@@ -1217,12 +1217,12 @@
         },
         {
         "source_path": "powerapps-docs/data-platform-create-app.md",
-        "redirect_url": "/powerapps/maker/common-data-service/data-platform-create-app",
+        "redirect_url": "/powerapps/maker/canvas-apps/data-platform-create-app",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/data-platform-create-app-scratch.md",
-        "redirect_url": "/powerapps/maker/common-data-service/data-platform-create-app-scratch",
+        "redirect_url": "/powerapps/maker/canvas-apps/data-platform-create-app-scratch",
         "redirect_document_id": true
         },
         {
