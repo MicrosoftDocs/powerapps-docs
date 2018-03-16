@@ -1,10 +1,5 @@
 {
     "redirections": [
-		{
-		"source_path": "powerapps-docs/index.yml",
-        "redirect_url": "/powerapps/index",
-        "redirect_document_id": true
-		},
         {
         "source_path": "powerapps-docs/postman-collection.md",
         "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/define-postman-collection",
