@@ -50,7 +50,7 @@ The Common Data Model and Common Data Service provide a rich and productive deve
 The Common Data Service for Apps provides several key capabilities over the Common Data Model including:
 
 - **Packaged applications**: Dynamics 365 apps like the Marketing, Sales, Service, Talent, Finance and Operations apps to transform your business.
-- **Customize applications and build native extensions for you needs**: Customizers and developers distribute application solutions so that organizations can use the Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
+- **Customize applications and build native extensions for you needs**: Customizers and developers distribute application solutions so that organizations can use the Common Data Service for Apps to install and uninstall the business functionality defined by the solution. See [Introduction to solutions](../developer/common-data-service/introduction-solutions.md).
 - **Build model-driven apps and canvas apps with PowerApp**s: For information about creating apps with the Common Data Service and PowerApps<!-- TODO:  see [Overview of building a model-driven app](../model-driven-app-overview.md). -->.
 - **Automate business processes with Flow**: For information about creating a flow that uses the Common Data Service, see [Create a flow that uses the Common Data Service](/flow/common-data-model-intro).
 
