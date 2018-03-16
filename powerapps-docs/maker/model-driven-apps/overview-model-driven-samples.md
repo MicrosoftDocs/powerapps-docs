@@ -23,7 +23,7 @@ In [powerapps.com](https://powerapps.com), use a sample app to explore design po
 
 Be sure to check out documentation specific to each sample app for more details. 
 
-![Sample app: Fundraiser](media/overview-model-driven-samples/fundraiser-app.PNG)
+![Fundraiser Sample App](media/overview-model-driven-samples/fundraiser-app.PNG)
 
 
 ## Get sample apps
@@ -38,7 +38,10 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
 ## Customize a sample app
 
-1. Sign in to [powerapps.com](https://powerapps.com) and chose **Model-driven** for the design mode. ![Choose design mode](media/overview-model-driven-samples/choose-design-mode.png)
+1. Sign in to [powerapps.com](https://powerapps.com) and chose **Model-driven** for the design mode. 
+
+    ![Choose design mode](media/overview-model-driven-samples/choose-design-mode.png)
+
 2. From the Home page, hover over the sample app and click **Customize**.
 3. The App designer will open providing multiple options for customizing the app. 
 4. For additonal customization options, click **Advanced** from the left navigation in the portal.
@@ -48,23 +51,36 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 - Deleting the solution also deletes any sample data specific to the custom entities for the app.
 - If customizations were made to the sample app, there may be [dependencies](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
-###Steps
+### Steps
 1. Login to the [PowerApps admin portal](https://admin.powerapps.com).
-2. Select an environment.
-3. Click **Dynamics 365 Administration Center**![Dynamics 365 Administration Center].(media/overview-model-driven-samples/admin-center.png)
-4. Select your Database from the list and click **OPEN**.![Select database](media/overview-model-driven-samples/select-database.png)
-5. Navigate to **Settings/Solutions**.
-6. Select the solution for the app that is to be deleted and click **delete**.![Delete solution](media/overview-model-driven-samples/delete-solution.png)
 
-*Alternatively navigate to the list of solutions by clicking **Advanced** in the maker portal and delete everything in the URL after .dynamics.com/
+2. Select an environment.
+
+3. Click **Dynamics 365 Administration Center** 
+
+    ![Dynamics 365 Administration Center](media/overview-model-driven-samples/admin-center.png)
+
+4. Select your Database from the list and click **OPEN**.
+
+    ![Select database](media/overview-model-driven-samples/select-database.png)
+
+5. Navigate to **Settings/Solutions**.
+
+6. Select the solution for the app that is to be deleted and click **delete**.
+
+    ![Delete solution](media/overview-model-driven-samples/delete-solution.png)
+
+*Alternatively navigate to the list of solutions by clicking **Advanced** in the maker portal and delete everything in the URL after .dynamics.com/*
 
 > [!IMPORTANT]
 > Do not delete other system solutions unless you're aware of the impact.
 
-##Install or uninstall Sample Data
+## Install or uninstall Sample Data
 1. Follow steps 1-4 above.
 2. Navigate to **Settings/Data Management/Sample Data**.
-3. If sample data is installed, the option to remove is available. Otherwise the option to install is available. ![remove sample data](media/overview-model-driven-samples/remove-sample-data.png)
+3. If sample data is installed, the option to remove is available. Otherwise the option to install is available. 
+
+    ![remove sample data](media/overview-model-driven-samples/remove-sample-data.png)
 
 
 
