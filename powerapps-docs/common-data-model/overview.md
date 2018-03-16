@@ -39,7 +39,7 @@ The Common Data Model and Common Data Service provide a rich and productive deve
  
      The data import includes mapping to standard entities of the Common Data Model, as well as defining, mapping, and loading as new entities. Data integration & mapping templates accelerate connecting to common data sources such as Salesforce.com; these data mapping templates are fully customizable and extensible. 
  
-     The following screenshot shows ingesting external data and mapping to standard entities 
+     The following screenshot shows ingesting external data and mapping to standard entities. 
 
     ![Ingest of external data and mapping to standard entities](media/cdm-mapping-entities.png)
  
