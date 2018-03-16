@@ -26,47 +26,48 @@ Power BI enables data insights and better decision-making, while PowerApps enabl
 
 Let's look at the steps required to use the PowerApps custom visual in your Power BI report. You can also go through a simple [step-by-step tutorial](embed-powerapps-powerbi.md) and check out out our [video](https://aka.ms/powerappscustomvisualvideo).
 
-1. Get the custom visual from AppSource or directly import it in the Power BI service.
+1. Get the custom visual from [AppSource](https://appsource.microsoft.com/product/power-bi-visuals/WA104381378?tab=Overview) or directly import it in the Power BI service.
 
-    ![IMAGE](./media/powerapps-custom-visual/IMAGE.png) 
+    ![Custom visual in marketplace](./media/powerapps-custom-visual/powerapps-store.png) 
 
-1. Next, add the PowerApps visual to your report and set the data fields associated with it.
+1. Add the PowerApps visual to your report and set the data fields associated with it.
 
-    ![IMAGE](./media/powerapps-custom-visual/IMAGE.png)
+    ![Select report data](./media/powerapps-custom-visual/add-visual-set-data.png)
 
-1. Now, you have the option to create a new app or use an existing app you have. will setup the required components in your app to enable Power BI to send data to PowerApps. 
+1. Now, you have the option to create a new app or use an existing app. 
 
-    ![IMAGE](./media/powerapps-custom-visual/IMAGE.png)
+    ![New or existing app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
+    
+    If you choose to use an existing app, the visual prompts you to open the app in PowerApps. The visual then sets up the required components in your app so that Power BI can send data to PowerApps.
 
- If you create a new app, PowerApps will create a simple app with the required components already setup.
+    If you create a new app, PowerApps creates a simple app with the required components already set up.
 
-    ![IMAGE](./media/powerapps-custom-visual/IMAGE.png)
+    ![New app](./media/powerapps-custom-visual/new-app.png)
 
-1. Once in PowerApps studio, you can use the data fields you set in step 2 above using the Data object in PowerApps. The PowerBIIntegration object will act like any other PowerApps read-only data source or collection which can be used to populate any control, or join and filter with other data sources.
+1. Now in PowerApps Studio, you can use the data fields you set in step 2. The PowerBIIntegration object acts like any other PowerApps read-only data source or collection. You can use the object to populate any control, or join and filter with other data sources.
 
-    ![IMAGE](./media/powerapps-custom-visual/IMAGE.png)
+    ![Custom formula](./media/powerapps-custom-visual/custom-formula.png)
 
-        Note:  The formula I used here to join Power BI data with my Customer data source
+    The formula I used here to join Power BI data with my Customer data source is: `LookUp(Customer,Customer\_x0020\_Name=First(PowerBIIntegration.Data).Customer\_Name)`
 
-is: `LookUp(Customer,Customer\_x0020\_Name=First(PowerBIIntegration.Data).Customer\_Name)`
+ The Power BI report and the instance of PowerApps Studio that was launched share a live data connection. While they are both open, you can filter or change the data in your report to see the updated data reflect immediately in your app in PowerApps Studio.
 
- While your Power BI report and the launched PowerApps studio are open, you can filter or change the data in your report to see the updated data reflect immediately in your app in PowerApps studio.
+1. After you have completed building or making changes to your app, save and publish the app in PowerApps to see your app in the Power BI report.
 
-1. After you have completed building or making changes to your app, Save and Publish the app in PowerApps to see your app in Power BI visual.
-
-Note: If you are editing an existing app, the current version of visual will not reload the app when a newer version in published from PowerApps. You will have to save your report and reload the browser page to see the latest version of the app.
+    > [!Note] 
+    > If you are editing an existing app, the current version of visual will not reload the app when a newer version in published from PowerApps. You will have to save your report and reload the browser page to see the latest version of the app.
 
 1. Once you are satisfied with your changes, make sure to share the PowerApps app with users of your report and then save your report.
 
-Note: If you want to again edit the app, click on 'More options' and then select Edit from the PowerApps visual.
+    If you want to again edit the app, click or tap **More options** and then select **Edit** from the PowerApps visual.
 
 1. And with that, you have created a report in which your users can take actions as they gain insights from your data.
 
-    ![IMAGE](./media/powerapps-custom-visual/IMAGE.png)
+    ![Working report](./media/powerapps-custom-visual/working-report.gif)
 
-Note: If you need to makes changes to an app, opening the report in edit more, click 'More options' (...) on the PowerApps visual and select 'Edit'.
+    If you need to makes changes to an app, open the report in edit mode, click or tap **More options** (**. . .**) on the PowerApps visual and select **Edit**.
 
-    ![IMAGE](./media/powerapps-custom-visual/IMAGE.png)
+    ![Edit app](./media/powerapps-custom-visual/edit-app.png)
 
 ## Limitations of the PowerApps custom visual
 
@@ -76,11 +77,11 @@ The PowerApps custom visual is currently available in preview and has some limit
 - If your PowerApps visual has been configured with an app, and you publish a newer version of the app from PowerApps Studio, the open report will not reload the app automatically. You must reload your report to get the latest version of the app.
 - If you change the data fields associated with the visual, you must edit the app from the Power BI service to make sure that the changes are propagated to PowerApps. If you don't do this, you will see unexpected behavior in the app.
 - The PowerApps custom visual cannot trigger a refresh of the Power BI report or Power BI data source. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately. Changes are reflected on the next scheduled refresh.
-- The PowerApps custom visual cannot filter the data or send out any data back to the report.
-- You will need to share the PowerApps app separately from your report. Learn about sharing apps in PowerApps.
+- The PowerApps custom visual cannot filter the data or send any data back to the report.
+- You will need to share the PowerApps app separately from your report. Learn about [sharing apps in PowerApps](share-apps.md).
 - PowerApps custom visual is currently not supported on Power BI mobile app.
 
-Please join the conversation in the PowerApps community as we would love to hear from you about how you are using this capability and what you would like to see added in the future.
+Please join the conversation in the [PowerApps community](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) as we would love to hear from you about how you are using this capability and what you would like to see added in the future.
 
 
 
