@@ -1,6 +1,6 @@
 ---
 title: PowerApps custom visual for Power BI | Microsoft Docs
-description: Embed an app that uses the same data source and can be filtered like other report items 
+description: Procedure and limitations for embedding an app that uses the same data source and can be filtered like other report items in Power BI 
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -84,5 +84,5 @@ Please join the conversation in the [PowerApps community](https://powerusers.mic
 
 ## Next steps
 
-Go through a simple [step-by-step tutorial](embed-powerapps-powerbi.md)
-Check out out our [video](https://aka.ms/powerappscustomvisualvideo)
+* Go through a simple [step-by-step tutorial](embed-powerapps-powerbi.md).
+* Check out out our [video](https://aka.ms/powerappscustomvisualvideo).
