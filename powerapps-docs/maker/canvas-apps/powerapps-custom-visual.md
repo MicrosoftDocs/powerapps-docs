@@ -37,7 +37,7 @@ Let's look at the steps required to use the PowerApps custom visual in your Powe
 1. You have the option to choose an existing app or create a new one. 
 
     ![New or existing app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
-    
+
     If you choose to use an existing app, the visual prompts you to open the app in PowerApps. The visual then sets up the required components in your app so that Power BI can send data to PowerApps.
 
     If you create a new app, PowerApps creates a simple app with the required components already set up.
