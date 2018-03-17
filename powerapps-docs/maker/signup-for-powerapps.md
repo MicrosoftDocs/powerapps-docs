@@ -24,26 +24,26 @@ To create an app in PowerApps, you need one of several types of licenses that of
 > [!NOTE]
 > If you're an administrator, see [Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](../administrator/signup-question-and-answer.md).
 
-You can [learn more](https://powerapps.microsoft.com/pricing/) about which licenses include PowerApps and what they offer. You can also determine whether you have a license by selecting **Sign in** on the [PowerApps site](http://powerapps.microsoft.com).
+You can find out [which licenses include PowerApps](https://powerapps.microsoft.com/pricing/) and what they offer. If you're still not sure whether you already have a license, open the [PowerApps site](http://powerapps.microsoft.com), and then select **Sign in**.
 
-   ![Sign-in option for PowerApps](./media/signup-for-powerapps/sign-in.png)
+![Sign-in option for PowerApps](./media/signup-for-powerapps/sign-in.png)
 
-If you have no license or you want more functionality than what your current license offers, you can sign up for a free trial of PowerApps Plan 2. This license offers all PowerApps functionality but expires after 30 days.
+If you don't have a license or you want more functionality than what your current license offers, you can sign up for a free trial of PowerApps Plan 2. This license offers all PowerApps functionality but expires after 30 days.
 
 ## Upgrade an existing license 
-You can sign up for a free trial by signing into PowerApps with an existing license and then trying any of these features:
+You can start a a free, 30-day trial of PowerApps Plan 2 by signing into PowerApps with an existing license and then trying any of these features:
 
 * [Create and manage an instance](../administrator/signup-for-powerapps-admin.md) of the Common Data Service.
 * [Model your data](./common-data-service/data-platform-intro.md) using the Common Data Service.
 * [Create and manage environments](../administrator/environments-administration.md) from the PowerApps admin center.
 * [Manage an on-premises data gateway](./canvas-apps/gateway-management.md) in PowerApps.  
 
-If you try any of these features without a Plan 2 license, you'll be prompted to start your free trial. Just select **Start my trial**, and then consent to the terms of use in the dialog box that appears.
+If you try any of these features without a PowerApps Plan 2 license, you'll be prompted to start your free, 30-day trial. Just select **Start my trial**, and then consent to the terms of use in the dialog box that appears.
 
 ![Agree to terms of use](./media/signup-for-powerapps/trial-consent.png)
 
 ## Get a license from scratch
-If you have no license for PowerApps, you can sign up for a trial license from the [PowerApps site](http://powerapps.microsoft.com).
+If you don't have a license for PowerApps, you can sign up for a free, 30-day trial of PowerApps Plan 2 from the [PowerApps site](http://powerapps.microsoft.com).
 
 * If you're using a browser on a phone, tap the menu icon in the upper-right corner, and then tap **Sign up free**.
 * If you're using a browser on another type of device, select **Sign up free** in the upper-right corner.
@@ -81,13 +81,13 @@ When this dialog box appears, select **Start**, and then start to use [PowerApps
 ![Click start](./media/signup-for-powerapps/almost-there.png)
 
 > [!NOTE]
-> If you need more time to evaluate PowerApps, you can request to extend your trial period.
+> If you want more time to evaluate PowerApps, you can request to extend your trial period for another 30 days.
 
 ## FAQ
 
 ### What premium features does the trial license include?
 
-* **Access to the Common Data Service**, which is a secure business data platform built into PowerApps. This service comes with hundreds of standard business entities, so all your apps can share the same definition of “customer,” “product,” “lead,” and more. [Learn more](./common-data-service/data-platform-intro.md)
+* **Access to the Common Data Service**, which is a secure business data platform built into PowerApps. The [Common Data Service](./common-data-service/data-platform-intro.md) comes with hundreds of standard business entities, so all your apps can share the same definition of “customer,” “product,” “lead,” and more.
 * **Access to premium connections** such as Salesforce, DB2, Zendesk, and the Common Data Service. With many Office 365 and Dynamics 365 plans, you can connect to data sources such as Office 365, Dynamics 365, Dropbox, and Twitter. With the trial license, you can also connect to data through premium connectors such as these:
   
     ![](./media/signup-for-powerapps/premium-connectors.png)
@@ -112,23 +112,23 @@ You can use a work or school address to sign up for a trial license. If you use 
 After 30 days, you'll be prompted to request an extension of the trial or purchase a plan. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 * If you have access to PowerApps through Office 365, Dynamics 365, or a PowerApps Plan 1 license, you can still use PowerApps, but you might lose access to the Common Data Service, premium connectors, the admin center, and other Plan 2 features. For example, this screen might appear if you try to create a premium connection:
-  
+
     ![](./media/signup-for-powerapps/premium-trial-expired.png)
 
-* If your only access to PowerApps is through the trial (for which you signed up on the [PowerApps site](http://powerapps.microsoft.com/) or the [pricing page](http://powerapps.microsoft.com/pricing)), this screen will appear if you try to access PowerApps:
-  
-    ![](./media/signup-for-powerapps/extend-screen.png)
+* If your only access to PowerApps is through the trial (for which you signed up on the [PowerApps site](http://powerapps.microsoft.com/) or the [pricing page](http://powerapps.microsoft.com/pricing)), you can request a 30-day extension of the trial license to retain access to PowerApps.
 
-### How many days are left before my trial expires?
-You'll soon be able to see how many days are left before your trial expires.
+### When will my trial license expire?
+To determine when your trial license will expire, select the gear icon near the upper-right corner of the PowerApps site, and then select **Plan(s)**.
 
-### What happens to my data when my trial expires?
-If you still have access to PowerApps, you can continue to use it. Any data in the Common Data Service will remain as it is, and any app or flow that used the Common Data Service as a data source will continue to run as it did. But you won't be able to use that app or flow, and you'll be prompted to request an extension of the trial or purchase a plan if you try to modify a schema or entities in the Common Data Service.
+![](./media/signup-for-powerapps/show-duration.png)
+
+### What happens to my data if my trial license expires?
+If you still have access to PowerApps, you can continue to use it. Any data in the Common Data Service will remain as it is, and any app or flow that used the Common Data Service as a data source will continue to run as it did. But you won't be able to use that app or flow, and you'll be prompted to request a 30-day extension of the trial or purchase a plan if you try to modify a schema or entities in the Common Data Service.
 
 ### What should I do next?
 You can retain access to PowerApps and its features by doing either of the following:
 
-* Extend your trial license when prompted.
+* Extend your trial license for 30 days when prompted.
 * Review the available plans on the PowerApps [pricing page](https://powerapps.microsoft.com/pricing/), and then [purchase one](../administrator/signup-for-powerapps-admin.md).
 
 ## More questions?
