@@ -1,5 +1,5 @@
 ---
-title: Apply Business Logic with code | Microsoft Docs
+title: Apply business logic with code | Microsoft Docs
 description: Learn how developers can use code to apply business logic in the Common Data Service for Apps.
 services: ''
 suite: powerapps
@@ -16,7 +16,7 @@ ms.workload: na
 ms.date: 02/26/2018
 ms.author: jdaly
 ---
-# Apply Business Logic with code
+# Apply business logic with code
 
 Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Dynamics 365 Customer Engagement Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 

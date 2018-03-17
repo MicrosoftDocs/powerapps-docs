@@ -19,7 +19,7 @@ ms.author: jdaly
 
 # Entity Metadata
 
-Each entity provides the capability to store structured data. For developers, entities represent the classes you will use when working with data in the Common Data Service.
+Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in the Common Data Service.
 
 ## Entity names
 Each entity has a unique name defined when it is created. This name is presented in several ways:
@@ -33,7 +33,7 @@ Each entity has a unique name defined when it is created. This name is presented
 |`EntitySetName`|Used to identify collections with the Web API. By default, it is the same as the logical collection name.<br />It is possible to change the Entity Set name by programmatically updating the metadata. But this should only be done before any Web API code is written for the entity. More information: [Dynamics 365 Customer Engagement Developer Guide: Web API types and operations > Change the name of an entity set](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#change-the-name-of-an-entity-set)|
 
 > [!NOTE]
-> When you create a custom entity, the name you choose will be prepended with the customization prefix value of the solution publisher associated with the solution that the entity was created within. Other than the entity set name, you cannot change the names of an entity after it is created.
+> When you create a custom entity, the name you choose will be prepended with the customization prefix value of the solution publisher associated with the solution that the entity was created within. Other than the entity set name, you cannot change the names of an entity after it is created. If you want consistent names for metadata items in your solution, you should create them in the context of a solution you create associated with a solution publisher that contains the customization prefix you want to use. More information : [Create a solution publisher and solution](introduction-solutions.md#create-a-solution-publisher-and-solution)
 
 Each entity also has three properties that can display localized values:
 
@@ -53,9 +53,6 @@ The `PrimaryIdAttribute` property value is the logical name of the attribute tha
 
 By default, all entities have a single GUID unique identifier attribute. This is usually named *&lt; entity logical name &gt;*+ `Id`.
 
-> [!NOTE]
-> Although you can specify a GUID value when creating an entity record using the web services, it is recommended that you do not. Performance is enhanced when you let the common data service generate this value.
-
 ## Primary Name
 
 The `PrimaryNameAttribute` property value is the logical name of the attribute that stores the string value that identifies the entity record. This is the value that will be displayed in a link to open the record in a UI.
@@ -72,7 +69,7 @@ The `PrimaryImageAttribute` property value is the logical name of the attribute 
 **Example**: The Contact entity `entityimage` attribute can store a picture of the contact.
 
 > [!NOTE]
-> The icon displayed for an entity in model-driven apps is set using the `IconVectorName` property.
+> This is different from the icon displayed for an entity in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
 
 ## Types of Entities
 
@@ -80,7 +77,7 @@ The capabilities and behavior of entities depends on several entity properties. 
 
 ### Entity Ownership
 
-Entities can be categorized by how the data within them is owned. This is an important concept related to how security is applied to entities. This information is in the OwnershipType property. The following table describes the different ownership types:
+Entities can be categorized by how the data within them is owned. This is an important concept related to how security is applied to entities. This information is in the `OwnershipType` property. The following table describes the different ownership types:
 
 |Ownership Type  |Description  |
 |---------|---------|
@@ -95,22 +92,21 @@ When you create new entities, the only ownership options are: **Organization** o
 
 An activity is a task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar. 
 
-Activities are modeled differently from other kinds of entities that store business data. Data about activities is frequently displayed together in a list, yet each kind of activity requires unique properties. Rather than have a single Activity entity with every possible property, there are separate kinds of activity entities and each of them inherits properties from base `ActivityPointer` entity. These entities will have the `IsActivity` property set to true.
+Activities are modeled differently from other kinds of entities that store business data. Data about activities is frequently displayed together in a list, yet each kind of activity requires unique properties. Rather than have a single Activity entity with every possible property, there are separate kinds of activity entities and each of them inherits properties from a base [ActivityPointer Entity](reference/entities/activitypointer.md). These entities will have the `IsActivity` property set to true.
 
 
-|Schema Name  |Description  |
+|Entity |Description  |
 |---------|---------|
-|`Appointment`|Commitment representing a time interval with start/end times and duration.|
-|`Email`|Activity that is delivered using email protocols.|
-|`Fax`|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|
-|`Letter`|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|
-|`PhoneCall`|Activity to track a telephone call.|
-|`RecurringAppointmentMaster`|The Master appointment of a recurring appointment series.|
-|`SocialActivity`|For internal use only.|
-|`Task`|Generic activity representing work needed to be done.|
-|`UntrackedEmail`|Activity that is delivered using UntrackedEmail protocols.|
+|[Appointment](reference/entities/appointment.md)|Commitment representing a time interval with start/end times and duration.|
+|[Email](reference/entities/email.md)|Activity that is delivered using email protocols.|
+|[Fax](reference/entities/fax.md)|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|
+|[Letter](reference/entities/letter.md)|Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.|
+|[PhoneCall](reference/entities/phonecall.md)|Activity to track a telephone call.|
+|[RecurringAppointmentMaster](reference/entities/recurringappointmentmaster.md)|The Master appointment of a recurring appointment series.|
+|[SocialActivity](reference/entities/socialactivity.md)|For internal use only.|
+|[Task](reference/entities/task.md)|Generic activity representing work needed to be done.|
 
-Whenever you create one of these kinds of activity entities, a corresponding `ActivityPointer` entity record will be created with the same `ActivityId` unique identifier attribute value. You cannot create, update, or delete instances of the `ActivityPointer` entity, but you can retrieve them. This is what allows all types of activities to be presented together in a list.
+Whenever anyone creates one of these kinds of activity entity records, a corresponding `ActivityPointer` entity record will be created with the same `ActivityId` unique identifier attribute value. You cannot create, update, or delete instances of the `ActivityPointer` entity, but you can retrieve them. This is what allows all types of activities to be presented together in a list.
 
 You can create custom activity entities that behave the same way.
 
@@ -121,7 +117,7 @@ This entity is used to add structure to activity entity `PartyListType` attribut
 You can query the `ActivityParty` entity, but you cannot create, retrieve, update, or delete an activity party outside of the activity that it is related to.
 More information: 
 - [Dynamics 365 Customer Engagement Developer Guide: ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
-- [ActivityParty Entity Reference](reference/entities/activityparty.md)
+- [ActivityParty](reference/entities/activityparty.md)
 
 
 ### Child entities
