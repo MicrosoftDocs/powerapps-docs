@@ -1,5 +1,5 @@
 ---
-title: Share a model-driven app | Microsoft Docs
+title: Share a model-driven app with PowerApps | Microsoft Docs
 description: Learn how to share a model-driven app based
 services: ''
 suite: powerapps

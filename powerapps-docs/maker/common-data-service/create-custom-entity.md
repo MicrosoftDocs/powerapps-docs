@@ -1,5 +1,5 @@
 ---
-title: Create a custom entity | Microsoft Docs
+title: Create a custom entity with PowerApps | Microsoft Docs
 description: Step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
 services: ''
 suite: powerapps

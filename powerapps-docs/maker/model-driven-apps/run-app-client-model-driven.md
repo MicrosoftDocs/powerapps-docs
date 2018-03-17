@@ -1,5 +1,5 @@
 ---
-title: Run a model-driven app on a mobile device | Microsoft Docs
+title: Run a model-driven app on a mobile device with PowerApps | Microsoft Docs
 description: Walkthrough of running a model-driven app on a mobile device
 services: ''
 suite: powerapps
