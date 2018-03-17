@@ -66,9 +66,17 @@ The `PrimaryNameAttribute` property value is the logical name of the attribute t
 
 The `PrimaryImageAttribute` property value is the logical name of the attribute that stores the image data for the entity record. Each entity can have only one image attribute and the logical name of that attribute is always `entityimage`.
 
-**Example**: The Contact entity `entityimage` attribute can store a picture of the contact.
+**Example**: The [Contact Entity](reference/entities/contact.md) [EntityImage](reference/entities/contact.md#BKMK_EntityImage) attribute can store a picture of the contact.
 
-For performance reasons, entity images are not included in retrieve operations unless explicitly requested. 
+For performance reasons, entity images are not included in retrieve operations unless explicitly requested.
+
+Each entity that supports entity images will have three supporting attributes.
+
+|SchemaName|Type|Description|
+|--|--|--|
+|`EntityImage_Timestamp` |`BigIntType`|The value represents when the image was last updated and is used to help make sure that the latest version of the image is downloaded and cached on the client.|
+|`EntityImage_URL`|`StringType`|An absolute URL to display the entity image in a client.|
+|`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image|
 
 More information: 
 - [Dynamics 365 Customer Engagement Developer Guide Image attributes](/dynamics365/customer-engagement/developer/image-attributes)
