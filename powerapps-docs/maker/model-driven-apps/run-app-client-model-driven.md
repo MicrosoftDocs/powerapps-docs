@@ -34,6 +34,5 @@ If you haven’t already, share the app and the app URL. Learn more: [Preview fe
 ## Run a model-driven app
 1.	Enter the app URL in your device’s web browser, tap ENTER, and then if prompted, sign-in to the app using your credentials. 
 2.	If your account is associated with more than one app, a list of available apps appears. Select the app you want to run. 
-3.	The app appears on your mobile device, such as a phone.
+3.	The app appears on your mobile device, such as a phone or tablet.
 
-   ![Unified Interface app running on a phone](media/run-app-client-model-driven/unified-client-on-phone.png)

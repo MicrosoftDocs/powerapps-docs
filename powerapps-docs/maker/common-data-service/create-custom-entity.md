@@ -73,7 +73,7 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
     
     e. Select **Save**. 
 
-    ![New option set](media/create-custom-entity/optionset-add-items.png)
+  ![New option set](media/create-custom-entity/optionset-add-items.png)
 6. Select **Searchable**, and then select **Done**.
 7. On the entity designer toolbar select **Add field**. On the **Field properties** pane, enter or select the following values, and then select **Done**.
   - **Display name**. *Breed*
@@ -125,13 +125,7 @@ Skip this step if you only want to use the Pet entity in a canvas app.
 
 ## Add the custom entity to an app
 
-Now your entity is ready to be used to build an app, such as this canvas app that uses a phone layout.
-
-![Example canvas app](media/create-custom-entity/pet-grooming-canvas-app.png)
-
-Or added to a model-driven app.
-
-![Example model-driven app](media/create-custom-entity/pet-grooming-model-app.png)
+Now your entity is ready to be used to build either a canvas or model-driven app. 
 
 ## Next steps
 

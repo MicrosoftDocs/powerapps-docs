@@ -48,7 +48,7 @@ Entities within the Common Data Service, both standard and custom, allow a secur
 When you develop an app, you can use standard entities, custom entities, or both. If a standard entity can serve a particular purpose in your app, you should use it rather than developing a custom entity that does the same thing. If a standard entity would serve a purpose with a few changes, you can add fields to suit your needs.
 
 * The Common Data Service provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts for an organization, such as Contacts, Accounts, and Products. For a full list of entities, see [Standard entities](data-platform-intro.md#standard-entities).
-* You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](data-platform-create-entity.md).
+* You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](create-custom-entity.md).
 
 > [!NOTE]
 > If possible, use standard entities (with custom fields added, if required). This will ensure that you can benefit from new features or apps that leverage these entities in the future.
@@ -58,7 +58,7 @@ When you develop an app, you can use standard entities, custom entities, or both
 Each field has a name, display name, data type, and some simple validation. Data types include, for example, **text**, **date**, or **number**. Validation ensures that required fields contain data and records are unique if the entity requires them to be. Every field falls into one of three categories: system fields, standard fields, or custom fields.
 
 ### System fields
-All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. For more information, see [System and record title fields](data-platform-create-entity.md#system-fields-and-the-record-title-field). These are the most important system fields:
+All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. These are the most important system fields:
 
 * **Created Record Date** - The date and time when a record was created.
 * **Created By** - The user who created the record.
@@ -86,7 +86,7 @@ For a list of the entities and their fields, and a list of the enumerations, see
 | Sales |The Sales entities let you create end-to-end sales solutions, from tracking leads and opportunities, to following through with contacts, accepting and delivering orders, and sending invoices. |
 
 ## Get started
-Try it out by creating an app using a standard entity or [create a custom entity](data-platform-create-entity.md), and then [create an app that uses that entity](../canvas-apps/data-platform-create-app.md).
+Try it out by creating an app using a standard entity or [create a custom entity](create-custom-entity.md), and then [create an app that uses that entity](../canvas-apps/data-platform-create-app.md).
 
 <!--TODO - Add Link for Standard entity app - Template? -->
 
