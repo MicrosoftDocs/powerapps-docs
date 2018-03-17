@@ -19,16 +19,16 @@ ms.author: anneta
 
 ---
 # Add data to an entity in the Common Data Service by using Power Query
-In this procedure, you'll create an entity in the [Common Data Service for Apps](data-platform-intro.md) and fill that entity with data from an OAuth feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
+In this procedure, you'll create an entity in the [Common Data Service for Apps](data-platform-intro.md) and fill that entity with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
 
 * SQL Server
 * Salesforce
 * IBM DB2
 * Access
 * Excel
-* web APIs
+* Web APIs
 * OData feeds
-* text files
+* Text files
 
 You can also filter, transform, and combine data before you load it into a new or existing entity.
 
@@ -80,11 +80,11 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
     ![List of standard and custom entities](./media/data-platform-cds-newentity-pq/entity-list.png)
 
 > [!WARNING]
-> If you use Power Query to add data to an existing entity, all data that the entity previously contained will be overwritten.
+> If you use Power Query to add data to an existing entity, all data in that entity will be overwritten.
 
 If you select **Load to existing entity**, you can specify an entity into which you add data from the **Customers** table. You could, for example, add the data to the **Account** entity with which the Common Data Service ships. Under **Source column**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Accounts** entity.
 
 ![Specify the name of the new entity](./media/data-platform-cds-newentity-pq/existing-entity.png)
 
-We're very excited about this functionality, and are eager to hear your feedback. Please [send us your suggestions and feedback](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) about this feature!
+We're excited about this functionality and eager to hear your feedback. Please [send us your suggestions and feedback](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) about this feature!
 
