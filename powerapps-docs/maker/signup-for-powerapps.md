@@ -88,16 +88,16 @@ When this dialog box appears, select **Start**, and then start to use [PowerApps
 ### What premium features does the trial license include?
 
 * **Access to the Common Data Service**, which is a secure business data platform built into PowerApps. The [Common Data Service](./common-data-service/data-platform-intro.md) comes with hundreds of standard business entities, so all your apps can share the same definition of “customer,” “product,” “lead,” and more.
-* **Access to premium connections** such as Salesforce, DB2, Zendesk, and the Common Data Service. With many Office 365 and Dynamics 365 plans, you can connect to data sources such as Office 365, Dynamics 365, Dropbox, and Twitter. With the trial license, you can also connect to data through premium connectors such as these:
-  
+* **Access to premium connections** such as Salesforce, DB2, Zendesk, and the Common Data Service. With many Office 365 and Dynamics 365 plans, you can connect to data sources such as Office 365, Dynamics 365, Dropbox, and Twitter. With the trial license, you can also connect to data through these premium connectors and many more:
+
     ![](./media/signup-for-powerapps/premium-connectors.png)
-  
+
     In the [complete list of connectors](./canvas-apps/connections-list.md), premium connectors appear with a badge:
-  
+
     ![](./media/signup-for-powerapps/premium-badge.png)
 * **Access to the PowerApps admin center**, in which you can manage your environments, databases, user permissions, and data policies. [Learn more](../administrator/introduction-to-the-admin-center.md)
 
-For more information about the functionality and capacity in the trial license, see the [pricing page](https://powerapps.microsoft.com/pricing/).
+For more information about functionality and capacity in the trial license, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 ### What email address can I use?
 You can use a work or school address to sign up for a trial license. If you use another kind of address, you might experience one of the symptoms in this table.
@@ -111,14 +111,14 @@ You can use a work or school address to sign up for a trial license. If you use 
 ### What happens when my trial expires?
 After 30 days, you'll be prompted to request an extension of the trial or purchase a plan. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-* If you have access to PowerApps through Office 365, Dynamics 365, or a PowerApps Plan 1 license, you can still use PowerApps, but you might lose access to the Common Data Service, premium connectors, the admin center, and other Plan 2 features. For example, this screen might appear if you try to create a premium connection:
+* If you have access to PowerApps through Office 365, Dynamics 365, or a PowerApps Plan 1 license, you can still use PowerApps, but you might lose access to the Common Data Service, premium connectors, the PowerApps admin center, and other features of PowerApps Plan 2. For example, this screen might appear if you try to create a premium connection:
 
     ![](./media/signup-for-powerapps/premium-trial-expired.png)
 
 * If your only access to PowerApps is through the trial (for which you signed up on the [PowerApps site](http://powerapps.microsoft.com/) or the [pricing page](http://powerapps.microsoft.com/pricing)), you can request a 30-day extension of the trial license to retain access to PowerApps.
 
 ### When will my trial license expire?
-To determine when your trial license will expire, select the gear icon near the upper-right corner of the PowerApps site, and then select **Plan(s)**.
+To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://web.powerapps.com), and then select **Plan(s)**.
 
 ![](./media/signup-for-powerapps/show-duration.png)
 
