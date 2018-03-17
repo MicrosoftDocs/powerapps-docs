@@ -87,19 +87,21 @@ In the following table:
 |Virtual|`VirtualType`|No|These attributes cannot be used in code and can generally be ignored.|
 
 
-## Supported operations for attributes
+## Supported operations and form usage for attributes
 
-Each attribute includes boolean properties that describe the kinds of operations it can participate in and how it is intended to be used in a form.
+Each attribute includes boolean properties that describe the kinds of operations it can participate in and how it can be in a form.
 
 |Property|Description|
 |--|--|
-|`IsRequiredForForm`|The attribute must be included as a field in a form.|
-|`IsValidForCreate`|The attribute value can be set in a create operation.|
-|`IsValidForForm`|The attribute can be included as a field in a form.|
-|`IsValidForRead`|The attribute value can be retrieved.|
-|`IsValidForUpdate`|The attribute value can be set in an update operation.|
+|`IsRequiredForForm`|Whether the attribute must be included as a field in a form.|
+|`IsValidForCreate`|Whether the attribute value can be set in a create operation.|
+|`IsValidForForm`|Whether the attribute can be included as a field in a form.|
+|`IsValidForRead`|Whether the attribute value can be retrieved.|
+|`IsValidForUpdate`|Whether the attribute value can be set in an update operation.|
 
-If you set a value in an update operation for an attribute that is not valid for update, the value will be ignored.
+If you try to set a value in a create or update operation for an attribute that is not valid for that operation, the value will be ignored.
+If you try to retrieve an attribute that is not valid for read, a null value will be returned.
+
 
 ## Attribute Requirement level
 
@@ -114,7 +116,7 @@ This property can have the following values set:
 |`ApplicationRequired`|2|**Business Required**|The attribute is required by the business to have a value.|
 |`Recommended`|3|**Business Recommended**|It is recommended that the attribute has a value.|
 
-The Common Data Service only enforces the `SystemRequired` option for system entities. Custom attributes cannot be set to use the `SystemRequired` option. 
+The Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. 
 
 Model-driven apps will enforce the `ApplicationRequired` option and use a different presentation for the `Recommended` option. Creators of custom clients may use this information to require similar validation or presentation options.
 
@@ -127,7 +129,10 @@ More information: [Managed Properties](introduction-solutions.md#managed-propert
 
 Calculated and rollup attributes free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
+More information: 
+- [Dynamics 365 Customer Engagement Customization Guide: Define rollup fields that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
+- [Dynamics 365 Customer Engagement Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
+- [Dynamics 365 Customer Engagement Developer Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
 
 ## Attribute Format
 
@@ -188,11 +193,36 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Create auto
 
 Those attributes which display a set of options can reference a set of options defined by the attribute or they can reference a separate set of options that can be shared by more than one attribute. This is particularly useful when values in one attribute also apply to other attributes. By referencing a common set of options, the options can be maintained in one place. Those option sets that can be shared are *global* option sets. Those defined within the attribute are *local* option sets.
 
-Each of these attribute inherit from [EnumAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata) and include an [OptionSet Property](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata.optionset). This property contains the [OptionSetMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata) that includes the options within the [Options property](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata.options). 
+### Retrieve options data
+The organization service provides request classes you can use to retrieve the options used by an attribute.
 
-Retrieving available options with the Web API is a little different than using the organization service. More information: [Dynamics 365 Customer Engagement Developer Guide: Query metadata using the Web API >Querying EntityMetadata attributes](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
+#### Use the organization service to retrieve options
 
-More information: [Dynamics 365 Customer Engagement Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+Each of the attributes with options inherit from [EnumAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata) and include an [OptionSet Property](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata.optionset). This property contains the [OptionSetMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata) that includes the options within the [Options property](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata.options). 
+
+With the organization service you can use the following messages to retrieve information about optionsets:
+|Request Class|Description|
+|--|--|
+|[RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest) |Retrieves data about all *global* optionsets|
+|[RetrieveAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveattributerequest) |Retrieves data about an attribute including any *local* optionsets|
+|[RetrieveMetadataChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) |Retrieves metadata based on a query that can include *local* optionsets<br />More information: [Retrieve and detect changes to metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata)|
+|[RetrieveOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveoptionsetrequest) |Retrieves data about a *global* option set.|
+
+More information: 
+- [Sample: Dump attribute picklist metadata to a file](/dynamics365/customer-engagement/developer/org-service/sample-dump-attribute-picklist-metadata-file)
+- [Dynamics 365 Customer Engagement Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+
+#### Use the Web API to retrieve options
+
+The Web API provides a RESTful style for querying option values. You can retreive local or global options by retrieving the attributes within an entity. The following example returns the [OptionSetMetadata](/dynamics365/customer-engagement/web-api/optionsetmetadata) for the options included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
+
+`GET <organization url>/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='accountcategorycode')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet`
+
+With the Web API you can also use the [RetrieveMetadataChanges Function](/dynamics365/customer-engagement/web-api/retrievemetadatachanges).
+
+More information: [Dynamics 365 Customer Engagement Developer Guide: Query metadata using the Web API > Querying EntityMetadata attributes](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
+
+
 
 ## Attribute Mapping
 
