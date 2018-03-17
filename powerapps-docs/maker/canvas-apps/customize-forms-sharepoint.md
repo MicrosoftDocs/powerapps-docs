@@ -19,9 +19,9 @@ ms.author: anneta
 
 ---
 # Customize forms in PowerApps
-Customize a **Display form** control and an **Edit form** control so that they show the data that matters most, in the most intuitive order, and in the controls that help users easily understand and update the data.
+Customize a **Display form** control and an **Edit form** control so that they show the data that matters most and in the most intuitive order to help users easily understand and update the data.
 
-Each form comprises one or more cards, each of which shows data from a particular column in the data source. By following the steps in this topic, you can specify which cards appear in a form, move cards up and down within a form, and configure how data from each column appears within a card.
+Each form comprises one or more cards, each of which shows data from a particular column in the data source. By following the steps in this topic, you can specify which cards appear in a form and move cards up and down within a form.
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
@@ -29,6 +29,11 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 [Generate an app](data-platform-create-app.md) from the Common Data Service, and then [customize the gallery](customize-layout-sharepoint.md) in that app.
 
 ## Show and hide cards
+1. Sign in to [PowerApps](http://web.powerapps.com).
+
+    ![Home page of PowerApps site](./media/customize-forms-sharepoint/sign-in.png)
+
+
 1. Open the app that you generated and customized.
 
 1. In the left navigation bar, type or paste **D** in the search bar to filter the list of elements, and then click or tap **DetailForm1** to select it.
@@ -39,7 +44,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
     ![Show data pane](./media/customize-forms-sharepoint/show-data-pane.png)
 
-1. In the **Data** pane, clear the **Description** and **Address 1: Street 2** checkboxes to hide those fields.
+1. In the **Data** pane, clear the **Primary Contact**, **Description**, and **Address 1: Street 2** checkboxes to hide those fields.
 
     ![List of fields](./media/customize-forms-sharepoint/hide-fields.png)
 
@@ -100,7 +105,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
     ![Delete record](./media/customize-forms-sharepoint/delete-record.png)
 
-9. Close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-left corner, *under* the title bar for PowerApps).
+9. Close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-left corner).
 
 ## Next steps
 - [Save and publish](save-publish-app.md) your app.
