@@ -68,6 +68,12 @@ The `PrimaryImageAttribute` property value is the logical name of the attribute 
 
 **Example**: The Contact entity `entityimage` attribute can store a picture of the contact.
 
+For performance reasons, entity images are not included in retrieve operations unless explicitly requested. 
+
+More information: 
+- [Dynamics 365 Customer Engagement Developer Guide Image attributes](/dynamics365/customer-engagement/developer/image-attributes)
+- [Dynamics 365 Customer Engagement Developer Guide Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
+
 > [!NOTE]
 > This is different from the icon displayed for an entity in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
 
