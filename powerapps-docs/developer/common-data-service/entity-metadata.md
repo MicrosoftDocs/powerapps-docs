@@ -109,15 +109,15 @@ Activities are modeled differently from other kinds of entities that store busin
 Whenever anyone creates one of these kinds of activity entity records, a corresponding `ActivityPointer` entity record will be created with the same `ActivityId` unique identifier attribute value. You cannot create, update, or delete instances of the `ActivityPointer` entity, but you can retrieve them. This is what allows all types of activities to be presented together in a list.
 
 You can create custom activity entities that behave the same way.
+<!-- TODO: Add link to topic about creating an activity entity -->
 
 ### ActivityParty entity
 
-This entity is used to add structure to activity entity `PartyListType` attributes that include references to other entities. You will use this entity when setting values for activity entity attributes like `Email.to` or `PhoneCall.from`. Within the `ActivityParty` entity, you set the `ParticipationTypeMask` attribute to define the role that the reference is playing. Roles include `Sender`, `ToRecipient`, `Organizer` and more.
+This entity is used to add structure to activity entity `PartyListType` attributes that include references to other entities. You will use this entity when setting values for activity entity attributes like `Email.to` or `PhoneCall.from`. Within the [ActivityParty entity](reference/entities/activityparty.md), you set the [ParticipationTypeMask](reference/entities/activityparty.md#BKMK_ParticipationTypeMask) attribute to define the role that the reference is playing. Roles include `Sender`, `ToRecipient`, `Organizer` and more.
 
 You can query the `ActivityParty` entity, but you cannot create, retrieve, update, or delete an activity party outside of the activity that it is related to.
 More information: 
 - [Dynamics 365 Customer Engagement Developer Guide: ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
-- [ActivityParty](reference/entities/activityparty.md)
 
 
 ### Child entities
