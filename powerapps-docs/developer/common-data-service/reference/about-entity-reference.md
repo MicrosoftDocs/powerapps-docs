@@ -1,0 +1,67 @@
+---
+title: "About Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+description: "Use this reference to understand the available operations that can be performed for specific entities, the default attributes attributes of each entity and the relationships between entities."
+
+services: ''
+suite: powerapps
+documentationcenter: na
+author: JimDaly
+manager: faisalmo
+editor: ''
+tags: ''
+
+ms.service: powerapps
+ms.devlang: na
+ms.topic: reference
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 03/12/2018
+ms.author: jdaly
+---
+# About the Entity Reference
+
+Use this reference to understand the available operations that can be performed for specific entities, the default attributes of each entity and the relationships between entities.
+
+> [!NOTE]
+> This reference includes only entities where:
+>
+> -  **IsPrivate** equals `false`
+>    - This excludes entities where no external use cases exist.
+> - **IsIntersect** equals `false`
+>    - This excludes entities used to define Many-to-many relationships.
+> - The entity supports some kind of operation.
+>    - This excludes entities which you can't use. 
+>
+> To see all entity metadata information for your environment, see [Dynamics 365 Developers Guide : Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata).
+
+
+## Entity Properties
+
+This section includes selected entity properties rather than all of them. Only those properties expected to be most useful for developers are included. Some entity properties can be changed.
+
+## Attributes
+Attributes are listed in two separate sections: **Writable attributes** and **Read-only attributes**. The purpose of this separation is to focus on the attributes a developer can set when creating or updating an entity instance. Understanding these attributes helps a developer understand what they can do with the entity beyond simply retrieving the values. 
+
+The attributes in the **Writable attributes** section return true for *either*  the **IsValidForCreate** or **IsValidForUpdate** properties, (usually both). If either of these properties return false, this is indicated.
+
+**Read-only attributes** are always return false for the **IsValidForCreate** *and* **IsValidForUpdate** properties.
+
+## Relationships
+
+The [EntityMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) class includes three properties to represent relationships:
+
+|Property| Type  |Description  |
+|---------|---------|---------|
+|[OneToManyRelationships](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.onetomanyrelationships#Microsoft_Xrm_Sdk_Metadata_EntityMetadata_OneToManyRelationships)|[OneToManyRelationshipMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.onetomanyrelationshipmetadata)[]|Gets the array of one-to-many relationships for the entity.|
+|[EntityMetadata.ManyToOneRelationships](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.manytoonerelationships#Microsoft_Xrm_Sdk_Metadata_EntityMetadata_ManyToOneRelationships)|[OneToManyRelationshipMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.onetomanyrelationshipmetadata)[]|Gets the array of many-to-one relationships for the entity.|
+|[EntityMetadata.ManyToManyRelationships](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.manytomanyrelationships#Microsoft_Xrm_Sdk_Metadata_EntityMetadata_ManyToManyRelationships)|[ManyToManyRelationshipMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata)[]|Gets the array of many-to-many relationships for the entity.|
+
+> [!NOTE]
+> It is important to keep in mind that while each entity lists those relationships which apply to it, each relationship is shared by both related entities. The relationships exist *between* entities. While One-To-Many relationships exist, *Many-to-One* relationships are simply a view of a One-To-Many relationship from the referencing entity.
+
+### One-to-Many relationships
+In order to represent that there are no actual *Many-to-One* relationships with a minimum of confusion, the details of each relationship are only documented once. Each One-to-Many relationship is listed with the referenced entity and includes selected relationship details and a link to the corresponding *Many-to-One* relationship. Each *Many-to-One* relationship listed includes only a link to the corresponding One-to-Many relationship.
+
+### Many-to-Many relationships
+Each Many-to-Many relationship includes [Entity1LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata.entity1logicalname) and [Entity2LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.manytomanyrelationshipmetadata.entity2logicalname). For this documentation relationship details are only included in the topic for *Entity1*. Each Many-to-Many relationship where the entity is *Entity2* includes only a link to the details found in the topic for *Entity1*.
+

@@ -51,7 +51,7 @@ Columns that contain spaces can by read by PowerApps, but the spaces are replace
 ## Prerequisites
 Open PowerApps by taking *either* of these steps:
 
-* [Sign up](../signup-for-powerapps.md) for PowerApps, [install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
+* [Sign up](../../signup-for-powerapps.md) for PowerApps, [install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
 
 * [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
 

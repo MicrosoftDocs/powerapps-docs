@@ -22,12 +22,12 @@ description: Microsoft PowerApps Documentation
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="media/index/powerapps-logo.svg" alt="" />
+                                                        <img src="media/index/user.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Find and run apps</h3>
-                                                    <p>You can...</p>
+                                                    <p>Learn how to find and run your apps or apps shared with you.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -41,12 +41,12 @@ description: Microsoft PowerApps Documentation
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="media/index/powerapps-logo.svg" alt="" />
+                                                        <img src="media/index/maker.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Create apps</h3>
-                                                    <p>You can...</p>
+                                                    <p>Learn how to build custom apps for managing your organization's mission-critical data.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -60,12 +60,12 @@ description: Microsoft PowerApps Documentation
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="media/index/powerapps-logo.svg" alt="" />
+                                                        <img src="media/index/admin.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Administer PowerApps</h3>
-                                                    <p>You can...</p>
+                                                    <p>Learn how to secure data, manage environments, and monitor usage.</p>
                                                 </div>
                                             </div>
                                         </div>
