@@ -6,13 +6,13 @@
     href: create-environment.md
   - name: Create a DLP policy # not in TOC previously
     href: create-dlp-policy.md
-  - name: View active users in your org
+  - name: View active users in your tenant
     href: admin-view-user-licenses.md
-  - name: View apps in your org # not in TOC previously
+  - name: View apps in your environments # not in TOC previously
     href: admin-view-apps.md
 - name: Concepts
   items:
-  - name: Pricing information
+  - name: Licensing overview
     href: pricing-billing-skus.md
   - name: Environments overview
     href: environments-overview.md

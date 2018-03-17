@@ -37,19 +37,23 @@ Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powe
 1. In the navigation pane, click or tap **Environments**, and then click or tap **New environment**.
 
     ![File and Share](./media/create-environment/new-environment.png)
-2. In the **New environment** dialog box, enter a name for the environment and select a region. The region defaults to the Azure Active Directory Tenant home region, but you may select any region from the drop-down list. You cannot change the region once the environment is created. When you're done, click or tap **Create environment**.
+2. In the **New environment** dialog box, enter a name for the environment, and then select a region and environment type from the drop-down lists. The region  defaults to the Azure Active Directory Tenant home region, but you may select any region from the drop-down list. You cannot change the region once the environment is created. When you're done, click or tap **Create environment**.
 
-3. Once the environment is created, you'll receive a confirmation message in the dialog box and you'll be prompted to create a database. Click **Create database** to enable access to the Common Data Service.
+    ![File and Share](./media/create-environment/new-environment-dialog.png)
+3. Once the environment is created, you'll receive a confirmation message in the dialog box and you'll be prompted to create a database. Click or tap **Create database** to enable access to the Common Data Service.
+
+    **Note:** At this time you can only create a database in the Azure Active Directory Tenant home region.
 
     ![File and Share](./media/create-environment/create-database-dialog.png)
+4. Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, click or tap **Create database**.
 
-4. Select the level of data access that you want to give users, and then click **Create database** to create the database.
+    ![File and Share](./media/create-environment/create-database-dialog2.png)
 
-    * **Give all users access** - All users can view and edit all data in the database.
+    It may take several minutes to create the database on the Common Data Service. Once the database is created, the new environment appears in the list of environments on the **Environments** page. 
 
-    * **Restrict access** - Data access is governed by user roles. You'll need to build roles and assign users to them to ensure proper access.
+    ![File and Share](./media/create-environment/new-environment-created.png)
 
-It may take several minutes to create the database on the Common Data Service. Once the database is created, the new environment appears in the list of environments on the **Environments** page. Click or tap the environment to view the environment details.
+    Click or tap the environment to view the environment details.
 
 ## Next steps
 In this quickstart, you learned how to create an environment and database for that environment. Next, learn how to administer environments in your organization.

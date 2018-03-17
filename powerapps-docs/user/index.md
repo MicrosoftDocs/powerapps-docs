@@ -26,17 +26,16 @@ App makers can also create *model-driven* apps that are generated from your orga
 
 When app makers are done creating apps, they can instantly publish them to iOS, Android, Windows, and the web, and then share them with others in their organization.
 
-As an app user, you can run apps that you created - or that someone else created and shared with you - on a phone or tablet or in a web browser. You can find apps on the [Dynamics 365 Home page](https://home.dynamics.com/) and in the PowerApps or Dynamics 365 app on your mobile device. You can even find and run apps from Microsoft Team channels, SharePoint, and AppSource. You can also run an app from a URL link, if someone creates an app and shares the link with you in an email.
+As an app user, you can run apps that you created - or that someone else created and shared with you - on a phone or tablet or in a web browser. You can find apps on the [Dynamics 365 Home page](https://home.dynamics.com/) and in the PowerApps or Dynamics 365 app on your mobile device. You can even find and run apps from Microsoft Team channels, SharePoint, and AppSource. If someone creates an app and sends a link to you in email, you can run the app by clicking or tapping the link in the email.
 
 This section provides information about how to find and run apps, and includes the following articles:
 
-* Run an app in a web browser
-* Run a canvas app on a mobile device
-* Run a model-driven app on a mobile device
-* Add and run an app in Microsoft Teams
-* Find and run an app in AppSource
+* [Run an app in a web browser](run-app-browser.md)
+* [Run a canvas app on a mobile device](run-app-client.md)
+* [Add and run an app in Microsoft Teams](open-app-embedded-in-teams.md)
+* [Find and run an app in AppSource](app-source.md)
 
 ## Next steps
-* Ensure that you're using a supported device platform and browser.
-* To run canvas apps, download and install PowerApps from the App Store or Google Play on an iPhone, iPad, or Android device.
-* To run model-driven apps, download and install Dynamics 365 for Phones or Dynamics 365 for Tablets from the App Store or Google Play on an iPhone, iPad, or Android device.
+* Ensure that you're using a [supported device platform and browser](../maker/canvas-apps/limits-and-config.md).
+* To run canvas apps, download and install PowerApps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps).
+* To run model-driven apps on a phone, download and install Dynamics 365 for phones from the [App Store](https://itunes.apple.com/app/dynamics-crm-for-phones/id1003997947?ls=1&mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone). To run model-driven apps on a tablet, download Dynamics 365 for tablets from the [App Store](https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmtablet).
