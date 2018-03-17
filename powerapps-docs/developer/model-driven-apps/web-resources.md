@@ -19,7 +19,9 @@ ms.author: jdaly
 
 # Use web resources
 
-There is a virtual folder called `webresources` within each Common Data Service for Apps instance where you can request HTML, JS, CSS, and image files by name and access them in your browser. These files can refer to each other using relative path names. This provides all the building blocks you need to make web applications using files that are processed within the authenticated session of your browser. Using only client-side code with AJAX techniques, you can create rich applications that can run within a browser window or within an IFrame in a form or dashboard. 
+There is a virtual folder called `webresources` within each Common Data Service for Apps instance where you can request HTML, JS, CSS, and image files by name and access them in your browser. You can upload these files using the application or programatically add them as [WebResource Entity](../common-data-service/reference/entities/webresource.md) records. The [XrmToolBox WebResources Manager](https://www.xrmtoolbox.com/plugins/MsCrmTools.WebResourcesManager/) is a community tool which can facilitate working with these records.
+
+These records can refer to each other using relative path names. This ability to upload files and request them by name provides all the building blocks you need to make web applications using files that are processed within the authenticated session of your browser. Using only client-side code with AJAX techniques, you can create rich applications that can run within a browser window or within an IFrame in a form or dashboard. 
 
 Most commonly, you will use JavaScript web resources to add event handler functions to forms and commands.
 
