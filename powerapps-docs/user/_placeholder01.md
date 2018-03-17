@@ -4,7 +4,7 @@ description: Placeholder topic for TOC test
 services: ''
 suite: powerapps
 documentationcenter: na
-author: mgblythe
+author: AFTOwen
 manager: anneta
 editor: ''
 tags: ''
@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 02/17/2018
-ms.author: mblythe
+ms.author: anneta
 
 ---
 
