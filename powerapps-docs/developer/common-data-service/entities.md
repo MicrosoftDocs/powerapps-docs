@@ -42,13 +42,13 @@ There are several ways to edit entity metadata using designers.
 
 A solution can contain entity metadata and other customized components. Importing a managed or unmanaged solution into your common data service tenant will include those entities or extend existing entities with the new entity metadata they contain.
 
-### Use Metadata services
+### Use metadata services
 
 The web services exposed in Common Data Service include capabilities to create, read, write, and delete entity metadata. These services are most frequently used to read the metadata because that data can inform your code at runtime about how the environment has been customized.
 
 More information: [Metadata Services](use-web-services.md#metadata-services)
 
-## Entity Metadata
+## Entity metadata
 
 The data model is defined as metadata that is stored within the common data service. This data about the schema is known as *Entity Metadata*. 
 
@@ -68,4 +68,9 @@ The Entity metadata includes the following information:
 
 > [!TIP]
 > Developing an understanding of the entity metadata in the system can help you understand how the common data service works. Many of the properties also control what entities in model-driven apps can do. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the Metadata Browser which will allow you to view all the hidden entities and metadata properties that are found in the system. More information: [Dynamics 365 Customer Engagement Developer Guide: Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
+
+### See also
+
+[Common Data Service for Apps Developer Overview](overview.md)
+
 

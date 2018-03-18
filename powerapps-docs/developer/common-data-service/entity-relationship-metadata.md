@@ -1,5 +1,5 @@
 ---
-title: Entity Relationship Metadata | Microsoft Docs
+title: Entity relationship metadata | Microsoft Docs
 description: Learn about the entity relationship metadata used in the Common Data Service for Apps.
 services: ''
 suite: powerapps
@@ -17,7 +17,7 @@ ms.date: 03/12/2018
 ms.author: jdaly
 ---
 
-# Entity Relationship Metadata
+# Entity relationship metadata
 
 When you look at the solution explorer or the three relationship collections in the `EntityMetadata`, you might think that there are three types of entity relationships. Actually, there are only two, as shown in the following table.
 
@@ -32,7 +32,7 @@ More information:
 - [Dynamics 365 Customer Engagement Customization Guide: Create and edit relationships between entities](/dynamics365/customer-engagement/customize/create-edit-entity-relationships)
 - [Dynamics 365 Customer Engagement Developer Guide: Customize entity relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
-## Cascade Configuration
+## Cascade configuration
 
 When a one-to-many entity relationship exists, there are cascading behaviors that can be configured to preserve data integrity and automate business processes.
 
@@ -42,7 +42,7 @@ More information:
 - [Dynamics 365 Customer Engagement Developer Guide: Entity relationship behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)
 
 
-## Create a Hierarchy of entities
+## Create a hierarchy of entities
 
 Within a self-referential One-to-Many relationship you can set a hierarchy by setting the `IsHierarchical` property to `true`.
 
@@ -51,3 +51,7 @@ With model-driven apps, this enables an experience that enables you to view and 
 For developers, this enables new types of queries based on the hierarchy using the `Under` and `Not Under` operators.
 
 More information: [Dynamics 365 Customer Engagement Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data)
+
+### See also
+
+[Common Data Service for Apps entities](entities.md)

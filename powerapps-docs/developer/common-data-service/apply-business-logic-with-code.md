@@ -55,3 +55,6 @@ When you register the plugin to run synchronously for an event, you have options
 
 More information: [Dynamics 365 Customer Engagement Developer Guide: Write plug-ins to extend business processes](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)
 
+### See also
+
+[Common Data Service for Apps Developer Overview](overview.md)

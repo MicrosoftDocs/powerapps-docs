@@ -1,5 +1,5 @@
 ---
-title: Common Data Model Overview | Microsoft Docs
+title: Common Data Model overview | Microsoft Docs
 description: Learn how the common data model connects the Common Data Service for Apps with the Common Data Service for Analytics.
 services: ''
 suite: powerapps
@@ -17,7 +17,7 @@ ms.date: 03/14/2018
 ms.author: jdaly
 ---
 
-# Common Data Model Overview
+# Common Data Model overview
 
 The **Common Data Model** (CDM) is an open-sourced definition of standard entities that represent commonly used concepts and activities across a variety of business and application domains. The Common Data Model offers *well-defined, modular, and extensible* business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Product, as well as interactions and relationships between vendors, workers, and customers, such as activities and service level agreements. 
 

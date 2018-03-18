@@ -1,5 +1,5 @@
 ---
-title: Attribute Metadata | Microsoft Docs
+title: Attribute metadata | Microsoft Docs
 description: Learn about the attribute metadata use in the Common Data Service for Apps.
 services: ''
 suite: powerapps
@@ -16,13 +16,13 @@ ms.workload: na
 ms.date: 03/12/2018
 ms.author: jdaly
 ---
-# Attribute Metadata
+# Attribute metadata
 
 Entities include a collection of attributes that represent the data that can be included within each record. Developers need to understand the different types of attributes and how to work with them. 
 
 More information: [Dynamics 365 Customer Engagement Developer Guide: Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-entity-attributes)
 
-## Attribute Names
+## Attribute names
 
 Like entities, each attribute has a unique name defined when it is created. This name is presented in several ways:
 
@@ -46,7 +46,7 @@ Each attribute also has two properties that can display localized values. These 
 
 These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Dynamics 365 Customer Engagement Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
 
-## Attribute Types
+## Attribute types
 
 The `AttributeTypeName` property describes the type of an attribute. This property contains a value of type `AttributeTypeDisplayName` which provides a label for each the different types of attributes that exist. 
 
@@ -103,7 +103,7 @@ If you try to set a value in a create or update operation for an attribute that 
 If you try to retrieve an attribute that is not valid for read, a null value will be returned.
 
 
-## Attribute Requirement level
+## Attribute requirement level
 
 The `RequiredLevel` property is a Boolean managed property that describes if an attribute value is required.
 
@@ -125,7 +125,7 @@ Because this is a managed property, as a publisher of a managed solution you can
 More information: [Managed Properties](introduction-solutions.md#managed-properties)
 
 
-## Rollup and Calculated attributes
+## Rollup and calculated attributes
 
 Calculated and rollup attributes free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.
 
@@ -134,11 +134,11 @@ More information:
 - [Dynamics 365 Customer Engagement Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
 - [Dynamics 365 Customer Engagement Developer Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
 
-## Attribute Format
+## Attribute format
 
 The format values for attributes controls how it is displayed in model-driven apps. Developer of custom apps may use this information to create similar experiences.
 
-### Integer Formats
+### Integer formats
 
 Use the `Format` property with integer attributes to display alternate user experiences for this type.
 
@@ -149,7 +149,7 @@ Use the `Format` property with integer attributes to display alternate user expe
 |`TimeZone`|Displays a drop-down list that contains a list of time zones.|
 |`Language`|Displays a drop-down list that contains a list of languages that have been enabled for the organization. If no other languages have been enabled, the base language will be the only option. The value saved is the LCID value for the language.|
 
-### String Formats
+### String formats
 
 Use the `FormatName` property with string attributes to set values from the [StringFormatName Class](/dotnet/api/microsoft.xrm.sdk.metadata.stringformatname) to control how the string attribute is formatted.
 
@@ -164,7 +164,7 @@ Use the `FormatName` property with string attributes to set values from the [Str
 |`URL`|The form will display a link to open the URL.|
 |`VersionNumber`|For internal use only.|
 
-### Date and Time Formats
+### Date and time formats
 
 The `DateTimeBehavior` property to controls the behavior for Date and Time attributes.
 There are three options:
@@ -184,12 +184,12 @@ Use the `Format` property control how the value is to be displayed in a model-dr
 
 More information: [Dynamics 365 Customer Engagement Developer Guide: Behavior and format of the date and time attribute](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute)
 
-## AutoNumber attributes
+## Auto-number attributes
 
 You can add an auto-number attribute for any entity. Currently, you can add the attribute programmatically. There is no user interface to add this type of attribute.
 More information: [Dynamics 365 Customer Engagement Developer Guide: Create auto-number attributes](/dynamics365/customer-engagement/developer/create-auto-number-attributes)
 
-## Option Sets
+## Option sets
 
 Those attributes which display a set of options can reference a set of options defined by the attribute or they can reference a separate set of options that can be shared by more than one attribute. This is particularly useful when values in one attribute also apply to other attributes. By referencing a common set of options, the options can be maintained in one place. Those option sets that can be shared are *global* option sets. Those defined within the attribute are *local* option sets.
 
@@ -224,7 +224,7 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Query metad
 
 
 
-## Attribute Mapping
+## Attribute mapping
 
 When you create a new entity record in the context of an existing entity record, you can automatically transfer certain values from the existing entity record as default values for the new entity record. This streamlines data entry for people using model-driven apps. Application users see the mapped values and can edit them before saving the entity.
 
@@ -234,3 +234,6 @@ More information
 - [Dynamics 365 Customer Engagement Customization Guide: Map entity fields](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
 - [Dynamics 365 Customer Engagement Developer Guide Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
 
+### See also
+
+[Common Data Service for Apps entities](entities.md)

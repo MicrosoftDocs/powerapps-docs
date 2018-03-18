@@ -1,5 +1,5 @@
 ---
-title: Entity Metadata | Microsoft Docs
+title: Entity metadata | Microsoft Docs
 description: Learn about the entity metadata use in the Common Data Service for Apps.
 services: ''
 suite: powerapps
@@ -17,7 +17,7 @@ ms.date: 03/12/2018
 ms.author: jdaly
 ---
 
-# Entity Metadata
+# Entity metadata
 
 Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in the Common Data Service.
 
@@ -47,13 +47,13 @@ Each entity also has three properties that can display localized values:
 These are the localizable values that are used to refer to the entities in an app. These values can be changed at any time. To add or edit localized values see  [Dynamics 365 Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
 
 
-## Primary Key
+## Primary key
 
 The `PrimaryIdAttribute` property value is the logical name of the attribute that is the primary key for the entity.
 
 By default, all entities have a single GUID unique identifier attribute. This is usually named *&lt; entity logical name &gt;*+ `Id`.
 
-## Primary Name
+## Primary name
 
 The `PrimaryNameAttribute` property value is the logical name of the attribute that stores the string value that identifies the entity record. This is the value that will be displayed in a link to open the record in a UI.
 
@@ -62,7 +62,7 @@ The `PrimaryNameAttribute` property value is the logical name of the attribute t
 > [!NOTE]
 > Not every entity will have a primary name. Some entities are not intended to be displayed in a UI.
 
-## Entity Images
+## Entity images
 
 The `PrimaryImageAttribute` property value is the logical name of the attribute that stores the image data for the entity record. Each entity can have only one image attribute and the logical name of that attribute is always `entityimage`.
 
@@ -85,11 +85,11 @@ More information:
 > [!NOTE]
 > This is different from the icon displayed for an entity in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
 
-## Types of Entities
+## Types of entities
 
 The capabilities and behavior of entities depends on several entity properties. Most of these properties are relatively simple and have descriptive names. Three that require some additional explanation are: *Ownership*, *Activity entities*, *Activityparty entity* and *Child entities*.
 
-### Entity Ownership
+### Entity ownership
 
 Entities can be categorized by how the data within them is owned. This is an important concept related to how security is applied to entities. This information is in the `OwnershipType` property. The following table describes the different ownership types:
 
@@ -140,7 +140,7 @@ Entities where the `IsChildEntity` property is true will never have any privileg
 
 For example, `PostComment`, `PostLike`, and `PostRole` are each children of the `Post` entity.
 
-## Entity Keys
+## Entity keys
 
 Each alternate key definition describes one or more attributes in combination that will uniquely identify an entity instance. Alternate keys are typically only applied for integration with external systems. You can define alternate keys to uniquely identify a record. This is valuable if you are integrating data with a system that doesn’t support GUID unique identifier keys. You can define a single field value or combination of field values to uniquely identify an entity. Adding an alternate key will enforce a uniqueness constraint on these attributes. You will not be able to create or update another entity record to have the same values.
 
@@ -148,7 +148,7 @@ More information:
  - [Dynamics 365 Customer Engagement Customization Guide: Define alternate keys to reference Dynamics 365 records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
  - [Dynamics 365 Customer Engagement Developer Guide: Define alternate keys for an entity and Developer Guide: Synchronize Dynamics 365 data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
 
-## Entity States
+## Entity states
 
 Most entities have two properties to track the state of a record. These are `StateCode`, which is called **Status** in model-driven apps and `StatusCode`, which is called **Status Reason** in model-driven apps. 
 
@@ -179,3 +179,6 @@ More information:
 - [Dynamics 365 Customer Engagement Developer Guide: Customize entity attribute metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
 - [Dynamics 365 Customer Engagement Developer Guide: Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions).
 
+### See also
+
+[Common Data Service for Apps entities](entities.md)
