@@ -207,7 +207,7 @@
     href: ./common-data-service/data-platform-cds-newentity-pq.md
   - name: Manage fields
     href: ./common-data-service/data-platform-manage-fields.md
-  - name: Create an Option set
+  - name: Create an option set
     href: ./common-data-service/custom-picklists.md
   - name: Create a relationship
     href: ./common-data-service/data-platform-entity-lookup.md
