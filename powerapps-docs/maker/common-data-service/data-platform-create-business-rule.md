@@ -80,8 +80,8 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
     |**All Forms**|Model Driven forms|  
     |Specific form (**Account** form, for example)|Just that Model Driven form|  
 
-> [!TIP]
-> If you're building a Canvas app, you must use Entity as the scope.
+    > [!TIP]
+    > If you're building a Canvas app, you must use Entity as the scope.
   
 1. **Add conditions.** To add more conditions to your business rule:  
   

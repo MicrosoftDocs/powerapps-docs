@@ -29,7 +29,7 @@ The Common Data Service allows you to securely store and manage data which is us
 * Create workflows and leverage integration with Microsoft Flow to drive additional actions and business processes against your data.
 * Incorporate standard and custom entities into an app that you're developing as easily as you would with data in other sources.
 * Connect to your data from Microsoft Excel using the Common Data Service productivity add-ins.
-* Easily import and syncronise your data using PowerQuery.
+* Easily import and syncronise your data using Power Query.
 * Secure your data within your organization using role-based security against standard and custom entities.
 * Provide global support for your data and applications by leveraging translation of entity and field names in your users language.
 
@@ -82,7 +82,7 @@ Entities within the Common Data Service can leverage rich server-side logic and 
 There are several ways to start getting data into the Common Data Service:
 
 * Create a PowerApp or Flow to start creating data.
-* Use PowerQuery to connect to an online or on-premise data source and import it directly into the Commmon Data Service. PowerQuery also allows you to create the entities during import based off the schema of your source as well as perform transformations to your data during import. For more information, see [Add data to an entity in the Common Data Service by using Power Query](./data-platform-cds-newentity-pq.md).
+* Use Power Query to connect to an online or on-premise data source and import it directly into the Commmon Data Service. Power Query also allows you to create the entities during import based off the schema of your source as well as perform transformations to your data during import. For more information, see [Add data to an entity in the Common Data Service by using Power Query](./data-platform-cds-newentity-pq.md).
 
 ## Developer Capabilities
 

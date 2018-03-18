@@ -22,7 +22,7 @@ You can delete custom entities, but you can't delete standard entities.
 
 1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
-![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
+    ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
 2. In the list of entities, click or tap the entity to delete, and then click or tap the **Delete entity** option from the command bar.
 3. In the dialog box that appears, click or tap **Delete** to delete the entity.
