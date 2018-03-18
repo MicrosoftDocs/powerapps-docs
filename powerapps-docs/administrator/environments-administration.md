@@ -4,7 +4,7 @@ description: Administer environments in PowerApps, including creation, renaming,
 services: 'powerapps'
 suite: powerapps
 documentationcenter: na
-author: jamesol-msft
+author: manasmams
 manager: kfile
 editor: ''
 tags: ''
@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 01/11/2017
-ms.author: jamesol
+ms.author: manasma
 
 ---
 # Administer environments in PowerApps
