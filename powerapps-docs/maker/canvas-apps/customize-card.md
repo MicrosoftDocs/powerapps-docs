@@ -1,11 +1,11 @@
 ---
 title: Customize a card | Microsoft Docs
-description: Perform basic and advanced customization on a card
+description: Change the default control that appears in a card on a Details or Edit form in PowerApps
 services: ''
 suite: powerapps
 documentationcenter: ''
-author: skjerland
-manager: anneta
+author: AFTOwen
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,11 +14,11 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/30/2016
-ms.author: sharik
+ms.date: 03/18/2018
+ms.author: anneta
 
 ---
-# Customize a card in Microsoft PowerApps
+# Customize a card in PowerApps
 Perform basic customization (without unlocking a card) by, for example, changing its control. Perform advanced customization by unlocking the card and, for example, adding a control that isn't available for that card by default.
 
 For an overview, see [Understand data cards](working-with-cards.md).
@@ -26,50 +26,63 @@ For an overview, see [Understand data cards](working-with-cards.md).
 ## Prerequisites
 
 * Learn how to [add and configure controls](add-configure-controls.md).
-* You can review this topic for general concepts only. To follow it exactly (step by step), follow the steps in these topics:
+* You can review this topic for general concepts only, or you can follow it exactly (step by step) if you complete the procedures in these topics:
 
-  1. [Create an app from SharePoint](app-from-sharepoint.md).
-  2. [Customize the layout](customize-layout-sharepoint.md).
-  3. [Customize the form](customize-forms-sharepoint.md).
+  1. [Generate an app](data-platform-create-app.md).
+  2. [Customize its gallery](customize-layout-sharepoint.md).
+  3. [Customize its forms](customize-forms-sharepoint.md).
 
 ## Customize a locked card
-In this procedure, you'll replace a **[Toggle](controls/control-toggle.md)** control with a **[Radio](controls/control-radio.md)** control without unlocking the card.
+In this procedure, you'll replace a **[Text-input](controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md)** control without unlocking the card.
 
-1. In **EditScreen1**, click or tap the **Paid** card to select it.
+1. Sign in to [PowerApps](http://web.powerapps.com).
 
-    ![](./media/customize-card/select-paid-card.png)
+    ![Home page for PowerApps](./media/customize-card/sign-in.png)
 
-2. In the right-hand pane, click or tap the card selector for the **Paid** card, and then click or tap **Edit Options**.
+1. Open the app that you generated and customized, select **EditForm1**, and then open the **Data** pane by selecting **Accounts** in the right-hand pane.
 
-    ![](./media/customize-card/select-toggle-paid.png)
+1. In the list of fields, select the down arrow for **Number of Employees** to show a list of options, and then select **Edit Slider**.
+
+    ![Drop-down list of options for a number card](./media/customize-card/card-selector.png)
 
     The screen reflects your change.
 
-    ![](./media/customize-card/display-radio.png)
-   
-    For information about which types of SharePoint columns support which types of cards, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
+    ![EditForm1 with slider control](./media/customize-card/add-slider.png)
 
 ## Unlock and customize a card
-In this procedure, you'll unlock a card and then replace a **[Text input](controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md)** control.
+In this procedure, you'll unlock a card and then replace a **[Toggle](controls/control-toggle.md)** control with a **[Checkbox](controls/control-check-box.md)** control.
 
-1. In **EditScreen1**, click or tap the **Quantity** card.
+1. In **EditForm1**, show the **Send Marketing Materials** field.
 
-2. In the right-hand pane, click or tap the ellipsis icon for that card, and then click or tap **Advanced options**.
+    ![Show field for Send Marketing Materials](./media/customize-card/show-field.png)
 
-    ![Open Advanced options](./media/customize-card/advanced-options.png)
-3. At the top of the right-hand pane, click or tap the lock icon to unlock the card.
+2. With that card selected, click or tap **Advanced** near the top of the right-hand pane, and then click or tap the lock icon to unlock the card.
 
-    ![Unlock a card](./media/customize-card/unlock-card.png)
-4. In the card, delete the **Input text** control, add a **Slider** control, and name the new control **QtySlider**.
+    ![Show field for Send Marketing Materials](./media/customize-card/unlock-card.png)
 
-5. In the right-hand pane, set the **Update** property of the **Quantity** card to this formula:<br>
-   **QtySlider.Value**
+1. In the card, delete the **Toggle** control, add a **Check box** control, and name the new control **chkMktg**.
 
-   > [!NOTE]
-> If the **Update** property doesn't appear, click or tap **More options** at the bottom of the **Data** section.
+    ![Replace toggle with checkbox](./media/customize-card/add-checkbox.png)
 
+1. Select the card that you just updated.
 
-6. Click or tap the slider to select it, and then open the list of controls at the top of the right-hand pane.
+    ![Select card](./media/customize-card/select-card.png)
 
-7. Click or tap **ErrorMessage4**, and then set its **Height** property to this formula:<br>
-   **QtySlider.Y + QtySlider.Height**
+1. In the right-hand pane, ensure that the **Advanced** tab is still showing, and then click or tap **More options**.
+
+    ![More options button](./media/customize-card/more-options.png)
+
+1. Change the value of the card's **Update** property to this expression:
+<br>`chkMktg.Value`
+
+1. Change value of the **Height** property of the error message for that card to this expression:<br>
+`chkMktg.Y + chkMktg.Height`
+
+1. Change the value of the **Text** property of **chkMktg** to **Yes**.
+
+    The screen reflects your changes, and the errors are resolved.
+
+    ![Final screen with errors resolved](./media/customize-card/final-screen.png)
+
+## Next steps
+Now that you have a basic understanding of how to generate an app and customize a gallery and a form, you can [build your own app from scratch](data-platform-create-app-scratch.md).
