@@ -49,7 +49,7 @@ The Common Data Model and Common Data Service provide a rich and productive deve
 The [Common Data Service for Apps](../maker/common-data-service/data-platform-intro.md) implements the Common Data Model, permitting business application development to:
 
 - **Leverage packaged business applications** – Dynamics 365 for Marketing, Sales, Service, Talent, Finance and Operations applications, as well as third-party applications leverage and/or are built on top of the Common Data Service for Apps.
-- **Customize applications and build native extensions for your needs** - Customizers and developers distribute application solutions with a well-defined application lifecycle.<!-- TODO Find and add suitable link  -->
+- **Customize applications and build native extensions for your needs** - Customizers and developers distribute application solutions with a well-defined application lifecycle. Solutions are how applications and extensions are distributed. See [Introduction to solutions](../developer/common-data-service/introduction-solutions.md).
 - **Build no code/low code, model-driven and WYSIWYG canvas apps with PowerApps** - Use the same shared entities created/used by the packaged applications or by other third-party applications and create additional stand-alone apps. See: 
     - Build a model-driven app <!-- TODO add link to /maker/model-driven-apps/model-driven-app-overview when topic added  -->
     - [Build a canvas app](../maker/canvas-apps/getting-started.md) 
