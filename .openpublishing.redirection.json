@@ -1243,12 +1243,12 @@
         {
         "source_path": "powerapps-docs/data-platform-export-data.md",
         "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/data-platform-interactive-excel.md",
         "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/data-platform-intro.md",
@@ -1263,7 +1263,7 @@
 		        {
         "source_path": "powerapps-docs/field-groups.md",
         "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
 		        {
         "source_path": "powerapps-docs/samples-resources.md",
