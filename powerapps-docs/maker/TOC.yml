@@ -209,8 +209,6 @@
     href: ./common-data-service/data-platform-manage-fields.md
   - name: Create a relationship
     href: ./common-data-service/data-platform-entity-lookup.md
-  - name: Create a relationship
-    href: ./common-data-service/data-platform-entity-lookup.md
   - name: Create a business rule
     href: ./common-data-service/data-platform-create-business-rule.md
   - name: Delete a custom entity
