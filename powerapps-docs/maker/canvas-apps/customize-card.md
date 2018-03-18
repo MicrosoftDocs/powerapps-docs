@@ -26,7 +26,7 @@ For an overview, see [Understand data cards](working-with-cards.md).
 ## Prerequisites
 
 * Learn how to [add and configure controls](add-configure-controls.md).
-* You can review this topic for general concepts only, or you can follow it exactly (step by step) if you complete the procedures in these topics:
+* You can review this topic for general concepts only, or you can follow it step by step if you complete the procedures in these topics:
 
   1. [Generate an app](data-platform-create-app.md).
   2. [Customize its gallery](customize-layout-sharepoint.md).
@@ -75,8 +75,10 @@ In this procedure, you'll unlock a card and then replace a **[Toggle](controls/c
 1. Change the value of the card's **Update** property to this expression:
 <br>`chkMktg.Value`
 
-1. Change value of the **Height** property of the error message for that card to this expression:<br>
+1. Change value of the **Y** property of the error message for that card to this expression:<br>
 `chkMktg.Y + chkMktg.Height`
+
+    ![Select error message for new card](./media/customize-card/select-error.png)
 
 1. Change the value of the **Text** property of **chkMktg** to **Yes**.
 
@@ -85,4 +87,4 @@ In this procedure, you'll unlock a card and then replace a **[Toggle](controls/c
     ![Final screen with errors resolved](./media/customize-card/final-screen.png)
 
 ## Next steps
-Now that you have a basic understanding of how to generate an app and customize a gallery and a form, you can [build your own app from scratch](data-platform-create-app-scratch.md).
+Now that you have a basic understanding of how to generate an app and customize a gallery, a form, and a card, you can [build your own app from scratch](data-platform-create-app-scratch.md).
