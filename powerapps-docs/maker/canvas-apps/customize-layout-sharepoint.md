@@ -70,7 +70,7 @@ Before you start this tutorial, [generate an app](data-platform-create-app.md) f
 
 	![Select title-only layout](./media/customize-layout-sharepoint/show-title-options.png)
 
-1. In the list of options, click or tap **Account Name (name)** to show that data in the **Gallery** control.
+1. In the list of options, click or tap **name** to show that data in the **Gallery** control.
 
 	![Final gallery](./media/customize-layout-sharepoint/final-gallery.png)
 
