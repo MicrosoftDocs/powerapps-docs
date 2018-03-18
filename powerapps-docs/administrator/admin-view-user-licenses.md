@@ -1,6 +1,6 @@
 ---
-title: Quickstart to download a list of active users in your organization | Microsoft Docs
-description: In this quickstart, you learn how to download a list of active users in your organization
+title: Quickstart to download a list of active users in your tenant | Microsoft Docs
+description: In this quickstart, you learn how to download a list of active users in your tenant
 services: 'powerapps'
 suite: powerapps
 documentationcenter: na
@@ -18,15 +18,12 @@ ms.date: 03/21/2018
 ms.author: sharik
 
 ---
-# Quickstart: Download a list of active users in your organization
-PowerApps lets you download a list of active users in your organization, so you can see not only who's accessed PowerApps, Microsoft Flow, or both, but also the licenses assigned to those users.
+# Quickstart: Download a list of active users in your tenant
+If you're a 365 Global admin or Azure Active Directory Tenant, you can download a list of active users in your tenant, so you can see not only who's accessed PowerApps, Microsoft Flow, or both, but also the licenses assigned to those users.
 
 In this quickstart, you'll learn how to download a list of active users to a .csv file, and then view that list in Excel.
 
-## Prerequisites
-To follow this quickstart, the following items are required:
-* Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
-* PowerApps Environment Admin or Tenant Admin permissions, Office 365 Global Admin permissions, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
+To follow this quickstart, you need Office 365 Global Admin or Azure Active Directory Tenant Admin permissions.
 
 ## Sign in to the PowerApps Admin center
 Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
@@ -52,7 +49,7 @@ If a user has left the organization, the list will show **Unknown** in the **Use
 To add user licenses, open the [Office 365 admin center](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 ## Next steps
-In this quickstart, you learned how to download and view a list of active users in your organization. To learn how to download and view a list of apps created in your organization, continue to the next quickstart.
+In this quickstart, you learned how to download and view a list of active users in your tenant. To learn how to download and view a list of apps created in your environments, continue to the next quickstart.
 
 > [!div class="nextstepaction"]
-> [Download a list of apps created in your organization](admin-view-apps.md)
+> [Download a list of apps created in your environments](admin-view-apps.md)

@@ -19,17 +19,16 @@ ms.author: sharik
 
 ---
 # Manage apps created in your organization
-If you have Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions, you can manage the apps created in your organization.
+If you're an Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin, you can manage the apps created in your organization.
 
 Admins can do the following from the PowerApps Admin center:
 * Add or change the users with whom an app is shared
 * Delete apps not currently in use
 * View the data sources used by an app
-* Update the owner of an app
 
 ## Prerequisites
 * Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
-* PowerApps Environment Admin or Tenant Admin permissions, Office 365 Global Admin permissions, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
+* PowerApps Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Manage an app
 1. Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).

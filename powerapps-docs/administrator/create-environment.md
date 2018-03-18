@@ -28,7 +28,7 @@ In this quickstart, you'll learn how to create an environment and a database for
 ## Prerequisites
  To follow this quickstart, the following items are required:
  * Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
- * PowerApps Environment Admin or Tenant Admin permissions, Office 365 Global Admin permissions, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
+ * PowerApps Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Sign in to the PowerApps Admin center
 Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
@@ -49,7 +49,7 @@ Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powe
 
     ![File and Share](./media/create-environment/create-database-dialog2.png)
 
-    It may take several minutes to create the database on the Common Data Service. Once the database is created, the new environment appears in the list of environments on the **Environments** page. 
+    It may take several minutes to create the database on the Common Data Service. Once the database is created, the new environment appears in the list of environments on the **Environments** page.
 
     ![File and Share](./media/create-environment/new-environment-created.png)
 
