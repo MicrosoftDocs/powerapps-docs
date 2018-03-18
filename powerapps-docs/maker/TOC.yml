@@ -207,18 +207,14 @@
     href: ./common-data-service/data-platform-cds-newentity-pq.md
   - name: Manage fields
     href: ./common-data-service/data-platform-manage-fields.md
-  - name: Use field groups
-    href: ./common-data-service/field-groups.md
-  - name: Create custom picklists
-    href: ./common-data-service/custom-picklists.md
   - name: Create a relationship
     href: ./common-data-service/data-platform-entity-lookup.md
+  - name: Create a relationship
+    href: ./common-data-service/data-platform-entity-lookup.md
+  - name: Create a business rule
+    href: ./common-data-service/data-platform-create-business-rule.md
   - name: Delete a custom entity
     href: ./common-data-service/data-platform-delete-entity.md
-  - name: Import or export data
-    href: ./common-data-service/data-platform-export-data.md
-  - name: Manage data in Excel
-    href: ./common-data-service/data-platform-interactive-excel.md
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
   - name: For Developers
