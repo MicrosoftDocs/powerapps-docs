@@ -85,7 +85,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 	![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/form-datasource.png)
 
- 1. On the **Properties** tab of the right-hand pane, click or tap **Accounts** to open the **Data** pane, and then select the checkboxes for these fields:
+1. On the **Properties** tab of the right-hand pane, click or tap **Accounts** to open the **Data** pane, and then select the checkboxes for these fields:
 
 	- Account name
 	- Address 1: Street 1
@@ -104,7 +104,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 ## Configure icons
 1. On the **BrowseScreen**, click or tap the circular icon near the top of the screen, and set its **OnSelect** property to this formula:<br>
-`Refresh()`
+`Refresh(Accounts)`
 
 	![Refresh icon](./media/data-platform-create-app-scratch/refresh-icon.png)
 
@@ -140,10 +140,10 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 	![Open Preview](./media/data-platform-create-app-scratch/open-preview.png)
 
-1. Toggle the list between ascending and descending sort orders, and type one or more characters into the search box to filter the list.
+1. Toggle the list between ascending and descending sort orders, and filter the list by specific characters in each account name.
 
-1. Add an account, edit the account that you added, update the account but cancel your changes, and then delete the account.
+1. Add an account, edit the account that you added, start to update the account but cancel your changes, and then delete the account.
 
 ## Next steps
-[Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create
+[Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
 
