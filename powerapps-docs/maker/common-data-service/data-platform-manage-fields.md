@@ -29,7 +29,7 @@ You can create and update one or more custom fields in any entity. When you crea
 
 ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
-2. Click or tap an existing entity, or [Create a new entity](data-platform-cds-create-entity.md)
+2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
 
 3. Add a new field to your entity by clicking **Add field**.
 

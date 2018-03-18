@@ -82,7 +82,7 @@ Entities within the Common Data Service can leverage rich server-side logic and 
 There are several ways to start getting data into the Common Data Service:
 
 * Create a PowerApp or Flow to start creating data.
-* Use PowerQuery to connect to an online or on-premise data source and import it directly into the Commmon Data Service. PowerQuery also allows you to create the entities during import based off the schema of your source as well as perform transformations to your data during import. For more information, see [Add data to an entity in the Common Data Service by using Power Query](./data-platform-cds-newentity-pq).
+* Use PowerQuery to connect to an online or on-premise data source and import it directly into the Commmon Data Service. PowerQuery also allows you to create the entities during import based off the schema of your source as well as perform transformations to your data during import. For more information, see [Add data to an entity in the Common Data Service by using Power Query](./data-platform-cds-newentity-pq.md).
 
 ## Developer Capabilities
 

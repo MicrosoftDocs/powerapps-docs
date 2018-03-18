@@ -36,7 +36,7 @@ To add a lookup relation to an entity, create a relation under the **Relationshi
 
 ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
-2. Click or tap an existing entity, or [Create a new entity](data-platform-cds-create-entity.md)
+2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
 
 3. Click **Relationships**
 
@@ -60,7 +60,7 @@ To add a One-to-many relationship, create a relation under the **Relationships**
 
 ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
-2. Click or tap an existing entity, or [Create a new entity](data-platform-cds-create-entity.md)
+2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
 
 3. Click **Relationships**
 
