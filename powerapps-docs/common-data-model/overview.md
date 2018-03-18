@@ -40,7 +40,8 @@ The Common Data Model and Common Data Service provide a rich and productive deve
     
     When you import data into the Common Data Service, you can map it to standard Common Data Model entities or create and map to new entities. Out-of-the-box data integration and mapping templates simplify connecting to common data sources such as Salesforce. These mapping templates are fully customizable and extensible. The following screenshot shows importing external data and mapping it to standard entities in Power Query. 
     
-    ![Import external data and map it to standard entities in Power Query ](media/cdm-mapping-entities.png)
+    ![Import external data and map it to standard entities in Power Query ](media/cdm-mapping-entities.png)<br />
+
 - **Extensibility** – You can extend the entities without breaking data sharing with other apps.
 - **Dependability** – Because you can depend on common entities, you can build reusable components that are bound to the entities. The Common Data Model supports extensibility and versioning that protects your development investment.
 - **Entity consistency across deployments** – Your solutions can connect information from productivity platforms with data from business applications. For example, you can connect a calendar appointment or a Microsoft Outlook task with a sales opportunity. 
@@ -49,7 +50,7 @@ The [Common Data Service for Apps](../maker/common-data-service/data-platform-in
 
 - **Leverage packaged business applications** – Dynamics 365 for Marketing, Sales, Service, Talent, Finance and Operations applications, as well as third-party applications leverage and/or are built on top of the Common Data Service for Apps.
 - **Customize applications and build native extensions for your needs** - Customizers and developers distribute application solutions with a well-defined application lifecycle.<!-- TODO Find and add suitable link  -->
-- **Build no code/low code, model-driven and WYSIWYG canvas apps with PowerApps** - Use the same shared entities created/used by the packaged applications or by other third-party applications and create additional stand-alone apps. See LINKs: 
+- **Build no code/low code, model-driven and WYSIWYG canvas apps with PowerApps** - Use the same shared entities created/used by the packaged applications or by other third-party applications and create additional stand-alone apps. See: 
     - Build a model-driven app <!-- TODO add link to /maker/model-driven-apps/model-driven-app-overview when topic added  -->
     - [Build a canvas app](../maker/canvas-apps/getting-started.md) 
 - **Automate business processes with Flow** - Use a business process flow to define a set of stages and steps to achieve a desired outcome. See [Create a flow that uses the Common Data Service](/flow/common-data-model-intro)
