@@ -34,6 +34,8 @@ Admins can do the following from the PowerApps Admin center:
 1. Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
 2. In the navigation pane, click or tap **Environments**, and then click or tap the environment that contains the app that you want to manage.
 
+    If you don't see **Environments** in the navigation pane, that indicates you don't have a PowerApps Plan 2, Flow Plan 2, or PowerApps Plan 2 trial license.
+
     ![File and Share](./media/admin-manage-apps/environment.png)
 3. On the **Resources** tab, click or tap **Apps**, and then click or tap the app that you want to manage.
 
