@@ -1,5 +1,5 @@
 ---
-title: Create Option sets | Microsoft Docs
+title: Create an Option set| Microsoft Docs
 description: Create an Option set
 services: powerapps
 documentationcenter: na
