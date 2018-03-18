@@ -75,7 +75,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 1. Repeat the steps in the previous procedure and this one so that the fields in **EditForm1** match those in **DetailForm1**.
 
 ## Run the app
-1. In the left navigation bar, type or paste **Br** to filter the list,and then click or tap **BrowseScreen1** to select it.
+1. In the left navigation bar, type or paste **Br** to filter the list, and then click or tap **BrowseScreen1** to select it.
 
 2. Open Preview mode by pressing F5 (or by selecting the **Preview** icon near the upper-right corner).
 
