@@ -1,0 +1,38 @@
+- name: Administer PowerApps
+  href: index.md
+- name: Quickstarts
+  items:
+  - name: Create an environment # not in TOC previously
+    href: create-environment.md
+  - name: Create a DLP policy # not in TOC previously
+    href: create-dlp-policy.md
+  - name: View active users in your tenant
+    href: admin-view-user-licenses.md
+  - name: View apps in your environments # not in TOC previously
+    href: admin-view-apps.md
+- name: Concepts
+  items:
+  - name: Licensing overview
+    href: pricing-billing-skus.md
+  - name: Environments overview
+    href: environments-overview.md
+  - name: Introduction to data groups
+    href: introduction-to-data-groups.md
+  - name: Regions overview
+    href: regions-overview.md
+  - name: PowerApps in your organization Q&A
+    href: signup-question-and-answer.md
+- name: How-to guides
+  items:
+  - name: Purchase PowerApps # moved from original get started location
+    href: signup-for-powerapps-admin.md
+  - name: Manage DLP policies
+    href: prevent-data-loss.md
+  - name: Create a database
+    href: create-database.md
+  - name: Administer environments
+    href: environments-administration.md
+  - name: Manage apps in your org # not in TOC previously
+    href: admin-manage-apps.md
+  - name: Move an app between tenants or environments
+    href: environment-and-tenant-migration.md
