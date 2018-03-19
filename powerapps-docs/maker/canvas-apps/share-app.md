@@ -74,8 +74,6 @@ Users can also discover the app in   [powerapps.com](http://web.powerapps.com) (
 * You can share an app with your entire organization, but think carefully about whether everyone needs access to your app.
 * Be aware that any changes you make to a shared app will flow through to the people you shared it with as soon as you save the changes. This can be great if you improve the app, but can also impact others if you remove or significantly change features.
 * Before you share an app, give it a meaningful name and description, so people know what your app is about and can easily pick it out from a list. On the **File** menu in PowerApps Studio, click or tap **App settings**, and then enter a description.
-  
-  ![App Description](./media/share-app/description.png)
 
 ### App sharing and the resources the app uses
 Most apps rely on at least one of these types of resources:
