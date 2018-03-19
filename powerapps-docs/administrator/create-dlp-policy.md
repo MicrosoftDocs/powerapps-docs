@@ -26,7 +26,7 @@ In this quickstart, you'll learn how to create a DLP policy that prevents data t
 ## Prerequisites
 To follow this quickstart, the following items are required:
 * Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
-* Either Environment Admin or Tenant Admin permissions, and permissions to at least one environment. For more information, see [Environments administration in PowerApps](environments-administration.md).
+* PowerApps Environment Admin or Azure Active Directory Tenant Admin permissions, and permissions to at least one environment. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Sign in to the PowerApps Admin center
 Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
