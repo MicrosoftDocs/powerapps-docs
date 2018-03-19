@@ -33,4 +33,4 @@ The documentation in this section provides answers to these questions and guides
 ## Next steps
 * Learn how to [create a data loss protection (DLP) policy](create-dlp-policy.md).
 * Learn how to [download a list of active users in your tenant](admin-view-user-licenses.md).
-* Learn how to [download a list of apps created in your environments](admin-view-apps.md).
+* Learn about [environments](environments-overview.md).
