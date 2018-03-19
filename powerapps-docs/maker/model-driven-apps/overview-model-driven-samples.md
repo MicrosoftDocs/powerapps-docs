@@ -23,14 +23,14 @@ In [powerapps.com](https://powerapps.com), use a sample app to explore design po
 
 Be sure to check out documentation specific to each sample app for more details. 
 
-![Fundraiser Sample App](media/overview-model-driven-samples/fundraiser-app.PNG)
+![Fundraiser Sample App](media/overview-model-driven-samples/fundraiser-app1.png)
 
 
 ## Get sample apps
 
 In order to play or edit model-driven sample apps, the apps must first be provisioned in a Common Data Service database. First create a trial environment and database and be sure to check **Include sample apps and data**.
 
-![Create database](media/overview-model-driven-samples/create-database.PNG)
+![Create database](media/overview-model-driven-samples/create-database1.png)
 
 
 > [!IMPORTANT]
