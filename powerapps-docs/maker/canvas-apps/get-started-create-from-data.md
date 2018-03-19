@@ -54,6 +54,8 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. Toggle the sort order by clicking or tapping the sort icon near the upper-right corner.
 
+	![Sort icon](./media/get-started-create-from-data/sort-icon.png)
+
 1. Filter the list by typing or pasting one or more characters in the search box.
 
 1. Click or tap the plus icon to add a record, add whatever data you want, and then click or tap the checkmark icon to save your changes.
@@ -65,7 +67,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 1. Click or tap the next arrow for the record that you added, and then click or tap the trash icon to delete that record.
 
 ## Next steps
-Customize the default browse screen to better suit your needs.
+Customize the default browse screen to better suit your needs. For example, you can sort and filter the list by product name, not category.
 
 > [!div class="nextstepaction"]
 > [Customize a default browse screen](customize-layout-sharepoint.md).
