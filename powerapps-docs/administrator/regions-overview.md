@@ -14,8 +14,8 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 05/04/2017
-ms.author: sharik
+ms.date: 03/21/2018
+ms.author: manasma
 
 ---
 # Regions overview in PowerApps
@@ -38,6 +38,7 @@ If you're an administrator, you can determine the region of each environment in 
 * Australia
 * India
 * Japan
+* United Kingdom
 
 ## What features are specific to a given region?
 Environments can be created in different regions, and are bound to that geographic location. When you create an app in an environment, that app is deployed in datacenters in that geographic location. This applies to any items you create in that environment, including  databases in the Common Data Service, apps, connections, gateways, and custom connectors.
@@ -45,5 +46,9 @@ Environments can be created in different regions, and are bound to that geograph
 For optimal performance, if your users are in Europe, create and use the environment in the Europe region. If your users are in the United States, create and use the environment in the U.S.
 
 > [!NOTE]
+> Currently, you can only create a database in a Production or Trial environment, which is in the same region as your Azure AD or Office 365 tenant's home region. We are working on enabling creation of database in environments created in a different region than your tenant's home location. Also, you currently cannot create a database in the default environment and an individual environment (created with PowerApps Community Plan).
+
+> [!NOTE]
 > On-premises data gateways aren't available in the India region or in custom environments. You must create gateways in the default environment.
+
 

@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 11/01/2016
+ms.date: 03/21/2018
 ms.author: manasma
 
 ---
@@ -107,7 +107,7 @@ Each user can create upto two Trial environments. PowerApps P2 can as well creat
 ### Where can environments be created?
 You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, they you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can be participate in as a member of the Environment Admin or Environment Maker role. For more information, see [Environment Administration](environments-administration.md).
 
-![](./media/environments-overview/CreateEnvironmentDialog-New.png)
+![](./media/environments-overview/CreateEnvironmnetDialog-New.png)
 
 ## What will change for PowerApps Preview users?
 Any user that has participated in the PowerApps preview will see some changes in their experience with the introduction of environments.  The following table lists what U.S. users and non-U.S. users can expect:
