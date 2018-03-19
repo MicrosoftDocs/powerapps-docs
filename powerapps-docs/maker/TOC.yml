@@ -192,10 +192,8 @@
     - name: Upcoming and recent webinars
       href: ./canvas-apps/webinars-listing.md
 - name: Model-driven apps
-  href: ./model-driven-apps/_placeholder01.md
+  href: ./model-driven-apps/model-driven-app-overview.md
   items:
-  - name: Overview of building a model-driven app
-    href: ./model-driven-apps/model-driven-app-overview.md
   - name: Share a model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
   - name: Run a model-driven app on a mobile device
