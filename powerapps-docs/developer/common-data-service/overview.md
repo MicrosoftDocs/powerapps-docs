@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/11/2018
+ms.date: 03/19/2018
 ms.author: jdaly
 ---
 # Common Data Service for Apps Developer Overview
@@ -23,7 +23,7 @@ PowerApps offers users, businesses, partners, independent software vendors (ISVs
 ## Get Started
 If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience to customize and extend the Common Data Service for Apps.
 
-If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working the Common Data Service for apps.
+If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working with the Common Data Service for apps.
 
 > [!NOTE]
 > - Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps Developer Overview](../model-driven-apps/overview.md). Content in this section will refer only to extensions developers can do at the service level. 
@@ -36,7 +36,7 @@ Developers will use the following tools and resources when working with solution
 
 ### Tools available for download from NuGet
 
-The following tools are distributed in NuGet packages. The [Developer Guide: Download tools from NuGet](/dynamics365/customer-engagement/developer/download-tools-nuget) includes a PowerShell script you can use to download and extract the latest versions of these tools.
+The following tools are distributed in NuGet packages. The [Developer Guide: Download tools from NuGet](/dynamics365/customer-engagement/developer/download-tools-nuget) topic includes a PowerShell script you can use to download and extract the latest versions of these tools.
 
 |Tool  |Description  |
 |---------|---------|
@@ -61,7 +61,7 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Use the Dyn
 |Assembly  |Namespaces  |
 |---------|---------|
 |Microsoft.Crm.Sdk.Proxy.dll|[Microsoft.Crm.Sdk](/dotnet/api/microsoft.crm.sdk)<br />[Microsoft.Crm.Sdk.Messages](/dotnet/api/microsoft.crm.sdk.messages)|
-|Microsoft.Xrm.Sdk.dll|[Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/)|[Microsoft.Xrm.Sdk](/dotnet/api/microsoft.xrm.sdk)<br />[Microsoft.Xrm.Sdk.Client](/dotnet/api/microsoft.xrm.sdk.client)<br />[Microsoft.Xrm.Sdk.Discovery](/dotnet/api/microsoft.xrm.sdk.discovery)<br />[Microsoft.Xrm.Sdk.Messages](/dotnet/api/microsoft.xrm.sdk.messages)<br />[Microsoft.Xrm.Sdk.Metadata](/dotnet/api/microsoft.xrm.sdk.metadata)<br />[Microsoft.Xrm.Sdk.Metadata.Query](/dotnet/api/microsoft.xrm.sdk.metadata.query)<br />[Microsoft.Xrm.Sdk.Organization](/dotnet/api/microsoft.xrm.sdk.organization)<br />[Microsoft.Xrm.Sdk.Query](/dotnet/api/microsoft.xrm.sdk.query)<br />[Microsoft.Xrm.Sdk.WebServiceClient](/dotnet/api/microsoft.xrm.sdk.webserviceclient)|
+|Microsoft.Xrm.Sdk.dll|[Microsoft.Xrm.Sdk](/dotnet/api/microsoft.xrm.sdk)<br />[Microsoft.Xrm.Sdk.Client](/dotnet/api/microsoft.xrm.sdk.client)<br />[Microsoft.Xrm.Sdk.Discovery](/dotnet/api/microsoft.xrm.sdk.discovery)<br />[Microsoft.Xrm.Sdk.Messages](/dotnet/api/microsoft.xrm.sdk.messages)<br />[Microsoft.Xrm.Sdk.Metadata](/dotnet/api/microsoft.xrm.sdk.metadata)<br />[Microsoft.Xrm.Sdk.Metadata.Query](/dotnet/api/microsoft.xrm.sdk.metadata.query)<br />[Microsoft.Xrm.Sdk.Organization](/dotnet/api/microsoft.xrm.sdk.organization)<br />[Microsoft.Xrm.Sdk.Query](/dotnet/api/microsoft.xrm.sdk.query)<br />[Microsoft.Xrm.Sdk.WebServiceClient](/dotnet/api/microsoft.xrm.sdk.webserviceclient)|
 
 #### Create Process Designer (Workflow) extensions
 
