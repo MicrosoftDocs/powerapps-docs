@@ -49,13 +49,8 @@ Entities within the Common Data Service, both standard and custom, allow a secur
 
 When you develop an app, you can use standard entities, custom entities, or both. If a standard entity can serve a particular purpose in your app, you should use it rather than developing a custom entity that does the same thing. If a standard entity would serve a purpose with a few changes, you can add fields to suit your needs.
 
-<<<<<<< HEAD
 * The Common Data Service provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts for an organization, such as Contacts, Accounts, and Products. For a full list of entities, see [Standard entities](data-platform-intro.md#standard-entities).
 * You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](create-custom-entity.md).
-=======
-* The Common Data Model is the definition of standard entities available within the Common Data Service which can be leverage within your apps. For more inforamtion, see [Common Data Model](../../common-data-model/overview.md)
-* You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](data-platform-create-entity.md).
->>>>>>> e87a646a2f0c542abd718314909703efd9f4a428
 
 > [!NOTE]
 > If possible, use standard entities (with custom fields added, if required). This will ensure that you can benefit from new features or apps that leverage these entities in the future.

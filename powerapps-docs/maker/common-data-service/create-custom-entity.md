@@ -45,7 +45,7 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
     ![New entity](media/create-custom-entity/create-new-entity.png)
 2. In the right pane, enter the following values, and then select **Next**.
   - **Display name**: *Pet* 
-  - **Description**: *Pets serviced in the grooming facility.*
+  - **Description**: *Custom entity to track pet services*
 3. Select **Save Entity**.
 
 ## Add and customize fields
