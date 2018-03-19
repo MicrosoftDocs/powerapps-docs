@@ -4,8 +4,8 @@ description: Share your app by giving other users permission to run or modify it
 services: ''
 suite: powerapps
 documentationcenter: na
-author: linhtranms
-manager: anneta
+author: AFTOwen
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,51 +14,45 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/28/2016
-ms.author: litran
+ms.date: 03/18/2018
+ms.author: anneta
 
 ---
 # Share an app in PowerApps
 It’s great to build apps that address your own business needs, but the real magic of PowerApps comes from sharing those apps with others. In this topic, you will learn how to share apps with specific users or security groups, or you can share it with your entire organization.
 
-## Open the share app screen
-To share an app, you must open powerapps.com. We no longer support sharing apps in PowerApps Studio or PowerApps Mobile.
+## Specify an app
+1. Sign in to PowerApps, and then click or tap **Apps** near the left edge.
 
-**From PowerApps Studio**
+    ![Show list of apps](./media/share-app/file-apps.png)
 
-* Option 1 - On the **File** menu, click or tap **Share**.
-  
-    ![File and Share](./media/share-app/studio-share.png)
-* Option 2 - On the **File** menu, click or tap **Open**, and then click or tap the share icon for an app.
-  
-    ![Ellipsis and Share](./media/share-app/studio-share-icon.png)
+1. Click or tap the ellipsis (...) for the app that you want to share, and then click or tap **Share**.
 
-**From [powerapps.com](http://web.powerapps.com)**
-
-* In the left navigation bar, click or tap **Apps**, click or tap the ellipsis (...), and then click or tap **Share**.
-  
-   ![Ellipsis on portal](./media/share-app/portal-share.png)
+    ![Open share screen](./media/share-app/ellipsis-share.png)
 
 ## Share an app
-From here, you can share an app by following these steps.
+1. Specify with which users or security groups in Azure Active Directory you want to share the app and whether you want to send mail to those people notifying them.
 
-1. Specify the names of one or more users or security groups in Azure Active Directory, or specify that you want to share the app with your entire organization. Note you can only share with **User** permission when sharing to your entire organization.
-   
-    ![Specify users in powerapps.com](./media/share-app/portal-users.png)
-2. Specify the level of permissions:
-   
-   * **User**: Users or groups can run the app but not share it.
-   * **Contributor**: Users or groups can run the app, customize it, and share the customized version further to other users.
-     
-       ![Share app portal](./media/share-app/portal-permissions.png)
-3. Click or tap **Save**.
+    You can also share the app with your entire organization so that they can run the app, but they won't be able to modify or share it.
+
+    ![Specify users](./media/share-app/share-list.png)
+
+1. Specify the level of permissions, and then click or tap **Save**.
+
+    * **Can use**: Users or groups can run the app but not share it.
+    * **Can edit**: Users or groups can run the app, customize it, and share the customized version further to other users.
+
+        ![Specify permissions](./media/share-app/edit-use.png)
 
 To change permissions for a user or a group, repeat step 1 of this procedure, and then specify a different option in the list of permissions for that user or group. To remove all permissions for a user or group, click or tap the **x** icon for that user or group.
 
 ### Send email notification
-When you share an app, you can select whether or not to notify users or a security group via email. If you choose this option, an email will be sent to notify the user or users or security groups. The email contains a link with which they can access the app. If appropriate, users are prompted to sign up for and install PowerApps.
+When you share an app, you can select whether or not to notify users or a security group via email. If you choose this option, an email will be sent to notify the user or users or security groups. The email contains a link with which they can access the app. If appropriate, users are prompted to sign up for PowerApps.
 
-Please note that different email templates are sent depending on the permission you decide to share the app with. When you share the app with **User** permission, the email contains the link to run the app. When you share the app with **Contributor** permission, the email contains the link to edit the app in PowerApps Studio or to run the app.
+The notification contains a different kind of link based on which permission you assign:
+
+- When you share the app with **Can use** permission, the email contains the link to run the app.
+- When you share the app with **Can edit** permission, the email contains the link to run or edit the app.
 
 ### How do my users see the app I shared?
 After you share an app with one or more users or security groups, how they can see the app depends on the permission you shared the app with.
