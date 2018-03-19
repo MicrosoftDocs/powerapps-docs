@@ -63,9 +63,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 1.  Click **New**.  
   
      The Business Rule designer window opens with a single condition already created for you. Every rule starts with a condition. The business rule takes one or more actions based on that condition.  
-  
 
-  
     > [!TIP]
     > If you want to modify an existing business rule, you must deactivate it before you can modify it.  
   
