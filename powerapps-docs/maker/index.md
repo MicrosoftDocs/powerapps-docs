@@ -42,7 +42,7 @@ Creating a canvas app is easy; With PowerApps, you can find or create your app i
 - [From a sample](canvas-apps/open-and-run-a-sample-app.md)
 - [From a Common Data Service source](canvas-apps/data-platform-create-app.md)
 - [From a blank canvas](canvas-apps/data-platform-create-app-scratch.md)
-- [Apps via AppSource](../user/app-source.md)
+- [Via AppSource](../user/app-source.md)
 
 ## Model-driven apps
 When you create a model-driven app, you can use all of the power of the Common Data Service to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the PowerApps site.
