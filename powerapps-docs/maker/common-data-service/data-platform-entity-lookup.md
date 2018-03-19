@@ -1,6 +1,6 @@
 ---
 title: Entity relationships via lookup field | Microsoft Docs
-description: Build a relationship between entities by using a lookup field.
+description: Create a relationship between entities by using a lookup field.
 services: powerapps
 documentationcenter: na
 author: clwesene
@@ -17,7 +17,7 @@ ms.date: 3/17/2018
 ms.author: clwesene
 
 ---
-# Build a relationship between entities
+# Create a relationships
 Data in one entity often relates to data in another entity. For example, you might have a **Teachers** entity and a **Class** entity, and the **Class** entity might have a lookup relation to the **Teachers** entity to show which teacher teaches the class. You can use a lookup field to show data from the **Teachers** entity. This is commonly referred to as a lookup field.
 
 ## Define a relationship
@@ -40,7 +40,7 @@ To add a lookup relation to an entity, create a relation under the **Relationshi
 
 3. Click **Relationships**
 
-4. Click **Add relationship**, this will open a new panel for you to choose the entity you want to create a relationship to. Select the entity from the **Related Entity** drop down.
+4. Click **Add relationship**, this will open a new panel for you to choose the entity you want to create a relationship to. Select the entity from the **Related entity** drop down.
 
     ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-1.png "Many to One Relationship")
 
@@ -64,7 +64,7 @@ To add a One-to-many relationship, create a relation under the **Relationships**
 
 3. Click **Relationships**
 
-4. Click  the down arrow to the right of **Add relationship**, this will give you the choice of both types of relationships. Click **One-to-many** this will open a new panel for you to choose the entity you want to create a relationship to. Select the entity from the **Related Entity** drop down.
+4. Click  the down arrow to the right of **Add relationship**, this will give you the choice of both types of relationships. Click **One-to-many** this will open a new panel for you to choose the entity you want to create a relationship to. Select the entity from the **Related entity** drop down.
 
     ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-1.png "One to Many Relationship")
 

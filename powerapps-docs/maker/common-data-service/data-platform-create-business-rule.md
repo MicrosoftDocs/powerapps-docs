@@ -18,7 +18,7 @@ ms.author: clwesene
 
 ---
 
-# Create a new Business Rule
+# Create a new business rule
 
 
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins.  Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. 
@@ -41,7 +41,7 @@ You can create business rules and recommendations to apply logic and validations
   
 ## Differences between Canvas and Model driven apps
 
-Model Driven apps can use all actions available on business rules, however not all business rule actions are available on Canvas apps at this time. The following actions are **not** available on Canvas apps :
+Model driven apps can use all actions available on business rules, however not all business rule actions are available on Canvas apps at this time. The following actions are **not** available on Canvas apps :
 
 -   Show or hide fields  
   
@@ -67,7 +67,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 
   
     > [!TIP]
-    >  If you want to modify an existing business rule, you must deactivate it before you can modify it.  
+    > If you want to modify an existing business rule, you must deactivate it before you can modify it.  
   
 1.  Add a description, if you want, in the description box in the upper-left corner of the window.  
   

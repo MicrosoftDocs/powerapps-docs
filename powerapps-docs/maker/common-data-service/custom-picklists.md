@@ -19,9 +19,9 @@ ms.author: clwesene
 ---
 # Create an Option set
 
-Option sets allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as Picklists or Choice fields in other applications. Similar to entities, there are both standard Option sets, and the ability create custom option sets to use within you app.
+Option sets allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice fields in other applications. Similar to entities, there are both standard Option sets, and the ability create custom option sets to use within you app.
 
-Option sets can be created in two ways, either from the Option set list within the portal or directly within an entity while creating a field. For more information on how to create an entity, see [Create an Entity](data-platform-create-entity.md).
+Option sets can be created in two ways, either from the Option set list within the portal or directly within an entity while creating a field. For more information on how to create an entity, see [Create an entity](data-platform-create-entity.md).
 
 ## Creating an Option set while adding a field.
 
@@ -33,20 +33,20 @@ Option sets can be created in two ways, either from the Option set list within t
 
 3. Add a new field to your entity by clicking **Add field**.
 
-4. In the New Field panel, enter the **Display name** for your field, **Name** will be automatically populated and is used as the unique name for your field. The **Displayname** is used when presenting this field to your users, the **Name** is used when building your app, in expressions and formulas.
+4. In the new field panel, enter the **Display name** for your field, **Name** will be automatically populated and is used as the unique name for your field. The **Display name** is used when presenting this field to your users, the **Name** is used when building your app, in expressions and formulas.
 
     ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
 
-5. Click the **Data Type** drop down and select **Option Set**, or **Multi Select Option Set**.
+5. Click the **Data type** drop down and select **Option set**, or **Multi select Option set**.
 
-6. Click the **Option Set** drop down and select **New Option Set**
+6. Click the **Option set** drop down and select **New Option set**
 
     > [!NOTE]
     > If an existing option set could be used for your entity, you can select it from this list without creating a new one.
 
     ![Option Set List](./media/data-platform-cds-newoptionset/fieldpanel-1.png "Option Set list")
 
-7. A new panel will open to create the Option Set, the **Display name** and **Name** will default from the name of the field but can be changed if needed. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
+7. A new panel will open to create the Option set, the **Display name** and **Name** will default from the name of the field but can be changed if needed. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
 
     ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "New Option Set")
 

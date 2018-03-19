@@ -44,7 +44,7 @@ Entities within the Common Data Service, both standard and custom, allow a secur
 * **Easy to share** - You can easily share data with your colleagues because PowerApps manages the permissions.
 * **Easy to secure** - Data is securely stored so that users can see it only if you grant them access. Role-based security allows you to control access to entities for different users within your organization.
 * **Rich metadata** - Data types and relationships are leveraged directly within PowerApps. For example, defining a field type URL will present your data as a hyperlink within your app.
-* **Logic and validation** - Define calculated fields, Business rules, workflows and Business Process flows to ensure the data quality and drive business processes.
+* **Logic and validation** - Define calculated fields, business rules, workflows and business process flows to ensure the data quality and drive business processes.
 * **Productivity tools** - Entities are available within the add-ins for Microsoft Excel to increase productivity, and ensure your data is accessible.
 
 When you develop an app, you can use standard entities, custom entities, or both. If a standard entity can serve a particular purpose in your app, you should use it rather than developing a custom entity that does the same thing. If a standard entity would serve a purpose with a few changes, you can add fields to suit your needs.
