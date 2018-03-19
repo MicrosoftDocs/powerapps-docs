@@ -59,12 +59,8 @@ When you develop an app, you can use standard entities, custom entities, or both
 
 When using a standard entity, or creating a custom entity there are multiple elements available within each one and different actions that can be performed. Depending on how simple or advanced your business scenario is will determine which features you will need to use. To see the entities available within your environment, sign in to [PowerApps](https://web.powerapps.com), and click Data and then Entities from the left  menu.
 
-<<<<<<< HEAD
 ### System fields
 All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. These are the most important system fields:
-=======
-![Entity Details](./media/data-platform-cds-intro/entitylist.png "Entity Details")
->>>>>>> e87a646a2f0c542abd718314909703efd9f4a428
 
 * Each **field** allows you to define a piece of information to be collected, and the data type or format you would like to display it. Fields are similar to columns in databases or Excel.
 * Alternate **keys** allow effiecient and accurate search and interaction with records in the entity when not using the standard unique identifier. This is particular important when using a Business Key or intergrating with an external system.
