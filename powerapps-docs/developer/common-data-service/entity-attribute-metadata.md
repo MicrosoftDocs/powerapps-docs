@@ -1,5 +1,5 @@
 ---
-title: Attribute Metadata | Microsoft Docs
+title: Attribute metadata | Microsoft Docs
 description: Learn about the attribute metadata use in the Common Data Service for Apps.
 services: ''
 suite: powerapps
@@ -16,13 +16,13 @@ ms.workload: na
 ms.date: 03/12/2018
 ms.author: jdaly
 ---
-# Attribute Metadata
+# Attribute metadata
 
 Entities include a collection of attributes that represent the data that can be included within each record. Developers need to understand the different types of attributes and how to work with them. 
 
 More information: [Dynamics 365 Customer Engagement Developer Guide: Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-entity-attributes)
 
-## Attribute Names
+## Attribute names
 
 Like entities, each attribute has a unique name defined when it is created. This name is presented in several ways:
 
@@ -46,7 +46,7 @@ Each attribute also has two properties that can display localized values. These 
 
 These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Dynamics 365 Customer Engagement Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
 
-## Attribute Types
+## Attribute types
 
 The `AttributeTypeName` property describes the type of an attribute. This property contains a value of type `AttributeTypeDisplayName` which provides a label for each the different types of attributes that exist. 
 
@@ -71,7 +71,7 @@ In the following table:
 |Collection|`CalendarRulesType`|No|Contains a collection of `CalendarRules` entity records.<br />There are no attributes that use this type. When generating a proxy, the code generation tool will create two simulated attributes that are not present in the metadata. These attributes represent a view of the calendar rules records associated in a one-to-many relationship to the entity record.|
 |Collection|`PartyListType`|No|Contains a collection of `ActivityParty` entity records.<br />More information: [ActivityParty entity](#activityparty-entity)|
 |Date and Time|`DateTimeType`<br />[DateTimeAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.datetimeattributemetadata)|Yes<br />**Date and Time**|Contains a date and time value.<br />All date and time attributes support values as early as 1/1/1753 12:00 AM.|
-|Image|`ImageType`<br />[ImageAttributeMetadata]()|Yes<br />**Image**|Contains data to support retrieving image data for an entity record. There are three additional attributes that support working with this data.<br />More information: [Dynamics 365 Customer Engagement Developer Guide: Image attributes](/dynamics365/customer-engagement/developer/image-attributes)|
+|Image|`ImageType`<br />[ImageAttributeMetadata]()|Yes<br />**Image**|Contains data to support retrieving image data for an entity record.<br />More information: [Entity Images](entity-metadata.md#entity-images)|
 |Managed Property|`ManagedPropertyType`<br />[ManagedPropertyAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata)|No|Contains data that describe whether the solution component stored in the entity record can be customized when included in a managed solution.<br />More information: [Managed Properties](introduction-solutions.md#managed-properties)|
 |Quantity|`BigIntType`<br />[BigIntAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.bigintattributemetadata)|No|Contains a `BigInt` value. For internal use only.|
 |Quantity|`DecimalType`<br />[DecimalAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.decimalattributemetadata)|Yes<br />**Decimal Number**|Contains a `Decimal` value. The `Precision` property sets the level of precision.|
@@ -87,21 +87,23 @@ In the following table:
 |Virtual|`VirtualType`|No|These attributes cannot be used in code and can generally be ignored.|
 
 
-## Supported operations for attributes
+## Supported operations and form usage for attributes
 
-Each attribute includes boolean properties that describe the kinds of operations it can participate in and how it is intended to be used in a form.
+Each attribute includes boolean properties that describe the kinds of operations it can participate in and how it can be in a form.
 
 |Property|Description|
 |--|--|
-|`IsRequiredForForm`|The attribute must be included as a field in a form.|
-|`IsValidForCreate`|The attribute value can be set in a create operation.|
-|`IsValidForForm`|The attribute can be included as a field in a form.|
-|`IsValidForRead`|The attribute value can be retrieved.|
-|`IsValidForUpdate`|The attribute value can be set in an update operation.|
+|`IsRequiredForForm`|Whether the attribute must be included as a field in a form.|
+|`IsValidForCreate`|Whether the attribute value can be set in a create operation.|
+|`IsValidForForm`|Whether the attribute can be included as a field in a form.|
+|`IsValidForRead`|Whether the attribute value can be retrieved.|
+|`IsValidForUpdate`|Whether the attribute value can be set in an update operation.|
 
-If you set a value in an update operation for an attribute that is not valid for update, the value will be ignored.
+If you try to set a value in a create or update operation for an attribute that is not valid for that operation, the value will be ignored.
+If you try to retrieve an attribute that is not valid for read, a null value will be returned.
 
-## Attribute Requirement level
+
+## Attribute requirement level
 
 The `RequiredLevel` property is a Boolean managed property that describes if an attribute value is required.
 
@@ -114,7 +116,7 @@ This property can have the following values set:
 |`ApplicationRequired`|2|**Business Required**|The attribute is required by the business to have a value.|
 |`Recommended`|3|**Business Recommended**|It is recommended that the attribute has a value.|
 
-The Common Data Service only enforces the `SystemRequired` option for system entities. Custom attributes cannot be set to use the `SystemRequired` option. 
+The Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. 
 
 Model-driven apps will enforce the `ApplicationRequired` option and use a different presentation for the `Recommended` option. Creators of custom clients may use this information to require similar validation or presentation options.
 
@@ -123,17 +125,20 @@ Because this is a managed property, as a publisher of a managed solution you can
 More information: [Managed Properties](introduction-solutions.md#managed-properties)
 
 
-## Rollup and Calculated attributes
+## Rollup and calculated attributes
 
 Calculated and rollup attributes free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
+More information: 
+- [Dynamics 365 Customer Engagement Customization Guide: Define rollup fields that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
+- [Dynamics 365 Customer Engagement Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
+- [Dynamics 365 Customer Engagement Developer Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
 
-## Attribute Format
+## Attribute format
 
 The format values for attributes controls how it is displayed in model-driven apps. Developer of custom apps may use this information to create similar experiences.
 
-### Integer Formats
+### Integer formats
 
 Use the `Format` property with integer attributes to display alternate user experiences for this type.
 
@@ -144,7 +149,7 @@ Use the `Format` property with integer attributes to display alternate user expe
 |`TimeZone`|Displays a drop-down list that contains a list of time zones.|
 |`Language`|Displays a drop-down list that contains a list of languages that have been enabled for the organization. If no other languages have been enabled, the base language will be the only option. The value saved is the LCID value for the language.|
 
-### String Formats
+### String formats
 
 Use the `FormatName` property with string attributes to set values from the [StringFormatName Class](/dotnet/api/microsoft.xrm.sdk.metadata.stringformatname) to control how the string attribute is formatted.
 
@@ -159,7 +164,7 @@ Use the `FormatName` property with string attributes to set values from the [Str
 |`URL`|The form will display a link to open the URL.|
 |`VersionNumber`|For internal use only.|
 
-### Date and Time Formats
+### Date and time formats
 
 The `DateTimeBehavior` property to controls the behavior for Date and Time attributes.
 There are three options:
@@ -179,22 +184,47 @@ Use the `Format` property control how the value is to be displayed in a model-dr
 
 More information: [Dynamics 365 Customer Engagement Developer Guide: Behavior and format of the date and time attribute](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute)
 
-## AutoNumber attributes
+## Auto-number attributes
 
 You can add an auto-number attribute for any entity. Currently, you can add the attribute programmatically. There is no user interface to add this type of attribute.
 More information: [Dynamics 365 Customer Engagement Developer Guide: Create auto-number attributes](/dynamics365/customer-engagement/developer/create-auto-number-attributes)
 
-## Option Sets
+## Option sets
 
 Those attributes which display a set of options can reference a set of options defined by the attribute or they can reference a separate set of options that can be shared by more than one attribute. This is particularly useful when values in one attribute also apply to other attributes. By referencing a common set of options, the options can be maintained in one place. Those option sets that can be shared are *global* option sets. Those defined within the attribute are *local* option sets.
 
-Each of these attribute inherit from [EnumAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata) and include an [OptionSet Property](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata.optionset). This property contains the [OptionSetMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata) that includes the options within the [Options property](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata.options). 
+### Retrieve options data
+The organization service provides request classes you can use to retrieve the options used by an attribute.
 
-Retrieving available options with the Web API is a little different than using the organization service. More information: [Dynamics 365 Customer Engagement Developer Guide: Query metadata using the Web API >Querying EntityMetadata attributes](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
+#### Use the organization service to retrieve options
 
-More information: [Dynamics 365 Customer Engagement Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+Each of the attributes with options inherit from [EnumAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata) and include an [OptionSet Property](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata.optionset). This property contains the [OptionSetMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata) that includes the options within the [Options property](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata.options). 
 
-## Attribute Mapping
+With the organization service you can use the following messages to retrieve information about optionsets:
+|Request Class|Description|
+|--|--|
+|[RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest) |Retrieves data about all *global* optionsets|
+|[RetrieveAttributeRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveattributerequest) |Retrieves data about an attribute including any *local* optionsets|
+|[RetrieveMetadataChangesRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievemetadatachangesrequest) |Retrieves metadata based on a query that can include *local* optionsets<br />More information: [Retrieve and detect changes to metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata)|
+|[RetrieveOptionSetRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrieveoptionsetrequest) |Retrieves data about a *global* option set.|
+
+More information: 
+- [Sample: Dump attribute picklist metadata to a file](/dynamics365/customer-engagement/developer/org-service/sample-dump-attribute-picklist-metadata-file)
+- [Dynamics 365 Customer Engagement Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+
+#### Use the Web API to retrieve options
+
+The Web API provides a RESTful style for querying option values. You can retreive local or global options by retrieving the attributes within an entity. The following example returns the [OptionSetMetadata](/dynamics365/customer-engagement/web-api/optionsetmetadata) for the options included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
+
+`GET <organization url>/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='accountcategorycode')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet`
+
+With the Web API you can also use the [RetrieveMetadataChanges Function](/dynamics365/customer-engagement/web-api/retrievemetadatachanges).
+
+More information: [Dynamics 365 Customer Engagement Developer Guide: Query metadata using the Web API > Querying EntityMetadata attributes](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
+
+
+
+## Attribute mapping
 
 When you create a new entity record in the context of an existing entity record, you can automatically transfer certain values from the existing entity record as default values for the new entity record. This streamlines data entry for people using model-driven apps. Application users see the mapped values and can edit them before saving the entity.
 
@@ -204,3 +234,6 @@ More information
 - [Dynamics 365 Customer Engagement Customization Guide: Map entity fields](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
 - [Dynamics 365 Customer Engagement Developer Guide Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
 
+### See also
+
+[Common Data Service for Apps entities](entities.md)

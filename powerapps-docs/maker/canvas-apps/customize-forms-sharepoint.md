@@ -4,8 +4,8 @@ description: Specify which data to show, in which order to show them, and in whi
 services: ''
 suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: AFTOwen
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,58 +14,70 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/16/2016
-ms.author: sharik
+ms.date: 03/17/2018
+ms.author: anneta
 
 ---
 # Customize forms in PowerApps
-Customize a **Display form** control and an **Edit form** control so that they show the data that matters most, in the most intuitive order, and in the controls that help users easily understand and update the data.
+Customize a **Display form** control and an **Edit form** control so that they show the data that matters most and in the most intuitive order to help users easily understand and update the data.
 
-Each form comprises one or more cards, each of which shows data from a particular column in the data source. By following the steps in this topic, you can specify which cards appear in a form, move cards up and down within a form, and configure how data from each column appears within a card.
+Each form comprises one or more cards, each of which shows data from a particular column in the data source. By following the steps in this topic, you can specify which cards appear in a form and move cards up and down within a form.
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
 ## Prerequisites
-You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
-
-1. [Create a connection](connect-to-sharepoint.md) from PowerApps to SharePoint.
-
-2. Create the SharePoint list that [Customize a layout](customize-layout-sharepoint.md) describes.
-
-3. [Generate an app automatically](app-from-sharepoint.md) based on that list.
-
-4. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
-
-    ![Toggle the views](./media/customize-forms-sharepoint/toggle-view.png)
+[Generate an app](data-platform-create-app.md) from the Common Data Service, and then [customize the gallery](customize-layout-sharepoint.md) in that app.
 
 ## Show and hide cards
-1. In the left navigation bar, click or tap the middle thumbnail to select **DetailsScreen1**.
+1. Sign in to [PowerApps](http://web.powerapps.com).
 
-    ![Select details screen](./media/customize-forms-sharepoint/details-thumbnail.png)
+    ![Home page of PowerApps site](./media/customize-forms-sharepoint/sign-in.png)
 
-2. Click or tap any card to select it and show the form-customization options in the right-hand pane.
 
-    ![Select a card](./media/customize-forms-sharepoint/select-card.png)
+1. Open the app that you generated and customized.
 
-3. In the right-hand pane, click or tap the checkbox for the **AccountID** card to hide it, and click or tap the checkbox for the **ID** column to show it.
+1. In the left navigation bar, type or paste **D** in the search bar to filter the list of elements, and then click or tap **DetailForm1** to select it.
 
-    ![Show card](./media/customize-forms-sharepoint/checkbox.png)
+    ![Select details screen](./media/customize-forms-sharepoint/select-detailform.png)
+
+1. In the right-hand pane, click or tap **Accounts** to show the **Data** pane.
+
+    ![Show data pane](./media/customize-forms-sharepoint/show-data-pane.png)
+
+1. In the **Data** pane, clear the **Primary Contact**, **Description**, and **Address 1: Street 2** checkboxes to hide those fields.
+
+    ![List of fields](./media/customize-forms-sharepoint/hide-fields.png)
+
+1.  In the **Data** pane, select the **Address 1: ZIP/Postal code** checkbox to show that field.
+
+    ![List of fields](./media/customize-forms-sharepoint/show-field.png)
 
 ## Reorder the cards
-* Click or tap the **Title** card to select it, and then drag its title bar up until the **OrderDate** card is highlighted.
+1. In the **Data** pane, drag the **Account Name** field to the top of the list of fields.
 
     ![Move card](./media/customize-forms-sharepoint/move-card.png)
 
-    The card that you're moving will appear just above the card that's highlighted when you release the mouse button.
+    The cards in **DetailForm1** reflect the same change.
 
     ![Reordered cards](./media/customize-forms-sharepoint/reordered-card.png)
 
+1. Reorder the other cards into this sequence:
+
+    - Account Name
+    - Address 1: Street 1
+    - Address 1: City
+    - Address 1: ZIP/Postal Code
+    - Number of Employees
+    - Annual Revenue
+
+1. In the left navigation bar, type or paste **Ed** in the search bar, and then click or tap **EditForm1** to select it.
+
+1. Repeat the steps in the previous procedure and this one so that the fields in **EditForm1** match those in **DetailForm1**.
+
 ## Run the app
-1. In the left navigation bar, click or tap the top thumbnail to select **BrowseScreen1**.
+1. In the left navigation bar, type or paste **Br** to filter the list, and then click or tap **BrowseScreen1** to select it.
 
-    ![Thumbnail for BrowseScreen1](./media/customize-forms-sharepoint/browse-thumbnail.png)
-
-2. Open Preview mode by pressing F5 (or by selecting the **Preview** icon near the upper-right corner).  
+2. Open Preview mode by pressing F5 (or by selecting the **Preview** icon near the upper-right corner).
 
     ![Preview icon](./media/customize-forms-sharepoint/open-preview.png)
 
@@ -73,7 +85,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Add record](./media/customize-forms-sharepoint/add-record.png)
 
-4. Add whatever data you want, and then click or tap the checkmark icon in the upper-right corner to save your new record in the SharePoint list and return to **BrowseScreen1**.
+4. Add whatever data you want, and then click or tap the checkmark icon in the upper-right corner to save your changes and return to **BrowseScreen1**.
 
     ![Save record](./media/customize-forms-sharepoint/save-record.png)
 
@@ -93,10 +105,8 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
     ![Delete record](./media/customize-forms-sharepoint/delete-record.png)
 
-9. Close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-left corner, *under* the title bar for PowerApps).
-
-    ![Close Preview mode](./media/customize-forms-sharepoint/close-preview.png)
+9. Close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-left corner).
 
 ## Next steps
-* Press Ctrl-S to save your app so that you can run it from other devices.
-* [Share the app](share-app.md) so that other people can run it.
+- [Save and publish](save-publish-app.md) your app.
+- [Customize a card](customize-card.md) in your app.

@@ -1,5 +1,5 @@
 ---
-title: Use Common Data Service for Apps Web Services| Microsoft Docs
+title: Use Common Data Service for Apps web services| Microsoft Docs
 description: Learn how developers can use Common Data Service for Apps web services.
 services: ''
 suite: powerapps
@@ -17,7 +17,7 @@ ms.date: 02/26/2018
 ms.author: jdaly
 ---
 
-# Use Common Data Service for Apps Web Services
+# Use Common Data Service for Apps web services
 
 The Common Data Service for Apps provides two web services you can use to interact with data. Choose the one which best matches the requirement and your skills. More information: [Dynamics 365 Customer Engagement Developer Guide: Choose your development style for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/choose-development-style)
 
@@ -26,7 +26,7 @@ The Web API is an OData v4 RESTful endpoint. Use this for any programming langua
 
 More information: [Dynamics 365 Customer Engagement Developer Guide: Use the Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)
 
-## Organization Service
+## Organization service
 
 The Organization service is a core part of the Common Data Service for Apps platform. It is a Windows Communication Foundation (WCF) service and currently exposes only a SOAP endpoint. 
 .NET developers can use the SDK assemblies to perform data operations. Within a Plug-in, the Organization service via the SDK assemblies is the only option.
@@ -56,7 +56,7 @@ A Discovery service is accessed through either the Web API or the Organization S
 - For the Web API see: [Dynamics 365 Customer Engagement Developer Guide: Discover the URL for your organization using the Web API](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)
 - For the Organization Service see: [Dynamics 365 Customer Engagement Developer Guide: Discover the URL for your organization using the Organization Service](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
 
-## Use Custom Actions
+## Use custom actions
 
 One of the declarative options available for processes is to create a *custom action*. A custom action is essentially creating a new message in the organization service. You can use custom actions to combine a set of operations into a named reusable operation. For example, you might create a new message called *new_Escalate* that combines a standard set of operations that are involved in notifying the correct people when an important customer is experiencing a serious issue.
 
@@ -71,7 +71,7 @@ More information:
 - [Dynamics 365 Customer Engagement Developer Guide: Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions)
 - [Dynamics 365 Customer Engagement Developer Guide: Use Web API actions > Use a custom action](/dynamics365/customer-engagement/developer/webapi/use-web-api-actions#use-a-custom-action)
 
-## Metadata Services
+## Metadata services
 
 Both the Web API and the organization service include capabilities to perform CRUD operations on the entity schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read metadata.
 
@@ -88,3 +88,8 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Browse the 
 For more information about working with metadata programmatically see:
 - [Dynamics 365 Customer Engagement Developer Guide: Use the Web API with metadata](/dynamics365/customer-engagement/developer/webapi/use-web-api-metadata)
 - [Dynamics 365 Customer Engagement Developer Guide: Use the Organization service with Dynamics 365 metadata](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)
+ 
+### See also
+
+[Common Data Service for Apps Developer Overview](overview.md)
+

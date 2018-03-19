@@ -116,16 +116,7 @@ The next five procedures provide a single, end-to-end example of how to use **En
     ![](media/entity-form-control/entityform-tutorial-01-07.png)  
    
     You didn’t set the **Pattern** property for the **Entity form** control, so it defaults to the **List** pattern. In addition, the **DefaultList** field group of the **Sales order** entity is used to display the list form. The form is also dynamic and will automatically reflect any change in the field group.
-8. (*Optional*) View the **DefaultList** field group of the **Sales order** entity:
-   
-   1. Sign in to [powerapps.com](https://web.powerapps.com), click or tap **Common Data Service** in the left navigation pane, and then click or tap **Entities**.
-   2. In the list of entities, click or tap **Sales order**, click or tap the **Field groups** tab, and then click or tap the **DefaultList** field group.  
-      
-      The fields in the sales order list match those listed here.  
-      
-      ![](media/entity-form-control/entityform-tutorial-01-08.png)   
-      
-      In the **Common Data Service**, you can [modify field groups](../common-data-service/field-groups.md) for custom entities (but not standard entities) to change the fields that appear on the corresponding forms that the **Entity form** control displays. Best of all, any change to the field group is automatically reflected in all the apps that use an **Entity form** control to display the corresponding form.
+
 
 ## Display the details of a record
 Let’s add another **Entity form** control to display the details of the sales order that’s selected in the list that you created earlier.  

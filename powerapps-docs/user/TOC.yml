@@ -6,7 +6,5 @@
   href: run-app-client.md
 - name: In Microsoft Teams
   href: open-app-embedded-in-teams.md
-- name: In SharePoint
-  href: open-app-embedded-in-sharepoint.md
 - name: From AppSource
   href: app-source.md
