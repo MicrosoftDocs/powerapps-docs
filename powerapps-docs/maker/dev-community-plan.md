@@ -1,5 +1,5 @@
 ---
-title: '# PowerApps Community Plan: a free development environment for individual use | Microsoft Docs'
+title: PowerApps Community Plan -- a free development environment for individual use | Microsoft Docs
 description: Sign up to to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service.
 services: ''
 suite: powerapps
@@ -117,7 +117,7 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 **A:** Both PowerApps Plan 2 Trial and PowerApps Community Plan are free, but are created for different purposes:
 
-**PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 90 days. This is meant for trying out PowerApps, Common Data Service, and Microsoft Flow. Once your trial expires, you can purchase a plan. If you are already using PowerApps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with PowerApps Plan 2.
+**PowerApps Plan 2 Trial** gives you PowerApps Plan 2 for 30 days. This is meant for trying out PowerApps, Common Data Service, and Microsoft Flow. Once your trial expires, you can purchase a plan. If you are already using PowerApps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of PowerApps, which are available with PowerApps Plan 2.
 
 **PowerApps Community Plan** gives you access to PowerApps premium functionalities, Common Data Service, and Microsoft Flow for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on PowerApps, Common Data Services, and Microsoft Flow.
 

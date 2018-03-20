@@ -78,7 +78,7 @@ You can pin an app to the home screen of your device for quick access. Tap the e
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
 ## Next steps
-In this quickstart, you learned how to run a canvas app on a mobile device. To learn more about PowerApps, continue to the PowerApps tutorials.
+In this quickstart, you learned how to run a canvas app on a mobile device. You can also run model-driven apps on a mobile device.
 
 > [!div class="nextstepaction"]
-> [PowerApps Tutorials](../maker/canvas-apps/get-started-create-from-blank.md)
+> [Run a model-driven app on a mobile device](../maker/model-driven-apps/run-app-client-model-driven.md)

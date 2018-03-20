@@ -20,12 +20,12 @@
     href: introduction-to-data-groups.md
   - name: Regions overview
     href: regions-overview.md
-  - name: PowerApps in your organization Q&A
-    href: signup-question-and-answer.md
 - name: How-to guides
   items:
   - name: Purchase PowerApps # moved from original get started location
     href: signup-for-powerapps-admin.md
+  - name: Manage licenses in your org
+    href: signup-question-and-answer.md
   - name: Manage DLP policies
     href: prevent-data-loss.md
   - name: Create a database
