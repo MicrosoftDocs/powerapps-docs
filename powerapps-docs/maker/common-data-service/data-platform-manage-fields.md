@@ -21,7 +21,7 @@ ms.author: clwesene
 You can create and update one or more custom fields in any entity. When you create a custom field, you specify a set of properties, such as the field's name, its display name, and the type of data that it will contain. For more information, see [Entity attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
 
 > [!NOTE]
-> Every entity has system fields, such as fields that indicate when a record was last updated, and who updated it. In addition, standard entities have standard (default) fields. You can't modify or delete system fields or standard fields. 
+> Every entity has [system fields], such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](data-platform-intro.md#system-fields) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
 
