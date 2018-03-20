@@ -47,11 +47,13 @@ Creating a canvas app is easy; With PowerApps, you can find or create your app i
 ## Model-driven apps
 When you create a model-driven app, you can use all of the power of the Common Data Service to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the PowerApps site.
 
-Getting started with model-driven apps is simple. For example, you can:
+Getting started with model-driven apps is simple, and you can begin with these topics:
 
-- [Create a site map](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-site-map-app)
-- [Add components in the app designer](https://docs.microsoft.com/dynamics365/customer-engagement/customize/add-edit-app-components)
-- [Manage properties](https://docs.microsoft.com/dynamics365/customer-engagement/customize/manage-app-properties)
+- Overview of building a model-driven app
+- [Create and design forms](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-design-forms-app)
+- [Create or edit views](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-views)
+- [Create or edit a system chart](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-system-chart)
+- [Create or edit dashboards](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-dashboards)
 - [Add security](https://docs.microsoft.com/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
 - [Add business logic](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
