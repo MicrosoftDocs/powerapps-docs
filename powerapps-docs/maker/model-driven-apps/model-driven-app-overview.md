@@ -33,12 +33,12 @@ Model-driven app design provides the following benefits:
 - Design capability similar to what’s is available in the Dynamics 365 customer engagement platform 
 - Your app can be distributed as a solution
  
- ## The approach to model-driven app making
+## The approach to model-driven app making
 At a fundamental level, model-driven app making consists of three key focus areas.
 
-1.	Modeling business data 
-2.	Defining business processes 
-3.	Composing the app
+- Modeling business data 
+- Defining business processes 
+- Composing the app
 
 ### Modeling business data
 To model business data you determine what data your app will need and how that data will relate to other data. Model-driven design uses a metadata-driven architecture so that designers can customize the application without writing code. Metadata means “data about data” and it defines the structure of the data stored in the system.
