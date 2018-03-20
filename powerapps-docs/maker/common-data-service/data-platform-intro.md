@@ -49,8 +49,8 @@ Entities within the Common Data Service, both standard and custom, allow a secur
 
 When you develop an app, you can use standard entities, custom entities, or both. If a standard entity can serve a particular purpose in your app, you should use it rather than developing a custom entity that does the same thing. If a standard entity would serve a purpose with a few changes, you can add fields to suit your needs.
 
-* The Common Data Model is the definition of standard entities available within the Common Data Service which can be leverage within your apps. For more inforamtion, see [Common Data Model](../../common-data-model/overview.md)
-* You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](data-platform-create-entity.md).
+* The Common Data Service provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts for an organization, such as Contacts, Accounts, and Products. For a full list of entities, see [Standard entities](data-platform-intro.md#standard-entities).
+* You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](create-custom-entity.md).
 
 > [!NOTE]
 > If possible, use standard entities (with custom fields added, if required). This will ensure that you can benefit from new features or apps that leverage these entities in the future.
@@ -59,7 +59,8 @@ When you develop an app, you can use standard entities, custom entities, or both
 
 When using a standard entity, or creating a custom entity there are multiple elements available within each one and different actions that can be performed. Depending on how simple or advanced your business scenario is will determine which features you will need to use. To see the entities available within your environment, sign in to [PowerApps](https://web.powerapps.com), and click Data and then Entities from the left  menu.
 
-![Entity Details](./media/data-platform-cds-intro/entitylist.png "Entity Details")
+### System fields
+All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. These are the most important system fields:
 
 * Each **field** allows you to define a piece of information to be collected, and the data type or format you would like to display it. Fields are similar to columns in databases or Excel.
 * Alternate **keys** allow effiecient and accurate search and interaction with records in the entity when not using the standard unique identifier. This is particular important when using a Business Key or intergrating with an external system.
@@ -89,7 +90,7 @@ There are several ways to start getting data into the Common Data Service:
 In addition to the features available through the [PowerApps](https://web.powerapps.com) portal, the Common Data Service also includes features for developers to programatically access metadata and data to create entities and business logic, as well as interact with data. For more information, see [Common Data Service for Apps Developer Overview](../../developer/common-data-service/overview.md)
 
 ## Get started
-Try it out by creating an app using a standard entity or [create a custom entity](data-platform-create-entity.md), and then [create an app that uses that entity](../canvas-apps/data-platform-create-app.md).
+Try it out by creating an app using a standard entity or [create a custom entity](create-custom-entity.md), and then [create an app that uses that entity](../canvas-apps/data-platform-create-app.md).
 
 ## Privacy notice
 With the Microsoft PowerApps common data model we collect and store custom entity and field names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The entity and field names that Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
