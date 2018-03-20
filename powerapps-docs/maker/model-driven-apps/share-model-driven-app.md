@@ -79,7 +79,6 @@ Security roles control a user’s access to data through a set of access levels 
 3. Select **Manage Roles**.
 
 ![Manage roles](media/share-model-driven-app/select-users-for-security-roles.png)
-
 4. In the **Manage User Roles** dialog box, select the **Pet Grooming Technicians** security role that you created earlier, and then select **OK**.
 
 ### Assign a security role to Pet Grooming Schedulers
