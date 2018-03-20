@@ -1,10 +1,10 @@
 ---
-title: Create custom picklists | Microsoft Docs
-description: Create a custom picklist.
+title: Create an Option set| Microsoft Docs
+description: Create an Option set
 services: powerapps
 documentationcenter: na
-author: pvillads
-manager: kfend
+author: clwesene
+manager: kfile
 editor: ''
 tags: ''
 
@@ -13,24 +13,75 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/09/2017
-ms.author: kfend
+ms.date: 3/17/2018
+ms.author: clwesene
 
 ---
-# Create custom picklists
-It's now possible to create your own picklists, in addition to the ones that are available out-of-the-box. Picklists, which are basically a named list of items that include a name and descriptions, are a simple concept. When the picklist fields are rendered, a drop-down menu that contains the display names of the items will appear. 
+# Create an Option set
 
-Picklists are added by using the menu item, **Picklists** on the **Common Data Service** tab, under the **Entities** menu. Click the menu to view all of the picklists that are currently defined in your environment. Several commonly used picklists are already defined for you and can easily be identified by their type, **Standard**. The ones that you create for yourself are the type **Custom**.
+Option sets allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice fields in other applications. Similar to entities, there are both standard Option sets, and the ability create custom option sets to use within you app.
 
-1. To create a new picklist, at the top of the page, click **New Picklist**. On the page that opens, define your picklist by entering the name, display name, and a description.
-   > [!IMPORTANT]
-> The picklist name can't be changed after you create the picklist. There are a few requirements for the picklist name. The name must be simple and can't contain any special characters. Also, you can only have one picklist with a particular name. If you try to create another picklist with the same name, you will receive an error. These restrictions don't apply to the **Display name**.
-   
-    In this topic, we will create a picklist that can be used to choose a mode of transportation.
-2. Name the picklist **Transportation** and add the information to the required fields.
-3. Click **Next**, and on the next page provide the different elements of the picklist, for this example, the transportation providers. When the page opens, you will see that a single item is already created. Update the line item with information appropriate to the picklist that you are creating. Editing is done in the line. There is not a separate page for each picklist item. Click in the  **NewItem** field to add the first item. Any time that you need a new picklist element, click **Add item** at the top right of the screen to add a new row. 
+Option sets can be created in two ways, either from the Option set list within the portal or directly within an entity while creating a field. For more information on how to create an entity, see [Create an entity](data-platform-create-entity.md).
 
-You can delete an item by clicking the garbage can icon on the far right of each item line. When all of the required items have been added, click **Create** to create the list and submit it to the server. You will see the picklist added to the list of existing picklists.
+## Creating an Option set while adding a field.
 
-You can now use the picklist to define fields on your entities by adding a field type **Picklist**, and then using the **Display name** in the **Properties** pane for the field. 
+1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
+    ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
+
+2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
+
+3. Add a new field to your entity by clicking **Add field**.
+
+4. In the new field panel, enter the **Display name** for your field, **Name** will be automatically populated and is used as the unique name for your field. The **Display name** is used when presenting this field to your users, the **Name** is used when building your app, in expressions and formulas.
+
+    ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
+
+5. Click the **Data type** drop down and select **Option set**, or **Multi select Option set**.
+
+6. Click the **Option set** drop down and select **New Option set**
+
+    > [!NOTE]
+    > If an existing option set could be used for your entity, you can select it from this list without creating a new one.
+
+    ![Option Set List](./media/data-platform-cds-newoptionset/fieldpanel-1.png "Option Set list")
+
+7. A new panel will open to create the Option set, the **Display name** and **Name** will default from the name of the field but can be changed if needed. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
+
+    ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "New Option Set")
+
+8. Once you've entered your items, click **Save** to create your Option set.
+
+    ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "New Option Set")
+
+9. Click **Done** to close the field panel, and then **Save entity** to save your entity to the Common Data Service.
+
+    > [!NOTE]
+    > You can select one of your items as the **Default** for this field, and it will be selected by default when users are creating new records in your entity.
+
+    ![New Field](./media/data-platform-cds-newoptionset/fieldpanel-2.png "New Field Panel")
+
+## Creating an Option set from the Option set list
+
+1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Option sets** in the left navigation pane.
+
+    ![Option sets](./media/data-platform-cds-newoptionset/optionsetlist.png "Option set List")
+
+2. Click **New Option set**
+
+3. A new panel will open to create the Option Set, enter the **Display name** and **Name**. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
+
+    ![Option Set Create](./media/data-platform-cds-newoptionset/optionset-create.png "Option Set Create")
+
+4. Once you've entered your items, click **Save** to create your Option set.
+
+    ![New Option Set](./media/data-platform-cds-newoptionset/optionset-create-values.png "New Option Set")
+
+5. You can now use this option set by creating new field on an entity.
+
+## Global and Local Option sets
+
+By default, Option sets are created as Global Option sets which allows them to be reused across multiple entities. Under the **View more** option when creating a new Option set you can chose to make an Option set **Local**. This option is only available when Creating an Option set while adding a field, and not through the Option set list. Local option sets can only be used by the entity and field they are created against, and cannot be reused on other entities. This approach is only recommended for advanced users that a specific need for a local option set.
+
+> [!IMPORTANT]
+> Once an option set is created as local or global, this cannot be changed.
