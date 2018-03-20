@@ -42,8 +42,8 @@
         },
         {
         "source_path": "powerapps-docs/app-analytics.md",
-        "redirect_url": "/powerapps/administrator/app-analytics",
-        "redirect_document_id": true
+        "redirect_url": "/powerapps/administrator/index",
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/create-database.md",
@@ -72,8 +72,8 @@
         },
         {
         "source_path": "powerapps-docs/export-import-packages.md",
-        "redirect_url": "/powerapps/administrator/export-import-packages",
-        "redirect_document_id": true
+        "redirect_url": "/powerapps/administrator/environments-overview",
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/introduction-to-data-groups.md",
@@ -82,8 +82,8 @@
         },
         {
         "source_path": "powerapps-docs/introduction-to-the-admin-center.md",
-        "redirect_url": "/powerapps/administrator/introduction-to-the-admin-center",
-        "redirect_document_id": true
+        "redirect_url": "/powerapps/administrator/index",
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/prevent-data-loss.md",
@@ -1277,8 +1277,8 @@
         },
 		        {
         "source_path": "powerapps-docs/open-app-embedded-in-sharepoint.md",
-        "redirect_url": "/powerapps/user/open-app-embedded-in-sharepoint",
-        "redirect_document_id": true
+        "redirect_url": "/powerapps/maker/canvas-apps/generate-app-from-sharepoint-list-interface",
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/open-app-embedded-in-teams.md",
