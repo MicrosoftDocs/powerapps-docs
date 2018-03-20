@@ -107,8 +107,7 @@ After you create a database, choose a security model. For more information, see 
 In an environment, all the users in the Azure AD tenant are users of that environment. However, for them to play a more privileged role, they need to be added to a specific environment role. Environments have two built-in roles that provide access to permissions within an environment:
 
 * The **Environment Admin** role (or **System Administrator** role) can perform all administrative actions on an environment including the following:
-
-    * Add or remove a user or group from either the Environment Admin or Environment Maker role.
+    * Add or remove a user from either the Environment Admin or Environment Maker role.
 
     * Provision a Common Data Service database for the environment.
 
@@ -128,6 +127,7 @@ To assign a user or a security group to an environment role, an Environment Admi
     ![](./media/environment-admin/choose-environment-updated.png)
 2. Select **Security** tab.
 3. If there is no database created in the environment:
+
     a. Select either the **Environment Admin** or **Environment Maker** role.
 
     ![](./media/environment-admin/choose-environment-role.png)
