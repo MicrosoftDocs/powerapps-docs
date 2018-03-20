@@ -194,6 +194,8 @@
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
+  - name: Overview of sample apps
+    href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Share a model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
   - name: Run a model-driven app on a mobile device
