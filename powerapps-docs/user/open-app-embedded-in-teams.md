@@ -21,7 +21,7 @@ ms.author: mblythe
 
 # Quickstart: Add an app to Microsoft Teams
 
-Microsoft Teams is a chat-based collaboration platform built on Office 365 technologies. You can customize the Teams experience by adding PowerApps canvas-based apps to your channels in Teams. In this quickstart, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
+Microsoft Teams is a chat-based collaboration platform built on Office 365 technologies. You can customize the Teams experience by adding PowerApps canvas apps to your channels in Teams. In this quickstart, you learn how to add the Product Showcase sample app to a Teams channel, and then open the app from that channel. 
 
 ![App embedded in Microsoft Teams](./media/open-app-embedded-in-teams/embedded-app.png)
 
@@ -63,15 +63,15 @@ Sign into PowerApps at [https://web.powerapps.com]([https://web.powerapps.com).
 ## Open an app
 
 1. In Microsoft Teams, choose the team and the channel that contains the app.
-   
+
     ![](./media/open-app-embedded-in-teams/teams-select-channel.png)
 
 2. Choose the **Product Showcase** tab.
-   
+
     ![](./media/open-app-embedded-in-teams/open-tab.png)
-   
+
     The app opens in the channel.
-   
+
     ![](./media/open-app-embedded-in-teams/app-in-channel.png)
 
 ## Known issues

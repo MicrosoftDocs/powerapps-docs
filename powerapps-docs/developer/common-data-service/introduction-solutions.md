@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/20/2018
+ms.date: 03/19/2018
 ms.author: jdaly
 ---
 # Introduction to solutions
@@ -68,7 +68,7 @@ From [powerapps.com](https://web.powerapps.com)
 2. In the fly out, select **All apps**.
 3. Look for the **Dynamics 365 - custom app**.
  You may want to click the elipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
-4. Click the **Dynamics 365 - custom app** and select it.
+4. Click the **Dynamics 365 - custom app** app and select it.
 5. Navigate to **Settings** > **Customization** > **Customizations**.
 
 From [home.dynamics.com](http://home.dynamics.com/)
@@ -113,7 +113,7 @@ In this example, default behavior defined in the system solution is overridden o
 
 More information: [Dynamics 365 Customer Engagement Developer Guide: Introduction to solutions > Unmanaged and managed solutions](/dynamics365/customer-engagement/developer/introduction-solutions#unmanaged-and-managed-solutions)
 
-## Managed Properties
+## Managed properties
 
 When you distribute a managed solution, anyone who installs your solution can include their own unmanaged customizations to it. Those unmanaged customizations can then be added to a solution that they distributed as a managed solution that depends on your solution. But what if you don’t want people to do this? As the publisher of the managed solution you can use managed properties to disable specific customizations for the components of your managed solution.
 
@@ -129,7 +129,7 @@ Customers, System Implementers, and other ISVs can then build solutions on top o
 
 When a set of business functionality is composed with multiple solutions, these are called packages. You can use the *Package Deployer* to combine multiple solutions into a single installable unit.
 
-## Deploy Solution Packages
+## Deploy solution packages
 
 Use the *Package Deployer* to create a custom installer for a package that can include 
 - One or more solution files.

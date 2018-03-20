@@ -63,4 +63,4 @@ You'll probably want to make more changes before you use this app or share it wi
 In this quickstart, you created an app to manage sample data about accounts in the Common Data Service for Apps. As a next step, customize the default browse screen to better suit your needs.
 
 > [!div class="nextstepaction"]
-> [Customize a default browse screen](customize-layout-sharepoint.md)
+> [Customize a default browse screen](customize-layout-sharepoint.md).

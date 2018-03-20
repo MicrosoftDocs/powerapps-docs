@@ -14,14 +14,14 @@ ms.devlang: na
 ms.topic: quickstart
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/07/2018
+ms.date: 03/21/2018
 ms.author: sharik
 
 ---
 # Quickstart: Run a canvas app on a mobile device
-When you create an app, or an app creator shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
+When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
-To follow this quickstart, if you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download PowerApps from the Windows Store, the App Store, or Google Play onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you built or that someone else built and shared with you.
+To follow this quickstart, if you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download PowerApps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
 
 ## Open PowerApps and sign in
 Open PowerApps on your mobile device and sign in using your Azure Active Directory credentials.
@@ -70,7 +70,7 @@ If an app requires a connection to a data source or permission to use the device
 ![Connection](./media/run-app-client/app-connection.png)
 
 ## Pin an app to the home screen
-If you've downloaded an app and used it at least once, you can pin it to the home screen of your device for quick access. Tap the ellipsis (...) on the app tile, tap **Pin to Home**, and then follow the instructions that appear.
+You can pin an app to the home screen of your device for quick access. Tap the ellipsis (...) on the app tile, tap **Pin to Home**, and then follow the instructions that appear.
 
 ![Pin app](./media/run-app-client/run-client-pin.png)
 

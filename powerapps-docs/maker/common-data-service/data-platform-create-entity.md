@@ -3,8 +3,8 @@ title: Create a custom entity | Microsoft Docs
 description: Create a custom entity that is based on another entity, or from scratch.
 services: powerapps
 documentationcenter: na
-author: kfend
-manager: kfend
+author: clwesene
+manager: kfile
 editor: ''
 tags: ''
 
@@ -13,46 +13,55 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/20/2017
-ms.author: kfend
+ms.date: 3/17/2018
+ms.author: clwesene
 
 ---
 # Create a custom entity
-You can create a custom entity to store data that is specific to your organization. You can then show that data by developing an app that refers to the entity.
+You can create a custom entity to store data that is specific to your organization. You can then show that data by developing an app that refers to the entity. After you create an entity, you can [create or modify one or more of its fields](data-platform-manage-fields.md), and [build relationships between entities](data-platform-entity-lookup.md).
 
-There are two ways to create an entity:
-
-* Create the entity from scratch. By default, the entity contains only [four system fields and a record title field](data-platform-create-entity.md#system-fields-and-the-record-title-field).
-* Create an entity that is based on another entity, by copying the fields and settings of that entity, but not its data.
-
-In both cases, Microsoft PowerApps automatically stores and helps secure the data. After you create an entity, you can [create or modify one or more of its fields](data-platform-manage-fields.md), and [build relationships between entities](data-platform-entity-lookup.md).
+These instructions will show you how to create a custom entity manually, you can also use Power Query to create an entity based off your existing data. For more information, see [Create new entity using Power Query](data-platform-cds-newentity-pq.md)
 
 > [!NOTE]
-> Before you create an entity, see the [list of standard entities](data-platform-intro.md#standard-entities). These entities cover typical scenarios, such as accounts and contacts. If one of these entities will meet your requirements out of the box or after only minor changes, you can save yourself some time by starting with that entity.
+> Before you create an entity, see the [entity reference](../../developer/common-data-service/reference/about-entity-reference.md). These entities cover typical scenarios, such as accounts and contacts. If one of these entities will meet your requirements out of the box or after only minor changes, you can save yourself some time by starting with that entity.
 
 ## Create an entity
-1. On [powerapps.com](https://web.powerapps.com), expand the **Common Data Service** section and click or tap **Entities** in the left navigation pane.
-2. If you haven't created a database, you need to create one. For more information, see [Create a Common Data Service database](../../administrator/create-database.md).
-3. Near the upper-right corner, click or tap **New entity**.
-4. In the **Entity name** field, enter a name for the entity. Make sure that the name is clear and meaningful, because you can't change it after you create the entity. When you develop an app, you will reference the entity by this name in a formula.
-5. Specify a display name and, optionally, a description for the entity, and then click or tap **Next**.
-6. Optional: Change the value in the **Title** field to something that is more meaningful for your data.
-7. Click or tap **Create** to create the entity.
+1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
-Your entity appears in the list of entities in your database. To show your entity at the top of the list, click or tap the **Type** column header. The entities will be sorted by type, and all custom entities will appear above all standard entities.
+    ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
-## System fields and the record title field
-All entities have five system fields. These fields are read-only. Therefore, you can't change or delete these fields, and you don't assign values to them.
+2. From the command bar, click or tap **New entity**.
+3. In the **Display name** field, enter a name that's easily recognizable for you to refer to this entity in the future. This is also used in forms, charts and other objects created using this entity. You'll notice two other fields also be populated:
 
-| Display name | System field name | Data type | Description |
-| --- | --- | --- | --- |
-| Id |System field name |Big Integer |The unique identifier for the record. |
-| Created By |CreatedByUser |Text |The user who created a record. |
-| Created Record Date |CreatedOnDateTime |DateTime |The date and time when a record was created. |
-| Last modified By |LastModifiedByUser |Text |The user who most recently modified the record. |
-| Modified Record Date |LastModifiedDateTime |DateTime |The date and time when a record was most recently modified. |
+    * Plural display name - this is used when interacting with this entity from PowerApps or Flow, and used as the name of the entity through the Common Data Service WebAPI. The Plural name should be automatically generated, but can be changed.
+    * Name - this is the unqiue name of the entity, it cannot contain special charecters or spaces and must be unqiue. The name also includes a prefix which was setup when your environment was created, this is used ensure the entities you create can be exported and imported into other environemnts with colliding with other entity names. This prefix can be changed by updating the prefix on your Publisher for the Common Data Service Default Solution.
 
-If you create an entity from scratch, it also contains a custom field that is named **Title**. This field is set as the record's **Title** field. The **Title** field value is the user-friendly identifier of a record whenever you use that record in an app. You can change which field is the **Title** field, but every entity must have a **Title** field.
+    > [!NOTE]
+    > The **Display name** fields can be updated at anytime to display differently in your apps, the **Name** field cannot be changed after your entity has been saved as this could result in breaking an existing app.
+
+    ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New Entity Panel")
+
+4. Click **Next** and you'll be taken to the Entity details page. By default every entity starts with one field, the "Primary Name" this field is used when lookups are created against this entity. It should typically be used to store the name or primary description of the data being stored in the entity.
+
+    > [!NOTE]
+    > The name and display name of the **Primary Name** field can be updated before saving the entity for the first time. For example, if you wanted to call this field "Student name" instead of "Primary name"
+
+    ![Entity Details](./media/data-platform-cds-create-entity/newentitydetails.png "New Entity Details")
+
+5. Optional: Add a text field to your entity by clicking **Add field**. In the New Field panel, enter the **Display name** for your field and select the Data type. For more information, see [Manage fields in an entity](data-platform-manage-fields.md).
+
+    ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
+
+
+6. Click **Done** to add the field, and repeat step 5 to add additional fields.
+7. Click **Save entity** to save your entity and make it available for use in apps.
+
+    Your entity appears in the list of entities in your database. To see entties you've created, you can change the filter in the command bar from "Default" to "Custom"
+
+## System fields
+All entities have system fields. These fields are read-only. Therefore, you can't change or delete these fields, and you don't assign values to them. By default system fields will not be shown in the list of fields even though they exist on the entity. To see all fields, you can change the filter on the Command Bar from **Default** to **All**.
+
+For more inforamtion on the metadata related to an entity, see [Entity metadata](../../developer/common-data-service/entity-metadata.md)
 
 ## Next steps
 * [Manage fields in an entity](data-platform-manage-fields.md)

@@ -39,6 +39,8 @@
       href: ./canvas-apps/data-platform-create-app-scratch.md
     - name: Share an app
       href: ./canvas-apps/share-app.md
+    - name: Embed an app in Power BI
+      href: ./canvas-apps/embed-powerapps-powerbi.md
   - name: Concepts
     items:
     - name: Get started with formulas
@@ -61,6 +63,8 @@
       href: ./canvas-apps/working-with-data-sources.md
     - name: Understand SharePoint forms integration
       href: ./canvas-apps/sharepoint-form-integration.md
+    - name: PowerApps custom visual
+      href: ./canvas-apps/powerapps-custom-visual.md
     - name: Canvas-app development
       items:
       - name: PowerApps for enterprise developers, partners, and ISVs
@@ -188,35 +192,31 @@
     - name: Upcoming and recent webinars
       href: ./canvas-apps/webinars-listing.md
 - name: Model-driven apps
-  href: ./model-driven-apps/_placeholder01.md
-  items:
-  - name: A model-driven apps topic
-    href: ./model-driven-apps/_placeholder02.md
+  href: ./model-driven-apps/model-driven-app-overview.md
+    items:
   - name: Overview of sample apps
     href: ./model-driven-apps/overview-model-driven-samples.md
-  - name: For Developers
-    href: ../developer/model-driven-apps/TOC.yml       
+  - name: Share a model-driven app
+    href: ./model-driven-apps/share-model-driven-app.md
+  - name: Run a model-driven app on a mobile device
+    href: ./model-driven-apps/run-app-client-model-driven.md
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
   - name: Create a custom entity
-    href: ./common-data-service/data-platform-create-entity.md
+    href: ./common-data-service/create-custom-entity.md
   - name: Create a custom entity from data
     href: ./common-data-service/data-platform-cds-newentity-pq.md
   - name: Manage fields
     href: ./common-data-service/data-platform-manage-fields.md
-  - name: Use field groups
-    href: ./common-data-service/field-groups.md
-  - name: Create custom picklists
+  - name: Create an option set
     href: ./common-data-service/custom-picklists.md
   - name: Create a relationship
     href: ./common-data-service/data-platform-entity-lookup.md
+  - name: Create a business rule
+    href: ./common-data-service/data-platform-create-business-rule.md
   - name: Delete a custom entity
     href: ./common-data-service/data-platform-delete-entity.md
-  - name: Import or export data
-    href: ./common-data-service/data-platform-export-data.md
-  - name: Manage data in Excel
-    href: ./common-data-service/data-platform-interactive-excel.md
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
   - name: For Developers

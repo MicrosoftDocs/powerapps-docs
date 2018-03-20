@@ -42,8 +42,8 @@
         },
         {
         "source_path": "powerapps-docs/app-analytics.md",
-        "redirect_url": "/powerapps/administrator/app-analytics",
-        "redirect_document_id": true
+        "redirect_url": "/powerapps/administrator/index",
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/create-database.md",
@@ -72,8 +72,8 @@
         },
         {
         "source_path": "powerapps-docs/export-import-packages.md",
-        "redirect_url": "/powerapps/administrator/export-import-packages",
-        "redirect_document_id": true
+        "redirect_url": "/powerapps/administrator/environments-overview",
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/introduction-to-data-groups.md",
@@ -82,8 +82,8 @@
         },
         {
         "source_path": "powerapps-docs/introduction-to-the-admin-center.md",
-        "redirect_url": "/powerapps/administrator/introduction-to-the-admin-center",
-        "redirect_document_id": true
+        "redirect_url": "/powerapps/administrator/index",
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/prevent-data-loss.md",
@@ -107,522 +107,457 @@
         },
         {
         "source_path": "powerapps-docs/trial-plan.md",
-        "redirect_url": "/powerapps/maker/canvas-apps/signup-for-powerapps",
+        "redirect_url": "/powerapps/maker/signup-for-powerapps",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/dev-isv-partner-intro.md",
-        "redirect_url": "/powerapps/developer/dev-enterprise-intro",
+        "redirect_url": "/powerapps/maker/canvas-apps/dev-enterprise-intro",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/dev-appsource-test-drive.md",
-        "redirect_url": "/powerapps/developer/dev-appsource-test-drive",
+        "redirect_url": "/powerapps/maker/canvas-apps/dev-appsource-test-drive",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/dev-enterprise-intro.md",
-        "redirect_url": "/powerapps/developer/dev-enterprise-intro",
+        "redirect_url": "/powerapps/maker/canvas-apps/dev-enterprise-intro",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/embed-apps-dev.md",
-        "redirect_url": "/powerapps/developer/embed-apps-dev",
+        "redirect_url": "/powerapps/maker/canvas-apps/embed-apps-dev",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/offline-apps.md",
-        "redirect_url": "/powerapps/developer/offline-apps",
+        "redirect_url": "/powerapps/maker/canvas-apps/offline-apps",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/register-custom-api.md",
-        "redirect_url": "/powerapps/developer/register-custom-api",
+        "redirect_url": "/powerapps/maker/canvas-apps/register-custom-api",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/cloud-storage-blob-connections.md",
-        "redirect_url": "/powerapps/maker/connections/cloud-storage-blob-connections",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/cloud-storage-blob-connections",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-azure-sqldatabase.md",
-        "redirect_url": "/powerapps/maker/connections/connection-azure-sqldatabase",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-dynamicsax.md",
-        "redirect_url": "/powerapps/maker/connections/connection-dynamicsax",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-dynamicsax",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-dynamics-crmonline.md",
-        "redirect_url": "/powerapps/maker/connections/connection-dynamics-crmonline",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-dynamics-crmonline",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-excel.md",
-        "redirect_url": "/powerapps/maker/connections/connection-excel",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-excel",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-microsoft-translator.md",
-        "redirect_url": "/powerapps/maker/connections/connection-microsoft-translator",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-microsoft-translator",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-office365-outlook.md",
-        "redirect_url": "/powerapps/maker/connections/connection-office365-outlook",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-office365-outlook",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-office365-users.md",
-        "redirect_url": "/powerapps/maker/connections/connection-office365-users",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-office365-users",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-oracledb.md",
-        "redirect_url": "/powerapps/maker/connections/connection-oracledb",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-oracledb",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-powerbi.md",
-        "redirect_url": "/powerapps/maker/connections/connection-powerbi",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-powerbi",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-sharepoint-online.md",
-        "redirect_url": "/powerapps/maker/connections/connection-sharepoint-online",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-sharepoint-online",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connection-twitter.md",
-        "redirect_url": "/powerapps/maker/connections/connection-twitter",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-twitter",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-configure-controls.md",
-        "redirect_url": "/powerapps/maker/add-configure-controls",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-configure-controls",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-data-connection.md",
-        "redirect_url": "/powerapps/maker/add-data-connection",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-data-connection",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-form.md",
-        "redirect_url": "/powerapps/maker/add-form",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-form",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-gallery.md",
-        "redirect_url": "/powerapps/maker/add-gallery",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-gallery",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-images-pictures-audio-video.md",
-        "redirect_url": "/powerapps/maker/add-images-pictures-audio-video",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-images-pictures-audio-video",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-images-to-excel.md",
-        "redirect_url": "/powerapps/maker/add-images-to-excel",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-images-to-excel",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-list-box-drop-down-list-radio-button.md",
-        "redirect_url": "/powerapps/maker/add-list-box-drop-down-list-radio-button",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-list-box-drop-down-list-radio-button",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-manage-connections.md",
-        "redirect_url": "/powerapps/maker/add-manage-connections",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-manage-connections",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-notifications.md",
-        "redirect_url": "/powerapps/maker/add-notifications",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-notifications",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-screen-context-variables.md",
-        "redirect_url": "/powerapps/maker/add-screen-context-variables",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-screen-context-variables",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/add-scrolling-screen.md",
-        "redirect_url": "/powerapps/maker/add-scrolling-screen",
+        "redirect_url": "/powerapps/maker/canvas-apps/add-scrolling-screen",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/admin-view-apps.md",
-        "redirect_url": "/powerapps/maker/admin-view-apps",
+        "redirect_url": "/powerapps/maker/canvas-apps/admin-view-apps",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/app-from-sharepoint.md",
-        "redirect_url": "/powerapps/maker/app-from-sharepoint",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/app-source.md",
-        "redirect_url": "/powerapps/maker/app-source",
+        "redirect_url": "/powerapps/maker/canvas-apps/app-from-sharepoint",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/cognitive-services-api.md",
-        "redirect_url": "/powerapps/maker/cognitive-services-api",
+        "redirect_url": "/powerapps/maker/canvas-apps/cognitive-services-api",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/common-issues-and-resolutions.md",
-        "redirect_url": "/powerapps/maker/common-issues-and-resolutions",
+        "redirect_url": "/powerapps/maker/canvas-apps/common-issues-and-resolutions",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connections/cloud-storage-blob-connections.md",
-        "redirect_url": "/powerapps/maker/connections/cloud-storage-blob-connections",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/cloud-storage-blob-connections",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-azure-sqldatabase.md",
-        "redirect_url": "/powerapps/maker/connections/connection-azure-sqldatabase",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-dynamicsax.md",
-        "redirect_url": "/powerapps/maker/connections/connection-dynamicsax",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-dynamicsax",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-dynamics-crmonline.md",
-        "redirect_url": "/powerapps/maker/connections/connection-dynamics-crmonline",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-dynamics-crmonline",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-excel.md",
-        "redirect_url": "/powerapps/maker/connections/connection-excel",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-excel",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-microsoft-translator.md",
-        "redirect_url": "/powerapps/maker/connections/connection-microsoft-translator",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-microsoft-translator",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-office365-outlook.md",
-        "redirect_url": "/powerapps/maker/connections/connection-office365-outlook",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-office365-outlook",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-office365-users.md",
-        "redirect_url": "/powerapps/maker/connections/connection-office365-users",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-office365-users",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-oracledb.md",
-        "redirect_url": "/powerapps/maker/connections/connection-oracledb",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-oracledb",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-powerbi.md",
-        "redirect_url": "/powerapps/maker/connections/connection-powerbi",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-powerbi",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-sharepoint-online.md",
-        "redirect_url": "/powerapps/maker/connections/connection-sharepoint-online",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-sharepoint-online",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections/connection-twitter.md",
-        "redirect_url": "/powerapps/maker/connections/connection-twitter",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections/connection-twitter",
         "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/connections-list.md",
-        "redirect_url": "/powerapps/maker/connections-list",
+        "redirect_url": "/powerapps/maker/canvas-apps/connections-list",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/connect-to-sharepoint.md",
-        "redirect_url": "/powerapps/maker/connect-to-sharepoint",
+        "redirect_url": "/powerapps/maker/canvas-apps/connect-to-sharepoint",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-add-picture.md",
-        "redirect_url": "/powerapps/maker/controls/control-add-picture",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-add-picture",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-attachments.md",
-        "redirect_url": "/powerapps/maker/controls/control-attachments",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-attachments",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-audio-video.md",
-        "redirect_url": "/powerapps/maker/controls/control-audio-video",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-audio-video",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-barcodescanner.md",
-        "redirect_url": "/powerapps/maker/controls/control-barcodescanner",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-barcodescanner",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-button.md",
-        "redirect_url": "/powerapps/maker/controls/control-button",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-button",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-camera.md",
-        "redirect_url": "/powerapps/maker/controls/control-camera",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-camera",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-card.md",
-        "redirect_url": "/powerapps/maker/controls/control-card",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-card",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-check-box.md",
-        "redirect_url": "/powerapps/maker/controls/control-check-box",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-check-box",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-column.md",
-        "redirect_url": "/powerapps/maker/controls/control-column",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-column",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-column-line-chart.md",
-        "redirect_url": "/powerapps/maker/controls/control-column-line-chart",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-column-line-chart",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-combo-box.md",
-        "redirect_url": "/powerapps/maker/controls/control-combo-box",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-combo-box",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-data-table.md",
-        "redirect_url": "/powerapps/maker/controls/control-data-table",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-data-table",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-date-picker.md",
-        "redirect_url": "/powerapps/maker/controls/control-date-picker",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-date-picker",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-drop-down.md",
-        "redirect_url": "/powerapps/maker/controls/control-drop-down",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-drop-down",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-export-import.md",
-        "redirect_url": "/powerapps/maker/controls/control-export-import",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-export-import",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-form-detail.md",
-        "redirect_url": "/powerapps/maker/controls/control-form-detail",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-form-detail",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-gallery.md",
-        "redirect_url": "/powerapps/maker/controls/control-gallery",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-gallery",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-html-text.md",
-        "redirect_url": "/powerapps/maker/controls/control-html-text",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-html-text",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-image.md",
-        "redirect_url": "/powerapps/maker/controls/control-image",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-image",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-list-box.md",
-        "redirect_url": "/powerapps/maker/controls/control-list-box",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-list-box",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-microphone.md",
-        "redirect_url": "/powerapps/maker/controls/control-microphone",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-microphone",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-pdf-viewer.md",
-        "redirect_url": "/powerapps/maker/controls/control-pdf-viewer",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-pdf-viewer",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-pen-input.md",
-        "redirect_url": "/powerapps/maker/controls/control-pen-input",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-pen-input",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-pie-chart.md",
-        "redirect_url": "/powerapps/maker/controls/control-pie-chart",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-pie-chart",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-power-bi-tile.md",
-        "redirect_url": "/powerapps/maker/controls/control-power-bi-tile",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-power-bi-tile",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-radio.md",
-        "redirect_url": "/powerapps/maker/controls/control-radio",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-radio",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-rating.md",
-        "redirect_url": "/powerapps/maker/controls/control-rating",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-rating",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-screen.md",
-        "redirect_url": "/powerapps/maker/controls/control-screen",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-screen",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-shapes-icons.md",
-        "redirect_url": "/powerapps/maker/controls/control-shapes-icons",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-shapes-icons",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-slider.md",
-        "redirect_url": "/powerapps/maker/controls/control-slider",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-slider",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-text-box.md",
-        "redirect_url": "/powerapps/maker/controls/control-text-box",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-text-box",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-text-input.md",
-        "redirect_url": "/powerapps/maker/controls/control-text-input",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-text-input",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-timer.md",
-        "redirect_url": "/powerapps/maker/controls/control-timer",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-timer",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/control-toggle.md",
-        "redirect_url": "/powerapps/maker/controls/control-toggle",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/control-toggle",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/create-app-browser.md",
-        "redirect_url": "/powerapps/maker/create-app-browser",
+        "redirect_url": "/powerapps/maker/canvas-apps/create-app-browser",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/create-update-collection.md",
-        "redirect_url": "/powerapps/maker/create-update-collection",
+        "redirect_url": "/powerapps/maker/canvas-apps/create-update-collection",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/customize-card.md",
-        "redirect_url": "/powerapps/maker/customize-card",
+        "redirect_url": "/powerapps/maker/canvas-apps/customize-card",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/customize-forms-sharepoint.md",
-        "redirect_url": "/powerapps/maker/customize-forms-sharepoint",
+        "redirect_url": "/powerapps/maker/canvas-apps/customize-forms-sharepoint",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/customize-layout-sharepoint.md",
-        "redirect_url": "/powerapps/maker/customize-layout-sharepoint",
+        "redirect_url": "/powerapps/maker/canvas-apps/customize-layout-sharepoint",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/customize-list-form.md",
-        "redirect_url": "/powerapps/maker/customize-list-form",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/custom-picklists.md",
-        "redirect_url": "/powerapps/maker/custom-picklists",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-cds-newentity-pq.md",
-        "redirect_url": "/powerapps/maker/data-platform-cds-newentity-pq",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-cds-newentity-troubleshooting-mashup.md",
-        "redirect_url": "/powerapps/maker/data-platform-cds-newentity-troubleshooting-mashup",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-create-app.md",
-        "redirect_url": "/powerapps/maker/data-platform-create-app",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-create-app-scratch.md",
-        "redirect_url": "/powerapps/maker/data-platform-create-app-scratch",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-create-entity.md",
-        "redirect_url": "/powerapps/maker/data-platform-create-entity",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-delete-entity.md",
-        "redirect_url": "/powerapps/maker/data-platform-delete-entity",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-entity-lookup.md",
-        "redirect_url": "/powerapps/maker/data-platform-entity-lookup",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-export-data.md",
-        "redirect_url": "/powerapps/maker/data-platform-export-data",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-interactive-excel.md",
-        "redirect_url": "/powerapps/maker/data-platform-interactive-excel",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-intro.md",
-        "redirect_url": "/powerapps/maker/data-platform-intro",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/data-platform-manage-fields.md",
-        "redirect_url": "/powerapps/maker/data-platform-manage-fields",
+        "redirect_url": "/powerapps/maker/canvas-apps/customize-list-form",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/delegation-list.md",
-        "redirect_url": "/powerapps/maker/delegation-list",
+        "redirect_url": "/powerapps/maker/canvas-apps/delegation-list",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/delegation-overview.md",
-        "redirect_url": "/powerapps/maker/delegation-overview",
+        "redirect_url": "/powerapps/maker/canvas-apps/delegation-overview",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/delete-app.md",
-        "redirect_url": "/powerapps/maker/delete-app",
+        "redirect_url": "/powerapps/maker/canvas-apps/delete-app",
         "redirect_document_id": true
         },
         {
@@ -632,667 +567,733 @@
         },
         {
         "source_path": "powerapps-docs/edit-app.md",
-        "redirect_url": "/powerapps/maker/edit-app",
+        "redirect_url": "/powerapps/maker/canvas-apps/edit-app",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/entity-form-control.md",
-        "redirect_url": "/powerapps/maker/entity-form-control",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/field-groups.md",
-        "redirect_url": "/powerapps/maker/field-groups",
+        "redirect_url": "/powerapps/maker/canvas-apps/entity-form-control",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/formula-reference.md",
-        "redirect_url": "/powerapps/maker/formula-reference",
+        "redirect_url": "/powerapps/maker/canvas-apps/formula-reference",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-aggregates.md",
-        "redirect_url": "/powerapps/maker/functions/function-aggregates",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-aggregates",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-char.md",
-        "redirect_url": "/powerapps/maker/functions/function-char",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-char",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-clear-collect-clearcollect.md",
-        "redirect_url": "/powerapps/maker/functions/function-clear-collect-clearcollect",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-clear-collect-clearcollect",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-clock-calendar.md",
-        "redirect_url": "/powerapps/maker/functions/function-clock-calendar",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-clock-calendar",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-colors.md",
-        "redirect_url": "/powerapps/maker/functions/function-colors",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-colors",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-concatenate.md",
-        "redirect_url": "/powerapps/maker/functions/function-concatenate",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-concatenate",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-datasourceinfo.md",
-        "redirect_url": "/powerapps/maker/functions/function-datasourceinfo",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-datasourceinfo",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-dateadd-datediff.md",
-        "redirect_url": "/powerapps/maker/functions/function-dateadd-datediff",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-dateadd-datediff",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-date-time.md",
-        "redirect_url": "/powerapps/maker/functions/function-date-time",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-date-time",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-datetime-parts.md",
-        "redirect_url": "/powerapps/maker/functions/function-datetime-parts",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-datetime-parts",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-datevalue-timevalue.md",
-        "redirect_url": "/powerapps/maker/functions/function-datevalue-timevalue",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-datevalue-timevalue",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-defaults.md",
-        "redirect_url": "/powerapps/maker/functions/function-defaults",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-defaults",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-distinct.md",
-        "redirect_url": "/powerapps/maker/functions/function-distinct",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-distinct",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-enable-disable.md",
-        "redirect_url": "/powerapps/maker/functions/function-enable-disable",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-enable-disable",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-encode-decode.md",
-        "redirect_url": "/powerapps/maker/functions/function-encode-decode",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-encode-decode",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-errors.md",
-        "redirect_url": "/powerapps/maker/functions/function-errors",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-errors",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-exit.md",
-        "redirect_url": "/powerapps/maker/functions/function-exit",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-exit",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-filter-lookup.md",
-        "redirect_url": "/powerapps/maker/functions/function-filter-lookup",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-filter-lookup",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-find.md",
-        "redirect_url": "/powerapps/maker/functions/function-find",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-find",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-first-last.md",
-        "redirect_url": "/powerapps/maker/functions/function-first-last",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-first-last",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-forall.md",
-        "redirect_url": "/powerapps/maker/functions/function-forall",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-forall",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-form.md",
-        "redirect_url": "/powerapps/maker/functions/function-form",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-form",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-groupby.md",
-        "redirect_url": "/powerapps/maker/functions/function-groupby",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-groupby",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-hashtags.md",
-        "redirect_url": "/powerapps/maker/functions/function-hashtags",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-hashtags",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-if.md",
-        "redirect_url": "/powerapps/maker/functions/function-if",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-if",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-isblank-isempty.md",
-        "redirect_url": "/powerapps/maker/functions/function-isblank-isempty",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-isblank-isempty",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-ismatch.md",
-        "redirect_url": "/powerapps/maker/functions/function-ismatch",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-ismatch",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-isnumeric.md",
-        "redirect_url": "/powerapps/maker/functions/function-isnumeric",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-isnumeric",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-language.md",
-        "redirect_url": "/powerapps/maker/functions/function-language",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-language",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-left-mid-right.md",
-        "redirect_url": "/powerapps/maker/functions/function-left-mid-right",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-left-mid-right",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-len.md",
-        "redirect_url": "/powerapps/maker/functions/function-len",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-len",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-logicals.md",
-        "redirect_url": "/powerapps/maker/functions/function-logicals",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-logicals",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-lower-upper-proper.md",
-        "redirect_url": "/powerapps/maker/functions/function-lower-upper-proper",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-lower-upper-proper",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-mod.md",
-        "redirect_url": "/powerapps/maker/functions/function-mod",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-mod",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-navigate.md",
-        "redirect_url": "/powerapps/maker/functions/function-navigate",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-navigate",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-now-today-istoday.md",
-        "redirect_url": "/powerapps/maker/functions/function-now-today-istoday",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-now-today-istoday",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-numericals.md",
-        "redirect_url": "/powerapps/maker/functions/function-numericals",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-numericals",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-param.md",
-        "redirect_url": "/powerapps/maker/functions/function-param",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-param",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-patch.md",
-        "redirect_url": "/powerapps/maker/functions/function-patch",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-patch",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-rand.md",
-        "redirect_url": "/powerapps/maker/functions/function-rand",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-rand",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-refresh.md",
-        "redirect_url": "/powerapps/maker/functions/function-refresh",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-refresh",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-remove-removeif.md",
-        "redirect_url": "/powerapps/maker/functions/function-remove-removeif",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-remove-removeif",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-replace-substitute.md",
-        "redirect_url": "/powerapps/maker/functions/function-replace-substitute",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-replace-substitute",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-reset.md",
-        "redirect_url": "/powerapps/maker/functions/function-reset",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-reset",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-revert.md",
-        "redirect_url": "/powerapps/maker/functions/function-revert",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-revert",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-round.md",
-        "redirect_url": "/powerapps/maker/functions/function-round",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-round",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-savedata-loaddata.md",
-        "redirect_url": "/powerapps/maker/functions/function-savedata-loaddata",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-savedata-loaddata",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-set.md",
-        "redirect_url": "/powerapps/maker/functions/function-set",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-set",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-shuffle.md",
-        "redirect_url": "/powerapps/maker/functions/function-shuffle",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-shuffle",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-sort.md",
-        "redirect_url": "/powerapps/maker/functions/function-sort",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-sort",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-split.md",
-        "redirect_url": "/powerapps/maker/functions/function-split",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-split",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-startswith.md",
-        "redirect_url": "/powerapps/maker/functions/function-startswith",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-startswith",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-table.md",
-        "redirect_url": "/powerapps/maker/functions/function-table",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-table",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-table-counts.md",
-        "redirect_url": "/powerapps/maker/functions/function-table-counts",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-table-counts",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-table-shaping.md",
-        "redirect_url": "/powerapps/maker/functions/function-table-shaping",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-table-shaping",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-text.md",
-        "redirect_url": "/powerapps/maker/functions/function-text",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-text",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-trig.md",
-        "redirect_url": "/powerapps/maker/functions/function-trig",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-trig",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-trim.md",
-        "redirect_url": "/powerapps/maker/functions/function-trim",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-trim",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-updatecontext.md",
-        "redirect_url": "/powerapps/maker/functions/function-updatecontext",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-updatecontext",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-update-updateif.md",
-        "redirect_url": "/powerapps/maker/functions/function-update-updateif",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-update-updateif",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-user.md",
-        "redirect_url": "/powerapps/maker/functions/function-user",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-user",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-validate.md",
-        "redirect_url": "/powerapps/maker/functions/function-validate",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-validate",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/function-value.md",
-        "redirect_url": "/powerapps/maker/functions/function-value",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/function-value",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/gallery-dynamic-sizing.md",
-        "redirect_url": "/powerapps/maker/gallery-dynamic-sizing",
+        "redirect_url": "/powerapps/maker/canvas-apps/gallery-dynamic-sizing",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/gateway-management.md",
-        "redirect_url": "/powerapps/maker/gateway-management",
+        "redirect_url": "/powerapps/maker/canvas-apps/gateway-management",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/gateway-reference.md",
-        "redirect_url": "/powerapps/maker/gateway-reference",
+        "redirect_url": "/powerapps/maker/canvas-apps/gateway-reference",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/generate-app-from-sharepoint-list-interface.md",
-        "redirect_url": "/powerapps/maker/generate-app-from-sharepoint-list-interface",
+        "redirect_url": "/powerapps/maker/canvas-apps/generate-app-from-sharepoint-list-interface",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/get-started-create-from-blank.md",
-        "redirect_url": "/powerapps/maker/get-started-create-from-blank",
+        "redirect_url": "/powerapps/maker/canvas-apps/get-started-create-from-blank",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/get-started-create-from-data.md",
-        "redirect_url": "/powerapps/maker/get-started-create-from-data",
+        "redirect_url": "/powerapps/maker/canvas-apps/get-started-create-from-data",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/get-started-test-drive.md",
-        "redirect_url": "/powerapps/maker/get-started-test-drive",
+        "redirect_url": "/powerapps/maker/canvas-apps/get-started-test-drive",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/getting-started.md",
-        "redirect_url": "/powerapps/maker/getting-started",
+        "redirect_url": "/powerapps/maker/canvas-apps/getting-started",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/global-apps.md",
-        "redirect_url": "/powerapps/maker/global-apps",
+        "redirect_url": "/powerapps/maker/canvas-apps/global-apps",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/intro-maker-portal.md",
-        "redirect_url": "/powerapps/maker/intro-maker-portal",
+        "redirect_url": "/powerapps/maker/canvas-apps/intro-maker-portal",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/limits-and-config.md",
-        "redirect_url": "/powerapps/maker/limits-and-config",
+        "redirect_url": "/powerapps/maker/canvas-apps/limits-and-config",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/open-and-run-a-sample-app.md",
-        "redirect_url": "/powerapps/maker/open-and-run-a-sample-app",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/open-app-embedded-in-sharepoint.md",
-        "redirect_url": "/powerapps/maker/open-app-embedded-in-sharepoint",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/open-app-embedded-in-teams.md",
-        "redirect_url": "/powerapps/maker/open-app-embedded-in-teams",
+        "redirect_url": "/powerapps/maker/canvas-apps/open-and-run-a-sample-app",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/operators.md",
-        "redirect_url": "/powerapps/maker/functions/operators",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/operators",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/properties-accessibility.md",
-        "redirect_url": "/powerapps/maker/controls/properties-accessibility",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/properties-accessibility",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/properties-color-border.md",
-        "redirect_url": "/powerapps/maker/controls/properties-color-border",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/properties-color-border",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/properties-core.md",
-        "redirect_url": "/powerapps/maker/controls/properties-core",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/properties-core",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/properties-size-location.md",
-        "redirect_url": "/powerapps/maker/controls/properties-size-location",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/properties-size-location",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/properties-text.md",
-        "redirect_url": "/powerapps/maker/controls/properties-text",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/properties-text",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/controls/properties-visual.md",
-        "redirect_url": "/powerapps/maker/controls/properties-visual",
+        "redirect_url": "/powerapps/maker/canvas-apps/controls/properties-visual",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/reference-properties.md",
-        "redirect_url": "/powerapps/maker/reference-properties",
+        "redirect_url": "/powerapps/maker/canvas-apps/reference-properties",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/release-notes.md",
-        "redirect_url": "/powerapps/maker/release-notes",
+        "redirect_url": "/powerapps/maker/canvas-apps/release-notes",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/restore-an-app.md",
-        "redirect_url": "/powerapps/maker/restore-an-app",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/run-app-browser.md",
-        "redirect_url": "/powerapps/maker/run-app-browser",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/run-app-client.md",
-        "redirect_url": "/powerapps/maker/run-app-client",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/samples-resources.md",
-        "redirect_url": "/powerapps/maker/samples-resources",
+        "redirect_url": "/powerapps/maker/canvas-apps/restore-an-app",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/save-publish-app.md",
-        "redirect_url": "/powerapps/maker/save-publish-app",
+        "redirect_url": "/powerapps/maker/canvas-apps/save-publish-app",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/scan-barcode.md",
-        "redirect_url": "/powerapps/maker/scan-barcode",
+        "redirect_url": "/powerapps/maker/canvas-apps/scan-barcode",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/set-aspect-ratio-portrait-landscape.md",
-        "redirect_url": "/powerapps/maker/set-aspect-ratio-portrait-landscape",
+        "redirect_url": "/powerapps/maker/canvas-apps/set-aspect-ratio-portrait-landscape",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/set-name-tile.md",
-        "redirect_url": "/powerapps/maker/set-name-tile",
+        "redirect_url": "/powerapps/maker/canvas-apps/set-name-tile",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/share-app.md",
-        "redirect_url": "/powerapps/maker/share-app",
+        "redirect_url": "/powerapps/maker/canvas-apps/share-app",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/share-app-data.md",
-        "redirect_url": "/powerapps/maker/share-app-data",
+        "redirect_url": "/powerapps/maker/canvas-apps/share-app-data",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/share-app-resources.md",
-        "redirect_url": "/powerapps/maker/share-app-resources",
+        "redirect_url": "/powerapps/maker/canvas-apps/share-app-resources",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-form-integration.md",
-        "redirect_url": "/powerapps/maker/sharepoint-form-integration",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-form-integration",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-lookup-fields.md",
-        "redirect_url": "/powerapps/maker/sharepoint-lookup-fields",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-lookup-fields",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-alerts-flow.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-alerts-flow",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-alerts-flow",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-approval-flow.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-approval-flow",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-approval-flow",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-build-app.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-build-app",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-build-app",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-build-report.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-build-report",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-build-report",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-embed-report.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-embed-report",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-embed-report",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-generate-app.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-generate-app",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-generate-app",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-intro.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-intro",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-intro",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-publish-report.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-publish-report",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-publish-report",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-setup.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-setup",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-setup",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/sharepoint-scenario-summary.md",
-        "redirect_url": "/powerapps/maker/sharepoint-scenario-summary",
+        "redirect_url": "/powerapps/maker/canvas-apps/sharepoint-scenario-summary",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/show-current-user.md",
-        "redirect_url": "/powerapps/maker/show-current-user",
+        "redirect_url": "/powerapps/maker/canvas-apps/show-current-user",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/show-images-text-gallery-sort-filter.md",
-        "redirect_url": "/powerapps/maker/show-images-text-gallery-sort-filter",
+        "redirect_url": "/powerapps/maker/canvas-apps/show-images-text-gallery-sort-filter",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/show-text-dates-times.md",
-        "redirect_url": "/powerapps/maker/show-text-dates-times",
+        "redirect_url": "/powerapps/maker/canvas-apps/show-text-dates-times",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/functions/signals.md",
-        "redirect_url": "/powerapps/maker/functions/signals",
+        "redirect_url": "/powerapps/maker/canvas-apps/functions/signals",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/signup-for-powerapps.md",
-        "redirect_url": "/powerapps/maker/signup-for-powerapps",
+        "redirect_url": "/powerapps/maker/canvas-apps/signup-for-powerapps",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/signup-for-powerapps-admin.md",
-        "redirect_url": "/powerapps/maker/signup-for-powerapps-admin",
+        "redirect_url": "/powerapps/maker/canvas-apps/signup-for-powerapps-admin",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/tutorial-working-with-images-in-excel.md",
-        "redirect_url": "/powerapps/maker/tutorial-working-with-images-in-excel",
+        "redirect_url": "/powerapps/maker/canvas-apps/tutorial-working-with-images-in-excel",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/use-line-pie-bar-chart.md",
-        "redirect_url": "/powerapps/maker/use-line-pie-bar-chart",
+        "redirect_url": "/powerapps/maker/canvas-apps/use-line-pie-bar-chart",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/using-logic-flows.md",
-        "redirect_url": "/powerapps/maker/using-logic-flows",
+        "redirect_url": "/powerapps/maker/canvas-apps/using-logic-flows",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/webinars-listing.md",
-        "redirect_url": "/powerapps/maker/webinars-listing",
+        "redirect_url": "/powerapps/maker/canvas-apps/webinars-listing",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-cards.md",
-        "redirect_url": "/powerapps/maker/working-with-cards",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-cards",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-data-sources.md",
-        "redirect_url": "/powerapps/maker/working-with-data-sources",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-data-sources",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-environments.md",
-        "redirect_url": "/powerapps/maker/working-with-environments",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-environments",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-form-layout.md",
-        "redirect_url": "/powerapps/maker/working-with-form-layout",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-form-layout",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-forms.md",
-        "redirect_url": "/powerapps/maker/working-with-forms",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-forms",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-formulas.md",
-        "redirect_url": "/powerapps/maker/working-with-formulas",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-formulas",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-formulas-in-depth.md",
-        "redirect_url": "/powerapps/maker/working-with-formulas-in-depth",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-formulas-in-depth",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-rules.md",
-        "redirect_url": "/powerapps/maker/working-with-rules",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-rules",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-tables.md",
-        "redirect_url": "/powerapps/maker/working-with-tables",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-tables",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/working-with-variables.md",
-        "redirect_url": "/powerapps/maker/working-with-variables",
+        "redirect_url": "/powerapps/maker/canvas-apps/working-with-variables",
+        "redirect_document_id": true
+        },
+		        {
+        "source_path": "powerapps-docs/custom-picklists.md",
+        "redirect_url": "/powerapps/maker/common-data-service/custom-picklists",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-cds-newentity-pq.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-cds-newentity-pq",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-cds-newentity-troubleshooting-mashup.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-cds-newentity-troubleshooting-mashup",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-create-app.md",
+        "redirect_url": "/powerapps/maker/canvas-apps/data-platform-create-app",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-create-app-scratch.md",
+        "redirect_url": "/powerapps/maker/canvas-apps/data-platform-create-app-scratch",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-create-entity.md",
+        "redirect_url": "/powerapps/maker/common-data-service/create-custom-entity",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-delete-entity.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-delete-entity",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-entity-lookup.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-entity-lookup",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-export-data.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-interactive-excel.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-intro.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/data-platform-manage-fields.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-manage-fields",
+        "redirect_document_id": true
+        },
+		        {
+        "source_path": "powerapps-docs/field-groups.md",
+        "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
+        "redirect_document_id": false
+        },
+		        {
+        "source_path": "powerapps-docs/samples-resources.md",
+        "redirect_url": "/powerapps/maker/common-data-service/samples-resources",
+        "redirect_document_id": true
+        },
+		{
+        "source_path": "powerapps-docs/app-source.md",
+        "redirect_url": "/powerapps/user/app-source",
+        "redirect_document_id": true
+        },
+		        {
+        "source_path": "powerapps-docs/open-app-embedded-in-sharepoint.md",
+        "redirect_url": "/powerapps/maker/canvas-apps/generate-app-from-sharepoint-list-interface",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "powerapps-docs/open-app-embedded-in-teams.md",
+        "redirect_url": "/powerapps/user/open-app-embedded-in-teams",
+        "redirect_document_id": true
+        },
+		        {
+        "source_path": "powerapps-docs/run-app-browser.md",
+        "redirect_url": "/powerapps/user/run-app-browser",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/run-app-client.md",
+        "redirect_url": "/powerapps/user/run-app-client",
+        "redirect_document_id": true
         }
     ]
 }
