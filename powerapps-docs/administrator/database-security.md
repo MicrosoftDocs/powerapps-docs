@@ -13,94 +13,104 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 05/08/2017
-ms.author: kfend
+ms.date: 03/21/2018
+ms.author: manasma
 
 ---
 # Configure database security
 The Common Data Service uses a role-based security model to help secure access to the database. This topic explains how to create the security artifacts that you must have to help secure an app. The user roles control run-time access to data and are separate from the Environment roles that govern environment administrators and environment makers. For an overview of environments, see [Environments overview](environments-overview.md).
 
-It's important that you understand what level of access to these entities users of the app require. The Common Data Service supports create, read, update, and delete (CRUD) permissions on entities.
+## Assign security roles to users
+Security roles control a user’s access to data through a set of access levels and permissions. The combination of access levels and permissions that are included in a specific security role sets limits on the user’s view of data and on the user’s interactions with that data.
 
-* **Create** – A user can create new entries in the entity.
-* **Read** – A user can view and search existing entries in the entity.
-* **Update** – A user can update or edit an existing entry in the entity.
-* **Delete** – A user can delete or remove an existing entry in the entity.
 
-The two permission levels that are most often used are read-only access and full access. The Common Data Service includes permission sets at these two permission levels for all its entities. View permission sets provide read access to an entity. Maintain permission sets provide full access to an entity.
+To assign a user or a security group to an environment role, an Environment Admin can take these steps in the [PowerApps admin center][1]:
 
-The security model enables any combination of these permissions to be assigned to a user role. Roles combine the various permissions that are granted across the permission sets that are added to them. Therefore, the members of a role can access all the data that the permission sets that are included in the role give them access to. For more information about the Common Data Service security model, see [Security model](https://docs.microsoft.c../maker/common-data-service/entity-reference/security-model).
+1. Select the environment in the environments table.
 
-## Identify the entities
-To configure the correct access controls for an app, you must know what entities the app uses. To see a list of the entities that an app uses, follow these steps.
+    ![](./media/environment-admin/environment-list-new.png)
 
-1. Open the app in Microsoft PowerApps Studio.
-2. On the **Content** tab, click or tap **Data sources**. The list of data sources appears in the right pane.
+2. Select **Security** tab.
 
-## Configure security
-When you create a new entity, you must also create a new permission set or edit an existing permission set to provide access to the entity's data. When you create an app, we recommend that you also create a permission set that provides access to all the entities that are required in order to run the app. Security is managed in the admin center.
+3. Click on the link to manage the environment roles in Dynamics 365.
 
-1. Open the [admin center](https://admin.powerapps.com).
-2. Click or tap the environment that contains your database.
-3. Click or tap **Security**. You can then use the **Permission sets** and **User roles** tabs to configure security on your database.
+    ![](./media/environment-admin/Security-Link-D365.png)
 
-## Create a permission set
-To enable access to a new app, you must first create a new permission set.
+4. Select the user from the list of users in the environment.
 
-1. Click or tap **Permission sets**.
-2. Click or tap **New permission set** to create a permission set.
-3. Enter a name and description for the permission set, and then tap or click **Create**. The new permission set appears in the list of permission sets.
-4. Click or tap the permission set that you just created.
-5. Click or tap the **Entities** tab. The **Entities** tab contains a list of all the entities in your database. For each entity that is used in your app, select the check box for the permission to allow.
-6. Click or tap **Save**.
+    ![](./media/environment-admin/D365-Select-User.png)
 
-## Create a policy (Technical Preview)
-To enable or restrict access to the records in an entity, you must first create a policy.
+5. Assign the role to the user.
 
-1. Click or tap **Policies**.
-2. Click or tap **New policy**.
-3. Enter a name and description for the policy.
-4. Select the type of policy to create. If you're creating a picklist policy, enter the picklist to use.
-5. Select the operator to use.
-6. Select the value for the policy to check against.
-7. Click or tap **Create**.
+    ![](./media/environment-admin/D365-Assign-Role.png)
 
-## Assign a policy (Technical Preview)
-To apply a policy, you must assign it to a data entity in a permission set.
+    > [!NOTE]
+    > Currently, roles can only be assigned to the users. Assigning a role to a security group is in our backlog.
 
-1. Click or tap **Permission Sets**.
-2. Click or tap the permission set to assign a policy under.
-3. Click or tap the **Edit** button for the entity to assign a policy to.
-4. Expand the **Policy assignment** section.
-5. Select the data operations to apply a policy to (**Create**, **Read**, **Update**, or **Delete**).
-6. Select the entity field that the policy will be based on.
-7. Select the policy to assign.
-8. Click or tap **Assign**.
-9. Click or tap **Save**.
+6. Select **OK** to update the assignments to the environment role.
 
-## Create and assign a role
-After the correct permissions are included in a permission set, you can create a role that can be assigned to users.
 
-1. Click or tap **User roles**.
-2. Click or tap **New role**.
-3. Enter a name and description for the role, and then click or tap **Create**. The new role appears in the **User** roles list.
-4. Click or tap the role that you just created.
-5. Click or tap the **Permission sets** tab.
-6. Enter the name of the permission set that you created earlier. In the drop-down list that appears as you type, click or tap the permission set to add it to the role. Repeat this step for every other permission set that you want for the role.
-7. Click or tap the **Users** tab for the role.
-8. Enter the names or email addresses of the users or groups to add to the role. In the drop-down list that appears as you type, click or tap the user. Users and groups that the role will be assigned to are added to the list.
-9. Click or tap **Save**.
+## Predefined security roles
+The PowerApps environment includes predefined security roles that reflect common user tasks with access levels defined to match the security best-practice goal of providing access to the minimum amount of business data required to use the app.
 
-The users or groups in this role can now access the data that any permission set that is associated with the role gives them access to. To use the data in your database, a user must have a security role and access to a PowerApps app that uses the data.
+|Security role  |*Database Privileges  |Description |
+|---------|---------|---------|
+|System Administrator     |  Create, Read, Write, Delete, Customizations, Security Roles       | Has full permission to customize or administer the environment, including creating, modifying, and assigning security roles. Can view all data in the environment. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|System Customizer     | Create (self), Read (self), Write (self), Delete (self), Customizations         | Has full permission to customize the environment. However, can only view records for environment entities that they create. More information: [Privileges required for customization](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|Environment Maker     |  None       | Can create new resources associated with an environment including apps, connections, custom APIs, gateways, and flows using Microsoft Flow. However, does not have any privileges to access data within an environment. More information: [Environments overview](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
+|Common Data Service User     |  Read, Create (self), write (self), delete (self)       | Can run an app within the environment and perform common tasks for the records that they own.        |
+|Delegate     | Act on behalf of another user        | Allows code to run as another user or impersonate.  Typically used with another security role to allow access to records. More information: [Impersonate another user](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
-## Edit permission sets and roles
-To edit roles and permission sets after they have been created, click the **Edit** button.
+*Privilege is global scope unless specified otherwise.
 
-To delete a role or permission set, use the **Delete** button.
+- The Environment Maker role can not only create resources within an environment, but can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users. For more information, see [Share an app in PowerApps](../maker/canvas-apps/share-app.md). 
 
-## Out-of-box security roles
-Two security roles are provided out of the box:
+- For the users making apps which are connecting to the database and needs to create or update entities and security roles, should be assigned System Customizer role as well, along with the Environment Maker as Environment Maker role, has no priviliges on the database.
 
-* **Database Owner** – The Database Owner role is intended for users who have an administrative function. The creator of the environment is automatically assigned to this role. Users in this role always have full access to all entities in the database. They even have full access to new entities that are added. Users in this role can also create and edit entity schemas in the database. You don't have to add permission sets to this role. You just have to assign users to it.
-* **Organization User** – The Organization User role is the default role that is assigned to all users. The purpose of this role is to give all users access to the entities that contain public data. If an app is shared in restricted mode, the entities that the app uses should be contained in this role. You don't have to assign this role, because it's already assigned to everyone in your organization. You just have to add the permission sets that you want to give to your whole organization.
+
+## Create or configure a custom security role
+If your app is based on a custom entity, privileges must be explicitly specified before users may work on it. To do this, you can choose to do one of the following.
+- Expand an existing predefined security role, so that it includes privileges on records based on the custom entity. 
+- Create a custom security role for the purpose of managing privileges for users of the app. 
+
+The environment might maintain the records which can be used by multiple apps, you might need multiple security roles to access the data with different priviliges. e.g.
+- Some of the users (Type A) might only need to read, update, and attach other records so their security role will have read, write, and append privileges. 
+- Other users might need all the privileges that users of Type A has, plus the ability to create, append to, delete, and share, so their security role will have create, read, write, append, delete, assign, append to, and share privileges.
+
+For more information about access and scope privileges, see [Security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
+
+## Create a custom security role
+1. In [PowerApps admin center][1] select the environment where you want to update a security role.
+
+    ![](./media/environment-admin/choose-environment-updated.png)
+
+2. Click on the link in **Details** tab to manage the environment in Dynamics 365 admin center.
+
+3. Select the instance (with the same name of environment) and click on Open
+
+    ![](./media/database-security/glados-instance-list.png)
+
+4. In the header, click on the **Settings** and select **Security**
+
+    ![](./media/database-security/dyn365-settings-security.png)
+
+5. Select **Security roles**
+
+    ![](./media/database-security/dyn365-securityroles.png)
+
+6. Click on **New**
+
+7. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. 
+
+8. Select the tab and search for your entity e.g. **Custom Entities** tab, for setting permissions on a custom entity. 
+
+9. Select the privileges **Read, Write, Append**
+
+10. Select **Save and Close**. 
+
+
+
+<!--Reference links in article-->
+[1]: https://admin.powerapps.com
+
 

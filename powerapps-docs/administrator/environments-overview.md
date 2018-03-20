@@ -4,7 +4,7 @@ description: What environments are and how to use them
 services: ''
 suite: powerapps
 documentationcenter: na
-author: jamesol-msft
+author: manasmams
 manager: anneta
 editor: ''
 tags: ''
@@ -14,12 +14,12 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 11/01/2016
-ms.author: jamesol
+ms.date: 03/21/2018
+ms.author: manasma
 
 ---
 # Environments overview
-Environments are a new concept in PowerApps. Put simply, an environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you choose to leverage environments depends on your organization and the apps you are trying to build. For example:
+An environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you choose to leverage environments depends on your organization and the apps you are trying to build. For example:
 
 * You may choose to only build your apps in a single environment.
 * You might create separate environments that group the Test and Production versions of your apps.
@@ -49,6 +49,8 @@ Environments have two built-in roles that provide access to permissions within a
     * View and manage all resources created within an environment
   
     * Set data loss prevention policies. For more information see [Data loss prevention policies](prevent-data-loss.md).
+    
+    After creating the database in the environment, you can use System Administrator role instead of Environment Admin role.
 
 * The Environment Maker role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow.
 
@@ -71,6 +73,9 @@ A single default environment is automatically created by PowerApps for each tena
 The default environment is named as follows: “{Azure AD tenant name} (default)”
 
 ![](./media/environments-overview/DefaultEnvironment.png)
+
+## Production and Trial environments
+You can create environments for different purpose. A Trial environment is for trying out the environment and database with Common Data Service experience. It expires after certain period. For more information, see [Environment Administration](environments-administration.md).
 
 ## Choosing an environment
 With the introduction of environments, you will now see a new experience when you come to [https://web.powerapps.com](https://web.powerapps.com).  The apps, connections, and other items that are visible in the site will now be filtered based on the current environment that is selected.  Your current environment is specified in the environment picker near the right edge of the header. To choose a different environment, click or tap the picker, and a list of available environments appears. Click or tap the one you wish to enter.
@@ -97,12 +102,12 @@ Your license determines whether you can create environments.
 | Office 365 Plans |x |
 | Dynamics 365 Apps and Teams Plans |x |
 
-Each user can create up to two  environments.
+Each user can create upto two Trial environments. PowerApps P2 can as well create upto two Production environments.
 
 ### Where can environments be created?
 You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, they you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can be participate in as a member of the Environment Admin or Environment Maker role. For more information, see [Environment Administration](environments-administration.md).
 
-![](./media/environments-overview/CreateEnvironmentDialog.png)
+![](./media/environments-overview/CreateEnvironmentDialog-New.png)
 
 ## What will change for PowerApps Preview users?
 Any user that has participated in the PowerApps preview will see some changes in their experience with the introduction of environments.  The following table lists what U.S. users and non-U.S. users can expect:
@@ -124,7 +129,7 @@ Two weeks after PowerApps enters general availability (GA), environments that co
 ![](./media/environments-overview/non-USuser1.png)
 
 ## Managing environments for your organization
-With the introduction of environments, we are also launching the PowerApps admin center, where you can manage all of the environments that you have created or to which you have been added to the Environment Admin role. From the Admin center, you can perform all administrative actions on an environment, including the following:
+In PowerApps admin center,  you can manage all of the environments that you have created or to which you have been added to the Environment Admin role. From the Admin center, you can perform all administrative actions on an environment, including the following:
 
 * Add or remove a user or group from either the Environment Admin or Environment Maker role.  For more information, see [Environment Administration](environments-administration.md).
 * Provision a Common Data Service database for the environment. For more information, see [Create a Common Data Service database](create-database.md).

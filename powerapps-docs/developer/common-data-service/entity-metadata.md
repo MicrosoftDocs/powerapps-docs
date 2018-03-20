@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/12/2018
+ms.date: 03/19/2018
 ms.author: jdaly
 ---
 
@@ -87,7 +87,7 @@ More information:
 
 ## Types of entities
 
-The capabilities and behavior of entities depends on several entity properties. Most of these properties are relatively simple and have descriptive names. Three that require some additional explanation are: *Ownership*, *Activity entities*, *Activityparty entity* and *Child entities*.
+The capabilities and behavior of entities depends on several entity properties. Most of these properties are relatively simple and have descriptive names. Four that require some additional explanation are: *Ownership*, *Activity entities*, *Activityparty entity* and *Child entities*.
 
 ### Entity ownership
 

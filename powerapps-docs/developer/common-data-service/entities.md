@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/12/2018
+ms.date: 03/19/2018
 ms.author: jdaly
 ---
 # Common Data Service for Apps entities
@@ -41,6 +41,10 @@ There are several ways to edit entity metadata using designers.
 ### Import a solution
 
 A solution can contain entity metadata and other customized components. Importing a managed or unmanaged solution into your common data service tenant will include those entities or extend existing entities with the new entity metadata they contain.
+
+### From a data source using Power Query
+
+You can create new entities and fill them with data using Power Query. More information: [Add data to an entity in the Common Data Service by using Power Query](../../maker/common-data-service/data-platform-cds-newentity-pq.md)
 
 ### Use metadata services
 
