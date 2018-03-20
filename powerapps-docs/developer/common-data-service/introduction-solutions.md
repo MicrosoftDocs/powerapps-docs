@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/20/2018
+ms.date: 03/19/2018
 ms.author: jdaly
 ---
 # Introduction to solutions
@@ -68,7 +68,7 @@ From [powerapps.com](https://web.powerapps.com)
 2. In the fly out, select **All apps**.
 3. Look for the **Dynamics 365 - custom app**.
  You may want to click the elipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
-4. Click the **Dynamics 365 - custom app** and select it.
+4. Click the **Dynamics 365 - custom app** app and select it.
 5. Navigate to **Settings** > **Customization** > **Customizations**.
 
 From [home.dynamics.com](http://home.dynamics.com/)
