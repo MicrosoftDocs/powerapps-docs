@@ -72,6 +72,7 @@ If you are a member of the Global Administrator role of your Azure AD or Office 
     ![](./media/environment-admin/environment-rename-2.png)
 
     If you have created the database in the environment, then you will not see this option. You can rename the environment from Dynamics 365 Admin center by clicking on the link in **Details** tab.
+    
         ![](./media/environment-admin/Delete-D365AdminCenter.png)
 
 
@@ -115,8 +116,8 @@ In an environment, all the users in the Azure AD tenant are users of that enviro
 
     * Set data loss prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
 
-> [!NOTE]
-> If the environment has the database, then you need to assign users the **System Administrator** role, instead of the **Environment Admin** role.
+    > [!NOTE]
+    > If the environment has the database, then you need to assign users the **System Administrator** role, instead of the **Environment Admin** role.
 
 * The **Environment Maker** role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow. Environment Makers can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users, security groups, or all users in the organization. For more information, see [Share an app in PowerApps](../maker/canvas-apps/share-app.md).
 
