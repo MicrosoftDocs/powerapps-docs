@@ -1,6 +1,6 @@
 ---
-title: Delete a custom entity and clear data | Microsoft Docs
-description: Delete a custom entity, and clear all data.
+title: Quickstart for deleting a custom entity and clear data | Microsoft Docs
+description: Quickstart to delete a custom entity, and clear all data
 services: powerapps
 documentationcenter: na
 author: clwesene
@@ -13,11 +13,11 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 3/17/2018
+ms.date: 3/21/2018
 ms.author: clwesene
 
 ---
-# Delete a custom entity
+# Quickstart: Delete a custom entity
 You can delete custom entities, but you can't delete standard entities.
 
 1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.

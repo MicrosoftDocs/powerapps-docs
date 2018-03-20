@@ -1,6 +1,6 @@
 ---
-title: Common Data Service for Apps | Microsoft Docs
-description: Create a new business rule
+title: Quickstart common Data Service for Apps | Microsoft Docs
+description: Quickstart for creating a new business rule
 services: powerapps
 documentationcenter: na
 author: clwesene
@@ -13,13 +13,12 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 3/17/2018
+ms.date: 3/21/2018
 ms.author: clwesene
 
 ---
 
-# Create a new business rule
-
+# Quickstart: Create a new business rule
 
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins.  Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. 
   

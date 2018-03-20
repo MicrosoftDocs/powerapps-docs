@@ -1,6 +1,6 @@
 ---
-title: Manage custom fields in an entity | Microsoft Docs
-description: Create, read, update, and delete custom fields in an entity.
+title: Manage custom fields in an entity quickstart | Microsoft Docs
+description: Quickstart to create, read, update, and delete custom fields in an entity.
 services: powerapps
 documentationcenter: na
 author: clwesene
@@ -13,11 +13,11 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 3/17/2018
+ms.date: 3/21/2018
 ms.author: clwesene
 
 ---
-# Manage custom fields
+# Quickstart: Manage custom fields
 You can create and update one or more custom fields in any entity. When you create a custom field, you specify a set of properties, such as the field's name, its display name, and the type of data that it will contain. For more information, see [Entity attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
 
 > [!NOTE]

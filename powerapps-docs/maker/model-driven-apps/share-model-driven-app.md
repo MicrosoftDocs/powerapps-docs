@@ -1,6 +1,6 @@
 ---
-title: Share a model-driven app with PowerApps | Microsoft Docs
-description: Learn how to share a model-driven app based
+title: Tutorial for sharing a model-driven app with PowerApps | Microsoft Docs
+description: In this tutorial learn how to share a model-driven app
 services: ''
 suite: powerapps
 documentationcenter: ''
@@ -19,7 +19,7 @@ ms.author: matp
 
 ---
 
-# Share a model-driven app with PowerApps
+# Tutorial: Share a model-driven app with PowerApps
 
 [!INCLUDE [powerapps](../../includes/powerapps.md)] apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed within the app. All app users must be assigned to one or more predefined or custom roles. Or, roles can also be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role. 
 

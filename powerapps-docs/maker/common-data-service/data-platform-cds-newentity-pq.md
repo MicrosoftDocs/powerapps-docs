@@ -1,6 +1,6 @@
 ---
-title: Adding data to an entity in the Common Data Service using Power Query | Microsoft Docs
-description: Step-by-step instructions for using Power Query to add data to a new or existing entity in the Common Data Service for Apps from another data source.
+title: Quickstart for adding data to an entity in the Common Data Service using Power Query | Microsoft Docs
+description: Quickstart with step-by-step instructions for using Power Query to add data to a new or existing entity in the Common Data Service for Apps from another data source.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -14,11 +14,11 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/17/2018
+ms.date: 03/21/2018
 ms.author: anneta
 
 ---
-# Add data to an entity in the Common Data Service by using Power Query
+# Quickstart: Add data to an entity in the Common Data Service by using Power Query
 In this procedure, you'll create an entity in the [Common Data Service for Apps](data-platform-intro.md) and fill that entity with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
 
 * SQL Server

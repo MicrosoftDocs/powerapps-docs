@@ -1,6 +1,6 @@
 ---
-title: Create a custom entity | Microsoft Docs
-description: Create a custom entity that is based on another entity, or from scratch.
+title: Quickstart for creating a custom entity | Microsoft Docs
+description: Quickstart for creating a custom entity that is based on another entity, or from scratch.
 services: powerapps
 documentationcenter: na
 author: clwesene
@@ -13,11 +13,11 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 3/17/2018
+ms.date: 3/21/2018
 ms.author: clwesene
 
 ---
-# Create a custom entity
+# Quickstart: Create a custom entity
 You can create a custom entity to store data that is specific to your organization. You can then show that data by developing an app that refers to the entity. After you create an entity, you can [create or modify one or more of its fields](data-platform-manage-fields.md), and [build relationships between entities](data-platform-entity-lookup.md).
 
 These instructions will show you how to create a custom entity manually, you can also use Power Query to create an entity based off your existing data. For more information, see [Create new entity using Power Query](data-platform-cds-newentity-pq.md)
