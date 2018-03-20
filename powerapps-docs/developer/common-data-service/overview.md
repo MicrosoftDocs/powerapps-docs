@@ -27,7 +27,7 @@ If you are new to the Dynamics 365 Customer Engagement applications, the followi
 
 > [!NOTE]
 > - Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps Developer Overview](../model-driven-apps/overview.md). Content in this section will refer only to extensions developers can do at the service level. 
-> - Because the Common Data Service for Apps in this release is an instance of Dynamics 365 Customer Engagement, you will find more complete information for developers in the [Dynamics 365 Customer Engagement Developer Guide](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
+> - Because the Common Data Service for Apps and Dynamics 365 Customer Engagement leverage the same platform, you will find more complete information for developers in the [Dynamics 365 Customer Engagement Developer Guide](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
 
 
 ## Tools and resources for developers
