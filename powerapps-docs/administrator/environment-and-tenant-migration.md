@@ -34,12 +34,10 @@ When you export an app, the dependent resources for your app will also get expor
 | --- | --- | --- |
 | App |Yes |There are two options to import an app into an environment: <ol><li><b>Create new</b> – The app will be created as a new app in the environment where the package is imported.</li> <li><b>Update</b> - the app already exists in the environment and will be updated when this package is imported.</li></ol> |
 | Flow |Yes |There are two options to import a flow into an environment: <ol><li><b>Create new</b> – The flow will be created as a new flow in the environment where the package is imported.</li> <li><b>Update</b> - The flow already exists in the environment and will be updated when this package is imported.</li></ol> <b>Note: </b>All resources that the flow depends on will also be included within the app package that is exported and will need to be configured with the package is imported. |
-| CDS Entity Customizations and Picklists |Yes |There are two options to import CDS Entities or Picklists in an environment: <ol><li><b>Overwrite</b> - If there's a resource with the same name, this import will replace it. If there isn’t a matching resource, a new resource will be created. <li><b>Merge</b> – If there's an entity or picklist with the same name, new fields or entries will be added, but missing fields or entries won’t be removed.</li></ol> |
 | Custom Connectors |No |If an app depends on a custom connector <b>we do not</b> currently support exporting the connector as a part of the package. <p></p> If you have an app that relies on a custom connector, your only current option is to manually re-create or update the connector in your target environment and select that connector when you import the package. |
 | Connections |No |If an app depends on a connection (such as a SQL connection w/ credentials), we do not currently support exporting the connection or credentials as a part of the package. <p></p> If you have an app that relies on a shared connection (like SQL), your only current option is to manually re-create that connection with the appropriate credentials in your target environment and select that connection when you import the package. |
-| CDS Custom Roles and Permission Sets |No |Exporting custom CDS roles and/or permission sets is not currently supported, so the only option today is to manually re-create these entities in your target environment. |
+| CDS Customizations |No |Exporting CDS customizations is no longer supported as a part of packaging. |
 | Gateways |No |Gateways are only supported in the default (and {tenant name} (from preview) ) environments, so export/migration is not supported. |
-| CDS data rows |No |Export rows from CDS entities is not current supported, so the only option today to manually export and import data after your CDS schema changes have been applied in a new environment. |
 
 ## How do I get access to packaging for my app?
 The ability to export an app is available to any user with "Can edit" permission to the app.
@@ -85,8 +83,3 @@ A  user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order 
 >  If you are importing an app and chose to **Update** an existing app, the new changes will be saved as a draft of the applications.  You will need to [publish](http://powerapps.microsoft.com/tutorials/save-publish-app/#publish-an-app) those changes in order for them to be available all other users of the applications.
 >
 >
-
-## Known limitations
-| Limitation | Status |
-| --- | --- |
-| Importing app packages that contains more than ~3 resources has been reported to take several minutes to complete. |This is a known issue and a fix will be rolled out soon. |
