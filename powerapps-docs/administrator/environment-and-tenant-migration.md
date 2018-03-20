@@ -36,7 +36,7 @@ When you export an app, the dependent resources for your app will also get expor
 | Flow |Yes |There are two options to import a flow into an environment: <ol><li><b>Create new</b> – The flow will be created as a new flow in the environment where the package is imported.</li> <li><b>Update</b> - The flow already exists in the environment and will be updated when this package is imported.</li></ol> <b>Note: </b>All resources that the flow depends on will also be included within the app package that is exported and will need to be configured with the package is imported. |
 | Custom Connectors |No |If an app depends on a custom connector <b>we do not</b> currently support exporting the connector as a part of the package. <p></p> If you have an app that relies on a custom connector, your only current option is to manually re-create or update the connector in your target environment and select that connector when you import the package. |
 | Connections |No |If an app depends on a connection (such as a SQL connection w/ credentials), we do not currently support exporting the connection or credentials as a part of the package. <p></p> If you have an app that relies on a shared connection (like SQL), your only current option is to manually re-create that connection with the appropriate credentials in your target environment and select that connection when you import the package. |
-| CDS Customizations |No |Exporting CDS customizations is no longer supported as a part of packaging. |
+| CDS Customizations |No |Exporting CDS customizations is no longer supported as a part of packaging. This is now supported through export and importing the environment default solution as outlined in the article below. |
 | Gateways |No |Gateways are only supported in the default (and {tenant name} (from preview) ) environments, so export/migration is not supported. |
 
 ## How do I get access to packaging for my app?
@@ -83,3 +83,15 @@ A  user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order 
 >  If you are importing an app and chose to **Update** an existing app, the new changes will be saved as a draft of the applications.  You will need to [publish](http://powerapps.microsoft.com/tutorials/save-publish-app/#publish-an-app) those changes in order for them to be available all other users of the applications.
 >
 >
+
+## Exporting CDS customizations and model-driven apps
+Exporting any entity or option set customizations or any model-driven apps that you have built in https://web.powerapps.com is supported by exporting the default environment solution as follows:
+1. In http://web.powerapps.com, select the **Model-driven (preview)** design mode in your environment.
+  ![Select model-driven design mode](./media/environment-and-tenant-migration/select-model-driven.png)
+
+2. Select **Advanced** in the left-navigation bar to launch the solution explorer for this environment's default solution
+  ![Select advanced](./media/environment-and-tenant-migration/select-advanced.png)
+
+3.
+
+## Importing CDS customization and model-driven apps
