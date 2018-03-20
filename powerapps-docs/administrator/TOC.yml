@@ -32,6 +32,8 @@
     href: create-database.md
   - name: Administer environments
     href: environments-administration.md
+  - name: Manage environment security
+    href: database-security.md
   - name: Manage apps in your org # not in TOC previously
     href: admin-manage-apps.md
   - name: Move an app between tenants or environments
