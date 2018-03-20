@@ -58,7 +58,7 @@ Getting started with model-driven apps is simple, and you can begin with these t
 - [Add business logic](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
 ## Common Data Service for Apps
-The Common Data Service allows you to securely store and manage data within a set of standard and custom entities, and you can add fields to those entities as you need them.
+The Common Data Service allows you to securely store and manage data within a set of standard and custom entities, and you can add fields to those entities when you need them.
 
 Getting started with the Common Data Service is easy. For example, you can start with these items:
 - [Create a custom entity](common-data-service/data-platform-create-entity.md)
