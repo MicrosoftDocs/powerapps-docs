@@ -1,20 +1,21 @@
 ---
 title: Migrate apps between environments and tenants | Microsoft Docs
 description: Migrate apps among environments and tenants
-services: ''
+services: powerapps
 suite: powerapps
 documentationcenter: na
 author: jamesol-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
+ms-topic: article
 
 ms.service: powerapps
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 07/28/2017
+ms.date: 03/21/2018
 ms.author: jamesol
 
 ---
@@ -52,41 +53,40 @@ A  user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order 
 
 ## Exporting an app
 1. In http://web.powerapps.com, click or tap **Apps**, select the ellipses for the app you want to migrate, and then select **Export (preview)**.
-   
+
     ![Select export](./media/environment-and-tenant-migration/select-export.png)
 2. When the export package page opens, enter a Name and Description for the package.
-   
+
     ![Review package details](./media/environment-and-tenant-migration/package-details.png)
 3. Within the ‘Review Package Content’ section you can optionally add comments or notes or change the setting for how each individual resource will be imported into the target environment during package import.
-   
+
     ![Configure package content](./media/environment-and-tenant-migration/export-package-content.png)
 
 4. When you are done select **Export** and the package file will begin downloading within a few seconds.
 
 ## Importing an app
 1. In http://web.powerapps.com, click or tap **Apps**, and then select **Import package (preview)**.
-   
+
     ![Select import](./media/environment-and-tenant-migration/select-import.png)
 2. Select **Upload** and select the app package file that you want to import.
-   
+
     ![Select package file](./media/environment-and-tenant-migration/select-file.png)
 3. Once the package has been uploaded you will need to review the package contents and will need to provide additional input for any item marked with a red icon by selecting the wrench icon for each item and entering the required information.
-   
+
     ![Review package content](./media/environment-and-tenant-migration/import-package-content.png)
 4. Once you have provided all of the required information select **Import**.
-   
+
     ![Updated packaged content](./media/environment-and-tenant-migration/import-package-content-dirty.png)
 5. When import completes you will be automatically redirected to a page (similar to the one below) that outlines whether or not the import operation was successful.
-   
+
     ![Review import results](./media/environment-and-tenant-migration/import-results.png)
 
 > [!NOTE]
 >  If you are importing an app and chose to **Update** an existing app, the new changes will be saved as a draft of the applications.  You will need to [publish](http://powerapps.microsoft.com/tutorials/save-publish-app/#publish-an-app) those changes in order for them to be available all other users of the applications.
-> 
-> 
+>
+>
 
 ## Known limitations
 | Limitation | Status |
 | --- | --- |
 | Importing app packages that contains more than ~3 resources has been reported to take several minutes to complete. |This is a known issue and a fix will be rolled out soon. |
-
