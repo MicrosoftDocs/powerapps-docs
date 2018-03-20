@@ -201,20 +201,26 @@
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
-  - name: Create a custom entity
-    href: ./common-data-service/create-custom-entity.md
-  - name: Create a custom entity from data
-    href: ./common-data-service/data-platform-cds-newentity-pq.md
-  - name: Manage fields
-    href: ./common-data-service/data-platform-manage-fields.md
-  - name: Create an option set
-    href: ./common-data-service/custom-picklists.md
-  - name: Create a relationship
-    href: ./common-data-service/data-platform-entity-lookup.md
-  - name: Create a business rule
-    href: ./common-data-service/data-platform-create-business-rule.md
-  - name: Delete a custom entity
-    href: ./common-data-service/data-platform-delete-entity.md
+  - name: Quickstarts
+    items:
+    - name: Create an entity
+      href: ./common-data-service/data-platform-create-entity.md
+    - name: Create a custom entity from data
+      href: ./common-data-service/data-platform-cds-newentity-pq.md
+    - name: Manage fields
+      href: ./common-data-service/data-platform-manage-fields.md
+    - name: Create an option set
+      href: ./common-data-service/custom-picklists.md
+    - name: Create a relationship
+      href: ./common-data-service/data-platform-entity-lookup.md
+    - name: Create a business rule
+      href: ./common-data-service/data-platform-create-business-rule.md
+    - name: Delete a custom entity
+      href: ./common-data-service/data-platform-delete-entity.md
+  - name: Tutorials
+    items: 
+    - name: Create a custom entity that has components
+      href: ./common-data-service/create-custom-entity.md
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
   - name: For Developers
