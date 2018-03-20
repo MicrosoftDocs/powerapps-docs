@@ -1,5 +1,5 @@
 ---
-title: '# PowerApps Community Plan: a free development environment for individual use | Microsoft Docs'
+title: PowerApps Community Plan: a free development environment for individual use | Microsoft Docs
 description: Sign up to to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service.
 services: ''
 suite: powerapps
