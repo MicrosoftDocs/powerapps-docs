@@ -86,12 +86,49 @@ A  user must have a PowerApps Plan 2 or PowerApps Plan 2 trial license in order 
 
 ## Exporting CDS customizations and model-driven apps
 Exporting any entity or option set customizations or any model-driven apps that you have built in https://web.powerapps.com is supported by exporting the default environment solution as follows:
+> [!NOTE]
+>  If you would like to learn more about solutions in PowerApps, please see [Introduction to solutions](../developer/common-data-service/introduction-solutions.md).
+>
+>
+
 1. In http://web.powerapps.com, select the **Model-driven (preview)** design mode in your environment.
+
   ![Select model-driven design mode](./media/environment-and-tenant-migration/select-model-driven.png)
 
 2. Select **Advanced** in the left-navigation bar to launch the solution explorer for this environment's default solution
+
   ![Select advanced](./media/environment-and-tenant-migration/select-advanced.png)
 
-3.
+3. Select **Export Solution** and complete the required steps.  A solution package file will begin downloading within a few seconds.
+
+  ![Select export](./media/environment-and-tenant-migration/select-export-solution.png)
 
 ## Importing CDS customization and model-driven apps
+Importing a CDS solution package unfortunately requires a manual workaround in the experience, one that we are actively working to fix:
+
+1. In http://web.powerapps.com, select the **Model-driven (preview)** design mode in your environment.
+
+  ![Select model-driven design mode](./media/environment-and-tenant-migration/select-model-driven.png)
+
+2. Select **Advanced** in the left-navigation bar to launch the solution explorer for this environment's default solution.
+
+  ![Select advanced](./media/environment-and-tenant-migration/select-advanced.png)
+
+3. Copy the Url from your browser, make the following changes and then navigate to the new URL in your browser:
+
+  - Current URL structure: https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}
+
+    ![Edit url](./media/environment-and-tenant-migration/edit-url.png)
+
+  - New URL structure:
+  https://{orguniquename}.crm.dynamics.com/tools/systemcustomization/systemcustomization.aspx?pid=11&web=true
+
+    ![Solutions list](./media/environment-and-tenant-migration/solutions-list.png)
+
+4. Select **Import** and select the CDS solution package file that you want to import.
+
+    ![Select package](./media/environment-and-tenant-migration/select-package.png)
+
+5. If import is successful you will see the following confirmation dialog. In order for the solution changes to be available to other customizers within the environment select **Publish All Customizations**
+
+    ![Successful import](./media/environment-and-tenant-migration/successful-import.png)
