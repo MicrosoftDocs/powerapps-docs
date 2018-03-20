@@ -71,18 +71,23 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
     
   d.  Replace **New option** with *Cat*. 
     
-    e. Select **Save**. 
+  e. Select **Save**. 
 
   ![New option set](media/create-custom-entity/optionset-add-items.png)
+
 6. Select **Searchable**, and then select **Done**.
+
 7. On the entity designer toolbar select **Add field**. On the **Field properties** pane, enter or select the following values, and then select **Done**.
   - **Display name**. *Breed*
   - **Data type**. *Text*
   - **Searchable**. *Yes*
+
 8. On the entity designer toolbar select **Add field**. 
+
 9. On the **Field properties** pane, enter or select the following values, and then select **Done**. 
   -	**Display name**. *Appointment date*
   - **Data type**. *Date and time*
+
 10. Select **Save Entity**.
 
 ## Add a relationship
