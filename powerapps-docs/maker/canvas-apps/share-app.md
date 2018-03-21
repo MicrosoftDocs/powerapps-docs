@@ -19,7 +19,7 @@ ms.author: anneta
 
 ---
 # Share an app in PowerApps
-It’s great to build apps that address your own business needs, but the real magic of PowerApps comes from sharing those apps with others. In this topic, you will learn how to share apps with specific users or security groups, or you can share it with your entire organization.
+It’s great to build apps that address your own business needs, but the real magic of PowerApps comes from sharing those apps with others. In this topic, you you'll learn how to share apps with specific users or security groups, or you can share it with your entire organization.
 
 ## Specify an app
 1. Sign in to PowerApps, and then click or tap **Apps** near the left edge.
@@ -69,10 +69,10 @@ Users can also discover the app in   [powerapps.com](http://web.powerapps.com) (
 
 ## Other things to know
 * To share an app, you must save it to the cloud, not locally.
-* Before you share an app, consider which users and security groups you’re going to share it with and what role you want each to have—user or contributor. If you share an app with a group, existing members of that group and anyone who joins it have the permissions that you specify. Anyone who leaves the group loses those permissions unless they're members of a different group that has access or you specify permissions for them explicitly.
-* Every member of a group has the same permissions for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can share an app with security group A with User permission. Every member of security group A can run the app. Now you share the app with user B, who is part of security group A, with Contributor permission. User B now can edit the app while everyone else in security group A can only use the app. If you specify fewer permissions to one or more members of a group, they'll still have all the permissions that you've granted to the overall group.
+* Before you share an app, consider which users and security groups you’re going to share it with and what role you want each to have: **Can edit** or **Can use**. If you share an app with a group, existing members of that group and anyone who joins it will have the permissions that you specify. Anyone who leaves the group loses those permissions unless they're members of a different group that has access or you specify permissions for them explicitly.
+* Every member of a group has the same permissions for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A the **Can use** permission, but you can also give User B, who belongs to that group, **Can edit** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A the **Can edit** permission and User B **Can use** permission, that user can still edit the app.
 * You can share an app with your entire organization, but think carefully about whether everyone needs access to your app.
-* Be aware that any changes you make to a shared app will flow through to the people you shared it with as soon as you save the changes. This can be great if you improve the app, but can also impact others if you remove or significantly change features.
+* Be aware that any changes you make to a shared app will flow through to the people you shared it with as soon as you save the changes. If you improve the app, everyone benefits. If you break the app, everyone is affected.
 * Before you share an app, give it a meaningful name and description, so people know what your app is about and can easily pick it out from a list. On the **File** menu in PowerApps Studio, click or tap **App settings**, and then enter a description.
 
 ### App sharing and the resources the app uses
@@ -86,13 +86,9 @@ Most apps rely on at least one of these types of resources:
 
 Users and contributors need permissions to any data connections and gateways that the app uses. Some permissions come along implicitly with the app, but others must be explicitly granted. For more information, see [Share app resources](share-app-resources.md).
 
-When you share an app that uses the Common Data Service, notice the information bar indicating that you must share the runtime permission to the Common Data Service separately. If you don’t have permission to do this, see your environment admin. [Read more](../../administrator/database-security.md) about security for the Common Data Service.
-
-![App resources when sharing](./media/share-app/app-sharing-resources.png)
+When you share an app that uses an older version of the Common Data Service, you must share the runtime permission to the Common Data Service separately. If you don’t have permission to do this, see your environment admin. When you share an app that uses the most recent version of the Common Data Service, you must create a custom role and assign users to it. [Read more](../../administrator/database-security.md) about security for the Common Data Service.
 
 ### What isn't supported?
 * You can share to a security group but not a distribution group.
 * You can share apps with users in your organization but not users in another tenant.
-* You can share an app from [powerapps.com](http://web.powerapps.com) but not from PowerApps Studio. (Click or tap a share icon in PowerApps Studio to open [powerapps.com](http://web.powerapps.com)).
-* You can re-share an app if you have Contributor (not User) permission to that app.
-
+* You can re-share an app if you have **Can edit** (not **Can use**) permission to that app.
