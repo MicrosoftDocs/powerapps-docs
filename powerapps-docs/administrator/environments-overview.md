@@ -1,11 +1,11 @@
 ---
 title: Overview of environments | Microsoft Docs
 description: What environments are and how to use them
-services: ''
+services: 'powerapps'
 suite: powerapps
 documentationcenter: na
 author: manasmams
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
@@ -41,15 +41,15 @@ There is also a process to move resources between environments. For more informa
 Environments have two built-in roles that provide access to permissions within an environment:
 
 * The Environment Admin role can perform all administrative actions on an environment including the following:
-  
+
     * Add or remove a user or group from either the Environment Admin or Environment Maker role
-  
+
     * Provision a Common Data Service database for the environment
-  
+
     * View and manage all resources created within an environment
-  
+
     * Set data loss prevention policies. For more information see [Data loss prevention policies](prevent-data-loss.md).
-    
+
     After creating the database in the environment, you can use System Administrator role instead of Environment Admin role.
 
 * The Environment Maker role can create resources within an environment including apps, connections, custom connectors, gateways, and flows using Microsoft Flow.
@@ -58,7 +58,7 @@ Environment Makers can also distribute the apps they build in an environment to 
 
 Users or groups assigned to these environment roles are not automatically given access to the environment’s database (if it exists) and must be given access separately by a Database owner. For more information, see [Configure database security](database-security.md).
 
-Users or security groups can be assigned to either of these two roles by an Environment Admin from the [PowerApps admin center][1]. For more information, see [Environment Administration](environments-administration.md).
+Users or security groups can be assigned to either of these two roles by an Environment Admin from the [PowerApps admin center][1]. For more information, see [Administer environments in PowerApps](environments-administration.md).
 
 ![](./media/environments-overview/EnvironmentRoles.png)
 
@@ -66,16 +66,16 @@ Users or security groups can be assigned to either of these two roles by an Envi
 A single default environment is automatically created by PowerApps for each tenant and shared by all users in that tenant. Whenever a new user signs up for PowerApps, they are automatically added to the Maker role of the default environment. The default environment is created in the closest region to the default region of the AAD tenant.
 
 > [!NOTE]
-> No users will be added to the Environment Admin role of the default environment automatically. For more informaton, see [Environment Administration](environments-administration.md).
-> 
-> 
+> No users will be added to the Environment Admin role of the default environment automatically. For more informaton, see [Administer environments in PowerApps](environments-administration.md).
+>
+>
 
 The default environment is named as follows: “{Azure AD tenant name} (default)”
 
 ![](./media/environments-overview/DefaultEnvironment.png)
 
 ## Production and Trial environments
-You can create environments for different purpose. A Trial environment is for trying out the environment and database with Common Data Service experience. It expires after certain period. For more information, see [Environment Administration](environments-administration.md).
+You can create environments for different purpose. A Trial environment is for trying out the environment and database with Common Data Service experience. It expires after certain period. For more information, see [Administer environments in PowerApps](environments-administration.md).
 
 ## Choosing an environment
 With the introduction of environments, you will now see a new experience when you come to [https://web.powerapps.com](https://web.powerapps.com).  The apps, connections, and other items that are visible in the site will now be filtered based on the current environment that is selected.  Your current environment is specified in the environment picker near the right edge of the header. To choose a different environment, click or tap the picker, and a list of available environments appears. Click or tap the one you wish to enter.
@@ -102,10 +102,10 @@ Your license determines whether you can create environments.
 | Office 365 Plans |x |
 | Dynamics 365 Apps and Teams Plans |x |
 
-Each user can create upto two Trial environments. PowerApps P2 can as well create upto two Production environments.
+Each user can create up to two Trial environments. PowerApps P2 can also create up to two Production environments.
 
 ### Where can environments be created?
-You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, they you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can be participate in as a member of the Environment Admin or Environment Maker role. For more information, see [Environment Administration](environments-administration.md).
+You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can participate in as a member of the Environment Admin or Environment Maker role. For more information about environments, see [Administer environments in PowerApps](environments-administration.md). For instructions on how to create an environment, see [Create an environment](create-environment.md).
 
 ![](./media/environments-overview/CreateEnvironmentDialog-New.png)
 
@@ -131,7 +131,7 @@ Two weeks after PowerApps enters general availability (GA), environments that co
 ## Managing environments for your organization
 In PowerApps admin center,  you can manage all of the environments that you have created or to which you have been added to the Environment Admin role. From the Admin center, you can perform all administrative actions on an environment, including the following:
 
-* Add or remove a user or group from either the Environment Admin or Environment Maker role.  For more information, see [Environment Administration](environments-administration.md).
+* Add or remove a user or group from either the Environment Admin or Environment Maker role.  For more information, see [Administer environments in PowerApps](environments-administration.md).
 * Provision a Common Data Service database for the environment. For more information, see [Create a Common Data Service database](create-database.md).
 * Set Data Loss Prevention policies. For more information, see [Data loss prevention policies](prevent-data-loss.md).
 * Set database security policies (as open or restricted by database roles). For more information, see [Configure database security](database-security.md).
