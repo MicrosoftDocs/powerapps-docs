@@ -121,13 +121,11 @@ Importing a CDS solution package unfortunately requires a manual workaround in t
     ![Edit url](./media/environment-and-tenant-migration/edit-url.png)
 
   - New URL structure:
-  https://{orguniquename}.crm.dynamics.com/tools/systemcustomization/systemcustomization.aspx?pid=11&web=true
+  https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
 
-    ![Solutions list](./media/environment-and-tenant-migration/solutions-list.png)
+      ![Select package](./media/environment-and-tenant-migration/select-package.png)
 
-4. Select **Import** and select the CDS solution package file that you want to import.
-
-    ![Select package](./media/environment-and-tenant-migration/select-package.png)
+4. Select the CDS solution package file that you want to import, and complete the wizard.
 
 5. If import is successful you will see the following confirmation dialog. In order for the solution changes to be available to other customizers within the environment select **Publish All Customizations**
 
