@@ -106,42 +106,6 @@ ms.author: mblythe
                           <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
                             <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
                               <div class="cardImage" style="width: 32px;">
-                                <img src="includes/media/index/i_common-data-service.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
-                              </div>
-                            </div>
-                            Creating an app from the Common Data Service
-                          </h3>
-                          <ul class="noBullet" style="margin: 24px;">
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds.yml#step-1">Generate an app</a>
-                                <span style="margin-left: 32px; align-self: center;">6m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds.yml#step-2">Explore a generated app</a>
-                                <span style="margin-left: 32px; align-self: center;">5m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds.yml#step-3">Customize the app</a>
-                                <span style="margin-left: 32px; align-self: center;">12m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-cds.yml#step-4">Add a data source and flow</a>
-                                <span style="margin-left: 32px; align-self: center;">11m</span>
-                              </li>
-                          </ul>
-                      </div>
-                    </div>
-                </div>
-            </div>
-          </li>
-          <li>
-            <div class="cardSize">
-                <div class="cardPadding">
-                  <div class="card" style="padding: 0 12px 54px 0;">
-                      <div class="cardText" style="box-shadow: 0 2px 5px #e8e8e8; border: 1px solid #dbdbdb;">
-                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
-                            <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
-                              <div class="cardImage" style="width: 32px;">
                                 <img src="https://docs.microsoft.com/media/common/i_management.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
                               </div>
                             </div>
@@ -158,46 +122,6 @@ ms.author: mblythe
                               </li>
                               <li style="display: flex; justify-content: space-between;">
                                 <a class="barLink" href="manage-apps.yml#step-3">Environments</a>
-                                <span style="margin-left: 32px; align-self: center;">8m</span>
-                              </li>
-                          </ul>
-                      </div>
-                    </div>
-                </div>
-            </div>
-          </li>
-          <li>
-            <div class="cardSize">
-                <div class="cardPadding">
-                  <div class="card" style="padding: 0 12px 54px 0;">
-                      <div class="cardText" style="box-shadow: 0 2px 5px #e8e8e8; border: 1px solid #dbdbdb;">
-                          <h3 class="bgdAccent1" style="padding: 8px; display: flex; background: #742874; font-weight: bold; border-bottom: 0; margin-bottom: 0; line-height: 42px; color: #ffffff">
-                            <div class="cardImageOuter" style="margin: 0 8px 0 10px;">
-                              <div class="cardImage" style="width: 32px;">
-                                <img src="includes/media/index/i_common-data-service.svg" alt="" data-linktype="absolute-path" class="x-hidden-focus" style="position: relative; top: 6px;">
-                              </div>
-                            </div>
-                            Managing data
-                          </h3>
-                          <ul class="noBullet" style="margin: 24px;">
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data.yml#step-1">The Common Data Service</a>
-                                <span style="margin-left: 32px; align-self: center;">5m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data.yml#step-2">Understand Common Data Service entities</a>
-                                <span style="margin-left: 32px; align-self: center;">8m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data.yml#step-3">Create custom entities</a>
-                                <span style="margin-left: 32px; align-self: center;">6m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data.yml#step-4">Manage entity data</a>
-                                <span style="margin-left: 32px; align-self: center;">7m</span>
-                              </li>
-                              <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-data.yml#step-5">Common Data Service security</a>
                                 <span style="margin-left: 32px; align-self: center;">8m</span>
                               </li>
                           </ul>
