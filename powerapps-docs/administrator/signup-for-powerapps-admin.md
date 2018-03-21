@@ -1,7 +1,7 @@
 ---
 title: Purchase PowerApps for your organization | Microsoft Docs
 description: Follow these steps in order to sign up for PowerApps as an administrator.
-services: ''
+services: 'powerapps'
 suite: powerapps
 documentationcenter: na
 author: jamesol-msft
@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/23/2016
+ms.date: 03/21/2018
 ms.author: jamesol
 
 ---

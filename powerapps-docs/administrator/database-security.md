@@ -1,10 +1,11 @@
 ---
-title: Configure database security | Microsoft Docs
-description: This topic explains how to configure database security.
-services: powerapps
+title: Configure environment security | Microsoft Docs
+description: This topic explains how to configure environment security.
+services: 'powerapps'
+suite: powerapps
 documentationcenter: na
-author: maertenm
-manager: kfend
+author: manasmams
+manager: kfile
 editor: ''
 tags: ''
 
@@ -17,12 +18,11 @@ ms.date: 03/21/2018
 ms.author: manasma
 
 ---
-# Configure database security
+# Configure environment security
 The Common Data Service uses a role-based security model to help secure access to the database. This topic explains how to create the security artifacts that you must have to help secure an app. The user roles control run-time access to data and are separate from the Environment roles that govern environment administrators and environment makers. For an overview of environments, see [Environments overview](environments-overview.md).
 
 ## Assign security roles to users
 Security roles control a user’s access to data through a set of access levels and permissions. The combination of access levels and permissions that are included in a specific security role sets limits on the user’s view of data and on the user’s interactions with that data.
-
 
 To assign a user or a security group to an environment role, an Environment Admin can take these steps in the [PowerApps admin center][1]:
 
@@ -63,23 +63,22 @@ The PowerApps environment includes predefined security roles that reflect common
 
 *Privilege is global scope unless specified otherwise.
 
-- The Environment Maker role can not only create resources within an environment, but can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users. For more information, see [Share an app in PowerApps](../maker/canvas-apps/share-app.md). 
+- The Environment Maker role can not only create resources within an environment, but can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users. For more information, see [Share an app in PowerApps](../maker/canvas-apps/share-app.md).
 
 - For the users making apps which are connecting to the database and needs to create or update entities and security roles, should be assigned System Customizer role as well, along with the Environment Maker as Environment Maker role, has no priviliges on the database.
 
 
 ## Create or configure a custom security role
 If your app is based on a custom entity, privileges must be explicitly specified before users may work on it. To do this, you can choose to do one of the following.
-- Expand an existing predefined security role, so that it includes privileges on records based on the custom entity. 
-- Create a custom security role for the purpose of managing privileges for users of the app. 
+- Expand an existing predefined security role, so that it includes privileges on records based on the custom entity.
+- Create a custom security role for the purpose of managing privileges for users of the app.
 
 The environment might maintain the records which can be used by multiple apps, you might need multiple security roles to access the data with different priviliges. e.g.
-- Some of the users (Type A) might only need to read, update, and attach other records so their security role will have read, write, and append privileges. 
+- Some of the users (Type A) might only need to read, update, and attach other records so their security role will have read, write, and append privileges.
 - Other users might need all the privileges that users of Type A has, plus the ability to create, append to, delete, and share, so their security role will have create, read, write, append, delete, assign, append to, and share privileges.
 
 For more information about access and scope privileges, see [Security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
-## Create a custom security role
 1. In [PowerApps admin center][1] select the environment where you want to update a security role.
 
     ![](./media/environment-admin/choose-environment-updated.png)
@@ -100,17 +99,15 @@ For more information about access and scope privileges, see [Security roles](htt
 
 6. Click on **New**
 
-7. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. 
+7. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action.
 
-8. Select the tab and search for your entity e.g. **Custom Entities** tab, for setting permissions on a custom entity. 
+8. Select the tab and search for your entity e.g. **Custom Entities** tab, for setting permissions on a custom entity.
 
 9. Select the privileges **Read, Write, Append**
 
-10. Select **Save and Close**. 
+10. Select **Save and Close**.
 
 
 
 <!--Reference links in article-->
 [1]: https://admin.powerapps.com
-
-

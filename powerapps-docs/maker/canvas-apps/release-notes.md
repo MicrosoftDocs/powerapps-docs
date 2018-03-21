@@ -5,7 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: skjerland
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/05/2018
+ms.date: 03/21/2018
 ms.author: sharik
 
 ---
@@ -23,6 +23,10 @@ For information about known limitations, see [Common issues and resolutions](com
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
+
+## Mar. 21
+1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
+2. [Create a database](../../administrator/create-database.md) on the latest version of the Common Data Service in an environment.
 
 ## Mar. 5
 1. Add (and delete) [attachments](controls/control-attachments.md) to SharePoint lists.
