@@ -19,7 +19,7 @@ ms.author: sharik
 
 ---
 # Quickstart: Download a list of active users in your tenant
-If you're a 365 Global admin or Azure Active Directory Tenant, you can download a list of active users in your tenant, so you can see not only who's accessed PowerApps, Microsoft Flow, or both, but also the licenses assigned to those users.
+If you're a 365 Global admin or Azure Active Directory Tenant admin, you can download a list of active users in your tenant, so you can see not only who's accessed PowerApps, Microsoft Flow, or both, but also the licenses assigned to those users.
 
 In this quickstart, you'll learn how to download a list of active users to a .csv file, and then view that list in Excel.
 
