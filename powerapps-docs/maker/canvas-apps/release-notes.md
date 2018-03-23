@@ -1,7 +1,7 @@
 ---
 title: What's new in PowerApps | Microsoft Docs
 description: Updates to PowerApps, organized by release date
-services: ''
+services: 'powerapps'
 suite: powerapps
 documentationcenter: na
 author: skjerland
@@ -21,8 +21,15 @@ ms.author: sharik
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
+
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
+
+## Announcing the Business Applications Spring '18 release notes
+
+Discover the latest updates to our business applications, as well as a host of new capabilities for building your own applications and extensions on top of our platform. [Download the Spring '18 release notes PDF](https://aka.ms/businessappsreleasenotes), which covers Dynamics 365, PowerApps, Microsoft Flow, and Power BI.
+
+**Coming soon:** We'll keep updating the release notes PDF as features ship, and we'll also make them available on a web page.
 
 ## Mar. 21
 1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
@@ -30,11 +37,11 @@ For information about known limitations, see [Common issues and resolutions](com
 3. The Common Data Service for Apps now includes:
 
     - **Additional data types** support more complex entity definitions and provide richer experiences. (Applies to canvas and model-driven apps.)
-    - [Create and customize entities](../common-data-service/data-platform-create-entity.md) in the Common Data Service for Apps right from the PowerApps site. The **refreshed experience** includes improved performance, a more user-friendly UI, and helpful features such as in-line creation of option sets. (Applies to canvas and model-driven apps.) 
+    - [Create and customize entities](../common-data-service/data-platform-create-entity.md) in the Common Data Service for Apps right from the PowerApps site. The **refreshed experience** includes improved performance, a more user-friendly UI, and helpful features such as in-line creation of option sets. (Applies to canvas and model-driven apps.)
     - Create **server-side business rules** for validating data entered into the Common Data Service for Apps. (Applies to canvas and model-driven apps.)
     - Create **calculated and rollup fields** in Common Data Service for Apps entities directly from the PowerApps site. (Applies to canvas and model-driven apps.)  
-    - Developers can use the Common Data Service for Apps **Software Development Kit** (SDK) to create code-based customizations for the Common Data Service. 
-    - Advanced users can access data stored in the Common Data Service for Apps through a new **OData Web API**. 
+    - Developers can use the Common Data Service for Apps **Software Development Kit** (SDK) to create code-based customizations for the Common Data Service.
+    - Advanced users can access data stored in the Common Data Service for Apps through a new **OData Web API**.
     - [Import data](../common-data-service/data-platform-cds-newentity-pq.md) into Common Data Service with **Power Query**. Use Power Query on the web to directly import data to the Common Data Service for Apps from multiple sources
 
 ## Mar. 5
