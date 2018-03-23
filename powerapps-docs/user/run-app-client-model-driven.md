@@ -25,11 +25,11 @@ The apps you build are designed to run in a web browser across a variety of devi
 - Unified Interface: This client type provides key accessibility and responsive design benefits and has a similar interface across PC, Mac, and popular mobile devices. For most situations and especially for running on mobile devices, we recommend you create apps using the Unified Interface client type.
 - Web: This app type appears and functions similar to the classic Dynamics 365 web browser client. 
 
-[!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+[!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 
-If you haven’t already, share the app and the app URL. Learn more: [Preview feature: Share a model-driven app with PowerApps](share-model-driven-app.md)
+If you haven’t already, share the app and the app URL. Learn more: [Tutorial: Share a model-driven app with PowerApps](../maker/model-driven-apps/share-model-driven-app.md)
 
 ## Run a model-driven app
 1.	Enter the app URL in your device’s web browser, tap ENTER, and then if prompted, sign-in to the app using your credentials. 
