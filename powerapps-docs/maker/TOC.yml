@@ -200,6 +200,8 @@
     href: ./model-driven-apps/share-model-driven-app.md
   - name: Run a model-driven app on a mobile device
     href: ./model-driven-apps/run-app-client-model-driven.md
+  - name: For Developers
+    href: ../developer/model-driven-apps/TOC.yml 
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
