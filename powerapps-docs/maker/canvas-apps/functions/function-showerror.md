@@ -49,4 +49,4 @@ The **ShowError** function displays an error to the user.  Messages are shown bo
 
 	Each time the button is clicked, the message **Hello, World** is displayed to the user.
 
-	![](media/function-showerror/hello-world.png)
+	![In the authoring environment, showing Button.OnSelect calling ShowError and displaying the resuling Hello, World message as a red banner message for the user](media/function-showerror/hello-world.png)
