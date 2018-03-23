@@ -22,7 +22,9 @@ ms.author: matp
 
 After the app is created and then shared with you, you can run that app on a variety of popular mobile devices such as Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a model-driven app on a mobile device. 
 
-[!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+> [!IMPORTANT]
+> “Should do” info as best practice; “must do” to complete task
+> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
 
 To follow this quickstart, if you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=) before you begin. Also, make sure you have access to an app that you created or that someone else created and shared with you.
 
