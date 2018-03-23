@@ -20,19 +20,33 @@ ms.author: matp
 ---
 # Quickstart: Run a model-driven app on a mobile device
 
-The apps you build are designed to run in a web browser across a variety of devices. How you start a model-driven app on a mobile device is really no different than starting the app on a PC. However, how your model-driven app looks and responds on a particular device depends on the client type the app is based on. There are two types of model-driven app clients. 
-
-- Unified Interface: This client type provides key accessibility and responsive design benefits and has a similar interface across PC, Mac, and popular mobile devices. For most situations and especially for running on mobile devices, we recommend you create apps using the Unified Interface client type.
-- Web: This app type appears and functions similar to the classic Dynamics 365 web browser client. 
+After the app is created and then shared with you, you can run that app on a variety of popular mobile devices such as Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a model-driven app on a mobile device. 
 
 [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-## Prerequisites
+To follow this quickstart, if you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com/signup?redirect=marketing&email=) before you begin. Also, make sure you have access to an app that you created or that someone else created and shared with you.
 
-If you haven’t already, share the app and the app URL. Learn more: [Preview feature: Share a model-driven app with PowerApps](share-model-driven-app.md)
+## Run the model-driven app
 
-## Run a model-driven app
-1.	Enter the app URL in your device’s web browser, tap ENTER, and then if prompted, sign-in to the app using your credentials. 
-2.	If your account is associated with more than one app, a list of available apps appears. Select the app you want to run. 
-3.	The app appears on your mobile device, such as a phone or tablet.
+You run a model-driven app on a mobile device using any of the following ways.
 
+### Use the mobile app
+Install the Dynamics 365 for phones or Dynamics 365 for tablets app from your device’s app store. More information: [Install Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/customer-engagement/mobile-app/install-dynamics-365-for-phones-and-tablets)
+
+ ![Mobile app for phones](media/run-app-client-model-driven/mobile-app-for-phone.png)
+
+### Run in your phone’s browser
+Enter the app URL directly into your phone’s browser and follow the directions on your screen to load the app. 
+
+![Run app in phone browser](media/run-app-client-model-driven/web-browser-on-phone.png)
+
+### Go to home.dynamics.com
+Select your app to run in your phone’s browser. 
+
+![Dynamics 365 home](media/run-app-client-model-driven/dynamics-365-app-home.png)
+
+## Next steps
+In this quickstart, you learned how to run a model-driven app on a mobile device. You can also run canvas apps on a mobile device.
+
+> [!div class="nextstepaction"]
+> [Run a model-driven app on a mobile device](run-app-client.md)
