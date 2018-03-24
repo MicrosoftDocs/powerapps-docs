@@ -20,7 +20,7 @@ ms.author: jdaly
 
 *Solutions* are how customizers and developers author, package, and maintain units of software that extend the Common Data Service for Apps. For example, the Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use the Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
 
-Every customization that you make to the Common Data Service for Apps or a previously installed solution is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
+Every customization that you make to the Common Data Service for Apps, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
 
 If you intend to transport customizations or extensions between different Common Data Service for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
 
