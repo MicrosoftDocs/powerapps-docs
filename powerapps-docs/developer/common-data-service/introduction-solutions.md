@@ -24,7 +24,7 @@ Every customization that you make to the Common Data Service for Apps, or to a p
 
 If you intend to transport customizations or extensions between different Common Data Service for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
 
-## Unmanaged and managed solutions
+## Managed and unmanaged solutions
 
 There are two types of solutions: *managed* and *unmanaged*.
 
@@ -47,6 +47,7 @@ An **unmanaged** solution is one that is still under development or isn’t inte
  > You cannot import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
 
 ## Solution publishers
+
 Each solution is linked to a solution publisher. The solution publisher provides information about how to contact the publisher as well a customization prefix value. The default value is `new`.
 
 When any schema changes are included as part of a solution, the solution publisher customization prefix is prepended to the name of the schema items. Any custom actions also have this value appended to them. This is valuable because it allows for easy recognition of which solution added the schema item or custom action. It is not required for all schema items and custom actions in a solution to use the same customization prefix, but it is strongly recommended.
