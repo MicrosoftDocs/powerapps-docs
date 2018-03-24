@@ -1301,9 +1301,9 @@
         "redirect_document_id": false
 		},
 		{
-			"source_path": "powerapps-docs/guided-learning/create-app-cds.md",
-			"redirect_url": "/powerapps/guided-learning/get-started#step-1",
-			"redirect_document_id": true
+		"source_path": "powerapps-docs/guided-learning/create-app-cds.md",
+		"redirect_url": "/powerapps/guided-learning/get-started#step-1",
+		"redirect_document_id": true
 		}
     ]
 }
