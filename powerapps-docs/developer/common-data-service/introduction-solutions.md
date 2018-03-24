@@ -18,9 +18,9 @@ ms.author: jdaly
 ---
 # Introduction to solutions
 
-*Solutions* are how customizers and developers author, package, and maintain units of software that extend the Common Data Service for Apps. Customizers and developers distribute solutions so that organizations can use the Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
+*Solutions* are how customizers and developers author, package, and maintain units of software that extend the Common Data Service for Apps. For example, the Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use the Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
 
-Every customization that you make to the Common Data Service for Apps is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
+Every customization that you make to the Common Data Service for Apps or a previously installed solution is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
 
 If you intend to transport customizations or extensions between different Common Data Service for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
 
@@ -67,7 +67,7 @@ From [powerapps.com](https://web.powerapps.com)
 1. Select the *Waffle* icon at the top left corner
 2. In the fly out, select **All apps**.
 3. Look for the **Dynamics 365 - custom app**.
- You may want to click the elipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
+ You may want to click the ellipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
 4. Click the **Dynamics 365 - custom app** app and select it.
 5. Navigate to **Settings** > **Customization** > **Customizations**.
 

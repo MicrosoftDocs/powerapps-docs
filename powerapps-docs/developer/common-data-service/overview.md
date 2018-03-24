@@ -17,17 +17,17 @@ ms.date: 03/19/2018
 ms.author: jdaly
 ---
 # Common Data Service for Apps Developer Overview
-PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the new Common Data Service for Apps. The Common Data Service for Apps now contains the core functionality of the Dynamics 365 Customer Engagement platform.
+PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the expansion of the Common Data Service, now called the Common Data Service for Apps which now contains the core functionality of the Dynamics 365 platform that powers Dynamics 365 for Sales, Marketing, Customer Service.
 
 
 ## Get Started
-If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience to customize and extend the Common Data Service for Apps.
+If you are already experienced with the Dynamics 365 for Sales, Marketing, or Customer Service apps, you will find that you will be able to apply your experience to customize and extend the Common Data Service for Apps.
 
-If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working with the Common Data Service for apps.
+If you are new to the Dynamics 365 for Sales, Marketing, or Customer Service apps, the following topics provide a high-level overview of the important concepts to help you get started working with the Common Data Service for Apps.
 
 > [!NOTE]
 > - Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps Developer Overview](../model-driven-apps/overview.md). Content in this section will refer only to extensions developers can do at the service level. 
-> - Because the Common Data Service for Apps and Dynamics 365 Customer Engagement leverage the same platform, you will find more complete information for developers in the [Dynamics 365 Customer Engagement Developer Guide](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
+> - Because the Common Data Service for Apps is the same platform used by Dynamics 365 for Sales, Marketing, or Customer Service apps, you will find more complete information for developers in the [Dynamics 365 Customer Engagement Developer Guide](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
 
 
 ## Tools and resources for developers
