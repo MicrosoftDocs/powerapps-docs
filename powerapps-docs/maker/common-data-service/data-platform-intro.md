@@ -59,7 +59,7 @@ When you develop an app, you can use standard entities, custom entities, or both
 
 When using a standard entity or creating a custom entity there are multiple elements available within each one and different actions that can be performed. Depending on how simple or advanced your business scenario is will determine which features you will need to use. To see the entities available within your environment, sign in to [PowerApps](https://web.powerapps.com), and click Data and then Entities from the left menu.
 
-    ![Entity Details](./media/data-platform-cds-intro/entitylist.png "Entity Details")
+![Entity Details](./media/data-platform-cds-intro/entitylist.png "Entity Details")
 
 * Each **field** allows you to define a piece of information to be collected, and the data type or format you would like to display it. Fields are similar to columns in databases or Excel.
 * Alternate **keys** allow efficient and accurate search and interaction with records in the entity when not using the standard unique identifier. This is important when using a Business Key or integrating with an external system.
