@@ -59,8 +59,7 @@ When you develop an app, you can use standard entities, custom entities, or both
 
 When using a standard entity or creating a custom entity there are multiple elements available within each one and different actions that can be performed. Depending on how simple or advanced your business scenario is will determine which features you will need to use. To see the entities available within your environment, sign in to [PowerApps](https://web.powerapps.com), and click Data and then Entities from the left menu.
 
-### System fields
-All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. These are the most important system fields:
+    ![Entity Details](./media/data-platform-cds-intro/entitylist.png "Entity Details")
 
 * Each **field** allows you to define a piece of information to be collected, and the data type or format you would like to display it. Fields are similar to columns in databases or Excel.
 * Alternate **keys** allow efficient and accurate search and interaction with records in the entity when not using the standard unique identifier. This is important when using a Business Key or integrating with an external system.
@@ -68,6 +67,9 @@ All entities, whether standard or custom, are created with a set of read-only fi
 * **Views** allow each entity can be presented in multiple ways, including which fields are displayed, filtering and sorting of the data. These presentations are saved as views and can be consumed in different apps, for example you may only want to see Active Accounts within your app so you would use a view which is pre filtered to only show Active accounts to avoid repeating the filter in each consuming app.
 * **Business rules**  can be used to validate data being created and updated in entities to ensure data quality. Each business rule can validate data across multiple fields and entities, prompt warning and error messages regardless of the app being used to create the data.
 * **Data** stored within the Common Data Service is available through the PowerApps portal, PowerApps, Microsoft Excel and Web APIs for Developers.
+
+### System fields
+All entities, whether standard or custom, are created with a set of read-only fields that you can't change, delete, or set to a value. These are the most important system fields:
 
 ## Logic and validation
 
