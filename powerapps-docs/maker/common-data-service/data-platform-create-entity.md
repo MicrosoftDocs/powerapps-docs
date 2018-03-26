@@ -34,7 +34,7 @@ These instructions will show you how to create a custom entity manually, you can
 3. In the **Display name** field, enter a name that's easily recognizable for you to refer to this entity in the future. This is also used in forms, charts and other objects created using this entity. You'll notice two other fields also be populated:
 
     * Plural display name - this is used when interacting with this entity from PowerApps or Flow, and used as the name of the entity through the Common Data Service WebAPI. The Plural name should be automatically generated, but can be changed.
-    * Name - this is the unqiue name of the entity, it cannot contain special charecters or spaces and must be unqiue. The name also includes a prefix which was setup when your environment was created, this is used ensure the entities you create can be exported and imported into other environemnts with colliding with other entity names. This prefix can be changed by updating the prefix on your Publisher for the Common Data Service Default Solution.
+    * Name - this is the unique name of the entity, it cannot contain special characters or spaces and must be unique. The name also includes a prefix which was setup when your environment was created, this is used ensure the entities you create can be exported and imported into other environments with colliding with other entity names. This prefix can be changed by updating the prefix on your Publisher for the Common Data Service Default Solution.
 
     > [!NOTE]
     > The **Display name** fields can be updated at anytime to display differently in your apps, the **Name** field cannot be changed after your entity has been saved as this could result in breaking an existing app.
@@ -56,12 +56,12 @@ These instructions will show you how to create a custom entity manually, you can
 6. Click **Done** to add the field, and repeat step 5 to add additional fields.
 7. Click **Save entity** to save your entity and make it available for use in apps.
 
-    Your entity appears in the list of entities in your database. To see entties you've created, you can change the filter in the command bar from "Default" to "Custom"
+    Your entity appears in the list of entities in your database. To see entities you've created, you can change the filter in the command bar from "Default" to "Custom"
 
 ## System fields
 All entities have system fields. These fields are read-only. Therefore, you can't change or delete these fields, and you don't assign values to them. By default system fields will not be shown in the list of fields even though they exist on the entity. To see all fields, you can change the filter on the Command Bar from **Default** to **All**.
 
-For more inforamtion on the metadata related to an entity, see [Entity metadata](../../developer/common-data-service/entity-metadata.md)
+For more information on the metadata related to an entity, see [Entity metadata](../../developer/common-data-service/entity-metadata.md)
 
 ## Next steps
 * [Manage fields in an entity](data-platform-manage-fields.md)

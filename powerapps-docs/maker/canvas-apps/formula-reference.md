@@ -162,7 +162,9 @@ Other elements include:
 **[Hour](functions/function-datetime-parts.md)** – Returns the hour portion of a date/time value.
 
 ## I
-**[If](functions/function-if.md)** – Returns one value if a condition is true and another value if not.  
+**[If](functions/function-if.md)** – Returns one value if a condition is true and another value if not. 
+
+**[IfError](functions/function-iferror.md)** - Detects errors and provides an alternative value or takes action. 
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
@@ -278,6 +280,8 @@ Other elements include:
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
+
+**[ShowError](functions/function-showerror.md)** – Displays an error message to the user.
 
 **[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
 
