@@ -144,5 +144,6 @@ For more information about model-driven app development, see these topics.
 
 ## Next steps
 [Quickstart: Create a custom entity](../common-data-service/data-platform-create-entity.md)
+
 [Tutorial: Create a custom entity that has components in PowerApps](../common-data-service/create-custom-entity.md)
 
