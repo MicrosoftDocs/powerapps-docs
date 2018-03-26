@@ -198,6 +198,8 @@
     href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Share a model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
+  - name: For Developers
+    href: ../developer/model-driven-apps/TOC.yml
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
