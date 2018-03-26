@@ -257,7 +257,7 @@
         },
         {
         "source_path": "powerapps-docs/admin-view-apps.md",
-        "redirect_url": "/powerapps/maker/canvas-apps/admin-view-apps",
+        "redirect_url": "/powerapps/administrator/admin-view-apps",
         "redirect_document_id": true
         },
         {
@@ -1122,12 +1122,12 @@
         },
         {
         "source_path": "powerapps-docs/signup-for-powerapps.md",
-        "redirect_url": "/powerapps/maker/canvas-apps/signup-for-powerapps",
+        "redirect_url": "/powerapps/maker/signup-for-powerapps",
         "redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/signup-for-powerapps-admin.md",
-        "redirect_url": "/powerapps/maker/canvas-apps/signup-for-powerapps-admin",
+        "redirect_url": "/powerapps/administrator/signup-for-powerapps-admin",
         "redirect_document_id": true
         },
         {
