@@ -108,7 +108,7 @@
         {
         "source_path": "powerapps-docs/trial-plan.md",
         "redirect_url": "/powerapps/maker/signup-for-powerapps",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/dev-isv-partner-intro.md",
