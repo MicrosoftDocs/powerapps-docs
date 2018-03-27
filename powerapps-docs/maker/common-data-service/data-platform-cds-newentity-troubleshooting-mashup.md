@@ -21,11 +21,11 @@ ms.author: millopis
 # Troubleshooting Power Query
 When you use Power Query to create a custom entity that contains data from external sources, this error might appear:
 
-`Your Azure Active Directory administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf`.
+`Your Azure Active Directory administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf.`
 
 The error appears if Power Query can't access the organization's data in PowerApps or the Common Data Service. This situation arises under two sets of circumstances:
 
-* An Azure Active Directory (AAD) tenant administrator has disallowed users' ability to consent to apps accessing company data on their behalf.
+* An Azure Active Directory (AAD) tenant administrator has disallowed users' ability to consent to apps that access company data on their behalf.
 * Using an unmanaged Active Directory tenant. An unmanaged tenant is a directory without a global administrator that was created to complete a self-service signup offer. To fix this scenario, users must first convert to a managed tenant and then follow one of the two solutions to this issue, described in the following section.
 
 To resolve this issue, the AAD administrator must follow the steps in either of the procedures later in this topic.
