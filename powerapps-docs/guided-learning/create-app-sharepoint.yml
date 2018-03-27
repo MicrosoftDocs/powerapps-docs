@@ -5,15 +5,15 @@ metadata:
   description: Generate a three screen app from a SharePoint list, then explore and update the app.
   audience: Business User
   level: Beginner
-  nextTutorialHref: create-app-cds
-  nextTutorialTitle: Creating an app from the Common Data Service
+  nextTutorialHref: manage-apps
+  nextTutorialTitle: Manage apps
   displayType: one-column
-  author: mgblythe
-  manager: anneta
+  author: AFTOwen
+  manager: kfile
   ms.service: powerapps
   ms.topic: get-started-article
   ms.date: 10/27/2017
-  ms.author: mblythe
+  ms.author: anneta
 items:
 - durationInMinutes: 1
   content: |

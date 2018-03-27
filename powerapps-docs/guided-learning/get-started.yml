@@ -8,12 +8,12 @@ metadata:
   nextTutorialHref: create-app-sharepoint
   nextTutorialTitle: Creating an app from SharePoint
   displayType: one-column
-  author: mgblythe
-  manager: anneta
+  author: AFTOwen
+  manager: kfile
   ms.service: powerapps
   ms.topic: get-started-article
   ms.date: 10/27/2017
-  ms.author: mblythe
+  ms.author: anneta
 items:
 - durationInMinutes: 1
   content: |

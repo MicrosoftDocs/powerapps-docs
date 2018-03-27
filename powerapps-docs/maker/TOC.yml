@@ -13,6 +13,10 @@
     items:
     - name: Open a sample app
       href: ./canvas-apps/open-and-run-a-sample-app.md
+    - name: Create an app from a template
+      href: ./canvas-apps/get-started-test-drive.md
+    - name: Create an app from within SharePoint
+      href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
     - name: Generate an app
       items:
       - name: From the Common Data Service for Apps
@@ -21,10 +25,6 @@
         href: ./canvas-apps/app-from-sharepoint.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
-    - name: Customize a SharePoint list form
-      href: ./canvas-apps/customize-list-form.md
-    - name: Create an app from within SharePoint
-      href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
   - name: Tutorials
     items:
     - name: Customize a generated app
@@ -79,8 +79,8 @@
         href: ./canvas-apps/dev-appsource-test-drive.md
   - name: How-to guides
     items:
-    - name: Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+    - name: Customize a SharePoint list form
+      href: ./canvas-apps/customize-list-form.md
     - name: Build an Excel app from scratch
       href: ./canvas-apps/get-started-create-from-blank.md
     - name: Customize an app
@@ -145,6 +145,8 @@
         href: ./canvas-apps/gateway-management.md
       - name: Understand gateways
         href: ./canvas-apps/gateway-reference.md
+      - name: Troubleshoot Power Query
+        href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
     - name: Integrate with other technologies # already one TOC level too deep
       items:
       - name: SharePoint Online
@@ -174,14 +176,14 @@
   - name: Reference
     items:
     - name: Formula reference
-      href: ./canvas-apps/formula-reference.md # lives in root, move to formulas?
+      href: ./canvas-apps/formula-reference.md
     - name: Controls reference
-      href: ./canvas-apps/reference-properties.md # lives in root, move to controls?
+      href: ./canvas-apps/reference-properties.md
     - name: Connectors reference
-      href: ./canvas-apps/connections-list.md # lives in root, move to connectors? Is this OK as a reference topic (vs. in how-to section)
+      href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
       href: ./canvas-apps/limits-and-config.md
-  - name: Resources # currently all content from old Get Started, except for intro topic. We can relocate as appropriate
+  - name: Resources
     items:
     - name: Work with environments
       href: ./canvas-apps/working-with-environments.md
@@ -198,10 +200,8 @@
     href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Share a model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
-  - name: Run a model-driven app on a mobile device
-    href: ./model-driven-apps/run-app-client-model-driven.md
   - name: For Developers
-    href: ../developer/model-driven-apps/TOC.yml 
+    href: ../developer/model-driven-apps/TOC.yml
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:

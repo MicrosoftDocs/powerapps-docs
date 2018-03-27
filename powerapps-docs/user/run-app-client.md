@@ -81,4 +81,4 @@ To close an app, use your finger to swipe from the left edge of the app to the r
 In this quickstart, you learned how to run a canvas app on a mobile device. You can also run model-driven apps on a mobile device.
 
 > [!div class="nextstepaction"]
-> [Run a model-driven app on a mobile device](../maker/model-driven-apps/run-app-client-model-driven.md)
+> [Run a model-driven app on a mobile device](run-app-client-model-driven.md)
