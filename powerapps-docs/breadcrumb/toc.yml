@@ -8,13 +8,13 @@
     items:
     - name: Run apps
       tocHref: /powerapps/user/
-      topicHref: /powerapps/user/index.md
+      topicHref: /powerapps/user/index
     - name: Create apps
       tocHref: /powerapps/maker/
-      topicHref: /powerapps/maker/index.md
+      topicHref: /powerapps/maker/index
     - name: Administer PowerApps
       tocHref: /powerapps/administrator/
-      topicHref: /powerapps/administrator/index.md
+      topicHref: /powerapps/administrator/index
     - name: Guided Learning
       tocHref: /powerapps/guided-learning/
-      topicHref: /powerapps/guided-learning/index.md
+      topicHref: /powerapps/guided-learning/index
