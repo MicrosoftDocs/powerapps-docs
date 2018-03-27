@@ -146,7 +146,7 @@
       - name: Understand gateways
         href: ./canvas-apps/gateway-reference.md
       - name: Troubleshoot Power Query
-        href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup
+        href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
     - name: Integrate with other technologies # already one TOC level too deep
       items:
       - name: SharePoint Online
