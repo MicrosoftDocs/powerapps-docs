@@ -5,15 +5,13 @@ metadata:
   description: Share apps, control which version of an app is used and shared, and work with containers.
   audience: Business User
   level: Beginner
-  nextTutorialHref: manage-data
-  nextTutorialTitle: Managing data
   displayType: one-column
-  author: mgblythe
-  manager: anneta
+  author: AFTOwen
+  manager: kfile
   ms.service: powerapps
   ms.topic: get-started-article
   ms.date: 10/27/2017
-  ms.author: mblythe
+  ms.author: anneta
 items:
 - durationInMinutes: 1
   content: |
