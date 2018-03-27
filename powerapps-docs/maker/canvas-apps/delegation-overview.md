@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 08/15/2017
+ms.date: 03/27/2018
 ms.author: gregli
 
 ---
@@ -27,7 +27,7 @@ The key to building efficient apps is to minimize the amount of data that needs 
 
 Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a PowerApps formula can be delegated to every data source.  The PowerApps language mimics Excel's formula language, designed with complete and instant access to a full workbook in memory, with a wide variety of numerical and text manipulation functions.  As a result, the PowerApps language is far richer than most data sources can support, including powerful database engines such as SQL Server.
 
-**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need. Take heed of [blue-dot suggestions](delegation-overview.md#blue-dot-suggestions) that flag places where delegation is not possible.  If you're working with small data sets (less than 500 records), you can use any data source and formula as processing can be done locally if the formula cannot be delegated.  
+**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need. Take heed of [blue-dot suggestions](delegation-overview.md#blue-dot-suggestions) that flag places where delegation is not possible.  If you're working with small data sets (less than 500 records), you can use any data source and formula as processing can be done locally if the formula cannot be delegated. 
 
 ## Delegable data sources
 See the [delegation list](delegation-list.md) for the full list of which data sources support delegation and to what extent.
@@ -80,7 +80,7 @@ Counting functions such as **[CountRows](functions/function-table-counts.md)**, 
 
 Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** cannot be delegated.
 
-### Other functions
+## Non-delegable functions
 All other functions do not support delegation, including these notable functions:
 
 * Table shaping: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ...
@@ -101,11 +101,19 @@ Since the **LookUp** and its data source are delegable, a match for **Suppliers*
 ## Non-delegable limits
 Formulas that cannot be delegated will be processed locally.  This allows for the full breadth of the PowerApps formula language to be used.  But at a price: all the data must be brought to the device first, which could involve retrieving a large amount of data over the network.  That can take time, giving the impression that your app is slow or possibly hung.
 
-To avoid this, PowerApps imposes a limit on the amount of data that can be processed locally: 500 records.  We chose this number so that you would still have complete access to small data sets and you would be able to refine your use of large data sets by seeing partial results.
+To avoid this, PowerApps imposes a limit on the amount of data that can be processed locally: 500 records by default.  We chose this number so that you would still have complete access to small data sets and you would be able to refine your use of large data sets by seeing partial results.
 
 Obviously care must be taken when using this facility as it can be confusing for users.  For example, consider a **Filter** function with a selection formula that cannot be delegated, over a million record data source.  Since the filtering will be done locally, only the first 500 records of the million records will be scanned.  If the desired record is record 501, or 500,001, it will not be considered or returned by **Filter**.
 
 Another place where this can be confusing is aggregate functions.  Take **Average** over a column of that same million record data source.  Since **Average** cannot yet be delegated, only the first 500 records will be averaged.  Care must be taken or a partial answer could be misconstrued as a complete answer by a user of your app.
+
+## Changing the limit
+
+500 is the default number of records.  This number can be changed by going to the File tab, selecting the App Settings in the left hand navigation pane, and looking under Experimental features.  Here you will find the "Data row limit for non-delegable queries" setting which you can change from 1 to 2000.  This setting is app wide.
+
+In some cases, you will know that 2000 (or 1000, or 1500) will satisfy the needs of your scenario.  With care, you can increase this number to fit your scenario.  Be aware that as you increase this number your app's performance may degrade, especially for wide tables with lots of columns.  The best answer is still to always delegate what you can.
+
+To ensure your app can scale to large data sets, reduce this setting down to 1.  Anything that cannot be delegated will now only return a single record, which should be easy to detect when testing your app.  This can help avoid surprises when trying to take a proof of concept app to production.
 
 ## Blue dot suggestions
 To make it easier to know what is and is not being delegated, the authoring experience provides blue dot suggestions when a formula contains something that cannot be delegated.
