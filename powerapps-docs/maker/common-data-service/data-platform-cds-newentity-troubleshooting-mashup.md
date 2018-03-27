@@ -1,11 +1,11 @@
 ---
-title: Troubleshooting - Unable to create or retrieve a mashup for this database | Microsoft Docs
-description: Resolve issues creating a Custom Entity using CDS and Power Query, by administrator changes to AAD restrictions.
+title: Troubleshooting Power Query | Microsoft Docs
+description: Resolve issues using Power Query to create a custom entity in the Common Data Service for Apps 
 services: ''
 suite: powerapps
 documentationcenter: na
 author: mllopis
-manager: kfend
+manager: kfile
 editor: ''
 tags: ''
 
@@ -18,39 +18,28 @@ ms.date: 08/18/2017
 ms.author: millopis
 
 ---
-# Troubleshooting - Unable to create or retrieve a mashup for this database
-When using the **New Entities from Data (Technical Preview)** feature, you might run into an error that looks like the following:
+# Troubleshooting Power Query
+When you use Power Query to create a custom entity that contains data from external sources, this error might appear:
 
-    *Unable to create or retrieve a mashup for the current database*
+`Your Azure Active Directory administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf`.
 
-This can occur when you're using the feature to create *Custom Entities* in the **Common Data Service (CDS)** based on data from external data sources using **Power Query**. The error is triggered when **Power Query** cannot access the organization's data in **PowerApps or CDS**. There are two scenarios when this can happen:
+The error appears if Power Query can't access the organization's data in PowerApps or the Common Data Service. This situation arises under two sets of circumstances:
 
-* An **Azure Active Directory** (AAD) tenant administrator has disallowed users' ability to consent to apps accessing company data on their behalf.
-* Using an unmanaged Active Directory tenant. An unmanaged tenant is a directory without a global administrator that was created to complete a self-service signup offer. To fix this scenario, users must *first* convert to a managed tenant, then follow one of the two solutions to this issue, described in the following section.
+* An Azure Active Directory (AAD) tenant administrator has disallowed users' ability to consent to apps accessing company data on their behalf.
+* Using an unmanaged Active Directory tenant. An unmanaged tenant is a directory without a global administrator that was created to complete a self-service signup offer. To fix this scenario, users must first convert to a managed tenant and then follow one of the two solutions to this issue, described in the following section.
 
-There are two ways to fix the issue described above:
+To resolve this issue, the AAD administrator must follow the steps in either of the procedures later in this topic.
 
-* Have the AAD administrator follow the steps necessary for users to consent to apps accessing company data
-* Have the AAD administrator allow **Power Query** to access data
+## Allow users to consent to apps that access company data
+This approach is perhaps easier than the next, but it allows for broader permissions.
 
-Each of the steps necessary for these solutions are described next.
+1. In [https://portal.azure.com](https://portal.azure.com), open the **Azure Active Directory** blade, and then select **User settings**.
+1. Select **Yes** next to **Users can consent to apps accessing company data on their behalf**, and then select **Save**.
 
-## Allowing users to give apps consent to access company data
+## Allow Power Query to access company data
+As an alternative, the tenant administrator can give consent to Power Query without modifying tenant-wide permissions.
 
-You can contact the AAD tenant administrator, and have him or her perform the following steps, which enables users to consent to any app accessing company data:
-
-1. Visit [https://portal.azure.com](https://portal.azure.com)
-2. Open the **Azure Active Directory** blade.
-3. Select **User settings**.
-4. Select **Yes** next to **Users can consent to apps accessing company data on their behalf**, and then select **Save**.
-5. Once that process is completed, the issue will be resolved.
-
-This is perhaps the easiest approach, but it allows for broader permissions than the next option.
-
-## Allowing Power Query to access company data
-Another solution is to have the tenant administrator give consent to **Power Query** without modifying tenant-wide permissions. Have the tenant administrator take the following steps achieve this:
-
-1. Install [Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps)
+1. Install [Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps).
 2. Run the following PowerShell commands:
    * Login-AzureRmAccount (and sign in as the tenant admin)
    * New-AzureRmADServicePrincipal -ApplicationId f3b07414-6bf4-46e6-b63f-56941f3f4128
