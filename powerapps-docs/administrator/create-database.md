@@ -49,6 +49,8 @@ There are three ways to create a database:
 
     ![](./media/create-database/Create-DB-From-Entities.png)
 
+> [!NOTE]
+> Currently, it's not possible to create a database outside your Azure AD region. It will be possible to create a database in a different region than your Azure AD home region soon, but for now, make sure you create a database in an environment that has the same region as your Azure AD home region.
 
 ## Security model for the databases
 When a database is created, the users who have environment roles assigned to them, will continue to maintain those priviliges.  
