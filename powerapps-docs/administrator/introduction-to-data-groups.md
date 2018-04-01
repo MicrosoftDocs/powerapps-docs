@@ -24,8 +24,10 @@ Data groups are a simple way to categorize services within a [data loss preventi
 ## How data is shared between data groups
 Data cannot be shared among services located in different groups. For example, if you place SharePoint and Salesforce in the **Business data only** group and you place Facebook and Twitter in the **No business data allowed** group, you cannot create a PowerApp that moves data between SharePoint and Facebook. While data cannot be shared among services in different groups, you can share data among the services within a specific group. So, going back to the earlier example, since SharePoint and Salesforce were placed in the same data group, PowerApps that your end users create can share data between SharePoint and Salesforce. The key point is that services in a specific group can share data, while services in different groups cannot share data.
 
-Additionally, one data group must be designated as the *default* group. Initially, the **No business data allowed** group is the *default* group and all services are in the data group. An administrator can change the default data group to the **business data only** data group. > [!NOTE]
-> any new services that are added to PowerApps will be placed in the designated *default* group. For this reason, we recommend you keep the **No business data allowed** as the default group and manually add services into the **Business data only** group after your organization has evaluated the impact of allowing business data to be shared with the new service.
+Additionally, one data group must be designated as the *default* group. Initially, the **No business data allowed** group is the *default* group and all services are in the data group. An administrator can change the default data group to the **business data only** data group. 
+
+> [!NOTE]
+> Any new services that are added to PowerApps will be placed in the designated *default* group. For this reason, we recommend you keep the **No business data allowed** as the default group and manually add services into the **Business data only** group after your organization has evaluated the impact of allowing business data to be shared with the new service.
 
 ## Add services to a data group
 In this walk-through, we'll add SharePoint and Salesforce to the **business data only** data group of a data loss prevention (DLP) policy.
@@ -48,7 +50,7 @@ Since all services must be in one of the available data groups, to remove a serv
 In this walk-through, we will change the default data group from the **no business data allowed** data group to the **business data only** data group.  
 
 > [!IMPORTANT]
-> any new services that are added to PowerApps will be placed in the designated *default* group. For this reason, we recommend you keep the **No business data allowed** as the default group and manually add services into the **Business data only** group.
+> Any new services that are added to PowerApps will be placed in the designated *default* group. For this reason, we recommend you keep the **No business data allowed** as the default group and manually add services into the **Business data only** group.
 
 1. Select the **...** located at the top right corner of the data group you wish to designate as the default data group:    
    ![change default group](./media/introduction-to-data-groups/default-data-group-0.png)  
