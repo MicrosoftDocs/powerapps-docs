@@ -4,7 +4,7 @@ description: Follow these steps in order to sign up for PowerApps as an administ
 services: 'powerapps'
 suite: powerapps
 documentationcenter: na
-author: manasma-msft
+author: manasmams
 manager: anneta
 editor: ''
 tags: ''
