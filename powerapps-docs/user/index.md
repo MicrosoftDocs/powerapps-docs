@@ -32,10 +32,11 @@ This section provides information about how to find and run apps, and includes t
 
 * [Run an app in a web browser](run-app-browser.md)
 * [Run a canvas app on a mobile device](run-app-client.md)
+* [Run a model-driven app on a mobile device](run-app-client-model-driven.md)
 * [Add and run an app in Microsoft Teams](open-app-embedded-in-teams.md)
 * [Find and run an app in AppSource](app-source.md)
 
 ## Next steps
 * Ensure that you're using a [supported device platform and browser](../maker/canvas-apps/limits-and-config.md).
 * To run canvas apps, download and install PowerApps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps).
-* To run model-driven apps on a phone, download and install Dynamics 365 for phones from the [App Store](https://itunes.apple.com/app/dynamics-crm-for-phones/id1003997947?ls=1&mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone). To run model-driven apps on a tablet, download Dynamics 365 for tablets from the [App Store](https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460?mt=8), [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmtablet), or [Windows Store](https://www.microsoft.com/store/p/microsoft-dynamics-365/9nblggh4rfqp). For more information, see [Quickstart: Run a model-driven app on a mobile device](run-app-client-model-driven.md).
+* To run model-driven apps on a phone, download and install Dynamics 365 for phones from the [App Store](https://itunes.apple.com/app/dynamics-crm-for-phones/id1003997947?ls=1&mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone). To run model-driven apps on a tablet, download Dynamics 365 for tablets from the [App Store](https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460?mt=8), [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmtablet), or [Windows Store](https://www.microsoft.com/store/p/microsoft-dynamics-365/9nblggh4rfqp).
