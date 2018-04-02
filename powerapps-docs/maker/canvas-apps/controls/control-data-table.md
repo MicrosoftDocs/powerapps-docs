@@ -142,3 +142,16 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
    
     ![Edit form connected to the Data table](./media/control-data-table/connected-form-data-table.png)
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* [**Color**](properties-color-border.md) and [**Fill**](properties-color-border.md)
+* **HeadingColor** and **HeadingFill**
+* **SelectedColor** and **SelectedFill**
+* [**HoverColor**](properties-color-border.md) and [**HoverFill**](properties-color-border.md)
+
+This is in addition to the standard color contrast requirements.
+
+### Screen reader support
+* **NoDataText** must be present.

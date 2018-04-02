@@ -40,8 +40,6 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when it has keyboard focus.
-
 **[Color](properties-color-border.md)** – The color of text in a control.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
@@ -51,6 +49,10 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 **[DisabledColor](properties-color-border.md)** – The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
@@ -96,7 +98,7 @@ Configure the **[OnSelect](properties-core.md)** property of a **Button** contro
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -181,3 +183,15 @@ You can also specify the color of a **Button** control by setting its **[HoverFi
 
 * Replace the **[ColorFade](../functions/function-colors.md)** function with a **[ColorValue](../functions/function-colors.md)** function in one of the buttons that you created, and observe the effects.
 
+
+## Accessibility guidelines
+### Color contrast
+* Standard color contrast requirements apply.
+
+### Screen reader support
+* **[Text](properties-core.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+ 

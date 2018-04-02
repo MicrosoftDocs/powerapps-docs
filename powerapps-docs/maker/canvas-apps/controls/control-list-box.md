@@ -32,13 +32,13 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 [!INCLUDE [long-items](../../../includes/long-items.md)]
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
@@ -51,6 +51,10 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -100,7 +104,7 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -146,3 +150,22 @@ A **List Box** control always shows all available choices (unlike a **[Drop down
     ![Flooring names in dropdown lists](./media/control-list-box/selected-lists.png)
 6. (optional) Press Esc to return to the default workspace.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **SelectionColor** and **SelectionFill**
+* **SelectionFill** and **[Fill](properties-color-border.md)**
+* **[HoverFill](properties-color-border.md)** and **[Fill](properties-color-border.md)**
+* **[PressedFill](properties-color-border.md)** and **[Fill](properties-color-border.md)**
+
+This is in addition to the standard color contrast requirements.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+> [!NOTE]
+> The tab key navigates to or away from the **List box**. Arrow keys navigate the contents of the **List box**.
