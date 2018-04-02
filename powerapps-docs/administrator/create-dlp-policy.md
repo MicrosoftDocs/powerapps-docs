@@ -23,7 +23,13 @@ To protect data in your organization, PowerApps lets you create and enforce poli
 
 In this quickstart, you'll learn how to create a DLP policy for a single environment that prevents data that's stored in your Common Data Service and SharePoint databases from being published to Twitter.
 
-To follow this quickstart, you'll need PowerApps Environment Admin or Azure Active Directory Tenant Admin permissions, and permissions to at least one environment. For more information, see [Environments administration in PowerApps](environments-administration.md).
+## Prerequisites
+To follow this quickstart, **one** of the following items is required:
+* Azure Active Directory Tenant Admin permissions
+* Office 365 Global Admin permissions
+* PowerApps Environment Admin permissions plus a PowerApps Plan 2, Microsoft Flow Plan 2, or a [PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=) license
+
+For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Sign in to the PowerApps Admin center
 Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).

@@ -44,10 +44,10 @@ To manage an environment in the PowerApps admin center, you must have one of the
 
 * The Global Administrator role of your Azure AD or Office 365 tenant.
 
-You also need either PowerApps Plan 2 or Flow Plan 2 to access the admin center. For more information, see the [PowerApps pricing page][3].
+You also need either a PowerApps Plan 2 or Microsoft Flow Plan 2 license to access the admin center. For more information, see the [PowerApps pricing page][3].
 
 > [!IMPORTANT]
-> Any changes that you make in PowerApps admin center affect the [Flow admin center][4] and vice versa.
+> Any changes that you make in PowerApps admin center affect the [Microsoft Flow admin center][4] and vice versa.
 
 ## Create an environment
 For instructions on how to create an environment, see [Quickstart: Create an environment](create-environment.md).
@@ -63,7 +63,7 @@ If you are a member of the Global Administrator role of your Azure AD or Office 
 1. Open the [PowerApps admin center][1], find the environment to be renamed in the list, and click or tap it.
 
     ![](./media/environment-admin/environment-list-updated3.png)
- 
+
 2. Click or tap **Details**.
 
     ![](./media/environment-admin/environment-rename-details-2.png)
