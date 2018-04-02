@@ -4,7 +4,7 @@ description: Follow these steps in order to sign up for PowerApps as an administ
 services: 'powerapps'
 suite: powerapps
 documentationcenter: na
-author: jamesol-msft
+author: manasma-msft
 manager: anneta
 editor: ''
 tags: ''
@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/21/2018
-ms.author: jamesol
+ms.author: manasma
 
 ---
 # Purchase PowerApps for your organization
@@ -46,7 +46,7 @@ You can purchase PowerApps subscriptions for your organization from the [Office 
 >
 > * If you sign in to PowerApps with an Office 365 subscription prior to this change going out, you will be prompted to sign up for a free PowerApps Plan 2 trial.
 > * Feel free to sign up for the trial if you want to try out PowerApps until the update is made to your Office 365 subscription.  
-> * However, please be aware that the trial license may include features of PowerApps that are not available to you through your Office 365 subscription when the trial expires after 90 days.  See [PowerApps pricing][2] to see what capabilities are included in your Office 365 subscription.
+> * However, please be aware that the trial license may include features of PowerApps that are not available to you through your Office 365 subscription when the trial expires after 30 days.  See [PowerApps pricing][2] to see what capabilities are included in your Office 365 subscription.
 
 
 ### Purchase a subscription trial
@@ -78,15 +78,15 @@ You can purchase PowerApps subscriptions for your organization from the [Office 
 5. Enter the number of licenses you would like to add, and then select **Check out now** or **Add to cart**.
 
    > [!NOTE]
-> You can add more later if needed.
-   >
+   > You can add more licenses later if needed.
+
 
 6. Enter the needed information in the Checkout flow,
 
     Under **Billing -> Subscriptions**, you will see **Microsoft PowerApps Plan 1** or **Microsoft PowerApps Plan 2** listed. If you decide later that you want to add more licenses, go back to **Add subscriptions** and then select **Change license quantity**.
 
 ## Add-ons
-These are coming soon but are not supported yet.
+These are not supported yet.
 
 ## See also
 [PowerApps in your organization Q&A](signup-question-and-answer.md)  
