@@ -1,6 +1,6 @@
 ---
 title: Apply business logic with code | Microsoft Docs
-description: Learn how developers can use code to apply business logic in the Common Data Service for Apps.
+description: Learn how developers can use code to apply business logic in Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -30,7 +30,7 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Custom work
 
 ## Create a plug-in
 
-You can write a .NET assembly to plug-in to the data transaction flow to apply business logic on the server. With the Common Data Service for Apps platform there is a framework that allows you to register specific events to execute code defined within a class in an assembly. That class inherits a specific interface that exposes an [Execute method](/dotnet/api/microsoft.xrm.sdk.iplugin.execute). When the registered event occurs, the `Execute` method on the class is invoked and passed contextual data about the event.
+You can write a .NET assembly to plug-in to the data transaction flow to apply business logic on the server. With Common Data Service for Apps there is a framework you use to register specific events to execute code defined within a class in an assembly. That class inherits a specific interface that exposes an [Execute method](/dotnet/api/microsoft.xrm.sdk.iplugin.execute). When the registered event occurs, the `Execute` method on the class is invoked and passed contextual data about the event.
 
 You will use the *Plug-in Registration Tool* to register your assemblies.
 
