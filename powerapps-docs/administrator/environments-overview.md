@@ -109,24 +109,6 @@ You will be able to create new environments from [PowerApps.com][2] and from the
 
 ![](./media/environments-overview/CreateEnvironmentDialog-New.png)
 
-## What will change for PowerApps Preview users?
-Any user that has participated in the PowerApps preview will see some changes in their experience with the introduction of environments.  The following table lists what U.S. users and non-U.S. users can expect:
-
-| User | What happens |
-| --- | --- |
-| Preview user who created a Common Data Service database |You will see an environment called “{Your name}’s environment” that contains your preview Common Data Service database and any apps that you built against it.  You will be added to the Environment Maker role and Environment Admin role of this environment and as a Database owner of the database. When PowerApps enters general availability, we will upgrade the metadata of the Common Data Service. The impact of this change means that you will still be able to use the entities and apps that you have already built against your preview Common Data Service database; however, you won't be able to create fields or entities in that database. We will soon publish guidance on how you can create an environment with a database that contains the upgraded metadata and migrate your apps over to that environment. <br> If any of your apps that were built against your preview Common Data Service database also leverage a custom connector as a data source, they will be temporarily broken in this environment because all custom connectors will be migrated to the default environment. You'll need to re-create the custom connector in this environment to repair any affected apps. |
-| Preview user in the U.S. |The following resources that you created during the PowerApps preview period will be available in your tenant’s default environment:<br>- All apps you created (except any that connected to a preview Common Data Service database)<br>- All connections and custom connectors that you created<br>- All on-premises data gateways you installed |
-| Preview user not in U.S. |In addition to the default environment, you will also see an environment called “{Azure AD tenant} (from preview)” that contains the following resources you created during the PowerApps preview period:<br>- All apps you created (except any that connected to a preview Common Data Service database)<br>- All connections and custom connectors that you created<br>- All on-premises data gateways you installed.<br>You will be added to the Environment Maker role of this environment. |
-
-A *preview user* is someone who used Microsoft PowerApps before its release to General Availability (GA).
-
-Two weeks after PowerApps enters general availability (GA), environments that contain preview content will be marked as read-only (with the exception of the default environment); all existing apps and flows will continue to work in these environments, but you won't be able to create apps or flows. We highly recommend that users of these environments migrate their content to the default environment or another custom environment. Please refer to the following blog (which will be posted this week) for more information about the migration process: see the [Common Data Service features announcement blog][3].
-
-### Example environments for a preview user in U.S.
-![](./media/environments-overview/USuser1.png)
-
-### Example environments for a preview user not in U.S.
-![](./media/environments-overview/non-USuser1.png)
 
 ## Managing environments for your organization
 In PowerApps admin center,  you can manage all of the environments that you have created or to which you have been added to the Environment Admin role. From the Admin center, you can perform all administrative actions on an environment, including the following:

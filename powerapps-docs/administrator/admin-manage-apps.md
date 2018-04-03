@@ -27,14 +27,14 @@ Admins can do the following from the PowerApps Admin center:
 * View the data sources used by an app
 
 ## Prerequisites
-* Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
+* Either a PowerApps Plan 2 or Microsoft Flow Plan 2 license. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
 * PowerApps Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Manage an app
 1. Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
 2. In the navigation pane, click or tap **Environments**, and then click or tap the environment that contains the app that you want to manage.
 
-    If you don't see **Environments** in the navigation pane, that indicates you don't have a PowerApps Plan 2, Flow Plan 2, or PowerApps Plan 2 trial license.
+    If you don't see **Environments** in the navigation pane, that indicates you don't have a PowerApps Plan 2, Microsoft Flow Plan 2, or PowerApps Plan 2 trial license.
 
     ![File and Share](./media/admin-manage-apps/environment.png)
 3. On the **Resources** tab, click or tap **Apps**, and then click or tap the app that you want to manage.
