@@ -115,7 +115,7 @@
         href: ./canvas-apps/add-scrolling-screen.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
-      - name: Creating Accessible Apps
+      - name: Create Accessible Apps
         href: ./canvas-apps/accessible-apps.md
     - name: Manage your app
       items:
