@@ -140,7 +140,7 @@ Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to s
 The same guidelines for **[Button](control-button.md)** and **[Image](control-image.md)** apply. In addition, consider the following:
 
 ### Color contrast
-* **Add media button** must have adequate contrast between its text and background. Since the uploaded image may have varying colors, use an opaque Fill on the **Add media button** to ensure consistent contrast.
+* **Add media button** must have adequate contrast between its text and background. Since the uploaded image may have varying colors, use an opaque **[Fill](properties-color-border.md)** on the **Add media button** to ensure consistent contrast.
 
 ### Screen reader support
 * **Add media button** must have **Text** and **ChangePictureText** that prompts the user to add or change a picture.

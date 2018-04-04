@@ -76,7 +76,7 @@ When the **Screen** is the effective background for text, there must be adequate
 
 For example, if a **Screen** contains a **[Label](control-text-box.md)** and the label has transparent fill, then the screen's **[Fill](properties-color-border.md)** effectively becomes the background color for the label.
 
-In addition to text, consider checking color contrast with essential graphical objects like the star images in a **[Rating](control-rating)** control.
+In addition to text, consider checking color contrast with essential graphical objects like the star images in a **[Rating](control-rating.md)** control.
 
 ### Screen reader support
 * There must be a meaningful name for each **Screen**. The screen name can be viewed and edited in the same way as other controls: in the tree view of the controls pane or in the header of the properties pane.
