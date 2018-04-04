@@ -1,6 +1,6 @@
 ---
 title: Common Data Service for Apps entities | Microsoft Docs
-description: Learn about the entities available in the Common Data Service for Apps.
+description: Learn about the entities available in Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -18,7 +18,7 @@ ms.author: jdaly
 ---
 # Common Data Service for Apps entities
 
-Providing storage for data is the most important function of the Common Data Service for apps. The common data service includes a base set of entities that provide structure for data used by business applications. 
+Providing storage for data is the most important function of Common Data Service for Apps. Common Data Service includes a base set of entities that provide structure for data used by business applications. 
 
 You can view the base set of entities in the [Common Data Service for Apps entity reference](reference/about-entity-reference.md).
 
@@ -33,18 +33,18 @@ There are several ways to edit entity metadata using designers.
 
 |Designer  |Description  |
 |---------|---------|
-|powerapps.com|The easiest and most common approach to modify the schema is to use the [powerapps.com](https://web.powerapps.com/) site to edit the common data service associated with an environment. Changes applied here are performed in the context of an unmanaged Common Data Service Default solution. <!-- TODO: Add link to topic that describes this -->|
-|Common Data Service Default solution explorer|There is another designer available from the [powerapps.com](https://web.powerapps.com/) site when editing the common data service. In the lower left-hand corner, the **Advanced** button will open the solution explorer to the Common Data Service Default solution. |
+|powerapps.com|The easiest and most common approach to modify the schema is to use the [powerapps.com](https://web.powerapps.com/) site to edit Common Data Service associated with an environment. Changes applied here are performed in the context of an unmanaged Common Data Service Default solution. <!-- TODO: Add link to topic that describes this -->|
+|Common Data Service Default solution explorer|There is another designer available from the [powerapps.com](https://web.powerapps.com/) site when editing Common Data Service. In the lower left-hand corner, the **Advanced** button will open the solution explorer to the Common Data Service Default solution. |
 |Solution explorer for your solution |If you will distribute a solution you should create any new entities, attributes, or relationships in the context of the unmanaged solution that you will use to develop your solution. <br /> More information: [Create a solution publisher and solution](introduction-solutions.md#create-a-solution-publisher-and-solution)|
 |From the form editor|When editing a model-driven app form for an entity, you can click the **New Field** button in the **Field Explorer**. If you create a lookup field, you will create a new entity relationship to support it.|
 
 ### Import a solution
 
-A solution can contain entity metadata and other customized components. Importing a managed or unmanaged solution into your common data service tenant will include those entities or extend existing entities with the new entity metadata they contain.
+A solution can contain entity metadata and other customized components. Importing a managed or unmanaged solution into your Common Data Service for Apps tenant will include those entities or extend existing entities with the new entity metadata they contain.
 
 ### From a data source using Power Query
 
-You can create new entities and fill them with data using Power Query. More information: [Add data to an entity in the Common Data Service by using Power Query](../../maker/common-data-service/data-platform-cds-newentity-pq.md)
+You can create new entities and fill them with data using Power Query. More information: [Add data to an entity in Common Data Service by using Power Query](../../maker/common-data-service/data-platform-cds-newentity-pq.md)
 
 ### Use metadata services
 
@@ -54,7 +54,7 @@ More information: [Metadata Services](use-web-services.md#metadata-services)
 
 ## Entity metadata
 
-The data model is defined as metadata that is stored within the common data service. This data about the schema is known as *Entity Metadata*. 
+The data model is defined as metadata that is stored within Common Data Service. This data about the schema is known as *Entity Metadata*. 
 
 - The [EntityMetadata Class](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) defines this with the Organization service. 
 - The [EntityMetadata EntityType](/dynamics365/customer-engagement/web-api/entitymetadata) defines this for the Web API. 
@@ -71,7 +71,7 @@ The Entity metadata includes the following information:
 |Keys|By default, each entity has a single GUID (globally unique identifier) attribute and the `Keys` property is an empty collection. You can add alternate keys to an entity. More information: [Entity Keys](entity-metadata.md#entity-keys)|
 
 > [!TIP]
-> Developing an understanding of the entity metadata in the system can help you understand how the common data service works. Many of the properties also control what entities in model-driven apps can do. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the Metadata Browser which will allow you to view all the hidden entities and metadata properties that are found in the system. More information: [Dynamics 365 Customer Engagement Developer Guide: Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
+> Developing an understanding of the entity metadata in the system can help you understand how Common Data Service works. Many of the properties also control what entities in model-driven apps can do. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the Metadata Browser which will allow you to view all the hidden entities and metadata properties that are found in the system. More information: [Dynamics 365 Customer Engagement Developer Guide: Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
 
 ### See also
 

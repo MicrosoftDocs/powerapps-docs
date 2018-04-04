@@ -20,7 +20,7 @@ ms.author: manasma
 # Create a Common Data Service database
 You can create a database and build apps by using Common Data Service as a data store. You can either create your own custom entities or use the predefined entities. To create a database, you first need to either create an environment, or be assigned to an existing environment as an **Environment Admin**. In addition, you must be assigned the appropriate license. For information on purchasing a plan for using the Common Data Service, see [Pricing info](pricing-billing-skus.md).
 
-There are three ways to create a database:
+There are various ways to create a database:
 
 * In the PowerApps admin center
 * In the **Entities** pane of powerapps.com
