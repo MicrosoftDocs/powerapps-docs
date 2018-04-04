@@ -31,7 +31,7 @@ Track expense reports from submission to approval. Tally line items as individua
 
 ## Prerequisites
 
-1. [Sign up](signup-for-powerapps.md) for PowerApps
+1. [Sign up](../signup-for-powerapps.md) for PowerApps
 
 ## Create the Expenses SharePoint list
 
