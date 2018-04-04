@@ -115,6 +115,8 @@
         href: ./canvas-apps/add-scrolling-screen.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
+      - name: Create Accessible Apps
+        href: ./canvas-apps/accessible-apps.md
     - name: Manage your app
       items:
       - name: Introduction to powerapps.com
@@ -222,7 +224,7 @@
     - name: Delete a custom entity
       href: ./common-data-service/data-platform-delete-entity.md
   - name: Tutorials
-    items: 
+    items:
     - name: Create a custom entity that has components
       href: ./common-data-service/create-custom-entity.md
   - name: Samples and resources
@@ -230,4 +232,4 @@
   - name: For Developers
     href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
-  href: ../common-data-model/overview.md    
+  href: ../common-data-model/overview.md
