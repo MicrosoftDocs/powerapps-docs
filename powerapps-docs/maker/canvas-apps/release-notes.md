@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/21/2018
+ms.date: 04/09/2018
 ms.author: sharik
 
 ---
@@ -30,6 +30,9 @@ For information about known limitations, see [Common issues and resolutions](com
 Discover the latest updates to our business applications, as well as a host of new capabilities for building your own applications and extensions on top of our platform. [Download the Spring '18 release notes PDF](https://aka.ms/businessappsreleasenotes), which covers Dynamics 365, PowerApps, Microsoft Flow, and Power BI.
 
 **Coming soon:** We'll keep updating the release notes PDF as features ship, and we'll also make them available on a web page.
+
+## Apr. 9
+* Copy (Ctrl+C or Ctrl+Z) and paste (Ctrl+V) controls&mdash;including the controls' styles, formulas, and properties&mdash;across apps in a web browser.
 
 ## Mar. 21
 1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
@@ -80,8 +83,3 @@ Discover the latest updates to our business applications, as well as a host of n
 
 ## Nov. 10
 * [Rename rules](working-with-rules.md) in an app and show rules when the selected control is in the rule condition.
-
-## Oct. 30
-1. [Show all rules](working-with-rules.md) in an app, not just those for the selected control.
-2. Add icons that app creators requested the most.
-3. Improved performance of apps on Android and iOS devices.
