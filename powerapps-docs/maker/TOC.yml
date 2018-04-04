@@ -83,8 +83,6 @@
       href: ./canvas-apps/customize-list-form.md
     - name: Build an Excel app from scratch
       href: ./canvas-apps/get-started-create-from-blank.md
-    - name: Creating Accessible Apps
-      href: ./canvas-apps/accessible-apps.md
     - name: Customize an app
       items:
       - name: Add and configure a control
@@ -117,6 +115,8 @@
         href: ./canvas-apps/add-scrolling-screen.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
+      - name: Creating Accessible Apps
+        href: ./canvas-apps/accessible-apps.md
     - name: Manage your app
       items:
       - name: Introduction to powerapps.com
