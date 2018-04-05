@@ -81,11 +81,11 @@ Now that you know the fundamental concepts let's go further. With your first app
 **Hide/Show/Lock a field based on a value**  
 One of the most common ways to make a successful form is to have strong business logic and be able to enforce that logic. One way this is done is by changing the state of a field based on a value or an action. With PowerApps you can select your control and set the DisplayMode to Edit or View to specify whether a user can change the field. A second method you can use is a simple If formula to do so conditionally. First, select the label you want to edit and click the lock icon to unlock the card allowing you to change the value.
 
-![Hide Show Lock Data Cards](./media/transform-infopath-forms/hide-show-lock.png)
+![Hide Show Lock Data Cards](./media/transform-infopath/hide-show-lock.png)
 
 Now scroll to the bottom of the card on the right and edit the DefaultMode property.
 
-![If Else Statement Expressions](./media/transform-infopath-forms/if-else-statement.png)
+![If Else Statement Expressions](./media/transform-infopath/if-else-statement.png)
 
 In this example use an If statement. If(ThisItem.Color = &quot;Blue&quot;, DisplayMode.View, DisplayMode.Edit) This statement says if the current items Color field is Blue then the animal field is read-only, if not then the field is editable.
 
@@ -124,7 +124,7 @@ If you still need variables (there are many cases that you do), this will help y
 **Cascading dropdowns**  
 Cascading dropdowns are very useful. They allow you to filter the choices in one dropdown based on the value selected in the previous dropdown. In PowerApps, these are often created by having two data sources in your app. The first data source is the data you are working with or updating and the second data source is used to store the values to build the cascading effect you want. Below is an example of the second data source with the choice options.
 
-![Cascading dropdowns](./media/transform-infopath-forms/cascading-dropdowns.png)
+![Cascading dropdowns](./media/transform-infopath/cascading-dropdowns.png)
 
 Now you would create your first dropdown control, and for the Items property, you would use the formula Distinct(Impacts, Title) to only show Cost, Program Impact, and Schedule in the dropdown. Then you would add a second dropdown and set the Items property to Filter(Impacts,ddSelectType.Selected.Value in SCategory) where ddSelectType is the name of the first dropdown box. Just like that you have cascading dropdowns. For more information check out this post from the PowerApps team [SharePoint: Cascading Dropdowns in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) or this [community video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813) and don't worry, you can do it just as easy without SharePoint.
 
