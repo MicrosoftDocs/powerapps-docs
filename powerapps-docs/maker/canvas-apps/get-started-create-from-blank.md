@@ -4,8 +4,8 @@ description: Create an app from the ground up by configuring each UI element and
 services: ''
 suite: powerapps
 documentationcenter: na
-author: karthik-1
-manager: anneta
+author: AFTOwen
+manager: kfile
 editor: ''
 tags: ''
 
@@ -15,14 +15,11 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 10/16/2016
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Create an app from scratch
 Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
-
-> [!NOTE]
-> This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
 
 By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records:
 
@@ -33,7 +30,9 @@ On the other screen, users can create a record, update one or more fields in a r
 ![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
 
 ## Prerequisites
-You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
+You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
+
+To follow the steps below exactly, first create an Excel file using this sample data.
 
 1. Copy this data, and then paste it into an Excel file.
 
@@ -48,7 +47,7 @@ You can review this tutorial for general concepts only, or you can follow it exa
 
 2. Format that data as a table, named **Schedule**, so that PowerApps can parse the information.
 
-    For more information, see [Create an Excel table in a worksheet](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+    For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
 3. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
 
