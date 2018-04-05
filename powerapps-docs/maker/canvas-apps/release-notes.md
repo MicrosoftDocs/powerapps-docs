@@ -32,7 +32,7 @@ Discover the latest updates to our business applications, as well as a host of n
 **Coming soon:** We'll keep updating the release notes PDF as features ship, and we'll also make them available on a web page.
 
 ## Apr. 9
-* Copy (Ctrl+C or Ctrl+Z) and paste (Ctrl+V) controls&mdash;including the controls' styles, formulas, and properties&mdash;across apps in a web browser.
+* Cut (Ctrl+Z), copy (Ctrl+C), and paste (Ctrl+V) controls&mdash;including the controls' styles, formulas, and properties&mdash;across apps in a web browser.
 
 ## Mar. 21
 1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
