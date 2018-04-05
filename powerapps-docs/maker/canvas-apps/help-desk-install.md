@@ -24,10 +24,18 @@ Step-by-step instructions for installing and configuring the Help Desk PowerApps
 
 Estimated time to complete these steps: **10-15 minutes**
 
+If you would like to see a demonstration of this process please watch this video.
+
+[![Help Desk Install Video](./media/help-desk-install/help-desk-install-video.png)](https://youtu.be/z4cdtD6hB_4 )
+
 ## Help Desk PowerApps sample overview
 Help Desk provides a user-friendly experience to connect end users with support professionals. Quickly find answers to your most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
 
 ![Opening screen of the Help Desk PowerApp](./media/help-desk-install/Login-screen.png)
+
+Watch this video to see how to use the Help Desk PowerApp Sample.
+
+[![Help Desk Demo Video](./media/help-desk-install/help-desk-demo-video.png)](https://youtu.be/sl5fXwwnvzI)
 
 ## Prerequisites
 
@@ -264,4 +272,8 @@ This list stores the Help Desk tickets.
 
 1. In the web browser, click **Apps**
 2. Click the **ellipses** next to the Help Desk PowerApp
-3. Click **Open**
+3. Click **Open** 
+
+Watch this video to see how to use the Help Desk PowerApp Sample.
+
+[![Help Desk Demo Video](./media/help-desk-install/help-desk-demo-video.png)](https://youtu.be/sl5fXwwnvzI)
