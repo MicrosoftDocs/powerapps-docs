@@ -68,7 +68,7 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
 
 
 ## Accessibility guidelines
-The **Power BI tile** is simply a container for Power BI content. Learn how to create accessible content with these [Power BI accessibility tips](https://docs.microsoft.com/en-us/power-bi/desktop-accessibility).
+The **Power BI tile** is simply a container for Power BI content. Learn how to create accessible content with these [Power BI accessibility tips](https://docs.microsoft.com/power-bi/desktop-accessibility).
 
 ### Screen reader support
 * Consider adding a heading using a **[Label](control-text-box.md)**, if the Power BI content does not have a title. The heading can be positioned immediately before the **Power BI tile**.
