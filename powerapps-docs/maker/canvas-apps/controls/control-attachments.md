@@ -23,6 +23,8 @@ A control that allows users to download files to their device, as well as upload
 
 ## Limitations
 The attachment control has the following temporary limitations:
+1. Attachment download is not supported in Internet Explorer.
+
 1. Attachment upload only works with SharePoint list data sources.  Support for other data sources will be introduced incrementally, starting with CDS.
 
 1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form.   Note that in order to save the file additions and deletions to the back end, the end user must save the form.
