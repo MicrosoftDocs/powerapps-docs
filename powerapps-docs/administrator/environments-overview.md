@@ -94,15 +94,14 @@ Your license determines whether you can create environments.
 
 | License | Environment creation is allowed |
 | --- | --- |
-| PowerApps P2 |√ |
-| PowerApps P2 Trial |√ |
+| PowerApps P2 |√ (Two Production and Two Trial environments)|
+| PowerApps P2 Trial |√ (Two Trial environments)|
 | PowerApps P1 |x |
 | PowerApps P1 Trial |x |
 | Dynamics 365 Plans |x |
 | Office 365 Plans |x |
 | Dynamics 365 Apps and Teams Plans |x |
 
-Each user can create up to two Trial environments. PowerApps P2 can also create up to two Production environments.
 
 ### Where can environments be created?
 You will be able to create new environments from [PowerApps.com][2] and from the [PowerApps admin center][1]. If you create an environment, you will automatically be added to the Environment Admin role for that environment. There is not be a limit on the number of environments that you can participate in as a member of the Environment Admin or Environment Maker role. For more information about environments, see [Administer environments in PowerApps](environments-administration.md). For instructions on how to create an environment, see [Create an environment](create-environment.md).
@@ -119,7 +118,47 @@ In PowerApps admin center,  you can manage all of the environments that you have
 * Set database security policies (as open or restricted by database roles). For more information, see [Configure database security](database-security.md).
 * Members of the Azure AD tenant Global administrator role (includes Office 365 Global admins) can also manage all environments that have been created in their tenant and set tenant-wide policies from the PowerApps admin center.
 
+## FAQ
+* How many environments can I create based on my PowerApps plan? *
+
+    You can create two Production and two Trial environments, based on your plan. [Read here](environments-overview.md/Creating_an_environment) for more details. 
+
+* While trying to create a new environment, I am getting an error. How should I resolve it?*
+
+    If you are getting the following error message: "Either your plan doesn’t support the environment type selected or you’ve reached the limit for that type of environment." , it can mean one of the two things:
+
+        1. You have already utilized your quota to create a specific type of environments. Say you were creating  a Trial environment and you get this error message. That means, that you have already provisioned two Trial environments. You can view all the environments in [PowerApps admin center][1].
+        If you want, you can delete an existing environment of that specific type and create a new one. But, please make sure that you don't lose your data, apps, flows and other resources which you want to retain.
+
+        2. You do not have a quota to create that specific type of the environment. Check what type of environment you can create here (environments-overview.md/Creating_an_environment).
+
+    If you are getting any other error message or have more questions, please connect with us [here][4]
+
+* While trying to create a database in an environment, I am getting an error. How should I resolve it?
+
+    In following scenarios, you can get an error while trying to create a database:
+    1. **Default environment**: Creating a database is currently not supported in a default environment in the tenant. 
+    2. **Environment for an individual use**: You get an environment for your individual use, by signing-up from the PowerApps Community Plan. If you have not created the database yet, then currently you can't provision a database in the environment for individual use. 
+    3. **Environment in a different region, than your AAD tenant's home region**: Currently, you can only provision a database in the environments created in your Azure Active Directory Tenant home region. Ability to provision a database in the other regions, will be coming soon. So, make sure to keep the region same as tenant's default location, if you want to create a database in it.
+    4. **Creating databases not supported in certain regions**: There are certain regions, where creating databases is still not available. e.g. countries in South America. So, if your tenant's home location is South America, you currently can't provision a database in any environment. 
+    
+    We are working on enabling all of the above scenarios.
+    If you are getting any other error message or have more questions, please connect with us [here][4]
+
+* When will my Trial environment expire?
+    
+    Trial environment expires after 30 days of creation. If you don't want your environment to expire, there will be ways to convert it into a Production environment. This functionality, will be coming soon and we will not expire Trial environments till then.
+
+* Does my current database (created with previous version of the Common Data Service) also gets counted in the quota?
+
+    If you had a database (created with previous version of the Common Data Service), they will also get counted with your Production environment quota. If you now create a database in an environment (created prior to March 15, 2018) then it will also get counted as Production environment.
+
+
+
+
+
 <!--Reference links in article-->
 [1]: https://admin.powerapps.com
 [2]: https://web.powerapps.com
 [3]: https://aka.ms/cdspreviewtoga
+[4]: https://go.microsoft.com/fwlink/?linkid=871628
