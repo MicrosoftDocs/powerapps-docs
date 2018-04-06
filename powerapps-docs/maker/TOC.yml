@@ -65,6 +65,8 @@
       href: ./canvas-apps/sharepoint-form-integration.md
     - name: PowerApps custom visual
       href: ./canvas-apps/powerapps-custom-visual.md
+    - name: Transform your InfoPath forms to PowerApps
+      href: ./canvas-apps/transform-infopath.md
     - name: Canvas-app development
       items:
       - name: PowerApps for enterprise developers, partners, and ISVs
