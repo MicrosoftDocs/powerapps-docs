@@ -229,8 +229,10 @@ This list stores the Help Desk tickets.
 4. Select **SharePoint**.
 5. Click **Create**.
 6. In the **Recent sites** list, select the SharePoint site where you created the HelpDesk List.
+
 	> [!TIP] 
 	> If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
+	
 7. In the **Search** textbox at the top of the list enter **HelpDesk**.
 8. Check the checkbox next to the **HelpDesk** list.
 9. Click **Connect**.
