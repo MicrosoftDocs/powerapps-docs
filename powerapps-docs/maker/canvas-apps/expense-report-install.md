@@ -4,7 +4,7 @@ description: Step-by-step instructions for installing and configuring the Expens
 services: ''
 suite: powerapps
 documentationcenter: na
-author: tbag
+author: caburk
 manager: ''
 editor: ''
 tags: ''
@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 02/20/2018
-ms.author: v-tobagi
+ms.author: caburk
 
 ---
 # Install and Configure the Expense Report PowerApps Sample
@@ -39,7 +39,7 @@ Watch this video to see how to use the Expense Report PowerApp Sample.
 
 ## Prerequisites
 
-1. [Sign up](../signup-for-powerapps.md) for PowerApps
+- [Sign up](../signup-for-powerapps.md) for PowerApps
 
 ## Create the Expenses SharePoint list
 
@@ -55,7 +55,8 @@ This list stores the expense reports.
 8. Click the **Custom List** app
 9. In the **Name** textbox, enter **Expenses**
 
-	**Important:** If you choose a different name for the list make sure you write it down because you will need to substitute it for Expenses everywhere you see it during the installation and configuration process.
+> [!IMPORTANT]
+> If you choose a different name for the list make sure you write it down because you will need to substitute it for Expenses everywhere you see it during the installation and configuration process.
 
 10. Click **Create**
 
@@ -139,7 +140,8 @@ This list stores the lines items associated with expense reports.
 6. Click the **Custom List** app
 7. In the **Name** textbox, enter **LineItems**
 
-	**Important:** If you choose a different name for the list make sure you write it down because you will need to substitute it for Expense everywhere you see it during the installation and configuration process.
+> [!IMPORTANT] 
+> If you choose a different name for the list make sure you write it down because you will need to substitute it for Expense everywhere you see it during the installation and configuration process.
 
 8. Click **Create**
  
@@ -265,7 +267,8 @@ This list stores the lines items associated with expense reports.
 	![Import settings screen](./media/expense-report-install/import-settings-office365outlook.png)
 16. Click **Save**
 
-	**Tip**: When you are done, it will look like this.
+> [!TIP] 
+> When you are done, it will look like this.
 
 	![Import settings screen](./media/expense-report-install/import-settings-done.png)
 
@@ -297,7 +300,8 @@ This list stores the lines items associated with expense reports.
 5. Select **SharePoint**
 6. Click **Create**
 7. In the **Recent sites** list, select the SharePoint site where you created the Expenses List
-	**Tip**: If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
+> [!TIP] 
+> If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
 8. In the **Search** textbox at the top of the list enter **Expenses**
 9. Check the checkbox next to the **Expenses** list
 10. Click **Connect**
@@ -311,7 +315,8 @@ This list stores the lines items associated with expense reports.
 5. Select **SharePoint**
 6. Click **Create**
 7. In the **Recent sites** list, select the SharePoint site where you created the LineItems List
-	**Tip**: If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
+> [!TIP] 
+> If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
 8. In the **Search** textbox at the top of the list enter **LineItems**
 9. Check the checkbox next to the **LineItems** list
 10. Click **Connect**
@@ -334,7 +339,8 @@ This list stores the lines items associated with expense reports.
 	
 	![Edit Flow screen](./media/expense-report-install/edit-flow-getitems.png)
 
-	**Tip**: You don’t need to type it manually, you can choose it in the dropdown lists.
+> [!TIP] 
+> You don’t need to type it manually, you can choose it in the dropdown lists.
 
 7.	Expand the **Condition**
 8.	Expand the **If yes** section
@@ -343,7 +349,8 @@ This list stores the lines items associated with expense reports.
 
 	![Edit Flow screen](./media/expense-report-install/edit-flow-condition-ifyes.png) 
 
-	**Tip**: You don’t need to type it manually, you can choose it in the dropdown lists.
+> [!TIP] 
+> You don’t need to type it manually, you can choose it in the dropdown lists.
 
 11. Expand the **If no** section
 12.	Expand the **Change item status to Open** action
@@ -351,7 +358,8 @@ This list stores the lines items associated with expense reports.
 
 	![Edit Flow screen](./media/expense-report-install/edit-flow-condition-ifno.png)
 
-	**Tip**: You don’t need to type it manually, you can choose it in the dropdown lists.
+> [!TIP] 
+> You don’t need to type it manually, you can choose it in the dropdown lists.
 
 14.	Click **Update flow**
 

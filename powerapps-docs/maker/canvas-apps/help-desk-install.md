@@ -4,7 +4,7 @@ description: Step-by-step instructions for installing and configuring the Help D
 services: ''
 suite: powerapps
 documentationcenter: na
-author: tbag
+author: caburk
 manager: ''
 editor: ''
 tags: ''
@@ -15,7 +15,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 02/20/2018
-ms.author: v-tobagi
+ms.author: caburk
 
 ---
 # Install and Configure the Help Desk PowerApps Sample
@@ -39,7 +39,7 @@ Watch this video to see how to use the Help Desk PowerApp Sample.
 
 ## Prerequisites
 
-1. [Sign up](https://web.powerapps.com/) for PowerApps
+- [Sign up](https://web.powerapps.com/) for PowerApps
 
 ## Create the HelpDesk SharePoint list
 
@@ -55,7 +55,8 @@ This list stores the Help Desk tickets.
 8. Click the **Custom List** app
 9. In the **Name** textbox, enter **HelpDesk**
 
-	**Important:** If you choose a different name for the list make sure you write it down because you will need to substitute it for HelpDesk everywhere you see it during the installation and configuration process.
+> [!IMPORTANT]
+> If you choose a different name for the list make sure you write it down because you will need to substitute it for HelpDesk everywhere you see it during the installation and configuration process.
 
 10. Click **Create**
 
@@ -193,7 +194,8 @@ This list stores the Help Desk tickets.
 	![Import settings screen](./media/help-desk-install/import-settings-office365outlook.png)
 13. Click **Save**
 
-	**Tip**: When you are done, it will look like this.
+> [!TIP] 
+> When you are done, it will look like this.
 
 	![Import settings screen](./media/help-desk-install/import-settings-done.png)
 
@@ -222,7 +224,8 @@ This list stores the Help Desk tickets.
 4. Select **SharePoint**
 5. Click **Create**
 6. In the **Recent sites** list, select the SharePoint site where you created the HelpDesk List
-	**Tip**: If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
+> [!TIP] 
+> If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
 7. In the **Search** textbox at the top of the list enter **HelpDesk**
 8. Check the checkbox next to the **HelpDesk** list
 9. Click **Connect**
@@ -236,7 +239,8 @@ This list stores the Help Desk tickets.
 
 	![Update Admin list](./media/help-desk-install/Change-admin.png)
 	
-	**Tip**: If you have more than 1 admin, please use a comma to delimit the admin.  Example "admin1@microsoft.com","admin2@microsoft.com").
+> [!TIP] 
+> If you have more than 1 admin, please use a comma to delimit the admin.  Example "admin1@microsoft.com","admin2@microsoft.com").
 
 5. Click **File**
 6. Click **Save**
@@ -257,7 +261,8 @@ This list stores the Help Desk tickets.
 	
 	![Edit Flow screen](./media/help-desk-install/edit-flow-getitems.png)
 
-	**Tip**: You don’t need to type it manually, you can choose it in the dropdown lists.
+> [!TIP] 
+> You don’t need to type it manually, you can choose it in the dropdown lists.
 
 7.	Expand the **Switch**
 8.	Expand the **NOT STARTED** case
