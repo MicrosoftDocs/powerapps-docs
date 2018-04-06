@@ -45,7 +45,7 @@ Watch this video to see how to use the Expense Report PowerApp Sample.
 
 This list stores the expense reports.
 
-1. Open a web browser and navigate to https://portal.office.com
+1. Open a web browser and navigate to https://portal.office.com.
 2. Log in with an account that has permission to create lists.
 3. Navigate to the site collection where you want the Expenses list to reside.
 4. Click the **gear icon** in the top right portion of the web page.
@@ -261,6 +261,7 @@ This list stores the lines items associated with expense reports.
 10. Click **Save**.
 11. Click the **red icon** for the **SharePoint Connection**.
 12. In the connections list, click the item with your username.
+
 	![Import settings screen](./media/expense-report-install/import-settings-approvals.png)
 
 13.  Click **Save**.
@@ -272,7 +273,7 @@ This list stores the lines items associated with expense reports.
 16. Click **Save**.
 
 	> [!TIP] 
-	> When you are done, it will look like this.
+	> When you are done, it will look like this:
 
 	![Import settings screen](./media/expense-report-install/import-settings-done.png)
 

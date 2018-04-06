@@ -45,7 +45,7 @@ Watch this video to see how to use the Help Desk PowerApp Sample.
 
 This list stores the Help Desk tickets.
 
-1. Open a web browser and navigate to https://portal.office.com
+1. Open a web browser and navigate to https://portal.office.com.
 2. Log in with an account that has permission to create lists.
 3. Navigate to the site collection where you want the HelpDesk list to reside.
 4. Click the **gear icon** in the top right portion of the web page.
@@ -240,12 +240,13 @@ This list stores the Help Desk tickets.
 1. Select the **LoginScreen**.
 2. Select **OnStart** in the dropdown.
 3. Expand the formula window and find the **AdminList** collection.
-4. Replace **user@microsoft.com** to your HelpDesk administrator(s).
+4. Replace **user@microsoft.com** with your HelpDesk administrator(s).
 
 	![Update Admin list](./media/help-desk-install/Change-admin.png)
 	
 	> [!TIP] 
-	> If you have more than 1 admin, please use a comma to delimit the admin.  Example "admin1@microsoft.com","admin2@microsoft.com").
+	> If you have more than 1 admin, please use a comma to delimit the admin.  Example:
+	> "admin1@microsoft.com","admin2@microsoft.com".
 
 5. Click **File**.
 6. Click **Save**.
