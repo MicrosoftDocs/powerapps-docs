@@ -41,6 +41,12 @@
       href: ./canvas-apps/share-app.md
     - name: Embed an app in Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
+  - name: Samples
+    items:
+    - name: Expense Report app
+      href: ./canvas-apps/expense-report-install.md
+    - name: Help Desk app
+      href: ./canvas-apps/help-desk-install.md
   - name: Concepts
     items:
     - name: Get started with formulas
@@ -65,6 +71,8 @@
       href: ./canvas-apps/sharepoint-form-integration.md
     - name: PowerApps custom visual
       href: ./canvas-apps/powerapps-custom-visual.md
+    - name: Transform your InfoPath forms to PowerApps
+      href: ./canvas-apps/transform-infopath.md
     - name: Canvas-app development
       items:
       - name: PowerApps for enterprise developers, partners, and ISVs
