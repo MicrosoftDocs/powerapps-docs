@@ -39,7 +39,7 @@ Watch this video to see how to use the Help Desk PowerApp Sample.
 
 ## Prerequisites
 
-- [Sign up](https://web.powerapps.com/) for PowerApps
+- [Sign up](https://web.powerapps.com/) for PowerApps.
 
 ## Create the HelpDesk SharePoint list
 
@@ -58,7 +58,7 @@ This list stores the Help Desk tickets.
 	> [!IMPORTANT]
 	> If you choose a different name for the list make sure you write it down because you will need to substitute it for HelpDesk everywhere you see it during the installation and configuration process.
 
-10. Click **Create**
+10. Click **Create**.
 
 ### Create Description column
 
@@ -137,12 +137,12 @@ This list stores the Help Desk tickets.
 
 ## Download the Help Desk PowerApp
 
-1.	In a web browser, navigate to http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip
+1.	In a web browser, navigate to http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip.
 2.	Download the PowerApps package and save it to your machine.
 
 ## Create connections
 
-1.	In a web browser, navigate to https://web.powerapps.com
+1.	In a web browser, navigate to https://web.powerapps.com.
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Connections**.
 	
@@ -232,7 +232,7 @@ This list stores the Help Desk tickets.
 
 	> [!TIP] 
 	> If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
-	
+
 7. In the **Search** textbox at the top of the list enter **HelpDesk**.
 8. Check the checkbox next to the **HelpDesk** list.
 9. Click **Connect**.

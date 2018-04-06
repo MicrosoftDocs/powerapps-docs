@@ -39,7 +39,7 @@ Watch this video to see how to use the Expense Report PowerApp Sample.
 
 ## Prerequisites
 
-- [Sign up](../signup-for-powerapps.md) for PowerApps
+- [Sign up](../signup-for-powerapps.md) for PowerApps.
 
 ## Create the Expenses SharePoint list
 
@@ -205,13 +205,13 @@ This list stores the lines items associated with expense reports.
 
 1.	In a web browser, navigate to the following link:
 
-	http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip
+	http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip.
 
 2.	Download the Expense Report PowerApps Sample package and save it to your machine.
 
 ## Create connections
 
-1.	In a web browser, navigate to https://web.powerapps.com
+1.	In a web browser, navigate to https://web.powerapps.com.
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Connections**.
 
@@ -240,7 +240,7 @@ This list stores the lines items associated with expense reports.
 
 ## Import the Expense Report PowerApp
 
-1.	In a web browser, navigate to https://web.powerapps.com
+1.	In a web browser, navigate to https://web.powerapps.com.
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Apps**. 
 4.	Click **Import package(preview)**.
