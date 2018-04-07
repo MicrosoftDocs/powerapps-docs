@@ -62,21 +62,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 1. In the **Data** pane (which opens automatically), open the list under **Data source**, and then select **Add a data source**.
 
-1. If the list of connections in the **Data** pane includes the one that you want, select it to add it to the app. Otherwise, skip to the next step.
-
-    ![Add data source](./media/add-data-connection/choose-existing-connections.png)
-
-5. Select **New connection** to display a list of connectors.
-
-    ![Add connection](./media/add-data-connection/new-connection.png)
-
-6. Scroll through the list of connectors until the type of connection that you want to create appears (for example, **OneDrive for Business**), and then select it.
-
-    ![Choose connection](./media/add-data-connection/another-connection.png)
-
-7. Select **Create** to both create the connection and add it to your app.
-
-    Some connectors require no additional steps, and you can show data from them immediately. Other connectors prompt you to provide credentials, specify a particular set of data, or perform other steps. For example, [SharePoint](connections/connection-sharepoint-online.md) and [SQL Server](connections/connection-azure-sqldatabase.md) require additional information before you can use them.
+1. Follow the previous procedure, starting with step 4.
 
 ## Identify or change a data source
 If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control. For example, you might need to identify a data source as you update an app that someone else created or you that you created long ago.
