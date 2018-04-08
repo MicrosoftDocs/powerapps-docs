@@ -22,9 +22,13 @@ In this topic, you'll automatically generate your first app in PowerApps using d
 
 The Excel file must be in a cloud-storage account, such as OneDrive, Google Drive, or Dropbox. This topic uses OneDrive for Business.
 
-To follow this topic, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md). As an alternative, you can use your own Excel file if the data is [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664). 
-
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+
+## Prerequisites ##
+To follow this topic exactly, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
+
+> [!IMPORTANT]
+> You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md). 
 
 ## Generate the app
 1. Sign in to [PowerApps](https://web.powerapps.com).
