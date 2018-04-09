@@ -27,7 +27,7 @@ App makers can also create *model-driven* apps that are generated from your orga
 
 When app makers are done creating apps, they can instantly publish them to iOS, Android, Windows, and the web, and then share them with others in their organization.
 
-As an app user, you can run apps that you created - or that someone else created and shared with you - on a phone or tablet or in a web browser. You can find apps on the [Dynamics 365 Home page](https://home.dynamics.com/) and in the PowerApps or Dynamics 365 app on your mobile device. You can even find and run apps from Microsoft Team channels, SharePoint, and AppSource. If someone creates an app and sends a link to you in email, you can run the app by clicking or tapping the link in the email.
+As an app user, you can run apps that you created&mdash;or that someone else created and shared with you&mdash;on a phone or tablet or in a web browser. You can find apps on the [Dynamics 365 Home page](https://home.dynamics.com/) and in the PowerApps or Dynamics 365 app on your mobile device. You can even find and run apps from Microsoft Team channels, SharePoint, and AppSource. If someone creates an app and sends a link to you in email, you can run the app by clicking or tapping the link in the email.
 
 This section provides information about how to find and run apps, and includes the following articles:
 

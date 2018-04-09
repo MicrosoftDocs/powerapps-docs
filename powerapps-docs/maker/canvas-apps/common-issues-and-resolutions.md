@@ -22,7 +22,7 @@ ms.author: sharik
 ## Recently added/changed
 1. **Copying and pasting screens across apps**
 
-	Copying and pasting screens across apps is not currently supported. To work around this, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them in the screen of your target app. 
+	Copying and pasting screens across apps is not currently supported. To work around this, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them into the screen of your target app. 
 
 1. **Changing the layout of SharePoint forms**
 

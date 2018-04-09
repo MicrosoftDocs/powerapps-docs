@@ -38,7 +38,6 @@ Discover the latest updates to our business applications, as well as a host of n
 1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
 2. [Create a database](../../administrator/create-database.md) on the latest version of the Common Data Service in an environment.
 3. The Common Data Service for Apps now includes:
-
     - **Additional data types** support more complex entity definitions and provide richer experiences. (Applies to canvas and model-driven apps.)
     - [Create and customize entities](../common-data-service/data-platform-create-entity.md) in the Common Data Service for Apps right from the PowerApps site. The **refreshed experience** includes improved performance, a more user-friendly UI, and helpful features such as in-line creation of option sets. (Applies to canvas and model-driven apps.)
     - Create **server-side business rules** for validating data entered into the Common Data Service for Apps. (Applies to canvas and model-driven apps.)
