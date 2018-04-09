@@ -57,9 +57,9 @@ Finally, if your company wishes to restrict the use of organizational-only data 
 
 ## Administration of PowerApps
 ### Why has the PowerApps icon appeared in the Office 365 app launcher?
-As announced in August, Microsoft PowerApps is now a fundamental part of the Office 365 suite. Three months after this announcement Microsoft PowerApps was enabled as a service as a part of existing Office 365 SKU's. As users everywhere in the world can now use Microsoft PowerApps, it has appeared in the app launcher for them. See [Licensing overview](pricing-billing-skus.md) to understand which Office 365 SKUs now include PowerApps.
+Microsoft PowerApps is a fundamental part of the Office 365 suite and is enabled as a service as a part of existing Office 365 SKU's. As users everywhere in the world can now use Microsoft PowerApps, it appeares in 'All apps' in the app launcher screen. See [Licensing overview](pricing-billing-skus.md) to understand which Office 365 SKUs now include PowerApps.
 
-See the following section if you'd like to remove the PowerApps tile from the app launcher by default.
+See the following section if you'd like to remove the PowerApps tile from 'All apps' by default.
 
 ### How do I remove PowerApps from existing users?
 If a user was assigned a PowerApps Plan 1 or PowerApps Plan 2 license then you can take the following steps to remove the PowerApps license for that user:

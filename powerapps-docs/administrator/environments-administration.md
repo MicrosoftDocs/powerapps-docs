@@ -172,26 +172,58 @@ An organization's data must be protected so that it isn't shared with audiences 
 ![](./media/environment-admin/data-policies.png)
 
 ## Frequently asked questions
-### How many environments can I create?
-Each user can create up to two Trial environments and two Production environments, depending on their license.
+### How many environments and databases can I create?
+You can create up to two Trial environments and two Production environments, depending on their license. [Read here](environments-overview.md#creating-an-environment) for more details. 
+Each user can provision databases in two Trial environments and two Production environments, depending on their license. 
 
-### How many databases can I provision?
-Each user can provision databases in two Trial environments and two Production environments, depending on their license. The user needs to an **Environment Admin** in the environment.
+### Which license includes Common Data Service?
+PowerApps Plan 2.  See [PowerApps pricing page][3] for details on all the plans that include this license.
+
+### While trying to create a new environment, I am getting an error. How should I resolve it?
+If you are getting the following error message: "Either your plan doesn’t support the environment type selected or you’ve reached the limit for that type of environment." , it can mean one of the two things
+
+1. You have already utilized your quota to create a specific type of environments. Say you were creating  a Trial environment and you get this error message. That means, that you have already provisioned two Trial environments. You can view all the environments in [PowerApps admin center][1].
+If you want, you can delete an existing environment of that specific type and create a new one. But, please make sure that you don't lose your data, apps, flows and other resources which you want to retain.
+
+2. You do not have a quota to create that specific type of the environment. Check what type of environment you can create [here](environments-overview.md#creating-an-environment).
+
+If you are getting any other error message or have more questions, please connect with us [here][5].
+
+### While trying to create a database in an environment, I am getting an error. How should I resolve it?
+In following scenarios, you can get an error while trying to create a database:
+
+1. **Default environment**: Creating a database is currently not supported in a default environment of the tenant. 
+
+2. **Environment for an individual use**: You get an environment for your individual use, by signing-up from the PowerApps Community Plan. If you have not created the database yet, then currently you can't provision a database in the environment for individual use. 
+
+3. **Environment in a different region, than your AAD tenant's home region**: Currently, you can only provision a database in the environments created in your Azure Active Directory Tenant home region. Ability to provision a database in the other regions, will be coming soon. So, make sure to keep the region same as tenant's default location, if you want to create a database in it.
+
+4. **Creating databases not supported in certain regions**: There are certain regions, where creating databases is still not available. e.g. countries in South America. So, if your tenant's home location is South America, you currently can't provision a database in any environment. 
+    
+We are working on enabling all of the above scenarios.
+If you are getting any other error message or have more questions, please connect with us [here][5]
+
+### When will my Trial environment expire?   
+Trial environment expires after 30 days of its creation. If you don't want your environment to expire, there will be ways to convert it into a Production environment. This functionality, will be coming soon and we will not expire Trial environments till then.
+
+### Does my current database (created with previous version of the Common Data Service) also gets counted in the quota?
+If you had a database (created with previous version of the Common Data Service), they will also get counted with your Production environment quota. If you now create a database in an environment (created prior to March 15, 2018) then it will also get counted as Production environment.
 
 ### Can I rename an environment?
 Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md#rename-your-environment) for more details.
 
 ### Can I delete an environment?
 Yes, this functionality is available from the PowerApps admin center. See [Environments Administration](environments-administration.md#delete-your-environment) for more details.
+Please note that you currently can't delete a Production environment with a database (with latest version of the Common Data Service). This will be coming soon!
 
 ### As an Environment Admin, can I view and manage all resources (apps, flows, APIs, etc.) for an environment?
 Yes, the ability to view the apps and flows for an environment is available from the PowerApps admin center. See [View Apps](admin-view-apps.md) for more details.
 
-### Which license includes Common Data Service?
-PowerApps Plan 2.  See [PowerApps pricing page][3] for details on all the plans that include this license.
+
 
 <!--Reference links in article-->
 [1]: https://admin.powerapps.com
 [2]: https://web.powerapps.com
 [3]: https://powerapps.microsoft.com/pricing/
 [4]: https://admin.flow.microsoft.com
+[5]: https://go.microsoft.com/fwlink/?linkid=871628
