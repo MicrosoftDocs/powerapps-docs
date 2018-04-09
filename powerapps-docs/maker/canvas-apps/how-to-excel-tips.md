@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/03/2016
+ms.date: 04/03/2018
 ms.author: yifwang
 
 ---
@@ -38,3 +38,7 @@ To find your table easily, go to **Design** under **Table Tools** and rename you
 In your Excel table, try to add a keyword "image" to your image column. This will bind your image column with an image control while using this table in a gallery with image controls.
 
 ![Connect Excel table with images](./media/how-to-excel-tips/connect-gallery.png)
+
+## Next steps
+* [Generate an app from Excel in PowerApps](get-started-create-from-data.md) based on a table that you specify. The app will have three screens by default: one each for browsing records, displaying details about a single record, and creating or updating a record.
+* [Create an app from scratch](get-started-create-from-blank.md) using the table you format in Excel. You can manually create and customize your app to display, browse, or edit the data in your table.
