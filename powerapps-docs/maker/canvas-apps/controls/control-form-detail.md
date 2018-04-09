@@ -176,3 +176,6 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 ## More information
 For a comprehensive overview of how forms work, see [Understand data forms](../working-with-forms.md).
 
+## Accessibility guidelines
+### Screen reader support
+* Consider adding a heading to the form using a **[Label](control-text-box.md)**.

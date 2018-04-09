@@ -30,13 +30,13 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 **[Value](properties-core.md)** – The value of an input control.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
@@ -49,6 +49,12 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 **FalseText** – The text shown when the toggle is off.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
+**HandleFill** – The fill color of the toggle handle.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -72,7 +78,7 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
 **ShowLabel** – Whether a text label is shown beside the toggle control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **TextPosition** – Whether the label is to the left or the right of the toggle control.
 
@@ -111,3 +117,30 @@ A toggle is designed for recent GUIs but behaves the same way as a check box.
 
     The label shows a different price, depending on whether **MemberDiscount** is on or off.
 4. To return to the default workspace, press Esc.
+
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **HandleFill** and **FalseFill**
+* **HandleFill** and **FalseHoverFill**
+* **HandleFill** and **TrueFill**
+* **HandleFill** and **TrueHoverFill**
+* **FalseFill** and color outside the control
+* **FalseHoverFill** and color outside the control
+* **TrueFill** and color outside the control
+* **TrueHoverFill** and color outside the control
+
+This is in addition to the standard color contrast requirements.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+* **FalseText** must be present.
+* **TrueText** must be present.
+
+### Low vision support
+* Consider setting **ShowLabel** to **true** so that users can quickly determine the toggle value.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.

@@ -14,12 +14,16 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/05/2018
+ms.date: 04/09/2018
 ms.author: sharik
 
 ---
 # Common issues and resolutions for PowerApps
 ## Recently added/changed
+1. **Copying and pasting screens across apps**
+
+	Copying and pasting screens across apps is not currently supported. To work around this, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them into the screen of your target app. 
+
 1. **Changing the layout of SharePoint forms**
 
 	While customizing a SharePoint list form in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.

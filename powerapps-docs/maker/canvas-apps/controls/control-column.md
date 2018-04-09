@@ -61,3 +61,7 @@ The [**Data table**](control-data-table.md) control shows a dataset in a tabular
    
     ![Column control resized](./media/control-column/post-resize-column.png)
 
+
+## Accessibility guidelines
+### Screen reader support
+* **DisplayName** must be present.

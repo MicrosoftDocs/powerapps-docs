@@ -55,6 +55,10 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
@@ -89,6 +93,8 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
@@ -119,3 +125,6 @@ Enabling this functionality in your app may expose it to security vulnerabilitie
 7. Press F5, click or tap **MyData**, click or tap the file that you exported, and then click or tap **Open**.
 8. Press Esc, click or tap **Collections** on the **File** menu, and confirm that the current app has the data that you exported.
 
+
+## Accessibility guidelines
+The same guidelines for **[Button](control-button.md)**  apply because **Export** and **Import** are just specialized buttons.

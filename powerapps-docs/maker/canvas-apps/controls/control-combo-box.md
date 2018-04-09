@@ -43,6 +43,8 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **IsSearchable** – Whether the user can search for items before selecting.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -55,6 +57,10 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **InputTextPlaceholder** – Instructional text shown to end-users when no items are selected.
@@ -64,6 +70,8 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **OnNavigate** – How the app responds when the user clicks on an item.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
@@ -82,3 +90,26 @@ To use **Combo box** as a people picker, choose the **Person** template from the
     A functional **Combo box** will appear in your app.
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?.
+
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **ChevronFill** and **ChevronBackground**
+* **ChevronHoverFill** and **ChevronHoverBackground**
+* **SelectionColor** and **SelectionFill**
+* **SelectionFill** and **[Fill](properties-color-border.md)**
+* **SelectionTagColor** and **SelectionTagFill**
+
+This is in addition to the standard color contrast requirements.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+> [!NOTE]
+> On touch screens, screen reader users can navigate the contents of the combo box sequentially. The combo box acts as a button that shows or hides its contents when selected.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+> [!NOTE]
+> The tab key navigates to or away from the combo box. Arrow keys navigate the contents of the combo box. The escape key closes the drop down when opened.

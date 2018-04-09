@@ -67,3 +67,18 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 8. (optional) Click or tap the other option in the **[Radio](control-radio.md)** control, and then click or tap the **[Shape](control-shapes-icons.md)** control to confirm that **Target** appears in the other color.
 9. To return to the default workspace, press Esc.
 
+
+## Accessibility guidelines
+### Color contrast
+When the **Screen** is the effective background for text, there must be adequate color contrast between:
+* **[Fill](properties-color-border.md)** and text
+* **[BackgroundImage](properties-visual.md)** and text (if applicable)
+
+For example, if a **Screen** contains a **[Label](control-text-box.md)** and the label has transparent fill, then the screen's **[Fill](properties-color-border.md)** effectively becomes the background color for the label.
+
+In addition to text, consider checking color contrast with essential graphical objects like the star images in a **[Rating](control-rating.md)** control.
+
+### Screen reader support
+* There must be a meaningful name for each **Screen**. The screen name can be viewed and edited in the same way as other controls: in the tree view of the controls pane or in the header of the properties pane.
+> [!NOTE]
+> When a new **Screen** is loaded, screen readers will announce its name. 

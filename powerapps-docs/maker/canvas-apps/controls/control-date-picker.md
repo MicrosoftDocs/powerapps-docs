@@ -37,13 +37,13 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **Language** – Determines the language used to format dates, including names of months. If this property isn't specified, the user's device setting determines the language.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
@@ -58,6 +58,10 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **EndYear** – The latest year to which the user can set value of a date-picker control.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -81,7 +85,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **StartYear** – The earliest year to which the user can set the value of a date-picker control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
@@ -107,3 +111,15 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
     The **[Label](control-text-box.md)** control shows the number of days between today and the date that you chose.
 4. To return to the default workspace, press Esc.
 
+
+## Accessibility guidelines
+### Color contrast
+* Standard color contrast requirements apply.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+ 

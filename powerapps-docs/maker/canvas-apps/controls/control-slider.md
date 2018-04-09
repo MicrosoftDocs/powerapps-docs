@@ -34,23 +34,29 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 **[Value](properties-core.md)** – The value of an input control.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
-
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **HandleActiveFill** – The color of the handle for a slider as the user changes its value.
 
 **HandleFill** – The color of the handle (the element that changes position) in a toggle or slider control.
 
 **HandleHoverFill** – The color of the handle in a slider when the user keeps the mouse pointer on it.
+
+**HandleSize** – The diameter of the handle.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -74,7 +80,7 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -109,3 +115,24 @@ The user can indicate a value, between a minimum and a maximum value that you sp
 7. Press F5, and then adjust **MinPopulation** to show only those cities that have a population that's greater than the value that you specify.
 8. To return to the default workspace, press Esc.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **ValueFill** and **RailFill**
+* **ValueHoverFill** and **RailHoverFill**
+* **[FocusedBorderColor](properties-color-border.md)** and color outside the control
+* **ValueFill** and background color
+* **RailFill** and background color
+* **ValueHoverFill** and background color
+* **RailHoverFill** and background color
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+* Slider value must be shown when interacting with the keyboard. This can be achieved by any one of these methods:
+    * Set **ShowValue** to **true**.
+    * Add a **[Label](control-text-box.md)** adjacent to the slider. Set the label's **[Text](properties-core.md)** to the slider's **[Value](properties-core.md)**.
