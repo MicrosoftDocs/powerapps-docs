@@ -1,4 +1,3 @@
-
 ---
 title: 'Card control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Card control
@@ -99,3 +98,11 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 ## Examples
 See [Understand data cards](../working-with-cards.md) and [Understand data form layout](../working-with-form-layout.md) for examples.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **[Fill](properties-color-border.md)** and any child controls. For example, if a card contains a **[Label](control-text-box.md)** and the label has transparent fill, then the card's **[Fill](properties-color-border.md)** effectively becomes the background color for the label. Thus, there should be adequate contrast between the card's **[Fill](properties-color-border.md)** and the label's **[Color](properties-color-border.md)**.
+
+### Screen reader support
+* **DisplayName** must be present.

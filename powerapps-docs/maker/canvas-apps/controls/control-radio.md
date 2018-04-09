@@ -42,8 +42,6 @@ A **Radio** control, with which users have decades of experience, is best used w
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
-
 **[Color](properties-color-border.md)** – The color of text in a control.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
@@ -55,6 +53,10 @@ A **Radio** control, with which users have decades of experience, is best used w
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -100,7 +102,7 @@ A **Radio** control, with which users have decades of experience, is best used w
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -132,3 +134,20 @@ A **Radio** control, with which users have decades of experience, is best used w
 4. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
 5. To return to the default workspace, press Esc.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **RadioSelectionFill** and **RadioBackgroundFill**
+* **RadioBackgroundFill** and **[Fill](properties-color-border.md)**
+
+This is in addition to the standard color contrast requirements.
+
+### Screen reader support
+* There must be a **[Value](properties-core.md)** for every radio option.
+* Consider adding a **[Label](control-text-box.md)** immediately before the **Radio** control to serve as the heading.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+ 

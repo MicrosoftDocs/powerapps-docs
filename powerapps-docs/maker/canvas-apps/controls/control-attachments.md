@@ -48,7 +48,7 @@ An **Attachments** control lets you open files stored on a data source as well a
 **[OnSelect](properties-core.md)** – How the app responds when the user clicks on an attachment.
 
 ## Additional properties
-**AccessibleLabel** – The label announced by screen readers.
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the attachments.
 
 **AddAttachmentText** – The label text for the link used to add a new attachment.
 
@@ -60,11 +60,17 @@ An **Attachments** control lets you open files stored on a data source as well a
 
 **[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **MaxAttachmentsText** – The text that replaces the "Attach file" link when the control contains the maximum number of files allowed.
 
 **NoAttachmentsText** – Informational text shown to the user when there are no files attached.
+
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Visible](properties-core.md)** – Whether a control is visible or hidden.
 
@@ -86,4 +92,31 @@ An **Attachments** control lets you open files stored on a data source as well a
 
     The Attachments field associated with the SharePoint list will appear in the form.
 
-Don't know how to [add and configure a control](../add-configure-controls.md)?
+[Learn how to add and configure a control.](../add-configure-controls.md)
+
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **ItemColor** and **ItemFill**
+* **ItemHoverColor** and **ItemHoverFill**
+* **ItemPressedColor** and **ItemPressedFill**
+* **AddedItemColor** and **AddedItemFill**
+* **RemovedItemColor** and **RemovedItemFill**
+* **ItemErrorColor** and **ItemErrorFill**
+* **AddAttachmentColor** and **Fill**
+* **MaxAttachmentsColor** and **Fill**
+* **NoAttachmentsColor** and **Fill**
+
+This is in addition to the standard color contrast requirements.
+
+### Screen reader support
+The following properties must be present:
+* **[AccessibleLabel](properties-accessibility.md)**
+* **AddAttachmentsText**
+* **MaxAttachmentsText**
+* **NoAttachmentsText**
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.

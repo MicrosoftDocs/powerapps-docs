@@ -30,6 +30,8 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 **Mode** – The control is in **Draw** or **Erase** mode.  Select mode has been deprecated.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Can be used to describe the purpose of the control as well as alternative methods of input.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -87,3 +89,18 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save your drawings locally or the **[Patch](../functions/function-patch.md)** function to save them to a data source.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **[BorderColor](properties-color-border.md)** and the color outside the control (if there is a border)
+* **[Fill](properties-color-border.md)** and the color outside the control (if there is no border)
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** should be present.
+> [!IMPORTANT]
+> **Pen input** is not accessible to screen reader users. Always provide an alternative form of input. For example, if a sketch is required, consider adding an **[Add picture](control-add-picture.md)** control for users to upload an image. Both methods can be offered and the user can choose the one they are more comfortable with.
+
+### Keyboard support
+> [!IMPORTANT]
+> **Pen input** is not accessible to keyboard users. Always provide an alternative form of input. For example, if a signature is required, consider adding a **[Text input](control-text-input.md)** for users to enter their name. Both methods can be offered and the user can choose the one they are more comfortable with.

@@ -29,7 +29,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
-**HTMLText** – Text that appears in an HTML text control and that may contain HTML tags.
+**HtmlText** – Text that appears in an HTML text control and that may contain HTML tags.
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -82,8 +82,22 @@ An **HTML text** control not only shows plain text and numbers but also converts
 
 Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
-1. Add an **HTML text** control, and set its **HTMLText** property to this value:<br>
+1. Add an **HTML text** control, and set its **HtmlText** property to this value:<br>
    **Source.Text**
    
      The **HTML text** control shows the same text as the **[Label](control-text-box.md)** control but converts the tags to the appropriate characters.
 
+
+## Accessibility guidelines
+**HTML text** is not meant to be interactive. It should only be used for text display.
+
+### Color contrast
+There must be adequate color contrast between:
+* **[Color](properties-color-border.md)** and **[Fill](properties-color-border.md)**
+* Text with custom colors and its background
+
+### Screen reader support
+* **HtmlText** must be present.
+
+### Keyboard support
+* **HtmlText** should not contain interactive elements like `<button>`, `<a>`, or `<input>`. The **[TabIndex](properties-accessibility.md)** system in PowerApps does not consider elements inside **HtmlText**.
