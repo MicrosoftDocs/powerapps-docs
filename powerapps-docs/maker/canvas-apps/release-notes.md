@@ -35,16 +35,16 @@ Discover the latest updates to our business applications, as well as a host of n
 * Cut (Ctrl+X), copy (Ctrl+C), and paste (Ctrl+V) controls&mdash;including the controls' styles, formulas, and properties&mdash;across apps in a web browser.
 
 ## Mar. 21
-1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
-2. [Create a database](../../administrator/create-database.md) on the latest version of the Common Data Service in an environment.
-3. The Common Data Service for Apps now includes:
+1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in Common Data Service for Apps to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
+2. [Create a database](../../administrator/create-database.md) on the latest version of CDS for Apps in an environment.
+3. CDS for Apps now includes:
     - **Additional data types** support more complex entity definitions and provide richer experiences. (Applies to canvas and model-driven apps.)
-    - [Create and customize entities](../common-data-service/data-platform-create-entity.md) in the Common Data Service for Apps right from the PowerApps site. The **refreshed experience** includes improved performance, a more user-friendly UI, and helpful features such as in-line creation of option sets. (Applies to canvas and model-driven apps.)
-    - Create **server-side business rules** for validating data entered into the Common Data Service for Apps. (Applies to canvas and model-driven apps.)
-    - Create **calculated and rollup fields** in Common Data Service for Apps entities directly from the PowerApps site. (Applies to canvas and model-driven apps.)  
-    - Developers can use the Common Data Service for Apps **Software Development Kit** (SDK) to create code-based customizations for the Common Data Service.
-    - Advanced users can access data stored in the Common Data Service for Apps through a new **OData Web API**.
-    - [Import data](../common-data-service/data-platform-cds-newentity-pq.md) into Common Data Service with **Power Query**. Use Power Query on the web to directly import data to the Common Data Service for Apps from multiple sources
+    - [Create and customize entities](../common-data-service/data-platform-create-entity.md) in CDS for Apps right from the PowerApps site. The **refreshed experience** includes improved performance, a more user-friendly UI, and helpful features such as in-line creation of option sets. (Applies to canvas and model-driven apps.)
+    - Create **server-side business rules** for validating data entered into CDS for Apps. (Applies to canvas and model-driven apps.)
+    - Create **calculated and rollup fields** in CDS for Apps entities directly from the PowerApps site. (Applies to canvas and model-driven apps.)  
+    - Developers can use the CDS for Apps **Software Development Kit** (SDK) to create code-based customizations for CDS for Apps.
+    - Advanced users can access data stored in CDS for Apps through a new **OData Web API**.
+    - [Import data](../common-data-service/data-platform-cds-newentity-pq.md) into CDS for Apps with **Power Query**. Use Power Query on the web to directly import data to CDS for Apps from multiple sources
 
 ## Mar. 5
 1. Add (and delete) [attachments](controls/control-attachments.md) to SharePoint lists.
