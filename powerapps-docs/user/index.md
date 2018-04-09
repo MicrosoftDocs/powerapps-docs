@@ -16,10 +16,11 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/21/2018
 ms.author: sharik
+#Customer intent: As an employee in an organization with a PowerApps subscription, I want to know where to go to find apps that I created or that others have created and shared with me and how to run those apps so that they can help me more effectively focus on my work and complete my tasks.
 
 ---
 
-# Find and run apps overview
+# How do I find and run apps?
 App makers can create customized task- and role-based *canvas* apps that work the way you do, whether you're a mobile worker in the field or a doctor in a busy hospital. Canvas app makers can customize almost every aspect of a canvas app and can connect to multiple data sources to help users complete focused tasks.
 
 App makers can also create *model-driven* apps that are generated from your organization's data. Model-driven apps are complex, responsive apps that help users focus on their work and not on remembering to perform a set of manual steps. Model-driven app makers determine what data an app needs and how it will relate to other data, define the business process that the app will follow, and then add and configure components that enforce that process. Unlike canvas apps, which are highly customizable, the layout of model-driven apps is largely determined by the components that the maker adds to the app.
