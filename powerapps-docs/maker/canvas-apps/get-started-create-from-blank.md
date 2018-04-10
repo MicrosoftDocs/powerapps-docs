@@ -1,6 +1,6 @@
 ---
-title: Create an app from scratch | Microsoft Docs
-description: Create an app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business.
+title: Create an Excel app from scratch | Microsoft Docs
+description: Create an Excel app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -18,16 +18,10 @@ ms.date: 10/16/2016
 ms.author: anneta
 
 ---
-# Create an app from scratch
-Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
+# Create an Excel app from scratch
+Create your own app from scratch based on Excel data formatted as a table and then add more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach takes much more time than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
 
-By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records:
-
-![Screen in which a user can scroll through a set of data](./media/get-started-create-from-blank/first-screen-final.png)
-
-On the other screen, users can create a record, update one or more fields in a record, or delete an entire record:
-
-![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
+By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record.
 
 ## Prerequisites
 You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
