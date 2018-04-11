@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 10/16/2016
+ms.date: 04/10/2018
 ms.author: anneta
 
 ---
@@ -142,8 +142,6 @@ To follow the steps below exactly, first create an Excel file using this sample 
 As you customize the app, test your changes by running the app in Preview mode, as the steps in this section describe.
 
 1. In the left navigation bar, click or tap the top thumbnail to select the **ViewScreen**.
-
-    ![Select ViewScreen](./media/get-started-create-from-blank/select-viewscreen.png)
 
 2. Open Preview mode by pressing F5 (or clicking or tapping the **Preview** icon near the upper-right corner).
 
