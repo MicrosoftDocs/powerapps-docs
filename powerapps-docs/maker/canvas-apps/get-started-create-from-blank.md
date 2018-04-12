@@ -29,7 +29,8 @@ If you're new to PowerApps:
 - Learn how to [add a control and set its properties](add-configure-controls.md), which determine how the control appears and behaves.
 - Learn how to [add and rename a screen](add-screen-context-variables.md).
 
-You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
+> [!IMPORTANT]
+> You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
 To follow the steps below exactly, first create an Excel file using this sample data.
 
@@ -59,7 +60,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 	![Blank-app tile](./media/get-started-create-from-blank/blank-app.png)
 
-	You can design an app from scratch for phones or for other devices (such as tablets); this topic will focus on designing an app for phones.
+	You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
 
 ## Specify a table
 1. In the middle of the screen, select **connect to data**.
@@ -91,7 +92,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
     ![Select gallery](./media/get-started-create-from-blank/select-layout.png)
 
-4. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
+4. In the property list, confirm that **[Items](controls/properties-core.md)** appears, copy this formula, and then paste it into the formula bar:
 
     **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer1"), "Volunteer1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
