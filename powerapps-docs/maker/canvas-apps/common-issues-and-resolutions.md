@@ -22,7 +22,7 @@ ms.author: sharik
 ## Recently added/changed
 1. **Using a custom image as an app icon**
 
-	In PowerApps Studio for Windows version 3.18043.xx, you cannot upload a custom image to use as an app icon. To work around this issue, use [PowerApps Studio for web](https://web.powerapps.com) to upload a custom image. Alternatively, you can use one of the icons included with PowerApps Studio for Windows and customize the background color.
+	In PowerApps Studio for Windows version 3.18043, you cannot upload a custom image to use as an app icon. To work around this issue, use [PowerApps Studio for web](https://web.powerapps.com) to upload a custom image. Alternatively, you can use one of the icons included with PowerApps Studio for Windows and customize the background color.
 
 1. **Copying and pasting screens across apps**
 
