@@ -14,15 +14,19 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/09/2018
+ms.date: 04/12/2018
 ms.author: sharik
 
 ---
 # Common issues and resolutions for PowerApps
 ## Recently added/changed
+1. **Using a custom image as an app icon**
+
+	In PowerApps Studio for Windows version 3.18043.xx, you cannot upload a custom image to use as an app icon. To work around this issue, use [PowerApps Studio for web](https://web.powerapps.com) to upload a custom image. Alternatively, you can use one of the icons included with PowerApps Studio for Windows and customize the background color.
+
 1. **Copying and pasting screens across apps**
 
-	Copying and pasting screens across apps is not currently supported. To work around this, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them into the screen of your target app. 
+	Copying and pasting screens across apps is not currently supported. To work around this, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them into the screen of your target app.
 
 1. **Changing the layout of SharePoint forms**
 
