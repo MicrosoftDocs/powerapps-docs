@@ -78,7 +78,7 @@ Entities within CDS for Apps can leverage rich server-side logic and validation 
 * **Business rules** can validate data across multiple fields and entities, prompt warning and error messages regardless of the app being used to create the data. For more information, see [Create a business rule](./data-platform-create-business-rule.md).
 * **Business process flows** guide users to ensure data is entered consistently and follow the same steps every time. Business process flows are currently only supported for Model driven apps. For more information, see [Business process flows overview](/dynamics365/customer-engagement/customize/business-process-flows-overview).
 * **Workflows** allow you to automate business processes without a user interaction. For more information, see [Workflows overview](/dynamics365/customer-engagement/customize/workflow-processes).
-* **Business logic with code** supports more advanced developer scenarios to extend there application directly through code. For more information, see [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md).
+* **Business logic with code** supports more advanced developer scenarios to extend the application directly through code. For more information, see [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md).
 
 ## Getting Data into Common Data Service for Apps
 
