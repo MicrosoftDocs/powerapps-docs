@@ -135,6 +135,8 @@
       items:
       - name: Introduction to powerapps.com
         href: ./canvas-apps/intro-maker-portal.md
+      - name: Work with environments
+        href: ./canvas-apps/working-with-environments.md
       - name: Edit an app
         href: ./canvas-apps/edit-app.md
       - name: Change screen size and orientation
@@ -201,10 +203,6 @@
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
       href: ./canvas-apps/limits-and-config.md
-  - name: Resources
-    items:
-    - name: Work with environments
-      href: ./canvas-apps/working-with-environments.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
