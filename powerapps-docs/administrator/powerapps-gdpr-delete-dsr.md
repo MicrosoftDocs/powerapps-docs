@@ -1,6 +1,6 @@
 ---
-title: Executing Delete Data Subject Rights (DSR) Requests against PowerApps Customer Data | Microsoft Docs
-description: Executing Delete Data Subject Rights (DSR) Requests against PowerApps Customer Data
+title: Responding to Delete Data Subject Rights (DSR) Requests for PowerApps Customer Data | Microsoft Docs
+description: Responding to Delete Data Subject Rights (DSR) Requests for PowerApps Customer Data
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -20,17 +20,17 @@ ms.author: jamesol
 
 ---
 
-# Executing Delete DSRs against PowerApps Customer Data
+# Responding to Delete Data Subject Rights (DSR) Requests for PowerApps Customer Data
 
 The “right to erasure” by the removal of personal data from an organization’s Customer Data is a key protection in the GDPR. Removing personal data includes removing all personal data and system-generated logs, except audit log information.
 
-PowerApps allows users to build line-of-business applications that are a critical part of your organization’s day-to-day operations, so when a user leaves your organization you will need to manually review and determine whether or not to delete certain data and resources that they have created.   There is other customer data that will be automatically deleted whenever the user’s account deleted from Azure Active Directory.
+PowerApps allows users to build line-of-business applications that are a critical part of your organization’s day-to-day operations, so when a user leaves your organization you will need to manually review and determine whether or not to delete certain data and resources that they have created.   There is other personal data that will be automatically deleted whenever the user’s account deleted from Azure Active Directory.
 
-Here is the breakdown between which customer data will be automatically deleted and which data will require your manual review and deletion:
+Here is the breakdown between which personal data will be automatically deleted and which data will require your manual review and deletion:
 
 Requires manual review and deletion |	Automatically deleted when the user is deleted from Azure Active Directory.
 --- | ---
-Environment** | Gateway**
+Environment** | Gateway
 Environment permissions*** | Gateway permissions
 Canvas App** | PowerApps notifications
 Canvas App permissions | PowerApps user settings
@@ -66,7 +66,7 @@ Custom connector permissions | | Maker: Available <br> Admin: Under development
 ## Prerequisites
 
 ### For users
-Any user with a valid PowerApps license will be able to perform the user operations outlined in this document using the [PowerApps maker portal](https://web.powerapps.com) or[PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448).
+Any user with a valid PowerApps license will be able to perform the user operations outlined in this document using the [PowerApps maker portal](https://web.powerapps.com) or [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### For admins
 In order to perform the administration operations outlined in this document using the [PowerApps Admin Center](https://admin.powerapps.com/), Microsoft Flow Admin Center, or [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804), you will need an account with the following permissions:
@@ -83,7 +83,7 @@ As an admin you have two decisions to make when processing a DSR delete request 
 2.	If you determine that the environment is still required, then you can choose to not delete the environment and add yourself (or another user in your organization) as an Environment Admin.
 > **Important**: Deleting an environment will permanently delete all resources within the environment, including all apps, flows, connections, etc., so please review the contents of an environment before deletion.
 
-### Give access to a user’s environments from the PowerApp Admin Center
+### Give access to a user’s environments from the PowerApps Admin Center
 An admin can grant Admin access to an environment created by a specific user from the [PowerApps Admin Center](https://admin.powerapps.com/) via the following steps:
 
 1.	From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization.
@@ -95,7 +95,7 @@ An admin can grant Admin access to an environment created by a specific user fro
   ![Environment security](./media/gdpr-dsr-guide/share-environment.png)
 
 ### Delete environments created by a user from the PowerApps Admin Center
-An admin can review and delete environment created by a specific user from the [PowerApps Admin Center](https://admin.powerapps.com/) via the following steps:
+An admin can review and delete environments created by a specific user from the [PowerApps Admin Center](https://admin.powerapps.com/) via the following steps:
 1.	From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization.
 
   ![Admin Center Landing Page](./media/gdpr-dsr-guide/admin-center-landing.png)
@@ -174,6 +174,7 @@ With the introduction of the Common Data Service for Apps, if a database is crea
 Please refer to the following documentation on how to remove personal data from a Common Data Service for Apps database instance: Common Data Service User personal data removal
 
 ## Step #3: Delete or reassign all canvas apps owned by a user
+
 ### Reassign a user’s canvas apps using the PowerApps Admin PowerShell cmdlets
 If an admin decides not to delete a user’s canvas apps, they can reassign the apps owned by a user via the **Set-AdminAppOwner** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
@@ -187,7 +188,7 @@ Get-AdminApp -Owner $deleteDsrUserId | Set-AdminAppOwner -AppOwner $newAppOwnerU
 ```
 
 ### Delete a canvas app using the PowerApps Maker Portal
-A user can export an app from the [PowerApps maker portal](https://web.powerapps.com). For the full steps on how to export an app, please see deleting an app.
+A user can delete an app from the [PowerApps maker portal](https://web.powerapps.com). For the full steps on how to delete an app, please see deleting an app.
 
 ### Delete a user’s canvas app using the PowerApps Admin Center
 An admin can delete apps created by a user starting from the [PowerApps Admin Center](https://admin.powerapps.com/) via the following steps:
@@ -221,8 +222,10 @@ Get-AdminApp -Owner "0ecb1fcc-6782-4e46-a4c4-738c1d3accea" | Remove-AdminApp
 
 ## Step #4: Delete the user’s permissions to canvas apps
 Whenever an app is shared with a user, PowerApps stores a record called a “role assignment” that describes the user’s permissions (CanEdit or CanUser) to the application. For more information see the Share an app article.
-NOTE: an app’s role assignments will be deleted with the app is deleted.
-NOTE: the owner app role assignment can only be deleted by assigning a new owner for the app.
+
+>**NOTE**: an app’s role assignments will be deleted when the app is deleted.
+
+>**NOTE**: the app owner's role assignment can only be deleted by assigning a new owner for the app.
 
 ### PowerApps Admin Center
 An admin can delete app role assignments for a user starting from the [PowerApps Admin Center](https://admin.powerapps.com/) via the following steps:
@@ -286,7 +289,7 @@ Get-ConnectionRoleAssignment | Remove-ConnectionRoleAssignment
 The function to allow an admin to find and delete a user’s connection role assignments using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
 ## Step #7: Delete custom connectors created by the user
-Custom Connectors supplement the existing out of box connectors and allow for connectivity to other APIs, SaaS and custom-developed systems. Custom Connectors do include references to the user who created them and as a result, can be deleted to remove any references to the user.
+Custom Connectors supplement the existing out of box connectors and allow for connectivity to other APIs, SaaS and custom-developed systems. You may want to transfer Custom Connector ownership to other users in the organization or delete the Custom Connector.
 
 ### PowerApps Maker PowerShell cmdlets
 A user can delete all of their custom connectors the Remove-Connector function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
@@ -302,7 +305,7 @@ The function to allow an admin to find and delete a user’s custom connectors u
 ## Step #8: Delete the user’s permissions to shared custom connectors
 
 ### PowerApps Maker PowerShell cmdlets
-A user can delete all of their connector role assignments for shared custom conector with the Remove-ConnectorRoleAssignment function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
+A user can delete all of their connector role assignments for shared custom connector with the Remove-ConnectorRoleAssignment function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
 ```
 Add-PowerAppsAccount
@@ -322,12 +325,13 @@ Please see [Executing DSRs against Microsoft Flow Customer Data](https://go.micr
 > **Important**:  It is recommended that admins complete this step for a PowerApps user
 
 ## Step #10: Delete the user’s personal data in Common Data Service (CDS) instances
-Certain PowerApps licenses give the ability for users within your organization to create instances of the Common Data Service, create and build apps on the Common Data Service, including the PowerApps Community Plan which is a free license that allows users to try out CDS in an individual environment. See the PowerApps Pricing page for which CDS capabilities are included in each PowerApps license.
+Certain PowerApps licenses give the ability for users within your organization to create instances of the Common Data Service, and create and build apps on the Common Data Service, including the PowerApps Community Plan which is a free license that allows users to try out CDS in an individual environment. See the PowerApps Pricing page for which CDS capabilities are included in each PowerApps license.
+
 Please see [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251), for guidance on how to respond to DSRs for users that use the Common Data Service.
 > **Important**: It is recommended that admins complete this step for a PowerApps user
 
 ## Step #11: Delete the user from Azure Active Directory
-Once the above steps have been complete the final step is to delete the user’s account for Azure Active Directory by following the following steps, see [delete a user from your organization](https://support.office.com/en-us/article/delete-a-user-from-your-organization-d5155593-3bac-4d8d-9d8b-f4513a81479e).
+Once the above steps have been complete the final step is to delete the user’s account for Azure Active Directory by following the steps outlined in the Azure Data Subject Request GDPR documentation that can be found on the [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
 
 
 
