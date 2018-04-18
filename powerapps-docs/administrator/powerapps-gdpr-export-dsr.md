@@ -1,6 +1,6 @@
 ---
-title: Executing Export Data Subject Rights (DSR) Requests against PowerApps Customer Data | Microsoft Docs
-description: Executing Export Data Subject Rights (DSR) Requests against PowerApps Customer Data
+title: Responding to Export Data Subject Rights (DSR) Requests for PowerApps Customer Data | Microsoft Docs
+description: Responding to Export Data Subject Rights (DSR) Requests for PowerApps Customer Data
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -20,14 +20,15 @@ ms.author: jamesol
 
 ---
 
-# Executing Export DSRs against PowerApps Customer Data
+# Responding to Export Data Subject Rights (DSR) Requests for PowerApps Customer Data
 
 The “right of data portability” allows a data subject to request a copy of their personal data in an electronic format (that’s a “structured, commonly used, machine read-able and interoperable format”) that may be transmitted to another data controller:
 
 1.	Website access: [PowerApps maker portal](https://web.powerapps.com), [PowerApps Admin Center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 2.	PowerShell access: PowerApps cmdlets ([Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448) , [Admin cmdlets](https://go.microsoft.com/fwlink/?linkid=871804)) and [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238)
-Below is a summary of the types of customer data that can be stored by PowerApps for a specific user and which experiences you can use to find and export it.
+
+Below is a summary of the types of personal data that can be stored by PowerApps for a specific user and which experiences you can use to find and export it.
 
 Resources containing personal data | Website access |	PowerShell access
 --- | --- | --
@@ -50,11 +51,13 @@ PowerApps user settings, user-app settings, and notifications | | Maker: Availab
 ## Prerequisites
 
 ### For users
-Any user with a valid PowerApps license will be able to perform the user operations outlined in this document using the [PowerApps maker portal](https://web.powerapps.com) orPowerApps Maker PowerShell cmdlets.
+Any user with a valid PowerApps license will be able to perform the user operations outlined in this document using the [PowerApps maker portal](https://web.powerapps.com) or [Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### For admins
 In order to perform the administration operations outlined in this document using the PowerApps Admin Center, Microsoft Flow Admin Center, or [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804), you will need an account with the following permissions:
-1.	A paid PowerApps Plan 2 license, or a PowerApps Plan 2 trial license. You can sign-up for a 30d trial license here – [http://web.powerapps.com/trial](http://web.powerapps.com/trial), trial licenses can be renewed if they have expired.
+
+1.	A paid PowerApps Plan 2 license, or a PowerApps Plan 2 trial license. You can sign-up for a 30d trial license at [http://web.powerapps.com/trial](http://web.powerapps.com/trial), trial licenses can be renewed if they have expired.
+
 2.	[Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal)  privileges are also required if you need to search through another user’s resources, otherwise you will only have access to those environments and environment resources where you have Environment Admin privileges.
 
 ## Step #1: Export personal data contained within environments created by the user
@@ -77,7 +80,7 @@ Get-PowerAppsEnvironment | ConvertTo-Json | Out-File -FilePath "UserDetails.json
 ```
 
 ### PowerApps Admin PowerShell cmdlets
-An admin can export all of the environment that have been created by a user via the **Get-AdminEnvironment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
+An admin can export all of the environments that have been created by a user via the **Get-AdminEnvironment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 ```PowerShell
 Add-PowerAppsAccount
 $userId = "7557f390-5f70-4c93-8bc4-8c2faabd2ca0"
@@ -207,7 +210,7 @@ Get-Connection | ConvertTo-Json | out-file -FilePath "UserDetails.json"
 ```
 
 ### PowerApps Admin PowerShell cmdlets
-The function to export connections created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+The function for an admin to export connections created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
  
 ## Step #6: Export the user’s permissions to shared connections
 ### PowerApps Maker PowerShell cmdlets
@@ -219,11 +222,11 @@ Get-ConnectionRoleAssignment | ConvertTo-Json | out-file -FilePath "UserDetails.
 ```
 
 ### PowerApps Admin PowerShell cmdlets
-The function to export connection role assignments for a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+The function for an admin to export connection role assignments for a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
  
 ## Step #7: Export personal data contained within custom connectors created by the user
-Custom Connectors supplement the existing out of box connectors and allow for connectivity to other APIs, SaaS and custom-developed systems. Custom Connector ownership may want to be transferred to other users in the organization or the Custom Connector can be deleted.  
+Custom Connectors supplement the existing out of box connectors and allow for connectivity to other APIs, SaaS and custom-developed systems.
 
 ### PowerApps Maker PowerShell cmdlets
 A user can export all custom connectors they have created to via the **Get-Connector** function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
@@ -234,7 +237,7 @@ Get-Connector -FilterNonCustomConnectors | ConvertTo-Json | Out-File -FilePath "
 ```
 
 ### PowerApps Admin PowerShell cmdlets
-The function to export custom connectors created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+The function for an admin to export custom connectors created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
 ## Step #8: Export the user’s permissions to custom connectors
 ### PowerApps Maker PowerShell cmdlets
@@ -246,19 +249,21 @@ Get-ConnectorRoleAssignment | ConvertTo-Json | Out-File -FilePath "UserDetails.j
 ```
 
 ### PowerApps Admin PowerShell cmdlets
-The function to export custom connector role assignments for a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+The function for and admin to export custom connector role assignments for a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
  
 ## Step #9: Export PowerApps Notifications, User Settings, and User-App Settings
 PowerApps sends several types of notifications to users including when an app is shared with them and when a Common Data Service export operation has completed.  A user’s notification history is visible to them within the [PowerApps maker portal](https://web.powerapps.com).
+
 PowerApps also stores several different user preferences and settings that are used to deliver the PowerApps runtime and portal experiences including, when you last opened an application, pinned apps, etc.
 
 ### PowerApps Maker PowerShell cmdlets
 The function to export a user’s PowerApps notifications, user settings and user-app settings using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
 ### PowerApps Admin PowerShell cmdlets
-The function to export a user’s PowerApps notifications, user settings and user-app settings using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+The function for admin to export a user’s PowerApps notifications, user settings and user-app settings using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
 ## Step #10: Export personal data contained for a user stored gateway or in the user’s gateway permissions
+
 ### PowerApps Maker Portal
 A user can export the personal data stored within the Gateway service from the [PowerApps maker portal](https://web.powerapps.com) via the following steps:
 
@@ -283,6 +288,8 @@ Please see [Executing DSRs against Microsoft Flow Customer Data](https://go.micr
 > **Important**: : It is recommended that admins complete this step for a PowerApps user
 
 ## Step #12: Export the user’s personal data in Common Data Service (CDS) instances
-Certain PowerApps licenses give the ability for users within your organization to create instances of the Common Data Service, create and build apps on the Common Data Service, including the PowerApps Community Plan which is a free license that allows users to try out CDS in an individual environment. See the PowerApps Pricing page for which CDS capabilities are included in each PowerApps license.
+Certain PowerApps licenses give the ability for users within your organization to create instances of the Common Data Service, and create and build apps on the Common Data Service, including the PowerApps Community Plan which is a free license that allows users to try out CDS in an individual environment. See the [PowerApps Pricing page](https://powerapps.microsoft.com/pricing) for which CDS capabilities are included in each PowerApps license.
+
 Please see [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251), for guidance on how to respond to DSRs for users that use the Common Data Service.
+
 > **Important**: It is recommended that admins complete this step for a PowerApps user

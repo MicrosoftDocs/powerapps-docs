@@ -20,9 +20,9 @@ ms.author: jamesol
 
 ---
 
-# PowerApps DSR Guide for Customer-Authored Data
+# Responding to Data Subject Rights (DSR) Requests for PowerApps Customer Data
 
-## Introduction to Data Subject Rights (DSRs) Requests
+## Introduction to DSR Requests
 As part of our commitment to partner with you on your journey to the GDPR, we’ve developed this documentation to help you prepare. The documentation not only describes what we’re doing to prepare for the GDPR but also shares examples of steps you can take today with Microsoft to support GDPR compliance when using PowerApps, Microsoft Flow, and Common Data Service for Apps.
 
 The EU Data Protection Regulation (GDPR) gives rights to people (known in the regulation as data subjects) to manage the personal data that has been collected by an employer or other type of agency or organization (known as the data controller or just controller). Personal data is defined very broadly under the GDPR as any data that relates to an identified or identifiable natural person. The GDPR gives data subjects specific rights to their personal data; these rights include obtaining copies of personal data, requesting corrections to it, restricting the processing of it, deleting it, or receiving it in an electronic format so it can be moved to another controller. A formal request by a data subject to a controller to take an action on their personal data is called a Data Subject Rights (DSR) request.
@@ -61,23 +61,28 @@ Model-driven app and model-driven app permissions	| Model-driven app design is a
 PowerApps offers the following experiences to find personal data for a specific user:
 1.	**Website access**: [PowerApps maker portal](https://web.powerapps.com), [PowerApps Admin Center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 2.	**PowerShell access**: PowerApps cmdlets ([Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448) , [Admin cmdlets](https://go.microsoft.com/fwlink/?linkid=871804)) and [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238)
-For the detailed steps on how you can use these experiences to find personal data for a specific user for each of these see types of resources see Export Customer Data in PowerApps.
-After you find the data, you can then perform the specific action to satisfy the request by the data subject.
 
+For the detailed steps on how you can use these experiences to find personal data for a specific user for each of these types of resources [Export Customer Data in PowerApps]( https://go.microsoft.com/fwlink/?linkid=871888).
+
+After you find the data, you can then perform the specific action to satisfy the request by the data subject.
 
 ### Step #2: Find personal data for the user in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service.
 Please see Executing DSRs against Microsoft Flow Customer Data, for guidance on how to discover personal data stored by the Microsoft Flow service.
-Important: It is recommended that admins complete this step for a PowerApps user
+
+>**Important**: It is recommended that admins complete this step for a PowerApps user
 
 ### Step #3: Find personal data for the user in Common Data Service (CDS) instances
-Certain PowerApps licenses give the ability for users within your organization to create instances of the Common Data Service, create and build apps on the Common Data Service, including the PowerApps Community Plan which is a free license that allows users to try out CDS in an individual environment. See the PowerApps Pricing page for which CDS capabilities are included in each PowerApps license.
+Certain PowerApps licenses give the ability for users within your organization to create instances of the Common Data Service, and create and build apps on the Common Data Service, including the PowerApps Community Plan which is a free license that allows users to try out CDS in an individual environment. See the [PowerApps Pricing](https://powerapps.microsoft.com/pricing/) page for which CDS capabilities are included in each PowerApps license.
+
 Please see Executing DSRs against Common Data Service Customer Data, for guidance on how to discover personal data stored by the Common Data Service.
-Important: It is recommended that admins complete this step for a PowerApps use
+
+>**Important**: It is recommended that admins complete this step for a PowerApps user
 
 ## Rectify
 If a data subject has asked you to rectify the personal data that resides in your organization’s data, you and your organization will have to determine whether it’s appropriate to honor the request.  Rectifying the data may include taking actions such as editing, redacting, or removing personal data from a document or other type or item.
-PowerApps has dependencies on Azure Active Directory for determining identity. Identities include personal information and as such, can be edited in Azure Active Directory. Enterprise customers have the ability to manage DSR rectify requests, including limited editing features per the nature of a given Microsoft service.  As a data processor, Microsoft does not offer the ability to correct system-generated logs as it reflects factual activities and constitutes a historical record of events within Microsoft services.
+
+PowerApps has dependencies on Azure Active Directory for determining identity. Identities include personal data and as such, can be edited in Azure Active Directory. Enterprise customers can manage DSR rectify requests, including limited editing features per the nature of a given Microsoft service.  As a data processor, Microsoft does not offer the ability to correct system-generated logs as it reflects factual activities and constitutes a historical record of events within Microsoft services. For more information please see the Azure Data Subject Request GDPR documentation that can be found on the [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
 
 ## Restrict
 Data subjects may request that you restrict processing of their personal data.  We provide both pre-existing application programming interfaces (APIs) or user interfaces (UIs).  These experiences provide the enterprise customer’s tenant administrator the capability to manage such DSRs through a combination of data export and data deletion. A customer may (1) export an electronic copy of the personal data of the user, including (a) account(s), (b) system-generated logs, and (c) associated logs, followed with (2) deletion of the account and associated data residing within Microsoft systems.
