@@ -16,14 +16,48 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 04/17/2018
-ms.author: paulliew
+ms.author: jamesol
 
 ---
 
-# PowerShell support for PowerApps
+# PowerShell support for PowerApps (preview)
 
-## PowerApps Maker Cmdlets
+With the preview launch of the PowerApps Maker and Admin PowerShell cmdlets, PowerApps users will now be able to automate many of the monitoring and management tasks that are only possible manually today in the [PowerApps Maker Portal](https://web.powerapps.com) or [PowerApps Admin Center](https://admin.powerapps.com).
 
+## Installation
+In order to run the Maker PowerShell commands in the table below, you first need to take the following steps:
+
+1. Download the PowerShell scripts file [here](https://go.microsoft.com/fwlink/?linkid=872358)
+
+2. Unzip the file into a folder
+
+3. Open a PowerShell command window in that same folder, as an Administrator
+
+4. Then run the following one-time PowerShell command (this presumes you've never run PowerShell commands on the current machine):
+
+  ~~~~
+  Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
+  ~~~~
+
+5. Next import the necessary modules using the following commands:
+
+  ~~~~
+  Import-Module .\Microsoft.PowerApps.Administration.PowerShell.psm1 -Force
+  Import-Module .\Microsoft.PowerApps.PowerShell.psm1 -Force
+  ~~~~
+
+6. Finally before accessing any of the command you will need to provide your credentials using the following command. These credentials will be refreshed for up to ~8 hours before you will be required to sign-in again to continue using the cmdlets.
+
+  ~~~~
+  Add-PowerAppsAccount
+  ~~~~
+
+## PowerApps Maker Cmdlets (preview)
+
+### Prerequisite
+Any user with a valid PowerApps license will be able to perform the maker operations in these Maker cmdlets, however they will only have access to the resources (e.g. apps, flows, etc.) that have been created or shared with them.
+
+### Cmdlet list
 | Purpose | Cmdlet |
 | --- | --- |
 | Read environments | Get-PowerAppsEnvironment <br> Get-FlowEnvironment
@@ -37,30 +71,40 @@ ms.author: paulliew
 | Read and delete connectors | Get-Connector <br> Remove-Connector
 | Read, update, and delete custom connector permissions | Get-ConnectorRoleAssignment <br> Set-ConnectorRoleAssignment <br> Remove-ConnectorRoleAssignment
 
+>**NOTE** The following commands can be used to understand syntax and view sample for each of the cmdlets:
 
-## PowerApps Admin Cmdlets
+~~~~
+Get-Help Get-PowerAppsEnvironment
+Get-Help Get-PowerAppsEnvironment -Examples
+Get-Help Get-PowerAppsEnvironment -Detailed
+~~~~
 
+## PowerApps Admin Cmdlets (preview)
 
-'Get-AdminEnvironment', `
-'Remove-AdminEnvironment', `
+### Prerequisite
+In order to perform the administration operations in these Admin cmdlets, you will need an account with the following permissions:
 
-'Get-AdminEnvironmentRoleAssignment', `
-'Set-AdminEnvironmentRoleAssignment', `
-'Remove-AdminEnvironmentRoleAssignment', `
+1.	A paid PowerApps Plan 2 license, or a PowerApps Plan 2 trial license. You can sign-up for a 30d trial license at [http://web.powerapps.com/trial](http://web.powerapps.com/trial), trial licenses can be renewed if they have expired.
 
-'Get-AdminApp', `
-'Remove-AdminApp', `
+2.	[Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal)  privileges are also required if you need to search through another user’s resources, otherwise you will only have access to those environments and environment resources where you have Environment Admin privileges.
 
-'Get-AdminAppRoleAssignment', `
-'Remove-AdminAppRoleAssignment', `
-'Set-AdminAppRoleAssignment', `
+### Cmdlet list
+| Purpose | Cmdlets
+| --- | ---
+| Read and delete environments | Get-AdminEnvironment <br> Remove-AdminEnvironment
+| Read, update, and delete environment privileges <br> <i> NOTE: These cmdlets only work for environments that do not have a Common Data Service for Apps database </i> | Get-AdminEnvironmentRoleAssignment <br> Set-AdminEnvironmentRoleAssignment <br> Remove-AdminEnvironmentRoleAssignment
+| Read and remove canvas apps | Get-AdminApp <br> Remove-AdminApp
+| Read, update, and delete canvas app permissions | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
+| Read, update, and delete flows | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
 
-'Set-AdminAppOwner', `
-'Get-AdminFlow', `
-'Enable-AdminFlow', `
-'Disable-AdminFlow', `
-'Remove-AdminFlow', `
+>**NOTE** The following commands can be used to understand syntax and view sample for each of the cmdlets:
 
-'Set-AdminFlowOwnerRole', `
-'Remove-AdminFlowOwnerRole', `
-'Get-AdminFlowOwnerRole'
+~~~~
+Get-Help Get-PowerAppsEnvironment
+Get-Help Get-PowerAppsEnvironment -Examples
+Get-Help Get-PowerAppsEnvironment -Detailed
+~~~~
+
+## Questions?
+
+If you have any comments, suggestions, or questions please send it along to the  {Administering PowerApps Community Board](https://powerusers.microsoft.com/t5/Administering-PowerApps/bd-p/Admin_PowerApps).
