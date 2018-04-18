@@ -107,7 +107,7 @@ An admin can review and delete environments created by a specific user from the 
 ### Give access to a user’s environments using the PowerApps Admin PowerShell cmdlets
 An admin can assign themselves (or another user within their organization) access to all environments created by a user via the **Set-AdminEnvironmentRoleAssignment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 $myUserId = $global:currentSession.UserId
@@ -117,20 +117,20 @@ Get-AdminEnvironment -CreatedBy $deleteDsrUserId | Set-AdminEnvironmentRoleAssig
 
 #Retrieve the environment role assignments to confirm
 Get-AdminEnvironment -CreatedBy $deleteDsrUserId | Get-AdminEnvironmentRoleAssignment
-``` 
+~~~~
 
 > **Important**: This function only works for environments that do not have a Common Data Service For Apps database instance.  
 
 ### Delete environments created by a user using the PowerApps Admin PowerShell cmdlets
  An admin can delete all environments created by a user via the **Remove-AdminEnvironment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 
 # Retrieve all environments created by the user and then delete them
 Get-AdminEnvironment -CreatedBy $deleteDsrUserId | Remove-AdminEnvironment
-``` 
+~~~~
 
 ## Step #2: Delete the user’s permissions to all other environments
 Users can be assigned permissions (such as Environment Admin, Environment Maker, etc.) in an environment, which is stored in the PowerApps service as a “role assignment.”
@@ -159,13 +159,13 @@ An admin can delete a user’s environment permissions starting from the [PowerA
 #### PowerApps Admin PowerShell cmdlets
 An admin can delete all environment role assignments for a user across all environments without a Common Data Service for Apps database via the **Remove-AdminEnvironmentRoleAssignment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 
 #find all environment role assignments for the user for environments without a CDS for Apps instance and delete them
 Get-AdminEnvironmentRoleAssignment -UserId $deleteDsrUserId | Remove-AdminEnvironmentRoleAssignment
-```
+~~~~
 
 > **Important**: This function only works for environments that do not have a Common Data Service For Apps database instance.  
 
@@ -178,14 +178,14 @@ Please refer to the following documentation on how to remove personal data from 
 ### Reassign a user’s canvas apps using the PowerApps Admin PowerShell cmdlets
 If an admin decides not to delete a user’s canvas apps, they can reassign the apps owned by a user via the **Set-AdminAppOwner** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 $newAppOwnerUserId = "72c272b8-14c3-4f7a-95f7-a76f65c9ccd8"
 
 #find all apps owned by the DSR user and assigns them a new owner
 Get-AdminApp -Owner $deleteDsrUserId | Set-AdminAppOwner -AppOwner $newAppOwnerUserId
-```
+~~~~
 
 ### Delete a canvas app using the PowerApps Maker Portal
 A user can delete an app from the [PowerApps maker portal](https://web.powerapps.com). For the full steps on how to delete an app, please see deleting an app.
@@ -212,13 +212,13 @@ An admin can delete apps created by a user starting from the [PowerApps Admin Ce
 ### Delete a user’s canvas apps using the PowerApps Admin PowerShell cmdlets
 If an admin decides to delete all canvas apps owned by a user, they can do so using the **Remove-AdminApp** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 
 #find all apps owned by the DSR user and deletes them
 Get-AdminApp -Owner "0ecb1fcc-6782-4e46-a4c4-738c1d3accea" | Remove-AdminApp
-```
+~~~~
 
 ## Step #4: Delete the user’s permissions to canvas apps
 Whenever an app is shared with a user, PowerApps stores a record called a “role assignment” that describes the user’s permissions (CanEdit or CanUser) to the application. For more information see the Share an app article.
@@ -247,26 +247,26 @@ An admin can delete app role assignments for a user starting from the [PowerApps
 ### PowerApps Admin PowerShell cmdlets
 An admin can delete all of user’s canvas app role assignments by using the **Remove-AdminAppRoleAssignmnet** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 
 #find all app role assignments for the DSR user and deletes them
 Get-AdminAppRoleAssignment -UserId $deleteDsrUserId | Remove-AdminAppRoleAssignment
-```
+~~~~
 
 ## Step #5: Delete connections created by a user
 Connections are used in conjunction with connectors when establishing connectivity with other APIs and SaaS systems.  Connections do include references to the user who created them and as a result, can be deleted to remove any references to the user.
 
 ### PowerApps Maker PowerShell cmdlets
-A user can delete all of their connections the Remove-Connection function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448
-  ):
-```
+A user can delete all of their connections the Remove-Connection function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
+
+~~~~
 Add-PowerAppsAccount
 
 #Retrieves all connections for the calling user and deletes them
 Get-Connection | Remove-Connection
-```
+~~~~
 
 ### PowerApps Admin PowerShell cmdlets
 The function to allow an admin to find and delete a user’s connections using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
@@ -276,12 +276,12 @@ The function to allow an admin to find and delete a user’s connections using t
 ### PowerApps Maker PowerShell cmdlets
 A user can delete all of their connection role assignments for shared connections Remove-ConnectionRoleAssignment function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
-```
+~~~~
 Add-PowerAppsAccount
 
 #Retrieves all connection role assignments for the calling users and deletes them
 Get-ConnectionRoleAssignment | Remove-ConnectionRoleAssignment
-```
+~~~~
 
 >NOTE: Owner role assignments cannot be deleted without deleting the connection resource.
 
@@ -293,12 +293,14 @@ Custom Connectors supplement the existing out of box connectors and allow for co
 
 ### PowerApps Maker PowerShell cmdlets
 A user can delete all of their custom connectors the Remove-Connector function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
-```
+
+~~~~
 Add-PowerAppsAccount
 
 #Retrieves all custom connectors	for the calling user and deletes them
 Get-Connector -FilterNonCustomConnectors | Remove-Connector
-```
+~~~~
+
 ### PowerApps Admin PowerShell cmdlets
 The function to allow an admin to find and delete a user’s custom connectors using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
@@ -307,12 +309,12 @@ The function to allow an admin to find and delete a user’s custom connectors u
 ### PowerApps Maker PowerShell cmdlets
 A user can delete all of their connector role assignments for shared custom connector with the Remove-ConnectorRoleAssignment function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
-```
+~~~~
 Add-PowerAppsAccount
 
 #Retrieves all connector role assignments for the calling users and deletes them
 Get-ConnectorRoleAssignment | Remove-ConnectorRoleAssignment
-```
+~~~~
 
 >NOTE: Owner role assignments cannot be deleted without deleting the connection resource.
 

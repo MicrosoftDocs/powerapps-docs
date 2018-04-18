@@ -74,18 +74,20 @@ An admin can export all environments created by a specific user from the [PowerA
 
 ### PowerApps Maker PowerShell cmdlets
 A user can export the environments they have access to in PowerApps via the **Get-PowerAppsEnvironment** function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
-```PowerShell
+
+~~~~
 Add-PowerAppsAccount
 Get-PowerAppsEnvironment | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
-```
+~~~~
 
 ### PowerApps Admin PowerShell cmdlets
 An admin can export all of the environments that have been created by a user via the **Get-AdminEnvironment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
-```PowerShell
+
+~~~~
 Add-PowerAppsAccount
 $userId = "7557f390-5f70-4c93-8bc4-8c2faabd2ca0"
 Get-AdminEnvironment -CreatedBy $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
-```
+~~~~
  
 ## Step #2: Export the user’s environment permissions
 Users can be assigned permissions (such as Environment Admin, Environment Maker, etc.) in an environment, which is stored in the PowerApps service as a “role assignment.”
@@ -114,11 +116,11 @@ An admin can export a user’s environment permissions starting from the [PowerA
 #### PowerApps Admin PowerShell cmdlets
 An admin can export all environment role assignments for a user across all environments without a Common Data Service for Apps database via the **Get-AdminEnvironmentRoleAssignment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 Get-AdminEnvironmentRoleAssignment -UserId $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
-```
+~~~~
 
 > **Important**: : This function only works for environments that do not have a Common Data Service For Apps database instance.  
 
@@ -155,11 +157,11 @@ An admin can export apps created by a user starting from the [PowerApps Admin Ce
 ### PowerApps Admin PowerShell cmdlets
 An admin can export apps created by a user via the **Get-AdminApp** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 Get-AdminApp -Owner $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
-```
+~~~~
 
 ## Step #4: Export the user’s permissions to canvas apps
 Whenever an app is shared with a user, PowerApps stores a record called a “role assignment” that describes the user’s permissions (CanEdit or CanUser) to the application. For more information see the [Share an app](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/share-app#share-an-app) article.
@@ -167,10 +169,10 @@ Whenever an app is shared with a user, PowerApps stores a record called a “rol
 ### PowerApps Maker PowerShell cmdlets
 A user can export the app role assignments for all apps that they have access to via the **Get-RoleAssignment** function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
-```
+~~~~
 Add-PowerAppsAccount
 Get-AppRoleAssignment | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
-```
+~~~~
 
 ### PowerApps Admin Center
 An admin can export app roles assignments for a user starting from the [PowerApps Admin Center](https://admin.powerapps.com/) via the following steps:
@@ -192,11 +194,11 @@ An admin can export app roles assignments for a user starting from the [PowerApp
 ### PowerApps Admin PowerShell cmdlets
 An admin can export all app role assignments for a user across all apps in their tenant via the **Get-AdminAppRoleAssignment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
-```
+~~~~
 Add-PowerAppsAccount
 $userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
 Get-AdminAppRoleAssignment -UserId $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
-```
+~~~~
 
 ## Step #5: Export personal data contained within connections created by the user
 Connections are used in conjunction with connectors when establishing connectivity with other APIs and SaaS systems.  Connections do include references to the user who created them and as a result, can be deleted to remove any references to the user.
@@ -204,10 +206,10 @@ Connections are used in conjunction with connectors when establishing connectivi
 ### PowerApps Maker PowerShell cmdlets
 A user can export all of the connections they have access to via the **Get-Connection** function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
-```
+~~~~
 Add-PowerAppsAccount
 Get-Connection | ConvertTo-Json | out-file -FilePath "UserDetails.json"
-```
+~~~~
 
 ### PowerApps Admin PowerShell cmdlets
 The function for an admin to export connections created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
@@ -216,10 +218,10 @@ The function for an admin to export connections created by a user using the [Pow
 ### PowerApps Maker PowerShell cmdlets
 A user can export the connection role assignments for all connections that they have access to via the **Get-ConnectionRoleAssignment** function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
-```
+~~~~
 Add-PowerAppsAccount
 Get-ConnectionRoleAssignment | ConvertTo-Json | out-file -FilePath "UserDetails.json"
-```
+~~~~
 
 ### PowerApps Admin PowerShell cmdlets
 The function for an admin to export connection role assignments for a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
@@ -231,10 +233,10 @@ Custom Connectors supplement the existing out of box connectors and allow for co
 ### PowerApps Maker PowerShell cmdlets
 A user can export all custom connectors they have created to via the **Get-Connector** function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
-```
+~~~~
 Add-PowerAppsAccount  
 Get-Connector -FilterNonCustomConnectors | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
-```
+~~~~
 
 ### PowerApps Admin PowerShell cmdlets
 The function for an admin to export custom connectors created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
@@ -243,10 +245,10 @@ The function for an admin to export custom connectors created by a user using th
 ### PowerApps Maker PowerShell cmdlets
 A user can export all connector role assignments for the custom connectors they have access to via the Get-ConnectorRoleAssignment function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
-```
+~~~~
 Add-PowerAppsAccount  
 Get-ConnectorRoleAssignment | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
-```
+~~~~
 
 ### PowerApps Admin PowerShell cmdlets
 The function for and admin to export custom connector role assignments for a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
