@@ -1,6 +1,6 @@
 ---
-title: Introduction | Microsoft Docs
-description: Information about how to create and use custom business apps with Microsoft PowerApps
+title: What are canvas apps? | Microsoft Docs
+description: How to design and build a custom line-of-business app from a canvas in PowerApps
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -18,7 +18,7 @@ ms.date: 03/14/2018
 ms.author: anneta
 
 ---
-# Introduction to PowerApps
+# What are canvas apps in PowerApps?
 Welcome to PowerApps! PowerApps is a service that lets you build business apps that run in a browser or on a phone or tablet, and no coding experience is required. PowerApps combines visual drag-and-drop concepts from PowerPoint with Excel-like expressions for logic and working with data.
 
 With PowerApps, you can integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md) into one powerful app. You can also create apps for users to run in SharePoint, Power BI, and Teams.
