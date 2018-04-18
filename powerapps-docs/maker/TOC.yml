@@ -210,6 +210,8 @@
   items:
   - name: Overview of sample apps
     href: ./model-driven-apps/overview-model-driven-samples.md
+  - name: Build your first model-driven app
+    href: .//model-driven-apps/build-first-model-driven-app.md
   - name: Share a model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
   - name: For Developers
