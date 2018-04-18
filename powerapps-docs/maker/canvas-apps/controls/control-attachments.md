@@ -31,6 +31,8 @@ The attachment control has the following temporary limitations:
 
 1. You can only upload files up to 10 MB in size.  
 
+1. Currently, iOS devices can only upload files from documents and cloud storage accounts. To attach photos/videos, please use the web browser on your iOS device to run the app.
+
 ## Description
 An **Attachments** control lets you open files stored on a data source as well as add and delete files from a SharePoint list.
 
