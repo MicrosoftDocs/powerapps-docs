@@ -38,8 +38,8 @@ Sign in to [PowerApps](https://web.powerapps.microsoft.com/). If you don’t alr
 3. From the left pane, select **Apps**, and then select **Create an app**.
 
 4.	On the **Create a New App** page, enter the following details, and then select **Done**: 
-* **Name**: Enter a name for the app, such as *Myfirstapp*. 
-* **Description**: Type a short description of what the app is or does, such as *This is my first app*.
+  - **Name**: Enter a name for the app, such as *Myfirstapp*. 
+  - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
 For information about the additional app properties, see [Create an app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
  
     ![Create-new-app](media/build-first-model-driven-app/create-new-app.png)
@@ -51,8 +51,8 @@ From the app designer you add components to your app.
     ![Create-new-sitemap](media/build-first-model-driven-app/new-sitemap.png)
 
 2.	On the sitemap designer select **New Subarea**, in the right pane select the **Properties** tab, and then select the following properties.
-- **Type**: Entity
-- **Entity**: Account
+  - **Type**: Entity
+  - **Entity**: Account
 
     ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png)
 
