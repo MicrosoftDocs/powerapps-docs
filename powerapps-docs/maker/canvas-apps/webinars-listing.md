@@ -43,10 +43,7 @@ PowerApps is fantastic at creating business applications FAST. This video shows 
 <br>by Audrie Gordon & Laura Rodgers
 <br>*May 14th, 10:00AM PST, 12:00PM EST*
 
-Laura Rogers from IW Mentor has been training, and delivering production apps, to enterprises for many years. We've all learned much from her, especially those of us working with SharePoint technologies. During this webinar, Laura will share best practices and lessons learned, for building production level apps using PowerApps and the Business Application Platform. PLUS she will demo an outstanding production app for tracking bills and measures.
-
-You won't want to miss this event! 
-
+Laura Rogers from IW Mentor has been training, and delivering production apps, to enterprises for many years. We've all learned much from her, especially those of us working with SharePoint technologies. During this webinar, Laura will share best practices and lessons learned, for building production level apps using PowerApps and the Business Application Platform. PLUS she will demo an outstanding production app for tracking bills and measures.You won't want to miss this event! 
 IW Mentor Website: https://www.iwmentor.com/
 
 [Click here to watch on May 14th](https://www.youtube.com/watch?v=I50GtV9w7Os)
@@ -188,7 +185,6 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Connector Series | Project Online (PWA)**
 <br>by Audrie Gordon 
 [Watch now](https://www.youtube.com/watch?v=oncGxlmFqy8)
-
 
 
 ### App Designer Topics ###
