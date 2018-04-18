@@ -91,6 +91,11 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Jono Luk
 [Watch now](https://info.microsoft.com/US-PowerBI-WBNR-FY17-04Apr-18-GettingStartedwiththeCommonDataServices312618_01Registration-ForminBody.html)
 
+**Getting Started with Model Driven Apps**
+<br>by Adrian Orth
+[Watch now](https://www.youtube.com/watch?v=buDDSzJTgns)
+
+
 ### Pro Topics ###
 **Deploying your PowerApps applications**
 <br>by James Oleinik
