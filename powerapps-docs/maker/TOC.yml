@@ -6,6 +6,12 @@
       href: signup-for-powerapps.md
     - name: Sign up for the PowerApps Community Plan
       href: dev-community-plan.md
+    - name: What's new
+      href: ./canvas-apps/release-notes.md
+    - name: Common issues and resolutions
+      href: ./canvas-apps/common-issues-and-resolutions.md
+    - name: Upcoming and recent webinars
+      href: ./canvas-apps/webinars-listing.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
@@ -123,12 +129,14 @@
         href: ./canvas-apps/add-scrolling-screen.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
-      - name: Create Accessible Apps
+      - name: Create an accessible app
         href: ./canvas-apps/accessible-apps.md
     - name: Manage your app
       items:
       - name: Introduction to powerapps.com
         href: ./canvas-apps/intro-maker-portal.md
+      - name: Work with environments
+        href: ./canvas-apps/working-with-environments.md
       - name: Edit an app
         href: ./canvas-apps/edit-app.md
       - name: Change screen size and orientation
@@ -195,21 +203,13 @@
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
       href: ./canvas-apps/limits-and-config.md
-  - name: Resources
-    items:
-    - name: Work with environments
-      href: ./canvas-apps/working-with-environments.md
-    - name: What's new
-      href: ./canvas-apps/release-notes.md
-    - name: Common issues and resolutions
-      href: ./canvas-apps/common-issues-and-resolutions.md
-    - name: Upcoming and recent webinars
-      href: ./canvas-apps/webinars-listing.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
   - name: Overview of sample apps
     href: ./model-driven-apps/overview-model-driven-samples.md
+  - name: Build your first model-driven app
+    href: .//model-driven-apps/build-first-model-driven-app.md
   - name: Share a model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
   - name: For Developers
