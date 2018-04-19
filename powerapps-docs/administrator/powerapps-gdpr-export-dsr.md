@@ -297,7 +297,7 @@ Certain PowerApps licenses allow users within your organization to create CDS fo
 
 For guidance on how to respond to DSR requests for users that use CDS for Apps, see [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251).
 
-> [!IMPORTANT]
+> [!IMPORTANT] 
 >  We recommend that administrators complete this step for PowerApps users.
 >
 >
