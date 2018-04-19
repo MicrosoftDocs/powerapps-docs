@@ -21,7 +21,7 @@ ms.author: sharik
 ---
 
 # What's the role of a PowerApps administrator?
-Administration of PowerApps, Microsoft Flow, and Common Data Service for Apps is done through the [PowerApps Admin center]([https://admin.powerapps.com).
+Administration of PowerApps, Microsoft Flow, and Common Data Service for Apps is done through the [PowerApps Admin center](https://admin.powerapps.com).
 
 ![](./media/index/admin-center.png)
 
