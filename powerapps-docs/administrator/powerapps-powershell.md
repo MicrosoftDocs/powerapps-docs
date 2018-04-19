@@ -97,13 +97,13 @@ In order to perform the administration operations in the admin cmdlets, you will
 | Read, update, and delete canvas app permissions | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
 | Read, update, and delete flows | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
 
-> [!NOTE]
-> The following commands can be used to understand syntax and view samples for each of the cmdlets:
->```
->Get-Help Get-PowerAppsEnvironment
->Get-Help Get-PowerAppsEnvironment -Examples
->Get-Help Get-PowerAppsEnvironment -Detailed
->```
+>**NOTE** The following commands can be used to understand syntax and view sample for each of the cmdlets:
+
+~~~~
+Get-Help Get-AdminEnvironment
+Get-Help Get-AdminEnvironment -Examples
+Get-Help Get-AdminEnvironment -Detailed
+~~~~
 
 ## Questions?
 
