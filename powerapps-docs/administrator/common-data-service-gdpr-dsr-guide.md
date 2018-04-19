@@ -149,11 +149,9 @@ From the [PowerApps admin center](https://admin.powerapps.com/):
 6.	Select Enabled Users view.
 7.	Click on the Export to Excel button.
 
-#### Audit history
-.  Screen shots of the Audit history can be captured and copied from the application by taking the steps outlined below.
-
-From the [PowerApps admin center](https://admin.powerapps.com/):
-
+#### Audit History
+Screen shots of the Audit history can be captured and copied from the application by taking the steps outlined below.
+From the [PowerApps Admin Center](https://admin.powerapps.com/),
 1.	Navigate to the Environments tab.
 2.	From the list of Environments, select an Environment.
 3.	Click on the Dynamics 365 Administration Center link.
@@ -196,7 +194,7 @@ From the [PowerApps admin center](https://admin.powerapps.com/),
 
 #### Remove user personal data via Excel import/export
 1.	Click **Settings** > **Security** > **Users**.
-2.	Select ****Disabled Users** view.
+2.	Select **Disabled Users** view.
 3.	Create an Excel template with all the user personal data columns that you want to update.
 4.	Click on **Download File**
 5.	Open the downloaded Excel file, make your updates, and save the file.
@@ -244,10 +242,10 @@ The CDS administrator can then access the CDS environment and perform a search.
 
 3.	Enter the individual’s personal data in the Search box.
 4.	Click the Search button.
- 
-Personal data in your content is typically stored in the key entities, e.g. Account, Contact, Lead, Opportunity, etc., but it’s your responsibility to maintain an inventory of where you store personal data of individuals.
 
     ![PowerApps Relevance Search Results](./media/common-data-service-gdpr-dsr-guide/powerapps-relevance-search-results.png)
+
+Personal data in your content is typically stored in the key entities, e.g. Account, Contact, Lead, Opportunity, etc., but it’s your responsibility to maintain an inventory of where you store personal data of individuals.
 
 ### Rectify
 The CDS system administrator can update an individual’s personal data by using the list of results from the  Relevance Search.  However, you may have stored this individual’s personal data in other custom entities as well.  The CDS system administrator is responsible for maintaining an inventory of these other custom entities and making the appropriate update to the individual’s personal data.

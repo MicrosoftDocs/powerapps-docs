@@ -102,7 +102,6 @@ Data subjects may request that you restrict processing of their personal data.  
     - account(s)
     - system-generated logs
     - associated logs
-
 - Delete the account and associated data residing within Microsoft systems.
 
 ## Export
