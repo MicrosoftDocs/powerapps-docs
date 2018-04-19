@@ -48,7 +48,7 @@ PowerApps user settings, user-app settings, and notifications | | Maker: Availab
 
 > *** An administrator will be able to access these resources from [PowerApps](https://web.powerapps.com) only if the owner of the resource has explicitly granted him or her access.  If that's not the case, the administrator will need to leverage the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804).
 
-## Pre-requisites
+## Prerequisites
 
 ### For users
 Any user with a valid PowerApps license can perform the user operations outlined in this document using [PowerApps](https://web.powerapps.com) or [Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448).
@@ -287,7 +287,7 @@ There are also PowerShell cmdlets that allow you to retrieve, manage, and delete
 ## Step 11: Export the user’s personal data in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see [Executing DSRs against Microsoft Flow Customer Data](https://go.microsoft.com/fwlink/?linkid=872250).
 
-> [!IMPORTANT]
+> [!IMPORTANT] 
 >  We recommend that administrators complete this step for PowerApps users.
 >
 >
