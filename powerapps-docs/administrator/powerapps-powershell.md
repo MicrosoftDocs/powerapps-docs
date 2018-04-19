@@ -54,7 +54,7 @@ To run the PowerShell cmdlets for app creators, you first need to take the follo
 
 ## PowerApps cmdlets for app makers (preview)
 
-### Pre-requisite
+### Prerequisite
 Any user with a valid PowerApps license will be able to perform the operations in these cmdlets. But they will only have access to the resources (e.g. apps, flows, etc.) that have been created or shared with them.
 
 ### Cmdlet list
@@ -73,15 +73,15 @@ Any user with a valid PowerApps license will be able to perform the operations i
 
 > [!NOTE]
 > The following commands can be used to understand syntax and view samples for each of the cmdlets:
->~~~~
+>```
 >Get-Help Get-PowerAppsEnvironment
 >Get-Help Get-PowerAppsEnvironment -Examples
 >Get-Help Get-PowerAppsEnvironment -Detailed
->~~~~
+>```
 
 ## PowerApps cmdlets for administrators (preview)
 
-### Pre-requisite
+### Prerequisite
 In order to perform the administration operations in the admin cmdlets, you will need an account with the following permissions:
 
 - A paid PowerApps Plan 2 license, or a PowerApps Plan 2 trial license. You can sign up for a 30-day trial license at [http://web.powerapps.com/trial](http://web.powerapps.com/trial). Trial licenses can be renewed if they have expired.
@@ -97,12 +97,12 @@ In order to perform the administration operations in the admin cmdlets, you will
 | Read, update, and delete canvas app permissions | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
 | Read, update, and delete flows | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
 
->[!NOTE] The following commands can be used to understand syntax and view sample for each of the cmdlets:
->~~~~
+> [!NOTE] The following commands can be used to understand syntax and view sample for each of the cmdlets:
+>```
 >Get-Help Get-AdminEnvironment
 >Get-Help Get-AdminEnvironment -Examples
 >Get-Help Get-AdminEnvironment -Detailed
->~~~~
+>```
 
 ## Questions?
 

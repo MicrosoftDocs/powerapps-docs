@@ -98,9 +98,11 @@ PowerApps has dependencies on Azure Active Directory for determining identity. I
 Data subjects may request that you restrict processing of their personal data.  We provide both pre-existing application programming interfaces (APIs) and user interfaces (UIs).  These experiences provide the enterprise customer’s tenant administrator the capability to manage such DSRs through a combination of data export and data deletion. A customer may request:
 
 - Export an electronic copy of the personal data of the user, including:
+
     - account(s)
     - system-generated logs
     - associated logs
+    
 - Delete the account and associated data residing within Microsoft systems.
 
 ## Export
