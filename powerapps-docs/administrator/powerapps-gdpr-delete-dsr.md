@@ -61,7 +61,7 @@ Custom-connector permissions | | App creator: Available <br> Admin: Under develo
 
 \** With the introduction of CDS for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the instance of that database. See [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251) for guidance on how to respond to DSRs for users of CDS for Apps.
 
-## Prerequisites
+## Pre-requisites
 
 ### For users
 Any user with a valid PowerApps license can perform the user operations outlined in this document using the [PowerApps site](https://web.powerapps.com) or [PowerShell cmdlets for app creators](https://go.microsoft.com/fwlink/?linkid=871448).

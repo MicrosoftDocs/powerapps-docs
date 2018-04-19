@@ -48,7 +48,7 @@ PowerApps user settings, user-app settings, and notifications | | Maker: Availab
 
 > *** An administrator will be able to access these resources from [PowerApps](https://web.powerapps.com) only if the owner of the resource has explicitly granted him or her access.  If that's not the case, the administrator will need to leverage the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804).
 
-## Prerequisites
+## Pre-requisites
 
 ### For users
 Any user with a valid PowerApps license can perform the user operations outlined in this document using [PowerApps](https://web.powerapps.com) or [Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448).
@@ -297,7 +297,7 @@ Certain PowerApps licenses allow users within your organization to create CDS fo
 
 For guidance on how to respond to DSR requests for users that use CDS for Apps, see [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251).
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 >  We recommend that administrators complete this step for PowerApps users.
 >
 >

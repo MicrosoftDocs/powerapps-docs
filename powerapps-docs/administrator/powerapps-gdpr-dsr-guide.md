@@ -97,13 +97,11 @@ PowerApps has dependencies on Azure Active Directory for determining identity. I
 ## Restrict
 Data subjects may request that you restrict processing of their personal data.  We provide both pre-existing application programming interfaces (APIs) and user interfaces (UIs).  These experiences provide the enterprise customer’s tenant administrator the capability to manage such DSRs through a combination of data export and data deletion. A customer may request:
 
-1. Export an electronic copy of the personal data of the user, including:
-
+- Export an electronic copy of the personal data of the user, including:
     - account(s)
     - system-generated logs
     - associated logs
-
-2. Delete the account and associated data residing within Microsoft systems.
+- Delete the account and associated data residing within Microsoft systems.
 
 ## Export
 The “right of data portability” allows a data subject to request a copy of their personal data in an electronic format (that’s a “structured, commonly used, machine read-able and interoperable format”) that may be transmitted to another data controller.
