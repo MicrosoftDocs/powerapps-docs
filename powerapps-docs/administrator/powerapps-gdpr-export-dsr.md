@@ -66,19 +66,11 @@ To perform the administration operations outlined in this document using the Pow
 Administrators can export all environments created by a specific user from the [PowerApps Admin Center](https://admin.powerapps.com/) by following these steps:
 1. From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization.
 
-<<<<<<< Updated upstream
-    ![Admin Center Landing Page](./media/gdpr-dsr-guide/admin-center-landing.png)
-=======
   ![Admin Center Landing Page](./media/powerapps-gdpr-export-dsr/admin-center-landing.png)
->>>>>>> Stashed changes
 
 2. If the environment was created by the user from the DSR request, go to the **Details** page, copy the details, and then paste them into a document editor, such as Microsoft Word.
 
-<<<<<<< Updated upstream
-    ![Environment details](./media/gdpr-dsr-guide/environment-details.png)
-=======
   ![Environment details](./media/powerapps-gdpr-export-dsr/environment-details.png)
->>>>>>> Stashed changes
 
 ### PowerApps Maker PowerShell cmdlets
 Users can export the environments they have access to in PowerApps by using the **Get-PowerAppsEnvironment** function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
@@ -107,11 +99,7 @@ Administrators can export a user’s environment permissions from the [PowerApps
 
 1. From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
 
-<<<<<<< Updated upstream
-    ![Admin Center Landing Page](./media/gdpr-dsr-guide/admin-center-landing.png)
-=======
   ![Admin Center Landing Page](./media/powerapps-gdpr-export-dsr/admin-center-landing.png)
->>>>>>> Stashed changes
 
 2.	Select **Security**.
 
@@ -119,11 +107,7 @@ Administrators can export a user’s environment permissions from the [PowerApps
 
 3. Select both **Environment Admin** and **Environment Maker** separately, and then using the search bar, search for the user’s name.
 
-<<<<<<< Updated upstream
-    ![Environment roles page](./media/gdpr-dsr-guide/admin-environment-role-share-page.png)
-=======
   ![Environment roles page](./media/powerapps-gdpr-export-dsr/admin-environment-role-share-page.png)
->>>>>>> Stashed changes
 
 5. If the user has access to either role, go to the **Users** page, copy the details, and then paste them into a document editor, such as Microsoft Word.
 
@@ -154,33 +138,19 @@ An administrator can export apps created by a user starting from the [PowerApps 
 
 1. From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
 
-<<<<<<< Updated upstream
-    ![Admin Center Landing Page](./media/gdpr-dsr-guide/admin-center-landing.png)
-=======
   ![Admin Center Landing Page](./media/powerapps-gdpr-export-dsr/admin-center-landing.png)
->>>>>>> Stashed changes
 
 2.  Select **Resources**, and then select **Apps**.
 
 3. Using the search bar, search for the user’s name, which brings up any apps that user created within this environment:
 
-<<<<<<< Updated upstream
-    ![Search apps](./media/gdpr-dsr-guide/search-apps.png)
-=======
   ![Search apps](./media/powerapps-gdpr-export-dsr/search-apps.png)
->>>>>>> Stashed changes
 
 4. Select **Share** for each of the apps created by that user and give yourself **Can edit** access to the app:
 
-<<<<<<< Updated upstream
-    ![Select app share](./media/gdpr-dsr-guide/select-share.png)
-
-    ![Give a user access](./media/gdpr-dsr-guide/grant-access.png)
-=======
   ![Select app share](./media/powerapps-gdpr-export-dsr/select-share.png)
 
   ![Give a user access](./media/powerapps-gdpr-export-dsr/grant-access.png)
->>>>>>> Stashed changes
 
 5. Once you have access to each of the user’s apps you can export an app from [PowerApps](https://web.powerapps.com). For step-by-step instructions on how to export an app, see [Exporting an app](environment-and-tenant-migration.md#exporting-an-app).
 
@@ -209,29 +179,17 @@ Administrators can export app roles assignments for a user from the [PowerApps A
 
 1. From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
 
-<<<<<<< Updated upstream
-    ![Admin Center Landing Page](./media/gdpr-dsr-guide/admin-center-landing.png)
-=======
   ![Admin Center Landing Page](./media/powerapps-gdpr-export-dsr/admin-center-landing.png)
->>>>>>> Stashed changes
 
 2. For each environment, select **Resources**, and then select **Apps**.
 
 3. Select **Share** for each of the apps in the environment.
 
-<<<<<<< Updated upstream
-    ![Select app share](./media/gdpr-dsr-guide/select-admin-share-nofilter.png)
-=======
   ![Select app share](./media/powerapps-gdpr-export-dsr/select-admin-share-nofilter.png)
->>>>>>> Stashed changes
 
 4. If the user has access to the app, go to the app’s **Share** page, copy the details, and then paste them into a document editor, such as Microsoft Word.
 
-<<<<<<< Updated upstream
-    ![Admin app share page](./media/gdpr-dsr-guide/admin-share-page.png)
-=======
   ![Admin app share page](./media/powerapps-gdpr-export-dsr/admin-share-page.png)
->>>>>>> Stashed changes
 
 ### PowerApps Admin PowerShell cmdlets
 Administrators can export all app role assignments for a user across all apps in their tenant by using the **Get-AdminAppRoleAssignment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
@@ -313,27 +271,15 @@ Users can export the personal data stored within the gateway service from [Power
 
 1. From [PowerApps](https://web.powerapps.com), within the default environment for your tenant, select **Gateways**, and then select **Details** for each gateway to which you have access.
 
-<<<<<<< Updated upstream
-    ![Gateway landing page](./media/gdpr-dsr-guide/gateway-select-details.png)
-=======
   ![Gateway landing page](./media/powerapps-gdpr-export-dsr/gateway-select-details.png)
->>>>>>> Stashed changes
 
 2. On the **Details** page, if the gateway details contain any personal data, copy the details, and then paste them into a document editor, such as Microsoft Word.
 
-<<<<<<< Updated upstream
-    ![Gateway details](./media/gdpr-dsr-guide/gateway-details-drillin.png)
-=======
   ![Gateway details](./media/powerapps-gdpr-export-dsr/gateway-details-drillin.png)
->>>>>>> Stashed changes
 
 3. Select **Share**, copy the contents of the page, and then paste it into a document editor, such as Microsoft Word.
 
-<<<<<<< Updated upstream
-    ![Gateway details](./media/gdpr-dsr-guide/gateway-details-share.png)
-=======
   ![Gateway details](./media/powerapps-gdpr-export-dsr/gateway-details-share.png)
->>>>>>> Stashed changes
 
 ### Gateway PowerShell cmdlets
 There are also PowerShell cmdlets that allow you to retrieve, manage, and delete your personal gateways. For more information, see [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238).
