@@ -287,7 +287,7 @@ There are also PowerShell cmdlets that allow you to retrieve, manage, and delete
 ## Step 11: Export the user’s personal data in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see [Executing DSRs against Microsoft Flow Customer Data](https://go.microsoft.com/fwlink/?linkid=872250).
 
-> [!IMPORTANT]
+> [!IMPORTANT] 
 >  We recommend that administrators complete this step for PowerApps users.
 >
 >
