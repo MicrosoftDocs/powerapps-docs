@@ -22,7 +22,9 @@ ms.author: fikaradz
 A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description
-An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL with optional closed captions.
+An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file.
+
+A **Video** control plays a video clip from a file or from YouTube or Azure Media Services.  Closed captions can optionally be shown when specified.
 
 ## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.
@@ -105,7 +107,13 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 5. Press Esc to return to the default workspace.
 
 ### Play a YouTube video
-1. Add a **Video** control, and set its **Media** property to the URL, enclosed in double quotation marks, of a YouTube video.
+1. Add a **Video** control, and set its **Media** property to the URL of the YouTube video, enclosed in double quotation marks.
+2. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
+3. Press Esc to return to the default workspace.
+
+### Play a video from Azure Media Services
+1. After the videos are published on AMS, copy the manifest URL. Start the streaming endpoint of your service, if not already.
+1. Add a **Video** control, and set its **Media** property to the URL of the AMS video, enclosed in double quotation marks.
 2. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
 3. Press Esc to return to the default workspace.
 
