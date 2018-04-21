@@ -23,9 +23,9 @@ ms.author: jamesol
 # Responding to Data Subject Rights (DSR) Requests for PowerApps Customer Data
 
 ## Introduction to DSR Requests
-As part of our commitment to partner with you on your journey to the GDPR, we’ve developed this documentation to help you prepare. The documentation not only describes what we’re doing to prepare for the GDPR but also shares examples of steps you can take today with Microsoft to support GDPR compliance when using PowerApps, Microsoft Flow, and Common Data Service for Apps.
+As part of our commitment to partner with you on your European Union (EU) General Data Protection Regulation (GDPR)compliance journey, we’ve developed this documentation to help you prepare. The documentation not only describes what we’re doing to prepare for GDPR complicance, but also shares examples of steps you can take today with Microsoft to support GDPR compliance when using PowerApps, Microsoft Flow, and Common Data Service (CDS) for Apps.
 
-The EU General Data Protection Regulation (GDPR) gives rights to people (known in the regulation as data subjects) to manage the personal data that has been collected by an employer or other type of agency or organization (known as the data controller or just controller). Personal data is defined very broadly under the GDPR as any data that relates to an identified or identifiable natural person. The GDPR gives data subjects specific rights to their personal data; these rights include obtaining copies of personal data, requesting corrections to it, restricting the processing of it, deleting it, or receiving it in an electronic format so it can be moved to another controller. A formal request by a data subject to a controller to take an action on their personal data is called a Data Subject Rights (DSR) request.
+The GDPR gives rights to people (known in the regulation as data subjects) to manage the personal data that has been collected by an employer or other type of agency or organization (known as the data controller or just controller). Personal data is defined very broadly under the GDPR as any data that relates to an identified or identifiable natural person. The GDPR gives data subjects specific rights to their personal data; these rights include obtaining copies of personal data, requesting corrections to it, restricting the processing of it, deleting it, or receiving it in an electronic format so it can be moved to another controller. A formal request by a data subject to a controller to take an action on their personal data is called a Data Subject Rights (DSR) request.
 
 The guide discusses how to use Microsoft's products, services and administrative tools to help our controller customers find and act on personal data to respond to DSR requests. Specifically, this includes how to find, access, and act on personal data that reside in Microsoft's cloud. Here’s a quick overview of the processes outlined in this guide:
 
@@ -60,10 +60,10 @@ Connection permissions	| Certain types of connections can be shared with users w
 Custom connector	| Custom connectors that a user has created to provide access to a data source not offered through one of the PowerApps standard connectors. [Learn more](https://go.microsoft.com/fwlink/?linkid=872245)
 Custom-connector permissions	| Custom connectors can be shared with users within an organization. [Learn more](https://go.microsoft.com/fwlink/?linkid=872246)
 PowerApps user and user-app settings	| PowerApps stores several user preferences and settings that are used to deliver the PowerApps runtime and portal experiences.
-PowerApps notifications	| PowerApps sends several types of notifications to users including when an app is shared with them and when a Common Data Service for Apps export operation has completed.
+PowerApps notifications	| PowerApps sends several types of notifications to users including when an app is shared with them and when a CDS for Apps export operation has completed.
 Gateway	| Gateways are on-premises data gateways that can be installed by a user to transfer data quickly and securely between PowerApps and a data source that isn’t in the cloud. [Learn more](https://go.microsoft.com/fwlink/?linkid=872247)
 Gateway permissions	| Gateways can be shared with users within an organization. [Learn more](https://go.microsoft.com/fwlink/?linkid=872249)
-Model-driven apps and model-driven app permissions	| Model-driven app design is a component-focused approach to app development. Model-driven apps and their user access permissions are stored as data within the Common Data Service for Apps database.  [Learn more](https://go.microsoft.com/fwlink/?linkid=872248)
+Model-driven apps and model-driven app permissions	| Model-driven app design is a component-focused approach to app development. Model-driven apps and their user access permissions are stored as data within the CDS for Apps database.  [Learn more](https://go.microsoft.com/fwlink/?linkid=872248)
 
 PowerApps offers the following experiences to find personal data for a specific user:
 
@@ -81,7 +81,7 @@ Please see Executing DSRs against Microsoft Flow Customer Data for guidance on h
 > [!IMPORTANT]
 > It is recommended that admins complete this step for a PowerApps user
 
-### Step #3: Find personal data for the user in instances of Common Data Service (CDS) for Apps
+### Step #3: Find personal data for the user in instances of CDS for Apps
 Certain PowerApps licenses, including the PowerApps Community Plan, give the ability for users within your organization to create instances of CDS for Apps and to create and build apps on CDS for Apps. The PowerApps Community Plan is a free license that allows users to try out CDS for Apps in an individual environment. See the [PowerApps Pricing](https://powerapps.microsoft.com/pricing/) page for which capabilities are included in each PowerApps license.
 
 Please see Executing DSRs against Common Data Service Customer Data for guidance on how to discover personal data stored by CDS for Apps.

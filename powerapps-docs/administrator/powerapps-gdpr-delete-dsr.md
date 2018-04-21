@@ -21,7 +21,7 @@ ms.author: jamesol
 
 # Responding to Delete Data Subject Rights (DSR) Requests for Customer Data in PowerApps
 
-The “right to erasure” by the removal of personal data from an organization’s customer data is a key protection in the General Data Protection Regulation (GDPR). Removing personal data includes removing system-generated logs but not audit log information.
+The “right to erasure” by the removal of personal data from an organization’s customer data is a key protection in the European Union (EU) General Data Protection Regulation (GDPR). Removing personal data includes removing system-generated logs but not audit log information.
 
 PowerApps allows users to build line-of-business applications that are a critical part of your organization’s day-to-day operations. When a user leaves your organization, you will need to manually review and determine whether to delete certain data and resources that the user created. Other personal data will be automatically deleted whenever the user’s account is deleted from Azure Active Directory.
 

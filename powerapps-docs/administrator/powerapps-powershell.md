@@ -92,7 +92,7 @@ In order to perform the administration operations in the admin cmdlets, you will
 | Purpose | Cmdlets
 | --- | ---
 | Read and delete environments | Get-AdminEnvironment <br> Remove-AdminEnvironment
-| Read, update, and delete environment privileges <br><br> *These cmdlets only work for environments that do not have a Common Data Service for Apps database.* | Get-AdminEnvironmentRoleAssignment <br> Set-AdminEnvironmentRoleAssignment <br> Remove-AdminEnvironmentRoleAssignment
+| Read, update, and delete environment privileges <br><br> *These cmdlets only work for environments that do not have a Common Data Service (CDS) for Apps database.* | Get-AdminEnvironmentRoleAssignment <br> Set-AdminEnvironmentRoleAssignment <br> Remove-AdminEnvironmentRoleAssignment
 | Read and remove canvas apps | Get-AdminApp <br> Remove-AdminApp
 | Read, update, and delete canvas app permissions | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
 | Read, update, and delete flows | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole

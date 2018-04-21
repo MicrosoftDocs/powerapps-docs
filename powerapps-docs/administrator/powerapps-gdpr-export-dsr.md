@@ -44,7 +44,7 @@ Connection | | Maker: Available <br> Admin: Under development
 Connection permissions	| | Maker: Available <br> Admin: Under development
 PowerApps user settings, user-app settings, and notifications | | Maker: Available <br> Admin: Under development
 
-> ** With the introduction of Common Data Service for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the CDS for Apps database instance. Please see [Executing DSR requests against Common Data Service for Apps customer data](https://go.microsoft.com/fwlink/?linkid=872251), for guidance on how to respond to DSR requests for users that use CDS for Apps.
+> ** With the introduction of Common Data Service (CDS) for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the CDS for Apps database instance. Please see [Executing DSR requests against Common Data Service for Apps customer data](https://go.microsoft.com/fwlink/?linkid=872251), for guidance on how to respond to DSR requests for users that use CDS for Apps.
 
 > *** An administrator will be able to access these resources from [PowerApps](https://web.powerapps.com) only if the owner of the resource has explicitly granted him or her access.  If that's not the case, the administrator will need to leverage the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804).
 
