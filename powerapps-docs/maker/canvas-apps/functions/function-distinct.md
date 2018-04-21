@@ -1,7 +1,6 @@
 ---
 title: Distinct function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Distinct function in PowerApps
-services: ''
 documentationcenter: na
 author: gregli-msft
 manager: kfile

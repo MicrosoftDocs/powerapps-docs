@@ -2,7 +2,7 @@
 title: Core properties | Microsoft Docs
 description: Reference information about the Disabled, Visible, and ReadOnly properties
 documentationcenter: na
-author: fikaradz
+author: gregli-msft
 manager: kfile
 editor: ''
 tags: ''

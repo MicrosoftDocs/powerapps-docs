@@ -2,7 +2,7 @@
 title: Size and location properties | Microsoft Docs
 description: Reference material for properties such as Height and Width
 documentationcenter: na
-author: fikaradz
+author: gregli-msft
 manager: kfile
 editor: ''
 tags: ''

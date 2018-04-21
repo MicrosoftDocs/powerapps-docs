@@ -11,7 +11,6 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: reference
 ms.component: canvas
-ms.workload: na
 ms.date: 01/26/2017
 ms.author: fikaradz
 
