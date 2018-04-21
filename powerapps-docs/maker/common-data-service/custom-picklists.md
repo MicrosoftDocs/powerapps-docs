@@ -1,7 +1,6 @@
 ---
 title: Quickstart for creating an Option set| Microsoft Docs
 description: In this quickstart, you create an Option set
-services: powerapps
 documentationcenter: na
 author: clwesene
 manager: kfile
@@ -10,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: cds
 ms.date: 3/21/2018
 ms.author: clwesene
 
