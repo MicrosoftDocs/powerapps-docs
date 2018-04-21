@@ -1,16 +1,19 @@
 ---
 title: ForAll function | Microsoft Docs
 description: Reference information, including syntax and examples, for the ForEach function in PowerApps
+services: ''
+suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: kfile
+manager: anneta
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: reference
-ms.component: canvas
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
 ms.date: 04/26/2016
 ms.author: gregli
 

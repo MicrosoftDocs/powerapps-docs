@@ -1,16 +1,19 @@
 ---
 title: UpdateContext function | Microsoft Docs
 description: Reference information, including syntax and examples, for the UpdateContext function in PowerApps
+services: ''
+suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: kfile
+manager: anneta
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: reference
-ms.component: canvas
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
 ms.date: 11/08/2015
 ms.author: gregli
 

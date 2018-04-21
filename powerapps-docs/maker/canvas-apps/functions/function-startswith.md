@@ -1,16 +1,19 @@
 ---
 title: EndsWith and StartsWith functions | Microsoft Docs
 description: Reference information, including syntax and examples for the EndsWith and StartsWith functions in PowerApps
+services: ''
+suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: kfile
+manager: anneta
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: reference
-ms.component: canvas
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
 ms.date: 07/24/2017
 ms.author: gregli
 
