@@ -1,19 +1,16 @@
 ---
 title: Core properties | Microsoft Docs
 description: Reference information about the Disabled, Visible, and ReadOnly properties
-services: ''
-suite: powerapps
 documentationcenter: na
-author: gregli-msft
-manager: anneta
+author: fikaradz
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
 

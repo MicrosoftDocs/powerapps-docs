@@ -1,19 +1,16 @@
 ---
 title: 'Gallery control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Gallery control
-services: ''
-suite: powerapps
 documentationcenter: na
-author: RickSaling
-manager: anneta
+author: fikaradz
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 05/25/2017
 ms.author: sharik
 

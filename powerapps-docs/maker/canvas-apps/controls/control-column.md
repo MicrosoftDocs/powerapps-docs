@@ -1,18 +1,16 @@
 ---
 title: 'Column control: reference | Microsoft Docs'
 description: This topic provides information about the Column control in Microsoft PowerApps.
-services: powerapps
 documentationcenter: na
-author: jasongre
-manager: kfend
+author: fikaradz
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 06/05/2017
 ms.author: kfend
 
