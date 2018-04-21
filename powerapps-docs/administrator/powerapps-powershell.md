@@ -36,7 +36,7 @@ To run the PowerShell cmdlets for app creators, you first need to take the follo
 4. Then run the following one-time PowerShell command (this presumes you've never run PowerShell commands on the current machine):
 
     ```
-    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
     ```
 
 5. Next import the necessary modules using the following commands:
