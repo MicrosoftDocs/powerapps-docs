@@ -1,7 +1,6 @@
 ---
 title: Filter, Search, and LookUp functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Filter and LookUp functions in PowerApps
-services: ''
 documentationcenter: na
 author: gregli-msft
 manager: kfile
