@@ -9,7 +9,7 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: conceptual
+ms.topic: sample
 ms.component: canvas
 ms.date: 04/08/2018
 ms.author: caburk

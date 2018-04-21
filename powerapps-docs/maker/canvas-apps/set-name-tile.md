@@ -3,7 +3,7 @@ title: Change app name and tile | Microsoft Docs
 description: Step-by-step instructions for changing settings such the app name and icon
 documentationcenter: na
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 

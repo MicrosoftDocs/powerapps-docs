@@ -3,7 +3,7 @@ title: Global support | Microsoft Docs
 description: Build apps that are used worldwide.
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 

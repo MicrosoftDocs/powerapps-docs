@@ -9,7 +9,6 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
-ms.workload: na
 ms.date: 03/18/2018
 ms.author: anneta
 
