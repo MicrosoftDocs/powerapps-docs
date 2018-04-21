@@ -1,8 +1,6 @@
 ---
-title: Create an app from scratch | Microsoft Docs
+title: Create an Excel app from scratch | Microsoft Docs
 description: Create an app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -11,14 +9,13 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/16/2016
 ms.author: anneta
 
 ---
-# Create an app from scratch
+# Create an Excel app from scratch
 Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
 
 By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records:

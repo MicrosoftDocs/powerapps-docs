@@ -1,21 +1,18 @@
 ---
 title: Add a screen and navigate between screens | Microsoft Docs
 description: Add a screen to an app and use next and back arrows to go between screens in PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 07/10/2017
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Add a screen and navigate between screens

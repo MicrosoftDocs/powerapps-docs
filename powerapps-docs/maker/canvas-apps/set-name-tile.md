@@ -1,8 +1,6 @@
 ---
 title: Change app name and tile | Microsoft Docs
 description: Step-by-step instructions for changing settings such the app name and icon
-services: ''
-suite: powerapps
 documentationcenter: na
 author: lonu
 manager: anneta
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/16/2016
 ms.author: lonu
 

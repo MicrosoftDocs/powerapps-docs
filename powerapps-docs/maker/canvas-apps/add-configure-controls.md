@@ -1,21 +1,18 @@
 ---
 title: Add and configure a control | Microsoft Docs
 description: Step-by-step instructions for adding and configuring controls directly, from the toolbar, in the Properties tab, or in the formula bar.
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 07/10/2017
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Add and configure a control in PowerApps

@@ -1,11 +1,9 @@
 ---
 title: Functions, signals, and enumerations | Microsoft Docs
 description: Reference information for functions, signals, and enumerations in PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 

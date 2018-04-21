@@ -1,21 +1,18 @@
 ---
 title: Overview of the SharePoint connection | Microsoft Docs
 description: See the available functions, responses, and examples for SharePoint
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: sarafankit
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2017
-ms.author: sharik
+ms.author: ankitsar
 
 ---
 # Connect to SharePoint from PowerApps

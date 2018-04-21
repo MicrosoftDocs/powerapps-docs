@@ -1,21 +1,18 @@
 ---
 title: Overview of the Power BI connection | Microsoft Docs
 description: See the available Power BI connections
-services: ''
-suite: powerapps
-documentationcenter: na
-author: sirui-sun
-manager: anneta
+documentationcenter: ''
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/12/2016
-ms.author: sirsu
+ms.author: lanced
 
 ---
 # Connect to Power BI from PowerApps

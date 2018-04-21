@@ -1,18 +1,15 @@
 ---
 title: Add a list box, a drop-down list, and radio buttons | Microsoft Docs
 description: Create or configure multiselect options in PowerApps
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/23/2016
 ms.author: lonu
 

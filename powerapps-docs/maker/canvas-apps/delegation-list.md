@@ -1,19 +1,16 @@
 ---
 title: Delegable data sources | Microsoft Docs
 description: List of all supported delegable data sources
-services: ''
-suite: powerapps
 documentationcenter: na
 author: archnair
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 08/15/2017
 ms.author: archanan
 
