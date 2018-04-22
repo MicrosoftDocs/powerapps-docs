@@ -74,7 +74,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 1. Under **Choose a table**, select the checkbox for **Schedule**, and then select **Connect**.
 
-## Add a browse screen
+## Create the browse screen
 
 1. On the **Home** tab, select the down-arrow next to **New screen** to open a list of screen types, and then select **List screen**.
 
@@ -103,6 +103,8 @@ To follow the steps below exactly, first create an Excel file using this sample 
 1. Under **Title2**, change the column shown from **Backup** to **Volunteer**.
 
      ![Change column in label](./media/get-started-create-from-blank/change-title2.png)
+
+1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
     The gallery shows the name of each volunteer, the day of that volunteer's shift, and the time when the volunteer's shift starts.
 
@@ -135,7 +137,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
 
-## Create the ChangeScreen and its banner
+## Create the change screen
 1. On the **Home** tab, select the down arrow next to **New screen**, and then select **Form screen**.
 
      ![Add form screen](./media/get-started-create-from-blank/add-form-screen.png)
@@ -154,43 +156,83 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
     ![Change title bar](./media/get-started-create-from-blank/change-title-bar2.png)
 
-## Configure navigation between screens
+## Delete and rename screens
 1. In the left navigation bar, select the ellipsis (...) for **Screen1**, and then select **Delete**.
 
     ![Delete screen](./media/get-started-create-from-blank/delete-screen.png)
 
 1. Select the ellipsis (...) for **Screen2**, select **Rename**, and then type or paste **ViewScreen**.
 
-1. 1. In the left navigation bar, select the ellipsis (...) for **Screen3**, select **Rename**, and then type or paste **ChangeScreen**.
+1. Select the ellipsis (...) for **Screen3**, select **Rename**, and then type or paste **ChangeScreen**.
 
-4. In the upper-right corner of **ViewScreen**, select the plus icon.
+## Configure icons on the view screen
+1. Near the top of the **ViewScreen**, select the circular-arrow icon.
+
+    ![Add record](./media/get-started-create-from-blank/refresh-icon.png)
+
+1. Set the **OnSelect** property for that icon to this formula:<br>**Refresh(Schedule)**
+
+    When the user selects this icon, the data from **Schedule** is refreshed.
+
+    For more information about this and other functions, see the [formula reference](formula-reference.md).
+
+1. In the upper-right corner of the **ViewScreen**, select the plus icon.
 
     ![Add record](./media/get-started-create-from-blank/add-record.png)
 
-5. Set the **[OnSelect](controls/properties-core.md)** property of the selected icon to this formula:
+1. Set the **OnSelect** property for that icon to this formula:<br>**NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)**
 
-    **NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**`
+    When the user selects this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
 
-     When the user clicks or taps this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
-1. 
+1. Select the right-pointing arrow for the first record in the gallery.
 
+    ![Select arrow](./media/get-started-create-from-blank/select-arrow.png)
 
-## Run the app
-As you customize the app, test your changes by running the app in Preview mode, as the steps in this section describe.
+1. Set the **OnSelect** property for the arrow to this formula:<br>**EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)**
 
-1. In the left navigation bar, click or tap the top thumbnail to select the **ViewScreen**.
+    When the user selects this icon, **ChangeScreen** appears with each field showing the data for the selected record, so that the user can edit or delete it more easily.
 
-2. Open Preview mode by pressing F5 (or clicking or tapping the **Preview** icon near the upper-right corner).
+## Configure icons on the change screen
+1. On **ChangeScreen**, select the "x" icon in the upper-left corner.
+
+    ![Cancel icon](./media/get-started-create-from-blank/cancel-icon.png)
+
+1. Set the **OnSelect** property for that icon to this formula:<br>**ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)**
+
+    When the user selects this icon, any changes that the user made is this screen are discarded, and the browse screen opens.
+
+1. In the upper-right corner, select the checkmark icon.
+
+    ![Checkmark icon](./media/get-started-create-from-blank/checkmark-icon.png)
+
+1. Set the **OnSelect** property for the checkmark to this formula:<br>**SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)**
+
+    When the user selects this icon, any changes that the user made is this screen are saved, and the browse screen opens.
+
+1. On the **Insert** tab, click or tap **Icons**, and then click or tap the **Trash** icon.
+
+1. Set the new icon's **Color** property to **White**, and move the new icon so it appears next to the checkmark icon.
+
+    ![Trash icon](./media/get-started-create-from-blank/trash-icon.png)
+
+1. Set the **OnSelect** property for the trash icon to this formula:<br>**Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)**
+
+    When the user selects this icon, the selected record is deleted from the data source, and the browse screen opens.
+
+## Test the app
+1. Show **ViewScreen**, and then open Preview by pressing F5 (or selecting the **Preview** icon near the upper-right corner).
 
     ![Open Preview mode](./media/get-started-create-from-blank/open-preview.png)
 
-3. Click or tap the Next arrow for a record to show details about that record.
+1. Add a record.
 
-4. On the **ChangeScreen**, change the information in one or more fields, and then save your changes by clicking or tapping **Save**, or remove the record by clicking or tapping **Remove**.
+1. Update the record that you added, and then save the changes.
 
-5. Close Preview mode by pressing Esc (or by clicking or tapping the close icon under the title bar).
+1. Update the record that you added, and then cancel the changes.
 
-    ![Close Preview mode](./media/get-started-create-from-blank/close-preview.png)
+1. Delete the record that you added.
+
+1. Close Preview mode by pressing Esc (or by selecting the close icon under the title bar).
 
 ## Next steps
 * Press Ctrl-S to save your app in the cloud so that you can run it from other devices.

@@ -118,7 +118,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 	![Next icon](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. On the **FormScreen**, click or tap the cancel icon, and set its **OnSelect** property to this formula:<br>
-`ResetForm(EditForm1);Navigate(FormScreen, ScreenTransition.None)`
+`ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
 	![Cancel icon](./media/data-platform-create-app-scratch/cancel-icon.png)
 
