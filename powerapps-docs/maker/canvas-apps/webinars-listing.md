@@ -5,7 +5,7 @@ description: Displays a listing of past and future webinars, including time/date
 services: ''
 suite: powerapps
 documentationcenter: na
-author: anhthuchang
+author: audrieMSFT
 manager: anneta
 editor: ''
 tags: ''
@@ -15,48 +15,46 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 3/1/2018
-ms.author: v-malyng
+ms.date: 4/18/2018
+ms.author: audrie
 
 ---
 # PowerApps webinar listing #
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Connector Series | Project Online (PWA)**
-<br>by Audrie Gordon
-<br>*March 12th, 10:00AM PST, 1:00PM EST*
+**Getting Started | Understanding Model Driven App Templates with Casey Burke**
+<br>by Casey Burke
+<br>*April 19th, 10:00AM PST, 12:00PM EST*
 
-In this connector series demonstration we will walkthrough usage of the Project Online (aka PWA) connector options. Feel free to join in and to bring your questions regarding building apps which leverage portfolio management tools and Project Online.
+Microsoft Program Manager Casey Burke will demonstrate and break down the architecture of a Model Driven App Template. Learn how to take these templates, and customize them to solve your own business objectives.
 
-[Click here to watch on March 12th](https://www.youtube.com/watch?v=oncGxlmFqy8)
+[Click here to watch on April 19th](https://www.youtube.com/watch?v=FShakkXKiS8) 
 
+**Deep Dive | Using PowerApps for Business Process Management (BPM) by Dawid van Heerden**
+<br>by Audrie Gordon & Dawid van Heerden
+<br>*April 23rd, 10:00AM PST, 12:00PM EST*
 
-**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard (Part 2)**
-<br>by Brian Blanchard & Audrie Gordon
-<br>*March 19th, 10:00AM PST, 1:00PM EST*
-
-This is part two of Brian Blanchard's demonstration on how he built an app for his team to manage server patching schedules. He will share the behind the scenes details of both the Azure Automation set-up and advanced workflows in Microsoft Flow. Kudos to Brian who leverages PowerApps and Flow to save time and money for his team.
-
-[Click here to watch on March 19th](https://www.youtube.com/watch?v=oncGxlmFqy8)
-
-**Deep Dive | Click-Through PowerApps Analytics by Vivek Bavishi**
-<br>by Vivek Bavishi & Audrie Gordon
-<br>*April 17th, 10:00AM PST, 1:00PM EST*
-
-Vivek Bavishi from the International PowerApps Champions group, joins Audrie Gordon from the PowerApps team, to walkthrough a simple approach for creating your own click-through analytics using PowerApps and Flow. Extend your reporting options to include statistics which will raise visibility into how your app consumers navigate your applications, enabling you to use data to validate assumptions on app usage and design! If you're a serious app maker, you don't want to miss Vivek's presentation.
-
-[Click here to watch on April 17th](https://www.youtube.com/watch?v=OM-rlhKJFTA)
-
-**Connector Series | The Advantages of Leveraging the Common Data Service**
-<br>by Audrie Gordon
-<br>*April 23rd, 10:30AM PST, 1:30PM EST*
-
-Have you started exploring the Common Data Service (aka CDS)? Are you up-to-speed on the advantages of a common data schema across your business applications? Have you heard all the buzz on what's new and exciting in that space?
-
-This webinar will dive into the advantages of leveraging the Common Data Service across all Microsoft Cloud Subscriptions (for Office 365, Azure, and Dynamics 365 app enablement). Come to this live webinar to catch a glimpse at where we're going with CDS, and how powerful it will be to model your apps using this platform. Can't wait to show you a few of the endless possibilities!
+PowerApps is fantastic at creating business applications FAST. This video shows the power of using this same platform to drive multi-step business processes, involving various roles, steps, and routing options.
 
 [Click here to watch on April 23rd](https://www.youtube.com/watch?v=JY8r46HnHoI)
+
+**Deep Dive | Laura Rogers from IWMentor Shares Best Practices for Production Apps**
+<br>by Audrie Gordon & Laura Rodgers
+<br>*May 14th, 10:00AM PST, 12:00PM EST*
+
+Laura Rogers from IW Mentor has been training, and delivering production apps, to enterprises for many years. We've all learned much from her, especially those of us working with SharePoint technologies. During this webinar, Laura will share best practices and lessons learned, for building production level apps using PowerApps and the Business Application Platform. PLUS she will demo an outstanding production app for tracking bills and measures.You won't want to miss this event! 
+IW Mentor Website: https://www.iwmentor.com/
+
+[Click here to watch on May 14th](https://www.youtube.com/watch?v=I50GtV9w7Os)
+
+**Inside the Universal Audit App: See what PowerApps and Flow are capable of  with Paul Culmsee**
+<br>by Paul Culmsee
+<br>*June 14th, 6:00PM PST, 9:00PM EST*
+
+This popular app in the PowerApps showcase has resulted in 3-5 requests a week for this app. As a result it has been deployed all around the world. In this session I will show how it was conceived, how we leveraged PowerApps and Flow to their full potential and what customizations have been done for clients. A great accompaniment session for those looking to get started by showing a complete solution in use around the world. 
+
+[Click here to watch on June 14th](https://www.youtube.com/watch?v=6Wn47bDOMEE)
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
@@ -82,18 +80,23 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=lUo0DXvJENI)
 
+**Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=obBQk-aSElI)
+
 **Get started with the Common Data Service**
 <br>by Jono Luk
 [Watch now](https://info.microsoft.com/US-PowerBI-WBNR-FY17-04Apr-18-GettingStartedwiththeCommonDataServices312618_01Registration-ForminBody.html)
+
+**Getting Started with Model Driven Apps**
+<br>by Adrian Orth
+[Watch now](https://www.youtube.com/watch?v=buDDSzJTgns)
+
 
 ### Pro Topics ###
 **Deploying your PowerApps applications**
 <br>by James Oleinik
 [Watch now](https://www.youtube.com/watch?v=LF49hFB14Cs)
-
-**Deep dive on PowerApps formulas**
-<br>by Greg Lindhorst
-[Watch now](https://www.youtube.com/watch?v=PuePMMuj5ps)
 
 **Rebuilding an InfoPath Designer form in PowerApps**
 <br>by Daniel Christian
@@ -151,21 +154,37 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Vishwas Lele
 [Watch Now](http://www.youtube.com/watch?v=eSMAAFHK44c)
 
-**Working with Connectors: Using the Planner Connector**
+
+### Deep Dives ###
+**Deep Dive | PowerApps formulas**
+<br>by Greg Lindhorst
+[Watch now](https://www.youtube.com/watch?v=PuePMMuj5ps)
+
+**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard**
+<br>by Brian Blanchard & Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=QAe0oBecowU)
+
+**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard (Part 2)**
+<br>by Brian Blanchard & Audrie Gordon
+ [Watch now](https://www.youtube.com/watch?v=FDU7ONCN4_U)
+
+**Deep Dive | Click-Through PowerApps Analytics by Vivek Bavishi**
+<br>by Vivek Bavishi & Audrie Gordon
+ [Watch now](https://www.youtube.com/watch?v=OM-rlhKJFTA)
+
+
+### Connector Series ###
+**Connector Series | Working with Connectors: Using the Planner Connector**
 <br> by Audrie Gordon
 [Watch Now](https://www.youtube.com/watch?v=NBPL9Uw7qzg)
-
-**Getting Started | Product Integrations: Teams + PowerApps Tips and Tricks**
-<br>by Audrie Gordon
-[Watch now](https://www.youtube.com/watch?v=obBQk-aSElI)
 
 **Connector Series | The Power of Office Graph with PowerApps**
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=AOGGyoElGaQ)
 
-**Deep Dive | Building Server Patching Solutions with PowerApps by Brian Blanchard**
-<br>by Brian Blanchard & Audrie Gordon
-[Watch now](https://www.youtube.com/watch?v=QAe0oBecowU)
+**Connector Series | Project Online (PWA)**
+<br>by Audrie Gordon 
+[Watch now](https://www.youtube.com/watch?v=oncGxlmFqy8)
 
 
 ### App Designer Topics ###

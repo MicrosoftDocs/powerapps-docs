@@ -55,7 +55,7 @@ When a database is created, the users who have environment roles assigned to the
     Users with **Environment Admin** role are now assigned to **System Administrator** role. 
     Users with **Environment Maker** continue to possess the same role.
 
-You can assign additional users to pre-defined roles or even create [custom roles][1]. See [Database Security](create-database.md) for more details.
+You can assign additional users to pre-defined roles or even create [custom roles][1]. See [Database Security](database-security.md) for more details.
 
 > [!NOTE]
 > On creating the database, any security group assigned to Environment Admin or Environment Maker role will not be honored any more. Currently, assigning permissions in database, do not support AAD security group.
