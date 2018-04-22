@@ -19,37 +19,30 @@ ms.author: anneta
 
 ---
 # Create an Excel app from scratch
-Create your own app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach takes much more time than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
-
-By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record.
+Create your own app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but experienced app makers can use it to build the best app for their needs.
 
 ## Prerequisites
-If you're new to PowerApps:
-
-- Learn how to [add a control and set its properties](add-configure-controls.md), which determine how the control appears and behaves.
-- Learn how to [add and rename a screen](add-screen-context-variables.md).
-
-> [!IMPORTANT]
-> You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
-
-To follow the steps below exactly, first create an Excel file using this sample data.
+To follow the steps in this tutorial exactly, first create an Excel file using this sample data.
 
 1. Copy this data, and then paste it into an Excel file.
 
-   | StartDay | StartTime | Volunteer1 | Volunteer2 |
-   | --- | --- | --- | --- |
-   | Saturday |10am-noon |Vasquez |Kumashiro |
-   | Saturday |noon-2pm |Ice |Singhal |
-   | Saturday |2pm-4-pm |Myk |Mueller |
-   | Sunday |10am-noon |Li |Adams |
-   | Sunday |10am-noon |Singh |Morgan |
-   | Sunday |10am-noon |Batye |Nguyen |
+    | StartDay | StartTime | Volunteer | Backup |
+    | --- | --- | --- | --- |
+    | Saturday |10am-noon |Vasquez |Kumashiro |
+    | Saturday |noon-2pm |Ice |Singhal |
+    | Saturday |2pm-4-pm |Myk |Mueller |
+    | Sunday |10am-noon |Li |Adams |
+    | Sunday |10am-noon |Singh |Morgan |
+    | Sunday |10am-noon |Batye |Nguyen |
 
 2. Format that data as a table, named **Schedule**, so that PowerApps can parse the information.
 
     For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
 3. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
+
+> [!IMPORTANT]
+> You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
 ## Open a blank app
 1. Sign in to [PowerApps](http://web.powerapps.com).
@@ -62,7 +55,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 	![Blank-app tile](./media/get-started-create-from-blank/blank-app.png)
 
-## Specify a table
+## Connect to data
 1. In the middle of the screen, select **connect to data**.
 
 1. In the **Data** pane, select the connection for your cloud-storage account if it appears. Otherwise, follow these steps to add a connection:
@@ -74,7 +67,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 1. Under **Choose a table**, select the checkbox for **Schedule**, and then select **Connect**.
 
-## Create the browse screen
+## Create the view screen
 
 1. On the **Home** tab, select the down-arrow next to **New screen** to open a list of screen types, and then select **List screen**.
 
@@ -106,13 +99,17 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
-    The gallery shows the name of each volunteer, the day of that volunteer's shift, and the time when the volunteer's shift starts.
+    The gallery shows the name of each volunteer and the day and time of that volunteer's shift.
 
     ![The Schedule data in the gallery unsorted](./media/get-started-create-from-blank/show-data-unsorted.png)
 
-    In the next step, you'll enable users to sort and filter the gallery based on the volunteers' names. You'll add a formula to the **[Items](controls/properties-core.md)** property of the gallery. If you're not sure how to configure a control's properties, see [Add and configure controls](add-configure-controls.md).
+4. Select the gallery, and confirm that the property list shows **[Items](controls/properties-core.md)**.
 
-4. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
+    As the formula bar shows, the value of that property is **Schedule**.
+
+    ![The Schedule data in the gallery unsorted](./media/get-started-create-from-blank/set-property.png)
+
+1. Change the value of the **Items** property by copying this formula and pasting it into the formula bar:
 
     **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer"), "Volunteer", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
@@ -133,7 +130,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
     ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
 
-6. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records** (retaining the double quotation marks).
+6. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
 
     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
 
@@ -142,7 +139,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
      ![Add form screen](./media/get-started-create-from-blank/add-form-screen.png)
 
-1. In the screen that you just added, select **Connect to data** to open the **Data** pane, and then select **Schedule**.
+1. In the screen that you just added, select **Connect to data** to open the **Data** pane, and then set the data source to **Schedule**.
 
 1. Under **Fields**, select all the checkboxes to show all the fields in the form.
 
@@ -152,7 +149,9 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
      ![Reorder fields](./media/get-started-create-from-blank/reorder-fields.png)
 
-1. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **Change records** (retaining the double quotation marks).
+1. With the form selected, set its **Item** property to this expression by typing or pasting it in the formula bar:<br>**BrowseGallery1.Selected**
+
+1. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **Change records**.
 
     ![Change title bar](./media/get-started-create-from-blank/change-title-bar2.png)
 
@@ -199,7 +198,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 1. Set the **OnSelect** property for that icon to this formula:<br>**ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)**
 
-    When the user selects this icon, any changes that the user made is this screen are discarded, and the browse screen opens.
+    When the user selects this icon, any changes that the user made is this screen are discarded, and the view screen opens.
 
 1. In the upper-right corner, select the checkmark icon.
 
@@ -207,7 +206,7 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 1. Set the **OnSelect** property for the checkmark to this formula:<br>**SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)**
 
-    When the user selects this icon, any changes that the user made is this screen are saved, and the browse screen opens.
+    When the user selects this icon, any changes that the user made is this screen are saved, and the view screen opens.
 
 1. On the **Insert** tab, click or tap **Icons**, and then click or tap the **Trash** icon.
 
@@ -217,10 +216,10 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 1. Set the **OnSelect** property for the trash icon to this formula:<br>**Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)**
 
-    When the user selects this icon, the selected record is deleted from the data source, and the browse screen opens.
+    When the user selects this icon, the selected record is deleted from the data source, and the view screen opens.
 
 ## Test the app
-1. Show **ViewScreen**, and then open Preview by pressing F5 (or selecting the **Preview** icon near the upper-right corner).
+1. With the **ViewScreen** selected, open Preview by pressing F5 (or selecting the **Preview** icon near the upper-right corner).
 
     ![Open Preview mode](./media/get-started-create-from-blank/open-preview.png)
 
@@ -237,4 +236,4 @@ To follow the steps below exactly, first create an Excel file using this sample 
 ## Next steps
 * Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
 * [Share the app](share-app.md) so that other people can run it.
-* Learn more about [galleries](add-gallery.md), [forms](add-form.md), and [formulas](working-with-formulas.md).
+* Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
