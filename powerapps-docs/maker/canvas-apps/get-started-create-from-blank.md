@@ -56,11 +56,11 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 	![PowerApps home page](./media/get-started-create-from-blank/sign-in.png)
 
-1. Under **Make apps like these**, hover over the **Start from blank** tile, click or tap the phone icon, and then click or tap **Make this app**.
+	You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
+
+1. Under **Make apps like these**, hover over the **Start from blank** tile, select the phone icon, and then select **Make this app**.
 
 	![Blank-app tile](./media/get-started-create-from-blank/blank-app.png)
-
-	You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
 
 ## Specify a table
 1. In the middle of the screen, select **connect to data**.
@@ -84,52 +84,86 @@ To follow the steps below exactly, first create an Excel file using this sample 
 
 2. Select the gallery by clicking or tapping near its center.
 
+    A selection box with handles surrounds the gallery.
+
+    ![Add a list screen](./media/get-started-create-from-blank/select-gallery.png)
+
 3. In the right-hand pane, select **CustomGallerySample** to open the **Data** pane.
+
+    ![Open Data pane](./media/get-started-create-from-blank/custom-gallery-sample.png)
 
 1. Under **Data source**, select the down arrow to open the list of data sources for the app, and then select **Schedule**.
 
+    ![Select a data source](./media/get-started-create-from-blank/select-schedule.png)
+
 1. Under **Layout**, select the down arrow to open the list of layouts, and then select **Title, subtitle, and body**.
 
-    ![Select gallery](./media/get-started-create-from-blank/select-layout.png)
+    ![Select layout](./media/get-started-create-from-blank/select-layout.png)
 
-4. In the property list, confirm that **[Items](controls/properties-core.md)** appears, copy this formula, and then paste it into the formula bar:
+1. Under **Title2**, change the column shown from **Backup** to **Volunteer**.
 
-    **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer1"), "Volunteer1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+     ![Change column in label](./media/get-started-create-from-blank/change-title2.png)
 
-    If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md).
+    The gallery shows the name of each volunteer, the day of that volunteer's shift, and the time when the volunteer's shift starts.
 
-    The gallery shows the data from the **Schedule** table.
+    ![The Schedule data in the gallery unsorted](./media/get-started-create-from-blank/show-data-unsorted.png)
 
-    ![The Schedule data in the gallery by default](./media/get-started-create-from-blank/show-data-default.png)
+    In the next step, you'll enable users to sort and filter the gallery based on the volunteers' names. You'll add a formula to the **[Items](controls/properties-core.md)** property of the gallery. If you're not sure how to configure a control's properties, see [Add and configure controls](add-configure-controls.md).
 
-    A search box can filter the gallery based on text that the user types. If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer1** field contains the text that the user typed.
+4. Set the **[Items](controls/properties-core.md)** property of the gallery to this formula:
 
-    The sort button can sort the records based on data in the **Volunteer1** column. If a user clicks or taps that button, the sort order toggles between ascending and descending.
+    **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer"), "Volunteer", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-    That formula contains the **Sort**, **If**, **IsBlank**, **Filter**, and **Text** functions. For more information about these and other functions, see the [formula reference](formula-reference.md).
+    The gallery shows data in alphabetical order by volunteer name.
 
-5. Type an **i** in the search box, and click or tap the sort button once (or an odd number of times).
+    ![The Schedule data in the gallery sorted](./media/get-started-create-from-blank/show-data-sorted.png)
+
+    Users can sort and filter the gallery by volunteer name based on the **SortByColumns** and **Search** functions in that formula.
+
+    - If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer** field contains the text that the user typed.
+    - If a user selects the sort button, the gallery shows the records in ascending or descending order (depending on how many times the user selects the button) based on the **Volunteer** field.
+
+    For more information about these and other functions, see the [formula reference](formula-reference.md).
+
+5. Type an **i** in the search box, and select the sort button once (or an odd number of times).
 
     The gallery shows these results.
 
     ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
 
-    More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
-
-6. Select the **[Label](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
-
-    ![Select title bar](./media/get-started-create-from-blank/select-title-bar.png)
-
-7. In the property list, click or tap **[Text](controls/properties-core.md)**, copy this text, and then paste it in the formula bar.<br>
-   **"View Records"**
+6. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records** (retaining the double quotation marks).
 
     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
 
 ## Create the ChangeScreen and its banner
-1. Delete **Screen1**, and rename **Screen2** to **ViewScreen**.
+1. On the **Home** tab, select the down arrow next to **New screen**, and then select **Form screen**.
 
+     ![Add form screen](./media/get-started-create-from-blank/add-form-screen.png)
 
-4. In the upper-right corner, click or tap the plus icon.
+1. In the screen that you just added, select **Connect to data** to open the **Data** pane, and then select **Schedule**.
+
+1. Under **Fields**, select all the checkboxes to show all the fields in the form.
+
+     ![Show fields](./media/get-started-create-from-blank/show-fields.png)
+
+1. Drag the **Volunteer** field up so it appears at the top of the list of fields.
+
+     ![Reorder fields](./media/get-started-create-from-blank/reorder-fields.png)
+
+1. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **Change records** (retaining the double quotation marks).
+
+    ![Change title bar](./media/get-started-create-from-blank/change-title-bar2.png)
+
+## Configure navigation between screens
+1. In the left navigation bar, select the ellipsis (...) for **Screen1**, and then select **Delete**.
+
+    ![Delete screen](./media/get-started-create-from-blank/delete-screen.png)
+
+1. Select the ellipsis (...) for **Screen2**, select **Rename**, and then type or paste **ViewScreen**.
+
+1. 1. In the left navigation bar, select the ellipsis (...) for **Screen3**, select **Rename**, and then type or paste **ChangeScreen**.
+
+4. In the upper-right corner of **ViewScreen**, select the plus icon.
 
     ![Add record](./media/get-started-create-from-blank/add-record.png)
 
@@ -138,6 +172,8 @@ To follow the steps below exactly, first create an Excel file using this sample 
     **NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**`
 
      When the user clicks or taps this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
+1. 
+
 
 ## Run the app
 As you customize the app, test your changes by running the app in Preview mode, as the steps in this section describe.
