@@ -14,12 +14,12 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/06/2018
+ms.date: 04/23/2018
 ms.author: tahoon
 
 ---
 # Accessible colors in PowerApps
-Colors used in an app should be chosen so that they are accessible to color-blind or low-vision users. All PowerApps themes are accessible by default. When modifying colors used in an app, ensure that they remain accessible to these users.
+Colors used in an app should be accessible to color-blind and low-vision users. All PowerApps themes are accessible by default. When modifying colors used in an app, follow these guidelines to ensure that they remain accessible.
 
 ## Minimum contrast for text
 * Text and its background must have a contrast ratio of at least 4.5:1
@@ -34,7 +34,7 @@ In practical terms, all interactive controls must have adequate color contrast b
 ## Minimum contrast for non-text
 
 > [!NOTE]
-> In [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html), contrast requirements only applies to text. For greater accessibility, consider the upcoming [WCAG 2.1 contrast guidelines](https://www.w3.org/TR/WCAG21/#non-text-contrast) for essential user interface components like icon buttons. A minimum ratio of 3:1 is recommended for these components. The guidelines descibed in this section are **optional** for WCAG 2.0 compliance.
+> In the [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) standard, contrast requirements only applies to text. For greater accessibility, consider the upcoming [WCAG 2.1 contrast guidelines](https://www.w3.org/TR/WCAG21/#non-text-contrast) for essential user interface components like icon buttons. A minimum ratio of 3:1 is recommended for these components. The guidelines descibed in this section are **optional** for WCAG 2.0 compliance.
 
 ### User interface components
 All interactive controls must have adequate color contrast between:
@@ -58,6 +58,6 @@ If an image conveys important information, consider checking it for contrast iss
 For video content, consider checking it for contrast issues. Alternatively or additionally, provide [closed captions](controls/control-audio-video.md) that describe the video.
 
 ## Provide other visual cues
-Ensure that the app does not convey information with just color. For example, a red error message will look the same as a green success message for users with red-green color blindness.
+Ensure that the app does not convey information with just color. For example, users with red-green color blindness will not be able to distinguish a red error message from a green success message.
 
 Additional cues like an **[Icon](controls/control-shapes-icons.md)** or text styles like **[Italic](controls/properties-text.md)** and **[Underline](properties-text.md)** can help convey meaning.
