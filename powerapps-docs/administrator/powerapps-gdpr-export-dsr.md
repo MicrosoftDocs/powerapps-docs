@@ -22,20 +22,20 @@ ms.author: jamesol
 
 # Responding to Data Subject Rights (DSR) requests to export PowerApps customer data
 
-The *right of data portability* allows a data subject to request a copy of his or her personal data in an electronic format (that is, a structured, commonly used, machine readable and interoperable format) that may be transmitted to another data controller:
+The “right of data portability” allows a data subject to request a copy of his or her personal data in an electronic format (that is, a structured, commonly used, machine readable and interoperable format) that may be transmitted to another data controller:
 
-* Website access: [PowerApps maker portal](https://web.powerapps.com), [PowerApps Admin Center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Website access: [PowerApps](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
-* PowerShell access: PowerApps cmdlets ([Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448), [Admin cmdlets](https://go.microsoft.com/fwlink/?linkid=871804)) and [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238)
+* PowerShell access: PowerApps cmdlets [Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448), [Admin cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) and [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238)
 
 Below is a summary of the types of personal data that PowerApps can store for a specific user and which experiences you can use to find and export it.
 
 Resources containing personal data | Website access |	PowerShell access
 --- | --- | --
-Environment	| PowerApps Admin Center | 	PowerApps cmdlets
-Environment permissions**	| PowerApps Admin Center 	| PowerApps cmdlets
-Canvas App	| PowerApps Admin Center <br> PowerApps Maker Portal | 	PowerApps cmdlets
-Canvas App permissions	| PowerApps Admin Center <br> PowerApps Maker Portal	| PowerApps cmdlets
+Environment	| PowerApps Admin center | 	PowerApps cmdlets
+Environment permissions**	| PowerApps Admin center 	| PowerApps cmdlets
+Canvas App	| PowerApps Admin center <br> PowerApps Maker Portal | 	PowerApps cmdlets
+Canvas App permissions	| PowerApps Admin center <br> PowerApps Maker Portal	| PowerApps cmdlets
 Gateway | PowerApps Maker Portal***	| On-premise gateway cmdlets
 Gateway permissions	| PowerApps Maker Portal***	|
 Custom connector | |	Maker: Available <br> Admin: Under development
@@ -44,14 +44,14 @@ Connection | | Maker: Available <br> Admin: Under development
 Connection permissions	| | Maker: Available <br> Admin: Under development
 PowerApps user settings, user-app settings, and notifications | | Maker: Available <br> Admin: Under development
 
-> ** With the introduction of Common Data Service (CDS) for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the CDS for Apps database instance. For guidance on how to respond to DSR requests for users that use CDS for Apps, see [Executing DSR requests against Common Data Service for Apps customer data](https://go.microsoft.com/fwlink/?linkid=872251).
+> ** With the introduction of Common Data Service (CDS) for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the CDS for Apps database instance. For guidance on how to respond to DSR requests for users that use CDS for Apps, see [Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data](common-data-service-gdpr-dsr-guide.md).
 
 > *** An administrator can access these resources from [PowerApps](https://web.powerapps.com) only if the owner of the resource has explicitly granted him or her access. If the administrator has not been granted access, he or she will need to leverage the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804).
 
 ## Prerequisites
 
 ### For users
-Any user with a valid PowerApps license can perform the user operations outlined in this document using [PowerApps](https://web.powerapps.com) or [Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448.
+Any user with a valid PowerApps license can perform the user operations outlined in this document using [PowerApps](https://web.powerapps.com) or [Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### For admins
 To perform the administration operations outlined in this document using the PowerApps Admin center, Microsoft Flow Admin Center, or [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804), you'll need the following:
@@ -62,10 +62,10 @@ To perform the administration operations outlined in this document using the Pow
 
 ## Step 1: Export personal data contained within environments created by the user
 
-### PowerApps Admin Center
-Administrators can export all environments created by a specific user from the [PowerApps Admin Center](https://admin.powerapps.com/) by following these steps:
+### PowerApps Admin center
+Administrators can export all environments created by a specific user from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:
 
-1. From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization.
+1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization.
 
     ![Admin Center Landing Page](./media/powerapps-gdpr-export-dsr/admin-center-landing.png)
 
@@ -95,10 +95,10 @@ Users can be assigned permissions (such as Environment Admin, Environment Maker,
 
 ### For environments without a CDS for Apps database
 
-#### PowerApps Admin Center
-Administrators can export a user’s environment permissions from the [PowerApps Admin Center](https://admin.powerapps.com/) by following these steps:
+#### PowerApps Admin center
+Administrators can export a user’s environment permissions from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:
 
-1. From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
+1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
 
     ![Admin Center Landing Page](./media/powerapps-gdpr-export-dsr/admin-center-landing.png)
 
@@ -134,10 +134,10 @@ With the introduction of the CDS for Apps, if a database is created within the e
 ### PowerApps Maker portal
 A user can export an app from [PowerApps](https://web.powerapps.com). For step-by-step instructions on how to export an app, see [Exporting an app](environment-and-tenant-migration.md#exporting-an-app).
 
-### PowerApps Admin Center
-An administrator can export apps created by a user starting from the [PowerApps Admin Center](https://admin.powerapps.com/) by following these steps:
+### PowerApps Admin center
+An administrator can export apps created by a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:
 
-1. From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
+1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
 
     ![Admin Center Landing Page](./media/powerapps-gdpr-export-dsr/admin-center-landing.png)
 
@@ -175,10 +175,10 @@ Add-PowerAppsAccount
 Get-AppRoleAssignment | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
 ~~~~
 
-### PowerApps Admin Center
-Administrators can export app roles assignments for a user from the [PowerApps Admin Center](https://admin.powerapps.com/) by following these steps:
+### PowerApps Admin center
+Administrators can export app roles assignments for a user from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:
 
-1. From the [PowerApps Admin Center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
+1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization. You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments created within your organization.
 
     ![Admin Center Landing Page](./media/powerapps-gdpr-export-dsr/admin-center-landing.png)
 
@@ -286,7 +286,7 @@ Users can export the personal data stored within the gateway service from [Power
 There are also PowerShell cmdlets that allow you to retrieve, manage, and delete your personal gateways. For more information, see [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238).
 
 ## Step 11: Export the user’s personal data in Microsoft Flow
-PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see [Executing DSRs against Microsoft Flow Customer Data](https://go.microsoft.com/fwlink/?linkid=872250).
+PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see Executing DSRs against Microsoft Flow Customer Data.
 
 > [!IMPORTANT] 
 >  We recommend that administrators complete this step for PowerApps users.
@@ -296,7 +296,7 @@ PowerApps licenses always include Microsoft Flow capabilities. In addition to be
 ## Step 12: Export the user’s personal data in CDS for Apps instances
 Certain PowerApps licenses allow users within your organization to create CDS for Apps instances and create and build apps on CDS for Apps, including the PowerApps Community Plan, which is a free license that allows users to try out CDS for Apps in an individual environment. To see which CDS for Apps capabilities are included in each PowerApps license, see the [PowerApps Pricing page](https://powerapps.microsoft.com/pricing).
 
-For guidance on how to respond to DSR requests for users that use CDS for Apps, see [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251).
+For guidance on how to respond to DSR requests for users that use CDS for Apps, see [Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data](common-data-service-gdpr-dsr-guide.md).
 
 > [!IMPORTANT]
 >  We recommend that administrators complete this step for PowerApps users.

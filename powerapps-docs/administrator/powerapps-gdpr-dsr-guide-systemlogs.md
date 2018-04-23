@@ -29,7 +29,9 @@ Microsoft gives you the ability to access, export, and delete system-generated l
 Note that the ability to restrict or rectify data in system-generated logs is not supported. Data in system-generated logs constitutes factual actions conducted within the Microsoft cloud, and diagnostic data&mdash;including modifications to such data&mdash;would compromise the historical record of actions and increase fraud and security risks.
 
 ## Accessing and exporting system-generated logs
-Administrators can access system-generated logs associated with a user’s use of PowerApps, Microsoft Flow, and Common Data Service (CDS) for Apps services and applications. To access and export system-generated logs:
+Administrators can access system-generated logs associated with a user’s use of PowerApps, Microsoft Flow, and Common Data Service (CDS) for Apps services and applications.
+
+To access and export system-generated logs, do the following:
 
 1. Go to the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/) and sign in using Office 365 Global Administrator credentials.
 

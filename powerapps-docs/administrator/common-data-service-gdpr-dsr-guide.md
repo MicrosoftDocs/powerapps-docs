@@ -19,7 +19,7 @@ ms.author: paulliew
 
 ---
 
-# Responding to Data Subject Rights (DSR) requests for customer data in Common Data Service for Apps
+# Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data
 
 ## Introduction to DSR requests
 The European Union (EU) General Data Protection Regulation (GDPR) gives rights to people (known in the regulation as *data subjects*) to manage the personal data that's been collected by an employer or other type of agency or organization (known as the *data controller* or just *controller*). Personal data is defined very broadly under the GDPR as any data that relates to an identified or identifiable natural person. The GDPR gives data subjects the right to do the following, as it pertains to their personal data:
@@ -88,9 +88,9 @@ Only Office 365 Global Administrators and CDS System Administrators can perform 
 
 System Administrators can create multiple CDS for Apps instances. These instances can be used for trial, development, or production purposes. Each of these instances has a copy of the system User entity with any custom attributes that may have been added by the system administrator, as well as the user personal data synced from the Office 365 Admin Center.
 
-System administrators can find a list of all the CDS for Apps instances by navigating to the Dynamics 365 Administration Center from the PowerApps Admin Center.
+System administrators can find a list of all the CDS for Apps instances by navigating to the Dynamics 365 Administration Center from the PowerApps Admin center.
 
-From the [PowerApps admin center](https://admin.powerapps.com/), do the following:
+From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 
@@ -106,13 +106,13 @@ You can find personal data from CDS for Apps users within the following resource
 
 |Resource | Purpose | Website access | Programmatic access
 | --- | --- | --- | ---
-| Entity record | Known as the system User entity, it stores a user's personal data. | [PowerApps Admin Center](https://admin.powerapps.com) | Through the [Web API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
-| Audit history | Allows customers to identify resources that users created, accessed, changed, or deleted at an entity level. | [PowerApps Admin Center](https://admin.powerapps.com) | Through the [Web API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Entity record | Known as the system User entity, it stores a user's personal data. | [PowerApps Admin center](https://admin.powerapps.com) | Through the [Web API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Audit history | Allows customers to identify resources that users created, accessed, changed, or deleted at an entity level. | [PowerApps Admin center](https://admin.powerapps.com) | Through the [Web API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
 
 #### User
 User personal data is stored in the Azure Active Directory and is automatically synced to all CDS for Apps environments. System administrators cannot update this personal data directly in CDS for Apps while the user is active&mdash;they must update the data from within the Office 365 Administration Center. System administrators can add personal data (for example, custom attributes) directly to CDS for Apps, but they must manually manage this data.
 
-To find a user and his or her personal data, go to the [PowerApps Admin Center](https://admin.powerapps.com/) and do the following:
+To find a user and his or her personal data, go to the [PowerApps Admin center](https://admin.powerapps.com/) and do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 
@@ -141,7 +141,7 @@ Once a user record is deleted from Azure Active Directory, System Administrators
 #### System user
 You can export a user's personal data stored in the system User entity to Excel from the user list within the administration center.
 
-From the [PowerApps Admin Center](https://admin.powerapps.com/), do the following:
+From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 
@@ -154,7 +154,7 @@ From the [PowerApps Admin Center](https://admin.powerapps.com/), do the followin
 #### Audit history
 You can take screenshots of the audit history from within the adminisration center.
 
-From the [PowerApps Admin Center](https://admin.powerapps.com/), do the following:
+From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 
@@ -180,7 +180,7 @@ When a user record is deleted from the Azure Active Directory, the following mes
 
 *This user’s information is no longer managed by Office 365. You can update this record to respond to DSR requests by removing or replacing all personal data associated with this user.*
 
-From the [PowerApps Admin Center](https://admin.powerapps.com/), do the following:
+From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 
@@ -196,7 +196,7 @@ From the [PowerApps Admin Center](https://admin.powerapps.com/), do the followin
 
 #### Remove a user's personal data by using Excel
 
-From the [PowerApps Admin Center](https://admin.powerapps.com/), do the following:
+From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 
@@ -216,7 +216,7 @@ From the [PowerApps Admin Center](https://admin.powerapps.com/), do the followin
 
 #### Remove audit history from the Audit Summary View page
 
-From the [PowerApps Admin Center](https://admin.powerapps.com/), do the following:
+From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 
@@ -240,7 +240,7 @@ When CDS System Administrators receive a DSR request from an individual, they mu
 
 Using an inventory, CDS System Administrators can configure the search entities and fields and then access the CDS for Apps environment to discover personal data. For more information, see [Configure Relevance Search](https://go.microsoft.com/fwlink/?linkid=872506).
 
-From the [PowerApps Admin Center](https://admin.powerapps.com/), do the following:
+From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 
@@ -266,7 +266,7 @@ From the Relevance Search results, do the following:
 ### Export
 You can take a screenshot of the data and share it with your DSR requestor.
 
-From the [PowerApps admin center](https://admin.powerapps.com/), do the following:
+From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
 

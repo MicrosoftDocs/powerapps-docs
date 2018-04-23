@@ -20,7 +20,7 @@ ms.author: jamesol
 
 # Responding to Data Subject Rights (DSR) requests to delete PowerApps customer data
 
-The *right to erasure* by the removal of personal data from an organization’s customer data is a key protection in the European Union (EU) General Data Protection Regulation (GDPR). Removing personal data includes removing system-generated logs but not audit log information.
+The “right to erasure” by the removal of personal data from an organization’s customer data is a key protection in the European Union (EU) General Data Protection Regulation (GDPR). Removing personal data includes removing system-generated logs but not audit log information.
 
 PowerApps allows users to build line-of-business applications that are a critical part of your organization’s day-to-day operations. When a user leaves your organization, you'll need to manually review and determine whether to delete certain data and resources that the user created. Other personal data will be automatically deleted whenever the user’s account is deleted from Azure Active Directory.
 
@@ -43,7 +43,7 @@ Custom-connector permissions |
 
 For the data and resources that require manual review, PowerApps offers the following experiences to reassign (if necessary) or delete personal data for a specific user:
 
-* Website access: [PowerApps site](https://web.powerapps.com), [PowerApps admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Website access: [PowerApps site](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 * PowerShell access: PowerApps cmdlets for [app creators](https://go.microsoft.com/fwlink/?linkid=871448) and [administrators](https://go.microsoft.com/fwlink/?linkid=871804) and cmdlets for [on-premise gateways](https://go.microsoft.com/fwlink/?linkid=872238).
 
@@ -142,20 +142,20 @@ For more information, see [Administer environments](environments-administration.
 
 ### For environments without a CDS for Apps database
 
-#### PowerApps admin center
-An administrator can delete a user’s environment permissions starting from the [PowerApps admin center](https://admin.powerapps.com/) via the following steps:
+#### PowerApps Admin center
+An administrator can delete a user’s environment permissions starting from the [PowerApps Admin center](https://admin.powerapps.com/) via the following steps:
 
-1. From the [PowerApps admin center](https://admin.powerapps.com/), select each environment in your organization.
+1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization.
 
     You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments that have been created within your organization.
 
     ![Admin Center Landing Page](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.	Select **Security**.
+2. Select **Security**.
 
     If your environment does not have a CDS for Apps database, you will see a section for **Environment Roles.**
 
-4.	Within **Environment Roles**, select both **Environment Admin** and **Environment Maker** separately and, using the search bar, search for the user’s name.
+3. Within **Environment Roles**, select both **Environment Admin** and **Environment Maker** separately and, using the search bar, search for the user’s name.
 
     ![Environment roles page](./media/powerapps-gdpr-delete-dsr/admin-environment-role-share-page.png)
 
@@ -195,26 +195,26 @@ Get-AdminApp -Owner $deleteDsrUserId | Set-AdminAppOwner -AppOwner $newAppOwnerU
 ### Delete a user’s canvas app using the PowerApps site
 A user can delete an app from the [PowerApps site](https://web.powerapps.com). For the full steps on how to delete an app, please see deleting an app.
 
-### Delete a user’s canvas app using the PowerApps admin center
-An admin can delete apps created by a user starting from the [PowerApps admin center](https://admin.powerapps.com/) via the following steps:
+### Delete a user’s canvas app using the PowerApps Admin center
+An admin can delete apps created by a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) via the following steps:
 
-1.	From the [PowerApps admin center](https://admin.powerapps.com/), select each environment in your organization.
+1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization.
 
     You must be a [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal)  to be able to review all environments that have been created within your organization.
 
     ![Admin Center Landing Page](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.	Select **Resources** > **Apps**.
+2. Select **Resources** > **Apps**.
 
-3.	Using the search bar, search for the user’s name, which will bring up any apps that have been created by that user within this environment:
+3. Using the search bar, search for the user’s name, which will bring up any apps that have been created by that user within this environment:
 
     ![Search apps](./media/powerapps-gdpr-delete-dsr/search-apps.png)
 
-4.	Select **Details** for each of the apps owned by the user:
+4. Select **Details** for each of the apps owned by the user:
 
     ![Select app details](./media/powerapps-gdpr-delete-dsr/select-app-details.png)
 
-5.	Select **Delete** to delete each app:
+5. Select **Delete** to delete each app:
 
 ### Delete a user’s canvas app using the PowerApps Admin PowerShell cmdlets
 If an admin decides to delete all canvas apps owned by a user, they can do so using the **Remove-AdminApp** function in the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804):
@@ -236,22 +236,22 @@ Whenever an app is shared with a user, PowerApps stores a record called a “rol
 > [!NOTE]
 > The app owner's role assignment can only be deleted by assigning a new owner for the app.
 
-### PowerApps admin center
-An admin can delete app-role assignments for a user starting from the [PowerApps admin center](https://admin.powerapps.com/) via the following steps:
+### PowerApps Admin center
+An admin can delete app-role assignments for a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) via the following steps:
 
-1.	From the [PowerApps admin center](https://admin.powerapps.com/), select each environment in your organization.
+1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization.
 
     You must be an [Office 365 Global Administrator](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) or [Azure Active Directory Global Administrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) to be able to review all environments that have been created within your organization.
 
     ![Admin Center Landing Page](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.	For each environment select **Resources** > **Apps**.
+2. For each environment select **Resources** > **Apps**.
 
-3.	Select **Share** for each of the apps in the environment:
+3. Select **Share** for each of the apps in the environment:
 
     ![Select app share](./media/powerapps-gdpr-delete-dsr/select-admin-share-nofilter.png)
 
-6.	If the user has access to the app, from within the app’s **Share** screen, remove their permission and select **Save**.
+4. If the user has access to the app, from within the app’s **Share** screen, remove their permission and select **Save**.
 
     ![Admin app share page](./media/powerapps-gdpr-delete-dsr/admin-share-page.png)
 
