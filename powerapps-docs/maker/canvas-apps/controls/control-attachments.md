@@ -110,7 +110,7 @@ There must be adequate color contrast between:
 * **MaxAttachmentsColor** and **Fill**
 * **NoAttachmentsColor** and **Fill**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 The following properties must be present:

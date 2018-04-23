@@ -98,7 +98,7 @@ In this control, the user can indicate, for example, how much they liked somethi
 There must be adequate color contrast between:
 * **RatingFill** and **[Fill](properties-color-border.md)**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.

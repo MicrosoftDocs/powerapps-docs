@@ -186,7 +186,7 @@ You can also specify the color of a **Button** control by setting its **[HoverFi
 
 ## Accessibility guidelines
 ### Color contrast
-* Standard color contrast requirements apply.
+* [Standard color contrast requirements](../accessible-apps-color.md) apply.
 
 ### Screen reader support
 * **[Text](properties-core.md)** must be present.

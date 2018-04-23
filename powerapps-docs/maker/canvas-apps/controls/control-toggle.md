@@ -131,7 +131,7 @@ There must be adequate color contrast between:
 * **TrueFill** and color outside the control
 * **TrueHoverFill** and color outside the control
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
