@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/09/2018
+ms.date: 04/23/2018
 ms.author: sharik
 
 ---
@@ -30,6 +30,9 @@ For information about known limitations, see [Common issues and resolutions](com
 Discover the latest updates to our business applications, as well as a host of new capabilities for building your own applications and extensions on top of our platform. [Download the Spring '18 release notes PDF](https://aka.ms/businessappsreleasenotes), which covers Dynamics 365, PowerApps, Microsoft Flow, and Power BI.
 
 **Coming soon:** We'll keep updating the release notes PDF as features ship, and we'll also make them available on a web page.
+
+## Apr. 23
+* Download [attachments](controls/control-attachments.md) in Internet Explorer within SharePoint custom list forms.
 
 ## Apr. 9
 * Cut (Ctrl+X), copy (Ctrl+C), and paste (Ctrl+V) controls&mdash;including the controls' styles, formulas, and properties&mdash;across apps in a web browser.
