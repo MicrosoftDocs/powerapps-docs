@@ -25,7 +25,7 @@ The “right of data portability” allows a data subject to request a copy of h
 
 * Website access: [PowerApps](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
-* PowerShell access: PowerApps cmdlets [Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448), [Admin cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) and [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238)
+* PowerShell access: PowerApps cmdlets [Maker cmdlets](https://go.microsoft.com/fwlink/?linkid=871448), [Admin cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) and [On-premises gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238)
 
 Below is a summary of the types of personal data that PowerApps can store for a specific user and which experiences you can use to find and export it.
 
@@ -35,7 +35,7 @@ Environment	| PowerApps Admin center | 	PowerApps cmdlets
 Environment permissions**	| PowerApps Admin center 	| PowerApps cmdlets
 Canvas App	| PowerApps Admin center <br> PowerApps Maker Portal | 	PowerApps cmdlets
 Canvas App permissions	| PowerApps Admin center <br> PowerApps Maker Portal	| PowerApps cmdlets
-Gateway | PowerApps Maker Portal***	| On-premise gateway cmdlets
+Gateway | PowerApps Maker Portal***	| On-premises gateway cmdlets
 Gateway permissions	| PowerApps Maker Portal***	|
 Custom connector | |	Maker: Available <br> Admin: Under development
 Custom connector permissions | | 	Maker: Available <br> Admin: Under development
@@ -283,7 +283,7 @@ Users can export the personal data stored within the gateway service from [Power
     ![Gateway details](./media/powerapps-gdpr-export-dsr/gateway-details-share.png)
 
 ### Gateway PowerShell cmdlets
-There are also PowerShell cmdlets that allow you to retrieve, manage, and delete your personal gateways. For more information, see [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238).
+There are also PowerShell cmdlets that allow you to retrieve, manage, and delete your personal gateways. For more information, see [On-premises gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238).
 
 ## Step 11: Export the user’s personal data in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).

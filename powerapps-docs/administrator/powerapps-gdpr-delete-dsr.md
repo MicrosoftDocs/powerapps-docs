@@ -45,7 +45,7 @@ For the data and resources that require manual review, PowerApps offers the foll
 
 * Website access: [PowerApps site](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
-* PowerShell access: PowerApps cmdlets for [app creators](https://go.microsoft.com/fwlink/?linkid=871448) and [administrators](https://go.microsoft.com/fwlink/?linkid=871804) and cmdlets for [on-premise gateways](https://go.microsoft.com/fwlink/?linkid=872238).
+* PowerShell access: PowerApps cmdlets for [app creators](https://go.microsoft.com/fwlink/?linkid=871448) and [administrators](https://go.microsoft.com/fwlink/?linkid=871804) and cmdlets for [on-premises gateways](https://go.microsoft.com/fwlink/?linkid=872238).
 
 Here is the breakdown of which experiences are available to delete each type of resource that can contain personal data:
 
