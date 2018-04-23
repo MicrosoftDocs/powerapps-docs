@@ -1,7 +1,6 @@
 ---
 title: Samples and other resources for the Common Data Service | Microsoft Docs
 description: Samples and other resources you can use to create apps.
-services: powerapps
 documentationcenter: na
 author: clwesene
 manager: kfile
@@ -10,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: cds
 ms.date: 3/17/2018
 ms.author: clwesene
 

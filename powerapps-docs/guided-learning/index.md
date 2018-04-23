@@ -3,8 +3,9 @@ title: Microsoft PowerApps Guided Learning
 description: Start your learning journey with this sequenced collection of courses, and understand the extensive and powerful capabilities of Microsoft PowerApps.
 layout: LandingPage
 author: mgblythe
-manager: anneta
+manager: kfile
 ms.service: powerapps
+ms.component: canvas
 ms.topic: landing-page
 ms.date: 10/27/2017
 ms.author: mblythe

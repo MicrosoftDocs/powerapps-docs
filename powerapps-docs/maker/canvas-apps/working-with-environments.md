@@ -1,19 +1,16 @@
 ---
 title: Working with environments | Microsoft Docs
 description: Switch environments and understand how the content on your pages change.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: linhtranms
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/14/2016
 ms.author: litran
 

@@ -1,8 +1,6 @@
 ---
 title: Quickstart for adding data to an entity in the Common Data Service using Power Query | Microsoft Docs
 description: Quickstart with step-by-step instructions for using Power Query to add data to a new or existing entity in the Common Data Service for Apps from another data source.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: cds
 ms.date: 03/21/2018
 ms.author: anneta
 
