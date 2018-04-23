@@ -83,7 +83,7 @@ After you find the data, you can then perform the specific action to satisfy the
 ### Step 2: Find personal data for the user in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service.
 
-For guidance on how to discover personal data stored by the Microsoft Flow service see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
+For guidance on how to discover personal data stored by the Microsoft Flow service, see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
 
 > [!IMPORTANT]
 > It is recommended that admins complete this step for a PowerApps user
