@@ -60,4 +60,4 @@ For video content, consider checking it for contrast issues. Alternatively or ad
 ## Provide other visual cues
 Ensure that the app does not convey information with just color. For example, users with red-green color blindness will not be able to distinguish a red error message from a green success message.
 
-Additional cues like an **[Icon](controls/control-shapes-icons.md)** or text styles like **[Italic](controls/properties-text.md)** and **[Underline](properties-text.md)** can help convey meaning.
+Additional cues like an **[Icon](controls/control-shapes-icons.md)** or text styles like **[Italic](controls/properties-text.md)** and **[Underline](controls/properties-text.md)** can help convey meaning.
