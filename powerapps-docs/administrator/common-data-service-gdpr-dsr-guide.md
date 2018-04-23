@@ -1,6 +1,6 @@
 ---
-title: DSR guide for customer-authored data | Microsoft Docs
-description: PowerApps DSR guide for customer-authored data
+title: Responding to DSR requests for CDS for Apps customer data | Microsoft Docs
+description: Walkthrough of how to respond to DSR requests for CDS for Apps customer data
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/17/2018
+ms.date: 04/23/2018
 ms.author: paulliew
 
 ---
@@ -323,7 +323,7 @@ An individual's personal data can be stored in any business entity.
 
 This version of the CDS contains its own database schema and infrastructure. It has its own entities, and you manage these entities in [PowerApps](http://web.powerapps.com/).
 
-To see a list of your entities in the [PowerApps admin center](https://admin.powerapps.com/), do the following:
+To see a list of your entities, do the following:
 
 1. In the **Environment** drop-down list, select your environment.
 
@@ -335,13 +335,13 @@ To see a list of your entities in the [PowerApps admin center](https://admin.pow
 
     ![PowerApps Legacy Entities details list](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-details-list.png)
 
-4. Click or tap **Data**. A list of records for the entity displays.
+4. Click or tap the **Data** tab. A list of records for the entity displays.
 
     ![PowerApps Legacy Account data](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-account-data.png)
 
 5. Click or tap **Export data**.
 
-6. When the export is complete, open the Excel worksheet, and then click or tap **Enable editing**.
+6. When the export is complete, click or tap **Open in Excel**, and then click or tap **Enable editing**.
 
 7. Click or tap the search button, enter the individual’s personal data in the search box, and then click or tap **Search**.
 
@@ -352,61 +352,91 @@ If a data subject asks you to rectify the personal data that resides in your org
 
 You can use Azure Active Directory to manage the identities (personal data) of your users within the previous version of CDS. Enterprise customers can manage DSR rectify requests by using the limited editing features within a given Microsoft service. As a data processor, Microsoft does not offer the ability to correct system-generated logs, because they reflect factual activities and constitute a historical record of events within Microsoft services. See [GDPR: Data Subject Requests (DSRs)](https://servicetrust.microsoft.com/ViewPage/GDPRDSR) for details.
 
-To rectify personal data that resides in the CDS environment, you can export the entity data into an Excel worksheet, update it, and then import the updates back to the database.
+To rectify personal data that resides in the CDS environment, you can export the entity data into an Excel spreadsheet, update it, and then import the updates back to the database.
 
 CDS System Administrators are responsible for identifying all entities that contain personal data for an individual and repeating the following steps for each of those entities.
 
 From [PowerApps](http://web.powerapps.com/), do the following:
 
-1.	Click **Data** > **Entities**.
-2.	Click on the entity, eg. Account.
-3.	Click on the **Data** option.
-4.	Click the **Export data** icon.
-5.	Click the **Open in Excel** icon (when the export is done).
-6.	**Enable Editing** on the Excel worksheet, and make update to the personal data.
-7.	**Save** your updated worksheet (do a **Save As** so you know where the file is located).
+1. In the navigation pane, click or tap **Data**, and then click or tap **Entities**.
+
+    ![PowerApps Legacy Entities](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities.png)
+
+2. From the list of entities, click or tap an entity (for example, the Account entity), as shown below.
+
+    ![PowerApps Legacy Entities details list](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-details-list.png)
+
+3. Click or tap the **Data** tab. A list of records for the entity displays.
 
     ![PowerApps Legacy Account data](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-account-data.png)
 
-8.	Make the necessary personal data updates
-9.	Save your updates
-10.	On the Data > Entities > Account form, click on Import data icon.
-11.	Click the Search box.
-12.	Choose the file that contains your updates.
-13.	Click the Open box.
-14.	Click the Import button.
+4. Click or tap **Export data**.
+
+5. When the export is complete, click or tap **Open in Excel**, and then click or tap **Enable editing**.
+
+6. In the menu bar, click or tap **File**, click or tap **Save As**, and then select a location in which to save the file.
+
+7. Make the necessary personal data updates and save the spreadsheet.
+
+10.	In PowerApps, go back to the **Data** tab of the entity, and then click or tap **Import data**.
+
+11.	Click **Search**, and then select and open the Excel spreadsheet that you just updated.
+
+12. Click **Import**.
 
 ### Export
 
-You can view and export personal data from each entity into an Excel worksheet.
+You can export personal data from each entity into an Excel spreadsheet and view it.
 
-From the [PowerApps site](http://web.powerapps.com/):
+From [PowerApps](http://web.powerapps.com/), do the following:
 
-1.	Navigate to **Data** > **Entities**.
-2.	Select the **Entity** you want to view and export the data.
-3.	Click on the **Data** option.
-4.	Click the **Export data** icon. This Export operation runs in the background and you will be notified when it’s done.
-5. To view the exported data, click on the Open in Excel icon.
+1. In the navigation pane, click or tap **Data**, and then click or tap **Entities**.
+
+    ![PowerApps Legacy Entities](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities.png)
+
+2. From the list of entities, click or tap the entity that you want to export and view (for example, the Account entity), as shown below.
+
+    ![PowerApps Legacy Entities details list](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-details-list.png)
+
+3. Click or tap the **Data** tab. A list of records for the entity displays.
+
+    ![PowerApps Legacy Account data](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-account-data.png)
+
+4. Click or tap **Export data**.
+
+    The export operation runs in the background and you'll be notified when it’s complete.
+
+5. To view the exported data, click or tap **Open in Excel**.
 
 ### Delete
-You can delete personal data that is stored in entities by using the Export/Import data functionality.
+You can delete personal data that's stored in entities by using the Export/Import data feature.
 
-The CDS administrator is responsible for identifying all the entities that contain the individual personal data and repeating the following steps for each of the entities.
+CDS System Administrators are responsible for identifying all entities that contain personal data for an individual and repeating the following steps for each of those entities.
 
-From the [PowerApps site](http://web.powerapps.com/):
+From [PowerApps](http://web.powerapps.com/), do the following:
 
-1.	Click **Data** > **Entities**.
-2.	Scroll down the **Entity** list and locate the entity you want to remove the personal data.
-3.	Click on the entity.
-4.	Click on the **Data** option.
-5.	Click the **Export data** icon.
-6.	Click the **Open in Excel** icon (when the export is done).
-7.	**Enable Editing** on the Excel worksheet.
-8.	**Save** your updated worksheet (do a Save As so you know where the file is located).
-9.	Delete the row(s) of the personal data records that you want to remove.
-10.	Save your updates
-11.	On the **Entities** form, click on **Import data** icon.
-12.	Click the **Search** box.
-13.	Choose the file that contains your updates.
-14.	Click the **Open** box.
-15.	Click the Import button.
+1. In the navigation pane, click or tap **Data**, and then click or tap **Entities**.
+
+    ![PowerApps Legacy Entities](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities.png)
+
+2. From the list of entities, click or tap the entity from which you want to remove personal data (for example, the Account entity), as shown below.
+
+    ![PowerApps Legacy Entities details list](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-details-list.png)
+
+3. Click or tap the **Data** tab. A list of records for the entity displays.
+
+    ![PowerApps Legacy Account data](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-account-data.png)
+
+4. Click or tap **Export data**.
+
+5. When the export is complete, click or tap **Open in Excel**, and then click or tap **Enable editing**.
+
+6. In the menu bar, click or tap **File**, click or tap **Save As**, and then select a location in which to save the file.
+
+7. Delete the rows containing the personal data that you want to remove from the entity and save the spreadsheet.
+
+10.	In PowerApps, go back to the **Data** tab of the entity, and then click or tap **Import data**.
+
+11.	Click **Search**, and then select and open the Excel spreadsheet that you just updated.
+
+12. Click **Import**.

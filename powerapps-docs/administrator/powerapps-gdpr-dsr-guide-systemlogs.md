@@ -1,6 +1,6 @@
 ---
-title: Responding to DSRs for system-generated logs in PowerApps, Microsoft Flow, and Common Data Service  | Microsoft Docs
-description: Responding to DSRs for system-generated logs in PowerApps, Microsoft Flow, and Common Data Service
+title: Responding to DSR requests for system-generated logs in PowerApps, Microsoft Flow, and Common Data Service for Apps  | Microsoft Docs
+description: Walkthrough of how to respond to DSR requests for system-generated logs in PowerApps, Microsoft Flow, and Common Data Service for Apps
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -15,7 +15,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/18/2018
+ms.date: 04/23/2018
 ms.author: jamesol
 
 ---
@@ -31,7 +31,7 @@ Note that the ability to restrict or rectify data in system-generated logs is no
 ## Accessing and exporting system-generated logs
 Administrators can access system-generated logs associated with a user’s use of PowerApps, Microsoft Flow, and Common Data Service (CDS) for Apps services and applications. To access and export system-generated logs:
 
-1. Go to the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/) and sign in using the credentials of an Office 365 Global Administrator.
+1. Go to the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/) and sign in using Office 365 Global Administrator credentials.
 
 2. From the **Privacy** drop-down list at the top of the page, select **Data Subject Request**.
 
@@ -53,7 +53,7 @@ The following table summarizes accessing and exporting system-generated logs:
 | What will data in system-generated logs look like? |	Example of a system-generated log record in JSON format: <br> [{ <br>"DateTime": "2017-04- 28T12:09:29-07:00",  <br> "AppName": "SharePoint", <br> "Action": "OpenFile", "IP": "154.192.13.131", <br> "DevicePlatform": "Windows 1.0.1607" <br>}]
 
 > [!NOTE]
->  Some features will not allow for the export or deletion of system-generated logs with personal information so that the integrity of such information can be maintained for security and audit reasons.
+>  For security and audit purposes, some features do not allow you to export or delete system-generated logs in order to maintain the integrity of personal information.
 >
 >
 
