@@ -83,7 +83,7 @@ After you find the data, you can then perform the specific action to satisfy the
 ### Step 2: Find personal data for the user in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service.
 
-See Executing DSRs against Microsoft Flow Customer Data for guidance on how to discover personal data stored by the Microsoft Flow service.
+For guidance on how to discover personal data stored by the Microsoft Flow service see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
 
 > [!IMPORTANT]
 > It is recommended that admins complete this step for a PowerApps user
@@ -115,11 +115,11 @@ Data subjects may request that you restrict processing of their personal data.  
 ## Export
 The “right of data portability” allows a data subject to request a copy of his or her personal data in an electronic format (that’s a “structured, commonly used, machine read-able and interoperable format”) that may be transmitted to another data controller.
 
-See [Responding to Data Subject Rights (DSR) requests to export PowerApps customer data](powerapps-gdpr-export-dsr.md) for more details.
+See [Responding to Data Subject Rights (DSR) requests to export PowerApps customer data](powerapps-gdpr-export-dsr.md) for details.
 
 ## Delete
 The “right to erasure” by the removal of personal data from an organization’s customer data is a key protection in the GDPR. Removing personal data includes system-generated logs but not audit-log information.
 
 PowerApps allows users to build line-of-business applications that are a critical part of your organization’s day-to-day operations. When a user leaves your organization, you will need to manually review and determine whether to delete certain data and resources that they have created. Other customer data will be automatically deleted whenever the user’s account is deleted from Azure Active Directory.
 
-See [Responding to Data Subject Rights (DSR) requests to delete PowerApps customer data](powerapps-gdpr-delete-dsr.md) for more details.
+See [Responding to Data Subject Rights (DSR) requests to delete PowerApps customer data](powerapps-gdpr-delete-dsr.md) for details.

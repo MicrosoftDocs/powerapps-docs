@@ -39,7 +39,7 @@ Custom-connector permissions |
 
 \** Each of these resources contains “Created By” and “Modified By” records that include personal data. For security reasons, these records will be retained until the resource is deleted.
 
-\*** For environments that include a Common Data Service (CDS) for Apps database, environment permissions (that is, which users are assigned to the Environment Maker and Admin roles) are stored as records in that database. For guidance on how to respond to DSRs for users of CDS for Apps, see [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251).
+\*** For environments that include a Common Data Service (CDS) for Apps database, environment permissions (that is, which users are assigned to the Environment Maker and Admin roles) are stored as records in that database. For guidance on how to respond to DSRs for users of CDS for Apps, see [Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data](common-data-service-gdpr-dsr-guide.md).
 
 For the data and resources that require manual review, PowerApps offers the following experiences to reassign (if necessary) or delete personal data for a specific user:
 
@@ -60,7 +60,7 @@ Connection permissions | | App creator: Available <br> Admin: Under development
 Custom connector | | App creator: Available <br> Admin: Under development
 Custom-connector permissions | | App creator: Available <br> Admin: Under development
 
-\** With the introduction of CDS for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the instance of that database. For guidance on how to respond to DSRs for users of CDS for Apps, see [Executing DSRs against Common Data Service Customer Data](https://go.microsoft.com/fwlink/?linkid=872251).
+\** With the introduction of CDS for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the instance of that database. For guidance on how to respond to DSRs for users of CDS for Apps, see [Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data](common-data-service-gdpr-dsr-guide.md).
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ As an administrator, you have two decisions to make when processing a DSR delete
 > Deleting an environment will permanently delete all resources within the environment, including all apps, flows, connections, etc. So please review the contents of an environment before deletion.
 
 ### Give access to a user’s environments from the PowerApps admin center
-An admin can grant administrative access to an environment created by a specific user from the [PowerApps admin center](https://admin.powerapps.com/) via the following steps:
+An admin can grant administrative access to an environment created by a specific user from the [PowerApps admin center](https://admin.powerapps.com/) by following these steps:
 
 1. From the [PowerApps admin center](https://admin.powerapps.com/), select each environment in your organization.
 
@@ -96,7 +96,7 @@ An admin can grant administrative access to an environment created by a specific
     ![Environment security](./media/powerapps-gdpr-delete-dsr/share-environment.png)
 
 ### Delete environments created by a user from the PowerApps admin center
-An admin can review and delete environments created by a specific user from the [PowerApps admin center](https://admin.powerapps.com/) via the following steps:
+An admin can review and delete environments created by a specific user from the [PowerApps admin center](https://admin.powerapps.com/) by following these steps:
 
 1. From the [PowerApps admin center](https://admin.powerapps.com/), select each environment in your organization.
 
@@ -107,7 +107,7 @@ An admin can review and delete environments created by a specific user from the 
     ![Environment deletion](./media/powerapps-gdpr-delete-dsr/delete-environment.png)
 
 ### Give access to a user’s environments using PowerShell
-An administrator can assign themselves (or another user within their organization) access to all environments created by a user via the **Set-AdminEnvironmentRoleAssignment** function in the [PowerShell cmdlets for PowerApps administrators](https://go.microsoft.com/fwlink/?linkid=871804):
+An administrator can assign themselves (or another user within their organization) access to all environments created by a user by using the **Set-AdminEnvironmentRoleAssignment** function in the [PowerShell cmdlets for PowerApps administrators](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
 Add-PowerAppsAccount
@@ -125,7 +125,7 @@ Get-AdminEnvironment -CreatedBy $deleteDsrUserId | Get-AdminEnvironmentRoleAssig
 > This function works only in environments that do not have an instance of a database in CDS for Apps.
 
 ### Delete environments created by a user using PowerShell
- An administrator can delete all environments created by a user via the **Remove-AdminEnvironment** function in the [PowerShell cmdlets for PowerApps administrators](https://go.microsoft.com/fwlink/?linkid=871804):
+ An administrator can delete all environments created by a user by using the **Remove-AdminEnvironment** function in the [PowerShell cmdlets for PowerApps administrators](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
 Add-PowerAppsAccount
@@ -143,7 +143,7 @@ For more information, see [Administer environments](environments-administration.
 ### For environments without a CDS for Apps database
 
 #### PowerApps Admin center
-An administrator can delete a user’s environment permissions starting from the [PowerApps Admin center](https://admin.powerapps.com/) via the following steps:
+An administrator can delete a user’s environment permissions starting from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:
 
 1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization.
 
@@ -162,7 +162,7 @@ An administrator can delete a user’s environment permissions starting from the
 5.	If the user has access to either role, from within the **Users** screen, remove their permission, and select **Save**.
 
 #### PowerShell
-An administrator can delete all environment role assignments for a user across all environments without a CDS for Apps database via the **Remove-AdminEnvironmentRoleAssignment** function in the [PowerShell cmdlets for PowerApps administrators](https://go.microsoft.com/fwlink/?linkid=871804):
+An administrator can delete all environment role assignments for a user across all environments without a CDS for Apps database by using the **Remove-AdminEnvironmentRoleAssignment** function in the [PowerShell cmdlets for PowerApps administrators](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
 Add-PowerAppsAccount
@@ -181,7 +181,7 @@ With the introduction of the CDS for Apps, if a database is created within the e
 ## Step 3: Delete or reassign all canvas apps owned by a user
 
 ### Reassign a user’s canvas apps using the PowerApps Admin PowerShell cmdlets
-If an admin decides not to delete a user’s canvas apps, they can reassign the apps owned by a user via the **Set-AdminAppOwner** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
+If an admin decides not to delete a user’s canvas apps, they can reassign the apps owned by a user by using the **Set-AdminAppOwner** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
 Add-PowerAppsAccount
@@ -196,7 +196,7 @@ Get-AdminApp -Owner $deleteDsrUserId | Set-AdminAppOwner -AppOwner $newAppOwnerU
 A user can delete an app from the [PowerApps site](https://web.powerapps.com). For the full steps on how to delete an app, please see deleting an app.
 
 ### Delete a user’s canvas app using the PowerApps Admin center
-An admin can delete apps created by a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) via the following steps:
+An admin can delete apps created by a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:
 
 1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization.
 
@@ -237,7 +237,7 @@ Whenever an app is shared with a user, PowerApps stores a record called a “rol
 > The app owner's role assignment can only be deleted by assigning a new owner for the app.
 
 ### PowerApps Admin center
-An admin can delete app-role assignments for a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) via the following steps:
+An admin can delete app-role assignments for a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:
 
 1. From the [PowerApps Admin center](https://admin.powerapps.com/), select each environment in your organization.
 
@@ -334,8 +334,7 @@ Get-ConnectorRoleAssignment | Remove-ConnectorRoleAssignment
 The function to allow an admin to find and delete a user’s connector role assignments using the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
 ## Step 9: Delete the user’s personal data in Microsoft Flow
-PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service.
-Please see [Executing DSRs against Microsoft Flow customer data](https://go.microsoft.com/fwlink/?linkid=872250), for guidance on how to respond to DSRs for users who use the Microsoft Flow service.
+PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSRs for users who use the Microsoft Flow service, see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
 
 > [!IMPORTANT]
 > It is recommended that admins complete this step for a PowerApps user.
@@ -343,7 +342,7 @@ Please see [Executing DSRs against Microsoft Flow customer data](https://go.micr
 ## Step 10: Delete the user’s personal data in instances of CDS for Apps
 Certain PowerApps licenses, including the PowerApps Community Plan, give the ability for users within your organization to create instances of CDS for Apps and to create and build apps on CDS for Apps. The PowerApps Community Plan is a free license that allows users to try out CDS for Apps in an individual environment. See the PowerApps pricing page for which capabilities are included in each PowerApps license.
 
-Please see [Executing DSRs against customer data in CDS for Apps](https://go.microsoft.com/fwlink/?linkid=872251) for guidance on how to respond to DSRs for users who use CDS for Apps.
+For guidance on how to respond to DSRs for users who use CDS for Apps, see [Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data](common-data-service-gdpr-dsr-guide.md).
 
 > [!IMPORTANT]
 > It is recommended that admins complete this step for a PowerApps user.

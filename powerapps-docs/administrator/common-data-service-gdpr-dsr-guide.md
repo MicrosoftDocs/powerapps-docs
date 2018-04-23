@@ -85,7 +85,6 @@ To avoid interruption to business applications that may be critical to your orga
 Only Office 365 Global Administrators and CDS System Administrators can perform the discover, rectify, export, and delete actions listed below.
 
 ### Discover
-
 System Administrators can create multiple CDS for Apps instances. These instances can be used for trial, development, or production purposes. Each of these instances has a copy of the system User entity with any custom attributes that may have been added by the system administrator, as well as the user personal data synced from the Office 365 Admin Center.
 
 System administrators can find a list of all the CDS for Apps instances by navigating to the Dynamics 365 Administration Center from the PowerApps Admin center.
@@ -195,7 +194,6 @@ From the [PowerApps Admin center](https://admin.powerapps.com/), do the followin
 10. On the user's Summary page, remove all personal data, and then click or tap **Save**.
 
 #### Remove a user's personal data by using Excel
-
 From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
@@ -215,7 +213,6 @@ From the [PowerApps Admin center](https://admin.powerapps.com/), do the followin
 12. Click or tap **Next**, and then click or tap **Submit**.
 
 #### Remove audit history from the Audit Summary View page
-
 From the [PowerApps Admin center](https://admin.powerapps.com/), do the following:
 
 1. In the navigation pane, click or tap **Environments**, and then select an environment from the list.
@@ -285,7 +282,6 @@ From the [PowerApps Admin center](https://admin.powerapps.com/), do the followin
 6. Save the screenshot to a file, which you can then send to the DSR requestor.
 
 ### Delete
-
 CDS System Administrators can delete an individual’s personal data from records where that data is stored.  The CDS System Administrator can choose to either delete the record where the personal data is stored, or remove the contents of the personal data from the record.  
 
 > [!NOTE]
@@ -302,7 +298,6 @@ From the Relevance Search results, to the following:
 ## Personal data stored in databases of the previous version of CDS
 
 ### Prerequisites
-
 You may be storing personal data from individuals (such as your own customers) within your CDS entities.  
 
 CDS System Administrators are responsible for maintaining an inventory of where personal data is being stored within various entities for each individual so that he or she can locate that data in response to any DSR requests.  
@@ -385,7 +380,6 @@ From [PowerApps](http://web.powerapps.com/), do the following:
 12. Click **Import**.
 
 ### Export
-
 You can export personal data from each entity into an Excel spreadsheet and view it.
 
 From [PowerApps](http://web.powerapps.com/), do the following:

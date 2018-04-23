@@ -21,7 +21,6 @@ ms.author: jamesol
 ---
 
 # Responding to Data Subject Rights (DSR) requests to export PowerApps customer data
-
 The “right of data portability” allows a data subject to request a copy of his or her personal data in an electronic format (that is, a structured, commonly used, machine readable and interoperable format) that may be transmitted to another data controller:
 
 * Website access: [PowerApps](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
@@ -216,6 +215,7 @@ Get-Connection | ConvertTo-Json | out-file -FilePath "UserDetails.json"
 The function for an administrator to export connections created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
  
 ## Step 6: Export the user’s permissions to shared connections
+
 ### PowerApps Maker PowerShell cmdlets
 Users can export the connection role assignments for all connections that they have access to by using the **Get-ConnectionRoleAssignment** function in the [PowerApps Maker PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
 
@@ -286,7 +286,7 @@ Users can export the personal data stored within the gateway service from [Power
 There are also PowerShell cmdlets that allow you to retrieve, manage, and delete your personal gateways. For more information, see [On-premise gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238).
 
 ## Step 11: Export the user’s personal data in Microsoft Flow
-PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see Executing DSRs against Microsoft Flow Customer Data.
+PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
 
 > [!IMPORTANT] 
 >  We recommend that administrators complete this step for PowerApps users.
