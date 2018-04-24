@@ -134,7 +134,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 ## Accessibility guidelines
 ### Color contrast
-* Standard color contrast requirements apply, if the graphic is used as a button.
+* [Standard color contrast requirements](../accessible-apps-color.md) apply, if the graphic is used as a button.
 * Consider checking for contrast issues within the image, if it is not purely decorative.
 
 ### Screen reader support

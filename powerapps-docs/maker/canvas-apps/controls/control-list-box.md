@@ -156,7 +156,7 @@ There must be adequate color contrast between:
 * **[HoverFill](properties-color-border.md)** and **[Fill](properties-color-border.md)**
 * **[PressedFill](properties-color-border.md)** and **[Fill](properties-color-border.md)**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.

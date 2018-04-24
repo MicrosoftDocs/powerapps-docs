@@ -133,6 +133,9 @@
         href: ./canvas-apps/global-apps.md
       - name: Create an accessible app
         href: ./canvas-apps/accessible-apps.md
+        items:
+          - name: Color
+            href: ./canvas-apps/accessible-apps-color.md
     - name: Manage your app
       items:
       - name: Introduction to powerapps.com

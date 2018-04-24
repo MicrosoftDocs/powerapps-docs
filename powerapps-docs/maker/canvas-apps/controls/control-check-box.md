@@ -140,7 +140,7 @@ There must be adequate color contrast between:
 * **CheckboxBackgroundFill** and **[PressedFill](properties-color-border.md)**
 * **CheckboxBackgroundFill** and **[HoverFill](properties-color-border.md)**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[Text](properties-core.md)** must be present.

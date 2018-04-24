@@ -149,7 +149,7 @@ There must be adequate color contrast between:
 * **SelectedColor** and **SelectedFill**
 * [**HoverColor**](properties-color-border.md) and [**HoverFill**](properties-color-border.md)
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **NoDataText** must be present.

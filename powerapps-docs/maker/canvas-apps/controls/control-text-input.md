@@ -160,7 +160,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 ## Accessibility guidelines
 ### Color contrast
-* Standard color contrast requirements apply.
+* [Standard color contrast requirements](../accessible-apps-color.md) apply.
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.

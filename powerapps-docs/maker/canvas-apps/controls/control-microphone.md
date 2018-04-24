@@ -118,7 +118,7 @@ The same guidelines for **[Button](control-button.md)**  apply because **Microph
 There must be adequate color contrast between:
 * **[Image](properties-visual.md)** and the button text and icon (if applicable)
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.

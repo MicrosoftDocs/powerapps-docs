@@ -98,7 +98,7 @@ There must be adequate color contrast between:
 * **SelectionFill** and **[Fill](properties-color-border.md)**
 * **SelectionTagColor** and **SelectionTagFill**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.

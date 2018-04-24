@@ -149,7 +149,7 @@ A **Label** can be used as a button or link by specifying **[OnSelect](propertie
 ### Color contrast
 There must be adequate color contrast between:
 * **[Color](properties-color-border.md)** and **[Fill](properties-color-border.md)**
-* Other standard color contrast requirements apply (if used as a button or link)
+* Other [standard color contrast requirements](../accessible-apps-color.md) apply (if used as a button or link)
 
 ### Screen reader support
 * **[Text](properties-core.md)** must be present.
