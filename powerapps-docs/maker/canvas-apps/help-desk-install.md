@@ -82,10 +82,10 @@ This list stores the Help Desk tickets.
 7. In the **Default value** textbox, enter **LAPTOP / PC equipment issue**.
 8. Click **OK**.
 
-### Create % Complete column
+### Create PercentComplete column
 
 1. Click **Create column**.
-2. In the **Column name** textbox enter **% Complete**.
+2. In the **Column name** textbox enter **PercentComplete**.
 3. In the **type of information in this column is** radio button list, select **Number (1, 10, 100)**.
 4. In the **Require that this column contains information** radio button list, select **No**.
 5. Click **OK**.
@@ -249,6 +249,8 @@ This list stores the Help Desk tickets.
 	> [!TIP] 
 	> If you have more than 1 admin, please use a comma to delimit the admin.  Example:
 	> "admin1@microsoft.com","admin2@microsoft.com".
+	> To ensure the addresses in the AdminList match the format PowerApps expects, select
+	> View > Variables > Global > MyProfile and look at the 'Mail' column to see the expected email format.
 
 5. Click **File**.
 6. Click **Save**.
