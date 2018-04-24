@@ -15,7 +15,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 4/18/2018
+ms.date: 4/23/2018
 ms.author: audrie
 
 ---
@@ -23,21 +23,28 @@ ms.author: audrie
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Getting Started | Understanding Model Driven App Templates with Casey Burke**
-<br>by Casey Burke
-<br>*April 19th, 10:00AM PST, 12:00PM EST*
-
-Microsoft Program Manager Casey Burke will demonstrate and break down the architecture of a Model Driven App Template. Learn how to take these templates, and customize them to solve your own business objectives.
-
-[Click here to watch on April 19th](https://www.youtube.com/watch?v=FShakkXKiS8) 
-
 **Deep Dive | Using PowerApps for Business Process Management (BPM) by Dawid van Heerden**
 <br>by Audrie Gordon & Dawid van Heerden
-<br>*April 23rd, 10:00AM PST, 12:00PM EST*
+<br>*April 24th, 10:00AM PST, 12:00PM EST*
 
 PowerApps is fantastic at creating business applications FAST. This video shows the power of using this same platform to drive multi-step business processes, involving various roles, steps, and routing options.
 
-[Click here to watch on April 23rd](https://www.youtube.com/watch?v=JY8r46HnHoI)
+[Click here to watch on April 23rd](https://www.youtube.com/watch?v=Jj3hPkAf5KU)
+
+**Model Driven App Components Part 1 | Managing Entities and Data Imports**
+<br>by Audrie Gordon & Clay Wesener 
+<br>*May 1st, 10:00AM PST, 12:00PM EST*
+
+Work along with Clay Wesener from the PowerApps team as he walks you through building a CDS for Apps database. You'll learn how to create and navigate entities as well as fields. You'll also get a head start on understanding what's built-in right out of the box! 
+
+This is part 1 of a 3-part series:
+Part 1: Entities
+Part 2: Forms and Views
+Part 3: Charts and Dashboards
+
+This is a great opportunity to learn how to reuse standard entitles and fields, and how to create your own custom scenarios in a snap!
+
+[Click here to watch on May 1st](https://www.youtube.com/watch?v=02NWfHRYkeo)
 
 **Deep Dive | Laura Rogers from IWMentor Shares Best Practices for Production Apps**
 <br>by Audrie Gordon & Laura Rodgers
@@ -47,6 +54,27 @@ Laura Rogers from IW Mentor has been training, and delivering production apps, t
 IW Mentor Website: https://www.iwmentor.com/
 
 [Click here to watch on May 14th](https://www.youtube.com/watch?v=I50GtV9w7Os)
+
+**Model Driven App Components Part 2 | Creating Forms and Views**
+<br>by Audrie Gordon & Clay Wesener 
+<br>*May 15th, 10:00AM PST, 12:00PM EST*
+
+Model Driven Apps provide a rich experience for app makers designing simple to complex forms scenarios. Learn to use our new Forms Designer to build the form(s) needed for the Model App we started in part 1. Anees will walk you through form components such as tabs, sections, and fields. He will also share best practices on integrating business logic and filters. 
+
+This is part 1 of a 3-part series:
+Part 1: Entities
+Part 2: Forms and Views
+Part 3: Charts and Dashboards
+
+[Click here to watch on May 15th](https://www.youtube.com/watch?v=v7VoX-V2ek4)
+
+**Model Driven App Components Part 3 | Exploring Charts and Dashboards**
+<br>by Audrie Gordon & Clay Wesener 
+<br>*May 29th, 10:00AM PST, 12:00PM EST
+
+PowerApps offers a composite approach to reporting, with rich views and dashboarding capabilities. Our Model Driven App series wraps up with helpful charts and dashboards to optimize and modernize the solution we’ve been working on. WOW! An app full of high value and fun!
+
+[Click here to watch on May 29th](https://www.youtube.com/watch?v=kJ5eTWh7Hyg)
 
 **Inside the Universal Audit App: See what PowerApps and Flow are capable of  with Paul Culmsee**
 <br>by Paul Culmsee
