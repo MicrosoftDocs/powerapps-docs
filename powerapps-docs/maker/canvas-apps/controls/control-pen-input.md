@@ -101,5 +101,5 @@ There must be adequate color contrast between:
 
 ### Keyboard support
 
-    > [!IMPORTANT]
+> [!IMPORTANT]
 > **Pen input** is not accessible to keyboard users. Always provide an alternative form of input. For example, if a signature is required, consider adding a **[Text input](control-text-input.md)** for users to enter their name. Both methods can be offered and the user can choose the one they are more comfortable with.
