@@ -142,11 +142,13 @@ If you add one or more **Image** controls to your app, you can show individual i
 * **[AccessibleLabel](properties-accessibility.md)** must be empty or the empty string **""**, if the graphic is purely for decoration. This causes screen readers to ignore the graphic.
 * **[AccessibleLabel](properties-accessibility.md)** can be empty or the empty string **""**, if the graphic provides redundant information.
     * For example, an **Image** of gears with its **[AccessibleLabel](properties-accessibility.md)** set to **Settings**. This image is not used as a button. It is next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read the image as **Settings**, and the label as **Settings** again. This is unnecessarily verbose. In this case, the **Image** does not need an **[AccessibleLabel](properties-accessibility.md)**.
+
 > [!IMPORTANT]
 > Screen readers will always read **Image**s that have **[TabIndex](properties-accessibility.md)** of zero or greater, even if **[AccessibleLabel](properties-accessibility.md)** is empty. This is because they are rendered as buttons. If no **[AccessibleLabel](properties-accessibility.md)** is provided, screen readers will simply read the graphic as **button**.
 
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater, if the graphic is used as a button. This allows keyboard users to navigate to it.
 * Focus indicators must be clearly visible, if the graphic is used as a button. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+
 > [!NOTE]
 > When **[TabIndex](properties-accessibility.md)** is zero or greater, the **Image** is rendered as a button. There is no change to the visual appearance, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the **Image** is identified as an image.

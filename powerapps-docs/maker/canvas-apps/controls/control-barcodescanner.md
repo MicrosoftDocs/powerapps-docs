@@ -86,5 +86,6 @@ If you add this control, the user can update a data source with one or more phot
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
+
 > [!NOTE]
 > Screen readers will annnouce when a new barcode has been found. The value will not be announced. As long as the barcode is in view, screen readers will remind every 5 seconds that the same barcode is still being identified.
