@@ -1,20 +1,11 @@
 ---
 title: Create an Excel app from scratch | Microsoft Docs
-description: Create an Excel app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 04/10/2018
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 04/23/2018
 ms.author: anneta
 
 ---

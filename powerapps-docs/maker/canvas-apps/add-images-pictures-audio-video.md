@@ -1,18 +1,15 @@
 ---
 title: Embed multimedia files into an app and upload | Microsoft Docs
 description: Show multimedia files in an app, and upload them to a data source
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: karthik-1
-manager: anneta
+manager: kfile
 editor: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 07/12/2017
 ms.author: sharik
 

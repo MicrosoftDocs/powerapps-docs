@@ -1,19 +1,16 @@
 ---
 title: Integrate PowerApps into websites and other services | Microsoft Docs
 description: Embed apps in websites and other services.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/20/2017
 ms.author: mblythe
 

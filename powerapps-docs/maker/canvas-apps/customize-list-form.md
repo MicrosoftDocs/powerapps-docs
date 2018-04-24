@@ -1,21 +1,18 @@
 ---
 title: Customize a SharePoint list form using PowerApps | Microsoft Docs
 description: Use PowerApps to customize a list form in SharePoint.
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 02/05/2018
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Customize a SharePoint list form using PowerApps

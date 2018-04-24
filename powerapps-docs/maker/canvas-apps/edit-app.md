@@ -1,19 +1,16 @@
 ---
 title: Edit an app | Microsoft Docs
 description: Step-by-step instructions for editing apps and session-locking scenarios.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: karthik-1
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 05/19/2017
 ms.author: sharik
 
