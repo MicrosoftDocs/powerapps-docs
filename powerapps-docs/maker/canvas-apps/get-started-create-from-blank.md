@@ -39,7 +39,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
-3. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
+3. Save the file under the name **eventsignup.xls**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
 
 > [!IMPORTANT]
 > You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
@@ -54,6 +54,10 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 1. Under **Make apps like these**, hover over the **Start from blank** tile, select the phone icon, and then select **Make this app**.
 
 	![Blank-app tile](./media/get-started-create-from-blank/blank-app.png)
+
+    PowerApps Studio creates a blank app for phones.
+
+1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
 
 ## Connect to data
 1. In the middle of the screen, select **connect to data**.
@@ -124,11 +128,13 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     For more information about these and other functions, see the [formula reference](formula-reference.md).
 
-5. Type an **i** in the search box, and select the sort button once (or an odd number of times).
+5. Type an **i** in the search box, select the sort button by clicking or tapping it, and then select it one more time (or an odd number of additional times).
 
     The gallery shows these results.
 
     ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
+
+1. Clear all text from the search box.
 
 6. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
 
@@ -149,7 +155,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
      ![Reorder fields](./media/get-started-create-from-blank/reorder-fields.png)
 
-1. With the form selected, set its **Item** property to this expression by typing or pasting it in the formula bar:<br>**BrowseGallery1.Selected**
+1. Select the form, and set its **Item** property to this expression by typing or pasting it in the formula bar:<br>**BrowseGallery1.Selected**
 
 1. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **Change records**.
 
@@ -171,7 +177,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. Set the **OnSelect** property for that icon to this formula:<br>**Refresh(Schedule)**
 
-    When the user selects this icon, the data from **Schedule** is refreshed.
+    When the user selects this icon, the data from **Schedule** is refreshed from the Excel file.
 
     For more information about this and other functions, see the [formula reference](formula-reference.md).
 
@@ -189,7 +195,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. Set the **OnSelect** property for the arrow to this formula:<br>**EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)**
 
-    When the user selects this icon, **ChangeScreen** appears with each field showing the data for the selected record, so that the user can edit or delete it more easily.
+    When the user selects this icon, **ChangeScreen** appears with each field showing the data for the selected record, so that the user can edit or delete the record more easily.
 
 ## Configure icons on the change screen
 1. On **ChangeScreen**, select the "x" icon in the upper-left corner.
@@ -198,7 +204,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. Set the **OnSelect** property for that icon to this formula:<br>**ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)**
 
-    When the user selects this icon, any changes that the user made is this screen are discarded, and the view screen opens.
+    When the user selects this icon, any changes that the user made in this screen are discarded, and the view screen opens.
 
 1. In the upper-right corner, select the checkmark icon.
 
@@ -208,7 +214,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     When the user selects this icon, any changes that the user made is this screen are saved, and the view screen opens.
 
-1. On the **Insert** tab, click or tap **Icons**, and then click or tap the **Trash** icon.
+1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 
 1. Set the new icon's **Color** property to **White**, and move the new icon so it appears next to the checkmark icon.
 
@@ -219,7 +225,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
     When the user selects this icon, the selected record is deleted from the data source, and the view screen opens.
 
 ## Test the app
-1. With the **ViewScreen** selected, open Preview by pressing F5 (or selecting the **Preview** icon near the upper-right corner).
+1. Select the **ViewScreen**, and then open Preview by pressing F5 (or selecting the **Preview** icon near the upper-right corner).
 
     ![Open Preview mode](./media/get-started-create-from-blank/open-preview.png)
 
@@ -231,7 +237,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. Delete the record that you added.
 
-1. Close Preview mode by pressing Esc (or by selecting the close icon under the title bar).
+1. Close Preview mode by pressing Esc (or by selecting the close icon in the upper-right corner).
 
 ## Next steps
 * Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
