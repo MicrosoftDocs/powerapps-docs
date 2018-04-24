@@ -1,19 +1,16 @@
 ---
 title: Abs, Exp, Ln, Power, and Sqrt functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Abs, Sqrt, and other functions in PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 09/13/2016
 ms.author: gregli
 
