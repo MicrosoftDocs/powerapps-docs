@@ -19,22 +19,21 @@ ms.author: anneta
 
 ---
 # Tutorial: Customize a gallery in PowerApps
-In this tutorial, you'll customize the default browse screen, including the gallery, of an app generated in PowerApps. You can manage data by using the default app without customizing it, but it will be much more powerful and easier to use if you make these changes:
+In this tutorial, you'll customize the gallery in the default screen of an app that was generated automatically in PowerApps. You can manage data without customizing the app, but it will be more powerful and easier to use if you make these kinds of changes:
 
 > [!div class="checklist"]
 > * Change the layout
-> * Change the data that appears
-> * Set the columns for filtering and sorting
-> * Test filtering and sorting
-> * Change the title
-> * Show a scrollbar
+> * Change the sort column
+> * Change the search column
+> * Change the screen title
+> * Show a scroll bar
 
-This tutorial starts with an app generated from the [Common Data Service for Apps](../common-data-service/data-platform-intro.md), but the same concepts apply to apps generated from SharePoint, Excel, and other data sources. 
+This tutorial starts with an app generated from a specific data source, but the same concepts apply to any app generated from SharePoint, Excel, or other data sources. 
 
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Prerequisites
-Before you start this tutorial, [generate an app](data-platform-create-app.md) from the Common Data Service for Apps.
+You can review this topic for general concepts, or you can follow each step if you first [generate this app](data-platform-create-app.md).
 
 ## Open the generated app
 1. Sign in to [PowerApps](https://web.powerapps.com), and then click or tap **Apps** near the left edge.
@@ -47,7 +46,7 @@ Before you start this tutorial, [generate an app](data-platform-create-app.md) f
 
 1. In the menu that appears, click or tap the option to edit the app. 
 
-## Customize the gallery
+## Change the layout
 1. On the browse screen, click or tap any item except the first one in the list of accounts.
 
 	This step selects the **Gallery** control, which shows the list of accounts.
@@ -75,7 +74,7 @@ Before you start this tutorial, [generate an app](data-platform-create-app.md) f
 	![Final gallery](./media/customize-layout-sharepoint/final-gallery.png)
 
 
-## Set the sort and search columns
+## Change the sort and search columns
 1. Select the **Gallery** control as the previous section describes.
 
 	![Select gallery](./media/customize-layout-sharepoint/select-gallery-title.png)
@@ -109,7 +108,7 @@ Before you start this tutorial, [generate an app](data-platform-create-app.md) f
 
 1. Remove all text from the search bar, and then close Preview mode by pressing Esc (or by clicking or tapping the close icon *under* the title bar for PowerApps).
 
-## Change the title of the screen
+## Change the screen title
 1. Click or tap the title of the screen to select it.
 
 	![Select screen title](./media/customize-layout-sharepoint/select-title.png)

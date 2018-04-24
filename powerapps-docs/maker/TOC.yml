@@ -35,7 +35,7 @@
     items:
     - name: Customize a generated app
       items:
-      - name: Customize a browse screen
+      - name: Customize a gallery
         href: ./canvas-apps/customize-layout-sharepoint.md
       - name: Customize a form
         href: ./canvas-apps/customize-forms-sharepoint.md
