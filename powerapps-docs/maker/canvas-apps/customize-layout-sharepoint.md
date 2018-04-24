@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.component: canvas
 ms.date: 04/24/2018
 ms.author: anneta
-
+#As a business analyst with little or no coding experience, I want to change the data that appears in the default gallery of a generated app and make other changes so that my users can more easily find and manage information.
 ---
 # Tutorial: Customize a gallery in Microsoft PowerApps
 In this tutorial, you'll customize the default gallery of an app that was generated automatically in PowerApps. You can use the app without making these changes, but they will probably make it easier to use:
