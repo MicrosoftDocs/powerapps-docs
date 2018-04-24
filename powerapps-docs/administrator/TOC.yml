@@ -55,3 +55,5 @@
   items:
   - name: PowerShell support for PowerApps (preview)
     href: powerapps-powershell.md
+- name: Administer Dynamics 365 Environments
+  href: ./dynamics-365-environments
