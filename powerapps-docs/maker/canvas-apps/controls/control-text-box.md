@@ -154,7 +154,7 @@ There must be adequate color contrast between:
 ### Screen reader support
 * **[Text](properties-core.md)** must be present.
 
-> [!NOTE]
+    > [!NOTE]
 > Screen readers will treat **Label**s as buttons when **[TabIndex](properties-accessibility.md)** is zero or greater.
 
 ### Low vision support

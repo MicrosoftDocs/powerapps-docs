@@ -100,7 +100,7 @@ This is in addition to the [standard color contrast requirements](../accessible-
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
 
-> [!NOTE]
+    > [!NOTE]
 > Screen readers treat the **Rating** control as radio buttons.
 
 ### Keyboard support
@@ -108,5 +108,5 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 * Consider using a different control if there are too many stars. It can be tedious to navigate with a keyboard and difficult to select accurately with a touch screen.
 
-> [!NOTE]
+    > [!NOTE]
 > The same keyboard interactions for radio buttons can be used on **Rating**.
