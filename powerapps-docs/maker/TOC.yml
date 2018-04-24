@@ -35,11 +35,11 @@
     items:
     - name: Customize a generated app
       items:
-      - name: Customize a gallery
+      - name: 1 - Customize a gallery
         href: ./canvas-apps/customize-layout-sharepoint.md
-      - name: Customize a form
+      - name: 2 - Customize a form
         href: ./canvas-apps/customize-forms-sharepoint.md
-      - name: Customize a card
+      - name: 3 - Customize a card
         href: ./canvas-apps/customize-card.md
     - name: Create an app from scratch
       href: ./canvas-apps/data-platform-create-app-scratch.md
