@@ -42,7 +42,11 @@
       - name: Customize a card
         href: ./canvas-apps/customize-card.md
     - name: Create an app from scratch
-      href: ./canvas-apps/data-platform-create-app-scratch.md
+      items:
+      - name: Common Data Service for Apps
+        href: ./canvas-apps/data-platform-create-app-scratch.md
+      - name: Excel
+        href: ./canvas-apps/get-started-create-from-blank.md
     - name: Share an app
       href: ./canvas-apps/share-app.md
     - name: Embed an app in Power BI
@@ -95,8 +99,6 @@
     items:
     - name: Customize a SharePoint list form
       href: ./canvas-apps/customize-list-form.md
-    - name: Build an Excel app from scratch
-      href: ./canvas-apps/get-started-create-from-blank.md
     - name: Customize an app
       items:
       - name: Add and configure a control
