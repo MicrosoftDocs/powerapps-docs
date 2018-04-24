@@ -5,7 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jamesol-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/19/2017
+ms.date: 04/24/2018
 ms.author: jamesol
 
 ---
@@ -32,7 +32,7 @@ PowerApps capabilities for Office 365 and Dynamics 365 enable users to create an
 |  | Included plans |
 | --- | --- |
 | Which Microsoft Office 365 plans include PowerApps? |These plans include PowerApps for Office 365: <br><br>Office 365 Business Essentials <br>Office 365 Business Premium <br>Office 365 Education <br>Office 365 Education Plus <br>Office 365 Enterprise E1 <br>Office 365 Enterprise E3 <br>Office 365 Enterprise E5<br><br>*Office 365 Enterprise E2 includes the same capabilities as Office 365 Enterprise E1, and Office 365 Enterprise E4 includes the same capabilities as Office 365 Enterprise E3.*<br><br>Office 365 Enterprise F1 includes PowerApps for Office 365 Enterprise F1. |
-| Which Microsoft Dynamics 365 apps and plans include PowerApps? |These apps include PowerApps for Dynamics 365:<br><br>Dynamics 365 for Sales, Enterprise edition <br>Dynamics 365 for Customer Service, Enterprise edition <br>Dynamics 365 for Operations, Enterprise edition <br>Dynamics 365 for Field Service, Enterprise edition <br>Dynamics 365 for Project Service Automation, Enterprise edition <br>Dynamics 365 for Team Members, Enterprise edition <br>Dynamics 365 for Financials, Business edition <br>Dynamics 365 for Team Members, Business edition <br><br>These plans include PowerApps Plan 2:<br><br>Dynamics 365, Enterprise edition, Plan 1<br>Dynamics 365, Enterprise edition, Plan 2 <br><br>*PowerApps for Dynamics 365 is also included in existing CRM Online Enterprise, Professional, Basic, and Essential subscriptions.* |
+| Which Microsoft Dynamics 365 apps and plans include PowerApps? |These apps include PowerApps for Dynamics 365:<br><br>Dynamics 365 for Sales, Enterprise edition <br>Dynamics 365 for Customer Service, Enterprise edition <br>Dynamics 365 for Operations, Enterprise edition <br>Dynamics 365 for Field Service, Enterprise edition <br>Dynamics 365 for Project Service Automation, Enterprise edition <br>Dynamics 365 for Team Members, Enterprise edition <br>Dynamics 365 for Financials, Business edition <br>Dynamics 365 for Team Members, Business edition <br>Dynamics 365 for Talent, Enterprise edition <br>Dynamics 365 for Retail, Enterprise edition <br><br>These plans include PowerApps Plan 2:<br><br>Dynamics 365, Enterprise edition, Plan 1<br>Dynamics 365, Enterprise edition, Plan 2 <br><br>*PowerApps for Dynamics 365 is also included in existing CRM Online Enterprise, Professional, Basic, and Essential subscriptions.* |
 
 ### PowerApps for Office 365 Enterprise F1
 PowerApps is included with Office 365 Enterprise F1, with which users can run apps and automate workflows. However, users can't create apps with this plan (as they can with plans such as Office 365 E1, E3, and E5). This table contains specifics about what users can do with PowerApps for Office 365 Enterprise F1:

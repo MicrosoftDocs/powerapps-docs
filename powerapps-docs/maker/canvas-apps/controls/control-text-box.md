@@ -1,19 +1,16 @@
 ---
 title: 'Label control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the label control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -152,7 +149,7 @@ A **Label** can be used as a button or link by specifying **[OnSelect](propertie
 ### Color contrast
 There must be adequate color contrast between:
 * **[Color](properties-color-border.md)** and **[Fill](properties-color-border.md)**
-* Other standard color contrast requirements apply (if used as a button or link)
+* Other [standard color contrast requirements](../accessible-apps-color.md) apply (if used as a button or link)
 
 ### Screen reader support
 * **[Text](properties-core.md)** must be present.

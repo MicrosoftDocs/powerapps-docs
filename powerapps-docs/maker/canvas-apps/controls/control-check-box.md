@@ -1,19 +1,16 @@
 ---
 title: 'Check Box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Check Box control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -143,7 +140,7 @@ There must be adequate color contrast between:
 * **CheckboxBackgroundFill** and **[PressedFill](properties-color-border.md)**
 * **CheckboxBackgroundFill** and **[HoverFill](properties-color-border.md)**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[Text](properties-core.md)** must be present.

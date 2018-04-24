@@ -1,19 +1,16 @@
 ---
 title: Errors function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Errors function in PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/11/2015
 ms.author: gregli
 
