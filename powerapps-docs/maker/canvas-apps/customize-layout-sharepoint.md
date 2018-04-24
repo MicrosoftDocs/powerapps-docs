@@ -1,8 +1,6 @@
 ---
 title: Tutorial for customizing a gallery | Microsoft Docs
 description: In this tutorial, you customize the default browse screen, including the gallery, of an app generated in PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/11/2018
 ms.author: anneta
 

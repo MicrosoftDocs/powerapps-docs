@@ -1,18 +1,16 @@
 ---
 title: Create a relationship between SharePoint lists via a lookup field | Microsoft Docs
 description: Create a relationship between SharePoint lists by using a lookup field.
-services: powerapps
 documentationcenter: na
 author: skjerland
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 01/20/2017
 ms.author: sharik
 

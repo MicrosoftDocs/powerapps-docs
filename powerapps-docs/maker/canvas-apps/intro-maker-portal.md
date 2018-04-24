@@ -1,19 +1,16 @@
 ---
 title: Introduction to powerapps.com | Microsoft Docs
 description: A new home for all makers of apps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: linhtranms
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/28/2016
 ms.author: litran
 

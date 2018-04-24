@@ -1,8 +1,6 @@
 ---
 title: Overview of creating apps | Microsoft Docs
 description: Overview of creating apps in either canvas or model-driven mode and incorporating the Common Data Service
-services: powerapps
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/18/2018
 ms.author: anneta
 

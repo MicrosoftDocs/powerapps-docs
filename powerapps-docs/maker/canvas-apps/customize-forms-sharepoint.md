@@ -1,8 +1,6 @@
 ---
 title: Customize forms | Microsoft Docs
 description: Specify which data to show, in which order to show them, and in which controls.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/17/2018
 ms.author: anneta
 

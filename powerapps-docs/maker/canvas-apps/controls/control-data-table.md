@@ -1,18 +1,16 @@
 ---
 title: 'Data table control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Data table control
-services: powerapps
 documentationcenter: na
 author: jasongre
-manager: kfend
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 06/05/2017
 ms.author: kfend
 

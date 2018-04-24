@@ -1,19 +1,16 @@
 ---
 title: Overview of the Dynamics 365 connection | Microsoft Docs
 description: Create an app for managing data in Dynamics 365
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: Mattp123
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2017
 ms.author: matp
 
