@@ -10,11 +10,11 @@ ms.date: 03/10/2018
 ms.author: anneta
 
 ---
-# Quickstart: Generate an app from Common Data Service for Apps in Microsoft PowerApps
+# Quickstart: Generate an app from Common Data Service for Apps in PowerApps
 
-In this quickstart, you'll use PowerApps to automatically generate your first app based on a list of sample accounts in [Common Data Service for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
+In this quickstart, you'll use Microsoft PowerApps to automatically generate an app based on a list of sample accounts in [Common Data Service (CDS) for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
-To follow this quickstart, you must [switch to an environment](working-with-environments.md) in which a database in Common Data Service for Apps has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
+To follow this quickstart, you must [switch to an environment](working-with-environments.md) in which a database in CDS for Apps has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
@@ -55,7 +55,7 @@ You'll probably want to make more changes before you use this app or share it wi
 1. Near the left edge, select **Save** and then, in the lower-left corner, select **Save**.
 
 ## Next steps
-In this quickstart, you created an app to manage sample data about accounts in the Common Data Service for Apps. As a next step, customize the default browse screen to better suit your needs.
+In this quickstart, you created an app to manage sample data about accounts in CDS for Apps. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs.
 
 > [!div class="nextstepaction"]
-> [Customize a default browse screen](customize-layout-sharepoint.md).
+> [Customize a gallery](customize-layout-sharepoint.md).
