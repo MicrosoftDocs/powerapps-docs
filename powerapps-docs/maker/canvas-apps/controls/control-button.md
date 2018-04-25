@@ -1,19 +1,16 @@
 ---
 title: 'Button control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Button control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -186,7 +183,7 @@ You can also specify the color of a **Button** control by setting its **[HoverFi
 
 ## Accessibility guidelines
 ### Color contrast
-* Standard color contrast requirements apply.
+* [Standard color contrast requirements](../accessible-apps-color.md) apply.
 
 ### Screen reader support
 * **[Text](properties-core.md)** must be present.

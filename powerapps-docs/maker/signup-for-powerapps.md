@@ -1,8 +1,6 @@
 ---
 title: Sign up for a free trial license | Microsoft Docs
 description: Sign up for a free license to try PowerApps for 30 days as an individual.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/12/2018
 ms.author: anneta
 

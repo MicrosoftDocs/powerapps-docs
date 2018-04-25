@@ -1,19 +1,16 @@
 ---
 title: 'Rating control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Rating control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -98,7 +95,7 @@ In this control, the user can indicate, for example, how much they liked somethi
 There must be adequate color contrast between:
 * **RatingFill** and **[Fill](properties-color-border.md)**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.

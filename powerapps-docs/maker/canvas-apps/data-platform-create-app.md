@@ -1,16 +1,14 @@
 ---
 title: Generate an app in PowerApps for the Common Data Service for Apps (quickstart)| Microsoft Docs
 description: Automatically generate an app in PowerApps to manage data in the Common Data Service for Apps
-services: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/10/2018
 ms.author: anneta
 

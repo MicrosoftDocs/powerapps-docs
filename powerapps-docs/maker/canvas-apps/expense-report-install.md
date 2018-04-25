@@ -1,19 +1,16 @@
 ---
 title: Install and configure the Expense Report PowerApps sample | Microsoft Docs
 description: Step-by-step instructions for installing and configuring the Expense Report PowerApps sample.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: caburk
-manager: ''
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: sample
+ms.component: canvas
 ms.date: 04/08/2018
 ms.author: caburk
 

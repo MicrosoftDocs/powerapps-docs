@@ -1,19 +1,16 @@
 ---
 title: 'Text-input control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the text-input control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -163,7 +160,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 ## Accessibility guidelines
 ### Color contrast
-* Standard color contrast requirements apply.
+* [Standard color contrast requirements](../accessible-apps-color.md) apply.
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.

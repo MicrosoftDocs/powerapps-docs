@@ -2,20 +2,12 @@
 ---
 title: Webinar listing | Microsoft Docs
 description: Displays a listing of past and future webinars, including time/date and topics covered.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: audrieMSFT
-manager: anneta
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 4/23/2018
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 4/18/2018
 ms.author: audrie
 
 ---
