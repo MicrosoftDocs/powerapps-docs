@@ -1,7 +1,8 @@
 ---
-title: Quickstart for creating a custom entity | Microsoft Docs
-description: Quickstart for creating a custom entity that is based on another entity, or from scratch.
-documentationcenter: na
+title: Quickstart to create a custom entity | Microsoft Docs
+description: In this quickstart, you learn how to create a custom entity from scratch, or based on another entity.
+services: ''
+suite: powerapps
 author: clwesene
 manager: kfile
 editor: ''
@@ -9,35 +10,34 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: conceptual
+ms.topic: quickstart
 ms.component: cds
 ms.date: 3/21/2018
 ms.author: clwesene
 
 ---
 # Quickstart: Create a custom entity
-You can create a custom entity to store data that is specific to your organization. You can then show that data by developing an app that refers to the entity. After you create an entity, you can [create or modify one or more of its fields](data-platform-manage-fields.md), and [build relationships between entities](data-platform-entity-lookup.md).
+When creating apps in PowerApps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. App development includes adding standard "out-of-the-box" entities or creating custom entities to store data that's specific to your organization. An entity defines the information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. You can then show that data by developing an app that refers to the entity.
 
-These instructions will show you how to create a custom entity manually, you can also use Power Query to create an entity based off your existing data. For more information, see [Create new entity using Power Query](data-platform-cds-newentity-pq.md)
+In this quickstart, you'll learn how to create a custom entity called Product Review. To follow the quickstart, you'll need either a PowerApps Plan 2 or Microsoft Flow Plan 2 license. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
 
-> [!NOTE]
-> Before you create an entity, see the [entity reference](../../developer/common-data-service/reference/about-entity-reference.md). These entities cover typical scenarios, such as accounts and contacts. If one of these entities will meet your requirements out of the box or after only minor changes, you can save yourself some time by starting with that entity.
+## Sign in to PowerApps
+Sign in to PowerApps at [https://web.powerapps.com]([https://web.powerapps.com).
 
 ## Create an entity
-1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. In the navigation pane, click or tap **Data** to expand it, and then click or tap **Entities**.
 
-    ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
+    ![List of entities and their details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
-2. From the command bar, click or tap **New entity**.
-3. In the **Display name** field, enter a name that's easily recognizable for you to refer to this entity in the future. This is also used in forms, charts and other objects created using this entity. You'll notice two other fields also be populated:
+2. Cick or tap **New entity**.
 
-    * Plural display name - this is used when interacting with this entity from PowerApps or Flow, and used as the name of the entity through the Common Data Service WebAPI. The Plural name should be automatically generated, but can be changed.
-    * Name - this is the unique name of the entity, it cannot contain special characters or spaces and must be unique. The name also includes a prefix which was setup when your environment was created, this is used ensure the entities you create can be exported and imported into other environments with colliding with other entity names. This prefix can be changed by updating the prefix on your Publisher for the Common Data Service Default Solution.
+    Before you create an entity, check out the [entity reference](../../developer/common-data-service/reference/about-entity-reference.md). These entities cover typical scenarios, such as accounts and contacts. If one of these entities meets your requirements as is or after only minor changes, you can save yourself some time by starting with that entity. 
 
-    > [!NOTE]
-    > The **Display name** fields can be updated at anytime to display differently in your apps, the **Name** field cannot be changed after your entity has been saved as this could result in breaking an existing app.
+3. In the **New entity** dialog box, enter **ProductReview** for the name (the name must be unique and can't contain special characters or spaces), and then enter **Product review** for the display name (the display name should be easily recognizable&mdash;it will be used by forms, charts, and other objects created using this entity). Optionally, you can also enter a description (this is helpful if other people use this entity). When you're done, click **Next**.
+ 
+    You can update the **Display name** at any time. However, to keep existing apps from breaking, you cannot change the **Name** after the entity has been saved.
 
-    ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New Entity Panel")
+     ![New Entity](./media/data-platform-cds-create-entity/newentity.png "New entity dialog box")
 
 4. Click **Next** and you'll be taken to the Entity details page. By default every entity starts with one field, the "Primary Name" this field is used when lookups are created against this entity. It should typically be used to store the name or primary description of the data being stored in the entity.
 
