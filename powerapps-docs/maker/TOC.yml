@@ -6,6 +6,12 @@
       href: signup-for-powerapps.md
     - name: Sign up for the PowerApps Community Plan
       href: dev-community-plan.md
+    - name: What's new
+      href: ./canvas-apps/release-notes.md
+    - name: Common issues and resolutions
+      href: ./canvas-apps/common-issues-and-resolutions.md
+    - name: Upcoming and recent webinars
+      href: ./canvas-apps/webinars-listing.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
@@ -36,11 +42,21 @@
       - name: Customize a card
         href: ./canvas-apps/customize-card.md
     - name: Create an app from scratch
-      href: ./canvas-apps/data-platform-create-app-scratch.md
+      items:
+      - name: Common Data Service for Apps
+        href: ./canvas-apps/data-platform-create-app-scratch.md
+      - name: Excel
+        href: ./canvas-apps/get-started-create-from-blank.md
     - name: Share an app
       href: ./canvas-apps/share-app.md
     - name: Embed an app in Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
+  - name: Samples
+    items:
+    - name: Expense Report app
+      href: ./canvas-apps/expense-report-install.md
+    - name: Help Desk app
+      href: ./canvas-apps/help-desk-install.md
   - name: Concepts
     items:
     - name: Get started with formulas
@@ -65,6 +81,8 @@
       href: ./canvas-apps/sharepoint-form-integration.md
     - name: PowerApps custom visual
       href: ./canvas-apps/powerapps-custom-visual.md
+    - name: Transform your InfoPath forms to PowerApps
+      href: ./canvas-apps/transform-infopath.md
     - name: Canvas-app development
       items:
       - name: PowerApps for enterprise developers, partners, and ISVs
@@ -81,8 +99,6 @@
     items:
     - name: Customize a SharePoint list form
       href: ./canvas-apps/customize-list-form.md
-    - name: Build an Excel app from scratch
-      href: ./canvas-apps/get-started-create-from-blank.md
     - name: Customize an app
       items:
       - name: Add and configure a control
@@ -115,10 +131,17 @@
         href: ./canvas-apps/add-scrolling-screen.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
+      - name: Create an accessible app
+        href: ./canvas-apps/accessible-apps.md
+        items:
+          - name: Color
+            href: ./canvas-apps/accessible-apps-color.md
     - name: Manage your app
       items:
       - name: Introduction to powerapps.com
         href: ./canvas-apps/intro-maker-portal.md
+      - name: Work with environments
+        href: ./canvas-apps/working-with-environments.md
       - name: Edit an app
         href: ./canvas-apps/edit-app.md
       - name: Change screen size and orientation
@@ -137,6 +160,8 @@
         href: ./canvas-apps/add-manage-connections.md
       - name: Connect to SharePoint
         href: ./canvas-apps/connect-to-sharepoint.md
+      - name: Prepare Excel data
+        href: ./canvas-apps/how-to-excel-tips.md
       - name: Delegation
         href: ./canvas-apps/delegation-overview.md
       - name: Delegable data sources
@@ -183,21 +208,13 @@
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
       href: ./canvas-apps/limits-and-config.md
-  - name: Resources
-    items:
-    - name: Work with environments
-      href: ./canvas-apps/working-with-environments.md
-    - name: What's new
-      href: ./canvas-apps/release-notes.md
-    - name: Common issues and resolutions
-      href: ./canvas-apps/common-issues-and-resolutions.md
-    - name: Upcoming and recent webinars
-      href: ./canvas-apps/webinars-listing.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
   - name: Overview of sample apps
     href: ./model-driven-apps/overview-model-driven-samples.md
+  - name: Build your first model-driven app
+    href: .//model-driven-apps/build-first-model-driven-app.md
   - name: Share a model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
   - name: For Developers
@@ -222,7 +239,7 @@
     - name: Delete a custom entity
       href: ./common-data-service/data-platform-delete-entity.md
   - name: Tutorials
-    items: 
+    items:
     - name: Create a custom entity that has components
       href: ./common-data-service/create-custom-entity.md
   - name: Samples and resources
@@ -230,4 +247,4 @@
   - name: For Developers
     href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
-  href: ../common-data-model/overview.md    
+  href: ../common-data-model/overview.md

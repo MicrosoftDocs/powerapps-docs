@@ -1,19 +1,16 @@
 ---
 title: 'Microphone control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Microphone control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -30,6 +27,8 @@ If you add this control, the user can update a data source with one or more soun
 **OnStop** – How the app responds when the user stops recording with a microphone control.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the microphone.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -47,6 +46,10 @@ If you add this control, the user can update a data source with one or more soun
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -71,6 +74,8 @@ If you add this control, the user can update a data source with one or more soun
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
+
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -102,3 +107,18 @@ If you add this control, the user can update a data source with one or more soun
 
 Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the recordings locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
 
+
+## Accessibility guidelines
+The same guidelines for **[Button](control-button.md)**  apply because **Microphone** is just a specialized button. In addition, consider the following:
+
+### Audio alternatives
+* Consider adding an alternative form of input for users with speech disabilities or without a microphone. For example, **[Text input](control-text-input.md)** to allow users to enter text.
+
+### Color contrast
+There must be adequate color contrast between:
+* **[Image](properties-visual.md)** and the button text and icon (if applicable)
+
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.

@@ -1,19 +1,16 @@
 ---
 title: 'Image control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Image control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -28,6 +25,8 @@ If you add one or more **Image** controls to your app, you can show individual i
 **[Image](properties-visual.md)** – The name of the image that appears in an image, audio, or microphone control.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **ApplyEXIFOrientation** – Whether to automatically apply the orientation specified in the EXIF data embedded with the image.
 
 **AutoDisableOnSelect** – Automatically disables the control while the OnSelect behavior is executing.
@@ -37,8 +36,6 @@ If you add one or more **Image** controls to your app, you can show individual i
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **CalculateOriginalDimensions** – Enables the **OriginalHeight** and **OriginalWidth** properties.
 
@@ -53,6 +50,10 @@ If you add one or more **Image** controls to your app, you can show individual i
 **FlipHorizontal** – Whether to flip the image horizontally before displaying it.
 
 **FlipVertical** – Whether to flip the image vertically before displaying it.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -89,6 +90,8 @@ If you add one or more **Image** controls to your app, you can show individual i
 **[RadiusTopLeft](properties-size-location.md)** – The degree to which the top-left corner of a control is rounded.
 
 **[RadiusTopRight](properties-size-location.md)** – The degree to which the top-right corner of a control is rounded.
+
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -127,3 +130,23 @@ If you add one or more **Image** controls to your app, you can show individual i
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 
     The **Gallery** control shows images of carpet, hardwood, and tile products based on links in the Excel file that you downloaded.
+
+
+## Accessibility guidelines
+### Color contrast
+* [Standard color contrast requirements](../accessible-apps-color.md) apply, if the graphic is used as a button.
+* Consider checking for contrast issues within the image, if it is not purely decorative.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present, if the graphic is used as a button or is otherwise not just for decoration.
+* **[AccessibleLabel](properties-accessibility.md)** must be empty or the empty string **""**, if the graphic is purely for decoration. This causes screen readers to ignore the graphic.
+* **[AccessibleLabel](properties-accessibility.md)** can be empty or the empty string **""**, if the graphic provides redundant information.
+    * For example, an **Image** of gears with its **[AccessibleLabel](properties-accessibility.md)** set to **Settings**. This image is not used as a button. It is next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read the image as **Settings**, and the label as **Settings** again. This is unnecessarily verbose. In this case, the **Image** does not need an **[AccessibleLabel](properties-accessibility.md)**.
+> [!IMPORTANT]
+> Screen readers will always read **Image**s that have **[TabIndex](properties-accessibility.md)** of zero or greater, even if **[AccessibleLabel](properties-accessibility.md)** is empty. This is because they are rendered as buttons. If no **[AccessibleLabel](properties-accessibility.md)** is provided, screen readers will simply read the graphic as **button**.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater, if the graphic is used as a button. This allows keyboard users to navigate to it.
+* Focus indicators must be clearly visible, if the graphic is used as a button. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+> [!NOTE]
+> When **[TabIndex](properties-accessibility.md)** is zero or greater, the **Image** is rendered as a button. There is no change to the visual appearance, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the **Image** is identified as an image.

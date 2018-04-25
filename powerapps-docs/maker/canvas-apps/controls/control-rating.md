@@ -1,19 +1,16 @@
 ---
 title: 'Rating control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Rating control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -30,17 +27,21 @@ In this control, the user can indicate, for example, how much they liked somethi
 **Max** – The maximum value to which the user can set a slider or a rating.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
-
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -56,7 +57,7 @@ In this control, the user can indicate, for example, how much they liked somethi
 
 **ShowValue** – Whether a slider's or rating's value appears as the user changes that value or hovers over the control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -88,3 +89,22 @@ In this control, the user can indicate, for example, how much they liked somethi
     The hint text in the **[Text input](control-text-input.md)** control changes to reflect the low rating.
 6. To return to the default workspace, press Esc.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **RatingFill** and **[Fill](properties-color-border.md)**
+
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+> [!NOTE]
+> Screen readers treat the **Rating** control as radio buttons.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+* Consider using a different control if there are too many stars. It can be tedious to navigate with a keyboard and difficult to select accurately with a touch screen.
+> [!NOTE]
+> The same keyboard interactions for radio buttons can be used on **Rating**.

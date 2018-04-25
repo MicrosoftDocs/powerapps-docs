@@ -1,19 +1,16 @@
 ---
 title: 'Label control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the label control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -56,6 +53,10 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
 **[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
@@ -91,6 +92,8 @@ A label shows data that you specify as a literal string of text, which appears e
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
+
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -137,3 +140,27 @@ In this procedure, you'll create a collection, called **CityPopulations**, that 
     When the gallery is selected, the right pane shows options for that gallery.
 4. In the **Gallery1** pane, set the top list to **Population**, set the middle list to **City**, and set the bottom list to **Country**.
 
+
+## Accessibility guidelines
+Despite its name, a **Label** control does not have to be used as a label for another control. It can be used to display any piece of text.
+
+A **Label** can be used as a button or link by specifying **[OnSelect](properties-core.md)** behavior. When used this way, there are similar accessibility considerations as with buttons.
+
+### Color contrast
+There must be adequate color contrast between:
+* **[Color](properties-color-border.md)** and **[Fill](properties-color-border.md)**
+* Other [standard color contrast requirements](../accessible-apps-color.md) apply (if used as a button or link)
+
+### Screen reader support
+* **[Text](properties-core.md)** must be present.
+> [!NOTE]
+> Screen readers will treat **Label**s as buttons when **[TabIndex](properties-accessibility.md)** is zero or greater.
+
+### Low vision support
+* **Label** should look like a link, if it is used as a link.
+    * Set **[Underline](properties-text.md)** to **true**
+    * **[HoverColor](properties-color-border.md)** should be different from **[Color](properties-color-border.md)**
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater, if the text is used as a button or link. This allows keyboard users to navigate to it.
+* Focus indicators must be clearly visible, if the text is used as a button or link. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.

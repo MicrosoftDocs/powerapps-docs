@@ -1,19 +1,16 @@
 ---
 title: Share resources used in your app | Microsoft Docs
 description: Understand how resources used in your app are shared, when an app is shared
-services: ''
-suite: powerapps
 documentationcenter: na
 author: archnair
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/28/2016
 ms.author: archanan
 

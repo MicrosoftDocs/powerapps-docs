@@ -38,3 +38,20 @@
     href: admin-manage-apps.md
   - name: Move an app between tenants or environments
     href: environment-and-tenant-migration.md
+  - name: Responding to DSR requests
+    items:
+    - name: System-generated logs
+      href: powerapps-gdpr-dsr-guide-systemlogs.md
+    - name: PowerApps customer data
+      href: powerapps-gdpr-dsr-guide.md
+      items:
+      - name: Export data
+        href: powerapps-gdpr-export-dsr.md
+      - name: Delete data
+        href: powerapps-gdpr-delete-dsr.md
+    - name: CDS for Apps customer data
+      href: common-data-service-gdpr-dsr-guide.md
+- name: Reference
+  items:
+  - name: PowerShell support for PowerApps (preview)
+    href: powerapps-powershell.md

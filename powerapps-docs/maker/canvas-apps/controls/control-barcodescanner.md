@@ -1,19 +1,16 @@
 ---
 title: 'Barcode scanner control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the barcode scanner control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -28,6 +25,8 @@ If you add this control, the user can update a data source with one or more phot
 **barcode scanner** – On a device that has more than one barcode scanner, the numeric ID of the barcode scanner that the app uses.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -48,9 +47,13 @@ If you add this control, the user can update a data source with one or more phot
 
 **Photo** – The image captured  when the user takes a picture.
 
+**ShowLiveBarcodeDetection** – Whether visual cues are shown to indicate the status of barcode detection. Yellow rectangles represent areas that are being examined. A green line across a rectangle indicates successful barcode identification.
+
 **Stream** – Automatically updated image based on the **StreamRate** property.
 
 **StreamRate** – How often to update the image on the **Stream** property, in milliseconds.  This value can range from 100 (1/10th of a second) to 3,600,000 (1 hour).
+
+**Text** – Value of barcode that was last identified by the scanner.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -72,6 +75,16 @@ If you add this control, the user can update a data source with one or more phot
 1. Add a **barcode scanner** control, name it **Mybarcode scanner**
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **Label** control and set its output to the Barcode's value.  
+2. Add a **Label** control and set its output to the Barcode's **Text**.  
 3. Scan a barcode of the type set under BarcodeType property.
 4. The label is going to display the scanned barcode.
+
+
+## Accessibility guidelines
+### Video alternatives
+* Consider adding a **[Label](control-text-box.md)** with its **[Text](properties-core.md)** set to the barcode scanner's **Text**. Since the barcode scanner does not display the identified barcode value, doing the above makes the scanner accessible to everyone, not just those with visual disabilities.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+> [!NOTE]
+> Screen readers will annnouce when a new barcode has been found. The value will not be announced. As long as the barcode is in view, screen readers will remind every 5 seconds that the same barcode is still being identified.

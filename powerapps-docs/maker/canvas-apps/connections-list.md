@@ -1,21 +1,18 @@
 ---
 title: Connectors overview | Microsoft Docs
 description: Overview of all the available connections you can use to build apps
-services: ''
-suite: powerapps
 documentationcenter: ''
-author: archnair
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
-ms.workload: na
-ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 08/28/2017
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Overview of connectors for PowerApps

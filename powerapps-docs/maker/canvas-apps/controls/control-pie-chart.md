@@ -1,19 +1,16 @@
 ---
 title: 'Pie chart control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Pie chart control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -24,12 +21,14 @@ A control that shows relative values in comparison to each other.
 ## Description
 Add a **Pie chart** control if you want to show relative data from a table that contains labels in the leftmost column and values in the second column from the left.
 
-## Key properties
+This control is a grouped control containing three controls: a **[Label](control-text-box.md)** for the title, the chart graphic, and a **Legend**.
+
+## Chart key properties
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **ShowLabels** – Whether a pie chart shows the value that's associated with each of its wedges.
 
-## Additional properties
+## Additional chart properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -64,6 +63,8 @@ Add a **Pie chart** control if you want to show relative data from a table that 
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
@@ -87,3 +88,25 @@ Add a **Pie chart** control if you want to show relative data from a table that 
    
     The **Pie chart** control shows revenue data for each product in relation to the other products.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* each item in **ItemColorSet**
+* every item in **ItemColorSet** and the background color
+* **[Color](properties-color-border.md)** and the background color
+
+### Screen reader support
+* There must be a **[Label](control-text-box.md)** immediately before the chart graphic to serve as the title.
+> [!NOTE]
+> Chart graphics and **Legend** are hidden from screen reader users. As an alternative, a tabular form of the data is presented to them. They can also cycle through buttons that select data in the chart.
+
+### Low vision support
+* There must be a **Legend**.
+* Consider setting **ShowLabels** to **true**. This helps low-vision users quickly determine what each pie slice represents.
+* Consider setting **LabelPosition** to **LabelPosition.Outside**. This increases legibility of labels because of a more consistent color contrast.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+> [!NOTE]
+> When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.
