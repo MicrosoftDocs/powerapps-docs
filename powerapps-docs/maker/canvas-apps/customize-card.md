@@ -1,8 +1,6 @@
 ---
 title: Customize a card | Microsoft Docs
 description: Change the default control that appears in a card on a Details or Edit form in PowerApps
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: AFTOwen
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/18/2018
 ms.author: anneta
 

@@ -1,19 +1,16 @@
 ---
-title: Create Accessible Apps | Microsoft Docs
+title: Create accessible apps | Microsoft Docs
 description: How to make apps accessible for people with disabilities
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 04/03/2018
 ms.author: fikaradz
 

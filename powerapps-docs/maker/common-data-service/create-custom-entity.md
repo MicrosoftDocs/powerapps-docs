@@ -1,19 +1,16 @@
 ---
 title: Tutorial for creating a custom entity that has components with PowerApps | Microsoft Docs
 description: Tutorial with step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: Mattp123
-manager: bycho
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: cds
 ms.date: 03/21/2018
 ms.author: matp
 

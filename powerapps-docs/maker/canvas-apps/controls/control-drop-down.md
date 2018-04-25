@@ -1,19 +1,16 @@
 ---
 title: 'Drop down control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Drop down control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -146,7 +143,7 @@ There must be adequate color contrast between:
 * **SelectionColor** and **SelectionFill**
 * **SelectionFill** and **[Fill](properties-color-border.md)**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.

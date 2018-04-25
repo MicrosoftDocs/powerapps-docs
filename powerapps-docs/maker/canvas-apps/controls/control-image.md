@@ -1,19 +1,16 @@
 ---
 title: 'Image control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Image control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -137,7 +134,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 ## Accessibility guidelines
 ### Color contrast
-* Standard color contrast requirements apply, if the graphic is used as a button.
+* [Standard color contrast requirements](../accessible-apps-color.md) apply, if the graphic is used as a button.
 * Consider checking for contrast issues within the image, if it is not purely decorative.
 
 ### Screen reader support
