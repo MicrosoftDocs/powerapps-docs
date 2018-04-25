@@ -81,7 +81,7 @@ You can review this topic for general concepts only, or you can follow each step
 	By using this formula, you ensure that:
 
     - If a user types one or more characters in the search bar, the gallery shows only those account names that contain the text that the user typed.
-    - If a user selects the sort icon, the gallery is sorted alphabetically by account in either ascending or descending order, depending on how many times the user selects the icon.
+    - If a user selects the sort icon, the gallery is sorted alphabetically by account name in either ascending or descending order, depending on how many times the user selects the icon.
 
     For more information about these and other functions, see the [formula reference](formula-reference.md).
 
@@ -94,7 +94,7 @@ You can review this topic for general concepts only, or you can follow each step
 
 	![Test the sort icon](./media/customize-layout-sharepoint/sort-button.png)
 
-1. In the search box, type **k** to show only those accounts for which the name contains the letter that you typed.
+1. In the search box, type **k** to show only those account names that contain the letter that you typed.
 
 	![Test the search bar](./media/customize-layout-sharepoint/test-filter.png)
 

@@ -33,8 +33,6 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
 
-	![Select an entity](./media/data-platform-create-app/select-entity.png)
-
 1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
 
 Your app opens to the browse screen, which shows a list of accounts. Near the top of the screen, a title bar shows icons for refreshing the list, sorting the list, and creating an account. Under the title bar, a search box provides the option to filter the list based on text that you type or paste. 
