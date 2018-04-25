@@ -164,5 +164,6 @@ This is in addition to the [standard color contrast requirements](../accessible-
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
-> [!NOTE]
+
+    > [!NOTE]
 > The tab key navigates to or away from the **List box**. Arrow keys navigate the contents of the **List box**.
