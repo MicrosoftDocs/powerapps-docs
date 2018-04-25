@@ -92,11 +92,13 @@ For shapes without borders:
 * **[AccessibleLabel](properties-accessibility.md)** must be empty or the empty string **""**, if the graphic is purely for decoration. This causes screen readers to ignore the graphic.
 * **[AccessibleLabel](properties-accessibility.md)** can be empty or the empty string **""**, if the graphic provides redundant information.
     * For example, a **Settings** icon with its **[AccessibleLabel](properties-accessibility.md)** set to **Settings**. This icon is not used as a button. It is next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read the icon as **Settings**, and the label as **Settings** again. This is unnecessarily verbose. In this case, the icon does not need an **[AccessibleLabel](properties-accessibility.md)**.
-> [!IMPORTANT]
+
+    > [!IMPORTANT]
 > Screen readers will always read icons or shapes that have **[TabIndex](properties-accessibility.md)** of zero or greater, even if **[AccessibleLabel](properties-accessibility.md)** is empty. This is because they are rendered as buttons. If no **[AccessibleLabel](properties-accessibility.md)** is provided, screen readers will simply read the graphic as **button**.
 
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater, if the graphic is used as a button. This allows keyboard users to navigate to it.
 * Focus indicators must be clearly visible, if the graphic is used as a button. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
-> [!NOTE]
+
+    > [!NOTE]
 > When **[TabIndex](properties-accessibility.md)** is zero or greater, the icon or shape is rendered as a button. There is no change to the visual appearance, but screen readers will correctly identify the image as a button. When **[TabIndex](properties-accessibility.md)** is less than zero, the icon or shape is identified as an image.
