@@ -1,19 +1,16 @@
 ---
 title: 'Barcode scanner control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the barcode scanner control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -89,5 +86,6 @@ If you add this control, the user can update a data source with one or more phot
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
-> [!NOTE]
+
+    > [!NOTE]
 > Screen readers will annnouce when a new barcode has been found. The value will not be announced. As long as the barcode is in view, screen readers will remind every 5 seconds that the same barcode is still being identified.

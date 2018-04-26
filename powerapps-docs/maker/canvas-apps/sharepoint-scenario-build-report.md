@@ -1,19 +1,16 @@
 ---
 title: Create a Power BI report to analyze projects | Microsoft Docs
 description: In this task, we'll create a Power BI report based on two SharePoint lists.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 01/10/2018
 ms.author: mblythe
 

@@ -1,21 +1,18 @@
 ---
 title: Understand on-premises data gateways | Microsoft Docs
 description: Reference information, including installation and troubleshooting, for on-premises data gateways
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/20/2017
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Understand on-premises data gateways for Microsoft PowerApps

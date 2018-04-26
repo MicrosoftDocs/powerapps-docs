@@ -1,19 +1,16 @@
 ---
 title: 'Pen input control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Pen input control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -98,9 +95,11 @@ There must be adequate color contrast between:
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** should be present.
-> [!IMPORTANT]
+
+    > [!IMPORTANT]
 > **Pen input** is not accessible to screen reader users. Always provide an alternative form of input. For example, if a sketch is required, consider adding an **[Add picture](control-add-picture.md)** control for users to upload an image. Both methods can be offered and the user can choose the one they are more comfortable with.
 
 ### Keyboard support
+
 > [!IMPORTANT]
 > **Pen input** is not accessible to keyboard users. Always provide an alternative form of input. For example, if a signature is required, consider adding a **[Text input](control-text-input.md)** for users to enter their name. Both methods can be offered and the user can choose the one they are more comfortable with.

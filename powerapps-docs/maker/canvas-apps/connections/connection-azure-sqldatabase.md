@@ -1,21 +1,18 @@
 ---
 title: Overview of the SQL Server connection | Microsoft Docs
 description: Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database
-services: ''
-suite: powerapps
 documentationcenter: ''
-author: archnair
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2016
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Connect to SQL Server from PowerApps

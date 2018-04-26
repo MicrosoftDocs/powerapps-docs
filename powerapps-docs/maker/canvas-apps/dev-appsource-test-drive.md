@@ -1,19 +1,16 @@
 ---
 title: Let customers test drive your apps on AppSource | Microsoft Docs
 description: Use AppSource to share apps with customers, and generate leads for your business.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: linhtranms
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 05/08/2017
 ms.author: litran
 

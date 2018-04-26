@@ -1,19 +1,16 @@
 ---
 title: Tutorial for sharing a model-driven app with PowerApps | Microsoft Docs
 description: In this tutorial learn how to share a model-driven app
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: Mattp123
-manager: brycho
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
-ms.workload: na
-ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
+ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
 

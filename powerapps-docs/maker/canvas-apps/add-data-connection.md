@@ -1,21 +1,18 @@
 ---
 title: Add a data connection in an app | Microsoft Docs
 description: Add a data connection in an existing app or a blank app
-services: ''
-suite: powerapps
 documentationcenter: na
-author: archnair
+author: lancedMicrosoft
 manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 04/06/2018
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Add a data connection in PowerApps

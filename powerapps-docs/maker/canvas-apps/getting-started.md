@@ -1,8 +1,6 @@
 ---
 title: What are canvas apps? | Microsoft Docs
 description: How to design and build a custom line-of-business app from a canvas in PowerApps
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: hero-article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/14/2018
 ms.author: anneta
 

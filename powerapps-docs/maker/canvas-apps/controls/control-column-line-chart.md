@@ -1,19 +1,16 @@
 ---
 title: 'Column chart control and Line chart control: reference | Microsoft Docs'
 description: Information, including properties and examples, about Column chart controls and Line chart controls
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -136,7 +133,8 @@ There must be adequate color contrast between:
 ### Screen reader support
 * There must be a **[Label](control-text-box.md)** immediately before the chart graphic to serve as the title.
 * Consider adding a summary of the chart graphic. For example, "The line chart shows a steady increase in sales between March and August this year."
-> [!NOTE]
+
+    > [!NOTE]
 > Chart graphics and **Legend** are hidden from screen reader users. As an alternative, a tabular form of the data is presented to them. They can also cycle through buttons that select data in the chart.
 
 ### Low vision support
@@ -146,5 +144,6 @@ There must be adequate color contrast between:
 
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
-> [!NOTE]
+
+    > [!NOTE]
 > When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.

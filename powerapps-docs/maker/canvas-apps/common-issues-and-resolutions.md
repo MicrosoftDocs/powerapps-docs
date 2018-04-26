@@ -1,8 +1,6 @@
 ---
 title: Common issues and resolutions for PowerApps | Microsoft Docs
 description: Read about PowerApps issues and resolutions
-services: ''
-suite: powerapps
 documentationcenter: na
 author: skjerland
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 04/12/2018
 ms.author: sharik
 
