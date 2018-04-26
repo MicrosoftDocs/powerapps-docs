@@ -28,8 +28,8 @@ Entities which include advanced server-side logic require users or players of th
 - Code Plug-ins : See [Plug-in development](https://msdn.microsoft.com/library/gg328490.aspx) for more information.
 - Real-time (Syncronous) workflows : See [Workflow processes](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes) for more information.
 
-        > [!NOTE]
-        >  Only workflows which are **converted to a real-time workflow** are considered real-time and syncronous with regards to Premium licenses. Workflows which are run in the background can still be used with the appropriate PowerApps plan.
+    > [!NOTE]
+    >  Only workflows which are **converted to a real-time workflow** are considered real-time and syncronous with regards to Premium licenses. Workflows which are run in the background can still be used with the appropriate PowerApps plan.
 
 
 Standard entities do not include code plug-ins or syncrouns workflows, however these can be added as a customization to standard and custom entities. When a code plug-in or real-time workflow is added to an entity, makers and developers need to ensure users of apps which included these entities have the correct licenses.
