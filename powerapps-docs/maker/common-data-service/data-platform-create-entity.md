@@ -20,7 +20,7 @@ ms.author: sharik
 # Quickstart: Create a custom entity
 In PowerApps, an *entity* defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. You can then surface that data by developing an app that refers to the entity. PowerApps offers standard "out-of-the-box" entities to cover typical scenarios within an organization (such as tracking appointments), but there may be times when you need to create custom entities to store data that's specific to your organization.
 
-In this quickstart, you'll learn how to create a custom entity called Product Review that you can use to create an app that displays ratings and comments for each product sold by a particular company.
+In this quickstart, you'll learn how to create a custom entity called Product Review that you can use to create an app that displays ratings and comments for products that your company sells.
 
 ## Prerequisites
 To follow this quickstart, the following items are required:
