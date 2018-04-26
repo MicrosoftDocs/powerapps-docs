@@ -25,13 +25,13 @@ The following entities require end users of Apps and Flows which perform create,
 
 Entity | Logical name | Licence required by end user
 --- | --- | ---
-Journey | journey | Dynamics 365 for Marketing **or** Dynamics 365, Enterprise edition, Plan 1 or 2
-Goal | goal | Dynamics 365 for Sales Professional, Dynamics 365 for Sales, Enterprise edition, **or** Dynamics 365, Enterprise edition, Plan 1 or 2
-Incident | incident | Dynamics 365 for Customer Service, Enterprise edition **or** Dynamics 365, Enterprise edition, Plan 1 or 2
-Knowledge article | knowledgearticle | Dynamics 365 for Customer Service, Enterprise edition **or** Dynamics 365, Enterprise edition, Plan 1 or 2
-SLA | sla | Dynamics 365 for Customer Service, Enterprise edition **or** Dynamics 365, Enterprise edition, Plan 1 or 2
-Entitlement | entitlement | Dynamics 365 for Customer Service, Enterprise edition **or** Dynamics 365, Enterprise edition, Plan 1 or 2
-Routing rule | routingrule | Dynamics 365 for Customer Service, Enterprise edition **or** Dynamics 365, Enterprise edition, Plan 1 or 2
+Journey | journey | Dynamics 365 for Marketing <br> **or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
+Goal | goal | Dynamics 365 for Sales Professional, <br>**or** Dynamics 365 for Sales, Enterprise edition, <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
+Incident | incident | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
+Knowledge article | knowledgearticle | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
+SLA | sla | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
+Entitlement | entitlement | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
+Routing rule | routingrule | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
 
 
 ## Licensing
