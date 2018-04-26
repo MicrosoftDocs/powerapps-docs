@@ -15,22 +15,33 @@ ms.date: 3/21/2018
 ms.author: clwesene
 
 ---
-# Understanding licence requirements for Premium entities
+# Understanding Premium entities
 
-Common Data Service for Apps allows you to securely store and manage data that's used in apps you've developed or apps from Microsoft and app providers. Data within CDS for Apps is stored within a set of standard and custom entities. An entity is a set of fields used to store data similarly to a table within a database. After your data is stored you can use Microsoft PowerApps to build rich applications using your data:
+PowerApps is licensed on a per-user basis, each user who accesses the service to create and run apps needs a license. The Common Data Service for Apps allows users to use entities from the Common Data Model and Dynamics 365 products to build apps using PowerApps and Flow. In some cases entities which have complex logic or are closely tied to the Dynamics 365 products require users of those apps, who need to perform create, update, or delete actions on data stored within these entities to require specific licences. Apps or Flows which only read data from these entities can still be used with the appropriate PowerApps plan. Please see the [PowerApps pricing page](https://powerapps.microsoft.com/pricing) for more information on available plans.
 
-* Leverage existing standard entities or create custom entities to support your scenario and application.
-* Create PowerApps and Flows directly against CDS for Apps.
-* Add custom fields, and relationships to standard entities where additional information is needed.
-* Create calculated and roll up fields to your entities to provide consistent calculations across apps and analytics.
-* Define business rules to ensure data quality within entities, regardless of the which app is accessing or editing your data.
-* Create workflows and leverage integration with Microsoft Flow to drive additional actions and business processes against your data.
-* Incorporate standard and custom entities into an app that you're developing as easily as you would with data in other sources.
-* Connect to your data from Microsoft Excel using CDS for Apps productivity add-ins.
-* Easily import and synchronize your data using Power Query.
-* Secure your data within your organization using role-based security against standard and custom entities.
-* Provide global support for your data and applications by leveraging translation of entity and field names in your user's language.
+Apps and Flows using Premium entities require the user who is consuming the app or Flow to be licenced appropriately and not the maker or developer of the app or flow.
 
-Each entity contains a set of records that users can create, read, update, and delete depending on their permissions. You can create relationships between entities so that you can look up information in one entity based on a record in another entity. For example, you could create a custom entity to track events which a customer had attended. By adding the Customer to your custom entity as a lookup field, you establish a relationship between the two entities which can be leveraged in your app and in reporting.
+## Premium entities with complex business logic
 
-For information on purchasing a plan for using CDS for Apps, see [Pricing info](../../administrator/pricing-billing-skus.md).
+Entities which include advanced server-side logic require users or players of the app or flow, who need to perform create, update or delete operations to have a PowerApps Plan 2. Entities which have the following logic will require a PowerApps Plan 2:
+
+- Code Plug-ins : See [Plug-in development](https://msdn.microsoft.com/library/gg328490.aspx) for more information.
+- Real-time (Syncronous) workflows : See [Workflow processes](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes) for more information.
+
+        > [!NOTE]
+        >  Only workflows which are **converted to a real-time workflow** are considered real-time and syncronous with regards to Premium licenses. Workflows which are run in the background can still be used with the appropriate PowerApps plan.
+
+
+Standard entities do not include code plug-ins or syncrouns workflows, however these can be added as a customization to standard and custom entities. When a code plug-in or real-time workflow is added to an entity, makers and developers need to ensure users of apps which included these entities have the correct licenses.
+
+## Premium entities restricted to Dynamics 365 licences
+
+Selected entities which are closely tied to the functionality of the Dynamics 365 products require users to have the corresponding license for that product to perform create, update and delete operations, and cannot be run with PowerApps plans. You can find a full list of entities retricted to Dynamics 365 licences [here](data-platform-premium-entities.md).
+
+## Licensing example
+
+
+
+## Licensing
+
+Please the [Licensing overview](../../administrator/pricing-billing-skus.md) page for more information on PowerApps and Dynamics 365 licences.
