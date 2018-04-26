@@ -19,8 +19,8 @@ ms.author: clwesene
 
 PowerApps is licensed on a per-user basis, each user who accesses the service to create and run apps needs a license. The Common Data Service for Apps allows users to use entities from the Common Data Model and Dynamics 365 products to build apps using PowerApps and Flow. Specific entities which are closely tied to the Dynamics 365 products require users of those apps, who need to perform create, update, or delete actions on data stored within these entities to be licensed for the respective Dynamics 365 product and cannot be used with a standard PowerApps or Flow plan. Apps or Flows which only read data from these entities can still be used with the appropriate PowerApps plan. Please see the [PowerApps pricing page](https://powerapps.microsoft.com/pricing) for more information on available plans.
 
-    > [!NOTE]
-    >  Apps or Flows which only read data from these entities can still be used with the appropriate PowerApps plan.
+   > [!NOTE]
+   > Apps or Flows which only read data from these entities can still be used with the appropriate PowerApps plan.
 
 ## Restricted entities for create, update and delete operations
 

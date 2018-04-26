@@ -45,7 +45,7 @@ Let's take a look at this example. Isaac is building a canvas app in PowerApps, 
 Isaac is going to build three Canvas apps;
 
 - App 1 : uses the Contact entity, along with a custom entity used to store related information.
-- App 2 : uses the Contact entity, along with a custom entity which Isaac has add a real-time workflow to.
+- App 2 : uses the Contact entity, along with a custom entity which Isaac has added a real-time workflow to.
 - App 3 : uses the Contact entity, along with the Incident entity (which is a restricted entity)
 
 Here's the types of licenses Isaac and his users are going to need :
