@@ -16,14 +16,16 @@ Design and build a business app from a canvas in Microsoft PowerApps without wri
 If you don't need a custom design and your data is in Common Data Service (CDS) for Apps, you can automatically generate a model-driven app from your business data and processes. This type of app can model forms, views, and other components, and the default UI automatically adjusts to phones, laptops, and other devices. For more information about this type of app, see [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md).
 
 ## Build an app
-To get started, automatically generate an app from these sources, among others:
+To get started, automatically generate an app from one of these sources, among others:
 - [a sample app](open-and-run-a-sample-app.md)
 - [a template](get-started-test-drive.md)
 - [CDS for Apps](data-platform-create-app.md)
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
-Explore specific screens and UI elements (called [controls](reference-properties.md)) to understand how they're configured, and experiment with customization to discover techniques that you can apply to your own apps.
+On the PowerApps site, select **Start from data**, or select a sample app, such as **Service Desk** or **Budget Tracker**.
+
+![PowerApps site](./media/getting-started/sample-apps.png)
 
 After you generate an app automatically, customize its default appearance and behavior based on your users' workflows. For example, change which types of data appear, how they're sorted, or even whether users specify a number by typing it or adjusting a slider. Add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls.
 
@@ -45,6 +47,6 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 * Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a PowerApps administrator for your organization, you can also open a support ticket in the [PowerApps admin center](https://portal.office.com/Support/Support.aspx).
 
 ## Next steps
-- [Sign up for a free license](../signup-for-powerapps.md).
-- [Sign in](https://web.powerapps.com).
-- [Open a sample app](open-and-run-a-sample-app.md).
+- [Sign up for a free license.](../signup-for-powerapps.md)
+- [Sign in to PowerApps.](https://web.powerapps.com)
+- [Open a sample app.](open-and-run-a-sample-app.md)
