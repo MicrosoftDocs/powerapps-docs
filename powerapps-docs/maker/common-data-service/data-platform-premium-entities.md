@@ -51,7 +51,7 @@ Isaac is going to build three Canvas apps;
 Here's the types of licenses Isaac and his users are going to need :
 
 - Issac needs a PowerApps Plan 2 license, to build apps against the Common Data Service for Apps.
-- Users of App 1: need a PowerApps Plan 1 license, as it doesn't contain any premium entities.
+- Users of App 1: need a PowerApps Plan 1 or Plan 2 license, as it doesn't contain any premium entities.
 - Users of App 2: need a PowerApps Plan 2 license, as it includes a Premium entity with complex business logic.
 - Users of App 3: need a Dynamics 365 for Customer Service, Enterprise Edition (or Dynamics 365, Enterprise Edition, Plan 1 or 2), as it includes a restricted entity. 
 
