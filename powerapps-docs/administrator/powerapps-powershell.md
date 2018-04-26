@@ -35,7 +35,7 @@ To run the PowerShell cmdlets for app makers, do the following:
 4. Run the following one-time PowerShell command (this presumes you've never run PowerShell commands on the current machine):
 
     ```
-    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
     ```
 
 5. Import the necessary modules using the following commands:
@@ -49,6 +49,12 @@ To run the PowerShell cmdlets for app makers, do the following:
 
     ```
     Add-PowerAppsAccount
+    ```
+
+7.  There is a [known issue](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036) today that may also require you to manually unblock the PowerShell files using the following command:
+
+    ```
+    dir . | Unblock-File
     ```
 
 ## PowerApps cmdlets for app makers (preview)
