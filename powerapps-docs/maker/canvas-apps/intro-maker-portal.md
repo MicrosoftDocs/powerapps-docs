@@ -31,7 +31,7 @@ Near the right edge of the header, you'll first see an environment dropdown, whe
 
 ![Header Environment](./media/intro-maker-portal/environment.png)
 
-Next to the environment dropdown, you will see a download icon. Click or tap this icon to display a dialog box with links to download PowerApps Mobile (for iOS or Android) or PowerApps Studio for Windows.
+Next to the environment dropdown, you will see a download icon. Click or tap this icon to display a dialog box with links to download PowerApps Mobile (for iOS or Android devices).
 
 ![Header Download](./media/intro-maker-portal/downloads2.png)
 
@@ -56,7 +56,7 @@ If you've never signed in, created an app, or run an app before, you won't see t
 
 ![Create an app](./media/intro-maker-portal/createapp.png)
 
-Click or tap **Get started** on this banner to display options for creating an app using **PowerApps Studio for Windows** or **PowerApps Studio for the web**.
+Click or tap **Get started** on this banner to display options for creating an app using **PowerApps Studio**.
 
 ![Create app Modal](./media/intro-maker-portal/createmodal2.png)
 
@@ -87,7 +87,7 @@ Under **Common Data Service**, a different button will appear, depending on your
 
 Below the **Use the Microsoft Common Data Service** banner, you'll see a set of sample apps and connected sample apps that we created for you to use.
 
-* **Sample apps** - Sample apps were built for different business scenarios in either phone or tablet layout. You can click an app to quickly view a description of what the app does, what layout the app was built for, and what capabilities the app showcases such as camera, GPS, or radio buttons. It's a quick way for new users to learn capabilities of PowerApps, and you can use a template to create an identical app in PowerApps Studio for Windows.
+* **Sample apps** - Sample apps were built for different business scenarios in either phone or tablet layout. You can click an app to quickly view a description of what the app does, what layout the app was built for, and what capabilities the app showcases such as camera, GPS, or radio buttons. It's a quick way for new users to learn capabilities of PowerApps, and you can use a template to create an identical app in PowerApps Studio.
   
     ![Sample Apps](./media/intro-maker-portal/sampleapps2.png)
 * **Connected sample apps** - These apps connect to your data via a data connection such as Office 365, Salesforce, Trello, and Wunderlist. This set of apps is different from the sample apps above. When you click or tap a connected sample app, you actually provision a new instance of the app (think of it as a template). It will prompt you to enter your credentials to connect to your data. The beautiful thing about a connected sample app is that an instance is provisioned for you right here, and you can open it in PowerApps Studio to learn how the corresponding app was built. The downside is that it can take pretty long (up to a minute) to create. So please be patient and let the browser open when you click or tap a connected sample app.
@@ -107,7 +107,7 @@ Please note that the list view shows only apps in the selected environment. To v
 
 ## What's new?
 
-* Clicking or tapping an app now opens it in PowerApps Studio for web in a new tab.
+* Clicking or tapping an app now opens it in PowerApps Studio in a new tab.
 * By default, the **Apps** page shows all apps that you have permission to edit. To view **All apps** (including apps you can only use), select the **All apps** filter.
   
    ![Apps filter](./media/intro-maker-portal/allapps_filter.png)

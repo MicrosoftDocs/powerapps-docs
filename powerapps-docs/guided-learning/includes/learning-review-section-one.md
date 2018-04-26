@@ -16,7 +16,6 @@ Congratulations! You have finished the first section of PowerApps Guided Learnin
 * Improve PowerApps by submitting an [idea](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas)
 
 ## PowerApps downloads
-* [PowerApps Studio for Windows](https://aka.ms/powerappswin)
 * [PowerApps Mobile for Windows](https://aka.ms/powerappswin)
 * [PowerApps Mobile for iOS](https://aka.ms/powerappsios)
 * [PowerApps Mobile for Android](https://aka.ms/powerappsandroid)
