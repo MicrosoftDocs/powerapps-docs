@@ -255,12 +255,9 @@
       - name: Asynchronous service
         href: /powerapps/maker/temp-maker-placeholder
       - name: Multiple language support
-        href: /powerapps/maker/temp-maker-placeholder 
-      - name: Build a data model
-        href: /powerapps/maker/temp-maker-placeholder 
-      - name: Build a data model
-        href: /powerapps/maker/temp-maker-placeholder                                                        
-        items: Pro Developer Concepts
+        href: /powerapps/maker/temp-maker-placeholder                                                       
+      - name: Pro Developer Concepts
+        items: 
           - name: Apply business logic with code
             href: /powerapps/developer/temp-developer-placeholder
           - name: Azure integration
