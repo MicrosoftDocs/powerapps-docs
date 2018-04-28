@@ -301,15 +301,15 @@
     - name: Configure Cascading relationships
       href: /powerapps/maker/temp-maker-placeholder
     - name: Pro Developer How-to guides
-        items: 
-          - name: Use web services
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Distribute your app on AppSource
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Build Windows client applications using XRM tools
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Create custom workflow activities
-            href: /powerapps/developer/temp-developer-placeholder
+      items: 
+      - name: Use web services
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Distribute your app on AppSource
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Build Windows client applications using XRM tools
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Create custom workflow activities
+        href: /powerapps/developer/temp-developer-placeholder
   - name: Reference
     items:
     - name: Entity Reference
@@ -339,21 +339,21 @@
     - name: Community tools
       href: /powerapps/maker/temp-maker-placeholder
     - name: Pro Developer Resources
-        items: 
-          - name: .NET SDK Assemblies
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Code generation tool 
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Configuration Migration tool 
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Package Deployer 
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Plug-in Registration Tool 
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: SolutionPackager tool 
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Community tools
-            href: /powerapps/developer/temp-developer-placeholder            
+      items: 
+      - name: .NET SDK Assemblies
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Code generation tool 
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Configuration Migration tool 
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Package Deployer 
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Plug-in Registration Tool 
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: SolutionPackager tool 
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Community tools
+        href: /powerapps/developer/temp-developer-placeholder
   # - name: Samples and resources
   #   href: ./common-data-service/samples-resources.md
   # - name: For Developers
