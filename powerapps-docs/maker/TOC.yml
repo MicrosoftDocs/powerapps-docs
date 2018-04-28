@@ -244,8 +244,31 @@
       href: ./common-data-service/create-custom-entity.md
   - name: Concepts
     items:
-      - name: Placeholder Test
+      - name: Build a data model
         href: /powerapps/maker/temp-maker-placeholder
+      - name: Data access and security
+        href: /powerapps/maker/temp-maker-placeholder
+      - name: Apply business logic
+        href: /powerapps/maker/temp-maker-placeholder
+      - name: Solutions
+        href: /powerapps/maker/temp-maker-placeholder
+      - name: Asynchronous service
+        href: /powerapps/maker/temp-maker-placeholder
+      - name: Multiple language support
+        href: /powerapps/maker/temp-maker-placeholder 
+      - name: Build a data model
+        href: /powerapps/maker/temp-maker-placeholder 
+      - name: Build a data model
+        href: /powerapps/maker/temp-maker-placeholder                                                        
+        items: Pro Developer Concepts
+          - name: Apply business logic with code
+            href: /powerapps/developer/temp-developer-placeholder
+          - name: Azure integration
+            href: /powerapps/developer/temp-developer-placeholder
+          - name: Outlook client
+            href: /powerapps/developer/temp-developer-placeholder
+          - name: Create custom clients
+            href: /powerapps/developer/temp-developer-placeholder                                    
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
   - name: For Developers
