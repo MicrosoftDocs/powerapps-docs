@@ -242,6 +242,10 @@
     items:
     - name: Create a custom entity that has components
       href: ./common-data-service/create-custom-entity.md
+  - name: Concepts
+    items:
+      - name: Placeholder Test
+        href: /powerapps/maker/temp-maker-placeholder
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
   - name: For Developers
