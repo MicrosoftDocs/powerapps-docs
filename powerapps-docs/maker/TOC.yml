@@ -248,22 +248,30 @@
       href: /powerapps/maker/temp-maker-placeholder
     - name: Manage localized strings
       href: /powerapps/maker/temp-maker-placeholder
-      - name: Pro Developer Tutorials
-        items: 
-          - name: Create a .NET console application
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Create a workflow process extension
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Create and deploy a plug-in
-            href: /powerapps/developer/temp-developer-placeholder
-          - name: Post data using web hooks
-            href: /powerapps/developer/temp-developer-placeholder
+    - name: Pro Developer Tutorials
+      items: 
+      - name: Create a .NET console application
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Create a workflow process extension
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Create and deploy a plug-in
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Post data using web hooks
+        href: /powerapps/developer/temp-developer-placeholder
   - name: Samples
     items:
         - name: Organization service samples
           href: /powerapps/developer/temp-developer-placeholder
         - name: Web API samples
-          href: /powerapps/developer/temp-developer-placeholder          
+          items:
+          - name: Basic Operations
+            href: /powerapps/developer/temp-developer-placeholder
+          - name: Query Data
+            href: /powerapps/developer/temp-developer-placeholder
+          - name: Conditional Operations
+            href: /powerapps/developer/temp-developer-placeholder
+          - name: Functions and actions
+            href: /powerapps/developer/temp-developer-placeholder
   - name: Concepts
     items:
       - name: Build a data model
