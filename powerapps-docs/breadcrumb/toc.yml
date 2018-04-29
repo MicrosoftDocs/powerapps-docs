@@ -9,6 +9,9 @@
     - name: Create apps
       tocHref: /powerapps/maker/
       topicHref: /powerapps/maker/index
+    - name: Create apps
+      tocHref: /powerapps/developer/
+      topicHref: /powerapps/maker/index
     - name: Guided Learning
       tocHref: /powerapps/guided-learning/
       topicHref: /powerapps/guided-learning/index
