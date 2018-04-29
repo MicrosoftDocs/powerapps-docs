@@ -1,6 +1,6 @@
 ---
 title: Premium entities | Microsoft Docs
-description: Understanding licence requirements for Premium entities
+description: Understanding license requirements for Premium entities
 documentationcenter: na
 author: clwesene
 manager: kfile
@@ -11,7 +11,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: cds
-ms.date: 3/21/2018
+ms.date: 5/1/2018
 ms.author: clwesene
 
 ---

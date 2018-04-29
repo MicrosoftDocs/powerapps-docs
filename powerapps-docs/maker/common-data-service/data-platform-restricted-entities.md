@@ -11,14 +11,14 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: cds
-ms.date: 3/21/2018
+ms.date: 5/1/2018
 ms.author: clwesene
 
 ---
 # Understanding Restricted entities
 
 
-The majority of entities available wthin the Common Data Service for Apps can be used to build PowerApps and Flows, and only require the user to have a PowerApps Plan 1 (or Flow Plan 1). Some entities with complex business logic added to the entity require users of the app to have a PowerApps Plan 2 (For more information see [Premium entities](data-platform-premium-entities.md)). While all entities can be to used to read data in apps with these licenses, a small set of entities require users to have a corresponding license for the Dynamics 365 product if they need to create, update or delete records, these are referred to as Restricted entities.
+The majority of entities available wthin the Common Data Service for Apps can be used to build PowerApps and Flows, and only require the user to have a PowerApps Plan 1. Some entities with complex business logic added to the entity require users of the app to have a PowerApps Plan 2 (For more information see [Premium entities](data-platform-premium-entities.md)). While all entities can be to used to read data in apps with these licenses, a small set of entities require users to have a corresponding license for the Dynamics 365 product if they need to create, update or delete records, these are referred to as Restricted entities.
 
 Entities may be restricted to a Dynamics 365 licence for the following reasons :
 
