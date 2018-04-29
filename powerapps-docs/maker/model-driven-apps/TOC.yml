@@ -1,5 +1,5 @@
 - name: Model-driven apps
-  href: ./model-driven-apps/model-driven-app-overview.md
+  href: model-driven-app-overview.md
   items:
   - name: Quickstarts
     items:
@@ -24,7 +24,7 @@
   - name: Tutorials
     items:
     - name: Share a model-driven app with PowerApps
-      href: ./model-driven-apps/share-model-driven-app.md
+      href: share-model-driven-app.md
     - name: Create a business process flow with branching
       href: /powerapps/maker/temp-maker-placeholder
     - name: Pro Developer Tutorials
@@ -40,7 +40,7 @@
   - name: Samples
     items:
     - name: Overview of sample apps
-      href: ./model-driven-apps/overview-model-driven-samples.md
+      href: overview-model-driven-samples.md
     - name: Pro Developer Samples
       items:
       - name: JavaScript API samples

@@ -1,161 +1,161 @@
 - name: Canvas apps
-  href: ./canvas-apps/getting-started.md
+  href: getting-started.md
   items:
   - name: Quickstarts
     items:
     - name: Open a sample app
-      href: ./canvas-apps/open-and-run-a-sample-app.md
+      href: open-and-run-a-sample-app.md
     - name: Create an app from a template
-      href: ./canvas-apps/get-started-test-drive.md
+      href: get-started-test-drive.md
     - name: Create an app from within SharePoint
-      href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
+      href: generate-app-from-sharepoint-list-interface.md
     - name: Generate an app
       items:
       - name: From the Common Data Service for Apps
-        href: ./canvas-apps/data-platform-create-app.md
+        href: data-platform-create-app.md
       - name: From SharePoint
-        href: ./canvas-apps/app-from-sharepoint.md
+        href: app-from-sharepoint.md
       - name: From Excel
-        href: ./canvas-apps/get-started-create-from-data.md
+        href: get-started-create-from-data.md
   - name: Tutorials
     items:
     - name: Customize a generated app
       items:
       - name: 1 - Galleries
-        href: ./canvas-apps/customize-layout-sharepoint.md
+        href: customize-layout-sharepoint.md
       - name: 2 - Forms
-        href: ./canvas-apps/customize-forms-sharepoint.md
+        href: customize-forms-sharepoint.md
       - name: 3 - Cards
-        href: ./canvas-apps/customize-card.md
+        href: customize-card.md
     - name: Create an app from scratch
       items:
       - name: Common Data Service for Apps
-        href: ./canvas-apps/data-platform-create-app-scratch.md
+        href: data-platform-create-app-scratch.md
       - name: Excel
-        href: ./canvas-apps/get-started-create-from-blank.md
+        href: get-started-create-from-blank.md
     - name: Share an app
-      href: ./canvas-apps/share-app.md
+      href: share-app.md
     - name: Embed an app in Power BI
-      href: ./canvas-apps/embed-powerapps-powerbi.md
+      href: embed-powerapps-powerbi.md
   - name: Samples
     items:
     - name: Expense Report app
-      href: ./canvas-apps/expense-report-install.md
+      href: expense-report-install.md
     - name: Help Desk app
-      href: ./canvas-apps/help-desk-install.md
+      href: help-desk-install.md
   - name: Concepts
     items:
     - name: Get started with formulas
-      href: ./canvas-apps/working-with-formulas.md
+      href: working-with-formulas.md
     - name: Tables and records
-      href: ./canvas-apps/working-with-tables.md
+      href: working-with-tables.md
     - name: Data forms
-      href: ./canvas-apps/working-with-forms.md
+      href: working-with-forms.md
     - name: Data form layout
-      href: ./canvas-apps/working-with-form-layout.md
+      href: working-with-form-layout.md
     - name: Data cards
-      href: ./canvas-apps/working-with-cards.md
+      href: working-with-cards.md
     - name: Variables
-      href: ./canvas-apps/working-with-variables.md
+      href: working-with-variables.md
     - name: Formulas
-      href: ./canvas-apps/working-with-formulas-in-depth.md
+      href: working-with-formulas-in-depth.md
     - name: Dates and times
-      href: ./canvas-apps/show-text-dates-times.md
+      href: show-text-dates-times.md
     - name: Data sources
-      href: ./canvas-apps/working-with-data-sources.md
+      href: working-with-data-sources.md
     - name: Understand SharePoint forms integration
-      href: ./canvas-apps/sharepoint-form-integration.md
+      href: sharepoint-form-integration.md
     - name: PowerApps custom visual
-      href: ./canvas-apps/powerapps-custom-visual.md
+      href: powerapps-custom-visual.md
     - name: Transform your InfoPath forms to PowerApps
-      href: ./canvas-apps/transform-infopath.md
+      href: transform-infopath.md
     - name: Canvas-app development
       items:
       - name: PowerApps for enterprise developers, partners, and ISVs
-        href: ./canvas-apps/dev-enterprise-intro.md
+        href: dev-enterprise-intro.md
       - name: Build and certify custom connectors
-        href: ./canvas-apps/register-custom-api.md
+        href: register-custom-api.md
       - name: Integrate with websites and other technologies
-        href: ./canvas-apps/embed-apps-dev.md
+        href: embed-apps-dev.md
       - name: Develop offline-capable apps
-        href: ./canvas-apps/offline-apps.md
+        href: offline-apps.md
       - name: Let customers test drive your apps
-        href: ./canvas-apps/dev-appsource-test-drive.md
+        href: dev-appsource-test-drive.md
   - name: How-to guides
     items:
     - name: Customize a SharePoint list form
-      href: ./canvas-apps/customize-list-form.md
+      href: customize-list-form.md
     - name: Customize an app
       items:
       - name: Add and configure a control
-        href: ./canvas-apps/add-configure-controls.md
+        href: add-configure-controls.md
       - name: Add a screen
-        href: ./canvas-apps/add-screen-context-variables.md
+        href: add-screen-context-variables.md
       - name: Add a data connection
-        href: ./canvas-apps/add-data-connection.md
+        href: add-data-connection.md
       - name: Show a list of items
-        href: ./canvas-apps/add-gallery.md
+        href: add-gallery.md
       - name: Show items of different heights
-        href: ./canvas-apps/gallery-dynamic-sizing.md
+        href: gallery-dynamic-sizing.md
       - name: Add a form
-        href: ./canvas-apps/add-form.md
+        href: add-form.md
       - name: Show the current user
-        href: ./canvas-apps/show-current-user.md
+        href: show-current-user.md
       - name: Add a list control
-        href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
+        href: add-list-box-drop-down-list-radio-button.md
       - name: Connect lists using lookups
-        href: ./canvas-apps/sharepoint-lookup-fields.md
+        href: sharepoint-lookup-fields.md
       - name: Add a chart
-        href: ./canvas-apps/use-line-pie-bar-chart.md
+        href: use-line-pie-bar-chart.md
       - name: Add multimedia
-        href: ./canvas-apps/add-images-pictures-audio-video.md
+        href: add-images-pictures-audio-video.md
       - name: Scan a barcode
-        href: ./canvas-apps/scan-barcode.md
+        href: scan-barcode.md
       - name: Add a flow
-        href: ./canvas-apps/using-logic-flows.md
+        href: using-logic-flows.md
       - name: Add a scrolling screen
-        href: ./canvas-apps/add-scrolling-screen.md
+        href: add-scrolling-screen.md
       - name: Build a global app
-        href: ./canvas-apps/global-apps.md
+        href: global-apps.md
       - name: Create an accessible app
-        href: ./canvas-apps/accessible-apps.md
+        href: accessible-apps.md
         items:
           - name: Color
-            href: ./canvas-apps/accessible-apps-color.md
+            href: accessible-apps-color.md
     - name: Manage your app
       items:
       - name: Introduction to powerapps.com
-        href: ./canvas-apps/intro-maker-portal.md
+        href: intro-maker-portal.md
       - name: Work with environments
-        href: ./canvas-apps/working-with-environments.md
+        href: working-with-environments.md
       - name: Edit an app
-        href: ./canvas-apps/edit-app.md
+        href: edit-app.md
       - name: Change screen size and orientation
-        href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+        href: set-aspect-ratio-portrait-landscape.md
       - name: Change app name and tile
-        href: ./canvas-apps/set-name-tile.md
+        href: set-name-tile.md
       - name: Save and publish an app
-        href: ./canvas-apps/save-publish-app.md
+        href: save-publish-app.md
       - name: Delete an app
-        href: ./canvas-apps/delete-app.md
+        href: delete-app.md
       - name: Restore your app to a previous version
-        href: ./canvas-apps/restore-an-app.md
+        href: restore-an-app.md
     - name: Connect to data
       items:
       - name: Manage data connections
-        href: ./canvas-apps/add-manage-connections.md
+        href: add-manage-connections.md
       - name: Connect to SharePoint
-        href: ./canvas-apps/connect-to-sharepoint.md
+        href: connect-to-sharepoint.md
       - name: Prepare Excel data
-        href: ./canvas-apps/how-to-excel-tips.md
+        href: how-to-excel-tips.md
       - name: Delegation
-        href: ./canvas-apps/delegation-overview.md
+        href: delegation-overview.md
       - name: Delegable data sources
-        href: ./canvas-apps/delegation-list.md
+        href: delegation-list.md
       - name: Manage gateways
-        href: ./canvas-apps/gateway-management.md
+        href: gateway-management.md
       - name: Understand gateways
-        href: ./canvas-apps/gateway-reference.md
+        href: gateway-reference.md
       - name: Troubleshoot Power Query
         href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
     - name: Integrate with other technologies # already one TOC level too deep
@@ -163,34 +163,34 @@
       - name: SharePoint Online
         items:
         - name: SharePoint Online integration overview
-          href: ./canvas-apps/sharepoint-scenario-intro.md
+          href: sharepoint-scenario-intro.md
         - name: Set up SharePoint Online lists
-          href: ./canvas-apps/sharepoint-scenario-setup.md
+          href: sharepoint-scenario-setup.md
         - name: Generate an app
-          href: ./canvas-apps/sharepoint-scenario-generate-app.md
+          href: sharepoint-scenario-generate-app.md
         - name: Create a flow for approvals
-          href: ./canvas-apps/sharepoint-scenario-approval-flow.md
+          href: sharepoint-scenario-approval-flow.md
         - name: Create an app from scratch
-          href: ./canvas-apps/sharepoint-scenario-build-app.md
+          href: sharepoint-scenario-build-app.md
         - name: Create a Power BI report
-          href: ./canvas-apps/sharepoint-scenario-build-report.md
+          href: sharepoint-scenario-build-report.md
         - name: Publish the Power BI report
-          href: ./canvas-apps/sharepoint-scenario-publish-report.md
+          href: sharepoint-scenario-publish-report.md
         - name: Embed the Power BI report
-          href: ./canvas-apps/sharepoint-scenario-embed-report.md
+          href: sharepoint-scenario-embed-report.md
         - name: Create a flow for alerts
-          href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
+          href: sharepoint-scenario-alerts-flow.md
         - name: Walk through the completed scenario
-          href: ./canvas-apps/sharepoint-scenario-summary.md
+          href: sharepoint-scenario-summary.md
       - name: Cognitive Services
-        href: ./canvas-apps/cognitive-services-api.md
+        href: cognitive-services-api.md
   - name: Reference
     items:
     - name: Formula reference
-      href: ./canvas-apps/formula-reference.md
+      href: formula-reference.md
     - name: Controls reference
-      href: ./canvas-apps/reference-properties.md
+      href: reference-properties.md
     - name: Connectors reference
-      href: ./canvas-apps/connections-list.md
+      href: connections-list.md
     - name: System requirements, limits, and configuration
-      href: ./canvas-apps/limits-and-config.md
+      href: limits-and-config.md
