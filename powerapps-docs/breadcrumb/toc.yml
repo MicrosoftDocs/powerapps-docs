@@ -6,6 +6,15 @@
     tocHref: /powerapps/
     topicHref: /powerapps/
     items:
+    - name: Apps
+      tocHref: /maker/canvas-apps/
+      topicHref: /powerapps/maker/index
+    - name: Apps
+      tocHref: /maker/model-driven-apps/
+      topicHref: /powerapps/maker/index
+    - name: Apps
+      tocHref: /maker/common-data-service/
+      topicHref: /powerapps/maker/index
     - name: Guided Learning
       tocHref: /powerapps/guided-learning/
       topicHref: /powerapps/guided-learning/index
