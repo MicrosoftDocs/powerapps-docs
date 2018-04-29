@@ -38,11 +38,11 @@ The following entities require end users of Apps and Flows which perform create,
 Entity | Logical name | License required
 --- | --- | ---
 Actual |msdyn_actual |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
-Agreement Business Process |msdyn_bpf_baa0a411a239410cb8bded8b5fdd88e3 |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Agreement Business Process |msdyn_bpf_baa0a411a239410cb8bded8b5fdd88e3 |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Booking journal | msdyn_bookingjournal|Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Booking Setup Metadata | msdyn_bookingsetupmetadata|Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Booking timestamp | msdyn_bookingtimestamp|Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
-Case to Work Order Business Process |msdyn_bpf_989e9b1857e24af18787d5143b67523b |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Case to Work Order Business Process |msdyn_bpf_989e9b1857e24af18787d5143b67523b |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Configuration |msdyn_configuration |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Entitlement | entitlement | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Estimate Line|msdyn_estimateline|Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
@@ -63,14 +63,14 @@ Project Stages| msdyn_bpf_665e73aa18c247d886bfc50499c73b82|Dynamics 365 for Proj
 Project Task Dependency|msdyn_projecttaskdependency |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Project Task|msdyn_projecttask |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Project Team Member|msdyn_projecteam |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
-Purchase Order Business Process | msdyn_bpf_2c5fe86acc8b414b8322ae571000c799|Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Purchase Order Business Process | msdyn_bpf_2c5fe86acc8b414b8322ae571000c799|Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Resource Assignment Detail (Deprecated)|msdyn_resourceassignmentdetail |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Resource Assignment|msdyn_resourceassignment |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Resource Restriction (Deprecated) |msdyn_workorderresourcerestriction | Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Routing rule set | routingrule | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Schedule Board Setting |msdyn_scheduleboardsetting |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Scheduling Parameter |msdyn_schedulingparameter |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
-Work Order Business Process |msdyn_bpf_d3d97bac8c294105840e99e37a9d1c39 |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Work Order Business Process |msdyn_bpf_d3d97bac8c294105840e99e37a9d1c39 |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 
 
 
