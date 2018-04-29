@@ -342,7 +342,7 @@
       - name: FormXML
         href: /powerapps/developer/temp-developer-placeholder          
   - name: Resources
-      items:
+    items:
     - name: Community tools
       href: /powerapps/maker/temp-maker-placeholder
   # - name: For Developers
