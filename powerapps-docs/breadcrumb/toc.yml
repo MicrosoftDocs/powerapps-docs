@@ -7,13 +7,7 @@
     topicHref: /powerapps/
     items:
     - name: Create apps
-      tocHref: /powerapps/maker/canvas-apps/
-      topicHref: /powerapps/maker/index
-    - name: Create apps
-      tocHref: /powerapps/maker/model-driven-apps/
-      topicHref: /powerapps/maker/index
-    - name: Create apps
-      tocHref: /powerapps/maker/common-data-service/
+      tocHref: /powerapps/maker/
       topicHref: /powerapps/maker/index
     - name: Guided Learning
       tocHref: /powerapps/guided-learning/
