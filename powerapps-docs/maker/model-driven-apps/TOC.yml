@@ -1,0 +1,137 @@
+- name: Model-driven apps
+  href: ./model-driven-apps/model-driven-app-overview.md
+  items:
+  - name: Quickstarts
+    items:
+    - name: Build your first model-driven app
+      href: /powerapps/maker/model-driven-apps/build-first-model-driven-app
+    - name: Create an entity form
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Create a view
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Create a business process flow
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Create a chart
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Create a dashboard
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Create a form business rule
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Pro Developer Quickstarts
+      items: 
+      - name: If any...
+        href: /powerapps/developer/temp-developer-placeholder         
+  - name: Tutorials
+    items:
+    - name: Share a model-driven app with PowerApps
+      href: ./model-driven-apps/share-model-driven-app.md
+    - name: Create a business process flow with branching
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Pro Developer Tutorials
+      items: 
+      - name: Add a command
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Create a custom control
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Create a form script event handler
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Streamline JavaScript web resource development using Fiddler AutoResponder
+        href: /powerapps/developer/temp-developer-placeholder                        
+  - name: Samples
+    items:
+    - name: Overview of sample apps
+      href: ./model-driven-apps/overview-model-driven-samples.md
+    - name: Pro Developer Samples
+      items:
+      - name: JavaScript API samples
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Pass multiple values to a web resource through the data parameter
+        href: /powerapps/developer/temp-developer-placeholder          
+  - name: Concepts
+    items:
+    - name: Apply business logic
+      items: 
+      - name: Business logic using Common Data Service for Apps
+        href: /powerapps/maker/temp-maker-placeholder
+      - name: Business process flow
+        href: /powerapps/maker/temp-maker-placeholder
+      - name: Form Business Rule
+        href: /powerapps/maker/temp-maker-placeholder 
+      - name: Form scripts
+        href: /powerapps/maker/temp-maker-placeholder 
+    - name: Multiple language support
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Pro Developer Concepts
+      items: 
+      - name: Supported customizations
+        href: /powerapps/developer/temp-developer-placeholder  
+      - name: Web Resources
+        href: /powerapps/developer/temp-developer-placeholder
+  - name: How-to guides
+    items:
+    - name: Manage entity forms
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Control Access to forms
+      href: /powerapps/maker/temp-maker-placeholder
+    - name: Create or edit main forms
+      href: /powerapps/maker/temp-maker-placeholder 
+    - name: Create or edit quick create forms
+      href: /powerapps/maker/temp-maker-placeholder 
+    - name: Create or edit quick view forms
+      href: /powerapps/maker/temp-maker-placeholder 
+    - name: Add form navigation for related entities
+      href: /powerapps/maker/temp-maker-placeholder 
+    - name: Add custom controls
+      href: /powerapps/maker/temp-maker-placeholder 
+    - name: Use the form editor
+      href: /powerapps/maker/temp-maker-placeholder 
+      items:
+      - name: Open the form editor
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Overview of form editor UI
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Show or hide form elements
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Change navigation within a form
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Add a field to a form
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Form properties
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Tab properties
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Section properties
+        href: /powerapps/maker/temp-maker-placeholder                                                           
+      - name: Common field properties
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Special field properties
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Sub-grid properties
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: Quick-view control properties
+        href: /powerapps/maker/temp-maker-placeholder   
+      - name: iFrame properties
+        href: /powerapps/maker/temp-maker-placeholder   
+    - name: Configure web resources and IFrame controls for use with mobile clients
+      href: /powerapps/maker/temp-maker-placeholder   
+    - name: Pro Developer How-to guides
+      items: 
+      - name: Client scripting in Model-driven apps using JavaScript
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Customize commands
+        href: /powerapps/developer/temp-developer-placeholder
+      - name: Create custom controls
+        href: /powerapps/developer/temp-developer-placeholder                
+  - name: Reference
+    items:
+    - name: Client API
+      href: /powerapps/developer/temp-developer-placeholder
+    - name: XML Schemas
+      href: /powerapps/developer/temp-developer-placeholder  
+      items:
+      - name: FormXML
+        href: /powerapps/developer/temp-developer-placeholder          
+  - name: Resources
+    items:
+    - name: Community tools
+      href: /powerapps/maker/temp-maker-placeholder
