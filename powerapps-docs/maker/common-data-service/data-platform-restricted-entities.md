@@ -29,13 +29,46 @@ The following entities require end users of Apps and Flows which perform create,
 
 Entity | Logical name | License required
 --- | --- | ---
-Journey | journey | Dynamics 365 for Marketing <br> **or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
-Goal | goal | Dynamics 365 for Sales Professional, <br>**or** Dynamics 365 for Sales, Enterprise edition, <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
-Incident | incident | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
-Knowledge article | knowledgearticle | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
-SLA | sla | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
-Entitlement | entitlement | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
-Routing rule | routingrule | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365, Enterprise edition, Plan 1 <br>**or** Dynamics 365, Enterprise edition, Plan 2
+Actual |msdyn_actual |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Booking journal | msdyn_bookingjournal|Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Booking Setup Metadata | msdyn_bookingsetupmetadata|Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Booking timestamp | msdyn_bookingtimestamp|Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Configuration |msdyn_configuration |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Entitlement | entitlement | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Estimate Line|msdyn_estimateline|Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Estimate|msdyn_estimate |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Fact|msdyn_fact |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Field service setting |msdyn_fieldservicesetting |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Field Service System Job |msdyn_fieldservicesystemjob |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Goal | goal | Dynamics 365 for Sales Professional, <br>**or** Dynamics 365 for Sales, Enterprise edition, <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Incident | incident | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Inventory Journal |msdyn_inventoryjournal |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Journey | journey | Dynamics 365 for Marketing <br> **or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Knowledge article | knowledgearticle | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Msdyn_bpf_*<br>*Multiple entities prefixed with "Msdyn_bpf_"* | |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Organizational Unit |msdyn_organizationalunit |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Product Inventory |msdyn_productinventory |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Project Parameter|msdyn_projectparameter |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Project Task Dependency|msdyn_projecttaskdependency |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Project Task|msdyn_projecttask |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Project Team Member|msdyn_projecteam |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Resource Assignment Detail (Deprecated)|msdyn_resourceassignmentdetail |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Resource Assignment|msdyn_resourceassignment |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Resource Restriction (Deprecated) |msdyn_workorderresourcerestriction | Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Routing rule set | routingrule | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Schedule Board Setting |msdyn_scheduleboardsetting |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Scheduling Parameter |msdyn_schedulingparameter |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+SLA | sla | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+System User Scheduler Setting |msdyn_systemuserschedulersetting |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Transaction connection|msdyn_transactionconnection |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Transaction Origin|msdyn_transactionorigin |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Transaction Type|msdyn_transactiontype |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Unique Number |msdyn_uniquenumber |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Work Order Details Generation Queue (Deprecated) |msdyn_workorderdetailsgenerationqueue |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+
+
+
+
 
 
 ## Licensing
