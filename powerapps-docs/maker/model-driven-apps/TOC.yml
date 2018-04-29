@@ -116,8 +116,8 @@
       href: /powerapps/maker/temp-maker-placeholder   
     - name: Pro Developer How-to guides
       items: 
-      - name: Client scripting in Model-driven apps using JavaScript
-        href: /powerapps/developer/temp-developer-placeholder
+      - name: Client scripting
+        href: /powerapps/developer/clientapi/client-scripting
       - name: Customize commands
         href: /powerapps/developer/temp-developer-placeholder
       - name: Create custom controls
@@ -125,7 +125,7 @@
   - name: Reference
     items:
     - name: Client API
-      href: /powerapps/developer/temp-developer-placeholder
+      href: /powerapps/developer/clientapi/reference
     - name: XML Schemas
       href: /powerapps/developer/temp-developer-placeholder  
       items:
