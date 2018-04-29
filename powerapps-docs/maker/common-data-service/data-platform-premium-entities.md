@@ -17,7 +17,7 @@ ms.author: clwesene
 ---
 # Understanding Premium entities
 
-PowerApps and Flow users can use the Common Data Service for Apps to develop apps or flows against their data, in most cases users of Apps and Flows which connect to the Common Data Service for Apps only require a PowerApps Plan 1. In some cases entities which have complex logic or are closely tied to the Dynamics 365 products require users of those apps to have a specific license. 
+PowerApps and Flow users can use the Common Data Service for Apps to develop apps or flows against their data, in most cases users of Apps and Flows which connect to the Common Data Service for Apps only require a PowerApps Plan 1. In some cases, entities which have complex logic or are closely tied to the Dynamics 365 products require users of those apps to have a specific license. 
 
 PowerApps Plan 1 allows users to run apps and flows which use entities from the Common Data Service for Apps, including custom entities and entities which are part of the Common Data Model. Please see the [PowerApps pricing page](https://powerapps.microsoft.com/pricing) for more information on available plans.
 
@@ -36,7 +36,7 @@ Entities which include complex server-side logic require users of the app or flo
 
 Currently you need to manually check if you have added complex business logic to your entities by reviewing the list of Plug-in assemblies and workflows which have been configured in your environment.
 
-## Impacting license requirements when adding complex buisness logic
+## Impacting license requirements when adding complex business logic
 
 Code plug-ins and Real-time workflows can be added to entities within the Common Data Service for Apps, by doing so you can change the licenses required by users of apps already deployed. Users should take care when adding complex business logic to entities by first checking which apps consume the entity and if your users have the appropriate licenses.
 
@@ -45,7 +45,7 @@ Code plug-ins and Real-time workflows can be added to entities within the Common
 
 ## Premium entities restricted to Dynamics 365 licenses
 
-Selected entities which are closely tied to the functionality of the Dynamics 365 products require users to have the corresponding license for that product to perform create, update and delete operations, and cannot be run with PowerApps plans. You can find a full list of entities restricted to Dynamics 365 licenses [here](data-platform-premium-entities.md).
+Selected entities which are closely tied to the functionality of the Dynamics 365 products require users to have the corresponding license for that product to perform create, update and delete operations, and cannot be run with PowerApps plans. You can find a full list of entities restricted to Dynamics 365 licenses [here](data-platform-restricted-entities.md).
 
 ## Licensing example
 
@@ -59,18 +59,18 @@ Barb is going to build two Canvas apps;
 Isaac is going to build two Model driven apps;
 
 - App 3 : uses the Contact entity, along with a custom entity used to store related information.
-- App 4 : users the Conact entity, along with the Incident entity (which is a restricted entity)
+- App 4 : uses the Contact entity, along with the Incident entity (which is a restricted entity)
 
 
-Here are the types of licenses Barb, Isaac and their users are going to need :
+Here are the types of licenses Barb, Isaac and their users are going to need:
 
 - Barb needs a PowerApps Plan 1 license, to build a canvas app using the Common Data Service for Apps.
     - Barb can build an app against the Common Data Service with a PowerApps Plan 1, if she needed to create a database or create a custom entity, she would require a PowerApps Plan 2 license.
-- Issac needs a PowerApps Plan 2 license, to build model driven apps.
+- Isaac needs a PowerApps Plan 2 license, to build model driven apps.
 - Users of App 1: need a PowerApps Plan 1 or Plan 2 license, as it doesn't contain any premium entities.
 - Users of App 2: need a Dynamics 365 for Customer Service, Enterprise Edition license (or Dynamics 365 Plan, Dynamics 365 Customer Engagement Plan), as it includes a restricted entity. 
-- Users of App 3 : need a PowerApps Plan 2 license, at it is a Model driven app.
-- Users of App 4 : need a Dynamics 365 for Customer Service, Enterprise Edition license (or Dynamics 365 Plan, Dynamics 365 Customer Engagement Plan), as it includes a restricted entity. 
+- Users of App 3: need a PowerApps Plan 2 license, at it is a Model driven app.
+- Users of App 4: need a Dynamics 365 for Customer Service, Enterprise Edition license (or Dynamics 365 Plan, Dynamics 365 Customer Engagement Plan), as it includes a restricted entity. 
     - Dynamics 365 for Customer Service includes a PowerApps Plan 2 license which allows users to run the Model driven app.
 
 Now, let's see what would happen if Isaac added a real-time workflow to the custom entity that both Barb and Isaac are using in their apps.
@@ -78,14 +78,14 @@ Now, let's see what would happen if Isaac added a real-time workflow to the cust
 Here are the types of licenses Barb, Isaac and their users are going to need :
 
 - Barb still needs a PowerApps Plan 1 license, to build a canvas app using the Common Data Service for Apps.
-- Issac still needs a PowerApps Plan 2 license, to build model driven apps.
+- Isaac still needs a PowerApps Plan 2 license, to build model driven apps.
 - **Users of App 1: now need a PowerApps Plan 2, as the app contains an entity with a real-time workflow.**
 - Users of App 2: still need a Dynamics 365 for Customer Service, Enterprise Edition license (or Dynamics 365 Plan, Dynamics 365 Customer Engagement Plan), as it includes a restricted entity. 
-- Users of App 3 : still need a PowerApps Plan 2 license, at it is a Model driven app.
-- Users of App 4 : still need a Dynamics 365 for Customer Service, Enterprise Edition license (or Dynamics 365 Plan, Dynamics 365 Customer Engagement Plan), as it includes a restricted entity. 
+- Users of App 3: still need a PowerApps Plan 2 license, at it is a Model driven app.
+- Users of App 4: still need a Dynamics 365 for Customer Service, Enterprise Edition license (or Dynamics 365 Plan, Dynamics 365 Customer Engagement Plan), as it includes a restricted entity. 
     - Dynamics 365 for Customer Service includes a PowerApps Plan 2 license which allows users to run the Model driven app.
 
-The only app impacted by this change was App 1, which previously required a PowerApp Plan 1, and now requires a PowerApps Plan 2 as it contains a premium entity. 
+The only app impacted by this change was App 1, which previously required a PowerApps Plan 1, and now requires a PowerApps Plan 2 as it contains a premium entity. 
 
 ## Licensing
 

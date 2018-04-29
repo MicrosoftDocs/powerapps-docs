@@ -18,14 +18,14 @@ ms.author: clwesene
 # Understanding Restricted entities
 
 
-The majority of entities available wthin the Common Data Service for Apps can be used to build PowerApps and Flows, and only require the user to have a PowerApps Plan 1. Some entities with complex business logic added to the entity require users of the app to have a PowerApps Plan 2 (For more information see [Premium entities](data-platform-premium-entities.md)). While all entities can be to used to read data in apps with these licenses, a small set of entities require users to have a corresponding license for the Dynamics 365 product if they need to create, update or delete records, these are referred to as Restricted entities.
+Most of the entities available within the Common Data Service for Apps can be used to build PowerApps and Flows, and only require the user to have a PowerApps Plan 1. Some entities with complex business logic added to the entity require users of the app to have a PowerApps Plan 2 (For more information see [Premium entities](data-platform-premium-entities.md)). While all entities can be to used to read data in apps with these licenses, a small set of entities require users to have a corresponding license for the Dynamics 365 product if they need to create, update or delete records, these are referred to as Restricted entities.
 
-Entities may be restricted to a Dynamics 365 licence for the following reasons :
+Entities may be restricted to a Dynamics 365 license for the following reasons:
 
 - **Configuration data** : if the entity is used to store and maintain product specific configuration that is typically not used outside of the application.
 - **Supported by advanced logic** : if the entity is accompanied by advanced logic to create and maintain data in a specific way when being used in a Dynamics 365 product.
 
-Users of Canvas and Model Driven apps will only require a corresponding Dynamics 365 licence if they need to create, update or delete data within these entities in their app. If their app or flow only reads information from the entity, they only require the appropriate PowerApps or Flow license.
+Users of Canvas and Model Driven apps will only require a corresponding Dynamics 365 license if they need to create, update or delete data within these entities in their app. If their app or flow only reads information from the entity, they only require the appropriate PowerApps or Flow license.
 
    > [!NOTE]
    > Apps or Flows which only read data from these entities can still be used with the appropriate PowerApps or Flow plan.
