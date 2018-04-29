@@ -13,13 +13,13 @@
     - name: Upcoming and recent webinars
       href: ./canvas-apps/webinars-listing.md
 - name: Canvas apps
-  href: canvas-apps/TOC.yml
+  href: canvas-apps/
 - name: Model-driven apps
-  href: model-driven-apps/TOC.yml
+  href: model-driven-apps/
   # - name: For Developers
   #   href: ../developer/model-driven-apps/TOC.yml
 - name: Common Data Service for Apps
-  href: common-data-service/TOC.yml
+  href: common-data-service/
   # - name: Samples and resources
   #   href: ./common-data-service/samples-resources.md
   # - name: For Developers
