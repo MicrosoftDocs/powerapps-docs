@@ -15,11 +15,11 @@
 - name: Canvas apps
   href: canvas-apps/
 - name: Model-driven apps
-  href: model-driven-apps/
+  href: /powerapps/maker/model-driven-apps/
   # - name: For Developers
   #   href: ../developer/model-driven-apps/TOC.yml
 - name: Common Data Service for Apps
-  href: common-data-service/
+  href: /powerapps/maker/common-data-service/
   # - name: Samples and resources
   #   href: ./common-data-service/samples-resources.md
   # - name: For Developers
