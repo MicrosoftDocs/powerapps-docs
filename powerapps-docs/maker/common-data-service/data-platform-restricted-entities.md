@@ -18,7 +18,7 @@ ms.author: clwesene
 # Understanding Restricted entities
 
 
-Most of the entities available within the Common Data Service for Apps can be used to build PowerApps and Flows, and only require the user to have a PowerApps Plan 1. Some entities with complex business logic added to the entity require users of the app to have a PowerApps Plan 2 (For more information see [Premium entities](data-platform-premium-entities.md)). While all entities can be to used to read data in apps with these licenses, a small set of entities require users to have a corresponding license for the Dynamics 365 product if they need to create, update or delete records. These are referred to as Restricted entities.
+Most of the entities available within the Common Data Service for Apps can be used to build PowerApps and Flows, and only require the user to have a PowerApps Plan 1. Some entities with complex business logic added to the entity require users of the app to have a PowerApps Plan 2, or Flow Plan 2 (For more information see [Entity license requirements](data-platform-entity-licenses.md)). While all entities can be to used to read data in apps with these licenses, a small set of entities require users to have a corresponding license for the Dynamics 365 product if they need to create, update or delete records. These are referred to as Restricted entities.
 
 Entities may be restricted to a Dynamics 365 license for the following reasons:
 
@@ -70,11 +70,14 @@ Resource Restriction (Deprecated) |msdyn_workorderresourcerestriction | Dynamics
 Routing rule set | routingrule | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Schedule Board Setting |msdyn_scheduleboardsetting |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Scheduling Parameter |msdyn_schedulingparameter |Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+SLA| sla | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+System User Scheduler Setting |msdyn_systemuserschedulersetting|Dynamics 365 for Field Service <br> **or** Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Transaction Connection|msdyn_transactionconnection |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Transaction Origin|msdyn_transactionorigin |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Transaction Type|msdyn_transactiontype |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
+Unique Number|msdyn_uniquenumber |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 Work Order Business Process |msdyn_bpf_d3d97bac8c294105840e99e37a9d1c39 |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
-
-
-
-
+Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgenerationqueue |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement Plan <br> **or** Dynamics 365 Plan
 
 
 
