@@ -1,19 +1,16 @@
 ---
 title: Add a scrolling screen | Microsoft Docs
 description: Create a screen that users can scroll to show more types of content than the screen can show at a time.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: lonu
 

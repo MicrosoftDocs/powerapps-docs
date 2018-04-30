@@ -1,20 +1,17 @@
 ---
 title: 'Attachments control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Attachments control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 09/29/2017
+ms.topic: reference
+ms.component: canvas
+ms.date: 04/23/2018
 ms.author: fikaradz
 
 ---
@@ -23,7 +20,7 @@ A control that allows users to download files to their device, as well as upload
 
 ## Limitations
 The attachment control has the following temporary limitations:
-1. Attachment download is not supported in Internet Explorer.
+1. Attachment download is supported in Internet Explorer only within SharePoint custom list forms.
 
 1. Attachment upload only works with SharePoint list data sources.  Support for other data sources will be introduced incrementally, starting with CDS.
 
@@ -94,7 +91,7 @@ An **Attachments** control lets you open files stored on a data source as well a
 
     The Attachments field associated with the SharePoint list will appear in the form.
 
-[Learn how to add and configure a control.](../add-configure-controls.md)
+[Learn how to add and configure a control].(../add-configure-controls.md)
 
 
 ## Accessibility guidelines
@@ -110,7 +107,7 @@ There must be adequate color contrast between:
 * **MaxAttachmentsColor** and **Fill**
 * **NoAttachmentsColor** and **Fill**
 
-This is in addition to the standard color contrast requirements.
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
 
 ### Screen reader support
 The following properties must be present:

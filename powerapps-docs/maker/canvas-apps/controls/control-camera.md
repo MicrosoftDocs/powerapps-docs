@@ -1,19 +1,16 @@
 ---
 title: 'Camera control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Camera control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -70,8 +67,6 @@ If you add this control, the user can update a data source with one or more phot
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
-**Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
-
 ## Related functions
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
@@ -79,16 +74,16 @@ If you add this control, the user can update a data source with one or more phot
 ### Add photos to an Image gallery control
 1. Add a **Camera** control, name it **MyCamera**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(MyPix, MyCamera.Photo)**
-   
+
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-   
+
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Press F5, and then take a photo by clicking or tapping **MyCamera**.
-3. Add an **[Image gallery](control-gallery.md)** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
-4. Set the **[Items](properties-core.md)** property of the **Image gallery** control to this expression:<br>**MyPix.Url**.
+3. Add an **[Vertical gallery](control-gallery.md)** control, and then resize its **[Image](control-image.md)** control, its template, and the **Image gallery** control itself to fit in the screen.
+4. Set the **[Items](properties-core.md)** property of the **Image gallery** control to:<br>**MyPix**.
 5. Set the **[Image](properties-visual.md)** property of the **Image** control in the gallery to this expression:<br>
    **ThisItem.Url**
-   
+
     The photo that you took appears in the **Image gallery** control.
 6. Take as many photos as you want, and then return to the default workspace by pressing Esc.
 7. (optional) Set the **OnSelect** property of the **Image** control in the **Image gallery** control to **Remove(MyPix, ThisItem)**, press F5, and then click or tap a photo to remove it.
@@ -112,4 +107,3 @@ There must be adequate color contrast between:
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
- 

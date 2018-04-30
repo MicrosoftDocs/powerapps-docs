@@ -1,19 +1,16 @@
 ---
 title: 'PDF viewer control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the PDF viewer control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -96,7 +93,7 @@ In case the document cannot be opened in PowerApps, the option to open the docum
 
 ## Example
 * Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>
-  **"http://www.who.int/gho/publications/world_health_statistics/EN_WHS2015_TOC.pdf?ua=1"**
+  **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
     The control shows the PDF file.
 
