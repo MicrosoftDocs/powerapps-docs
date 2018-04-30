@@ -27,9 +27,6 @@ In this tutorial you create an entity and then add or customize key components s
 - Customize a view 
 - Customize a form
 
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 The tutorial will follow the company, Contoso, which is a pet grooming business that grooms dogs and cats. Contoso needs an app for client and pet tracking that can be used by employees across a variety of devices.
 
 ## Prerequisites
