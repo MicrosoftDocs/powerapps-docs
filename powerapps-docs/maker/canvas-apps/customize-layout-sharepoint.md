@@ -25,7 +25,7 @@ This tutorial starts with an app that was generated from a specific data source.
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Prerequisites
-You can review this topic for general concepts only, or you can follow each step if you first [generate this app](data-platform-create-app.md).
+[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Common Data Service (CDS) for Apps.
 
 ## Open the generated app
 1. Sign in to [PowerApps](https://web.powerapps.com), and then select **Apps** near the left edge.
