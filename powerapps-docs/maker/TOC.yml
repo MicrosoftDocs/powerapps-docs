@@ -244,6 +244,14 @@
       href: ./common-data-service/create-custom-entity.md
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
+  - name: Concepts
+    items:
+    - name: License requirements for entities
+      href: ./common-data-service/data-platform-entity-licenses.md
+  - name: Reference
+    items:
+    - name: Restricted entities requiring Dynamics 365 licenses
+      href: ./common-data-service/data-platform-restricted-entities.md  
   - name: For Developers
     href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
