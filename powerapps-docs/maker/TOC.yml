@@ -228,8 +228,6 @@
       href: ./common-data-service/data-platform-create-entity.md
     - name: Create a custom entity from data
       href: ./common-data-service/data-platform-cds-newentity-pq.md
-    - name: Manage fields
-      href: ./common-data-service/data-platform-manage-fields.md
     - name: Create an option set
       href: ./common-data-service/custom-picklists.md
     - name: Create a relationship
@@ -248,6 +246,10 @@
     items:
     - name: License requirements for entities
       href: ./common-data-service/data-platform-entity-licenses.md
+  - name: How-to guides
+    items:
+    - name: Manage custom fields in an entity
+      href: ./common-data-service/data-platform-manage-fields.md
   - name: Reference
     items:
     - name: Restricted entities requiring Dynamics 365 licenses

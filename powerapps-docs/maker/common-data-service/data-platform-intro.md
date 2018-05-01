@@ -18,7 +18,7 @@ ms.author: sharik
 # What is Common Data Service for Apps?
 Common Data Service (CDS) for Apps lets you securely store and manage data that's used by business applications. Data within CDS for Apps is stored within a set of entities. An *entity* is a set of records used to store data, similar to how a table stores data within a database. CDS for Apps includes a base set of standard entities that covers typical scenarios, but you can also create custom entities specific to your organization and populate them with data using Power Query. App makers can then use PowerApps to build rich applications using this data.
 
-For information on purchasing a plan for using CDS for Apps, see [Pricing info](../../administrator/pricing-billing-skus.md).
+For information on purchasing a plan to use CDS for Apps, see [Pricing info](../../administrator/pricing-billing-skus.md).
 
 ## Why use Common Data Service for Apps?
 Standard and custom entities within CDS for Apps provide a secure and cloud-based storage option for your data. Entities let you to create a business-focused definition of your organization's data for use within apps. If you're not sure if entities are your best option, consider these benefits:
@@ -39,12 +39,10 @@ For a full list of entities, see the [Entity reference](https://docs.microsoft.c
 
 You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](create-custom-entity.md).
 
-If possible, use standard entities (with custom fields added, if required) rather than develop custom entities that do the same thing. This ensures that going forward you can benefit from new features or apps that leverage these entities.
-
 ## Logic and validation
 Entities within CDS for Apps can leverage rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data within an entity.
 
-* **Business rules** validate data across multiple fields and entitiesand provide warning and error messages, regardless of the app used to create the data. For more information, see [Create a business rule](./data-platform-create-business-rule.md).
+* **Business rules** validate data across multiple fields and entities and provide warning and error messages, regardless of the app used to create the data. For more information, see [Create a business rule](./data-platform-create-business-rule.md).
 * **Business process flows** guide users to ensure they enter data consistently and follow the same steps every time. Business process flows are currently only supported for Model driven apps. For more information, see [Business process flows overview](/dynamics365/customer-engagement/customize/business-process-flows-overview).
 * **Workflows** allow you to automate business processes without user interaction. For more information, see [Workflows overview](/dynamics365/customer-engagement/customize/workflow-processes).
 * **Business logic with code** supports advanced developer scenarios to extend the application directly through code. For more information, see [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md).
