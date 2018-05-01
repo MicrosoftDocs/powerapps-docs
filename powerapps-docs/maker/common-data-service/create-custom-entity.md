@@ -11,7 +11,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: cds
-ms.date: 03/21/2018
+ms.date: 05/01/2018
 ms.author: matp
 
 ---
