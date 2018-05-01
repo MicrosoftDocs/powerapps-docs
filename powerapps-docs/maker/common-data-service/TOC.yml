@@ -1,0 +1,135 @@
+- name: Common Data Service for Apps
+  href: index.md
+  items:
+  - name: Quickstarts
+    items:
+    - name: Create an entity
+      href: data-platform-create-entity.md
+    - name: Create a custom entity from data
+      href: data-platform-cds-newentity-pq.md
+    - name: Manage fields
+      href: data-platform-manage-fields.md
+    - name: Create an option set
+      href: custom-picklists.md
+    - name: Create a relationship
+      href: data-platform-entity-lookup.md
+    - name: Create a business rule
+      href: data-platform-create-business-rule.md
+    - name: Delete a custom entity
+      href: data-platform-delete-entity.md
+  - name: Tutorials
+    items:
+    - name: Create a custom entity that has components
+      href: create-custom-entity.md
+    - name: Manage system jobs
+      href:  /powerapps/maker/common-data-service/actions
+    - name: Monitor workflows
+      href:  /powerapps/maker/common-data-service/actions
+    - name: Manage localized strings
+      href:  /powerapps/maker/common-data-service/actions
+    - name: Pro Developer Tutorials
+      items: 
+      - name: Create a .NET console application
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Create a workflow process extension
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Create and deploy a plug-in
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Post data using web hooks
+        href: /powerapps/developer/common-data-service/add-field-form
+  - name: Samples
+    items:
+        - name: Organization service samples
+          href: /powerapps/developer/common-data-service/add-field-form
+        - name: Web API samples
+          items:
+          - name: Basic Operations
+            href: /powerapps/developer/common-data-service/add-field-form
+          - name: Query Data
+            href: /powerapps/developer/common-data-service/add-field-form
+          - name: Conditional Operations
+            href: /powerapps/developer/common-data-service/add-field-form
+          - name: Functions and actions
+            href: /powerapps/developer/common-data-service/add-field-form
+  - name: Concepts
+    items:
+      - name: Build a data model
+        href:  /powerapps/maker/common-data-service/actions
+      - name: Data access and security
+        href:  /powerapps/maker/common-data-service/actions
+      - name: Apply business logic
+        href:  /powerapps/maker/common-data-service/actions
+      - name: Solutions
+        href:  /powerapps/maker/common-data-service/actions
+      - name: Asynchronous service
+        href:  /powerapps/maker/common-data-service/actions
+      - name: Multiple language support
+        href:  /powerapps/maker/common-data-service/actions
+      - name: Pro Developer Concepts
+        items: 
+          - name: Apply business logic with code
+            href: /powerapps/developer/common-data-service/add-field-form
+          - name: Azure integration
+            href: /powerapps/developer/common-data-service/add-field-form
+          - name: Outlook client
+            href: /powerapps/developer/common-data-service/add-field-form
+          - name: Create custom clients
+            href: /powerapps/developer/common-data-service/add-field-form
+  - name: How-to guides
+    items:
+    - name: Configure Cascading relationships
+      href:  /powerapps/maker/common-data-service/actions
+    - name: Pro Developer How-to guides
+      items: 
+      - name: Use web services
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Distribute your app on AppSource
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Build Windows client applications using XRM tools
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Create custom workflow activities
+        href: /powerapps/developer/common-data-service/add-field-form
+  - name: Reference
+    items:
+    - name: Entity Reference
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: Web API Reference
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: Organization Service assemblies
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: XRM Tooling assemblies
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: Virtual Entity assemblies
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: Workflow assemblies
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: Package Deployer assemblies
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: Outlook Client assemblies
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: Deployment Service assemblies
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: Online Management API
+      href: /powerapps/developer/common-data-service/add-field-form
+    - name: XML Schemas
+      href: /powerapps/developer/common-data-service/add-field-form
+  - name: Resources
+    items:
+    - name: Community tools
+      href:  /powerapps/maker/common-data-service/actions
+    - name: Pro Developer Resources
+      items: 
+      - name: .NET SDK Assemblies
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Code generation tool 
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Configuration Migration tool 
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Package Deployer 
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Plug-in Registration Tool 
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: SolutionPackager tool 
+        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Community tools
+        href: /powerapps/developer/common-data-service/add-field-form
