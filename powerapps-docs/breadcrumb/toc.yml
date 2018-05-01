@@ -7,8 +7,11 @@
     topicHref: /powerapps/
     items:
     - name: Create apps
-      tocHref: /powerapps/maker/
+      tocHref: /powerapps/maker/common-data-service/
       topicHref: /powerapps/maker/index
+    - name: Create apps
+      tocHref: /powerapps/maker/model-driven-apps/
+      topicHref: /powerapps/maker/index      
     - name: Create apps
       tocHref: /powerapps/developer/common-data-service/
       topicHref: /powerapps/maker/index
