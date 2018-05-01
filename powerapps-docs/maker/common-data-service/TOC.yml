@@ -1,3 +1,9 @@
+- name: Create apps
+  href: /powerapps/maker/
+- name: Canvas apps
+  href: /powerapps/maker/canvas-apps/ 
+- name: Model-driven apps
+  href: /powerapps/maker/model-driven-apps/
 - name: Common Data Service for Apps
   href: index.md
   items:
@@ -133,3 +139,5 @@
         href: /powerapps/developer/common-data-service/add-field-form
       - name: Community tools
         href: /powerapps/developer/common-data-service/add-field-form
+- name: Common Data Model
+  href: /powerapps/common-data-model/         

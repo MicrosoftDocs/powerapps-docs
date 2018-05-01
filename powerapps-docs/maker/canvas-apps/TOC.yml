@@ -1,3 +1,5 @@
+- name: Create apps
+  href: /powerapps/maker/  
 - name: Canvas apps
   href: getting-started.md
   items:
@@ -194,3 +196,9 @@
       href: connections-list.md
     - name: System requirements, limits, and configuration
       href: limits-and-config.md
+- name: Model-driven apps
+  href: /powerapps/maker/model-driven-apps/
+- name: Common Data Service for Apps
+  href: /powerapps/maker/common-data-service/
+- name: Common Data Model
+  href: /powerapps/common-data-model/  
