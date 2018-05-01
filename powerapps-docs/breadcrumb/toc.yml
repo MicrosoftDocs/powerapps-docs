@@ -6,6 +6,23 @@
     tocHref: /powerapps/
     topicHref: /powerapps/
     items:
+    - name: Create apps
+      tocHref: /powerapps/maker/
+      topicHref: /powerapps/maker/index
+    - name: Create apps
+      tocHref: /powerapps/developer/common-data-service/
+      topicHref: /powerapps/maker/index
+      items:
+      - name: Common Data Service for Apps
+        tocHref: /powerapps/developer/common-data-service/
+        topicHref: /powerapps/maker/common-data-service/
+    - name: Create apps
+      tocHref: /powerapps/developer/model-driven-apps/
+      topicHref: /powerapps/maker/index
+      items:
+      - name: Model-driven apps
+        tocHref: /powerapps/developer/model-driven-apps/
+        topicHref: /powerapps/maker/model-driven-apps/
     - name: Guided Learning
       tocHref: /powerapps/guided-learning/
       topicHref: /powerapps/guided-learning/index

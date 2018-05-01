@@ -2,7 +2,7 @@
   href: overview.md
 - name: Introduction to solutions
   href: introduction-solutions.md
-- name: Common Data Service for Apps data entities
+- name: Entities
   href: entities.md
   items: 
   - name: Entity metadata
