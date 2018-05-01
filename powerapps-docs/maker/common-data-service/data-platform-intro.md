@@ -49,7 +49,7 @@ Entities within CDS for Apps can leverage rich server-side logic and validation 
 * **Workflows** allow you to automate business processes without user interaction. For more information, see [Workflows overview](/dynamics365/customer-engagement/customize/workflow-processes).
 * **Business logic with code** supports advanced developer scenarios to extend the application directly through code. For more information, see [Apply business logic with code](../../developer/common-data-service/apply-business-logic-with-code.md).
 
-## Developer Capabilities
+## Developer capabilities
 In addition to the features available through the [PowerApps](https://web.powerapps.com) portal, CDS for Apps also includes features for developers to programmatically access metadata and data to create entities and business logic, as well as interact with data. For more information, see [Common Data Service for Apps Developer Overview](../../developer/common-data-service/overview.md)
 
 ## Next steps
