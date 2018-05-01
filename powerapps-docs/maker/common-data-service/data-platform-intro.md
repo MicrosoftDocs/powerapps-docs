@@ -2,7 +2,7 @@
 title: What is Common Data Service for Apps? | Microsoft Docs
 description: Introduction to Common Data Service (CDS) for Apps, entities, and server-side logic.
 documentationcenter: na
-author: clwesene
+author: SKjerland
 manager: kfile
 editor: ''
 tags: ''
@@ -12,7 +12,7 @@ ms.devlang: na
 ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
-ms.author: clwesene
+ms.author: sharik
 
 ---
 # What is Common Data Service for Apps?
@@ -59,4 +59,4 @@ To get started using CDS for Apps:
 * [Use Power Query](./data-platform-cds-newentity-pq.md) to connect to an online or on-premises data source and import the data directly into CDS for Apps.
 
 ## Privacy notice
-With the Microsoft PowerApps common data model we collect and store custom entity and field names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The entity and field names that Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+With the Microsoft PowerApps common data model, Microsoft collects and stores custom entity and field names in our diagnostic systems. We use this knowledge to improve the common data model for our customers. The entity and field names that app Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, that the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
