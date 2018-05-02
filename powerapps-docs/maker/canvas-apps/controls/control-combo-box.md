@@ -39,6 +39,8 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **IsSearchable** – Whether the user can search for items before selecting.
 
+**SearchFields** - The data fields of the data source searched when user is entering text.  To search on multiple fields, set ComboBox1.SearchFields = ["MyFirstColumn", "MySecondColumn"]
+
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
 
