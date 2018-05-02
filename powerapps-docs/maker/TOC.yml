@@ -2,66 +2,21 @@
   href: index.md
   expanded: true
   items:
-    - name: Sign up for a 30-day trial version
-      href: signup-for-powerapps.md
-    - name: Sign up for the PowerApps Community Plan
-      href: dev-community-plan.md
-    - name: What's new
-      href: ./canvas-apps/release-notes.md
-    - name: Common issues and resolutions
-      href: ./canvas-apps/common-issues-and-resolutions.md
-    - name: Upcoming and recent webinars
-      href: ./canvas-apps/webinars-listing.md
+  - name: Sign up for a 30-day trial version
+    href: signup-for-powerapps.md
+  - name: Sign up for the PowerApps Community Plan
+    href: dev-community-plan.md
+  - name: What's new
+    href: ./canvas-apps/release-notes.md
+  - name: Common issues and resolutions
+    href: ./canvas-apps/common-issues-and-resolutions.md
+  - name: Upcoming and recent webinars
+    href: ./canvas-apps/webinars-listing.md
 - name: Canvas apps
   href: canvas-apps/index.md
 - name: Model-driven apps
   href: model-driven-apps/index.md
-  # - name: For Developers
-  #   href: ../developer/model-driven-apps/TOC.yml
 - name: Common Data Service for Apps
-<<<<<<< HEAD
   href: common-data-service/index.md
-  # - name: Samples and resources
-  #   href: ./common-data-service/samples-resources.md
-  # - name: For Developers
-  #   href: ../developer/common-data-service/TOC.yml
-=======
-  href: ./common-data-service/data-platform-intro.md
-  items:
-  - name: Quickstarts
-    items:
-    - name: Create an entity
-      href: ./common-data-service/data-platform-create-entity.md
-    - name: Create a custom entity from data
-      href: ./common-data-service/data-platform-cds-newentity-pq.md
-    - name: Create an option set
-      href: ./common-data-service/custom-picklists.md
-    - name: Create a relationship
-      href: ./common-data-service/data-platform-entity-lookup.md
-    - name: Create a business rule
-      href: ./common-data-service/data-platform-create-business-rule.md
-    - name: Delete a custom entity
-      href: ./common-data-service/data-platform-delete-entity.md
-  - name: Tutorials
-    items:
-    - name: Create a custom entity that has components
-      href: ./common-data-service/create-custom-entity.md
-  - name: Samples and resources
-    href: ./common-data-service/samples-resources.md
-  - name: Concepts
-    items:
-    - name: License requirements for entities
-      href: ./common-data-service/data-platform-entity-licenses.md
-  - name: How-to guides
-    items:
-    - name: Manage custom fields in an entity
-      href: ./common-data-service/data-platform-manage-fields.md
-  - name: Reference
-    items:
-    - name: Restricted entities requiring Dynamics 365 licenses
-      href: ./common-data-service/data-platform-restricted-entities.md  
-  - name: For Developers
-    href: ../developer/common-data-service/TOC.yml
->>>>>>> 99ee7b2440324234c83194b1e9105e4736aa201f
 - name: Common Data Model
   href: ../common-data-model/index.md
