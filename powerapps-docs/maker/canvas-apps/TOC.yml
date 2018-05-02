@@ -2,6 +2,7 @@
   href: ../maker/index.md
 - name: Canvas apps
   href: getting-started.md
+  expanded: true
   items:
   - name: Quickstarts
     items:

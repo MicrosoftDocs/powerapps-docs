@@ -4,6 +4,7 @@
   href: ../maker/canvas-apps/index.md
 - name: Model-driven apps
   href: model-driven-app-overview.md
+  expanded: true
   items:
   - name: Quickstarts
     items:
