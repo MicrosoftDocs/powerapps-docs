@@ -13,4 +13,4 @@
   # - name: For Developers
   #   href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
-  href: index.md
+  href: overview.md

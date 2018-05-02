@@ -5,7 +5,7 @@
 - name: Model-driven apps
   href: ../model-driven-apps/index.md
 - name: Common Data Service for Apps
-  href: index.md
+  href: data-platform-intro.md
   expanded: true
   items:
   - name: Quickstarts
