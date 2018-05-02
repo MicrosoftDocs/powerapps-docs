@@ -4,13 +4,7 @@
   href: ../maker/canvas-apps/index.md
 - name: Model-driven apps
   href: ../maker/model-driven-apps/index.md
-  # - name: For Developers
-  #   href: ../developer/model-driven-apps/TOC.yml
 - name: Common Data Service for Apps
   href: ../maker/common-data-service/index.md
-  # - name: Samples and resources
-  #   href: ./common-data-service/samples-resources.md
-  # - name: For Developers
-  #   href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
   href: overview.md
