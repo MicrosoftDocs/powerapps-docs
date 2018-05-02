@@ -1,6 +1,6 @@
 ---
-title: Manage custom fields in an entity quickstart | Microsoft Docs
-description: Quickstart to create, read, update, and delete custom fields in an entity.
+title: Manage custom fields in an entity | Microsoft Docs
+description: Walkthrough of how to create, read, update, and delete custom fields in an entity in CDS for Apps.
 documentationcenter: na
 author: clwesene
 manager: kfile
@@ -9,20 +9,19 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: conceptual
+ms.topic: article
 ms.component: cds
-ms.date: 3/21/2018
+ms.date: 03/21/2018
 ms.author: clwesene
 
 ---
-# Quickstart: Manage custom fields
+# Manage custom fields in an entity
 You can create and update one or more custom fields in any entity. When you create a custom field, you specify a set of properties, such as the field's name, its display name, and the type of data that it will contain. For more information, see [Entity attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
 
 > [!NOTE]
-> Every entity has [system fields], such as fields that indicate when a record was last updated, and who updated it. In addition, [standard entities](data-platform-intro.md#system-fields) have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
+> Every entity has system fields, such as fields that indicate when a record was last updated, and who updated it. In addition, standard entities have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
-
 1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
     ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
@@ -59,7 +58,6 @@ You can create and update one or more custom fields in any entity. When you crea
     You're notified when the operation is completed successfully. If the operation is unsuccessful, an error message indicates the issues that occurred and how you can fix them.
 
 ## Create a Calculated or Roll up field
-
 Calculated fields let you automate manual calculations used in your business processes. For example, a salesperson may want to know the weighted revenue for an opportunity which is based on the estimated revenue from an opportunity multiplied by the probability. Or, they want to automatically apply a discount, if an order is greater than $500. A calculated field can contain values resulting from simple math operations, or conditional operations, such as greater than or if-else, and many others. Calculated fields can be created using the following data types:
 
 * Single line of text
@@ -71,7 +69,6 @@ Calculated fields let you automate manual calculations used in your business pro
 * Date and Time
 
 For more details on the types of expressions supported and examples, see [Define calculated fields](/dynamics365/customer-engagement/customize/define-calculated-fields)
-
 
 ## Update or delete a field
 1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane, and then click or tap an entity.
