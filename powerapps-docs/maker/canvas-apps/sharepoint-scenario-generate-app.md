@@ -30,7 +30,7 @@ Now that the SharePoint lists are in place, we can build and customize our first
    
     ![Create an app](./media/sharepoint-scenario-generate-app/02-01-01-create-app.png)
 
-2. Give the app a name, like "Project Requests app", then click or tap **Create**. When the app is ready, it opens in PowerApps Studio for web.
+2. Give the app a name, like "Project Requests app", then click or tap **Create**. When the app is ready, it opens in PowerApps Studio.
    
     ![Specify a name for the app](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 

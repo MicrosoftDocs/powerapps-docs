@@ -10,7 +10,7 @@ Each sample app is designed for a specific purpose, such as managing a budget, i
 ![PowerApps flooring sample app](./media/learning-quick-look-powerapps/powerapps-flooring-sample.png)
 
 ## Create an app from a template
-Another good way to start is by **building an app from a template**. Templates are basically sample apps that you can open to understand how they are put together. They use sample data to help you get a sense of what's possible, and opening them in PowerApps Studio will help you **see hands-on how an app is built**. Note that templates are available only in PowerApps Studio for Windows at this time, not PowerApps Studio for web.
+Another good way to start is by **building an app from a template**. Templates are basically sample apps that you can open to understand how they are put together. They use sample data to help you get a sense of what's possible, and opening them in PowerApps Studio will help you **see hands-on how an app is built**.
 
 ![PowerApps app template](./media/learning-quick-look-powerapps/powerapps-templates.png)
 
@@ -24,7 +24,7 @@ If your team has started using PowerApps, people might have **shared apps with y
 ![PowerApps sharing](./media/learning-quick-look-powerapps/powerapps-sharing.png)
 
 ## Create an app from a data source
-Create apps in **PowerApps Studio for web** or **PowerApps Studio for Windows**. You'll be able to connect to data sources and start composing apps in a visual designer.
+Create apps in **PowerApps Studio**. You'll be able to connect to data sources and start composing apps in a visual designer.
 
 ![PowerApps app from data](./media/learning-quick-look-powerapps/powerapps-app-from-data.png)
 
