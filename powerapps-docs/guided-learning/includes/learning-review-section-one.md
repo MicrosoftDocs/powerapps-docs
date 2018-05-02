@@ -6,7 +6,7 @@ PowerApps connects to the **cloud services and data sources** you're already usi
 
 The easiest way to get started with PowerApps is to run the samples, play around with the templates, and generate apps from your own data. You have seen how to generate an app based on a SharePoint list. You now have a solid base, and you will be building and sharing out apps in no time. 
 
-## What's Next?
+## What's next?
 Congratulations! You have finished the first section of PowerApps Guided Learning. Regardless of how much experience you began with, we hope you now have a very clear picture of what PowerApps is and how you can start creating apps. We've included some useful resources and downloads below, but you should definitely take a look at more of Guided Learning. If you're ready for more, learn how to [create and customize an app from a SharePoint list](https://docs.microsoft.com/powerapps/guided-learning/create-app-sharepoint#step-1)
 
 ## PowerApps resources
@@ -16,7 +16,6 @@ Congratulations! You have finished the first section of PowerApps Guided Learnin
 * Improve PowerApps by submitting an [idea](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas)
 
 ## PowerApps downloads
-* [PowerApps Studio for Windows](https://aka.ms/powerappswin) 
 * [PowerApps Mobile for Windows](https://aka.ms/powerappswin)
 * [PowerApps Mobile for iOS](https://aka.ms/powerappsios)
 * [PowerApps Mobile for Android](https://aka.ms/powerappsandroid)
