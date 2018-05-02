@@ -30,9 +30,9 @@ PowerApps is fantastic at creating business applications FAST. This video shows 
 Work along with Clay Wesener from the PowerApps team as he walks you through building a CDS for Apps database. You'll learn how to create and navigate entities as well as fields. You'll also get a head start on understanding what's built-in right out of the box! 
 
 This is part 1 of a 3-part series:
-**Part 1: Entities**
-Part 2: Forms and Views
-Part 3: Charts and Dashboards
+<br>**Part 1: Entities**
+<br>Part 2: Forms and Views
+<br>Part 3: Charts and Dashboards
 
 This is a great opportunity to learn how to reuse standard entitles and fields, and how to create your own custom scenarios in a snap!
 
@@ -54,9 +54,9 @@ IW Mentor Website: https://www.iwmentor.com/
 Model Driven Apps provide a rich experience for app makers designing simple to complex forms scenarios. Learn to use our new Forms Designer to build the form(s) needed for the Model App we started in part 1. Anees will walk you through form components such as tabs, sections, and fields. He will also share best practices on integrating business logic and filters. 
 
 This is part 2 of a 3-part series:
-Part 1: Entities
-**Part 2: Forms and Views**
-Part 3: Charts and Dashboards
+<br>Part 1: Entities
+<br>**Part 2: Forms and Views**
+<br>Part 3: Charts and Dashboards
 
 [Click here to watch on May 15th](https://www.youtube.com/watch?v=v7VoX-V2ek4)
 
@@ -67,9 +67,9 @@ Part 3: Charts and Dashboards
 PowerApps offers a composite approach to reporting, with rich views and dashboarding capabilities. Our Model Driven App series wraps up with helpful charts and dashboards to optimize and modernize the solution we’ve been working on. 
 
 This is part 3 of a 3-part series:
-Part 1: Entities
-Part 2: Forms and Views
-**Part 3: Charts and Dashboards**
+<br>Part 1: Entities
+<br>Part 2: Forms and Views
+<br>**Part 3: Charts and Dashboards**
 
 [Click here to watch on May 29th](https://www.youtube.com/watch?v=kJ5eTWh7Hyg)
 
