@@ -1,5 +1,5 @@
 - name: Create apps
-  href: ../maker/index.md
+  href: index.md
 - name: Canvas apps
   href: getting-started.md
   expanded: true
@@ -198,8 +198,8 @@
     - name: System requirements, limits, and configuration
       href: limits-and-config.md
 - name: Model-driven apps
-  href: ../maker/model-driven-apps/index.md
+  href: ../model-driven-apps/index.md
 - name: Common Data Service for Apps
-  href: ../maker/common-data-service/index.md
+  href: ../common-data-service/index.md
 - name: Common Data Model
-  href: ../common-data-model/index.md
+  href: ../../common-data-model/index.md
