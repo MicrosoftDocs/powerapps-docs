@@ -1,19 +1,10 @@
 ---
-title: Accessible colors in PowerApps | Microsoft Docs
+title: Accessible colors | Microsoft Docs
 description: Color contrast guidelines for PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: tahoon
-manager: anneta
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 04/23/2018
 ms.author: tahoon
 

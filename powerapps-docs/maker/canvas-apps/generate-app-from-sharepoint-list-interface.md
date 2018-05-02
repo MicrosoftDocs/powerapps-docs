@@ -50,7 +50,7 @@ The app opens in a separate browser tab.
 ## Manage the app
 ![Command bar](./media/generate-app-from-sharepoint-list-interface/command-bar.png)
 
-* If you click or tap **Edit in PowerApps**, the app opens in a separate browser tab where you can update the app in PowerApps Studio for the web.
+* If you click or tap **Edit in PowerApps**, the app opens in a separate browser tab where you can update the app in PowerApps Studio.
 
 * If you click or tap **Make this view public**, other people in your organization can view it. By default, only you can see views that you create. If you want to allow other people to edit your app, you need to [share it with them](share-app.md), and then grant **Can edit** permissions.
 
