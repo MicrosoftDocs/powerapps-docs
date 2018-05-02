@@ -1,5 +1,5 @@
 - name: Create apps
-  href: /powerapps/maker/  
+  href: ../maker/index.md
 - name: Canvas apps
   href: getting-started.md
   items:
@@ -197,8 +197,8 @@
     - name: System requirements, limits, and configuration
       href: limits-and-config.md
 - name: Model-driven apps
-  href: /powerapps/maker/model-driven-apps/
+  href: ../maker/model-driven-apps/index.md
 - name: Common Data Service for Apps
-  href: /powerapps/maker/common-data-service/
+  href: ../maker/common-data-service/index.md
 - name: Common Data Model
-  href: /powerapps/common-data-model/  
+  href: ../common-data-model/index.md

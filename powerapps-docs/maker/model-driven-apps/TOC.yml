@@ -1,7 +1,7 @@
 - name: Create apps
-  href: /powerapps/maker/
+  href: ../maker/index.md
 - name: Canvas apps
-  href: /powerapps/maker/canvas-apps/ 
+  href: ../maker/canvas-apps/index.md
 - name: Model-driven apps
   href: model-driven-app-overview.md
   items:
@@ -140,6 +140,6 @@
     - name: Community tools
       href: /powerapps/maker/model-driven-apps/export-import-remove-app
 - name: Common Data Service for Apps
-  href: /powerapps/maker/common-data-service/
+  href: ../maker/common-data-service/index.md
 - name: Common Data Model
-  href: /powerapps/common-data-model/       
+  href: ../common-data-model/index.md       

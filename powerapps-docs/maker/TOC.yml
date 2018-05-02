@@ -13,16 +13,16 @@
     - name: Upcoming and recent webinars
       href: ./canvas-apps/webinars-listing.md
 - name: Canvas apps
-  href: canvas-apps/
+  href: canvas-apps/index.md
 - name: Model-driven apps
-  href: /powerapps/maker/model-driven-apps/
+  href: model-driven-apps/index.md
   # - name: For Developers
   #   href: ../developer/model-driven-apps/TOC.yml
 - name: Common Data Service for Apps
-  href: /powerapps/maker/common-data-service/
+  href: common-data-service/index.md
   # - name: Samples and resources
   #   href: ./common-data-service/samples-resources.md
   # - name: For Developers
   #   href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
-  href: ../common-data-model/overview.md
+  href: common-data-model/index.md
