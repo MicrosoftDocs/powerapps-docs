@@ -15,6 +15,9 @@
     - name: Create apps
       tocHref: /powerapps/developer/common-data-service/
       topicHref: /powerapps/maker/index
+    - name: Create apps
+      tocHref: /powerapps/developer/canvas-apps/
+      topicHref: /powerapps/maker/index      
       items:
       - name: Common Data Service for Apps
         tocHref: /powerapps/developer/common-data-service/

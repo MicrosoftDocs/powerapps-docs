@@ -1,5 +1,5 @@
 - name: Create apps
-  href: ../index.md
+  href: /powerapps/maker/
 - name: Canvas apps
   href: ../canvas-apps/index.md
 - name: Model-driven apps
@@ -34,7 +34,7 @@
       href:  /powerapps/maker/common-data-service/actions
     - name: Manage localized strings
       href:  /powerapps/maker/common-data-service/actions
-    - name: Pro Developer Tutorials
+    - name: Developer Tutorials
       items: 
       - name: Create a .NET console application
         href: /powerapps/developer/common-data-service/add-field-form
@@ -72,7 +72,7 @@
         href:  /powerapps/maker/common-data-service/actions
       - name: Multiple language support
         href:  /powerapps/maker/common-data-service/actions
-      - name: Pro Developer Concepts
+      - name: Developer Concepts
         items: 
           - name: Apply business logic with code
             href: /powerapps/developer/common-data-service/add-field-form
@@ -86,7 +86,7 @@
     items:
     - name: Configure Cascading relationships
       href:  /powerapps/maker/common-data-service/actions
-    - name: Pro Developer How-to guides
+    - name: Developer How-to guides
       items: 
       - name: Use web services
         href: /powerapps/developer/common-data-service/add-field-form
@@ -124,7 +124,7 @@
     items:
     - name: Community tools
       href:  /powerapps/maker/common-data-service/actions
-    - name: Pro Developer Resources
+    - name: Developer Resources
       items: 
       - name: .NET SDK Assemblies
         href: /powerapps/developer/common-data-service/add-field-form
