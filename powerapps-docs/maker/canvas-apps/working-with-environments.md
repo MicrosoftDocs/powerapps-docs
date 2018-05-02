@@ -40,7 +40,7 @@ To create an app in the right environment, do either of the following:
 
 - If PowerApps Studio isn't open, [sign in](http://web.powerapps.com), select the environment you would like to create your app in, select **Apps** near the left edge, and then select **Create an app**.
 
-- If PowerApps Studio is open, select the environment again at the top right corner. We will improve this experience in the future but, in the current release, you must select this every time you want to create an app in a new environment.
+- If PowerApps Studio is open, select the environment again at the top right corner.
 
 5. On the **Account** page, select **Change** next to the name of the current environment.
 
