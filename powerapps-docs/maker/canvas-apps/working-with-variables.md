@@ -254,5 +254,5 @@ Let's recreate our adding machine by using a collection:
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons.  Select the **Save** button.  Close and reload your app, and select the **Load** button to reload your collection.  
     
     > [!NOTE]
-    > **SaveData** and **LoadData** do not function when running in a web browser. You must be using PowerApps Studio for Windows or PowerApps Mobile.
+    > **SaveData** and **LoadData** don't function in PowerApps Studio, but they do in PowerApps Mobile.
 
