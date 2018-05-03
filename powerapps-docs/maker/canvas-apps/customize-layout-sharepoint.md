@@ -35,7 +35,9 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 
 ## Change the layout
-1. On the browse screen, select the gallery by clicking or tapping any item except the first one in the list of accounts.
+1. In the left navigation pane, select the gallery by clicking or tapping **BrowseGallery1**.
+
+    [![Select gallery](media/customize-layout-sharepoint/select-gallery-1.png)](media/customize-layout-sharepoint/select-gallery-2.png#lightbox)
 
 	When the gallery is selected, a selection box with handles surrounds it.
 
