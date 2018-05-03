@@ -37,7 +37,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 ## Change the layout
 1. In the left navigation pane, select the gallery by clicking or tapping **BrowseGallery1**.
 
-    [![Select gallery](media/customize-layout-sharepoint/select-gallery-1.png)](media/customize-layout-sharepoint/select-gallery-2.png#lightbox)
+    [![Select gallery](media/customize-layout-sharepoint/select-gallery-1.png)](media/customize-layout-sharepoint/select-gallery-1.png#lightbox)
 
 	When the gallery is selected, a selection box with handles surrounds it.
 
