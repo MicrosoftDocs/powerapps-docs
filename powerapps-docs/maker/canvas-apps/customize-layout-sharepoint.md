@@ -30,16 +30,18 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 ## Open the generated app
 1. Sign in to [PowerApps](https://web.powerapps.com), and then select **Apps** near the left edge.
 
-	![PowerApps home page](./media/customize-layout-sharepoint/sign-in.png)
+	[![PowerApps home page](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
 
 1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 
+    ![Open app for editing](./media/customize-layout-sharepoint/open-app.png)
+
 ## Change the layout
-1. On the browse screen, select the gallery by clicking or tapping any item except the first one in the list of accounts.
+1. In the left navigation pane, select **BrowseGallery1**.
 
 	When the gallery is selected, a selection box with handles surrounds it.
 
-	![Selected gallery](./media/customize-layout-sharepoint/select-gallery.png)
+    ![Select gallery](media/customize-layout-sharepoint/select-gallery-1.png)
 
 1. Near the right edge, select **Accounts** to open the **Data** pane.
 
@@ -53,7 +55,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 	![Select title-only layout](./media/customize-layout-sharepoint/choose-layout.png)
 
-1. In the **Data** pane, open the list of options for the title.
+1. In the **Data** pane, open the list of options for **Title2**.
 
 	![Select title-only layout](./media/customize-layout-sharepoint/show-title-options.png)
 
@@ -63,7 +65,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 	![Final gallery](./media/customize-layout-sharepoint/final-gallery.png)
 
-## Change the sort and search columns
+## Change sort and search columns
 1. Select the gallery as the previous section describes.
 
 	![Select gallery](./media/customize-layout-sharepoint/select-gallery-title.png)
@@ -85,7 +87,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
     For more information about these and other functions, see the [formula reference](formula-reference.md).
 
-## Test sorting and searching
+### Test sorting and searching
 1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).
 
 	![Open Preview mode](./media/customize-layout-sharepoint/open-preview.png)
