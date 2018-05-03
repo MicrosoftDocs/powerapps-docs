@@ -15,15 +15,7 @@ ms.author: audrie
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Deep Dive | Using PowerApps for Business Process Management (BPM) by Dawid van Heerden**
-<br>by Audrie Gordon & Dawid van Heerden
-<br>*April 24th, 10:00AM PST, 12:00PM EST*
-
-PowerApps is fantastic at creating business applications FAST. This video shows the power of using this same platform to drive multi-step business processes, involving various roles, steps, and routing options.
-
-[Click here to watch on April 23rd](https://www.youtube.com/watch?v=Jj3hPkAf5KU)
-
-**Model Driven App Components Part 1 | Managing Entities and Data Imports**
+**Model Driven App Series Part 1 | Managing Entities and Data Imports**
 <br>by Audrie Gordon & Clay Wesener 
 <br>*May 1st, 10:00AM PST, 12:00PM EST*
 
@@ -47,7 +39,7 @@ IW Mentor Website: https://www.iwmentor.com/
 
 [Click here to watch on May 14th](https://www.youtube.com/watch?v=I50GtV9w7Os)
 
-**Model Driven App Components Part 2 | Creating Forms and Views**
+**Model Driven App Series Part 2 | Creating Forms and Views**
 <br>by Audrie Gordon & Clay Wesener 
 <br>*May 15th, 10:00AM PST, 12:00PM EST*
 
@@ -60,7 +52,7 @@ This is part 2 of a 3-part series:
 
 [Click here to watch on May 15th](https://www.youtube.com/watch?v=v7VoX-V2ek4)
 
-**Model Driven App Components Part 3 | Exploring Charts and Dashboards**
+**Model Driven App Series Part 3 | Exploring Charts and Dashboards**
 <br>by Audrie Gordon & Clay Wesener 
 <br>*May 29th, 10:00AM PST, 12:00PM EST
 
@@ -117,6 +109,14 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Adrian Orth
 [Watch now](https://www.youtube.com/watch?v=buDDSzJTgns)
 
+### Model Driven Apps ###
+**Model Driven App Components | Introduction to Model Driven Apps**
+<br>by Charles Sterling & Adrian Orth 
+[Watch now](https://www.youtube.com/watch?v=buDDSzJTgns)
+
+**Model Driven App Components | Getting Started with Model Driven Templates**
+<br>by Charles Sterling & Casey Burke
+[Watch now](https://www.youtube.com/watch?v=FShakkXKiS8)
 
 ### Pro Topics ###
 **Deploying your PowerApps applications**
@@ -196,6 +196,10 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Deep Dive | Click-Through PowerApps Analytics by Vivek Bavishi**
 <br>by Vivek Bavishi & Audrie Gordon
  [Watch now](https://www.youtube.com/watch?v=OM-rlhKJFTA)
+
+ **Deep Dive | Using PowerApps for Business Process Management (BPM) by Dawid van Heerden**
+<br>by Dawid van Heerden 
+ [Watch now](https://www.youtube.com/watch?v=Jj3hPkAf5KU)
 
 
 ### Connector Series ###

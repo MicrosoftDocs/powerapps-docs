@@ -32,8 +32,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 ## Create a blank app
 1. [Sign up for PowerApps](../signup-for-powerapps.md), and then do *either* of the following:
 
-   * [Open PowerApps](https://create.powerapps.com/api/start) in a browser on a device that has a camera.
-   * [Install PowerApps](http://aka.ms/powerappsinstall) from the Windows Store on a device that has a camera. Open PowerApps, sign in, and then click or tap **New** on the **File** menu (along the left edge).
+1. [Open PowerApps](https://create.powerapps.com) in a browser on a device that has a camera.
 
 2. Under **Start with a blank canvas or template**, click or tap **Phone layout** in the **Blank app** tile.
 

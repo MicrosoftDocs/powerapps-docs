@@ -22,7 +22,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 ## Prerequisites
 
-* [Sign up](../../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) PowerApps Studio, open it, and then sign in by providing the same credentials that you used to sign up.
+* [Sign up](../../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com) by providing the same credentials that you used to sign up.
 * Gather the following information for a database that contains at least one table with a primary key:
   
   * the name of the database
