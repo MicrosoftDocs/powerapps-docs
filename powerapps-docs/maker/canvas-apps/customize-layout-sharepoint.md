@@ -34,6 +34,8 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 
+    ![Open app for editing](./media/customize-layout-sharepoint/open-app.png)
+
 ## Change the layout
 1. In the left navigation pane, select **BrowseGallery1**.
 
