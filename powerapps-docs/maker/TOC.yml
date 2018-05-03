@@ -2,6 +2,7 @@
   href: index.md
   expanded: true
   items:
+  # DO NOT CHANGE ABOVE  
   - name: Sign up for a 30-day trial version
     href: signup-for-powerapps.md
   - name: Sign up for the PowerApps Community Plan
@@ -12,6 +13,7 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Upcoming and recent webinars
     href: ./canvas-apps/webinars-listing.md
+# DO NOT CHANGE BELOW    
 - name: Canvas apps
   href: canvas-apps/index.md
 - name: Model-driven apps

@@ -6,6 +6,7 @@
   href: model-driven-app-overview.md
   expanded: true
   items:
+# DO NOT CHANGE ABOVE    
   - name: Quickstarts
     items:
     - name: Build your first model-driven app
@@ -140,6 +141,7 @@
     items:
     - name: Community tools
       href: /powerapps/maker/model-driven-apps/export-import-remove-app
+# DO NOT CHANGE BELOW  
 - name: Common Data Service for Apps
   href: ../common-data-service/index.md
 - name: Common Data Model

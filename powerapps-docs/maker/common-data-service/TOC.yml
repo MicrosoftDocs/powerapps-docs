@@ -3,11 +3,12 @@
 - name: Canvas apps
   href: ../canvas-apps/index.md
 - name: Model-driven apps
-  href: ../model-driven-apps/index.md
+  href: ../model-driven-apps/index.md   
 - name: Common Data Service for Apps
   href: data-platform-intro.md
   expanded: true
   items:
+# DO NOT CHANGE ABOVE  
   - name: Quickstarts
     items:
     - name: Create an entity
@@ -140,5 +141,6 @@
         href: /powerapps/developer/common-data-service/add-field-form
       - name: Community tools
         href: /powerapps/developer/common-data-service/add-field-form
+# DO NOT CHANGE BELOW  
 - name: Common Data Model
   href: ../../common-data-model/index.md     

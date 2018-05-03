@@ -1,9 +1,10 @@
 - name: Create apps
-  href: /powerapps/maker/
+  href: /powerapps/maker/  
 - name: Canvas apps
   href: getting-started.md
   expanded: true
   items:
+# DO NOT CHANGE ABOVE    
   - name: Quickstarts
     items:
     - name: Open a sample app
@@ -197,6 +198,7 @@
       href: connections-list.md
     - name: System requirements, limits, and configuration
       href: limits-and-config.md
+# DO NOT CHANGE BELOW  
 - name: Model-driven apps
   href: ../model-driven-apps/index.md
 - name: Common Data Service for Apps
