@@ -88,7 +88,7 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 ## Create an app from the Assets list
 You use this app to add data to the **Assets** list.
 
-1. Open PowerApps Studio. If you are new to PowerApps, [sign up for free](https://powerapps.microsoft.com) using your organizational email address and follow the instructions to download PowerApps Studio from the Windows store.
+1. [Sign in to PowerApps Studio](http://web.powerapps.com). If you are new to PowerApps, [sign up for free](https://powerapps.microsoft.com) using your organizational email address.
 
 2. In the **File** menu (along the left edge), click or tap **New**, and then click or tap **SharePoint**.
 

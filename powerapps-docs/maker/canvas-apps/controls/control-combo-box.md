@@ -39,6 +39,8 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 
 **IsSearchable** – Whether the user can search for items before selecting.
 
+**SearchFields** - The data fields of the data source searched when user is entering text.  To search on multiple fields, set ComboBox1.SearchFields = ["MyFirstColumn", "MySecondColumn"]
+
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
 
@@ -102,11 +104,13 @@ This is in addition to the [standard color contrast requirements](../accessible-
 
 ### Screen reader support
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
-> [!NOTE]
+
+    > [!NOTE]
 > On touch screens, screen reader users can navigate the contents of the combo box sequentially. The combo box acts as a button that shows or hides its contents when selected.
 
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
-> [!NOTE]
+
+    > [!NOTE]
 > The tab key navigates to or away from the combo box. Arrow keys navigate the contents of the combo box. The escape key closes the drop down when opened.

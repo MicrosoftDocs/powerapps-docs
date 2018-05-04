@@ -1,19 +1,10 @@
 ---
-title: Accessible colors in PowerApps | Microsoft Docs
+title: Accessible colors | Microsoft Docs
 description: Color contrast guidelines for PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: tahoon
-manager: anneta
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 04/23/2018
 ms.author: tahoon
 
@@ -61,3 +52,6 @@ For video content, consider checking it for contrast issues. Alternatively or ad
 Ensure that the app does not convey information with just color. For example, users with red-green color blindness will not be able to distinguish a red error message from a green success message.
 
 Additional cues like an **[Icon](controls/control-shapes-icons.md)** or text styles like **[Italic](controls/properties-text.md)** and **[Underline](controls/properties-text.md)** can help convey meaning.
+
+## Next steps
+Learn about [accessibility properties](controls/properties-accessibility.md) in PowerApps controls.

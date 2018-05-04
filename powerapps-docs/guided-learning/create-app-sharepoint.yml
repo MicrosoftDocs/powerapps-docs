@@ -5,7 +5,7 @@ metadata:
   description: Generate a three screen app from a SharePoint list, then explore and update the app.
   audience: Business User
   level: Beginner
-  nextTutorialHref: manage-apps
+  nextTutorialHref: manage-apps.yml
   nextTutorialTitle: Manage apps
   displayType: one-column
   author: AFTOwen
