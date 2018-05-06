@@ -13,11 +13,15 @@ ms.author: anneta
 # Tutorial: Customize a gallery in PowerApps
 In this tutorial, you'll customize a list of records, called a gallery, and make other changes in an app that was generated automatically in Microsoft PowerApps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs.
 
-This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in PowerApps, whether from a SharePoint list, an Excel table, or some other data source. 
+For example, the gallery for this tutorial matches this graphic by default. The email address is featured more prominently than other types of data, and users can sort and filter the gallery based on text in that address:
 
-In this tutorial, the gallery shows the name, the city, and the email address of each account by default but highlights the email address over the other types of data. Users can sort the gallery alphabetically by email address and filter the gallery based on characters that appear in the email address. However, your users might rely on the name of each account more than the email address, so you'll reconfigure the gallery to highlight, sort, and filter based on the data that interests your users the most.
+![Default gallery](./media/customize-layout-sharepoint/gallery-before.png)
 
-In addition, you'll change the title of the default screen so that users can better differentiate it from the other screens in the app. You'll also add a scroll bar so that users who don't have touch screens or mouse wheels can browse the entire gallery.
+However, your users might be more interested in the account name more than the email address, so you'll reconfigure the gallery to highlight, sort, and filter based on the key data for your organization. In addition, you'll change the title of the default screen to differentiate it from the other screens in the app.
+
+![Final gallery](./media/customize-layout-sharepoint/gallery-after.png)
+
+You'll also add a scroll bar so that users who don't have touch screens or mouse wheels can browse the entire gallery.
 
 > [!div class="checklist"]
 > * Change the layout of the gallery
@@ -25,6 +29,8 @@ In addition, you'll change the title of the default screen so that users can bet
 > * Change the columns by which users can sort and search the data
 > * Change the screen title
 > * Show a scroll bar
+
+This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in PowerApps, whether from a SharePoint list, an Excel table, or some other data source.
 
 If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com) before you start.
 
