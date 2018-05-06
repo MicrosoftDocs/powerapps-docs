@@ -32,22 +32,31 @@ To assign a user or a security group to an environment role, an Environment Admi
 
 2. Select **Security** tab.
 
-3. Click on the link to manage the environment roles in Dynamics 365.
+3. View if the user already exists in the environment, by selecting **view the list of users in the environment**.
+    
+    ![](./media/database-security/security-viewuser.png)
 
-    ![](./media/environment-admin/Security-Link-D365.png)
+4. In case user doesn’t exist, you can add the user from PowerApps admin center 
+	Add the user by mentioning the email address of the user, in your organization, and selecting **Add user**.
 
-4. Select the user from the list of users in the environment.
+    ![](./media/database-security/security-adduser.png)
+
+	Wait for a few minutes to check if the user is available in the list of users in the environment.
+  
+5. Select the user from the list of users in the environment.
 
     ![](./media/environment-admin/D365-Select-User.png)
 
-5. Assign the role to the user.
+6. Assign the role to the user.
 
     ![](./media/environment-admin/D365-Assign-Role.png)
 
     > [!NOTE]
     > Currently, roles can only be assigned to the users. Assigning a role to a security group is in our backlog.
 
-6. Select **OK** to update the assignments to the environment role.
+7. Select **OK** to update the assignments to the environment role.
+
+
 
 
 ## Predefined security roles
