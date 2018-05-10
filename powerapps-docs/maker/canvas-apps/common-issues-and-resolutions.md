@@ -1,24 +1,23 @@
 ---
 title: Common issues and resolutions for PowerApps | Microsoft Docs
 description: A list of common issues and resolutions within PowerApps.
-documentationcenter: na
 author: skjerland
 manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
-ms.date: 05/03/2018
+ms.date: 05/10/2018
 ms.author: sharik
-
 ---
 # Common issues and resolutions for PowerApps
-This article lists some common issues that users might encounter while using PowerApps. Where applicable, workarounds are provided.
+This article lists some common issues that you might encounter while using PowerApps. Where applicable, workarounds are provided.
 
 ## Recently added/changed
+1. **Launching a website from an embedded app**
+
+    Internet Explorer and Microsoft Edge browsers might block the launch of a URL or website that’s in protected mode or a lower security zone than the website in which the app is loaded. To resolve this issue, [change the security and privacy settings](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings) for your browser.
+
 1. **Combo box controls in galleries**
 
     When you use a **Combo box** control inside a gallery, its selections are not maintained when the user scrolls the gallery. This is not an issue if you use a **Combo box** control inside a gallery that doesn't scroll. A workaround is not currently available.
