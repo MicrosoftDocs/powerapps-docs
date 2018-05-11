@@ -1,21 +1,14 @@
 ---
 title:  Overview of the role of a PowerApps administrator | Microsoft Docs
 description: Overview of the PowerApps adoption journey and the role of a PowerApps administrator
-services: ''
-suite: powerapps
-documentationcenter: na
 author: SKjerland
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-admin
 ms.topic: overview
 ms.date: 04/27/2018
 ms.author: sharik
 #Customer intent: As a PowerApps administrator, I want to understand the PowerApps adoption journey so I can plan how to effectively protect my organization's data, manage users and data, monitor usage, deploy solutions, orchestrate updates, and identify and fix issues.
-
 ---
 
 # What's the role of a PowerApps administrator?

@@ -24,7 +24,7 @@
   items:
   - name: Purchase PowerApps # moved from original get started location
     href: signup-for-powerapps-admin.md
-  - name: Manage licenses in your org
+  - name: Manage licenses in your organization
     href: signup-question-and-answer.md
   - name: Manage DLP policies
     href: prevent-data-loss.md

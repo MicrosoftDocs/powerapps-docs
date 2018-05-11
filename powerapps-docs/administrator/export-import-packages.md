@@ -1,22 +1,15 @@
 ---
 title: Export and import resources | Microsoft Docs
-description: Export and import resources
-services: powerapps
-documentationcenter: na
+description: Learn how to export and import resources in PowerApps
 author: nimakms
-manager: kfend
-editor: ''
-tags: ''
-
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 07/28/2017
-ms.author: kfend
-
+ms.author: nimak
 ---
+
 # Export and import resources
 If you've created multiple environments to support the development of your database and apps, you must move changes from one environment to another environment. You can use **Export resources** and **Import resources** to move resources between environments.
 
