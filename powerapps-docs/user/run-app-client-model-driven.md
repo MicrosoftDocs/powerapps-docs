@@ -1,23 +1,15 @@
 ---
-title: Run a model-driven app on a mobile device with PowerApps | Microsoft Docs
-description: Walkthrough of running a model-driven app on a mobile device
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Quickstart to run a model-driven app on a mobile device with PowerApps | Microsoft Docs
+description: In this quickstart, you learn how to run a model-driven app on a mobile device.
 author: Mattp123
-manager: brycho
-editor: ''
-tags: ''
-
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
 ms.author: matp
-
 ---
+
 # Quickstart: Run a model-driven app on a mobile device
 
 After the app is created and then shared with you, you can run that app on a variety of popular mobile devices such as Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a model-driven app on a mobile device. 
