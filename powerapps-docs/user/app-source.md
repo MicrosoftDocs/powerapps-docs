@@ -1,23 +1,15 @@
 ---
 title: Discover apps via AppSource | Microsoft Docs
 description: Discover the apps shared with your organization via AppSource
-services: ''
-suite: powerapps
-documentationcenter: na
 author: linhtranms
-manager: anneta
-editor: ''
-tags: ''
-
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-user
+ms.topic: conceptual
 ms.date: 10/28/2016
 ms.author: litran
-
 ---
+
 # Discover apps via AppSource
 The apps you build and publish with PowerApps are discovered and used in Dynamics 365 on the web. It displays all of your apps -- the apps that you've specifically chosen to use (that is, by launching from a share email or opening from AppSource) or that an admin has provisioned for you. This includes all of your apps from PowerApps, as well as Dynamics 365 applications from Microsoft. You can search for apps, filter by environment, and pin the apps you use most frequently to the top of the page.
 
