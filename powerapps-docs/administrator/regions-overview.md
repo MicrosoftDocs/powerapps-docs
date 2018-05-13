@@ -1,23 +1,15 @@
 ---
-title: Overview of regions | Microsoft Docs
-description: 'Regions in PowerApps: where apps are deployed, available regions, features specific to a region'
-services: ''
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: anneta
-editor: ''
-tags: ''
-
+title: Regions overview | Microsoft Docs
+description: Learn about regions in PowerApps
+author: manasmams
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-
 ---
+
 # Regions overview in PowerApps
 ## How do I find out where my app is deployed?
 Your app is deployed in the region that hosts the environment. For example, if your environment is created in the Europe region, then your app is deployed in Europe data centers.
