@@ -1,26 +1,20 @@
 ---
-title: Quickstart for entity relationships via lookup field | Microsoft Docs
-description: Quickstart for creating a relationship between entities by using a lookup field
-documentationcenter: na
+title: Create a relationship between entities by using a lookup field | Microsoft Docs
+description: Step-by-step instructions for how to create a relationship between entities in PowerApps by using a lookup field.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
-ms.date: 3/21/2018
+ms.topic: conceptual
+ms.date: 03/21/2018
 ms.author: clwesene
-
 ---
-# Quickstart: Create a relationship
+
+# Create a relationship between entities
 Data in one entity often relates to data in another entity. For example, you might have a **Teachers** entity and a **Class** entity, and the **Class** entity might have a lookup relation to the **Teachers** entity to show which teacher teaches the class. You can use a lookup field to show data from the **Teachers** entity. This is commonly referred to as a lookup field.
 
 ## Define a relationship
 You can create several types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one entity, and each entity can have more than one relationship to another entity. Some common relationship types are:
-
 
 * **Many-to-one** - In this type of relationship, each record in entity A can match more than one record in entity B, but each record in entity B can match only one record in entity A. For example, a class has a single classroom. This is the most common type of relationship and is shown in the field list as a **Lookup field**
 * **One-to-many** - In this type of relationship, each record in entity B can match more than one record in entity A, but each record in entity A can match only one record in entity B. For example, a single teacher, teaches many classes.
