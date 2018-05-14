@@ -1,20 +1,15 @@
 ---
 title: License requirements for entities| Microsoft Docs
 description: An explanation of license requirements for entities within Common Data Service (CDS) for Apps.
-documentationcenter: na
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
+ms.topic: conceptual
 ms.date: 05/01/2018
 ms.author: clwesene
-
 ---
+
 # License requirements for entities
 App makers can use most of the entities available within Common Data Service (CDS) for Apps (including custom entities and entities that are part of the Common Data Model) to create apps and flows for users who have only a PowerApps Plan 1 or Microsoft Flow Plan 1 license. In some cases, entities contain complex business logic or are tied to Dynamics 365 products that require app users to have a specific license. For more information about available plans, see the [PowerApps pricing page](https://powerapps.microsoft.com/pricing).
 

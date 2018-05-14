@@ -226,16 +226,6 @@
     items:
     - name: Create an entity
       href: ./common-data-service/data-platform-create-entity.md
-    - name: Create a custom entity from data
-      href: ./common-data-service/data-platform-cds-newentity-pq.md
-    - name: Create an option set
-      href: ./common-data-service/custom-picklists.md
-    - name: Create a relationship
-      href: ./common-data-service/data-platform-entity-lookup.md
-    - name: Create a business rule
-      href: ./common-data-service/data-platform-create-business-rule.md
-    - name: Delete a custom entity
-      href: ./common-data-service/data-platform-delete-entity.md
   - name: Tutorials
     items:
     - name: Create a custom entity that has components
@@ -250,6 +240,16 @@
     items:
     - name: Manage custom fields in an entity
       href: ./common-data-service/data-platform-manage-fields.md
+    - name: Create a custom entity from data
+      href: ./common-data-service/data-platform-cds-newentity-pq.md
+    - name: Create an option set
+      href: ./common-data-service/custom-picklists.md
+    - name: Create a relationship between entities
+      href: ./common-data-service/data-platform-entity-lookup.md
+    - name: Create a business rule
+      href: ./common-data-service/data-platform-create-business-rule.md
+    - name: Delete a custom entity
+      href: ./common-data-service/data-platform-delete-entity.md
   - name: Reference
     items:
     - name: Restricted entities requiring Dynamics 365 licenses
