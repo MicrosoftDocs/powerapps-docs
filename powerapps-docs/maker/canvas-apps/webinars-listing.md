@@ -92,10 +92,6 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 <br>by Audrie Gordon
 [Watch now](https://www.youtube.com/watch?v=obBQk-aSElI)
 
-**Get started with the Common Data Service**
-<br>by Jono Luk
-[Watch now](https://info.microsoft.com/US-PowerBI-WBNR-FY17-04Apr-18-GettingStartedwiththeCommonDataServices312618_01Registration-ForminBody.html)
-
 **PowerApps Community Opportunities & Rewards**
 <br> by Audrie Gordon & Mackenzie Lyng
 [Watch Now](https://www.youtube.com/watch?v=MTIkTPUgDSY)
@@ -113,17 +109,9 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 [Watch now](https://www.youtube.com/watch?v=9PopTeLdpmU)
 
 ### Intermediate Webinar Series ###
-**Deploying your PowerApps applications**
-<br>by James Oleinik
-[Watch now](https://www.youtube.com/watch?v=LF49hFB14Cs)
-
 **Application Lifecycle with the new Save and publish options in PowerApps**
 <br>by Karthik Bharathy
 [Watch now](https://www.youtube.com/watch?v=Np3DXBQvq2I)
-
-**Tips for Connecting to Excel on OneDrive for Business from PowerApps**
-<br>by Audrie Gordon
-[Watch now](https://www.youtube.com/watch?v=WPhux5_3Sfs)
 
 **PowerApps Focus on Using the Lookup Function**
 <br>by Audrie Gordon
@@ -162,6 +150,10 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Optimizing Connectors in PowerApps and Microsoft Flow**
 <br>by Theresa Palmer-Boroski
 [Watch now](https://www.youtube.com/watch?v=6jwt4qXA2IQ)
+
+**Tips for Connecting to Excel on OneDrive for Business from PowerApps**
+<br>by Audrie Gordon
+[Watch now](https://www.youtube.com/watch?v=WPhux5_3Sfs)
 
 **Connecting to on-premises data from PowerApps**
 <br>by Archana Nair and Dimah Zaidalkilani
