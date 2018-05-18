@@ -19,7 +19,7 @@ Common Data Service for Apps allows you to connect directly to your data using P
 To use Power BI with the Common Data Service for Apps, you need the following:
 
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
-* Common Data Service for Apps environment with maker permissions to access the portal, and read permissions to access data within entities.
+* Common Data Service for Apps environment with maker permissions to access the portal and read permissions to access data within entities.
 
 ## Finding your Common Data Service for Apps Environment URL
 
@@ -53,7 +53,7 @@ To use Power BI with the Common Data Service for Apps, you need the following:
 
     * Common Data Model - these are standard entities which are commonly used and available in all environments as part of the Common Data Model.
     * Custom Entities - are entities that you have created or imported in your environment.
-    * System - cotains all entities in your enviornment, including the Common Data Model and Custom entities.
+    * System - contains all entities in your environment, including the Common Data Model and Custom entities.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
 
@@ -61,7 +61,7 @@ To use Power BI with the Common Data Service for Apps, you need the following:
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Power BI Desktop")
 
-6. Your entity is now loaded into your report, and you can begin buildling reports, or repeat this process to add additional entities.
+6. Your entity is now loaded into your report, and you can begin building reports, or repeat this process to add additional entities.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport6.png "Power BI Desktop")
 
