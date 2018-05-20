@@ -23,7 +23,7 @@ In this quickstart, you'll learn how to create an environment and a database for
  * PowerApps Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Sign in to the PowerApps Admin center
-Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
+Sign in to the Admin center at [https://admin.powerapps.com](https://admin.powerapps.com).
 
 ## Create an environment and database
 1. In the navigation pane, click or tap **Environments**, and then click or tap **New environment**.
