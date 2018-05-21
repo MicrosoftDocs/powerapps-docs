@@ -18,7 +18,7 @@ To create, edit, or delete DLP policies, you must have either Environment Admin 
 For instructions on how to create a DLP policy, see [Quickstart: Create a data loss prevention (DLP) policy](create-dlp-policy.md).
 
 ## Find a DLP policy
-1. Sign in to the Admin center at [https://admin.poweraps.com]([https://admin.powerapps.com).
+1. Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
 2. In the navigation pane, click or tap **Data policies**. If you have a long list of policies, use the **Search** box to find specific DLP policies.
 
     ![](./media/prevent-data-loss/data-policies.png)
