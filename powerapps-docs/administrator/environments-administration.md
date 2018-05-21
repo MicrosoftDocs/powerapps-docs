@@ -133,9 +133,9 @@ To assign a user or a security group to an environment role, an Environment Admi
 
 4. If database is created in the environment:
 
-    a. Click on the link to manage the environment roles in Dynamics 365.
+    a. Add the user to the environment and click on the link to assign the user a role.
 
-    ![](./media/environment-admin/Security-Link-D365.png)
+    ![](./media/database-security/security-adduser.png)
 
     b. Select the user from the list of users in the environment / instance.
 
