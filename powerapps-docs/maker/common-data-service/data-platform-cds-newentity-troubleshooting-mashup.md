@@ -1,4 +1,3 @@
-
 ---
 title: Troubleshooting Power Query | Microsoft Docs
 description: Resolve issues using Power Query to create a custom entity in Common Data Service (CDS) for Apps. 

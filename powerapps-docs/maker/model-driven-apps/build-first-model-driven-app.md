@@ -20,11 +20,11 @@ ms.author: matp
 Model-driven app design is a component-focused approach to app development. In this quickstart, you simplify how to create a model-driven app by using one of the standard entities that's available in your [!INCLUDE [powerapps](../../includes/powerapps.md)] environment. 
 
 ## Sign in to PowerApps
-Sign in to [PowerApps](https://web.powerapps.microsoft.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link. 
+Sign in to [PowerApps](https://web.powerapps.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link. 
 
 ## Create your model-driven app
 
-1.	Select the environment you want, or go to the [PowerApps admin center](https://admin.powerapps.microsoft.com/) to create a new one.
+1.	Select the environment you want, or go to the [PowerApps admin center](https://admin.powerapps.com/) to create a new one.
 2.	From the left navigation pane, select **Model-driven**. 
 
     ![Model-driven](media/build-first-model-driven-app/choose-design-mode.png)
