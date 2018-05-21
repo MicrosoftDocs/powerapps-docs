@@ -1,19 +1,16 @@
 ---
 title: Create an app to manage projects  | Microsoft Docs
 description: In this task, we'll build an app from scratch. This app allows a user to assign a manager to projects and to update project details.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
 
@@ -28,8 +25,6 @@ In this task, we'll build an app from scratch. This app allows a user to assign 
 > The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-details-app.msapp.
 
 ## Quick review of PowerApps Studio
-You used PowerApps Studio for web in the last task, but we want to make sure you understand all the parts before we move on. You can continue to work in PowerApps Studio for web, or you can use [PowerApps Studio for Windows](https://aka.ms/powerappswin).
-
 PowerApps Studio has three panes and a ribbon that make app creation feel like building a slide deck in PowerPoint:
 
 1. Left navigation bar, which shows a hierarchical view of all the app's screens and controls, as well as thumbnails of the screens

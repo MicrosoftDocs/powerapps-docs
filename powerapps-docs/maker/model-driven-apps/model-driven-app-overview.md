@@ -1,19 +1,16 @@
 ---
 title: Overview of building a model-driven app with PowerApps | Microsoft Docs
 description: Step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: Mattp123
-manager: bycho
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
 
@@ -23,9 +20,6 @@ ms.author: matp
 Model-driven app design is a component-focused approach to app development. Model-driven app design doesn’t require code and the apps you make can be simple or very complex.  Unlike canvas app development where the designer has complete control over app layout, with model-driven apps much of the layout is determined for you and largely designated by the components you add to the app. 
 
 ![Sample model-driven app](media/model-driven-app-overview/model-app-sample.png)
-
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 Model-driven app design provides the following benefits:
 - Rich component-focused no-code design environments 

@@ -1,21 +1,18 @@
 ---
 title: Overview of the SQL Server connection | Microsoft Docs
 description: Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database
-services: ''
-suite: powerapps
 documentationcenter: ''
-author: archnair
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2016
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Connect to SQL Server from PowerApps
@@ -25,7 +22,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 ## Prerequisites
 
-* [Sign up](../../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) PowerApps Studio, open it, and then sign in by providing the same credentials that you used to sign up.
+* [Sign up](../../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com) by providing the same credentials that you used to sign up.
 * Gather the following information for a database that contains at least one table with a primary key:
   
   * the name of the database

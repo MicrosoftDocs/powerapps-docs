@@ -1,21 +1,18 @@
 ---
 title: Customize a SharePoint list form using PowerApps | Microsoft Docs
 description: Use PowerApps to customize a list form in SharePoint.
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 02/05/2018
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Customize a SharePoint list form using PowerApps
@@ -33,11 +30,11 @@ Ready to start customizing? Let's get started!
 > [!NOTE]
 > The **Customize forms** option will be unavailable, or may not work correctly, if the SharePoint list contains data types that PowerApps doesn't support.
 
-Within your SharePoint list, click or tap **PowerApps** on the command bar, and then click or tap **Customize forms**. This takes you to PowerApps Studio for web in a browser, where PowerApps generates a single-screen form app, as shown in the following example.
+Within your SharePoint list, click or tap **PowerApps** on the command bar, and then click or tap **Customize forms**. This takes you to PowerApps Studio in a browser, where PowerApps generates a single-screen form app, as shown in the following example.
 
 ![Single-screen form app](./media/customize-list-form/list-form-app.png)
 
-To return to your SharePoint list at any time, click or tap **Back to SharePoint** in the upper-left corner of PowerApps Studio for web.
+To return to your SharePoint list at any time, click or tap **Back to SharePoint** in the upper-left corner of PowerApps Studio.
 
 ## Customize the list form
 
@@ -88,7 +85,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
     * **Use the default SharePoint form** - SharePoint will use the default SharePoint form for your list.
 
-    * **Use a custom form created in PowerApps** - SharePoint will use the form that you customized in PowerApps. (Alternatively, you can re-publish the form from the **Save** page in PowerApps Studio for web.)
+    * **Use a custom form created in PowerApps** - SharePoint will use the form that you customized in PowerApps. (Alternatively, you can re-publish the form from the **Save** page in PowerApps Studio.)
 
     You can toggle back and forth between options, as needed.
 
@@ -108,7 +105,7 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 **Q:** How does a customized list form differ from a standalone app that I create from SharePoint or PowerApps?
 
-**A:** The list form app that you create from SharePoint is a special type of PowerApps app that can only be used within a SharePoint list. These list form apps don't appear in your app list in PowerApps Studio for web or PowerApps Mobile, and you can't run them outside of the SharePoint list.
+**A:** The list form app that you create from SharePoint is a special type of PowerApps app that can only be used within a SharePoint list. These list form apps don't appear in your app list in PowerApps Studio or PowerApps Mobile, and you can't run them outside of the SharePoint list.
 
 **Q:** When should I create a customized list form and when should I create a standalone app?
 
@@ -142,12 +139,12 @@ For step-by-step instructions on how to hide fields and make other form changes,
 
 1. Within your SharePoint list, click or tap **PowerApps** on the command bar, and then click or tap **Customize forms**.
 
-1. In PowerApps Studio for web, click or tap **File**, and then on the **Save** page, click or tap **See all versions**. The **Versions** page opens in a new browser tab.
+1. In PowerApps Studio, click or tap **File**, and then on the **Save** page, click or tap **See all versions**. The **Versions** page opens in a new browser tab.
 
     > [!NOTE]
     > If you don't see the **See all versions** button, click or tap **Save**. The button should appear.
 
-1. Without closing the **Versions** page or the browser tab, go back to the **Save** page in the other browser tab, click or tap the arrow at the top of the left navigation pane, and then click or tap **Back to SharePoint** to unlock your form and exit PowerApps Studio for web.
+1. Without closing the **Versions** page or the browser tab, go back to the **Save** page in the other browser tab, click or tap the arrow at the top of the left navigation pane, and then click or tap **Back to SharePoint** to unlock your form and exit PowerApps Studio.
 
 1. Go back to the **Versions** page in the other browser tab, locate the version that you want to restore, and then click **Restore**.
 

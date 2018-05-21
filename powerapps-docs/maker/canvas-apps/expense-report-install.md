@@ -1,19 +1,16 @@
 ---
 title: Install and configure the Expense Report PowerApps sample | Microsoft Docs
 description: Step-by-step instructions for installing and configuring the Expense Report PowerApps sample.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: caburk
-manager: ''
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: sample
+ms.component: canvas
 ms.date: 04/08/2018
 ms.author: caburk
 
@@ -60,13 +57,13 @@ This list stores the expense reports.
 
 10. Click **Create**.
 
-### Create CostCenter column
+### Create Cost Center column
 
 1. Click the **Expenses** list.
 2. Click the **gear icon** in the top right portion of the web page.
 3. Click **List settings**.
 4. Click **Create column**.
-5. In the **Column name** textbox enter **CostCenter**.
+5. In the **Column name** textbox enter **Cost Center**.
 6. In the **type of information in this column is** radio button list, select **Choice**.
 7. In the **Type each choice on a separate line** textbox enter the following values, each on a separate line: 
 	- Microsoft
@@ -233,7 +230,7 @@ This list stores the lines items associated with expense reports.
 ### Create SharePoint connection
 
 1.	Click **+ New connection**.
-2.	In the **Search** textbox, enter **Outlook**.
+2.	In the **Search** textbox, enter **SharePoint**.
 3.	Select **SharePoint** in the list.
 4.	Click **Create**.
 5.	In the popup window, select the account you logged in with.
@@ -259,7 +256,7 @@ This list stores the lines items associated with expense reports.
 	![Import settings screen](./media/expense-report-install/import-settings-sharepoint.png)
 
 10. Click **Save**.
-11. Click the **red icon** for the **SharePoint Connection**.
+11. Click the **red icon** for the **Approval Connection**.
 12. In the connections list, click the item with your username.
 
 	![Import settings screen](./media/expense-report-install/import-settings-approvals.png)

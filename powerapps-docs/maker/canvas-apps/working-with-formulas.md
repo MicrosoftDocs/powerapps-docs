@@ -1,19 +1,16 @@
 ---
 title: Get started with formulas | Microsoft Docs
 description: Use formulas to customize an app.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
 
@@ -32,7 +29,7 @@ This topic provides only an overview of working with formulas. Browse the [formu
 
 ## Prerequisites
 
-* [Sign up](../signup-for-powerapps.md) for PowerApps, [install](http://aka.ms/powerappsinstall) it, open it, and then sign in by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com) by providing the same credentials that you used to sign up.
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Show a simple value

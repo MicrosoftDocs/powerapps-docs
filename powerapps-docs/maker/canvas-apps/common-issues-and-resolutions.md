@@ -1,25 +1,36 @@
 ---
 title: Common issues and resolutions for PowerApps | Microsoft Docs
-description: Read about PowerApps issues and resolutions
-services: ''
-suite: powerapps
-documentationcenter: na
+description: A list of common issues and resolutions within PowerApps.
 author: skjerland
 manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/05/2018
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 05/10/2018
 ms.author: sharik
-
 ---
 # Common issues and resolutions for PowerApps
+This article lists some common issues that you might encounter while using PowerApps. Where applicable, workarounds are provided.
+
 ## Recently added/changed
+1. **Launching a website from an embedded app**
+
+    Internet Explorer and Microsoft Edge browsers might block the launch of a URL or website that’s in protected mode or a lower security zone than the website in which the app is loaded. To resolve this issue, [change the security and privacy settings](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings) for your browser.
+
+1. **Combo box controls in galleries**
+
+    When you use a **Combo box** control inside a gallery, its selections are not maintained when the user scrolls the gallery. This is not an issue if you use a **Combo box** control inside a gallery that doesn't scroll. A workaround is not currently available.
+
+
+1. **Using a custom image as an app icon**
+
+	In PowerApps Studio for Windows version 3.18043, you cannot upload a custom image to use as an app icon. To work around this issue, use [PowerApps Studio for web](https://web.powerapps.com) to upload a custom image. Alternatively, you can use one of the icons included with PowerApps Studio for Windows and customize the background color.
+
+1. **Copying and pasting screens across apps**
+
+	Copying and pasting screens across apps is not currently supported. To work around this, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them into the screen of your target app.
+
 1. **Changing the layout of SharePoint forms**
 
 	While customizing a SharePoint list form in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.

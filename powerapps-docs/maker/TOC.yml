@@ -6,6 +6,12 @@
       href: signup-for-powerapps.md
     - name: Sign up for the PowerApps Community Plan
       href: dev-community-plan.md
+    - name: What's new
+      href: ./canvas-apps/release-notes.md
+    - name: Common issues and resolutions
+      href: ./canvas-apps/common-issues-and-resolutions.md
+    - name: Upcoming and recent webinars
+      href: ./canvas-apps/webinars-listing.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
@@ -29,14 +35,18 @@
     items:
     - name: Customize a generated app
       items:
-      - name: Customize a browse screen
+      - name: 1 - Galleries
         href: ./canvas-apps/customize-layout-sharepoint.md
-      - name: Customize a form
+      - name: 2 - Forms
         href: ./canvas-apps/customize-forms-sharepoint.md
-      - name: Customize a card
+      - name: 3 - Cards
         href: ./canvas-apps/customize-card.md
     - name: Create an app from scratch
-      href: ./canvas-apps/data-platform-create-app-scratch.md
+      items:
+      - name: Common Data Service for Apps
+        href: ./canvas-apps/data-platform-create-app-scratch.md
+      - name: Excel
+        href: ./canvas-apps/get-started-create-from-blank.md
     - name: Share an app
       href: ./canvas-apps/share-app.md
     - name: Embed an app in Power BI
@@ -89,8 +99,6 @@
     items:
     - name: Customize a SharePoint list form
       href: ./canvas-apps/customize-list-form.md
-    - name: Build an Excel app from scratch
-      href: ./canvas-apps/get-started-create-from-blank.md
     - name: Customize an app
       items:
       - name: Add and configure a control
@@ -123,12 +131,17 @@
         href: ./canvas-apps/add-scrolling-screen.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
-      - name: Create Accessible Apps
+      - name: Create an accessible app
         href: ./canvas-apps/accessible-apps.md
+        items:
+          - name: Color
+            href: ./canvas-apps/accessible-apps-color.md
     - name: Manage your app
       items:
       - name: Introduction to powerapps.com
         href: ./canvas-apps/intro-maker-portal.md
+      - name: Work with environments
+        href: ./canvas-apps/working-with-environments.md
       - name: Edit an app
         href: ./canvas-apps/edit-app.md
       - name: Change screen size and orientation
@@ -195,21 +208,13 @@
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
       href: ./canvas-apps/limits-and-config.md
-  - name: Resources
-    items:
-    - name: Work with environments
-      href: ./canvas-apps/working-with-environments.md
-    - name: What's new
-      href: ./canvas-apps/release-notes.md
-    - name: Common issues and resolutions
-      href: ./canvas-apps/common-issues-and-resolutions.md
-    - name: Upcoming and recent webinars
-      href: ./canvas-apps/webinars-listing.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
   - name: Overview of sample apps
     href: ./model-driven-apps/overview-model-driven-samples.md
+  - name: Build your first model-driven app
+    href: .//model-driven-apps/build-first-model-driven-app.md
   - name: Share a model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
   - name: For Developers
@@ -221,24 +226,34 @@
     items:
     - name: Create an entity
       href: ./common-data-service/data-platform-create-entity.md
-    - name: Create a custom entity from data
-      href: ./common-data-service/data-platform-cds-newentity-pq.md
-    - name: Manage fields
-      href: ./common-data-service/data-platform-manage-fields.md
-    - name: Create an option set
-      href: ./common-data-service/custom-picklists.md
-    - name: Create a relationship
-      href: ./common-data-service/data-platform-entity-lookup.md
-    - name: Create a business rule
-      href: ./common-data-service/data-platform-create-business-rule.md
-    - name: Delete a custom entity
-      href: ./common-data-service/data-platform-delete-entity.md
   - name: Tutorials
     items:
     - name: Create a custom entity that has components
       href: ./common-data-service/create-custom-entity.md
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
+  - name: Concepts
+    items:
+    - name: License requirements for entities
+      href: ./common-data-service/data-platform-entity-licenses.md
+  - name: How-to guides
+    items:
+    - name: Manage custom fields in an entity
+      href: ./common-data-service/data-platform-manage-fields.md
+    - name: Create a custom entity from data
+      href: ./common-data-service/data-platform-cds-newentity-pq.md
+    - name: Create an option set
+      href: ./common-data-service/custom-picklists.md
+    - name: Create a relationship between entities
+      href: ./common-data-service/data-platform-entity-lookup.md
+    - name: Create a business rule
+      href: ./common-data-service/data-platform-create-business-rule.md
+    - name: Delete a custom entity
+      href: ./common-data-service/data-platform-delete-entity.md
+  - name: Reference
+    items:
+    - name: Restricted entities requiring Dynamics 365 licenses
+      href: ./common-data-service/data-platform-restricted-entities.md  
   - name: For Developers
     href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model

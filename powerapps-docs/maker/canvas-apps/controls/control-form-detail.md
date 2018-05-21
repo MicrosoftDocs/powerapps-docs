@@ -1,19 +1,16 @@
 ---
 title: 'Display form and Edit form controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Display form and Edit form controls
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/06/2017
 ms.author: gregli
 
@@ -176,3 +173,6 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 ## More information
 For a comprehensive overview of how forms work, see [Understand data forms](../working-with-forms.md).
 
+## Accessibility guidelines
+### Screen reader support
+* Consider adding a heading to the form using a **[Label](control-text-box.md)**.

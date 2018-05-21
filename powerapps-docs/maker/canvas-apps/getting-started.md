@@ -1,73 +1,52 @@
 ---
-title: Introduction | Microsoft Docs
-description: Information about how to create and use custom business apps with Microsoft PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
+title: What are canvas apps? | Microsoft Docs
+description: Design and build canvas apps in PowerApps so that users can manage line-of-business data in a browser or on their mobile devices
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: hero-article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/14/2018
+ms.topic: overview
+ms.component: canvas
+ms.date: 04/26/2018
 ms.author: anneta
-
+#As a business analyst with little/no coding experience, I want to design and build an app without writing traditional code so that my users can manage data in any of a variety of sources.
 ---
-# Introduction to PowerApps
-Welcome to PowerApps! PowerApps is a service that lets you build business apps that run in a browser or on a phone or tablet, and no coding experience is required. PowerApps combines visual drag-and-drop concepts from PowerPoint with Excel-like expressions for logic and working with data.
+# What are canvas apps in PowerApps?
+Design and build a business app from a canvas in Microsoft PowerApps without writing code in a traditional programming language such as C#. Design the app by dragging and dropping elements onto a canvas, just as you would design a slide in PowerPoint. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so that users can run it in a browser or on a mobile device, and embed your app so that users can run it in SharePoint, Power BI, or Teams.
 
-With PowerApps, you can integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md) into one powerful app. You can also create apps for users to run in SharePoint, Power BI, and Teams.
+If you don't need a custom design and your data is in Common Data Service (CDS) for Apps, you can automatically generate a model-driven app from your business data and processes. This type of app can model forms, views, and other components, and the default UI automatically adjusts to phones, laptops, and other devices. For more information about this type of app, see [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md).
 
-If you're new to app building, PowerApps provides templates and sample data that you can use to quickly build an app, and then you can customize the app to better suit your business needs. With some experience and creativity, you'll soon be developing your own apps from scratch. If you're a seasoned developer, you can take advantage of the advanced functionality and truly innovate. If you can imagine it, you can build it!
+## Build an app
+To get started, automatically generate an app from one of these sources, among others:
+- [a sample app](open-and-run-a-sample-app.md)
+- [a template](get-started-test-drive.md)
+- [CDS for Apps](data-platform-create-app.md)
+- [SharePoint](app-from-sharepoint.md)
+- [Excel](get-started-create-from-data.md)
 
-## Generate an app automatically
-In PowerApps, you can easily generate an app automatically from these data sources, among others:
+On the PowerApps site, select **Start from data**, or select a sample app, such as **Service Desk** or **Budget Tracker**.
 
-* [Common Data Service for Apps](data-platform-create-app.md)
-* [SharePoint](app-from-sharepoint.md)
-* [Excel](get-started-create-from-data.md)
-* [SQL Server](connections/connection-azure-sqldatabase.md)
-* [Salesforce](add-manage-connections.md)
-* [Dynamics 365](connections/connection-dynamics-crmonline.md)
+![PowerApps site](./media/getting-started/sample-apps.png)
 
-You can also [generate an app from a template](get-started-test-drive.md). Each template is based on fictitious data in a cloud account, such as Dropbox. Explore specific screens and UI elements (called [controls](reference-properties.md)) to understand how they're configured, and experiment with customization to discover techniques that you can apply to your own apps.
+After you generate an app automatically, customize its default appearance and behavior based on your users' workflows. For example, change which types of data appear, how they're sorted, or even whether users specify a number by typing it or adjusting a slider. Add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls.
 
-## Customize an app
-When you generate an app automatically, PowerApps designs the default interface around your data, but you can customize the app's appearance and behavior based on your users' workflows. For example, you might want to change which types of data appear, how they're sorted, or even whether users specify a number by typing it or adjusting a slider. You can add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls to optimize your app's performance.
-
-For ideas on how to improve your app even further, you can [open a sample app](open-and-run-a-sample-app.md) to get a sense of what you can do with some creativity and a bit of experience.
-
-![Sample apps](./media/getting-started/sample-apps.png)
-
-## Create an app from scratch
-After you've generated an app or two automatically and gained some experience with customization, you can [create an app from scratch](get-started-create-from-blank.md). By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
+After you've generated an app or two automatically and gained some experience with customization, create an app from scratch based on [CDS for Apps](data-platform-create-app-scratch.md), [Excel](get-started-create-from-blank.md), or another data source. By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
 
 ## Share and run an app
-When you finish your app and save it to the cloud, you can then share it with others in your organization. You control the level of permissions on your app - you decide which users or groups can run the app, and whether they can also customize it or share it with additional people in the organization.
+When you finish the app and save it to the cloud, [share it with others](share-app.md) in your organization. Specify which users or groups can run the app and whether they can also customize and share it with additional people in the organization.
 
-You can run your own apps - and any apps shared with you - on Windows, iOS, Android, or in a web browser.
+Run your own apps - and any apps shared with you - on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](../../user/run-app-client.md).
 
-For more information, check out the following topics:
-
-* [Share an app with others](share-app.md)
-* [Run apps in a web browser](../../user/run-app-browser.md)
-* [Run apps on a phone or tablet](../../user/run-app-client.md)
-
-## Get help and support
-If you have a question about PowerApps, you can get help in several ways:
-
+## Learn more
 * Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
 * Work through the self-paced [Guided Learning courses](https://docs.microsoft.com/powerapps/guided-learning/).
-* Read and post in the [PowerApps Community](https://aka.ms/powerapps-community), where anyone who uses PowerApps can post a question and others can answer. Before you post a question, search the community to see whether your question has already been answered.
 * Check out the [upcoming webinars](webinars-listing.md#upcoming-webinars), which can help you leverage the features and functions of PowerApps. You can also access [past webinars](webinars-listing.md#past-webinars) on demand.
+
+## Share your experience
+* Read and post in the [PowerApps Community](https://aka.ms/powerapps-community), where anyone who uses PowerApps can post a question and others can answer. Before you post a question, search the community to see whether your question has already been answered.
+* Submit an idea for how we can improve PowerApps in [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
 * Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a PowerApps administrator for your organization, you can also open a support ticket in the [PowerApps admin center](https://portal.office.com/Support/Support.aspx).
 
-In addition, we want your help to make PowerApps even better!
-
-* To submit an idea for how we can improve PowerApps, go to [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas), and tell us about it.
-* To report an issue that you're having with PowerApps, go to the [PowerApps Forum](https://powerusers.microsoft.com/t5/General-Discussion/bd-p/PowerAppsForum1), and provide details so that we can look into it.
+## Next steps
+- [Sign up for a free license.](../signup-for-powerapps.md)
+- [Sign in to PowerApps.](https://web.powerapps.com)
+- [Open a sample app.](open-and-run-a-sample-app.md)

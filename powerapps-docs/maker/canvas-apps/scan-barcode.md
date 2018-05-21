@@ -1,24 +1,21 @@
 ---
 title: Scan a barcode | Microsoft Docs
 description: Scan a variety of barcode types, such as UPC and Codabar
-services: ''
-suite: powerapps
 documentationcenter: na
 author: aftowen
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/23/2016
 ms.author: anneta
 
 ---
-# Scan a barcode in Microsoft PowerApps
+# Scan a barcode in PowerApps
 Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](connections-list.md).
 
 If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
@@ -35,8 +32,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 ## Create a blank app
 1. [Sign up for PowerApps](../signup-for-powerapps.md), and then do *either* of the following:
 
-   * [Open PowerApps](https://create.powerapps.com/api/start) in a browser on a device that has a camera.
-   * [Install PowerApps](http://aka.ms/powerappsinstall) from the Windows Store on a device that has a camera. Open PowerApps, sign in, and then click or tap **New** on the **File** menu (along the left edge).
+1. [Open PowerApps](https://create.powerapps.com) in a browser on a device that has a camera.
 
 2. Under **Start with a blank canvas or template**, click or tap **Phone layout** in the **Blank app** tile.
 
