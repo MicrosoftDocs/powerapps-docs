@@ -247,7 +247,7 @@ An admin can delete app-role assignments for a user starting from the [PowerApps
 
     ![Admin app share page](./media/powerapps-gdpr-delete-dsr/admin-share-page.png)
 
-### PowerApps Admin PowerShell cmdlets
+### PowerShell cmdlets for admins
 An admin can delete all of a user’s canvas-app role assignments by using the **Remove-AdminAppRoleAssignmnet** function in the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
@@ -288,7 +288,7 @@ Get-ConnectionRoleAssignment | Remove-ConnectionRoleAssignment
 > [!NOTE]
 > Owner role assignments cannot be deleted without deleting the connection resource.
 
-### PowerApps Admin PowerShell cmdlets
+### PowerShell cmdlets for admins
 The function to allow an admin to find and delete a user’s connection role assignments using the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
 ## Step 7: Delete custom connectors created by the user
@@ -304,7 +304,7 @@ Add-PowerAppsAccount
 Get-Connector -FilterNonCustomConnectors | Remove-Connector
 ```
 
-### PowerApps Admin PowerShell cmdlets
+### PowerShell cmdlets for admins
 The function to allow an admin to find and delete a user’s custom connectors using the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
 ## Step 8: Delete the user’s permissions to shared custom connectors
@@ -322,7 +322,7 @@ Get-ConnectorRoleAssignment | Remove-ConnectorRoleAssignment
 > [!NOTE]
 > Owner role assignments cannot be deleted without deleting the connection resource.
 
-### PowerApps Admin PowerShell cmdlets
+### PowerShell cmdlets for admins
 The function to allow an admin to find and delete a user’s connector role assignments using the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
 
 ## Step 9: Delete the user’s personal data in Microsoft Flow

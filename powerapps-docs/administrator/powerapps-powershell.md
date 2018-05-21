@@ -14,7 +14,7 @@ ms.author: jamesol
 With the preview launch of the PowerShell cmdlets for app creators and administrators, you can automate many of the monitoring and management tasks that are only possible manually today in [PowerApps](https://web.powerapps.com) or the [PowerApps Admin center](https://admin.powerapps.com).
 
 ## Installation
-To run the PowerShell cmdlets for app makers, do the following:
+To run the PowerShell cmdlets for app creators, do the following:
 
 1. Download the [PowerShell scripts file](https://go.microsoft.com/fwlink/?linkid=872358).
 
@@ -47,7 +47,7 @@ To run the PowerShell cmdlets for app makers, do the following:
     dir . | Unblock-File
     ```
 
-## PowerApps cmdlets for app makers (preview)
+## PowerApps cmdlets for app creators (preview)
 
 ### Prerequisite
 Users with a valid PowerApps license can perform the operations in these cmdlets, but they will only have access to the resources (for example, apps, flows, etc.) that have been created or shared with them.
