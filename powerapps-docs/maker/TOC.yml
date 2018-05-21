@@ -251,7 +251,7 @@
     - name: Delete a custom entity
       href: ./common-data-service/data-platform-delete-entity.md
     - name: Open entity data in Excel
-      href: ./common-data-service/data-platform-excel-add-in.md
+      href: ./common-data-service/data-platform-excel-addin.md
     - name: Create a Power BI report
       href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Reference
