@@ -250,6 +250,10 @@
       href: ./common-data-service/data-platform-create-business-rule.md
     - name: Delete a custom entity
       href: ./common-data-service/data-platform-delete-entity.md
+    - name: Open entity data in Excel
+      href: ./common-data-service/data-platform-excel-add-in.md
+    - name: Create a Power BI report
+      href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Reference
     items:
     - name: Restricted entities requiring Dynamics 365 licenses
