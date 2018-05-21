@@ -45,7 +45,7 @@ This is part 2 of a 3-part series:
 
 **Model Driven App Series Part 3 | Exploring Charts and Dashboards**
 <br>by Audrie Gordon & Casey Burke 
-<br>*May 29th, 10:00AM PST, 12:00PM EST
+<br>*May 29th, 10:00AM PST, 12:00PM EST*
 
 PowerApps offers a composite approach to reporting, with rich views and dashboarding capabilities. Our Model Driven App series wraps up with helpful charts and dashboards to optimize and modernize the solution we’ve been working on. 
 
