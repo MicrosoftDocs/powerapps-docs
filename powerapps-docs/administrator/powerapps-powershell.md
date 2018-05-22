@@ -35,17 +35,17 @@ To run the PowerShell cmdlets for app creators, do the following:
     Import-Module .\Microsoft.PowerApps.PowerShell.psm1 -Force
     ```
 
+7.  There is a [known issue](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036) today that may also require you to manually unblock the PowerShell files using the following command:
+
+    ```
+    dir . | Unblock-File
+    ```
 6. Before accessing any of the commands, provide your credentials using the following command. These credentials are refreshed for up to ~8 hours before you're required to sign in again to continue using the cmdlets.
 
     ```
     Add-PowerAppsAccount
     ```
 
-7.  There is a [known issue](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036) today that may also require you to manually unblock the PowerShell files using the following command:
-
-    ```
-    dir . | Unblock-File
-    ```
 
 ## PowerApps cmdlets for app creators (preview)
 
@@ -91,6 +91,10 @@ To perform the administration operations in the admin cmdlets, you'll need the f
 | Read and remove canvas apps | Get-AdminApp <br> Remove-AdminApp
 | Read, update, and delete canvas app permissions | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
 | Read, update, and delete flows | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
+| Read and delete connections | Get-AdminConnection <br> Remove-AdminConnection
+| Read, update, and delete connection permissions | Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br> Remove-AdminConnectionRoleAssignment
+| Read and delete custom connectors | Get-AdminConnector <br> Remove-AdminConnector
+| Read, update, and delete custom connector permissions | Get-AdminConnectorRoleAssignment <br> Set-AdminConnectorRoleAssignment <br> Remove-AdminConnectorRoleAssignment
 
 > [!NOTE]
 > Use the following commands to understand syntax and view sample for each of the cmdlets:
