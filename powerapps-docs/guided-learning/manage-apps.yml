@@ -1,13 +1,13 @@
 ### YamlMime:Tutorial
 title: Managing apps
 metadata:
-  title: Managing apps | Microsoft PowerApps
+  title: Managing apps | Microsoft Docs
   description: Share apps, control which version of an app is used and shared, and work with containers.
   audience: Business User
   level: Beginner
   displayType: one-column
   author: AFTOwen
-  manager: kfile
+
   ms.service: powerapps
   ms.component: canvas
   ms.topic: interactive-tutorial
