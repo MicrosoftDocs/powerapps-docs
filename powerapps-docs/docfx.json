@@ -35,8 +35,9 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-MSPowerApps",
-      "contributors_to_exclude": ["openpublishingbuild","sudeepku","v-thepet"],
+      "contributors_to_exclude": ["openpublishingbuild","sudeepku","v-thepet","PRMerger10"],
       "breadcrumb_path": "breadcrumb/toc.yml",
+      "extendBreadcrumb": true,
       "searchScope": ["PowerApps"],
       "titleSuffix": "PowerApps"
       
