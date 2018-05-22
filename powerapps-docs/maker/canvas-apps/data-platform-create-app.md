@@ -1,22 +1,23 @@
 ---
 title: Quickstart - Generate an app from Common Data Service for Apps | Microsoft Docs
-description: Automatically generate an app in PowerApps to manage data in Common Data Service for Apps
+description: In this quickstart, you automatically generate an app in PowerApps to manage data in Common Data Service for Apps
 author: AFTOwen
 
 ms.service: powerapps
-ms.topic: conceptual
+ms.topic: quickstart
 ms.component: canvas
-ms.date: 03/10/2018
+ms.date: 05/06/2018
 ms.author: anneta
-
+#As a business analyst with little/no coding experience, I want to quickly create a custom app so that my users can manage data. 
 ---
 # Quickstart: Generate an app from Common Data Service for Apps in PowerApps
 
 In this quickstart, you'll use Microsoft PowerApps to automatically generate an app based on a list of sample accounts in [Common Data Service (CDS) for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
-To follow this quickstart, you must [switch to an environment](working-with-environments.md) in which a database in CDS for Apps has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
+If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com) before you start.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+## Prerequisites
+To follow this quickstart, you must [switch to an environment](working-with-environments.md) in which a database in CDS for Apps has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
 ## Generate an app
 1. Sign in to [PowerApps](https://web.powerapps.com) and, if necessary, switch environments as specified earlier in this topic.
@@ -35,9 +36,9 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
 
-Your app opens to the browse screen, which shows a list of accounts. Near the top of the screen, a title bar shows icons for refreshing the list, sorting the list, and creating an account. Under the title bar, a search box provides the option to filter the list based on text that you type or paste. 
+Your app opens to the browse screen, which shows a list of accounts in a control called a gallery. Near the top of the screen, a title bar shows icons for refreshing the data in the gallery, sorting the data in the gallery alphabetically, and adding data to the gallery. Under the title bar, a search box provides the option to filter the data in the gallery based on text that you type or paste. 
 
-By default, the list shows an email address, a city, and an ID for that account. But you can customize the list, which is called a gallery, to show other types of data.
+By default, the gallery shows an email address, a city, and an account name. As you'll see in [Next steps](data-platform-create-app.md#next-steps), you can customize the gallery to change how the data appears and even show other types of data.
 
 ![Browse screen](./media/data-platform-create-app/browse-screen.png)
 
