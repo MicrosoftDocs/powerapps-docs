@@ -1,23 +1,13 @@
 ---
-title: PowerShell support | Microsoft Docs
-description: Description of the different PowerShell cmdlets and a walkthrough of how to install and run them
-services: powerapps
-suite: powerapps
-documentationcenter: na
+title: PowerShell support (preview) | Microsoft Docs
+description: Description of the different PowerShell cmdlets and a walkthrough of how to install and run them.
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-ms-topic: article
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: reference
 ms.date: 04/23/2018
 ms.author: jamesol
-
 ---
 
 # PowerShell support for PowerApps (preview)
@@ -35,7 +25,7 @@ To run the PowerShell cmdlets for app makers, do the following:
 4. Run the following one-time PowerShell command (this presumes you've never run PowerShell commands on the current machine):
 
     ```
-    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
     ```
 
 5. Import the necessary modules using the following commands:
@@ -49,6 +39,12 @@ To run the PowerShell cmdlets for app makers, do the following:
 
     ```
     Add-PowerAppsAccount
+    ```
+
+7.  There is a [known issue](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036) today that may also require you to manually unblock the PowerShell files using the following command:
+
+    ```
+    dir . | Unblock-File
     ```
 
 ## PowerApps cmdlets for app makers (preview)

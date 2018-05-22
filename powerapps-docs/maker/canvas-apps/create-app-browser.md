@@ -20,7 +20,7 @@ Create and edit apps in PowerApps Studio for web, which opens in a browser windo
 
 ## Prerequisites
 * [Sign up](../signup-for-powerapps.md) for PowerApps.
-* Make sure you're using a [supported browser](limits-and-config.md#supported-browsers-for-powerapps-studio-for-web).
+* Make sure you're using a [supported browser](limits-and-config.md#supported-browsers-for-powerapps-studio).
 
 ## Open PowerApps Studio for web
 1. Sign in to [powerapps.com](http://go.microsoft.com/fwlink/p/?LinkId=708209).

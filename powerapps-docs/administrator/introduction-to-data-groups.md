@@ -1,24 +1,16 @@
 ---
 title: Data groups | Microsoft Docs
-description: Introduction to data groups for Microsoft PowerApps.
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
+description: Walkthrough of how to use data groups in PowerApps.
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-
 ---
-# Learn all about data groups
+
+# Data groups
 Data groups are a simple way to categorize services within a [data loss prevention (DLP) policy](prevent-data-loss.md). The two data groups available are the **Business data only** group and the **No business data allowed** group. Organizations are free to determine which services are placed into a particular data group. A good way to categorize services is to place them in groups, based on the impact to the organization. By default, all services are placed into the **No business data allowed** data group. You manage the services in a data group when you create or modify the properties of a DLP policy from the admin center.
 
 ## How data is shared between data groups

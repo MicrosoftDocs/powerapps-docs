@@ -34,7 +34,7 @@ This topic contains device platform and web browser requirements, as well as lim
 | Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android 5 or later <br>iOS 8 or later <br>macOS |
 | Apple Safari (latest version) |iOS 8 or later <br>macOS |
 
-## Supported browsers for PowerApps Studio for web
+## Supported browsers for PowerApps Studio
 | **Browser** | **Operating system** |
 | --- | --- |
 | Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS |

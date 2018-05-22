@@ -19,10 +19,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 ## Prerequisites
 
-* [Sign up](../signup-for-powerapps.md) for PowerApps, and then follow either of these steps:
-
-  * In the [Windows Store](http://aka.ms/powerappsinstall), install PowerApps Studio for Windows, open it, and then sign in by providing the same credentials that you used to sign up.
-  * In [powerapps.com](http://web.powerapps.com), open PowerApps Studio for web by clicking or tapping **New app** in the lower-left corner.
+* [Sign up](../signup-for-powerapps.md) for PowerApps.
 * Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow

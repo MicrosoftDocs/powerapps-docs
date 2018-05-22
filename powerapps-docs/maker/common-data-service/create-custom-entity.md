@@ -1,20 +1,15 @@
 ---
 title: Tutorial for creating a custom entity that has components with PowerApps | Microsoft Docs
 description: Tutorial with step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
-documentationcenter: na
 author: Mattp123
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
-ms.date: 03/21/2018
+ms.topic: tutorial
+ms.date: 05/01/2018
 ms.author: matp
-
 ---
+
 # Tutorial: Create a custom entity that has components in PowerApps
 
 With [!INCLUDE [powerapps](../../includes/powerapps.md)] you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. [!INCLUDE [powerapps](../../includes/powerapps.md)] app development includes adding standard "out-of-box entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
@@ -27,9 +22,6 @@ In this tutorial you create an entity and then add or customize key components s
 - Customize a view 
 - Customize a form
 
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 The tutorial will follow the company, Contoso, which is a pet grooming business that grooms dogs and cats. Contoso needs an app for client and pet tracking that can be used by employees across a variety of devices.
 
 ## Prerequisites
@@ -38,7 +30,7 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
 
 ## Create a custom entity
 
-1. On the left navigation pane under **Common Data Service**, select **Entities** and then select **New entity**.
+1. On the left navigation pane expand **Data**, select **Entities**, and then select **New entity**.
     ![New entity](media/create-custom-entity/create-new-entity.png)
 2. In the right pane, enter the following values, and then select **Next**.
   - **Display name**: *Pet* 
@@ -46,18 +38,18 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
 3. Select **Save Entity**.
 
 ## Add and customize fields
-
+ 
 1. On the **Fields** tab, select the **Primary Name** field.
 2. In the right pane make the following changes to the **Primary Name** field: 
   - Change the **Display name** from **Primary name** to *Pet Name*
-  -	Select **Searchable**
-
+  -	Select **Searchable**  
+  
     ![Change primary field](media/create-custom-entity/primary-field.png)
 3. Select **Done**.
-4. On the entity designer toolbar select **Add** field. On the **Field properties** pane, enter or select the following values and options.
+4. On the **Fields** tab on the entity designer toolbar select **Add** field. On the **Field properties** pane, enter or select the following values and options.
   - **Display name**. *Species*
   - **Data type**. *Option Set*
-  - **Option set**. *New*
+  - **Option set**. *New option set*
 5. Create the option set
 
   a. Select **Add new item**. 
@@ -89,16 +81,17 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
 
 ## Add a relationship
 
-1. Select the **Relationships** tab, and then on the entity designer toolbar select **Add relationship**. 
-2. On the right pane, in the **Related entity** list select **Account**, and then select **Done**.
-3. Select **Save Entity**.
+1. Select the **Relationships** tab, on the entity designer toolbar select **Add relationship**, and then select **Many-to-one**. 
+2. On the right pane, in the **Related** list select **Account**.
+3. Select **Done**.
+4. Select **Save Entity**.
 
-Notice that when you add a relationship, a field with the data type **Lookup** is automatically added to your list of fields on the **Fields** tab.
+Notice that when you add a many-to-one relationship, an **Account** field with the data type **Lookup** is automatically added to your list of fields on the **Fields** tab.
     ![Account lookup field](media/create-custom-entity/account-lookup-field.png)
 
 ## Customize a view
 
-1. Select the **Views** tab and then select the **Active Pets** view.
+1. Select the **Views** tab, and then select the **Active Pets** view. If you don't see the **Active Pets** view, select **Remove filter**.
 2. On the view designer select **Add Columns**, select the following columns, and then select **OK**.
   - Account
   - Appointment date 
@@ -108,22 +101,20 @@ Notice that when you add a relationship, a field with the data type **Lookup** i
 4. To arrange the columns, select the column you want to move and then use the <- and -> arrow buttons until your view looks like this.
     ![Active pets view](media/create-custom-entity/active-pets-view.png)
 5. On the view designer toolbar, select **Save and Close**.  
-6. Select **Save Entity**.
 
 ## Model-driven apps only: Customize the main form
 
 Skip this step if you only want to use the Pet entity in a canvas app. 
 
 1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] left navigation pane, select **Model-driven**.
-2. On the left navigation pane, select **Advanced**.
-3. On the left navigation of the solution window, select **Entities**, expand **Pet**, and then select **Forms**.
-4. Select **Information** next to the **Main** form type to open the form editor.
+2. On the left navigation pane, expand **Data**, select **Entities**, and then select **Pet**.
+3. Select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form editor.
     ![Edit main form](media/create-custom-entity/main-form-edit.png)
-5. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** fields located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
+4. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** fields located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
     ![Select fields for main form](media/create-custom-entity/main-form-edit2.png) 
-6. Select **Save and Close**.
-7. On the solution window, select **Publish All Customizations**.
-    ![Publish all customizations](media/create-custom-entity/publish-all-customizations.png)
+5. Select **Save**.
+6. Select **Publish**.
+7. Select **Save and close** to close the form designer.
 
 ## Add the custom entity to an app
 
@@ -131,4 +122,6 @@ Now your entity is ready to be used to build either a canvas or model-driven app
 
 ## Next steps
 
-In this tutorial, you learned how to create an entity that can be used to create a useful app. To learn how to create a canvas app, see [Create an app from scratch](../canvas-apps/get-started-create-from-blank.md).
+In this tutorial, you learned how to create an entity that can be used to create a useful app. 
+- To learn how to create a model-driven app, see [Build your first model-driven app](../model-driven-apps/build-first-model-driven-app.md).
+- To learn how to create a canvas app, see [Create an app from scratch](../canvas-apps/get-started-create-from-blank.md).

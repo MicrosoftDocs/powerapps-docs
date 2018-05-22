@@ -38,7 +38,7 @@ Create an app automatically in which users can show, add, or delete images from 
 6. Under **Choose a table**, click or tap the table that you created, and then click or tap **Connect**.
    
     ![Select your table](./media/add-images-to-excel/select-table.png)
-7. If you just installed or upgraded PowerApps, take the quick tour, or click or tap **Skip**.
+7. If the quick tour appears, take it, or click or tap **Skip**.
    
     ![First screen of quick tour](./media/add-images-to-excel/quick-tour.png)
 

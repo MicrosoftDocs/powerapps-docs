@@ -1,23 +1,15 @@
 ---
 title: Quickstart to create an environment | Microsoft Docs
 description: In this quickstart, you learn how to create an environment
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
 author: skjerland
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-admin
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
 ms.author: sharik
-
 ---
+
 # Quickstart: Create an environment
 An environment is a space to store, manage, and share your organization’s business data, apps, and flows. It also serves as a container to separate apps that may have different roles, security requirements, or target audiences. PowerApps automatically creates a single default environment for each tenant, which is shared by all users in that tenant.
 
@@ -31,7 +23,7 @@ In this quickstart, you'll learn how to create an environment and a database for
  * PowerApps Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Sign in to the PowerApps Admin center
-Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
+Sign in to the Admin center at [https://admin.powerapps.com](https://admin.powerapps.com).
 
 ## Create an environment and database
 1. In the navigation pane, click or tap **Environments**, and then click or tap **New environment**.

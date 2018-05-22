@@ -46,13 +46,11 @@ You can add data from a custom list but not a library. In addition, not all type
 Columns that contain spaces can by read by PowerApps, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
 ## Prerequisites
-Open PowerApps by taking *either* of these steps:
+1. [Sign up](../../signup-for-powerapps.md) for PowerApps.
 
-* [Sign up](../../signup-for-powerapps.md) for PowerApps, [install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
+1. [Sign in](http://web.powerapps.com) to PowerApps by providing the same credentials that you used to sign up.
 
-* [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
-
-    For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](../create-app-browser.md).
+1. Near the left edge, select **Apps**, and then select **Create an app** in the banner.
 
 ## Create an app
 * [Generate an app automatically](../app-from-sharepoint.md) based on data in a SharePoint list.

@@ -25,7 +25,7 @@ In PowerApps, you can use a gallery to show several related items, just as you s
 > 
 
 ### Prerequisites
-* [Sign up](../signup-for-powerapps.md) for PowerApps and [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign-in using the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com) using the same credentials that you used to sign up.
 * Create a tablet app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 * Learn how to [configure a control](add-configure-controls.md).
 * These steps use the [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) as sample input data, which includes .jpg images. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.

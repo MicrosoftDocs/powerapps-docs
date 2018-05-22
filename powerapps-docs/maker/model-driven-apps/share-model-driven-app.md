@@ -25,9 +25,6 @@ In this tutorial you perform the tasks for sharing a mode-driven app so that oth
 - Assign users to the custom security role
 - Assign the security role to an app
 
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 ## Prerequisites
 To share an app you must have the [!INCLUDE [powerapps](../../includes/powerapps.md)] Environment Admin or System Admin role. 
 
