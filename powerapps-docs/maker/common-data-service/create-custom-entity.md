@@ -1,20 +1,15 @@
 ---
 title: Tutorial for creating a custom entity that has components with PowerApps | Microsoft Docs
 description: Tutorial with step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
-documentationcenter: na
 author: Mattp123
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
+ms.topic: tutorial
 ms.date: 05/01/2018
 ms.author: matp
-
 ---
+
 # Tutorial: Create a custom entity that has components in PowerApps
 
 With [!INCLUDE [powerapps](../../includes/powerapps.md)] you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. [!INCLUDE [powerapps](../../includes/powerapps.md)] app development includes adding standard "out-of-box entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 

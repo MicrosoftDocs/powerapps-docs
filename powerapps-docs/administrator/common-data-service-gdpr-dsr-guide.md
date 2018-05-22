@@ -1,22 +1,14 @@
 ---
-title: Responding to DSR requests for CDS for Apps customer data | Microsoft Docs
-description: Walkthrough of how to respond to DSR requests for CDS for Apps customer data
-services: powerapps
-suite: powerapps
-documentationcenter: na
+title: Responding to DSR requests for Common Data Service (CDS) for Apps customer data | Microsoft Docs
+description: Walkthrough of how to respond to DSR requests for Common Data Service (CDS) for Apps customer data
 author: jamesol-msft
+ms.reviewer: paulliew
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 04/23/2018
-ms.author: paulliew
-
+ms.author: jamesol
 ---
 
 # Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data
