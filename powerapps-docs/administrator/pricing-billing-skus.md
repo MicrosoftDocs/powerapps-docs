@@ -1,23 +1,15 @@
 ---
 title: Licensing overview | Microsoft Docs
-description: Microsoft PowerApps licensing overview.
-services: ''
-suite: powerapps
-documentationcenter: na
+description: Overview of licensing in PowerApps.
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: jamesol
-
 ---
+
 # Licensing overview
 PowerApps is licensed on a per-user basis. Each user who accesses the service to create and run apps needs a license. Office 365 and Dynamics 365 customers can immediately benefit from the PowerApps and Microsoft Flow capabilities that these offerings include. Customers who want to build apps and flows that access data sources outside Office 365 and Dynamics 365, or need additional functionality, can purchase standalone  subscriptions to PowerApps and Microsoft Flow. There are important differences in functionality between these groups of licenses.
 

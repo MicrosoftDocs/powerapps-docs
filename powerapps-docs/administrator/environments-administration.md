@@ -1,23 +1,15 @@
 ---
 title: Administer environments | Microsoft Docs
-description: Administer environments in PowerApps, including creation, renaming, deletion, and security
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
+description: Learn how to administer environments in PowerApps, including creation, renaming, deletion, and security
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-
 ---
+
 # Administer environments in PowerApps
 In the [PowerApps admin center][1], manage environments that you've created and those for which you have been added to the Environment Admin or System Administrator role. From the admin center, you can perform these administrative actions:
 
@@ -141,9 +133,9 @@ To assign a user or a security group to an environment role, an Environment Admi
 
 4. If database is created in the environment:
 
-    a. Click on the link to manage the environment roles in Dynamics 365.
+    a. Add the user to the environment and click on the link to assign the user a role.
 
-    ![](./media/environment-admin/Security-Link-D365.png)
+    ![](./media/database-security/security-adduser.png)
 
     b. Select the user from the list of users in the environment / instance.
 

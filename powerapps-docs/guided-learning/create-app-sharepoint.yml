@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Creating an app from SharePoint
 metadata:
-  title: Creating an app from SharePoint | Microsoft PowerApps
+  title: Creating an app from SharePoint | Microsoft Docs
   description: Generate a three screen app from a SharePoint list, then explore and update the app.
   audience: Business User
   level: Beginner
@@ -9,7 +9,7 @@ metadata:
   nextTutorialTitle: Manage apps
   displayType: one-column
   author: AFTOwen
-  manager: kfile
+
   ms.service: powerapps
   ms.component: canvas
   ms.topic: interactive-tutorial
