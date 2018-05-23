@@ -66,6 +66,7 @@ Users with a valid PowerApps license can perform the operations in these cmdlets
 | Read and delete connectors | Get-Connector <br> Remove-Connector
 | Read, update, and delete custom connector permissions | Get-ConnectorRoleAssignment <br> Set-ConnectorRoleAssignment <br> Remove-ConnectorRoleAssignment
 
+
 > [!NOTE]
 > Use the following commands to understand syntax and view samples for each of the cmdlets:
 >```
@@ -95,6 +96,9 @@ To perform the administration operations in the admin cmdlets, you'll need the f
 | Read, update, and delete connection permissions | Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br> Remove-AdminConnectionRoleAssignment
 | Read and delete custom connectors | Get-AdminConnector <br> Remove-AdminConnector
 | Read, update, and delete custom connector permissions | Get-AdminConnectorRoleAssignment <br> Set-AdminConnectorRoleAssignment <br> Remove-AdminConnectorRoleAssignment
+| Read a user's PowerApps user settings, user-app settings, and notifications | Get-AdminPowerAppsUserDetails
+| Read & delete a user's Microsoft Flow settings, which are not visible to user, but that support flow execution | Get-AdminFlowUserDetails <br> Remove-AdminFlowUserDetails
+| Create, read, update & delete data loss prevention policies for your organization | Get-AdminApiPolicy <br> Add-AdminApiPolicy <br> Remove-AdminApiPolicy <br> Set-AdminApiPolicy <br> Add-ConnectorToBusinessDataGroup <br>  Remove-ConnectorFromBusinessDataGroup
 
 > [!NOTE]
 > Use the following commands to understand syntax and view sample for each of the cmdlets:

@@ -27,11 +27,11 @@ Canvas App	| PowerApps Admin center <br> PowerApps Portal | 	PowerApps cmdlets
 Canvas App permissions	| PowerApps Admin center <br> PowerApps Portal	| PowerApps cmdlets
 Gateway | PowerApps Portal***	| On-premises gateway cmdlets
 Gateway permissions	| PowerApps Portal***	|
-Custom connector | |	App creator: Available <br> Admin: Under development
-Custom connector permissions | | 	App creator: Available <br> Admin: Under development
-Connection | | App creator: Available <br> Admin: Under development
-Connection permissions	| | App creator: Available <br> Admin: Under development
-PowerApps user settings, user-app settings, and notifications | | App creator: Available <br> Admin: Under development
+Custom connector | |	App creator: Available <br> Admin: Available
+Custom connector permissions | | 	App creator: Available <br> Admin: Available
+Connection | | App creator: Available <br> Admin: Available
+Connection permissions	| | App creator: Available <br> Admin: Available
+PowerApps user settings, user-app settings, and notifications | | App creator: Available <br> Admin: Available
 
 > ** With the introduction of Common Data Service (CDS) for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the CDS for Apps database instance. For guidance on how to respond to DSR requests for users that use CDS for Apps, see [Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data](common-data-service-gdpr-dsr-guide.md).
 
@@ -202,7 +202,13 @@ Get-Connection | ConvertTo-Json | out-file -FilePath "UserDetails.json"
 ~~~~
 
 ### PowerShell cmdlets for admins
-The function for an administrator to export connections created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+Administrators can export all connections created by the user using the  **Get-AdminConnection** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminConnection -CreatedBy $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
+~~~~
  
 ## Step 6: Export the user’s permissions to shared connections
 
@@ -211,11 +217,17 @@ Users can export the connection role assignments for all connections that they h
 
 ~~~~
 Add-PowerAppsAccount
-Get-ConnectionRoleAssignment | ConvertTo-Json | out-file -FilePath "UserDetails.json"
+Get-ConnectionRoleAssignment | ConvertTo-Json | Out-file -FilePath "UserDetails.json"
 ~~~~
 
 ### PowerShell cmdlets for admins
-The function for an administrator to export connection role assignments for a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+Administrators can export all connection role assignments for a user using the  **Get-AdminConnectionRoleAssignment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminConnectionRoleAssignment -PrincipalObjectId $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
+~~~~
 
 ## Step 7: Export personal data contained within custom connectors created by the user
 Custom Connectors supplement the existing out-of-box connectors and allow for connectivity to other APIs, SaaS, and custom-developed systems.
@@ -229,7 +241,13 @@ Get-Connector -FilterNonCustomConnectors | ConvertTo-Json | Out-File -FilePath "
 ~~~~
 
 ### PowerShell cmdlets for admins
-The function for an administrator to export custom connectors created by a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+Administrators can export all custom connectors created by a user using the  **Get-AdminConnector** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminConnector -CreatedBy $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
+~~~~
 
 ## Step 8: Export the user’s permissions to custom connectors
 
@@ -242,7 +260,13 @@ Get-ConnectorRoleAssignment | ConvertTo-Json | Out-File -FilePath "UserDetails.j
 ~~~~
 
 ### PowerShell cmdlets for admins
-The function for an administrator to export custom connector role assignments for a user using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+Administrators can export all custom connector role assignments for a user using the  **Get-AdminConnectorRoleAssignment** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminConnectorRoleAssignment -PrincipalObjectId $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
+~~~~
  
 ## Step 9: Export PowerApps Notifications, User Settings, and User-App Settings
 PowerApps sends several types of notifications to users, including when an app is shared with them and when a CDS for Apps export operation has completed. A user’s notification history is visible to them within the [PowerApps portal](https://web.powerapps.com).
@@ -250,10 +274,21 @@ PowerApps sends several types of notifications to users, including when an app i
 PowerApps also stores several different user preferences and settings that are used to deliver the PowerApps runtime and portal experiences, including when a user last opened an application, pinned an app, etc.
 
 ### PowerShell cmdlets for app creators
-The function to export a user’s PowerApps notifications, user settings, and user-app settings using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+Users can export their own PowerApps notifications, user settings, and user-app settings using the **Get-AdminPowerAppsUserDetails** function in the [PowerApps App creator PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871448):
+
+~~~~
+Add-PowerAppsAccount  
+Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json"
+~~~~
 
 ### PowerShell cmdlets for admins
-The function for an administrator to export a user’s PowerApps notifications, user settings, and user-app settings using the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+Administrators can export the PowerApps notifications, user settings, and user-app settings for a user using the  **Get-AdminPowerAppsUserDetails** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -UserPrincipalName foobar@microsoft.com
+~~~~
 
 ## Step 10: Export personal data contained for a user-stored gateway or in the user’s gateway permissions
 
@@ -274,6 +309,9 @@ Users can export the personal data stored within the gateway service from the [P
 
 ### Gateway PowerShell cmdlets
 There are also PowerShell cmdlets that allow you to retrieve, manage, and delete your personal gateways. For more information, see [On-premises gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238).
+
+### Administrators
+Please refer to the **Tenant Administration** section in the [Understand on-premises data gateways for Microsoft PowerApps](../canvas-apps/gateway-reference.md) article for guidance around managing gateways for your organization.
 
 ## Step 11: Export the user’s personal data in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
