@@ -21,29 +21,29 @@ Step-by-step instructions for installing and configuring the Help Desk PowerApps
 
 Estimated time to complete these steps: **10-15 minutes**
 
-If you would like to see a demonstration of this process please watch this video.
+> [!TIP]
+> If you would like to see a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
 
-[![Help Desk Install Video](./media/help-desk-install/help-desk-install-video.png)](https://youtu.be/z4cdtD6hB_4 )
 
 ## Help Desk PowerApps sample overview
 Help Desk provides a user-friendly experience to connect end users with support professionals. Quickly find answers to your most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
 
 ![Opening screen of the Help Desk PowerApp](./media/help-desk-install/Login-screen.png)
 
-Watch this video to see how to use the Help Desk PowerApp Sample.
-
-[![Help Desk Demo Video](./media/help-desk-install/help-desk-demo-video.png)](https://youtu.be/sl5fXwwnvzI)
+> [!TIP]
+> Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk PowerApp Sample.
 
 ## Prerequisites
 
 - [Sign up](https://web.powerapps.com/) for PowerApps.
+- Must have a valid SharePoint Online license and permission to create lists.
 
 ## Create the HelpDesk SharePoint list
 
 This list stores the Help Desk tickets.
 
 1. Open a web browser and navigate to https://portal.office.com.
-2. Log in with an account that has permission to create lists.
+2. Log in with an account that has permission to create SharePoint lists.
 3. Navigate to the site collection where you want the HelpDesk list to reside.
 4. Click the **gear icon** in the top right portion of the web page.
 5. Click **Add an app**.
@@ -59,12 +59,13 @@ This list stores the Help Desk tickets.
 
 ### Create Description column
 
-1. Click **Create column**.
-2. In the **Column name** textbox enter **Description**.
-3. In the **type of information in this column is** radio button list, select **Multiple lines of text**.
-4. In the **Require that this column contains information** radio button list, select **Yes**.
-5. In the **Specify the type of text to allow** radio button list, select **Plain text**.
-6. Click **OK**.
+1. Select the elipsis next to the HelpDesk list and click **Settings**.
+2. Click **Create column**.
+3. In the **Column name** textbox enter **Description**.
+4. In the **type of information in this column is** radio button list, select **Multiple lines of text**.
+5. In the **Require that this column contains information** radio button list, select **Yes**.
+6. In the **Specify the type of text to allow** radio button list, select **Plain text**.
+7. Click **OK**.
 
 ### Create Category column
 
@@ -134,14 +135,13 @@ This list stores the Help Desk tickets.
 
 ## Download the Help Desk PowerApp
 
-1.	In a web browser, navigate to http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip.
-2.	Download the PowerApps package and save it to your machine.
+1.	[Download](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the PowerApps package and save it to your machine.
 
 ## Create connections
 
 1.	In a web browser, navigate to https://web.powerapps.com.
 2.	Sign in by providing the same credentials that you used to sign up.
-3.	In the menu on the left, select **Connections**.
+3.	In the menu on the left, select **Data** then **Connections**.
 	
 ### Create Office 365 Outlook connection
 
@@ -154,7 +154,7 @@ This list stores the Help Desk tickets.
 ### Create SharePoint connection
 
 1.	Click **+ New connection**.
-2.	In the **Search** textbox, enter **Outlook**.
+2.	In the **Search** textbox, enter **SharePoint**.
 3.	Select **SharePoint** in the list.
 4.	Click **Create**.
 5.	In the popup window, select the account you logged in with.
@@ -206,16 +206,14 @@ This list stores the Help Desk tickets.
 
 ## Configure the PowerApp to use the SharePoint list
 
-1. In the web browser, click **Apps**.
-2. Click the **ellipses** next to the HelpDesk PowerApp.
-3. Click **Edit on the web**.
-4. Click **Allow**.
+1. Under Next steps, click **Open app**.
+2. Click **Allow** when prompted for permission.
 
 ### Delete connections
 
 1. Click **View**.
 2. Click **Data sources**.
-3. In the **Data** pane, click the **ellipses** next to **HelpDesk**.
+3. In the **Data** pane, click the **ellipses** next to the **HelpDesk** SharePoint connection.
 4. Click **Remove**.
 
 ### HelpDesk list
@@ -273,7 +271,7 @@ This list stores the Help Desk tickets.
 
 7.	Expand the **Switch**.
 8.	Expand the **NOT STARTED** case.
-9.  Expand the **Send an email** action.
+9.  Expand the **Case not started** action.
 10.	Change the **To** to match the HelpDesk admin email.
 
 	![Edit Flow screen](./media/help-desk-install/edit-flow-condition-send-email.png) 
@@ -286,11 +284,11 @@ This list stores the Help Desk tickets.
 2. Click the **ellipses** next to the Help Desk PowerApp.
 3. Click **Open**. 
 
-Watch this video to see how to use the Help Desk PowerApp Sample.
+> [!TIP]
+> Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk PowerApp Sample.
 
-[![Help Desk Demo Video](./media/help-desk-install/help-desk-demo-video.png)](https://youtu.be/sl5fXwwnvzI)
 
-##Next steps
+## Next steps
 - [Customize a SharePoint list form](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
 - [Add and configure a control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
 - [Edit and manage permissions for a SharePoint list or library](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
