@@ -30,7 +30,7 @@ When you develop an app, you can use standard entities, custom entities, or both
 
 ![Screenshot showing a list of entities.](./media/data-platform-cds-intro/entitylist.png "Entity list")
 
-For a full list of entities, see the [Entity reference](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/about-entity-reference).
+For a full list of entities, see the [Entity reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 You can extend the functionality of standard entities by creating one or more custom entities to store information that's unique to your organization. For more information, see [How to create a custom entity](create-custom-entity.md).
 
