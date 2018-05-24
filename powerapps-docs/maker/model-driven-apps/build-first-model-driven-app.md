@@ -29,6 +29,9 @@ Sign in to [PowerApps](https://web.powerapps.com/). If you don’t already have 
 
     ![Model-driven](media/build-first-model-driven-app/choose-design-mode.png)
 
+> [!IMPORTANT]
+> If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+
 3. From the left pane, select **Apps**, and then select **Create an app**.
 
 4.	On the **Create a New App** page, enter the following details, and then select **Done**: 
