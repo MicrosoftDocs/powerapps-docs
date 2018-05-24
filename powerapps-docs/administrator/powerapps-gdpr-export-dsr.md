@@ -6,7 +6,7 @@ manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 04/23/2018
+ms.date: 05/23/2018
 ms.author: jamesol
 ---
 
@@ -311,7 +311,7 @@ Users can export the personal data stored within the gateway service from the [P
 There are also PowerShell cmdlets that allow you to retrieve, manage, and delete your personal gateways. For more information, see [On-premises gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238).
 
 ### Administrators
-Please refer to the **Tenant Administration** section in the [Understand on-premises data gateways for Microsoft PowerApps](../canvas-apps/gateway-reference.md) article for guidance around managing gateways for your organization.
+Please refer to the **Tenant Administration** section in the [Understand on-premises data gateways for Microsoft PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/gateway-reference#tenant-level-administration) article for guidance around managing gateways for your organization.
 
 ## Step 11: Export the user’s personal data in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSR requests for users that use the Microsoft Flow service, see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).

@@ -6,7 +6,7 @@ manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: reference
-ms.date: 04/23/2018
+ms.date: 05/23/2018
 ms.author: jamesol
 ---
 
@@ -35,12 +35,12 @@ To run the PowerShell cmdlets for app creators, do the following:
     Import-Module .\Microsoft.PowerApps.PowerShell.psm1 -Force
     ```
 
-7.  There is a [known issue](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036) today that may also require you to manually unblock the PowerShell files using the following command:
+6.  There is a [known issue](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036) today that may also require you to manually unblock the PowerShell files using the following command:
 
     ```
     dir . | Unblock-File
     ```
-6. Before accessing any of the commands, provide your credentials using the following command. These credentials are refreshed for up to ~8 hours before you're required to sign in again to continue using the cmdlets.
+7. Before accessing any of the commands, provide your credentials using the following command. These credentials are refreshed for up to ~8 hours before you're required to sign in again to continue using the cmdlets.
 
     ```
     Add-PowerAppsAccount

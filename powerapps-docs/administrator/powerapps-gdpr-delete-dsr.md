@@ -6,7 +6,7 @@ manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 04/23/2018
+ms.date: 05/23/2018
 ms.author: jamesol
 ---
 
@@ -47,10 +47,10 @@ Environment	| PowerApps Admin center | 	PowerApps cmdlets
 Environment permissions**	| PowerApps Admin center | PowerApps cmdlets
 Canvas app	| PowerApps Admin center <br> PowerApps| PowerApps cmdlets
 Canvas-app permissions	| PowerApps Admin center | PowerApps cmdlets
-Connection | | App creator: Available <br> Admin: Under development
-Connection permissions | | App creator: Available <br> Admin: Under development
-Custom connector | | App creator: Available <br> Admin: Under development
-Custom-connector permissions | | App creator: Available <br> Admin: Under development
+Connection | | App creator: Available <br> Admin: Available
+Connection permissions | | App creator: Available <br> Admin: Available
+Custom connector | | App creator: Available <br> Admin: Available
+Custom-connector permissions | | App creator: Available <br> Admin: Available
 
 \** With the introduction of CDS for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the instance of that database. For guidance on how to respond to DSRs for users of CDS for Apps, see [Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data](common-data-service-gdpr-dsr-guide.md).
 
@@ -272,7 +272,15 @@ Get-Connection | Remove-Connection
 ```
 
 ### PowerShell cmdlets for PowerApps administrators
-The function to allow an admin to find and delete a user’s connections using [PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+An admin can delete all of a user’s connections by using the **Remove-AdminConnection** function in the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all connections for the DSR user and deletes them
+Get-AdminConnection -CreatedBy $deleteDsrUserId | Remove-AdminConnection
+```
 
 ## Step 6: Delete the user’s permissions to shared connections
 
@@ -289,7 +297,15 @@ Get-ConnectionRoleAssignment | Remove-ConnectionRoleAssignment
 > Owner role assignments cannot be deleted without deleting the connection resource.
 
 ### PowerShell cmdlets for admins
-The function to allow an admin to find and delete a user’s connection role assignments using the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+An admin can delete all of a user’s connection role assignments by using the **Remove-AdminConnectionRoleAssignment** function in the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all connection role assignments for the DSR user and deletes them
+Get-AdminConnectionRoleAssignment -PrincipalObjectId $deleteDsrUserId | Remove-AdminConnectionRoleAssignment
+```
 
 ## Step 7: Delete custom connectors created by the user
 Custom Connectors supplement the existing out of box connectors and allow for connectivity to other APIs, SaaS and custom-developed systems. You may want to transfer Custom Connector ownership to other users in the organization or delete the Custom Connector.
@@ -305,7 +321,15 @@ Get-Connector -FilterNonCustomConnectors | Remove-Connector
 ```
 
 ### PowerShell cmdlets for admins
-The function to allow an admin to find and delete a user’s custom connectors using the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+An admin can delete all custom connectors created by a user using the **Remove-AdminConnector** function in the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all custom connectors created by the DSR user and deletes them
+Get-AdminConnector -CreatedBy $deleteDsrUserId | Remove-AdminConnector
+```
 
 ## Step 8: Delete the user’s permissions to shared custom connectors
 
@@ -323,7 +347,15 @@ Get-ConnectorRoleAssignment | Remove-ConnectorRoleAssignment
 > Owner role assignments cannot be deleted without deleting the connection resource.
 
 ### PowerShell cmdlets for admins
-The function to allow an admin to find and delete a user’s connector role assignments using the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) is under development.
+An admin can delete all custom connector role assignments for a user using the **Remove-AdminConnectorRoleAssignment** function in the [PowerApps Admin PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all custom connector role assignments for the DSR user and deletes them
+Get-AdminConnectorRoleAssignment -PrincipalObjectId $deleteDsrUserId | Remove-AdminConnectorRoleAssignment
+```
 
 ## Step 9: Delete the user’s personal data in Microsoft Flow
 PowerApps licenses always include Microsoft Flow capabilities. In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. For guidance on how to respond to DSRs for users who use the Microsoft Flow service, see [Responding to GDPR Data Subject Requests for Microsoft Flow](https://go.microsoft.com/fwlink/?linkid=872250).
