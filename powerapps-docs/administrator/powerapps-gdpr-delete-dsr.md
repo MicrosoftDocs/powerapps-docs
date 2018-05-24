@@ -59,6 +59,26 @@ Custom-connector permissions | | App creator: Available <br> Admin: Available
 ### For users
 Any user with a valid PowerApps license can perform the user operations outlined in this document using the [PowerApps](https://web.powerapps.com) or [PowerShell cmdlets for app creators](https://go.microsoft.com/fwlink/?linkid=871448).
 
+#### Unmanaged tenant
+If you are a member of an [unmanaged tenant](https://docs.microsoft.com/azure/active-directory/domains-admin-takeover), meaning that your Azure AD tenant does not have global administrator, then you will still be able to follow the steps outlined in this art to remove your own personal data.  However, since there is no global administrator for your tenant you will need to follow the instructions outlined in [Step 11: Delete the user from Azure Active Directory](#step-11-delete-the-user-from-azure-active-directory) below to delete your own account from the tenant.
+
+In order to determine if you are a member of an unmanaged tenant please follow these steps:
+
+1. Open the following URL in a browser, making sure to replace your email address in the URL: https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
+
+2. If you are a member of an **unmanaged tenant** then you will see an `"IsViral": true` in the response.
+```
+{
+  ...
+  "Login": "foobar@unmanagedcontoso.com",
+  "DomainName": "unmanagedcontoso.com",
+  "IsViral": true,
+  ...
+}
+```
+
+3. Otherwise, you belong to a **managed tenant**.
+
 ### For administrators
 To perform the administrative operations outlined in this document using the [PowerApps Admin center](https://admin.powerapps.com/), Microsoft Flow admin center, or [PowerShell cmdlets for PowerApps administrators](https://go.microsoft.com/fwlink/?linkid=871804), you'll need the following:
 
@@ -372,4 +392,19 @@ For guidance on how to respond to DSRs for users who use CDS for Apps, see [Resp
 > It is recommended that admins complete this step for a PowerApps user.
 
 ## Step 11: Delete the user from Azure Active Directory
-Once the above steps have been complete the final step is to delete the user’s account for Azure Active Directory by following the steps outlined in the Azure Data Subject Request GDPR documentation that can be found on the [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
+Once the above steps have been complete the final step is to delete the user’s account for Azure Active Directory.
+
+### Managed tenant
+As an admin of a managed Azure AD tenant you can delete the user's account by following the steps outlined in the Azure Data Subject Request GDPR documentation that can be found on the [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
+
+### Unmanaged tenant
+If you are a member of an unmanaged tenant then you will need to follow these steps in order to delete your account from your Azure AD tenant:
+
+> [!NOTE]
+> Please see the [Unmanaged tenant section](#unmanaged-tenant) above to see how to detect if you are a member of an unmanaged or managed tenant.
+
+1. Navigate to the [Work and School privacy page](https://go.microsoft.com/fwlink/?linkid=87312) and sign-in with your Azure AD account.
+
+2. Select **Close account** and follow the instructions to delete your account from your Azure AD tenant.
+
+    ![Select app share](./media/powerapps-gdpr-delete-dsr/close-account.png)
