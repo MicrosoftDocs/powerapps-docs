@@ -1,13 +1,13 @@
 ---
 title: What is Common Data Service for Apps? | Microsoft Docs
 description: Introduction to Common Data Service (CDS) for Apps, entities, and server-side logic.
-author: SKjerland
+author: Mattp123
 manager: kfile
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
-ms.author: sharik
+ms.author: matp
 ---
 
 # What is Common Data Service for Apps?

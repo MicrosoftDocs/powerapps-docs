@@ -1,13 +1,13 @@
 ---
 title: Quickstart to create an environment | Microsoft Docs
 description: In this quickstart, you learn how to create an environment
-author: skjerland
-manager: kfile
+author: jimholtz
+
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: sharik
+ms.author: jimh
 ---
 
 # Quickstart: Create an environment
