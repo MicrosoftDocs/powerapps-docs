@@ -1,13 +1,12 @@
 ---
 title: Quickstart to create a data loss prevention (DLP) policy | Microsoft Docs
 description: In this quickstart, you learn how to create a data loss prevention (DLP) policy in PowerApps
-author: SKjerland
-manager: kfile
+author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/30/2018
-ms.author: sharik
+ms.author: jimh
 ---
 
 # Quickstart: Create a data loss prevention (DLP) policy

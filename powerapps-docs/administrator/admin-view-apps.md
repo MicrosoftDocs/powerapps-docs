@@ -1,13 +1,13 @@
 ---
 title: Quickstart to download a list of apps created in your environments | Microsoft Docs
 description: In this quickstart, you learn how to download a list of apps created in your environments.
-author: SKjerland
-manager: kfile
+author: jimholtz
+
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: sharik
+ms.author: jimh
 ---
 
 # Quickstart: Download a list of apps created in your environments
