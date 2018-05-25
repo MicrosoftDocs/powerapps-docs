@@ -6,12 +6,20 @@
     tocHref: /powerapps/
     topicHref: /powerapps/
     items:
+    # Adding Create app for each type of app
     - name: Create apps
-      tocHref: /powerapps/maker/
+      tocHref: /powerapps/maker/common-data-service/
       topicHref: /powerapps/maker/index
+    - name: Create apps
+      tocHref: /powerapps/maker/model-driven-apps/
+      topicHref: /powerapps/maker/index     
+    - name: Create apps
+      tocHref: /powerapps/maker/canvas-apps/
+      topicHref: /powerapps/maker/index       
+    #  Make sure Create apps appears for topics in developer folder 
     - name: Create apps
       tocHref: /powerapps/developer/common-data-service/
-      topicHref: /powerapps/maker/index
+      topicHref: /powerapps/maker/index     
       items:
       - name: Common Data Service for Apps
         tocHref: /powerapps/developer/common-data-service/
