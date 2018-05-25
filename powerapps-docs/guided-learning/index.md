@@ -2,13 +2,12 @@
 title: Microsoft PowerApps Guided Learning
 description: Start your learning journey with this sequenced collection of courses, and understand the extensive and powerful capabilities of Microsoft PowerApps.
 layout: LandingPage
-author: mgblythe
-manager: kfile
+author: AFTOwen
 ms.service: powerapps
 ms.component: canvas
 ms.topic: landing-page
 ms.date: 10/27/2017
-ms.author: mblythe
+ms.author: anneta
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -34,27 +33,27 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-1">Introducing PowerApps</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=1">Introducing PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-2">Parts of PowerApps</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=2">Parts of PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-3">Related technologies</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=3">Related technologies</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-4">A quick look at creating apps</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=4">A quick look at creating apps</a>
                                 <span style="margin-left: 32px; align-self: center;">6m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-5">Create your first app</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=5">Create your first app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-6">Review this section</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=6">Review this section</a>
                                 <span style="margin-left: 32px; align-self: center;">2m</span>
                               </li>
                           </ul>
@@ -78,19 +77,19 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-1">Generate an app</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=1">Generate an app</a>
                                 <span style="margin-left: 32px; align-self: center;">3m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-2">Explore a generated app</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=2">Explore a generated app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-3">Customize the app</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=3">Customize the app</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-4">Explore app formulas</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=4">Explore app formulas</a>
                                 <span style="margin-left: 32px; align-self: center;">9m</span>
                               </li>
                             </ul>
@@ -114,15 +113,15 @@ ms.author: mblythe
                           </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-1">Share your apps</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=1">Share your apps</a>
                                 <span style="margin-left: 32px; align-self: center;">5m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-2">Version your apps</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=2">Version your apps</a>
                                 <span style="margin-left: 32px; align-self: center;">1m</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-3">Environments</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=3">Environments</a>
                                 <span style="margin-left: 32px; align-self: center;">8m</span>
                               </li>
                           </ul>

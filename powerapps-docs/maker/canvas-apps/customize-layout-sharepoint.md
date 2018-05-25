@@ -6,12 +6,22 @@ author: AFTOwen
 ms.service: powerapps
 ms.topic: tutorial
 ms.component: canvas
-ms.date: 04/24/2018
+ms.date: 05/06/2018
 ms.author: anneta
 #As a business analyst with little or no coding experience, I want to change the data that appears in the default gallery of a generated app and make other changes so that my users can more easily manage information.
 ---
 # Tutorial: Customize a gallery in PowerApps
-In this tutorial, you'll customize the gallery and make other changes to an app that was generated automatically in Microsoft PowerApps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs:
+In this tutorial, you'll customize a list of records, called a gallery, and make other changes in an app that was generated automatically in Microsoft PowerApps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs.
+
+For example, the gallery for this tutorial matches this graphic by default. The email address is featured more prominently than other types of data, and users can sort and filter the gallery based on text in that address:
+
+![Default gallery](./media/customize-layout-sharepoint/gallery-before.png)
+
+However, your users might be more interested in the account name more than the email address, so you'll reconfigure the gallery to highlight, sort, and filter based on the key data for your organization. In addition, you'll change the title of the default screen to differentiate it from the other screens in the app.
+
+![Final gallery](./media/customize-layout-sharepoint/gallery-after.png)
+
+You'll also add a scroll bar so that users who don't have touch screens or mouse wheels can browse the entire gallery.
 
 > [!div class="checklist"]
 > * Change the layout of the gallery
@@ -20,9 +30,9 @@ In this tutorial, you'll customize the gallery and make other changes to an app 
 > * Change the screen title
 > * Show a scroll bar
 
-This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in PowerApps from a SharePoint list, an Excel table, or another data source. 
+This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in PowerApps, whether from a SharePoint list, an Excel table, or some other data source.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com) before you start.
 
 ## Prerequisites
 [Generate an app](data-platform-create-app.md) from the **Accounts** entity of Common Data Service (CDS) for Apps.
@@ -30,16 +40,20 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 ## Open the generated app
 1. Sign in to [PowerApps](https://web.powerapps.com), and then select **Apps** near the left edge.
 
-	![PowerApps home page](./media/customize-layout-sharepoint/sign-in.png)
+	[![PowerApps home page](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
 
 1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 
+    ![Open app for editing](./media/customize-layout-sharepoint/open-app.png)
+
+1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+
 ## Change the layout
-1. On the browse screen, select the gallery by clicking or tapping any item except the first one in the list of accounts.
+1. In the left navigation pane, select **BrowseGallery1**.
 
 	When the gallery is selected, a selection box with handles surrounds it.
 
-	![Selected gallery](./media/customize-layout-sharepoint/select-gallery.png)
+    ![Select gallery](media/customize-layout-sharepoint/select-gallery-1.png)
 
 1. Near the right edge, select **Accounts** to open the **Data** pane.
 
@@ -55,7 +69,9 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. In the **Data** pane, open the list of options for the title.
 
-	![Select title-only layout](./media/customize-layout-sharepoint/show-title-options.png)
+    The name of this control will end in a numeral, such as **Title1**, but the numeral might differ based on other actions you might have taken.
+
+	![Open list of options for title label](./media/customize-layout-sharepoint/show-title-options.png)
 
 1. In the list of options, select **Account name (name)**, and then close the **Data** pane.
 
@@ -63,7 +79,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 	![Final gallery](./media/customize-layout-sharepoint/final-gallery.png)
 
-## Change the sort and search columns
+## Change sort and search columns
 1. Select the gallery as the previous section describes.
 
 	![Select gallery](./media/customize-layout-sharepoint/select-gallery-title.png)
@@ -85,7 +101,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
     For more information about these and other functions, see the [formula reference](formula-reference.md).
 
-## Test sorting and searching
+### Test sorting and searching
 1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).
 
 	![Open Preview mode](./media/customize-layout-sharepoint/open-preview.png)

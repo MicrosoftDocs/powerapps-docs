@@ -70,7 +70,7 @@ With the individual environment, you get the following functionality:
 
 *You can't share apps, flows, connections, etc. with any other users of your tenant. You also can't add any other user as an environment admin or maker, or to the database roles from the admin center.
 
-**Creating a database with the Common Data Service, is currently unavailable in an individual environment, and will be available again soon. If you had created a database earlier, then you can continue using it without any issues. 
+\*\*Creating a database with the Common Data Service is currently unavailable in an individual environment, and will be available again soon. If you had created a database earlier, then you can continue using it without any issues. 
 
 ## What are the capacity limits for the individual environment?
 | **Capacity** |  |

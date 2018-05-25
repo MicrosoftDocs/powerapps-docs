@@ -1,23 +1,14 @@
 ---
 title: Quickstart to run a canvas-based app on a mobile device | Microsoft Docs
-description: In this quickstart, you learn how to run a canvas app on a mobile device
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
-
+description: In this quickstart, you learn how to run a canvas app on a mobile device.
+author: Mattp123
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
-ms.author: sharik
-
+ms.author: matp
 ---
+
 # Quickstart: Run a canvas app on a mobile device
 When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
