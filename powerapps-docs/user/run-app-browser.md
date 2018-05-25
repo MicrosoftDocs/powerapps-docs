@@ -1,13 +1,12 @@
 ---
 title: Quickstart to run apps in a web browser | Microsoft Docs
 description: In this quickstart, you learn how to run apps in a web browser
-author: SKjerland
-manager: kfile
+author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 03/07/2018
-ms.author: sharik
+ms.author: matp
 ---
 
 # Quickstart: Run an app in a web browser

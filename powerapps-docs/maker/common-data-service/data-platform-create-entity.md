@@ -1,13 +1,13 @@
 ---
 title: Quickstart to create a custom entity | Microsoft Docs
 description: In this quickstart, you learn how to create a custom entity in PowerApps.
-author: SKjerland
-manager: kfile
+author: Mattp123
+
 ms.service: powerapps
 ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
-ms.author: sharik
+ms.author: matp
 #Customer intent: As a system administrator, I want to create custom entities to store data, so that app creators can create apps using data that's tailored to our organization.
 ---
 
