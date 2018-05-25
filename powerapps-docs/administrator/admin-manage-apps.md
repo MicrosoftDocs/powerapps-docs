@@ -9,7 +9,7 @@ ms.date: 03/21/2018
 ms.author: jimh
 ---
 
-# Manage apps created in your organization
+# Manage apps created in your organization 
 If you're an Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin, you can manage the apps created in your organization.
 
 Admins can do the following from the PowerApps Admin center:
