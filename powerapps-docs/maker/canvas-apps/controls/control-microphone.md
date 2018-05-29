@@ -16,10 +16,12 @@ ms.author: fikaradz
 
 ---
 # Microphone control in PowerApps
-A control with which the user can record sounds.
+A control that allows app users to record sounds from their device.
 
 ## Description
-If you add this control, the user can update a data source with one or more sounds from wherever the app is running.
+App users can make audio recordings if the device where the app is running has a microphone.
+
+Audio is stored in 3gp format in Android and in AAC format in iOS.
 
 ## Key properties
 **Mic** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.
@@ -94,9 +96,9 @@ If you add this control, the user can update a data source with one or more soun
 ### Add sounds to a Custom gallery control
 1. Add a **Microphone**, name it **MyMic**, and set its **OnStop** property to this formula:<br>
    **Collect(MySounds, MyMic.Audio)**
-   
+
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-   
+
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
 2. Add a **Custom gallery** control, move it below **MyMic**, and set the **[Items](properties-core.md)** property for the **Custom gallery** control to **MySounds**.
 3. In the template for the **Custom gallery** control, add an **[Audio](control-audio-video.md)** control, and set its **Media** property to **ThisItem.Url**.
