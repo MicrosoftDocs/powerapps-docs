@@ -40,11 +40,11 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 
 ## Limitations
 The current version of the control is experimental due to the following temporary limitations:
-1. Control has limited features for formatting text.  
+- Control has limited features for formatting text.  
 
-1. The control is primarily targeted for use in browsers on large screens.  Using the control on a mobile phone can be a frustrating experience.
+- The control is primarily targeted for use in browsers on large screens.  Using the control on a mobile phone can be a frustrating experience.
 
-1. Known issues in the authoring  experience when using the Windows studio or Edge browser.  Current recommendation is to use web studio in Chrome.
+- Known issues in the authoring  experience when using the Windows studio or Edge browser.  Current recommendation is to use web studio in Chrome.
 
 
 ## Key properties
