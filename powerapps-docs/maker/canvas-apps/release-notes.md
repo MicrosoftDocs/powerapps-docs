@@ -23,6 +23,9 @@ Discover the latest updates to our business applications, as well as a host of n
 
 **Coming soon:** We'll keep updating the release notes PDF as features ship, and we'll also make them available on a web page.
 
+## May 30
+1. [Rich-text editor control](controls/control-richtexteditor.md) (experimental) - allows end users to format text inside a WYSIWYG editing area. 
+
 ## May 21
 1. Allow app users to import and export data from Excel or CSV files stored locally by using the **Get Data from Excel file** and **Export Data** features now available for upgraded Common Data Service (CDS) for Apps environments. 
 1. Allow app users to [open entities in Excel](../common-data-service/data-platform-excel-addin.md) to create, update, and delete data stored within CDS for Apps by using the Excel add-in for PowerApps. 
