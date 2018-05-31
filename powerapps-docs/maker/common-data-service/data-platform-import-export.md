@@ -45,7 +45,7 @@ Every entity has required fields that must exist in your input file. For a more 
 
 ![Example of uploading file to Account entity](./media/data-platform-import-export/upload-account.png)
 
-- Once the file is uploaded and Mapping Status is green, click **Import** in the top right corner. If you encounter errors during mapping, please refere to section below to navigate and fix the mapping errors
+- After the file is uploaded and Mapping Status is green, click **Import** in the top right corner. If you encounter errors during mapping, please refere to section below to navigate and fix the mapping errors
 
 ![Example of successful Mapping status and Import button](./media/data-platform-import-export/success-map-imp.png)
 
