@@ -62,7 +62,7 @@ If you are an advanced user and well versed with the required fields for a given
 
 ## Navigating Mapping errors
 
-If you encounter mapping errors, after uploading your file, click on **Map status* , use the following steps to inspect and rectify the field mapping errors.
+If you encounter mapping errors, after uploading your file, click on **Map status**, use the following steps to inspect and rectify the field mapping errors.
 
 - Use the drop down on the right, under **Show** to walk through the **Unmapped fields** or **Fields with error** or **Required Fields**
 
@@ -76,7 +76,7 @@ If you encounter mapping errors, after uploading your file, click on **Map statu
 ![ Example of inspecting and rectifying warnings with field mappings](./media/data-platform-import-export/inspect-warnings.png)
 
 - Once you have rectified all the errors and/or warnings, click on **Save Changes** in the top right corner which should take you back to the **Import Data** screen
-- Once **Mapping Status** column indicates **Completed** in green, click *Import* in the top right corner
+- Once **Mapping Status** column indicates **Completed** in green, click **Import** in the top right corner
 - Once you get the **Import completed successfully** message, it will show you the total inserts and updates
 
 ## Ensuring uniqueness while importing data into entity from Excel or CSV
@@ -99,13 +99,13 @@ For Account entity, you could set ‘transactioncurrencyid’ as an alternate ke
 
 User can still use primary keys as identifier after specifying alternate keys. So, in the above sample first file is still valid provided GUIDs are valid data.
 
-# Export data to CSV
+## Export data to CSV
 
 You can do a one-time data export from a standard entity or custom entity, and you can export data from more than one entity at a time. If you export data from more than one entity, each entity is exported into its own Microsoft csv file.
 
 1. On [powerapps.com](https://web.powerapps.com/), expand the **Data** section and click or tap **Entities** in the left navigation pane
 1. Select the entity that you want to export data from
-1. Click on the ellipsis or menu at the top and select **Export** and click or tap on **Data*
+1. Click on the ellipsis or menu at the top and select **Export** and click or tap on **Data**
 
     ![Example of exporting data from Account entity](./media/data-platform-import-export/export-account.png)
 
