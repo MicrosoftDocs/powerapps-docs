@@ -107,10 +107,10 @@ You can do a one-time data export from a standard entity or custom entity, and y
 1. Select the entity that you want to export data from
 1. Click on the ellipsis or menu at the top and select **Export** and click or tap on **Data*
 
-![Example of exporting data from Account entity](./media/data-platform-import-export/export-account.png)
+    ![Example of exporting data from Account entity](./media/data-platform-import-export/export-account.png)
 
-[!Note]
-For exporting data from multiple entities, in the menu at the top, select **Export** and click or tap on **Data*. You should be able to choose multiple entities
+> [!NOTE]
+> For exporting data from multiple entities, in the menu at the top, select **Export** and click or tap on **Data*. You should be able to choose multiple entities
 
 1. Once export completes successfully, you should be able to **Download exported data** which should you give you a link to the downloadable CSV file
 
