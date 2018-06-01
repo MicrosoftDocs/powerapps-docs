@@ -109,14 +109,14 @@ You can do a one-time data export from a standard entity or custom entity, and y
 
     ![Example of exporting data from Account entity](./media/data-platform-import-export/export-account.png)
 
-> [!NOTE]
-> For exporting data from multiple entities, in the menu at the top, select **Export** and click or tap on **Data*. You should be able to choose multiple entities
+    > [!NOTE]
+    > For exporting data from multiple entities, in the menu at the top, select **Export** and click or tap on **Data**. You should be able to choose multiple entities
 
 1. Once export completes successfully, you should be able to **Download exported data** which should you give you a link to the downloadable CSV file
 
-![Sample export showing successful export with link downloadable file](./media/data-platform-import-export/export-success.png)
+    ![Sample export showing successful export with link downloadable file](./media/data-platform-import-export/export-success.png)
 
-# Unsupported Data Types
+## Unsupported Data Types
 
 Following data types are currently not supported
 

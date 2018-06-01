@@ -250,6 +250,8 @@
       href: ./common-data-service/data-platform-create-business-rule.md
     - name: Delete a custom entity
       href: ./common-data-service/data-platform-delete-entity.md
+    - name: Import or export data from an entity
+      href: ./common-data-service/data-platform-import-export.md
     - name: Open entity data in Excel
       href: ./common-data-service/data-platform-excel-addin.md
     - name: Create a Power BI report
