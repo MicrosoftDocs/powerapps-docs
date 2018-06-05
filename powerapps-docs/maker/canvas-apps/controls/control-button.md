@@ -1,14 +1,9 @@
 ---
 title: 'Button control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Button control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
