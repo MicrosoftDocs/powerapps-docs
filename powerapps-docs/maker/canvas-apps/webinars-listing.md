@@ -32,7 +32,7 @@ Manas Maheshwari, Senior Program Manager on the PowerApps team comes to share a 
 
 [Click here to watch on June 12th](https://www.youtube.com/watch?v=9Sy_vT5kIts)
 
-**Inside the Universal Audit App: See what PowerApps and Flow are capable of  with Paul Culmsee**
+**Inside the Universal Audit App: See what PowerApps and Flow are capable of by Paul Culmsee**
 <br>by Paul Culmsee
 <br>*June 14th, 6:00PM PST, 9:00PM EST*
 
