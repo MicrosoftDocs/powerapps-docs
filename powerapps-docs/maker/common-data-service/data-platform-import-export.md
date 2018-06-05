@@ -83,14 +83,14 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 
 Common Data Service for Apps entities use a primary key to uniquely identify records within a CDS entity table. The primary key for a CDS entity is a globally unique identifier (GUID). It forms the default basis for record identification. Data operations, like importing data into CDS entities, surface the default primary keys.
 
-Example:
+**Example:**
 The primary key for an **Account** entity is **accountid**.
 
    ![Sample export file from an **Account** entity showing **accountid** as the primary key](./media/data-platform-import-export/export-pk.png)
 
 Sometimes, a primary key might not work when you integrate data from an external source. Use CDS to define alternate keys that uniquely identify a record in place of the primary key.
 
-Example:
+**Example:**
 For an **Account** entity, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.
 
    ![Example of creating an alternate key on a **Currency** entity](./media/data-platform-import-export/create-ak.png)
