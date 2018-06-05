@@ -16,7 +16,7 @@ These webinars can help you to leverage the features and functions of Microsoft 
 
 ## Upcoming webinars ##
 
-**Connector Series | Microsoft StaffHub (Shift Scheduling) Apps with PowerApps**
+**Connector Series | Microsoft StaffHub (Shift Planning) Apps with PowerApps**
 <br>by Marc-André Lépine
 <br>*June 5th, 10:00AM PST, 1:00PM EST*
 <br>

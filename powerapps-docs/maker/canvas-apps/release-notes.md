@@ -1,23 +1,18 @@
 ---
-title: What's new in PowerApps | Microsoft Docs
+title: What's new | Microsoft Docs
 description: Updates to PowerApps, organized by release date
 documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
-ms.date: 04/23/2018
-ms.author: sharik
+ms.date: 05/21/2018
+ms.author: anneta
 
 ---
 # What's new in PowerApps
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
-
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
@@ -28,13 +23,21 @@ Discover the latest updates to our business applications, as well as a host of n
 
 **Coming soon:** We'll keep updating the release notes PDF as features ship, and we'll also make them available on a web page.
 
-## Apr. 23
+## May 30
+1. [Rich-text editor control](controls/control-richtexteditor.md) (experimental) - allows end users to format text inside a WYSIWYG editing area. 
+
+## May 21
+1. Allow app users to import and export data from Excel or CSV files stored locally by using the **Get Data from Excel file** and **Export Data** features now available for upgraded Common Data Service (CDS) for Apps environments. 
+1. Allow app users to [open entities in Excel](../common-data-service/data-platform-excel-addin.md) to create, update, and delete data stored within CDS for Apps by using the Excel add-in for PowerApps. 
+1. [Create and publish Power BI reports](../common-data-service/data-platform-powerbi-connector.md) by using Power BI Desktop connected to CDS for Apps. 
+
+## April 23
 * Download [attachments](controls/control-attachments.md) in Internet Explorer within SharePoint custom list forms.
 
-## Apr. 9
+## April 9
 * Cut (Ctrl+X), copy (Ctrl+C), and paste (Ctrl+V) controls&mdash;including the controls' styles, formulas, and properties&mdash;across apps in a web browser.
 
-## Mar. 21
+## March 21
 1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in Common Data Service for Apps to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
 2. [Create a database](../../administrator/create-database.md) on the latest version of CDS for Apps in an environment.
 3. CDS for Apps now includes:
@@ -46,7 +49,7 @@ Discover the latest updates to our business applications, as well as a host of n
     - Advanced users can access data stored in CDS for Apps through a new **OData Web API**.
     - [Import data](../common-data-service/data-platform-cds-newentity-pq.md) into CDS for Apps with **Power Query**. Use Power Query on the web to directly import data to CDS for Apps from multiple sources
 
-## Mar. 5
+## March 5
 1. Add (and delete) [attachments](controls/control-attachments.md) to SharePoint lists.
 2. Open external [PDF](controls/control-pdf-viewer.md) files in a web browser. (Experimental feature)
 
@@ -70,15 +73,3 @@ Discover the latest updates to our business applications, as well as a host of n
 
 ## Jan. 5
 * Act on data right from your Power BI report or dashboard by integrating a [PowerApps custom visual (preview release)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), which pulls contextual data from your Power BI report.
-
-## Dec. 8
-1. [Condition templates](working-with-rules.md) for rules infer common properties of a control (such as **Text** or **Value**).
-2. Stop displaying the [**Defining actions** confirmation dialog box](working-with-rules.md) when defining rule actions.
-
-## Nov. 13
-1. Select multiple values for the same field in SharePoint lists.
-2. [View and download attachments](controls/control-attachments.md) in SharePoint lists.
-3. [Customize SharePoint list forms](customize-list-form.md) using PowerApps.
-
-## Nov. 10
-* [Rename rules](working-with-rules.md) in an app and show rules when the selected control is in the rule condition.

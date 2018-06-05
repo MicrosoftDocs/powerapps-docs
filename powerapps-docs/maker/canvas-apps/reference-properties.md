@@ -83,6 +83,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Rating](controls/control-rating.md)** – Indicate a value between 1 and a specified number.
 
+**[Rich text editor (experimental)](controls/control-richtexteditor.md)** – Allows rich text formatting by app users.
+
 **[Screen](controls/control-screen.md)** – Show and update data about a specific task.
 
 **[Shape](controls/control-shapes-icons.md)** – Display arrows and geometric shapes, such as rectangles.

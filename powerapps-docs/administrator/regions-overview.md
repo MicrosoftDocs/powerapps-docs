@@ -43,4 +43,3 @@ For optimal performance, if your users are in Europe, create and use the environ
 > [!NOTE]
 > On-premises data gateways aren't available in the India region or in custom environments. You must create gateways in the default environment.
 
-
