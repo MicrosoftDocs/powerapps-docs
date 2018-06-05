@@ -49,7 +49,7 @@ Audrie Gordon from the PowerApps team will share best practices and quick start 
 [Click here to watch on June 26th](https://www.youtube.com/watch?v=ykNRxKvAirg)
 
 ## Past webinars ##
-Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
+Webinars are available on-demand after the live broadcast. Please note that in some cases you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
 
 ### Beginner Webinar Series ###
 **Top 5 Tips for Designing Apps that Mean Business**
