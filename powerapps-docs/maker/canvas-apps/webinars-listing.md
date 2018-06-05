@@ -59,7 +59,7 @@ This is part 3 of a 3-part series:
 **Connector Series | Microsoft StaffHub (Shift Planning) Apps with PowerApps**
 <br>by Marc-André Lépine
 <br>*June 5th, 10:00AM PST, 1:00PM EST*
-
+<br>
 Marc-André Lépine from the PowerApps and Flow Azure Advisors group joins us in this session to discuss how he built an awesome app to complement and extend what's possible using the StaffHub Connector. Later this week, he will show how he extended the Connector using a custom API.  
 
 [Click here to watch on June 5th](https://www.youtube.com/watch?v=LAximnEnKy8)
