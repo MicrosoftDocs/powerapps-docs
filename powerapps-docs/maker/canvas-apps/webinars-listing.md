@@ -56,7 +56,7 @@ This is part 3 of a 3-part series:
 
 [Click here to watch on May 29th](https://www.youtube.com/watch?v=kJ5eTWh7Hyg)
 
-**Connector Series | Microsoft StaffHub (Shift Planning) Apps with PowerApps**
+**Connector Series | Microsoft StaffHub (Shift Scheduling) Apps with PowerApps**
 <br>by Marc-André Lépine
 <br>*June 5th, 10:00AM PST, 1:00PM EST*
 <br>
