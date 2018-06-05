@@ -36,7 +36,7 @@ If you add this control, the user can update a data source with one or more phot
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+**[OnSelect](properties-core.md)** – How the app responds when the user clicks or taps a control.
 
 **OnStream** – How the app responds when the **Stream** property is updated.
 
