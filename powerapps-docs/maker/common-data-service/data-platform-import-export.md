@@ -22,8 +22,8 @@ Every entity has required fields that must exist in your input file. We recommen
 1. Prepare the file template.
 
     - Export the entity data to the CVS file. Follow the steps in **Export data to CSV**.
-    - Define a plan to ensure uniqueness of data. Use either **primary keys** or **Alternate Keys**.
-    - Refer to the next section for instructions to ensure uniqueness before you import data into an entity.
+    - Define a plan to make sure data is unique. Use either **primary keys** or **Alternate Keys**.
+    - Refer to the next section for instructions to make sure data is unique before you import it into an entity.
 
 1. Modify the file with your data.
 
@@ -62,12 +62,12 @@ If you're an advanced user and know the required fields for a given entity for C
 
 ## Navigate mapping errors
 
-If you get mapping errors after uploading your file, select **Map status**. Take the following steps to inspect and rectify the field mapping errors.
+If you get mapping errors after you upload your file, select **Map status**. Take the following steps to inspect and rectify the field mapping errors.
 
 - Use the drop-down menu on the right, under **Show**, to walk through the **Unmapped fields**, **Fields with error**, or **Required Fields**.
 
 > [!TIP]
-> Depending on whether you get a Warning or Error, inspect **Unmapped fields** or **Fields with error** through the drop-down menu in **Field Mappings**.
+> Depending on whether you get a Warning or an Error, inspect **Unmapped fields** or **Fields with error** through the drop-down menu in **Field Mappings**.
 
 ![Example of a partial match due to warnings with field mappings](./media/data-platform-import-export/partial-match.png)
 
@@ -81,17 +81,17 @@ If you get mapping errors after uploading your file, select **Map status**. Take
 
 ## Ensure uniqueness when you import data into an entity from Excel or CSV
 
-Common Data Service for Apps entities use a primary key to uniquely identify records within a CDS entity table. The primary key for a CDS entity is a globally unique identifier (GUID). It forms the default basis for record identification. Data operations like importing data into CDS entities surface the default primary keys.
+Common Data Service for Apps entities use a primary key to uniquely identify records within a CDS entity table. The primary key for a CDS entity is a globally unique identifier (GUID). It forms the default basis for record identification. Data operations, like importing data into CDS entities, surface the default primary keys.
 
-    Example:
-    The primary key for an **Account** entity is **accountid**.
+Example:
+The primary key for an **Account** entity is **accountid**.
 
    ![Sample export file from an **Account** entity showing **accountid** as the primary key](./media/data-platform-import-export/export-pk.png)
 
 Sometimes, a primary key might not work when you integrate data from an external source. Use CDS to define alternate keys that uniquely identify a record in place of the primary key.
 
-    Example:
-    For an **Account** entity, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.
+Example:
+For an **Account** entity, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.
 
    ![Example of creating an alternate key on a **Currency** entity](./media/data-platform-import-export/create-ak.png)
 
