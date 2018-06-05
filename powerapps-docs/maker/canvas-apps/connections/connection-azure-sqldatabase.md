@@ -1,14 +1,9 @@
 ---
 title: Overview of the SQL Server connection | Microsoft Docs
 description: Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database
-documentationcenter: ''
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 07/12/2016
