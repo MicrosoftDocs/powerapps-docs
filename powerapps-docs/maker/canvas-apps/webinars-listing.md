@@ -64,17 +64,6 @@ Marc-André Lépine from the PowerApps and Flow Azure Advisors group joins us in
 
 [Click here to watch on June 5th](https://www.youtube.com/watch?v=LAximnEnKy8)
 
-**Extendability | Building a JSON-Driven Solution with PowerApps and Flow**
-<br>by Marc-André Lépine
-<br>*June 7th, 10:00AM PST, 1:00PM EST*
-
-Marc-André Lépine returns with some extendibility tips to share with us. If you missed his first video  check it out in advance from here:
-https://www.youtube.com/watch?v=LAximnEnKy8
-
-This time Marc demonstrates the "no cliffs" advantage of PowerApps by extending the capability of the StaffHub connector to include his own enterprise requirements via a Custom Connector. (It's truly amazing how easy this is to do, so don't miss this even if you're not a professional developer.) 
-
-[Click here to watch on June 7th](https://www.youtube.com/watch?v=ykNRxKvAirg)
-
 **PowerApps Administration | Frequently Asked Questions**
 <br>by Manas Maheshwari
 <br>*June 12th, 9:30AM PST, 12:30PM EST*
