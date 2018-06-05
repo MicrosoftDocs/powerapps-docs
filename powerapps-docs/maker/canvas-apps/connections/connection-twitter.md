@@ -1,14 +1,9 @@
 ---
 title: Overview of the Twitter connection | Microsoft Docs
 description: See how to connect to Twitter, step through some examples, and see all the functions
-documentationcenter: ''
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 07/12/2017
