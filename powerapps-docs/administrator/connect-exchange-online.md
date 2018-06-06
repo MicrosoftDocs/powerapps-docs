@@ -18,19 +18,19 @@ manager: "brycho"
 ---
 # Connect Dynamics 365 (online) to Exchange Online 
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-With both [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] and [!INCLUDE[pn_Microsoft_Exchange_Online](../../includes/pn-microsoft-exchange-online.md)] hosted as online services, connecting the two is a simpler, more straightforward configuration.  
+With both [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] and [!INCLUDE[pn_Microsoft_Exchange_Online](../includes/pn-microsoft-exchange-online.md)] hosted as online services, connecting the two is a simpler, more straightforward configuration.  
   
 > [!TIP]
-> ![Video symbol](../media/video-thumbnail-4.png "Video symbol") Check out the following video: [Connect Dynamics 365 (online) to Exchange Online using server-side sync](https://go.microsoft.com/fwlink/p/?linkid=836831).  
+> ![Video symbol](media/video-thumbnail-4.png "Video symbol") Check out the following video: [Connect Dynamics 365 (online) to Exchange Online using server-side sync](https://go.microsoft.com/fwlink/p/?linkid=836831).  
   
 > [!IMPORTANT]
-> [!INCLUDE[cc_feature_requires_office_365](../../includes/cc-feature-requires-office-365.md)]  
+> [!INCLUDE[cc_feature_requires_office_365](../includes/cc-feature-requires-office-365.md)]  
   
 <a name="BKMK_GetExchangeReady"></a>   
 ## Get Exchange ready  
- To use [!INCLUDE[pn_Exchange_Online](../../includes/pn-exchange-online.md)] with [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)], you must have an [!INCLUDE[pn_Exchange_Online](../../includes/pn-exchange-online.md)] subscription that comes as part of an [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] subscription or that can be subscribed to separately. For information on [!INCLUDE[pn_Exchange_Online](../../includes/pn-exchange-online.md)], see:  
+ To use [!INCLUDE[pn_Exchange_Online](../includes/pn-exchange-online.md)] with [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], you must have an [!INCLUDE[pn_Exchange_Online](../includes/pn-exchange-online.md)] subscription that comes as part of an [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] subscription or that can be subscribed to separately. For information on [!INCLUDE[pn_Exchange_Online](../includes/pn-exchange-online.md)], see:  
   
 -   [Exchange Online](https://technet.microsoft.com/library/jj200580\(v=exchg.150\).aspx)  
   
@@ -39,19 +39,19 @@ With both [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] and [!INCLU
 -   [Office 365 service comparison](https://technet.microsoft.com/office/dn788955)  
   
 > [!TIP]
->  To make sure you’ve got a good connection to [!INCLUDE[pn_Exchange_Online](../../includes/pn-exchange-online.md)], run the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/). For information on what tests to run, see [Test mail flow with the Remote Connectivity Analyzer](https://technet.microsoft.com/library/dn305950\(v=exchg.150\).aspx).  
+>  To make sure you’ve got a good connection to [!INCLUDE[pn_Exchange_Online](../includes/pn-exchange-online.md)], run the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/). For information on what tests to run, see [Test mail flow with the Remote Connectivity Analyzer](https://technet.microsoft.com/library/dn305950\(v=exchg.150\).aspx).  
   
 <a name="BKMK_VerifyProfile"></a>   
 ## Verify you have the profile: Microsoft Exchange Online  
- If you have an [!INCLUDE[pn_Exchange_Online](../../includes/pn-exchange-online.md)] subscription in the same tenant as your [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)] subscription, [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)] creates a default profile for the email connection: **Microsoft Exchange Online**. To verify this profile:  
+ If you have an [!INCLUDE[pn_Exchange_Online](../includes/pn-exchange-online.md)] subscription in the same tenant as your [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] subscription, [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] creates a default profile for the email connection: **Microsoft Exchange Online**. To verify this profile:  
   
 1.  Go to **Settings** > **Email Configuration** > **Email Server Profiles**.  
   
 2.  Click **Active Email Server Profiles** and check that the **Microsoft Exchange Online** profile is in the list.  
   
- ![Verify the Microsoft Exchange Online profile](../media/exchange-online-profile.png "Verify the Microsoft Exchange Online profile")  
+ ![Verify the Microsoft Exchange Online profile](media/exchange-online-profile.png "Verify the Microsoft Exchange Online profile")  
   
-     If the [!INCLUDE[pn_Microsoft_Exchange_Online](../../includes/pn-microsoft-exchange-online.md)] profile is missing, verify you have an [!INCLUDE[pn_Exchange_Online](../../includes/pn-exchange-online.md)] subscription and that it exists in the same tenant as your [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)] subscription.  
+     If the [!INCLUDE[pn_Microsoft_Exchange_Online](../includes/pn-microsoft-exchange-online.md)] profile is missing, verify you have an [!INCLUDE[pn_Exchange_Online](../includes/pn-exchange-online.md)] subscription and that it exists in the same tenant as your [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] subscription.  
   
 3.  If there are multiple profiles, click the **Microsoft Exchange Online** profile and set it as default.  
   
@@ -63,7 +63,7 @@ With both [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] and [!INCLU
   
 2.  Set the processing and synchronization fields as follows:  
   
-    - **Server Profile**: [!INCLUDE[pn_Microsoft_Exchange_Online](../../includes/pn-microsoft-exchange-online.md)]  
+    - **Server Profile**: [!INCLUDE[pn_Microsoft_Exchange_Online](../includes/pn-microsoft-exchange-online.md)]  
   
     - **Incoming Email**: Server-Side Synchronization or Email Router  
   
@@ -71,7 +71,7 @@ With both [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] and [!INCLU
   
     - **Appointments, Contacts, and Tasks**: Server-Side Synchronization or Email Router  
   
- ![System Settings for server-side synchronization](../media/exchange-online-sss-settings.png "System Settings for server-side synchronization")  
+ ![System Settings for server-side synchronization](media/exchange-online-sss-settings.png "System Settings for server-side synchronization")  
   
 3.  Click **OK**.  
   
@@ -91,9 +91,9 @@ All new users will have these settings applied to their mailbox.
   
 2.  Choose **Active Mailboxes**.  
   
-3.  Select all the mailboxes that you want to associate with the [!INCLUDE[pn_Microsoft_Exchange_Online](../../includes/pn-microsoft-exchange-online.md)] profile, click **Apply Default Email Settings**, verify the settings, and then click **OK**.  
+3.  Select all the mailboxes that you want to associate with the [!INCLUDE[pn_Microsoft_Exchange_Online](../includes/pn-microsoft-exchange-online.md)] profile, click **Apply Default Email Settings**, verify the settings, and then click **OK**.  
   
- ![Apply default email settings](../media/apply-default-email-settings.png "Apply default email settings")  
+ ![Apply default email settings](media/apply-default-email-settings.png "Apply default email settings")  
   
      By default, the mailbox configuration is tested and the mailboxes are enabled when you click **OK**.  
   
@@ -137,7 +137,7 @@ All new users will have these settings applied to their mailbox.
   
 3.  Select the mailboxes you want to test, and then click **Test & Enable Mailboxes**.  
   
-     This tests the incoming and outgoing email configuration of the selected mailboxes and enables them for email processing. If an error occurs in a mailbox, an alert is shown on the Alerts wall of the mailbox and the profile owner. Depending on the nature of the error, [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] tries to process the email again after some time or disables the mailbox for email processing.  
+     This tests the incoming and outgoing email configuration of the selected mailboxes and enables them for email processing. If an error occurs in a mailbox, an alert is shown on the Alerts wall of the mailbox and the profile owner. Depending on the nature of the error, [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] tries to process the email again after some time or disables the mailbox for email processing.  
   
      To see alerts for an individual mailbox, open the mailbox and then under **Common**, click **Alerts**.  
   
@@ -145,7 +145,7 @@ All new users will have these settings applied to their mailbox.
   
      You can find information on recurring issues and other troubleshooting information in [Blog: Test and Enable Mailboxes in Microsoft Dynamics CRM 2015](http://blogs.msdn.com/b/crm/archive/2015/08/31/test-and-enable-mailboxes-in-microsoft-dynamics-crm-2015.aspx) and [Troubleshooting and monitoring server-side synchronization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/troubleshooting-monitoring-server-side-synchronization).  
   
-     Make sure you’ve got a good connection to [!INCLUDE[pn_Exchange_Online](../../includes/pn-exchange-online.md)] by running the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/). For information on what tests to run, see [Test mail flow with the Remote Connectivity Analyzer](https://technet.microsoft.com/library/dn305950\(v=exchg.150\).aspx).  
+     Make sure you’ve got a good connection to [!INCLUDE[pn_Exchange_Online](../includes/pn-exchange-online.md)] by running the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/). For information on what tests to run, see [Test mail flow with the Remote Connectivity Analyzer](https://technet.microsoft.com/library/dn305950\(v=exchg.150\).aspx).  
   
 > [!TIP]
 >  If you’re unable to synchronize contacts, appointments, and tasks for a mailbox, you may want to select the **Sync items with Exchange from this Dynamics 365 org only, even if Exchange was set to sync with a different org** check box. [Read more about this check box](https://docs.microsoft.com/dynamics365/customer-engagement/admin/when-would-want-use-check-box).  
@@ -155,9 +155,9 @@ All new users will have these settings applied to their mailbox.
   
 1.  Go to **Settings** > **Email Configuration** > **Email Server Profiles**.  
   
-2.  Select the [!INCLUDE[pn_Microsoft_Exchange_Online](../../includes/pn-microsoft-exchange-online.md)] profile, and then click **Test & Enable Mailboxes**.  
+2.  Select the [!INCLUDE[pn_Microsoft_Exchange_Online](../includes/pn-microsoft-exchange-online.md)] profile, and then click **Test & Enable Mailboxes**.  
   
-     When you test the email configuration, an asynchronous job runs in the background. It may take a few minutes for the test to be completed. [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] tests the email configuration of all the mailboxes associated with the [!INCLUDE[pn_Microsoft_Exchange_Online](../../includes/pn-microsoft-exchange-online.md)] profile. For the mailboxes configured with server-side synchronization for synchronizing appointments, tasks, and contacts, it also checks to make sure they’re configured properly.  
+     When you test the email configuration, an asynchronous job runs in the background. It may take a few minutes for the test to be completed. [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] tests the email configuration of all the mailboxes associated with the [!INCLUDE[pn_Microsoft_Exchange_Online](../includes/pn-microsoft-exchange-online.md)] profile. For the mailboxes configured with server-side synchronization for synchronizing appointments, tasks, and contacts, it also checks to make sure they’re configured properly.  
   
 > [!TIP]
 >  If you’re unable to synchronize contacts, appointments, and tasks for a mailbox, you may want to select the **Sync items with Exchange from this Dynamics 365 org only, even if Exchange was set to sync with a different org** check box. [Read more about this check box](https://docs.microsoft.com/dynamics365/customer-engagement/admin/when-would-want-use-check-box).  

@@ -18,9 +18,9 @@ manager: "brycho"
 ---
 # Manage teams
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-Using teams in [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] is optional. However, teams provide an easy way to share business objects and let you collaborate with other people across business units. While a team belongs to one business unit, it can include users from other business units. You can associate a user with more than one team.  
+Using teams in [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] is optional. However, teams provide an easy way to share business objects and let you collaborate with other people across business units. While a team belongs to one business unit, it can include users from other business units. You can associate a user with more than one team.  
   
  You can use two types of teams:  
   
@@ -36,7 +36,7 @@ Using teams in [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] is
   
 -   Your organization’s policies require the ability for records to be owned by entities other than users, such as the team entity.  
   
--   The number of teams is known at the design time of your [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] system.  
+-   The number of teams is known at the design time of your [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] system.  
   
 -   Daily reporting on progress by owning teams is required.  
   
@@ -44,7 +44,7 @@ Using teams in [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] is
   
 -   The teams are dynamically formed and dissolved. This typically happens if the clear criteria for defining the teams, such as established territory, product, or volume are not provided.  
   
--   The number of teams is not known at the design time of your [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] system.  
+-   The number of teams is not known at the design time of your [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] system.  
   
 -   The team members require different access rights on the records. You can share a record with several access teams, each team providing different access rights on the record. For example, one team is granted the Read access right on the account and another team, the Read, Write, and Share access rights on the same account.  
   
@@ -58,22 +58,22 @@ Using teams in [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] is
   
  If an owner team doesn’t own records and doesn’t have security roles assigned to the team, it can be converted to an access team. It is a one-way conversion. You can’t convert the access team back to the owner team. During conversion, all queues and mailboxes associated with the team are deleted. When you create a team in the Web application, you have to choose the team type **Owner**.  
   
- [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Assign a record to a user or team](https://docs.microsoft.com/dynamics365/customer-engagement/basics/assign-record-user-team)  
+ [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Assign a record to a user or team](https://docs.microsoft.com/dynamics365/customer-engagement/basics/assign-record-user-team)  
  
 <a name="CreateTeam"></a>   
 ## Create a team  
   
-1. [!INCLUDE[proc_permissions_mgr_vp_sys_admin_sys_cust](../../includes/proc-permissions-mgr-vp-sys-admin-sys-cust.md)]  
+1. [!INCLUDE[proc_permissions_mgr_vp_sys_admin_sys_cust](../includes/proc-permissions-mgr-vp-sys-admin-sys-cust.md)]  
   
     Check your security role  
   
-    - [!INCLUDE[proc_follow_steps_in_link](../../includes/proc-follow-steps-in-link.md)]  
+    - [!INCLUDE[proc_follow_steps_in_link](../includes/proc-follow-steps-in-link.md)]  
   
     -   Don’t have the correct permissions? Contact your system administrator.  
   
 2.  Go to **Settings > Security**.  
   
-     (In [!INCLUDE[pn_microsoft_dynamics_crm_for_outlook](../../includes/pn-microsoft-dynamics-crm-for-outlook.md)], go to **Settings > System > Security**.)  
+     (In [!INCLUDE[pn_microsoft_dynamics_crm_for_outlook](../includes/pn-microsoft-dynamics-crm-for-outlook.md)], go to **Settings > System > Security**.)  
   
 3.  Click **Teams**.  
   
@@ -84,17 +84,17 @@ Using teams in [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] is
 <a name="EditTeam"></a>   
 ## Edit a team  
   
-1. [!INCLUDE[proc_permissions_mgr_vp_sys_admin_sys_cust](../../includes/proc-permissions-mgr-vp-sys-admin-sys-cust.md)]  
+1. [!INCLUDE[proc_permissions_mgr_vp_sys_admin_sys_cust](../includes/proc-permissions-mgr-vp-sys-admin-sys-cust.md)]  
   
     Check your security role  
   
-    - [!INCLUDE[proc_follow_steps_in_link](../../includes/proc-follow-steps-in-link.md)]  
+    - [!INCLUDE[proc_follow_steps_in_link](../includes/proc-follow-steps-in-link.md)]  
   
     -   Don’t have the correct permissions? Contact your system administrator.  
   
 2.  Go to **Settings > Security**.  
   
-     (In [!INCLUDE[pn_crm_for_outlook_short](../../includes/pn-crm-for-outlook-short.md)], go to **Settings > System > Security**.)  
+     (In [!INCLUDE[pn_crm_for_outlook_short](../includes/pn-crm-for-outlook-short.md)], go to **Settings > System > Security**.)  
   
 3.  Click **Teams**.  
   
@@ -121,7 +121,7 @@ Using teams in [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] is
   
 <a name="MaxSettings"></a>   
 ## Maximum settings for system-managed access teams  
- The maximum number of team templates that you can create for an entity is specified in the `MaxAutoCreatedAccessTeamsPerEntity` deployment setting. The default value is 2. The maximum number of entities that you can enable for auto-created access teams is specified in the `MaxEntitiesEnabledForAutoCreatedAccessTeams` deployment setting. The default value is 5. You can use the `Set-CrmSetting`[!INCLUDE[pn_PowerShell](../../includes/pn-powershell.md)] command to update this value. <!--[!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [TeamSettings](Update%20deployment%20configuration%20settings.md#team) or -->   
+ The maximum number of team templates that you can create for an entity is specified in the `MaxAutoCreatedAccessTeamsPerEntity` deployment setting. The default value is 2. The maximum number of entities that you can enable for auto-created access teams is specified in the `MaxEntitiesEnabledForAutoCreatedAccessTeams` deployment setting. The default value is 5. You can use the `Set-CrmSetting`[!INCLUDE[pn_PowerShell](../includes/pn-powershell.md)] command to update this value. <!--[!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [TeamSettings](Update%20deployment%20configuration%20settings.md#team) or -->   
   
 ### See also  
  [Manage security, users and teams](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-security-users-and-teams)<br /> 

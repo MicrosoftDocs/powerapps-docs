@@ -19,4 +19,4 @@ manager: "brycho"
 # System Settings - Features
 
 > [!NOTE]
-> ![This page is under construction. Check back soon!](../media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
+> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]

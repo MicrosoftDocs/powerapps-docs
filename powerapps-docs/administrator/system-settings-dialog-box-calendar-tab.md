@@ -18,28 +18,28 @@ manager: "brycho"
 ---
 # System Settings dialog box - Calendar tab
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-Use the settings on this page to configure calendar settings for [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)].  
+Use the settings on this page to configure calendar settings for [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)].  
   
 ## Open the Calendar System Settings dialog box (if it isn’t already open)  
   
-1. [!INCLUDE[proc_permissions_system_admin_and_customizer](../../includes/proc-permissions-system-admin-and-customizer.md)]  
+1. [!INCLUDE[proc_permissions_system_admin_and_customizer](../includes/proc-permissions-system-admin-and-customizer.md)]  
   
     Check your security role  
   
-    - [!INCLUDE[proc_follow_steps_in_link](../../includes/proc-follow-steps-in-link.md)]  
+    - [!INCLUDE[proc_follow_steps_in_link](../includes/proc-follow-steps-in-link.md)]  
   
-    - [!INCLUDE[proc_dont_have_correct_permissions](../../includes/proc-dont-have-correct-permissions.md)]  
+    - [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_administration](../../includes/proc-settings-administration.md)]  
+2. [!INCLUDE[proc_settings_administration](../includes/proc-settings-administration.md)]  
   
 3.  Go to **System Settings** > **Calendar** tab.  
   
 |Settings|Description|  
 |--------------|-----------------|  
 |**Set scheduling options**||  
-|Maximum duration of an appointment in days|[!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] users can create appointments to meet or talk to customers. Users create these appointments on the Service Calendar or in the Activities area.<br /><br /> You can use this setting to control the maximum number of days that your users can schedule an appointment for. The default is 10 days.|  
+|Maximum duration of an appointment in days|[!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] users can create appointments to meet or talk to customers. Users create these appointments on the Service Calendar or in the Activities area.<br /><br /> You can use this setting to control the maximum number of days that your users can schedule an appointment for. The default is 10 days.|  
   
 ### See also  
  [Create or edit an appointment](https://docs.microsoft.com/dynamics365/customer-engagement/basics/create-edit-appointment)

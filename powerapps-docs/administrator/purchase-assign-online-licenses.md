@@ -19,18 +19,18 @@ manager: "brycho"
 # Purchase and assign Dynamics 365 (online) licenses
 
 > [!NOTE]
-> ![This page is under construction. Check back soon!](../media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
+> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-[!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)] introduces a new licensing model with choices that extend to pricing with [!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)]. Get monthly plans—with apps packaged for savings—or standalone applications. Opt for full or light use. And select the edition that meets the needs of your large or small business, now and down the road.  
+[!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)] introduces a new licensing model with choices that extend to pricing with [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)]. Get monthly plans—with apps packaged for savings—or standalone applications. Opt for full or light use. And select the edition that meets the needs of your large or small business, now and down the road.  
   
 > [!TIP]
 >  Get started with the following resources:  
 >   
 > -   [Important information for CRM Online customers](https://docs.microsoft.com/dynamics365/customer-engagement/admin/important-information-customers)  
 > -   Download: [Dynamics 365 Enterprise Edition Licensing Guide](http://download.microsoft.com/documents/en-us/dynamics/pricing/Dynamics_365_Enterprise_edition_Licensing_Guide.pdf)  
-> - ![Video symbol](../media/video-thumbnail-4.png "Video symbol") Video: [How to buy Dynamics 365](https://www.youtube.com/embed/WOacBzpHwGU?rel=0)  
+> - ![Video symbol](media/video-thumbnail-4.png "Video symbol") Video: [How to buy Dynamics 365](https://www.youtube.com/embed/WOacBzpHwGU?rel=0)  
 > -   [Dynamics 365 Pricing](https://www.microsoft.com/en-us/dynamics365/pricing)  
 > -   Download: [The Dynamics CRM Online pricing and licensing guide](http://aka.ms/gtn5wt)  
   
@@ -41,13 +41,13 @@ manager: "brycho"
   
 2.  Click **Billing** > **Purchase Services**.  
   
- ![Office 365 Purchase Services](../media/office-365-purchase-services.png "Office 365 Purchase Services")  
+ ![Office 365 Purchase Services](media/office-365-purchase-services.png "Office 365 Purchase Services")  
   
-3.  Select the subscription that best fits your company's [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] needs.  
+3.  Select the subscription that best fits your company's [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] needs.  
   
 4.  Click **Buy now** and then follow the steps to purchase a new license.  
   
- ![Dynamics 365 Sales Plan buy now](../media/dynamics-365-sales-plan-buy-now.png "Dynamics 365 Sales Plan buy now")  
+ ![Dynamics 365 Sales Plan buy now](media/dynamics-365-sales-plan-buy-now.png "Dynamics 365 Sales Plan buy now")  
   
 <a name="BKMK_AssignLicense"></a>  
  
@@ -59,19 +59,19 @@ manager: "brycho"
   
 3.  Select multiple users, and then click **Edit product licenses**.  
   
- ![Edit product licenses for multiple users](../media/edit-product-licenses-multiple-users.png "Edit product licenses for multiple users")  
+ ![Edit product licenses for multiple users](media/edit-product-licenses-multiple-users.png "Edit product licenses for multiple users")  
   
 4.  Click **Replace existing product license assignments**, and then click **Next**.  
   
-5.  Turn on the license for your [!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)] plan.  
+5.  Turn on the license for your [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)] plan.  
   
- ![Dynamics 365 Customer Engagement Plan Enterprise Edition license](../media/dynamics-365-plan-1-enterprise-edition-license.png "Dynamics 365 Customer Engagement Plan Enterprise Edition license")  
+ ![Dynamics 365 Customer Engagement Plan Enterprise Edition license](media/dynamics-365-plan-1-enterprise-edition-license.png "Dynamics 365 Customer Engagement Plan Enterprise Edition license")  
   
 6.  Click **Replace**, and then click **Close** twice.  
   
 7.  Review the license status on the Active users page and make other assignments as needed.  
   
- ![Active users page](../media/active-users-page.png "Active users page")  
+ ![Active users page](media/active-users-page.png "Active users page")  
 
 ## PowerApps licensing
 

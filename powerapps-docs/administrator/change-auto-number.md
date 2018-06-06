@@ -18,9 +18,9 @@ manager: "brycho"
 ---
 # Change auto-numbering prefixes for contracts, cases, articles, quotes, orders, invoices, campaigns, categories, and knowledge articles
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-Contracts, cases, articles, quotes, orders, invoices, marketing campaigns, categories, and knowledge articles (the new Knowledge Article entity introduced in [!INCLUDE[pn_crm_online_2016_update](../../includes/pn-crm-online-2016-update.md)] and [!INCLUDE[pn_crm_2016](../../includes/pn-crm-2016.md)]) are automatically numbered by [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)]. If your organization has standard numbering formats, you can change the default three-character prefixes and number format to match your organization.  
+Contracts, cases, articles, quotes, orders, invoices, marketing campaigns, categories, and knowledge articles (the new Knowledge Article entity introduced in [!INCLUDE[pn_crm_online_2016_update](../includes/pn-crm-online-2016-update.md)] and [!INCLUDE[pn_crm_2016](../includes/pn-crm-2016.md)]) are automatically numbered by [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)]. If your organization has standard numbering formats, you can change the default three-character prefixes and number format to match your organization.  
   
 1.  Go to **Settings** > **Administration** > **Auto-Numbering**.  
   

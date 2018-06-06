@@ -19,38 +19,38 @@ manager: "brycho"
 # Sign in to Customer Engagement and Office 365 apps
 
 > [!NOTE]
-> ![This page is under construction. Check back soon!](../media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
+> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-There are multiple ways to sign in and access your Dynamics and [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] apps. You can sign in by using the [!INCLUDE[pn_office_365_admin_center](../../includes/pn-office-365-admin-center.md)], or sign in directly. For [!INCLUDE[pn_crm_8_2_0_online](../../includes/pn-crm-8-2-0-online.md)], we're introducing the [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] home page which you can also sign in to directly.  
+There are multiple ways to sign in and access your Dynamics and [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] apps. You can sign in by using the [!INCLUDE[pn_office_365_admin_center](../includes/pn-office-365-admin-center.md)], or sign in directly. For [!INCLUDE[pn_crm_8_2_0_online](../includes/pn-crm-8-2-0-online.md)], we're introducing the [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] home page which you can also sign in to directly.  
   
 > [!TIP]
 >  Admins: Be sure to share this information with your end users.  
 >   
->  You can troubleshoot issues with signing in to [!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)] using the Support and Recovery Assistant for Office 365. For more information, see the blog [New diagnostic scenario for web sign-in](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/archive/2016/11/15/new-diagnostic-scenario-for-web-sign-in).  
+>  You can troubleshoot issues with signing in to [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)] using the Support and Recovery Assistant for Office 365. For more information, see the blog [New diagnostic scenario for web sign-in](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/archive/2016/11/15/new-diagnostic-scenario-for-web-sign-in).  
   
 <a name="BKMK_PortalSignIn"></a>   
 ## Signing in to https://portal.office.com  
- For admins and end users, when you sign in to https://portal.office.com, you will go to the [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] Welcome page. The tiles that appear on the Welcome page depend on what licenses you have. For example, if you have licenses for [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] and [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)], you'll see tiles for [!INCLUDE[pn_MS_Office](../../includes/pn-ms-office.md)] apps like [!INCLUDE[pn_ms_Word_short](../../includes/pn-ms-word-short.md)], [!INCLUDE[pn_onedrive](../../includes/pn-onedrive.md)], and [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)], as well as a tile for [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)].  
+ For admins and end users, when you sign in to https://portal.office.com, you will go to the [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] Welcome page. The tiles that appear on the Welcome page depend on what licenses you have. For example, if you have licenses for [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] and [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], you'll see tiles for [!INCLUDE[pn_MS_Office](../includes/pn-ms-office.md)] apps like [!INCLUDE[pn_ms_Word_short](../includes/pn-ms-word-short.md)], [!INCLUDE[pn_onedrive](../includes/pn-onedrive.md)], and [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)], as well as a tile for [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)].  
   
- ![Office 365 welcome page](../media/office-365-welcome-page.png "Office 365 welcome page")  
+ ![Office 365 welcome page](media/office-365-welcome-page.png "Office 365 welcome page")  
   
- Click the [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] tile to go to the [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] Home page. See [For admins and end users: Introducing the Dynamics 365 home page](quickly-navigate-office-365-app-launcher.md#BKMK_IntroD365HomePage).  
+ Click the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] tile to go to the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] Home page. See [For admins and end users: Introducing the Dynamics 365 home page](quickly-navigate-office-365-app-launcher.md#BKMK_IntroD365HomePage).  
   
- If you're a [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] system administrator, you'll see an **Admin** tile. Click this tile to get to the [!INCLUDE[pn_office_365_admin_center](../../includes/pn-office-365-admin-center.md)], where you can see your service health, manage users, manage licenses, and more for all the online services associated with your account.  
+ If you're a [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] system administrator, you'll see an **Admin** tile. Click this tile to get to the [!INCLUDE[pn_office_365_admin_center](../includes/pn-office-365-admin-center.md)], where you can see your service health, manage users, manage licenses, and more for all the online services associated with your account.  
   
- ![Admin tile on the Office 365 welcome page](../media/admin-tile-office-365-welcome-page.png "Admin tile on the Office 365 welcome page")  
+ ![Admin tile on the Office 365 welcome page](media/admin-tile-office-365-welcome-page.png "Admin tile on the Office 365 welcome page")  
   
- From there, you can get to the [!INCLUDE[pn_dyn_365_admin_center](../../includes/pn-dyn-365-admin-center.md)]. Click **Admin centers** > **Dynamics 365**.  
+ From there, you can get to the [!INCLUDE[pn_dyn_365_admin_center](../includes/pn-dyn-365-admin-center.md)]. Click **Admin centers** > **Dynamics 365**.  
   
- ![Dynamics 365 option in the Admin center drop-down list](../media/click-admin-centers-dynamics-365.png "Dynamics 365 option in the Admin center drop-down list")  
+ ![Dynamics 365 option in the Admin center drop-down list](media/click-admin-centers-dynamics-365.png "Dynamics 365 option in the Admin center drop-down list")  
   
- For other ways to access Dynamics and [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] apps, see [Quickly navigate with the Office 365 app launcher and the Dynamics 365 home page](quickly-navigate-office-365-app-launcher.md).  
+ For other ways to access Dynamics and [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] apps, see [Quickly navigate with the Office 365 app launcher and the Dynamics 365 home page](quickly-navigate-office-365-app-launcher.md).  
   
 <a name="BKMK_DirectAdminCenter"></a>   
 ## Direct sign in to the Dynamics 365 Administration Center  
- Some [!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)] admin or Office 365 admin roles might be unable to access the [!INCLUDE[pn_dyn_365_admin_center](../../includes/pn-dyn-365-admin-center.md)] after signing in to https://portal.office.com. Use the following steps to directly navigate to the [!INCLUDE[pn_dyn_365_admin_center](../../includes/pn-dyn-365-admin-center.md)] and manage your [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)] instance.  
+ Some [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)] admin or Office 365 admin roles might be unable to access the [!INCLUDE[pn_dyn_365_admin_center](../includes/pn-dyn-365-admin-center.md)] after signing in to https://portal.office.com. Use the following steps to directly navigate to the [!INCLUDE[pn_dyn_365_admin_center](../includes/pn-dyn-365-admin-center.md)] and manage your [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] instance.  
   
 1.  Go to https://port.\<region>.dynamics.com/G/instances/InstancePicker.aspx  
   
@@ -70,17 +70,17 @@ There are multiple ways to sign in and access your Dynamics and [!INCLUDE[pn_Off
   
      For Germany (DEU), use the following: https://port.crm.microsoftdynamics.de/g/instances.instancepicker.aspx.  
   
-2.  Sign in with your [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)] admin credentials.  
+2.  Sign in with your [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] admin credentials.  
   
 <a name="BKMK_DirectHomePage"></a>   
 ## Direct sign in to the Dynamics 365 home page  
- We have a new [!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)] home page for you to use  to manage and open [!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)] apps. You can sign in to this page directly using your [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] (or Active Directory) credentials with this URL: https://home.dynamics.com  
+ We have a new [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)] home page for you to use  to manage and open [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)] apps. You can sign in to this page directly using your [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] (or Active Directory) credentials with this URL: https://home.dynamics.com  
   
- For information on the [!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)] home page, see: [For admins and end users: Introducing the Dynamics 365 home page](quickly-navigate-office-365-app-launcher.md#BKMK_IntroD365HomePage).  
+ For information on the [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)] home page, see: [For admins and end users: Introducing the Dynamics 365 home page](quickly-navigate-office-365-app-launcher.md#BKMK_IntroD365HomePage).  
   
 <a name="BKMK_directsignin"></a>   
 ## Direct sign in to Dynamics 365 (online)  
- To directly sign in to the [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)] service, use:  
+ To directly sign in to the [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] service, use:  
   
  https://\<organization>.crm.dynamics.com  
   
@@ -99,21 +99,21 @@ There are multiple ways to sign in and access your Dynamics and [!INCLUDE[pn_Off
   
  For Germany (DEU), use the following: [https://\<organization>.crm.microsoftdynamics.de](https://<organization>.crm.microsoftdynamics.de).  
   
- Your user name depends on whether your organization uses the standard [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] domain (for example, username@contoso.onmicrosoft.com) or you have a custom domain (for example, username@contoso.com).  
+ Your user name depends on whether your organization uses the standard [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] domain (for example, username@contoso.onmicrosoft.com) or you have a custom domain (for example, username@contoso.com).  
   
- [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] administrators can provide the URL and sign-in information.  
+ [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] administrators can provide the URL and sign-in information.  
   
 <a name="BKMK_social"></a>   
 ## Direct sign in to Social Engagement  
- To directly sign in to the [!INCLUDE[pn_netbreeze_long](../../includes/pn-social-engagement-long.md)] service, use:  
+ To directly sign in to the [!INCLUDE[pn_netbreeze_long](../includes/pn-social-engagement-long.md)] service, use:  
   
  https://listening.microsoft.com/app/\<appID>  
   
- This URL, which includes the appID, is sent to the [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] administrator in an email invitation.  
+ This URL, which includes the appID, is sent to the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] administrator in an email invitation.  
   
- Your user name depends on whether your organization uses the standard [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] domain (for example, username@contoso.onmicrosoft.com) or you have a custom domain (for example, username@contoso.com).  
+ Your user name depends on whether your organization uses the standard [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] domain (for example, username@contoso.onmicrosoft.com) or you have a custom domain (for example, username@contoso.com).  
   
- [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] administrators can provide the URL and sign-in information.  
+ [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] administrators can provide the URL and sign-in information.  
   
 ### See also  
  [Quickly navigate with the Office 365 app launcher and the Dynamics 365 home page](quickly-navigate-office-365-app-launcher.md)   

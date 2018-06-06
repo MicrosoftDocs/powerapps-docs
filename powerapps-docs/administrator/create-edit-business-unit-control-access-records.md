@@ -18,13 +18,13 @@ manager: "brycho"
 ---
 # Create or edit a business unit to control access to records
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
 A business unit is a logical grouping of related business activities. Use business units together with security roles to control data access so people see just the information they need to do their jobs.  
   
  Keep the following in mind when creating business units:  
   
--   The organization (also known as the root business unit) is the top level of a [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] business unit hierarchy. [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] automatically creates the organization when you install or provision [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)]. You can’t change or delete the organization name.  
+-   The organization (also known as the root business unit) is the top level of a [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] business unit hierarchy. [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] automatically creates the organization when you install or provision [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)]. You can’t change or delete the organization name.  
   
 -   Each business unit can have just one parent business unit.  
   
@@ -41,21 +41,21 @@ A business unit is a logical grouping of related business activities. Use busine
   
     Check your security role  
   
-    1. [!INCLUDE[proc_follow_steps_in_link](../../includes/proc-follow-steps-in-link.md)]  
+    1. [!INCLUDE[proc_follow_steps_in_link](../includes/proc-follow-steps-in-link.md)]  
   
-    2. [!INCLUDE[proc_dont_have_correct_permissions](../../includes/proc-dont-have-correct-permissions.md)]  
+    2. [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_security](../../includes/proc-settings-security.md)]  
+2. [!INCLUDE[proc_settings_security](../includes/proc-settings-security.md)]  
   
 3.  Choose **Business Units**.  
   
 4.  On the Actions bar, choose **New**.  
   
-5.  In the **Business Unit** dialog box, type a name for the new business unit. [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] automatically fills in the **Parent Business** field with the name of the root business unit.  
+5.  In the **Business Unit** dialog box, type a name for the new business unit. [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] automatically fills in the **Parent Business** field with the name of the root business unit.  
   
- ![Business Unit dialog box in Dynamics 365](../media/business-unit-dialog-box.png "Business Unit dialog box in Dynamics 365")  
+ ![Business Unit dialog box in Dynamics 365](media/business-unit-dialog-box.png "Business Unit dialog box in Dynamics 365")  
   
-6.  If you want to change the parent business unit, choose the **Lookup** button ![Lookup button](../media/lookup-button-4.gif "Lookup button"), choose **Look Up More Records**, and then do one of the following:  
+6.  If you want to change the parent business unit, choose the **Lookup** button ![Lookup button](media/lookup-button-4.gif "Lookup button"), choose **Look Up More Records**, and then do one of the following:  
   
     -   Select an existing business unit from the list, and then choose **Add**.  
   
@@ -78,11 +78,11 @@ A business unit is a logical grouping of related business activities. Use busine
   
     Check your security role  
   
-    1. [!INCLUDE[proc_follow_steps_in_link](../../includes/proc-follow-steps-in-link.md)]  
+    1. [!INCLUDE[proc_follow_steps_in_link](../includes/proc-follow-steps-in-link.md)]  
   
-    2. [!INCLUDE[proc_dont_have_correct_permissions](../../includes/proc-dont-have-correct-permissions.md)]  
+    2. [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_security](../../includes/proc-settings-security.md)]  
+2. [!INCLUDE[proc_settings_security](../includes/proc-settings-security.md)]  
   
 3.  Choose **Business Units**.  
   
@@ -98,7 +98,7 @@ A business unit is a logical grouping of related business activities. Use busine
     -   Choose **Actions** on the Actions bar, and then select a command. For example, to change the parent business unit, choose **Actions**, and then choose **Change Parent Business**.  
   
         > [!NOTE]
-        >  When you change the parent business unit, [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] removes security roles for users and teams associated with the business unit. You must reassign them.  
+        >  When you change the parent business unit, [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] removes security roles for users and teams associated with the business unit. You must reassign them.  
   
     -   Under **Organization**, choose a record type to see a list of related records. For example, choose **Users** to view a list of users in the selected business unit or to add users to the business unit.  
   

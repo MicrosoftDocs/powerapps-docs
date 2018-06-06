@@ -19,9 +19,9 @@ ms.assetid: 0b050a02-7654-4c0d-803b-1c2c74711230
 
 # Set when your business is closed (Customer Service)
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
-Prevent scheduling resources on holidays and other nonworking days by defining business closures in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)]. You can set both the days and times that your organization will be closed. 
+Prevent scheduling resources on holidays and other nonworking days by defining business closures in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)]. You can set both the days and times that your organization will be closed. 
 
 > [!IMPORTANT]
 > Service scheduling has been deprecated. For more information, see [Important changes coming](https://docs.microsoft.com/en-us/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming).
@@ -30,11 +30,11 @@ Prevent scheduling resources on holidays and other nonworking days by defining b
   
     #### Check your security role  
   
-    - [!INCLUDE[proc_follow_steps_in_link](../../includes/proc-follow-steps-in-link.md)]  
+    - [!INCLUDE[proc_follow_steps_in_link](../includes/proc-follow-steps-in-link.md)]  
   
-    - [!INCLUDE[proc_dont_have_correct_permissions](../../includes/proc-dont-have-correct-permissions.md)]  
+    - [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_service_management](../../includes/proc-settings-service-management.md)]  
+2. [!INCLUDE[proc_settings_service_management](../includes/proc-settings-service-management.md)]  
   
 3.  Click **Business Closure**.  
   
@@ -52,9 +52,9 @@ Prevent scheduling resources on holidays and other nonworking days by defining b
   
     2.  In the **Start Time** and **End Time** boxes, enter the start and end date for the closure.  
   
-    3.  If you want to enter duration instead of an end time, select the length of the closure in the **Duration** box. [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] automatically calculates the end time for you.  
+    3.  If you want to enter duration instead of an end time, select the length of the closure in the **Duration** box. [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] automatically calculates the end time for you.  
   
-    4.  If the closure is an all-day event, select the **All Day Event** check box. [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] automatically enters the duration of *1 day*.  
+    4.  If the closure is an all-day event, select the **All Day Event** check box. [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] automatically enters the duration of *1 day*.  
   
          If you want to enter a specific time period, clear the **All Day Event** check box. You can then specify the hours during which your organization will be closed.  
   

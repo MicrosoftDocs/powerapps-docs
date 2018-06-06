@@ -17,12 +17,12 @@ manager: "brycho"
 ---
 # Import contacts
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
-Whether your contacts are stored in an email program, a spreadsheet, or on your phone, here’s how to import them into [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] so you have all your business contact information in [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)].  
+Whether your contacts are stored in an email program, a spreadsheet, or on your phone, here’s how to import them into [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] so you have all your business contact information in [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)].  
 
 > [!TIP]
->  You can also use the new [!INCLUDE[pn_data_loader_service](../../includes/pn-data-loader-service.md)] (preview feature) to import bulk data. [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Preview feature: Import bulk data with the Data Loader](https://docs.microsoft.com/dynamics365/customer-engagement/admin/import-bulk-data-data-loader)  
+>  You can also use the new [!INCLUDE[pn_data_loader_service](../includes/pn-data-loader-service.md)] (preview feature) to import bulk data. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Preview feature: Import bulk data with the Data Loader](https://docs.microsoft.com/dynamics365/customer-engagement/admin/import-bulk-data-data-loader)  
   
 ## Step 1: Get your import file ready  
 First, you export your contacts into a file. These file formats are supported:  
@@ -80,14 +80,14 @@ Next, follow the procedure for the program or location where your contacts are s
 
 Use a USB cable or an app to export your contacts from your phone to your computer.
   
-To find specific steps to export contacts for your brand of phone, search for “export contacts from my phone” in your favorite search engine (like [!INCLUDE[pn_bing](../../includes/pn-bing.md)]).  
+To find specific steps to export contacts for your brand of phone, search for “export contacts from my phone” in your favorite search engine (like [!INCLUDE[pn_bing](../includes/pn-bing.md)]).  
   
 To find an app, search your phone’s online store.  
   
 ## Step 2: Import the file  
  You’ll use the **Import Data** wizard to import your contacts.  
   
-1. [!INCLUDE[proc_settings_datamanagement](../../includes/proc-settings-datamanagement.md)]  
+1. [!INCLUDE[proc_settings_datamanagement](../includes/proc-settings-datamanagement.md)]  
   
 2.  Click **Imports**.  
   
@@ -105,9 +105,9 @@ To find an app, search your phone’s online store.
   
 6.  Select **Default (Automatic Mapping)** for the System Data Map. Click **Next**.  
   
-7.  In the [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)]**Record Types** drop-down list, select **Contacts**. Click **Next**.  
+7.  In the [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)]**Record Types** drop-down list, select **Contacts**. Click **Next**.  
   
-8.  For any record type with an alert icon, map the column from your contacts file to the corresponding field in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)]. Click **OK**, and then click **Next**.  
+8.  For any record type with an alert icon, map the column from your contacts file to the corresponding field in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)]. Click **OK**, and then click **Next**.  
   
 9. Review the summary, and then click **Next**.  
   
@@ -118,7 +118,7 @@ To find an app, search your phone’s online store.
 ## Step 3: Check that the contacts imported successfully  
  After the wizard finishes, check your list of contacts to make sure they imported correctly.  
   
-1.  Select your role (either Sales, Service, or Marketing). [!INCLUDE[proc_contacts](../../includes/proc-contacts.md)]  
+1.  Select your role (either Sales, Service, or Marketing). [!INCLUDE[proc_contacts](../includes/proc-contacts.md)]  
   
 2.  Scroll through the contact list. Check that each person is listed and verify the contents of the fields for accuracy.
 
