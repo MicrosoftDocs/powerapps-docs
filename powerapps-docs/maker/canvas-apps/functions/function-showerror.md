@@ -1,14 +1,9 @@
 ---
 title: ShowError function | Microsoft Docs
 description: Reference information, including syntax and examples, for the ShowError function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 06/05/2018
@@ -62,7 +57,7 @@ Note: This function was previously named **ShowError** when it could only displa
 
 	Each time the button is clicked, the message **Hello, World** is displayed to the user as informational.
 
-	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resuling Hello, World message as a blue banner message for the user](media/function-showerror/hello-world.png)
+	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a blue banner message for the user](media/function-showerror/hello-world.png)
 
 4. Change the type of message to indicate an error.  Add a second argument to our formula:
 
@@ -72,7 +67,7 @@ Note: This function was previously named **ShowError** when it could only displa
 
 	Now each time the button is clicked, the message **Hello, World** is displayed to the user as an error.
 
-	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resuling Hello, World message as a red banner message for the user](media/function-showerror/hello-world-error.png)
+	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a red banner message for the user](media/function-showerror/hello-world-error.png)
 
 4. Change the type of message to indicate a warning.  Change the second argument in our formula:
 
@@ -82,7 +77,7 @@ Note: This function was previously named **ShowError** when it could only displa
 
 	Now each time the button is clicked, the message **Hello, World** is displayed to the user as a warning.
 
-	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resuling Hello, World message as an orange banner message for the user](media/function-showerror/hello-world-warning.png)
+	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as an orange banner message for the user](media/function-showerror/hello-world-warning.png)
 
 4. Change the type of message to indicate success.  Change the second argument in our formula:
 
@@ -92,4 +87,4 @@ Note: This function was previously named **ShowError** when it could only displa
 
 	Now each time the button is clicked, the message **Hello, World** is displayed to the user as success.
 
-	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resuling Hello, World message as a green banner message for the user](media/function-showerror/hello-world-success.png)
+	![In the authoring environment, showing Button.OnSelect calling Notify and displaying the resulting Hello, World message as a green banner message for the user](media/function-showerror/hello-world-success.png)
