@@ -36,7 +36,7 @@ Messages are shown both when authoring your app and when end users are using you
 
 **Notify** can be paired with the [**IfError**](function-iferror.md) function to detect and report errors with a custom error message.
 
-PowerApps can also send push notifications using an entirely different mechanism from **Notify**.  For more information see [Send a notification in PowerApps](../add-notifications).
+PowerApps can also send push notifications using an entirely different mechanism from **Notify**.  For more information see [Send a notification in PowerApps](../add-notifications.md).
 
 **Notify** always returns *true*.
 
