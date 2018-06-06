@@ -1,24 +1,15 @@
 ---
 title: Migrate apps between environments and tenants | Microsoft Docs
-description: Migrate apps among environments and tenants
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Walkthrough of how to migrate PowerApps apps between environments and tenants
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-ms-topic: article
-
+ms-topic: conceptual
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/21/2018
+ms.component: pa-admin
+ms.topic: conceptual
 ms.author: jamesol
-
 ---
+
 # Environment and tenant app migration through Packaging
 Learn how to migrate resources from one environment to another with packaging. These environments can be within the same tenant or across different tenants.
 
@@ -93,37 +84,37 @@ Exporting any entity or option set customizations or any model-driven apps that 
 
 1. In http://web.powerapps.com, select the **Model-driven (preview)** design mode in your environment.
 
-  ![Select model-driven design mode](./media/environment-and-tenant-migration/select-model-driven.png)
+    ![Select model-driven design mode](./media/environment-and-tenant-migration/select-model-driven.png)
 
 2. Select **Advanced** in the left-navigation bar to launch the solution explorer for this environment's default solution
 
-  ![Select advanced](./media/environment-and-tenant-migration/select-advanced.png)
+    ![Select advanced](./media/environment-and-tenant-migration/select-advanced.png)
 
 3. Select **Export Solution** and complete the required steps.  A solution package file will begin downloading within a few seconds.
 
-  ![Select export](./media/environment-and-tenant-migration/select-export-solution.png)
+    ![Select export](./media/environment-and-tenant-migration/select-export-solution.png)
 
 ## Importing CDS customization and model-driven apps
 Importing a CDS solution package unfortunately requires a manual workaround in the experience, one that we are actively working to fix:
 
 1. In http://web.powerapps.com, select the **Model-driven (preview)** design mode in your environment.
 
-  ![Select model-driven design mode](./media/environment-and-tenant-migration/select-model-driven.png)
+    ![Select model-driven design mode](./media/environment-and-tenant-migration/select-model-driven.png)
 
 2. Select **Advanced** in the left-navigation bar to launch the solution explorer for this environment's default solution.
 
-  ![Select advanced](./media/environment-and-tenant-migration/select-advanced.png)
+    ![Select advanced](./media/environment-and-tenant-migration/select-advanced.png)
 
 3. Copy the Url from your browser, make the following changes and then navigate to the new URL in your browser:
 
-  - Current URL structure: https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}
+    * Current URL structure: https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}
 
-    ![Edit url](./media/environment-and-tenant-migration/edit-url.png)
+        ![Edit url](./media/environment-and-tenant-migration/edit-url.png)
 
-  - New URL structure:
+    * New URL structure:
   https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
 
-      ![Select package](./media/environment-and-tenant-migration/select-package.png)
+        ![Select package](./media/environment-and-tenant-migration/select-package.png)
 
 4. Select the CDS solution package file that you want to import, and complete the wizard.
 

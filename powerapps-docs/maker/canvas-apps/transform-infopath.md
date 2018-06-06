@@ -1,7 +1,6 @@
 ---
 title: Transform your InfoPath forms to PowerApps | Microsoft Docs
 description: Get started transforming your InfoPath forms to PowerApps with more information on common InfoPath scenarios and how to create these items in PowerApps.
-services: powerapps
 documentationcenter: na
 author: dewcatpaint1
 manager: kfile
@@ -11,8 +10,7 @@ tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: canvas
 ms.date: 04/05/2018
 ms.author: cathed
 

@@ -1,21 +1,18 @@
 ---
 title: Create or edit apps in a browser | Microsoft Docs
 description: Create or edit apps in a browser by using PowerApps Studio for web.
-services: 'powerapps'
-suite: powerapps
 documentationcenter: na
-author: skjerland
+author: aftowen
 manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/08/2018
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Create or edit apps in PowerApps Studio for web
@@ -23,7 +20,7 @@ Create and edit apps in PowerApps Studio for web, which opens in a browser windo
 
 ## Prerequisites
 * [Sign up](../signup-for-powerapps.md) for PowerApps.
-* Make sure you're using a [supported browser](limits-and-config.md#supported-browsers-for-powerapps-studio-for-web).
+* Make sure you're using a [supported browser](limits-and-config.md#supported-browsers-for-powerapps-studio).
 
 ## Open PowerApps Studio for web
 1. Sign in to [powerapps.com](http://go.microsoft.com/fwlink/p/?LinkId=708209).

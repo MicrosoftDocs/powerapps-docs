@@ -1,23 +1,15 @@
 ---
 title: Introduction to the admin center | Microsoft Docs
 description: Introduction to the admin center for PowerApps.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: msftman
-manager: anneta
-editor: ''
-tags: ''
-
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: overview
 ms.date: 03/21/2017
 ms.author: deonhe
-
 ---
+
 # Introduction to the admin center for PowerApps
 ![overview](./media/introduction-to-the-admin-center/overview.png)  
 

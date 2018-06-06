@@ -1,21 +1,18 @@
 ---
 title: Overview of the cloud-storage connection | Microsoft Docs
 description: See how to connect to a cloud-storage account, and display Excel data in your app
-services: ''
-suite: powerapps
 documentationcenter: ''
-author: archnair
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2016
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Connect to cloud-storage from PowerApps

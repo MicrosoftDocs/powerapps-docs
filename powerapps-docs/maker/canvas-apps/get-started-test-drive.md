@@ -1,8 +1,6 @@
 ---
 title: Create an app from a template | Microsoft Docs
 description: Step-by-step instructions for creating an app automatically based on a PowerApps template.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/19/2018
 ms.author: anneta
 

@@ -1,0 +1,148 @@
+- name: Create apps
+  href: /powerapps/maker/
+- name: Canvas apps
+  href: ../canvas-apps/index.md
+- name: Model-driven apps
+  href: model-driven-app-overview.md
+  expanded: true
+  items:
+# DO NOT CHANGE ABOVE    
+  - name: Quickstarts
+    items:
+    - name: Build your first model-driven app
+      href: build-first-model-driven-app.md
+    - name: Create an entity form
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Create a view
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Create a business process flow
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Create a chart
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Create a dashboard
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Create a form business rule
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Developer Quickstarts
+      items: 
+      - name: If any...
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy       
+  - name: Tutorials
+    items:
+    - name: Share a model-driven app with PowerApps
+      href: share-model-driven-app.md
+    - name: Create a business process flow with branching
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Developer Tutorials
+      items: 
+      - name: Add a command
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
+      - name: Create a custom control
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
+      - name: Create a form script event handler
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
+      - name: Streamline JavaScript web resource development using Fiddler AutoResponder
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy                      
+  - name: Samples
+    items:
+    - name: Overview of sample apps
+      href: overview-model-driven-samples.md
+    - name: Developer Samples
+      items:
+      - name: JavaScript API samples
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
+      - name: Pass multiple values to a web resource through the data parameter
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy        
+  - name: Concepts
+    items:
+    - name: Apply business logic
+      items: 
+      - name: Business logic using Common Data Service for Apps
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app
+      - name: Business process flow
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app
+      - name: Form Business Rule
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app 
+      - name: Form scripts
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app 
+    - name: Multiple language support
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Developer Concepts
+      items: 
+      - name: Supported customizations
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
+      - name: Web Resources
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
+  - name: How-to guides
+    items:
+    - name: Manage entity forms
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Control Access to forms
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Create or edit main forms
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
+    - name: Create or edit quick create forms
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
+    - name: Create or edit quick view forms
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
+    - name: Add form navigation for related entities
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
+    - name: Add custom controls
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
+    - name: Use the form editor
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
+      items:
+      - name: Open the form editor
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Overview of form editor UI
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Show or hide form elements
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Change navigation within a form
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Add a field to a form
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Form properties
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Tab properties
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Section properties
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app                                                           
+      - name: Common field properties
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Special field properties
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Sub-grid properties
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: Quick-view control properties
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+      - name: iFrame properties
+        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+    - name: Configure web resources and IFrame controls for use with mobile clients
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+    - name: Developer How-to guides
+      items: 
+      - name: Client scripting
+        href: /powerapps/developer/clientapi/client-scripting
+      - name: Customize commands
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
+      - name: Create custom controls
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy              
+  - name: Reference
+    items:
+    - name: Client API
+      href: /powerapps/developer/clientapi/reference
+    - name: XML Schemas
+      href:  /powerapps/developer/model-driven-apps/form-properties-legacy
+      items:
+      - name: FormXML
+        href:  /powerapps/developer/model-driven-apps/form-properties-legacy        
+  - name: Resources
+    items:
+    - name: Community tools
+      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+# DO NOT CHANGE BELOW  
+- name: Common Data Service for Apps
+  href: ../common-data-service/index.md
+- name: Common Data Model
+  href: ../../common-data-model/index.md       

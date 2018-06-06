@@ -1,25 +1,22 @@
 ---
 title: 'Power BI tile control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Power BI tile control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/07/2016
 ms.author: fikaradz
 
 ---
 # Power BI tile control in PowerApps
-A control that shows a [Power BI ](https://powerbi.microsoft.com) tile inside an app.
+A control that shows a [Power BI](https://powerbi.microsoft.com) tile inside an app.
 
 ## Description
 Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** inside your apps.  Choose the tile you want to show by setting its **Workspace**, **Dashboard** and **Tile** properties in the **Data** tab of the options panel.
@@ -66,3 +63,9 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
    
    Don't have have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 
+
+## Accessibility guidelines
+The **Power BI tile** is simply a container for Power BI content. Learn how to create accessible content with these [Power BI accessibility tips](https://docs.microsoft.com/power-bi/desktop-accessibility).
+
+### Screen reader support
+* Consider adding a heading using a **[Label](control-text-box.md)**, if the Power BI content does not have a title. The heading can be positioned immediately before the **Power BI tile**.

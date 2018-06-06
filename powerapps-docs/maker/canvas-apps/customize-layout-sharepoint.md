@@ -1,120 +1,127 @@
 ---
-title: Tutorial for customizing a gallery | Microsoft Docs
-description: In this tutorial, you customize the default browse screen, including the gallery, of an app generated in PowerApps.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Tutorial - Customize a gallery in a generated app | Microsoft Docs
+description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in PowerApps.
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/11/2018
+ms.topic: tutorial
+ms.component: canvas
+ms.date: 05/06/2018
 ms.author: anneta
-
+#As a business analyst with little or no coding experience, I want to change the data that appears in the default gallery of a generated app and make other changes so that my users can more easily manage information.
 ---
 # Tutorial: Customize a gallery in PowerApps
-In this tutorial, you'll customize the default browse screen, including the gallery, of an app generated in PowerApps. You can manage data by using the default app without customizing it, but it will be much more powerful and easier to use if you make these changes:
+In this tutorial, you'll customize a list of records, called a gallery, and make other changes in an app that was generated automatically in Microsoft PowerApps. Users can manage data in the app even if you don't make these changes, but the app will be easier to use if you customize it for your organization's needs.
+
+For example, the gallery for this tutorial matches this graphic by default. The email address is featured more prominently than other types of data, and users can sort and filter the gallery based on text in that address:
+
+![Default gallery](./media/customize-layout-sharepoint/gallery-before.png)
+
+However, your users might be more interested in the account name more than the email address, so you'll reconfigure the gallery to highlight, sort, and filter based on the key data for your organization. In addition, you'll change the title of the default screen to differentiate it from the other screens in the app.
+
+![Final gallery](./media/customize-layout-sharepoint/gallery-after.png)
+
+You'll also add a scroll bar so that users who don't have touch screens or mouse wheels can browse the entire gallery.
 
 > [!div class="checklist"]
-> * Change the layout
-> * Change the data that appears
-> * Set the columns for filtering and sorting
-> * Test filtering and sorting
-> * Change the title
-> * Show a scrollbar
+> * Change the layout of the gallery
+> * Change the type of data that appears in the gallery
+> * Change the columns by which users can sort and search the data
+> * Change the screen title
+> * Show a scroll bar
 
-This tutorial starts with an app generated from the [Common Data Service for Apps](../common-data-service/data-platform-intro.md), but the same concepts apply to apps generated from SharePoint, Excel, and other data sources. 
+This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in PowerApps, whether from a SharePoint list, an Excel table, or some other data source.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com) before you start.
 
 ## Prerequisites
-Before you start this tutorial, [generate an app](data-platform-create-app.md) from the Common Data Service for Apps.
+[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Common Data Service (CDS) for Apps.
 
 ## Open the generated app
-1. Sign in to [PowerApps](https://web.powerapps.com), and then click or tap **Apps** near the left edge.
+1. Sign in to [PowerApps](https://web.powerapps.com), and then select **Apps** near the left edge.
 
-	![PowerApps home page](./media/customize-layout-sharepoint/sign-in.png)
+	[![PowerApps home page](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
 
-1. Find the app that you generated, and then click or tap the ellipsis icon (**...**) for it near the right edge.
+1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 
-	![App list](./media/customize-layout-sharepoint/open-for-edit.png)
+    ![Open app for editing](./media/customize-layout-sharepoint/open-app.png)
 
-1. In the menu that appears, click or tap the option to edit the app. 
+1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
 
-## Customize the gallery
-1. On the browse screen, click or tap any item except the first one in the list of accounts.
+## Change the layout
+1. In the left navigation pane, select **BrowseGallery1**.
 
-	This step selects the **Gallery** control, which shows the list of accounts.
+	When the gallery is selected, a selection box with handles surrounds it.
 
-	![Selected gallery](./media/customize-layout-sharepoint/select-gallery.png)
+    ![Select gallery](media/customize-layout-sharepoint/select-gallery-1.png)
 
-1. In the right-hand pane, click or tap **Accounts** to the right of the **Data** label.
+1. Near the right edge, select **Accounts** to open the **Data** pane.
 
 	![Open the **Data** pane](./media/customize-layout-sharepoint/open-data-pane.png)
 
-1. In the **Data** pane, click or tap the down arrow to open the list of options under **Layout**.
+1. In the **Data** pane, open the list of options under **Layout**.
 
 	![Show layout options](./media/customize-layout-sharepoint/show-layouts.png)
 
-1. In the list of options, click or tap the option that shows only a title.
+1. In the list of options, select the option that shows only a title.
 
 	![Select title-only layout](./media/customize-layout-sharepoint/choose-layout.png)
 
-1. In the **Data** pane, click or tap the down arrow to open the list of options for the title.
+1. In the **Data** pane, open the list of options for the title.
 
-	![Select title-only layout](./media/customize-layout-sharepoint/show-title-options.png)
+    The name of this control will end in a numeral, such as **Title1**, but the numeral might differ based on other actions you might have taken.
 
-1. In the list of options, click or tap **name** to show that data in the **Gallery** control.
+	![Open list of options for title label](./media/customize-layout-sharepoint/show-title-options.png)
+
+1. In the list of options, select **Account name (name)**, and then close the **Data** pane.
+
+    The gallery shows the name of each account.
 
 	![Final gallery](./media/customize-layout-sharepoint/final-gallery.png)
 
-
-## Set the sort and search columns
-1. Select the **Gallery** control as the previous section describes.
+## Change sort and search columns
+1. Select the gallery as the previous section describes.
 
 	![Select gallery](./media/customize-layout-sharepoint/select-gallery-title.png)
 
-2. Near the upper-left corner, ensure that the property list shows **Items**.
+2. Near the upper-left corner, confirm that the property list shows **Items**.
 
 	![Items property](./media/customize-layout-sharepoint/items-property.png)
 
-	The value of this property appears in the formula bar and determines not only the data source for the gallery but also the filter and sort columns.
+	The value of this property appears in the formula bar. You set this property to specify not only the data source for the gallery but also the columns by which users can sort and search the data.
 
-1. In the formula bar, replace both instances of **emailaddress1** to **name**, and retain the double-quotation marks that surround each instance.
+1. Copy this formula, and then paste it in the formula bar.
 
-	The formula should match this example:
+    ```SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, Descending, Ascending))```
 
-	![Formula for the Items property](./media/customize-layout-sharepoint/items-value.png)
+	By using this formula, you ensure that:
 
-	The first instance of **name** specifies that the user can filter the list to show only those records for which the account name contains text that the user typed in the search bar. The second instance of **name** specifies that the user can sort the list alphabetically by account name. For more information about these and other functions, see the [formula reference](formula-reference.md).
+    - If a user types one or more characters in the search bar, the gallery shows only those account names that contain the text that the user typed.
+    - If a user selects the sort icon, the gallery is sorted alphabetically by account name in either ascending or descending order, depending on how many times the user selects the icon.
 
-## Test sorting and searching
-1. Open Preview mode by pressing F5 (or by clicking or tapping the play button near the upper-right corner).
+    For more information about these and other functions, see the [formula reference](formula-reference.md).
+
+### Test sorting and searching
+1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).
 
 	![Open Preview mode](./media/customize-layout-sharepoint/open-preview.png)
 
-1. Near the upper-right corner of the browse screen, click or tap the sort icon one or more times to change the alphabetical sort order between ascending and descending.
+1. Near the upper-right corner of the browse screen, select the sort icon one or more times to change the alphabetical sort order between ascending and descending.
 
 	![Test the sort icon](./media/customize-layout-sharepoint/sort-button.png)
 
-1. In the search box, type **k** to show only those accounts for which the name contains the letter that you typed.
+1. In the search box, type **k** to show only those account names that contain the letter that you typed.
 
 	![Test the search bar](./media/customize-layout-sharepoint/test-filter.png)
 
-1. Remove all text from the search bar, and then close Preview mode by pressing Esc (or by clicking or tapping the close icon *under* the title bar for PowerApps).
+1. Remove all text from the search bar, and then close Preview mode by pressing Esc (or by selecting the close icon near the upper-right corner).
 
-## Change the title of the screen
-1. Click or tap the title of the screen to select it.
+## Change the screen title
+1. Select the title of the screen by clicking or tapping it.
 
 	![Select screen title](./media/customize-layout-sharepoint/select-title.png)
 
-1. Ensure that the property list shows **Text**, and then type **Browse**, surrounded by double quotation marks, in the formula bar.
+1. Ensure that the property list shows **Text** and then, in the formula bar, replace **Accounts** with **Browse** (retaining the double quotation marks).
 
 	![Update screen title](./media/customize-layout-sharepoint/change-screen-title.png)
 
@@ -123,18 +130,18 @@ Before you start this tutorial, [generate an app](data-platform-create-app.md) f
 	![New screen title](./media/customize-layout-sharepoint/new-screen-title.png)
 
 ## Show a scroll bar
-If your users might not have touch screens or mouse wheels, configure the **Gallery** control to show a scroll bar when the user hovers over it with the mouse. That way, users can show all accounts even if the screen can't show them all at once.
+If your users might have neither touch screens nor mouse wheels, configure the gallery to show a scroll bar when the user hovers over it with the mouse. That way, users can show all accounts even if the screen can't show them all at once.
 
-1. Select the **Gallery** control as the first procedure describes.
+1. Select the gallery as the first procedure describes.
 
 	![Select gallery](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
-1. On the **Gallery** tab, click or tap **Show scrollbar**, and confirm that the value of that property has changed to **true**. 
+1. On the **Gallery** tab, select **Show scrollbar**, and confirm that the value of that property has changed to **true**. 
 
 	![Show scrollbar](./media/customize-layout-sharepoint/show-scrollbar.png)
 
 ## Next steps
-In this tutorial, you've customized the **Gallery** control and the title of the default browse screen of a generated app. You can also customize the default screens for displaying details and creating or updating accounts. Those screens contain a **Display form** control and an **Edit form** control, and you can change (for example) which types of data they show and in which order.
+In this tutorial, you've customized the gallery and made other changes to the default screen for browsing records in a generated app. You can also customize the default screens for displaying details and creating or updating accounts. As the browse screen contains a gallery, the other two screens in the app contain forms. You can change, for example, which types of data the forms show and in which order.
 
 > [!div class="nextstepaction"]
 > [Customize forms](customize-forms-sharepoint.md)

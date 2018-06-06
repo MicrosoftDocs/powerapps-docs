@@ -1,23 +1,14 @@
 ---
 title: Quickstart to run apps in a web browser | Microsoft Docs
 description: In this quickstart, you learn how to run apps in a web browser
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
-author: SKjerland
-manager: kfile
-editor: ''
-tags: ''
-
+author: Mattp123
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/07/2018
-ms.author: sharik
-
+ms.author: matp
 ---
+
 # Quickstart: Run an app in a web browser
 When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
 

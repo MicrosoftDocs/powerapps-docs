@@ -1,19 +1,16 @@
 ---
 title: Working with environments | Microsoft Docs
 description: Switch environments and understand how the content on your pages change.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: linhtranms
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/14/2016
 ms.author: litran
 
@@ -30,28 +27,22 @@ When you sign up and first sign in to powerapps.com, you will likely land in a d
 
 ![Default environment](./media/working-with-environments/env-dropdown.png)
 
-The *Default environment* is accessible to everyone. You can start creating apps in this environment and share your apps with other users. You may also have access to other environments, such as those you [create yourself](../../administrator/environments-administration.md) or those created by others but you have access to. You can switch environments by clicking the environment dropdown in the upper-right corner and selecting a different environment. In this example, I am switching from *Default environment* to *Environment 1*.
+The *Default environment* is accessible to everyone. You can start creating apps in this environment and share your apps with other users. You may also have access to other environments, such as those you [create yourself](../../administrator/environments-administration.md) or those created by others but you have access to. You can switch environments by clicking the environment dropdown in the upper-right corner and selecting a different environment. This example shows switching from *Default environment* to *Environment 1*.
 
 ![Switch environment](./media/working-with-environments/switch-env.png)
 
 Once you switch to a different environment (such as Environment 1), you will see all the apps you created or have access to in this new environment.
 
 ## Create apps in the right environment
-You can create apps in existing environments that you have access to or in a new environment. Creating your own environment, however, requires a specific plan. For more information, see [this topic](../../administrator/pricing-billing-skus.md). Before you create an app, always **make sure you select the environment you want to app to be in**. Otherwise, you will have to deal with moving apps between environments.
+You can create apps in an environment that you create or for which you've been given access. Creating your own environment, however, requires a [specific plan](../../administrator/pricing-billing-skus.md). Before you create an app, always **make sure you select the environment you want to app to be in**. Otherwise, you will have to deal with moving apps between environments.
 
-1. If you are in [powerapps.com](http://web.powerapps.com), select the environment you would like to create your app in. If you are in *PowerApps Studio* or *PowerApps Studio for web*, skip to step 4.
+To create an app in the right environment, do either of the following:
 
-2. Select **+ New app**.
+- If PowerApps Studio isn't open, [sign in](http://web.powerapps.com), select the environment you would like to create your app in, select **Apps** near the left edge, and then select **Create an app**.
 
-3. Select **Open PowerApps Studio** or **PowerApps Studio for web**.
-
-4. When *PowerApps Studio* or *PowerApps Studio* for web opens, select the environment again at the top right corner. We will improve this experience in the future but, in the current release, you must select this every time you want to create an app in a new environment.
-
-    ![Studio switch environment](./media/working-with-environments/studio-switch-env.PNG)
+- If PowerApps Studio is open, select the environment again at the top right corner.
 
 5. On the **Account** page, select **Change** next to the name of the current environment.
-
-    ![Studio switch environment](./media/working-with-environments/studio-env-dropdown.PNG)
 
 6. Select the environment you want to create your app in.
 
@@ -62,14 +53,6 @@ You can create apps in existing environments that you have access to or in a new
     ![Studio switch environment](./media/working-with-environments/new-app.PNG)
 
 ## View apps in the right environment
-Whether you are working in [powerapps.com](http://web.powerapps.com), PowerApps Studio for Windows, or PowerApps Studio for web, the list of apps, connections, etc. that you see is always filtered based on the environment that's selected in the dropdown. If you don't see the apps you are looking for, always confirm whether the right environment is selected.
-
-Again, to switch environments in [powerapps.com](http://web.powerapps.com):
-
-![Switch environment](./media/working-with-environments/switch-env.png)
-
-To switch environments in PowerApps Studio for Windows or PowerApps Studio for web:
-
-![Studio switch environment](./media/working-with-environments/studio-switch-env.PNG)
+Whether you are working in [powerapps.com](http://web.powerapps.com) or PowerApps Studio, the list of apps, connections, etc. that you see is always filtered based on the environment that's selected in the dropdown. If you don't see the apps you are looking for, always confirm whether the right environment is selected.
 
 For more information about environments, see [this overview](../../administrator/environments-overview.md).

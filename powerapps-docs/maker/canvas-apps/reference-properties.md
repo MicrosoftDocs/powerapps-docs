@@ -1,19 +1,16 @@
 ---
 title: Find a property | Microsoft Docs
 description: Find a property by control, by category, or alphabetically.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/17/2016
 ms.author: gregli
 

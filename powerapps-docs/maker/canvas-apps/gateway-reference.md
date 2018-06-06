@@ -1,21 +1,18 @@
 ---
 title: Understand on-premises data gateways | Microsoft Docs
 description: Reference information, including installation and troubleshooting, for on-premises data gateways
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/20/2017
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Understand on-premises data gateways for Microsoft PowerApps
@@ -138,6 +135,10 @@ The on-premises data gateway is configured to use *NT SERVICE\PBIEgwService* for
 This isn't the account used to connect to on-premises data sources or the work or school account with which you sign in to cloud services.
 
 If you encounter issues with your proxy server due to authentication, you may want to change the Windows service account to a domain-user or managed-service account as [proxy configuration](https://docs.microsoft.com/power-bi/service-gateway-proxy#changing-the-gateway-service-account-to-a-domain-user) describes.
+
+## Tenant level administration 
+
+There is currently no single place where tenant administrators  can manage all the gateways that other users have installed and configured.  If you’re a tenant administrator, we recommend that you ask the users in your organization to add you as an administrator to every gateway they install. This allows you to manage all the gateways in your organization through the Gateway Settings page or through [PowerShell commands](https://docs.microsoft.com/power-bi/service-gateway-high-availability-clusters#powershell-support-for-gateway-clusters).
 
 ## Frequently asked questions
 #### General

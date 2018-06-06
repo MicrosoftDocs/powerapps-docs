@@ -1,23 +1,15 @@
 ---
-title: App Analytics | Microsoft Docs
-description: View reports to review the usage and performance of your app.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: View analytics reports for your app | Microsoft Docs
+description: View reports to see the usage and performance of your PowerApps apps.
 author: jamesol-msft
-manager: anneta
-editor: ''
-tags: ''
-
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 08/29/2017
 ms.author: jamesol
-
 ---
+
 # View analytics reports for your app
 Have you built an app and shared it out to your organization?  Are you curious how many of your colleagues are using it on a daily basis?
 

@@ -1,19 +1,16 @@
 ---
 title: Understand variables | Microsoft Docs
 description: Reference information for working with state, context variables, and collections
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 07/06/2017
 ms.author: gregli
 
@@ -257,5 +254,5 @@ Let's recreate our adding machine by using a collection:
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons.  Select the **Save** button.  Close and reload your app, and select the **Load** button to reload your collection.  
     
     > [!NOTE]
-    > **SaveData** and **LoadData** do not function when running in a web browser. You must be using the studio installed on Windows or one of the players for mobile devices.  
+    > **SaveData** and **LoadData** don't function in PowerApps Studio, but they do in PowerApps Mobile.
 

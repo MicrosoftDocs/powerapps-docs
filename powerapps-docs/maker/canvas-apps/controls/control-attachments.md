@@ -1,20 +1,17 @@
 ---
 title: 'Attachments control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Attachments control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 09/29/2017
+ms.topic: reference
+ms.component: canvas
+ms.date: 04/23/2018
 ms.author: fikaradz
 
 ---
@@ -23,13 +20,15 @@ A control that allows users to download files to their device, as well as upload
 
 ## Limitations
 The attachment control has the following temporary limitations:
-1. Attachment download is not supported in Internet Explorer.
+1. Attachment download is supported in Internet Explorer only within SharePoint custom list forms.
 
 1. Attachment upload only works with SharePoint list data sources.  Support for other data sources will be introduced incrementally, starting with CDS.
 
 1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form.   Note that in order to save the file additions and deletions to the back end, the end user must save the form.
 
 1. You can only upload files up to 10 MB in size.  
+
+1. Currently, iOS devices can only upload files from documents and cloud storage accounts. To attach photos/videos, please use the web browser on your iOS device to run the app.
 
 ## Description
 An **Attachments** control lets you open files stored on a data source as well as add and delete files from a SharePoint list.
@@ -48,7 +47,7 @@ An **Attachments** control lets you open files stored on a data source as well a
 **[OnSelect](properties-core.md)** – How the app responds when the user clicks on an attachment.
 
 ## Additional properties
-**AccessibleLabel** – The label announced by screen readers.
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the attachments.
 
 **AddAttachmentText** – The label text for the link used to add a new attachment.
 
@@ -60,11 +59,17 @@ An **Attachments** control lets you open files stored on a data source as well a
 
 **[DisplayMode](properties-core.md)** – Whether the control allows adding and deleting files (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **MaxAttachmentsText** – The text that replaces the "Attach file" link when the control contains the maximum number of files allowed.
 
 **NoAttachmentsText** – Informational text shown to the user when there are no files attached.
+
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Visible](properties-core.md)** – Whether a control is visible or hidden.
 
@@ -86,4 +91,31 @@ An **Attachments** control lets you open files stored on a data source as well a
 
     The Attachments field associated with the SharePoint list will appear in the form.
 
-Don't know how to [add and configure a control](../add-configure-controls.md)?
+[Learn how to add and configure a control].(../add-configure-controls.md)
+
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **ItemColor** and **ItemFill**
+* **ItemHoverColor** and **ItemHoverFill**
+* **ItemPressedColor** and **ItemPressedFill**
+* **AddedItemColor** and **AddedItemFill**
+* **RemovedItemColor** and **RemovedItemFill**
+* **ItemErrorColor** and **ItemErrorFill**
+* **AddAttachmentColor** and **Fill**
+* **MaxAttachmentsColor** and **Fill**
+* **NoAttachmentsColor** and **Fill**
+
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
+
+### Screen reader support
+The following properties must be present:
+* **[AccessibleLabel](properties-accessibility.md)**
+* **AddAttachmentsText**
+* **MaxAttachmentsText**
+* **NoAttachmentsText**
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
