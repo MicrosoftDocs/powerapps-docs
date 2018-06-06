@@ -1,0 +1,1 @@
+Defines an action to add or replace items in the ribbon.

@@ -1,0 +1,1 @@
+Microsoft .NET Framework 4.5.2

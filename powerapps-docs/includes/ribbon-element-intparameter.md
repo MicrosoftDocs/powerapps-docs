@@ -1,0 +1,1 @@
+Specifies a value with an integer data type that may be passed as a parameter.

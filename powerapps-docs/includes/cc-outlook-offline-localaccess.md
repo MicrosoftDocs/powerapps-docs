@@ -1,0 +1,1 @@
+Users who log on locally to a device that has Microsoft Dynamics 365 for Outlook installed can potentially access Dynamics 365 data stored locally. Shared use of a device running Dynamics 365 for Outlook is not supported.

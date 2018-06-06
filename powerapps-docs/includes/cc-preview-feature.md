@@ -1,0 +1,1 @@
+To use this feature, it must be turned on and the license terms must be accepted. [What are Preview features and how do I enable them?](../admin/what-are-preview-features-how-do-i-enable-them.md).
