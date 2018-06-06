@@ -1,0 +1,1 @@
+Go to **Settings** > **Product Catalog**.
