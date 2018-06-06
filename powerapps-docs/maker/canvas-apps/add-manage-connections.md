@@ -1,21 +1,18 @@
 ---
 title: Add and manage connections to data sources in cloud services | Microsoft Docs
 description: Add, delete, and update connections to data sources such as SharePoint, SQL Server, OneDrive for Business, Salesforce, and Office 365
-services: ''
-suite: powerapps
 documentationcenter: na
-author: archnair
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/09/2017
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Manage your connections in PowerApps

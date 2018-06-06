@@ -1,25 +1,17 @@
 ---
 title: Configure environment security | Microsoft Docs
 description: This topic explains how to configure environment security.
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-
 ---
+
 # Configure environment security
-The Common Data Service uses a role-based security model to help secure access to the database. This topic explains how to create the security artifacts that you must have to help secure an app. The user roles control run-time access to data and are separate from the Environment roles that govern environment administrators and environment makers. For an overview of environments, see [Environments overview](environments-overview.md).
+Common Data Service (CDS) for Apps uses a role-based security model to help secure access to the database. This topic explains how to create the security artifacts that you must have to help secure an app. The user roles control run-time access to data and are separate from the Environment roles that govern environment administrators and environment makers. For an overview of environments, see [Environments overview](environments-overview.md).
 
 ## Assign security roles to users
 Security roles control a user’s access to data through a set of access levels and permissions. The combination of access levels and permissions that are included in a specific security role sets limits on the user’s view of data and on the user’s interactions with that data.
@@ -32,23 +24,29 @@ To assign a user or a security group to an environment role, an Environment Admi
 
 2. Select **Security** tab.
 
-3. Click on the link to manage the environment roles in Dynamics 365.
+3. View if the user already exists in the environment, by selecting **view the list of users in the environment**.
+    
+    ![](./media/database-security/security-viewuser.png)
 
-    ![](./media/environment-admin/Security-Link-D365.png)
+4. In case user doesn’t exist, you can add the user from PowerApps admin center 
+	Add the user by mentioning the email address of the user, in your organization, and selecting **Add user**.
 
-4. Select the user from the list of users in the environment.
+    ![](./media/database-security/security-adduser.png)
+
+	Wait for a few minutes to check if the user is available in the list of users in the environment.
+  
+5. Select the user from the list of users in the environment.
 
     ![](./media/environment-admin/D365-Select-User.png)
 
-5. Assign the role to the user.
+6. Assign the role to the user.
 
     ![](./media/environment-admin/D365-Assign-Role.png)
 
     > [!NOTE]
     > Currently, roles can only be assigned to the users. Assigning a role to a security group is in our backlog.
 
-6. Select **OK** to update the assignments to the environment role.
-
+7. Select **OK** to update the assignments to the environment role.
 
 ## Predefined security roles
 The PowerApps environment includes predefined security roles that reflect common user tasks with access levels defined to match the security best-practice goal of providing access to the minimum amount of business data required to use the app.
@@ -66,7 +64,6 @@ The PowerApps environment includes predefined security roles that reflect common
 - The Environment Maker role can not only create resources within an environment, but can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users. For more information, see [Share an app in PowerApps](../maker/canvas-apps/share-app.md).
 
 - For the users making apps which are connecting to the database and needs to create or update entities and security roles, should be assigned System Customizer role as well, along with the Environment Maker as Environment Maker role, has no priviliges on the database.
-
 
 ## Create or configure a custom security role
 If your app is based on a custom entity, privileges must be explicitly specified before users may work on it. To do this, you can choose to do one of the following.

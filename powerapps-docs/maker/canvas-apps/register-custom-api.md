@@ -1,18 +1,15 @@
 ---
 title: Custom connector content links | Microsoft Docs
 description: Links to content for creating, using, sharing, and certifying custom connectors.
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 05/05/2017
 ms.author: mblythe
 

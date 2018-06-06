@@ -1,8 +1,6 @@
 ---
 title: System requirements, limits, and configuration values | Microsoft Docs
 description: System requirements, limits, and configuration values for PowerApps
-services: ''
-suite: PowerApps
 documentationcenter: na
 author: skjerland
 manager: kfile
@@ -11,9 +9,8 @@ tags: ''
 
 ms.service: PowerApps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/07/2018
 ms.author: sharik
 
@@ -37,7 +34,7 @@ This topic contains device platform and web browser requirements, as well as lim
 | Mozilla Firefox (latest version) |Windows 7 SP1, 8.1, and 10 <br> Android 5 or later <br>iOS 8 or later <br>macOS |
 | Apple Safari (latest version) |iOS 8 or later <br>macOS |
 
-## Supported browsers for PowerApps Studio for web
+## Supported browsers for PowerApps Studio
 | **Browser** | **Operating system** |
 | --- | --- |
 | Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS |

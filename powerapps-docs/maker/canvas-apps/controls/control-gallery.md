@@ -1,19 +1,16 @@
 ---
 title: 'Gallery control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Gallery control
-services: ''
-suite: powerapps
 documentationcenter: na
-author: RickSaling
-manager: anneta
+author: fikaradz
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 05/25/2017
 ms.author: sharik
 
@@ -34,6 +31,8 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 **Selected** – The selected item.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe what the list of items are.
+
 **AllItems** – All items in a gallery, including additional control values that are a part of the gallery's template.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -93,3 +92,22 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 * [Get sounds](control-microphone.md#example)
 * [Get drawings](control-pen-input.md#create-a-set-of-images)
 
+
+## Accessibility guidelines
+### Color contrast
+If clicking anywhere in a gallery item is meant to select it, there must be adequate color contrast between:
+* **[BorderColor](properties-color-border.md)** and the color outside the gallery (if there is a border)
+* **[Fill](properties-color-border.md)** and the color outside the gallery (if there is no border)
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+    > [!NOTE]
+> Screen readers will annnouce when items in the gallery change. The **AccessibleLabel** is also mentioned. This gives context to the announcement and is even more important when there are multiple galleries on the same screen.
+
+### Keyboard support
+* Consider setting **ShowScrollbar** to **true**. On most touch screen devices, the scrollbar will not show until scrolling begins.
+* If clicking anywhere in a gallery item is meant to select it, there must also be way for keyboard users to select the gallery item. For example, adding a **[Button](control-button.md)** that has its **OnSelect** property set to **Select(Parent)**.
+
+    > [!NOTE]
+> Controls outside the gallery are not considered in the keyboard navigation order within the gallery. **[TabIndex](properties-accessibility.md)** of controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.

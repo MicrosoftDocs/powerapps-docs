@@ -1,24 +1,17 @@
 ---
-title: Create a Common Data Service database | Microsoft Docs
-description: Create a Common Data Service database.
+title: Create a Common Data Service (CDS) for Apps database | Microsoft Docs
+description: Walkthrough of how to create a Common Data Service (CDS) for Apps database.
 services: powerapps
-documentationcenter: na
 author: manasmams
-manager: kfend
-editor: ''
-tags: ''
-
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-
 ---
-# Create a Common Data Service database
-You can create a database and build apps by using Common Data Service as a data store. You can either create your own custom entities or use the predefined entities. To create a database, you first need to either create an environment, or be assigned to an existing environment as an **Environment Admin**. In addition, you must be assigned the appropriate license. For information on purchasing a plan for using the Common Data Service, see [Pricing info](pricing-billing-skus.md).
+# Create a Common Data Service for Apps database
+You can create a database and build apps by using Common Data Service (CDS) for Apps as a data store. You can either create your own custom entities or use the predefined entities. To create a database, you first need to either create an environment, or be assigned to an existing environment as an **Environment Admin**. In addition, you must be assigned the appropriate license. For information on purchasing a plan for using CDS for Apps, see [Pricing info](pricing-billing-skus.md).
 
 There are various ways to create a database:
 
@@ -42,20 +35,22 @@ There are various ways to create a database:
 
 
 
-## Create a database in the Entities pane of powerapps.com
+## Create a database in the Entities pane of PowerApps
 1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
 2. Click **Create Database** to create the database.
 
     ![](./media/create-database/Create-DB-From-Entities.png)
 
+> [!NOTE]
+> Currently, it's not possible to create a database outside your Azure AD region. It will be possible to create a database in a different region than your Azure AD home region soon, but for now, make sure you create a database in an environment that has the same region as your Azure AD home region.
 
 ## Security model for the databases
 When a database is created, the users who have environment roles assigned to them, will continue to maintain those priviliges.  
     Users with **Environment Admin** role are now assigned to **System Administrator** role. 
     Users with **Environment Maker** continue to possess the same role.
 
-You can assign additional users to pre-defined roles or even create [custom roles][1]. See [Database Security](create-database.md) for more details.
+You can assign additional users to pre-defined roles or even create [custom roles][1]. See [Database Security](database-security.md) for more details.
 
 > [!NOTE]
 > On creating the database, any security group assigned to Environment Admin or Environment Maker role will not be honored any more. Currently, assigning permissions in database, do not support AAD security group.
