@@ -135,5 +135,5 @@ System administrators and customizers can start or stop auditing for an organiza
  
 ### See also  
  [Manage security, users and teams](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-security-users-and-teams)<br/> 
- [Getting started with customization](../../maker/model-driven-apps/getting-started-customization.md)   
+ [Getting started with customization](../maker/model-driven-apps/getting-started-customization.md)   
 

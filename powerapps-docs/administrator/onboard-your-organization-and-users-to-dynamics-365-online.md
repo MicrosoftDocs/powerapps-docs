@@ -143,9 +143,9 @@ New to [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)]
   
 [!INCLUDE[proc_more_information](../includes/proc-more-information.md)]
   
--   [Export your customizations as a solution](../../maker/common-data-service/use-solutions-for-your-customizations.md)  
+-   [Export your customizations as a solution](../maker/common-data-service/use-solutions-for-your-customizations.md)  
   
--   [Use solutions for your customizations](../../maker/common-data-service/use-solutions-for-your-customizations.md)  
+-   [Use solutions for your customizations](../maker/common-data-service/use-solutions-for-your-customizations.md)  
   
 For more advanced scenarios, consider the following development tools: [Solution tools for team development](https://docs.microsoft.com/dynamics365/customer-engagement/developer/solution-tools-team-development).
   
@@ -258,15 +258,15 @@ For more advanced scenarios, consider the following development tools: [Solution
 
 [!INCLUDE[proc_more_information](../includes/proc-more-information.md)]
 
--   [Create custom business logic through processes](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)
+-   [Create custom business logic through processes](../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)
   
--   [Create a business process flow to standardize processes](../../maker/model-driven-apps/create-business-process-flow.md)
+-   [Create a business process flow to standardize processes](../maker/model-driven-apps/create-business-process-flow.md)
   
--   [Create a mobile task flow](../../maker/model-driven-apps/create-mobile-task-flow.md)
+-   [Create a mobile task flow](../maker/model-driven-apps/create-mobile-task-flow.md)
   
--   [Use Workflow processes to automate processes that don't require user interaction](../../maker/common-data-service/workflow-processes.md)
+-   [Use Workflow processes to automate processes that don't require user interaction](../maker/common-data-service/workflow-processes.md)
   
--   [Actions overview](../../maker/common-data-service/actions.md)
+-   [Actions overview](../maker/common-data-service/actions.md)
   
 <a name="Customizing"></a>   
 
@@ -277,11 +277,11 @@ For more advanced scenarios, consider the following development tools: [Solution
   
 -   [Video: 6 ways to customize Dynamics 365 without writing code](https://www.youtube.com/embed/SycOC_eVBY4)  
   
--   [Design custom business apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
+-   [Design custom business apps by using the app designer](../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
   
--   [Create a theme](../../maker/common-data-service/change-color-scheme-add-logo-match-organizations-brand.md)
+-   [Create a theme](../maker/common-data-service/change-color-scheme-add-logo-match-organizations-brand.md)
   
--   [Get started with app making and customization](../../maker/model-driven-apps/getting-started-customization.md)
+-   [Get started with app making and customization](../maker/model-driven-apps/getting-started-customization.md)
   
 To do advanced customizations, we recommend you work with a partner. [Find a partner if you don’t have one.](https://partnercenter.microsoft.com/pcv/search)  
   
@@ -454,7 +454,7 @@ To do advanced customizations, we recommend you work with a partner. [Find a par
   
 -   [Start your day with a dashboard](https://docs.microsoft.com/dynamics365/customer-engagement/basics/start-your-day-dashboard-chart)  
   
--   [Create or edit dashboards](../../maker/model-driven-apps/create-edit-dashboards.md)
+-   [Create or edit dashboards](../maker/model-driven-apps/create-edit-dashboards.md)
   
 -   [Add or edit Power BI visualizations on your dashboard](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)  
   

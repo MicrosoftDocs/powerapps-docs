@@ -1,5 +1,5 @@
-- name: pa_Administer PowerApps
-  href: https://docs.microsoft.com/en-us/powerapps/administrator/
+- name: Administer PowerApps
+  href: admin-guide.md
   items:
   - name: Getting started
     items:
@@ -25,7 +25,7 @@
       href: try-dynamics-365-online.md
     - name: Add users
       href: create-users-assign-online-security-roles.md
-    - name: ce_Set up email
+    - name: [Customer Engagement] Set up email
       href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/deploy-dynamics-365-app-for-outlook
     - name: Import data
       href: import-data-all-record-types.md

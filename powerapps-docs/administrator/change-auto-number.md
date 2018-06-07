@@ -43,4 +43,4 @@ Contracts, cases, articles, quotes, orders, invoices, marketing campaigns, categ
 6.  Click **OK** to save your settings.  
   
 ### See also  
- [Use the default solution to customize](../../maker/common-data-service/use-solutions-for-your-customizations.md)
+ [Use the default solution to customize](../maker/common-data-service/use-solutions-for-your-customizations.md)

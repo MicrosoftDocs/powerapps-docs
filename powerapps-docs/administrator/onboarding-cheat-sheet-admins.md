@@ -40,7 +40,7 @@ Here are the seven steps to getting your organization on board with Dynamics 365
   
 ## Step four: Customize your system  
   
--   [Get started with app making and customization](../../maker/model-driven-apps/getting-started-customization.md)
+-   [Get started with app making and customization](../maker/model-driven-apps/getting-started-customization.md)
   
 ## Step five: Add SharePoint  
   

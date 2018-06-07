@@ -132,7 +132,7 @@ The hierarchy security model is an extension to the existing [!INCLUDE[pn_micros
   
 ### See also  
  [Security concepts for Microsoft Dynamics 365](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-concepts)   
- [Visualize hierarchical data with model-driven apps](../../maker/model-driven-apps/visualize-hierarchical-data.md)
+ [Visualize hierarchical data with model-driven apps](../maker/model-driven-apps/visualize-hierarchical-data.md)
  [Video: Hierarchical Security Modelling in Microsoft Dynamics CRM 2015](http://www.youtube.com/watch?v=kx5So32DrCo&index=10&list=PLC3591A8FE4ADBE07)   
  [Video: Hierarchy Visualization in Microsoft Dynamics CRM 2015](http://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
 

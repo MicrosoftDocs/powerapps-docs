@@ -45,7 +45,7 @@ Use the settings on this page to enable preview features in [!INCLUDE[pn_microso
 |These preview features are intended to be used for development and testing purposes only.||
 |I have read and agree to the license terms|After agreeing to the license terms, check this box to allow you to enable preview features.|
 |**Action Step Support for Business Process Flows Preview**||
-|Enable Action Step Support for Business Process Flows Preview|More information: [Business process flows overview]([Business process flows overview](../../maker/model-driven-apps/business-process-flows-overview.md))|  
+|Enable Action Step Support for Business Process Flows Preview|More information: [Business process flows overview]([Business process flows overview](../maker/model-driven-apps/business-process-flows-overview.md))|  
 |**BPF Entity Customization Support**||
 |Enable BPF Entity Customization Support|If Yes, enables customization support for business process flow entities. Default is No.|
 |**Organization Insights Preview**||

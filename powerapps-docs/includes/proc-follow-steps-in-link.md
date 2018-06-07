@@ -1,1 +1,1 @@
-Follow the steps in [View your user profile](../basics/view-your-user-profile.md).
+Follow the steps in [View your user profile](https://docs.microsoft.com/dynamics365/customer-engagement/basics/view-your-user-profile).

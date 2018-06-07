@@ -48,7 +48,7 @@ Whether your data is stored in spreadsheets, databases, or other systems, you’
     > 
     >  You can add multiple import files to a single .zip file, and then import the .zip file to bring in all the files at once. For example, if several salespeople enter leads from a tradeshow into different spreadsheets, you can gather them into one .zip file for import.  
     >   
-    >  For best results, it’s a good idea to make sure you (or your [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] admin, if that’s someone else) have some rules in place to reduce any duplicates when you import the data (called “duplicate detection rules”). [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Set up duplicate detection rules to keep your data clean](../admin/set-up-duplicate-detection-rules-keep-data-clean.md) 
+    >  For best results, it’s a good idea to make sure you (or your [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] admin, if that’s someone else) have some rules in place to reduce any duplicates when you import the data (called “duplicate detection rules”). [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Set up duplicate detection rules to keep your data clean](set-up-duplicate-detection-rules-keep-data-clean.md) 
     >
     >  Your import will fail if you’re using a template that you exported from [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] and then added a new column and are now importing the data back into [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)].  
       

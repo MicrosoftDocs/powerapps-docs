@@ -40,7 +40,7 @@ Use the settings on this page to change general system-level settings like prefe
 |--------------|-----------------|  
 |**Allow text wrapping in form fields labels and values**|Default: Yes. Choose **Yes** to allow text wrapping.|
 |**Select the default save option for forms**||  
-|Enable auto save on all forms|If Yes, which is the default, after a record is created (initially saved), any changes made to a form will automatically be saved thirty seconds after the change is made. The 30-second period starts again after a change is made. If no changes are made, the automatic save doesn’t happen.<br /><br /> [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Disable auto-save](../../maker/model-driven-apps/manage-auto-save.md)|  
+|Enable auto save on all forms|If Yes, which is the default, after a record is created (initially saved), any changes made to a form will automatically be saved thirty seconds after the change is made. The 30-second period starts again after a change is made. If no changes are made, the automatic save doesn’t happen.<br /><br /> [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Disable auto-save](../maker/model-driven-apps/manage-auto-save.md)|  
 |**Set Skype for Business Options**||  
 |Enable presence for the system|If Yes, which is the default, instant messaging will display the current status for users, contacts, opportunities, or leads. This only applies to lists and sub-lists for entities with an updated user interface.|  
 |**Set the full-name format**||  
@@ -95,5 +95,5 @@ Use the settings on this page to change general system-level settings like prefe
 |Load default static content from Content Delivery Network|Default is **Yes** and [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] will load out-of-the-box static content from the [!INCLUDE [pn-azure-content-delivery-network](../includes/pn-azure-content-delivery-network.md)] (CDN) service. For firewall restrictions and IP whitelisting related issues, system administrators can select **No** to disable the Azure [!INCLUDE [pn-azure-content-delivery-network](../includes/pn-azure-content-delivery-network.md)] feature.|
 
 ### See also  
- [Disable auto-save](../../maker/model-driven-apps/manage-auto-save.md)
+ [Disable auto-save](../maker/model-driven-apps/manage-auto-save.md)
  
