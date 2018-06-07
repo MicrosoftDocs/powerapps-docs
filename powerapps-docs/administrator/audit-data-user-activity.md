@@ -18,11 +18,11 @@ manager: "brycho"
 ---
 # Audit data and user activity for security and compliance 
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-The [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] auditing feature logs changes that are made to customer records and user access so you can review the activity later. The auditing feature is designed to meet the auditing, compliance, security, and governance policies of many regulated enterprises.  
+The [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] auditing feature logs changes that are made to customer records and user access so you can review the activity later. The auditing feature is designed to meet the auditing, compliance, security, and governance policies of many regulated enterprises.  
   
- The audit logs help the [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] Administrator answer questions such as:  
+ The audit logs help the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] Administrator answer questions such as:  
   
 -   Which user was accessing the system and when?  
   
@@ -55,13 +55,13 @@ The following operations can be audited:
 System administrators and customizers can start or stop auditing for an organization.  
   
 > [!IMPORTANT]
->  For [!INCLUDE[pn_crm_op_edition](../../includes/pn-crm-onprem.md)], you may notice that auditing can significantly increase the size of the organization database over time. You can delete audit logs by going to **Settings** > **Auditing** > **Audit Log Management**. Additionally, you may want to stop auditing for maintenance purposes. Stopping auditing stops tracking for the organization during the period until auditing is started again. When you start auditing again, the same auditing selection is maintained that was previously used.  
+>  For [!INCLUDE[pn_crm_op_edition](../includes/pn-crm-onprem.md)], you may notice that auditing can significantly increase the size of the organization database over time. You can delete audit logs by going to **Settings** > **Auditing** > **Audit Log Management**. Additionally, you may want to stop auditing for maintenance purposes. Stopping auditing stops tracking for the organization during the period until auditing is started again. When you start auditing again, the same auditing selection is maintained that was previously used.  
   
 <a name="BKMK_startAudit"></a>   
 ## Start or stop auditing for an organization  
  This task requires the system administrator or customizer security role or equivalent permissions.  
   
-1. [!INCLUDE[proc_settings_administration](../../includes/proc-settings-administration.md)]  
+1. [!INCLUDE[proc_settings_administration](../includes/proc-settings-administration.md)]  
   
 2.  Choose **System Settings**.  
   
@@ -69,7 +69,7 @@ System administrators and customizers can start or stop auditing for an organiza
   
 4.  Select the entities you want to track. To start or stop auditing on specific entities, select or clear the following check boxes:  
   
-    - **Audit user access**. Tracks when a user accesses [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] including the user name and time.  
+    - **Audit user access**. Tracks when a user accesses [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] including the user name and time.  
   
     - **Common Entities**. Tracks common entities like Account, Contact, Goal, Product, and User.  
   
@@ -85,7 +85,7 @@ System administrators and customizers can start or stop auditing for an organiza
 ## View audit logging details  
  System administrators can see activity for the entities that are enabled for audit logging.  
   
-1. [!INCLUDE[proc_settings_auditing](../../includes/proc-settings-auditing.md)]  
+1. [!INCLUDE[proc_settings_auditing](../includes/proc-settings-auditing.md)]  
   
 2.  Choose **Audit Summary View**.  
   
@@ -95,7 +95,7 @@ System administrators and customizers can start or stop auditing for an organiza
   
     -   Choose an **Event** to view specific details about the activity, such as field changes that were made during an update to a record and who performed the update.  
   
-    -   Click the **Refresh** button  ![Refresh button](../media/html-viewer-grid-refresh.gif "Refresh button") to view the most recent activity. 
+    -   Click the **Refresh** button  ![Refresh button](media/html-viewer-grid-refresh.gif "Refresh button") to view the most recent activity. 
 
 <a name="BKMK_enable_ent_aud"></a>   
 ## Enable or disable entities and fields for auditing  
@@ -103,7 +103,7 @@ System administrators and customizers can start or stop auditing for an organiza
   
  **To enable or disable auditing for an entity**  
   
-1. [!INCLUDE[proc_settings_system](../../includes/proc-settings-system.md)]  
+1. [!INCLUDE[proc_settings_system](../includes/proc-settings-system.md)]  
   
 2.  Click **Auditing**.  
   

@@ -18,9 +18,9 @@ manager: "brycho"
 ---
 # Hierarchy security to control access
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-The hierarchy security model is an extension to the existing [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] security models that use business units, security roles, sharing, and teams. It can be used in conjunction with all other existing security models. The hierarchy security offers a more granular access to records for an organization and helps to bring the maintenance costs down. For example, in complex scenarios, you can start with creating several business units and then add the hierarchy security. This will achieve a more granular access to data with far less maintenance costs that a large number of business units may require.  
+The hierarchy security model is an extension to the existing [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] security models that use business units, security roles, sharing, and teams. It can be used in conjunction with all other existing security models. The hierarchy security offers a more granular access to records for an organization and helps to bring the maintenance costs down. For example, in complex scenarios, you can start with creating several business units and then add the hierarchy security. This will achieve a more granular access to data with far less maintenance costs that a large number of business units may require.  
   
 <a name="BKMK_Securitymodels"></a>   
 ## Manager hierarchy and Position hierarchy security models  
@@ -39,7 +39,7 @@ The hierarchy security model is an extension to the existing [!INCLUDE[pn_micros
   
  For a non-direct report, a manager has the Read-only access to the report’s data. For a direct report, the manager has the Read, Write, Update, Append, AppendTo access to the report’s data. To illustrate the Manager hierarchy security model, let’s take a look at the diagram below. The CEO can read or update the VP of Sales data and the VP of Service data. However, the CEO can only read the Sales Manager data and the Service Manager data, as well as the Sales and Support data. You can further limit the amount of data accessible by a manager with “Depth”. Depth is used to limit how many levels deep a manager has Read-only access to the data of their reports. For example, if the depth is set to 2, the CEO can see the data of the VP of Sales, VP of Service and Sales and Service Managers. However, the CEO doesn’t see the Sales data or the Support data.  
   
- ![Manager hierarchy security in Dynamics 365](../media/manage-hierarchy-security.PNG "Manager hierarchy security in Dynamics 365")  
+ ![Manager hierarchy security in Dynamics 365](media/manage-hierarchy-security.PNG "Manager hierarchy security in Dynamics 365")  
   
  It is important to note that if a direct report has deeper security access to an entity than their manager, the manager may not able to see all the records that the direct report has access to. The following example illustrates this point.  
   
@@ -58,7 +58,7 @@ The hierarchy security model is an extension to the existing [!INCLUDE[pn_micros
   
  To illustrate the concept of the direct ancestor path, let’s look at the diagram below. The Sales Manager position has access to the Sales data, however, it doesn’t have access to the Support data, which is in the different ancestor path. The same is true for the Service Manager position. It doesn’t have access to the Sales data, which is in the Sales path. Like in the Manager hierarchy, you can limit the amount of data accessible by higher positions with “Depth”. The depth will limit how many levels deep a higher position has a Read-only access, to the data of the lower positions in the direct ancestor path. For example, if the depth is set to 3, the CEO position can see the data all the way down from the VP of Sales and VP of Service positions, to the Sales and Support positions.  
   
- ![Position hierarchy in Microsoft Dynamics 365](../media/position-hierarchy.png "Position hierarchy in Dynamics 365")  
+ ![Position hierarchy in Microsoft Dynamics 365](media/position-hierarchy.png "Position hierarchy in Dynamics 365")  
   
 > [!NOTE]
 >  With the Position hierarchy security, a user at a higher position has access to the records owned by a lower position user or by the team that a user is a member of, and to the records that are directly shared to the user or the team that a user is a member of.  
@@ -71,7 +71,7 @@ The hierarchy security model is an extension to the existing [!INCLUDE[pn_micros
   
  The hierarchy security is disabled by default. To enable:  
   
-1. [!INCLUDE[proc_settings_security](../../includes/proc-settings-security.md)]  
+1. [!INCLUDE[proc_settings_security](../includes/proc-settings-security.md)]  
   
 2.  Choose **Hierarchy security** and select **Enable Hierarchy Modeling**.  
   
@@ -80,11 +80,11 @@ The hierarchy security model is an extension to the existing [!INCLUDE[pn_micros
   
  After you have enabled the hierarchy modeling, choose the specific model by selecting the **Manager Hierarchy** or **Custom Position Hierarchy**. All system entities are enabled for hierarchy security out-of-the-box, but, you can exclude selective entities from the hierarchy. The **Hierarchy Security** window shown below:  
   
- ![Set up hierarchy security in Dynamics 365](../media/hierarchy-security-setup.PNG "Set up hierarchy security in Dynamics 365")  
+ ![Set up hierarchy security in Dynamics 365](media/hierarchy-security-setup.PNG "Set up hierarchy security in Dynamics 365")  
   
- Set the **Depth** to a desired value to limit how many levels deep a manager has a Read-only access to the data of their reports. For example, if the depth equals to 2, a manager can only access his accounts and the accounts of the reports two levels deep. In our example, if you log in into [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] not as an Administrator, who can see all accounts, but, as the VP of Sales, you’ll only be able to see the active accounts of the users shown in the red rectangle, as illustrated below:  
+ Set the **Depth** to a desired value to limit how many levels deep a manager has a Read-only access to the data of their reports. For example, if the depth equals to 2, a manager can only access his accounts and the accounts of the reports two levels deep. In our example, if you log in into [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] not as an Administrator, who can see all accounts, but, as the VP of Sales, you’ll only be able to see the active accounts of the users shown in the red rectangle, as illustrated below:  
   
- ![Read access for VP of Sales in Dynamics 365](../media/sales-vp-access.png "Read access for VP of Sales in Dynamics 365")  
+ ![Read access for VP of Sales in Dynamics 365](media/sales-vp-access.png "Read access for VP of Sales in Dynamics 365")  
   
 > [!NOTE]
 >  While, the hierarchy security grants the VP of Sales access to the records in the red rectangle, additional access can be available based on the security role that the VP of Sales has.  
@@ -93,32 +93,32 @@ The hierarchy security model is an extension to the existing [!INCLUDE[pn_micros
 ## Set up Manager and Position hierarchies  
  The Manager hierarchy is easily created by using the manager relationship on the system user record. You use the Manager (**ParentsystemuserID**) lookup field to specify the manager of the user. If you have already created the Position hierarchy, you can also tag the user with a particular position in the Position hierarchy. In the following example, the sales person reports to the sales manager in the Manager hierarchy and also has the Sales position in the Position hierarchy:  
   
- ![Sales person user record in Dynamics 365](../media/appointment-fields-customization.png "Sales person user record in Dynamics 365")  
+ ![Sales person user record in Dynamics 365](media/appointment-fields-customization.png "Sales person user record in Dynamics 365")  
   
  To add a user to a particular position in the Position hierarchy, use the lookup field called Position on the user record’s form, as show below:  
   
 > [!IMPORTANT]
 >  To add a user to a position or change the user’s position, you must have the **Assign position for a user** privilege.  
   
- ![Add user to position in Hierarchy Security in Dynamics 365](../media/hierarchy-security-add-position.PNG "Add user to position in Hierarchy Security in Dynamics 365")  
+ ![Add user to position in Hierarchy Security in Dynamics 365](media/hierarchy-security-add-position.PNG "Add user to position in Hierarchy Security in Dynamics 365")  
   
  To change the position on the user record’s form, on the nav bar, choose **More** (…) and choose a different position, as shown below:  
   
- ![Change position in hierarchy security in Dynamics 365](../media/cust-hs-change-position.PNG "Change position in hierarchy security in Dynamics 365")  
+ ![Change position in hierarchy security in Dynamics 365](media/cust-hs-change-position.PNG "Change position in hierarchy security in Dynamics 365")  
   
  To create a Position hierarchy:  
   
-1. [!INCLUDE[proc_settings_security](../../includes/proc-settings-security.md)]  
+1. [!INCLUDE[proc_settings_security](../includes/proc-settings-security.md)]  
   
 2.  Choose **Positions**.  
   
  For each position, provide the name of the position, the parent of the position, and the description. Add users to this position by using the lookup field called **Users in this position**. Below is the example of Position hierarchy with the active positions.  
   
- ![Active positions in Hierarchy Security in Dynamics 365](../media/active-positions.png "Active positions in Hierarchy Security in Dynamics 365")  
+ ![Active positions in Hierarchy Security in Dynamics 365](media/active-positions.png "Active positions in Hierarchy Security in Dynamics 365")  
   
  The example of the enabled users with their corresponding positions is shown below:  
   
- ![Enabled users with assigned positions in Dynamics 365](../media/hierachy-security-enabled-users.png "Enabled users with assigned positions in Dynamics 365")  
+ ![Enabled users with assigned positions in Dynamics 365](media/hierachy-security-enabled-users.png "Enabled users with assigned positions in Dynamics 365")  
   
 <a name="BKMK_Performanceconsiderations"></a>
 

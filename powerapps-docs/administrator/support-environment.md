@@ -21,11 +21,11 @@ ms.author: jimholtz
 # Manage Support instances
 
 > [!NOTE]
-> ![This page is under construction. Check back soon!](../media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
+> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE [cc_applies_to_update_8_2_0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE [cc_applies_to_update_8_2_0](../includes/cc_applies_to_update_8_2_0.md)]
 
-A Support instance is any non-production instance of [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] used by Microsoft Support to reproduce and resolve customer issues. When there is an issue affecting the operation of your online service, Microsoft can create a Support instance in your tenant to troubleshoot and repair the issue.  It is isolated from your production instance so it does not impact your business operations. Dynamics 365 System admins have full control of managing and providing organization data by [copying it](copy-environment.md) to a Support instance. 
+A Support instance is any non-production instance of [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] used by Microsoft Support to reproduce and resolve customer issues. When there is an issue affecting the operation of your online service, Microsoft can create a Support instance in your tenant to troubleshoot and repair the issue.  It is isolated from your production instance so it does not impact your business operations. Dynamics 365 System admins have full control of managing and providing organization data by [copying it](copy-environment.md) to a Support instance. 
 
 **What is a Support instance?**
 
@@ -37,7 +37,7 @@ A Support instance is any non-production instance of [!INCLUDE[pn_CRM_Online](..
 **What data is in a Support instance?**
 
 -  When a Support instance is initially created by Microsoft, it contains no customer data or customizations.
--  System admins [manage Support instances](manage-online-environments.md) in the [!INCLUDE[pn_dyn_365_admin_center](../../includes/pn-dyn-365-admin-center.md)].
+-  System admins [manage Support instances](manage-online-environments.md) in the [!INCLUDE[pn_dyn_365_admin_center](../includes/pn-dyn-365-admin-center.md)].
 -  System admins can [copy an instance](copy-environment.md) to a Support instance, and then choose whether to provide a [Minimal](copy-environment.md#minimal-copy-instance) or a [Full](copy-environment.md#full-copy-instance) copy of their instance.
 -  System admins must consent to providing a copy of their data to Microsoft. 
 

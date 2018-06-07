@@ -18,18 +18,18 @@ manager: "brycho"
 ---
 # Manage user account synchronization 
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-Because [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] user identities are provisioned through [!INCLUDE[pn_MS_Online_Services](../../includes/pn-ms-online-services.md)], you have multiple options for managing user synchronization between your online and on-premises environments.  
+Because [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] user identities are provisioned through [!INCLUDE[pn_MS_Online_Services](../includes/pn-ms-online-services.md)], you have multiple options for managing user synchronization between your online and on-premises environments.  
   
 ## Decide on a user management approach  
- You can choose from three main identity models in [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] when you set up and manage user accounts:
+ You can choose from three main identity models in [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] when you set up and manage user accounts:
 
-1.  **Cloud identity**. Manage your user accounts in [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] only. No on-premises servers are required to manage users; it's all done in the cloud.
+1.  **Cloud identity**. Manage your user accounts in [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] only. No on-premises servers are required to manage users; it's all done in the cloud.
 
-2.  **Synchronized identity**. Synchronize on-premises directory objects with [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] and manage your users on-premises. You can also synchronize passwords so that the users have the same password on-premises and in the cloud, but they will have to sign in again to use [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)].
+2.  **Synchronized identity**. Synchronize on-premises directory objects with [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] and manage your users on-premises. You can also synchronize passwords so that the users have the same password on-premises and in the cloud, but they will have to sign in again to use [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)].
 
-3.  **Federated identity**. Synchronize on-premises directory objects with [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] and manage your users on-premises. The users have the same password on-premises and in the cloud, and they do not have to sign in again to use [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)]. This is often referred to as single sign-on.
+3.  **Federated identity**. Synchronize on-premises directory objects with [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] and manage your users on-premises. The users have the same password on-premises and in the cloud, and they do not have to sign in again to use [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)]. This is often referred to as single sign-on.
   
 It’s important to carefully consider which identity model to use to get up and running. Think about time, existing complexity, and cost. These factors are different for every organization. Your choice is based largely on the size of your company and the depth and breadth of your IT resources.  
   
@@ -48,7 +48,7 @@ Review the following resources to equip you to make the right decision for your 
   
  https://\<*yourCRMOrganizationName*>.crm.dynamics.com?whr=\<*yourFederationServiceIdentifier*>  
   
- You can get the \<*yourCRMOrganizationName*> by looking at the URL you use to access [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)]. For example, in https://contoso.crm.dynamics.com, *contoso* is \<*yourCRMOrganizationName*>.  
+ You can get the \<*yourCRMOrganizationName*> by looking at the URL you use to access [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)]. For example, in https://contoso.crm.dynamics.com, *contoso* is \<*yourCRMOrganizationName*>.  
   
 > [!IMPORTANT]
 > The following URLs would be used for subscriptions hosted in these locations.  
@@ -66,7 +66,7 @@ Review the following resources to equip you to make the right decision for your 
   
  You can get the Federation Service identifier for your organization by using the following steps:  
   
-1.  On the server that is running [!INCLUDE[pn_ADFS2](../../includes/pn-adfs2.md)], click or tap **Start** > **Administrative Tools** > **AD FS 2.0 Management**.  
+1.  On the server that is running [!INCLUDE[pn_ADFS2](../includes/pn-adfs2.md)], click or tap **Start** > **Administrative Tools** > **AD FS 2.0 Management**.  
   
 2.  In the console tree, right-click or tap **AD FS 2.0**, and then click or tap **Edit Federation Service Properties**.  
   
@@ -76,4 +76,4 @@ Review the following resources to equip you to make the right decision for your 
   
  Your URL should look like: https://*contoso*.crm.dynamics.com?whr=*http://sts1.fabrikam.com/adfs/services/trust*  
   
- Send this URL to your [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] users and encourage them to bookmark it.
+ Send this URL to your [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] users and encourage them to bookmark it.

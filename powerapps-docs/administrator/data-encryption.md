@@ -18,18 +18,18 @@ manager: "brycho"
 ---
 # Enhance security by encrypting your data
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-[!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] uses standard [!INCLUDE[pn_MS_SQL_Server](../../includes/pn-ms-sql-server.md)] cell level encryption for a set of default entity attributes that contain sensitive information, such as user names and email passwords. This feature can help organizations meet FIPS 140-2 compliance.  
+[!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] uses standard [!INCLUDE[pn_MS_SQL_Server](../includes/pn-ms-sql-server.md)] cell level encryption for a set of default entity attributes that contain sensitive information, such as user names and email passwords. This feature can help organizations meet FIPS 140-2 compliance.  
   
- For [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)],  all new and upgraded organizations use data encryption by default. Data encryption can’t be turned off.  
+ For [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)],  all new and upgraded organizations use data encryption by default. Data encryption can’t be turned off.  
   
- [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] users who have the system administrator security role can change the encryption key at any time. 
+ [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] users who have the system administrator security role can change the encryption key at any time. 
 
 <a name="BKMK_changeEncKey"></a>   
 ## Change an organization encryption key  
   
-1. [!INCLUDE[proc_settings_datamanagement](../../includes/proc-settings-datamanagement.md)]  
+1. [!INCLUDE[proc_settings_datamanagement](../includes/proc-settings-datamanagement.md)]  
   
 2.  Click **Data Encryption**.  
   
@@ -43,9 +43,9 @@ manager: "brycho"
 ## Copy your organization data encryption key  
  We strongly recommend that you make a copy of your data encryption key.  
   
-1.  Sign in to [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] as a user with the system administrator security role.  
+1.  Sign in to [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] as a user with the system administrator security role.  
   
-2. [!INCLUDE[proc_settings_datamanagement](../../includes/proc-settings-datamanagement.md)]  
+2. [!INCLUDE[proc_settings_datamanagement](../includes/proc-settings-datamanagement.md)]  
   
 3.  Click **Data Encryption**.  
   
@@ -54,7 +54,7 @@ manager: "brycho"
 5.  Paste the encryption key in to a text editor, such as Notepad.  
   
     > [!WARNING]
-    >  By default, [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] generates a passphrase that is a random collection of Unicode characters. Therefore, you must save the system-generated passphrase by using an application and file that supports Unicode characters. Some text editors, such as Notepad use ANSI coding by default. Before you save the passphrase using Notepad, select **Save As**, and then in the **Encoding** list, select **Unicode**.  
+    >  By default, [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] generates a passphrase that is a random collection of Unicode characters. Therefore, you must save the system-generated passphrase by using an application and file that supports Unicode characters. Some text editors, such as Notepad use ANSI coding by default. Before you save the passphrase using Notepad, select **Save As**, and then in the **Encoding** list, select **Unicode**.  
   
 6.  As a best practice, save the text file that contains the encryption key on a computer in a secure location on an encrypted hard drive.  
   

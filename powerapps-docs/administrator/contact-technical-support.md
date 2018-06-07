@@ -18,7 +18,7 @@ manager: "brycho"
 ---
 # Contact Technical Support 
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
 ## New Dynamics 365 support center 
 
@@ -51,15 +51,15 @@ On February 14, 2018, we introduced a new Help + support experience for admins t
 
 2. Select **+ New support request**.
 
-   ![New support request](../media/new-support-request.png "New support request")
+   ![New support request](media/new-support-request.png "New support request")
 
 3. Fill in your information, and then select **Submit**.
 
-   ![Create a new support request](../media/create-support-ticket.png "Create a new support request")
+   ![Create a new support request](media/create-support-ticket.png "Create a new support request")
 
 Your request will appear in the list of support requests.
 
-![List of support requests](../media/support-ticket-list.png "List of support requests")
+![List of support requests](media/support-ticket-list.png "List of support requests")
 
 You can check the status and edit your request on this page.
   

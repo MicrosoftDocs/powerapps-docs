@@ -20,38 +20,38 @@ manager: "brycho"
 # Manage storage  
 
 > [!NOTE]
-> ![This page is under construction. Check back soon!](../media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
+> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
-You can manage your organization’s data storage capacity in connection with your subscription to [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)]. The type of subscription you purchase determines the amount of storage initially allocated to your organization. If you run out of storage, you can add more.  
+You can manage your organization’s data storage capacity in connection with your subscription to [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)]. The type of subscription you purchase determines the amount of storage initially allocated to your organization. If you run out of storage, you can add more.  
   
- You can also gain storage by deleting certain types of unnecessary data in [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)]. For information on deleting data, see: [Free storage space in Dynamics 365](https://docs.microsoft.com/dynamics365/customer-engagement/admin/free-storage-space).  
+ You can also gain storage by deleting certain types of unnecessary data in [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)]. For information on deleting data, see: [Free storage space in Dynamics 365](https://docs.microsoft.com/dynamics365/customer-engagement/admin/free-storage-space).  
   
- For information on storage amounts included with the various [!INCLUDE[pn_CRM_Online](../../includes/pn-crm-online.md)] plans, see: [Dynamics 365 pricing](https://www.microsoft.com/en-us/dynamics365/pricing).  
+ For information on storage amounts included with the various [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] plans, see: [Dynamics 365 pricing](https://www.microsoft.com/en-us/dynamics365/pricing).  
   
 ## Monitor the amount of storage your organization is using  
- Monitor your [!INCLUDE[pn_crm_online_shortest](../../includes/pn-crm-online-shortest.md)] storage to make sure you’ve got lots of capacity for growth.  
+ Monitor your [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] storage to make sure you’ve got lots of capacity for growth.  
   
- If your total storage used is 80% or more of capacity, [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] admins will receive email notifications and alerts will appear on the Service Health page.  
+ If your total storage used is 80% or more of capacity, [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] admins will receive email notifications and alerts will appear on the Service Health page.  
   
-1. [!INCLUDE[proc_office365_signin](../../includes/proc-office365-signin.md)]  
+1. [!INCLUDE[proc_office365_signin](../includes/proc-office365-signin.md)]  
   
-2. [!INCLUDE[proc_office365_choose_admin_crm](../../includes/proc-office365-choose-admin-crm.md)]  
+2. [!INCLUDE[proc_office365_choose_admin_crm](../includes/proc-office365-choose-admin-crm.md)]  
   
 3.  Choose the **Service Health** tab.  
   
- ![View storage consumed by each instance](../media/instance-storage.png "View storage consumed by each instance")  
+ ![View storage consumed by each instance](media/instance-storage.png "View storage consumed by each instance")  
   
 ## Add storage to Dynamics 365 (online)  
   
-1. [!INCLUDE[proc_office365_signin](../../includes/proc-office365-signin.md)]  
+1. [!INCLUDE[proc_office365_signin](../includes/proc-office365-signin.md)]  
   
 2.  Click **Billing** > **Purchase Services**.  
   
 3.  Scroll down to the **Add-on subscriptions** section and mouse over the **Dynamics 365 - Additional Database Storage** tile.  
   
- ![Purchase additional online storage](../media/purchase-additional-online-storage.png "Purchase additional online storage")  
+ ![Purchase additional online storage](media/purchase-additional-online-storage.png "Purchase additional online storage")  
   
 4.  Click **Buy now**, and then proceed through the order process.  
   
@@ -59,7 +59,7 @@ You can manage your organization’s data storage capacity in connection with yo
 
 ## What happens if you exceed your storage limit?
 
-[!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] System administrators will receive frequent email notifications which will cease once additional storage is added or storage is reduced to below the limit.
+[!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] System administrators will receive frequent email notifications which will cease once additional storage is added or storage is reduced to below the limit.
 
 ### See also  
  [Manage Microsoft Dynamics 365 (online) instances](manage-online-environments.md)   

@@ -20,14 +20,14 @@ ms.author: jimholtz
 ---
 # Copy an instance to a Sandbox instance
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE [cc_applies_to_update_8_2_0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE [cc_applies_to_update_8_2_0](../includes/cc_applies_to_update_8_2_0.md)]
 
-You can use Copy instance in the [!INCLUDE[pn_dyn_365_admin_center](../../includes/pn-dyn-365-admin-center.md)] to copy the [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] application and all data from any instance to a Sandbox instance. You can do either a full or minimal copy.  
+You can use Copy instance in the [!INCLUDE[pn_dyn_365_admin_center](../includes/pn-dyn-365-admin-center.md)] to copy the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] application and all data from any instance to a Sandbox instance. You can do either a full or minimal copy.  
   
 > [!TIP]
-> ![Video symbol](../media/video-thumbnail-4.png "Video symbol") Check out the following video on copying an instance to a Sandbox instance: [Microsoft Dynamics CRM 2013 Spring '14 Online New Features -Copy](http://youtu.be/y6duFi8nZaE).  
+> ![Video symbol](media/video-thumbnail-4.png "Video symbol") Check out the following video on copying an instance to a Sandbox instance: [Microsoft Dynamics CRM 2013 Spring '14 Online New Features -Copy](http://youtu.be/y6duFi8nZaE).  ![video-thumbnail-4.png](media/video-thumbnail-4.png)
 >   
->  This video also applies to [!INCLUDE[pn_crm_online_2015_update_1_shortest](../../includes/pn-crm-online-2015-update-1-shortest.md)] and [!INCLUDE[pn_crm_online_2016_update](../../includes/pn-crm-online-2016-update.md)].  
+>  This video also applies to [!INCLUDE[pn_crm_online_2015_update_1_shortest](../includes/pn-crm-online-2015-update-1-shortest.md)] and [!INCLUDE[pn_crm_online_2016_update](../includes/pn-crm-online-2016-update.md)].  
   
 > [!NOTE]
 >  To copy instances larger than 100 GB, please contact [technical support](contact-technical-support.md).  
@@ -100,12 +100,12 @@ After modifying and enabling some of the plug-ins, the developer Sandbox instanc
 
 ## To copy an instance  
   
-1. [!INCLUDE[proc_office365_signin](../../includes/proc-office365-signin.md)]  
+1. [!INCLUDE[proc_office365_signin](../includes/proc-office365-signin.md)]  
   
     > [!NOTE]
-    >  Global administrators can copy all available instances. [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] System administrators can copy instances for which they have the System administrator role.  
+    >  Global administrators can copy all available instances. [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] System administrators can copy instances for which they have the System administrator role.  
   
-2. [!INCLUDE[proc_office365_choose_admin_crm](../../includes/proc-office365-choose-admin-crm.md)]  
+2. [!INCLUDE[proc_office365_choose_admin_crm](../includes/proc-office365-choose-admin-crm.md)]  
   
 3.  Choose the **Instances** tab.  
   
@@ -127,17 +127,17 @@ Once the copy process is complete, the target instance is placed in [Administrat
 ## Next steps after copying an instance  
  To ensure the newly created copy (target) instance does not impact your production instance, once the copy operation is complete, two things happen:  
   
-1.  The newly created copy instance is placed in administration mode. Only those with [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] System Administrator or System Customizer security roles can sign in and manage the copy instance. Regular [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] users cannot sign in and use the copy instance.  
+1.  The newly created copy instance is placed in administration mode. Only those with [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] System Administrator or System Customizer security roles can sign in and manage the copy instance. Regular [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] users cannot sign in and use the copy instance.  
   
-2.  Background operations are disabled in the copy instance. Disabled operations include workflows and synchronization with [!INCLUDE[pn_Microsoft_Exchange](../../includes/pn-microsoft-exchange.md)].  
+2.  Background operations are disabled in the copy instance. Disabled operations include workflows and synchronization with [!INCLUDE[pn_Microsoft_Exchange](../includes/pn-microsoft-exchange.md)].  
   
 **Review components**  
   
- You should review the status of application components in the copy instance with external connections such as [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)], email, plug-ins, custom workflow activities, etc. Review these and consider what action to take:  
+ You should review the status of application components in the copy instance with external connections such as [!INCLUDE[pn_yammer](../includes/pn-yammer.md)], email, plug-ins, custom workflow activities, etc. Review these and consider what action to take:  
   
 1.  Disable the component.  
   
-2.  Redirect the component to another service instance such as one running [!INCLUDE[pn_Exchange](../../includes/pn-exchange.md)] or [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)].  
+2.  Redirect the component to another service instance such as one running [!INCLUDE[pn_Exchange](../includes/pn-exchange.md)] or [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)].  
   
 3.  Do nothing – leave the component as is in the copy instance. For example, you might decide to allow Yammer posting to both the copy and production instances.  
   
@@ -151,13 +151,13 @@ Once the copy process is complete, the target instance is placed in [Administrat
   
     -   Appointments, Contacts, Tasks  
   
- [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Set the delivery method for incoming and outgoing email](set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks.md)  
+ [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Set the delivery method for incoming and outgoing email](set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks.md)  
   
-- **SharePoint**. Deactivate or redirect [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)] to a sandbox [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)] environment to prevent impacting documents in [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)] managed by [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)]. In [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)], go to **Settings** > **Documentation Management** > **SharePoint Sites**. Select your site, and then click **Deactivate**.  
+- **SharePoint**. Deactivate or redirect [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] to a sandbox [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)] environment to prevent impacting documents in [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] managed by [!INCLUDE[pn_SharePoint_short](../includes/pn-sharepoint-short.md)]. In [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)], go to **Settings** > **Documentation Management** > **SharePoint Sites**. Select your site, and then click **Deactivate**.  
   
-- **Yammer**. Disable [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] or redirect to a separate [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] service to prevent posts made in the copy instance conflicting with posts made in the production instance. In [!INCLUDE[pn_microsoftcrm](../../includes/pn-microsoftcrm.md)], go to **Settings** > **Administration** > **Yammer Configuration**.  
+- **Yammer**. Disable [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] or redirect to a separate [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] service to prevent posts made in the copy instance conflicting with posts made in the production instance. In [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)], go to **Settings** > **Administration** > **Yammer Configuration**.  
   
-     After creating a new Sandbox instance, workflows and system jobs might be pending execution. Apart from these jobs, if you have connected [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] to [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] there will be [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] activity streams posted from [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] to [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] asynchronously. These activity streams are not visible through the system jobs. If there were any pending [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] activity streams before the Disable Background Process is turned on, these activity steams will be posted to the current [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] configuration once the Disable Background Process is turned back off. In the Sandbox instance, if you have your current [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] configuration connected to the same [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] network as your production environment, you might see duplicate activity streams. To avoid duplicate [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] activity streams, redirect your Sandbox instance to another [!INCLUDE[pn_yammer](../../includes/pn-yammer.md)] network (possibly a test network) before turning background processes back on.  
+     After creating a new Sandbox instance, workflows and system jobs might be pending execution. Apart from these jobs, if you have connected [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] to [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] there will be [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] activity streams posted from [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] to [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] asynchronously. These activity streams are not visible through the system jobs. If there were any pending [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] activity streams before the Disable Background Process is turned on, these activity steams will be posted to the current [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] configuration once the Disable Background Process is turned back off. In the Sandbox instance, if you have your current [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] configuration connected to the same [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] network as your production environment, you might see duplicate activity streams. To avoid duplicate [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] activity streams, redirect your Sandbox instance to another [!INCLUDE[pn_yammer](../includes/pn-yammer.md)] network (possibly a test network) before turning background processes back on.  
   
 - **Platform extensibility**. Consider disabling the following that could be running in the copy instance and impacting external service components.  
   

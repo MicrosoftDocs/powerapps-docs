@@ -18,21 +18,21 @@ manager: "brycho"
 ---
 # Set up security permissions for a field 
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
 You can restrict access to a field by creating a field security profile. After you create the profile, you assign users and or teams to that profile, and set up specific read, create, or write permissions for the field.  
   
- [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Security concepts for Dynamics 365](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-concepts)  
+ [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Security concepts for Dynamics 365](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-concepts)  
   
-1. [!INCLUDE[proc_permissions_system_admin](../../includes/proc-permissions-system-admin.md)]  
+1. [!INCLUDE[proc_permissions_system_admin](../includes/proc-permissions-system-admin.md)]  
   
     Check your security role  
   
-    - [!INCLUDE[proc_follow_steps_in_link](../../includes/proc-follow-steps-in-link.md)]  
+    - [!INCLUDE[proc_follow_steps_in_link](../includes/proc-follow-steps-in-link.md)]  
   
-    - [!INCLUDE[proc_dont_have_correct_permissions](../../includes/proc-dont-have-correct-permissions.md)]  
+    - [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_security](../../includes/proc-settings-security.md)]  
+2. [!INCLUDE[proc_settings_security](../includes/proc-settings-security.md)]  
   
 3.  Click **Field Security Profiles**, and then on the command bar, click **New**.  
   

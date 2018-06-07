@@ -18,19 +18,19 @@ manager: "brycho"
 ---
 # Customize regional options 
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../../includes/cc_applies_to_update_8_2_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
 You can customize how numbers, currencies, times, and dates appear to everyone in your organization.  
   
-1. [!INCLUDE[proc_permissions_system_admin](../../includes/proc-permissions-system-admin.md)]  
+1. [!INCLUDE[proc_permissions_system_admin](../includes/proc-permissions-system-admin.md)]  
   
     Check your security role  
   
-    1. [!INCLUDE[proc_follow_steps_in_link](../../includes/proc-follow-steps-in-link.md)]  
+    1. [!INCLUDE[proc_follow_steps_in_link](../includes/proc-follow-steps-in-link.md)]  
   
-    2. [!INCLUDE[proc_dont_have_correct_permissions](../../includes/proc-dont-have-correct-permissions.md)]  
+    2. [!INCLUDE[proc_dont_have_correct_permissions](../includes/proc-dont-have-correct-permissions.md)]  
   
-2. [!INCLUDE[proc_settings_administration](../../includes/proc-settings-administration.md)]  
+2. [!INCLUDE[proc_settings_administration](../includes/proc-settings-administration.md)]  
   
 3.  Click **System Settings**.  
   
