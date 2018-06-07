@@ -14,7 +14,7 @@ ms.assetid: c0219d78-f2e2-4fdd-9d54-2d7e1468fc0c
 caps.latest.revision: 11
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Set up Dynamics 365 (online) to use SharePoint Online
 

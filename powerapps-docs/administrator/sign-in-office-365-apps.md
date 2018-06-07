@@ -14,7 +14,7 @@ ms.assetid: 01f41319-db9a-4cb0-8894-4123d35fdd49
 caps.latest.revision: 6
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Sign in to Customer Engagement and Office 365 apps
 

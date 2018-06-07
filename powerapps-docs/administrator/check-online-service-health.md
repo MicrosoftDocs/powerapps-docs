@@ -14,7 +14,7 @@ ms.assetid: c16f1162-f8f4-4ce2-9749-3d0293540d3f
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # How do I check my online service health?
 

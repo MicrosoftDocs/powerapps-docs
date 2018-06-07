@@ -14,7 +14,7 @@ ms.assetid: 6cc410d4-2c5a-42f6-97a0-af7259182e9a
 caps.latest.revision: 27
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: kvivek
 ---
 # Skype for Business and Skype integration
 

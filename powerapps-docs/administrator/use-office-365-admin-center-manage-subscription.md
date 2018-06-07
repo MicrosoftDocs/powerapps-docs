@@ -14,7 +14,7 @@ ms.assetid: 4a55b843-e764-43aa-a818-904b85189cc5
 caps.latest.revision: 5
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Use the Office 365 admin center to manage your subscription
 

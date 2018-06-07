@@ -14,7 +14,7 @@ ms.assetid: 578abf62-e903-452e-90e0-7fb43343fcaf
 caps.latest.revision: 26
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Set up security permissions for a field 
 

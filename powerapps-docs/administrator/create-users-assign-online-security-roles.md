@@ -14,7 +14,7 @@ ms.assetid: 5f21f288-f941-4ca0-a15f-a91cd9feee4d
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Create users in Dynamics 365 (online) and assign security roles
 

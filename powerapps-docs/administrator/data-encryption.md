@@ -14,7 +14,7 @@ ms.assetid: f88f7c87-2ee2-42f3-8101-7271f6731cf9
 caps.latest.revision: 28
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: kvivek
 ---
 # Enhance security by encrypting your data
 

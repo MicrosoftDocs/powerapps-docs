@@ -14,7 +14,7 @@ ms.assetid: 9707d6fd-f289-4e46-895e-6b871ca3a9ea
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Global and Service administrators can administer without a license 
 

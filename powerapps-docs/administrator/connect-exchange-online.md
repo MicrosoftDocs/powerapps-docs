@@ -14,7 +14,7 @@ ms.assetid: 1b2b7846-5a69-4af7-849d-0c0acc300a7e
 caps.latest.revision: 22
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Connect Dynamics 365 (online) to Exchange Online 
 

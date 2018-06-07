@@ -14,7 +14,7 @@ ms.assetid: 4ab7a76b-979b-4326-ad38-35ec967d250d
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Cancel your subscription
 

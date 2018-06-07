@@ -14,7 +14,7 @@ ms.assetid: fb3338ce-6522-46af-9c1e-71a368424e50
 caps.latest.revision: 63
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Billing FAQs for Dynamics 365 (online)
 

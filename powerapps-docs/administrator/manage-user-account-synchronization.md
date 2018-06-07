@@ -14,7 +14,7 @@ ms.assetid: d72e27e3-a8c4-4d0d-96d1-c7f3f85bafdb
 caps.latest.revision: 5
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Manage user account synchronization 
 

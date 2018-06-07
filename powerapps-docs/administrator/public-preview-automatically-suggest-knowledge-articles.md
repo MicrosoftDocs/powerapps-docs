@@ -14,7 +14,7 @@ ms.assetid: ee417009-afaf-4a63-9d8b-ef756a37decf
 caps.latest.revision: 10
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: kvivek
 ---
 # Preview feature: Automatically suggest knowledge articles
 

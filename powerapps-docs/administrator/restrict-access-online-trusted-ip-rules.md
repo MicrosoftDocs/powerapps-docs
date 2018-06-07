@@ -14,7 +14,7 @@ ms.assetid: 45e17aac-7d50-4022-88b2-9dd5d0895b8c
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Restrict access with trusted IP rules
 

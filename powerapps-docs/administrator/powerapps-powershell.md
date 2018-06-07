@@ -2,7 +2,7 @@
 title: PowerShell support (preview) | Microsoft Docs
 description: Description of the different PowerShell cmdlets and a walkthrough of how to install and run them.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: reference

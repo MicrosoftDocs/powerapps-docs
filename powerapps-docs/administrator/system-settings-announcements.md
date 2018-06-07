@@ -14,7 +14,7 @@ ms.assetid: 9456884f-08e3-421e-9f4c-9773671e0b6c
 caps.latest.revision: 15
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings - Announcements
 

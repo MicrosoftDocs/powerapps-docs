@@ -14,7 +14,7 @@ ms.assetid: 82047a4c-b097-4fa4-9542-557eadbe3827
 caps.latest.revision: 12
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Set privacy preferences for an organization
 

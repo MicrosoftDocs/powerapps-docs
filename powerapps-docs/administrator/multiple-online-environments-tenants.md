@@ -14,7 +14,7 @@ ms.assetid: 2bdb7dc2-da26-4ab7-9e8f-65c04ae6df0d
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # About multiple online instances or tenants
 

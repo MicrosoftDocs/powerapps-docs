@@ -14,7 +14,7 @@ ms.assetid: ef49fa3d-3359-42a5-b4d7-fda206c82365
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Purchase and assign Dynamics 365 (online) licenses
 

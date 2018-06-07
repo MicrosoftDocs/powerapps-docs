@@ -14,7 +14,7 @@ ms.assetid: a67a5f58-6d75-46bd-a14e-3e77331df206
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Grant users access
 

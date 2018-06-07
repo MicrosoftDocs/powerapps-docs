@@ -14,7 +14,7 @@ ms.assetid: 0477a65a-66c9-4562-8049-c7ea27f4080b
 caps.latest.revision: 15
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings - Features
 

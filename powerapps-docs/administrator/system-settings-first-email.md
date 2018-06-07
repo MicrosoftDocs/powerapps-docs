@@ -14,7 +14,7 @@ ms.assetid: 742822c3-3863-42b1-8f62-1dd2a233fdb4
 caps.latest.revision: 15
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings - Email: First time configuration
 

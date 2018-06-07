@@ -14,7 +14,7 @@ ms.assetid: f8966997-6047-4ff7-b3ae-47cbceea96a2
 caps.latest.revision: 17
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: kvivek
 ---
 # Audit data and user activity for security and compliance 
 

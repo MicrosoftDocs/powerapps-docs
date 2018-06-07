@@ -14,7 +14,7 @@ ms.assetid: 8a8f0648-22fd-434b-9b1a-1ded448dacb0
 caps.latest.revision: 30
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Download a template for data import
 

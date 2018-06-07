@@ -14,7 +14,7 @@ ms.assetid: 1d489839-9400-4d74-b270-468e33719d80
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # What is Office 365 and how does it relate to Dynamics 365 (online)? 
 

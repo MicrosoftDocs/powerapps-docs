@@ -14,7 +14,7 @@ ms.assetid: 02aa7752-3df6-4528-9108-d037b14056ba
 caps.latest.revision: 5
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # For partners: the Delegated Administrator
 

@@ -14,7 +14,7 @@ ms.assetid: bdd1ca68-8231-451e-ab5c-b1bfae86dd23
 caps.latest.revision: 13
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Enable OneDrive for Business (on-premises)
 

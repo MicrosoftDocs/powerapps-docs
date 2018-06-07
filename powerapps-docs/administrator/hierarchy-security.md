@@ -14,7 +14,7 @@ author: "jimholtz"
 ms.assetid: cb5bc112-03f3-4de4-ae5b-998b1e22503e
 caps.latest.revision: 30
 ms.author: "rdubois"
-manager: "brycho"
+manager: kvivek
 ---
 # Hierarchy security to control access
 

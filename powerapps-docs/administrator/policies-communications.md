@@ -14,7 +14,7 @@ ms.assetid: e351e995-d299-4817-8e84-0a70743627bd
 caps.latest.revision: 5
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Policies and Communications for service incidents
 

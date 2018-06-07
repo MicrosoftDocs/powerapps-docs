@@ -14,7 +14,7 @@ ms.assetid: dea61b2c-a489-4d9a-9535-2e8eb6fe8943
 caps.latest.revision: 38
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Create or edit a business unit to control access to records
 

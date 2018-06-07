@@ -14,7 +14,7 @@ ms.assetid: bb11b898-55d2-4afa-a09b-0b7965145e88
 caps.latest.revision: 19
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Volume licensing FAQ
 

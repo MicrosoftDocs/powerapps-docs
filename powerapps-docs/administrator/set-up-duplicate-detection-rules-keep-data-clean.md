@@ -14,7 +14,7 @@ ms.assetid: a692ee2a-ad33-47a9-978e-00331ec0f75e
 caps.latest.revision: 54
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Set up duplicate detection rules to keep your data clean
 

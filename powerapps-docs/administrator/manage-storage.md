@@ -15,7 +15,7 @@ ms.assetid: cf4bf53e-4458-4fec-a837-aaa0e946d1ed
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Manage storage  
 

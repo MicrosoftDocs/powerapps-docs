@@ -14,7 +14,7 @@ ms.assetid: e34d0e4f-a01b-49a3-b1ad-033a2f4908c0
 caps.latest.revision: 5
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Invite users with Azure Active Directory B2B collaboration
 

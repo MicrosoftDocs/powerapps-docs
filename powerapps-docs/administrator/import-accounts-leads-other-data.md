@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: dee40fe5-1942-4521-986f-714edfd36433
 caps.latest.revision: 37
 ms.author: "anbichse"
-manager: "brycho"
+manager: kvivek
 ---
 # Import accounts, leads, or other data
 

@@ -5,7 +5,7 @@ services: 'powerapps'
 suite: powerapps
 documentationcenter: na
 author: jimholtz
-manager: kfile
+manager: kvivek
 editor: ''
 tags: ''
 

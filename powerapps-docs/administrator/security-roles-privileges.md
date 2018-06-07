@@ -14,7 +14,7 @@ ms.assetid: 460766f2-4b19-4406-8fd0-fff46d4cbb5e
 caps.latest.revision: 21
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: kvivek
 ---
 # Security roles and privileges
 

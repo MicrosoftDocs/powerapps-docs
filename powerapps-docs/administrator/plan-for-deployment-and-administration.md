@@ -14,7 +14,7 @@ ms.assetid: 1d1c7350-f8df-4867-851f-8d5940dfbb72
 caps.latest.revision: 5
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Plan for deployment and administration
 

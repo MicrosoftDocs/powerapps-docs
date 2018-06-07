@@ -14,7 +14,7 @@ author: "jimholtz"
 ms.assetid: 73759d4a-596d-469a-8da3-8ab4f02cd048
 caps.latest.revision: 14
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Contact information for billing support
 

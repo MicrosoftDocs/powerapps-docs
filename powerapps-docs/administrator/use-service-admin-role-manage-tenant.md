@@ -14,7 +14,7 @@ ms.assetid: a92f7d58-fbe0-4ad7-bf42-d2961e306b85
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Use the service admin role to manage your tenant 
 

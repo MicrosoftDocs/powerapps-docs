@@ -2,7 +2,7 @@
 title: Administer environments | Microsoft Docs
 description: Learn how to administer environments in PowerApps, including creation, renaming, deletion, and security
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

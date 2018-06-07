@@ -14,7 +14,7 @@ author: "jimholtz"
 ms.assetid: a852882d-8672-4ade-87d5-dc0262c45fa9
 caps.latest.revision: 63
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Contact Technical Support 
 

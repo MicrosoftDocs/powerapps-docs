@@ -14,7 +14,7 @@ ms.assetid: 15bcc3ff-01cf-4973-831a-7529c0fe951b
 caps.latest.revision: 12
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: kvivek
 ---
 # Manage your documents using SharePoint
 

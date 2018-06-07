@@ -14,7 +14,7 @@ ms.assetid: a55db523-8adf-403c-9afb-a55be30e19f8
 caps.latest.revision: 7
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Manage email notifications to admins
 

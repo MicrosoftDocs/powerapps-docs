@@ -132,7 +132,7 @@
     - name: "'Troubleshooting: Unblock required URLs'"
       href: troubleshooting-unblock-urls-required.md
   - name: Configure environment security
-    href: database-security
+    href: database-security.md
     items:
     - name: Introduction to data groups
       href: introduction-to-data-groups.md

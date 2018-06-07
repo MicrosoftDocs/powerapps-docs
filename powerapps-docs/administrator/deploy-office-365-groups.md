@@ -14,7 +14,7 @@ ms.assetid: d3646c17-1344-490f-9612-6c8cb63e213f
 caps.latest.revision: 7
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Deploy Office 365 Groups
 

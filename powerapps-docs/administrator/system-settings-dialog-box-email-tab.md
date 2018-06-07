@@ -14,7 +14,7 @@ ms.assetid: 7ffc3f15-6624-4718-ab77-5bcb5360943a
 caps.latest.revision: 63
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings dialog box - Email tab
 

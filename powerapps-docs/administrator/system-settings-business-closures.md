@@ -14,7 +14,7 @@ ms.assetid: 478b2c16-5827-4e1b-ae93-d3d19c3f6c8d
 caps.latest.revision: 15
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings - Business closures
 

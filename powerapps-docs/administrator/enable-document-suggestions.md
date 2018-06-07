@@ -14,7 +14,7 @@ ms.assetid: 80de5c8d-bec9-4779-a83f-1d900eecbf2d
 caps.latest.revision: 19
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: kvivek
 ---
 # Enable document suggestions to recommend related documents
 

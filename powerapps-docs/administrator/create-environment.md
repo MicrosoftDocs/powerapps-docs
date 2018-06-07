@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: jimh
+ms.author: jimholtz
 ---
 
 # Quickstart: Create an environment

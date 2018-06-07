@@ -2,7 +2,7 @@
 title: Introduction to the admin center | Microsoft Docs
 description: Introduction to the admin center for PowerApps.
 author: msftman
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: overview

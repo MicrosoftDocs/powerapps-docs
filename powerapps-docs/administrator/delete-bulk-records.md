@@ -14,7 +14,7 @@ author: "jimholtz"
 ms.assetid: 6c1edaef-d2d0-4e94-bb3d-819b208966c1
 caps.latest.revision: 15
 ms.author: "rdubois"
-manager: "brycho"
+manager: kvivek
 ---
 # Remove a large amount of specific, targeted data with bulk deletion 
 

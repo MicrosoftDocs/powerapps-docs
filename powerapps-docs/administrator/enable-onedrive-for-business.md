@@ -14,7 +14,7 @@ ms.assetid: c3742b70-863a-488e-beb3-fb9d63c2e6e5
 caps.latest.revision: 5
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Enable OneDrive for Business (online)
 

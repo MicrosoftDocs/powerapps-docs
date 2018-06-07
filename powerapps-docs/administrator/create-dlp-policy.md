@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/30/2018
-ms.author: jimh
+ms.author: jimholtz
 ---
 
 # Quickstart: Create a data loss prevention (DLP) policy

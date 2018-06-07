@@ -14,7 +14,7 @@ ms.assetid: 45bd2a92-d366-442f-8744-04190bd42b5c
 caps.latest.revision: 15
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings - Privacy and security
 

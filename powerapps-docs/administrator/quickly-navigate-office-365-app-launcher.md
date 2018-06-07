@@ -14,7 +14,7 @@ ms.assetid: af61eae1-39db-403e-9bf7-c5f1195f31cb
 caps.latest.revision: 5
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Quickly navigate with the Office 365 app launcher and the Dynamics 365 home page
 

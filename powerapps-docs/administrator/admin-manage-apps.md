@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: jimh
+ms.author: jimholtz
 ---
 
 # Manage apps created in your organization 

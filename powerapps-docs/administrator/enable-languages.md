@@ -14,7 +14,7 @@ ms.assetid: d5ac01dc-ebc6-455a-9a73-3367ff69eb1a
 caps.latest.revision: 11
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: kvivek
 ---
 # Regional and language options for your organization  
 

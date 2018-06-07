@@ -13,7 +13,7 @@ author: "jimholtz"
 ms.assetid: 7a28ff46-558b-47c5-9c99-073fd6f66844
 caps.latest.revision: 141
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Setup overview for mobile apps
 

@@ -14,7 +14,7 @@ ms.assetid: eab6629e-a3d0-49c8-93b3-6e7191591200
 caps.latest.revision: 15
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings - Behavior
 

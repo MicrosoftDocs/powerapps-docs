@@ -14,7 +14,7 @@ ms.assetid: fd3c2656-0108-4e25-a5ab-c786ebe7a000
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Reset a user's password
 

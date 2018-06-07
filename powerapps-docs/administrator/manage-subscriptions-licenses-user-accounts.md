@@ -14,7 +14,7 @@ ms.assetid: 7b23df4b-e4cd-459b-bd82-c06498f039a1
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Manage subscriptions, licenses, and user accounts
 

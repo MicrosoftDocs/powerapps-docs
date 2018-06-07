@@ -14,7 +14,7 @@ ms.assetid: cbbd5020-c6fb-449b-ab50-8f75ffd0d27a
 caps.latest.revision: 7
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Microsoft Dynamics 365 (online) requirements 
 

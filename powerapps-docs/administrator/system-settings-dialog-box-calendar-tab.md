@@ -14,7 +14,7 @@ ms.assetid: e7e20147-aef3-41d8-b290-1e6108611b1b
 caps.latest.revision: 15
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings dialog box - Calendar tab
 

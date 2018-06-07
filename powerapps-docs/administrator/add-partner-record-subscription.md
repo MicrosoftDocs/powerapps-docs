@@ -14,7 +14,7 @@ ms.assetid: 16f7174e-6adf-46c9-9ddf-b6ccd805e73a
 caps.latest.revision: 4
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Add a Partner of Record (POR) to your subscription
 

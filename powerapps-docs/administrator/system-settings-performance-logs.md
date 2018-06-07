@@ -14,7 +14,7 @@ ms.assetid: 8a3a67d7-03fc-48a4-9b65-d1275481d50a
 caps.latest.revision: 15
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # System Settings - Data performance logs
 

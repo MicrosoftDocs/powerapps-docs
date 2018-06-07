@@ -14,7 +14,7 @@ ms.assetid: f2c4534a-2185-4404-b31a-8c61a9873285
 caps.latest.revision: 7
 author: "jimholtz"
 ms.author: "jimholtz"
-manager: "brycho"
+manager: kvivek
 ---
 # Troubleshooting: Unblock required URLs
 
