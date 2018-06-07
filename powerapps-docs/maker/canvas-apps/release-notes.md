@@ -12,7 +12,7 @@ ms.author: anneta
 
 ---
 # What's new in PowerApps
-> [!IMPORTANT]<br>
+> [!IMPORTANT]
 > **Announcing the release notes**<br>
 > Wondering about upcoming and recently released capabilities in PowerApps?<br>
 [View the release notes](https://docs.microsoft.com/en-us/business-applications-release-notes/april18/powerapps/overview). We've captured all the details, end to end, top to bottom, which you can use for planning.
