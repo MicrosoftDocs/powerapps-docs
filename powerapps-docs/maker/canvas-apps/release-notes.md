@@ -12,16 +12,15 @@ ms.author: anneta
 
 ---
 # What's new in PowerApps
+> [!IMPORTANT]<br>
+> **Announcing the release notes**<br>
+> Wondering about upcoming and recently released capabilities in PowerApps?<br>
+[View the release notes](https://docs.microsoft.com/en-us/business-applications-release-notes/april18/powerapps/overview). We've captured all the details, end to end, top to bottom, which you can use for planning.
+
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
-
-## Announcing the Business Applications Spring '18 release notes
-
-Discover the latest updates to our business applications, as well as a host of new capabilities for building your own applications and extensions on top of our platform. [Download the Spring '18 release notes PDF](https://aka.ms/businessappsreleasenotes), which covers Dynamics 365, PowerApps, Microsoft Flow, and Power BI.
-
-**Coming soon:** We'll keep updating the release notes PDF as features ship, and we'll also make them available on a web page.
 
 ## May 30
 1. [Rich-text editor control](controls/control-richtexteditor.md) (experimental) - allows end users to format text inside a WYSIWYG editing area. 
