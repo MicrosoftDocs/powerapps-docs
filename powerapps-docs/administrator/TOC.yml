@@ -38,9 +38,9 @@
     - name: Contact technical support
       href: contact-technical-support.md
     - name: "[Customer Engagement] Contact billing support"
-      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/billing-support
-    - name: Billing FAQ
-      href: billing-faqs-dynamics-365-online.md
+      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/contact-information-microsoft-dynamics-365-online-billing-support
+    - name: "[Customer Engagement] Billing FAQ"
+      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/billing-faqs-dynamics-365-online
   - name: Licensing
     items:
     - name: Licensing overview
