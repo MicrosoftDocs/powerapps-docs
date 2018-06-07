@@ -25,25 +25,6 @@ ms.author: jimholtz
 
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE [cc_applies_to_update_8_2_0](../includes/cc_applies_to_update_8_2_0.md)]
 
-Changes:
-1. environments = environments
-2. DLP policy
-3. PA
-4. CDS
-5. data groups
-6. database
-7. GDPR
-8. DSR
-9. clone
-
-
-
-
-
-
-
-
-
 The following are terms used throughout the [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] product and documentation.  
   
 <a name="BKMK_Terminology"></a>  
@@ -58,9 +39,8 @@ The following are terms used throughout the [!INCLUDE[pn_CRM_Online](../includes
 |User account|A user account assigned by an organization (work, school, non-profit) to one of their constituents (an employee, student, customer) that provides sign-in access to one or more of the organization’s Microsoft cloud service subscriptions, such as [!INCLUDE[pn_Exchange_Online](../includes/pn-exchange-online.md)] or [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)]. Access to an online service is controlled by the license assigned to the user account.<br /><br /> User accounts are stored in an organization’s cloud directory within [!INCLUDE[pn_azure_active_directory](../includes/pn-azure-active-directory.md)], and are typically deleted when the user leaves the organization. Organizational accounts differ from Microsoft accounts in that they are created and managed by admins in the organization, not by the user.|  
 |Security group|If your company has multiple [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] environments, you can use environment security groups to control which licensed users can access a particular environment. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Control user access to environments: security groups and licenses](add-environment-subscription.md#BKMK_man_sec_group)|  
 |Common Data Services  |[Common Data Service ](../maker/common-data-service/data-platform-intro.md) is the data platform that comes with PowerApps and allows you to store and model business data. It's the platform on which Dynamics 365 applications are built; if you’re a Dynamics customer, your data is already in the Common Data Service.   |
-|  |   |
-|  |   |
-
+|Data loss prevention policy (DLP) |A policy designed to protect an organization's data by defining which consumer connectors and what data can be shared. For example, an organization that uses PowerApps can create a DLP to prevent business data that's stored in SharePoint to not be automatically published to its Twitter feed. See [Create a data loss prevention (DLP) policy](create-dlp-policy.md)  |
+|Data groups  |Data groups are a simple way to categorize services within a data loss prevention (DLP) policy. See [Data groups](introduction-to-data-groups.md).   |
   
 ### See also  
  [Manage Microsoft Dynamics 365 (online) environments](manage-online-environments.md)

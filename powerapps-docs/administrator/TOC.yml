@@ -19,7 +19,7 @@
       href: online-requirements.md
   - name: Onboarding
     items:
-    - name: 250 seats or more - use FastTrack
+    - name: Onboard your organization and users
       href: onboard-your-organization-and-users-to-dynamics-365-online.md
     - name: Create a trial environment
       href: try-dynamics-365-online.md

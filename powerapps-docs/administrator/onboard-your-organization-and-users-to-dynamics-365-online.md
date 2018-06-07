@@ -31,9 +31,13 @@ New to [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)]
 >  This topic is targeted at administrators for [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)]. Many of the features covered in this topic are also available for [!INCLUDE[pn_crm_op_edition](../includes/pn-crm-onprem.md)]. If a feature is available only for [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], it’s indicated in the topic. For more information about which features are online only, see [Online-only features in Dynamics 365 Customer Engagement](https://docs.microsoft.com/dynamics365/get-started/whats-new/customer-engagement/online-only-features)  
   
 ## Step One: Try out Dynamics 365 (online) in a free 30-day trial  
- If you haven’t already purchased [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], we recommend you [start with a free 30-day trial](http://go.microsoft.com/fwlink/p/?LinkId=400723). You can try out any of the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] apps, including Sales, Customer Service, Field Service, Project Service Automation, Operations, or Financials.  
-  
- To get the most out of your free trial, watch this video: [How to get the most out of your 30-day trial](https://go.microsoft.com/fwlink/p/?linkid=830035).  
+
+[JimHoltz: rewrite for new process]
+
+If you haven’t already purchased Dynamics 365 (online), we recommend you start with a free 30-day trial.
+
+1. In the 
+
   
 ## Step Two: Buy and manage a subscription  
  With [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], you can evolve your business on your terms. Start with just what you need to run your business. For example, you might want to start with the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] for Sales app or the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] for Customer Service app, and then add more apps as your needs change. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Dynamics 365](https://www.microsoft.com/dynamics365/home)  
