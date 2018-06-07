@@ -5,6 +5,8 @@
     items:
     - name: Introducing the new admin center
       href: intro-new-admin-center.md
+    - name: What's the role of a PowerApps administrator?
+      href: overview-role-powerapps-admin.md
     - name: Terminology used in the product and documentation
       href: online-terminology.md
     - name: What is Office 365 and how does it relate?
