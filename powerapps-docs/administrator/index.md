@@ -1,3 +1,3 @@
 ---
-redirect_url: /dynamics365/customer-engagement/admin/admin-guide
+redirect_url: /powerapps-docs/powerapps/administrator/admin-guide
 ---
