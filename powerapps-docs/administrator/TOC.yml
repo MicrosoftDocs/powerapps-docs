@@ -29,7 +29,7 @@
       href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/deploy-dynamics-365-app-for-outlook
     - name: Import data
       href: import-data-all-record-types.md
-    - name: ce_Customize
+    - name: "[Customer Engagement] Customize"
       href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/overview
   - name: Support and billing
     items:
@@ -37,16 +37,16 @@
       href: help-additional-resources.md
     - name: Contact technical support
       href: contact-technical-support.md
-    - name: ce_Contact billing support
+    - name: "[Customer Engagement] Contact billing support"
       href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/billing-support
     - name: Billing FAQ
       href: billing-faqs-dynamics-365-online.md
   - name: Licensing
     items:
-    - name: pa_Licensing overview
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/pricing-billing-skus
-    - name: pa_Manage licenses in your org
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/signup-question-and-answer
+    - name: Licensing overview
+      href: pricing-billing-skus
+    - name: Manage licenses in your org
+      href: signup-question-and-answer
     - name: Manage licenses - duplicate topic
       href: manage-licenses.md
     - name: Purchase and assign licenses
@@ -57,36 +57,36 @@
       href: volume-licensing-faq-dynamics-365-online-customer-engagement.md
   - name: Manage PowerApps
     items:
-    - name: pa_View apps in your environments
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/admin-view-apps
-    - name: pa_Purchase PowerApps
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/signup-for-powerapps-admin
-    - name: pa_Manage apps in your org
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/admin-manage-apps
-    - name: pa_Move an app between tenants or environments
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/environment-and-tenant-migration
+    - name: View apps in your environments
+      href: admin-view-apps
+    - name: Purchase PowerApps
+      href: signup-for-powerapps-admin
+    - name: Manage apps in your org
+      href: admin-manage-apps
+    - name: Move an app between tenants or environments
+      href: environment-and-tenant-migration
     - name: Sign in to apps
       href: sign-in-office-365-apps.md
     - name: Move between apps
       href: quickly-navigate-office-365-app-launcher.md
-    - name: pa_PowerShell support for PowerApps (preview)
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/powerapps-powershell
-  - name: pa_Responding to DSR requests
-    href: https://docs.microsoft.com/en-us/powerapps/administrator/powerapps-gdpr-dsr-guide-systemlogs
+    - name: PowerShell support for PowerApps (preview)
+      href: powerapps-powershell
+  - name: Responding to DSR requests
+    href: powerapps-gdpr-dsr-guide-systemlogs
     items:
-    - name: pa_System-generated logs
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/powerapps-gdpr-dsr-guide-systemlogs
-    - name: pa_PowerApps customer data
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/powerapps-gdpr-dsr-guide
+    - name: System-generated logs
+      href: powerapps-gdpr-dsr-guide-systemlogs
+    - name: PowerApps customer data
+      href: powerapps-gdpr-dsr-guide
       items:
-      - name: pa_Export data
-        href: https://docs.microsoft.com/en-us/powerapps/administrator/powerapps-gdpr-export-dsr
-      - name: pa_Delete data
-        href: https://docs.microsoft.com/en-us/powerapps/administrator/powerapps-gdpr-delete-dsr
-    - name: pa_CDS for Apps customer data
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/common-data-service-gdpr-dsr-guide
-  - name: pa_Administer environments
-    href: https://docs.microsoft.com/en-us/powerapps/administrator/environments-administration
+      - name: Export data
+        href: powerapps-gdpr-export-dsr
+      - name: Delete data
+        href: powerapps-gdpr-delete-dsr
+    - name: CDS for Apps customer data
+      href: common-data-service-gdpr-dsr-guide
+  - name: Administer environments
+    href: environments-administration
     items:
     - name: Service health?
       href: check-online-service-health.md
@@ -99,14 +99,14 @@
       href: manage-storage.md
     - name: Manage environments
       href: manage-online-environments.md
-    - name: pa_Environments overview
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/environments-overview
-    - name: pa_Regions overview
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/regions-overview
-    - name: pa_Create an environment
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/create-environment
-    - name: pa_Create a database
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/create-database
+    - name: Environments overview
+      href: environments-overview
+    - name: Regions overview
+      href: regions-overview
+    - name: Create an environment
+      href: create-environment
+    - name: Create a database
+      href: create-database
     - name: Manage Sandbox environments
       href: manage-sandbox-environments.md
     - name: Add an environment to your subscription
@@ -131,15 +131,15 @@
       href: add-edit-multiregional-environments.md
     - name: "'Troubleshooting: Unblock required URLs'"
       href: troubleshooting-unblock-urls-required.md
-  - name: pa_Configure environment security
-    href: https://docs.microsoft.com/en-us/powerapps/administrator/database-security
+  - name: Configure environment security
+    href: database-security
     items:
-    - name: pa_Introduction to data groups
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/introduction-to-data-groups
-    - name: pa_Create a DLP policy
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/create-dlp-policy
-    - name: pa_Manage DLP policies
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/prevent-data-loss
+    - name: Introduction to data groups
+      href: introduction-to-data-groups
+    - name: Create a DLP policy
+      href: create-dlp-policy
+    - name: Manage DLP policies
+      href: prevent-data-loss
     - name: Manage encryption keys
       href: manage-encryption-keys-environment.md
   - name: Manage subscriptions and user accounts
@@ -149,8 +149,8 @@
       href: use-office-365-admin-center-manage-subscription.md
     - name: Policies and communications
       href: policies-communications.md
-    - name: pa_View active users in your tenant
-      href: https://docs.microsoft.com/en-us/powerapps/administrator/admin-view-user-licenses
+    - name: View active users in your tenant
+      href: admin-view-user-licenses
     - name: Reset a user's password
       href: reset-users-password.md
     - name: Manage email notifications
@@ -247,9 +247,9 @@
           href: connect-yammer.md
       - name: Microsoft Social Engagement configuration
         href: connect-microsoft-social-engagement.md
-      - name: ce_Mobile configuration
+      - name: "[Customer Engagement] Mobile configuration"
         href: https://docs.microsoft.com/dynamics365/customer-engagement/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets
-      - name: ce_Relationships Insights configuration - this is under Sales-app
+      - name: "[Customer Engagement] Relationships Insights configuration - this is under Sales-app"
         href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/sales-enterprise/embedded-intelligence
       - name: Yammer integration
         href: connect-yammer.md
