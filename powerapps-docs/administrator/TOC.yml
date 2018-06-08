@@ -25,11 +25,11 @@
       href: try-dynamics-365-online.md
     - name: Add users
       href: create-users-assign-online-security-roles.md
-    - name: "[Customer Engagement] Set up email"
+    - name: "[CE] Set up email"
       href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/outlook-app/deploy-dynamics-365-app-for-outlook
     - name: Import data
       href: import-data-all-record-types.md
-    - name: "[Customer Engagement] Customize"
+    - name: "[CE] Customize"
       href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/overview
   - name: Support and billing
     items:
@@ -37,9 +37,9 @@
       href: help-additional-resources.md
     - name: Contact technical support
       href: contact-technical-support.md
-    - name: "[Customer Engagement] Contact billing support"
+    - name: "[CE] Contact billing support"
       href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/contact-information-microsoft-dynamics-365-online-billing-support
-    - name: "[Customer Engagement] Billing FAQ"
+    - name: "[CE] Billing FAQ"
       href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/billing-faqs-dynamics-365-online
   - name: Licensing
     items:
@@ -247,9 +247,9 @@
           href: connect-yammer.md
       - name: Microsoft Social Engagement configuration
         href: connect-microsoft-social-engagement.md
-      - name: "[Customer Engagement] Mobile configuration"
+      - name: "[CE] Mobile configuration"
         href: https://docs.microsoft.com/dynamics365/customer-engagement/mobile-app/set-up-dynamics-365-for-phones-and-dynamics-365-for-tablets
-      - name: "[Customer Engagement] Relationships Insights configuration - this is under Sales-app"
+      - name: "[CE] Relationships Insights configuration - this is under Sales-app"
         href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/sales-enterprise/embedded-intelligence
       - name: Yammer integration
         href: connect-yammer.md
