@@ -72,7 +72,7 @@ The **SharePointIntegration** control communicates user actions between SharePoi
 ![](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
->You can access the properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing it in PowerApps Studio. These properties may not be available in **OnStart** or **OnVisible**. 
+>You can access the properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing the form in PowerApps Studio. These properties may not be available in **OnStart** or **OnVisible**. 
 
 The **SharePointIntegration** control has the following properties:
 
