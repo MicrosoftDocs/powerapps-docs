@@ -30,7 +30,7 @@ There are several resources available to you covering planning, operating, and u
   
 -   [Administer Dynamics 365 Customer Engagement](admin-guide.md)  
 -   [What's new in Dynamics 365](https://docs.microsoft.com/dynamics365/get-started/whats-new/index)  
--   [Spring '18 Release Overview](https://docs.microsoft.com/business-applications-release-notes/april18/release-overview)
+-   [What's new in Business Applications](https://docs.microsoft.com/business-applications-release-notes/index)
   
 <a name="More_help"></a>   
 
