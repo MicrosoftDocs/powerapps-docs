@@ -13,17 +13,29 @@ ms.author: matp
 # What is Common Data Service for Apps?
 Common Data Service (CDS) for Apps lets you securely store and manage data that's used by business applications. Data within CDS for Apps is stored within a set of entities. An *entity* is a set of records used to store data, similar to how a table stores data within a database. CDS for Apps includes a base set of standard entities that cover typical scenarios, but you can also create custom entities specific to your organization and populate them with data using Power Query. App makers can then use PowerApps to build rich applications using this data.
 
+![Screenshot showing overview of the Business Application Platform.](./media/data-platform-cds-intro/platform.png "Platform Overview")
+
 For information on purchasing a plan to use CDS for Apps, see [Pricing info](../../administrator/pricing-billing-skus.md).
 
 ## Why use Common Data Service for Apps?
 Standard and custom entities within CDS for Apps provide a secure and cloud-based storage option for your data. Entities let you to create a business-focused definition of your organization's data for use within apps. If you're not sure if entities are your best option, consider these benefits:
 
 * **Easy to manage** &ndash; Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they're stored.
-* **Easy to share** &ndash; You can easily share data with your colleagues&mdash;PowerApps manages the permissions.
 * **Easy to secure** &ndash; Data is securely stored so that users can see it only if you grant them access. Role-based security allows you to control access to entities for different users within your organization.
-* **Rich metadata** &ndash; Data types and relationships are leveraged directly within PowerApps. For example, defining a field type URL will present your data as a hyperlink within your app.
+* **Access your Dynamics 365 Data** &ndash; Data from your Dynamics 365 applications is also stored within the Common Data Service for Apps allowing you to quickly build apps which leverage your Dynamics 365 data and extend your apps using PowerApps.
+* **Rich metadata** &ndash; Data types and relationships are leveraged directly within PowerApps.
 * **Logic and validation** &ndash; Define calculated fields, business rules, workflows, and business process flows to ensure data quality and drive business processes.
 * **Productivity tools** &ndash; Entities are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
+
+## Dynamics 365 and the Common Data Service for Apps
+
+Dynamics 365 applications, like Dynamics 365 for Sales, Service or Talent also use the Common Data Service for Apps to store and secure data used by the applications. This enables you to build apps using PowerApps and the Common Data Service for Apps directly against your core business data already used within Dynamics 365 without the need for integration.
+
+* **Build Apps against your Dynamics 365 Data** &ndash; Build apps quickly against your business data within PowerApps or using the Pro Developer SDK.
+* **Manage reusable Business logic and rules** &ndash; Business Rules and logic already defined in on your Dynamics 365 entities are applied to your PowerApps to ensure data consistency regardless of how your users are accessing the data or through which app.
+* **Reusable skills across Dynamics 365 and PowerApps** &ndash; Users with skills previously in PowerApps or Dynamics 365 can now leverage those skills across the new Common Data Service for Apps Platform. Creating entities, forms, charts, etc are now common across your applications.
+    > [!NOTE]
+    > Dynamics 365 for Finance and Operations currently requires the configuration of the Data Integrator to make your business data from Finance and Operations available within the Common Data Service for Apps.
 
 ## Interacting with entities
 When you develop an app, you can use standard entities, custom entities, or both. CDS for Apps provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
