@@ -20,9 +20,6 @@ ms.author: jimholtz
 ---
 # Try Dynamics 365 (online)
 
-> [!NOTE]
-> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
-
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE [cc_applies_to_update_8_2_0](../includes/cc_applies_to_update_8_2_0.md)]
 
 We're excited about the release of [!INCLUDE [pn-crm-9-0-0-online](../includes/pn-crm-9-0-0-online.md)] and hope you're eager to try it out. New and existing customers have different options to take a look at [!INCLUDE [pn-crm-online](../includes/pn-crm-online.md)].  

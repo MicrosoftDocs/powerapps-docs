@@ -1,7 +1,7 @@
 ---
 title: "Contact Dynamics 365 Customer Engagement Technical Support | MicrosoftDocs"
 ms.custom: ""
-ms.date: 02/27/2018
+ms.date: 07/15/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -22,11 +22,11 @@ manager: kvivek
 
 ## New Dynamics 365 support center 
 
-On February 14, 2018, we introduced a new Help + support experience for admins to contact a Microsoft support representative for Dynamics 365 (online). The new process will help us improve your overall support experience and drive faster issue resolution. 
+Admins, use the Help + support experience to contact a Microsoft support representative for Dynamics 365 (online) to get resolution for your issue. 
 
 ### Prerequisites
 
--  Currently provided in English. We’re working to provide other languages soon. 
+-  Currently provided in English. We’re working to provide other languages. 
 
 -  You have one of the following Office 365 admin roles to enter support requests:
  
@@ -47,9 +47,7 @@ On February 14, 2018, we introduced a new Help + support experience for admins t
 
 ### Enter a support request through the new support center
 
-1. Go to [https://admin.dynamics.com](https://admin.dynamics.com).
-
-2. Select **+ New support request**.
+1. In the Business Application Platform Admin center, choose **Help + Support** > **+ New support request**.
 
    ![New support request](media/new-support-request.png "New support request")
 

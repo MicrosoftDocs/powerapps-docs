@@ -18,9 +18,6 @@ manager: kvivek
 ---
 # Sign in to Customer Engagement and Office 365 apps
 
-> [!NOTE]
-> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
-
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
 There are multiple ways to sign in and access your Dynamics and [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] apps. You can sign in by using the [!INCLUDE[pn_office_365_admin_center](../includes/pn-office-365-admin-center.md)], or sign in directly. For [!INCLUDE[pn_crm_8_2_0_online](../includes/pn-crm-8-2-0-online.md)], we're introducing the [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] home page which you can also sign in to directly.  

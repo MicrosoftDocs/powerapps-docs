@@ -1,7 +1,7 @@
 ---
 title: "Help and additional resources for Dynamics 365 Customer Engagement| MicrosoftDocs"
 ms.custom: ""
-ms.date: 09/30/2017
+ms.date: 07/15/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -29,17 +29,15 @@ There are several resources available to you covering planning, operating, and u
  The following are useful resources for administering [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)]:    
   
 -   [Administer Dynamics 365 Customer Engagement](admin-guide.md)  
-  
 -   [What's new in Dynamics 365](https://docs.microsoft.com/dynamics365/get-started/whats-new/index)  
+-   [Spring '18 Release Overview](https://docs.microsoft.com/business-applications-release-notes/april18/release-overview)
   
 <a name="More_help"></a>   
 
 ## More self-service help resources  
   
 -   View the [Office 365 Service Health Dashboard](https://portal.office.com/ServiceStatus/ServiceStatus.aspx)  
-  
 -   Search the [Support Blog](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/default.aspx) and [Community Forum](https://community.dynamics.com/product/crm/f/117.aspx)  
-  
 -   Search the [Microsoft Knowledge Base](http://go.microsoft.com/fwlink/p/?LinkId=203050)  
   
 <a name="sec_and_serv"></a>   

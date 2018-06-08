@@ -18,9 +18,6 @@ manager: kvivek
 ---
 # Purchase and assign Dynamics 365 (online) licenses
 
-> [!NOTE]
-> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
-
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
 
 [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)] introduces a new licensing model with choices that extend to pricing with [!INCLUDE[pn_dyn_365](../includes/pn-dyn-365.md)]. Get monthly plans—with apps packaged for savings—or standalone applications. Opt for full or light use. And select the edition that meets the needs of your large or small business, now and down the road.  

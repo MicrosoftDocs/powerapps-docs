@@ -20,9 +20,6 @@ ms.author: jimholtz
 ---
 # Onboard your organization and users
 
-> [!NOTE]
-> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
-
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE [cc_applies_to_update_8_2_0](../includes/cc_applies_to_update_8_2_0.md)]
 
 New to [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)]? We've put together step-by-step guidance whether you’re still evaluating [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], ready to make a purchase, or ready to onboard your organization and users.  
@@ -34,7 +31,7 @@ New to [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)]
 
 If you haven’t already purchased Dynamics 365 (online), we recommend you start with a free 30-day trial.
 
-1. In the Business Application Platform Admin center, choose **Environments** > **New environment**.
+1. In the Business Application Platform Admin center, choose **Environments** > **+ New environment**.
 2. Select **Trial** for the environment type and fill in the rest of your information.
 3. Choose **Yes** for **Create a database for this environment**, and then choose **Create**.
 

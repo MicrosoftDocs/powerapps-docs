@@ -20,9 +20,6 @@ ms.author: jimholtz
 ---
 # Manage Support instances
 
-> [!NOTE]
-> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
-
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE [cc_applies_to_update_8_2_0](../includes/cc_applies_to_update_8_2_0.md)]
 
 A Support instance is any non-production instance of [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] used by Microsoft Support to reproduce and resolve customer issues. When there is an issue affecting the operation of your online service, Microsoft can create a Support instance in your tenant to troubleshoot and repair the issue.  It is isolated from your production instance so it does not impact your business operations. Dynamics 365 System admins have full control of managing and providing organization data by [copying it](copy-environment.md) to a Support instance. 

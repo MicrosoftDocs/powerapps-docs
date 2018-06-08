@@ -20,9 +20,6 @@ ms.author: jimholtz
 ---
 # Release history for Administrator Guide
 
-> [!NOTE]
-> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
-
 [!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
 
 This is the release history page for the [Administrator Guide for Dynamics 365 Customer Engagement](admin-guide.md) documentation. Note that some of the updated and new topics relate to changes made since the last product release and are not exclusive to [!INCLUDE[pn_crm_9_0_0_online](../includes/pn-crm-9-0-0-online.md)].
