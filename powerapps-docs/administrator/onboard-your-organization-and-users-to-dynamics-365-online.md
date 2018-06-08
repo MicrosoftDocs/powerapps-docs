@@ -32,12 +32,13 @@ New to [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)]
   
 ## Step One: Try out Dynamics 365 (online) in a free 30-day trial  
 
-[JimHoltz: rewrite for new process]
-
 If you haven’t already purchased Dynamics 365 (online), we recommend you start with a free 30-day trial.
 
-1. In the 
+1. In the Business Application Platform Admin center, choose **Environments** > **New environment**.
+2. Select **Trial** for the environment type and fill in the rest of your information.
+3. Choose **Yes** for **Create a database for this environment**, and then choose **Create**.
 
+Your trial environment will appear in the list of environments.
   
 ## Step Two: Buy and manage a subscription  
  With [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], you can evolve your business on your terms. Start with just what you need to run your business. For example, you might want to start with the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] for Sales app or the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] for Customer Service app, and then add more apps as your needs change. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Dynamics 365](https://www.microsoft.com/dynamics365/home)  
@@ -53,6 +54,7 @@ If you haven’t already purchased Dynamics 365 (online), we recommend you start
 -   Buy through a cloud solution provider  
   
 <a name="Convert"></a>   
+
 ### Convert from a trial  
  The simplest way to buy [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] is to click the **Buy Now** button from one of the sidebars in the free 30-day trial:  
   
@@ -66,22 +68,27 @@ If you haven’t already purchased Dynamics 365 (online), we recommend you start
 [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Introduction to solutions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions)
   
 <a name="BuyDirect"></a>   
+
 ### Buy direct  
  To buy direct, go to the [Dynamics 365 pricing page](https://www.microsoft.com/dynamics365/pricing). This page includes several different plans to fit your organization’s needs.  
   
 <a name="VL"></a>   
+
 ### Buy through volume licensing  
  If your organization has 250 or more [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] users, you may be interested in [purchasing a Dynamics 365 enterprise licensing agreement](https://www.microsoft.com/licensing/default.aspx).  
   
 <a name="Partner"></a>   
+
 ### Buy through a cloud solution provider  
  A cloud solution provider can work closely with you to understand the needs of your business or organization. [Learn how to find a Dynamics 365 partner](https://partnercenter.microsoft.com/partner/home).  
   
 <a name="support"></a>   
+
 ### Choose your support  
  Microsoft provides flexible, industry-leading support, services, and resources that enable users to quickly address technical issues and maximize return on your [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] investment. Choose a plan that best meets your business requirements. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Dynamics 365 support](https://www.microsoft.com/dynamics365/support)  
   
 <a name="Communicate"></a>   
+
 ### Set up points of contacts for communications  
  Microsoft regularly maintains and updates [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] to ensure security, performance, and availability, and to provide new features and functionality. From time to time, Microsoft also responds to service incidents. For each of these activities, the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] admin for your organization receives email notifications. You have control over who should receive these email communications.  
   
@@ -92,6 +99,7 @@ If you haven’t already purchased Dynamics 365 (online), we recommend you start
 -   [Manage email notifications](manage-email-notifications.md)  
   
 <a name="Subscription"></a>   
+
 ### Manage subscriptions, licenses, and user accounts  
  As a [!INCLUDE[pn_MS_Online_Services](../includes/pn-ms-online-services.md)] administrator, you manage the [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] subscription, including billing and payments, user licenses, accounts and registration. You do these tasks in the [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)] admin center. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Manage subscriptions, licenses, and user accounts](manage-subscriptions-licenses-user-accounts.md)  
   
@@ -106,6 +114,7 @@ If you haven’t already purchased Dynamics 365 (online), we recommend you start
  [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Use the FastTrack customer success service to plan a successful Dynamics 365 rollout](https://docs.microsoft.com/dynamics365/get-started/fasttrack/index).  
   
 <a name="Plan"></a>   
+
 ### Plan your deployment  
  Many decisions you make at the beginning and throughout the deployment process can have downstream effects and impact other phases of the plan. Developing a plan to deploy [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] is important in determining the actions to take from inception to go live. The amount of resources involved in planning depends on the size and scope of the project. Large organizations may need a deployment team, while a small organization may assign these functions to a key person.  
   
@@ -121,6 +130,7 @@ If you haven’t already purchased Dynamics 365 (online), we recommend you start
  After you purchase a subscription to [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], it’s time to onboard your organization.  
   
 <a name="SignIn"></a>   
+
 ### Sign in to Dynamics 365 (online) and manage your subscription  
   
 -   [Sign in to Dynamics 365 and Office 365 apps](sign-in-office-365-apps.md)  
@@ -165,6 +175,7 @@ For more advanced scenarios, consider the following development tools: [Solution
 -   [Understanding storage and storage notifications](https://blogs.msdn.microsoft.com/crm/2013/07/24/understanding-storage-and-storage-notifications-in-microsoft-dynamics-crm-online/)  
   
 <a name="Sandbox"></a>   
+
 ### Create a sandbox (non-production instance)  
  You can create a sandbox instance (non-production environment) for development, testing, training, and other non-production uses. Then when you’re ready to turn the sandbox instance into your production instance, you can switch it.  
   
@@ -177,6 +188,7 @@ For more advanced scenarios, consider the following development tools: [Solution
 -   [Switch an instance](switch-environment.md)  
   
 <a name="SystemSettings"></a>   
+
 ### Set organization-wide system settings  
  When you first set up [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)], you’ll want to set system-wide settings.  
   
@@ -187,6 +199,7 @@ For more advanced scenarios, consider the following development tools: [Solution
 -   [Set up a Dynamics 365 organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/set-up-a-dynamics-365-organization)  
   
 <a name="Import"></a>   
+
 ### Import and export data  
  [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] provides an import tool for importing simple data stored in files. If the import tool doesn't satisfy your data import requirements, you may want to contact a partner. [Find a partner if you don’t have one.](https://partnercenter.microsoft.com/en-us/pcv/search)  
   
@@ -203,6 +216,7 @@ For more advanced scenarios, consider the following development tools: [Solution
 [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)] also provides advanced tools for exporting to [!INCLUDE[pn_Azure_SQL_Database_long](../includes/pn-azure-sql-database-long.md)]. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Replicate data to Azure SQL Database using Data Export Service](https://docs.microsoft.com/dynamics365/customer-engagement/admin/replicate-data-microsoft-azure-sql-database)  
   
 <a name="MoCA"></a>   
+
 ### Set up Dynamics 365 for phones and Dynamics 365 for tablets  
  The [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] mobile apps make it easy to stay connected with your prospects and customers no matter where you are, or what mobile device you’re using. Having access to [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] data in the field also improves user adoption and productivity.  
   
@@ -217,6 +231,7 @@ For more advanced scenarios, consider the following development tools: [Solution
 -   [Configure mobile offline synchronization for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/customer-engagement/mobile-app/dynamics-365-phones-tablets-users-guide)  -->
   
 <a name="Outlook"></a>   
+
 ### Set up Dynamics 365 App for Outlook  
  Your users can tap the power of [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] from the familiar [!INCLUDE[pn_MS_Outlook_Short](../includes/pn-ms-outlook-short.md)] environment. Working with a tool they already know speeds up the learning curve and makes them more productive.  
   
