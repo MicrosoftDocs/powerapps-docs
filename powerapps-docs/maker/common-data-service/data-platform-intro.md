@@ -1,7 +1,7 @@
 ---
 title: What is Common Data Service for Apps? | Microsoft Docs
 description: Introduction to Common Data Service (CDS) for Apps, entities, and server-side logic.
-author: Mattp123
+author: clwesene
 manager: kfile
 ms.service: powerapps
 ms.topic: overview
@@ -40,10 +40,10 @@ Dynamics 365 applications, like Dynamics 365 for Sales, Service or Talent also u
 
 ## Integrating Data into the Common Data Service
 
-Buildling an app typically involves data from more than one source, while this can sometimes be done at the application level, there are also cases where integrating this data together into a common store allows for an easier app buildling experience, and a single set of logic to maintain and operate over the data. The Common Data Service for Apps allows data to be integrated from multiple sources into a single store which can then be used in PowerApps, Flow and PowerBI along with data already available from the Dynamics 365 applications.
+Building an app typically involves data from more than one source, while this can sometimes be done at the application level, there are also cases where integrating this data together into a common store allows for an easier app building experience, and a single set of logic to maintain and operate over the data. The Common Data Service for Apps allows data to be integrated from multiple sources into a single store which can then be used in PowerApps, Flow and Power BI along with data already available from the Dynamics 365 applications.
 
-* **Scheduled integration with other systems** &ndash; Data which is kept within another application can be regularly syncronized with the Common Data Service for Apps to allow you to leverage other applications data in PowerApps.
-* **Transform and import data using PowerQuery** &ndash; Transforming data when importing into the Common Data Service can be done through PowerQuery from many online data sources, a common tool used across Excel and PowerBI.
+* **Scheduled integration with other systems** &ndash; Data which is kept within another application can be regularly synchronized with the Common Data Service for Apps to allow you to leverage other applications data in PowerApps.
+* **Transform and import data using PowerQuery** &ndash; Transforming data when importing into the Common Data Service can be done through PowerQuery from many online data sources, a common tool used across Excel and Power BI.
 * **One time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one time or infrequent import of data into the Common Data Service for Apps.
 
 
