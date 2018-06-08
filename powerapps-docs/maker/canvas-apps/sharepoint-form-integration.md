@@ -72,7 +72,7 @@ The **SharePointIntegration** control communicates user actions between SharePoi
 ![](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
->The properties for the **SharePointIntegration** control are only available when the form is running in SharePoint, and they can't be accessed when customizing the form in PowerApps studio. Using SharePointIntegration.Selected in OnVisible is not supported.
+>The properties for the **SharePointIntegration** control are only available when the form is running in SharePoint, and they can't be accessed when customizing the form in PowerApps studio. The properties for the SharePointIntegration control may not be available in OnStart or OnVisible. They are not set so early in the cycle to be available on the first page, but if you do a navigate in OnNew, OnEdit or OnView, they will be available on subsequent page. Generally, a better idea is to use OnNew, OnEdit or OnView in the forms scenario rather than OnStart or OnVisible.
 
 The **SharePointIntegration** control has the following properties:
 
