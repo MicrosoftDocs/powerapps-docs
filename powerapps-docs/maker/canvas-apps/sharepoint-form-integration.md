@@ -72,7 +72,7 @@ The **SharePointIntegration** control communicates user actions between SharePoi
 ![](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
->The properties for the **SharePointIntegration** control are only available when the form is running in SharePoint, and they can't be accessed when customizing the form in PowerApps studio. The properties for the SharePointIntegration control may not be available in OnStart or OnVisible. They are not set so early in the cycle to be available on the first page, but if you do a navigate in OnNew, OnEdit or OnView, they will be available on subsequent page. Generally, a better idea is to use OnNew, OnEdit or OnView in the forms scenario rather than OnStart or OnVisible.
+>You can access the properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing the form in PowerApps Studio. These properties may not be available in **OnStart** or **OnVisible**. 
 
 The **SharePointIntegration** control has the following properties:
 
@@ -105,3 +105,5 @@ Now that you have a better understanding of the default generated form and the *
 * Make sure to include **RequestHide()** in the **OnSuccess** formula of all your forms. If you forget this, SharePoint will not know when to hide the form.
 
 * You can't control the hiding of a form when a user clicks or taps **Cancel** in SharePoint, so make sure you reset your forms in the **OnCancel** formula of the **SharePointIntegration** control.
+
+* The properties for the **SharePointIntegration** control may not be available in **OnStart** or **OnVisible**, and those events execute only once while the list is loaded. You can use **OnNew**, **OnView**, or **OnEdit** formulas to run logic before the form is shown to the user every time. 
