@@ -11,7 +11,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: reference
 ms.component: canvas
-ms.date: 11/07/2015
+ms.date: 06/09/2018
 ms.author: gregli
 
 ---
