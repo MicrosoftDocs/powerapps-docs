@@ -30,7 +30,7 @@ All these functions work with the local time of the current user.
 See [working with dates and times](../show-text-dates-times.md) for more information.
 
 ## Volatile Functions
-**Now** and **Today** are volatile functions.  Each time the function is evaluated it returns a different value.  
+**Now** and **Today** are volatile functions.  Each time one of these functions is evaluated it returns a different value.  
 
 When used in a data flow formula, a volatile function will only return a different value if the formula in which it appears is reevaluated.  If nothing else changes in the formula then it will have the same value throughout the execution of your app.
 
