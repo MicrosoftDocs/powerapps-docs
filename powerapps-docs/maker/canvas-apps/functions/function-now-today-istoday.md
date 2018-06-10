@@ -52,7 +52,7 @@ For the examples in this section, the current time is **3:59 AM** on **February 
 | **IsToday( DateAdd( Now(), 12 ) )** |Tests whether the current date and time, plus 12 days, is between midnight today and midnight tomorrow. |**false** |
 | **IsToday( DateAdd( Today(), 12 ) )** |Tests whether the current date, plus 12 days, is between midnight today and midnight tomorrow. |**false** |
 
-#### Display a real-time clock
+#### Display a clock that updates in real time
 
 1. Add a **[Timer](../controls/control-timer.md)** control, set its **Duration** property to **1000**, and set its **Repeat** property to **true**.
 
@@ -74,7 +74,7 @@ For the examples in this section, the current time is **3:59 AM** on **February 
 
 	![A screen that contains a label control with Text property set to Text( CurrentTime, LongTime24)](media/function-now-today-istoday/now-use-currenttime.png)
 
-1. Preview the app by pressing F5, and then start the timer by clicking or tapping it.
+1. While holding down the Alt key, start the timer by clicking or tapping it.
 
     The label continually shows the current time, down to the second.
 

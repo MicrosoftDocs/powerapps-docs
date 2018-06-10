@@ -19,7 +19,7 @@ The **Rand** function returns a pseudo-random number that's greater than or equa
 ## Volatile Functions
 **Rand** is a volatile function, which means that it returns a different value whenever it's reevaluated. However, formulas are reevaluated only when something in them changes. For example, you can set the **Text** property of a **[Label](../controls/control-text-box.md)** control to **Rand()**, but it won't update until the app is closed and reopened.
 
-In contrast, you can set the same property to **Slider1.Value + Rand()**, which will update whenever the user changes the value of a slider. For a step-by-step demonstration, see the example at the end of this topic.
+In contrast, you can set the same property to **Slider1.Value + Rand()**, which will update whenever the user changes the value of a slider. For a step-by-step demonstration, see the example later in this topic.
 
 ## Syntax
 **Rand**()
@@ -37,7 +37,7 @@ In contrast, you can set the same property to **Slider1.Value + Rand()**, which 
 
     ![A screen displaying a label control with 50.741](media/function-rand/rand-slider-1.png)
 
-1. Change the value of the slider.
+1. While holding down the Alt key, change the value of the slider.
 
     Every time you change the value of the slider, the decimal portion of the label shows a different random number:
 
@@ -54,7 +54,7 @@ In contrast, you can set the same property to **Slider1.Value + Rand()**, which 
 
     ![A screen showing a data table with five different decimal values 0.857, 0.105, 0.979, 0.167, 0.814](media/function-rand/set-show-data.png)
 
-1. Open Preview by pressing F5, and then select the button by clicking or tapping it.
+1. While holding down the Alt key, select the button by clicking or tapping it.
 
     The data table shows five random decimal numbers:
 
@@ -64,6 +64,4 @@ In contrast, you can set the same property to **Slider1.Value + Rand()**, which 
 
     ![The same screen showing a data table with a new set of five different decimal values 0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
 
-To show a single random number instead of a table, use **Set( RandomNumber, Rand() )**.
-
-
+To generate a single random number instead of a table, use **Set( RandomNumber, Rand() )**.
