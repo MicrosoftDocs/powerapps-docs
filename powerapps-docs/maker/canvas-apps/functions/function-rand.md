@@ -48,7 +48,7 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand*
 
 #### Create a table of random numbers
 
-1. Place a **[Button](../controls/control-button.md)** control on the canvas.  Set its **[OnSelect](../controls/properties-core.md)** property to **ClearCollect( RandomNumbers, ForAll( [ 1, 2, 3, 4, 5 ], Rand() )**.  The single column table [1, 2, 3, 4, 5] is only used to iterate 5 times, resulting in 5 random numbers.
+1. Place a **[Button](../controls/control-button.md)** control on the canvas.  Set its **[OnSelect](../controls/properties-core.md)** property to **ClearCollect( RandomNumbers, ForAll( [ 1, 2, 3, 4, 5 ], Rand() ) )**.  The single column table [1, 2, 3, 4, 5] is only used to iterate 5 times, resulting in 5 random numbers.
 2. Place a **[Data table](../controls/control-data-table.md)** control on the canvas.  Select the **RandomNumbers** collection as the data source for the data table and select the **Value** field to display.
 3. Press the button.  You will see a list of random numbers in the data table:
     ![A screen showing a data table with five different decimal values 0.857, 0.105, 0.979, 0.167, 0.814](media/function-rand/rand-collection-1.png)
