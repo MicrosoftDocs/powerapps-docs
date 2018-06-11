@@ -24,10 +24,16 @@ All these functions work with the local time of the current user.
 
 See [working with dates and times](../show-text-dates-times.md) for more information.
 
-## Volatile functions
-**Now** and **Today** are volatile functions, which means that they return different values whenever they're reevaluated. However, formulas are reevaluated only when something in them changes. For example, you can set the **Text** property of a **[Label](../controls/control-text-box.md)** control to **Now()**, but the value won't update until the app is closed and reopened.
+## Volatile Functions
+**Now** and **Today** are volatile functions.  Each time one of these functions is evaluated it returns a different value.  
 
-In contrast, you can set the same property to **DateAdd( Now(), Slider1.Value, Minutes )**, which will update whenever the user changes the value of a slider. For a step-by-step demonstration of how to show a clock that updates every second, see the example at the end of this topic.
+When used in a data flow formula, a volatile function will only return a different value if the formula in which it appears is reevaluated.  If nothing else changes in the formula then it will have the same value throughout the execution of your app.
+
+For example, a label control with **Label1.Text = Now()** will not change while your app is active.  Only closing and reopening the app will result in a new value.
+
+The function will be reevaluated if it is part of a formula in which something else has changed.  For example, if we change our example to involve a slider control with **Label1.Text = DateAdd( Now(), Slider1.Value, Minutes )** then the current time is retrieved each time the Slider control's value changes and the label's text property is reevaluated.
+
+When used in a [behavior formula](../working-with-formulas-in-depth.md), volatile functions will be evaluated each time the behavior formula is evaluated.  See below for an example.
 
 ## Syntax
 **Now**()
@@ -86,6 +92,6 @@ For the examples in this section, the current time is **3:59 AM** on **February 
 
 1. Set the screen's **[OnStart](../controls/control-screen.md)** property so that the **CurrentTime** variable has a valid value, as in this example:
 
-    **Set(CurrentTime, 0)**
+    **Set(CurrentTime, Now())**
 
     The label appears as soon as the app starts (before the timer runs for a full second).
