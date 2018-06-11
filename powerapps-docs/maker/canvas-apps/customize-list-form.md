@@ -7,14 +7,17 @@ author: aftowen
 ms.service: powerapps
 ms.topic: conceptual
 ms.component: canvas
-ms.date: 06/08/2018
+ms.date: 06/11/2018
 ms.author: anneta
 
 ---
 # Customize a SharePoint list form by using PowerApps
-You can easily customize the form for a SharePoint list by opening PowerApps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list so that all of its users can use your form. In PowerApps, you can also review analytics reports, create rules for conditional formatting by pointing and clicking, and connect to other data sources.
+You can easily customize the form for a SharePoint list by opening PowerApps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In PowerApps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
 
-To follow the steps in this topic, you'll create a simple list so that you can see how customization works, and then you can apply the same concepts to your own list. If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [PowerApps doesn't support](connections/connection-sharepoint-online.md#known-issues).
+To follow the steps in this topic, you'll create a simple list so that you can see how customization works, and then you can apply the same concepts to your own list.
+
+> [!NOTE]
+> If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [PowerApps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md).
 
 ## Customize a form
 1. On a SharePoint site, create a list named **NewProducts**, and add these columns:
@@ -40,27 +43,23 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 
     ![Field list](./media/customize-list-form/field-list.png)
 
-1. (optional) Customize your app in a variety of other ways, including these:
+1. (optional) Customize your form in a variety of other ways, including these:
 
-    * [Customize the form further](customize-forms-sharepoint.md)
-    * [Change the size and orientation](set-aspect-ratio-portrait-landscape.md)
-    * [Format the text](controls/properties-text.md)
-    * [Add an image](add-images-pictures-audio-video.md) or [add a chart](use-line-pie-bar-chart.md)
-    * [Add custom data validation](functions/function-validate.md)
-    * [Add rules](working-with-rules.md)
-    * [Create more views](https://powerapps.microsoft.com/blog/separate-custom-forms/)
+    * Change its size, orientation, or both (for example, to [make the form wider](set-aspect-ratio-portrait-landscape.md)).
+    * Add a control so that users can [upload attachments](controls/properties-text.md).
+    * Create a [lookup field](sharepoint-lookup-fields.md).
 
 1. When you're done, open the **File** menu, select **Save**, and then select **Publish to SharePoint** twice.
 
-1. In the upper-left corner, select the back arrow, and then select **Back to SharePoint**., and then select **New** in the command bar. The form opens inline on the right-hand side of the browser window.
+1. In the upper-left corner, select the back arrow, and then select **Back to SharePoint**.
+
+1. In the command bar, select **New** to show your customized form near the right edge of the browser.
 
     ![Open form inline in SharePoint](./media/customize-list-form/list-form-open.png)
 
-1. If you want to [further customize your form](sharepoint-form-integration.md), click or tap **Customize**, and then make your changes. When you're done, be sure to save your changes.
+If you want to [customize your form further](sharepoint-form-integration.md), select **Customize** on the command bar, and then make, save, and publish your changes.
 
-    ![Customize button](./media/customize-list-form/customize-button.png)
-
-    You can customize and save as many times as you want, but your changes will not be visible in SharePoint until you click or tap **Publish to SharePoint**.
+![Customize button](./media/customize-list-form/customize-button.png)
 
 ## Toggle between using the default form and your custom form
 
