@@ -21,3 +21,16 @@ manager: kvivek
 > [!NOTE]
 > ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 
+When your business is closed for the day (or other time period), configure business closure settings so service activities such as meetings or calls won't be scheduled during that time.
+
+These settings can be found by 
+
+|Settings|Description|  
+|--------------|-----------------|  
+|**Closure name**|xxxxx|  
+|**Start date**|xxxxxx|  
+|**End date**|xxxxxx|  
+|**All day event**|xxxxxx|  
+|**Start time**|xxxxxx|  
+|**End time**|xxxxxx|  
+|**Duration**|xxxxxx|  
