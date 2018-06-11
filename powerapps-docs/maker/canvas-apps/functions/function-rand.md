@@ -17,9 +17,15 @@ Returns a pseudo-random number.
 The **Rand** function returns a pseudo-random number that's greater than or equal to 0 and less than 1.
 
 ## Volatile Functions
-**Rand** is a volatile function, which means that it returns a different value whenever it's reevaluated. However, formulas are reevaluated only when something in them changes. For example, you can set the **Text** property of a **[Label](../controls/control-text-box.md)** control to **Rand()**, but it won't update until the app is closed and reopened.
+**Rand** is a volatile function.  Each time the function is evaluated it returns a different value.  
 
-In contrast, you can set the same property to **Slider1.Value + Rand()**, which will update whenever the user changes the value of a slider. For a step-by-step demonstration, see the example later in this topic.
+When used in a data flow formula, a volatile function will only return a different value if the formula in which it appears is reevaluated.  If nothing else changes in the formula then it will have the same value throughout the execution of your app.
+
+For example, a label control with **Label1.Text = Rand()** will not change while your app is active.  Only closing and reopening the app will result in a new value.
+
+The function will be reevaluated if it is part of a formula in which something else has changed.  For example, if we change our example to involve a slider control with **Label1.Text = Slider1.Value + Rand()** then a new random number is generated each time the Slider control's value changes and the label's text property is reevaluated.  See below for this example.
+
+When used in a [behavior formula](../working-with-formulas-in-depth.md), **Rand** will be evaluated each time the behavior formula is evaluated.  See below for an example.
 
 ## Syntax
 **Rand**()
