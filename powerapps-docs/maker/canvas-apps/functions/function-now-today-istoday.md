@@ -74,7 +74,7 @@ For the examples in this section, the current time is **3:59 AM** on **February 
 
 	![A screen that contains a label control with Text property set to Text( CurrentTime, LongTime24)](media/function-now-today-istoday/now-use-currenttime.png)
 
-1. While holding down the Alt key, start the timer by clicking or tapping it.
+1. Preview the app by pressing F5, and then start the timer by clicking or tapping it.
 
     The label continually shows the current time, down to the second.
 
