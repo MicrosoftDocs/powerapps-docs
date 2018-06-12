@@ -21,16 +21,23 @@ manager: kvivek
 > [!NOTE]
 > ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 
-When your business is closed for the day (or other time period), configure business closure settings so service activities such as meetings or calls won't be scheduled during that time.
+Prevent scheduling resources on holidays and other nonworking days by defining business closures in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)]. You can set both the days and times that your organization will be closed. 
 
-These settings can be found by 
+These settings can be found in the Business Application Platform Admin center by going to **Environments** > [select an environment] > **Settings** > **Business closures**.
+
+Make sure you have the Schedule Manager Security role or equivalent permissions to update the business closures.
+
+**Check your security role**
+
+- Follow the steps in [View your user profile](https://docs.microsoft.com/dynamics365/customer-engagement/basics/view-your-user-profile).
+- Don’t have the correct permissions? Contact your system administrator.
 
 |Settings|Description|  
 |--------------|-----------------|  
-|**Closure name**|xxxxx|  
-|**Start date**|xxxxxx|  
-|**End date**|xxxxxx|  
-|**All day event**|xxxxxx|  
-|**Start time**|xxxxxx|  
-|**End time**|xxxxxx|  
-|**Duration**|xxxxxx|  
+|**Closure name**|The name for the business closure event. The first 12 characters of the name appear on each day of the closure on the calendar view of the affected resource's **Work Hours**.|  
+|**Start date**|The date the closure event starts.|  
+|**End date**|The date the closure event ends.|  
+|**All day event**|Select if the closure event is for the whole day. In the **Duration** box, Dynamics 365 automatically enters the duration of 1 day.|  
+|**Start time**|The time the closure event starts. Does not apply to all day events.|  
+|**End time**|The time the closure event ends. Does not apply to all day events.|  
+|**Duration**|If you want to enter duration instead of an end time, select the length of the closure in the **Duration** box. Dynamics 365 automatically calculates the end time for you.|  
