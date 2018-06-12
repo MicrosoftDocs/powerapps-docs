@@ -1,1 +1,1 @@
-# Sample: Entity operations
+# Sample: Organization service Entity operations

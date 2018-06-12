@@ -18,7 +18,7 @@
     href: entity-operations.md
 - name: How-to Guides
   items:
-  - name: Entity Operations
+  - name: Generate entity and custom action classes
     href: how-code-generation-utility.md
 - name: Resources
   items:

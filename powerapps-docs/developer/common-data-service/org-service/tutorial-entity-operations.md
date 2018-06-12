@@ -1,1 +1,1 @@
-# Tutorial: Entity Operations
+# Tutorial: Organization service entity operations
