@@ -37,9 +37,9 @@ If any of the formulas within the **Concurrent** results in an error, the first 
 
 2. Add a **[Button](../controls/control-button.md)** control, and set its **OnSelect** property to this formula:
 
-	**ClearCollect( Product, '[SalesLT].[Product]' ); 
-	ClearCollect( Customer, '[SalesLT].[Customer]' ); 
-	ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ); 
+	**ClearCollect( Product, '[SalesLT].[Product]' );<br>
+	ClearCollect( Customer, '[SalesLT].[Customer]' );<br>
+	ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );<br> 
 	ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )**
 
 3. Both [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/network) and [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) offer developer tools to monitor network traffic while your app is running.  Turn this on in your browser.  You may want to also turn on network throttling to exaggerate the effects of this comparison.  
@@ -52,11 +52,11 @@ If any of the formulas within the **Concurrent** results in an error, the first 
 
 1. Add a second **[Button](../controls/control-button.md)** control, and set its **OnSelect** property to this formula:
 
-	**Concurrent( 
-	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Product, '[SalesLT].[Product]' ), 
-	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Customer, '[SalesLT].[Customer]' ), 
-	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ), 
-	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ) 
+	**Concurrent(<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Product, '[SalesLT].[Product]' ),<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Customer, '[SalesLT].[Customer]' ),<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )<br>
 	)**
 
 	Note that these are the same **ClearCollect** calls as with the first button, but they are wrapped in a Concurrent function and separated by commas.
