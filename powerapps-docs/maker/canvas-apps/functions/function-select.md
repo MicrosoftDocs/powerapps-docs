@@ -16,20 +16,22 @@ ms.author: gregli
 
 ---
 # Select function in PowerApps
-Simulates a select action on a control.
+Simulates a select action on a control causing **OnSelect** to be evaluated.
 
 ## Description
-The **Select** function simulates a select action on a control as if the user had caused the selection with a mouse click, screen touch, or keyboard keystroke.  As a result the **OnSelect** formula on the target control is evaluated.
+The **Select** function simulates a select action on a control as if the user had clicked or touched the control.  As a result, the **OnSelect** formula on the target control is evaluated.
 
 Use **Select** to propagate a select action to a parent control.  Controls inserted into a **[Gallery](../controls/control-gallery.md)** control have a default **OnSelect** property set to **Select( Parent )**.  With this propagation in place, set the **OnSelect** of the gallery control to have mouse clicks anywhere in the gallery evaluate the same formula.  You can also have specialized buttons in your gallery that perform different actions by replacing **Select( Parent )** on just those controls with your own formula while having most of the gallery continue to propagate to the **OnSelect** of the gallery.  
 
-**Select** queues the select action for later processing which may happen after the current formula has been evaluated.  **Select** does not cause the target **OnSelect** property to evaluate immediately nor does it wait for it finish evaluation.  
+**Select** queues the target **OnSelect** for later processing which may happen after the current formula has finished being evaluated.  **Select** does not cause the target **OnSelect** to evaluate immediately nor does it wait for it finish evaluation.  
 
-The target control cannot be within a container control, such as a gallery, unless the formula evaluating the **Select** function is also within the same container.  **Select** cannot be used across screens.
+Controls within a container control, such as a gallery or form, can only be used if the formula invoking the **Select** is on a control within the same container.  **Select** cannot be used across screens.
 
 **Select** can only be used with controls that have an **OnSelect** property.  
 
-**Select** can only be used in [behavior formulas](../working-with-formulas-in-depth.md).  
+**Select** can only be used in [behavior formulas](../working-with-formulas-in-depth.md).
+
+A control cannot **Select** itself directly or indirectly through other controls.
 
 ## Syntax
 **Select**( *Control* )
@@ -56,4 +58,22 @@ The target control cannot be within a container control, such as a gallery, unle
 
 #### Gallery control
 
+1. Insert a **[Gallery](../controls/control-gallery.md)** control.  Select the first template with image, text, and angle bracket.
 
+2. Set the **OnSelect** property of the gallery to this formula:
+ 
+	**Notify( "Gallery Selected" )**
+
+3. Hold down the Alt key and click the background of the gallery, the image control, any of the test, or the angle bracket icon.  All clicks will flash the "Gallery Selected" banner at the top of the app.  
+ 
+	Use the gallery's **OnSelect** for the default action to take when an item is selected in the gallery.
+
+5. Set the **OnSelect** property of the image control to this formula:
+
+	**Notify( "Image Selected", Success )**
+
+6. Hold down the Alt key and again click the various elements of the gallery.  All of them continue to display "Gallery Selected" except for the image control which displays "Image Selected". 
+ 
+	Use individual controls in the gallery to take different actions, independent of the gallery's default action.
+
+	![An animation showing the default OnSelect property settings for the gallery control and then setting on an indivdual control that takes a different action](media/function-select/gallery-select.gif)
