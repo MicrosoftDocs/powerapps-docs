@@ -100,7 +100,7 @@
   - name: Reference
     items:
     - name: Entity Reference
-      href: ../../developer//common-data-service/reference/entities/toc.yml
+      href: ../../developer/common-data-service/reference/entities/toc.yml
     - name: Web API Reference
       href: ../../developer/common-data-service/use-web-services.md
     - name: Organization Service assemblies
