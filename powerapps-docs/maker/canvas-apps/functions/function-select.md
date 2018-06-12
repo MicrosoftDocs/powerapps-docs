@@ -16,7 +16,7 @@ ms.author: gregli
 
 ---
 # Select function in PowerApps
-Simulates a select action on a control causing **OnSelect** to be evaluated.
+Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
 
 ## Description
 The **Select** function simulates a select action on a control as if the user had clicked or touched the control.  As a result, the **OnSelect** formula on the target control is evaluated.
