@@ -35,7 +35,7 @@ If any of the formulas within the **Concurrent** results in an error, the first 
 
 2. Add four different data sources from the Common Data Service for apps, SQL Server, or SharePoint.  In this example, we are using four tables from the [sample Adventure Works database on SQL Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal).
 
-2. Add a **[Button](../controls/button.md)** control, and set its **OnSelect** property to this formula:
+2. Add a **[Button](../controls/control-button.md)** control, and set its **OnSelect** property to this formula:
 
 	**ClearCollect( Product, '[SalesLT].[Product]' ); 
 	ClearCollect( Customer, '[SalesLT].[Customer]' ); 
@@ -50,7 +50,7 @@ If any of the formulas within the **Concurrent** results in an error, the first 
 
 5. Save and close the app.  As data is cached by PowerApps, hitting the button again will not necessarily cause four new requests.  Each time you want to test the performance again, you will need to close and reopen your app.  If you turned on network throttling, you may want to turn it off until you are ready for another test.
 
-1. Add a second **[Button](../controls/button.md)** control, and set its **OnSelect** property to this formula:
+1. Add a second **[Button](../controls/control-button.md)** control, and set its **OnSelect** property to this formula:
 
 	**Concurrent( 
 	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Product, '[SalesLT].[Product]' ), 
