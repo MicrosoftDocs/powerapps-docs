@@ -38,27 +38,27 @@
     - name: Developer Tutorials
       items: 
       - name: Create a .NET console application
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Create a workflow process extension
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Create and deploy a plug-in
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Post data using web hooks
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
   - name: Samples
     items:
         - name: Organization service samples
-          href: /powerapps/developer/common-data-service/add-field-form
+          href: ../../developer/common-data-service/use-web-services.md
         - name: Web API samples
           items:
           - name: Basic Operations
-            href: /powerapps/developer/common-data-service/add-field-form
+            href: ../../developer/common-data-service/use-web-services.md
           - name: Query Data
-            href: /powerapps/developer/common-data-service/add-field-form
+            href: ../../developer/common-data-service/use-web-services.md
           - name: Conditional Operations
-            href: /powerapps/developer/common-data-service/add-field-form
+            href: ../../developer/common-data-service/use-web-services.md
           - name: Functions and actions
-            href: /powerapps/developer/common-data-service/add-field-form
+            href: ../../developer/common-data-service/use-web-services.md
   - name: Concepts
     items:
       - name: Build a data model
@@ -76,13 +76,13 @@
       - name: Developer Concepts
         items: 
           - name: Apply business logic with code
-            href: /powerapps/developer/common-data-service/add-field-form
+            href: ../../developer/common-data-service/use-web-services.md
           - name: Azure integration
-            href: /powerapps/developer/common-data-service/add-field-form
+            href: ../../developer/common-data-service/use-web-services.md
           - name: Outlook client
-            href: /powerapps/developer/common-data-service/add-field-form
+            href: ../../developer/common-data-service/use-web-services.md
           - name: Create custom clients
-            href: /powerapps/developer/common-data-service/add-field-form
+            href: ../../developer/common-data-service/use-web-services.md
   - name: How-to guides
     items:
     - name: Configure Cascading relationships
@@ -90,37 +90,37 @@
     - name: Developer How-to guides
       items: 
       - name: Use web services
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Distribute your app on AppSource
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Build Windows client applications using XRM tools
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Create custom workflow activities
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
   - name: Reference
     items:
     - name: Entity Reference
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: ../../developer/reference/entities/toc.yml
     - name: Web API Reference
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: ../../developer/common-data-service/use-web-services.md
     - name: Organization Service assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /dotnet/api/?view=dynamics-general-ce-9
     - name: XRM Tooling assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
     - name: Virtual Entity assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /dotnet/api/?view=dynamics-virtualentity-ce-9
     - name: Workflow assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /dotnet/api/?view=dynamics-workflow-ce-9
     - name: Package Deployer assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /dotnet/api/?view=dynamics-deployer-ce-9
     - name: Outlook Client assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /dotnet/api/?view=dynamics-outlookclient-ce-9
     - name: Deployment Service assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /dotnet/api/?view=dynamics-deployment-ce-9
     - name: Online Management API
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /rest/api/admin.services.crm.dynamics.com/
     - name: XML Schemas
-      href: /powerapps/developer/common-data-service/add-field-form
+      href: /dynamics365/customer-engagement/developer/schemas-used-dynamics-365
   - name: Resources
     items:
     - name: Community tools
@@ -128,19 +128,19 @@
     - name: Developer Resources
       items: 
       - name: .NET SDK Assemblies
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Code generation tool 
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Configuration Migration tool 
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Package Deployer 
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Plug-in Registration Tool 
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: SolutionPackager tool 
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
       - name: Community tools
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: ../../developer/common-data-service/use-web-services.md
 # DO NOT CHANGE BELOW  
 - name: Common Data Model
   href: ../../common-data-model/index.md     
