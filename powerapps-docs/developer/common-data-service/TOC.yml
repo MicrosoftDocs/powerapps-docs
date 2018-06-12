@@ -17,3 +17,6 @@
   href: apply-business-logic-with-code.md
 - name: Use Common Data Service for Apps web services
   href: use-web-services.md
+  - items:
+    - name: Organization Service
+      href: org-service/index.md

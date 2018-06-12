@@ -1,0 +1,1 @@
+# How to generate entity and custom action classes
