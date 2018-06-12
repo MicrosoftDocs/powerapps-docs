@@ -24,6 +24,10 @@
       - name: Common Data Service for Apps
         tocHref: /powerapps/developer/common-data-service/
         topicHref: /powerapps/maker/common-data-service/
+        items:
+        - name: Organization Service
+          tocHref: /powerapps/developer/common-data-service/org-service/
+          topicHref: /powerapps/maker/common-data-service/org-service/index
     - name: Create apps
       tocHref: /powerapps/developer/model-driven-apps/
       topicHref: /powerapps/maker/index
