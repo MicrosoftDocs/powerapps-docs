@@ -1,7 +1,7 @@
 ---
 title: "System Settings - Business closures| MicrosoftDocs"
 ms.custom: ""
-ms.date: 09/30/2017
+ms.date: 06/30/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -25,12 +25,14 @@ Prevent scheduling resources on holidays and other nonworking days by defining b
 
 These settings can be found in the Business Application Platform Admin center by going to **Environments** > [select an environment] > **Settings** > **Business closures**.
 
-Make sure you have the Schedule Manager Security role or equivalent permissions to update the business closures.
+Make sure you have the Schedule Manager security role or equivalent permissions to update the business closures.
 
 **Check your security role**
 
 - Follow the steps in [View your user profile](https://docs.microsoft.com/dynamics365/customer-engagement/basics/view-your-user-profile).
 - Don’t have the correct permissions? Contact your system administrator.
+
+## Settings
 
 |Settings|Description|  
 |--------------|-----------------|  

@@ -187,8 +187,10 @@
         href: system-settings-privacy-security.md
       - name: Previews
         href: system-settings-dialog-box-previews-tab.md
-    - name: Business(system-settings-business-closures.md)
+    - name: Business
       items:
+      - name: Business closures - new page
+        href: system-settings-business-closures.md
       - name: Calendar
         href: system-settings-dialog-box-calendar-tab.md
       - name: Currencies
