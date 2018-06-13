@@ -1,22 +1,47 @@
 - name: Overview
   href: overview.md
-- name: Introduction to solutions
-  href: introduction-solutions.md
-- name: Entities
-  href: entities.md
-  items: 
-  - name: Entity metadata
-    href: entity-metadata.md
-  - name: Attribute metadata 
-    href: entity-attribute-metadata.md
-  - name: Entity relationships metadata
-    href: entity-relationship-metadata.md
-  - name: Entity reference
-    href: reference/entities/toc.yml
-- name: Apply business logic with code
-  href: apply-business-logic-with-code.md
-- name: Use Common Data Service for Apps web services
-  href: use-web-services.md
+- name: Quick Starts
   items:
-  - name: Organization Service
-    href: org-service/index.md
+  - name: Organization Service Console App
+    href: org-service/quick-start-console-app.md
+- name: Tutorials
+  items:
+  - name: Organization Service Entity Operations
+    href: org-service/tutorial-entity-operations.md
+- name: Samples
+  items:
+  - name: Organization Service Entity Operations
+    href: org-service/sample-entity-operations.md
+- name: Concepts
+  items:
+  - name: Introduction to solutions
+    href: introduction-solutions.md
+  - name: Entities
+    href: entities.md
+    items: 
+    - name: Entity metadata
+      href: entity-metadata.md
+    - name: Attribute metadata 
+      href: entity-attribute-metadata.md
+    - name: Entity relationships metadata
+      href: entity-relationship-metadata.md
+    - name: Entity reference
+      href: reference/entities/toc.yml
+  - name: Apply business logic with code
+    href: apply-business-logic-with-code.md
+  - name: Use Common Data Service for Apps web services
+    href: use-web-services.md
+    items:
+    - name: Organization Service
+      href: org-service/index.md
+  - name: Entity Operations
+    href: entity-operations.md
+- name: How-to Guides
+  # items:
+  # - name: Generate entity and custom action classes
+  #   href: how-code-generation-utility.md
+- name: Resources
+  items:
+  - name: Community Tools
+    href: community-tools.md  
+
