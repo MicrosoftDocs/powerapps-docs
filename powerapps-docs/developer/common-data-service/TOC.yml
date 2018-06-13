@@ -36,10 +36,10 @@
       href: org-service/index.md
   - name: Entity Operations
     href: entity-operations.md
-- name: How-to Guides
-  # items:
-  # - name: Generate entity and custom action classes
-  #   href: how-code-generation-utility.md
+# - name: How-to Guides
+#   items:
+#   - name: Generate entity and custom action classes
+#     href: how-code-generation-utility.md
 - name: Resources
   items:
   - name: Community Tools
