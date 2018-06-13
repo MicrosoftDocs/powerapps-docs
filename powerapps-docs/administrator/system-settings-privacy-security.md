@@ -36,13 +36,13 @@ Make sure you have the System Administrator or System Customizer security role o
 
 |Settings|Description|  
 |--------------|-----------------|  
-|**Privacy preferences**||  
-|**Default app name**|Default: On. |  
-|**Privacy statement URL**|xxxxxx |  
-|**Default action to take when an error occurs**| |
+|**Privacy preferences**|More information: [Set privacy preferences for an organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/set-privacy-preferences-organization#replace-the-privacy-statement-for-the-organization)|  
+|**Default app name**|Default: xx. xxxxx|  
+|**Privacy statement URL**|Provide users with a link to your organization's privacy statement. The link will be added to the **Settings** menu.|  
+|**Default action to take when an error occurs**|[Set privacy preferences for an organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/set-privacy-preferences-organization#set-error-reporting-preferences-for-the-organization) |
 |**Ask the user for permission to send an error report to Microsoft**|Default: Selected.|  
-|**Automatically send an error report to Microsoft without user interaction**|xxxxxxx|  
-|**Never send an error report to Microsoft**|Default: Off.|  
+|**Automatically send an error report to Microsoft without user interaction**||  
+|**Never send an error report to Microsoft**||  
 |**Session expiration**| |  
 |**Maximum session duration (minutes)**|Default: 1440|  
 |**Show warning before expiration? (minutes prior)**|Default: 20|  
