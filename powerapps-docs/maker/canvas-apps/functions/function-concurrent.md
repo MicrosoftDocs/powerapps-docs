@@ -100,7 +100,7 @@ With "Formula-level error management" enabled as an advanced setting then the fi
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
 	)**
 
-4. Insert a [**Date Table**](../controls/control-date-table.md) control and select the **Results** as the data source.  Select all fields to display.
+4. Insert a [**Date Table**](../controls/control-data-table.md) control and select the **Results** as the data source.  Select all fields to display.
 
 6. Enter whatever phrase you like to see translated in the text input box.
 
