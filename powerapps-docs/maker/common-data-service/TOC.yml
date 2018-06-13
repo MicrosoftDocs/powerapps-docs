@@ -25,6 +25,10 @@
       href: data-platform-create-business-rule.md
     - name: Delete a custom entity
       href: data-platform-delete-entity.md
+    - name: Developer Quick starts
+      items:
+      - name: PH Organization Service one
+        href: ../../developer/common-data-service/org-service/quick-start-org-service-1.md
   - name: Tutorials
     items:
     - name: Create a custom entity that has components
@@ -37,28 +41,12 @@
       href:  /powerapps/maker/common-data-service/actions
     - name: Developer Tutorials
       items: 
-      - name: Create a .NET console application
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Create a workflow process extension
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Create and deploy a plug-in
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Post data using web hooks
-        href: ../../developer/common-data-service/use-web-services.md
+      - name: PH Organization Service one
+        href: ../../developer/common-data-service/org-service/tutorial-org-service-1.md
   - name: Samples
     items:
-        - name: Organization service samples
-          href: ../../developer/common-data-service/use-web-services.md
-        - name: Web API samples
-          items:
-          - name: Basic Operations
-            href: ../../developer/common-data-service/use-web-services.md
-          - name: Query Data
-            href: ../../developer/common-data-service/use-web-services.md
-          - name: Conditional Operations
-            href: ../../developer/common-data-service/use-web-services.md
-          - name: Functions and actions
-            href: ../../developer/common-data-service/use-web-services.md
+        - name: PH Organization service samples one
+          href: ../../developer/common-data-service/org-service/sample-org-service-1.md
   - name: Concepts
     items:
       - name: Build a data model
@@ -75,34 +63,22 @@
         href:  /powerapps/maker/common-data-service/actions
       - name: Developer Concepts
         items: 
-          - name: Apply business logic with code
-            href: ../../developer/common-data-service/use-web-services.md
-          - name: Azure integration
-            href: ../../developer/common-data-service/use-web-services.md
-          - name: Outlook client
-            href: ../../developer/common-data-service/use-web-services.md
-          - name: Create custom clients
-            href: ../../developer/common-data-service/use-web-services.md
+          - name: PH Organization service one
+            href: ../../developer/common-data-service/org-service/org-service-concept-1.md
   - name: How-to guides
     items:
     - name: Configure Cascading relationships
       href:  /powerapps/maker/common-data-service/actions
     - name: Developer How-to guides
       items: 
-      - name: Use web services
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Distribute your app on AppSource
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Build Windows client applications using XRM tools
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Create custom workflow activities
-        href: ../../developer/common-data-service/use-web-services.md
+      - name: PH Organization service one
+        href: ../../developer/common-data-service/org-service/how-org-service-1.md
   - name: Reference
     items:
     - name: Entity Reference
       href: ../../developer/common-data-service/reference/entities/toc.yml
     - name: Web API Reference
-      href: ../../developer/common-data-service/use-web-services.md
+      href: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
     - name: Organization Service assemblies
       href: /dotnet/api/?view=dynamics-general-ce-9
     - name: XRM Tooling assemblies
@@ -123,24 +99,8 @@
       href: /dynamics365/customer-engagement/developer/schemas-used-dynamics-365
   - name: Resources
     items:
-    - name: Community tools
-      href:  /powerapps/maker/common-data-service/actions
-    - name: Developer Resources
-      items: 
-      - name: .NET SDK Assemblies
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Code generation tool 
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Configuration Migration tool 
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Package Deployer 
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Plug-in Registration Tool 
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: SolutionPackager tool 
-        href: ../../developer/common-data-service/use-web-services.md
-      - name: Community tools
-        href: ../../developer/common-data-service/use-web-services.md
+    - name: Community tools for developers
+      href: ../../developer/common-data-service/community-tools.md
 # DO NOT CHANGE BELOW  
 - name: Common Data Model
   href: ../../common-data-model/index.md     

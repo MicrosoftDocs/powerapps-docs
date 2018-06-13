@@ -1,1 +1,1 @@
-# How to generate entity and custom action classes
+# Placeholder: How To Org Service one

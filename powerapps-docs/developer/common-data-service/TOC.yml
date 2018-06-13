@@ -24,9 +24,7 @@
     - name: Attribute metadata 
       href: entity-attribute-metadata.md
     - name: Entity relationships metadata
-      href: entity-relationship-metadata.md
-    - name: Entity reference
-      href: reference/entities/toc.yml
+      href: entity-relationship-metadata.md    
   - name: Apply business logic with code
     href: apply-business-logic-with-code.md
   - name: Use Common Data Service for Apps web services
@@ -42,4 +40,8 @@
   items:
   - name: Community Tools
     href: community-tools.md  
+- name: Reference
+  items:
+  - name: Entity reference
+    href: reference/entities/toc.yml
 
