@@ -1,8 +1,28 @@
 - name: Overview
   href: overview.md
-- name: Use web resources
-  href: web-resources.md  
-- name: Client scripting
-  href: client-scripting.md
-- name: Customize commands
-  href: customize-commands.md
+- name: Quick Starts
+  items:
+  - name: PH Model-driven quick start
+    href: quick-start-mda-1.md
+- name: Tutorials
+  items:
+  - name: PH Model-driven tutorial
+    href: tutorial-mda-1.md
+- name: Samples
+  items:
+  - name:  PH Model-driven sample
+    href: sample-mda-1.md
+- name: Concepts
+  items:
+  - name: Use web resources
+    href: web-resources.md  
+  - name: Client scripting
+    href: client-scripting.md
+  - name: Customize commands
+    href: customize-commands.md
+# - name: How-to Guides
+#   items:
+#   - name: Generate entity and custom action classes
+#     href: how-code-generation-utility.md
+# - name: Resources
+# - name: Reference
