@@ -19,7 +19,10 @@
     #  Make sure Create apps appears for topics in developer folder 
     - name: Create apps
       tocHref: /powerapps/developer/common-data-service/
-      topicHref: /powerapps/maker/index     
+      topicHref: /powerapps/maker/index  
+    - name: Developer
+      tocHref: /powerapps/developer/common-data-service/
+      topicHref: /powerapps/developer/common-data-service/index          
       items:
       - name: Common Data Service for Apps
         tocHref: /powerapps/developer/common-data-service/
@@ -31,6 +34,9 @@
     - name: Create apps
       tocHref: /powerapps/developer/model-driven-apps/
       topicHref: /powerapps/maker/index
+    - name: Developer
+      tocHref: /powerapps/developer/model-driven-apps/
+      topicHref: /powerapps/developer/model-driven-apps/index      
       items:
       - name: Model-driven apps
         tocHref: /powerapps/developer/model-driven-apps/
