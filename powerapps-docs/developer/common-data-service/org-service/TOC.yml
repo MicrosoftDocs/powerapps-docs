@@ -2,24 +2,24 @@
   href: overview.md
 - name: Quick Starts
   items:
-  - name: Console App
-    href: quick-start-console-app.md
+  - name: Org service quick start one
+    href: quick-start-org-service-1.md
 - name: Tutorials
   items:
-  - name: Entity Operations
-    href: tutorial-entity-operations.md
+  - name: Org service tutorial one
+    href: tutorial-org-service-1.md
 - name: Samples
   items:
-  - name: Entity Operations
-    href: sample-entity-operations.md
+  - name: Org service sample one
+    href: sample-org-service-1.md
 - name: Concepts
   items:
-  - name: Entity Operations
-    href: entity-operations.md
+  - name: Org Service Concept One
+    href: org-service-concept-1.md
 - name: How-to Guides
   items:
-  - name: Generate entity and custom action classes
-    href: how-code-generation-utility.md
+  - name: How to Org Service one
+    href: how-org-service-1.md
 - name: Resources
   items:
   - name: Community Tools

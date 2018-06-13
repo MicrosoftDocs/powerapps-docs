@@ -1,1 +1,0 @@
-# Tutorial: Organization service entity operations

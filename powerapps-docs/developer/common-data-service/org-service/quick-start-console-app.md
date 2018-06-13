@@ -1,1 +1,0 @@
-# Quick Start: Organization service console app
