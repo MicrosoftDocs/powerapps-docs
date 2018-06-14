@@ -384,7 +384,7 @@
        - name: Now function
          href: ./canvas-apps/functions/function-now-today-istoday.md
        - name: Operators
-	     href: ./canvas-apps/functions/operators.md
+         href: ./canvas-apps/functions/operators.md
        - name: Or function
          href: ./canvas-apps/functions/function-logicals.md
        - name: Param function
