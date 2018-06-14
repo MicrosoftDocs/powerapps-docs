@@ -49,7 +49,7 @@ The notification contains a different kind of link based on which permission you
 ### Make sure users have access to the data your app uses
 
 > [!IMPORTANT]
-> If your app is based on Common Data Service for Apps, your users must be assigned to a security role that grants them access to the data that your app use. For information about how to create security roles and assigned users to them, see [Configure environment security](../../administrator/database-security.md).
+> If your app is based on Common Data Service for Apps, your users must be assigned to a security role that grants them access to the data that your app uses. For information about how to create security roles and assign users to them, see [Configure environment security](../../administrator/database-security.md).
 
 Most apps rely on at least one of these types of resources:
 
