@@ -46,7 +46,7 @@ The notification contains a different kind of link based on which permission you
 - When you share the app with **Can use** permission, the email contains the link to run the app.
 - When you share the app with **Can edit** permission, the email contains the link to run or edit the app.
 
-### Make sure users have access to the data your app uses
+## Make sure users have access to the data your app uses
 
 > [!IMPORTANT]
 > If your app is based on Common Data Service for Apps, your users must be assigned to a security role that grants them access to the data that your app uses. For information about how to create security roles and assign users to them, see [Configure environment security](../../administrator/database-security.md).
@@ -63,15 +63,15 @@ Users and contributors need permissions to any data connections and gateways tha
 
 When you share an app that uses an older version of the Common Data Service, you must share the runtime permission to the Common Data Service separately. If you don’t have permission to do this, see your environment admin.
 
-### How do my users see the app I shared?
+## How do my users see the app I shared?
 After you share an app with one or more users or security groups, how they can see the app depends on the permission you shared the app with.
 
-##### If you shared an app with *Can use* permission
+### If you shared an app with *Can use* permission
 The people you shared the app with will receive an email notification if you selected that check box in the app sharing screen. In the email, they can click or tap a link to run the app on [Dynamics 365](http://home.dynamics.com). Soon we will support universal links, which means if you have PowerApps Studio or PowerApps Mobile installed, the app will open in PowerApps Studio or PowerApps mobile.
 
 Users can also discover the app in AppSource on [Dynamics 365](http://home.dynamics.com) (for example, if you didn't send email). [Read more](../../user/app-source.md) on how to users can get apps via AppSource.
 
-##### If you shared an app with *Can edit* permission
+### If you shared an app with *Can edit* permission
 The people you shared the app with will receive an email notification if you selected that check box in the app sharing screen. In the email, they can click or tap a link that opens the app directly for editing using PowerApps Studio. There is also a link to run the app on [Dynamics 365](http://home.dynamics.com). Soon we will support universal links, which means if you have PowerApps Studio or PowerApps Mobile installed, the app will open in PowerApps Studio or PowerApps Mobile.
 
 Users can also discover the app in [powerapps.com](http://web.powerapps.com) (for example, if you didn't send email). This is the home for app creators to browse through all the apps they created or that have been shared with them with **Contributor** permission. In contrast, [Dynamics 365](http://home.dynamics.com) is where users can run apps from PowerApps and other business apps quickly.
