@@ -6,7 +6,7 @@ author: AFTOwen
 ms.service: powerapps
 ms.topic: conceptual
 ms.component: canvas
-ms.date: 03/18/2018
+ms.date: 06/14/2018
 ms.author: anneta
 
 ---
