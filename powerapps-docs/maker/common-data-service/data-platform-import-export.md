@@ -21,35 +21,35 @@ Every entity has required fields that must exist in your input file. We recommen
 
 1. Prepare the file template.
 
-    a. Export the entity data to the CVS file. Follow the steps in **Export data to CSV**.
-    b. Define a plan to make sure data is unique. Use either **primary keys** or **Alternate Keys**.
-    c. Refer to the next section for instructions to make sure data is unique before you import it into an entity.
+    a. Export the entity data to the CVS file. Follow the steps in **Export data to CSV**.  
+    b. Define a plan to make sure data is unique. Use either **primary keys** or **Alternate Keys**.  
+    c. Refer to the next section for instructions to make sure data is unique before you import it into an entity. 
 
 1. Modify the file with your data.
 
     - Copy data from your Excel or CSV file into the template that you just created.
 
-1. Import the file.
-    a. On [powerapps.com](https://web.powerapps.com/), expand the **Data** section. Select **Entities** in the left navigation pane.
-    b. Select the entity that you want to import data into.
-    c. Select the ellipsis or menu at the top. Select **Get Data**. Select **Get data from Excel**.
+1. Import the file.  
+    a. On [powerapps.com](https://web.powerapps.com/), expand the **Data** section. Select **Entities** in the left navigation pane.  
+    b. Select the entity that you want to import data into.  
+    c. Select the ellipsis or menu at the top. Select **Get Data**. Select **Get data from Excel**.  
 
     > [!NOTE]
     > To import data into more than one entity, in the top menu, select **Get Data**. Select **Get data from Excel**. Then you can choose multiple entities and select **Next**.
 
     ![Example of importing data to an **Account** entity](./media/data-platform-import-export/import-data-to-account.png)
 
-    d. On the **Import data** screen, choose whether to import data from an Excel or a CSV file.
-    e. Select **Upload**.
-    f. Choose your file. Follow the prompts to upload your file.
+    d. On the **Import data** screen, choose whether to import data from an Excel or a CSV file.  
+    e. Select **Upload**.  
+    f. Choose your file. Follow the prompts to upload your file.  
 
     ![Example of uploading a file to an **Account** entity](./media/data-platform-import-export/upload-account.png)
 
-    g. After the file is uploaded and **Mapping status** is green, select **Import** in the top-right corner. Refer to the next section to navigate and fix any mapping errors.
+    g. After the file is uploaded and **Mapping status** is green, select **Import** in the top-right corner. Refer to the next section to navigate and fix any mapping errors.  
 
     ![Example of a successful **Mapping status** and **Import** button](./media/data-platform-import-export/success-map-imp.png)
 
-    h. After the import finishes successfully, you'll see the total number of inserts and updates.
+    h. After the import finishes successfully, you'll see the total number of inserts and updates.  
 
     ![Example of a successful import that shows the number of inserts and updates](./media/data-platform-import-export/success-imp-insert.png)
 
@@ -83,14 +83,14 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 
 Common Data Service for Apps entities use a primary key to uniquely identify records within a Common Data Service entity table. The primary key for a Common Data Service entity is a globally unique identifier (GUID). It forms the default basis for record identification. Data operations, like importing data into Common Data Service entities, surface the default primary keys.
 
-**Example:**  
+Example:  
 The primary key for an **Account** entity is **accountid**.
 
    ![Sample export file from an **Account** entity showing **accountid** as the primary key](./media/data-platform-import-export/export-pk.png)
 
 Sometimes, a primary key might not work when you integrate data from an external source. Use Common Data Service to define alternate keys that uniquely identify a record in place of the primary key.
 
-**Example:**  
+Example:  
 For an **Account** entity, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.
 
    ![Example of creating an alternate key on a **Currency** entity](./media/data-platform-import-export/create-ak.png)
