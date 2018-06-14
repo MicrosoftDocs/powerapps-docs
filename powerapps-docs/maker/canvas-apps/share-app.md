@@ -1,14 +1,9 @@
 ---
 title: Share an app | Microsoft Docs
 description: Share your app by giving other users permission to run or modify it
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/18/2018
@@ -19,11 +14,11 @@ ms.author: anneta
 It’s great to build apps that address your own business needs, but the real magic of PowerApps comes from sharing those apps with others. In this topic, you learn how to share apps with specific users or security groups, or you can share it with your entire organization.
 
 ## Specify an app
-1. Sign in to PowerApps, and then click or tap **Apps** near the left edge.
+1. Sign in to PowerApps, and then select **Apps** near the left edge.
 
     ![Show list of apps](./media/share-app/file-apps.png)
 
-1. Click or tap the ellipsis (...) for the app that you want to share, and then click or tap **Share**.
+1. Select the ellipsis (...) for the app that you want to share, and then select **Share**.
 
     ![Open share screen](./media/share-app/ellipsis-share.png)
 
@@ -51,6 +46,23 @@ The notification contains a different kind of link based on which permission you
 - When you share the app with **Can use** permission, the email contains the link to run the app.
 - When you share the app with **Can edit** permission, the email contains the link to run or edit the app.
 
+### Make sure users have access to the data your app uses
+
+> [!IMPORTANT]
+> If your app is based on Common Data Service for Apps, your users must be assigned to a security role that grants them access to the data that your app use. For information about how to create security roles and assigned users to them, see [Configure environment security](../../administrator/database-security.md).
+
+Most apps rely on at least one of these types of resources:
+
+* A connection to a data source
+* An on-premises data gateway
+* A custom connector
+* An Excel workbook or other service
+* A flow
+
+Users and contributors need permissions to any data connections and gateways that the app uses. Some permissions come along implicitly with the app, but others must be explicitly granted. For more information, see [Share app resources](share-app-resources.md).
+
+When you share an app that uses an older version of the Common Data Service, you must share the runtime permission to the Common Data Service separately. If you don’t have permission to do this, see your environment admin.
+
 ### How do my users see the app I shared?
 After you share an app with one or more users or security groups, how they can see the app depends on the permission you shared the app with.
 
@@ -71,19 +83,6 @@ Users can also discover the app in [powerapps.com](http://web.powerapps.com) (fo
 * You can share an app with your entire organization, but think carefully about whether everyone needs access to your app.
 * Be aware that any changes you make to a shared app will flow through to the people you shared it with as soon as you save the changes. If you improve the app, everyone benefits. If you break the app, everyone is affected.
 * Before you share an app, give it a meaningful name and description, so people know what your app is about and can easily pick it out from a list. On the **File** menu in PowerApps Studio, click or tap **App settings**, and then enter a description.
-
-### App sharing and the resources the app uses
-Most apps rely on at least one of these types of resources:
-
-* A connection to a data source
-* An on-premises data gateway
-* A custom connector
-* An Excel workbook or other service
-* A flow
-
-Users and contributors need permissions to any data connections and gateways that the app uses. Some permissions come along implicitly with the app, but others must be explicitly granted. For more information, see [Share app resources](share-app-resources.md).
-
-When you share an app that uses an older version of the Common Data Service, you must share the runtime permission to the Common Data Service separately. If you don’t have permission to do this, see your environment admin. When you share an app that uses the most recent version of the Common Data Service, you must create a custom role and assign users to it. [Read more](../../administrator/database-security.md) about security for the Common Data Service.
 
 ### What isn't supported?
 * You can share to a security group but not a distribution group.
