@@ -202,7 +202,7 @@
     items:
     - name: Formula reference
       href: ./canvas-apps/formula-reference.md
-	  items:
+      items:
        - name: Abs function
          href: ./canvas-apps/functions/function-numericals.md
        - name: Acceleration function
