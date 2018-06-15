@@ -39,7 +39,7 @@ At this time, only SharePoint and the Common Data Service support lookup columns
 
 #### Choices for a lookup
 
-1. Create a [Common Data Service database](../../../admin/administrator/create-database.md) and check the box to "Include sample apps and data".  Many entities will be created including the **Accounts** entity:
+1. Create a [Common Data Service database](../../../administrator/create-database.md) and check the box to "Include sample apps and data".  Many entities will be created including the **Accounts** entity:
 
 	![A partial list of the fields from the Account entity in the Commmon Data Service, highlighting that "Primay Contact" is a lookup field](media/function-choices/entity-account.png)
 
@@ -49,19 +49,11 @@ At this time, only SharePoint and the Common Data Service support lookup columns
 
 	For each each Account, there is a Contact designated as the Primary Contact.  It is also possible that the Primary Contact is *blank*.
  
-2. Create a new tablet app.
+2. [Generate an app from the Common Data Service](../data-platform-create-app.md) using the **Accouns** entity.
 
-4. From the View menu, open the data sources pane and add the **Accounts** entity.
+3. Select the **EditForm1** control in the **EditScreen1** screen from the left hand Screens pane.
 
-	Note that we do not need to add the **Contacts** entity as a data source.
-
-5. Insert a **Gallery** control, and rename it **Gallery1** if it has a different name.
-
-6. Set the **Items** property of the gallery to the formula **Accounts**.
-
-7. Add an **Edit form** control and set its data source to **Accounts**.
-
-8. If it has not already been added, add the **Primary Contact** field to the form.
+8. If it has not already been added, add the **Primary Contact** field to the form.  It will appear at the end of the list of fields in the form, which you can move up or down in the form.
 
 9. Select the **Combo box** control within the card for **Primary Contact**.  View the **Items** property which will contain the formula:
 
