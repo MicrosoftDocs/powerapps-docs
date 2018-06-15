@@ -233,6 +233,8 @@
          href: ./canvas-apps/functions/function-clock-calendar.md
        - name: Char
          href: ./canvas-apps/functions/function-char.md
+       - name: Choices
+         href: ./canvas-apps/functions/function-choices.md
        - name: Clear
          href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
        - name: ClearCollect
