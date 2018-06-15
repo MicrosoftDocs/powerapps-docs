@@ -39,7 +39,12 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Use the Dyn
 
 It is valuable to recognize that the organization service is what defines the platform. The Web API provides a RESTful programming experience but ultimately all data operations go through the underlying organization service. 
 
-The organization service defines the supported operations as messages. Each message has a name. Within the SDK assemblies each message has a corresponding *&lt;message name&gt;*`Request` and *&lt;message name&gt;*`Response` class. The [IOrganizationService interface](/dotnet/api/microsoft.xrm.sdk.iorganizationservice) in the `Microsoft.Xrm.Sdk.dll` defines several helper methods for common CRUD operations as well as an [Execute method](/dotnet/api/microsoft.xrm.sdk.iorganizationservice.execute) that can be used to invoke messages. All messages use the underlying [OrganizationRequest Class](/dotnet/api/microsoft.xrm.sdk.organizationrequest).
+The organization service defines the supported operations as messages. Each message has a name. Within the SDK assemblies each message has a corresponding *&lt;message name&gt;*`Request` and *&lt;message name&gt;*`Response` class. The <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface in the `Microsoft.Xrm.Sdk.dll` assembly defines several helper methods for common CRUD operations as well as an <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute> method that can be used to invoke messages. All messages use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
+
+Checking XREF linking for Web API reference:
+
+- entity: <xref:Microsoft.Dynamics.CRM.account>
+- Function: <xref:Microsoft.Dynamics.CRM.CalculateTotalTimeIncident>
 
 The Web API provides all the same operations as the organization service but presents them in an RESTful style using the OData v4 protocol. OData v4 provides for named operations via *functions* or *actions*. Almost every message available in the organization service is exposed as a corresponding named function or action. Those messages that correspond to CRUD operations are not available in the Web API because as a RESTful service they have implementations using GET, POST, PATCH, and DELETE HTTP methods.
 
