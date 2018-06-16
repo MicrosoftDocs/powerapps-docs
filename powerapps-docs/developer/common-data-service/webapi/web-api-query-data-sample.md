@@ -40,7 +40,8 @@ This sample is divided into the following principal sections, containing Web API
 |[Parameter alias](#bkmk_parameteralias)|[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
 |[Limit results](#bkmk_limitresults)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /><br /> [Limits on number of entities returned](query-data-web-api.md#bkmk_limits)|
 |[Expanding results](#bkmk_expandresults)|[Retrieve related entities by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated)|
-|[FetchXML queries](#bkmk_fetchxml)|[FetchXML schema](../org-service/fetchxml-schema.md)<br /><br /> [Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)<br /><br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)|
+<!-- TODO:
+|[FetchXML queries](#bkmk_fetchxml)|[FetchXML schema](../org-service/fetchxml-schema.md)<br /><br /> [Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)<br /><br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)| -->
 |[Predefined queries](#bkmk_predefinedqueries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /><br /> <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" /><br /><br /> <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />|
 
 The following sections contain a brief discussion of the CDS for Apps Web API operations performed, along with the corresponding HTTP messages and associated console output.
@@ -1794,7 +1795,8 @@ Account 'Contoso, Ltd. (sample)' has the following tasks:
 
 ## FetchXML queries
 
-Besides query filter operations, the Web API also supports FetchXML queries. FetchXml provides an alternative way to define queries and additional options to perform aggregations. More information:[Build queries with FetchXML](../org-service/build-queries-fetchxml.md)  
+<!-- TODO:
+Besides query filter operations, the Web API also supports FetchXML queries. FetchXml provides an alternative way to define queries and additional options to perform aggregations. More information:[Build queries with FetchXML](../org-service/build-queries-fetchxml.md)   -->
   
 <!-- TODO: To use fetch xml you must compose a string representing the query. Make sure the query string conforms to the [FetchXML schema](../org-service/fetchxml-schema.md). Before you include the string in the URL you must URL encode the string.   -->
   

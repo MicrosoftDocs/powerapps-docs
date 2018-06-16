@@ -572,7 +572,8 @@ The following example will use these properties to create a money attribute.
 |DisplayName|Balance|  
 |Description|Enter the balance amount.|  
 |RequiredLevel|None|  
-|PrecisionSource|2 **Note:**  For information on the valid values for PrecisionSource, see [Quantity data attributes](../introduction-entity-attributes.md#quantity-data-attributes). The value 2 means that the level of decimal precision will match TransactionCurrency.CurrencyPrecision that is associated with the current record.|  
+<!-- TODO:
+|PrecisionSource|2 **Note:**  For information on the valid values for PrecisionSource, see [Quantity data attributes](../introduction-entity-attributes.md#quantity-data-attributes). The value 2 means that the level of decimal precision will match TransactionCurrency.CurrencyPrecision that is associated with the current record.|   -->
   
 The following example creates a money attribute using the properties and adds it to the entity with the MetadataId value of 402fa40f-287c-e511-80d2-00155d2a68d2. The URI for the attribute is returned in the response.  
   
@@ -798,6 +799,6 @@ As mentioned in [Update entities](create-update-entity-definitions-using-web-api
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Model entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />
-[Use the Organization service with Common Data Service for Apps metadata](../org-service/use-organization-service-metadata.md)<br />
 <!-- TODO:
+[Use the Organization service with Common Data Service for Apps metadata](../org-service/use-organization-service-metadata.md)<br />
 [Customize Entity Attribute Metadata](../customize-entity-attribute-metadata.md) -->

@@ -223,17 +223,18 @@ OData-EntityId: [Organization URI]/api/data/v9.0/RelationshipDefinitions(420245f
 
 ## Update Relationships
 
- As discussed in [Update entities](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), you update relationships using the HTTP PUT method to replace the existing definition with changes you want to apply. You can’t edit individual properties using the HTTP PATCH method as you can with business data entities. Just like with entities and attributes, you should include a `MSCRM.MergeLabels` header with the value set to `true` to avoid overwriting localized labels not included in your update and you must publish customizations before they are active in the system.  
+As discussed in [Update entities](create-update-entity-definitions-using-web-api.md#bkmk_updateEntities), you update relationships using the HTTP PUT method to replace the existing definition with changes you want to apply. You can’t edit individual properties using the HTTP PATCH method as you can with business data entities. Just like with entities and attributes, you should include a `MSCRM.MergeLabels` header with the value set to `true` to avoid overwriting localized labels not included in your update and you must publish customizations before they are active in the system.  
   
 <a name="bkmk_deleteRelationship"></a>
  
 ## Delete Relationships
 
- To delete a relationship using the Web API, use the HTTP DELETE method with the URI for the relationship.  
+To delete a relationship using the Web API, use the HTTP DELETE method with the URI for the relationship.  
   
 ### See also
 
-[Customize entity relationship metadata](../customize-entity-relationship-metadata.md)<br />
+<!-- TODO:
+[Customize entity relationship metadata](../customize-entity-relationship-metadata.md)<br /> -->
 [Use the Web API with Common Data Service for Apps metadata](use-web-api-metadata.md)<br />
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />

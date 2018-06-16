@@ -52,7 +52,8 @@ In general, the Web API address of the Discovery service has the following forma
 
 The service base address of the global Discovery service is : `https://globaldisco.crm.dynamics.com/`. This results in the service address of `https://globaldisco.crm.dynamics.com/api/discovery/`.  
   
-The service base address of the Discovery service for a datacenter is : `https://disco.crm[N].dynamics.com/`. This results in the Discovery service address of `https://disco.crm[N].dynamics.com/api/discovery/`. Each datacenter has an N number associated with it. For a complete list of available CDS for Apps datacenters, and their N numbers,  see [Download endpoints using Developer resources page](../developer-resources-page.md).  
+<!-- TODO:
+The service base address of the Discovery service for a datacenter is : `https://disco.crm[N].dynamics.com/`. This results in the Discovery service address of `https://disco.crm[N].dynamics.com/api/discovery/`. Each datacenter has an N number associated with it. For a complete list of available CDS for Apps datacenters, and their N numbers,  see [Download endpoints using Developer resources page](../developer-resources-page.md).   -->
   
 ## Using the Discovery service  
 

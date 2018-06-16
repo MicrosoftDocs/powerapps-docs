@@ -19,8 +19,9 @@ ms.author: "jdaly"
 
 You can use the Common Data Service for Apps Web API with a wide variety of programming languages or libraries. This guide provides a matrix of samples demonstrating how to use the Web API in a number of different ways. This topic introduces the samples available for each group of operations and how to perform these operations using different languages or libraries.
 
+<!-- TODO:
 > [!NOTE]
-> With the availability of the new [Xrm.WebApi](../clientapi/reference/xrm-webapi.md) client API methods, we are working on updating the client-side JavaScript samples to use the new client API methods. Check back soon.  
+> With the availability of the new [Xrm.WebApi](../clientapi/reference/xrm-webapi.md) client API methods, we are working on updating the client-side JavaScript samples to use the new client API methods. Check back soon.   -->
   
 ## Web API Sample Matrix
 
@@ -29,10 +30,11 @@ The following table describes the Common Data Service for Apps Web API samples a
 |Language-neutral description|C# implementation|Client-side JavaScript implementation|  
 |-----------------------------------|------------------------|--------------------------------------------|  
 |[Web API Samples](web-api-samples.md) (this topic)|[Web API Samples (C#)](web-api-samples-csharp.md)|[Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)|  
+<!-- TODO:
 |[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|[Web API Basic Operations Sample (C#)](web-api-basic-operations-sample-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
-|[Web API Query Data Sample](web-api-query-data-sample.md)|[Web API Query Data Sample (C#)](web-api-query-data-sample-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
+|[Web API Query Data Sample](web-api-query-data-sample.md)|[Web API Query Data Sample (C#)](web-api-query-data-sample-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|   
 |[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|[Web API Conditional Operations Sample (C#)](web-api-conditional-operations-sample-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
-|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|[Web API Functions and Actions Sample (C#)](web-api-functions-actions-sample-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
+|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|[Web API Functions and Actions Sample (C#)](web-api-functions-actions-sample-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  -->
   
  The following tables categorize the sample topics by the groups of operations demonstrated and by implementation issues.  
   

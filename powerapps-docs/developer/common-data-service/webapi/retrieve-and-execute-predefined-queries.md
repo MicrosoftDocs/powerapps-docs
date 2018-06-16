@@ -29,8 +29,9 @@ Common Data Service for Apps allows you to define, save, and execute two types o
 
 |Query type|Description|
 |----------------|-----------------|
-|**Saved Query**|System-defined views for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />. More information:[Customize Entity Views](../customize-dev/customize-entity-views.md)|
-|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information:[UserQuery (Saved View) Entity](../userquery-saved-view-entity.md)|
+<!-- TODO:
+|**Saved Query**|System-defined views for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />. More information:[Customize Entity Views](../customize-dev/customize-entity-views.md)| 
+|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information:[UserQuery (Saved View) Entity](../userquery-saved-view-entity.md)|-->
 
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
@@ -62,7 +63,8 @@ GET [Organization URI]/api/data/v9.0/accounts(8f390c24-9c72-e511-80d4-00155d2a68
 
 ## Use custom FetchXML
 
-FetchXML is a proprietary query language that provides capabilities to perform aggregation. The saved queries and user queries stored in <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" /> and <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" /> respectively both include a fetchxml property that defines the query. You can use FetchXML directly with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method or with the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest>. More information:[Build Queries with FetchXML](../org-service/build-queries-fetchxml.md)
+<!-- TODO:
+FetchXML is a proprietary query language that provides capabilities to perform aggregation. The saved queries and user queries stored in <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" /> and <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" /> respectively both include a fetchxml property that defines the query. You can use FetchXML directly with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method or with the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest>. More information:[Build Queries with FetchXML](../org-service/build-queries-fetchxml.md) -->
 
 You can pass URL encoded FetchXML as a query to the entity set corresponding to the root entity of the query using the `fetchXml` query string parameter to return the results from the Web API. For example, you can have the following FetchXML that has account as the entity.  
 
@@ -145,7 +147,8 @@ With FetchXML you can apply paging by setting the `page` and `count` attributes 
 </fetch>
 ```
 
-With a request using FetchXML you can also request a paging cookie and include it with your query. More information:[Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)  
+<!-- TODO:
+With a request using FetchXML you can also request a paging cookie and include it with your query. More information:[Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)   -->
 
 A paging cookie must be requested as an annotation. Set the `odata.include-annotations` preference to use (or include) `Microsoft.Dynamics.CRM.fetchxmlpagingcookie` and a `@Microsoft.Dynamics.CRM.fetchxmlpagingcookie` property will be returned with the result.
 

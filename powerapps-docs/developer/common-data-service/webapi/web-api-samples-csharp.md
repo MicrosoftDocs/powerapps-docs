@@ -36,7 +36,8 @@ The following is required to build and run the Common Data Service for Apps Web 
   
 -   Access to  Common Data Service for Apps Online or on-premises (or later). For all Common Data Service for Apps installation types, a user account with privileges to perform CRUD operations is required.  
   
--   In order to run samples against CDS for Apps, you must register your application with Azure Active Directory to obtain a client ID and redirect URL. For more information, see [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-dynamics-365-app-azure-active-directory.md).  
+<!-- TODO:
+-   In order to run samples against CDS for Apps, you must register your application with Azure Active Directory to obtain a client ID and redirect URL. For more information, see [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-dynamics-365-app-azure-active-directory.md).   -->
 
 > [!NOTE]
 > These samples require version 2.x of assembly [Microsoft.IdentityModel.Client.ActiveDirectory](https://docs.microsoft.com/en-us/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet) for OAuth based authentication.
@@ -72,7 +73,7 @@ Many of these common elements are also present when creating a new solution that
  
 This C# implementation depends upon the following helper code for HTTP communication, application configuration, authentication, error handling, and JSON serialization.  
   
--   The standard .NET Framework HTTP messaging classes that are contained in the  [System.Net.Http namespace](/dotnet/api/system.net.http), particularly [HttpClient](/dotnet/api/system.net.http.httpclient), [HttpRequestMessage](dotnet/api/system.net.http.httprequestmessage), and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage), are used for HTTP messaging.  
+-   The standard .NET Framework HTTP messaging classes that are contained in the  [System.Net.Http namespace](/dotnet/api/system.net.http), particularly [HttpClient](/dotnet/api/system.net.http.httpclient), [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage), and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage), are used for HTTP messaging.  
   
 -   The Common Data Service for Apps Web API Helper Library is used to read the application configuration file, authenticate with the Common Data Service for Apps server, and assist in operation error handling.  For more information, see [Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md).  
   

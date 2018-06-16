@@ -807,7 +807,8 @@ This section demonstrates how to associate and disassociate existing entity inst
   
 ## Section 5: Delete entities (sample cleanup) 
  
-This section demonstrates how to delete entity instances. The corresponding message is a straightforward DELETE request that uses the URI of the entity instance to be deleted.  If the target entity has a parent-child relationship with other entities, then deleting the parent will, by default, automatically cascade delete child instances. For example, in this sample, tasks have contact as their parent. For more information, see [Entity relationship behavior](../entity-relationship-behavior.md).  
+<!-- TODO:
+This section demonstrates how to delete entity instances. The corresponding message is a straightforward DELETE request that uses the URI of the entity instance to be deleted.  If the target entity has a parent-child relationship with other entities, then deleting the parent will, by default, automatically cascade delete child instances. For example, in this sample, tasks have contact as their parent. For more information, see [Entity relationship behavior](../entity-relationship-behavior.md).   -->
   
 1.  Each element of the collection of entity URLs is deleted.  The first is a contact record for Peter Cambel.  
   

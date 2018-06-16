@@ -515,6 +515,7 @@ MyNameSpace.WebAPI = MyNameSpace.WebAPI || {};
 ### See also  
 
 [Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
-[Work with Common Data Service for Apps data using web resources](../work-data-using-web-resources.md)<br />
+<!-- TODO:
+[Work with Common Data Service for Apps data using web resources](../work-data-using-web-resources.md)<br /> -->
 [Perform operations using the Web API](perform-operations-web-api.md)<br /> 
 [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md)

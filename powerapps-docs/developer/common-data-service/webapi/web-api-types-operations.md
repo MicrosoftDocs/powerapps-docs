@@ -247,7 +247,8 @@ OData supports a wide range of data types but Common Data Service for Apps doesn
 |Memo|Edm.String|Sequence of UTF-8 characters|  
 |Money|Edm.Decimal|Numeric values with fixed precision and scale|  
 |Owner|Single-valued navigation property|A reference to the <xref href="Microsoft.Dynamics.CRM.principal?text=principal EntityType" />. Both systemuser and team entity types inherit their ownerid property from the prinicipal entity type.|  
-|PartyList|Collection-valued navigation property to the `activityparty` entity type.|The activitypartyparticipationtypemask property contains a value to represent the role of the participant. See [Activity Party Types](../activityparty-entity.md#ActivityPartyTypes) for more information.|  
+<!-- TODO:
+|PartyList|Collection-valued navigation property to the `activityparty` entity type.|The activitypartyparticipationtypemask property contains a value to represent the role of the participant. See [Activity Party Types](../activityparty-entity.md#ActivityPartyTypes) for more information.|   -->
 |Picklist|Edm.Int32|Signed 32-bit integer|  
 |State|Edm.Int32|Signed 32-bit integer|  
 |Status|Edm.Int32|Signed 32-bit integer|  
