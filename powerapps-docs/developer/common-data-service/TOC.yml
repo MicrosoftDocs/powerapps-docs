@@ -46,21 +46,21 @@
   items:
   - name: Entity reference
     href: reference/entities/toc.yml
-  - Web API Reference
+  - name: Web API Reference
     href: /dynamics365/customer-engagement/web-api/about
-  - Organization Service 9.0
+  - name: Organization Service 9.0
     href: /dotnet/api/?view=dynamics-general-ce-9
-  - XRM Tooling 9.0
+  - name: XRM Tooling 9.0
     href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - Virtual Entity 9.0
+  - name: Virtual Entity 9.0
     href: /dotnet/api/?view=dynamics-virtualentity-ce-9
-  - Workflow 9.0
+  - name: Workflow 9.0
     href: /dotnet/api/?view=dynamics-workflow-ce-9 
-  - Package Deployer 9.0
+  - name: Package Deployer 9.0
     href: /dotnet/api/?view=dynamics-deployer-ce-9
-  - Outlook Client 9.0
+  - name: Outlook Client 9.0
     href: /dotnet/api/?view=dynamics-outlookclient-ce-9
-  - Online Management API Reference
+  - name: Online Management API Reference
     href: /rest/api/admin.services.crm.dynamics.com
 
 
