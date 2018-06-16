@@ -22,7 +22,7 @@ This sample shows you how to connect to the Common Data Service for Apps web ser
 
 ## Prerequisites
 
-[!INCLUDE[sdk-prerequisite](../../includes/sdk-prerequisite.md)]
+[!INCLUDE [sdk-prerequisite](../../../includes/sdk-prerequisite.md)]
 
 ## Requirements
 

@@ -110,7 +110,7 @@ Use the `Get-CrmOrganizations` cmdlet to retrieve the organizations that you hav
         > [!NOTE]
         >  For the `DeploymentRegion` parameter, valid values are `NorthAmerica`, `EMEA`, `APAC`, `SouthAmerica`, `Oceania`, `JPN`, `CAN`, `IND`, and `NorthAmerica2`. For the `OnlineType` parameter, specify `Office365`.
 <!--   
-    -   If you’re connecting to the [!INCLUDE[pn_crm_op_edition](../../includes/pn-crm-onprem.md)] server:  
+    -   If you’re connecting to the on-premises server:  
   
         ```powershell  
         $CRMOrgs = Get-CrmOrganizations –ServerUrl http://<CRM_Server_Host> –Credential $Cred  
@@ -171,7 +171,7 @@ Use the `Get-CrmConnection` cmdlet to connect to a CDS for Apps instance. The cm
         >  For the `DeploymentRegion` parameter, valid values are `NorthAmerica`, `EMEA`, `APAC`, `SouthAmerica`, `Oceania`, `JPN`, `CAN`, `IND` and `NorthAmerica2`. For the `OnlineType` parameter, specify `Office365`. 
   
     <!-- not available for this version at this time
-     -   If you’re connecting to the [!INCLUDE[pn_crm_op_edition](../../includes/pn-crm-onprem.md)] server:  
+     -   If you’re connecting to the on-premises server:  
   
         ```powershell  
         $CRMConn = Get-CrmConnection –ServerUrl http://<CRM_Server_Host> -Credential $Cred -OrganizationName <OrgName>  

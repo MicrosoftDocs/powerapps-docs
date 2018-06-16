@@ -18,7 +18,7 @@ manager: "amyla"
 ---
 # Use connection strings in XRM tooling to connect to Common Data Service for Apps
 
-With CDS for Apps, XRM tooling enables you to connect to your CDS for Apps environment by using connection strings. This is similar to the concept of connection strings used with [!INCLUDE[pn_MS_SQL_Server](../../includes/pn-ms-sql-server.md)]. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure CDS for Apps connections at deployment time, and not hard code in your application to connect to your CDS for Apps environment.  
+With CDS for Apps, XRM tooling enables you to connect to your CDS for Apps environment by using connection strings. This is similar to the concept of connection strings used with SQL Server. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure CDS for Apps connections at deployment time, and not hard code in your application to connect to your CDS for Apps environment.  
   
 <a name="Create"></a> 
 

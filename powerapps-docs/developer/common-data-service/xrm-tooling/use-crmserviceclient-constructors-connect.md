@@ -46,7 +46,7 @@ CrmServiceClient crmSvc = new CrmServiceClient(<orgWebProxyClient>);
 
 ## Connect to CDS for Apps (Office 365)
 
- Use the following constructor to connect to your [!INCLUDECDS for Apps instance in [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)].  
+ Use the following constructor to connect to your CDS for Apps instance in Office 365.  
   
 ```csharp  
 CrmServiceClient crmSvc = new CrmServiceClient("<UserName>", CrmServiceClient.MakeSecureString("<Password>"), "<CrmRegion>", "<OrgName>", useUniqueInstance:false, useSsl:false, <orgDetail>, isOffice365:true);  
@@ -60,7 +60,7 @@ CrmServiceClient crmSvc = new CrmServiceClient("<UserName>", CrmServiceClient.Ma
 
 ## Connect to CDS for Apps (Office 365) using OAuth
  
- Use the following constructor to use OAuth protocol to connect to your [!INCLUDECDS for Apps instance in [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)]. The OAuth support is introduced in CDS for Apps.  
+ Use the following constructor to use OAuth protocol to connect to your [!INCLUDECDS for Apps instance in Office 365. The OAuth support is introduced in CDS for Apps.  
   
 ```csharp  
 CrmServiceClient crmSvc = new CrmServiceClient("<UserName>", CrmServiceClient.MakeSecureString("<Password>"), "<CrmRegion>", "<OrgName>", useUniqueInstance:false, <orgDetail>,  
