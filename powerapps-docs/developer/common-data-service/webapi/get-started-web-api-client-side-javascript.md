@@ -18,8 +18,9 @@ manager: "amyla"
 ---
 # Get started with the Common Data Service for Apps Web API (client-side JavaScript)
 
+<!-- TODO: 
 > [!NOTE]
-> ![This page is under construction. Check back soon!](../../media/under_construction.png "Coming soon") [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
+> ![This page is under construction. Check back soon!](../../media/under_construction.png "Coming soon") [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)] -->
 
 In HTML web resources, form scripts, or ribbon commands you can use JavaScript to perform operations on Common Data Service for Apps data using the Web API introduced with CDS for Apps.
 

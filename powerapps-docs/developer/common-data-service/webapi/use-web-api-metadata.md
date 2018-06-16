@@ -27,7 +27,7 @@ You can perform any of the metadata operations with the Web API that you can per
 |*[Organization URI]*/api/data/v9.0/EntityDefinitions|Contains <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" /> entities.|  
 |*[Organization URI]*/api/data/v9.0/RelationshipDefinitions|Contains <xref href="Microsoft.Dynamics.CRM.ManyToManyRelationshipMetadata?text=ManyToManyRelationshipMetadata EntityType" /> and <xref href="Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType" /> as both inherit from <xref href="Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType" />.|  
 |*[Organization URI]*/api/data/v9.0/GlobalOptionSetDefinitions|Contains globally defined <xref href="Microsoft.Dynamics.CRM.BooleanOptionSetMetadata?text=BooleanOptionSetMetadata EntityType" /> and <xref href="Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType" /> entities as both inherit from <xref href="Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType" />.|  
-|*[Organization URI]*/api/data/v9.0/ManagedPropertyDefinitions|[!INCLUDE[internal](../../includes/internal.md)]|  
+|*[Organization URI]*/api/data/v9.0/ManagedPropertyDefinitions|For internal use only|  
   
 Each metadata entity type uses `MetadataId` as the unique identifier property, which it inherits from the <xref href="Microsoft.Dynamics.CRM.MetadataBase?text=MetadataBase EntityType" />. While all metadata entities have a `MetadataId`, you can’t query all of them directly. For example, you can query and perform operations on attributes only in the context of the `EntityMetadata` entity that contains them.  
   

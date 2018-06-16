@@ -87,7 +87,7 @@ You can learn more about this document in [OData Version 4.0 Part 3: Common Sche
 
 ### Metadata annotations
 
-The metadata document includes several types of `Annotation` elements which provide additional information about metadata elements and the capabilities of the service.  Starting with [!INCLUDE[pn_crm_9_0_0_online](../../includes/pn-crm-9-0-0-online.md)], these annotations are not included with the default metadata document unless explicitly requested. These annotations increase the size of the metadata document and are not always necessary.  
+The metadata document includes several types of `Annotation` elements which provide additional information about metadata elements and the capabilities of the service.  Starting with v9.x, these annotations are not included with the default metadata document unless explicitly requested. These annotations increase the size of the metadata document and are not always necessary.  
   
  To include annotations you have two options when requesting the metadata document:  
   
@@ -95,7 +95,7 @@ The metadata document includes several types of `Annotation` elements which prov
   
 -   Add  the `Prefer: odata.include-annotations="*"` header to the request.  
   
-Each `Annotation` element includes a `Term` attribute that describes the type of annotation. The definitions of all the possible annotations used by OData v4 can be found in [OData Vocabularies Version 4.0](http://docs.oasis-open.org/odata/odata-vocabularies/v4.0/csprd01/odata-vocabularies-v4.0-csprd01.html). The following table provides some examples used by [!INCLUDE[pn_dyn_365](../../includes/pn-dyn-365.md)].  
+Each `Annotation` element includes a `Term` attribute that describes the type of annotation. The definitions of all the possible annotations used by OData v4 can be found in [OData Vocabularies Version 4.0](http://docs.oasis-open.org/odata/odata-vocabularies/v4.0/csprd01/odata-vocabularies-v4.0-csprd01.html). The following table provides some examples used by the Web API.  
   
 |Term|Description|  
 |----------|-----------------|  

@@ -207,7 +207,7 @@ Prefer: odata.include-annotations="*"
   
 --batch_AAA123-- 
 ```
-[!INCLUDE[sdk_for_more_info_about](../../includes/sdk-for-more-info-about.md)] preference headers, see[Header Prefer](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
+For more information about preference headers, see[Header Prefer](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
 
 ### See also
 

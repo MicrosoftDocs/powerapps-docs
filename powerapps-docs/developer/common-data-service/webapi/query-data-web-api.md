@@ -437,9 +437,6 @@ Navigation properties let you access data related to the current entity. *Single
   
 You can filter your entity set records based on single-valued navigation property  values. For example, you can retrieve child accounts for the specified account. You can only use the primary attribute value of the entity referenced by the single-valued navigation property to filter records.  
   
-> [!NOTE]
->  The capability to filter records  based on single-valued navigation property was introduced in [!INCLUDE[pn_crm_8_1_0_online](../../includes/pn-crm-8-1-0-online.md)] and [!INCLUDE[pn_crm_8_1_0_op](../../includes/pn-crm-8-1-0-op.md)].  
-  
  For example:  
   
 -   Retrieve all the matching accounts for a specified Contact ID  
@@ -523,8 +520,6 @@ Use the `$expand` system query option in the navigation properties to control wh
 If you include only the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.  
   
 > [!NOTE]
->  The capability to retrieve  related entities for entity sets was introduced in [!INCLUDE[pn_crm_8_1_0_online](../../includes/pn-crm-8-1-0-online.md)] and [!INCLUDE[pn_crm_8_1_0_op](../../includes/pn-crm-8-1-0-op.md)].  
->   
 >  To retrieve related entities for an entity instance, see [Retrieve related entities for an entity by expanding navigation properties](retrieve-entity-using-web-api.md#bkmk_expandRelated).  
   
 - **Retrieve related entities by expanding single-valued navigation properties**: The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the contactid and fullname.  

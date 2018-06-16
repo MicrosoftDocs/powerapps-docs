@@ -89,7 +89,7 @@ To run this sample, download the solution package here [Microsoft CRM Web API Ba
     <h2>Instructions</h2>  
     <p>  
         Choose your preferences and run the JavaScript code.   
-    Use your browser's developer tools to view the output written to the console (e.g.: in [!include[](../../includes/pn-ie-11.md)] or [!include[](../../includes/pn-microsoft-edge.md)],   
+    Use your browser's developer tools to view the output written to the console (e.g.: in IE 11 or Microsoft Edge,   
     press F12 to load the Developer Tools).  
     </p>  
     <p>  
