@@ -50,8 +50,9 @@ protected override void Execute(CodeActivityContext executionContext)
 [Custom workflow activities (workflow assemblies)](../custom-workflow-activities-workflow-assemblies.md)<br />
 [Register and use a custom workflow activity assembly](register-use-custom-workflow-activity-assembly.md)<br />
 [Sample: Create a Custom Workflow Activity](sample-create-custom-workflow-activity.md)<br />
+<!-- TODO:
 [IOrganizationService Web Service](../org-service/use-organization-service-read-write-data-metadata.md)<br />
-[Organization service methods](../org-service/organization-service-methods.md)<br />
+[Organization service methods](../org-service/organization-service-methods.md)<br /> -->
 <xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext><br />
 <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory><br />
 <xref:Microsoft.Xrm.Sdk.IOrganizationService>

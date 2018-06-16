@@ -121,4 +121,5 @@ else
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 [Use XRM Tooling to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)<br />
-[Work with attribute metadata](../org-service/work-attribute-metadata.md)
+<!-- TODO:
+[Work with attribute metadata](../org-service/work-attribute-metadata.md) -->
