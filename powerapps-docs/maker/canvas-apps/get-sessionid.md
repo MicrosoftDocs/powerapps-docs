@@ -15,6 +15,12 @@ If you encounter a problem with an app that was created in PowerApps, you can he
 
 - When editing an app, select **File**, select **Account**, and then, under **Diagnostics**, select **Session details**.
 
+     ![Get a session ID from PowerApps Studio](media/get-sessionid/studio.png)
+
 - When running an app in a browser, select the gear icon in the upper-right corner, and then select **Session details**.
 
-- When running an app on a mobile device, swipe left, and then tap **Session details**. 
+     ![Get a session ID from a browser](media/get-sessionid/browser.png)
+
+- When running an app on a phone or a tablet, swipe right, and then tap **Session details**.
+
+     ![Get a session ID from a browser](media/get-sessionid/mobile.png)
