@@ -41,7 +41,8 @@ XRM tooling has the following three components:
 
 The following applications in the current version of CDS for Apps use the common WPF login control for authenticating users while signing in to CDS for Apps from the client application:  
   
-- Unified Service Desk. More information: [Extend Unified Service Desk](/dynamics365/customer-engagement/unified-service-desk/extend-unified-service-desk)  
+- Unified Service Desk. More information: [Extend Unified Service Desk](/dynamics365/customer-engagement/unified-service-desk/extend-unified-service-desk)
+
 <!-- TODO: fix links when files added to admin guide
 
 - Package Deployer tool. More information: [Deploy packages using CRM Package Deployer and Windows PowerShell](../../administrator/deploy-packages-using-package-deployer-windows-powershell.md)   
