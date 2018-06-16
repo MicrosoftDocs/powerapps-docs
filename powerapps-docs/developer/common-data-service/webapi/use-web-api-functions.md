@@ -1,6 +1,6 @@
 ---
 title: "Use Web API functions (PowerApps Common Data Service for Apps)| MicrosoftDocs"
-description: "Functions are reusable operations that are used with a GET request to retrieve data from Dynamics 365"
+description: "Functions are reusable operations that are used with a GET request to retrieve data from CDS for Apps"
 ms.custom: ""
 ms.date: 06/15/2018
 ms.reviewer: ""

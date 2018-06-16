@@ -40,7 +40,7 @@ The Web API is especially easy to use with JavaScript and web resources because 
  JavaScript web resources  
  JavaScript code included in a JavaScript web resource running in the context of an HTML web resource, form scripts or ribbon commands.  
   
- When you use JavaScript web resources in Common Data Service for Apps you do not need to authenticate because the web resources are part of the application the user is already authenticated. The rest of this topic will focus on this scenario. More information:[Web resources for Dynamics 365](../web-resources.md),[Script (JScript) web resources](../script-jscript-web-resources.md), [Use JavaScript with Dynamics 365](../use-javascript.md), & [Client scripting in Customer Engagement using JavaScript](../clientapi/client-scripting.md).  
+ When you use JavaScript web resources in Common Data Service for Apps you do not need to authenticate because the web resources are part of the application the user is already authenticated. The rest of this topic will focus on this scenario. More information:[Web resources for CDS for Apps](../web-resources.md),[Script (JScript) web resources](../script-jscript-web-resources.md), [Use JavaScript with CDS for Apps](../use-javascript.md), & [Client scripting in Customer Engagement using JavaScript](../clientapi/client-scripting.md).  
   
  Single Page Applications  
  JavaScript code in a JavaScript library from another application running in a browser and authenticating to Common Data Service for Apps using Cross-Origin Resource Sharing (CORS). This pattern is typically used for single page applications.  

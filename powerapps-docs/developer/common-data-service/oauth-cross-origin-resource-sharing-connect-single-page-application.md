@@ -9,7 +9,7 @@ ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
-  - "CDS for Apps (online)"
+  - "Dynamics 365 (online)"
 ms.assetid: oauth-cross-origin-resource-sharing-connect-single-page-application
 caps.latest.revision: 11
 author: "JimDaly"

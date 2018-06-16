@@ -4240,8 +4240,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_SyncOptInSelection"></a> SyncOptInSelection
 
-**Description**: Indicates the selection to use the dynamics 365 azure sync framework or server side sync.<br />
-**DisplayName**: Enable dynamics 365 azure sync framework for this organization.<br />
+**Description**: Indicates the selection to use the Dynamics 365 azure sync framework or server side sync.<br />
+**DisplayName**: Enable Dynamics 365 azure sync framework for this organization.<br />
 **LogicalName**: syncoptinselection<br />
 **IsValidForForm**: False<br />
 **IsValidForRead**: True<br />
@@ -4257,8 +4257,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_SyncOptInSelectionStatus"></a> SyncOptInSelectionStatus
 
-**Description**: Indicates the status of the opt-in or opt-out operation for dynamics 365 azure sync.<br />
-**DisplayName**: Status of opt-in or opt-out operation for dynamics 365 azure sync.<br />
+**Description**: Indicates the status of the opt-in or opt-out operation for Dynamics 365 azure sync.<br />
+**DisplayName**: Status of opt-in or opt-out operation for Dynamics 365 azure sync.<br />
 **LogicalName**: syncoptinselectionstatus<br />
 **IsValidForForm**: False<br />
 **IsValidForRead**: True<br />

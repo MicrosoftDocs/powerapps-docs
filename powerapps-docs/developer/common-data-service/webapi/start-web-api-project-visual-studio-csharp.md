@@ -48,7 +48,7 @@ This topic demonstrates how to create a new project in Visual Studio that builds
 4.  In the list of templates, select **Console Application**. (Alternately choose the project type suited to your solution.)  All of the Web API C# samples are console applications.  
   
  <!-- TODO:
- ![A new console app project dialog in Dynamics 365](../media/new-project.PNG "A new console app project dialog in Dynamics 365")   -->
+ ![A new console app project dialog in CDS for Apps](../media/new-project.PNG "A new console app project dialog in CDS for Apps")   -->
   
 5.  In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name `StartWebAPI-CS` was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
   
@@ -80,7 +80,7 @@ The Common Data Service for Apps Web API Helper Library contains classes to assi
   
 2.  In the upper right-hand corner, set the **Package** source drop-down to **Nuget.org**.  
   
-3.  In the upper left-hand corner, click on **Browse** then enter “`Dynamics 365 HelperCode`” in the search box and press Enter.  
+3.  In the upper left-hand corner, click on **Browse** then enter “`CDS for Apps HelperCode`” in the search box and press Enter.  
   
  <!-- TODO:
 ![NuGet Package Manager showing Common Data Service for Apps Helper Code Library &#40;C&#35;&#41;](../media/package-manifest-helper-code.png "NuGet Package Manager showing Common Data Service for Apps Helper Code Library (C#)")   -->

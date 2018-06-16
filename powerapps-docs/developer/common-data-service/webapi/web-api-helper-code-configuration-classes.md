@@ -30,7 +30,7 @@ The `Configuration`class reads and parses the application configuration file to 
 |Connection data|Deployments|Description|  
 |---------------------|-----------------|-----------------|  
 |Service URL|All|The base URL to the Common Data Service for Apps service|  
-|Username|All|The user name registered in Dynamics 365|  
+|Username|All|The user name registered in CDS for Apps|  
 |Password|All|The password for that user|  
 |Domain|All|The domain of the Common Data Service for Apps service for Active Directory authentication|  
 |Client ID|Online and IFD only|The client ID of the application as it was registered with Azure AD for Common Data Service for Apps|  

@@ -71,7 +71,7 @@ The Entity metadata includes the following information:
 |Keys|By default, each entity has a single GUID (globally unique identifier) attribute and the `Keys` property is an empty collection. You can add alternate keys to an entity. More information: [Entity Keys](entity-metadata.md#entity-keys)|
 
 > [!TIP]
-> Developing an understanding of the entity metadata in the system can help you understand how Common Data Service works. Many of the properties also control what entities in model-driven apps can do. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the Metadata Browser which will allow you to view all the hidden entities and metadata properties that are found in the system. More information: [Dynamics 365 Customer Engagement Developer Guide: Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
+> Developing an understanding of the entity metadata in the system can help you understand how Common Data Service works. Many of the properties also control what entities in model-driven apps can do. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the Metadata Browser which will allow you to view all the hidden entities and metadata properties that are found in the system. More information: [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
 
 ### See also
 

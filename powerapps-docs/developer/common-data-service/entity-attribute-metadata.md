@@ -20,7 +20,7 @@ ms.author: jdaly
 
 Entities include a collection of attributes that represent the data that can be included within each record. Developers need to understand the different types of attributes and how to work with them. 
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-entity-attributes)
+More information: [Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-entity-attributes)
 
 ## Attribute names
 
@@ -44,7 +44,7 @@ Each attribute also has two properties that can display localized values. These 
 |`Description`|A short sentence describing the attribute or providing guidance to the user. i.e. *Type an ID number or code for the account to quickly search and identify the account in system views.*<br />In model-driven apps, this information will appear when users hover over the field for this attribute in a form.|
 
 
-These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Dynamics 365 Customer Engagement Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
+These are the localizable values that are used to refer to the attributes in an app. These values can be changed at any time. To add or edit localized values see  [Common Data Service for Apps Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
 
 ## Attribute types
 
@@ -64,7 +64,7 @@ In the following table:
 |---------|---------|---------|---------|
 |Categorization|`BooleanType`<br />[BooleanAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.booleanattributemetadata)|Yes<br />**Two Options**|Contains the selected option value from two options that usually indicate a true or false value.<br />More information: [Option Sets](#option-sets)|
 |Categorization|`EntityNameType`<br />[EntityNameAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitynameattributemetadata)|No|Contains an option value that corresponds to an entity in the system. For internal use only.|
-|Categorization|`MultiSelectPicklistType`<br />[MultiSelectPicklistAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.multiselectpicklistattributemetadata)|Yes<br />**MultiSelect Option Set**|Contains multiple selected option values where multiple options can be selected.<br />More information: <br />[Option Sets](#option-sets)<br />[Dynamics 365 Customer Engagement Developer Guide: Multi-Select Picklist attributes](/dynamics365/customer-engagement/developer/multi-select-picklist)|
+|Categorization|`MultiSelectPicklistType`<br />[MultiSelectPicklistAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.multiselectpicklistattributemetadata)|Yes<br />**MultiSelect Option Set**|Contains multiple selected option values where multiple options can be selected.<br />More information: <br />[Option Sets](#option-sets)<br />[Multi-Select Picklist attributes](/dynamics365/customer-engagement/developer/multi-select-picklist)|
 |Categorization|`PicklistType`<br />[PicklistAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.picklistattributemetadata)|Yes<br />**Option Set**|Contains the selected option value where one option can be selected.<br />More information: [Option Sets](#option-sets)|
 |Categorization|`StateType`<br />[StateAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.stateattributemetadata)|No|Contains the option value that describes the status of an entity record.<br />More information: [Option Sets](#option-sets)|
 |Categorization|`StatusType`<br />[StatusAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.statusattributemetadata)|No|Contains the option value that describes the reason for the status of an entity record.<br />More information: [Option Sets](#option-sets)|
@@ -130,9 +130,9 @@ More information: [Managed Properties](introduction-solutions.md#managed-propert
 Calculated and rollup attributes free the user from having to manually perform calculations and focus on their work. System administrators can define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.
 
 More information: 
-- [Dynamics 365 Customer Engagement Customization Guide: Define rollup fields that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
-- [Dynamics 365 Customer Engagement Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
-- [Dynamics 365 Customer Engagement Developer Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
+- [Common Data Service for Apps Customization Guide: Define rollup fields that aggregate values](/dynamics365/customer-engagement/customize/define-rollup-fields)
+- [Common Data Service for Apps Customization Guide: Calculated and rollup attributes](/dynamics365/customer-engagement/customize/define-calculated-fields)
+- [Calculated and rollup attributes](/dynamics365/customer-engagement/developer/calculated-rollup-attributes)
 
 ## Attribute format
 
@@ -182,12 +182,12 @@ Use the `Format` property control how the value is to be displayed in a model-dr
 |DateAndTime|Display the full date and time|
 |DateOnly|Display just the date.|
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Behavior and format of the date and time attribute](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute)
+More information: [Behavior and format of the date and time attribute](/dynamics365/customer-engagement/developer/behavior-format-date-time-attribute)
 
 ## Auto-number attributes
 
 You can add an auto-number attribute for any entity. Currently, you can add the attribute programmatically. There is no user interface to add this type of attribute.
-More information: [Dynamics 365 Customer Engagement Developer Guide: Create auto-number attributes](/dynamics365/customer-engagement/developer/create-auto-number-attributes)
+More information: [Create auto-number attributes](/dynamics365/customer-engagement/developer/create-auto-number-attributes)
 
 ## Option sets
 
@@ -210,7 +210,7 @@ With the organization service you can use the following messages to retrieve inf
 
 More information: 
 - [Sample: Dump attribute picklist metadata to a file](/dynamics365/customer-engagement/developer/org-service/sample-dump-attribute-picklist-metadata-file)
-- [Dynamics 365 Customer Engagement Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+- [Common Data Service for Apps Developer Guide : Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
 
 #### Use the Web API to retrieve options
 
@@ -220,7 +220,7 @@ The Web API provides a RESTful style for querying option values. You can retreiv
 
 With the Web API you can also use the [RetrieveMetadataChanges Function](/dynamics365/customer-engagement/web-api/retrievemetadatachanges).
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Query metadata using the Web API > Querying EntityMetadata attributes](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
+More information: [Query metadata using the Web API > Querying EntityMetadata attributes](/dynamics365/customer-engagement/developer/webapi/query-metadata-web-api#querying-entitymetadata-attributes)
 
 
 
@@ -231,8 +231,8 @@ When you create a new entity record in the context of an existing entity record,
 For developers creating custom clients, the same behavior can be achieved by using the `InitializeFrom` message (Organization service  [InitializeFromRequest Class](/dotnet/api/microsoft.crm.sdk.messages.initializefromrequest) or Web API [InitializeFrom Function](/dynamics365/customer-engagement/web-api/initializefrom)) to get the entity data with the configured default values set.
 
 More information 
-- [Dynamics 365 Customer Engagement Customization Guide: Map entity fields](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
-- [Dynamics 365 Customer Engagement Developer Guide Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
+- [Common Data Service for Apps Customization Guide: Map entity fields](/dynamics365/customer-engagement/customize/map-entity-fields#BKMK_mappingEntityFields)
+- [Common Data Service for Apps Developer Guide Customize entity and attribute mappings](/dynamics365/customer-engagement/developer/customize-entity-attribute-mappings)
 
 ### See also
 

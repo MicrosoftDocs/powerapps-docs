@@ -19,7 +19,7 @@ ms.author: jdaly
 
 # Client scripting with model-driven apps
 
-Client-side scripting using JavaScript is one of the ways to apply custom business process logic for displaying data on a form in a model-driven app, but it shouldn't be your first choice. *Business rules* provides provides a way for someone who does not know JavaScript and is not a developer, to apply business process logic in a form. More information: [Dynamics 365 Customer Engagement Customization Guide Create business rules and recommendations to apply logic in a form](/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
+Client-side scripting using JavaScript is one of the ways to apply custom business process logic for displaying data on a form in a model-driven app, but it shouldn't be your first choice. *Business rules* provides provides a way for someone who does not know JavaScript and is not a developer, to apply business process logic in a form. More information: [Common Data Service for Apps Customization Guide Create business rules and recommendations to apply logic in a form](/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
 > [!TIP]
 > You will find the business rule designer within the **Common Data Service** area on [powerapps.com](http://web.powerapps.com). When you view an entity, look for the **Business rules** tab.
@@ -28,7 +28,7 @@ If your business requirement can't be achieved using a business rule, you will f
 
 ## Resources
 
-The following resources for client scripting are available in the Dynamics 365 Customer Engagement Developer guide.
+The following resources for client scripting are available in the Common Data Service for Apps Developer guide.
 
 - [Client scripting using JavaScript](/dynamics365/customer-engagement/developer/clientapi/client-scripting)
 - [Events in forms and grids](/dynamics365/customer-engagement/developer/clientapi/events-forms-grids)

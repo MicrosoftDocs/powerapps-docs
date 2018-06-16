@@ -25,7 +25,7 @@ Going forward the capabilities of the service can change, including potentially 
   
 ## Web API Limitations  
 
-The Common Data Service for Apps Web API provides complete parity with the capabilities of the organization service. For Common Data Service for Apps, this topic describes the limitations carried forward from the Dynamics 365 Customer Engagement v8.x release. For earlier releases, see [Dynamics CRM 2016 Web API Limitations](https://msdn.microsoft.com/library/mt628816\(CRM.8\).aspx).  
+The Common Data Service for Apps Web API provides complete parity with the capabilities of the organization service. For Common Data Service for Apps, this topic describes the limitations carried forward from the Common Data Service for Apps v8.x release. For earlier releases, see [Dynamics CRM 2016 Web API Limitations](https://msdn.microsoft.com/library/mt628816\(CRM.8\).aspx).  
   
 ## Limitations addressed in this release 
  In version 8.2, some custom actions were not available in Web API.

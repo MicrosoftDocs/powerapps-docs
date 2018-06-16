@@ -1,6 +1,6 @@
 ---
 title: "Use Web API actions (PowerApps Common Data Service for Apps)| MicrosoftDocs"
-descriptions: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on Dynamics 365"
+descriptions: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on CDS for Apps"
 ms.custom: ""
 ms.date: 06/15/2018
 ms.reviewer: ""

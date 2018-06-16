@@ -32,8 +32,8 @@ The `EntityMetadata` `ManyToOneRelationships` collection contains [OneToManyRela
 > Although related entities are sometimes called *child entities*, don't confuse these with [Child entities](entity-metadata.md#child-entities), which refers to how security is applied to related entities.
 
 More information:
-- [Dynamics 365 Customer Engagement Customization Guide: Create and edit relationships between entities](/dynamics365/customer-engagement/customize/create-edit-entity-relationships)
-- [Dynamics 365 Customer Engagement Developer Guide: Customize entity relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+- [Common Data Service for Apps Customization Guide: Create and edit relationships between entities](/dynamics365/customer-engagement/customize/create-edit-entity-relationships)
+- [Customize entity relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 ## Cascade configuration
 
@@ -41,8 +41,8 @@ When a one-to-many entity relationship exists, there are cascading behaviors tha
 
 More information:
 
-- [Dynamics 365 Customer Engagement Customization Guide: Create 1:N (one-to-many) or N:1 (many-to-one) relationships > Relationship behavior](/dynamics365/customer-engagement/customize/create-and-edit-1n-relationships#relationship-behavior)
-- [Dynamics 365 Customer Engagement Developer Guide: Entity relationship behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)
+- [Common Data Service for Apps Customization Guide: Create 1:N (one-to-many) or N:1 (many-to-one) relationships > Relationship behavior](/dynamics365/customer-engagement/customize/create-and-edit-1n-relationships#relationship-behavior)
+- [Entity relationship behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)
 
 
 ## Create a hierarchy of entities
@@ -53,7 +53,7 @@ With model-driven apps, this enables an experience that enables you to view and 
 
 For developers, this enables new types of queries based on the hierarchy using the `Under` and `Not Under` operators.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data)
+More information: [Common Data Service for Apps Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data)
 
 ### See also
 

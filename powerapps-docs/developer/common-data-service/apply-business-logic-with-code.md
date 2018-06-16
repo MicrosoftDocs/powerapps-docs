@@ -18,7 +18,7 @@ ms.author: jdaly
 ---
 # Apply business logic with code
 
-Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Dynamics 365 Customer Engagement Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
+Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Common Data Service for Apps Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
 When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.
 
@@ -26,7 +26,7 @@ When a declarative process doesn’t meet a requirement, as a developer you have
 
 You can write a .NET assembly to provide new options within the process designer. This method provides a new option for people using the workflow designer to apply a condition or perform a new action. A workflow extension can then be re-used by people who are not developers to apply the logic in your code.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Custom workflow activities (workflow assemblies)](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies)
+More information: [Custom workflow activities (workflow assemblies)](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies)
 
 ## Create a plug-in
 
@@ -53,7 +53,7 @@ When you register the plugin to run synchronously for an event, you have options
 > [!NOTE]
 > Synchronous plug-ins have constraints on the amount of system resources they can use. If a plug-in exceeds thresholds or becomes unresponsive an exception will be thrown cancelling the operation.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Write plug-ins to extend business processes](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)
+More information: [Write plug-ins to extend business processes](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)
 
 ### See also
 

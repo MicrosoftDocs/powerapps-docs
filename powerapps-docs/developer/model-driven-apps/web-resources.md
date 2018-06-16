@@ -27,4 +27,4 @@ Most commonly, you will use JavaScript web resources to add event handler functi
 
 More information:
 - [Client scripting with model-driven apps](client-scripting.md)
-- [Dynamics 365 Customer Engagement Developer Guide: Web resources](/dynamics365/customer-engagement/developer/web-resources)
+- [Web resources](/dynamics365/customer-engagement/developer/web-resources)
