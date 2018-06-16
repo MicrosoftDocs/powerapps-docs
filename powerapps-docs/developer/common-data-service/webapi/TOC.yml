@@ -1,0 +1,93 @@
+- name: Use Common Data Service for Apps Web API
+  href: ../use-cds-web-api.md
+  items:
+  - name: Get started with Common Data Service for Apps Web API (C#)
+    href: get-started-dynamics-365-web-api-csharp.md
+    items:
+    - name: Simple Web API quick-start sample (C#)
+      href: simple-web-api-quick-start-sample-csharp.md
+    - name: Start a Web API project in Visual Studio (C#)
+      href: start-web-api-project-visual-studio-csharp.md
+    - name: Use the Common Data Service for Apps Web API Helper Library (C#)
+      href: use-microsoft-dynamics-365-web-api-helper-library-csharp.md
+      items:
+      - name: 'Web API Helper code: Configuration classes'
+        href: web-api-helper-code-configuration-classes.md
+      - name: 'Web API Helper code: Authentication class'
+        href: web-api-helper-code-authentication-class.md
+      - name: 'Web API Helper code: CrmHttpResponseException class'
+        href: web-api-helper-code-crmhttpresponseexception-class.md
+  - name: Get started with the Common Data Service for Apps Web API (client-side JavaScript)
+    href: get-started-web-api-client-side-javascript.md
+  - name: Authenticate with the Web API
+    href: authenticate-web-api.md
+  - name: Web API types and operations
+    href: web-api-types-operations.md
+  - name: Perform operations using the Web API
+    href: perform-operations-web-api.md
+    items:
+    - name: Compose HTTP requests and handle errors
+      href: compose-http-requests-handle-errors.md
+    - name: Query Data using the Web API
+      href: query-data-web-api.md
+    - name: Retrieve and execute predefined queries
+      href: retrieve-and-execute-predefined-queries.md
+    - name: Create an entity using the Web API
+      href: create-entity-web-api.md
+    - name: Retrieve an entity using the Web API
+      href: retrieve-entity-using-web-api.md
+    - name: Update and delete entities using the Web API
+      href: update-delete-entities-using-web-api.md
+    - name: Associate and disassociate entities using the Web API
+      href: associate-disassociate-entities-using-web-api.md
+    - name: Use Web API functions
+      href: use-web-api-functions.md
+    - name: Use Web API actions
+      href: use-web-api-actions.md
+    - name: Execute batch operations using the Web API
+      href: execute-batch-operations-using-web-api.md
+    - name: Impersonate another user using the Web API
+      href: impersonate-another-user-web-api.md
+    - name: Perform conditional operations using the Web API
+      href: perform-conditional-operations-using-web-api.md
+    - name: Manage duplicate detection during Create and Update operations
+      href: manage-duplicate-detection-create-update.md
+  - name: Web API Versions
+    href: web-api-versions.md
+  - name: Use the Web API with metadata
+    href: use-web-api-metadata.md
+    items:
+    - name: Query metadata using the Web API
+      href: query-metadata-web-api.md
+    - name: Retrieve metadata by name or MetadataId
+      href: retrieve-metadata-name-metadataid.md
+    - name: Create and update entity definitions
+      href: create-update-entity-definitions-using-web-api.md 
+    - name: Create and update entity relationships
+      href: create-update-entity-relationships-using-web-api.md
+  - name: Discover the URL for your organization using the Web API
+    href: discover-url-organization-web-api.md
+  - name: Web API Samples
+    href: web-api-samples.md
+    items:
+    - name: Web API Basic Operations Sample
+      href: web-api-basic-operations-sample.md
+    - name: Web API Query Data Sample
+      href: web-api-query-data-sample.md
+    - name: Web API Conditional Operations Sample
+      href: web-api-conditional-operations-sample.md
+    - name: Web API Functions and Actions Sample
+      href: web-api-functions-actions-sample.md
+  - name: Web API Samples (C#)
+    href: web-api-samples-csharp.md
+    items:
+      - name: Web API Basic Operations Sample (C#)
+        href: web-api-basic-operations-sample-csharp.md
+      - name: Web API Query Data Sample (C#)
+        href: web-api-query-data-sample-csharp.md
+      - name: Web API Conditional Operations Sample (C#)
+        href: web-api-conditional-operations-sample-csharp.md
+      - name: Web API Functions and Actions Sample (C#)
+        href: web-api-functions-actions-sample-csharp.md
+  - name: Web API Samples (Client-side JavaScript)
+    href: web-api-samples-client-side-javascript.md
