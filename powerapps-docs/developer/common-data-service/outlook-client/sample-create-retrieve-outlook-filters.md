@@ -1,0 +1,93 @@
+---
+title: "Sample: Create and retrieve Outlook filters (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+ms.custom: ""
+ms.date: 06/17/2018
+ms.reviewer: ""
+ms.service: "crm-online"
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "samples"
+applies_to: 
+  - "Dynamics 365 (online)"
+ms.assetid: 72fd6888-2e5d-47a2-a1d3-f391e4d9f086
+caps.latest.revision: 21
+author: "JimDaly"
+ms.author: "jdaly"
+manager: "amyla"
+---
+# Sample: Create and retrieve Outlook filters
+
+This sample code is for Common Data Service for Apps. To download the sample, refer [Sample: Create and retrieve Outlook filters](https://msdn.microsoft.com/en-us/library/gg309283.aspx).
+
+## Prerequisites
+
+[!INCLUDE [sdk-prerequisite](../../../includes/sdk-prerequisite.md)]
+  
+## Demonstrates  
+ This sample shows how to retrieve filters for Microsoft Dynamics 365 for Outlook..  
+  
+## Example  
+
+```csharp
+// Create and Retrieve Offline Filter
+// In your Outlook client, this will appear in the System Filters tab
+// under File | CRM | Synchronize | Outlook Filters.
+Console.Write("Creating offline filter");
+String contactName = String.Format("offlineFilteredContact {0}",
+    DateTime.Now.ToLongTimeString());
+String fetchXml = String.Format("<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\"><entity name=\"contact\"><attribute name=\"contactid\" /><filter type=\"and\">" +
+    "<condition attribute=\"ownerid\" operator=\"eq-userid\" /><condition attribute=\"description\" operator=\"eq\" value=\"{0}\" />" +
+    "<condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>", contactName);
+SavedQuery filter = new SavedQuery();
+filter.FetchXml = fetchXml;
+filter.IsQuickFindQuery = false;
+filter.QueryType = SavedQueryQueryType.OfflineFilters;
+filter.ReturnedTypeCode = Contact.EntityLogicalName;
+filter.Name = "ReadOnlyFilter_" + contactName;
+filter.Description = "Sample offline filter for Contact entity";
+_offlineFilter = _serviceProxy.Create(filter);
+
+Console.WriteLine(" and retrieving offline filter");
+SavedQuery result = (SavedQuery)_serviceProxy.Retrieve(
+    SavedQuery.EntityLogicalName,
+    _offlineFilter,
+    new ColumnSet("name", "description"));
+Console.WriteLine("Name: {0}", result.Name);
+Console.WriteLine("Description: {0}", result.Description);
+Console.WriteLine();
+
+// Create and Retrieve Offline Template
+// In your Outlook client, this will appear in the User Filters tab
+// under File | CRM | Synchronize | Outlook Filters.
+Console.Write("Creating offline template");
+String accountName = String.Format("offlineFilteredAccount {0}",
+    DateTime.Now.ToLongTimeString());
+fetchXml = String.Format("<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\"><entity name=\"account\"><attribute name=\"accountid\" /><filter type=\"and\">" +
+    "<condition attribute=\"ownerid\" operator=\"eq-userid\" /><condition attribute=\"name\" operator=\"eq\" value=\"{0}\" />" +
+    "<condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /></filter></entity></fetch>", accountName);
+SavedQuery template = new SavedQuery();
+template.FetchXml = fetchXml;
+template.IsQuickFindQuery = false;
+template.QueryType = SavedQueryQueryType.OfflineTemplate;
+template.ReturnedTypeCode = Account.EntityLogicalName;
+template.Name = "ReadOnlyFilter_" + accountName;
+template.Description = "Sample offline template for Account entity";
+_offlineTemplate = _serviceProxy.Create(template);
+
+Console.WriteLine(" and retrieving offline template");
+result = (SavedQuery)_serviceProxy.Retrieve(
+    SavedQuery.EntityLogicalName,
+    _offlineTemplate,
+    new ColumnSet("name", "description"));
+Console.WriteLine("Name: {0}", result.Name);
+Console.WriteLine("Description: {0}", result.Description);
+Console.WriteLine();
+```
+  
+### See also  
+
+[Extend Dynamics 365 for Outlook](../extend-customer-engagement-outlook.md)<br />
+[Sample: Use Outlook Methods](sample-outlook-methods.md)<br />
+[Offline and Outlook Filters and Templates](offline-outlook-filters-templates.md)<br />
+[SavedQuery Entity Reference](../reference/entities/savedquery.md) 
+<xref:Microsoft.Xrm.Sdk.IOrganizationService>

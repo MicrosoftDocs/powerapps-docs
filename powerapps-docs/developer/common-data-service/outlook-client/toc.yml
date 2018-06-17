@@ -1,0 +1,9 @@
+- name: Extend Outlook Client
+  href: ../extend-customer-engagement-outlook.md
+  items:
+  - name: Offline and Outlook filters and templates
+    href: offline-outlook-filters-templates.md
+  - name: "Sample: Create and retrieve Outlook filters"
+    href: sample-create-retrieve-outlook-filters.md
+  - name: "Sample: Use Dynamics 365 for Outlook methods"
+    href: sample-outlook-methods.md       
