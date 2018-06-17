@@ -33,7 +33,7 @@ The Dynamics 365 Data SDK assembly, `Microsoft.Xrm.Sdk.Data.dll`, contains types
 |<xref:Microsoft.Xrm.Sdk.Data.Mappings>|Classes and interfaces that build the mapping from virtual entity metadata types to external types.|
 |Microsoft.Xrm.Sdk.Data.Visitors|Classes that implement the [visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern) to perform specific operations on the **QueryExpression** parameter passed to the data provider during **RetrieveMultiple** requests. Provides specific support for both generic query and LINQ-baseed processing. These classes are derived from Microsoft.Xrm.Sdk.Query.QueryExpressionVisitorBase.|
 
-This assembly is distributed as a NuGet package:[Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/)
+This assembly is distributed as a NuGet package: [Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/)
 
 ## Changes to the core platform
 
