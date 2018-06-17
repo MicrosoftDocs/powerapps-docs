@@ -1,6 +1,6 @@
 ---
-title: "API considerations of virtual entities (Developer Guide for Dynamics 365 Customer Engagement) | MicrosoftDocs"
-ms.date: 10/31/2017
+title: "API considerations of virtual entities (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+ms.date: 06/17/2018
 ms.service: "crm-online"
 ms.topic: "article"
 applies_to: 
@@ -13,12 +13,10 @@ manager: "amyla"
 
 # API considerations of virtual entities
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+There are two broad categories of changes to the metadata system that are associated with the introduction of virtual entities in Common Data Service for Apps:
 
-There are two broad categories of changes to the metadata system that are associated with the introduction of virtual entities in [!INCLUDE[pn-crm-9-0-0-online](../../includes/pn-crm-9-0-0-online.md)]:
-
-* Addition of a new assembly, namespaces, classes and other types to support development of custom virtual entity data providers
-* Changes to the core platform, including a few additional properties to support external data source mapping, and modification of behaviors of existing entity and attribute properties that reflect the limitations of the initial implementation of this feature
+- Addition of a new assembly, namespaces, classes and other types to support development of custom virtual entity data providers
+- Changes to the core platform, including a few additional properties to support external data source mapping, and modification of behaviors of existing entity and attribute properties that reflect the limitations of the initial implementation of this feature
 
 ## New Dynamics 365 Data SDK assembly
 
@@ -26,63 +24,61 @@ The Dynamics 365 Data SDK assembly, `Microsoft.Xrm.Sdk.Data.dll`, contains types
 
 |Namespace|Description|
 |---------|---------|
-|Microsoft.Xrm.Sdk.Data|Base namespace that contains a few common types, such as the **AllowedQueryOptions** enumeration|
-|Microsoft.Xrm.Sdk.Data.CodeGen|Contains classes and interfaces that support dynamic reflection, type matching, and code generation.  Mainly used by the internal provider engine.|
-|Microsoft.Xrm.Sdk.Data.Converters|A set of classes to convert standard XRM types to their corresponding .NET fundamental types|
-|Microsoft.Xrm.Sdk.Data.Exceptions|A set of exception classes that represent errors that can occur during runtime value resolution.  All are derived from Microsoft.Xrm.Sdk.SdkExceptionBase.|
-|Microsoft.Xrm.Sdk.Data.Expressions|Classes to assist in implementing the supported query transformations, such as FILTER, JOIN, and ORDER.|
-|Microsoft.Xrm.Sdk.Data.Infra|A few miscellaneous classes that support the central query processing.|
-|Microsoft.Xrm.Sdk.Data.Mappings|Classes and interfaces that build the mapping from virtual entity metadata types to external types.|
-|Microsoft.Xrm.Sdk.Data.Visitors|Classes that implement the [visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern) to perform specific operations on the **QueryExpression** parameter passed to the data provider during **RetrieveMultiple** requests. Provides specific support for both generic query and LINQ-baseed processing. These classes are derived from Microsoft.Xrm.Sdk.Query.QueryExpressionVisitorBase.|
-| | |
- 
-<!-- TODO: Need to put in links to reference sections for these namespaces after TOC is completed. -->
+|<xref:Microsoft.Xrm.Sdk.Data>|Base namespace that contains a few common types, such as the **AllowedQueryOptions** enumeration|
+|<xref:Microsoft.Xrm.Sdk.Data.CodeGen>|Contains classes and interfaces that support dynamic reflection, type matching, and code generation.  Mainly used by the internal provider engine.|
+|<xref:Microsoft.Xrm.Sdk.Data.Converters>|A set of classes to convert standard XRM types to their corresponding .NET fundamental types|
+|<xref:Microsoft.Xrm.Sdk.Data.Exceptions>|A set of exception classes that represent errors that can occur during runtime value resolution.  All are derived from Microsoft.Xrm.Sdk.SdkExceptionBase.|
+|<xref:Microsoft.Xrm.Sdk.Data.Expressions>|Classes to assist in implementing the supported query transformations, such as FILTER, JOIN, and ORDER.|
+|<xref:Microsoft.Xrm.Sdk.Data.Infra>|A few miscellaneous classes that support the central query processing.|
+|<xref:Microsoft.Xrm.Sdk.Data.Mappings>|Classes and interfaces that build the mapping from virtual entity metadata types to external types.|
+|<xref:Microsoft.Xrm.Sdk.Data.Visitors>|Classes that implement the [visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern) to perform specific operations on the **QueryExpression** parameter passed to the data provider during **RetrieveMultiple** requests. Provides specific support for both generic query and LINQ-baseed processing. These classes are derived from Microsoft.Xrm.Sdk.Query.QueryExpressionVisitorBase.|
 
-This assembly is distributed with the Dynamics 365 Data SDK, which is also available as a NuGet package.
-<!-- TODO: Will the SDK be downloadable separately? When the final package is ready, put in proper name and link. -->
+This assembly is distributed as a NuGet package:[Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/)
 
 ## Changes to the core platform
 
-The following changes to the standard [!INCLUDE[pn-dynamics365](../../includes/pn-dynamics-365.md)] reference types were introduced to support virtual entities.
+The following changes to the standard CDS for Apps reference types were introduced to support virtual entities.
 
-### New Web API types
+### New Entities
 
-The Dynamics 365 Web API exposes virtual entity data providers and sources as the following new entity types: [EntityDataProvider](../entities/entitydataprovider.md) and [EntityDataSource](../entities/entitydatasource.md). 
+The CDS for Apps exposes virtual entity data providers and sources as the following new entities: [EntityDataProvider](../reference/entities/entitydataprovider.md) and [EntityDataSource](../reference/entities/entitydatasource.md). 
 
 ### New metadata properties
 
-Four new properties were added to the **Microsoft.Xrm.Sdk.Metadata.EntityMetadata** class:
+Four new properties were added to the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata> class:
 
-* **DataProviderId** - GUID that identifies the associated virtual entity data provider
-* **DataSourceId** - GUID that identifies the associated virtual entity data source
-* **ExternalName** - Name for this type in the external data source
-* **ExternalCollectionName** - Plural name for this type, used in the UI and to support OData access
+|Property|Description|
+|--|--|
+|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataProviderId>|GUID that identifies the associated virtual entity data provider|
+|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataSourceId>|GUID that identifies the associated virtual entity data source|
+|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ExternalName>|Name for this type in the external data source|
+|<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.ExternalCollectionName>|Plural name for this type, used in the UI and to support OData access|
 
-Two new properties were added to the **Microsoft.Xrm.Sdk.Metadata.AttributeMetadata** class:
+Two new properties were added to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> class:
 
-* **ExternalName** - Name of the type in the external data source
-* **IsDataSourceSecret** - Indicates whether the field contains sensitive information
+|Property|Description|
+|--|--|
+|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ExternalName>|Name of the type in the external data source|
+|<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsDataSourceSecret>|Indicates whether the field contains sensitive information|
 
-The **ExternalName** property was also added to the **Option** and **OptionSetMetadata** classes. These external names assist in the external data source mapping, by specifiying the name of the associated type in the external data source. These properties are only used for virtual entities; for a builtin or standard custom entity type, these external names must be `null`.
+The `ExternalName` property was also added to the <xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata> and <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> classes. These external names assist in the external data source mapping, by specifiying the name of the associated type in the external data source. These properties are only used for virtual entities; for a builtin or standard custom entity type, these external names must be `null`.
 
 
 ### Virtual entity creation
 
 The approach to programmatically creating a virtual entity type differs slightly from a standard custom entity type creation in that:
 
-* If the associated data provider (and optionally data source) is known at creation time, then these are specified.
-* If the data provider for this type is not known, then at minimum, `EntityMetadata.DataProviderId` is set to `7015A531-CC0D-4537-B5F2-C882A1EB65AD`, and the `EntityMetadata.DataSourceId` is set to `null`. Before instances of this type are used at runtime, these properties must be assigned appropriate values.
+- If the associated data provider (and optionally data source) is known at creation time, then these are specified.
+- If the data provider for this type is not known, then at minimum, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataProviderId> is set to `7015A531-CC0D-4537-B5F2-C882A1EB65AD`, and the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataSourceId> is set to `null`. Before instances of this type are used at runtime, these properties must be assigned appropriate values.
 
-Two new entity types, [EntityDataProvider](../entities/entitydataprovider.md) and optionally [EntityDataSource](../entities/entitydatasource.md), will be created when you register a plugin, and their respective ID's, **entitydataproviderid** and **entitydatasourceid**, represent these required GUIDs. (Otherwise, developers rarely need to access these custom types directly.) Note that DataSource contains the property **entitydataproviderid** that must match the corresponding DataProvider type or a runtime exception will be thrown.
+Two new entities, [EntityDataProvider](../reference/entities/entitydataprovider.md) and optionally [EntityDataSource Entity Reference](../reference/entities/entitydatasource.md), will be created when you register a plugin, and their respective ID's, **entitydataproviderid** and **entitydatasourceid**, represent these required GUIDs. (Otherwise, developers rarely need to access these custom types directly.) Note that DataSource contains the property **entitydataproviderid** that must match the corresponding DataProvider type or a runtime exception will be thrown.
 
 > [!WARNING]
-> Standard (non-virtual) entities must have the values of their associated **EntityMetadata.DataProviderId** and **EntityMetadata.DataSourceId** set to their default values (`null`), otherwise a runtime exception will be thrown.  Once created, you cannot convert from a non-virtual type to a virtual type, or the reverse. 
+> Standard (non-virtual) entities must have the values of their associated <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataProviderId> and <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataSourceId> set to their default values (`null`), otherwise a runtime exception will be thrown.  Once created, you cannot convert from a non-virtual type to a virtual type, or the reverse. 
 
 ### Entity metadata property behavior changes
 
-The following table details how the behavior of standard [EntityMetadata properties](https://msdn.microsoft.com/library/microsoft.xrm.sdk.metadata.entitymetadata_properties.aspx) are modified when applied to virtual entities. Some properties are not valid for virtual entities, whereas others are limited in scope or value.
-
-<!-- TODO: Above link URL needs to be changed to docs.microsoft.com -->
+The following table details how the behavior of standard [EntityMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata?view=dynamics-general-ce-9#properties) are modified when applied to virtual entities. Some properties are not valid for virtual entities, whereas others are limited in scope or value.
 
 |**Metadata Property**|**Applies?**|**Notes**|
 |---------------------|------------|---------|
@@ -172,16 +168,13 @@ The following table details how the behavior of standard [EntityMetadata propert
 |ReportViewName|_invalid_||
 |SchemaName|valid||
 |SyncToExternalSearchIndex|_invalid_||
-||||
 
 <!-- TODO: Add links to reference properties in first column. -->
 
 
 ### Attribute metadata property behavior changes
 
-The following table explains how the behavior of standard [AttributeMetadata properties]( https://msdn.microsoft.com/en-us/library/microsoft.xrm.sdk.metadata.attributemetadata_properties.aspx) are modified when applied to virtual entities. Some properties are not valid for virtual entities, whereas others are limited in scope or value.
-
-<!-- TODO: Above link URL needs to be changed to docs.microsoft.com -->
+The following table explains how the behavior of standard [AttributeMetadata properties](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata?view=dynamics-general-ce-9#properties) are modified when applied to virtual entities. Some properties are not valid for virtual entities, whereas others are limited in scope or value.
 
 |**Metadata Property**|**Applies?**|**Notes**|
 |---------------------|------------|---------|
@@ -217,5 +210,10 @@ The following table explains how the behavior of standard [AttributeMetadata pro
 |RequiredLevel|valid||
 |SchemaName|valid||
 |SourceType|_invalid_|Always 0, calculated or rollup values not supported.|
-||||
+
+### See also
+
+[Get started with virtual entities](get-started-ve.md)<br />
+[Custom virtual entity data providers](custom-ve-data-providers.md)<br />
+[Sample: Generic virtual entity data provider plug-in](sample-generic-ve-plugin.md)
 
