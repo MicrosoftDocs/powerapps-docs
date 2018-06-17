@@ -71,10 +71,10 @@ The approach to programmatically creating a virtual entity type differs slightly
 - If the associated data provider (and optionally data source) is known at creation time, then these are specified.
 - If the data provider for this type is not known, then at minimum, <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataProviderId> is set to `7015A531-CC0D-4537-B5F2-C882A1EB65AD`, and the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataSourceId> is set to `null`. Before instances of this type are used at runtime, these properties must be assigned appropriate values.
 
-Two new entities, [EntityDataProvider](../reference/entities/entitydataprovider.md) and optionally [EntityDataSource Entity Reference](../reference/entities/entitydatasource.md), will be created when you register a plugin, and their respective ID's, **entitydataproviderid** and **entitydatasourceid**, represent these required GUIDs. (Otherwise, developers rarely need to access these custom types directly.) Note that DataSource contains the property **entitydataproviderid** that must match the corresponding DataProvider type or a runtime exception will be thrown.
+Two new entities, [EntityDataProvider](../reference/entities/entitydataprovider.md) and optionally [EntityDataSource](../reference/entities/entitydatasource.md), will be created when you register a plugin, and their respective ID's, `entitydataproviderid` and `entitydatasourceid`, represent these required GUIDs. (Otherwise, developers rarely need to access these custom types directly.) Note that DataSource contains the property `entitydataproviderid` that must match the corresponding DataProvider type or a runtime exception will be thrown.
 
 > [!WARNING]
-> Standard (non-virtual) entities must have the values of their associated <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataProviderId> and <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.DataSourceId> set to their default values (`null`), otherwise a runtime exception will be thrown.  Once created, you cannot convert from a non-virtual type to a virtual type, or the reverse. 
+> Standard (non-virtual) entities must have the values of their associated `DataProviderId` and `DataSourceId` set to their default values (`null`), otherwise a runtime exception will be thrown.  Once created, you cannot convert from a non-virtual type to a virtual type, or the reverse. 
 
 ### Entity metadata property behavior changes
 
