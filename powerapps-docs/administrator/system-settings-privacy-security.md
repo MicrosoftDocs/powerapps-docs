@@ -21,9 +21,9 @@ manager: kvivek
 > [!NOTE]
 > ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 
-Use Behavior settings to adjust how Dynamics 365 (online) appears and functions.
+Use these settings to adjust Dynamics 365 (online) privacy and security.
 
-These settings can be found in the Business Application Platform Admin center by going to **Environments** > [select an environment] > **Settings** > **Behavior**.
+These settings can be found in the Business Application Platform Admin center by going to **Environments** > [select an environment] > **Settings** > **Privacy + security**.
 
 Make sure you have the System Administrator or System Customizer security role or equivalent permissions to update the business closures.
 
@@ -36,19 +36,19 @@ Make sure you have the System Administrator or System Customizer security role o
 
 |Settings|Description|  
 |--------------|-----------------|  
-|**Privacy preferences**||  
-|**Default app name**|Default: On. |  
-|**Privacy statement URL**|xxxxxx |  
+|**Privacy preferences**|More information: [Set privacy preferences for an organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/set-privacy-preferences-organization)|  
+|**Default app name**|Default: xx. xxxxx|  
+|**Privacy statement URL**|Provide users with a link to your organization's privacy statement. The link will be added to the **Settings** menu.|  
 |**Default action to take when an error occurs**| |
 |**Ask the user for permission to send an error report to Microsoft**|Default: Selected.|  
-|**Automatically send an error report to Microsoft without user interaction**|xxxxxxx|  
-|**Never send an error report to Microsoft**|Default: Off.|  
-|**Session expiration**| |  
-|**Maximum session duration (minutes)**|Default: 1440|  
-|**Show warning before expiration? (minutes prior)**|Default: 20|  
-|**Inactivity timeout**| |  
-|**End inactive sessions**|Default: On. |  
-|**Duration of inactivity before timeout (minutes)**|Default: 20|  
-|**Show warning before inactivity timeout? (minutes prior)**|xxxxxxx|  
+|**Automatically send an error report to Microsoft without user interaction**||  
+|**Never send an error report to Microsoft**||  
+|**Session expiration**|More information: [Security enhancements: User session and access management](https://docs.microsoft.com/dynamics365/customer-engagement/admin/user-session-management)|  
+|**Maximum session duration (minutes)**|Default: 1440. After the time you set is reached, users must re-authenticate to Dynamics 365 (online).|  
+|**Show warning before expiration? (minutes prior)**|Default: 20. After the time you set is reached, users receive an expiration warning.|  
+|**Inactivity timeout**|More information: [Inactivity timeout](https://docs.microsoft.com/dynamics365/customer-engagement/admin/user-session-management#inactivity-timeout) |  
+|**End inactive sessions**|Default: xx. Enable to automatically sign out a user after a specified time period.|  
+|**Maximum length of inactive sessions**|Default: 120. If the user is inactive for the time you set, they are logged out.|  
+|**Timing of session end warning**|Default 20. If the user is inactive for the time you set, they receive a warning.|  
 |**Blocked attachments**||  
-|**Block these file extensions (colon separated)**|xxxxxx|  
+|**Block these file extensions (colon separated)**|Prevent upload or download of certain attachment types that are considered dangerous. Separate file extensions with a colon.|  
