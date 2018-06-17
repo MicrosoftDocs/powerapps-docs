@@ -37,28 +37,28 @@ Make sure you have the System Administrator or System Customizer security role o
 |Settings|Description|  
 |--------------|-----------------|  
 |**Embedded content**||  
-|**Power BI visualization embedding**|Default: xx.|  
-|**Bing Maps**|Default: xx. |  
-|**Social data in Dynamics**|Default: xx.|  
+|**Power BI visualization embedding**|Default: Off.|  
+|**Bing Maps**|Default: On. |  
+|**Social data in Dynamics**|Default: Off.|  
 |**Communications**| |
-|**Skype presence**|Default: xx.|  
-|**Country/region code prefixing**|Default: xx.|  
+|**Skype presence**|Default: Off.|  
+|**Country/region code prefixing**|Default: Off.|  
 |**Telephony provider**|xxxxxxx|  
 |**Search customization**||  
-|**Relevance Search**|Default: xx.|  
+|**Relevance Search**|Default: Off.|  
 |**Quick Find record limits**|xxxxxxxx|  
 |**Categorized search**|xxxxxxxx|  
 |**Help features**||  
-|**Custom help for customizable entries**|Default: xx.|  
+|**Custom help for customizable entries**|Default: Off.|  
 |**Global custom help URL**|xxxxxx|  
 |**Append parameters to URL**|Default: not selected. xxxxxx|  
-|**Learning Path authoring**|Default: xx.|  
+|**Learning Path authoring**|Default: On.|  
 |**Auditing**| |
-|**Start auditing**|Default: xx.|  
+|**Start auditing**|Default: On.|  
 |**Entity types to audit**| |
 |**Common entities**|Default: not selected. xxxxxx|  
 |**Sales entities**|Default: not selected. xxxxxx|  
 |**Marketing entities**|Default: not selected. xxxxxx|  
 |**Customer Service entities**|Default: not selected. xxxxxx|  
-|**Audit user access**|Default: xx.| 
-|**Start read auditing**|Default: xx.| 
+|**Audit user access**|Default: On.| 
+|**Start read auditing**|Default: On.| 
