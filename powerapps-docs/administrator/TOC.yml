@@ -87,6 +87,7 @@
       href: common-data-service-gdpr-dsr-guide.md
   - name: Administer environments
     href: environments-administration.md
+    items:
     # - name: Manage storage
     #   href: manage-storage.md
     # - name: Manage environments
