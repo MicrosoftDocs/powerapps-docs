@@ -20,7 +20,7 @@ manager: "kvivek"
 ---
 # Use segmented solutions and patches to export selected entity assets
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]
 
 To gain tighter control over what you distribute in solutions and solution patches, use solution segmentation. With solution segmentation, you can export solutions with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. To create the segmented solutions and patches, you can use the solutions user interface, without writing code.  
   
@@ -54,7 +54,7 @@ To gain tighter control over what you distribute in solutions and solution patch
 ## Create a segmented solution with the entity assets you want  
  To create a segmented solution, start with creating an unmanaged solution and adding the existing resources. You can add multiple system or custom entities, and for each entity, choose the assets you want to include in the solution. The wizard-like setup takes you step-by-step through the process of adding entity assets.  
   
-1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
+1. [!INCLUDE[proc_settings_solutions](../../includes/proc-settings-solutions.md)]  
   
 2.  Select **New** and create a solution. Enter information in the required fields. Select **Save & Close**.  
   
@@ -101,7 +101,7 @@ To gain tighter control over what you distribute in solutions and solution patch
   
  #### Create a patch for an unmanaged solution  
   
-1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
+1. [!INCLUDE[proc_settings_solutions](../../includes/proc-settings-solutions.md)]  
   
 2.  In the grid, select an unmanaged solution to create a patch for. Select **Clone a Patch**. The dialog box that opens contains the base solution’s name and the patch version number. Select **Save**.  
   
@@ -128,7 +128,7 @@ To gain tighter control over what you distribute in solutions and solution patch
 ## Clone a solution  
  When you clone an unmanaged solution, all patches related to this solution are rolled up into the newly-created version of the original solution.  
   
-1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
+1. [!INCLUDE[proc_settings_solutions](../../includes/proc-settings-solutions.md)]  
   
 2.  From the list, select an unmanaged solution you want to clone. Select **Clone Solution**. The dialog box that opens contains the base solution’s name and the new version number. Select **Save**.  
   

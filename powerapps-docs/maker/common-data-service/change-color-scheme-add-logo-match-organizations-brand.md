@@ -18,13 +18,13 @@ manager: "brycho"
 ---
 # Create a theme
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0](../../includes/cc_applies_to_update_9_0_0.md)]
 
-You can create a custom look and feel (a theme), for your [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] web application by making changes to the default colors and visual elements provided in the uncustomized [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] system. For example, you can create your personal product branding by adding a company logo and providing entity-specific coloring. A theme is created by using the customization tools in the user interface, without requiring a developer to write code. You can create, change or delete themes that are used in your organization. The theme customization is supported in the Web forms in [!INCLUDE[pn_crm_for_outlook_short](../includes/pn-crm-for-outlook-short.md)]. You can define multiple themes, but only one can be set and published as the default theme.  
+You can create a custom look and feel (a theme), for your [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] web application by making changes to the default colors and visual elements provided in the uncustomized [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] system. For example, you can create your personal product branding by adding a company logo and providing entity-specific coloring. A theme is created by using the customization tools in the user interface, without requiring a developer to write code. You can create, change or delete themes that are used in your organization. The theme customization is supported in the Web forms in [!INCLUDE[pn_crm_for_outlook_short](../../includes/pn-crm-for-outlook-short.md)]. You can define multiple themes, but only one can be set and published as the default theme.  
   
 <a name="UseThemes"></a>   
 ## Use themes to enhance the user interface and create your product branding  
- Theming is used to enhance the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] user interface, not drastically alter it. The theme colors are applied globally throughout the application. For example, you can enhance the following visual elements in the UI:  
+ Theming is used to enhance the [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] user interface, not drastically alter it. The theme colors are applied globally throughout the application. For example, you can enhance the following visual elements in the UI:  
   
 -   Change product logos and navigation colors to create product branding  
   
@@ -106,7 +106,7 @@ The following screenshot shows the default theme setup.
 ### Theme contrast  
  We recommend the following approach to providing contrast colors:  
   
--   Carefully choose the contrasting colors. [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] out-of-the-box default theme has the correct contrast ratios to ensure optimal usability. Use similar rations for your new themes.  
+-   Carefully choose the contrasting colors. [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] out-of-the-box default theme has the correct contrast ratios to ensure optimal usability. Use similar rations for your new themes.  
   
 -   For high contrast mode, use the default color settings.  
   

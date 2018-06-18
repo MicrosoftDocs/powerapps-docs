@@ -41,7 +41,7 @@ When a self-referential one-to-many (1:N) relationship exists, in the relationsh
 
 To query the data as a hierarchy, you must set one of the entity’s one-to-many (1:N) self-referential relationships as hierarchical. This can only be done using solution explorer.
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 To turn the hierarchy on:  
   

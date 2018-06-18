@@ -20,14 +20,14 @@ manager: "kvivek"
 ---
 # Display custom icons instead of values in list views
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
 <a name="GridIcons"></a>   
 
  Administrators and customizers can add graphics to a view and establish the logic used to select the graphic based on a column values using JavaScript. The capability to display list views that show icons rather than text or numerical values in some columns was introduced in Relationship Insights. 
   
 > [!NOTE]
->  Grid icons are only shown in the web interface. They are not shown in [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)] or the mobile app.  
+>  Grid icons are only shown in the web interface. They are not shown in [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)] or the mobile app.  
   
 ### Add custom graphics and JavaScript as web resources  
   

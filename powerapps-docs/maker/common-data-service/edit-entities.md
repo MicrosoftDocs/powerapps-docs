@@ -72,7 +72,7 @@ For any other changes to entity options, you must edit the entity using solution
 
 When editing an entity using the solution explorer you need to find the unmanaged solution that you want to add it to.
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../../includes/cc_navigate-solution-from-powerapps-portal.md)]
   
 <a name="BKMK_ChangeEntityName"></a> 
   
@@ -95,7 +95,7 @@ By default, all custom entities in the web application have the same icons. You 
 
 The following table lists the options that you can enable for an entity, but after these items are enabled, they can’t be disabled:  
 
-[!INCLUDE [cc_entity-set-once-options-table](../../includes/cc_entity-set-once-options-table.md)] 
+[!INCLUDE [cc_entity-set-once-options-table](../../../includes/cc_entity-set-once-options-table.md)] 
   
 <a name="BKMK_EnableDisableOptions"></a>  
  
@@ -103,7 +103,7 @@ The following table lists the options that you can enable for an entity, but aft
 
 The following table lists the entity options that you can enable or disable at any time.  
 
-[!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)] 
+[!INCLUDE [cc_entity-changeable-options-table](../../../includes/cc_entity-changeable-options-table.md)] 
 
 ### See also
 

@@ -51,7 +51,7 @@ When you map entity fields for a 1:N entity relationship certain items of data f
 
 The only way to map entity fields is to use solution explorer.
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../../includes/cc_navigate-solution-from-powerapps-portal.md)]
   
 Mapping fields is done in the context of a 1:N or N:1 entity relationship, so first you need to [view 1:N or N:1 entity relationships](create-edit-1n-relationships-solution-explorer.md#view-entity-relationships).
 

@@ -20,11 +20,11 @@ manager: "kvivek"
 ---
 # Import, update, and export solutions 
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
  You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources. You can import the default solution only to the organization from which you exported it, but not into a different organization.  
   
-1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
+1. [!INCLUDE[proc_settings_solutions](../../includes/proc-settings-solutions.md)]  
   
 2.  In the solutions list menu, choose **Import**.  
   
@@ -40,17 +40,17 @@ manager: "kvivek"
   
  If the import isn’t successful, you will see a report showing any errors or warnings that were captured. You can choose **Download Log File** to capture details about what caused the import to fail. The most common cause for a solution import to fail is that the solution did not contain some required solution components.  
   
- When you download the log file, you will find an XML file that you can open using [!INCLUDE[pn_MS_Excel_Full](../includes/pn-ms-excel-full.md)] and view the contents.  
+ When you download the log file, you will find an XML file that you can open using [!INCLUDE[pn_MS_Excel_Full](../../includes/pn-ms-excel-full.md)] and view the contents.  
   
 > [!NOTE]
->  You can’t edit an active routing rule set. Therefore, if you’re importing a solution that includes an active routing rule set into an organization where the rule already exists with the same ID, the solution import will fail. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create rules to automatically route cases](../customer-service/create-rules-automatically-route-cases.md)  
+>  You can’t edit an active routing rule set. Therefore, if you’re importing a solution that includes an active routing rule set into an organization where the rule already exists with the same ID, the solution import will fail. [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Create rules to automatically route cases](../customer-service/create-rules-automatically-route-cases.md)  
   
 <a name="BKMK_UpdateSolutions"></a>   
 
 ## Update solutions  
  There are times when you may wish to install an update to an existing managed solution. The procedure is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
   
-1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
+1. [!INCLUDE[proc_settings_solutions](../../includes/proc-settings-solutions.md)]  
   
 2.  In the solutions list menu choose **Import**.  
   
@@ -83,7 +83,7 @@ manager: "kvivek"
 ## Export solutions  
  We recommend that you export your unmanaged customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions.  
   
-1. [!INCLUDE[proc_settings_solutions](../includes/proc-settings-solutions.md)]  
+1. [!INCLUDE[proc_settings_solutions](../../includes/proc-settings-solutions.md)]  
   
 2.  In the list select the solution you want to export and choose **Export**.  
   
@@ -124,7 +124,7 @@ manager: "kvivek"
 |Show Week Number|Information that specifies whether to display the week number in calendar displays throughout the app.|  
 |Time Format Code|Information that specifies how the time is displayed throughout the app.|  
 |Week Start Day Code|Designated first day of the week throughout the app.|  
-|Customization|Is Application Mode Enabled|Indicates whether loading of [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] in a browser window that does not have address, tool, and menu bars is enabled.|  
+|Customization|Is Application Mode Enabled|Indicates whether loading of [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)] in a browser window that does not have address, tool, and menu bars is enabled.|  
 |Email-tracking|Allow Unresolved Address Email Send|Indicates whether users are allowed to send email to unresolved parties (parties must still have an email address).|  
 |Ignore Internal Email|Indicates whether incoming email sent by app users or queues should be tracked.|  
 |Max Tracking Number|Maximum tracking number before recycling takes place.|  
@@ -145,18 +145,18 @@ manager: "kvivek"
 |Allow Automatic Unsubscribe|Indicates whether automatic unsubscribe is allowed.|  
 |Allow Automatic Unsubscribe Acknowledgement|Indicates whether automatic unsubscribe acknowledgement email is allowed to send.|  
 |Allow Marketing Email Execution|Indicates whether marketing emails execution is allowed.|  
-|[!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)] Synchronization|Allow Address Book Synchronization|Indicates whether background address book synchronization in Microsoft Office Outlook is allowed.|  
-|Allow Offline Scheduled Synchronization|Indicates whether background offline synchronization in [!INCLUDE[pn_MS_Outlook_Full](../includes/pn-ms-outlook-full.md)] is allowed.|  
-|Allow Scheduled Synchronization|Indicates whether scheduled synchronizations to [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)] are allowed.|  
-|Email Send Polling Frequency|Normal polling frequency used for sending email in [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)].|  
-|Min Address Synchronization Frequency|Normal polling frequency used for address book synchronization in [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)].|  
-|Min Offline Synchronization Frequency|Normal polling frequency used for background offline synchronization in [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)].|  
-|Min Synchronization Frequency|Minimum allowed time between scheduled [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)] synchronizations.|  
+|[!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)] Synchronization|Allow Address Book Synchronization|Indicates whether background address book synchronization in Microsoft Office Outlook is allowed.|  
+|Allow Offline Scheduled Synchronization|Indicates whether background offline synchronization in [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] is allowed.|  
+|Allow Scheduled Synchronization|Indicates whether scheduled synchronizations to [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)] are allowed.|  
+|Email Send Polling Frequency|Normal polling frequency used for sending email in [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)].|  
+|Min Address Synchronization Frequency|Normal polling frequency used for address book synchronization in [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)].|  
+|Min Offline Synchronization Frequency|Normal polling frequency used for background offline synchronization in [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)].|  
+|Min Synchronization Frequency|Minimum allowed time between scheduled [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)] synchronizations.|  
 |Auto-Tag Max Cycles|Maximum number of aggressive polling cycles executed for email auto-tagging when a new email is received.|  
-|Auto-Tag Interval|Normal polling frequency used for email auto-tagging in [!INCLUDE[pn_Outlook_short](../includes/pn-outlook-short.md)].|  
+|Auto-Tag Interval|Normal polling frequency used for email auto-tagging in [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)].|  
 |ISV Config|Service Calendar Appearance Configuration|You can define visual styles for service calendars.
 
-[!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Service Calendar Appearance Configuration](../developer/customize-dev/service-calendar-appearance-configuration.md)|
+[!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Service Calendar Appearance Configuration](../developer/customize-dev/service-calendar-appearance-configuration.md)|
 
   
 ### See also

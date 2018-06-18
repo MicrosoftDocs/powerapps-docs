@@ -22,7 +22,7 @@ manager: "kvivek"
 
 # Use the default solution to customize  
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
  When you customize a model-driven app, you may work with the default solution. To open the default solution, open solution explorer.  
   
@@ -32,14 +32,14 @@ manager: "kvivek"
  Every environment has a default solution and it has some unique properties. The default solution contains all the solution components available in your environment. Other solutions may include a subset of the solution components visible in the default solution, but the default solution contains all of them.  
   
 > [!TIP]
->  Before you start creating new customizations, remember to change the solution publisher customization prefix. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Solution publisher prefix](change-solution-publisher-prefix.md).  
+>  Before you start creating new customizations, remember to change the solution publisher customization prefix. [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Solution publisher prefix](change-solution-publisher-prefix.md).  
   
 <a name="BKMK_PrivacyNotice"></a>   
 
 ## Privacy notices  
- [!INCLUDE[cc_privacy_crm_gcc_solution_import](../includes/cc-privacy-crm-gcc-solution-import.md)]  
+ [!INCLUDE[cc_privacy_crm_gcc_solution_import](../../includes/cc-privacy-crm-gcc-solution-import.md)]  
   
- [!INCLUDE[cc_privacy_crm_customizations](../includes/cc-privacy-crm-customizations.md)]  
+ [!INCLUDE[cc_privacy_crm_customizations](../../includes/cc-privacy-crm-customizations.md)]  
   
 ### See Also  
  [Customization overview](../customize/overview.md)<br/>

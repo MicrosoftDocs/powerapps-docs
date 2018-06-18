@@ -26,7 +26,7 @@ The [PowerApps portal](https://web.powerapps.com) enables configuring the most c
 
 Part of the name of any global option set you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this global option set. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 ## View global option sets
 
@@ -57,7 +57,7 @@ Type a **Description** for the global option set.
 
 ### Configure options
 
-[!INCLUDE [cc_configure-option-set-options-solution-explorer](../../includes/cc_configure-option-set-options-solution-explorer.md)]
+[!INCLUDE [cc_configure-option-set-options-solution-explorer](../../../includes/cc_configure-option-set-options-solution-explorer.md)]
 
 ## Edit a global option set
 
@@ -65,7 +65,7 @@ While viewing global option sets, select the option set you want to edit to open
 
 Except for changing the **Name** field value or the number **Value** assigned to an option, you can make any of the changes you can when creating the global option set.
 
-[!INCLUDE [cc_remove-option-warning](../../includes/cc_remove-option-warning.md)]
+[!INCLUDE [cc_remove-option-warning](../../../includes/cc_remove-option-warning.md)]
 
 ## Delete a global option set
 
