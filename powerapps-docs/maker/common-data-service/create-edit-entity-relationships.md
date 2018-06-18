@@ -51,7 +51,7 @@ When you look at the solution explorer you might think that there are three type
   
 The **N:1 (many-to-one)** relationship type exists in the user interface because the designer shows you a view grouped by entities. 1:N relationships actually exist *between* entities and refer to each entity as either a **Primary Entity** or **Related Entity**. The related entity, sometimes called the *child* entity, has a lookup field that allows storing a reference to a record from the primary entity, sometimes called the *parent* entity. A N:1 relationship is just a 1:N relationship viewed from the related entity.  
  
-### See also
+## See also
 
 [Entities and metadata overview](create-edit-metadata.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
