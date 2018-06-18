@@ -44,7 +44,7 @@ Whether your data is stored in spreadsheets, databases, or other systems, you’
   
     > [!TIP]
     
-    > If you need to import a larger amount of data, check out the developer documentation, [Import data](../developer/import-data.md) for additional details.  
+    > If you need to import a larger amount of data, check out the developer documentation, [Import data](https://docs.microsoft.com/dynamics365/customer-engagement/developer/import-data for additional details.  
     > 
     >  You can add multiple import files to a single .zip file, and then import the .zip file to bring in all the files at once. For example, if several salespeople enter leads from a tradeshow into different spreadsheets, you can gather them into one .zip file for import.  
     >   

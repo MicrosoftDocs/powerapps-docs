@@ -278,8 +278,6 @@ For more advanced scenarios, consider the following development tools: [Solution
   
 -   [Create a business process flow to standardize processes](../maker/model-driven-apps/create-business-process-flow.md)
   
--   [Create a mobile task flow](../maker/model-driven-apps/create-mobile-task-flow.md)
-  
 -   [Use Workflow processes to automate processes that don't require user interaction](../maker/common-data-service/workflow-processes.md)
   
 -   [Actions overview](../maker/common-data-service/actions.md)
