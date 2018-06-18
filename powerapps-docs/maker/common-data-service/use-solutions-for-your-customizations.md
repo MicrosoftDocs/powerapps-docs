@@ -40,7 +40,7 @@ manager: "kvivek"
  [!INCLUDE[cc_privacy_crm_customizations](../../includes/cc-privacy-crm-customizations.md)]  
   
 ## See Also  
- [Customization overview](../customize/overview.md)<br/>
- [Getting started with customization](Getting-started-customization.md)  
+ [Customization overview](overview.md)<br/>
+ [Getting started with customization](../model-driven-apps/getting-started-customization.md)  
  <br/>
  [Whitepaper: Patterns and Principles for Solution Builders](http://go.microsoft.com/fwlink/p/?LinkID=533946)
