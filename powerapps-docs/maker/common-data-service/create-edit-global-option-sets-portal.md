@@ -76,7 +76,7 @@ While viewing global option sets, select the option set you want to edit to open
 
 Except for changing the **Name** field value or the number value assigned to an option, you can make any of the changes you can when creating the global option set.
 
-[!INCLUDE [cc_remove-option-warning](../../../includes/cc_remove-option-warning.md)]
+[!INCLUDE [cc_remove-option-warning](../../includes/cc_remove-option-warning.md)]
 
 ## Delete a global option set
 

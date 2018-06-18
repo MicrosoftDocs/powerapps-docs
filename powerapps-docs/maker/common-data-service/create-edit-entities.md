@@ -57,11 +57,11 @@ Information in this topic will help you choose which designer you can use. You c
 
 - Change any of the following properties that can only be enabled:
 
-  [!INCLUDE [cc_entity-set-once-options-table](../../../includes/cc_entity-set-once-options-table.md)]
+  [!INCLUDE [cc_entity-set-once-options-table](../../includes/cc_entity-set-once-options-table.md)]
 
 - Change any of the following properties:
 
-  <!-- Based on ../../../includes/cc_entity-changeable-options-table.md 
+  <!-- Based on ../../includes/cc_entity-changeable-options-table.md 
 Removed these:
 
   /|**Description**/|Provide a meaningful description of the purpose of the entity./|

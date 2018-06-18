@@ -24,7 +24,7 @@ You can easily create an entity using the PowerApps portal for most common situa
 
 Part of the name of any entity you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this entity. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 ## View entities
 
@@ -88,7 +88,7 @@ The following options can be set once and cannot be changed after you set them. 
 Same data is presented in edit-entities.md
 Both should point to this include
  -->
-[!INCLUDE [cc_entity-set-once-options-table](../../../includes/cc_entity-set-once-options-table.md)]
+[!INCLUDE [cc_entity-set-once-options-table](../../includes/cc_entity-set-once-options-table.md)]
 
 #### Options that you can change
 
@@ -98,7 +98,7 @@ The following properties can be changed at any time.
 Same data is presented in edit-entities.md
 Both should point to this include
  -->
-[!INCLUDE [cc_entity-changeable-options-table](../../../includes/cc_entity-changeable-options-table.md)]
+[!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)]
 
 You can also make the following changes:
 - [Create and edit fields for Common Data Service for Apps](create-edit-fields.md)

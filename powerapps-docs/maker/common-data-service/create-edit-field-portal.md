@@ -193,7 +193,7 @@ If you want to create a local option set you must click **View more** and choose
 > [!NOTE]
 > If you define every option set as a global option set your list of global option sets will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local option set.
 
-[!INCLUDE [cc_remove-option-warning](../../../includes/cc_remove-option-warning.md)]
+[!INCLUDE [cc_remove-option-warning](../../includes/cc_remove-option-warning.md)]
 
 ## Delete a field
 

@@ -29,7 +29,7 @@ Managed properties only apply when you include metadata with a managed solution 
 
 Setting managed properties must be done using solution explorer.
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 ## Entity managed properties
 

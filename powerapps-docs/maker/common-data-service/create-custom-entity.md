@@ -12,7 +12,7 @@ ms.author: matp
 
 # Tutorial: Create a custom entity that has components in PowerApps
 
-With [!INCLUDE [powerapps](../../../includes/powerapps.md)] you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. [!INCLUDE [powerapps](../../../includes/powerapps.md)] app development includes adding standard "out-of-box entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
+With [!INCLUDE [powerapps](../../includes/powerapps.md)] you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. [!INCLUDE [powerapps](../../includes/powerapps.md)] app development includes adding standard "out-of-box entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
 
 In this tutorial you create an entity and then add or customize key components such as fields, relationships, views, and forms. You learn how to:
 
@@ -26,7 +26,7 @@ The tutorial will follow the company, Contoso, which is a pet grooming business 
 
 ## Prerequisites
 
-Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already have a [!INCLUDE [powerapps](../../../includes/powerapps.md)] account, select the **Get started free** link from [powerapps.com](https://web.powerapps.com).
+Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link from [powerapps.com](https://web.powerapps.com).
 
 ## Create a custom entity
 
@@ -106,7 +106,7 @@ Notice that when you add a many-to-one relationship, an **Account** field with t
 
 Skip this step if you only want to use the Pet entity in a canvas app. 
 
-1. On the [!INCLUDE [powerapps](../../../includes/powerapps.md)] left navigation pane, select **Model-driven**.
+1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] left navigation pane, select **Model-driven**.
 2. On the left navigation pane, expand **Data**, select **Entities**, and then select **Pet**.
 3. Select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form editor.
     ![Edit main form](media/create-custom-entity/main-form-edit.png)
