@@ -2,7 +2,7 @@
 title: "Add form navigation for related entities in PowerApps | MicrosoftDocs"
 descriptoin: Learn how to add form navigation for related entities
 ms.custom: ""
-ms.date: 03/30/2018
+ms.date: 06/18/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -18,18 +18,17 @@ caps.latest.revision: 15
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Add form navigation for related entities
+# Quickstart: Add form navigation for related entities
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+In this quickstart, you use the form navigation pane that is used to add links to related entities. When an app user clicks one of these links in a record, the associated view for the entity is displayed.   
+  
+1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
 
-In the form Navigation Pane, you can add links to related entities. When a user clicks one of these links in a record, the associated view for the entity is displayed.  
+    ![Model-driven design mode](../model-driven-apps/media/model-driven-switch.png)
+
+2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
   
-  
-1.  Open solution explorer.  
-  
-2.  Under **Components**, expand **Entities**, expand the entity you want to work with, and then choose **Forms**.  
-  
-3.  In the list, locate an entry with the form type of Main, and then double-click or tap to edit it.  
+3.  In the list, open a form with the type of **Main** to edit it.  
   
 4.  To add a link to a related entity, on **Home** tab, in the **Select** group, choose **Navigation**.  
   
@@ -49,7 +48,7 @@ In the form Navigation Pane, you can add links to related entities. When a user 
 6.  Select the related entity you want to link to, drag it to the Navigation Pane, and then drop it where you want it to be displayed.  
   
     > [!TIP]
-    >  You can also create a new relationship by choosing **New 1:N** or **New N:N** in the **Relationship Explorer** pane. For more information, see [Create and edit entity relationships for Common Data Service for Apps](../customize/create-edit-entity-relationships.md)  
+    >  You can also create a new relationship by choosing **New 1:N** or **New N:N** in the **Relationship Explorer** pane.   
   
 7. To edit the properties for this or any other related entity link, in the Navigation Pane, select the link, and then on the **Home** tab, choose **Change Properties**.  
   
@@ -74,7 +73,7 @@ In the form Navigation Pane, you can add links to related entities. When a user 
     -   To publish customizations for all unpublished components at one time, in the Navigation Pane, choose **Entities**, and then on the command bar, choose **Publish All Customizations**.  
   
 > [!NOTE]
-> [!INCLUDE[cc_solution_recommendation]../../includes/cc-solution-recommendation.md)]  
+> Installing a solution or publishing customizations can interfere with normal system operation. We recommend that you schedule a solution import when it’s least disruptive to users.
   
-### See also  
- [Create and edit entity relationships for Common Data Service for Apps](../customize/create-edit-entity-relationships.md)
+## Next steps  
+ [Create and edit entity relationships for Common Data Service for Apps](create-edit-entity-relationships.md)
