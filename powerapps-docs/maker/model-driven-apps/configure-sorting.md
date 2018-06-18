@@ -27,5 +27,5 @@ manager: "kvivek"
   
 3.  Select **OK** to close the **Configure Sort Order** dialog box.  
 
-### Next steps
-[Create or edit a view](../common-data-service/create-edit-views.md)
+## Next steps
+[Create or edit a view](create-edit-views.md)

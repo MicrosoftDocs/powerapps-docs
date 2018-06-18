@@ -36,7 +36,7 @@ Typically, views are classified into three types:
 - **Public:** As an app maker, you can create and edit public views to fit your organizational requirements. These views are available in the view selector, and you can use them in subgrids in a form or as a list in a dashboard.
 - **System:** As an app maker, you can also modify system views to meet the requirements of your organization. These are special views that the application depends on: they exist for system entities or are automatically created when you create custom entities. These views are available to some or all users, depending on their permissions.
 
-More information: [Understand views](../common-data-service/about-views.md)
+More information: [Understand views](about-views.md)
 
 ## Create a public view in PowerApps
 As an app maker, you can create and edit public views by using PowerApps.
