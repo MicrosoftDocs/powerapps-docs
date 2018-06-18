@@ -147,7 +147,7 @@ function displayIconTooltip(rowData, userLCID) {
   
  This results in displaying icons with tooltips in the **Rating** column that depend on the value in each row. The result could look like this:  
   
- ![Custom column graphics example](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  
+ ![Custom column graphics example](media/custom-column-graphics-example.png "Custom column graphics example")  
  
  ### See also
- [Create or edit views](create-edit-views.md)
+ [Create or edit views](../model-driven-apps/create-edit-views.md)
