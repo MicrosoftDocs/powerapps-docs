@@ -44,7 +44,7 @@ You can also make changes to records that support the entity:
 
 - **Business Rules**. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-- **Views**. More information:  [Create or edit a view](create-edit-views.md)
+- **Views**. More information:  [Create or edit a view](../model-driven-apps/create-edit-views.md)
   
 - **Forms**. More information:  [Create and design forms](../model-driven-apps/create-design-forms.md)
 

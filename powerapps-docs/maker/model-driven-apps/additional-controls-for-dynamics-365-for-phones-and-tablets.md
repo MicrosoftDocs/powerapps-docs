@@ -2,7 +2,7 @@
 title: "Additional controls for Dynamics 365 for phones and tablets | MicrosoftDocs"
 description: "A list of controls available for use with Dynamics 365 for phones and tablets"
 ms.custom: ""
-ms.date: 04/02/2018
+ms.date: 06/18/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -19,8 +19,6 @@ ms.author: "matp"
 manager: "kvivek"
 ---
 # Additional controls for Dynamics 365 for phones and tablets 
-
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
  You can use a rich set of additional controls to create a more touch-friendly experience on Dynamics 365 for phones and tablets. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
 
@@ -64,7 +62,7 @@ manager: "kvivek"
  The calendar control supports all date behaviors (User Local, Date Only, and Time-Zone Independent).  
   
 ## Timeline control  
- Provide a timeline of recent, relevant news articles and [!INCLUDE[tn_twitter]../../includes/tn-twitter.md)] tweets for an account.  
+ Provide a timeline of recent, relevant news articles and Twitter tweets for an account.  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -146,9 +144,9 @@ manager: "kvivek"
  Use the website preview control to map a URL field and show a preview of the website.  
   
 > [!IMPORTANT]
->  By enabling this control, you consent to allow your users to share certain identifiable device information with an external system. Data imported from external systems into [!INCLUDE[pn_crm_shortest]../../includes/pn-crm-shortest.md)] are subject to our privacy statement at [Microsoft Privacy and Cookies](http://go.microsoft.com/fwlink/p/?LinkId=521839).  
+>  By enabling this control, you consent to allow your users to share certain identifiable device information with an external system. Data imported from external systems into a PowerApps app or Dynamics 365 customer engagement are subject to our privacy statement at [Microsoft Privacy and Cookies](http://go.microsoft.com/fwlink/p/?LinkId=521839).  
 >   
->  [Privacy notices](../customize/use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
+>  [Privacy notices](use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -207,7 +205,7 @@ manager: "kvivek"
   
 -   Audio streams  
   
- [Privacy notice](../customize/use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
+ [Privacy notice](use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -252,3 +250,5 @@ manager: "kvivek"
 |Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
   
+## Next steps
+[Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)

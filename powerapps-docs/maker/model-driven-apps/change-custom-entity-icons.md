@@ -49,21 +49,21 @@ You must use solution explorer to set entity icons.
 
 1. On the command bar, select **Update Icons**.  
   
-1. In the **Select New Icons** dialog box, in the **Web Client** tab, under **Icon in Web application** or **Icon for Entity Forms**, to the right of **New Icon**, select the **Browse** button ![Lookup button](media/lookup-button-4.gif).
-2. Select or create the appropriate web resource, and then select **OK**. 
-3. In the **Unified Interface** tab, do the same for the **New Icon** field.
-4. Select **OK** to close the **Select New Icons** dialog
-5. On the command bar, on the **File** menu, select **Save**.  
-6. When your changes are complete, publish them. Select **Publish** in the command bar while the entity is selected in solution explorer.
+2. In the **Select New Icons** dialog box, in the **Web Client** tab, under **Icon in Web application** or **Icon for Entity Forms**, to the right of **New Icon**, select the **Browse** button ![Lookup button](media/lookup-button-4.gif).
+3. Select or create the appropriate web resource, and then select **OK**. 
+4. In the **Unified Interface** tab, do the same for the **New Icon** field.
+5. Select **OK** to close the **Select New Icons** dialog
+6. On the command bar, on the **File** menu, select **Save**.  
+7. When your changes are complete, publish them. Select **Publish** in the command bar while the entity is selected in solution explorer.
   
 ## Community tools
 
-**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Dynamics 365 Customer Engagement. Please see the [Developer tools for Common Data Service for Apps](../../developer/common-data-service/developer-tools.md) topic for community developed tools.
+**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** is a tool that XrmToolbox community developed for Dynamics 365 Customer Engagement. Please see the [Developer tools for Common Data Service for Apps](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
-### See also  
+## Next steps  
 [Create an entity](../common-data-service/create-edit-entities.md)<br />
 [Edit an entity](../common-data-service/edit-entities.md)

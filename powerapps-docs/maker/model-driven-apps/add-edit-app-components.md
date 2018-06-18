@@ -131,7 +131,7 @@ The app designer refers to existing metadata in the default solution. You can us
   
      The form designer opens. More information: [Create and design forms](create-design-forms.md)  
   
-     When you're adding a view or a chart, the **Create New** option opens the corresponding designer. More information: [Understand views (lists)](../common-data-service/about-views.md) and [Create or edit a system chart](create-edit-system-chart.md)  
+     When you're adding a view or a chart, the **Create New** option opens the corresponding designer. More information: [Understand views](create-edit-views.md) and [Create or edit a system chart](create-edit-system-chart.md)  
   
     > [!NOTE]
     >  When you're adding a view, you can reference only public views that are listed under the **Views** node in the solution explorer.  
@@ -185,6 +185,6 @@ The app designer refers to existing metadata in the default solution. You can us
 
 Alternatively, you can select the forms, views, charts, or dashboards tile, and then on the **Components** tab, clear the check boxes for the assets you want to remove from the designer.  
   
-### Next steps  
+## Next steps  
  [Create a site map for an app](create-site-map-app.md)   
  [Validate and publish an app](validate-app.md)

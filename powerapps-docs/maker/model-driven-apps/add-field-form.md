@@ -1,7 +1,7 @@
 ---
 title: "Add a field to a form in PowerApps | MicrosoftDocs"
 ms.custom: ""
-ms.date: 03/30/2018
+ms.date: 06/18/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -17,16 +17,19 @@ caps.latest.revision: 30
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Add a field to a form 
+# Quickstart: Add a field to a form 
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+If a PowerApps form for a standard entity doesn’t meet your organization’s business requirements, you can customize the form by changing existing fields or by adding new fields. While it might be simpler to edit the existing fields on a form, sometimes it’s better to add a field to address a specific business scenario.
 
-If a [!INCLUDE [pn-powerapps]../../includes/pn-powerapps.md)] form doesn’t meet your organization’s business requirements, you can customize the form by changing existing fields or by adding new fields. While it might be simpler to edit the existing fields on a form, sometimes it’s better to add a field to address a specific business scenario.  
+In this quickstart, you add a field on to a form.   
   
-1. Open solution explorer.
-  
-2.  Under **Components**, expand **Entities**, expand the entity you want to customize, and then click **Forms**.  
-3.  In the list, find an entry with the form type of Main, and then double-click or tap to edit it.  
+1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+
+    ![Model-driven design mode](../model-driven-apps/media/model-driven-switch.png)
+
+2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
+
+3.  In the list, open a form with the type of **Main** to edit it.  
   
 4.  In the form, click the section you want to add a field to, and then in the **Field Explorer** pane, double-click the field you want added to the form.  
   
@@ -48,6 +51,6 @@ If a [!INCLUDE [pn-powerapps]../../includes/pn-powerapps.md)] form doesn’t mee
 > [!NOTE]
 >  Publishing customizations can interfere with normal system operation. We recommend that you publish when it’s least disruptive to users.  
   
-### See Also  
+## Next steps  
  
- [Create and design forms](../customize/create-design-forms.md)
+ [Create and design forms](create-design-forms.md)

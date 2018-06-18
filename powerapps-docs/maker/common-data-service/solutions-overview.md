@@ -122,7 +122,7 @@ manager: "kvivek"
 ### How solutions are applied  
  All solutions are evaluated as layers to determine what your app will actually do. The following diagram shows how managed and unmanaged solutions are evaluated and how changes in them will appear in your organization.  
   
- ![Solution layering](../customize/media/solution-layering.png "Solution layering")  
+ ![Solution layering](media/solution-layering.png "Solution layering")  
   
  Starting from the bottom and working up to top:  
   
@@ -148,9 +148,8 @@ manager: "kvivek"
   
  The system tracks these dependencies between solutions. If you try to install a solution that requires a base solution that isn’t installed, you won’t be able to install the solution. You will get a message saying that the solution requires another solution to be installed first. Similarly, because of the dependencies, you can’t uninstall the base solution while a solution that depends on it is still installed. You have to uninstall the dependent solution before you can uninstall the base solution.  
   
-
   
-### See also  
- [Getting started with customization](../customize/getting-started-customization.md)   
- [Privileges you need for customization](../customize/privileges-required-customization.md)   
+## Next steps  
+ [Getting started with customization](../model-driven-apps/getting-started-customization.md)   
+ [Privileges you need for customization](../model-driven-apps/privileges-required-customization.md)   
  

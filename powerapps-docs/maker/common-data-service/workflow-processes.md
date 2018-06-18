@@ -106,7 +106,7 @@ Developers can create workflows using information in the [Dynamics 365 Customer 
 >  The default scope value is **User**. Make sure you verify that the scope value is appropriate before you activate the workflow.  
   
  **Start When**  
- Use the options in this section to specify when a workflow should start automatically. You can configure a real-time workflow to be run before certain events. This is a very powerful capability because the workflow can stop the action before it occurs. More information: [Using Real-time Workflows](../customize/configure-workflow-steps.md#BKMK_SynchronousWorkflows). The options are:  
+ Use the options in this section to specify when a workflow should start automatically. You can configure a real-time workflow to be run before certain events. This is a very powerful capability because the workflow can stop the action before it occurs. More information: [Using Real-time Workflows](configure-workflow-steps.md#BKMK_SynchronousWorkflows). The options are:  
   
 - **Record is created**  
   
@@ -143,5 +143,5 @@ Developers can create workflows using information in the [Dynamics 365 Customer 
  Workflows are saved when they are activated, so it is not necessary to save them before activating them.  
   
 ## Next steps  
- [Configuring workflow processes](../customize/configure-workflow-steps.md)   
+ [Configuring workflow processes](configure-workflow-steps.md)   
 

@@ -2,7 +2,7 @@
 title: "Use the default solution to customize with PowerApps | MicrosoftDocs"
 description: "Learn how to customize the default solution"
 ms.custom: ""
-ms.date: 04/24/2018
+ms.date: 06/18/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -22,8 +22,6 @@ manager: "kvivek"
 
 # Use the default solution to customize  
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
-
  When you customize a model-driven app, you may work with the default solution. To open the default solution, open solution explorer.  
   
 > [!TIP]
@@ -32,7 +30,7 @@ manager: "kvivek"
  Every environment has a default solution and it has some unique properties. The default solution contains all the solution components available in your environment. Other solutions may include a subset of the solution components visible in the default solution, but the default solution contains all of them.  
   
 > [!TIP]
->  Before you start creating new customizations, remember to change the solution publisher customization prefix. [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Solution publisher prefix](change-solution-publisher-prefix.md).  
+>  Before you start creating new customizations, remember to change the solution publisher customization prefix. More information: [Solution publisher prefix](change-solution-publisher-prefix.md).  
   
 <a name="BKMK_PrivacyNotice"></a>   
 
@@ -41,8 +39,8 @@ manager: "kvivek"
   
  [!INCLUDE[cc_privacy_crm_customizations](../../includes/cc-privacy-crm-customizations.md)]  
   
-### See Also  
- [Customization overview](../customize/overview.md)<br/>
- [Getting started with customization](Getting-started-customization.md)  
- [Privileges required for customization](Privileges-required-customization.md)<br/>
+## See Also  
+ [Customization overview](overview.md)<br/>
+ [Getting started with customization](../model-driven-apps/getting-started-customization.md)  
+ <br/>
  [Whitepaper: Patterns and Principles for Solution Builders](http://go.microsoft.com/fwlink/p/?LinkID=533946)
