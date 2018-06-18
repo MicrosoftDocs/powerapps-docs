@@ -94,7 +94,7 @@ See [Create business rules and recommendations to apply logic in a form](../mode
 
 ### Views
 
-See [Create or edit a view](create-edit-views.md)
+See [Create or edit a view](../model-driven-apps/create-edit-views.md)
 
 ### Forms
 

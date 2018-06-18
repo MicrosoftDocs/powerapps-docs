@@ -30,7 +30,7 @@ Different clients people use to interact with the data in your environment depen
 You can learn about standard entities, attributes, and entity relationships included by default in CDS for Apps by reviewing the [Entity Reference](/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 > [!TIP]
-> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the entities and metadata properties that are found in the system. More information: [Browse the metadata for your environment](../../developer/common-data-service/browse-your-metadata.md).
+> The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the **Metadata Browser** which will allow you to view all the entities and metadata properties that are found in the system. More information: [Browse the metadata for your environment](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
   
 <a name="BKMK_CreateNewOrUseExistingMetadata"></a>
 
