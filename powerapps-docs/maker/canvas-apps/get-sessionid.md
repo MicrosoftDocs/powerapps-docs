@@ -6,7 +6,7 @@ author: AFTOwen
 ms.service: powerapps
 ms.topic: conceptual
 ms.component: canvas
-ms.date: 06/15/2018
+ms.date: 06/18/2018
 ms.author: anneta
 
 ---
@@ -35,3 +35,13 @@ If you encounter a problem with an app that was created in PowerApps, you can he
 1. Tap **Session details**.
 
      ![Get a session ID from a browser](media/get-sessionid/mobile.png)
+
+## When running an embedded app or form
+1. Perform one of these steps:
+
+    - While holding down the Alt key, right-click the app or form.
+    - Tap the app or form with two fingers for 1-2 seconds, and then release.
+
+1. Select **Session details**.
+
+     ![Get a session ID from an embedded app](media/get-sessionid/embedded.png)
