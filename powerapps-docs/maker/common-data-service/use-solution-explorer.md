@@ -42,10 +42,10 @@ With managed solutions there will be no commands available and you’ll see the 
   
  For details about customizing the individual solution components found in the solution explorer, see the following topics:  
   
--   For entity, entity relationships, field and message customizations, see [Metadata](../model-driven-apps/create-edit-metadata.md).  
+-   For entity, entity relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
   
 -   For entity forms see [Forms](../model-driven-apps/create-design-forms.md).  
   
 -   For processes, see [Processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md).  
   
--   For business rules, see [Business Rules](create-business-rules-recommendations-apply-logic-form.md).  
+-   For business rules, see [Business Rules](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).  
