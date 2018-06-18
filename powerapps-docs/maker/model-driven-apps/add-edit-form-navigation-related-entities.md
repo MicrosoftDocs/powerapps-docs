@@ -20,7 +20,7 @@ manager: "kvivek"
 ---
 # Add form navigation for related entities
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
 In the form Navigation Pane, you can add links to related entities. When a user clicks one of these links in a record, the associated view for the entity is displayed.  
   
@@ -74,7 +74,7 @@ In the form Navigation Pane, you can add links to related entities. When a user 
     -   To publish customizations for all unpublished components at one time, in the Navigation Pane, choose **Entities**, and then on the command bar, choose **Publish All Customizations**.  
   
 > [!NOTE]
-> [!INCLUDE[cc_solution_recommendation](../includes/cc-solution-recommendation.md)]  
+> [!INCLUDE[cc_solution_recommendation]../../includes/cc-solution-recommendation.md)]  
   
 ### See also  
  [Create and edit entity relationships for Common Data Service for Apps](../customize/create-edit-entity-relationships.md)

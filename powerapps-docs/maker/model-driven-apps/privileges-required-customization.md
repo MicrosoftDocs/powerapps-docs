@@ -18,7 +18,7 @@ manager: "brycho"
 ---
 # Privileges required for customization
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)] 
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)] 
 
 App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
   

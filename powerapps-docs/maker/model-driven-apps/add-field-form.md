@@ -19,9 +19,9 @@ manager: "kvivek"
 ---
 # Add a field to a form 
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
-If a [!INCLUDE [pn-powerapps](../includes/pn-powerapps.md)] form doesn’t meet your organization’s business requirements, you can customize the form by changing existing fields or by adding new fields. While it might be simpler to edit the existing fields on a form, sometimes it’s better to add a field to address a specific business scenario.  
+If a [!INCLUDE [pn-powerapps]../../includes/pn-powerapps.md)] form doesn’t meet your organization’s business requirements, you can customize the form by changing existing fields or by adding new fields. While it might be simpler to edit the existing fields on a form, sometimes it’s better to add a field to address a specific business scenario.  
   
 1. Open solution explorer.
   

@@ -21,7 +21,7 @@ tags:
 ---
 # Assign form order
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
  When you have multiple main, quick create, or mobile forms for an entity, you can assign a form order. The form order determines which of the available forms will be shown by default. The available main or mobile forms can be further controlled by assigning security roles to forms. See [Control access to forms](control-access-forms.md) for more information.  
   

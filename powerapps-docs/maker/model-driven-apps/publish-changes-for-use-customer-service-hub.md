@@ -21,7 +21,7 @@ tags:
 ---
 # Publish changes 
 
- [!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+ [!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
  
  Certain customizations that make changes to the user interface require that they be published before people can use them in the application. 
  

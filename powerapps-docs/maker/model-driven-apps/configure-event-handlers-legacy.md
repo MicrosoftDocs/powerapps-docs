@@ -16,9 +16,9 @@ ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 ---
 # Configure event handlers
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
- Form event handlers for [!INCLUDE [pn-powerapps](../includes/pn-powerapps.md)] forms can be configured for the following areas in a form:  
+ Form event handlers for [!INCLUDE [pn-powerapps]../../includes/pn-powerapps.md)] forms can be configured for the following areas in a form:  
   
 |Element|Event|Description|  
 |-------------|-----------|-----------------|  
@@ -28,7 +28,7 @@ ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 |Field|`OnChange`|Occurs when data in the field changes and the control loses focus.|  
 |IFRAME|`OnReadyStateComplete`|Occurs when the content of an IFRAME loads.|  
   
- An event handler consists of a reference to a [!INCLUDE[pn_JavaScript](../includes/pn-javascript.md)] web resource and a function defined within that web resource that will execute when the event occurs. Each element can have up to 50 separate event handlers configured.  
+ An event handler consists of a reference to a [!INCLUDE[pn_JavaScript]../../includes/pn-javascript.md)] web resource and a function defined within that web resource that will execute when the event occurs. Each element can have up to 50 separate event handlers configured.  
   
 > [!IMPORTANT]
 >  Configuring an event handler incorrectly can result in script errors that may cause the form to fail to load or function correctly. If you are not the developer of the script, make sure you understand exactly what configuration options the script requires.  
@@ -50,9 +50,9 @@ ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
 5.  To add a form library to an event handler:  
     1.  In the **Form Libraries** section of the **Event List**, select **Add**.  
   
-    2.  Locate the [!INCLUDE[pn_JavaScript](../includes/pn-javascript.md)] web resource in the list of available web resources. Select it and then select **Add**.  
+    2.  Locate the [!INCLUDE[pn_JavaScript]../../includes/pn-javascript.md)] web resource in the list of available web resources. Select it and then select **Add**.  
   
-         If the [!INCLUDE[pn_JavaScript](../includes/pn-javascript.md)] web resource you need does not exist, select **New** to open a new web resource form and create one.  
+         If the [!INCLUDE[pn_JavaScript]../../includes/pn-javascript.md)] web resource you need does not exist, select **New** to open a new web resource form and create one.  
   
     3.  To create a JavaScript web resource:  
         1.  In the web resource form set the following properties:  
@@ -70,7 +70,7 @@ ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
              Alternatively, you can select the **Text Editor** button and paste or type the contents of the script in the **Edit Content** dialog.  
   
             > [!NOTE]
-            >  Because this simple text editor does not provide any features to check the correctness of the script, generally you should always try to use a separate application like [!INCLUDE[pn_Visual_Studio](../includes/pn-visual-studio.md)] to edit scripts and then upload them.  
+            >  Because this simple text editor does not provide any features to check the correctness of the script, generally you should always try to use a separate application like [!INCLUDE[pn_Visual_Studio]../../includes/pn-visual-studio.md)] to edit scripts and then upload them.  
   
         3.  Select **Save** and close the web resource dialog.  
   

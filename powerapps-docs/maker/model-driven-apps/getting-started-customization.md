@@ -20,7 +20,7 @@ manager: "kvivek"
 ---
 # Get started with app making and customization
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
 You can tailor a model-driven app to more closely fit your organization’s industry, nomenclature, and unique business processes. You can implement many customizations without writing any code.  
   
@@ -40,7 +40,7 @@ You can tailor a model-driven app to more closely fit your organization’s indu
 ## Publishing customizations  
  Certain customizations that make changes to the user interface require that they be published before people can use them in the application. Publishing provides a way for you to save your work before you have finished and then come back and finish at a later time. Publishing is only required when you change a solution component. When you create or delete a solution component, publishing occurs automatically. Before you export a solution, you’ll be prompted to publish customizations. This is because any unpublished customizations won’t be included in the solution.  
   
- When you perform customizations that will appear in [!INCLUDE[pn_moca_full](../includes/pn-moca-full.md)] you should always explicitly publish your customizations to make sure that every item is synchronized with the [!INCLUDE[pn_moca_short](../includes/pn-moca-short.md)] application.  
+ When you perform customizations that will appear in [!INCLUDE[pn_moca_full]../../includes/pn-moca-full.md)] you should always explicitly publish your customizations to make sure that every item is synchronized with the [!INCLUDE[pn_moca_short]../../includes/pn-moca-short.md)] application.  
   
 > [!NOTE]
 >  Publishing customizations can interfere with normal system operation. In a production environment we recommend that you schedule publishing customizations when it’s least disruptive to users.  
@@ -66,7 +66,7 @@ You can tailor a model-driven app to more closely fit your organization’s indu
 -   Web Resource  
   
 > [!NOTE]
->  When using [!INCLUDE[pn_crm_app_for_outlook_short](../includes/pn-crm-app-for-outlook-short.md)] it can take at least an hour for customization changes to take effect. You can make the changes appear immediately in [!INCLUDE[pn_Internet_Explorer](../includes/pn-internet-explorer.md)] by clearing the cache. To do this, go to **Tools** > **Internet Options** and under **Browsing history** select the **Delete** button. Uncheck all browsing history items except “Temporary Internet files and website files” and “Cookies and website data” and then select **Delete**.  
+>  When using [!INCLUDE[pn_crm_app_for_outlook_short]../../includes/pn-crm-app-for-outlook-short.md)] it can take at least an hour for customization changes to take effect. You can make the changes appear immediately in [!INCLUDE[pn_Internet_Explorer]../../includes/pn-internet-explorer.md)] by clearing the cache. To do this, go to **Tools** > **Internet Options** and under **Browsing history** select the **Delete** button. Uncheck all browsing history items except “Temporary Internet files and website files” and “Cookies and website data” and then select **Delete**.  
   
 ### See also  
  [Privileges required](../customize/privileges-required-customization.md)  

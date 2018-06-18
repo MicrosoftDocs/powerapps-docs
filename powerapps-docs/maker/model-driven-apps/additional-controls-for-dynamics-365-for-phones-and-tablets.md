@@ -20,7 +20,7 @@ manager: "kvivek"
 ---
 # Additional controls for Dynamics 365 for phones and tablets 
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
  You can use a rich set of additional controls to create a more touch-friendly experience on Dynamics 365 for phones and tablets. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
 
@@ -64,7 +64,7 @@ manager: "kvivek"
  The calendar control supports all date behaviors (User Local, Date Only, and Time-Zone Independent).  
   
 ## Timeline control  
- Provide a timeline of recent, relevant news articles and [!INCLUDE[tn_twitter](../includes/tn-twitter.md)] tweets for an account.  
+ Provide a timeline of recent, relevant news articles and [!INCLUDE[tn_twitter]../../includes/tn-twitter.md)] tweets for an account.  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -146,7 +146,7 @@ manager: "kvivek"
  Use the website preview control to map a URL field and show a preview of the website.  
   
 > [!IMPORTANT]
->  By enabling this control, you consent to allow your users to share certain identifiable device information with an external system. Data imported from external systems into [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] are subject to our privacy statement at [Microsoft Privacy and Cookies](http://go.microsoft.com/fwlink/p/?LinkId=521839).  
+>  By enabling this control, you consent to allow your users to share certain identifiable device information with an external system. Data imported from external systems into [!INCLUDE[pn_crm_shortest]../../includes/pn-crm-shortest.md)] are subject to our privacy statement at [Microsoft Privacy and Cookies](http://go.microsoft.com/fwlink/p/?LinkId=521839).  
 >   
 >  [Privacy notices](../customize/use-the-form-editor-legacy.md#BKMK_PrivacyNotices)  
   

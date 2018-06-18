@@ -20,7 +20,7 @@ ms.assetid: 2b91ee28-7f09-435e-9fae-5225aa698e22
 ---
 # Common field properties
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
  Fields in a form display controls people use to view or edit data in an entity record. Fields can be formatted to occupy up to four columns within a section.  
 
@@ -36,13 +36,13 @@ The following table describes properties that all fields have. Certain types of 
 ||**Display label on the form**|You can choose not to display the label at all.|  
 ||**Field Behavior**|Specify the field level behavior using the check boxes.|  
 ||**Locking**|This will prevent the field from being removed from the form accidentally. This will prevent any configuration you have applied to the field, such as event handlers, from being cleared if the field were removed. To remove this field a customizer would need to clear this setting first.|  
-||**Visibility**|Showing the field is optional and can be controlled using scripts. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Visibility options](../customize/visibility-options-legacy.md)|  
+||**Visibility**|Showing the field is optional and can be controlled using scripts. [!INCLUDE[proc_more_information]../../includes/proc-more-information.md)] [Visibility options](../customize/visibility-options-legacy.md)|  
 ||**Availability**|Choose if you want the tab to be available on the phone.|
 |**Formatting**|**Select the number of columns the control occupies**|When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has.|  
-|**Details**|**Display Name**, **Name**, and **Description**|These read-only fields are for reference. Click the **Edit** button for convenient access to the field definition if you want to edit it.<br /><br /> Each instance of a field in the form has a name property so that they can be referenced in form scripts, but this name is managed by the application. The first instance of the field is the name of the field specified when it was created. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create and edit fields](create-edit-fields.md#create-and-edit-fields)<br /><br /> For each additional time that a field is included in a form, the name appends a number starting with 1 to the end. So if the field name is ‘new_cost’, the first instance is ‘new_cost’, the second is ‘new_cost1’, and so on for each instance of the field in the form.<br /><br />**Note:** The field **Description** value provides tooltip text for the field when people place their cursor over it.|  
-|**Events**|**Form Libraries**|Specify any [!INCLUDE[pn_JavaScript](../includes/pn-javascript.md)] web resources that will be used in the field `OnChange` event handler.<br /><br />|  
-||**Event Handlers**|Configure the functions from the form libraries that should be called for the field `OnChange` event. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure Event Handlers](../customize/configure-event-handlers-legacy.md)|  
-|**Business Rules**|**Business Rules**|View and manage any business rules that reference this field. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create business rules and recommendations](create-business-rules-recommendations-apply-logic-form.md)|  
+|**Details**|**Display Name**, **Name**, and **Description**|These read-only fields are for reference. Click the **Edit** button for convenient access to the field definition if you want to edit it.<br /><br /> Each instance of a field in the form has a name property so that they can be referenced in form scripts, but this name is managed by the application. The first instance of the field is the name of the field specified when it was created. [!INCLUDE[proc_more_information]../../includes/proc-more-information.md)] [Create and edit fields](create-edit-fields.md#create-and-edit-fields)<br /><br /> For each additional time that a field is included in a form, the name appends a number starting with 1 to the end. So if the field name is ‘new_cost’, the first instance is ‘new_cost’, the second is ‘new_cost1’, and so on for each instance of the field in the form.<br /><br />**Note:** The field **Description** value provides tooltip text for the field when people place their cursor over it.|  
+|**Events**|**Form Libraries**|Specify any [!INCLUDE[pn_JavaScript]../../includes/pn-javascript.md)] web resources that will be used in the field `OnChange` event handler.<br /><br />|  
+||**Event Handlers**|Configure the functions from the form libraries that should be called for the field `OnChange` event. [!INCLUDE[proc_more_information]../../includes/proc-more-information.md)] [Configure Event Handlers](../customize/configure-event-handlers-legacy.md)|  
+|**Business Rules**|**Business Rules**|View and manage any business rules that reference this field. [!INCLUDE[proc_more_information]../../includes/proc-more-information.md)] [Create business rules and recommendations](create-business-rules-recommendations-apply-logic-form.md)|  
 |**Controls**|**Controls**|Add controls and specify their availability on Web, Phone and Tablet .|  
 
 ## See also

@@ -18,7 +18,7 @@ manager: "brycho"
 ---
 # Disable auto-save
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
+[!INCLUDE[cc-applies-to-update-9-0-0]../../includes/cc_applies_to_update_9_0_0.md)]
 
 Auto-save helps people focus on their work without having to manage saving data in the form. Most people will appreciate not having to explicitly save data each time they update a record, but some organizations may have customizations that were designed expecting an explicit save. For these organizations there are options to manage how auto-save is applied.  
   
@@ -41,7 +41,7 @@ Auto-save helps people focus on their work without having to manage saving data 
 ## Disable auto-save for the organization  
  If you determine that auto-save will cause problems with any extensions you are using, you can disable it for your organization. There is no setting to disable auto-save for individual entities or forms.  
   
-1. [!INCLUDE[proc_settings_administration](../includes/proc-settings-administration.md)]  
+1. [!INCLUDE[proc_settings_administration]../../includes/proc-settings-administration.md)]  
   
 2.  Choose **System Settings**.  
   
@@ -54,11 +54,11 @@ Auto-save helps people focus on their work without having to manage saving data 
 > [!NOTE]
 >  Auto-save will be disabled for the form, but data will still be saved whenyou  click the ![Auto save button](../customize/media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form.  
   
-1. [!INCLUDE[proc_logo_settings](../includes/proc-logo-settings.md)]  
+1. [!INCLUDE[proc_logo_settings]../../includes/proc-logo-settings.md)]  
   
- [!INCLUDE[proc_settings_appears](../includes/proc-settings-appears.md)]
+ [!INCLUDE[proc_settings_appears]../../includes/proc-settings-appears.md)]
   
-2. [!INCLUDE[proc_settings_customization](../includes/proc-settings-customization.md)]  
+2. [!INCLUDE[proc_settings_customization]../../includes/proc-settings-customization.md)]  
   
 3.  Choose **Customize the System**.  
   

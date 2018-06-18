@@ -16,13 +16,13 @@ ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
 
 # Accessibility in PowerApps app designer, site map designer, and My Apps page
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
+[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
 
-Microsoft is committed to making its products and services easier for everyone. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Microsoft accessibility](http://www.microsoft.com/enable/default.aspx)  
+Microsoft is committed to making its products and services easier for everyone. [!INCLUDE[proc_more_information]../../includes/proc-more-information.md)] [Microsoft accessibility](http://www.microsoft.com/enable/default.aspx)  
   
   
 ## Keyboard shortcuts  
- [!INCLUDE [pn-powerapps](../includes/pn-powerapps.md)] offers keyboard shortcuts to address issues faced by people with limited dexterity or motion disabilities.  
+ [!INCLUDE [pn-powerapps]../../includes/pn-powerapps.md)] offers keyboard shortcuts to address issues faced by people with limited dexterity or motion disabilities.  
   
 |My Apps page|||  
 |------------------|-|-|  
@@ -83,10 +83,10 @@ Microsoft is committed to making its products and services easier for everyone. 
   
 |Browser|Jaws|Narrator|Voice Over|  
 |-------------|----------|--------------|----------------|  
-|[!INCLUDE[pn_ie_11](../includes/pn-ie-11.md)]|Yes|Yes|No|  
-|[!INCLUDE[tn_Google_Chrome](../includes/tn-google-chrome.md)]|Yes|No|No|  
-|[!INCLUDE[tn_Firefox](../includes/tn-firefox.md)]|Yes|No|No|  
-|[!INCLUDE[tn_Safari](../includes/tn-safari.md)]|No|No|Yes|  
+|[!INCLUDE[pn_ie_11]../../includes/pn-ie-11.md)]|Yes|Yes|No|  
+|[!INCLUDE[tn_Google_Chrome]../../includes/tn-google-chrome.md)]|Yes|No|No|  
+|[!INCLUDE[tn_Firefox]../../includes/tn-firefox.md)]|Yes|No|No|  
+|[!INCLUDE[tn_Safari]../../includes/tn-safari.md)]|No|No|Yes|  
   
 ## Accessibility info for browsers  
  For accessibility information about your browser, visit the following websites:  
