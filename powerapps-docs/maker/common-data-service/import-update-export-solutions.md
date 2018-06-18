@@ -153,7 +153,7 @@ manager: "kvivek"
 |Auto-Tag Interval|Normal polling frequency used for email auto-tagging in Outlook.|  
 |ISV Config|Service Calendar Appearance Configuration|You can define visual styles for service calendars.
 
-More information:[Service Calendar Appearance Configuration](../../developer/customize-dev/service-calendar-appearance-configuration.md)|
+More information:   [Service Calendar Appearance Configuration](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)|
 
   
 ## Next steps
