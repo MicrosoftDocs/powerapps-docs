@@ -28,7 +28,7 @@ If you have customized entity or field text, such as field labels or drop-down l
 > - The file that you import must be a compressed file that contains the CrmTranslations.xml and the [Content_Types].xml file at the root.  
 > - You can’t import translated text that is over 500 characters long. If any of the items in your translation file are longer than 500 characters, the import process will fail. If the import process fails, review the line in the file that caused the failure, reduce the number of characters, and try to import again. Also note that after you import translated text, you must republish customizations.  
   
-1. Open [solution explorer](../model-driven-apps/advanced-navigation#solution-explorer.md).  
+1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer.md).  
   
 2. In the solution explorer, on the Actions toolbar, select **Import Translations**.  
 3.  In the **Import Translated Text** dialog box, specify the file that contains the translated text, and then select **Import**.  
