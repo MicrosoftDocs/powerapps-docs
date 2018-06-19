@@ -1,5 +1,5 @@
 ---
-title: "Contact Dynamics 365 Customer Engagement Technical Support | MicrosoftDocs"
+title: "Contact Technical Support | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/30/2018
 ms.reviewer: ""
@@ -18,8 +18,8 @@ manager: kvivek
 ---
 # Contact Technical Support 
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
-
+> [!NOTE]
+> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 ## New Dynamics 365 support center 
 
 Admins, use the Help + support experience to contact a Microsoft support representative for Dynamics 365 (online) to get resolution for your issue. 
