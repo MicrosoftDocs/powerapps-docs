@@ -193,10 +193,6 @@
          href: notes-control-legacy.md 
        - name: Quick view control properties
          href: quick-view-control-properties-legacy.md                                                                    
-    - name: Translate customized entity and field text
-      href: export-customized-entity-field-text-translation.md
-    - name: Import translated entity and field text into an app
-      href: import-translated-entity-field-text.md
     - name: Navigate to advanced app making areas
       href: advanced-navigation.md      
     - name: Developer How-to guides

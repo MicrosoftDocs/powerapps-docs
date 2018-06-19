@@ -87,6 +87,10 @@
     items:
     - name: Configure Cascading relationships
       href:  /powerapps/maker/common-data-service/actions
+    - name: Translate customized entity and field text
+      href: export-customized-entity-field-text-translation.md
+    - name: Import translated entity and field text into an app
+      href: import-translated-entity-field-text.md 
     - name: Developer How-to guides
       items: 
       - name: Use web services
@@ -96,7 +100,7 @@
       - name: Build Windows client applications using XRM tools
         href: /powerapps/developer/common-data-service/add-field-form
       - name: Create custom workflow activities
-        href: /powerapps/developer/common-data-service/add-field-form
+        href: /powerapps/developer/common-data-service/add-field-form   
   - name: Reference
     items:
     - name: Entity Reference
