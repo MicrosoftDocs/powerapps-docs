@@ -188,8 +188,8 @@
         href: system-settings-privacy-security.md
       # - name: Previews
       #   href: system-settings-dialog-box-previews-tab.md
-    - name: [D365] Business
-      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-general-tab
+    # - name: [D365] Business
+    #   href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-general-tab
       # items:
       # - name: Business closures - new page
       #   href: system-settings-business-closures.md
