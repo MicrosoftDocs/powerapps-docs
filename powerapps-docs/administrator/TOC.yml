@@ -141,8 +141,8 @@
       href: create-dlp-policy.md
     - name: Manage DLP policies
       href: prevent-data-loss.md
-    - name: Manage encryption keys
-      href: manage-encryption-keys-environment.md
+    # - name: Manage encryption keys
+    #   href: manage-encryption-keys-environment.md
   - name: Manage subscriptions and user accounts
     items:
     # - name: Mange subscription with the Office 365 admin center
