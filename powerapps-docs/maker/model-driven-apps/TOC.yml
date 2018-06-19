@@ -87,10 +87,40 @@
         href:  /powerapps/developer/model-driven-apps/form-properties-legacy        
   - name: Concepts
     items:
+    - name: Get started with app making
+      href: getting-started-customization.md
+    - name: Privileges required for customization
+      href: privileges-required-customization.md       
     - name: Work with forms
       items: 
+      - name: Create and design forms
+        href: create-design-forms.md
+      - name: Overview of the form editor 
+        href: form-editor-user-interface-legacy.md
+      - name: Design considerations for main forms
+        href: design-considerations-main-forms.md
+      - name: Type of forms
+        href: types-forms.md                        
       - name: Control access to forms
         href: control-access-forms.md
+      - name: Form properties
+        href: form-properties-legacy.md
+      - name: How main forms appear 
+        href: main-form-presentations.md
+      - name: Sub-grid properties overview
+        href: sub-grid-properties-legacy.md
+      - name: Tab properties overview
+        href: tab-properties-legacy.md
+      - name: Show or hide form elements
+        href: visibility-options-legacy.md
+      - name: Change navigation within a form
+        href: use-the-form-editor-legacy.md                                                
+    - name: Work with fields
+      items: 
+      - name: Common field properties
+        href: common-field-properties-legacy.md 
+      - name: Overview of special field properties
+        href: special-field-properties-legacy.md      
     - name: Apply business logic
       items: 
       - name: Business logic using Common Data Service for Apps
