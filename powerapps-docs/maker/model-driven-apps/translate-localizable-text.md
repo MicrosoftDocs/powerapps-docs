@@ -30,7 +30,7 @@ The process has the following steps:
 
 ## Enable other languages for your environment
 
-If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](../../administrator/enable-languages.md#enable-the-language) to enable them.
+If you haven't already enabled the languages for your environment, use the steps described in [Enable the language](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) to enable them.
 
 > [!IMPORTANT]
 > Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
@@ -124,6 +124,6 @@ After the translated text is imported, you should publish all customizations to 
 
 
 ## Next steps
-[Regional and language options for your organization](../../administrator/enable-languages.md)<br />
+[Regional and language options for your organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages)<br />
 [Edit system entity messages](../common-data-service/edit-system-entity-messages.md)
 

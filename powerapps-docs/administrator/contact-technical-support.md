@@ -61,5 +61,3 @@ Your request will appear in the list of support requests.
 
 You can check the status and edit your request on this page.
   
-### See also
- [Help and additional resources](help-additional-resources.md)
