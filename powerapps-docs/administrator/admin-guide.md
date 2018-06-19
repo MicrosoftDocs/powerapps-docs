@@ -18,13 +18,7 @@ manager: "kvivek"
 ---
 # Administrator PowerApps
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]<br/>[!INCLUDE[cc-applies-to-update-8-2-0](../includes/cc_applies_to_update_8_2_0.md)]
-
-<!-- 
-[!INCLUDE[cc-see-nonv-subscription-guide](../includes/cc-see-nonv-subscription-guide.md)] 
--->
-
-Implementers and administrators for [!INCLUDE[pn_microsoftcrm](../includes/pn-dynamics-crm.md)] will find the resources and topics provided in this guide to help you manage and configure [!INCLUDE[pn_microsoftcrm](../includes/pn-dynamics-crm.md)] Customer Engagement applications and services.
+Implementers and administrators for PowerApps will find the resources and topics provided in this guide to help you manage PowerApps environments and process.
 
 > [!NOTE]
 > We are transitioning documentation from the [Administrator Guide for Dynamics 365 Customer Engagement](https://docs.microsoft.com/dynamics365/customer-engagement/admin/admin-guide) to this site. We appreciate your patience during this move.

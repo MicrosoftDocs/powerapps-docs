@@ -7,8 +7,8 @@
       href: intro-new-admin-center.md
     - name: What's the role of a PowerApps administrator?
       href: overview-role-powerapps-admin.md
-    - name: Terminology used in the product and documentation
-      href: online-terminology.md
+    # - name: Terminology used in the product and documentation
+    #   href: online-terminology.md
     # - name: What is Office 365 and how does it relate?
     #   href: what-office-365-how-does-relate.md
     # - name: Plan for deployment
@@ -37,9 +37,9 @@
     #   href: help-additional-resources.md
     - name: Contact technical support
       href: contact-technical-support.md
-    - name: "[CE] Contact billing support"
+    - name: "[D365] Contact billing support"
       href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/contact-information-microsoft-dynamics-365-online-billing-support
-    - name: "[CE] Billing FAQ"
+    - name: "[D365] Billing FAQ"
       href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/billing-faqs-dynamics-365-online
   - name: Licensing
     items:
@@ -53,8 +53,8 @@
       href: signup-for-powerapps-admin.md
     # - name: Purchase and assign licenses
     #   href: purchase-assign-online-licenses.md
-    - name: Administer without a license
-      href: global-service-administrators-can-administer-without-license.md
+    # - name: Administer without a license
+    #   href: global-service-administrators-can-administer-without-license.md
     # - name: Volume licensing FAQ
     #   href: volume-licensing-faq-dynamics-365-online-customer-engagement.md
   - name: Manage PowerApps
@@ -188,20 +188,22 @@
         href: system-settings-privacy-security.md
       # - name: Previews
       #   href: system-settings-dialog-box-previews-tab.md
-    - name: Business
-      items:
-      - name: Business closures - new page
-        href: system-settings-business-closures.md
+    - name: [D365] Business
+      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-general-tab
+      # items:
+      # - name: Business closures - new page
+      #   href: system-settings-business-closures.md
       # - name: Calendar
       #   href: system-settings-dialog-box-calendar-tab.md
       # - name: Currencies
       #   href: customize-regional-options-admins.md
       # - name: Regional formatting
       #   href: customize-regional-options-admins.md
-    - name: Users + permissions
-      items:
-      - name: Users
-        href: create-users-assign-online-security-roles.md
+    - name: [D365] Users + permissions
+      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-security-users-and-teams
+      # items:
+      # - name: Users
+      #   href: create-users-assign-online-security-roles.md
       # - name: Security roles
       #   href: security-roles-privileges.md
       # - name: Hierachy security
@@ -223,13 +225,14 @@
       # - name: Server profiles
       #   href: set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks.md
       # - name: Dynamics 365 for Outlook
-    - name: Services
-      items:
-      - name: Office integration
-        href: add-office-365-online-services.md
-        items:
-        - name: Connect Dynamics 365 (online) to Exchange Online
-          href: connect-exchange-online.md
+    - name: [D365] Services
+      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/add-office-365-online-services
+      # items:
+      # - name: Office integration
+      #   href: add-office-365-online-services.md
+      #   items:
+      #   - name: Connect Dynamics 365 (online) to Exchange Online
+      #     href: connect-exchange-online.md
       #   - name: Set up Dynamics 365 (online) to use SharePoint Online
       #     href: set-up-dynamics-365-online-to-use-sharepoint-online.md
       #   - name: Skype for Business and Skype integration
@@ -256,8 +259,9 @@
       #   href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/sales-enterprise/embedded-intelligence
       # - name: Yammer integration
       #   href: connect-yammer.md
-    - name: Data management
-      items:
+    - name: [D365] Data management
+      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-your-data
+      # items:
       # - name: Data Import
       #   items:
       #   - name: Import accounts, leads, and other data
@@ -282,5 +286,5 @@
       #   href: data-encryption.md
       # - name: Similar record suggestions
       #   href: enable-document-suggestions.md
-      - name: Templates
-        href: download-template-data-import.md
+      # - name: Templates
+      #   href: download-template-data-import.md

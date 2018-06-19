@@ -1,7 +1,7 @@
 ---
 title: "Contact Dynamics 365 Customer Engagement Technical Support | MicrosoftDocs"
 ms.custom: ""
-ms.date: 07/15/2018
+ms.date: 06/30/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
