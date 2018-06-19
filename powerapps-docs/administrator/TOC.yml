@@ -188,8 +188,8 @@
         href: system-settings-privacy-security.md
       # - name: Previews
       #   href: system-settings-dialog-box-previews-tab.md
-    # - name: [D365] Business
-    #   href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-general-tab
+    - name: "[D365] Business"
+      href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-general-tab
       # items:
       # - name: Business closures - new page
       #   href: system-settings-business-closures.md
@@ -199,7 +199,7 @@
       #   href: customize-regional-options-admins.md
       # - name: Regional formatting
       #   href: customize-regional-options-admins.md
-    - name: [D365] Users + permissions
+    - name: "[D365] Users + permissions"
       href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-security-users-and-teams
       # items:
       # - name: Users
@@ -225,7 +225,7 @@
       # - name: Server profiles
       #   href: set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks.md
       # - name: Dynamics 365 for Outlook
-    - name: [D365] Services
+    - name: "[D365] Services"
       href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/add-office-365-online-services
       # items:
       # - name: Office integration
@@ -259,7 +259,7 @@
       #   href: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/sales-enterprise/embedded-intelligence
       # - name: Yammer integration
       #   href: connect-yammer.md
-    - name: [D365] Data management
+    - name: "[D365] Data management"
       href: https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-your-data
       # items:
       # - name: Data Import
