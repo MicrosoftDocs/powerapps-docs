@@ -11,11 +11,11 @@
     items:
     - name: Build your first model-driven app
       href: build-first-model-driven-app.md
-    - name: Create or edit a main form for an entity
+    - name: Create or edit a main form
       href: create-edit-main-forms.md
-    - name: Create or edit quick create forms for a streamlined data entry experience
+    - name: Create or edit quick create forms
       href: create-edit-quick-create-forms.md
-    - name: Create a quick view form to view information about a related entity
+    - name: Create a quick view form
       href: create-edit-quick-view-forms.md
     - name: Add form navigation for related entities
       href: add-edit-form-navigation-related-entities.md
@@ -23,7 +23,7 @@
       href: add-field-form.md
     - name: Create or edit a view
       href: create-and-edit-views.md
-    - name: Access a view definition in PowerApps
+    - name: Access a view definition
       href: accessing-view-definitions.md
     - name: Create a system chart
       href: create-edit-system-chart.md 
@@ -35,6 +35,16 @@
         href:  /powerapps/developer/model-driven-apps/form-properties-legacy       
   - name: Tutorials
     items:
+    - name: Work with views
+      items: 
+      - name: Create and edit views with app designer
+        href: create-edit-views-app-designer.md
+      - name: Choose and configure columns in views
+        href: choose-and-configure-columns.md
+    - name: Work with business logic
+      items:
+      - name: Create a business process flow
+        href: create-business-process-flow.md             
     - name: Share a model-driven app with PowerApps
       href: share-model-driven-app.md
     - name: Create a business process flow with branching
