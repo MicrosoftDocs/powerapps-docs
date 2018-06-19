@@ -143,51 +143,62 @@
         href:  /powerapps/developer/model-driven-apps/form-properties-legacy
   - name: How-to guides
     items:
-    - name: Manage entity forms
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
-    - name: Control Access to forms
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
-    - name: Create or edit main forms
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
-    - name: Create or edit quick create forms
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
-    - name: Create or edit quick view forms
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
-    - name: Add form navigation for related entities
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
-    - name: Add custom controls
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
-    - name: Use the form editor
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app 
-      items:
+    - name: Change custom entity icons
+      href: change-custom-entity-icons.md
+    - name: Work with forms
+      items:  
+      - name: Use the main form and its components
+        href: use-main-form-and-components.md   
       - name: Open the form editor
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Overview of form editor UI
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Show or hide form elements
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Change navigation within a form
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Add a field to a form
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Form properties
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Tab properties
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Section properties
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app                                                           
-      - name: Common field properties
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Special field properties
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Sub-grid properties
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-      - name: Quick-view control properties
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+        href: open-form-editor.md   
       - name: iFrame properties
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app   
-    - name: Configure web resources and IFrame controls for use with mobile clients
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app   
+        href: iframe-properties-legacy.md   
+      - name: Optimize form performance
+        href: optimize-form-performance.md   
+      - name: Section properties
+        href: section-properties-legacy.md                                                           
+      - name: Configure Bing maps
+        href: configure-bing-maps-legacy.md   
+      - name: Assign form order
+        href: assign-form-order.md   
+      - name: Configure event handlers
+        href: configure-event-handlers-legacy.md   
+      - name: Disable auto-save
+        href: manage-auto-save.md   
+    - name: Work with views
+      items: 
+       - name: Make grids editable
+         href: make-grids-lists-editable-custom-control.md     
+       - name: Sort records in a view
+         href: configure-sorting.md 
+       - name: Edit filter criteria and sort order
+         href: edit-filter-criteria.md 
+       - name: Managed properties for views
+         href: managed-properties-views.md 
+       - name: Specify a default view
+         href: specify-default-views.md 
+       - name: Delete or deactivate a view
+         href: remove-views.md  
+    - name: Work with apps
+      items: 
+       - name: Manage app properties
+         href: manage-app-properties.md  
+       - name: Specify properties for Unified Interface apps
+         href: specify-properties-for-unified-interface-apps.md 
+       - name: Validate and publish an app
+         href: validate-app.md                          
+    - name: Use controls
+      items:  
+       - name: Set up the Notes control
+         href: notes-control-legacy.md 
+       - name: Quick view control properties
+         href: quick-view-control-properties-legacy.md                                                                    
+    - name: Translate customized entity and field text
+      href: export-customized-entity-field-text-translation.md
+    - name: Import translated entity and field text into an app
+      href: import-translated-entity-field-text.md
+    - name: Navigate to advanced app making areas
+      href: advanced-navigation.md      
     - name: Developer How-to guides
       items: 
       - name: Client scripting
