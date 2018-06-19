@@ -22,7 +22,7 @@ If you want one or more controls in the gallery to perform different actions fro
 
 **Select** queues the target **OnSelect** for later processing, which may happen after the current formula has finished being evaluated. **Select** doesn't cause the target **OnSelect** to evaluate immediately, nor does **Select** wait for **OnSelect** to finish being evaluated.
 
-If you use **Select** with a control in a container control, such as a gallery or a form, the argument for that function must be another control within the same container control or the container control itself. You can't use **Select** across screens.
+**Select** can't cross the boundaries of container controls, such as a gallery or a form. Controls within a container control can only be the subject of a **Select** function in formulas that are inside the same container control. You can't use **Select** across screens.
 
 You can use **Select** only with controls that have an **OnSelect** property.
 
