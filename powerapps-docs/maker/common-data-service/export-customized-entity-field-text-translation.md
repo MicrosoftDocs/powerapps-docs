@@ -22,7 +22,7 @@ manager: "kvivek"
 
 After you create customized entity and field text, you may want to translate it into other languages.  
   
-1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer.md).    
+1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).    
   
 2. In the solution explorer, on the Actions toolbar, select **Export Translations**.  
 3.  After completing the export, open or save the compressed (.zip) file that contains the exported labels to your local computer or network.  
