@@ -11,18 +11,24 @@
     items:
     - name: Build your first model-driven app
       href: build-first-model-driven-app.md
-    - name: Create an entity form
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
-    - name: Create a view
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
-    - name: Create a business process flow
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
-    - name: Create a chart
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
-    - name: Create a dashboard
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
-    - name: Create a form business rule
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    - name: Create or edit a main form for an entity
+      href: create-edit-main-forms.md
+    - name: Create or edit quick create forms for a streamlined data entry experience
+      href: create-edit-quick-create-forms.md
+    - name: Create a quick view form to view information about a related entity
+      href: create-edit-quick-view-forms.md
+    - name: Add form navigation for related entities
+      href: add-edit-form-navigation-related-entities.md
+    - name: Add a field to a form
+      href: add-field-form.md
+    - name: Create or edit a view
+      href: create-and-edit-views.md
+    - name: Access a view definition in PowerApps
+      href: accessing-view-definitions.md
+    - name: Create a system chart
+      href: create-edit-system-chart.md 
+    - name: Create or edit dashboards
+      href: create-edit-dashboards.md                  
     - name: Developer Quickstarts
       items: 
       - name: If any...
