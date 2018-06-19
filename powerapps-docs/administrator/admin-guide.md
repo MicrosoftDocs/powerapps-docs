@@ -1,5 +1,5 @@
 ---
-title: "Administrator PowerApps | MicrosoftDocs"
+title: "Administer PowerApps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/30/2018
 ms.reviewer: ""
@@ -16,7 +16,7 @@ author: "jimholtz"
 ms.author: "jimholtz"
 manager: "kvivek"
 ---
-# Administrator PowerApps
+# Administer PowerApps
 
 Implementers and administrators for PowerApps will find the resources and topics provided in this guide to help you manage PowerApps environments and process.
 
