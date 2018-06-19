@@ -41,14 +41,30 @@
         href: create-edit-views-app-designer.md
       - name: Choose and configure columns in views
         href: choose-and-configure-columns.md
-    - name: Work with business logic
+    - name: Apply business logic
       items:
       - name: Create a business process flow
-        href: create-business-process-flow.md             
+        href: create-business-process-flow.md           
+      - name: Enhance business process flows with branching
+        href: enhance-business-process-flows-branching.md  
+      - name: Create business rules and recommendations
+        href: create-business-rules-recommendations-apply-logic-form.md          
+    - name: Work with apps
+      items: 
+      - name: Add or edit app components in app designer
+        href: add-edit-app-components.md
+      - name: Export, import, or remove an app
+        href: export-import-remove-app.md
+      - name: Create a model-driven app
+        href: create-edit-app.md
+      - name: Create a site map for an app
+        href: create-site-map-app.md                              
+    - name: Create or edit web resources
+      href: create-edit-web-resources.md
+    - name: Use custom controls for data visualizations
+      href: use-custom-controls-data-visualizations.md
     - name: Share a model-driven app with PowerApps
-      href: share-model-driven-app.md
-    - name: Create a business process flow with branching
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+      href: share-model-driven-app.md            
     - name: Developer Tutorials
       items: 
       - name: Add a command
@@ -71,6 +87,10 @@
         href:  /powerapps/developer/model-driven-apps/form-properties-legacy        
   - name: Concepts
     items:
+    - name: Work with forms
+      items: 
+      - name: Control access to forms
+        href: control-access-forms.md
     - name: Apply business logic
       items: 
       - name: Business logic using Common Data Service for Apps
