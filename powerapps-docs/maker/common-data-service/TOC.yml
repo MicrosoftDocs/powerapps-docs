@@ -69,6 +69,10 @@
     items:
     - name: Configure Cascading relationships
       href:  /powerapps/maker/common-data-service/actions
+    - name: Translate customized entity and field text
+      href: export-customized-entity-field-text-translation.md
+    - name: Import translated entity and field text into an app
+      href: import-translated-entity-field-text.md 
     - name: Developer How-to guides
       items: 
       - name: PH Organization service one
