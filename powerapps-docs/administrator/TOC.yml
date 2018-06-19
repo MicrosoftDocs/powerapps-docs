@@ -65,8 +65,8 @@
       href: admin-manage-apps.md
     - name: Move an app between tenants or environments
       href: environment-and-tenant-migration.md
-    - name: Sign in to apps
-      href: sign-in-office-365-apps.md
+    # - name: Sign in to apps
+    #   href: sign-in-office-365-apps.md
     # - name: Move between apps
     #   href: quickly-navigate-office-365-app-launcher.md
     - name: PowerShell support for PowerApps (preview)
@@ -144,7 +144,6 @@
     - name: Manage encryption keys
       href: manage-encryption-keys-environment.md
   - name: Manage subscriptions and user accounts
-    href: manage-subscriptions-licenses-user-accounts.md
     items:
     # - name: Mange subscription with the Office 365 admin center
     #   href: use-office-365-admin-center-manage-subscription.md
