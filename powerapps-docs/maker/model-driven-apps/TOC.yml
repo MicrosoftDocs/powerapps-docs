@@ -123,16 +123,18 @@
         href: special-field-properties-legacy.md      
     - name: Apply business logic
       items: 
-      - name: Business logic using Common Data Service for Apps
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app
-      - name: Business process flow
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app
-      - name: Form Business Rule
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app 
-      - name: Form scripts
-        href: /powerapps/maker/model-driven-apps/export-import-remove-app 
-    - name: Multiple language support
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+      - name: Create custom business logic
+        href: guide-staff-through-common-tasks-processes.md
+      - name: Business process flows overview
+        href: business-process-flows-overview.md
+    - name: Design custom business apps
+      href: design-custom-business-apps-using-app-designer.md
+    - name: Timer control overview
+      href: timer-control-legacy.md
+    - name: Web resource properties
+      href: web-resource-properties-legacy.md
+    - name: Set properties for a chart or list
+      href: set-properties-chart-list-included-dashboard.md                  
     - name: Developer Concepts
       items: 
       - name: Supported customizations
