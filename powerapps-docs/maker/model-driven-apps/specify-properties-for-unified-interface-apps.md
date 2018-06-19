@@ -88,4 +88,4 @@ Adding the Read Only Grid control to your controls list allows you to  configure
 You can display a custom icon instead of a value in a list and establish the logic used to select them based on a column’s values by using JavaScript. For more information about conditional images, see [Display custom icons instead of values in list views](../common-data-service/display-custom-icons-instead.md).
 
 ## Next steps
-[Create or edit a view](../common-data-service/create-edit-views.md)
+[Create or edit a view](create-edit-views.md)

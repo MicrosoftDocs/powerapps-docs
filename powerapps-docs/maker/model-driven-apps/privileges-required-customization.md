@@ -1,7 +1,7 @@
 ---
 title: "Privileges required for customizing | MicrosoftDocs"
 ms.custom: ""
-ms.date: 03/21/2018
+ms.date: 06/18/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -14,16 +14,15 @@ applies_to:
 ms.assetid: 43cf7f3a-7e26-4990-8b5a-c817ac6d51bb
 caps.latest.revision: 13
 ms.author: "matp"
-manager: "brycho"
+manager: "kvivek"
+author: "Mattp123"
 ---
 # Privileges required for customization
-
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0]../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)] 
 
 App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
   
 > [!NOTE]
->  This section assumes you know how to work with security roles. For more information about working with security roles, see [Create users and assign security roles](../admin/create-users-assign-online-security-roles.md).  
+>  This section assumes you know how to work with security roles. For more information about working with security roles, see [Create users and assign security roles](../../administrator/create-users-assign-online-security-roles.md).  
   
 <a name="BKMK_SysAdminAndSysCustomizer"></a>   
 ## System Administrator and System Customizer security roles  
@@ -49,7 +48,6 @@ App users can personalize the system and even share some of their customizations
 > [!IMPORTANT]
 >  Don’t attempt to remove your System Administrator security role if you have only one user account. The system will warn you if you try, but if you proceed you could find that you won’t be able to get it back. Most security roles don’t allow editing of a user’s security roles.  
   
-### See also  
- [Customization overview](../customize/overview.md)<br/> 
- [Getting started with customization](../customize/getting-started-customization.md)<br/>
- [Solutions overview](../customize/solutions-overview.md)
+## Next steps  
+ [Getting started with customization](getting-started-customization.md)
+
