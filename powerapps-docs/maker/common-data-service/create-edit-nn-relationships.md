@@ -38,7 +38,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 > [!NOTE]
 > You can also create new Many-to-many (N:N) entity relationship in your environment using the following:
 > - Import a solution that contains the definition of the relationship. More information: [Import, update, and export solutions](import-update-export-solutions.md)
-> - A developer can use [Metadata services](../../developer/common-data-service/use-web-services#metadata-services) to write a program to create and update entity relationships. More information: [Developer documentation: Customize entity relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+> - A developer can use [Metadata services](../../developer/common-data-service/use-web-services.md#metadata-services) to write a program to create and update entity relationships. More information: [Developer documentation: Customize entity relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Information in this topic will help you choose which designer you can use. 
 
