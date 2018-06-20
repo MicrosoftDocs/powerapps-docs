@@ -1,5 +1,5 @@
 ---
-title: "Manage duplicate detection for create and update operations using the Web API | MicrosoftDocs"
+title: "Manage duplicate detection for create and update operations using the Web API | Microsoft Docs"
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Common Data Service for Apps Web API"
 ms.custom: ""
 ms.date: 06/15/2018

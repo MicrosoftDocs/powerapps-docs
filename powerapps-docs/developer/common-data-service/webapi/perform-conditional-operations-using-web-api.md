@@ -1,5 +1,5 @@
 ---
-title: "Perform conditional operations using the Web API (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Perform conditional operations using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
 ms.date: 06/15/2018

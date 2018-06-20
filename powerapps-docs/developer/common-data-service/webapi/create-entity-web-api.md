@@ -1,5 +1,5 @@
 ---
-title: "Create an entity using the Web API (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Create an entity using the Web API (Common Data Service for Apps) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create an entity on Common Data Service for Apps using the Web API"
 ms.custom: ""
 ms.date: 06/15/2018

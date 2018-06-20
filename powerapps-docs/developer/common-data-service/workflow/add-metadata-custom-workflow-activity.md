@@ -1,5 +1,5 @@
 ---
-title: "Add metadata to a custom workflow activity (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Add metadata to a custom workflow activity (Common Data Service for Apps) | Microsoft Docs"
 description: "Learn about adding metadata to a custom workflow activity by adding input and output parameters, and input and output attributes for the parameters."
 ms.custom: ""
 ms.date: 06/16/2018

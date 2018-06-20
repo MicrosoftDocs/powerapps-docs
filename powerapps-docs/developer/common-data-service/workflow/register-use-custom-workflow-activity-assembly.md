@@ -1,5 +1,5 @@
 ---
-title: "Register and use a custom workflow activity assembly (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Register and use a custom workflow activity assembly (Common Data Service for Apps) | Microsoft Docs"
 description: "Learn about registering and using a custom workflow activity assembly"
 ms.custom: ""
 ms.date: 06/16/2018

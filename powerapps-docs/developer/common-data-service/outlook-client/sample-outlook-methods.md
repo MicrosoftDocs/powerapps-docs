@@ -1,5 +1,5 @@
 ---
-title: "Sample: Use Dynamics 365 for Outlook methods (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Sample: Use Dynamics 365 for Outlook methods (Common Data Service for Apps)| Microsoft Docs"
 ms.custom: ""
 ms.date: 06/17/2018
 ms.reviewer: ""

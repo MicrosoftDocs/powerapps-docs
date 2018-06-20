@@ -1,5 +1,5 @@
 ---
-title: "Associate and disassociate entities using the Web API (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Associate and disassociate entities using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read how to add  reference to a collection-valued navigation property, remove a reference and change an existing reference using the Web API"
 ms.custom: ""
 ms.date: 06/15/2018

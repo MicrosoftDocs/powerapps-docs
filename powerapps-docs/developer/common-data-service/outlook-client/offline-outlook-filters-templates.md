@@ -1,5 +1,5 @@
 ---
-title: "Offline and Outlook filters and templates (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Offline and Outlook filters and templates (Common Data Service for Apps)| Microsoft Docs"
 description: "Data that should be synchronized between the Common Data Service for Apps and Dynamics 365 for Outlook is determined by Data Filters for Office Outlook"
 ms.custom: ""
 ms.date: 06/17/2018

@@ -1,5 +1,5 @@
 ---
-title: "Process classes, attributes, and types (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Process classes, attributes, and types (Common Data Service for Apps) | Microsoft Docs"
 description: "The topic provides information about the process classes and types found in Common Data Service for Apps that you can use to work with the custom activities. "
 ms.custom: ""
 ms.date: 06/16/2018

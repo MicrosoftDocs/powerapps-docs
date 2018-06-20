@@ -1,5 +1,5 @@
 ---
-title: "Sample: Create and retrieve Outlook filters (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Sample: Create and retrieve Outlook filters (Common Data Service for Apps)| Microsoft Docs"
 ms.custom: ""
 ms.date: 06/17/2018
 ms.reviewer: ""

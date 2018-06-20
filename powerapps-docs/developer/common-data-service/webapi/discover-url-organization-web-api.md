@@ -1,5 +1,5 @@
 ---
-title: "Discover the URL for your organization using the Web API (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Discover the URL for your organization using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Learn how you can use the Web API to discover at runtime the organizations, or instances that the logged-on user belongs to"
 ms.custom: ""
 ms.date: 06/15/2018

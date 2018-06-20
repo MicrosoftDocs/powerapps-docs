@@ -1,5 +1,5 @@
 ---
-title: "Use the Web API with metadata (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Use the Web API with metadata (Common Data Service for Apps) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference."
 ms.custom: ""
 ms.date: 06/15/2018

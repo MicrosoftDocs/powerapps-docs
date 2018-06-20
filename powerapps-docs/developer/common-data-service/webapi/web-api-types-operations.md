@@ -1,5 +1,5 @@
 ---
-title: "Web API types and operations (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API types and operations (Common Data Service for Apps)| Microsoft Docs"
 description: "This topic describes what is available for you to use vis-a-vis the Web API and will introduce important topics and how you can find information you need from the documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions"
 ms.custom: ""
 ms.date: 06/15/2018

@@ -1,5 +1,5 @@
 ---
-title: "Use Web API functions (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Use Web API functions (Common Data Service for Apps)| Microsoft Docs"
 description: "Functions are reusable operations that are used with a GET request to retrieve data from CDS for Apps"
 ms.custom: ""
 ms.date: 06/15/2018

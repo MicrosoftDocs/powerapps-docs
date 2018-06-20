@@ -1,5 +1,5 @@
 ---
-title: "Retrieve and execute predefined queries (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Retrieve and execute predefined queries (Common Data Service for Apps)| Microsoft Docs"
 description: "Common Data Service for Apps provides a way for administrators to create system views that are available to all users. Read how you can compose a predefined query and use FetchXML to create a query string to retrieve data"
 ms.custom: ""
 ms.date: 06/15/2018

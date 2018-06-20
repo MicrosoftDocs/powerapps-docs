@@ -1,5 +1,5 @@
 ---
-title: "Create a custom workflow activity (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Create a custom workflow activity (Common Data Service for Apps)| Microsoft Docs"
 description: "The topic describes how to create a custom workflow activity and register it for use in CDS for Apps (online) Customer Engagement."
 ms.custom: ""
 ms.date: 06/16/2018

@@ -1,5 +1,5 @@
 ---
-title: "Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application (Common Data Service for Apps)| Microsoft Docs"
 description: "Learn how to use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application"
 ms.custom: ""
 ms.date: 06/15/2018

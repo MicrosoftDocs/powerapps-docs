@@ -1,5 +1,5 @@
 ---
-title: "Impersonate another user using the Web API (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Impersonate another user using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Impersonation is used to execute business logic(code) on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Common Data Service for Apps using the Web API"
 ms.custom: ""
 ms.date: 06/15/2018

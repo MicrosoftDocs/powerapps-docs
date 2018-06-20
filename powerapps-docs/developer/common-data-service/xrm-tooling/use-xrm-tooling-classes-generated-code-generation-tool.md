@@ -1,5 +1,5 @@
 ---
-title: "Use XRM tooling with classes generated using the code-generation tool (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Use XRM tooling with classes generated using the code-generation tool (Common Data Service for Apps)| Microsoft Docs"
 description: "CrmServiceClient class can be used to set up your entity and data context classes by using the code-generation tool. The sample shows how to create a connection to CDS for Apps by using an instance of this class, and then set the value of the OrganizationServiceProxy object to the CrmServiceClient.OrganizationServiceProxy property"
 ms.custom: ""
 ms.date: 06/16/2018

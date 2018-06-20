@@ -1,5 +1,5 @@
 ---
-title: "Query Data using the Web API (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Query Data using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service for Apps data using the Common Data Service for Apps Web API and various system query options that can be applied in these queries"
 ms.custom: ""
 ms.date: 06/15/2018

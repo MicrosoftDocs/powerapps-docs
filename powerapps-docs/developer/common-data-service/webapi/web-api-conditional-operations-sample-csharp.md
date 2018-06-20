@@ -1,5 +1,5 @@
 ---
-title: "Web API Conditional Operations Sample (C#) (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Conditional Operations Sample (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "This sample demonstrates how to perform conditional operations using Common Data Service for Apps Web API and C#"
 ms.custom: ""
 ms.date: 06/15/2018

@@ -1,5 +1,5 @@
 ---
-title: "Sample: Quick start for XRM Tooling API (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Sample: Quick start for XRM Tooling API (Common Data Service for Apps)| Microsoft Docs"
 description: ""
 ms.custom: ""
 ms.date: 06/16/2018

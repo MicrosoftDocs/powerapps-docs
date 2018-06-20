@@ -1,5 +1,5 @@
 ---
-title: "Execute batch operations using the Web API (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Execute batch operations using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
 ms.date: 06/15/2018

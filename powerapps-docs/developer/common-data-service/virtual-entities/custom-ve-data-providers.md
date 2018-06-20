@@ -1,5 +1,5 @@
 ---
-title: "Custom virtual entity data providers (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Custom virtual entity data providers (Common Data Service for Apps) | Microsoft Docs"
 ms.date: 06/17/2018
 ms.service: "crm-online"
 ms.topic: "article"

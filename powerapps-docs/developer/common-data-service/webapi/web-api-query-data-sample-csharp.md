@@ -1,5 +1,5 @@
 ---
-title: "Web API Query Data Sample (C#) (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Query Data Sample (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "This sample demonstrates how to perform basic query requests using the Common Data Service for Apps Web API and C#"
 ms.custom: ""
 ms.date: 06/15/2018

@@ -1,5 +1,5 @@
 ---
-title: "Sample: Simplified connection quick start (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Sample: Simplified connection quick start (Common Data Service for Apps) | Microsoft Docs"
 description: "This sample shows you how to connect to the Common Data Service for Apps web services using the CrmServiceClient and perform basic create, update, retrieve, and delete operations on an entity. "
 ms.custom: ""
 ms.date: 06/16/2018

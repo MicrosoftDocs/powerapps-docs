@@ -1,5 +1,5 @@
 ---
-title: "Use the IOrganization web service in a custom workflow activity (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Use the IOrganization web service in a custom workflow activity (Common Data Service for Apps) | Microsoft Docs"
 description: "Learn on how to get the IOrganizationService from within the Execute method of your custom workflow activity."
 ms.custom: ""
 ms.date: 06/16/2018

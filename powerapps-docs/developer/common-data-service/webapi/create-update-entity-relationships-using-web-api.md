@@ -1,5 +1,5 @@
 ---
-title: "Create and update entity relationships using the Web API (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Create and update entity relationships using the Web API (Common Data Service for Apps) | Microsoft Docs"
 description: "Learn about creating and updating entity Common Data Service for Apps uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
 ms.date: 06/15/2018

@@ -1,5 +1,5 @@
 ---
-title: "Web API Basic Operations Sample (Client-side JavaScript) (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Basic Operations Sample (Client-side JavaScript) (Common Data Service for Apps)| Microsoft Docs"
 description: "This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on entity instances using client-side JavaScript and the Common Data Service for Apps Web API"
 ms.custom: ""
 ms.date: 06/15/2018

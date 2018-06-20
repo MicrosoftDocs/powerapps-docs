@@ -1,5 +1,5 @@
 ---
-title: "Web API Samples (Client-side JavaScript) (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Samples (Client-side JavaScript) (Common Data Service for Apps)| Microsoft Docs"
 description: "This topic provides a description of various Web API samples that are implemented using Client-side JavaScript"
 ms.custom: ""
 ms.date: 06/15/2018

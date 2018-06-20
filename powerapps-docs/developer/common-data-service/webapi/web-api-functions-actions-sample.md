@@ -1,5 +1,5 @@
 ---
-title: "Web API Functions and Actions Sample (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Functions and Actions Sample (Common Data Service for Apps)| Microsoft Docs"
 description: "This group of samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service for Apps Web API. These are implemented using Client-side JavaScript and C#"
 ms.custom: ""
 ms.date: 06/15/2018

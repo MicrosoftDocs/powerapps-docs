@@ -1,5 +1,5 @@
 ---
-title: "Debug a custom workflow activity (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Debug a custom workflow activity (Common Data Service for Apps) | Microsoft Docs"
 description: "Learn more about how to debug a custom workflow activity"
 ms.custom: ""
 ms.date: 06/16/2018

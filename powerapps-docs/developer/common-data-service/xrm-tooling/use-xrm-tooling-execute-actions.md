@@ -1,5 +1,5 @@
 ---
-title: "Use XRM tooling to execute actions in CDS for Apps (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Use XRM tooling to execute actions in CDS for Apps (Common Data Service for Apps) | Microsoft Docs"
 description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on CDS for Apps data"
 ms.custom: ""
 ms.date: 06/16/2018

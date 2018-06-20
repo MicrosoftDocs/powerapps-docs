@@ -1,5 +1,5 @@
 ---
-title: "Web API Samples (C#) (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Samples (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "This topic provides a description of various Web API samples that are implemented using C#"
 ms.custom: ""
 ms.date: 06/15/2018

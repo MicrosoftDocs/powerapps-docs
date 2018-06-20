@@ -1,5 +1,5 @@
 ---
-title: "Extend Dynamics 365 for Outlook (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Extend Dynamics 365 for Outlook (Common Data Service for Apps) | Microsoft Docs"
 description: "Dynamics 365 for Outlook lets users interact with data while they’re offline and not connected to a server. Common Data Service for Apps includes features that let you extend your solutions to offline scenarios by calling the web services offline from your custom code. In addition, the Sdk assembly provides programmatic support for basic Outlook actions such as synchronization, going offline or online, and Dynamics 365 for Outlook state verification. Offline programming uses the ASP.NET Development Server."
 ms.custom: ""
 ms.date: 06/17/2018

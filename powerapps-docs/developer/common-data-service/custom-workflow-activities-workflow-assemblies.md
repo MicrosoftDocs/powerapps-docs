@@ -1,5 +1,5 @@
 ---
-title: "Custom workflow activities (workflow assemblies) (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Custom workflow activities (workflow assemblies) (Common Data Service for Apps) | Microsoft Docs"
 description: "Learn about registration and execution of custom workflow activities in addition to the out-of-box activities provided by Windows Workflow Foundation. You can write custom workflow activities in Microsoft Visual C# or Visual Basic .NET code by creating an assembly that contains one or more classes derived from the Windows Workflow FoundationCodeActivity class."
 ms.custom: ""
 ms.date: 06/16/2018

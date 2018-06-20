@@ -1,5 +1,5 @@
 ---
-title: "About Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "About Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific entities, the default attributes attributes of each entity and the relationships between entities."
 
 services: ''

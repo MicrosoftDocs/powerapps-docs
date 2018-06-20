@@ -1,5 +1,5 @@
 ---
-title: "Update a custom workflow activity using assembly versioning (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Update a custom workflow activity using assembly versioning (Common Data Service for Apps) | Microsoft Docs"
 description: "Learn about updating a custom workflow activity using assembly versioning."
 ms.custom: ""
 ms.date: 06/16/2018

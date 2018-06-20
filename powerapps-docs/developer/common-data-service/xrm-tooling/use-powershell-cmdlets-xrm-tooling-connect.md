@@ -1,5 +1,5 @@
 ---
-title: "Use PowerShell cmdlets for XRM tooling to connect to CDS for Apps (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Use PowerShell cmdlets for XRM tooling to connect to CDS for Apps (Common Data Service for Apps)| Microsoft Docs"
 description: "Learn how to use Powershell cmdlets for XRM tooling like Get-CrmConnection and Get-CrmOrganizations to connect to Common Data Service for Apps and retrieve organizations that the current user has access to"
 ms.custom: ""
 ms.date: 06/16/2018

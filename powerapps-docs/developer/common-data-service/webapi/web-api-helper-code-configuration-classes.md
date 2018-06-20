@@ -1,5 +1,5 @@
 ---
-title: "Web API Helper code: Configuration classes (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Helper code: Configuration classes (Common Data Service for Apps)| Microsoft Docs"
 description: "Configuration class hierarchy can be used to specify the required connection data for accessing Common Data Service for Appsweb services from your application"
 ms.custom: ""
 ms.date: 06/15/2018

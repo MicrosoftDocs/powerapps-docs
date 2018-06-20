@@ -1,5 +1,5 @@
 ---
-title: "Create and update entity definitions using the Web API (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Create and update entity definitions using the Web API (Common Data Service for Apps) | Microsoft Docs"
 description: "Learn about creating and updating entity definitions using the Web API."
 ms.custom: ""
 ms.date: 06/15/2018

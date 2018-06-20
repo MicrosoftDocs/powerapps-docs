@@ -1,5 +1,5 @@
 ---
-title: "Common Data Service for Apps Web API Versions (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Common Data Service for Apps Web API Versions (Common Data Service for Apps)| Microsoft Docs"
 description: "Read how versioning of Common Data Service for Apps Web API works. Common Data Service for Apps Web API versions support version specific differences in the same environment which is different from the behavior in the v8.x releases in which new capabilities were additive"
 ms.custom: ""
 ms.date: 06/15/2018

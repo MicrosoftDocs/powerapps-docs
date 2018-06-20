@@ -1,5 +1,5 @@
 ---
-title: "Build Windows client applications using the XRM tools (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Build Windows client applications using the XRM tools (Common Data Service for Apps)| Microsoft Docs"
 description: "XRM tooling is a set of APIs that provides support for building Windows client applications for CDS for Apps"
 ms.custom: ""
 ms.date: 06/16/2018

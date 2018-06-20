@@ -1,5 +1,5 @@
 ---
-title: "Get started with virtual entities (PowerApps Common Data Service for Apps) | MicrosoftDocs"
+title: "Get started with virtual entities (Common Data Service for Apps) | Microsoft Docs"
 ms.date: 06/17/2018
 ms.service: "crm-online"
 ms.topic: "get-started-article"

@@ -1,5 +1,5 @@
 ---
-title: "Web API Conditional Operations Sample (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Conditional Operations Sample (Common Data Service for Apps)| Microsoft Docs"
 description: "This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Common Data Service for Apps server and/or currently maintained by the client"
 ms.custom: ""
 ms.date: 06/15/2018

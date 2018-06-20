@@ -1,5 +1,5 @@
 ---
-title: "Web API Helper code: CrmHttpResponseException class (PowerApps Common Data Service for Apps)| MicrosoftDocs"
+title: "Web API Helper code: CrmHttpResponseException class (Common Data Service for Apps)| Microsoft Docs"
 description: "CrmHttpResponseException class is used to represent HTTP status errors generated during Common Data Service for Apps Web API calls"
 ms.custom: ""
 ms.date: 06/15/2018
