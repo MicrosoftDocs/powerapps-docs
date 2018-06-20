@@ -95,8 +95,22 @@
           href: set-managed-properties.md                       
   - name: How-to guides
     items:
-    - name: Configure Cascading relationships
-      href:  /powerapps/maker/common-data-service/actions
+    - name: Work with entities
+      items: 
+      - name: Define alternate keys
+        href: define-alternate-keys-reference-records.md
+      - name: Define status reason transitions
+        href: define-status-reason-transitions.md  
+      - name: Delete a custom entity
+        href: data-platform-delete-entity.md  
+      - name: Display custom icons
+        href: display-custom-icons-instead.md
+      - name: Edit system entity messages
+        href: edit-system-entity-messages.md
+      - name: Azure Cosmos DB SQL API Data Provider
+        href: virtual-entity-documentdb-provider-requirements.md
+      - name: Virtual entity walkthrough
+        href: virtual-entity-walkthrough-using-odata-provider.md                                              
     - name: Translate customized entity and field text
       href: export-customized-entity-field-text-translation.md
     - name: Import translated entity and field text into an app
