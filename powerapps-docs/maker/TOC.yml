@@ -510,9 +510,10 @@
        - name: Weekday
          href: ./canvas-apps/functions/function-datetime-parts.md
        - name: Year
-         href: ./canvas-apps/functions/function-datetime-parts.md	  
+         href: ./canvas-apps/functions/function-datetime-parts.md
     - name: Controls reference
       href: ./canvas-apps/reference-properties.md
+    - name:
       items:
        - name: Add picture
          href: ./canvas-apps/controls/control-add-picture.md
@@ -593,7 +594,7 @@
        - name: Toggle
          href: ./canvas-apps/controls/control-toggle.md
        - name: Video
-         href: ./canvas-apps/controls/control-audio-video.md	  
+         href: ./canvas-apps/controls/control-audio-video.md
     - name: Connectors reference
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
