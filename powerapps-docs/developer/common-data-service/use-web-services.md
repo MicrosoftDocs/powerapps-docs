@@ -37,15 +37,7 @@ More information: [Use the CDS for Apps Organization service](/dynamics365/custo
 
 ## About the web services and the platform
 
-It is valuable to recognize that the organization service is what defines the platform. The Web API provides a RESTful programming experience but ultimately all data operations go through the underlying organization service. 
-
-The organization service defines the supported operations as messages. Each message has a name. Within the SDK assemblies each message has a corresponding *&lt;message name&gt;*`Request` and *&lt;message name&gt;*`Response` class. The <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface in the `Microsoft.Xrm.Sdk.dll` assembly defines several helper methods for common CRUD operations as well as an <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)> method that can be used to invoke messages. All messages use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
-
-The Web API provides all the same operations as the organization service but presents them in an RESTful style using the OData v4 protocol. OData v4 provides for named operations via *functions* or *actions*. Almost every message available in the organization service is exposed as a corresponding named function or action. Those messages that correspond to CRUD operations are not available in the Web API because as a RESTful service they have implementations using GET, POST, PATCH, and DELETE HTTP methods.
-
-The .NET SDK assemblies for the organization service SOAP endpoint were designed to closely model the underlying platform services based on <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. However they are not the same components and should not be confused with one another. 
-
-The SOAP endpoint for the organization service was introduced in 2011 and we have announced that it is deprecated. This means that it will continue to work and be supported until we remove it. We have also announced that we will update the .NET SDK assemblies so that they will continue to work after the SOAP endpoint is removed. This means that there will be updated SDK assemblies available before the SOAP endpoint is removed and developers will be required to update their code to use these new assemblies at some point in the future.
+[!INCLUDE [cc_about-web-services-platform](../../includes/cc_about-web-services-platform.md)]
 
 ## Discovery services
 

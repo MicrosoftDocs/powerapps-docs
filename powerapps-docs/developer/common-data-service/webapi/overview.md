@@ -21,8 +21,10 @@ manager: "amyla"
 The CDS for Apps Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [http://www.odata.org/](http://www.odata.org/). Details about this standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0).  
   
  Because the Web API is built on open standards, we don’t provide assemblies for a specific developer experience. You can compose HTTP requests for specific operations or use third-party libraries to generate classes for whatever language or platform you want. You can find a list of libraries that support OData version 4.0 at [http://www.odata.org/libraries/](http://www.odata.org/libraries/).  
-  
- To compare the Web API with other CDS for Apps web services, see [Use Common Data Service for Apps web services](../use-web-services.md). 
+
+## About the web services and the platform
+
+[!INCLUDE [cc_about-web-services-platform](../../../includes/cc_about-web-services-platform.md)]
 
   
 ### Related Sections
