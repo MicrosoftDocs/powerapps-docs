@@ -29,10 +29,6 @@
       href: create-edit-system-chart.md 
     - name: Create or edit dashboards
       href: create-edit-dashboards.md                  
-    - name: Developer Quickstarts
-      items: 
-      - name: If any...
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy       
   - name: Tutorials
     items:
     - name: Work with views
@@ -65,26 +61,10 @@
       href: use-custom-controls-data-visualizations.md
     - name: Share a model-driven app with PowerApps
       href: share-model-driven-app.md            
-    - name: Developer Tutorials
-      items: 
-      - name: Add a command
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
-      - name: Create a custom control
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
-      - name: Create a form script event handler
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
-      - name: Streamline JavaScript web resource development using Fiddler AutoResponder
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy                      
   - name: Samples
     items:
     - name: Overview of sample apps
-      href: overview-model-driven-samples.md
-    - name: Developer Samples
-      items:
-      - name: JavaScript API samples
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
-      - name: Pass multiple values to a web resource through the data parameter
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy        
+      href: overview-model-driven-samples.md   
   - name: Concepts
     items:
     - name: Get started with app making
@@ -135,12 +115,6 @@
       href: web-resource-properties-legacy.md
     - name: Set properties for a chart or list
       href: set-properties-chart-list-included-dashboard.md                  
-    - name: Developer Concepts
-      items: 
-      - name: Supported customizations
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
-      - name: Web Resources
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
   - name: How-to guides
     items:
     - name: Change custom entity icons
@@ -194,28 +168,11 @@
        - name: Quick view control properties
          href: quick-view-control-properties-legacy.md                                                                    
     - name: Navigate to advanced app making areas
-      href: advanced-navigation.md      
-    - name: Developer How-to guides
-      items: 
-      - name: Client scripting
-        href: /powerapps/developer/clientapi/client-scripting
-      - name: Customize commands
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
-      - name: Create custom controls
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy              
-  - name: Reference
-    items:
-    - name: Client API
-      href: /powerapps/developer/clientapi/reference
-    - name: XML Schemas
-      href:  /powerapps/developer/model-driven-apps/form-properties-legacy
-      items:
-      - name: FormXML
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy        
+      href: advanced-navigation.md                 
   - name: Resources
-    items:
-    - name: Community tools
-      href: /powerapps/maker/model-driven-apps/export-import-remove-app
+    items: 
+    - name: Accessibility in PowerApps app designer
+      href: Accessibility-app-designer-site-map-designer-my-apps-page.md    
 # DO NOT CHANGE BELOW  
 - name: Common Data Service for Apps
   href: ../common-data-service/index.md

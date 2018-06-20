@@ -29,8 +29,8 @@
     items:
     - name: Create a custom entity that has components
       href: create-custom-entity.md
-    - name: Manage system jobs
-      href:  /powerapps/maker/common-data-service/actions
+    - name: Create and edit global option sets
+      href: create-edit-global-option-sets.md
     - name: Monitor workflows
       href:  /powerapps/maker/common-data-service/actions
     - name: Manage localized strings
@@ -91,60 +91,10 @@
       href: export-customized-entity-field-text-translation.md
     - name: Import translated entity and field text into an app
       href: import-translated-entity-field-text.md 
-    - name: Developer How-to guides
-      items: 
-      - name: Use web services
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Distribute your app on AppSource
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Build Windows client applications using XRM tools
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Create custom workflow activities
-        href: /powerapps/developer/common-data-service/add-field-form   
-  - name: Reference
-    items:
-    - name: Entity Reference
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: Web API Reference
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: Organization Service assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: XRM Tooling assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: Virtual Entity assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: Workflow assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: Package Deployer assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: Outlook Client assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: Deployment Service assemblies
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: Online Management API
-      href: /powerapps/developer/common-data-service/add-field-form
-    - name: XML Schemas
-      href: /powerapps/developer/common-data-service/add-field-form
   - name: Resources
     items:
-    - name: Community tools
-      href:  /powerapps/maker/common-data-service/actions
-    - name: Developer Resources
-      items: 
-      - name: .NET SDK Assemblies
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Code generation tool 
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Configuration Migration tool 
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Package Deployer 
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Plug-in Registration Tool 
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: SolutionPackager tool 
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Community tools
-        href: /powerapps/developer/common-data-service/add-field-form
+    - name: Behavior and format of the Date and Time field
+      href: behavior-format-date-time-field.md
 # DO NOT CHANGE BELOW  
 - name: Common Data Model
   href: ../../common-data-model/index.md     
