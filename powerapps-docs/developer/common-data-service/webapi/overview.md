@@ -22,12 +22,12 @@ The CDS for Apps Web API provides a development experience that can be used acro
   
  Because the Web API is built on open standards, we don’t provide assemblies for a specific developer experience. You can compose HTTP requests for specific operations or use third-party libraries to generate classes for whatever language or platform you want. You can find a list of libraries that support OData version 4.0 at [http://www.odata.org/libraries/](http://www.odata.org/libraries/).  
   
- To compare the Web API with other CDS for Apps web services, see [Use Common Data Service for Apps web services](use-web-services.md). 
+ To compare the Web API with other CDS for Apps web services, see [Use Common Data Service for Apps web services](../use-web-services.md). 
 
   
 ### Related Sections
 
-[Use Common Data Service for Apps web services](use-web-services.md)<br />
+[Use Common Data Service for Apps web services](../use-web-services.md)[Use Common Data Service for Apps web services](use-web-services.md)<br />
 [OData - the best way to REST](http://www.odata.org/)<br />
 [OData Version 4.0 Part 1: Protocol Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)<br />
 [OData Version 4.0 Part 2: URL Conventions Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)<br />
