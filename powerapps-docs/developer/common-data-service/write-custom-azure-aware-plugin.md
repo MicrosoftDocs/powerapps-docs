@@ -1,0 +1,1 @@
+# Write a custom Azure-aware plug-in

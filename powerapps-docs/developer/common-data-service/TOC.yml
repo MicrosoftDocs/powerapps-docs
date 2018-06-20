@@ -2,20 +2,56 @@
   href: overview.md
 - name: Quick Starts
   items:
-  - name: Org service quick start one
-    href: org-service/quick-start-org-service-1.md
+  - name: Simple Web API quick-start sample (C#)
+    href: webapi/simple-web-api-quick-start-sample-csharp.md
 - name: Tutorials
   items:
-  - name: Org service tutorial one
-    href: org-service/tutorial-org-service-1.md
+  - name: Create and register a plug-in
+    href: create-register-plugin.md
+  - name: Create and register a workflow extension
+    href: create-register-workflow-extension.md
 - name: Samples
   items:
   - name: Org service sample one
     href: org-service/sample-org-service-1.md
 - name: Concepts
   items:
+  - name: Supported Customizations
+    href: supported-customizations.md
   - name: Introduction to solutions
     href: introduction-solutions.md
+  - name: Web Services
+    href: use-web-services.md
+    items:
+    - name: Web API
+      href: webapi/index.md
+    - name: Organization Service
+      href: org-service/index.md
+  - name: Apply business logic with code
+    href: apply-business-logic-with-code.md
+    items:
+    - name: Event Framework
+      href: event-framework.md
+    - name: Processes
+      href: processes.md
+    - name: Custom Actions
+      href: custom-actions.md
+    - name: Plug-ins
+      href: plug-ins.md
+    - name: Azure Integration
+      href: azure-integration.md
+    - name: Web Hooks
+      href: web-hooks.md
+    - name: Flow
+      href: flow.md
+    - name: Workflow Extensions
+      href: workflow-extensions.md
+  - name: Security Model
+    href: security-model.md
+  - name: Discovery Service
+    href: discovery-service.md
+  - name: Authentication
+    href: authentication.md
   - name: Entities
     href: entities.md
     items: 
@@ -24,22 +60,43 @@
     - name: Attribute metadata 
       href: entity-attribute-metadata.md
     - name: Entity relationships metadata
-      href: entity-relationship-metadata.md    
-  - name: Apply business logic with code
-    href: apply-business-logic-with-code.md
-  - name: Use Common Data Service for Apps web services
-    href: use-web-services.md
-    items:
-    - name: Web API
-      href: webapi/index.md
-    - name: Organization Service
-      href: org-service/index.md
-# - name: How-to Guides
-#   items:
-#   - name: Generate entity and custom action classes
-#     href: how-code-generation-utility.md
+      href: entity-relationship-metadata.md
+  - name: Virtual Entities
+    href: virtual-entities.md
+  - name: Optimistic Concurrency
+    href: optimistic-concurrency.md
+  - name: Data Synchronization
+    href: data-synchronization.md
+  - name: Online Management API
+    href: online-management-api.md
+  - name: Outlook Client
+    href: outlook-client.md
+- name: How-to Guides
+  items:
+  - name: Write and register a plug-in
+    href: write-register-plug-in.md
+  - name: Create a workflow extension
+    href: create-workflow-extension.md
+  - name: Write a custom Azure-aware plug-in
+    href: write-custom-azure-aware-plugin.md
+  - name: Register a web hook
+    href: register-web-hook.md
+  - name: Use Multi-Tenant Server-to-server authentication
+    href: use-multi-tenant-server-server-authentication.md
+  - name: Use Single-Tenant Server-to-server authentication
+    href: use-single-tenant-server-server-authentication.md
+  - name: Create a client application
+    href: create-client-application.md
+  - name: How to manage solutions
+    href: how-manage-solutions.md
+  - name: Publish Apps on AppSource
+    href: publish-app-appsource.md
+  - name: Import Data
+    href: import-data.md
 - name: Resources
   items:
+  - name: Developer tools
+    href: developer-tools.md
   - name: Community Tools
     href: community-tools.md  
 - name: Reference
