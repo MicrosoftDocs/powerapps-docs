@@ -15,8 +15,6 @@
       href: data-platform-create-entity.md
     - name: Create a custom entity from data
       href: data-platform-cds-newentity-pq.md
-    - name: Manage fields
-      href: data-platform-manage-fields.md
     - name: Create an option set
       href: custom-picklists.md
     - name: Create a relationship
@@ -97,6 +95,10 @@
     items:
     - name: Work with entities
       items: 
+      - name: Import or export data
+        href: data-platform-import-export
+      - name: Open entity data in Excel
+        href: data-platform-excel-addin
       - name: Define alternate keys
         href: define-alternate-keys-reference-records.md
       - name: Define status reason transitions
@@ -119,6 +121,8 @@
         href: query-visualize-hierarchical-data.md 
     - name: Work with fields
       items: 
+      - name: Manage fields
+        href: data-platform-manage-fields.md
       - name: Map entity fields
         href: map-entity-fields.md
       - name: Delete fields
@@ -157,6 +161,14 @@
       href: export-customized-entity-field-text-translation.md
     - name: Import translated entity and field text into an app
       href: import-translated-entity-field-text.md 
+  - name: Reference
+    items: 
+      - name: Restricted entities requiring Dynamics 365 licenses
+        href: data-platform-restricted-entities.md
+  - name: For Developers
+    items: 
+    - name: Common Data Service for Apps Developer Overview
+      href: ../../developer/common-data-service/overview.md
   - name: Resources
     items:
     - name: Behavior and format of the Date and Time field
