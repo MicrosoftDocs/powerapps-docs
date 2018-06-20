@@ -513,88 +513,87 @@
          href: ./canvas-apps/functions/function-datetime-parts.md
     - name: Controls reference
       href: ./canvas-apps/reference-properties.md
-    - name:
       items:
-       - name: Add picture
-         href: ./canvas-apps/controls/control-add-picture.md
-       - name: Attachments
-         href: ./canvas-apps/controls/control-attachments.md
-       - name: Audio
-         href: ./canvas-apps/controls/control-audio-video.md
-       - name: Barcode scanner (experimental)
-         href: ./canvas-apps/controls/control-barcodescanner.md
-       - name: Button
-         href: ./canvas-apps/controls/control-button.md
-       - name: Camera
-         href: ./canvas-apps/controls/control-camera.md
-       - name: Card
-         href: ./canvas-apps/controls/control-card.md
-       - name: Check box
-         href: ./canvas-apps/controls/control-check-box.md
-       - name: Column chart
-         href: ./canvas-apps/controls/control-column-line-chart.md
-       - name: Column
-         href: ./canvas-apps/controls/control-column.md
-       - name: Combo box
-         href: ./canvas-apps/controls/control-combo-box.md
-       - name: Data table
-         href: ./canvas-apps/controls/control-data-table.md
-       - name: Date picker
-         href: ./canvas-apps/controls/control-date-picker.md
-       - name: Display form
-         href: ./canvas-apps/controls/control-form-detail.md
-       - name: Drop down
-         href: ./canvas-apps/controls/control-drop-down.md
-       - name: Edit form
-         href: ./canvas-apps/controls/control-form-detail.md
-       - name: Export
-         href: ./canvas-apps/controls/control-export-import.md
-       - name: Gallery
-         href: ./canvas-apps/controls/control-gallery.md
-       - name: HTML text
-         href: ./canvas-apps/controls/control-html-text.md
-       - name: Icon
-         href: ./canvas-apps/controls/control-shapes-icons.md
-       - name: Image
-         href: ./canvas-apps/controls/control-image.md
-       - name: Import
-         href: ./canvas-apps/controls/control-export-import.md
-       - name: Line chart
-         href: ./canvas-apps/controls/control-column-line-chart.md
-       - name: List box
-         href: ./canvas-apps/controls/control-list-box.md
-       - name: Microphone
-         href: ./canvas-apps/controls/control-microphone.md
-       - name: PDF viewer (experimental)
-         href: ./canvas-apps/controls/control-pdf-viewer.md
-       - name: Pen input
-         href: ./canvas-apps/controls/control-pen-input.md
-       - name: Pie chart
-         href: ./canvas-apps/controls/control-pie-chart.md
-       - name: Power BI tile
-         href: ./canvas-apps/controls/control-power-bi-tile.md
-       - name: Radio
-         href: ./canvas-apps/controls/control-radio.md
-       - name: Rating
-         href: ./canvas-apps/controls/control-rating.md
-       - name: Rich text editor (experimental)
-         href: ./canvas-apps/controls/control-richtexteditor.md
-       - name: Screen
-         href: ./canvas-apps/controls/control-screen.md
-       - name: Shape
-         href: ./canvas-apps/controls/control-shapes-icons.md
-       - name: Slider
-         href: ./canvas-apps/controls/control-slider.md
-       - name: Label
-         href: ./canvas-apps/controls/control-text-box.md
-       - name: Text input
-         href: ./canvas-apps/controls/control-text-input.md
-       - name: Timer
-         href: ./canvas-apps/controls/control-timer.md
-       - name: Toggle
-         href: ./canvas-apps/controls/control-toggle.md
-       - name: Video
-         href: ./canvas-apps/controls/control-audio-video.md
+        - name: Add picture
+          href: ./canvas-apps/controls/control-add-picture.md
+        - name: Attachments
+          href: ./canvas-apps/controls/control-attachments.md
+        - name: Audio
+          href: ./canvas-apps/controls/control-audio-video.md
+        - name: Barcode scanner (experimental)
+          href: ./canvas-apps/controls/control-barcodescanner.md
+        - name: Button
+          href: ./canvas-apps/controls/control-button.md
+        - name: Camera
+          href: ./canvas-apps/controls/control-camera.md
+        - name: Card
+          href: ./canvas-apps/controls/control-card.md
+        - name: Check box
+          href: ./canvas-apps/controls/control-check-box.md
+        - name: Column chart
+          href: ./canvas-apps/controls/control-column-line-chart.md
+        - name: Column
+          href: ./canvas-apps/controls/control-column.md
+        - name: Combo box
+          href: ./canvas-apps/controls/control-combo-box.md
+        - name: Data table
+          href: ./canvas-apps/controls/control-data-table.md
+        - name: Date picker
+          href: ./canvas-apps/controls/control-date-picker.md
+        - name: Display form
+          href: ./canvas-apps/controls/control-form-detail.md
+        - name: Drop down
+          href: ./canvas-apps/controls/control-drop-down.md
+        - name: Edit form
+          href: ./canvas-apps/controls/control-form-detail.md
+        - name: Export
+          href: ./canvas-apps/controls/control-export-import.md
+        - name: Gallery
+          href: ./canvas-apps/controls/control-gallery.md
+        - name: HTML text
+          href: ./canvas-apps/controls/control-html-text.md
+        - name: Icon
+          href: ./canvas-apps/controls/control-shapes-icons.md
+        - name: Image
+          href: ./canvas-apps/controls/control-image.md
+        - name: Import
+          href: ./canvas-apps/controls/control-export-import.md
+        - name: Line chart
+          href: ./canvas-apps/controls/control-column-line-chart.md
+        - name: List box
+          href: ./canvas-apps/controls/control-list-box.md
+        - name: Microphone
+          href: ./canvas-apps/controls/control-microphone.md
+        - name: PDF viewer (experimental)
+          href: ./canvas-apps/controls/control-pdf-viewer.md
+        - name: Pen input
+          href: ./canvas-apps/controls/control-pen-input.md
+        - name: Pie chart
+          href: ./canvas-apps/controls/control-pie-chart.md
+        - name: Power BI tile
+          href: ./canvas-apps/controls/control-power-bi-tile.md
+        - name: Radio
+          href: ./canvas-apps/controls/control-radio.md
+        - name: Rating
+          href: ./canvas-apps/controls/control-rating.md
+        - name: Rich text editor (experimental)
+          href: ./canvas-apps/controls/control-richtexteditor.md
+        - name: Screen
+          href: ./canvas-apps/controls/control-screen.md
+        - name: Shape
+          href: ./canvas-apps/controls/control-shapes-icons.md
+        - name: Slider
+          href: ./canvas-apps/controls/control-slider.md
+        - name: Label
+          href: ./canvas-apps/controls/control-text-box.md
+        - name: Text input
+          href: ./canvas-apps/controls/control-text-input.md
+        - name: Timer
+          href: ./canvas-apps/controls/control-timer.md
+        - name: Toggle
+          href: ./canvas-apps/controls/control-toggle.md
+        - name: Video
+          href: ./canvas-apps/controls/control-audio-video.md
     - name: Connectors reference
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
