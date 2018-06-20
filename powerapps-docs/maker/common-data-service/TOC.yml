@@ -111,6 +111,48 @@
         href: virtual-entity-documentdb-provider-requirements.md
       - name: Virtual entity walkthrough
         href: virtual-entity-walkthrough-using-odata-provider.md                                              
+    - name: Work with relationships
+      items: 
+      - name: Set managed properties for relationships
+        href: set-managed-properties-relationships.md
+      - name: Query and visualize hierarchically related data
+        href: query-visualize-hierarchical-data.md 
+    - name: Work with fields
+      items: 
+      - name: Map entity fields
+        href: map-entity-fields.md
+      - name: Delete fields
+        href: delete-fields.md     
+    - name: Apply business logic
+      items: 
+      - name: Create a business rule
+        href: data-platform-create-business-rule.md
+      - name: Configure workflow steps
+        href: configure-workflow-steps.md
+      - name: Invoke custom actions from a workflow
+        href: invoke-custom-actions-workflow-dialog.md
+      - name: Configure custom actions from a workflow
+        href: configure-actions.md
+      - name: Monitor and manage workflow processes
+        href: monitor-manage-processes.md
+    - name: Work with solutions
+      items:  
+      - name: Import, update, and export solutions
+        href: import-update-export-solutions.md 
+      - name: Navigate to a specific solution
+        href: navigate-specific-solution.md
+      - name: Use segmented solutions
+        href: use-segmented-solutions-patches-simplify-updates.md
+      - name: Change the solution publisher prefix
+        href: change-solution-publisher-prefix.md
+      - name: Publish changes
+        href: publish-changes-for-use-customer-service-hub.md                                                 
+    - name: Work with analytics
+      items: 
+      - name: Create a Power BI report
+        href: data-platform-powerbi-connector.md
+      - name: Customize and organize reports
+        href: customize-organize-reports.md 
     - name: Translate customized entity and field text
       href: export-customized-entity-field-text-translation.md
     - name: Import translated entity and field text into an app
