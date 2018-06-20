@@ -1,4 +1,4 @@
 ---
-redirect_url: ../use-microsoft-dynamics-365-web-api
+redirect_url: /powerapps/developer/common-data-service/webapi/overview
 ---
 
