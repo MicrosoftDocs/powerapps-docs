@@ -96,9 +96,9 @@
     - name: Work with entities
       items: 
       - name: Import or export data
-        href: data-platform-import-export
+        href: data-platform-import-export.md
       - name: Open entity data in Excel
-        href: data-platform-excel-addin
+        href: data-platform-excel-addin.md
       - name: Define alternate keys
         href: define-alternate-keys-reference-records.md
       - name: Define status reason transitions
