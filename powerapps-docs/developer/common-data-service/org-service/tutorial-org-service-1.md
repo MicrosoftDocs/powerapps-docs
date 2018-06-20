@@ -1,1 +1,0 @@
-# Placeholder: Tutorial: Organization service one

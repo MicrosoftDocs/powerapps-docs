@@ -1,1 +1,0 @@
-# Placeholder: Quick Start: Organization service one

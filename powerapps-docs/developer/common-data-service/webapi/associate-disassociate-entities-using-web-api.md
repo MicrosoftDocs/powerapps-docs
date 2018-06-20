@@ -18,15 +18,13 @@ manager: "amyla"
 ---
 # Associate and disassociate entities using the Web API
 
-
-
 There are several methods you can use to associate and disassociate entities. Which method you apply depends on whether you’re creating or updating the entities and whether you’re operating in the context of the referenced entity or the referencing entity.  
 
 <a name="bkmk_Addareferencetoacollection"></a>
 
 ## Add a reference to a collection-valued navigation property
 
- The following example shows how to associate an existing opportunity entity with the opportunityid value of 00000000-0000-0000-0000-000000000001 to the collection-valued opportunity_customer_accounts navigation property for an account entity with the `accountid` value of 00000000-0000-0000-0000-000000000002. This is a 1:N relationship but you can perform the same operation for an N:N relationship.  
+ The following example shows how to associate an existing opportunity entity with the `opportunityid` value of `00000000-0000-0000-0000-000000000001` to the collection-valued `opportunity_customer_accounts` navigation property for an account entity with the `accountid` value of `00000000-0000-0000-0000-000000000002`. This is a 1:N relationship but you can perform the same operation for an N:N relationship.  
   
 **Request**  
 ```http  

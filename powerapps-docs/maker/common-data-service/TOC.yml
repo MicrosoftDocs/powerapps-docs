@@ -27,8 +27,8 @@
       href: data-platform-delete-entity.md
     - name: Developer Quick starts
       items:
-      - name: PH Organization Service one
-        href: ../../developer/common-data-service/org-service/quick-start-org-service-1.md
+      - name: Console app using the organization service
+        href: ../../developer/common-data-service/org-service/quick-start-org-service-console-app.md
   - name: Tutorials
     items:
     - name: Create a custom entity that has components
@@ -39,14 +39,12 @@
       href:  /powerapps/maker/common-data-service/actions
     - name: Manage localized strings
       href:  /powerapps/maker/common-data-service/actions
-    - name: Developer Tutorials
-      items: 
-      - name: PH Organization Service one
-        href: ../../developer/common-data-service/org-service/tutorial-org-service-1.md
-  - name: Samples
-    items:
-        - name: PH Organization service samples one
-          href: ../../developer/common-data-service/org-service/sample-org-service-1.md
+    # - name: Developer Tutorials
+    #   items: 
+  # - name: Samples
+  #   items:
+  #       - name: PH Organization service samples one
+  #         href: ../../developer/common-data-service/org-service/sample-org-service-1.md
   - name: Concepts
     items:
       - name: Build a data model
@@ -61,10 +59,8 @@
         href:  /powerapps/maker/common-data-service/actions
       - name: Multiple language support
         href:  /powerapps/maker/common-data-service/actions
-      - name: Developer Concepts
-        items: 
-          - name: PH Organization service one
-            href: ../../developer/common-data-service/org-service/org-service-concept-1.md
+      # - name: Developer Concepts
+      #   items: 
   - name: How-to guides
     items:
     - name: Configure Cascading relationships
@@ -75,8 +71,8 @@
       href: import-translated-entity-field-text.md 
     - name: Developer How-to guides
       items: 
-      - name: PH Organization service one
-        href: ../../developer/common-data-service/org-service/how-org-service-1.md
+      - name: Create a client app using the organization service
+        href: ../../developer/common-data-service/org-service/create-client-app.md
   - name: Reference
     items:
     - name: Entity Reference

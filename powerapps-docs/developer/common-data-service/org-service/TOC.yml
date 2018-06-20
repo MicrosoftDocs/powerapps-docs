@@ -3,23 +3,47 @@
 - name: Quick Starts
   items:
   - name: Org service quick start one
-    href: quick-start-org-service-1.md
-- name: Tutorials
-  items:
-  - name: Org service tutorial one
-    href: tutorial-org-service-1.md
-- name: Samples
-  items:
-  - name: Org service sample one
-    href: sample-org-service-1.md
+    href: quick-start-org-service-console-app.md
+# - name: Tutorials
+#   items:
+#   - name: Org service tutorial one
+#     href: tutorial-org-service-1.md
+# - name: Samples
+#   items:
+#   - name: Org service sample one
+#     href: sample-org-service-1.md
 - name: Concepts
   items:
-  - name: Org Service Concept One
-    href: org-service-concept-1.md
+  - name: IOrganizationService Interface
+    href: iorganizationservice-interface.md
+  - name: Early-bound programming
+    href: early-bound-programming.md
+  - name: OrganizationServiceContext
+    href: organizationservicecontext.md  
 - name: How-to Guides
   items:
-  - name: How to Org Service one
-    href: how-org-service-1.md
+  - name: Create a client app
+    href: create-client-app.md
+  - name: Entity operations
+    href: entity-operations.md
+  - name: Use messages
+    href: use-messages.md
+  - name: Execute Multiple requests
+    href: execute-multiple-requests.md
+  - name: Query Data
+    href: query-data.md
+  - name: Use OrganizationServiceContext
+    href: use-organizationservicecontext.md
+  - name: Detect Duplicate Data
+    href: detect-duplicate-data.md
+  - name: Generate classes for late-bound programming
+    href: generate-late-bound-classes.md
+  - name: Work with metadata
+    href: work-with-metadata.md
+  - name: Import data
+    href: import-data.md
+  - name: Sample data
+    href: sample-data.md
 - name: Resources
   items:
   - name: Community Tools

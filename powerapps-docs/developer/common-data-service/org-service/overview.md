@@ -1,1 +1,1 @@
-# Placeholder: Organization Service overview
+# Organization Service overview

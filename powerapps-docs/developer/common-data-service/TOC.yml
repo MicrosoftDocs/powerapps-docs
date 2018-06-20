@@ -10,10 +10,10 @@
     href: create-register-plugin.md
   - name: Create and register a workflow extension
     href: create-register-workflow-extension.md
-- name: Samples
-  items:
-  - name: Org service sample one
-    href: org-service/sample-org-service-1.md
+# - name: Samples
+#   items:
+#   - name: Org service sample one
+#     href: org-service/sample-org-service-1.md
 - name: Concepts
   items:
   - name: Supported Customizations
@@ -67,6 +67,8 @@
     href: optimistic-concurrency.md
   - name: Data Synchronization
     href: data-synchronization.md
+  - name: Data Export Service
+    href: data-export-service.md
   - name: Online Management API
     href: online-management-api.md
   - name: Outlook Client
@@ -119,5 +121,6 @@
     href: /dotnet/api/?view=dynamics-outlookclient-ce-9
   - name: Online Management API Reference
     href: /rest/api/admin.services.crm.dynamics.com
+# - name: On-premises options
 
 
