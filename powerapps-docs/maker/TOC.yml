@@ -233,6 +233,8 @@
          href: ./canvas-apps/functions/function-clock-calendar.md
        - name: Char
          href: ./canvas-apps/functions/function-char.md
+       - name: Choices
+         href: ./canvas-apps/functions/function-choices.md
        - name: Clear
          href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
        - name: ClearCollect
@@ -594,6 +596,8 @@
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
       href: ./canvas-apps/limits-and-config.md
+    - name: Get a session ID
+      href: ./canvas-apps/get-sessionid.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
