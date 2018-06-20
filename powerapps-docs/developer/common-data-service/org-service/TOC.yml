@@ -33,7 +33,7 @@
   - name: Query Data
     href: query-data.md
   - name: Use OrganizationServiceContext
-    href: use-organizationservicecontext.md
+    href: organizationservicecontext.md
   - name: Detect Duplicate Data
     href: detect-duplicate-data.md
   - name: Generate classes for late-bound programming

@@ -53,7 +53,7 @@ The following applications in the current version of CDS for Apps use the common
   
 ### See also
 
-[Sample: Quick start for XRM Tooling API](xrm-tooling/sample-quick-start-xrm-tooling-api.md)<br />
+[Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 <!-- TODO:
 [Use the CDS for Apps Organization service](use-microsoft-dynamics-365-organization-service.md)<br />
 [Discover the URL for Your Organization With IDiscoveryService Web Service](org-service/discover-url-organization-organization-service.md)<br />
