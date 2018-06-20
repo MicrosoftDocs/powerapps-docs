@@ -15,9 +15,6 @@
     href: ./canvas-apps/webinars-listing.md
 # DO NOT CHANGE BELOW    
 - name: Canvas apps
-<<<<<<< HEAD
-  href: canvas-apps/index.md
-=======
   href: ./canvas-apps/getting-started.md
   items:
   - name: Quickstarts
@@ -603,13 +600,9 @@
       href: ./canvas-apps/limits-and-config.md
     - name: Get a session ID
       href: ./canvas-apps/get-sessionid.md
->>>>>>> master
 - name: Model-driven apps
   href: model-driven-apps/index.md
 - name: Common Data Service for Apps
-<<<<<<< HEAD
-  href: common-data-service/index.md
-=======
   href: ./common-data-service/data-platform-intro.md
   items:
   - name: Quickstarts
@@ -652,6 +645,5 @@
       href: ./common-data-service/data-platform-restricted-entities.md  
   - name: For Developers
     href: ../developer/common-data-service/TOC.yml
->>>>>>> master
 - name: Common Data Model
   href: ../common-data-model/index.md
