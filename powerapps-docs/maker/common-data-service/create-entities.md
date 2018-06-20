@@ -24,7 +24,7 @@ manager: "kvivek"
 
  Before you create a custom entity, evaluate whether using an existing entity will meet your requirements. More information: [Create new metadata or use existing metadata](create-edit-metadata.md#BKMK_CreateNewOrUseExistingMetadata)  
   
- Part of the name of any custom entity you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution or the default solution where the customization prefix is the one you want for this entity. For information about how to change the customization prefix, see [Solution Publisher](change-solution-publisher-prefix.md#BKMK_SolutionPublisher).  
+ Part of the name of any custom entity you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution or the default solution where the customization prefix is the one you want for this entity. For information about how to change the customization prefix, see [Solution Publisher](change-solution-publisher-prefix.md).  
   
   
 > [!NOTE]
