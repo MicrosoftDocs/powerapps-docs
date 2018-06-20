@@ -48,7 +48,7 @@
   - name: Concepts
     items:
       - name: License requirements for entities
-        href: data-platform-entity-licenses
+        href: data-platform-entity-licenses.md
       - name: Work with entities
         items: 
         - name: Entities and metadata
