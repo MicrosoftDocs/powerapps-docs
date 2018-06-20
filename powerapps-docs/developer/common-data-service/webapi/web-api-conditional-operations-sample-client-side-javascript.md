@@ -436,7 +436,7 @@ Sdk.startSample = function () {
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)<br />

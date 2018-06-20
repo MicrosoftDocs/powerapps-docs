@@ -879,7 +879,7 @@ namespace Microsoft.Crm.Sdk.Samples
   
 ### See also 
  
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Query Data Sample](web-api-query-data-sample.md)<br />

@@ -246,7 +246,7 @@ This companion method optionally deletes sample records and other Common Data Se
   
 ### See also  
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
 [Web API Basic Operations Sample (C#)](web-api-basic-operations-sample-csharp.md)<br />

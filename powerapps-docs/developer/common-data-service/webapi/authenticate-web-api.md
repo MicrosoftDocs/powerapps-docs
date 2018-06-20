@@ -26,7 +26,7 @@ If you’re creating a single page application (SPA) using JavaScript you can us
   
 ### See also
  
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Web API types and operations](web-api-types-operations.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 <!-- 

@@ -44,7 +44,7 @@ If you defined a custom action which included a complex return value and a simpl
   
 ### See also  
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Authenticate to Common Data Service for Apps with the Web API](authenticate-web-api.md)<br />
 [Web API types and operations](web-api-types-operations.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)

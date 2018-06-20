@@ -59,4 +59,4 @@ These entities have some substantial differences from the entities that store bu
 [Metadata and data models](../metadata-data-models.md)<br />
 [Browse the Metadata for Your Organization](../browse-your-metadata.md)<br />
 [Use the Organization service with Common Data Service for Apps metadata](../org-service/use-organization-service-metadata.md)<br />
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md) -->
+[Use the Common Data Service for Apps Web API](overview.md) -->

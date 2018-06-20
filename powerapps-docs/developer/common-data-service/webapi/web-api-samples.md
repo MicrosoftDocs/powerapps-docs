@@ -60,7 +60,7 @@ The following table lists the topics that cover the common language- or library-
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Web API Basic Operations Sample](web-api-basic-operations-sample.md)<br />
 [Web API Query Data Sample](web-api-query-data-sample.md)<br />
 [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)<br />

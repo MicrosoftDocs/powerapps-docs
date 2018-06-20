@@ -481,7 +481,7 @@ Expected custom error: ContactFirstName and ContactLastName are required when Cu
   
 ### See also  
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Web API Functions and Actions Sample (C#)](web-api-functions-actions-sample-csharp.md)<br />

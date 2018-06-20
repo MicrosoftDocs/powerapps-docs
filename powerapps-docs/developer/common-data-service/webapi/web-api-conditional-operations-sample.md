@@ -483,6 +483,6 @@ This group of samples demonstrate how to perform operations that are conditional
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 [Web API Conditional Operations Sample (C#)](web-api-conditional-operations-sample-csharp.md)   

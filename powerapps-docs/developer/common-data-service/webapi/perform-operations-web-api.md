@@ -38,6 +38,6 @@ The Web API is new for CDS for Apps. It provides a modern, RESTful web service y
 
 ### See also
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Authenticate to Common Data Service for Apps with the Web API](authenticate-web-api.md)<br />
 [Web API types, functions and actions](web-api-types-operations.md)

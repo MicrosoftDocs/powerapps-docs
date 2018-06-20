@@ -152,7 +152,7 @@ If you are using an earlier version of Common Data Service for Apps Customer Eng
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Samples (C#)](web-api-samples-csharp.md)   
  

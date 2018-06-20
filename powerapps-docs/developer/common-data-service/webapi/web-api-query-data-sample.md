@@ -2228,7 +2228,7 @@ Saved User Query:
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br />
 [Web API Query Data Sample (C#)](web-api-query-data-sample-csharp.md)<br />

@@ -367,6 +367,6 @@ An ordinary intersect entity has only the four basic properties required to main
   
 ### See also  
 
-[Use the Common Data Service for Apps Web API](../use-cds-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](overview.md)<br />
 [Authenticate to Common Data Service for Apps with the Web API](authenticate-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)
