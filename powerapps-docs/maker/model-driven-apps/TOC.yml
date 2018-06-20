@@ -95,6 +95,8 @@
         href: visibility-options-legacy.md
       - name: Change navigation within a form
         href: use-the-form-editor-legacy.md                                                
+    - name: 
+      href: create-edit-views.md    
     - name: Work with fields
       items: 
       - name: Common field properties
