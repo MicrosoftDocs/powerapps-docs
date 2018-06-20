@@ -23,7 +23,7 @@ topic-status: Drafting
 
 # Preview feature: Azure Cosmos DB SQL API Data Provider requirements
 
-This topic describes the requirements for the Azure Cosmos DB for SQL API Data Provider as well as how to configure and recommended best practices when you use the Azure Cosmos DB for SQL API Data Provide with virtual entities. 
+This topic describes the requirements for the Azure Cosmos DB for SQL API data provider as well as how to configure and recommended best practices when you use the Azure Cosmos DB for SQL API data provider with virtual entities. 
 
 > [!IMPORTANT]
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]

@@ -165,10 +165,6 @@
     items: 
       - name: Restricted entities requiring Dynamics 365 licenses
         href: data-platform-restricted-entities.md
-  - name: For Developers
-    items: 
-    - name: Common Data Service for Apps Developer Overview
-      href: ../../developer/common-data-service/overview.md
   - name: Resources
     items:
     - name: Behavior and format of the Date and Time field
