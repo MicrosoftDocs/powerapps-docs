@@ -29,36 +29,20 @@
     items:
     - name: Create a custom entity that has components
       href: create-custom-entity.md
-    - name: Create and edit global option sets
-      href: create-edit-global-option-sets.md
-    - name: Monitor workflows
-      href:  /powerapps/maker/common-data-service/actions
-    - name: Manage localized strings
-      href:  /powerapps/maker/common-data-service/actions
-    - name: Developer Tutorials
+    - name: Work with fields
       items: 
-      - name: Create a .NET console application
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Create a workflow process extension
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Create and deploy a plug-in
-        href: /powerapps/developer/common-data-service/add-field-form
-      - name: Post data using web hooks
-        href: /powerapps/developer/common-data-service/add-field-form
+      - name: Create and edit fields
+        href: create-edit-fields.md
+      - name: Create and edit global option sets
+        href: create-edit-global-option-sets.md
+      - name: Define calculated fields
+        href: define-calculated-fields.md
+      - name: Define rollup fields
+        href: define-rollup-fields.md
   - name: Samples
     items:
-        - name: Organization service samples
-          href: /powerapps/developer/common-data-service/add-field-form
-        - name: Web API samples
-          items:
-          - name: Basic Operations
-            href: /powerapps/developer/common-data-service/add-field-form
-          - name: Query Data
-            href: /powerapps/developer/common-data-service/add-field-form
-          - name: Conditional Operations
-            href: /powerapps/developer/common-data-service/add-field-form
-          - name: Functions and actions
-            href: /powerapps/developer/common-data-service/add-field-form
+        - name: Samples and other resources
+          href: samples-resources.md
   - name: Concepts
     items:
       - name: Build a data model
