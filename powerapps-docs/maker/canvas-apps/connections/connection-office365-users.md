@@ -1,14 +1,9 @@
 ---
 title: Overview of the Office 365 Users connection | Microsoft Docs
 description: See how to connect to Office 365 Users, step through some examples, and see all the functions
-documentationcenter: ''
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 06/07/2016

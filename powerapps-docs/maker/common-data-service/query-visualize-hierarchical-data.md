@@ -91,8 +91,6 @@ For some entities, such as account and user, the visualizations are provided out
   
  Next, in the **Hierarchy Settings** grid view, we selected the **new_new_widget_new_widget** hierarchical relationship. In the form, we filled in the required fields. If you haven’t yet marked the (1:N) relationship as hierarchical, the link on the form will take you back to the relationship definition form, where you can mark the relationship as hierarchical.  
   
- ![Hierarchy settings](media/hierarchy-settings.png "Hierarchy settings")  
-  
  For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four fields to display in each tile.  
   
  ![Create quick form for widget](media/create-quickf-orm.png "Create quick form for widget")  

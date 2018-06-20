@@ -15,65 +15,14 @@ ms.author: audrie
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-**Model Driven App Series Part 1 | Managing Entities and Data Imports**
-<br>by Audrie Gordon & Clay Wesener 
-<br>*May 1st, 10:00AM PST, 12:00PM EST*
-
-Work along with Clay Wesener from the PowerApps team as he walks you through building a CDS for Apps database. You'll learn how to create and navigate entities as well as fields. You'll also get a head start on understanding what's built-in right out of the box! 
-
-This is part 1 of a 3-part series:
-<br>**Part 1: Entities**
-<br>Part 2: Forms and Views
-<br>Part 3: Charts and Dashboards
-
-This is a great opportunity to learn how to reuse standard entitles and fields, and how to create your own custom scenarios in a snap!
-
-[Click here to watch on May 1st](https://www.youtube.com/watch?v=02NWfHRYkeo)
-
-**Model Driven App Series Part 2 | Creating Forms and Views**
-<br>by Audrie Gordon & Anees Ansari 
-<br>*May 15th, 10:00AM PST, 12:00PM EST*
-
-Model Driven Apps provide a rich experience for app makers designing simple to complex forms scenarios. Learn to use our new Forms Designer to build the form(s) needed for the Model App we started in part 1. Anees will walk you through form components such as tabs, sections, and fields. He will also share best practices on integrating business logic and filters. 
-
-This is part 2 of a 3-part series:
-<br>Part 1: Entities
-<br>**Part 2: Forms and Views**
-<br>Part 3: Charts and Dashboards
-
-[Click here to watch on May 15th](https://www.youtube.com/watch?v=v7VoX-V2ek4)
-
-**Model Driven App Series Part 3 | Exploring Charts and Dashboards**
-<br>by Audrie Gordon & Casey Burke 
-<br>*May 29th, 10:00AM PST, 12:00PM EST*
-
-PowerApps offers a composite approach to reporting, with rich views and dashboarding capabilities. Our Model Driven App series wraps up with helpful charts and dashboards to optimize and modernize the solution we’ve been working on. 
-
-This is part 3 of a 3-part series:
-<br>Part 1: Entities
-<br>Part 2: Forms and Views
-<br>**Part 3: Charts and Dashboards**
-
-[Click here to watch on May 29th](https://www.youtube.com/watch?v=kJ5eTWh7Hyg)
 
 **Connector Series | Microsoft StaffHub (Shift Planning) Apps with PowerApps**
 <br>by Marc-André Lépine
 <br>*June 5th, 10:00AM PST, 1:00PM EST*
-
+<br>
 Marc-André Lépine from the PowerApps and Flow Azure Advisors group joins us in this session to discuss how he built an awesome app to complement and extend what's possible using the StaffHub Connector. Later this week, he will show how he extended the Connector using a custom API.  
 
 [Click here to watch on June 5th](https://www.youtube.com/watch?v=LAximnEnKy8)
-
-**Extendability | Building a JSON-Driven Solution with PowerApps and Flow**
-<br>by Marc-André Lépine
-<br>*June 7th, 10:00AM PST, 1:00PM EST*
-
-Marc-André Lépine returns with some extendibility tips to share with us. If you missed his first video  check it out in advance from here:
-https://www.youtube.com/watch?v=LAximnEnKy8
-
-This time Marc demonstrates the "no cliffs" advantage of PowerApps by extending the capability of the StaffHub connector to include his own enterprise requirements via a Custom Connector. (It's truly amazing how easy this is to do, so don't miss this even if you're not a professional developer.) 
-
-[Click here to watch on June 7th](https://www.youtube.com/watch?v=ykNRxKvAirg)
 
 **PowerApps Administration | Frequently Asked Questions**
 <br>by Manas Maheshwari
@@ -83,7 +32,7 @@ Manas Maheshwari, Senior Program Manager on the PowerApps team comes to share a 
 
 [Click here to watch on June 12th](https://www.youtube.com/watch?v=9Sy_vT5kIts)
 
-**Inside the Universal Audit App: See what PowerApps and Flow are capable of  with Paul Culmsee**
+**Inside the Universal Audit App: See what PowerApps and Flow are capable of by Paul Culmsee**
 <br>by Paul Culmsee
 <br>*June 14th, 6:00PM PST, 9:00PM EST*
 
@@ -91,8 +40,16 @@ This popular app in the PowerApps showcase has resulted in 3-5 requests a week f
 
 [Click here to watch on June 14th](https://www.youtube.com/watch?v=6Wn47bDOMEE)
 
+**Getting Started | PowerApps Learning Paths - How to get good building apps fast!**
+<br>by Audrie Gordon
+<br>*June 26th, 6:00PM PST, 9:00PM EST*
+
+Audrie Gordon from the PowerApps team will share best practices and quick start strategies for learning and adopting PowerApps in your organization. Don't miss this special after-hours discussion live on YouTube. 
+
+[Click here to watch on June 26th](https://www.youtube.com/watch?v=ykNRxKvAirg)
+
 ## Past webinars ##
-Webinars are available on-demand after the live broadcast. Please note that you'll need to re-enter registration details, and then you'll be sent a link to the recording via email.
+Webinars are available on-demand after the live broadcast. Please note that in some cases you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
 
 ### Beginner Webinar Series ###
 **Top 5 Tips for Designing Apps that Mean Business**
@@ -227,6 +184,18 @@ Webinars are available on-demand after the live broadcast. Please note that you'
 **Model Driven App Components | Getting Started with Templates**
 <br>by Charles Sterling & Casey Burke
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Understanding-Model-Driven-App-Templates/m-p/116833)
+
+**Model Driven App Series Part 1 | Managing Entities and Data Imports**
+<br>by Audrie Gordon & Clay Wesener 
+[Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Components-Part-1-Managing-Entities-and-Data/m-p/116837)
+
+**Model Driven App Series Part 2 | Creating Forms and Views**
+<br>by Audrie Gordon & Anees Ansari 
+[Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Components-Part-2-Creating-Forms-and-Views-with/m-p/116838)
+
+**Model Driven App Series Part 3 | Exploring Charts and Dashboards**
+<br>by Audrie Gordon & Casey Burke 
+[Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Components-Part-3-Exploring-Charts-and/m-p/119732)
 
 ### App Designer Series ###
 **Building Apps for Adoption and Usability**
