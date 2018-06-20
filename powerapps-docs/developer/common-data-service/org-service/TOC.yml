@@ -19,7 +19,7 @@
   - name: Early-bound programming
     href: early-bound-programming.md
   - name: OrganizationServiceContext
-    href: organizationservicecontext.md  
+    href: organizationservicecontext.md 
 - name: How-to Guides
   items:
   - name: Create a client app
