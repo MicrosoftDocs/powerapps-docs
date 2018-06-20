@@ -1,5 +1,5 @@
 - name: Build Windows client applications using the XRM tools
-  href: ../build-windows-client-applications-xrm-tools.md
+  href: build-windows-client-applications-xrm-tools.md
   items:
   - name: Use connection strings in XRM tooling to connect
     href: use-connection-strings-xrm-tooling-connect.md

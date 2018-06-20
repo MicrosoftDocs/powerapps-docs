@@ -198,5 +198,5 @@ Use the `Get-CrmConnection` cmdlet to connect to a CDS for Apps instance. The cm
 ### See also
   
 [Use XRM Tooling API to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
-[Build Windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md)<br />
+[Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
 [Blog: PowerShell module for performing data operations and manipulating user and system settings in CRM](http://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)

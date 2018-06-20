@@ -31,4 +31,4 @@ After you are connected to CDS for Apps, you can use the <xref:Microsoft.Xrm.Too
 ### See also
 
 [Use XRM Tooling API to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
-[Build windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md)
+[Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)

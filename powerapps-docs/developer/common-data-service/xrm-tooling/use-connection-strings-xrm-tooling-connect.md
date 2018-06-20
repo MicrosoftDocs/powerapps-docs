@@ -120,7 +120,7 @@ The following examples show how you can use connection strings for connecting to
   
 ### See also
 
-[Build Windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md)<br />
+[Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
 [Use CrmServiceClient constructors to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)<br />
 <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>

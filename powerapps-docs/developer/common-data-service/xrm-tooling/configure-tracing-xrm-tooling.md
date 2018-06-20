@@ -120,4 +120,4 @@ If you want to enable tracing for all of the components in XRM tooling, you can 
   
 ### See also
 
-[Build Windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md)
+[Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)

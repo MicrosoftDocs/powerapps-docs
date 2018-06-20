@@ -149,4 +149,4 @@ There is a template for Visual Studio that enables you to use the common login c
 ### See also  
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Build windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md)
+[Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)

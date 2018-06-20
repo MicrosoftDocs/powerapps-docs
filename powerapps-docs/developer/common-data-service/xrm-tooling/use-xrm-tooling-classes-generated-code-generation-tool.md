@@ -57,4 +57,4 @@ else
 
 <!-- TODO:
 [Use the IOrganizationService Web Service to Read and Write Data or Metadata](../org-service/use-organization-service-read-write-data-metadata.md)<br /> -->
-[Build windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md)
+[Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)

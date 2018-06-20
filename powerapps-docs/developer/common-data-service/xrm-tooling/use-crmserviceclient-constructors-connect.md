@@ -144,4 +144,4 @@ CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential(
 <!-- TODO:
 [Sample: Quick Start for CDS for Apps](../sample-quick-start.md)<br /> -->
 <xref:Microsoft.Xrm.Tooling.Connector.AuthenticationType><br />
-[Build windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md)
+[Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)

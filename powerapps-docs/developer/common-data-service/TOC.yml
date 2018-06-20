@@ -27,6 +27,8 @@
       href: webapi/index.md
     - name: Organization Service
       href: org-service/index.md
+    - name: Metadata services
+      href: metadata-services.md
   - name: Apply business logic with code
     href: apply-business-logic-with-code.md
     items:

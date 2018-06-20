@@ -18,7 +18,7 @@ manager: "amyla"
 ---
 # Sample: Quick start for XRM Tooling API
 
-The QuickStart sample is a .NET Framework managed code sample that shows how to connect to a Common Data Service for Apps instance by using the XRM Tooling APIs, and perform basic create, update, retrieve, and delete operations on an entity. For more information about XRM Tooling, see [Build windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md).
+The QuickStart sample is a .NET Framework managed code sample that shows how to connect to a Common Data Service for Apps instance by using the XRM Tooling APIs, and perform basic create, update, retrieve, and delete operations on an entity. For more information about XRM Tooling, see [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md).
 
 Download the sample: [Work with XRM Tooling API](https://code.msdn.microsoft.com/XRM-Tooling-Sample-24a5c55c)
 
@@ -251,6 +251,6 @@ namespace QuickStartXRMToolingWPFClient
 ### See also
 
 [Use the XRM Tooling common login control](use-xrm-tooling-common-login-control-client-applications.md)<br />
-[Build Windows client applications using the XRM tools](../build-windows-client-applications-xrm-tools.md)<br />
+[Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
 <!-- TODO:
 [Tutorials for Learning About CDS for Apps Development](../tutorials-resources-sdk.md)<br /> -->
