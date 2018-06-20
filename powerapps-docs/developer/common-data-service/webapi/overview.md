@@ -27,7 +27,7 @@ The CDS for Apps Web API provides a development experience that can be used acro
   
 ### Related Sections
 
-[Use Common Data Service for Apps web services](../use-web-services.md)[Use Common Data Service for Apps web services](use-web-services.md)<br />
+[Use Common Data Service for Apps web services](../use-web-services.md)<br />
 [OData - the best way to REST](http://www.odata.org/)<br />
 [OData Version 4.0 Part 1: Protocol Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)<br />
 [OData Version 4.0 Part 2: URL Conventions Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)<br />
