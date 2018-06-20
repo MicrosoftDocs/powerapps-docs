@@ -15,38 +15,7 @@ ms.author: audrie
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
 ## Upcoming webinars ##
-
-**Connector Series | Microsoft StaffHub (Shift Planning) Apps with PowerApps**
-<br>by Marc-André Lépine
-<br>*June 5th, 10:00AM PST, 1:00PM EST*
-<br>
-Marc-André Lépine from the PowerApps and Flow Azure Advisors group joins us in this session to discuss how he built an awesome app to complement and extend what's possible using the StaffHub Connector. Later this week, he will show how he extended the Connector using a custom API.  
-
-[Click here to watch on June 5th](https://www.youtube.com/watch?v=LAximnEnKy8)
-
-**PowerApps Administration | Frequently Asked Questions**
-<br>by Manas Maheshwari
-<br>*June 12th, 9:30AM PST, 12:30PM EST*
-
-Manas Maheshwari, Senior Program Manager on the PowerApps team comes to share a few administration best practices, and to answer your questions about PowerApps Administration, Environments, and Databases LIVE! This will be jam packed with everything you need to know to administrator your PowerApps environments. Looking forward to seeing you there, and answering your most pressing admin questions.
-
-[Click here to watch on June 12th](https://www.youtube.com/watch?v=9Sy_vT5kIts)
-
-**Inside the Universal Audit App: See what PowerApps and Flow are capable of by Paul Culmsee**
-<br>by Paul Culmsee
-<br>*June 14th, 6:00PM PST, 9:00PM EST*
-
-This popular app in the PowerApps showcase has resulted in 3-5 requests a week for this app. As a result it has been deployed all around the world. In this session I will show how it was conceived, how we leveraged PowerApps and Flow to their full potential and what customizations have been done for clients. A great accompaniment session for those looking to get started by showing a complete solution in use around the world. 
-
-[Click here to watch on June 14th](https://www.youtube.com/watch?v=6Wn47bDOMEE)
-
-**Getting Started | PowerApps Learning Paths - How to get good building apps fast!**
-<br>by Audrie Gordon
-<br>*June 26th, 6:00PM PST, 9:00PM EST*
-
-Audrie Gordon from the PowerApps team will share best practices and quick start strategies for learning and adopting PowerApps in your organization. Don't miss this special after-hours discussion live on YouTube. 
-
-[Click here to watch on June 26th](https://www.youtube.com/watch?v=ykNRxKvAirg)
+Scheduling
 
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that in some cases you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
@@ -104,6 +73,18 @@ Webinars are available on-demand after the live broadcast. Please note that in s
 **Laura Rogers from IWMentor Shares Best Practices for Production Apps**
 <br>by Laura Rodgers
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Laura-Rogers-from-IWMentor-Shares-Best-Practices-for-Production/m-p/116871)
+
+**Connector Series | Microsoft StaffHub (Shift Planning) Apps with PowerApps**
+<br>by Marc-André Lépine
+[Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connector-Series-Shift-Scheduling-Apps-with-PowerApps-StaffHub/m-p/122036)
+
+**PowerApps Administration | Frequently Asked Questions**
+<br>by Manas Maheshwari
+[Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Administration-FAQ/m-p/127369#M44)
+
+**Inside the Universal Audit App: See what PowerApps and Flow are capable of by Paul Culmsee**
+<br>by Paul Culmsee
+[Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Inside-the-Universal-Audit-App-See-what-PowerApps-and-Flow-are/m-p/127370#M45)
 
 ### Advanced Webinar Series ###
 **PowerApps formulas**
