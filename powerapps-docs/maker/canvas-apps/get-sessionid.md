@@ -1,19 +1,21 @@
 ---
-title: Get a session ID | Microsoft Docs
-description: How to get a session ID for troubleshooting in PowerApps
-author: AFTOwen
+title: Get a Session ID or App ID | Microsoft Docs
+description: How to get a Session ID for troubleshooting in PowerApps
+author: AFTOwen, brimcg04
 
 ms.service: powerapps
 ms.topic: conceptual
 ms.component: canvas
 ms.date: 06/18/2018
-ms.author: anneta
+ms.author: anneta, brimcg
 
 ---
-# Get a session ID
-If you encounter a problem with an app that was created in PowerApps, you can help Microsoft troubleshoot the problem much more effectively if you provide them with a session ID for that problem.
+# Get a Session ID or App ID
+If you encounter a problem with an app that was created in PowerApps, you can help Microsoft troubleshoot the problem much more effectively if you provide them with a Session ID and/or an App ID for that problem.
 
-## When editing an app
+## Get the Session ID
+
+### When editing an app
 1. In the upper-left corner, select **File**.
 
 1. Select **Account**.
@@ -22,21 +24,21 @@ If you encounter a problem with an app that was created in PowerApps, you can he
 
      ![Get a session ID from PowerApps Studio](media/get-sessionid/studio.png)
 
-## When running an app in a browser
+### When running an app in a browser
 1. In the upper-right corner, select the gear icon.
 
 1. Select **Session details**.
 
      ![Get a session ID from a browser](media/get-sessionid/browser.png)
 
-## When running an app on a phone or a tablet
+### When running an app on a phone or a tablet
 1. Swipe right.
 
 1. Tap **Session details**.
 
      ![Get a session ID from a browser](media/get-sessionid/mobile.png)
 
-## When running an embedded app or form
+### When running an embedded app or form
 1. Perform one of these steps:
 
     - While holding down the Alt key, right-click the app or form.
@@ -45,3 +47,14 @@ If you encounter a problem with an app that was created in PowerApps, you can he
 1. Select **Session details**.
 
      ![Get a session ID from an embedded app](media/get-sessionid/embedded.png)
+
+## Get the App ID
+The app ID is available on powerapps.com:
+
+1. In [powerapps.com](https://powerapps.microsoft.com), on the **Apps** tab, click or tap the ellipsis ( **. . .** ), then **Details**.
+   
+    ![Go to app details](./media/embed-apps-dev/details.png)
+
+
+   
+    ![Copy app ID from details](./media/embed-apps-dev/app-id.png)
