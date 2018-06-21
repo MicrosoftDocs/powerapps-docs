@@ -49,7 +49,7 @@ Activity entities can only be owned by a user or team, they can’t be owned by 
 The following table lists activity entities that are available in a default CDS for Apps environment.
   
 |Name|Description|Display in activity menus|Reference|
-|----------|-----------------|-------------------------------|  
+|----------|-----------------|----------------|---------------|  
 |**Appointment**|Commitment representing a time interval with start/end times and duration.|Yes|[Appointment](/powerapps/developer/common-data-service/reference/entities/appointment)|
 |**Email**|Activity that is delivered using email protocols.|Yes|[Email ](/powerapps/developer/common-data-service/reference/entities/email)|
 |**Fax**|Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document.|Yes|[Fax](/powerapps/developer/common-data-service/reference/entities/fax)|
