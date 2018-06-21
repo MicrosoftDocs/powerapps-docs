@@ -14,9 +14,6 @@ ms.author: audrie
 # PowerApps webinar listing #
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
 
-## Upcoming webinars ##
-Scheduling
-
 ## Past webinars ##
 Webinars are available on-demand after the live broadcast. Please note that in some cases you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
 
