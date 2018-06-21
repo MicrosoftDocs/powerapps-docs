@@ -23,7 +23,7 @@ manager: "kvivek"
   
 ## Enable posts for a custom entity  
   
-1.  Go to **Settings** > **Activity Feeds Configuration**. 
+1.  Go to **[Settings](advanced-navigation.md#settings)** > **Activity Feeds Configuration**. 
   
 2.  Open the record for your custom entity.  
   

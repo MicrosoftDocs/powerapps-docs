@@ -55,8 +55,6 @@
         href: add-edit-app-components.md
       - name: Export, import, or remove an app
         href: export-import-remove-app.md                            
-    - name: Create or edit web resources
-      href: create-edit-web-resources.md
     - name: Use custom controls for data visualizations
       href: use-custom-controls-data-visualizations.md
     - name: Share a model-driven app with PowerApps
@@ -113,6 +111,8 @@
       href: design-custom-business-apps-using-app-designer.md
     - name: Timer control overview
       href: timer-control-legacy.md
+    - name: Create or edit web resources
+      href: create-edit-web-resources.md      
     - name: Web resource properties
       href: web-resource-properties-legacy.md
     - name: Set properties for a chart or list
