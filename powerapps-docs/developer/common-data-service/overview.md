@@ -59,7 +59,7 @@ If you are going to distribute the extensions you create or any customizations t
 
 ### Authentication
 
-When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are creating a client application. A simple console client application is a good way to familarize yourself with the CDS for Apps APIs. Most of the code samples provided include a means to authenticate. Enabling a means to connect to the data is an important first step. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
+When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are creating a client application. A simple console client application is a good way to familiarize yourself with the CDS for Apps APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
 - [Authentication](authentication.md)
 - [Create a client application](create-client-application.md)
 - [Quick Start: Create a console app using the organization service](org-service/quick-start-org-service-console-app.md)
@@ -77,7 +77,8 @@ More information:
 - [Common Data Service for Apps entities](entities.md)
 - [About the Entity Reference](reference/about-entity-reference.md)
 
+## Content for on-premises deployments
 
-
+CDS for Apps is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing (IFD) deployments. For information related to these options see the [Software Development Kit for Microsoft Dynamics 365 (online) and Dynamics 365 (on-premises)](https://msdn.microsoft.com/library/hh547453.aspx)
 
 

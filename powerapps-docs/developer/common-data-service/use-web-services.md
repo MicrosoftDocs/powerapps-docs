@@ -16,11 +16,7 @@ Common Data Service for Apps provides two web services you can use to interact w
 
 Choose the one which best matches the requirement and your skills. 
 
-<!-- TODO update diagram 
-Change branding, remove mention of custom XML Workflows
--->
-
-![Flow diagram to choose web service](media/whentousewebapi.jpg)
+![Flow diagram to choose web service](media/whentousewebapi.png)
 
 ## Web API
 
