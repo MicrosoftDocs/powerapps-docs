@@ -47,14 +47,14 @@
         href: create-business-rules-recommendations-apply-logic-form.md          
     - name: Work with apps
       items: 
-      - name: Add or edit app components in app designer
-        href: add-edit-app-components.md
-      - name: Export, import, or remove an app
-        href: export-import-remove-app.md
       - name: Create a model-driven app
         href: create-edit-app.md
       - name: Create a site map for an app
-        href: create-site-map-app.md                              
+        href: create-site-map-app.md 
+      - name: Add or edit app components in app designer
+        href: add-edit-app-components.md
+      - name: Export, import, or remove an app
+        href: export-import-remove-app.md                            
     - name: Create or edit web resources
       href: create-edit-web-resources.md
     - name: Use custom controls for data visualizations

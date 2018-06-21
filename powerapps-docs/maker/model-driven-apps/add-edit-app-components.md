@@ -103,7 +103,7 @@ The app designer refers to existing metadata in the default solution. You can us
     > [!NOTE]
     >  Alternatively, you can also do one of the following:  
     >   
-    > - Select **Add**![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Forms**.  
+    > - Select **Add** ![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Forms**.  
     > - On the **Components** tab, under **Entity Assets**, select **Forms**.  
   
     > [!TIP]
@@ -186,5 +186,5 @@ The app designer refers to existing metadata in the default solution. You can us
 Alternatively, you can select the forms, views, charts, or dashboards tile, and then on the **Components** tab, clear the check boxes for the assets you want to remove from the designer.  
   
 ## Next steps  
- [Create a site map for an app](create-site-map-app.md)   
+ [Create a site map for an app](create-site-map-app.md) </br>  
  [Validate and publish an app](validate-app.md)

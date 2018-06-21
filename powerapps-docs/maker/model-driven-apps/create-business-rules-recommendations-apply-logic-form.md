@@ -19,7 +19,7 @@ manager: "kvivek"
 tags: 
  - "PowerApps maker portal impact"
 ---
-# Create business rules and recommendations to apply logic in a form
+# Tutorial: Create business rules and recommendations to apply logic in a form
 
 This tutorial shows you how to create business rules and recommendations to apply form logic without writing JavaScript code or creating plug-ins.  Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to Main and Quick Create forms, and they work in PowerApps apps, Dynamics 365 customer engagement web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).  
   

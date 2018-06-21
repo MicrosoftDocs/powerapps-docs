@@ -13,7 +13,7 @@ caps.latest.revision: 9
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Enhance business process flows with branching
+# Tutorial: Enhance business process flows with branching
 
 Business process flows guide you through various stages of sales, marketing, or service processes toward completion. In simple cases, a linear business process flow is a good option. However, in more complex scenarios, you can enhance a business process flow with branching. If you have the create permissions on business process flows, you’ll be able create business process flow with multiple branches by using the `If-Else` logic. The branching condition can be formed of multiple logical expressions that use a combination of `AND` or `OR` operators. The branch selection is done automatically, in real time, based on rules defined during the process definition. For example, in selling cars, you can configure a single business process flow, which after a common qualification stage splits into two separate branches on the basis of a rule (Does the customer prefer a new car or pre-owned car, is their budget above or below $20,000, and so on. ), one branch, for selling new cars and another branch, for selling pre-owned cars. For more information about Business process flows, see [Business process flows overview](business-process-flows-overview.md).  
   

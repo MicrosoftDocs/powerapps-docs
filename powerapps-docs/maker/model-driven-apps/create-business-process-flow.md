@@ -18,7 +18,7 @@ author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Create a business process flow to standardize processes
+# Tutorial: Create a business process flow to standardize processes
 
 This tutorial shows you how to create a business process flow with PowerApps. To learn more about why you use business process flows, see [Business process flows overview](business-process-flows-overview.md). For information on creating a mobile task flow, see [Create a mobile task flow](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-mobile-task-flow).  
   
@@ -26,15 +26,11 @@ This tutorial shows you how to create a business process flow with PowerApps. To
   
  ![Business process with stages](media/business-process-stages.png "Business process with stages")  
   
-<a name="BKMK_Createbusinessprocessflows"></a>   
-## Create a business process flow  
-  
-1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
-  
     > [!TIP]
     >  After you create a business process flow definition, you can provide control over who can create, read, update, or delete the business process flow instance. For example, for service-related processes, you could provide full access for customer service reps to change the business process flow instance, but provide read-only access to the instance for sales reps so they can monitor post-sales activities for their customers. To set security for a business process flow definition you create, select **Enable Security Roles** on the action bar.  
   
-## Create a process process flow
+<a name="BKMK_Createbusinessprocessflows"></a>   
+## Create a business process flow  
   
 1. Open [solution explorer](advanced-navigation.md#solution-explorer).
   
@@ -194,7 +190,7 @@ The Dynamics 365 (online), version 9.0 update introduces a new business process 
 
 ### Enable Action Step support for business process flows 
 
-1.	Go to **Settings** > **Administration** > **System Settings**.
+1.	Go to **[Settings](advanced-navigation.md#settings)** > **Administration** > **System Settings**.
 2.	Select the **Preview** tab.
 3.	Review, and if you agree, accept the license terms.
 4.	Select **Enable Action Step Support for Business Process Flows Preview**, and then select **OK**.
@@ -228,9 +224,7 @@ Now, members of Contoso’s salesforce can kick-off the action from the **Opport
 - Actions are not available as Action Steps if the input or output parameters are Entity, EntityCollection, or OptionSet (Picklist) types. Actions with more than one EntityReference output parameter or any number of EntityReference input parameters are not available as Action Steps. Actions not associated with a primary entity (global action) are not available as Action Steps.
 
   
-### Next steps  
- [Business process flows overview](business-process-flows-overview.md)   
- [Enhance business process flows with branching ](enhance-business-process-flows-branching.md)</br> 
- [Create business rules and recommendations to apply logic in a form](create-business-rules-recommendations-apply-logic-form.md)   
- [Create custom business logic with processes](guide-staff-through-common-tasks-processes.md)  
- [Workflow processes](../common-data-service/workflow-processes.md)
+## Next steps  
+ [Business process flows overview](business-process-flows-overview.md) </br>   
+ [Enhance business process flows with branching ](enhance-business-process-flows-branching.md)
+

@@ -124,7 +124,6 @@ You can view or set these privileges on the **Customization** tab of a security 
 ## Add a group to the site map  
   
 1.  On the site map designer canvas, select the area you want to add the group to.  
-  
 2.  Select **Add** ![Add button on the designer](media/dynamics365-designer-addbutton.PNG "Add button on the designer"), and then select **Group**.  
   
      or  
@@ -184,7 +183,6 @@ You can view or set these privileges on the **Customization** tab of a security 
   
      Under **Advanced**, do the following:  
  
-
     - **Privileges**: This defines whether a subarea is displayed based on privileges available in any security roles that are assigned to the user. Select the name of the entity to check privileges for, and then select the check boxes to assign privileges. 
   
     - **More Titles**: If your organization uses multiple languages, select a language for the title, enter the title for the subarea, and then select **Add**. You can create, edit, or delete titles for as many languages as your organization uses. However, you can have only one title per language.  

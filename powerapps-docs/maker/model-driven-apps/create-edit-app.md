@@ -21,7 +21,7 @@ caps.latest.revision: 19
 topic-status: Drafting
 ---
 
-# Create a model-driven app by using the app designer
+# Tutorial: Create a model-driven app by using the app designer
 
 In this tutorial you learn the basics of how to create and edit a model-driven app by using the tile-based app designer.
 
@@ -37,8 +37,8 @@ Verify the following prerequisites before you start creating an app:
 
     ![Model-driven design mode](media/model-driven-switch.png)
 
-> [!IMPORTANT]
-> “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
 2. Select **Apps**, and then select **Create an app**.
 
