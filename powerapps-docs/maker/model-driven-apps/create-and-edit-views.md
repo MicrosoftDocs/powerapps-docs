@@ -30,6 +30,9 @@ manager: "kvivek"
 
     ![Model-driven design mode](media/model-driven-switch.png)
 
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
+
 2.  Expand **Data**, select **Entities**, select the **Account** entity, and then select the **Views** tab. 
 
 3.  On the toolbar, select **Add view**.  

@@ -35,10 +35,10 @@ A quick view form can be added to another form as a quick view control. It provi
   
 1. On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
 
-     ![Model-driven design mode](media/model-driven-switch.png)
+    ![Model-driven design mode](media/model-driven-switch.png)
 
-> [!IMPORTANT]
-> “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
   
 2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
   
@@ -72,8 +72,8 @@ A quick view form can be added to another form as a quick view control. It provi
   
 1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
 
-> [!IMPORTANT]
-> “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
   
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
 

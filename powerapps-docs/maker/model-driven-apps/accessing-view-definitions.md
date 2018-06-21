@@ -25,17 +25,21 @@ manager: "kvivek"
   
 ## Open a view in PowerApps
 
-1. Sign in to [PowerApps](https://web.powerapps.com/). 
+1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
 
-2. Select **Model-driven** > **Data** > **Entities** > and then select the entity you want, such as the account entity. 
+    ![Model-driven design mode](media/model-driven-switch.png)
 
-3. Select the **Views** tab and then select **Remove filter**.
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-![Account view definitions](media/account-view-definitions.png)
+2.  Expand **Data**, select **Entities**, and then select the **Account** entity.   
+3. Select the **Views** tab, and then select **Remove filter**.
+
+    ![Account view definitions](media/account-view-definitions.png)
 
 4. Select the view you want to open, such as the account entity **All Accounts** view.
 
-![All Accounts view](media/all-accounts-view.png)
+    ![All Accounts view](media/all-accounts-view.png)
 
 5. From the view editor you can perform several tasks: 
  
@@ -56,7 +60,7 @@ On any list view for an entity, in the command bar you will find the following c
 
 ## Open a view in solution explorer 
   
-1.  Open solution explorer.  
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer).  
   
 2.  Under **Components**, expand **Entities**, and then expand the entity you want.  
   
@@ -66,17 +70,17 @@ On any list view for an entity, in the command bar you will find the following c
   
  This list of views has four filters you can use to find the views you want more easily:  
   
-- **All Active Views**  
+    - **All Active Views**  
   
-- **Active Public Views**  
+    - **Active Public Views**  
   
-- **Inactive Public Views**  
+    - **Inactive Public Views**  
   
-- **Active System-Defined Views**  
+    - **Active System-Defined Views**  
   
  If the entity that the view is associated with is part of an unmanaged solution, you can still create or edit views for that entity in the default solution. System views are associated with an entity and are not available as separate solution components. Unlike fields, views do not use a customization prefix in a unique name that should be consistent in a solution, so you do not need to create views in the context of a solution. 
  
-### Next steps
+## Next steps
 [Understand views ](create-edit-views.md)
 
 

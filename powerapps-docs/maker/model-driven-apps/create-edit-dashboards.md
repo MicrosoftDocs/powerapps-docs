@@ -27,8 +27,8 @@ There are two types of dashboards, user dashboards and system dashboards. An app
 
     ![Model-driven design mode](media/model-driven-switch.png)
 
-> [!IMPORTANT]
-> “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
   
 2. Expand **Data**, select **Entities**, select the entity that you want base the dashboard on, such as the **Account** entity, and then select the **Dashboards** tab. 
 
@@ -49,8 +49,8 @@ There are two types of dashboards, user dashboards and system dashboards. An app
   
 1. On the [PowerApps](https://web.powerapps.com) site select **Model-driven** (lower left of the navigation pane).
 
-> [!IMPORTANT]
-> “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).    
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).    
   
 2. Expand **Data**, select **Entities**, select the entity that you want base the dashboard on, such as the **Account** entity, and then select the **Dashboards** tab.  
 
@@ -64,13 +64,13 @@ There are two types of dashboards, user dashboards and system dashboards. An app
   
  Additional system dashboards tasks you can perform include:  
   
--   Remove a list or chart from a dashboard  
+    -   Remove a list or chart from a dashboard  
   
--   Add a list or chart to a dashboard  
+    -   Add a list or chart to a dashboard  
   
--   Set the default dashboard  
+    -   Set the default dashboard  
   
--   Use security roles to make a dashboard visible to just certain roles    
+    -   Use security roles to make a dashboard visible to just certain roles    
   
-### Next steps  
+## Next steps  
 [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md)
