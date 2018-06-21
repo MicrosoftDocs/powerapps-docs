@@ -12,12 +12,9 @@ ms.author: audrie
 
 ---
 # PowerApps webinar listing #
-These webinars can help you to leverage the features and functions of Microsoft PowerApps. Please feel free to suggest additional topics in the comments under this topic.
+These webinars can help you to leverage the features and functions of Microsoft PowerApps. Webinars are available on-demand after the live broadcast. Please note that, in some cases, you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
 
-## Past webinars ##
-Webinars are available on-demand after the live broadcast. Please note that in some cases you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 
-
-### Beginner Webinar Series ###
+## Beginner Webinar Series ##
 **Top 5 Tips for Designing Apps that Mean Business**
 <br>by Audrie Gordon
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Top-5-tips-for-designing-and-building-PowerApps-that-mean/m-p/116843)
@@ -54,7 +51,7 @@ Webinars are available on-demand after the live broadcast. Please note that in s
 <br>by Emma Cooper
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Getting-Started-New-Office-Graph-Templates-Part-2-by-Emma-Cooper/m-p/116840)
 
-### Intermediate Webinar Series ###
+## Intermediate Webinar Series ##
 **Application Lifecycle with the new Save and publish options in PowerApps**
 <br>by Karthik Bharathy
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Application-LIfecycle-with-the-new-Save-and-publish-options-in/m-p/116860)
@@ -83,7 +80,7 @@ Webinars are available on-demand after the live broadcast. Please note that in s
 <br>by Paul Culmsee
 [Watch Now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Inside-the-Universal-Audit-App-See-what-PowerApps-and-Flow-are/m-p/127370#M45)
 
-### Advanced Webinar Series ###
+## Advanced Webinar Series ##
 **PowerApps formulas**
 <br>by Greg Lindhorst
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Deep-dive-on-formulas-by-Greg-Lindhorst/m-p/116899)
@@ -133,7 +130,7 @@ Webinars are available on-demand after the live broadcast. Please note that in s
 <br>by Audrie Gordon 
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-Project-Online-PWA/m-p/116889)
 
-### SharePoint Series ###
+## SharePoint Series ##
 **Rapidly build applications with PowerApps Studio**
 <br>by Karthik Bharathy
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Rapidly-build-applications-with-PowerApps-Studio/m-p/116849)
@@ -154,7 +151,7 @@ Webinars are available on-demand after the live broadcast. Please note that in s
 <br>by Ankit Saraf
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Introducing-List-Forms-in-SharePoint-Online/m-p/116916)
 
-### Model Driven Series ###
+## Model Driven Series ##
 **Model Driven App Components | Introduction to Model Driven Apps**
 <br>by Charles Sterling & Adrian Orth 
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Series-Introduction-to-Model-Driven-Apps/m-p/116820)
@@ -175,7 +172,7 @@ Webinars are available on-demand after the live broadcast. Please note that in s
 <br>by Audrie Gordon & Casey Burke 
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Components-Part-3-Exploring-Charts-and/m-p/119732)
 
-### App Designer Series ###
+## App Designer Series ##
 **Building Apps for Adoption and Usability**
 <br>by Veronica Ward
 [Watch now](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Apps-for-Adoption-and-Usability-with-Veronica-Ward/m-p/117625#M38)
