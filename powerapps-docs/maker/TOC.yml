@@ -596,7 +596,7 @@
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
       href: ./canvas-apps/limits-and-config.md
-    - name: Get a session ID
+    - name: Get a session or app ID
       href: ./canvas-apps/get-sessionid.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
