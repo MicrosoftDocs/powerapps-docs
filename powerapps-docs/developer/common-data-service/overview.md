@@ -5,7 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: JimDaly
-manager: faisalmo
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -17,133 +17,67 @@ ms.date: 03/20/2018
 ms.author: jdaly
 ---
 # Common Data Service for Apps Developer Overview
-PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the expansion of the Common Data Service, now called Common Data Service for Apps which now contains the core functionality of the CDS for Apps platform that powers CDS for Apps for Sales, Marketing, Customer Service.
+
+PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the expansion of the Common Data Service, now called Common Data Service for Apps which now contains the core functionality of the Dynamics 365 Customer Engagement platform that powers Dynamics 365 Customer Engagement for Sales, Marketing, Customer Service.
+
+> [!NOTE]
+> If you are already experienced with the the Dynamics 365 Customer Engagement for Sales, Marketing, or Customer Service apps, you will find that you will be able to apply your experience to customize and extend Common Data Service for Apps.
 
 
 ## Get Started
-If you are already experienced with the CDS for Apps for Sales, Marketing, or Customer Service apps, you will find that you will be able to apply your experience to customize and extend Common Data Service for Apps.
 
-If you are new to the CDS for Apps for Sales, Marketing, or Customer Service apps, the following topics provide a high-level overview of the important concepts to help you get started working with Common Data Service for Apps.
+There are many aspects to how developers can contribute to creating apps that use CDS for Apps. While it is possible to build an application with code using CDS for Apps as your data source, most projects will use either model-driven driven apps or canvas apps to generate the experience that people will use. 
 
-> [!NOTE]
-> - Model-driven apps connect to Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps Developer Overview](../model-driven-apps/overview.md). Content in this section will refer only to extensions developers can do at the service level. 
-> - Because Common Data Service for Apps is the same platform used by CDS for Apps for Sales, Marketing, or Customer Service apps, you will find more complete information for developers in the [Common Data Service for Apps Developer Guide](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
+## Working with model-driven apps
+
+Model-driven apps are built on CDS for apps. A model-driven app can only connect to a CDS for Apps environment and all the data that defines a model-driven app is stored within CDS for Apps.
+
+Model-driven apps share the method of distributing customizations and extensions used by CDS for Apps: Solutions. You can learn more about solutions in [Introduction to solutions](introduction-solutions.md)
+
+Model driven apps also have a number of points for developers to write code to extend. For information on what developers can do with model-driven apps, see [Model-driven apps Developer Overview](../model-driven-apps/overview.md)
+
+## Understand when to write code
+
+Because CDS for Apps includes many capabilities for people to configure custom business logic without writing code, the most common scenarios for developers to contribute involve filling spaces in-between where existing features may not provide functionality you need to meet a requirement. Fortunately, CDS for Apps provides many points for developers to extend the common functionality using code.
+
+For a developer who will contribute to projects it is important that they understand what can be done without writing code. You should familiarize yourself with these capabilities. More information: [What is Common Data Service for Apps?](../../maker/common-data-service/data-platform-intro.md)
+
+## Where to begin?
+
+Where to begin depends on what problem you are trying to solve. This guide includes content about a wide range of capabilities and it is unlikely you will ever use all of them. The following includes several of the key areas to begin.
+
+### Applying business logic
+
+The most common extensions created using code involve automating the processes used by businesses. You can find a summary of options available for you in [Apply business logic with code](apply-business-logic-with-code.md). Each of these approaches are typically invoked based on events that occur on the server, so understanding of the [Event Framework](event-framework.md) will be valuable.
+
+### Solutions
+
+If you are going to distribute the extensions you create or any customizations that they depend on, you will need to understand solutions. Solutions created by an individual are relatively simple to work with and don't require the skills of a developer. But for a team of developers to work productively with solutions and use effective application lifecycle management principles requires a more sophisticated approach. More information:
+ - [Introduction to solutions](introduction-solutions.md)
+ - [How to manage solutions](how-manage-solutions.md)
 
 
-## Tools and resources for developers
+### Authentication
 
-Developers will use the following tools and resources when working with solutions using Common Data Service for apps.
+When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are creating a client application. A simple console client application is a good way to familarize yourself with the CDS for Apps APIs. Most of the code samples provided include a means to authenticate. Enabling a means to connect to the data is an important first step. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
+- [Authentication](authentication.md)
+- [Create a client application](create-client-application.md)
+- [Quick Start: Create a console app using the organization service](org-service/quick-start-org-service-console-app.md)
+- [Simple Web API quick-start sample (C#)](webapi/simple-web-api-quick-start-sample-csharp.md)
+- [Sample: Quick start for XRM Tooling API](xrm-tooling/sample-quick-start-xrm-tooling-api.md)
 
-### Tools available for download from NuGet
+### Web services
 
-The following tools are distributed in NuGet packages. The [Developer Guide: Download tools from NuGet](/dynamics365/customer-engagement/developer/download-tools-nuget) topic includes a PowerShell script you can use to download and extract the latest versions of these tools.
+There are two different web services you can use to work with data. Which one you should use depends on the type of project you are working on. For more information see [Use Common Data Service for Apps web services](use-web-services.md)
 
-|Tool  |Description  |
-|---------|---------|
-|Code generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the entity data model used by the organization service. <br />More information: <br />[Organization Service](use-web-services.md#organization-service)<br />[Create early bound entity classes with the code generation tool ](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)|
-|Configuration Migration tool `DataMigrationUtility.exe`|Used to move configuration data across environments. Configuration data is used to define custom functionality  and is typically stored in custom entities. This tool is not designed to move business data. <br /> More information: [Common Data Service for Apps Administrator Guide: Move configuration data across instances and organizations with the Configuration Migration tool](/dynamics365/customer-engagement/admin/manage-configuration-data)|
-|Package Deployer `PackageDeployer.exe`|Used to deploy packages on Common Data Service for Apps instances. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy Solution Packages](introduction-solutions.md#deploy-solution-packages)<br />[Create packages for the CDS for Apps Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)|
-|Plug-in Registration Tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to server events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)|
-|SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a Common Data Service for Apps compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development of solutions](introduction-solutions.md#team-development-of-solutions)<br />[Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
+### Entities
 
-### .NET SDK Assemblies 
-
-The following are assemblies .NET developers can use. The latest versions are available to download in the corresponding NuGet packages.
-
-#### Work with data
-
-Use these assemblies to interact with the organization service and discovery services.
-
-More information: [Use the CDS for Apps Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)
-
-**NuGet Package**: [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/)
-
-|Assembly  |Namespaces  |
-|---------|---------|
-|Microsoft.Crm.Sdk.Proxy.dll|[Microsoft.Crm.Sdk](/dotnet/api/microsoft.crm.sdk)<br />[Microsoft.Crm.Sdk.Messages](/dotnet/api/microsoft.crm.sdk.messages)|
-|Microsoft.Xrm.Sdk.dll|[Microsoft.Xrm.Sdk](/dotnet/api/microsoft.xrm.sdk)<br />[Microsoft.Xrm.Sdk.Client](/dotnet/api/microsoft.xrm.sdk.client)<br />[Microsoft.Xrm.Sdk.Discovery](/dotnet/api/microsoft.xrm.sdk.discovery)<br />[Microsoft.Xrm.Sdk.Messages](/dotnet/api/microsoft.xrm.sdk.messages)<br />[Microsoft.Xrm.Sdk.Metadata](/dotnet/api/microsoft.xrm.sdk.metadata)<br />[Microsoft.Xrm.Sdk.Metadata.Query](/dotnet/api/microsoft.xrm.sdk.metadata.query)<br />[Microsoft.Xrm.Sdk.Organization](/dotnet/api/microsoft.xrm.sdk.organization)<br />[Microsoft.Xrm.Sdk.Query](/dotnet/api/microsoft.xrm.sdk.query)<br />[Microsoft.Xrm.Sdk.WebServiceClient](/dotnet/api/microsoft.xrm.sdk.webserviceclient)|
-
-#### Create Process Designer (Workflow) extensions
-
-Use this assembly to add custom activities to the Process designer. 
-
-More information [Custom workflow activities (workflow assemblies)](/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies)
-
-**NuGet Package**: [Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/) 
-
-|Assembly|Namespaces|
-|---------|---------|
-|Microsoft.Xrm.Sdk.Workflow.dll|[Microsoft.Xrm.Sdk.Workflow](/dotnet/api/microsoft.xrm.sdk.workflow)<br />[Microsoft.Xrm.Sdk.Workflow.Activities](/dotnet/api/microsoft.xrm.sdk.workflow.activities)<br />[Microsoft.Xrm.Sdk.Workflow.Designers](/dotnet/api/microsoft.xrm.sdk.workflow.designers)|
-
-#### Build windows client applications
-
-Use these assemblies to facilitate connecting to the organization service and to build windows client applications. 
-
-More information [Build Windows client applications using the XRM tools](/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools)
-
-**NuGet Packages**:
-- [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) (Microsoft.Xrm.Tooling.Connector.dll)
-- [Microsoft.CrmSdk.XrmTooling.WpfControls](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.WpfControls/) 
-
-|Assembly|Namespaces  |
-|---------|---------|
-|Microsoft.Xrm.Tooling.Connector.dll|[Microsoft.Xrm.Tooling.Connector](/dotnet/api/microsoft.xrm.tooling.connector)<br />[Microsoft.Xrm.Tooling.Connector.Model](/dotnet/api/microsoft.xrm.tooling.connector.model)|
-|Microsoft.Xrm.Tooling.CrmConnectControl.dll|[Microsoft.Xrm.Tooling.CrmConnectControl](/dotnet/api/microsoft.xrm.tooling.crmconnectcontrol)<br />[Microsoft.Xrm.Tooling.CrmConnectControl.Model](/dotnet/api/microsoft.xrm.tooling.crmconnectcontrol.model)<br />[Microsoft.Xrm.Tooling.CrmConnectControl.Properties](/dotnet/api/microsoft.xrm.tooling.crmconnectcontrol.properties)<br />[Microsoft.Xrm.Tooling.CrmConnectControl.Utility](/dotnet/api/microsoft.xrm.tooling.crmconnectcontrol.utility)|
-|Microsoft.Xrm.Tooling.WebResourceUtility.dll|[Microsoft.Xrm.Tooling.WebResourceUtility](/dotnet/api/microsoft.xrm.tooling.webresourceutility)|
-
-#### Create packages
-
-Use these assemblies to create packages for the Package Deployer.
-
-More information: [Create packages for the CDS for Apps Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)
-
-**NuGet Package**: [Microsoft.CrmSdk.XrmTooling.PackageDeployment](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment/)
-
-|Assembly|Namespace  |
-|---------|---------|
-|Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.dll|[Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase](/dotnet/api/microsoft.xrm.tooling.packagedeployment.crmpackageextentionbase)|
-
-#### Create Custom virtual entity data providers
-
-Use this assembly to create custom virtual entity data providers. 
-
-More information: [Get started with virtual entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)
-
-**NuGet Package**: [Microsoft.CrmSdk.Data](https://www.nuget.org/packages/Microsoft.CrmSdk.Data/)
-
-|Assembly  |Namespaces  |
-|---------|---------|
-|Microsoft.Xrm.Sdk.Data.dll|[Microsoft.Xrm.Sdk.Data](/dotnet/api/microsoft.xrm.sdk.data)<br />[Microsoft.Xrm.Sdk.Data.CodeGen](/api/microsoft.xrm.sdk.data.codegen)<br />[Microsoft.Xrm.Sdk.Data.Converters](/dotnet/api/microsoft.xrm.sdk.data.converters)<br />[Microsoft.Xrm.Sdk.Data.Exceptions](/dotnet/api/microsoft.xrm.sdk.data.exceptions)<br />[Microsoft.Xrm.Sdk.Data.Expressions](/dotnet/api/microsoft.xrm.sdk.data.expressions)<br />[Microsoft.Xrm.Sdk.Data.Infra](/dotnet/api/microsoft.xrm.sdk.data.infra)<br />[Microsoft.Xrm.Sdk.Data.Mappings](/dotnet/api/microsoft.xrm.sdk.data.mappings)|
-
-#### Extend Outlook Client
-
-Use this assembly to interact with Microsoft CDS for Apps for Outlook and Microsoft CDS for Apps for Microsoft Office Outlook with Offline Access. 
-
-More information: [Extend Common Data Service for Apps for Outlook](/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook)
-
-**NuGet Package**: [Microsoft.CrmSdk.Outlook](https://www.nuget.org/packages/Microsoft.CrmSdk.Outlook/)
-
-|Assembly|Namespace|
-|---------|---------|
-|Microsoft.Crm.Outlook.Sdk.dll|[Microsoft.Crm.Outlook.Sdk](/dotnet/api/microsoft.crm.outlook.sdk)|
+Entities store the business data you will work with. An understanding what they are and how to work with them is essential.
+More information:
+- [Common Data Service for Apps entities](entities.md)
+- [About the Entity Reference](reference/about-entity-reference.md)
 
 
 
-## Community Tools for Common Data Service for Apps
 
-The CDS for Apps community creates tools! Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service for Apps, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
 
-The following is a selected list of community tools distributed via the XrmToolBox that you can use with Common Data Service for Apps.
-
-|Tool  |Description  |
-|---------|---------|
-|[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)|Used to rename/delete/or change the type of an attribute.|
-|[Early Bound Generator](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.EarlyBoundGenerator/)|Generates Early Bound Entities/Option Sets/Actions. Uses CrmSvcUtil from the SDK, and shows command line used to create the classes.|
-|[Export to Excel](https://www.xrmtoolbox.com/plugins/Ryr.XrmToolBox.ExportToExcel/)|Easily export records from the selected view/fetchxml to Excel.|
-|[FetchXML Builder](https://www.xrmtoolbox.com/plugins/Cinteros.Xrm.FetchXmlBuilder/)|Create and test FetchXml Queries|
-|[Metadata Browser](https://www.xrmtoolbox.com/plugins/MsCrmTools.MetadataBrowser/)|Browse metadata from your Dynamics CRM organization|
-|[Plugin Trace Viewer](https://www.xrmtoolbox.com/plugins/Cinteros.XrmToolBox.PluginTraceViewer/)|Investigate the Plug-in Trace Log with easy filtering and display possibilities|
-|[User Settings Utility](https://www.xrmtoolbox.com/plugins/MsCrmTools.UserSettingsUtility/)|Manage users personal settings in bulk|
-
-> [!NOTE]
-> Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.

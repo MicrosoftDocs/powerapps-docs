@@ -5,7 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: JimDaly
-manager: faisalmo
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
