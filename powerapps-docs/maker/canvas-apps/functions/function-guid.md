@@ -1,9 +1,6 @@
 ---
 title: GUID function | Microsoft Docs
 description: Reference information, including syntax, for the GUID function in PowerApps
-author: gregli-msft
-
-ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
 ms.date: 06/09/2018
@@ -41,11 +38,13 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **GUID*
 ## Syntax
 **GUID**( [ *GUIDString* ] )
 
+
 * *GUIDString* – Optional.  A text string that contains the hexadecimal representation of a GUID. If no string is supplied, a GUID is created.
 
 ## Examples
 
 #### Basic usage
+
 
 To return a GUID value based on the hexadecimal string representation:
 
