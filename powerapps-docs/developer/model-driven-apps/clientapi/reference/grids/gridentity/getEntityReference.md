@@ -1,5 +1,5 @@
 ---
-title: "getEntityReference (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "getEntityReference (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 11/10/2017
 ms.service: "crm-online"
 ms.topic: "reference"

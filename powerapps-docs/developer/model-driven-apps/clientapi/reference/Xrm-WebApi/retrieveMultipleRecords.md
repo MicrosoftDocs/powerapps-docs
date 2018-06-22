@@ -1,5 +1,5 @@
 ---
-title: "retrieveMultipleRecords (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 05/24/2018
 ms.service: "crm-online"
 ms.topic: "reference"

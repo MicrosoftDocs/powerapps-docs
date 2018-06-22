@@ -1,4 +1,4 @@
-- name: Client scripting in Customer Engagement using JavaScript
+- name: Client scripting
   href: client-scripting.md
   items:
   - name: Events in forms and grids
@@ -16,9 +16,9 @@
       href: clientapi-xrm.md
   - name: 'Walkthrough: Write your first client script'
     href: walkthrough-write-your-first-client-script.md
-  - name: Debug your JavaScript code for Customer Engagement
+  - name: Debug your JavaScript code for model-driven apps
     href: debug-JavaScript-code.md
-  - name: 'Best practices: client scripting in Customer Engagement'
+  - name: 'Best practices: client scripting in model-driven apps'
     href: client-scripting-best-practices.md
   - name: Client API Reference
     href: reference.md

@@ -1,5 +1,5 @@
 ---
-title: "getCurrentAppName (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "getCurrentAppName (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -13,7 +13,7 @@ manager: "amyla"
 
 
 
-Returns the name of the current business app in Customer Engagement.
+Returns the name of the current business app in model-driven apps.
 
 ## Syntax
 

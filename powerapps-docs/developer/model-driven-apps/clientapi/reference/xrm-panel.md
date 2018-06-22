@@ -13,7 +13,7 @@ manager: "amyla"
 
 
 
-Provides a method to display a web page in the side pane of Customer Engagement form. 
+Provides a method to display a web page in the side pane of model-driven apps form. 
 
 |Method | Description | 
 | ------------- |-------------| 

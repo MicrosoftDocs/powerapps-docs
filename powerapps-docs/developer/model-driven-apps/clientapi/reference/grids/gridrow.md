@@ -1,5 +1,5 @@
 ---
-title: "GridRow (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "GridRow (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 11/10/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -37,6 +37,6 @@ var gridRow = myRows.get(arg);
 
 [GridRowData](gridrowdata.md)
 
-[Grids and subgrids in Customer Engagement](../grids.md)
+[Grids and subgrids in model-driven apps](../grids.md)
 
 

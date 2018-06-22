@@ -1,5 +1,5 @@
 ---
-title: "Grids and subgrids in Customer Engagement for Dynamics 365| MicrosoftDocs"
+title: "Grids and subgrids in model-driven apps for Dynamics 365| MicrosoftDocs"
 ms.date: 11/10/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -9,15 +9,15 @@ author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
 ---
-# Grids and subgrids in Customer Engagement (Client API reference)
+# Grids and subgrids in model-driven apps (Client API reference)
 
 
 
-Grids present data in a tabular format in Customer Engagement. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*.
+Grids present data in a tabular format in model-driven apps. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*.
 
 ## Types of grids
 
-There are two types of grids in Customer Engagement:
+There are two types of grids in model-driven apps:
 - **Read-only grids**: Display data in a tabular format. To edit the data displayed in a read-only grid, you have to click the record in the grid to open the form, edit the data, and then save.
 -  **Editable grids**: In addition to displaying data in a tabular format, provides rich inline editing capabilities on web and mobile clients including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views. The editable grid is a custom control, and is supported in the main grid and subgrids on a form in the web client and in dashboards and on form grids on the mobile clients. Although the editable grid control provides editing capability, it honors the read-only grid metadata and field-level security settings.
 
@@ -36,7 +36,7 @@ Grid context is the grid or subgrid instance on a form against which you want to
 |[Grid OnSave](events/grid-onsave.md)|Occurs before sending the updated information to the server, and when any of the following occurs: there is a change in the record selection, the user explicitly triggers a save operation using the editable grid’s save button, or the user applies a sort, filter, group, pagination, or navigation operation from the editable grid while there are pending changes.|Editable grid|
 
 >[!NOTE]
->You can register for the **OnChange**, **OnRecordSelect**, and **OnSave** events using the **Events** tab of the Dynamics 365 Customer Engagement page that is used to enable editable grids for an entity or a read-only grid.
+>You can register for the **OnChange**, **OnRecordSelect**, and **OnSave** events using the **Events** tab of the model-driven apps page that is used to enable editable grids for an entity or a read-only grid.
 
 ## Methods
 
@@ -56,9 +56,9 @@ Grid context is the grid or subgrid instance on a form against which you want to
 
 [Client API grid context](../clientapi-grid-context.md)
 
-[Use editable grids in Customer Engagement](../../customize-dev/use-editable-grids-dynamics-365.md)
+[Use editable grids in model-driven apps](../../customize-dev/use-editable-grids-dynamics-365.md)
 
-[Client API Reference for Customer Engagement](../reference.md)
+[Client API Reference for model-driven apps](../reference.md)
 
-[Developer Guide for Dynamics 365 Customer Engagement](../../developer-guide.md)
+[Developer Guide for model-driven apps](../../developer-guide.md)
 

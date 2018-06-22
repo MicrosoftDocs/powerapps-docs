@@ -1,5 +1,5 @@
 ---
-title: "Client API execution context in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "Client API execution context in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "conceptual"

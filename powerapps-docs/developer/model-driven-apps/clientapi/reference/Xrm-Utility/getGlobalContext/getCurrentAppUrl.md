@@ -13,7 +13,7 @@ manager: "amyla"
 
 
 
-Returns the URL of the current business app in Customer Engagement.
+Returns the URL of the current business app in model-driven apps.
 
 ## Syntax
 
@@ -30,8 +30,8 @@ globalContext.getCurrentAppUrl();
 
 |Value |Client |
 |---|---|
-|https://[org].crm.dynamics.com/main.aspx?appid=[GUID]|Dynamics 365 Customer Engagement (online)|
-|https://[server]/[org]/main.aspx?appid=[GUID]|Dynamics 365 Customer Engagement (on-premises)|
+|https://[org].crm.dynamics.com/main.aspx?appid=[GUID]|model-driven apps (online)|
+|https://[server]/[org]/main.aspx?appid=[GUID]|model-driven apps (on-premises)|
 
 ### Related topics
 

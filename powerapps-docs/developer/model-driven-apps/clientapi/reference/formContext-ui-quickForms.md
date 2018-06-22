@@ -1,6 +1,6 @@
 ---
-title: "formContext.ui.quickForms (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
-description: "Learn about working with processes in Customer Engagement using client API."
+title: "formContext.ui.quickForms (Client API reference) in model-driven apps| MicrosoftDocs"
+description: "Learn about working with processes in model-driven apps using client API."
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -14,7 +14,7 @@ manager: "amyla"
 
 
 
-Provides methods to access all the quick view controls and its constituent controls on the Customer Engagement forms when using the new form rendering engine (also called "turbo forms"). A quick view control is a quick view form added to a main form in Customer Engagement that enables you to view information about a related entity record within the main form. Data in constituent controls in a quick view control cannot be edited.
+Provides methods to access all the quick view controls and its constituent controls on the model-driven apps forms when using the new form rendering engine (also called "turbo forms"). A quick view control is a quick view form added to a main form in model-driven apps that enables you to view information about a related entity record within the main form. Data in constituent controls in a quick view control cannot be edited.
 
 The **quickForms** collection provides access to all the quick view controls on a form, and supports all the standard methods of the collections. See [Collections](collections.md)) for information about the collection methods. 
 

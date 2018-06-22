@@ -1,5 +1,5 @@
 ---
-title: "getGlobalContext (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "getGlobalContext (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 01/23/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -36,11 +36,11 @@ Use the following properties of global context to return information about the c
 |---|---|
 |[getAdvancedConfigSetting](getGlobalContext/getAdvancedConfigSetting.md) |Returns information about the advanced configuration settings for the organization.|
 |[getClientUrl](getGlobalContext/getClientUrl.md) |Returns the base URL that was used to access the application.|
-|[getCurrentAppName](getGlobalContext/getCurrentAppName.md) |Returns the name of the current business app in Customer Engagement.|
-|[getCurrentAppProperties](getGlobalContext/getCurrentAppProperties.md) |Returns the properties of the current business app in Customer Engagement.|
-|[getCurrentAppUrl](getGlobalContext/getCurrentAppUrl.md) |Returns the URL of the current business app in Customer Engagement.|
-|[getVersion](getGlobalContext/getVersion.md) |Returns the version number of the Dynamics 365 Customer Engagement instance.|
-|[isOnPremises](getGlobalContext/isOnPremises.md) |Returns a boolean value indicating if the Customer Engagement instance is hosted on-premises or online.|
+|[getCurrentAppName](getGlobalContext/getCurrentAppName.md) |Returns the name of the current business app in model-driven apps.|
+|[getCurrentAppProperties](getGlobalContext/getCurrentAppProperties.md) |Returns the properties of the current business app in model-driven apps.|
+|[getCurrentAppUrl](getGlobalContext/getCurrentAppUrl.md) |Returns the URL of the current business app in model-driven apps.|
+|[getVersion](getGlobalContext/getVersion.md) |Returns the version number of the model-driven apps instance.|
+|[isOnPremises](getGlobalContext/isOnPremises.md) |Returns a boolean value indicating if the model-driven apps instance is hosted on-premises or online.|
 |[prependOrgName](getGlobalContext/prependOrgName.md) |Prefixes the current organization's unique name to a string, typically a URL path.|
 
 

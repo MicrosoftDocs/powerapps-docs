@@ -1,5 +1,5 @@
 ---
-title: "isOnPremise (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "isOnPremise (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -13,7 +13,7 @@ manager: "amyla"
 
 
 
-Returns a boolean value indicating if the Customer Engagement instance is hosted on-premises or online. 
+Returns a boolean value indicating if the model-driven apps instance is hosted on-premises or online. 
 
 ## Syntax
 
@@ -26,7 +26,7 @@ globalContext.isOnPremises();
 
 **Type**: Boolean
 
-**Description**: **true** if the Customer Engagement instance is on-premises; **false** otherwise.
+**Description**: **true** if the model-driven apps instance is on-premises; **false** otherwise.
 
 ### Related topics
 

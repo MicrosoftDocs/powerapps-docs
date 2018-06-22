@@ -1,6 +1,6 @@
 ---
-title: "formContext.ui.process (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
-description: "Learn about working with processes in Customer Engagement using client API."
+title: "formContext.ui.process (Client API reference) in model-driven apps| MicrosoftDocs"
+description: "Learn about working with processes in model-driven apps using client API."
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"

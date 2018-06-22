@@ -1,5 +1,5 @@
 ---
-title: "Events in forms and grids in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "Events in forms and grids in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -9,11 +9,11 @@ author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
 ---
-# Events in forms and grids in Customer Engagement
+# Events in forms and grids in model-driven apps
 
 
 
-All client-side code is initiated by events. In Customer Engagement, you associate a specific function in a JavaScript library ([Script web resource](../script-jscript-web-resources.md)) to be executed when an event occurs. This function is called an *event handler*. Each event handler specifies a single function within a JavaScript library and any parameters that can be passed to the function.
+All client-side code is initiated by events. In model-driven apps, you associate a specific function in a JavaScript library ([Script web resource](../script-jscript-web-resources.md)) to be executed when an event occurs. This function is called an *event handler*. Each event handler specifies a single function within a JavaScript library and any parameters that can be passed to the function.
 
 You can associate event handlers to only some events using the UI. For events that are not available to be associated through UI, Client API provides methods that can be used to attach event handlers to such events. 
 

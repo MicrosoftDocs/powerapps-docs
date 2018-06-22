@@ -1,5 +1,5 @@
 ---
-title: "addOnLoad (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"

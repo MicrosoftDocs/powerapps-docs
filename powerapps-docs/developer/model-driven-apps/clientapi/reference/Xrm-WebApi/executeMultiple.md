@@ -1,5 +1,5 @@
 ---
-title: "executeMultiple (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "executeMultiple (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 03/20/2018
 ms.service: "crm-online"
 ms.topic: "reference"

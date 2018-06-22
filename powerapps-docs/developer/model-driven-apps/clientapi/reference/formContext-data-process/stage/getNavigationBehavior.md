@@ -1,5 +1,5 @@
 ---
-title: "getNavigationBehavior (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "getNavigationBehavior (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 01/22/2018    
 ms.service: "crm-online"
 ms.topic: "reference"

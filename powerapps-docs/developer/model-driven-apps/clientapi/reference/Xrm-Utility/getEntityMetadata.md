@@ -1,5 +1,5 @@
 ---
-title: "getEntityMetadata (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "getEntityMetadata (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 05/02/2018
 ms.service: "crm-online"
 ms.topic: "reference"

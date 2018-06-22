@@ -1,5 +1,5 @@
 ---
-title: "getFormContext (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "getFormContext (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the getFormContext method that returns a reference to the form or an item on the form depending on where the method was called." 
 ms.date: 10/31/2017
 ms.service: "crm-online"

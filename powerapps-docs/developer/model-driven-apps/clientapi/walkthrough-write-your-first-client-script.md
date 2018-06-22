@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Write your first client script in Customer Engagement| MicrosoftDocs"
+title: "Walkthrough: Write your first client script in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "conceptual"
@@ -17,10 +17,10 @@ Ready to write your first client script to see things in action. Lets get starte
 
 ## Objective
 
-After completing this walkthrough, you will know how to use your JavaScript code in Customer Engagement, which involves the following steps at a high level:
+After completing this walkthrough, you will know how to use your JavaScript code in model-driven apps, which involves the following steps at a high level:
 - Write your JavaScript code to address a business issue
-- Upload your JavaScript code as a web resource in Customer Engagement
-- Associate the JavaScript functions in the web resource to different client-side events in Customer Engagement.
+- Upload your JavaScript code as a web resource in model-driven apps
+- Associate the JavaScript functions in the web resource to different client-side events in model-driven apps.
 
 We will draw your attention to important facts during the walkthrough, and provide references to actual methods as appropriate.
 
@@ -28,7 +28,7 @@ We will draw your attention to important facts during the walkthrough, and provi
 
 The first step is to identify the business issue you are trying to address using client scripting. Once you have identified it, you need to write your JavaScript code containing the custom business logic that addresses your business issue. 
 
-Dynamics 365 Customer Engagement does not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](https://docs.microsoft.com/en-us/scripting/javascript/).
+model-driven apps does not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](https://docs.microsoft.com/en-us/scripting/javascript/).
 
 You can review the complete sample code used in the walkthrough later in this topic.
 
@@ -99,9 +99,9 @@ Let's look at the code in detail:
 
 ## Step 2: Add your JavaScript code in a Script web resource
 
-Now that your code is ready, you want to associate it with events in Customer Engagement. You use [Script web resources](../script-jscript-web-resources.md) in Customer Engagement to upload the script to your Customer Engagement instance, and then associate it with events.
+Now that your code is ready, you want to associate it with events in model-driven apps. You use [Script web resources](../script-jscript-web-resources.md) in model-driven apps to upload the script to your model-driven apps instance, and then associate it with events.
 
-1. Navigate to your Customer Engagement instance in browser, and go to **Settings** > **Customizations**.
+1. Navigate to your model-driven apps instance in browser, and go to **Settings** > **Customizations**.
 2. In the Customization area, choose **Customize the System**.
 3. In the solutions explorer, under **Components**, choose **Web Resources**.  
 4. Choose **New** to create a web resource.
@@ -113,9 +113,9 @@ Now that your code is ready, you want to associate it with events in Customer En
 
 ## Step 3: Associate Script web resource to a form
 
-Associate the web resource containing your JavaScript code to Customer Engagement forms to be able to associate functions in your code with events. As the JavaScript code in this walkthrough is targeted at the account record, we will associate the web resource with the account form.
+Associate the web resource containing your JavaScript code to model-driven apps forms to be able to associate functions in your code with events. As the JavaScript code in this walkthrough is targeted at the account record, we will associate the web resource with the account form.
 
-1. Navigate to your Customer Engagement instance in browser, and go to **Sales** > **Accounts** or **Service** > **Accounts**.
+1. Navigate to your model-driven apps instance in browser, and go to **Sales** > **Accounts** or **Service** > **Accounts**.
 2. Open an account record, and select **Form** to open the form editor.
 
     ![Open the form editor](../media/clientapi_walkThrough-img2.png)
@@ -168,9 +168,9 @@ Thats it! You have completed the steps to configure the account form to use cust
 
 ## Test your JavaScript code
 
-Its recommended that you refresh your browser for the changes to take effect in your Customer Engagement instance. To test custom business logic you configured in this walkthrough:
+Its recommended that you refresh your browser for the changes to take effect in your model-driven apps instance. To test custom business logic you configured in this walkthrough:
 
-1. Sign in to your Customer Engagement instance.
+1. Sign in to your model-driven apps instance.
 2. Browse to **Accounts**, and try to open or create a new account. In this case, we will open an existing account to load the account form. You will see a notification conytaining your user name that will automatically disappear in 5 seconds.
 
       ![Form level notification](../media/clientapi_walkThrough-img11.png)

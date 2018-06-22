@@ -1,5 +1,5 @@
 ---
-title: "Debug your JavaScript code for Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "Debug your JavaScript code for model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "conceptual"
@@ -10,15 +10,15 @@ author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
 ---
-# Debug your JavaScript code for Customer Engagement
+# Debug your JavaScript code for model-driven apps
 
 
 
-Each browser provides some kind of debugging extension. Microsoft Edge and Internet Explorer provide F12 Developer Tools you can use to debug scripts in Customer Engagement. The F12 Developer Tools can be opened by pressing F12 when viewing a page using Microsoft Edge or Internet Explorer. For more information, see Using the [F12 developer tools guide](https://docs.microsoft.com/microsoft-edge/f12-devtools-guide).
+Each browser provides some kind of debugging extension. Microsoft Edge and Internet Explorer provide F12 Developer Tools you can use to debug scripts in model-driven apps. The F12 Developer Tools can be opened by pressing F12 when viewing a page using Microsoft Edge or Internet Explorer. For more information, see Using the [F12 developer tools guide](https://docs.microsoft.com/microsoft-edge/f12-devtools-guide).
 
 For Google Chrome, press F12 to open developer tools. Firebug is a popular browser extension for web development using Mozilla Firefox. For Apple Safari, you must first select the **Show Develop** menu in menu bar in **Advanced Preferences**. Then you can select **Show Web Inspector** from the **Develop** menu.
 
-When you use JavaScript libraries in Customer Engagement, your libraries are loaded with the web page. It can sometimes be difficult to isolate your specific library in the debugging environment. When using debugging tools in Microsoft Edge, on the **Debugger** tab, click on the folder icon at the top-left corner, and expand the available scripts and find the one with the name that corresponds to the name of your JavaScript web resource, such as the **new_myCustomJavaScript.js** web resource shown below. You can also search for your JavaScript library by typing the file name in the search box.
+When you use JavaScript libraries in model-driven apps, your libraries are loaded with the web page. It can sometimes be difficult to isolate your specific library in the debugging environment. When using debugging tools in Microsoft Edge, on the **Debugger** tab, click on the folder icon at the top-left corner, and expand the available scripts and find the one with the name that corresponds to the name of your JavaScript web resource, such as the **new_myCustomJavaScript.js** web resource shown below. You can also search for your JavaScript library by typing the file name in the search box.
 
 ![Debugging JavaScript](../media/form-script-debugging.png)
 
@@ -28,7 +28,7 @@ Also look at the following blog post on our team blog site for more ideas on deb
 
 ## Select appropriate frame to debug your code
 
-Customer Engagement forms are composed of several frames. For the code to work in the **Console** of the browser developer tools, you must select the appropriate frame. 
+model-driven apps forms are composed of several frames. For the code to work in the **Console** of the browser developer tools, you must select the appropriate frame. 
 - For the web client forms, select the frame named **ClientApiWrapper**. 
 - For the new Unified Interface forms, select the frame named **ClientApiFrame_[n]** where n is the internal page ID. You should select the frame with the highest value for [n].
 

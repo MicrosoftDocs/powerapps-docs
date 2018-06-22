@@ -1,6 +1,6 @@
 ---
-title: "Client API Reference for Dynamics 365 Customer Engagement | MicrosoftDocs"
-description: "The topic provides client API reference for Dynamics 365."
+title: "Client API Reference for model-driven apps | MicrosoftDocs"
+description: "The topic provides client API reference for model-driven apps."
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "conceptual"
@@ -11,7 +11,7 @@ author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
 ---
-# Client API Reference for Customer Engagement
+# Client API Reference for model-driven apps
 
 
 
@@ -29,8 +29,8 @@ The topics under this section are organized as follows:
 
 ### Related topics
 
-[Client scripting in Customer Engagement using JavaScript](client-scripting.md)
+[Client scripting in model-driven apps using JavaScript](client-scripting.md)
 
 [Understand the Client API object model](understand-clientapi-object-model.md)
 
-[Developer Guide for Dynamics 365 Customer Engagement](../developer-guide.md)
+[Developer Guide for model-driven apps](../developer-guide.md)

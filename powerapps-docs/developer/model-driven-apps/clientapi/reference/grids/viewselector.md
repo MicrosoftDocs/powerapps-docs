@@ -1,5 +1,5 @@
 ---
-title: "ViewSelector methods (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "ViewSelector methods (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 11/10/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -34,6 +34,6 @@ Methods
 
 [gridContext](../grids.md#bkmk_gridcontext)
 
-[Grids and subgrids in Customer Engagement](../grids.md)
+[Grids and subgrids in model-driven apps](../grids.md)
 
 

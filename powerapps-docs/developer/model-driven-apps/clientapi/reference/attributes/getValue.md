@@ -30,7 +30,7 @@ All
 | Attribute Type | Return Type| 
 |----|-----|
 | boolean | [Boolean](https://msdn.microsoft.com/library/t7bkhaz6.aspx) |
-| datetime| [Date](https://msdn.microsoft.com/library/cd9w2te4.aspx)<br/> To get the string version of a date using the Microsoft Dynamics 365 user’s locale preferences, use the [format](https://msdn.microsoft.com/library/bb384009.aspx) and [localeFormat](https://msdn.microsoft.com/library/bb383816.aspx) methods. Other methods will format dates using the operating system locale rather than the user’s Microsoft Dynamics 365 locale preferences. | 
+| datetime| [Date](https://msdn.microsoft.com/library/cd9w2te4.aspx)<br/> To get the string version of a date using the PowerApps user’s locale preferences, use the [format](https://msdn.microsoft.com/library/bb384009.aspx) and [localeFormat](https://msdn.microsoft.com/library/bb383816.aspx) methods. Other methods will format dates using the operating system locale rather than the user’s PowerApps locale preferences. | 
 | decimal| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)| 
 | Double | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)| 
 | integer | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|

@@ -1,6 +1,6 @@
 ---
-title: "Attributes in Dynamics 365 Customer Engagement| MicrosoftDocs"
-description: "Learn about working with attributes in Customer Engagement using client API."
+title: "Attributes in model-driven apps| MicrosoftDocs"
+description: "Learn about working with attributes in model-driven apps using client API."
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -14,7 +14,7 @@ manager: "amyla"
 
 
 
-Attributes contain data in the Customer Engagement form or grids. Use the `formContext.data.entity.attributes` collection or the `formContext.getAttribute` shortcut method to access a collection of attributes. For more information about collections, see [Collections (Client API reference)](collections.md). 
+Attributes contain data in the model-driven apps form or grids. Use the `formContext.data.entity.attributes` collection or the `formContext.getAttribute` shortcut method to access a collection of attributes. For more information about collections, see [Collections (Client API reference)](collections.md). 
 
 To access an attribute within the collection, you pass either the name (string) or the index value (number) of the attribute as an argument to the method. For example: `formContext.getAttribute(arg)`
 

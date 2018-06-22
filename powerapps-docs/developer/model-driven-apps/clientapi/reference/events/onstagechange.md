@@ -1,5 +1,5 @@
 ---
-title: "OnStageChange Event (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "OnStageChange Event (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 11/20/2017
 ms.service: "crm-online"
 ms.topic: "reference"

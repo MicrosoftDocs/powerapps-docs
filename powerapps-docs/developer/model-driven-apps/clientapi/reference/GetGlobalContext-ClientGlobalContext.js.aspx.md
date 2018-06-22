@@ -1,5 +1,5 @@
 ---
-title: "GetGlobalContext function and ClientGlobalContext.js.aspx in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps| MicrosoftDocs"
 ms.date: 06/05/2018
 ms.service: "crm-online"
 ms.topic: "conceptual"
@@ -14,7 +14,7 @@ manager: "amyla"
 
 
 
-Use the **GetGlobalContext** function when programming with [web resources](../../web-resources.md) to gain access to the global context information such as the information specific to the client, organization or user for your Customer Engagement instance. 
+Use the **GetGlobalContext** function when programming with [web resources](../../web-resources.md) to gain access to the global context information such as the information specific to the client, organization or user for your model-driven apps instance. 
 
 To get access to the **GetGlobalContext** function in your HTML web resource, include a reference to **ClientGlobalContext.js.aspx**.
 
@@ -62,5 +62,5 @@ The **ClientGlobalContext.js.aspx** page will include some global event handlers
 
 [Understand Client API object model](../understand-clientapi-object-model.md) 
 
-[Web resources for Customer Engagement](../../web-resources.md)
+[Web resources for model-driven apps](../../web-resources.md)
 

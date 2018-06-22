@@ -1,6 +1,6 @@
 ---
-title: "Client API Xrm object for Dynamics 365 Customer Engagement | MicrosoftDocs"
-description: "The topic provides client API reference for Dynamics 365."
+title: "Client API Xrm object for model-driven apps | MicrosoftDocs"
+description: "The topic provides client API reference for model-driven apps."
 ms.date: 12/05/2017
 ms.service: "crm-online"
 ms.topic: "conceptual"
@@ -30,10 +30,10 @@ Here is the information about each of the namespaces in the Xrm object:
 ---------|---------------
 |[Xrm.Device](reference/xrm-device.md)|Provides methods to use native device capabilities of mobile devices.|
 |[Xrm.Encoding](reference/xrm-encoding.md)|Provides methods to encode strings.|
-|[Xrm.Navigation](reference/xrm-navigation.md)|Provides methods for navigating forms and items in Customer Engagement.|
-|[Xrm.Panel](reference/xrm-panel.md)|Provides a method to display a web page in the side pane of Customer Engagement form.|
+|[Xrm.Navigation](reference/xrm-navigation.md)|Provides methods for navigating forms and items in model-driven apps.|
+|[Xrm.Panel](reference/xrm-panel.md)|Provides a method to display a web page in the side pane of model-driven apps form.|
 |[Xrm.Utility](reference/xrm-utility.md)|Provides a container for useful methods.|
-|[Xrm.WebApi](reference/xrm-webapi.md)|Provides methods to use Web API to create and manage records and execute Web API actions and functions.<br/><br/>[Xrm.WebApi.offline](reference/xrm-webapi/offline.md): Provides methods to create and manage records in the Dynamics 365 Customer Engagement mobile clients while working in the *offline* mode.<br/><br/>[Xrm.WebApi.online](reference/xrm-webapi/online.md): Provides methods to use Web API to create and manage records and execute Web API actions and functions when connected to the server.|
+|[Xrm.WebApi](reference/xrm-webapi.md)|Provides methods to use Web API to create and manage records and execute Web API actions and functions.<br/><br/>[Xrm.WebApi.offline](reference/xrm-webapi/offline.md): Provides methods to create and manage records in the model-driven apps mobile clients while working in the *offline* mode.<br/><br/>[Xrm.WebApi.online](reference/xrm-webapi/online.md): Provides methods to use Web API to create and manage records and execute Web API actions and functions when connected to the server.|
 
 ## Client API global context
 

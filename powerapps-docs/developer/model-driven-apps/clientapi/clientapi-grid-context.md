@@ -1,5 +1,5 @@
 ---
-title: "Client API grid context in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "Client API grid context in model-driven apps| MicrosoftDocs"
 ms.date: 01/19/2017
 ms.service: "crm-online"
 ms.topic: "conceptual"

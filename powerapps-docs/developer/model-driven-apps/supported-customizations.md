@@ -15,9 +15,9 @@ The following customization methods can be used to produce fully supported custo
 
 - Customization in the PowerApps portal or solution explorer. For more information, see [Overview of building a model-driven app](../../maker/model-driven-apps/model-driven-app-overview.md)
 
-- Settings in the web application. For more information, see [Administer Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/admin/admin-guide).
+- Settings in the web application. For more information, see [Administer model-driven apps](/dynamics365/customer-engagement/admin/admin-guide).
 
-- Reporting Services. For more information, see [Reporting and Analytics Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
+- Reporting Services. For more information, see [Reporting and Analytics Guide for model-driven apps](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
 
 > [!NOTE]
 > The behavior of model-driven apps depend on customizations applied to the associated Common Data Service for Apps. More information: [Supported Customizations for Common Data Service for Apps](../common-data-service/supported-customizations.md)
@@ -41,7 +41,7 @@ You can use JavaScript within model-driven apps in three areas:
 
 <!-- TODO: Continue from here -->
 
-All interaction with Dynamics 365 application pages must only be performed through the methods with the methods documented in the Client API Reference. Directly accessing the Document Object Model (DOM) of any Dynamics 365 application pages is not supported. The use of jQuery in form scripts and commands is not recommended. More information: Client scripting in Customer Engagement using JavaScript
+All interaction with Dynamics 365 application pages must only be performed through the methods with the methods documented in the Client API Reference. Directly accessing the Document Object Model (DOM) of any Dynamics 365 application pages is not supported. The use of jQuery in form scripts and commands is not recommended. More information: Client scripting in model-driven apps using JavaScript
 
 You can open Dynamics 365 forms, views, dialogs, and reports using the methods documented in Open Forms, Views, Dialogs and Reports with a URL.
 
@@ -73,9 +73,9 @@ The ability to create custom business logic using the plug-in mechanism describe
 Adding your plug-in and custom workflow activity assemblies to the %installdir%\server\bin\ folder is supported on Dynamics 365 on-premises and IFD server installations only.
 
 Workflow
-The ability to create custom workflow activities (assemblies) to be called from workflow rules is fully supported and upgradeable. This feature is available for Dynamics 365 on-premises, IFD, and Online. However, custom workflow activities can only be registered and executed in the sandbox (isolation) of Dynamics 365 (online). More information: Automate your business processes in Customer Engagement
+The ability to create custom workflow activities (assemblies) to be called from workflow rules is fully supported and upgradeable. This feature is available for Dynamics 365 on-premises, IFD, and Online. However, custom workflow activities can only be registered and executed in the sandbox (isolation) of Dynamics 365 (online). More information: Automate your business processes in model-driven apps
 
-The ability to edit XAML workflows is fully supported and upgradeable. However, this feature is available for Dynamics 365 on-premises and IFD only. More information: Automate your business processes in Customer Engagement
+The ability to edit XAML workflows is fully supported and upgradeable. However, this feature is available for Dynamics 365 on-premises and IFD only. More information: Automate your business processes in model-driven apps
 
 
 Support for .NET Framework Versions
@@ -87,7 +87,7 @@ Important
 
 You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later. Starting with the Dynamics 365 (online), version 9.0, only applications using Transport Level Security (TLS) 1.2 or better security will be allowed to connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
 
-Enforcement of this higher standard for security will only be applied to Dynamics 365 (online), version 9.0 at this time. If your clients are designed to connect to any version or deployment type you can prepare by re-compling the application to use .NET Framework 4.6.2. More information: Blog Post: Updates coming to Dynamics 365 Customer Engagement connection security
+Enforcement of this higher standard for security will only be applied to Dynamics 365 (online), version 9.0 at this time. If your clients are designed to connect to any version or deployment type you can prepare by re-compling the application to use .NET Framework 4.6.2. More information: Blog Post: Updates coming to model-driven apps connection security
 
 Any .NET assembly that is created with the Microsoft .NET Framework 4.5.2 for use in Dynamics 365 as a Dynamics 365 plug-in assembly or as a Dynamics 365 custom workflow activity is supported.
 Any visualization (chart) that is created with .NET Framework 4.5.2 .

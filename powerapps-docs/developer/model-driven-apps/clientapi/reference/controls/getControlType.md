@@ -1,5 +1,5 @@
 ---
-title: "getControlType (Client API reference) in Customer Engagement for Dynamics 365| MicrosoftDocs"
+title: "getControlType (Client API reference) in model-driven apps for Dynamics 365| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"

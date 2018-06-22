@@ -1,5 +1,5 @@
 ---
-title: "getControl (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "getControl (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -32,7 +32,7 @@ manager: "amyla"
 
 ## Remarks
 
-After you have retrieved a constituent control in a quick view control, you can use any of the methods supported for a control in Customer Engagement on the constituent control that does not alter the constituent control data. This is because constituent controls in a quick view control are read only. For example, you can use: 
+After you have retrieved a constituent control in a quick view control, you can use any of the methods supported for a control in model-driven apps on the constituent control that does not alter the constituent control data. This is because constituent controls in a quick view control are read only. For example, you can use: 
 
 `quickViewControl.getControl(0).getAttribute()` 
 

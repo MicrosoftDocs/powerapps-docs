@@ -1,5 +1,5 @@
 ---
-title: "getVersion (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "getVersion (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "reference"
@@ -13,7 +13,7 @@ manager: "amyla"
 
 
 
-Returns the version number of the Dynamics 365 Customer Engagement instance.
+Returns the version number of the model-driven apps instance.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ globalContext.getVersion();
 
 **Type**: String
 
-**Description**: Version of the Customer Engagement instance. For example:
+**Description**: Version of the model-driven apps instance. For example:
 
 `"9.0.0.1103"`
 

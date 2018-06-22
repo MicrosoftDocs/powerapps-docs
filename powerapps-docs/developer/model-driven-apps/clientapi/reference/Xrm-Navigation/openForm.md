@@ -1,5 +1,5 @@
 ---
-title: "openForm (Client API reference) in Dynamics 365 Customer Engagement| MicrosoftDocs"
+title: "openForm (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 01/17/2018
 ms.service: "crm-online"
 ms.topic: "reference"
