@@ -1,0 +1,1 @@
+Removes event handlers from the [Subgrid OnLoad event](../../../events/subgrid-onload.md) event.

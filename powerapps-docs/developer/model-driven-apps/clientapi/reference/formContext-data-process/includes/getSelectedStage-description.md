@@ -1,0 +1,1 @@
+Gets the currently selected stage.

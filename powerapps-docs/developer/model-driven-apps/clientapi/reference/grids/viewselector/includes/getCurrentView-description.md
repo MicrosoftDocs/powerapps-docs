@@ -1,0 +1,1 @@
+Gets a reference to the current view.

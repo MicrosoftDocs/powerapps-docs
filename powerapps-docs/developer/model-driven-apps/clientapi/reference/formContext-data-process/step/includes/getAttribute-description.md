@@ -1,0 +1,1 @@
+Returns the logical name of the attribute associated to the step.

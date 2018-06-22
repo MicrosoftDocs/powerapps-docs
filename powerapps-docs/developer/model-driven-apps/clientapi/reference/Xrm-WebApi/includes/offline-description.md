@@ -1,0 +1,1 @@
+Provides methods to create and manage records in the Dynamics 365 Customer Engagement mobile clients while working in the *offline* mode. 

@@ -1,0 +1,1 @@
+Cancels the save operation, but all remaining handlers for the event will still be executed.
