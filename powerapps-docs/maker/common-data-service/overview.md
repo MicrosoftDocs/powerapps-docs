@@ -32,7 +32,7 @@ The way your organization works is unique. Some organizations have well-defined 
 
 Changing the Common Data Service for Apps components, such as entities, views, fields, charts, and dashboards to build apps that work the way you want is called *customization*.  
  
-When you build and customize you app using the tools in PowerApps, you’re adding or updating the metadata or data used by features that depend on the metadata. Because we know the kinds of data used to create apps, we can take this data into account and add new features to your Common Data Service for Apps environment without breaking your apps. <!-- This way you should always be able to apply an update rollup or upgrade to the latest version and enjoy the best new features.  -->
+When you build and customize your apps using the tools in PowerApps, you’re adding or updating the metadata or data used by features that depend on the metadata. Because we know the kinds of data used to create apps, we can take this data into account and add new features to your Common Data Service for Apps environment without breaking your apps. <!-- This way you should always be able to apply an update rollup or upgrade to the latest version and enjoy the best new features.  -->
 
 <!--  
 > **Customize or Configure?**   
@@ -66,22 +66,21 @@ You don’t need to be a developer to build and customize PowerApps apps. Howeve
  jQuery is a very common library used by JavaScript developers. Most of the benefit of using jQuery is that it simplifies a developer’s ability to access and create DOM elements, which is exactly what we do not support in the PowerApps application pages. jQuery is recommended when developers are creating custom user interfaces with HTML web resources, but within the PowerApps application pages, the supported APIs do not require jQuery to be used.  
   
  **Using any undocumented internal objects or methods using JavaScript**  
-PowerApps uses many JavaScript objects within pages. A JavaScript developer can discover these objects by debugging a page and then access and reuse these objects. We reserve the right to make any changes necessary to these objects, including removing them or changing the names of the methods. If a script references these objects, the script will break if they are not found.  <a name="BKMK_Metadata"></a>   
+The Common Data Service for Apps uses many JavaScript objects within pages. A JavaScript developer can discover these objects by debugging a page and then access and reuse these objects. We reserve the right to make any changes necessary to these objects, including removing them or changing the names of the methods. If a script references these objects, the script will break if they are not found.  <a name="BKMK_Metadata"></a>   
  
 <a name="BKMK_CombineCustomizations"></a>   
 ## Combine customization capabilities  
- Each of the topics in this guide describe individual customization capabilities in considerable depth. But it’s important to keep in mind that the solutions to meeting your business requirements will frequently use one of the capabilities together with one or more other capabilities.  
+ The topics found in these sections describe individual customization capabilities in considerable depth. But it’s important to keep in mind that the solutions to meeting your business requirements will frequently use one of the capabilities together with one or more other capabilities.  
   
 <a name="BKMK_ChooseTheRightCustomization"></a>   
 ### Choose the right customization capability for the job  
- The law of instrument states “If all you have is a hammer, everything looks like a nail.” With all the different customization capabilities available in PowerApps it’s easy to become familiar with one of them and seek to use it to solve every problem. As you evaluate the business problems you want to solve, think about the end result you want to achieve and then work backwards to how you can get there.  
+ With all the different customization capabilities available in PowerApps it’s easy to become familiar with one of them and seek to use it to solve every problem. As you evaluate the business problems you want to solve, think about the end result you want to achieve and then work backwards to how you can get there.  
  
 <a name="BKMK_changesinperformance"></a>   
-## Changes that affect PowerApps environment performance  
- Importing solutions and applying customizations that change metadata can affect PowerApps environment performance. Actions that can interfere with normal system operation include:  
+## Changes that affect Common Data Service for Apps environment performance  
+ Importing solutions and applying customizations that change metadata can affect Common Data Service for Apps environment performance. Actions that can interfere with normal system operation include:  
   
 -   Add, remove, or change entities, alternate keys, attributes, or relationships.   
-  
 -   Import solutions
   
 -   Publishing customizations 
