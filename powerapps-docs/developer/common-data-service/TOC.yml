@@ -123,6 +123,8 @@
     href: /dotnet/api/?view=dynamics-outlookclient-ce-9
   - name: Online Management API Reference
     href: /rest/api/admin.services.crm.dynamics.com
+  - name: Customization solutions file schema
+    href: customization-solutions-file-schema.md
 # - name: On-premises options
 
 
