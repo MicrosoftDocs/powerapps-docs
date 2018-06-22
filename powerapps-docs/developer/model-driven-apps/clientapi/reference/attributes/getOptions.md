@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getOptions (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns an array of option objects representing valid options for an attribute. 
 

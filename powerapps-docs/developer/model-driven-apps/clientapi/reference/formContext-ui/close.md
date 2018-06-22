@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # close (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/close-description.md](./includes/close-description.md)]
 

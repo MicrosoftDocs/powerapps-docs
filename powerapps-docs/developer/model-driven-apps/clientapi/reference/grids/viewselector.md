@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # ViewSelector methods (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Provides methods to get or set information about the view selector of the subgrid control. If the subgrid control is not configured to display the view selector, calling the **ViewSelector** methods will throw an error.
 

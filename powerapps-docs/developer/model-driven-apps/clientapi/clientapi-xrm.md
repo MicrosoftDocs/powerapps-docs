@@ -14,7 +14,7 @@ manager: "amyla"
 
 # Client API Xrm object
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The **Xrm** object is globally available to use in your code without having to use the execution context in Client API.
 

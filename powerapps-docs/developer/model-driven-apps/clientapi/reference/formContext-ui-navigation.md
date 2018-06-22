@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # formContext.ui.navigation item (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Each item represents one of the available navigation options available in the navigation bar for entities that have been updated to the new user experience or on the left side of the form for entities that have not been updated.
 

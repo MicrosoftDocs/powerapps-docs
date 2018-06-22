@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getIsPartyList (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns a Boolean value indicating whether the lookup represents a partylist lookup. Partylist lookups allow for multiple records to be set, such as the **To:** field for an email entity record.
 

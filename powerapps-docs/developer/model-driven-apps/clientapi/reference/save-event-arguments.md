@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Save event arguments (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 When the form [OnSave](events/form-onsave.md) event occurs, you can use the [getEventArgs](executioncontext/getEventArgs.md) method of the execution context object to retrieve an object that contains methods you can use to manage the save event.
 

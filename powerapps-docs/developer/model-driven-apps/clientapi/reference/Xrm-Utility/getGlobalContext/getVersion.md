@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getVersion (Client API reference)
 
-[!INCLUDE[](../../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns the version number of the Dynamics 365 Customer Engagement instance.
 

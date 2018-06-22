@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # setDisplayState (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/setDisplayState-description.md](./includes/setDisplayState-description.md)]
 

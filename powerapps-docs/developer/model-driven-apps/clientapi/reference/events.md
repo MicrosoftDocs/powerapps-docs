@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Events (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Events occur in Custom Engagement forms and grids whenever a form or grid loads, data is changed, or saved. You execute your JavaScript code by associating it an events so that it is executed when the event occurs. More information: [Events in forms and grids](../events-forms-grids.md)
 

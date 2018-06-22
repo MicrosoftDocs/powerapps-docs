@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getActiveStage (Client API reference)
 
-[!INCLUDE[](../../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/getActiveStage-description.md](./includes/getActiveStage-description.md)]
 

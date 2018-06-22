@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Xrm.Panel
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Provides a method to display a web page in the side pane of Customer Engagement form. 
 

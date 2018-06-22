@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # Understand the Client API object model
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The Client API object model for Customer Engagement provides you objects and methods that you can use to apply custom business logic in Customer Engagement using JavaScript, such as:
 - Get or set attribute values.

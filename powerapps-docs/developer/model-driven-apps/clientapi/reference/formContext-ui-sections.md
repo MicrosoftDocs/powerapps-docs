@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # formContext.ui.sections (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 A section contains methods to manage how it appears as well as accessing the tab that contains the section.
 

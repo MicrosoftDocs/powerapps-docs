@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Grids and subgrids in Customer Engagement (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Grids present data in a tabular format in Customer Engagement. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*.
 

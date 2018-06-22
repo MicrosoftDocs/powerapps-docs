@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # removePreSearch (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Removes event handler functions that have previously been set for the [PreSearch](../events/PreSearch.md) event.
 

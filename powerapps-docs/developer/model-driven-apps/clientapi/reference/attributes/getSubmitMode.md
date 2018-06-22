@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getSubmitMode (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns a string indicating when data from the attribute will be submitted when the record is saved. 
 

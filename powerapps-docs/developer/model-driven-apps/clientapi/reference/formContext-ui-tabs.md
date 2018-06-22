@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # formContext.ui.tabs (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 A tab is a group of sections on a page. It contains properties and methods to manipulate tabs as well as access to sections within the tab through the sections collection.
 

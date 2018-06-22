@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Attribute OnChange Event (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The `OnChange` event occurs in the following situations:
 - Data in a form field has changed and focus is lost. There is an exception to this behavior that applies to Two-Option (Boolean) fields that are formatted to use radio buttons or check boxes. In these cases the event occurs immediately.

@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # Client API form context
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The Client API form context (**formContext**) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed.
 

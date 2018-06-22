@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # OnStageChange Event (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 This event occurs when the stage of a business process flow control changes. This event occurs when the user clicks the **Next Stage** or **Move to previous stage** buttons in the user interface or when a developer uses the `formContext.data.process.moveNext` or `formContext.data.process.movePrevious` methods. You can’t cancel the stage change using code in a handler for this event.
 

@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # fireOnChange (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Causes the `OnChange` event to occur on the attribute so that any script associated to that event can execute.
 

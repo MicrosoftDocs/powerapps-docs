@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Subgrid OnLoad Event (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 This event occurs every time the subgrid refreshes. This includes when users sort values in subgrid by clicking the column headings. 
 

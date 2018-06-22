@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # formContext.ui.quickForms (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Provides methods to access all the quick view controls and its constituent controls on the Customer Engagement forms when using the new form rendering engine (also called "turbo forms"). A quick view control is a quick view form added to a main form in Customer Engagement that enables you to view information about a related entity record within the main form. Data in constituent controls in a quick view control cannot be edited.
 

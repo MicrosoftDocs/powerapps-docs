@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # GetGlobalContext function and ClientGlobalContext.js.aspx (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Use the **GetGlobalContext** function when programming with [web resources](../../web-resources.md) to gain access to the global context information such as the information specific to the client, organization or user for your Customer Engagement instance. 
 

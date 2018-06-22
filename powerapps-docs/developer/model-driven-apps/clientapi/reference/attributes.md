@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # Attributes (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Attributes contain data in the Customer Engagement form or grids. Use the `formContext.data.entity.attributes` collection or the `formContext.getAttribute` shortcut method to access a collection of attributes. For more information about collections, see [Collections (Client API reference)](collections.md). 
 

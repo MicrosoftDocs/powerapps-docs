@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # OnSelection Event (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 This event occurs when a knowledge base article is selected in the knowledge base search control. 
 

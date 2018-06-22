@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getUtcValue (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns a UTC-equivalent date and time value of the value stored in a **datetime** type of attribute. UTC stands for Coordinated Universal Time.
 

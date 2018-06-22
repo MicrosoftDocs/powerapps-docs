@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getOption (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns an option object with the value matching the argument (label or enumeration value) passed to the method. 
 

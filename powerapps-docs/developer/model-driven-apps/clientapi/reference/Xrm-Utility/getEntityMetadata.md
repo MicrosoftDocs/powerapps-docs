@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getEntityMetadata
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/getEntityMetadata-description.md](./includes/getEntityMetadata-description.md)] 
 

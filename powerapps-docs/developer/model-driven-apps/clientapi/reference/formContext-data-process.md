@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # formContext.data.process (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Provides events, methods, and objects to interact with the business process flow data on a form. See [formContext.ui.process (Client API reference)](formContext-ui-process.md) for methods to interact with the business process flow control on the form.
 

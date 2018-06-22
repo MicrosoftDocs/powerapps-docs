@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Grid OnChange Event (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The `OnChange` event occurs when a value is changed in a cell in the editable grid and the cell loses focus. This event can also occur when an attribute value is updated using the [setValue](../attributes/setValue.md) method. 
 

@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Xrm.Device (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Provides methods to use native device capabilities of mobile devices. 
 

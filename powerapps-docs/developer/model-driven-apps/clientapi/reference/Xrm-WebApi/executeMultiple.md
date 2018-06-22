@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # executeMultiple (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/executeMultiple-description.md](./includes/executeMultiple-description.md)]
 

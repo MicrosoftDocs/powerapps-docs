@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getAttribute (Client API reference)
 
-[!INCLUDE[](../../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/getAttribute-description.md](./includes/getAttribute-description.md)]
 

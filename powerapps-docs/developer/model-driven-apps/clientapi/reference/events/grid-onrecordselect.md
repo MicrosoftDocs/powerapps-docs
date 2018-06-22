@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Grid OnRecordSelect Event (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The `OnRecordSelect` event occurs when a single row (record) is selected in the editable grid. This event won't occur if a user selects different cells in the same row, or selects multiple rows. 
 

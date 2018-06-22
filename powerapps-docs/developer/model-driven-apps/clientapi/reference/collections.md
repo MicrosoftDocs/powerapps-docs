@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Collections (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Collections are structures to provide access to data that represent an array,
 but without the ability to modify the data in the array. More information: [Collections in formContext object model](../clientapi-form-context.md#collections-in-the-formcontext-object-model)

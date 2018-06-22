@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # loadPanel (Client-side reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/loadPanel-description.md](./includes/loadPanel-description.md)]
 

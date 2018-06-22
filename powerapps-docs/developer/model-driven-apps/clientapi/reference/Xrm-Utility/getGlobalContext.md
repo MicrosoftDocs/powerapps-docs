@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getGlobalContext (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/getGlobalContext-description.md](./includes/getGlobalContext-description.md)]
 The method provides access to the global context without going through the form context. It contains an equivalent of all the methods available for the **Xrm.Page.context** object (now deprecated) to retrieve information specific to the client, organization or user.

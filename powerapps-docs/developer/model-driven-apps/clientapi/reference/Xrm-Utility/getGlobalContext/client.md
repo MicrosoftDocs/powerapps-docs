@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getGlobalContext.client (Client API reference)
 
-[!INCLUDE[](../../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Provides access to the methods to determine which client is being used, whether the client is connected to the server, and what kind of device is being used.
 

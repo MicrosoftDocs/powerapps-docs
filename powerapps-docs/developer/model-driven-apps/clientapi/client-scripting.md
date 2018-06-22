@@ -13,7 +13,7 @@ manager: "amyla"
 ---
 # Client scripting in Customer Engagement using JavaScript
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Client-side scripting using JavaScript is one of the ways to apply custom business process logic for displaying data on a form in Customer Engagement. 
 

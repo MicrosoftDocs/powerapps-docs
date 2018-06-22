@@ -12,7 +12,7 @@ manager: "kvivek"
 ---
 # htmlDecode (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/htmlDecode-description.md](./includes/htmlDecode-description.md)] 
 

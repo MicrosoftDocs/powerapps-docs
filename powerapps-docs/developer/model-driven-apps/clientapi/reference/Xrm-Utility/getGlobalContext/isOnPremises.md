@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # isOnPremise (Client API reference)
 
-[!INCLUDE[](../../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns a boolean value indicating if the Customer Engagement instance is hosted on-premises or online. 
 

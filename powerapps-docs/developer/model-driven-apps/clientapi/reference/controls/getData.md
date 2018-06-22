@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getData (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns the value of the data query string parameter passed to a Silverlight web resource. 
 

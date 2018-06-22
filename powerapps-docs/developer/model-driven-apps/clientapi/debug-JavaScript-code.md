@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # Debug your JavaScript code for Customer Engagement
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Each browser provides some kind of debugging extension. Microsoft Edge and Internet Explorer provide F12 Developer Tools you can use to debug scripts in Customer Engagement. The F12 Developer Tools can be opened by pressing F12 when viewing a page using Microsoft Edge or Internet Explorer. For more information, see Using the [F12 developer tools guide](https://docs.microsoft.com/microsoft-edge/f12-devtools-guide).
 

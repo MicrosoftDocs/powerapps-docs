@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # isLoaded (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/isLoaded-description.md](./includes/isLoaded-description.md)]
 

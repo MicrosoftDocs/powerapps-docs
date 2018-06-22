@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # Execution context (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The execution context defines the event context in which your code executes. More information: [Client API execution context](../clientapi-execution-context.md).
 

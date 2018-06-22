@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Events in forms and grids in Customer Engagement
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 All client-side code is initiated by events. In Customer Engagement, you associate a specific function in a JavaScript library ([Script web resource](../script-jscript-web-resources.md)) to be executed when an event occurs. This function is called an *event handler*. Each event handler specifies a single function within a JavaScript library and any parameters that can be passed to the function.
 

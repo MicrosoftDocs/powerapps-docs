@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Form OnLoad Event (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The form `OnLoad` event occurs after the form has loaded. It cannot prevent the window from loading. Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on fields, and interact with other page elements.
 

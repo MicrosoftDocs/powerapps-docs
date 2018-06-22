@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Form OnSave Event (Client API reference) in Dynamics 365 Customer Engagement
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The `OnSave` event occurs when:
 - The user clicks the **Save** icon in the lower right corner of the form, even when there is no changed data to be saved.

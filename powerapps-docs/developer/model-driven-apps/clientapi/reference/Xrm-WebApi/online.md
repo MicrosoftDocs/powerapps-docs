@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Xrm.WebApi.online (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 [!INCLUDE[./includes/online-description.md](./includes/online-description.md)] 
 

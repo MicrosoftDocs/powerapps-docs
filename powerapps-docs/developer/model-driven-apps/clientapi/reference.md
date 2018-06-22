@@ -13,7 +13,7 @@ manager: "amyla"
 ---
 # Client API Reference for Customer Engagement
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 This section contains reference documentation for client API object model that can be used with JavaScript libraries.
 

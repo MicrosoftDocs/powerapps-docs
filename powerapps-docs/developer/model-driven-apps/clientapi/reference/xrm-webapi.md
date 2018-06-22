@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # Xrm.WebApi (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Provides properties and methods to use Web API to create and manage records and execute Web API actions and functions in Customer Engagement. 
 

@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # Composite attributes 
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Some fields added to a form can represent multiple items of data. These *composite attributes* behave differently from other attributes when displayed in the web application and you must write scripts differently to use them properly.
 

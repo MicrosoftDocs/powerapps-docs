@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # formContext.data.entity (Client API reference)
 
-[!INCLUDE[](../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Provides properties and methods to retrieve information specific to the record displayed on the page, the save method, and a collection of all the attributes included in the form. Attribute data is limited to attributes represented by fields on the form.
 

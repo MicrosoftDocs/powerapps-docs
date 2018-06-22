@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getIsDirty (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns a Boolean value indicating if there are unsaved changes to the attribute value. 
 

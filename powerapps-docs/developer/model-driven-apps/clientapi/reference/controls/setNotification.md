@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # setNotification (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Displays an error message for the control to indicate that data isn’t valid. When this method is used,  a red "X" icon appears next to the control. On Dynamics 365 mobile clients, tapping on the icon will display the message. 
 

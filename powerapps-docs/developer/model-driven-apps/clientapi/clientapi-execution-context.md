@@ -12,7 +12,7 @@ manager: "amyla"
 ---
 # Client API execution context
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 The execution context defines the event context in which your code executes. The execution context is passed when an event occurs on a form or grid, which you can use it in your event handler to perform various tasks such as determine [formContext](clientapi-form-context.md) or [gridContext](clientapi-grid-context.md), or manage the save event. 
 

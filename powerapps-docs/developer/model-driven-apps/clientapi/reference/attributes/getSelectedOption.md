@@ -11,7 +11,7 @@ manager: "amyla"
 ---
 # getSelectedOption (Client API reference)
 
-[!INCLUDE[](../../../../includes/cc_applies_to_update_9_0_0.md)]
+
 
 Returns the option object or an array of option objects selected in an **optionset** or **multiselectoptionset** attribute respectively. 
 
