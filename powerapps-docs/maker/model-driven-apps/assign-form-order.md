@@ -1,5 +1,5 @@
 ---
-title: "Quickstart for how to assign from order in PowerApps | MicrosoftDocs"
+title: "Assign from order in PowerApps | MicrosoftDocs"
 description: "Learn how to assign the default form in your app"
 ms.custom: ""
 ms.date: 06/22/2018
