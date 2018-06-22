@@ -22,9 +22,12 @@
     href: client-scripting.md
   - name: Customize commands
     href: customize-commands.md
-# - name: How-to Guides
-#   items:
-#   - name: Generate entity and custom action classes
-#     href: how-code-generation-utility.md
+- name: How-to Guides
+  items:
+  - name: Client Scripting
+    href: clientapi/client-scripting.md
 # - name: Resources
-# - name: Reference
+- name: Reference
+  items:
+  - name: Client Scripting
+    href: clientapi/reference.md
