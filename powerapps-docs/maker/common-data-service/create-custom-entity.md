@@ -2,17 +2,17 @@
 title: Tutorial for creating a custom entity that has components with PowerApps | Microsoft Docs
 description: Tutorial with step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
 author: Mattp123
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: tutorial
-ms.date: 05/01/2018
+ms.date: 06/22/2018
 ms.author: matp
 ---
 
 # Tutorial: Create a custom entity that has components in PowerApps
 
-With [!INCLUDE [powerapps](../../includes/powerapps.md)] you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. [!INCLUDE [powerapps](../../includes/powerapps.md)] app development includes adding standard "out-of-box entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
+With PowerApps you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. PowerApps app development includes adding standard "out-of-box entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
 
 In this tutorial you create an entity and then add or customize key components such as fields, relationships, views, and forms. You learn how to:
 
@@ -26,7 +26,7 @@ The tutorial will follow the company, Contoso, which is a pet grooming business 
 
 ## Prerequisites
 
-Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link from [powerapps.com](https://web.powerapps.com).
+Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already have a PowerApps account, select the **Get started free** link from [powerapps.com](https://web.powerapps.com).
 
 ## Create a custom entity
 
@@ -39,14 +39,15 @@ Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already
 
 ## Add and customize fields
  
-1. On the **Fields** tab, select the **Primary Name** field.
-2. In the right pane make the following changes to the **Primary Name** field: 
-  - Change the **Display name** from **Primary name** to *Pet Name*
+1. In the list of entities, select the **Pet** entity that was created in the previous section.
+2. On the **Fields** tab, select the **Pet** field.
+3. In the right pane make the following changes to the **Display name** field: 
+  - Change the **Display name** from **Pet** to *Pet Name*
   -	Select **Searchable**  
   
     ![Change primary field](media/create-custom-entity/primary-field.png)
 3. Select **Done**.
-4. On the **Fields** tab on the entity designer toolbar select **Add** field. On the **Field properties** pane, enter or select the following values and options.
+4. On the **Fields** tab on the entity designer toolbar select **Add field**. On the **Field properties** pane, enter or select the following values and options.
   - **Display name**. *Species*
   - **Data type**. *Option Set*
   - **Option set**. *New option set*
@@ -106,7 +107,7 @@ Notice that when you add a many-to-one relationship, an **Account** field with t
 
 Skip this step if you only want to use the Pet entity in a canvas app. 
 
-1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] left navigation pane, select **Model-driven**.
+1. On the PowerApps left navigation pane, select **Model-driven**.
 2. On the left navigation pane, expand **Data**, select **Entities**, and then select **Pet**.
 3. Select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form editor.
     ![Edit main form](media/create-custom-entity/main-form-edit.png)
