@@ -55,8 +55,8 @@
           href: create-edit-metadata.md
         - name: Types of entities
           href: types-of-entities.md 
-        - name: Create an entity
-          href: create-entities.md
+        - name: Create and edit entities
+          href: create-edit-entities.md
         - name: Edit an entity
           href: edit-entities.md
         - name: Create and edit virtual entities
@@ -97,6 +97,10 @@
     items:
     - name: Work with entities
       items: 
+      - name: Create entities using PowerApps portal
+        href: create-edit-entities-portal.md
+      - name: Create entities using solution explorer
+        href: create-edit-entities-solution-explorer.md  
       - name: Import or export data
         href: data-platform-import-export.md
       - name: Open entity data in Excel
