@@ -2,7 +2,7 @@
 title: "Display custom icons instead of values in list views with PowerApps | MicrosoftDocs"
 description: "Learn how to display custom icon graphics in a view"
 ms.custom: ""
-ms.date: 04/06/2018
+ms.date: 06/21/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -20,11 +20,9 @@ manager: "kvivek"
 ---
 # Display custom icons instead of values in list views
 
-[!INCLUDE [cc-applies-to-powerapps-and-update-9-0-0](../../includes/cc-applies-to-powerapps-and-update-9-0-0.md)]
-
 <a name="GridIcons"></a>   
 
- Administrators and customizers can add graphics to a view and establish the logic used to select the graphic based on a column values using JavaScript. The capability to display list views that show icons rather than text or numerical values in some columns was introduced in Relationship Insights. 
+ PowerApps environment administrators and customizers can add graphics to a view and establish the logic used to select the graphic based on a column values using JavaScript. The capability to display list views that show icons rather than text or numerical values in some columns was introduced in Relationship Insights. 
   
 > [!NOTE]
 >  Grid icons are only shown in the web interface. They are not shown in [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)] or the mobile app.  
@@ -35,7 +33,7 @@ manager: "kvivek"
   
 2.  Write one or more JavaScript functions that establish which icons to show for which values (you'll typically need one function for each column you want to customize). Each function must accept a row data object and a language (LCID) code as input and return an array containing an image name and tooltip text. For an example function, see [Sample JavaScript function](#SampleJavascript), later in this topic.  
   
-3.  Sign into your environment as an administrator and open solution explorer.  
+3.  Sign into your environment as an administrator and open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).  
   
 4.  The **Default Solution** pop-up window opens. Navigate to **Components** > **Web Resources** here.  
   

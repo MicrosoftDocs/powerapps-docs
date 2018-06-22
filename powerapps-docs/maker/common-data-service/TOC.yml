@@ -45,6 +45,8 @@
           href: samples-resources.md
   - name: Concepts
     items:
+      - name: Common Data Service for Apps overview
+        href: overview.md
       - name: License requirements for entities
         href: data-platform-entity-licenses.md
       - name: Work with entities

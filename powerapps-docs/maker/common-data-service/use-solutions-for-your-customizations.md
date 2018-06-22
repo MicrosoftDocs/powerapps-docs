@@ -22,7 +22,7 @@ manager: "kvivek"
 
 # Use the default solution to customize  
 
- When you customize a model-driven app, you may work with the default solution. To open the default solution, open solution explorer.  
+ When you customize a model-driven app, you may work with the default solution. To open the default solution, open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).  
   
 > [!TIP]
 >  After you have the default solution open, use `Ctrl+D` to create a favorite or bookmark in your browser. This will help you open it faster even if you don’t already have the web application open.  

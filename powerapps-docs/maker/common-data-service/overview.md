@@ -1,5 +1,5 @@
 ---
-title: "Customization Guide (Dynamics 365 Customer Engagement) | MicrosoftDocs"
+title: "Common Data Service for Apps overview | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
@@ -18,7 +18,7 @@ ms.author: "matp"
 manager: "kvivek"
 ---
 
-# Customization Guide for Dynamics 365 Customer Engagement
+# Common Data Service for Apps overview
 
 The way your organization works is unique. Some organizations have well-defined business processes that they apply using PowerApps apps. Others aren’t happy with their current business processes and use PowerApps to apply new data and processes to their business. Whatever situation you find yourself in, you’ll find a lot of customization capabilities in PowerApps so that it can work for your organization.  
   

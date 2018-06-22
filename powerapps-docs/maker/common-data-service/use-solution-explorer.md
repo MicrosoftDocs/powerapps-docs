@@ -30,9 +30,9 @@ manager: "kvivek"
  As you select each node, you can see a list of the solution components. The actions available in the command bar will change depending on the context of the node you have selected and if the solution is the default solution or a managed solution. With unmanaged solutions that are not the default solution, you can use the **Add Existing** command to bring in solution components that aren’t already in the solution.  
   
 With managed solutions there will be no commands available and you’ll see the message:  
-  
+
 > [!NOTE]
-> You can’t directly edit the components within a managed solution. If the managed properties for solution components are set to allow customizations, you can edit them in the Customizations area or from another unmanaged solution.          
+> You can’t directly edit the components within a managed solution. If the managed properties for solution components are set to allow customizations, you can edit them using a PowerApps design tool or from another unmanaged solution.    
   
  You’ll need to locate the solution component in the default solution and try to edit it there or add it to another unmanaged solution that you’ve created. The solution component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
   

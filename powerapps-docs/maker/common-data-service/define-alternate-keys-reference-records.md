@@ -27,7 +27,7 @@ A data integration system will use alternate keys to uniquely identify records u
 For example, to identify an account record with an alternate key, you can use the account number or the account number field in combination with some other fields which have values that should not change.
 
 > [!NOTE]
-> While you can define alternate keys in the user interface (UI), they can only be used programmatically in code. 
+> While you can define alternate keys with PowerApps, they can only be used programmatically in code. 
 > To learn more about using alternate keys programmatically, see:   
 > - [Developer Documentation: Use an alternate key to create a record](/dynamics365/customer-engagement/developer/use-alternate-key-create-record) 
 > - [Developer Documentation: Retrieve a record with the Web API using an alternate key](/dynamics365/customer-engagement/developer/webapi/retrieve-entity-using-web-api#retrieve-using-an-alternate-key)
