@@ -131,8 +131,6 @@
         href: delete-fields.md     
     - name: Apply business logic
       items: 
-      - name: Create a business rule
-        href: data-platform-create-business-rule.md
       - name: Configure workflow steps
         href: configure-workflow-steps.md
       - name: Invoke custom actions from a workflow
