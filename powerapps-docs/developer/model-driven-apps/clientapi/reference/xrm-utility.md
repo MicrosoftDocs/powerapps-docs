@@ -32,7 +32,7 @@ Provides a container for useful methods.
 
 ## Deprecated methods
 
-The following table lists the new methods you should use instead of the deprecated methods in the **Xrm.Utility** namespace. These methods were deprecated in [!INCLUDE[pn_crm_9_0_0_online](../../../includes/pn-crm-9-0-0-online.md)].
+The following table lists the new methods you should use instead of the deprecated methods in the **Xrm.Utility** namespace. These methods were deprecated in v9.0.
 
 |Deprecated Method | New method to be used | 
 | ------------- |-------------|
