@@ -1,8 +1,8 @@
-# Supported Customizations
+# Supported Customizations for Common Data Service for Apps
 
 You can customize Common Data Service for Apps by using tools that are available in the PowerApps portal or that are described in the official documentation. These customizations are supported and can be upgraded.
 
-Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Dynamics 365. For more information, see [Unsupported Customizations](#unsupported-customizations).
+Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to CDS for Apps. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
 Topics covered in technical articles published on Microsoft sites such as doc.microsoft.com, msdn.microsoft.com or technet.microsoft.com are supported, but might not be upgradable.
 
@@ -19,8 +19,6 @@ The following customization methods can be used to produce fully supported custo
 
 - Reporting Services. For more information, see [Reporting and Analytics Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
 
-- Using Filtered Views with external applications such as those in Microsoft Office.
-
 > [!NOTE]
 > Fully supported means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
 
@@ -29,7 +27,7 @@ For more information about using the customization tools in the web application,
 
 ## Customizations applied using code
 
-The CDS for Apps web services, technical articles, and sample code published on this site, and information released by the CDS for Apps Developer Support Team are included in the area of customizations applied using code. The specific actions and levels of supportability and upgradeability are described later in this topic.
+The documentation on this site for developers, technical articles, and sample code published on this site, and information released by the CDS for Apps Developer Support Team are included in the area of customizations applied using code. The specific actions and levels of supportability and upgradeability are described later in this topic.
 
 ### CDS for Apps web services
 
@@ -106,7 +104,11 @@ The following is a list of unsupported action types that are frequently asked ab
 
 ### Outlook Client
 - Modifications to any one of the Dynamics 365 forms or adding new forms, such as custom .aspx pages, directly to Office Outlook or making changes to .pst files. These changes will not be upgraded.
-- Making customizations except when you use the Dynamics 365 supported tools available offline in the Dynamics 365 for Outlook.
+- Making customizations using any means other than the supported tools.
+
+### See also
+
+[Supported customizations for model-driven apps](../model-driven-apps/supported-customizations.md)
 
 
 

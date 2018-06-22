@@ -1,0 +1,1 @@
+# Use localized labels with ribbons

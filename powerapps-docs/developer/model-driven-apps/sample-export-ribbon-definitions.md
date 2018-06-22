@@ -1,0 +1,1 @@
+# Sample: Export ribbon definitions

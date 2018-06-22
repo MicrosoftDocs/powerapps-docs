@@ -1,0 +1,1 @@
+# Ribbon WSS schema

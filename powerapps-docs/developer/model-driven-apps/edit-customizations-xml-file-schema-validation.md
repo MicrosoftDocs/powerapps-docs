@@ -1,0 +1,1 @@
+# Edit the customizations XML file with schema validation

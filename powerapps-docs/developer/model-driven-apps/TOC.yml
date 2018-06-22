@@ -14,6 +14,8 @@
     href: sample-mda-1.md
 - name: Concepts
   items:
+  - name: Supported customizations
+    href: supported-customizations.md
   - name: Use web resources
     href: web-resources.md  
   - name: Client scripting
