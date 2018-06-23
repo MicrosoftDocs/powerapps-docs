@@ -33,4 +33,4 @@ The topics under this section are organized as follows:
 
 [Understand the Client API object model](understand-clientapi-object-model.md)
 
-[Developer Guide for model-driven apps](../developer-guide.md)
+[Model-driven apps Developer Overview](../overview.md)

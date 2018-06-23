@@ -26,6 +26,13 @@ All
 # Parameters
 Depends on the type of attribute.
 
+<!-- TODO: 
+
+Change type links from msdn to docs, i.e. https://msdn.microsoft.com/library/dwab3ed2.aspx to /scripting/javascript/reference/number-object-javascript 
+
+or MDN https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+-->
+
 | Attribute Type|Parameters Type|
 -------|------|
 | boolean| [Boolean](https://msdn.microsoft.com/library/t7bkhaz6.aspx) |
@@ -40,7 +47,7 @@ Depends on the type of attribute.
 | string | [String](https://msdn.microsoft.com/library/ecczf11c.aspx)|
 | memo | [String](https://msdn.microsoft.com/library/ecczf11c.aspx)|
 | money|[Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
-| optionset, multiselectoptionset|[Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)<br/><br/>The [getOptions](getOptions.md) method returns option values as strings. You must use [parseInt](https://msdn.microsoft.com/library/x53yedee.aspx) to convert them to numbers before you can use those values to set the value of an optionset attribute. Valid statuscode (Status Reason) options depend on the current statecode of the record. The statecode (Status) field cannot be set in form scripts. To understand which statecode values are valid, refer to the metadata for the attributes. <!-- See [Default status and status reason values](../../../customize/default-status-and-status-reason-values.md) for a list of default values for system entities. --> For custom entities use the Entity Metadata browser. Finally, also consider any custom state transitions that have been applied to the field. More information: [Define status reason transitions](../../../../customize/define-status-reason-transitions.md).| 
+| optionset, multiselectoptionset|[Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)<br/><br/>The [getOptions](getOptions.md) method returns option values as strings. You must use [parseInt](https://msdn.microsoft.com/library/x53yedee.aspx) to convert them to numbers before you can use those values to set the value of an optionset attribute. Valid statuscode (Status Reason) options depend on the current statecode of the record. The statecode (Status) field cannot be set in form scripts. To understand which statecode values are valid, refer to the metadata for the attributes. <!-- See [Default status and status reason values](../../../customize/default-status-and-status-reason-values.md) for a list of default values for system entities. --> For custom entities use the Entity Metadata browser. Finally, also consider any custom state transitions that have been applied to the field. More information: [Define status reason transitions](/dynamics365/customer-engagement/customize/define-status-reason-transitions).| 
 | String| [String](https://msdn.microsoft.com/library/ecczf11c.aspx) <br/><br/> A String field with the email format requires that the string represents a valid email address.|
 
 

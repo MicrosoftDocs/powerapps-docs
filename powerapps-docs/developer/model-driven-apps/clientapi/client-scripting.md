@@ -18,7 +18,7 @@ manager: "amyla"
 Client-side scripting using JavaScript is one of the ways to apply custom business process logic for displaying data on a form in model-driven apps. 
 
 > [!NOTE]
-> You can also use business rules, which provides a way for someone who does not know JavaScript and is not a developer, to apply business process logic in a form. More information: [Create business rules and recommendations to apply logic in a form](../../customize/create-business-rules-recommendations-apply-logic-form.md)  
+> You can also use business rules, which provides a way for someone who does not know JavaScript and is not a developer, to apply business process logic in a form. More information: [Create business rules and recommendations to apply logic in a form](/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form.md)  
 
 Forms in model-driven apps help display data to the user. A form in model-driven apps can contain items such as fields, a quick form, or a grid. An [event](events-forms-grids.md) occurs in model-driven apps forms whenever:
 - A form loads
@@ -49,4 +49,4 @@ model-driven apps provides you a rich set of **client APIs** to interact with fo
 
 [Web resources for model-driven apps](../web-resources.md)
 
-[Customize commands and the ribbon](../customize-dev/customize-commands-ribbon.md)
+[Customize commands and the ribbon](../customize-commands-ribbon.md)

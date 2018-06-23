@@ -1,5 +1,5 @@
 - name: Use Common Data Service for Apps Web API
-  href: ../use-cds-web-api.md
+  href: overview.md
   items:
   - name: Get started with Common Data Service for Apps Web API (C#)
     href: get-started-dynamics-365-web-api-csharp.md

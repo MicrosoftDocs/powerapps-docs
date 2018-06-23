@@ -33,7 +33,8 @@ To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gri
 
 [getRelationship](getRelationship.md)
 
-[Customize entity relationship metadata](../../../../customize-entity-relationship-metadata.md) 
+<!-- TODO: 
+[Customize entity relationship metadata](../../../../customize-entity-relationship-metadata.md)  -->
 
 
 

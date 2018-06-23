@@ -56,9 +56,9 @@ Grid context is the grid or subgrid instance on a form against which you want to
 
 [Client API grid context](../clientapi-grid-context.md)
 
-[Use editable grids in model-driven apps](../../customize-dev/use-editable-grids-dynamics-365.md)
+[Use editable grids](../../use-editable-grids.md)
 
 [Client API Reference for model-driven apps](../reference.md)
 
-[Developer Guide for model-driven apps](../../developer-guide.md)
+[Model-driven apps Developer Overview](../../overview.md)
 

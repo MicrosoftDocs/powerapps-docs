@@ -63,9 +63,7 @@
     - name: Set field values using parameters passed to a form
       href: set-field-values-using-parameters-passed-form.md
     - name: Configure a form to accept custom querystring parameters
-      href: configure-form-accept-custom-querystring-parameters.md
-    - name:
-      href:                
+      href: configure-form-accept-custom-querystring-parameters.md              
 - name: Resources
   items:
   - name: Developer Tools
