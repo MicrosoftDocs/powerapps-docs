@@ -15,12 +15,12 @@ Use the **GUID** function to convert a string that contains the hexadecimal repr
 
 The string passed can contain uppercase or lowercase letters, but it must be 32 hexadecimal digits in either of these formats:
 
-	123e4567-e89b-12d3-a456-426655440000
-	123e4567e89b12d3a456426655440000
+- **"123e4567-e89b-12d3-a456-426655440000"** (hyphens in standard locations)
+- **"123e4567e89b12d3a456426655440000"** (no hyphens)
 
 If you don't specify an argument, this function creates a new random GUID.
 
-To convert a GUID value to a string, simply use it in a string context. The value will be converted to a hexadecimal representation string with dashes and lowercase letters. 
+To convert a GUID value to a string, simply use it in a string context. The value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
 
 ## Volatile functions
 **GUID** is a volatile function when used without an argument. Each time the function is evaluated, it returns a different value.  
@@ -50,7 +50,7 @@ To return a GUID value based on the hexadecimal string representation:
 
 * **GUID( "0f8fad5b-d9cb-469f-a165-70867728950e" )**
 
-You can also provide the GUID string without dashes. This formula returns the same GUID value:
+You can also provide the GUID string without hyphens. This formula returns the same GUID value:
 
 * **GUID( "0f8fad5bd9cb469fa16570867728950e" )**
 
