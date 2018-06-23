@@ -1,0 +1,1 @@
+# Solution component file reference (SolutionPackager)

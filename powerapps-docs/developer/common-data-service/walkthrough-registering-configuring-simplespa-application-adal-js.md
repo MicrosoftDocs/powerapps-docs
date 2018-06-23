@@ -1,0 +1,1 @@
+# Walkthrough: Registering and configuring a SPA application with adal.js
