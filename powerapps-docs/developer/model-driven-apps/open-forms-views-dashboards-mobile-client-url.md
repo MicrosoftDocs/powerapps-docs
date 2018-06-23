@@ -1,0 +1,1 @@
+Open forms, views, and dashboards in Dynamics 365 mobile client with a URL

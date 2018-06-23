@@ -1,0 +1,1 @@
+# Script (JScript) web resources

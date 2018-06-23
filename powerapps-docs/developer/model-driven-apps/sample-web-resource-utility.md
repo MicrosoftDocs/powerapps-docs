@@ -1,0 +1,1 @@
+# Sample: Web resource utility

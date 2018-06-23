@@ -1,0 +1,1 @@
+# Web resource development using Fiddler AutoResponder

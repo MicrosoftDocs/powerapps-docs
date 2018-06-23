@@ -1,1 +1,0 @@
-# Placeholder: Tutorial model-driven apps one

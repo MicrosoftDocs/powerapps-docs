@@ -1,0 +1,1 @@
+# Sample: Import files as web resources

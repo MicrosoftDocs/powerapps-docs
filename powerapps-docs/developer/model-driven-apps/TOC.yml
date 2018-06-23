@@ -1,23 +1,23 @@
 - name: Overview
   href: overview.md
-- name: Quick Starts
-  items:
-  - name: PH Model-driven quick start
-    href: quick-start-mda-1.md
+# - name: Quick Starts
+#   items:
+#   - name: PH Model-driven quick start
+#     href: quick-start-mda-1.md
 - name: Tutorials
   items:
-  - name: PH Model-driven tutorial
-    href: tutorial-mda-1.md
+  - name: Write your first client script
+    href: clientapi/walkthrough-write-your-first-client-script.md
 - name: Samples
   items:
-  - name:  PH Model-driven sample
-    href: sample-mda-1.md
+  - name: Export ribbon definitions
+    href: sample-export-ribbon-definitions.md
 - name: Concepts
   items:
   - name: Supported customizations
     href: supported-customizations.md
   - name: Use web resources
-    href: web-resources.md  
+    href: use-web-resources.md  
   - name: Client scripting
     href: client-scripting.md
   - name: Customize commands
@@ -26,8 +26,59 @@
   items:
   - name: Client Scripting
     href: clientapi/client-scripting.md
-# - name: Resources
+  - name: Customize commands and the ribbon
+    href: customize-commands-ribbon.md
+    items:
+    - name: Ribbons available
+      href: ribbons-available.md
+    - name: Command bar or ribbon presentation
+      href: command-bar-ribbon-presentation.md
+    - name: Export, prepare to edit, and import the ribbon
+      href: export-prepare-edit-import-ribbon.md
+    - name: Use localized labels with ribbons
+      href: use-localized-labels-ribbons.md
+    - name: Define ribbon commands
+      href: define-ribbon-commands.md
+    - name: Define ribbon enable rules
+      href: define-ribbon-enable-rules.md
+    - name: Define ribbon display rules
+      href: define-ribbon-display-rules.md
+    - name: Define ribbon actions
+      href: define-ribbon-actions.md
+    - name: Pass data from a page as a parameter to Ribbon Actions
+      href: pass-data-page-parameter-ribbon-actions.md
+    - name: Define custom actions to modify the ribbon
+      href: define-custom-actions-modify-ribbon
+    - name: Define scaling for ribbon elements
+      href: define-scaling-ribbon-elements
+    - name: Define ribbon tab display rules
+      href: define-ribbon-tab-display-rules
+    - name: Pass parameters to a URL by using the ribbon
+      href: pass-parameters-url-by-using-ribbon
+  - name: Edit the customizations XML file with schema validation
+    href: edit-customizations-xml-file-schema-validation.md
+  - name: Open forms, views, dialogs, and reports with a URL
+    href: open-forms-views-dialogs-reports-url.md
+    items:
+    - name: Set field values using parameters passed to a form
+      href: set-field-values-using-parameters-passed-form.md
+    - name: Configure a form to accept custom querystring parameters
+      href: configure-form-accept-custom-querystring-parameters.md
+    - name:
+      href:                
+- name: Resources
+  items:
+  - name: Developer Tools
+    href: developer-tools.md
 - name: Reference
   items:
   - name: Client Scripting
     href: clientapi/reference.md
+  - name: Customization XML reference
+    href: customization-xml-reference.md
+  - name: Ribbon core schema
+    href: ribbon-core-schema.md
+  - name: Ribbon types schema
+    href: ribbon-types-schema.md
+  - name: Ribbon WSS schema
+    href: ribbon-wss-schema.md

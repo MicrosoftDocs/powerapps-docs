@@ -30,10 +30,10 @@ If your business requirement can't be achieved using a business rule, you will f
 
 The following resources for client scripting are available in the Common Data Service for Apps Developer guide.
 
-- [Client scripting using JavaScript](/dynamics365/customer-engagement/developer/clientapi/client-scripting)
-- [Events in forms and grids](/dynamics365/customer-engagement/developer/clientapi/events-forms-grids)
-- [Understand the Client API object model](/dynamics365/customer-engagement/developer/clientapi/understand-clientapi-object-model)
-- [Walkthrough: Write your first client script](/dynamics365/customer-engagement/developer/clientapi/walkthrough-write-your-first-client-script)
+- [Client scripting with model-driven apps](client-scripting.md)
+- [Events in forms and grids in model-driven apps](clientapi/events-forms-grids.md)
+- [Understand the Client API object model](clientapi/understand-clientapi-object-model.md)
+- [Tutorial: Write your first client script](clientapi/walkthrough-write-your-first-client-script.md)
 - [Debug your JavaScript code](/dynamics365/customer-engagement/developer/clientapi/debug-javascript-code)
 - [Best practices: Client scripting](/dynamics365/customer-engagement/developer/clientapi/client-scripting-best-practices)
 - [Client API Reference](/dynamics365/customer-engagement/developer/clientapi/reference)

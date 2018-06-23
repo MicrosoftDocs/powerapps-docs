@@ -1,0 +1,1 @@
+# Web resource dependencies

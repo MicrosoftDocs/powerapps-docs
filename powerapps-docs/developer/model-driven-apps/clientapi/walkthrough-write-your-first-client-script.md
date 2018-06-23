@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Write your first client script in model-driven apps| MicrosoftDocs"
+title: "Tutorial: Write your first client script in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2017
 ms.service: "crm-online"
 ms.topic: "conceptual"
