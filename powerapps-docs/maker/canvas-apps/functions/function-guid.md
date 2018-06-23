@@ -8,17 +8,17 @@ ms.author: gregli
 
 ---
 # GUID function in PowerApps
-Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a GUID value.
+Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a new GUID value.
 
 ## Description
 Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. Some database systems, such as Common Data Service for Apps and SQL Server, use GUID values as keys.
 
 The string passed can contain uppercase or lowercase letters, but it must be 32 hexadecimal digits in either of these formats:
 
-- 123e4567-e89b-12d3-a456-426655440000
-- 123e4567e89b12d3a456426655440000
+	123e4567-e89b-12d3-a456-426655440000
+	123e4567e89b12d3a456426655440000
 
-If you don't specify an argument, this function creates a random GUID.
+If you don't specify an argument, this function creates a new random GUID.
 
 To convert a GUID value to a string, simply use it in a string context. The value will be converted to a hexadecimal representation string with dashes and lowercase letters. 
 
@@ -39,7 +39,7 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **GUID*
 **GUID**( [ *GUIDString* ] )
 
 
-* *GUIDString* – Optional.  A text string that contains the hexadecimal representation of a GUID. If no string is supplied, a GUID is created.
+* *GUIDString* – Optional.  A text string that contains the hexadecimal representation of a GUID. If no string is supplied, a new GUID is created.
 
 ## Examples
 
