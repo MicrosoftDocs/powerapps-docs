@@ -22,7 +22,7 @@ To follow this quickstart, the following items are required:
 * Either a System Adminsitrator or System Customizer security role within Common Data Service for Apps.
 
 ## Sign in to PowerApps
-Sign in to PowerApps at [https://web.powerapps.com]([https://web.powerapps.com).
+Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com).
 
 ## Create an entity
 1. In the navigation pane, click or tap **Data** to expand it, and then click or tap **Entities**.

@@ -61,6 +61,8 @@ Other elements include:
 
 **[Char](functions/function-char.md)** – Translates a character code into a string.
 
+**[Choices](functions/function-choices.md)** – Returns a table of the possible values for a lookup column.
+
 **[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
@@ -275,6 +277,8 @@ Other elements include:
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
 **[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
+
+**[Select](functions/function-select.md)** – Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
