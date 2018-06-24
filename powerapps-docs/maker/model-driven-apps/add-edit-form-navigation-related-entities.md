@@ -26,6 +26,9 @@ In this quickstart, you use the form navigation pane that is used to add links t
 
     ![Model-driven design mode](../model-driven-apps/media/model-driven-switch.png)
 
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
+
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
   
 3.  In the list, open a form with the type of **Main** to edit it.  

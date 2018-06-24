@@ -29,10 +29,6 @@
       href: create-edit-system-chart.md 
     - name: Create or edit dashboards
       href: create-edit-dashboards.md                  
-    - name: Developer Quickstarts
-      items: 
-      - name: PH Model-driven quick start
-        href:  ../../developer/model-driven-apps/quick-start-mda-1.md     
   - name: Tutorials
     items:
     - name: Work with views
@@ -51,32 +47,22 @@
         href: create-business-rules-recommendations-apply-logic-form.md          
     - name: Work with apps
       items: 
-      - name: Add or edit app components in app designer
-        href: add-edit-app-components.md
-      - name: Export, import, or remove an app
-        href: export-import-remove-app.md
       - name: Create a model-driven app
         href: create-edit-app.md
       - name: Create a site map for an app
-        href: create-site-map-app.md                              
-    - name: Create or edit web resources
-      href: create-edit-web-resources.md
+        href: create-site-map-app.md 
+      - name: Add or edit app components in app designer
+        href: add-edit-app-components.md
+      - name: Export, import, or remove an app
+        href: export-import-remove-app.md                            
     - name: Use custom controls for data visualizations
       href: use-custom-controls-data-visualizations.md
     - name: Share a model-driven app with PowerApps
       href: share-model-driven-app.md            
-    - name: Developer Tutorials
-      items: 
-      - name: PH Model-driven tutorial
-        href:  ../../developer/model-driven-apps/tutorial-mda-1.md                    
   - name: Samples
     items:
     - name: Overview of sample apps
-      href: overview-model-driven-samples.md
-    - name: Developer Samples
-      items:
-      - name: JavaScript API samples
-        href:  ../../developer/model-driven-apps/sample-mda-1.md    
+      href: overview-model-driven-samples.md   
   - name: Concepts
     items:
     - name: Get started with app making
@@ -107,6 +93,8 @@
         href: visibility-options-legacy.md
       - name: Change navigation within a form
         href: use-the-form-editor-legacy.md                                                
+    - name: Understand views
+      href: create-edit-views.md    
     - name: Work with fields
       items: 
       - name: Common field properties
@@ -123,16 +111,12 @@
       href: design-custom-business-apps-using-app-designer.md
     - name: Timer control overview
       href: timer-control-legacy.md
+    - name: Create or edit web resources
+      href: create-edit-web-resources.md      
     - name: Web resource properties
       href: web-resource-properties-legacy.md
     - name: Set properties for a chart or list
       href: set-properties-chart-list-included-dashboard.md                  
-    - name: Developer Concepts
-      items: 
-      - name: Supported customizations
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
-      - name: Web Resources
-        href:  /powerapps/developer/model-driven-apps/form-properties-legacy
   - name: How-to guides
     items:
     - name: Change custom entity icons
@@ -186,16 +170,17 @@
        - name: Quick view control properties
          href: quick-view-control-properties-legacy.md                                                                    
     - name: Navigate to advanced app making areas
-      href: advanced-navigation.md      
+      href: advanced-navigation.md
     - name: Developer How-to guides
       items: 
       - name: Client scripting
         href: ../../developer/model-driven-apps/client-scripting.md
       - name: Customize commands
         href: ../../developer/model-driven-apps/customize-commands.md
-  # - name: How-to guides           
-  # - name: Reference     
-  # - name: Resources
+  - name: Resources
+    items: 
+    - name: Accessibility in PowerApps app designer
+      href: Accessibility-app-designer-site-map-designer-my-apps-page.md    
 # DO NOT CHANGE BELOW  
 - name: Common Data Service for Apps
   href: ../common-data-service/index.md

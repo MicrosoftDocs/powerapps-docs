@@ -40,12 +40,12 @@ More information: [Understand views](create-edit-views.md)
 
 ## Create a public view in PowerApps
 As an app maker, you can create and edit public views by using PowerApps.
-1. [On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+1. On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
 
      ![Model-driven design mode](media/model-driven-switch.png)
 
-> [!IMPORTANT]
-> “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+    > [!IMPORTANT]
+    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
   
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab. 
 

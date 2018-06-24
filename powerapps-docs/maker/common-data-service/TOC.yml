@@ -15,8 +15,6 @@
       href: data-platform-create-entity.md
     - name: Create a custom entity from data
       href: data-platform-cds-newentity-pq.md
-    - name: Manage fields
-      href: data-platform-manage-fields.md
     - name: Create an option set
       href: custom-picklists.md
     - name: Create a relationship
@@ -33,38 +31,140 @@
     items:
     - name: Create a custom entity that has components
       href: create-custom-entity.md
-    - name: Manage system jobs
-      href:  /powerapps/maker/common-data-service/actions
-    - name: Monitor workflows
-      href:  /powerapps/maker/common-data-service/actions
-    - name: Manage localized strings
-      href:  /powerapps/maker/common-data-service/actions
-    # - name: Developer Tutorials
-    #   items: 
-  # - name: Samples
-  #   items:
-  #       - name: PH Organization service samples one
-  #         href: ../../developer/common-data-service/org-service/sample-org-service-1.md
+    - name: Work with fields
+      items: 
+      - name: Create and edit fields
+        href: create-edit-fields.md
+      - name: Create and edit global option sets
+        href: create-edit-global-option-sets.md
+      - name: Define calculated fields
+        href: define-calculated-fields.md
+      - name: Define rollup fields
+        href: define-rollup-fields.md
+    - name: Create a solution
+      href: create-solution.md
+  - name: Samples
+    items:
+        - name: Samples and other resources
+          href: samples-resources.md
   - name: Concepts
     items:
-      - name: Build a data model
-        href:  /powerapps/maker/common-data-service/actions
-      - name: Data access and security
-        href:  /powerapps/maker/common-data-service/actions
+      - name: App building practices
+        href: overview.md
+      - name: License requirements for entities
+        href: data-platform-entity-licenses.md
+      - name: Work with entities
+        items: 
+        - name: Entities and metadata
+          href: create-edit-metadata.md
+        - name: Types of entities
+          href: types-of-entities.md 
+        - name: Create and edit entities
+          href: create-edit-entities.md
+        - name: Edit an entity
+          href: edit-entities.md
+        - name: Create and edit virtual entities
+          href: create-edit-virtual-entities.md
+        - name: Virtual entity OData v4 data provider
+          href: virtual-entity-odata-provider-requirements.md 
+      - name: Work with relationships
+        items:  
+        - name: Create and edit relationships
+          href: create-edit-entity-relationships.md     
+        - name: Create one-to-many or many-to-one relationships
+          href: create-edit-1n-relationships-portal.md     
+      - name: Work with fields
+        items: 
+        - name: Types of fields
+          href: types-of-fields.md       
+        - name: Set managed properties for fields
+          href: set-managed-properties-for-field.md 
       - name: Apply business logic
-        href:  /powerapps/maker/common-data-service/actions
-      - name: Solutions
-        href:  /powerapps/maker/common-data-service/actions
-      - name: Asynchronous service
-        href:  /powerapps/maker/common-data-service/actions
-      - name: Multiple language support
-        href:  /powerapps/maker/common-data-service/actions
-      # - name: Developer Concepts
-      #   items: 
+        items: 
+        - name: Use Workflow processes to automate processes 
+          href: workflow-processes.md  
+        - name: Actions overview
+          href: actions.md
+        - name: Best practices for workflow processes
+          href: best-practices-workflow-processes.md
+      - name: Work with solutions
+        items:     
+        - name: Solutions overview
+          href: solutions-overview.md
+        - name: Use the solution explorer
+          href: use-solution-explorer.md
+        - name: Use the default solution to customize
+          href: use-solutions-for-your-customizations.md
+        - name: Set managed properties overview
+          href: set-managed-properties.md                       
   - name: How-to guides
     items:
-    - name: Configure Cascading relationships
-      href:  /powerapps/maker/common-data-service/actions
+    - name: Work with entities
+      items: 
+      - name: Create entities using PowerApps portal
+        href: create-edit-entities-portal.md
+      - name: Create entities using solution explorer
+        href: create-edit-entities-solution-explorer.md  
+      - name: Import or export data
+        href: data-platform-import-export.md
+      - name: Open entity data in Excel
+        href: data-platform-excel-addin.md
+      - name: Define alternate keys
+        href: define-alternate-keys-reference-records.md
+      - name: Define status reason transitions
+        href: define-status-reason-transitions.md  
+      - name: Delete a custom entity
+        href: data-platform-delete-entity.md  
+      - name: Display custom icons
+        href: display-custom-icons-instead.md
+      - name: Edit system entity messages
+        href: edit-system-entity-messages.md
+      - name: Azure Cosmos DB SQL API Data Provider
+        href: virtual-entity-documentdb-provider-requirements.md
+      - name: Virtual entity walkthrough
+        href: virtual-entity-walkthrough-using-odata-provider.md                                              
+    - name: Work with relationships
+      items: 
+      - name: Set managed properties for relationships
+        href: set-managed-properties-relationships.md
+      - name: Query and visualize hierarchically related data
+        href: query-visualize-hierarchical-data.md 
+    - name: Work with fields
+      items: 
+      - name: Manage fields
+        href: data-platform-manage-fields.md
+      - name: Map entity fields
+        href: map-entity-fields.md
+      - name: Delete fields
+        href: delete-fields.md     
+    - name: Apply business logic
+      items: 
+      - name: Configure workflow steps
+        href: configure-workflow-steps.md
+      - name: Invoke custom actions from a workflow
+        href: invoke-custom-actions-workflow-dialog.md
+      - name: Configure custom actions from a workflow
+        href: configure-actions.md
+      - name: Monitor and manage workflow processes
+        href: monitor-manage-processes.md
+    - name: Work with solutions
+      items:  
+      - name: Import, update, and export solutions
+        href: import-update-export-solutions.md 
+      - name: Navigate to a specific solution
+        href: navigate-specific-solution.md
+      - name: Use segmented solutions
+        href: use-segmented-solutions-patches-simplify-updates.md
+      - name: Change the solution publisher prefix
+        href: change-solution-publisher-prefix.md
+      - name: Publish changes
+        href: publish-changes-for-use-customer-service-hub.md                                                 
+    - name: Work with analytics
+      items: 
+      - name: Create a Power BI report
+        href: data-platform-powerbi-connector.md
+      - name: Customize and organize reports
+        href: customize-organize-reports.md 
     - name: Translate customized entity and field text
       href: export-customized-entity-field-text-translation.md
     - name: Import translated entity and field text into an app
@@ -75,6 +175,8 @@
         href: ../../developer/common-data-service/org-service/create-client-app.md
   - name: Reference
     items:
+    - name: Restricted entities requiring Dynamics 365 licenses
+      href: data-platform-restricted-entities.md
     - name: Entity Reference
       href: ../../developer/common-data-service/reference/entities/toc.yml
     - name: Web API Reference
@@ -99,6 +201,8 @@
       href: /dynamics365/customer-engagement/developer/schemas-used-dynamics-365
   - name: Resources
     items:
+    - name: Behavior and format of the Date and Time field
+      href: behavior-format-date-time-field.md
     - name: Community tools for developers
       href: ../../developer/common-data-service/community-tools.md
 # DO NOT CHANGE BELOW  
