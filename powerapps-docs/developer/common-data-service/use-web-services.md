@@ -9,7 +9,7 @@ ms.topic: article
 ms.date: 02/26/2018
 ms.author: jdaly
 ---
-
+<!-- OLD: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-services -->
 # Use Common Data Service for Apps web services
 
 Common Data Service for Apps provides two web services you can use to interact with data, and two discovery services that you can use to find available instances for users.

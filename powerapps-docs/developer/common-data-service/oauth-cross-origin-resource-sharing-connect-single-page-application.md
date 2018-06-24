@@ -68,7 +68,6 @@ TODO:
 ### See also  
 <!-- 
 TODO:
-[Authenticate users in CDS for Apps](authenticate-users.md)   
 [Use OAuth to connect to CDS for Apps web Services](connect-customer-engagement-web-services-using-oauth.md)   
 [Active Directory and Claims-Based Authentication](active-directory-claims-based-authentication.md)
 -->
