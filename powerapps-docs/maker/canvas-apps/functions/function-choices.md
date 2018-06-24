@@ -51,30 +51,42 @@ At this time, only SharePoint and Common Data Service for Apps support lookup co
 
 	For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
 
-1. [Generate an app](../data-platform-create-app.md) from the **Accounts** entity in Common Data Service for Apps.
+1. [Generate an app](../data-platform-create-app.md) from the **Accounts** entity.
 
-1. In the list of screens and controls near the left edge, select the **EditForm1** control (under the **EditScreen1** screen).
+1. In the list of screens and controls near the left edge, scroll down until **EditScreen1** appears, and then select **EditForm1** just under it.
 
-1. If it hasn't already been added, show the **Primary Contact** field in the form.
+	![In the left navigation bar, select EditForm1 on EditScreen1](media/function-choices/select-editform.png)
 
-    The field appears at the end of the list of fields in the form, and you can move each field up or down in the form.
+1. On the **Properties** tab of the right pane, select **Accounts**.
 
-1. Within the card for **Primary Contact**, select the **Combo box** control.
+	![Select Accounts to open the Data pane](media/function-choices/open-data-pane.png)
 
-    The **Items** property of that control is set to this formula:
+1. In the **Data** pane, scroll down to the list of fields.
 
-	**Choices( Accounts.'Primary Contact' )**
+	![Select Accounts to open the Data pane](media/function-choices/field-list.png)
+
+1. Find the **Primary Contact** check box, and then select it if it's cleared.
+
+1. (optional) Drag the **Primary Contact** field from the bottom to the top of the list of fields.
+
+1. In the card for **Primary Contact**, select the **Combo box** control.
+
+    The **Items** property of that control is set to one of two formulas based on the state of the **Use column display names** check box in advanced settings.
+
+    - If the check box is selected, the property is set to this formula:<br>**Choices( Accounts.'Primary Contact' )**
+    - If the check box is cleared, the property is set to this formula:<br>**Choices( Acccounts.primarycontactid )**
 
 	![A canvas screen with a form control. The **Combo box** control within the **Primary Contact** card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
 
-	If, in the app's advanced settings, the **Use column display names** check box is cleared, this formula appears as **Choices( Acccounts.primarycontactid )**.
+1. On the **Home** tab, select **New screen**,and then select **Blank**.
 
-1. To show what **Choices** is returning, add a screen.
+1. On the **Insert** tab, select **Data table**.
 
-1. Add a **Data table** control, and set its **Items** property to this formula:
+1. Set the **Items** property of the **Data table** control to one of these formulas:
 
-	**Choices( Accounts.'Primary Contact' )**
+    - If the **Use column display names** check box in advanced settings is selected, use this formula:<br>**Choices( Accounts.'Primary Contact' )**
+    - Otherwise, use this formula:<br>**Choices( Accounts.primarycontactid )**
 
-1. In the **Data** pane, select **First Name**, **Last Name**, or any other fields that you want to show.
+1. Open the **Data** pane, and then select the check boxes for **firstname**, **lastname**, or any other field that you want to show.
 
 	![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts entity](media/function-choices/full-accounts-pc.png)
