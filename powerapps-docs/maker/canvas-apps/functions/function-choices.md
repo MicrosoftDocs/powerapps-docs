@@ -20,15 +20,15 @@ Use the **Choices** function to provide a list of choices for your user to selec
 
 For a lookup, the table that **Choices** returns matches the foreign table that's associated with the lookup. By using **Choices**, you eliminate the need to add the foreign table as an additional data source. **Choices** returns all columns of the foreign table.
 
-Because **Choices** returns a table, you can use [**Filter**](function-filter-lookup.md), [**Sort**](function-sort.md), [**AddColumns**](function-table-shaping.md), and all the other table-manipulation functions to filter, sort, and shape the table before using it. 
+Because **Choices** returns a table, you can use [**Filter**](function-filter-lookup.md), [**Sort**](function-sort.md), [**AddColumns**](function-table-shaping.md), and all the other table-manipulation functions to filter, sort, and shape the table. 
 
 At this time, you can't [delegate](../delegation-overview.md) **Choices**. If this limitation poses a problem in your app, add the foreign entity as a data source, and use it directly. 
 
 **Choices** doesn't require column names to be strings and enclosed in double quotes, unlike the [**ShowColumns**](function-table-shaping.md), [**Search**](function-filter-lookup.md), and other table functions. Provide the formula as if you were referencing the column directly.
 
-Column references must be direct to the data source. For example, if the data source is **Accounts** and the lookup is **SLA**, the column reference would be **Accounts.SLA**. The reference can't pass through a function, a variable, or a control. Furthering this example, if **Accounts** is fed to a **Gallery** control, the SLA for the selected account can be referenced by the formula **Gallery.Selected.SLA**. However, this reference has passed through a control, so it can't be passed to the **Columns** function - **Accounts.SLA** must still be used.
+Column references must be direct to the data source. For example, if the data source is **Accounts** and the lookup is **SLA**, the column reference would be **Accounts.SLA**. The reference can't pass through a function, a variable, or a control. Furthering this example, if **Accounts** is fed to a **Gallery** control, use the formula **Gallery.Selected.SLA** to reference the SLA for the selected account. However, this reference has passed through a control, so it can't be passed to the **Columns** function - you must still use **Accounts.SLA**.
 
-At this time, only SharePoint and Common Data Service for Apps support lookup columns.
+At this time, you can use lookup columns only with SharePoint and Common Data Service for Apps.
 
 ## Syntax
 **Choices**( *column-reference* )
@@ -74,11 +74,11 @@ At this time, only SharePoint and Common Data Service for Apps support lookup co
     The **Items** property of that control is set to one of two formulas based on the state of the **Use column display names** check box in advanced settings.
 
     - If the check box is selected, the property is set to this formula:<br>**Choices( Accounts.'Primary Contact' )**
-    - If the check box is cleared, the property is set to this formula:<br>**Choices( Acccounts.primarycontactid )**
+    - If the check box is cleared, the property is set to this formula:<br>**Choices( Accounts.primarycontactid )**
 
 	![A canvas screen with a form control. The **Combo box** control within the **Primary Contact** card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
 
-1. On the **Home** tab, select **New screen**,and then select **Blank**.
+1. On the **Home** tab, select **New screen**, and then select **Blank**.
 
 1. On the **Insert** tab, select **Data table**.
 
