@@ -44,6 +44,12 @@ Select ![Save](media/save-entity-icon-solution-explorer.png) to save your change
 
 > [!NOTE]
 > Although the UI exposed to edit system entity messages includes many references to entity names, it doesn't include all of them. For a more comprehensive approach, see [Updating localizable text in the base language](../model-driven-apps/translate-localizable-text.md#updating-localizable-text-in-the-base-language)
+
+## Programmatically update entity display strings
+
+For developers looking for a way to work with these in code, the display strings are stored in the [DisplayString](../../developer/common-data-service/reference/entities/displaystring.md) entity. 
+
+The `DisplayString` entity doesn’t contain the default display strings. The two attributes for this entity that contain text are [CustomDisplayString](../../developer/common-data-service/reference/entities/displaystring.md#BKMK_CustomDisplayString) and [PublishedDisplayString](../../developer/common-data-service/reference/entities/displaystring.md#BKMK_CustomDisplayString#BKMK_PublishedDisplayString). By default, these attribute values are null unless the display string has been customized and published. The `PublishedDisplayString` value is read-only and reflects the currently published `CustomDisplayString`.
  
 ### See also
 [Edit an entity](edit-entities.md)<br />
