@@ -60,7 +60,7 @@ The following table lists the OData Entity Data Model (EDM) data type mappings w
 
 This procedure shows you how to use the out-of-box OData Data Provider to use as the virtual entity data source.   
   
-1. Go to **Settings** > **Administration** > **Virtual Entity Data Sources**.  
+1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtual Entity Data Sources**.  
 1. On the actions toolbar, click **New**.  
 1. On the **Select Data Provider** dialog box, select from the following data sources, and then click **OK**.  
   
@@ -78,7 +78,7 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
         ![Virtual entity data source record](media/virtual-entity-data-source.png) 
 
 
-### See also  
+## See also  
 
 [Create and edit virtual entities that contain data from an external data source](create-edit-virtual-entities.md) <br/>
 [TechNet Blog: Interact with data from external systems using the new virtual entities](https://blogs.technet.microsoft.com/lystavlen/2017/09/08/virtual-entities/)
