@@ -1,5 +1,16 @@
 # Processes
 
+<!-- Needs major attention
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/automate-business-processes-customer-engagement
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/process-architecture
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/process-categories
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/workflow-process-entities
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-types-triggers-entities-actions-processes
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/model-business-process-flows
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-work-business-process-flows
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-real-time-workflows
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-own-actions -->
 
 ## Use custom actions
 
