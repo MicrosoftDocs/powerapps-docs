@@ -1,0 +1,1525 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Online Management API for Dynamics 365 Customer Engagement",
+    "description": "The REST API provides the ability to manage the Customer Engagement online instances in an Office 365 tenant."
+  },
+  "host": "{ServiceUrl}",
+  "schemes": [
+    ""
+  ],
+  "paths": {
+    "/api/v1/Currencies": {
+      "get": {
+        "tags": [
+          "Currencies"
+        ],
+        "summary": "Retrieves currencies in a Customer Engagement instance.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetCurrencies",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of available currencies in a Customer Engagement instance.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Region"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/InstanceBackups": {
+      "get": {
+        "tags": [
+          "InstanceBackups"
+        ],
+        "summary": "Retrieves all backups of a Customer Engagement instance.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstanceBackups",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "instanceId",
+            "in": "query",
+            "description": "Instance ID for retrieving the backups.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of backups available for a Customer Engagement instance.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InstanceBackup"
+              }
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "InstanceBackups"
+        ],
+        "summary": "Backs up a Customer Engagement instance.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "BackupInstance",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "backupInfo",
+            "in": "body",
+            "description": "Object containing information about the backup.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewInstanceBackup"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Backup operation started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the backup operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/InstanceBackups/{instanceId}/{restorePointId}": {
+      "get": {
+        "tags": [
+          "InstanceBackups"
+        ],
+        "summary": "Retrieves a Customer Engagement instance backup based on the restore point.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstanceBackup",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "instanceId",
+            "in": "path",
+            "description": "Id of the instance to retrieve the backup from.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "restorePointId",
+            "in": "path",
+            "description": "Restore point of an existing instance backup.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Customer Engagement instance backup.",
+            "schema": {
+              "$ref": "#/definitions/InstanceBackup"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/Instances": {
+      "get": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Retrieves all Customer Engagement instances in your Office 365 tenant.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstances",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Customer Engagement instances instances retrieved from your Office 365 tenant.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Instance"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Instances/{id}": {
+      "get": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Retrieves a Customer Engagement instance in your Office 365 tenant.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstance",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of an instance to retieve.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The retrieved Customer Engagement instance.",
+            "schema": {
+              "$ref": "#/definitions/Instance"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/Instances/Provision": {
+      "put": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Provisions (creates) a Customer Engagement instance in your Office 365 tenant.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "ProvisionInstance",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "newInstance",
+            "in": "body",
+            "description": "Allowed state for the new instance.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewInstance"
+            }
+          },
+          {
+            "name": "validate",
+            "in": "query",
+            "description": "Indicates whether to validate or create an instance. Set True to validate; set False to create.",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "If validate was set, validation was successful. If validation was not set, the instance was provisioned without requiring an operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "operationId": "00000000-0000-0000-0000-000000000000",
+                  "status": 6,
+                  "errors": [],
+                  "information": [],
+                  "operationLocation": null,
+                  "resourceLocation": null,
+                  "context": {
+                    "items": {
+                      "instanceState": 2,
+                      "admin.InstanceId": "b12d586f-8ffc-4b0f-97f7-7fb89bcc3f26"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "202": {
+            "description": "Provision operation started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "operationId": "accac4b5-2478-4fc7-b8b0-6b979e837bb1",
+                  "status": 2,
+                  "errors": [],
+                  "information": [],
+                  "operationLocation": null,
+                  "resourceLocation": null,
+                  "context": {
+                    "items": {
+                      "instanceState": 2,
+                      "admin.InstanceId": "e2a9c8b3-2ead-4a83-b8ad-d1587b6415de"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the provision operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            },
+            "examples": {
+              "application/json": [
+                {
+                  "operationId": "00000000-0000-0000-0000-000000000000",
+                  "status": 1,
+                  "errors": [
+                    {
+                      "subject": "ProvisioningJobCreation",
+                      "description": "There was an error creating the provisioning job."
+                    }
+                  ],
+                  "information": [],
+                  "operationLocation": null,
+                  "resourceLocation": null,
+                  "context": {
+                    "items": {
+                      "instanceState": 5
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Instances/{targetInstanceId}/Restore": {
+      "post": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Restores a Customer Engagement instance in your Office 365 tenant.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "RestoreInstance",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "targetInstanceId",
+            "in": "path",
+            "description": "ID of the Customer Engagement instance that you want to restore.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "instanceRestorePoint",
+            "in": "body",
+            "description": "The restore point of an existing instance backup.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InstanceRestorePoint"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Restore Instance Operation Started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the restore operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/Instances/{id}/Delete": {
+      "delete": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Deletes a Customer Engagement instance in your Office 365 tenant.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "DeleteInstance",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the Customer Engagement instance to delete.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "validate",
+            "in": "query",
+            "description": "Indicates whether to validate or delete an instance. Set True to validate; set False to delete.",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "If validate was set, validation was executed.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "202": {
+            "description": "Delete Instance Operation Started.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or starting the delete operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/Instances/{id}/UpdateAdminMode": {
+      "post": {
+        "tags": [
+          "Instances"
+        ],
+        "summary": "Updates the Admin Mode settings of a Customer Engagement instance.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "UpdateInstanceAdminMode",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the Customer Engagement instance to update the admin mode settings.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "adminModeSettings",
+            "in": "body",
+            "description": "The admin mode settings to update.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/InstanceAdminModeSettings"
+            }
+          },
+          {
+            "name": "validate",
+            "in": "query",
+            "description": "Indicates whether to validate or update an instance. Set True to validate; set False to update.",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Update Instance Admin Mode Operation Executed.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "400": {
+            "description": "There was an issue either validating or executing the update admin mode update operation.",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/InstanceTypeInfo": {
+      "get": {
+        "tags": [
+          "InstanceTypeInfo"
+        ],
+        "summary": "Retrieve information about all the instance types in Customer Engagement.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstanceTypesInfo",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of instance types information.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InstanceTypeInfo"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/InstanceTypeInfo/{type}": {
+      "get": {
+        "tags": [
+          "InstanceTypeInfo"
+        ],
+        "summary": "Retrieve information about a Customer Engagement instance type.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetInstanceTypeInfo",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "An instance type",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "None",
+              "Production",
+              "Sandbox",
+              "Support",
+              "Preview",
+              "Trial"
+            ],
+            "x-ms-enum": {
+              "name": "InstanceType"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Instance Type Information",
+            "schema": {
+              "$ref": "#/definitions/InstanceTypeInfo"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/Languages": {
+      "get": {
+        "tags": [
+          "Languages"
+        ],
+        "summary": "Retrieves languages supported by Customer Enagagement instance.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetLanguages",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "releaseId",
+            "in": "query",
+            "description": "ID of the release of Customer Enagagement.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of supported languages",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Language"
+              }
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/Operation/{id}": {
+      "get": {
+        "tags": [
+          "OperationStatus"
+        ],
+        "summary": "Retrieves status of an operation in your Customer Engagement instance.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api.md#service-url)",
+        "operationId": "GetOperationStatus",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the operation to get the status for.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OperationStatus",
+            "schema": {
+              "$ref": "#/definitions/OperationStatus"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    },
+    "/api/v1/ServiceVersions": {
+      "get": {
+        "tags": [
+          "ServiceVersions"
+        ],
+        "summary": "Retrieves information about all the supported releases for Customer Engagement.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api.md#service-url)",
+        "operationId": "GetServiceVersions",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Available Service Versions",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ServiceVersion"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Templates": {
+      "get": {
+        "tags": [
+          "Templates"
+        ],
+        "summary": "Retrieves templates supported for provisioning a Customer Engagement instance.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api.md#service-url)",
+        "operationId": "GetTemplates",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of available templates",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Template"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TenantApplicationIdentities": {
+      "get": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "summary": "Retrieves all Tenant Application Identities for a tenant.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api.#service-url)",
+        "operationId": "GetTenantApplicationIdentities",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of tenant application identities for a tenant.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TenantApplicationIdentity"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "summary": "Registers a tenant application identity to be used with Online Management API.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "CreateTenantApplicationIdentity",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenantApplicationIdentity",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TenantApplicationIdentity"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "New Tenant Application Identity created",
+            "schema": {
+              "$ref": "#/definitions/TenantApplicationIdentity"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TenantApplicationIdentities/{id}": {
+      "get": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "summary": "Retrieves a Tenant Application Identity.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "operationId": "GetTenantApplicationIdentity",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of a Tenant Application Identity to retrieve.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "TenantApplicationIdentity",
+            "schema": {
+              "$ref": "#/definitions/TenantApplicationIdentity"
+            }
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "operationId": "DeleteTenantApplicationIdentity",
+        "summary": "Deletes a Tenant Application Identity.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "TenantApplicationIdentity is deleted."
+          }
+        }
+      }
+    },
+    "/api/v1/TenantApplicationIdentities/{id}/Enable": {
+      "post": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "operationId": "EnableTenantApplicationIdentity",
+        "summary": "Enables a Tenant Application Identity.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tenant Application Identity is enabled."
+          }
+        }
+      }
+    },
+    "/api/v1/TenantApplicationIdentities/{id}/Disable": {
+      "post": {
+        "tags": [
+          "TenantApplicationIdentities"
+        ],
+        "operationId": "DisableTenantApplicationIdentity",
+        "summary": "Disables a Tenant Application Identity.",
+        "description": "For a list of region-specific service URLs, see [Service URL](/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api#service-url)",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tenant Application Identity is disabled."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Region": {
+      "required": [
+        "RegionCode",
+        "Name",
+        "Currencies"
+      ],
+      "type": "object",
+      "properties": {
+        "RegionCode": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Currencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Currency"
+          }
+        }
+      }
+    },
+    "Currency": {
+      "type": "object",
+      "properties": {
+        "Code": {
+          "description": "Code of the Currency in customer Engagement",
+          "maxLength": 3,
+          "minLength": 3,
+          "type": "string"
+        },
+        "Precision": {
+          "description": "Precision of the Currency in Customer Engagement",
+          "format": "int32",
+          "maximum": 4,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "Symbol": {
+          "description": "Code of the Currency in Customer Engagement",
+          "maxLength": 4,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Name": {
+          "description": "Name of the Currency in Customer Engagement",
+          "type": "string"
+        }
+      }
+    },
+    "NewInstanceBackup": {
+      "required": [
+        "InstanceId",
+        "Label"
+      ],
+      "type": "object",
+      "properties": {
+        "InstanceId": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the instance to backup."
+        },
+        "Label": {
+          "type": "string",
+          "description": "Label to help identify this backup for future restoration."
+        },
+        "Notes": {
+          "type": "string",
+          "description": "Notes to help identify this backup for future restoration."
+        },
+        "IsAzureBackup": {
+          "type": "boolean",
+          "description": "For internal use only."
+        },
+        "AzureStorageInformation": {
+          "$ref": "#/definitions/AzureStorage"
+        }
+      }
+    },
+    "AzureStorage": {
+      "required": [
+        "ContainerName",
+        "StorageAccountKey",
+        "StorageAccountName"
+      ],
+      "type": "object",
+      "properties": {
+        "ContainerName": {
+          "type": "string",
+          "description": "For internal use only."
+        },
+        "StorageAccountKey": {
+          "type": "string",
+          "description": "For internal use only."
+        },
+        "StorageAccountName": {
+          "type": "string",
+          "description": "For internal use only."
+        }
+      }
+    },
+    "OperationStatus": {
+      "required": [
+        "OperationId",
+        "Status"
+      ],
+      "type": "object",
+      "properties": {
+        "OperationId": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the backup operation."
+        },
+        "Status": {
+          "enum": [
+            "None",
+            "FailedToCreate",
+            "NotStarted",
+            "Ready",
+            "Pending",
+            "Running",
+            "Succeeded",
+            "Failed",
+            "Cancelling",
+            "Cancelled",
+            "Aborting",
+            "Aborted",
+            "Tombstone",
+            "Deleting",
+            "Deleted"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "OperationState"
+          }
+        },
+        "Errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ItemDescription"
+          },
+          "readOnly": true
+        },
+        "Information": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ItemDescription"
+          },
+          "readOnly": true
+        },
+        "OperationLocation": {
+          "type": "string"
+        },
+        "ResourceLocation": {
+          "type": "string"
+        },
+        "Context": {
+          "$ref": "#/definitions/OperationContext",
+          "readOnly": true
+        }
+      }
+    },
+    "ItemDescription": {
+      "type": "object",
+      "properties": {
+        "Subject": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        }
+      }
+    },
+    "OperationContext": {
+      "type": "object",
+      "properties": {
+        "Items": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "InstanceBackup": {
+      "required": [
+        "Id",
+        "Status",
+        "CreatedBy",
+        "CreatedOn",
+        "ExpiresOn",
+        "Version",
+        "Label"
+      ],
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ExpiresOn": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "Version": {
+          "type": "string"
+        },
+        "Notes": {
+          "type": "string"
+        },
+        "Label": {
+          "type": "string"
+        },
+        "IsAzureBackup": {
+          "type": "boolean"
+        },
+        "AzureStorageInformation": {
+          "$ref": "#/definitions/AzureStorage"
+        }
+      }
+    },
+    "Instance": {
+      "description": "A representation of an organization",
+      "required": [
+        "Id",
+        "UniqueName",
+        "Version",
+        "ApplicationUrl",
+        "ApiUrl",
+        "State",
+        "Type",
+        "FriendlyName",
+        "DomainName",
+        "BaseLanguage",
+        "InitialUserEmail"
+      ],
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "description": "The id of the instance",
+          "type": "string"
+        },
+        "UniqueName": {
+          "description": "The unique name of the instance",
+          "type": "string"
+        },
+        "Version": {
+          "description": "The version of the instance",
+          "type": "string"
+        },
+        "ApplicationUrl": {
+          "description": "The url to the web application of the instance",
+          "type": "string"
+        },
+        "ApiUrl": {
+          "description": "The url of the web api for the instance",
+          "type": "string"
+        },
+        "State": {
+          "description": "The state of the instance",
+          "enum": [
+            "None",
+            "Ready",
+            "Pending",
+            "Inactive",
+            "Disabled",
+            "FailedProvisioning",
+            "PreparingInstance",
+            "ReadyToConfigure",
+            "Locked"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "InstanceState"
+          }
+        },
+        "StateIsSupportedForDelete": {
+          "description": "Indicates whether the instance can be deleted",
+          "type": "boolean"
+        },
+        "AdminMode": {
+          "description": "Whether the instance is in admin mode",
+          "type": "boolean"
+        },
+        "Type": {
+          "description": "The type of the instance",
+          "enum": [
+            "None",
+            "Production",
+            "Sandbox",
+            "Support",
+            "Preview",
+            "Trial"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "InstanceType"
+          }
+        },
+        "Purpose": {
+          "description": "The purpose of the instance",
+          "type": "string"
+        },
+        "FriendlyName": {
+          "description": "The friendly name of the instance",
+          "type": "string"
+        },
+        "DomainName": {
+          "description": "The public domain name of the instance.",
+          "type": "string"
+        },
+        "BaseLanguage": {
+          "format": "int32",
+          "description": "The base language code for the instance",
+          "type": "integer"
+        },
+        "InitialUserEmail": {
+          "description": "The object id of the user that created the instance",
+          "type": "string"
+        },
+        "SecurityGroupId": {
+          "format": "uuid",
+          "description": "The (optional) security group set for the instance.",
+          "type": "string"
+        }
+      }
+    },
+    "NewInstance": {
+      "description": "The set of instance values that will be used to create a new instance",
+      "required": [
+        "ServiceVersionId",
+        "Type",
+        "FriendlyName",
+        "DomainName",
+        "BaseLanguage",
+        "InitialUserEmail"
+      ],
+      "type": "object",
+      "properties": {
+        "Currency": {
+          "$ref": "#/definitions/Currency",
+          "description": "The Currency settings for the instance"
+        },
+        "ServiceVersionId": {
+          "format": "uuid",
+          "description": "ID of the available CRM service to use for the new instance",
+          "type": "string"
+        },
+        "Templates": {
+          "description": "The set of templates to be used when creating a new instance",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Type": {
+          "description": "The type of the instance",
+          "enum": [
+            "None",
+            "Production",
+            "Sandbox",
+            "Support",
+            "Preview",
+            "Trial"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "InstanceType"
+          }
+        },
+        "Purpose": {
+          "description": "The purpose of the instance",
+          "type": "string"
+        },
+        "FriendlyName": {
+          "description": "The friendly name of the instance",
+          "type": "string"
+        },
+        "DomainName": {
+          "description": "The public domain name of the instance.",
+          "type": "string"
+        },
+        "BaseLanguage": {
+          "format": "int32",
+          "description": "The base language code for the instance",
+          "type": "integer"
+        },
+        "InitialUserEmail": {
+          "description": "The object id of the user that created the instance.",
+          "type": "string"
+        },
+        "SecurityGroupId": {
+          "format": "uuid",
+          "description": "The (optional) security group set for the instance.",
+          "type": "string"
+        }
+      }
+    },
+    "InstanceRestorePoint": {
+      "required": [
+        "SourceInstanceId"
+      ],
+      "type": "object",
+      "properties": {
+        "SourceInstanceId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "InstanceBackupId": {
+          "format": "uuid",
+          "description": "The Id of a legacy instance backup to use.  If set, this will be used instead of Label or RestorePoint.",
+          "type": "string"
+        },
+        "Label": {
+          "description": "The label of an existing instance backup to use.  If set, this will be used instead of RestorePoint.",
+          "maxLength": 100,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "description": "The CreatedOn date and time of an existing instance backup to use.",
+          "type": "string"
+        }
+      }
+    },
+    "InstanceAdminModeSettings": {
+      "type": "object",
+      "properties": {
+        "OverrideUserObjectId": {
+          "format": "uuid",
+          "description": "If set, will be used instead of the user object id of the calling user.",
+          "type": "string"
+        },
+        "AdminMode": {
+          "description": "Indicates whether to enable or disable the Admin Mode settings.",
+          "type": "boolean"
+        },
+        "BackgroundOperationsEnabled": {
+          "description": "Indicates whether to enable or disable the background operatiojs.",
+          "type": "boolean"
+        },
+        "NotificationText": {
+          "type": "string"
+        }
+      }
+    },
+    "InstanceTypeInfo": {
+      "required": [
+        "Type",
+        "Total",
+        "Consumed"
+      ],
+      "type": "object",
+      "properties": {
+        "Type": {
+          "enum": [
+            "None",
+            "Production",
+            "Sandbox",
+            "Support",
+            "Preview",
+            "Trial"
+          ],
+          "type": "string",
+          "x-ms-enum": {
+            "name": "InstanceType"
+          }
+        },
+        "Total": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Consumed": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Language": {
+      "required": [
+        "LCID",
+        "Name",
+        "LocalizedName"
+      ],
+      "type": "object",
+      "properties": {
+        "LCID": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Locale ID of the language"
+        },
+        "Name": {
+          "type": "string",
+          "description": "Name of the language"
+        },
+        "LocalizedName": {
+          "type": "string",
+          "description": "Localized name of the language"
+        }
+      }
+    },
+    "ServiceVersion": {
+      "required": [
+        "LocalizedName",
+        "LCID",
+        "Version",
+        "Id",
+        "Name"
+      ],
+      "type": "object",
+      "properties": {
+        "LocalizedName": {
+          "type": "string",
+          "description": "Localized name of the service (release)"
+        },
+        "LCID": {
+          "format": "int32",
+          "type": "integer",
+          "description": "Locale ID of the service (release)"
+        },
+        "Version": {
+          "type": "string",
+          "description": "Version of the service (release)"
+        },
+        "Id": {
+          "format": "uuid",
+          "type": "string",
+          "description": "ID of the service (release)"
+        },
+        "Name": {
+          "type": "string",
+          "description": "Name of the service (release)"
+        }
+      }
+    },
+    "Template": {
+      "required": [
+        "Name",
+        "LocalizedName",
+        "LocalizedDescription",
+        "SupportedServiceVersions"
+      ],
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "description": "Name of the currency"
+        },
+        "LocalizedName": {
+          "type": "string"
+        },
+        "LocalizedDescription": {
+          "type": "string",
+          "description": "Localized name of the currency"
+        },
+        "SupportedServiceVersions": {
+          "type": "array",
+          "items": {
+            "format": "uuid",
+            "type": "string",
+            "description": "Versions supported by the currency"
+          }
+        }
+      }
+    },
+    "TenantApplicationIdentity": {
+      "required": [
+        "AadApplicationId",
+        "TenantId",
+        "Enabled"
+      ],
+      "type": "object",
+      "properties": {
+        "Id": {
+          "description": "",
+          "format": "uuid",
+          "type": "string"
+        },
+        "AadApplicationId": {
+          "format": "uuid",
+          "description": "Azure Application ID",
+          "type": "string"
+        },
+        "TenantId": {
+          "format": "uuid",
+          "description": "Tenant ID",
+          "type": "string"
+        },
+        "Enabled": {
+          "type": "boolean",
+          "description": "Indicates whether the Tenant Application Identity is enabled"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "description": "Entity created on",
+          "type": "string"
+        },
+        "ModifiedOn": {
+          "format": "date-time",
+          "description": "Entity last modified on",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "oauth2": {
+      "type": "oauth2",
+      "description": "",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "tokenUrl": "https://login.windows.net/common/oauth2/token",
+      "scopes": {}
+    }
+  }
+}
