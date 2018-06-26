@@ -54,7 +54,7 @@ If you are a member of the Global Administrator role of your Azure AD or Office 
 ## Rename your environment
 
 > [!IMPORTANT]
-> Follow the steps in this section to rename a production environment that doesn't contain a database. You can't rename trial environments, and you must use the Dynamics 365 admin center to rename any environment that contains a database.
+> Follow the steps in this section to rename a production environment that doesn't contain a database. You can't rename trial environments, and you must use the Dynamics 365 admin center to rename any production environment that contains a database.
 
 1. Open the [PowerApps admin center][1], find the environment to be renamed in the list, and click or tap it.
 
