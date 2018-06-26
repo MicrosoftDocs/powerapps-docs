@@ -6,7 +6,7 @@ author: gregli-msft
 ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
-ms.date: 06/12/2018
+ms.date: 06/26/2018
 ms.author: gregli
 
 ---
