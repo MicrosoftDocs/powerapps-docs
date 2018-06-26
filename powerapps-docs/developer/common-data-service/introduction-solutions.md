@@ -16,6 +16,11 @@ ms.workload: na
 ms.date: 03/19/2018
 ms.author: jdaly
 ---
+
+<!-- TODO: Work in any missing content from original topic
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-solutions -->
+
+
 # Introduction to solutions
 
 *Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service for Apps. For example, the CDS for Apps for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
