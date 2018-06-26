@@ -1,21 +1,13 @@
 ---
 title: Overview of the Power BI connection | Microsoft Docs
 description: See the available Power BI connections
-services: ''
-suite: powerapps
-documentationcenter: na
-author: sirui-sun
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/12/2016
-ms.author: sirsu
+ms.author: lanced
 
 ---
 # Connect to Power BI from PowerApps
@@ -26,7 +18,7 @@ Power BI is a suite of business analytics tools to analyze data and share insigh
 This topic shows you how to use the Power BI connection in an app, and lists the available functions.
 
 ## Prerequisites
-* Access to [powerapps.com](https://powerapps.com) or have [PowerApps](http://aka.ms/powerappsinstall) installed
+* [Sign up](https://web.powerapps.com)
 * Add the Power BI [connection](https://powerapps.microsoft.com/tutorials/add-manage-connections/)
 * Create an app from a [template](https://powerapps.microsoft.com/tutorials/get-started-test-drive/), from [data](https://powerapps.microsoft.com/tutorials/get-started-create-from-data/), or from [scratch](https://powerapps.microsoft.com/tutorials/get-started-create-from-blank/)
 

@@ -1,21 +1,12 @@
 ---
 title: Overview of the Excel connection | Microsoft Docs
 description: Display and update data in Excel by storing the workbook in a cloud-storage account and then connecting to the data from your app.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
-
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/02/2016
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Connect to Excel from PowerApps

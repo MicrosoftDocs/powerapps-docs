@@ -1,23 +1,14 @@
 ---
 title: Manage apps created in your organization | Microsoft Docs
-description: Walkthrough of how to manage apps created in your organization
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
-
+description: Walkthrough of how to manage PowerApps apps created in your organization
+author: jimholtz
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: sharik
-
+ms.author: jimh
 ---
+
 # Manage apps created in your organization
 If you're an Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin, you can manage the apps created in your organization.
 
@@ -27,14 +18,14 @@ Admins can do the following from the PowerApps Admin center:
 * View the data sources used by an app
 
 ## Prerequisites
-* Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
+* Either a PowerApps Plan 2 or Microsoft Flow Plan 2 license. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
 * PowerApps Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Manage an app
-1. Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
+1. Sign in to the Admin center at [https://admin.powerapps.com](https://admin.powerapps.com).
 2. In the navigation pane, click or tap **Environments**, and then click or tap the environment that contains the app that you want to manage.
 
-    If you don't see **Environments** in the navigation pane, that indicates you don't have a PowerApps Plan 2, Flow Plan 2, or PowerApps Plan 2 trial license.
+    If you don't see **Environments** in the navigation pane, that indicates you don't have a PowerApps Plan 2, Microsoft Flow Plan 2, or PowerApps Plan 2 trial license.
 
     ![File and Share](./media/admin-manage-apps/environment.png)
 3. On the **Resources** tab, click or tap **Apps**, and then click or tap the app that you want to manage.

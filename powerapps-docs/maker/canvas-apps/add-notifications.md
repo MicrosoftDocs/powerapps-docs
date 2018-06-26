@@ -1,24 +1,21 @@
 ---
 title: Send a push notification | Microsoft Docs
 description: Learn how to send native push notifications to an app in PowerApps.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: jamesol-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 08/08/2017
 ms.author: jamesol
 
 ---
-# Send a pull notification in PowerApps
+# Send a push notification in PowerApps
 Push notifications are used in mobile apps for consumer and business scenarios primarily to engage app users and help them prioritize key tasks. In PowerApps, you can send notifications by using the PowerApps Notification connector. You can send native push notifications to any app that you create in PowerApps. We plan to add more notification types in the future.
 
 ![Example of what a push notification looks like](./media/add-notifications/pic1-notification-screenshot.png)

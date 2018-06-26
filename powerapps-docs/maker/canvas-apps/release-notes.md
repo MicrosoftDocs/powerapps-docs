@@ -1,50 +1,54 @@
 ---
-title: What's new in PowerApps | Microsoft Docs
+title: What's new | Microsoft Docs
 description: Updates to PowerApps, organized by release date
-services: 'powerapps'
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/21/2018
-ms.author: sharik
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 05/21/2018
+ms.author: anneta
 
 ---
 # What's new in PowerApps
-For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
+> [!IMPORTANT]
+> **Announcing the release notes**<br>
+> Wondering about upcoming and recently released capabilities in PowerApps?<br>
+[View the release notes](https://docs.microsoft.com/en-us/business-applications-release-notes/april18/powerapps/overview). We've captured all the details, end to end, top to bottom, which you can use for planning.
 
+For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
 
-## Announcing the Business Applications Spring '18 release notes
+## May 30
+1. [Rich-text editor control](controls/control-richtexteditor.md) (experimental) - allows end users to format text inside a WYSIWYG editing area. 
 
-Discover the latest updates to our business applications, as well as a host of new capabilities for building your own applications and extensions on top of our platform. [Download the Spring '18 release notes PDF](https://aka.ms/businessappsreleasenotes), which covers Dynamics 365, PowerApps, Microsoft Flow, and Power BI.
+## May 21
+1. Allow app users to import and export data from Excel or CSV files stored locally by using the **Get Data from Excel file** and **Export Data** features now available for upgraded Common Data Service (CDS) for Apps environments. 
+1. Allow app users to [open entities in Excel](../common-data-service/data-platform-excel-addin.md) to create, update, and delete data stored within CDS for Apps by using the Excel add-in for PowerApps. 
+1. [Create and publish Power BI reports](../common-data-service/data-platform-powerbi-connector.md) by using Power BI Desktop connected to CDS for Apps. 
 
-**Coming soon:** We'll keep updating the release notes PDF as features ship, and we'll also make them available on a web page.
+## April 23
+* Download [attachments](controls/control-attachments.md) in Internet Explorer within SharePoint custom list forms.
 
-## Mar. 21
-1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in the Common Data Service to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
-2. [Create a database](../../administrator/create-database.md) on the latest version of the Common Data Service in an environment.
-3. The Common Data Service for Apps now includes:
+## April 9
+* Cut (Ctrl+X), copy (Ctrl+C), and paste (Ctrl+V) controls&mdash;including the controls' styles, formulas, and properties&mdash;across apps in a web browser.
 
+## March 21
+1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in Common Data Service for Apps to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
+2. [Create a database](../../administrator/create-database.md) on the latest version of CDS for Apps in an environment.
+3. CDS for Apps now includes:
     - **Additional data types** support more complex entity definitions and provide richer experiences. (Applies to canvas and model-driven apps.)
-    - [Create and customize entities](../common-data-service/data-platform-create-entity.md) in the Common Data Service for Apps right from the PowerApps site. The **refreshed experience** includes improved performance, a more user-friendly UI, and helpful features such as in-line creation of option sets. (Applies to canvas and model-driven apps.)
-    - Create **server-side business rules** for validating data entered into the Common Data Service for Apps. (Applies to canvas and model-driven apps.)
-    - Create **calculated and rollup fields** in Common Data Service for Apps entities directly from the PowerApps site. (Applies to canvas and model-driven apps.)  
-    - Developers can use the Common Data Service for Apps **Software Development Kit** (SDK) to create code-based customizations for the Common Data Service.
-    - Advanced users can access data stored in the Common Data Service for Apps through a new **OData Web API**.
-    - [Import data](../common-data-service/data-platform-cds-newentity-pq.md) into Common Data Service with **Power Query**. Use Power Query on the web to directly import data to the Common Data Service for Apps from multiple sources
+    - [Create and customize entities](../common-data-service/data-platform-create-entity.md) in CDS for Apps right from the PowerApps site. The **refreshed experience** includes improved performance, a more user-friendly UI, and helpful features such as in-line creation of option sets. (Applies to canvas and model-driven apps.)
+    - Create **server-side business rules** for validating data entered into CDS for Apps. (Applies to canvas and model-driven apps.)
+    - Create **calculated and rollup fields** in CDS for Apps entities directly from the PowerApps site. (Applies to canvas and model-driven apps.)  
+    - Developers can use the CDS for Apps **Software Development Kit** (SDK) to create code-based customizations for CDS for Apps.
+    - Advanced users can access data stored in CDS for Apps through a new **OData Web API**.
+    - [Import data](../common-data-service/data-platform-cds-newentity-pq.md) into CDS for Apps with **Power Query**. Use Power Query on the web to directly import data to CDS for Apps from multiple sources
 
-## Mar. 5
+## March 5
 1. Add (and delete) [attachments](controls/control-attachments.md) to SharePoint lists.
 2. Open external [PDF](controls/control-pdf-viewer.md) files in a web browser. (Experimental feature)
 
@@ -68,20 +72,3 @@ Discover the latest updates to our business applications, as well as a host of n
 
 ## Jan. 5
 * Act on data right from your Power BI report or dashboard by integrating a [PowerApps custom visual (preview release)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), which pulls contextual data from your Power BI report.
-
-## Dec. 8
-1. [Condition templates](working-with-rules.md) for rules infer common properties of a control (such as **Text** or **Value**).
-2. Stop displaying the [**Defining actions** confirmation dialog box](working-with-rules.md) when defining rule actions.
-
-## Nov. 13
-1. Select multiple values for the same field in SharePoint lists.
-2. [View and download attachments](controls/control-attachments.md) in SharePoint lists.
-3. [Customize SharePoint list forms](customize-list-form.md) using PowerApps.
-
-## Nov. 10
-* [Rename rules](working-with-rules.md) in an app and show rules when the selected control is in the rule condition.
-
-## Oct. 30
-1. [Show all rules](working-with-rules.md) in an app, not just those for the selected control.
-2. Add icons that app creators requested the most.
-3. Improved performance of apps on Android and iOS devices.

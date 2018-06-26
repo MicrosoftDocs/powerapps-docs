@@ -18,13 +18,13 @@ ms.author: jdaly
 ---
 # Introduction to solutions
 
-*Solutions* are how customizers and developers author, package, and maintain units of software that extend the Common Data Service for Apps. Customizers and developers distribute solutions so that organizations can use the Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
+*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service for Apps. For example, the Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
 
-Every customization that you make to the Common Data Service for Apps is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
+Every customization that you make to Common Data Service for Apps, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
 
 If you intend to transport customizations or extensions between different Common Data Service for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
 
-## Unmanaged and managed solutions
+## Managed and unmanaged solutions
 
 There are two types of solutions: *managed* and *unmanaged*.
 
@@ -47,6 +47,7 @@ An **unmanaged** solution is one that is still under development or isn’t inte
  > You cannot import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
 
 ## Solution publishers
+
 Each solution is linked to a solution publisher. The solution publisher provides information about how to contact the publisher as well a customization prefix value. The default value is `new`.
 
 When any schema changes are included as part of a solution, the solution publisher customization prefix is prepended to the name of the schema items. Any custom actions also have this value appended to them. This is valuable because it allows for easy recognition of which solution added the schema item or custom action. It is not required for all schema items and custom actions in a solution to use the same customization prefix, but it is strongly recommended.
@@ -67,7 +68,7 @@ From [powerapps.com](https://web.powerapps.com)
 1. Select the *Waffle* icon at the top left corner
 2. In the fly out, select **All apps**.
 3. Look for the **Dynamics 365 - custom app**.
- You may want to click the elipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
+ You may want to click the ellipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
 4. Click the **Dynamics 365 - custom app** app and select it.
 5. Navigate to **Settings** > **Customization** > **Customizations**.
 
@@ -111,7 +112,7 @@ The following diagram introduces how managed solutions and unmanaged customizati
 
 In this example, default behavior defined in the system solution is overridden or appended by managed solutions. Any unmanaged customizations can then override or append customizations that are then visible in the application.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Introduction to solutions > Unmanaged and managed solutions](/dynamics365/customer-engagement/developer/introduction-solutions#unmanaged-and-managed-solutions)
+More information: [Dynamics 365 Customer Engagement Developer Guide: Introduction to solutions > Unmanaged and managed solutions](/dynamics365/customer-engagement/developer/introduction-solutions#managed-and-unmanaged-solutions)
 
 ## Managed properties
 

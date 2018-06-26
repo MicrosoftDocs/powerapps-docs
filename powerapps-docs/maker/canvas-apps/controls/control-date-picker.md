@@ -1,19 +1,16 @@
 ---
 title: 'Date Picker control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Date Picker control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -37,13 +34,13 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **Language** – Determines the language used to format dates, including names of months. If this property isn't specified, the user's device setting determines the language.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
@@ -59,11 +56,19 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
+
+**IconFill** – The foreground color of a the date picker icon.
+
+**IconBackground** – The background color of a the date picker icon.
 
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
@@ -81,7 +86,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **StartYear** – The earliest year to which the user can set the value of a date-picker control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
@@ -96,14 +101,25 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 ## Example
 1. Add a **Date Picker** control, and name it **Deadline**.
-   
+
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to this formula:
    <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
-   
+
     Want more information about the **[DateDiff](../functions/function-dateadd-datediff.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, choose a date in **Deadline**, and then click or tap **OK**.
-   
+
     The **[Label](control-text-box.md)** control shows the number of days between today and the date that you chose.
 4. To return to the default workspace, press Esc.
 
+
+## Accessibility guidelines
+### Color contrast
+* [Standard color contrast requirements](../accessible-apps-color.md) apply.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.

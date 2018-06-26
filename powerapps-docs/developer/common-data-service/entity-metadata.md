@@ -1,6 +1,6 @@
 ---
 title: Entity metadata | Microsoft Docs
-description: Learn about the entity metadata use in the Common Data Service for Apps.
+description: Learn about the entity metadata use in Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -19,7 +19,7 @@ ms.author: jdaly
 
 # Entity metadata
 
-Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in the Common Data Service.
+Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in Common Data Service for Apps.
 
 ## Entity names
 Each entity has a unique name defined when it is created. This name is presented in several ways:
@@ -166,7 +166,7 @@ Some entities will have different sets of options.
 **Example**: `PhoneCall` entity `StateCode` and `StatusCode` options
 
 
-|Column1  |Column2  |
+|`StateCode`|`StatusCode`|
 |---------|---------|
 |0 : Open|1: Open|
 |1 : Completed|2: Made <br />4: Received|

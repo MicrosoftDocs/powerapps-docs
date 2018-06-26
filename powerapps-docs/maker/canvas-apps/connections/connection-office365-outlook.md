@@ -1,21 +1,12 @@
 ---
 title: Overview of the Office 365 Outlook connection | Microsoft Docs
 description: Reference information, including examples, for the Office 365 Outlook connection to PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
-
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/20/2017
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Connect to Office 365 Outlook from PowerApps

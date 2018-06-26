@@ -1,23 +1,15 @@
 ---
 title: Quickstart to download a list of apps created in your environments | Microsoft Docs
-description: In this quickstart, you learn how to download a list of apps created in your environments
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+description: In this quickstart, you learn how to download a list of apps created in your environments.
+author: jimholtz
 
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-admin
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
-ms.author: sharik
-
+ms.author: jimh
 ---
+
 # Quickstart: Download a list of apps created in your environments
 If you're an Environment admin, you can view and download a list of apps created in the environments that you're administering. If you're a 365 Global admin or Azure Active Directory Tenant admin, you can view and download a list of apps created in all of the environments in your organization.
 
@@ -25,7 +17,7 @@ In this quickstart, you'll learn how to download a list of apps created in a sin
 
 ## Prerequisites
  To follow this quickstart, the following items are required:
- * Either PowerApps Plan 2 or Flow Plan 2. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
+ * Either a PowerApps Plan 2 or Microsoft Flow Plan 2 license. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
  * PowerApps Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
 ## Sign in to the PowerApps Admin center

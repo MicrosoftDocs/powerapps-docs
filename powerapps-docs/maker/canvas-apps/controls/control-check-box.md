@@ -1,19 +1,16 @@
 ---
 title: 'Check Box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Check Box control
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -58,6 +55,10 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Fill](properties-color-border.md)** – The background color of a control.
 
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
+
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
 **[FontWeight](properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
@@ -98,6 +99,8 @@ The user can specify a Boolean value by using this familiar control, which has b
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
@@ -128,3 +131,21 @@ The user can specify a Boolean value by using this familiar control, which has b
     The **[Date Picker](control-date-picker.md)** control appears when the **[Value](properties-core.md)** property of **chkReserve** is **true** but not when it's **false**.
 4. To return to the default workspace, press Esc.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **CheckmarkFill** and **CheckboxBackgroundFill**
+* **CheckboxBackgroundFill** and **[Fill](properties-color-border.md)**
+* **CheckboxBackgroundFill** and **[PressedFill](properties-color-border.md)**
+* **CheckboxBackgroundFill** and **[HoverFill](properties-color-border.md)**
+
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
+
+### Screen reader support
+* **[Text](properties-core.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+ 

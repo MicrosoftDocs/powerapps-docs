@@ -1,23 +1,16 @@
 ---
-title: Quickstart for creating an Option set| Microsoft Docs
-description: In this quickstart, you create an Option set
-services: powerapps
-documentationcenter: na
+title: Create an Option set| Microsoft Docs
+description: Step-by-step instructions for how to create an Option set.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 3/21/2018
+ms.component: cds
+ms.topic: conceptual
+ms.date: 03/21/2018
 ms.author: clwesene
-
 ---
-# Quickstart: Create an Option set
+
+# Create an Option set
 
 Option sets allow you to include drop down lists of fixed values to a user within your app to ensure data consistency, sometimes referred to as picklists or choice fields in other applications. Similar to entities, there are both standard Option sets, and the ability create custom option sets to use within you app.
 

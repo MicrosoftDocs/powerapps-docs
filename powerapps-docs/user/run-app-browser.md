@@ -1,30 +1,21 @@
 ---
 title: Quickstart to run apps in a web browser | Microsoft Docs
 description: In this quickstart, you learn how to run apps in a web browser
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
-author: SKjerland
-manager: kfile
-editor: ''
-tags: ''
-
+author: Mattp123
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/07/2018
-ms.author: sharik
-
+ms.author: matp
 ---
+
 # Quickstart: Run an app in a web browser
 When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
 
 To follow this quickstart, you need a [Microsoft Office 365 subscription](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) that includes Dynamics 365, and access to a [supported browser and operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to an app that you built or that someone else built and shared with you.
 
 ## Sign in to Dynamics 365
-Sign in to Dynamics 365 at [https://home.dynamics.com]([https://home.dynamics.com).
+Sign in to Dynamics 365 at [https://home.dynamics.com](https://home.dynamics.com).
 
 ## Find an app on the Home page
 The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You can also filter the list to show only apps created by a specific source, such as PowerApps. To do this, click or tap **Filter** and then select the source.

@@ -1,19 +1,16 @@
 ---
 title: PowerApps Community Plan -- a free development environment for individual use | Microsoft Docs
 description: Sign up to to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 05/01/2016
 ms.author: mblythe
 
@@ -73,7 +70,7 @@ With the individual environment, you get the following functionality:
 
 *You can't share apps, flows, connections, etc. with any other users of your tenant. You also can't add any other user as an environment admin or maker, or to the database roles from the admin center.
 
-**Creating a database with the Common Data Service, is currently unavailable in an individual environment, and will be available again soon. If you had created a database earlier, then you can continue using it without any issues. 
+\*\*Creating a database with the Common Data Service is currently unavailable in an individual environment, and will be available again soon. If you had created a database earlier, then you can continue using it without any issues. 
 
 ## What are the capacity limits for the individual environment?
 | **Capacity** |  |

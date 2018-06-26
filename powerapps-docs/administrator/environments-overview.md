@@ -1,23 +1,15 @@
 ---
-title: Overview of environments | Microsoft Docs
-description: What environments are and how to use them
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
+title: Environments overview | Microsoft Docs
+description: Learn about environments in PowerApps and how to use them
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-
 ---
+
 # Environments overview
 An environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you choose to leverage environments depends on your organization and the apps you are trying to build. For example:
 

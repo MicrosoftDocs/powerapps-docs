@@ -1,7 +1,6 @@
 ---
 title: Create an app from scratch using a Common Data Service database | Microsoft Docs
 description: Create an app to add, update, and delete records.
-services: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -10,9 +9,8 @@ tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/18/2018
 ms.author: anneta
 
@@ -38,7 +36,6 @@ When you build an app from the Common Data Service, you don't need to create a c
 	You can design an app from scratch for phones or other devices (such as tablets); this topic will focus on designing an app for phones.
 
 ## Specify an entity
-
 1. In the middle of the screen, click or tap **connect to data** and then, in the **Data** pane, click or tap the **Common Data Service** connection.
 
 1. In the search box, type or paste the first few letters of **Accounts** to filter the list of entities, select the **Accounts** check box, and then click or tap **Connect**.
@@ -119,7 +116,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 	![Next icon](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. On the **FormScreen**, click or tap the cancel icon, and set its **OnSelect** property to this formula:<br>
-`ResetForm(EditForm1);Navigate(FormScreen, ScreenTransition.None)`
+`ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
 	![Cancel icon](./media/data-platform-create-app-scratch/cancel-icon.png)
 

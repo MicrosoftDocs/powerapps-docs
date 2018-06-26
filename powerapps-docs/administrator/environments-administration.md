@@ -1,23 +1,15 @@
 ---
 title: Administer environments | Microsoft Docs
-description: Administer environments in PowerApps, including creation, renaming, deletion, and security
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
+description: Learn how to administer environments in PowerApps, including creation, renaming, deletion, and security
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-
 ---
+
 # Administer environments in PowerApps
 In the [PowerApps admin center][1], manage environments that you've created and those for which you have been added to the Environment Admin or System Administrator role. From the admin center, you can perform these administrative actions:
 
@@ -44,10 +36,10 @@ To manage an environment in the PowerApps admin center, you must have one of the
 
 * The Global Administrator role of your Azure AD or Office 365 tenant.
 
-You also need either PowerApps Plan 2 or Flow Plan 2 to access the admin center. For more information, see the [PowerApps pricing page][3].
+You also need either a PowerApps Plan 2 or Microsoft Flow Plan 2 license to access the admin center. For more information, see the [PowerApps pricing page][3].
 
 > [!IMPORTANT]
-> Any changes that you make in PowerApps admin center affect the [Flow admin center][4] and vice versa.
+> Any changes that you make in PowerApps admin center affect the [Microsoft Flow admin center][4] and vice versa.
 
 ## Create an environment
 For instructions on how to create an environment, see [Quickstart: Create an environment](create-environment.md).
@@ -61,12 +53,13 @@ If you are a member of the Global Administrator role of your Azure AD or Office 
 
 ## Rename your environment
 
-If there is no database in the environment, follow the below mentioned steps to rename your environment. If you have a database in your environment, then you can only rename your production environment (and not a trial environment) from Dynamics 365 Admin center.
+> [!IMPORTANT]
+> Follow the steps in this section to rename a production environment that doesn't contain a database. You can't rename trial environments, and you must use the Dynamics 365 admin center to rename any environment that contains a database.
 
 1. Open the [PowerApps admin center][1], find the environment to be renamed in the list, and click or tap it.
 
     ![](./media/environment-admin/environment-list-updated3.png)
- 
+
 2. Click or tap **Details**.
 
     ![](./media/environment-admin/environment-rename-details-2.png)

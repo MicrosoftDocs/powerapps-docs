@@ -1,11 +1,9 @@
 You're now familiar with all the parts of PowerApps and the options for creating apps, so it's time to actually build an app. For this topic, we'll generate a phone app from a SharePoint Online list, but you could use data from lots of other sources, including Excel, cloud services like Salesforce, and on-premises sources such as SQL Server.
 
 ## Connect to a data source
-The first step in generating an app from data is to choose which PowerApps Studio to use, then connect to your data source. In web.powerapps.com, click or tap **New app**, then choose whether to use PowerApps Studio for Windows or PowerApps Studio for web.
+In web.powerapps.com, click or tap **Apps** near the left edge, and then click or tap **Create an app** in the banner.
 
-![Get started on web.powerapps.com](./media/learning-create-first-app-powerapps/generate-choose-studio.png)
-
-In PowerApps Studio you have the option of starting from data, from a template, or from scratch. We're building a phone app for a SharePoint list, so under **SharePoint** click or tap **Phone layout**.
+In PowerApps, you can build an app from data, from a template, or from scratch. We're building a phone app for a SharePoint list, so under **SharePoint** click or tap **Phone layout**.
 
 ![Phone app from SharePoint list](./media/learning-create-first-app-powerapps/generate-sharepoint-phone.png)
 

@@ -1,19 +1,16 @@
 ---
 title: Show, edit, or add a record from a table | Microsoft Docs
 description: Use a form to show, edit, or add a record from a table in your data source.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: karthik-1
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/06/2017
 ms.author: sharik
 

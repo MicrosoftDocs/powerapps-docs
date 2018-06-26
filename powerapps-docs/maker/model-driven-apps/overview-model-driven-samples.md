@@ -1,17 +1,14 @@
 ---
 title: Model-driven sample apps
 description: Understand how to get, customize, and remove model-driven sample apps.
-services: powerapps
 documentationcenter: na
 author: caburk
 manager: kfile
 
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.custom:
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: model
 ms.date: 03/08/2018
 ms.author: caburk
 
