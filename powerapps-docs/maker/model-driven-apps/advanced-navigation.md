@@ -24,7 +24,7 @@ ms.assetid: 60281cab-23d5-4421-ae51-f7e6c1176729
 This topic describes how to access advanced customization and administration areas that are available within a PowerApps environment.
 
 ## Solution explorer
-Use solution explorer to perform app making and customization task that can’t be completed from the PowerApps model-driven home page.
+Use solution explorer to perform app making and customization tasks that can’t be completed from the PowerApps model-driven home page.
 
 1.	Sign in to [PowerApps](https://web.powerapps.com).
 2.	Select **Model-driven** (lower left). 

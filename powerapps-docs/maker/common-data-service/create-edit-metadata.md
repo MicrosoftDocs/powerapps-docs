@@ -61,7 +61,7 @@ You can’t delete standard entities, fields, or entity relationships. They are 
 
 ## Limitations on creating metadata items  
 
-There is a limit to the number of entities you can create. You can find information about the maximum number in the **Settings** > **Administration** > **Resources In Use** page. If you need more custom entities, contact technical support. This upper limit can be adjusted.  
+There is a limit to the number of entities you can create. You can find information about the maximum number in the **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Resources In Use** page. If you need more custom entities, contact technical support. This upper limit can be adjusted.  
   
 Within each entity there is an upper limit on the number of fields you can create. This limit is based on the technical limitations on the amount of data that can be stored in a row of a database table. It is difficult to provide a specific number because each type of field can use a different amount of space. The upper limit depends on the total space used by all the fields for the entity.  
   
@@ -69,11 +69,8 @@ Most people do not create enough custom fields to reach the limit, but if you fi
   
 Option set fields provide a set of options that will be displayed in a drop-down control on a form or in picklist control when using advanced find. Your environment can support thousands of options within an Option set, but you shouldn’t consider this as the upper limit. Usability studies have shown that people have trouble using a system where a drop-down control provides large numbers of options. Use option set field to define categories for data. Don’t use option set fields to select categories that actually represent separate items of data. For example, rather than maintain an option set field that stores each of hundreds of possible manufacturers of a type of equipment, consider creating an entity that stores references to each manufacturer and use a lookup field instead of an option set.  
   
-### See also  
+## Next steps 
 
 [Create or edit entities (record types)](create-edit-entities.md)<br />
-[Create and edit virtual entities that contain data from an external data source](create-edit-virtual-entities.md)<br />
-[Create and edit relationships between entities](create-edit-entity-relationships.md)<br />
-[Create and edit fields for Common Data Service for Apps](create-edit-fields.md)<br />
-[Create and edit global option sets for Common Data Service for Apps (picklists)](create-edit-global-option-sets.md)<br />
-[Create and design forms](../model-driven-apps/create-design-forms.md)
+[Create and edit relationships between entities](create-edit-entity-relationships.md)
+

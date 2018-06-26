@@ -133,6 +133,10 @@
       items: 
       - name: Manage fields
         href: data-platform-manage-fields.md
+      - name: Create global option sets using PowerApps portal
+        href: create-edit-global-option-sets-portal.md
+      - name: Create global option sets using solution explorer  
+        href: create-edit-global-option-sets-solution-explorer.md
       - name: Map entity fields
         href: map-entity-fields.md
       - name: Delete fields
