@@ -16,7 +16,7 @@ ms.workload: na
 ms.date: 03/17/2018
 ms.author: jdaly
 ---
-
+<!-- This topic was not migrated it was written for PowerApps -->
 # Customize commands with model-driven apps 
 
 The commands that appear within a form or list command bar are customizable. Commands are based on the XML schemas used in Office ribbons, so the term *ribbon* is still used. When you create a command, you can define three elements:

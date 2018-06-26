@@ -1,5 +1,9 @@
 # Supported customizations for model-driven apps
 
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-extensions
+Split to just include MDA issues
+ -->
+
 You can customize Model-driven apps by using tools that are available in the PowerApps portal  or that are described in the documentation. These customizations are supported and can be upgraded.
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to model-driven apps. For more information, see [Unsupported customizations](#unsupported-customizations)

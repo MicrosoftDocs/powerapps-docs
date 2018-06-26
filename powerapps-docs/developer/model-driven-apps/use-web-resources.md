@@ -16,7 +16,7 @@ ms.workload: na
 ms.date: 03/17/2018
 ms.author: jdaly
 ---
-
+<!-- This topic was not migrated it was written for PowerApps -->
 # Use web resources
 
 There is a virtual folder called `webresources` within each Common Data Service for Apps instance where you can request HTML, JS, CSS, image, and other files by name and access them in your browser. You can upload these files using the application or programatically add them as [WebResource Entity](../common-data-service/reference/entities/webresource.md) records. The [XrmToolBox WebResources Manager](https://www.xrmtoolbox.com/plugins/MsCrmTools.WebResourcesManager/) is a community tool which can facilitate working with these records.

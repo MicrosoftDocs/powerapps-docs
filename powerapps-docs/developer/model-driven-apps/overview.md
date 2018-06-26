@@ -16,6 +16,7 @@ ms.workload: na
 ms.date: 03/17/2018
 ms.author: jdaly
 ---
+<!-- This topic was not migrated it was written for PowerApps -->
 # Model-driven apps Developer Overview
 
 PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are model-driven apps built using the new Common Data Service for Apps. Common Data Service for Apps now contains the core functionality of the Common Data Service for Apps  applications. With model-driven apps, you can build apps that use the same extensibility capabilities as those applications.
@@ -23,6 +24,7 @@ PowerApps offers users, businesses, partners, independent software vendors (ISVs
 Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with learning how to build a model-driven app and what options can be applied without code. 
 
 ## Get Started
+
 If you are already experienced with the Common Data Service for Apps apps, you will find that you will be able to apply your experience building model-driven apps. There are some new designers available to you, but generally the concepts are the same.
 
 > [!NOTE]

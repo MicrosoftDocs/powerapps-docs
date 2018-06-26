@@ -16,6 +16,7 @@ ms.workload: na
 ms.date: 03/13/2018
 ms.author: jdaly
 ---
+<!-- This topic was not migrated it was written for PowerApps -->
 
 # Client scripting with model-driven apps
 
