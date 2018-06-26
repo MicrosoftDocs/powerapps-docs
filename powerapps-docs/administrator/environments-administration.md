@@ -52,6 +52,9 @@ When you open the admin center, the Environments tab appears by default and list
 If you are a member of the Global Administrator role of your Azure AD or Office 365 tenant, all the environments that have been created by users in your tenant appear, because you're automatically an Environment Admin for all of them.
 
 ## Rename your environment
+
+If there is no database in the environment, follow the below mentioned steps to rename your environment. If you have a database in your environment, then you can only rename your production environment (and not a trial environment) from Dynamics 365 Admin center.
+
 1. Open the [PowerApps admin center][1], find the environment to be renamed in the list, and click or tap it.
 
     ![](./media/environment-admin/environment-list-updated3.png)
@@ -187,10 +190,6 @@ In following scenarios, you can get an error while trying to create a database:
 1. **Default environment**: Creating a database is currently not supported in a default environment of the tenant. 
 
 2. **Environment for an individual use**: You get an environment for your individual use, by signing-up from the PowerApps Community Plan. If you have not created the database yet, then currently you can't provision a database in the environment for individual use. 
-
-3. **Environment in a different region, than your AAD tenant's home region**: Currently, you can only provision a database in the environments created in your Azure Active Directory Tenant home region. Ability to provision a database in the other regions, will be coming soon. So, make sure to keep the region same as tenant's default location, if you want to create a database in it.
-
-4. **Creating databases not supported in certain regions**: There are certain regions, where creating databases is still not available. e.g. countries in South America. So, if your tenant's home location is South America, you currently can't provision a database in any environment. 
     
 We are working on enabling all of the above scenarios.
 If you are getting any other error message or have more questions, please connect with us [here][5]
