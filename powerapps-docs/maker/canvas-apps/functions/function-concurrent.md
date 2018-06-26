@@ -56,7 +56,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 	![Time graph of four network requests, each one starting after the last finishes, covering the entire span of time](media/function-concurrent/chained-network.png)
 
-5. Save and close the app.
+5. Save, close, and reopen the app.
 
     PowerApps caches data, so selecting the button again won't necessarily cause four new requests. Each time you want to test performance, close and reopen your app. If you turned network throttling on, you may want to turn it off until you're ready for another test.
 
@@ -73,7 +73,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 2. Clear the network monitor in the browser.
 
-1. If you were using network throttling before, turn it on again now.
+1. If you were using network throttling before, turn it on again.
 
 3. While holding down the Alt key, select the second button, and then watch the network traffic.
 
@@ -83,7 +83,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 	These graphs are based on the same scale. By using **Concurrent**, you halved the total amount of time these operations took to finish. 
 
-5. Save and close the app.
+5. Save, close, and reopen the app.
 
 #### Race condition
 
@@ -94,7 +94,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 3. Add a **Button** control, and set its **OnSelect** property to this formula:
 
 	**Set( StartTime, Value(Now()) );<br>
-	RunInParallel(<br>
+	Concurrent(<br>
     &nbsp;&nbsp;&nbsp;&nbsp;Set(FRTrans, MicrosoftTranslator.Translate(TextInput1.Text,"fr")); Set(FRTransTime, Value(Now()) ),<br>
     &nbsp;&nbsp;&nbsp;&nbsp;Set(DETrans, MicrosoftTranslator.Translate(TextInput1.Text,"de")); Set(DETransTime, Value(Now()) )<br>
 	); <br>
@@ -108,7 +108,15 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
 	)**
 
-4. Add a [**Data table**](../controls/control-data-table.md) control, set its **Data source** property to **Results**, and show all fields.
+4. Add a [**Data table**](../controls/control-data-table.md) control, and set its **Items** property to **Results**.
+
+1. On the **Properties** tab of the right pane, select **Results** to open the **Data** pane.
+
+1. In the list of fields, select the check box for each field to show them all in the data table.
+
+1. (optional) Drag the **Input** field to the top of the list, and drag the **FrenchFaster** field to the bottom of the list.
+
+	![List of fields in the Result collection](media/function-concurrent/field-list.png) 
 
 6. In the **Text input** control, type or paste a phrase to translate.
 
@@ -118,6 +126,6 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
   
 	![Display of the data table containing results of translating the string "Hello World" to French and German. Sometimes the French translation is faster than the German, and sometimes it's the other way around.](media/function-concurrent/race-condition.png) 
 
-	In some cases, the French translation is faster than the German translation, and vice versa. Both start at the same time, but one will return before the other for a variety of reasons, including network latency and server-side processing.
+	In some cases, the French translation is faster than the German translation, and vice versa. Both start at the same time, but one returns before the other for a variety of reasons, including network latency and server-side processing.
 
 	A [race condition](https://en.wikipedia.org/wiki/Race_condition) would occur if the app depended on one translation ending first. Fortunately, PowerApps flags most timing dependencies.
