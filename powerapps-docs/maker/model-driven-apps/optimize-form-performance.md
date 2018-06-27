@@ -2,7 +2,7 @@
 title: "Optimize form performance in PowerApps | MicrosoftDocs"
 description: "Learn how to avoid form designs that cause a form to load slowly"
 ms.custom: ""
-ms.date: 04/16/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

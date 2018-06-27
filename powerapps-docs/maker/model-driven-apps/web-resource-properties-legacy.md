@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 04/26/2018
+ms.date: 06/27/2018
 ms.service: crm-online
 ms.topic: article
 applies_to: 

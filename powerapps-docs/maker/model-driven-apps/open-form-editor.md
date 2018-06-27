@@ -1,7 +1,7 @@
 ---
-title: "Open the form editor (Dynamics 365 Customer Engagement) | MicrosoftDocs"
+title: "Open the form editor  | MicrosoftDocs"
 ms.custom: ""
-ms.date: 09/30/2017
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -10,11 +10,12 @@ ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-author: "jimholtz"
+  - "powerapps"
+author: "Mattp123"
 ms.assetid: 8478a07a-c697-4784-874b-36958eb4f95d
 caps.latest.revision: 63
-ms.author: "rdubois"
-manager: "brycho"
+ms.author: "matp"
+manager: "kvivek"
 ---
 
 # Open the form editor 

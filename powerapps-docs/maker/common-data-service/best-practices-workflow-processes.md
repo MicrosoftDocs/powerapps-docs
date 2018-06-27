@@ -2,7 +2,7 @@
 title: "Best practices for workflow processes in PowerApps | MicrosoftDocs"
 description: "Understand the recommended ways to use workflows"
 ms.custom: ""
-ms.date: 04/02/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
