@@ -86,7 +86,7 @@ Console.WriteLine();
   
 ### See also  
 
-[Extend Dynamics 365 for Outlook](../extend-dynamics-365-outlook.md)<br />
+[Extend Dynamics 365 for Outlook](extend-dynamics-365-outlook.md)<br />
 [Sample: Use Outlook Methods](sample-outlook-methods.md)<br />
 [Offline and Outlook Filters and Templates](offline-outlook-filters-templates.md)<br />
 [SavedQuery Entity Reference](../reference/entities/savedquery.md) 

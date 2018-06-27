@@ -1,5 +1,5 @@
 - name: Extend Outlook Client
-  href: ../extend-dynamics-365-outlook.md
+  href: extend-dynamics-365-outlook.md
   items:
   - name: Offline and Outlook filters and templates
     href: offline-outlook-filters-templates.md

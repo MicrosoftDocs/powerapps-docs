@@ -34,9 +34,9 @@ Microsoft Dynamics 365 for Outlook lets users interact with data while they’re
   
 ## In This Section
 
-[Offline and Outlook Filters and Templates](outlook-client/offline-outlook-filters-templates.md)<br />  
-[Sample: Retrieve Outlook Filters](outlook-client/sample-create-retrieve-outlook-filters.md)<br />  
-[Sample: Use Outlook Methods](outlook-client/sample-outlook-methods.md)<br />
+[Offline and Outlook Filters and Templates](offline-outlook-filters-templates.md)<br />  
+[Sample: Retrieve Outlook Filters](sample-create-retrieve-outlook-filters.md)<br />  
+[Sample: Use Outlook Methods](sample-outlook-methods.md)<br />
   
 ## Related Sections
 
@@ -51,6 +51,6 @@ Microsoft Dynamics 365 for Outlook lets users interact with data while they’re
 [Integrate Dynamics 365 with SharePoint](integration-dev/integrate-sharepoint.md)<br />
 [Integrate Dynamics 365 with OneNote](integration-dev/integrate-onenote.md)<br /> -->
 <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" /><br />
-[SavedQuery Entity Reference](reference/entities/savedquery.md)<br />
+[SavedQuery Entity](../reference/entities/savedquery.md)<br />
   
 
