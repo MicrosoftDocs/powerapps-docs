@@ -18,6 +18,8 @@ author: "JimDaly"
 ms.author: "jdaly"
 manager: "kvivek"
 ---
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customization-solutions-file-schema -->
+
 # Customization solutions file schema
 
 

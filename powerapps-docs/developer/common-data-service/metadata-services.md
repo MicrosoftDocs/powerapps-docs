@@ -1,3 +1,5 @@
+<!-- An overview topic describing when to use metadata -->
+
 # Metadata services
 
 Both the Web API and the organization service include capabilities to perform CRUD operations on the entity schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read metadata.

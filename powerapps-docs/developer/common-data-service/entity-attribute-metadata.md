@@ -16,6 +16,8 @@ ms.workload: na
 ms.date: 03/12/2018
 ms.author: jdaly
 ---
+
+<!-- This topic was not migrated it was written for PowerApps -->
 # Attribute metadata
 
 Entities include a collection of attributes that represent the data that can be included within each record. Developers need to understand the different types of attributes and how to work with them. 

@@ -18,6 +18,11 @@ author: "JimDaly"
 ms.author: "jdaly"
 manager: "amyla"
 ---
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook 
+
+This topic should be in powerapps-docs/developer/common-data-service/outlook-client/
+-->
+
 # Extend Dynamics 365 for Outlook
 
 > [!IMPORTANT]

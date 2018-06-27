@@ -16,6 +16,9 @@ ms.workload: na
 ms.date: 05/03/2018
 ms.author: jdaly
 ---
+
+<!-- This topic was not migrated it was written for PowerApps -->
+
 # Apply business logic with code
 
 Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Common Data Service for Apps Customization Guide: Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)

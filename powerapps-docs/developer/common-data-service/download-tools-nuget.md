@@ -15,6 +15,8 @@ author: "JimDaly"
 ms.author: "jdaly"
 manager: "amyla"
 ---
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget -->
+
 # Download tools from NuGet 
 
 You can download tools used in development from NuGet using the  powershell script found below. These tools include:

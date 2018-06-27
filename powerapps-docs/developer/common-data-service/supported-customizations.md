@@ -1,3 +1,5 @@
+<!-- Split https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-extensions into a CDS specific topic -->
+
 # Supported Customizations for Common Data Service for Apps
 
 You can customize Common Data Service for Apps by using tools that are available in the PowerApps portal or that are described in the official documentation. These customizations are supported and can be upgraded.

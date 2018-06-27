@@ -16,7 +16,7 @@ ms.workload: na
 ms.date: 03/19/2018
 ms.author: jdaly
 ---
-
+<!-- This topic was not migrated it was written for PowerApps -->
 # Entity metadata
 
 Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in Common Data Service for Apps.

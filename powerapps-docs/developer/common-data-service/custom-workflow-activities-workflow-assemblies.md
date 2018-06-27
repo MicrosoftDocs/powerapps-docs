@@ -15,6 +15,9 @@ author: "JimDaly"
 ms.author: "jdaly"
 manager: "amyla"
 ---
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies
+ -->
 # Custom workflow activities (workflow assemblies)
 
 Common Data Service for Apps supports the registration and execution of custom workflow activities in addition to the out-of-box activities provided by [Windows Workflow Foundation](/dotnet/framework/windows-workflow-foundation/). Windows Workflow Foundation includes an [activity library](/dotnet/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library) that provides activities for control flow, sending and receiving messages, doing work in parallel, and more. However, to build applications that satisfy your business needs, you may need activities that perform tasks specific to that application. To make this possible, Windows Workflow Foundation supports the creation of custom workflow activities.  

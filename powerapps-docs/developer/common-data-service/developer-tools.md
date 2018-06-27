@@ -1,3 +1,9 @@
+
+<!-- The information about SDK assemblies should be found elsewhere
+Perhaps this topic should call out the available tools at a high level?
+Community tools should go here?
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/developer-tools -->
+
 # Developer tools and resources
 
 Developers will use the following tools and resources when working with solutions using Common Data Service for apps.

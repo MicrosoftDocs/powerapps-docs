@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: "JimDaly"
 ms.author: "jdaly"
 ---
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/oauth-cross-origin-resource-sharing-connect-single-page-application -->
 # Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application
 
 You can create a Single Page Apps (SPAs) which uses JavaScript to work with Common Data Service for Apps data. To provide this, Cross-Origin Resource Sharing (CORS) is enabled so that your SPAs can bypass browser restrictions that normally prevent requests that cross domain boundaries.  

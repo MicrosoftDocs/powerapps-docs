@@ -16,6 +16,8 @@ ms.workload: na
 ms.date: 03/19/2018
 ms.author: jdaly
 ---
+<!-- This topic was not migrated it was written for PowerApps -->
+
 # Common Data Service for Apps entities
 
 Providing storage for data is the most important function of Common Data Service for Apps. Common Data Service includes a base set of entities that provide structure for data used by business applications. 

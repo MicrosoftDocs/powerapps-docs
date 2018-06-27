@@ -85,7 +85,7 @@ if (outlookService.IsCrmClientLoaded)
   
 ### See also  
 
-[Extend Dynamics 365 Customer Engagement for Outlook](../extend-customer-engagement-outlook.md)<br />
+[Extend Dynamics 365 Customer Engagement for Outlook](../extend-dynamics-365-outlook.md)<br />
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService><br />
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService.GoOnline><br />
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService.GoOffline>

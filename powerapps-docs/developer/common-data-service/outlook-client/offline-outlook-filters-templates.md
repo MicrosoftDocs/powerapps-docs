@@ -55,7 +55,7 @@ You can reset the filters for a user to the default by using the <xref:Microsoft
   
 ### See also
 
-[Extend Dynamics 365 Customer Engagement for Outlook](../extend-customer-engagement-outlook.md)<br />
+[Extend Dynamics 365 Customer Engagement for Outlook](../extend-dynamics-365-outlook.md)<br />
 [SavedQuery Entity Reference](../reference/entities/savedquery.md)<br />
 [Sample: Retrieve Outlook Filters](sample-create-retrieve-outlook-filters.md)<br /> 
 <xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest><br />
