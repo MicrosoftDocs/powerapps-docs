@@ -37,7 +37,11 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 #### Loading data faster
 
-1. Create an app, and add four data sources from Common Data Service for Apps, SQL Server, or SharePoint. This example uses four tables from the [sample Adventure Works database on SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal).
+1. Create an app, and add four data sources from Common Data Service for Apps, SQL Server, or SharePoint. 
+
+    This example uses four tables from the [sample Adventure Works database on SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal). After you create the database, connect to it from PowerApps using the fully qualified server name (for example, srvname.database.windows.net):
+
+	![Connect to Adventure Works database in Azure](media/function-concurrent/connect-database.png)
 
 2. Add a **[Button](../controls/control-button.md)** control, and set its **OnSelect** property to this formula:
 
