@@ -2,7 +2,7 @@
 title: "Type of forms in PowerApps | MicrosoftDocs"
 description: "Understand the different types of forms"
 ms.custom: ""
-ms.date: 04/24/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

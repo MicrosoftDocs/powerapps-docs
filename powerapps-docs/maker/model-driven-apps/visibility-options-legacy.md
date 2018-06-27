@@ -29,4 +29,4 @@ manager: "kvivek"
 
 ## Next steps
 
-[[Overview of the form editor interface](form-editor-user-interface-legacy.md)](create-design-forms.md)
+[Overview of the form editor interface](form-editor-user-interface-legacy.md)
