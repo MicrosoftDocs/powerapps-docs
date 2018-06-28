@@ -83,6 +83,7 @@
   - name: Enable field security for an entity
     href: sample-enable-field-security-entity.md
   - name: Import data
+    items:
     - name: Export and import a data map
       href: sample-export-import-data-map.md
     - name: Import data using complex data map
