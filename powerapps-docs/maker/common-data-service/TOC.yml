@@ -133,6 +133,8 @@
         href: create-edit-nn-relationships-solution-explorer.md  
       - name: Set managed properties for relationships
         href: set-managed-properties-relationships.md
+      - name: Visualize hierarchical data
+        href: visualize-hierarchical-data.md
       - name: Query and visualize hierarchically related data
         href: query-visualize-hierarchical-data.md 
       - name: Define and query hierarchically related data
