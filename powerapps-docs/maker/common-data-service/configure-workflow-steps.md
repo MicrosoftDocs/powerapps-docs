@@ -2,7 +2,7 @@
 title: "Configure workflow steps in PowerApps | MicrosoftDocs"
 description: "Learn how to configure workflow steps"
 ms.custom: ""
-ms.date: 04/20/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -16,7 +16,7 @@ manager: "kvivek"
 ---
 # Configure workflow steps
 
-In this tutorial, you learn how to design a workflow. 
+In this topic you learn what you need to know to design a workflow. 
 
 When configuring workflows you have four major areas to consider:  
   

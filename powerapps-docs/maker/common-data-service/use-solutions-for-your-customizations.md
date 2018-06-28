@@ -18,7 +18,6 @@ caps.latest.revision: 57
 ms.author: "matp"
 manager: "kvivek"
 --- 
-<a name="BKMK_UsingDefaultSolution"></a>   
 
 # Use the default solution to customize  
 

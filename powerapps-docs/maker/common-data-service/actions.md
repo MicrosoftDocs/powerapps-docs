@@ -1,7 +1,7 @@
 ---
 title: "Actions overview | MicrosoftDocs"
 ms.custom: ""
-ms.date: 03/21/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -20,7 +20,7 @@ manager: "kvivek"
 
 Actions are a type of process. You can invoke actions, including custom actions, directly from a workflow or dialog without writing code! More information: [Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md)   
   
- Actions can also be invoked by running custom code that uses the PowerApps web services.  
+ Actions can also be invoked by running custom code that uses the Common Data Service for Apps web services.  
   
  You can call actions:  
   
@@ -28,9 +28,9 @@ Actions are a type of process. You can invoke actions, including custom actions,
   
 -   From a command that is placed in the application and executes the operation using JavaScript code.  
   
--   From an integration with another system that uses the PowerApps web services.  
+-   From an integration with another system that uses the Common Data Service for Apps web services.  
   
--   From a custom client application that uses the PowerApps web services.  
+-   From a custom client application that uses the Common Data Service for Apps web services.  
   
 Developers can learn more in this topic:  [Create your own actions](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-own-actions). 
   
