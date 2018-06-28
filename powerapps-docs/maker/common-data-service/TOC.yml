@@ -169,6 +169,8 @@
       href: export-customized-entity-field-text-translation.md
     - name: Import translated entity and field text into an app
       href: import-translated-entity-field-text.md 
+    - name: Create a theme
+      href: change-color-scheme-add-logo-match-organizations-brand.md  
   - name: Reference
     items: 
       - name: Restricted entities requiring Dynamics 365 licenses
