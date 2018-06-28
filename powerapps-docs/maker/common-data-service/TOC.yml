@@ -82,7 +82,9 @@
       - name: Apply business logic
         items: 
         - name: Use Workflow processes to automate processes 
-          href: workflow-processes.md  
+          href: workflow-processes.md 
+        - name: Configure workflow steps
+          href: configure-workflow-steps.md          
         - name: Actions overview
           href: actions.md
         - name: Best practices for workflow processes
@@ -161,8 +163,6 @@
       items: 
       - name: Create a mobile task flow
         href: create-mobile-task-flow.md  
-      - name: Configure workflow steps
-        href: configure-workflow-steps.md
       - name: Invoke custom actions from a workflow
         href: invoke-custom-actions-workflow-dialog.md
       - name: Configure custom actions from a workflow

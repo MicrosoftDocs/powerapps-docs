@@ -1,5 +1,5 @@
 ---
-title: "Configure workflow steps in PowerApps | MicrosoftDocs"
+title: "Configure workflow stages and steps in PowerApps | MicrosoftDocs"
 description: "Learn how to configure workflow steps"
 ms.custom: ""
 ms.date: 06/27/2018
@@ -14,27 +14,9 @@ caps.latest.revision: 18
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Configure workflow steps
+# Configure workflow stages and steps
 
-In this topic you learn what you need to know to design a workflow. 
-
-When configuring workflows you have four major areas to consider:  
-  
--   When to start them?  
-  
--   Should they run as a real-time workflow or a background workflow?  
-  
--   What actions should they perform?  
-  
--   Under what conditions actions should be performed?  
-  
- The [Workflows processes overview](../common-data-service/workflow-processes.md) topic shows how to find workflow processes, when to start them, and if they should run as real time or background. This topic shows which actions workflows can perform and conditions to perform those actions.  
-  
-<a name="BKMK_WorkflowStagesAndSteps"></a>   
-
-## Workflow stages and steps  
-
- When you design workflows you have the option to contain the logic you want to perform in stages and steps.  
+When you design workflows you have the option to contain the logic you want to perform in stages and steps.  
   
  **Stages**  
  Stages make the workflow logic easier to read, and explain the workflow logic. However, stages do not affect the logic or behavior of workflows. If a process has stages, all the steps within the process must be contained with a stage.  
@@ -118,7 +100,7 @@ When configuring workflows you have four major areas to consider:
 
  When you apply a **Stop Workflow** action in a workflow you have the option to specify a status condition that can be either **Succeeded** or **Canceled**. When you set the status to canceled, you prevent the operation. An error message containing the text from the stop action status message will be displayed to the user with the heading **Business Process Error**.  
   
-### Next steps  
+## Next steps  
  [Create custom business logic with processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md)   
  [Workflow processes overview](../common-data-service/workflow-processes.md)   
  [Monitor and manage workflow processes](monitor-manage-processes.md)   
