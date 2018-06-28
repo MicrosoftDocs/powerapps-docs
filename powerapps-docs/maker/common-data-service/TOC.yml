@@ -37,9 +37,9 @@
         href: define-calculated-fields.md
       - name: Define rollup fields
         href: define-rollup-fields.md
-      - name: Define alternate keys using PowerApps portal
-        href: define-alternate-keys-portal.md
-      - name: Create a solution
+    - name: Define alternate keys using PowerApps portal
+      href: define-alternate-keys-portal.md
+    - name: Create a solution
       href: create-solution.md
   - name: Samples
     items:
