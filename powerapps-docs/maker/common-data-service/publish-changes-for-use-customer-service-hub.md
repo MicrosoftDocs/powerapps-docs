@@ -25,7 +25,7 @@ tags:
  
 ## Publish your customizations
 
-- In the solution explorer, select **Publish All Customizations**.  
+- In the [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer), select **Publish All Customizations**.  
   
 > [!IMPORTANT]
 >  Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.  

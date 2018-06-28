@@ -2,7 +2,7 @@
 title: "Main form presentations in PowerApps | MicrosoftDocs"
 description: "Learn how main forms appear when displayed on different devices"
 ms.custom: ""
-ms.date: 04/10/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

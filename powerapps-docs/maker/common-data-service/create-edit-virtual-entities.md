@@ -2,7 +2,7 @@
 title: "Create and edit virtual entities with Common Data Service for Apps | MicrosoftDocs"
 description: "Learn how to create virtual entities"
 ms.custom: ""
-ms.date: 04/26/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

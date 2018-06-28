@@ -2,7 +2,7 @@
 title: "Create a business process flow in PowerApps | MicrosoftDocs"
 description: "Learn how to create a business process flow"
 ms.custom: ""
-ms.date: 04/03/2018
+ms.date: 06/26/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -26,8 +26,8 @@ This tutorial shows you how to create a business process flow with PowerApps. To
   
  ![Business process with stages](media/business-process-stages.png "Business process with stages")  
   
-    > [!TIP]
-    >  After you create a business process flow definition, you can provide control over who can create, read, update, or delete the business process flow instance. For example, for service-related processes, you could provide full access for customer service reps to change the business process flow instance, but provide read-only access to the instance for sales reps so they can monitor post-sales activities for their customers. To set security for a business process flow definition you create, select **Enable Security Roles** on the action bar.  
+ > [!TIP]
+ >  After you create a business process flow definition, you can provide control over who can create, read, update, or delete the business process flow instance. For example, for service-related processes, you could provide full access for customer service reps to change the business process flow instance, but provide read-only access to the instance for sales reps so they can monitor post-sales activities for their customers. To set security for a business process flow definition you create, select **Enable Security Roles** on the action bar.  
   
 <a name="BKMK_Createbusinessprocessflows"></a>   
 ## Create a business process flow  

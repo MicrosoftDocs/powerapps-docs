@@ -2,7 +2,7 @@
 title: "Preview Feature: Use the Azure Cosmos DB for SQL API Data Provider with Common Data Service for Apps | MicrosoftDocs"
 description: "Learn how to configure the Azure Cosmos DB for SQL API Data Provider to use with virtual entities."
 keywords: "SQL API"
-ms.date: 04/26/2018
+ms.date: 06/27/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article

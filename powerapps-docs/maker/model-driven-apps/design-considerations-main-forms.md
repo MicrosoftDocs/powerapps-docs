@@ -2,7 +2,7 @@
 title: "Design considerations for main forms with PowerApps | MicrosoftDocs"
 description: "Learn how to design main forms"
 ms.custom: ""
-ms.date: 04/06/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

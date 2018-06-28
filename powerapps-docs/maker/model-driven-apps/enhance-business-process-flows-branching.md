@@ -2,7 +2,7 @@
 title: "Enhance business process flows with branching with PowerApps | MicrosoftDocs"
 description: "Learn how to use branching in a business process flow"
 ms.custom: ""
-ms.date: 04/09/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""

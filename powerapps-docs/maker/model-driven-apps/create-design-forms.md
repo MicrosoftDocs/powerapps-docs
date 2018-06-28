@@ -1,7 +1,7 @@
 ---
 title: "Create and design forms | MicrosoftDocs"
 ms.custom: ""
-ms.date: 03/21/2018
+ms.date: 06/26/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

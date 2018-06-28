@@ -1,7 +1,7 @@
 ---
 title: "Design custom business apps by using the app designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 03/21/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

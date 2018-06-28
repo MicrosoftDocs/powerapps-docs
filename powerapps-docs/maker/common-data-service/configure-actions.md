@@ -1,7 +1,7 @@
 ---
 title: "Configure actions for workflows in PowerApps | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/02/2018
+ms.date: 06/27/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -133,10 +133,9 @@ Actions also have something that workflow processes don’t – input and output
  In addition to the steps that can be used for real-time workflows, actions also have the **Assign Value** step.  In actions, these can be used only to set output arguments. You can use the form assistant to set output arguments to specific values or, more likely, to values from the record that the action is running against, records related to that record with a many-to-one relationship, records created in an earlier step, or values that are part of the process itself.  
   
 ## Next steps  
- [Actions](actions.md)   
+ [Actions](actions.md)  
+
  [Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md)   
- [Monitoring real-time workflows and actions](monitor-manage-processes.md#BKMK_MonitorSyncWorkflows)<br />
- [Workflow processes](/workflow-processes.md)   
- [Business process flows overview](../model-driven-apps/business-process-flows-overview.md)   
+ [Monitoring real-time workflows and actions](monitor-manage-processes.md#BKMK_MonitorSyncWorkflows)
  
  
