@@ -70,7 +70,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
 
 2.	Select **Model-driven** (lower left). 
 
-3.	Select ![Settings icon](media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
+3.	Select ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
 
 4. Under **Themes** select **All themes**. 
 
