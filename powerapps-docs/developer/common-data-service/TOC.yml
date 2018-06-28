@@ -211,21 +211,54 @@
     items:
     - name: Entity metadata
       href: entity-metadata.md
+      items:
+        - name: Customize entity metadata
+          href: customize-entity-metadata.md
     - name: Attribute metadata 
       href: entity-attribute-metadata.md
       items:
+      - name: Entity attribute metadata messages
+        href: entity-attribute-metadata-messages.md
       - name: Behavior and format of the date and time attribute
         href: behavior-format-date-time-attribute.md
       - name: Calculated and rollup attributes
         href: calculated-rollup-attributes.md
+      - name: Multi-Select Picklist attributes
+        href: multi-select-picklist.md
+      - name: Image attributes
+        href: image-attributes.md
     - name: Entity relationships metadata
       href: entity-relationship-metadata.md
+      items:
+      - name: Entity relationship eligibility
+        href: entity-relationship-eligibility.md
+      - name: Entity relationship metadata messages
+        href: entity-relationship-metadata-messages.md
+    - name: Customize entity and attribute mappings
+      href: customize-entity-attribute-mappings.md
+    - name: Customer entities
+      href: customer-entities-account-contact.md
     - name: Activity entities
       href: activity-entities.md
-    - name: ActivityParty entity
-      href: activityparty-entity.md
-    - name: ActivityPointer (activity) entity
-      href: activitypointer-activity-entity.md
+      items:
+      - name: Custom activities
+        href: custom-activities.md
+      - name: Email activity entities
+        href: email-activity-entities.md
+      - name: ActivityParty entity
+        href: activityparty-entity.md
+      - name: ActivityPointer (activity) entity
+        href: activitypointer-activity-entity.md
+      - name: Recurring Appointments
+        items:
+        - name: Recurring appointment partial expansion model
+          href: recurring-appointment-partial-expansion-model.md
+        - name: Create a recurring appointment series, instance, or exception
+          href: create-recurring-appointment-series-instance-exception.md
+        - name: Update a recurring appointment
+          href: update-recurring-appointment.md
+        - name: Link custom attributes of the recurring appointment master and appointment entities
+          href: link-custom-attributes-recurring-master-appointment-entities.md
     - name: Annotation (note) entity
       href: annotation-note-entity.md
     - name: Calendar entities
@@ -233,16 +266,6 @@
       items:
       - name: Types of calendars
         href: types-calendars.md
-    - name: Recurring Appointments
-      items:
-      - name: Recurring appointment partial expansion model
-        href: recurring-appointment-partial-expansion-model.md
-      - name: Create a recurring appointment series, instance, or exception
-        href: create-recurring-appointment-series-instance-exception.md
-      - name: Update a recurring appointment
-        href: update-recurring-appointment.md
-      - name: Link custom attributes of the recurring appointment master and appointment entities
-        href: link-custom-attributes-recurring-master-appointment-entities.md
     - name: Virtual Entities
       href: virtual-entities.md
   - name: Auditing overview
@@ -306,6 +329,8 @@
         href: use-multi-tenant-server-server-authentication.md
       - name: Use Single-Tenant Server-to-server authentication
         href: use-single-tenant-server-server-authentication.md
+      - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
+        href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
   - name: How to manage solutions
     href: how-manage-solutions.md
     items:
@@ -386,10 +411,15 @@
       href: create-auto-number-attributes.md
 - name: Resources
   items:
+  - name: Developer resources page
+    href: developer-resources-page.md
   - name: Browse the metadata for your environment
     href: browse-your-metadata.md
   - name: Developer tools
     href: developer-tools.md
+    items:
+    - name: Download tools from NuGet 
+      href: download-tools-nuget.md
   - name: Community Tools
     href: community-tools.md  
 - name: Reference
@@ -421,16 +451,8 @@
   items:
   - name: Create solutions that support multiple languages
     href: create-solutions-support-multiple-languages.md
-  - name: Custom activities
-    href: custom-activities.md
   - name: Custom workflow activities 
     href: custom-workflow-activities-workflow-assemblies.md
-  - name: Customer entities
-    href: customer-entities-account-contact.md
-  - name: Customize entity and attribute mappings
-    href: customize-entity-attribute-mappings.md
-  - name: Customize entity metadata
-    href: customize-entity-metadata.md
   - name: Customize labels to support multiple languages
     href: customize-labels-support-multiple-languages.md
   - name: Define alternate keys for an entity
@@ -443,46 +465,29 @@
     href: dependency-tracking-solution-components.md
   - name: Detect duplicate data for developers
     href: detect-duplicate-data-for-developers.md
-  - name: Developer resources page
-    href: developer-resources-page.md
   - name: Disaster recovery 
     href: disaster-recovery.md
-  - name: Download tools from NuGet 
-    href: download-tools-nuget.md
   - name: Manage duplicate detection for create and update operations
     href: duplicate-detection-create-update.md
   - name: Duplicate detection messages
     href: duplicate-detection-messages.md
   - name: Duplicate Rule entities
     href: duplicaterule-entities.md
-  - name: Email activity entities
-    href: email-activity-entities.md
   - name: Enable and Disable duplicate detection
     href: enable-disable-duplicate-detection.md
-  - name: Entity attribute metadata messages
-    href: entity-attribute-metadata-messages.md
-  - name: Entity relationship eligibility
-    href: entity-relationship-eligibility.md
-  - name: Entity relationship metadata messages
-    href: entity-relationship-metadata-messages.md
   - name: Export a solution for a specific version
     href: export-solution-specific-version.md
   - name: Field-level data encryption
     href: field-level-data-encryption.md
   - name: Field security entities
     href: field-security-entities.md
-  - name: Image attributes
-    href: image-attributes.md
   - name: Integrate Customer Engagement with OneNote
     href: integrate-onenote.md
   - name: Knowledge management entities
     href: knowledge-management-entities.md
   - name: Maintain managed solutions
     href: maintain-managed-solutions.md
-  - name: Multi-Select Picklist attributes
-    href: multi-select-picklist.md
-  - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
-    href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+  
   - name: Integration with Office 365
     href: online-integration-office-365.md
   - name: Organize your solutions
