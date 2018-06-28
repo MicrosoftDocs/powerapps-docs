@@ -37,7 +37,9 @@
         href: define-calculated-fields.md
       - name: Define rollup fields
         href: define-rollup-fields.md
-    - name: Create a solution
+      - name: Define alternate keys using PowerApps portal
+        href: define-alternate-keys-portal.md
+      - name: Create a solution
       href: create-solution.md
   - name: Samples
     items:
@@ -66,9 +68,11 @@
       - name: Work with relationships
         items:  
         - name: Create and edit relationships
-          href: create-edit-entity-relationships.md     
+          href: create-edit-entity-relationships.md 
         - name: Create one-to-many or many-to-one relationships
-          href: create-edit-1n-relationships-portal.md     
+          href: create-edit-1n-relationships-portal.md 
+        - name: Create many-to-many entity relationships
+          href: create-edit-nn-relationships.md
       - name: Work with fields
         items: 
         - name: Types of fields
@@ -115,16 +119,24 @@
         href: display-custom-icons-instead.md
       - name: Edit system entity messages
         href: edit-system-entity-messages.md
+      - name: Configure an entity for feedback/ratings
+        href: configure-entity-feedback.md
       - name: Azure Cosmos DB SQL API Data Provider
         href: virtual-entity-documentdb-provider-requirements.md
       - name: Virtual entity walkthrough
         href: virtual-entity-walkthrough-using-odata-provider.md                                              
     - name: Work with relationships
       items: 
+      - name: Create many-to-many relationships using PowerApps portal
+        href: create-edit-nn-relationships-portal.md
+      - name: Create many-to-many relationships using PowerApps solution explorer
+        href: create-edit-nn-relationships-solution-explorer.md  
       - name: Set managed properties for relationships
         href: set-managed-properties-relationships.md
       - name: Query and visualize hierarchically related data
         href: query-visualize-hierarchical-data.md 
+      - name: Define and query hierarchically related data
+        href: define-query-hierarchical-data.md
       - name: Configure connection roles
         href: configure-connection-roles.md  
     - name: Work with fields
@@ -145,6 +157,8 @@
         href: delete-fields.md     
     - name: Apply business logic
       items: 
+      - name: Create a mobile task flow
+        href: create-mobile-task-flow.md  
       - name: Configure workflow steps
         href: configure-workflow-steps.md
       - name: Invoke custom actions from a workflow
@@ -163,6 +177,8 @@
         href: use-segmented-solutions-patches-simplify-updates.md
       - name: Change the solution publisher prefix
         href: change-solution-publisher-prefix.md
+      - name: Set managed properties in metadata
+        href: set-managed-properties-metadata.md
       - name: Publish changes
         href: publish-changes-for-use-customer-service-hub.md                                                 
     - name: Work with analytics
@@ -171,6 +187,8 @@
         href: data-platform-powerbi-connector.md
       - name: Customize and organize reports
         href: customize-organize-reports.md 
+    - name: Define alternate keys using solution explorer
+      href: define-alternate-keys-solution-explorer.md
     - name: Translate customized entity and field text
       href: export-customized-entity-field-text-translation.md
     - name: Import translated entity and field text into an app
@@ -183,6 +201,8 @@
         href: data-platform-restricted-entities.md
   - name: Resources
     items:
+    - name: View or download developer resources
+      href: view-download-developer-resources.md  
     - name: Behavior and format of the Date and Time field
       href: behavior-format-date-time-field.md
 # DO NOT CHANGE BELOW  
