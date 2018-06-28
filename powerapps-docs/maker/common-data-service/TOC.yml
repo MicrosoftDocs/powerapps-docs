@@ -125,10 +125,16 @@
         href: set-managed-properties-relationships.md
       - name: Query and visualize hierarchically related data
         href: query-visualize-hierarchical-data.md 
+      - name: Configure connection roles
+        href: configure-connection-roles.md  
     - name: Work with fields
       items: 
       - name: Manage fields
         href: data-platform-manage-fields.md
+      - name: Create fields using PowerApps portal
+        href: create-edit-field-portal.md 
+      - name: Create fields using PowerApps solution explorer
+        href: create-edit-field-solution-explorer.md
       - name: Create global option sets using PowerApps portal
         href: create-edit-global-option-sets-portal.md
       - name: Create global option sets using solution explorer  
