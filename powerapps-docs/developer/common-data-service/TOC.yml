@@ -26,30 +26,50 @@
     href: sample-add-record-queue-early-bound.md
   - name: Add a security principal (user or team) to a queue 
     href: sample-add-security-principal-user-team-queue-early-bound.md
-  - name: Audit entity data changes
-    href: sample-audit-entity-data-changes.md
-  - name: Audit user access
-    href: sample-audit-user-access.md
+  - name: Auditing
+    items:
+    - name: Audit entity data changes
+      href: sample-audit-entity-data-changes.md
+    - name: Audit user access
+      href: sample-audit-user-access.md
   - name: Azure aware custom plug-in
     href: sample-azure-aware-custom-plugin.md
   - name: Azure aware custom workflow activity
     href: sample-azure-aware-custom-workflow-activity.md
-  - name: Book an appointment
-    href: sample-book-appointment.md
+  - name: Appointments
+    items:
+    - name: Book an appointment
+      href: sample-book-appointment.md
+    - name: Validate an appointment
+      href: sample-validate-appointment.md
+    - name: Create, retrieve, update, and delete a recurring appointment
+      href: sample-create-retrieve-update-delete-recurring-appointment.md
+    - name: Reschedule and cancel a recurring appointment
+      href: sample-reschedule-cancel-recurring-appointment.md
+    - name: End a recurring appointment series
+      href: sample-end-recurring-appointment-series.md
+    - name: Convert an appointment to a recurring appointment
+      href: sample-convert-appointment-recurring-appointment.md
   - name: Bulk delete exported records
     href: sample-bulk-delete-exported-records.md
   - name: Bulk delete records that match common criteria
     href: sample-bulk-delete-records-match-common-criteria.md
   - name: Clean up history for a queue
     href: sample-clean-up-history-queue-early-bound.md
-  - name: Convert an appointment to a recurring appointment
-    href: sample-convert-appointment-recurring-appointment.md
   - name: Convert a fax to a task
     href: sample-convert-fax-task.md
-  - name: Create a connection
-    href: sample-create-connection-early-bound.md
-  - name: Create a connection role
-    href: sample-create-connection-role-early-bound.md
+  - name: Connections
+    items:
+    - name: Create a connection
+      href: sample-create-connection-early-bound.md
+    - name: Create a connection role
+      href: sample-create-connection-role-early-bound.md
+    - name: Query connections by a record
+      href: sample-query-connections-record-early-bound.md
+    - name: Query connection roles by entity type code
+      href: sample-query-connection-roles-entity-type-code-early-bound.md
+    - name: Query connections by reciprocal roles
+      href: sample-query-connections-reciprocal-roles-early-bound.md
   - name: Create a custom activity
     href: sample-create-custom-activity.md
   - name: Create an email using a template
@@ -58,36 +78,25 @@
     href: sample-create-reciprocal-connection-role-early-bound.md
   - name: Create, retrieve, update, and delete an email attachment
     href: sample-create-retrieve-update-delete-email-attachment.md
-  - name: Create, retrieve, update, and delete a recurring appointment
-    href: sample-create-retrieve-update-delete-recurring-appointment.md
   - name: Detect solution dependencies
     href: sample-detect-solution-dependencies.md
   - name: Enable field security for an entity
     href: sample-enable-field-security-entity.md
-  - name: End a recurring appointment series
-    href: sample-end-recurring-appointment-series.md
-  - name: Export and import a data map
-    href: sample-export-import-data-map.md
-  - name: Import data using complex data map
-    href: sample-import-data-complex-data-map.md
+  - name: Import data
+    - name: Export and import a data map
+      href: sample-export-import-data-map.md
+    - name: Import data using complex data map
+      href: sample-import-data-complex-data-map.md
   - name: Insert or update a record using Upsert
     href: sample-insert-update-record-upsert.md
   - name: Link custom attributes between series and instances
     href: sample-link-custom-attributes-between-series-instances.md
   - name: One-way listener
     href: sample-one-way-listener.md
-  - name: Override goal total count and close the goal
-    href: sample-override-goal-total-count-close-goal.md
   - name: Persistent queue listener
     href: sample-persistent-queue-listener.md
   - name: Promote an email message
     href: sample-promote-email-message.md
-  - name: Query connection roles by entity type code
-    href: sample-query-connection-roles-entity-type-code-early-bound.md
-  - name: Query connections by reciprocal roles
-    href: sample-query-connections-reciprocal-roles-early-bound.md
-  - name: Query connections by a record
-    href: sample-query-connections-record-early-bound.md
   - name: Query the working hours of multiple users
     href: sample-query-working-hours-multiple-users.md
   - name: Query the working hours of a user
@@ -96,8 +105,6 @@
     href: sample-quick-start.md
   - name: Release a queue item to the queue
     href: sample-release-queue-item-queue-early-bound.md
-  - name: Reschedule and cancel a recurring appointment
-    href: sample-reschedule-cancel-recurring-appointment.md
   - name: REST listener
     href: sample-rest-listener.md
   - name: Retrieve absolute URL and site collection URL of a location record
@@ -114,10 +121,16 @@
     href: sample-retrieve-time-zone-information.md
   - name: Retrieve valid status transitions
     href: sample-retrieve-valid-status-transitions.md
-  - name: Rollup goal data for a custom period against the target revenue
-    href: sample-rollup-goal-data-custom-period-target-revenue.md
-  - name: Rollup goal data for a fiscal period against the stretch target count
-    href: sample-rollup-goal-data-fiscal-period-stretch-target-count.md
+  - name: Goal management
+    items:
+    - name: Rollup goal data for a custom period against the target revenue
+      href: sample-rollup-goal-data-custom-period-target-revenue.md
+    - name: Rollup goal data for a fiscal period against the stretch target count
+      href: sample-rollup-goal-data-fiscal-period-stretch-target-count.md
+    - name: Use rollup queries to track goals
+      href: sample-use-rollup-queries-track-goals.md
+    - name: Override goal total count and close the goal
+      href: sample-override-goal-total-count-close-goal.md
   - name: Send bulk email and monitor results
     href: sample-send-bulk-email-monitor-results.md
   - name: Send an email using a template
@@ -136,10 +149,6 @@
     href: sample-two-way-listener.md
   - name: Upload, retrieve, and download an attachment
     href: sample-upload-retrieve-download-attachment.md
-  - name: Use rollup queries to track goals
-    href: sample-use-rollup-queries-track-goals.md
-  - name: Validate an appointment
-    href: sample-validate-appointment.md
   - name: Work with activity party records
     href: sample-work-activity-party-records.md
   - name: Work with solutions
@@ -157,6 +166,8 @@
       href: webapi/index.md
     - name: Organization Service
       href: org-service/overview.md
+    - name: API Limits
+      href: api-limits.md
     - name: Metadata services
       href: metadata-services.md
   - name: Apply business logic with code
@@ -172,6 +183,11 @@
       href: plug-ins.md
     - name: Azure Integration
       href: azure-integration.md
+      items: 
+      - name: Work with data in your Azure solution
+        href: work-data-azure-solution.md
+      - name: Work with event data in your Azure Event Hub solution
+        href: work-event-data-azure-event-hub-solution.md
     - name: Web Hooks
       href: web-hooks.md
     - name: Flow
@@ -180,55 +196,197 @@
       href: workflow-extensions.md
   - name: Security Model
     href: security-model.md
+    items:
+    - name: BusinessUnit entity
+      href: businessunit-entity.md
+  - name: Asynchronous service
+    href: asynchronous-service.md
   - name: Discovery Service
     href: discovery-service.md
   - name: Authentication
     href: authentication.md
   - name: Entities
     href: entities.md
-    items: 
+    items:
     - name: Entity metadata
       href: entity-metadata.md
     - name: Attribute metadata 
       href: entity-attribute-metadata.md
+      items:
+      - name: Behavior and format of the date and time attribute
+        href: behavior-format-date-time-attribute.md
+      - name: Calculated and rollup attributes
+        href: calculated-rollup-attributes.md
     - name: Entity relationships metadata
       href: entity-relationship-metadata.md
-  - name: Virtual Entities
-    href: virtual-entities.md
+    - name: Activity entities
+      href: activity-entities.md
+    - name: ActivityParty entity
+      href: activityparty-entity.md
+    - name: ActivityPointer (activity) entity
+      href: activitypointer-activity-entity.md
+    - name: Annotation (note) entity
+      href: annotation-note-entity.md
+    - name: Calendar entities
+      href: calendar-entities.md
+      items:
+      - name: Types of calendars
+        href: types-calendars.md
+    - name: Recurring Appointments
+      items:
+      - name: Recurring appointment partial expansion model
+        href: recurring-appointment-partial-expansion-model.md
+      - name: Create a recurring appointment series, instance, or exception
+        href: create-recurring-appointment-series-instance-exception.md
+      - name: Update a recurring appointment
+        href: update-recurring-appointment.md
+      - name: Link custom attributes of the recurring appointment master and appointment entities
+        href: link-custom-attributes-recurring-master-appointment-entities.md
+    - name: Virtual Entities
+      href: virtual-entities.md
+  - name: Auditing overview
+    href: auditing-overview.md
+  - name: Apply Service Level Agreements (SLAs)
+    href: apply-slas-entities.md
   - name: Optimistic Concurrency
     href: optimistic-concurrency.md
   - name: Data Synchronization
     href: data-synchronization.md
   - name: Data Export Service
     href: data-export-service.md
+  - name: Server-side synchronization
+    href: server-side-synchronization-entities.md
+    items:
+    - name: Configure Exchange folder-level tracking rules
+      href: configure-exchange-folder-level-tracking-rules.md 
+  - name: Use connections to link records to each other
+    href: connection-entities.md
+    items:
+    - name: Describe a relationship between entities with connection roles
+      href: describe-relationship-entities-connection-roles.md
   - name: Online Management API
     href: online-management-api.md
   - name: Outlook Client
     href: outlook-client.md
 - name: How-to Guides
   items:
-  - name: Write and register a plug-in
-    href: write-register-plug-in.md
-  - name: Create a workflow extension
-    href: create-workflow-extension.md
-  - name: Write a custom Azure-aware plug-in
-    href: write-custom-azure-aware-plugin.md
+  - name: Azure integration
+    items:
+    - name: Configure Azure integration with Common Data Service for App
+      href: configure-azure-integration.md
+    - name: Write a custom Azure-aware plug-in
+      href: write-custom-azure-aware-plugin.md
+  - name: Plug-ins
+    items:
+    - name: Write and register a plug-in
+      href: write-register-plug-in.md
+    - name: Create and register a plug-in
+      href: create-register-plugin.md
+  - name: Workflow extensions
+    items: 
+    - name: Create a workflow extension
+      href: create-workflow-extension.md
+    - name: Create and register a workflow extension
+      href: create-register-workflow-extension.md
   - name: Register a web hook
     href: register-web-hook.md
-  - name: Use Multi-Tenant Server-to-server authentication
-    href: use-multi-tenant-server-server-authentication.md
-  - name: Use Single-Tenant Server-to-server authentication
-    href: use-single-tenant-server-server-authentication.md
-  - name: Create a client application
-    href: create-client-application.md
+  - name: Create Client applications
+    href: connect-cds.md
+    items:
+    - name: Authentication
+      items:
+      - name: Authenticate Office 365 users
+        href: authenticate-office-365-users-cds-web-services.md
+      - name: Connect with Microsoft Office 365
+        href: connect-microsoft-office-365.md
+      - name: Connect using OAuth
+        href: connect-web-services-using-oauth.md        
+      - name: Use Multi-Tenant Server-to-server authentication
+        href: use-multi-tenant-server-server-authentication.md
+      - name: Use Single-Tenant Server-to-server authentication
+        href: use-single-tenant-server-server-authentication.md
   - name: How to manage solutions
     href: how-manage-solutions.md
+    items:
+    - name: Create, export, or import an unmanaged solution
+      href: create-export-import-unmanaged-solution.md
+    - name: Create, install, and update a managed solution
+      href: create-install-update-managed-solution.md
+    - name: Create patches to simplify solution updates
+      href: create-patches-simplify-solution-updates.md
+    - name: SolutionPackager tool
+      href: compress-extract-solution-file-solutionpackager.md
+      items:
+      - name: Source control with solution files
+        href: use-source-control-solution-files.md
+  - name: Create and manage custom business apps using code
+    href: create-manage-custom-business-apps-using-code.md        
   - name: Publish Apps on AppSource
     href: publish-app-appsource.md
+    items:
+    - name: 'Step 1: Fill the app submission form on AppSource'
+      href: fill-app-submission-form-appsource.md
+    - name: 'Step 2: Register for Microsoft Partner Network account'
+      href: register-microsoft-partner-network.md
+    - name: 'Step 3: Create a managed solution for your app'
+      href: create-solution-app-appsource.md
+    - name: 'Step 4: Create an AppSource package for your app'
+      href: create-package-app-appsource.md
+    - name: 'Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
+      href: store-appsource-package-azure-storage.md
+    - name: 'Next steps: Submit your app on Cloud Partner Portal'
+      href: next-steps-submit-app-cloud-partner-portal.md
   - name: Import Data
     href: import-data.md
+    items:
+    - name: Prepare source files for import
+      href: prepare-source-files-import.md
+    - name: Create data maps for import
+      href: create-data-maps-for-import.md
+    - name: Add transformation mappings for import
+      href: add-transformation-mappings-import.md
+    - name: Configure data import
+      href: configure-data-import.md
+    - name: Run data import
+      href: run-data-import.md
+    - name: Data import entities
+      href: data-import-entities.md
+  - name: Integrate Common Data Service for Apps with SharePoint
+    href: integrate-sharepoint.md
+    items:
+    - name: Get started with SharePoint integration
+      href: get-started-sharepoint-integration.md
+    - name: Enable document management for entities
+      href: enable-document-management-entities.md
+    - name: Actions on SharePoint location records
+      href: actions-on-sharepoint-location-records.md
+    - name: Define custom claim mapping for SharePoint server-based integration
+      href: define-custom-claim-mapping-sharepoint-server-based-integration.md
+  - name: Goal management
+    href: goal-management-entities.md
+    items:
+    - name: Create goal hierarchy, goals, and targets
+      href: create-goal-hierarchy-goals-targets.md
+    - name: Define goal metric and rollup fields
+      href: define-goal-metric-rollup-fields.md
+    - name: Add complex goal criteria
+      href: add-complex-goal-criteria.md
+    - name: Roll up goal totals
+      href: roll-up-goal-totals.md
+  - name: Auditing
+    items:
+    - name: Configure entities and attributes for auditing
+      href: configure-entities-attributes-auditing.md
+    - name: Retrieve and delete the history of audited data changes
+      href: retrieve-and-delete-the-history-of-audited-data-changes.md
+    - name: Audit user access
+      href: audit-user-access.md
+    - name: Create auto-number attributes
+      href: create-auto-number-attributes.md
 - name: Resources
   items:
+  - name: Browse the metadata for your environment
+    href: browse-your-metadata.md
   - name: Developer tools
     href: developer-tools.md
   - name: Community Tools
@@ -255,87 +413,11 @@
     href: /rest/api/admin.services.crm.dynamics.com
   - name: Customization solutions file schema
     href: customization-solutions-file-schema.md
+  - name: Solution component file reference (SolutionPackager) 
+    href: solution-component-file-reference-solutionpackager.md
 # - name: On-premises options
 - name: TBD
   items:
-  - name: Actions on SharePoint location records
-    href: actions-on-sharepoint-location-records.md
-  - name: Activity entities
-    href: activity-entities.md
-  - name: ActivityParty entity
-    href: activityparty-entity.md
-  - name: ActivityPointer (activity) entity
-    href: activitypointer-activity-entity.md
-    href: Add complex goal criteria
-  - name: powerapps-docs/developer/common-data-service/add-complex-goal-criteria.md
-    href: Add transformation mappings for import
-  - name: powerapps-docs/developer/common-data-service/add-transformation-mappings-import.md
-    href: Annotation (note) entity
-    href: annotation-note-entity.md
-  - name: API Limits
-    href: api-limits.md
-  - name: Apply SLAs to entities
-    href: apply-slas-entities.md
-  - name: Asynchronous service
-    href: asynchronous-service.md
-  - name: Audit user access
-    href: audit-user-access.md
-  - name: Auditing overview
-    href: auditing-overview.md
-  - name: Authenticate Office 365 users with Common Data Service for Apps web services
-    href: authenticate-office-365-users-cds-web-services.md
-  - name: Behavior and format of the date and time attribute
-    href: behavior-format-date-time-attribute.md
-  - name: Browse the metadata for your environment
-    href: browse-your-metadata.md
-  - name: BusinessUnit entity
-    href: businessunit-entity.md
-  - name: Calculated and rollup attributes
-    href: calculated-rollup-attributes.md
-  - name: Calendar entities
-    href: calendar-entities.md
-  - name: SolutionPackager tool
-    href: compress-extract-solution-file-solutionpackager.md
-  - name: Configure Azure integration with Common Data Service for App
-    href: configure-azure-integration.md
-  - name: Configure data import
-    href: configure-data-import.md
-  - name: Configure entities and attributes for auditing
-    href: configure-entities-attributes-auditing.md
-  - name: Configure Exchange folder-level tracking rules
-    href: configure-exchange-folder-level-tracking-rules.md
-  - name: Create Client applications
-    href: connect-cds.md
-  - name: Connect with Microsoft Office 365 and Common Data Service for Apps
-    href: connect-microsoft-office-365.md
-  - name: Connect to web services using OAuth
-    href: connect-web-services-using-oauth.md
-  - name: Use connections to link records to each other
-    href: connection-entities.md
-  - name: Create auto-number attributes
-    href: create-auto-number-attributes.md
-  - name: Create data maps for import
-    href: create-data-maps-for-import.md
-  - name: Create, export, or import an unmanaged solution
-    href: create-export-import-unmanaged-solution.md
-  - name: Create goal hierarchy, goals, and targets
-    href: create-goal-hierarchy-goals-targets.md
-  - name: Create, install, and update a managed solution
-    href: create-install-update-managed-solution.md
-  - name: Create and manage custom business apps in Customer Engagement using code
-    href: create-manage-custom-business-apps-using-code.md
-  - name: 'Step 4: Create an AppSource package for your app'
-    href: create-package-app-appsource.md
-  - name: Create patches to simplify solution updates
-    href: create-patches-simplify-solution-updates.md
-  - name: Create a recurring appointment series, instance, or exception
-    href: create-recurring-appointment-series-instance-exception.md
-  - name: Create and register a plug-in
-    href: create-register-plugin.md
-  - name: Create and register a workflow extension
-    href: create-register-workflow-extension.md
-  - name: 'Step 3: Create a managed solution for your app'
-    href: create-solution-app-appsource.md
   - name: Create solutions that support multiple languages
     href: create-solutions-support-multiple-languages.md
   - name: Custom activities
@@ -350,22 +432,14 @@
     href: customize-entity-metadata.md
   - name: Customize labels to support multiple languages
     href: customize-labels-support-multiple-languages.md
-  - name: Data import entities
-    href: data-import-entities.md
   - name: Define alternate keys for an entity
     href: define-alternate-keys-entity.md
-  - name: Define custom claim mapping for SharePoint server-based integration
-    href: define-custom-claim-mapping-sharepoint-server-based-integration.md
   - name: Define custom state model transitions
     href: define-custom-state-model-transitions.md
-  - name: Define goal metric and rollup fields
-    href: define-goal-metric-rollup-fields.md
   - name: Delete data in bulk
     href: delete-data-bulk.md
   - name: Dependency tracking for solution components
     href: dependency-tracking-solution-components.md
-  - name: Describe a relationship between entities with connection roles
-    href: describe-relationship-entities-connection-roles.md
   - name: Detect duplicate data for developers
     href: detect-duplicate-data-for-developers.md
   - name: Developer resources page
@@ -384,8 +458,6 @@
     href: email-activity-entities.md
   - name: Enable and Disable duplicate detection
     href: enable-disable-duplicate-detection.md
-  - name: Enable document management for entities
-    href: enable-document-management-entities.md
   - name: Entity attribute metadata messages
     href: entity-attribute-metadata-messages.md
   - name: Entity relationship eligibility
@@ -398,28 +470,16 @@
     href: field-level-data-encryption.md
   - name: Field security entities
     href: field-security-entities.md
-  - name: 'Step 1: Fill the app submission form on AppSource'
-    href: fill-app-submission-form-appsource.md
-  - name: Get started with SharePoint integration
-    href: get-started-sharepoint-integration.md
-  - name: Goal management entities
-    href: goal-management-entities.md
   - name: Image attributes
     href: image-attributes.md
   - name: Integrate Customer Engagement with OneNote
     href: integrate-onenote.md
-  - name: Integrate Common Data Service for Apps with SharePoint
-    href: integrate-sharepoint.md
   - name: Knowledge management entities
     href: knowledge-management-entities.md
-  - name: Link custom attributes of the recurring appointment master and appointment entities
-    href: link-custom-attributes-recurring-master-appointment-entities.md
   - name: Maintain managed solutions
     href: maintain-managed-solutions.md
   - name: Multi-Select Picklist attributes
     href: multi-select-picklist.md
-  - name: 'Next steps: Submit your app on Cloud Partner Portal'
-    href: next-steps-submit-app-cloud-partner-portal.md
   - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
     href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
   - name: Integration with Office 365
@@ -428,32 +488,16 @@
     href: organize-solutions.md
   - name: Organize your team to develop solutions
     href: organize-team-develop-solutions.md
-  - name: Prepare source files for import
-    href: prepare-source-files-import.md
   - name: Queue entities
     href: queue-entities.md
-  - name: 'Step 2: Register for Microsoft Partner Network account'
-    href: register-microsoft-partner-network.md
-  - name: Retrieve and delete the history of audited data changes
-    href: retrieve-and-delete-the-history-of-audited-data-changes.md
-  - name: Roll up goal totals
-    href: roll-up-goal-totals.md
   - name: Run bulk delete
     href: run-bulk-delete.md
-  - name: Run data import
-    href: run-data-import.md
   - name: Run duplicate detection
     href: run-duplicate-detection.md
-  - name: Server-side synchronization entities
-    href: server-side-synchronization-entities.md
-  - name: Solution component file reference (SolutionPackager)
-    href: solution-component-file-reference-solutionpackager.md
   - name: Solution tools for team development
     href: solution-tools-team-development.md
   - name: Specify time zone settings for a user
     href: specify-time-zone-settings-user.md
-  - name: 'Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
-    href: store-appsource-package-azure-storage.md
   - name: Subject entity
     href: subject-entity.md
   - name: Synchronize Common Data Service for Apps data with external systems
@@ -464,14 +508,10 @@
     href: time-zone-entities.md
   - name: Transaction Currency (currency) entity
     href: transaction-currency-currency-entity.md
-  - name: Types of calendars
-    href: types-calendars.md
   - name: Understand how managed solutions are merged
     href: understand-managed-solutions-merged.md
   - name: Uninstall or delete a solution
     href: uninstall-delete-solution.md
-  - name: Update a recurring appointment
-    href: update-recurring-appointment.md
   - name: Upload and manage document templates
     href: upload-manage-document-templates.md
   - name: Use access teams and owner teams to collaborate and share information
@@ -486,8 +526,6 @@
     href: use-feedback-entity-manage-feedback-ratings-records.md
   - name: Use managed properties
     href: use-managed-properties.md
-  - name: Source control with solution files
-    href: use-source-control-solution-files.md
   - name: Use Upsert to insert or update a record
     href: use-upsert-insert-update-record.md
   - name: Use webhooks to create external handlers for server events
@@ -498,10 +536,6 @@
     href: userquery-saved-view-entity.md
   - name: When to edit the customizations file
     href: when-edit-customization-file.md
-  - name: Work with Common Data Service for Apps data in your Azure solution
-    href: work-data-azure-solution.md
-  - name: Work with Common Data Service for Apps event data in your Azure Event Hub solution
-    href: work-event-data-azure-event-hub-solution.md
   - name: Work with knowledge articles
     href: work-knowledge-articles.md
   - name: Work with solutions
