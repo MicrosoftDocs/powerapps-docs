@@ -80,8 +80,6 @@
     href: sample-create-retrieve-update-delete-email-attachment.md
   - name: Detect solution dependencies
     href: sample-detect-solution-dependencies.md
-  - name: Enable field security for an entity
-    href: sample-enable-field-security-entity.md
   - name: Import data
     items:
     - name: Export and import a data map
@@ -114,10 +112,14 @@
     href: sample-retrieve-currency-exchange-rate.md
   - name: Retrieve email attachments for an email template
     href: sample-retrieve-email-attachments-email-template.md
-  - name: Retrieve field permissions
-    href: sample-retrieve-field-permissions.md
-  - name: Retrieve field sharing records
-    href: sample-retrieve-field-sharing-records.md
+  - name: Field Level Security
+    items:
+    - name: Retrieve field permissions
+      href: sample-retrieve-field-permissions.md
+    - name: Retrieve field sharing records
+      href: sample-retrieve-field-sharing-records.md
+    - name: Enable field security for an entity
+      href: sample-enable-field-security-entity.md
   - name: Retrieve time zone information
     href: sample-retrieve-time-zone-information.md
   - name: Retrieve valid status transitions
@@ -160,6 +162,21 @@
     href: supported-customizations.md
   - name: Introduction to solutions
     href: introduction-solutions.md
+    items:
+    - name: Dependency tracking for solution components
+      href: dependency-tracking-solution-components.md
+    - name: Maintain managed solutions
+      href: maintain-managed-solutions.md
+    - name: Organize your solutions
+      href: organize-solutions.md
+    - name: Organize your team to develop solutions
+      href: organize-team-develop-solutions.md
+    - name: Solution tools for team development
+      href: solution-tools-team-development.md
+    - name: Use managed properties
+      href: use-managed-properties.md
+    - name: Understand how managed solutions are merged
+      href: understand-managed-solutions-merged.md
   - name: Web Services
     href: use-web-services.md
     items:
@@ -182,6 +199,8 @@
       href: custom-actions.md
     - name: Plug-ins
       href: plug-ins.md
+    - name: Custom workflow activities 
+      href: custom-workflow-activities-workflow-assemblies.md
     - name: Azure Integration
       href: azure-integration.md
       items: 
@@ -196,10 +215,13 @@
     - name: Workflow Extensions
       href: workflow-extensions.md
   - name: Security Model
-    href: security-model.md
+    # See notes within this topic
+    href: security-model.md 
     items:
     - name: BusinessUnit entity
       href: businessunit-entity.md
+    - name: Field security entities
+      href: field-security-entities.md
   - name: Asynchronous service
     href: asynchronous-service.md
   - name: Discovery Service
@@ -214,6 +236,8 @@
       items:
         - name: Customize entity metadata
           href: customize-entity-metadata.md
+        - name: Define alternate keys for an entity
+          href: define-alternate-keys-entity.md
     - name: Attribute metadata 
       href: entity-attribute-metadata.md
       items:
@@ -227,6 +251,8 @@
         href: multi-select-picklist.md
       - name: Image attributes
         href: image-attributes.md
+      - name: Define custom state model transitions
+        href: define-custom-state-model-transitions.md
     - name: Entity relationships metadata
       href: entity-relationship-metadata.md
       items:
@@ -245,6 +271,8 @@
         href: custom-activities.md
       - name: Email activity entities
         href: email-activity-entities.md
+      - name: Task, fax, phone call, and letter activity entities
+        href: task-fax-phone-call-letter-activity-entities.md
       - name: ActivityParty entity
         href: activityparty-entity.md
       - name: ActivityPointer (activity) entity
@@ -266,8 +294,22 @@
       items:
       - name: Types of calendars
         href: types-calendars.md
-    - name: Virtual Entities
-      href: virtual-entities.md
+    - name: Knowledge management entities
+      href: knowledge-management-entities.md
+    - name: Queue entities
+      href: queue-entities.md
+    - name: Subject entity
+      href: subject-entity.md
+    - name: Transaction Currency (currency) entity
+      href: transaction-currency-currency-entity.md
+    - name: Use the Category entity
+      href: use-category-entity.md
+    - name: Use the Feedback entity to manage feedback and ratings for records
+      href: use-feedback-entity-manage-feedback-ratings-records.md
+    - name: Work with knowledge articles
+      href: work-knowledge-articles.md
+  - name: Virtual Entities
+    href: virtual-entities.md
   - name: Auditing overview
     href: auditing-overview.md
   - name: Apply Service Level Agreements (SLAs)
@@ -278,6 +320,19 @@
     href: data-synchronization.md
   - name: Data Export Service
     href: data-export-service.md
+  - name: Delete data in bulk
+    href: delete-data-bulk.md
+    items:
+    - name: Run bulk delete
+      href: run-bulk-delete.md
+  - name: Duplicate record management
+    items:
+    - name: Detect duplicate data
+      href: detect-duplicate-data-for-developers.md
+    - name: Duplicate detection messages
+      href: duplicate-detection-messages.md
+    - name: Duplicate Rule entities
+      href: duplicaterule-entities.md
   - name: Server-side synchronization
     href: server-side-synchronization-entities.md
     items:
@@ -292,6 +347,14 @@
     href: online-management-api.md
   - name: Outlook Client
     href: outlook-client.md
+  - name: Multiple language support
+    items:
+    - name: Create solutions that support multiple languages
+      href: create-solutions-support-multiple-languages.md
+    - name: Customize labels to support multiple languages
+      href: customize-labels-support-multiple-languages.md
+  - name: Field-level data encryption
+    href: field-level-data-encryption.md
 - name: How-to Guides
   items:
   - name: Azure integration
@@ -300,6 +363,8 @@
       href: configure-azure-integration.md
     - name: Write a custom Azure-aware plug-in
       href: write-custom-azure-aware-plugin.md
+    - name: Write a listener application for a Azure solution
+      href: write-listener-application-azure-solution.md
   - name: Plug-ins
     items:
     - name: Write and register a plug-in
@@ -312,8 +377,12 @@
       href: create-workflow-extension.md
     - name: Create and register a workflow extension
       href: create-register-workflow-extension.md
-  - name: Register a web hook
-    href: register-web-hook.md
+    - name: Web Hooks
+      items:
+      - name: Register a web hook
+        href: register-web-hook.md
+      - name: Use webhooks to create external handlers for server events
+        href: use-webhooks.md
   - name: Create Client applications
     href: connect-cds.md
     items:
@@ -321,6 +390,8 @@
       items:
       - name: Authenticate Office 365 users
         href: authenticate-office-365-users-cds-web-services.md
+      - name: Integration with Office 365
+        href: online-integration-office-365.md
       - name: Connect with Microsoft Office 365
         href: connect-microsoft-office-365.md
       - name: Connect using OAuth
@@ -331,15 +402,25 @@
         href: use-single-tenant-server-server-authentication.md
       - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
         href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+    - name: Disaster recovery 
+      href: disaster-recovery.md
   - name: How to manage solutions
     href: how-manage-solutions.md
     items:
     - name: Create, export, or import an unmanaged solution
       href: create-export-import-unmanaged-solution.md
+    - name: Uninstall or delete a solution
+      href: uninstall-delete-solution.md
+    - name: Work with solutions
+      href: work-solutions.md
+    - name: Export a solution for a specific version
+      href: export-solution-specific-version.md
     - name: Create, install, and update a managed solution
       href: create-install-update-managed-solution.md
     - name: Create patches to simplify solution updates
       href: create-patches-simplify-solution-updates.md
+    - name: When to edit the customizations file
+      href: when-edit-customization-file.md
     - name: SolutionPackager tool
       href: compress-extract-solution-file-solutionpackager.md
       items:
@@ -409,6 +490,23 @@
       href: audit-user-access.md
     - name: Create auto-number attributes
       href: create-auto-number-attributes.md
+  - name: Manage Duplicate records
+    items:
+    - name: Enable and Disable duplicate detection
+      href: enable-disable-duplicate-detection.md
+    - name: Run duplicate detection
+      href: run-duplicate-detection.md
+    - name: Manage duplicate detection for create and update operations
+      href: duplicate-detection-create-update.md
+  - name: Synchronize data with external systems
+    href: synchronize-cds-data-with-external-systems.md
+    items:
+    - name: Use an alternate key to create a record
+      href: use-alternate-key-create-record.md
+    - name: Use change tracking to synchronize data with external systems
+      href: use-change-tracking-synchronize-data-external-systems.md
+    - name: Use Upsert to insert or update a record
+      href: use-upsert-insert-update-record.md
 - name: Resources
   items:
   - name: Developer resources page
@@ -449,102 +547,19 @@
 # - name: On-premises options
 - name: TBD
   items:
-  - name: Create solutions that support multiple languages
-    href: create-solutions-support-multiple-languages.md
-  - name: Custom workflow activities 
-    href: custom-workflow-activities-workflow-assemblies.md
-  - name: Customize labels to support multiple languages
-    href: customize-labels-support-multiple-languages.md
-  - name: Define alternate keys for an entity
-    href: define-alternate-keys-entity.md
-  - name: Define custom state model transitions
-    href: define-custom-state-model-transitions.md
-  - name: Delete data in bulk
-    href: delete-data-bulk.md
-  - name: Dependency tracking for solution components
-    href: dependency-tracking-solution-components.md
-  - name: Detect duplicate data for developers
-    href: detect-duplicate-data-for-developers.md
-  - name: Disaster recovery 
-    href: disaster-recovery.md
-  - name: Manage duplicate detection for create and update operations
-    href: duplicate-detection-create-update.md
-  - name: Duplicate detection messages
-    href: duplicate-detection-messages.md
-  - name: Duplicate Rule entities
-    href: duplicaterule-entities.md
-  - name: Enable and Disable duplicate detection
-    href: enable-disable-duplicate-detection.md
-  - name: Export a solution for a specific version
-    href: export-solution-specific-version.md
-  - name: Field-level data encryption
-    href: field-level-data-encryption.md
-  - name: Field security entities
-    href: field-security-entities.md
-  - name: Integrate Customer Engagement with OneNote
-    href: integrate-onenote.md
-  - name: Knowledge management entities
-    href: knowledge-management-entities.md
-  - name: Maintain managed solutions
-    href: maintain-managed-solutions.md
-  
-  - name: Integration with Office 365
-    href: online-integration-office-365.md
-  - name: Organize your solutions
-    href: organize-solutions.md
-  - name: Organize your team to develop solutions
-    href: organize-team-develop-solutions.md
-  - name: Queue entities
-    href: queue-entities.md
-  - name: Run bulk delete
-    href: run-bulk-delete.md
-  - name: Run duplicate detection
-    href: run-duplicate-detection.md
-  - name: Solution tools for team development
-    href: solution-tools-team-development.md
+  - name: User and team entities
+    href: user-team-entities.md
   - name: Specify time zone settings for a user
     href: specify-time-zone-settings-user.md
-  - name: Subject entity
-    href: subject-entity.md
-  - name: Synchronize Common Data Service for Apps data with external systems
-    href: synchronize-cds-data-with-external-systems.md
-  - name: Task, fax, phone call, and letter activity entities
-    href: task-fax-phone-call-letter-activity-entities.md
   - name: Time zone entities
     href: time-zone-entities.md
-  - name: Transaction Currency (currency) entity
-    href: transaction-currency-currency-entity.md
-  - name: Understand how managed solutions are merged
-    href: understand-managed-solutions-merged.md
-  - name: Uninstall or delete a solution
-    href: uninstall-delete-solution.md
   - name: Upload and manage document templates
     href: upload-manage-document-templates.md
   - name: Use access teams and owner teams to collaborate and share information
     href: use-access-teams-owner-teams-collaborate-share-information.md
-  - name: Use an alternate key to create a record
-    href: use-alternate-key-create-record.md
-  - name: Use the Category entity
-    href: use-category-entity.md
-  - name: Use change tracking to synchronize data with external systems
-    href: use-change-tracking-synchronize-data-external-systems.md
-  - name: Use the Feedback entity to manage feedback and ratings for records
-    href: use-feedback-entity-manage-feedback-ratings-records.md
-  - name: Use managed properties
-    href: use-managed-properties.md
-  - name: Use Upsert to insert or update a record
-    href: use-upsert-insert-update-record.md
-  - name: Use webhooks to create external handlers for server events
-    href: use-webhooks.md
-  - name: User and team entities
-    href: user-team-entities.md
   - name: UserQuery (saved view) entity
     href: userquery-saved-view-entity.md
-  - name: When to edit the customizations file
-    href: when-edit-customization-file.md
-  - name: Work with knowledge articles
-    href: work-knowledge-articles.md
-  - name: Work with solutions
-    href: work-solutions.md
-  - name: Write a listener application for a Azure solution
-    href: write-listener-application-azure-solution.md
+  
+  
+  
+  

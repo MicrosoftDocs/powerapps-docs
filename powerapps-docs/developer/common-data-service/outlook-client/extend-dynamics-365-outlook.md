@@ -49,7 +49,7 @@ Microsoft Dynamics 365 for Outlook lets users interact with data while they’re
 [Customize Dynamics 365 applications](customize-dev/customize-applications.md)<br />
 [Package and distribute extensions using solutions](package-distribute-extensions-use-solutions.md)<br />
 [Integrate Dynamics 365 with SharePoint](integration-dev/integrate-sharepoint.md)<br />
-[Integrate Dynamics 365 with OneNote](integration-dev/integrate-onenote.md)<br /> -->
+ -->
 <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" /><br />
 [SavedQuery Entity](../reference/entities/savedquery.md)<br />
   
