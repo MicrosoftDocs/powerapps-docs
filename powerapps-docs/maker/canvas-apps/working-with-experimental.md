@@ -34,7 +34,7 @@ Each stage increases the size of the audience using the feature, helping us to v
 Here are some more details of each stage:
 
 | Stage | When should I use it? | Can I use it with confidence? | Is it enabled by default for new apps? | Where do I send feedback? | Where do I go for information? | 
-|----------|--------------------|---------------|------------|
+|----|----|----|-----|------|-----|
 | **Experimental** | If you are an early adopter, see something useful to you, and would like to help test the feature. | No.  Experimental features can radically change or completely disappear at any time. | No. Authors must explicitly opt in to the feature.  | [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). | The description in the Advanced Settings may be all there is, especially in the early days of a feature.  The [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) and [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/) may have additional information.  |
 | **Preview** | New apps will automatically include this feature.  Start enabling and testing in existing apps as this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues, this is the main reason the feature is in Preview. | [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) and [support](https://powerapps.microsoft.com/en-us/support/). | [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started) and [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  There may also be a [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/) post announcing the feature. | 
 | **Shipped** (no longer appears in Advanced settings) | All apps will have this feature. | Yes. | Yes.  Most cannot be turned off. | [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) and [support](https://powerapps.microsoft.com/en-us/support/). |  [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started) and [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). |
@@ -50,10 +50,3 @@ In some cases, after changing a setting you may need to close and reopen the app
 At the top of the **Advanced settings** panel appear settings for fully shipped features that are not preview or experimental and that you can completely depend on. 
 
 Note that these settings are only for this app.  Creating a new app will revert these switches to their default settings.
-
-
-
-
-
-
-
