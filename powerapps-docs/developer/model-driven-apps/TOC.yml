@@ -85,6 +85,8 @@
     href: ribbon-wss-schema.md
 - name: TBD
   items:
+  - name: Create and manage custom business apps using code
+    href: create-manage-custom-business-apps-using-code.md
   - name: Actions on dashboards
     href: actions-dashboards.md
   - name: Actions on visualizations (charts)
