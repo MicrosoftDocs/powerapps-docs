@@ -67,6 +67,10 @@ For more information about access and scope privileges, see [Security roles](htt
 ## Assign security roles to users
 Security roles control a user’s access to data through a set of access levels and permissions. The combination of access levels and permissions that are included in a specific security role sets limits on the user’s view of data and on the user’s interactions with that data.
 
+> [!IMPORTANT]
+> To use a model-driven app, all app users in your environment must at least have the Common Data Service User security role regardless of additional security roles you assign. In most cases, the Common Data Service User security role provides sufficient privileges to perform the basic tasks required to use an app.
+> Notice that users who have the Common Data Service User security role also have read and write access to all account, contact, and connection standard entity records regardless of who owns them. If you don’t want app users to have privileges to these records, create a custom security role. The easiest way is to copy the Common Data Service User security role and remove the appropriate privileges. More information: [Copy a security role](https://docs.microsoft.com/dynamics365/customer-engagement/admin/copy-security-role)
+
 ### Assign a security role to Pet Grooming Technicians
 1. From the **Share this app** dialog, under **Assign users to the security role** select **Security Users**.
 2. In the list that is displayed, select the pet groomers.
