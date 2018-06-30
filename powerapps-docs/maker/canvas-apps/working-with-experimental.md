@@ -43,7 +43,7 @@ Here are some more details of each stage:
 
 Experimental and preview features appear in the app's advanced settings.  From within the app, select the **File** menu, then **App settings**, then **Advanced settings**, and then scroll down to the **Preview features**:
 
-![](media/working-with-experimental-features/advanced-settings.png)
+![](media/working-with-experimental/advanced-settings.png)
 
 In some cases, after changing a setting you may need to close and reopen the app.  The feature description should indicate when this is true.   
 
