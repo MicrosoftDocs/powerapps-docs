@@ -83,3 +83,6 @@ More information:
 CDS for Apps is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing (IFD) deployments. For information related to these options see the [Software Development Kit for Microsoft Dynamics 365 (online) and Dynamics 365 (on-premises)](https://msdn.microsoft.com/library/hh547453.aspx)
 
 
+
+
+
