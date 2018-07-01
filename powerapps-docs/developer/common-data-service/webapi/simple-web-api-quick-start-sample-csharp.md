@@ -30,7 +30,7 @@ This sample demonstrates how to authenticate with Common Data Service for Apps a
 -   A user account on your Common Data Service for Apps.  
   
 <!-- TODO:
--   The sample application must be registered Azure Active Directory, as described in [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-dynamics-365-app-azure-active-directory.md). -->
+-   The sample application must be registered Azure Active Directory, as described in [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md). -->
   
 > [!IMPORTANT]
 >  By design, initially the solution will not build successfully. The source code must be edited at the lines indicated by `//TODO` comments to supply user account and/or application registration information.  
@@ -42,7 +42,7 @@ This simple sample demonstrates two basic concepts required for development usin
 Authentication is required before a client application can access any Common Data Service for Apps resource. This process can be nontrivial for two reasons: different authentication mechanisms are required for the different deployment types, and web-based authentication mechanisms typically involve multiple programmatic steps. Thereafter, the program subsequently acts as an agent of the authenticated user.  
   
 <!-- TODO:
-Common Data Service for Apps environments require the registration of client application beforehand,  and then uses a multi-step OAuth authentication process. The  registration process for Common Data Service for Apps is described in the  article [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-dynamics-365-app-azure-active-directory.md).    -->
+Common Data Service for Apps environments require the registration of client application beforehand,  and then uses a multi-step OAuth authentication process. The  registration process for Common Data Service for Apps is described in the  article [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).    -->
 
 <!-- TODO:
 Each subsequent Web API request must be authenticated with OAuth. Luckily, much of the complexity of OAuth authentication can be simplified through the use of Active Directory Authentication Libraries ([ADAL](/azure/active-directory/active-directory-authentication-libraries)) for .NET clients, which is added to the sample as the NuGet package [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/). OAuth authorization is further encapsulated in this sample with the inclusion of the `OAuthMessageHandler` class, which adds the required OAuth authorization header to message requests. In future samples, supporting authentication functionality is separated into the [Web API Helper Library](use-microsoft-dynamics-365-web-api-helper-library-csharp.md).    -->

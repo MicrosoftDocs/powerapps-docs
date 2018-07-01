@@ -37,7 +37,7 @@ The `Configuration`class reads and parses the application configuration file to 
 |Redirect URL|Online and IFD only|A callback URI for the current application.|  
   
 <!-- TODO:
-For more information on obtaining a client ID and a redirection URL for an application, see [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-dynamics-365-app-azure-active-directory.md).  
+For more information on obtaining a client ID and a redirection URL for an application, see [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).  
    -->
 <a name="bkmk_FileConfigconnectionsettings"></a>
 

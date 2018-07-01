@@ -62,13 +62,12 @@ When calling the CDS for Apps Web API, you must include the token value in an Au
     -   The name of the Active Directory tenant your organization uses to authenticate  
     -   The client ID you get when you register your application  
     -   The URL to where the SPA will be deployed or debugged during development  
-<!-- 
-TODO:  
- The set of steps required are described in [Walkthrough: Registering and configuring SimpleSPA application with adal.js](walkthrough-registering-configuring-simplespa-application-adal-js.md).  
-   -->
-### See also  
-<!-- 
-TODO:
-[Use OAuth to connect to CDS for Apps web Services](connect-customer-engagement-web-services-using-oauth.md)   
-[Active Directory and Claims-Based Authentication](active-directory-claims-based-authentication.md)
--->
+
+
+ The set of steps required are described in [Walkthrough: Registering and configuring a SPA application with adal.js](walkthrough-registering-configuring-simplespa-application-adal-js.md).  
+  
+### See also
+
+[Use OAuth to connect to CDS for Apps web Services](connect-web-services-using-oauth.md)   
+
+
