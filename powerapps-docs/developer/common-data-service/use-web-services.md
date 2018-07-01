@@ -1,13 +1,14 @@
 ---
-title: Use Common Data Service for Apps web services| Microsoft Docs
-description: Learn how developers can use Common Data Service for Apps web services.
-suite: powerapps
-author: JimDaly
-manager: kvivek
-ms.service: powerapps
-ms.topic: article
-ms.date: 02/26/2018
-ms.author: jdaly
+title: "<Topic Title> Common Data Service for Apps | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+ms.custom: ""
+ms.date: 08/01/2018
+ms.reviewer: ""
+ms.service: "powerapps"
+ms.topic: "article"
+author: "JimDaly" # GitHub ID
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
+manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 <!-- OLD: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-services -->
 # Use Common Data Service for Apps web services
