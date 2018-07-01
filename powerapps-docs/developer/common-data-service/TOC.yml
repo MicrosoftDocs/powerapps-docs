@@ -377,12 +377,12 @@
       href: create-workflow-extension.md
     - name: Create and register a workflow extension
       href: create-register-workflow-extension.md
-    - name: Web Hooks
-      items:
-      - name: Register a web hook
-        href: register-web-hook.md
-      - name: Use webhooks to create external handlers for server events
-        href: use-webhooks.md
+  - name: Web Hooks
+    items:
+    - name: Register a web hook
+      href: register-web-hook.md
+    - name: Use webhooks to create external handlers for server events
+      href: use-webhooks.md
   - name: Create Client applications
     href: connect-cds.md
     items:
