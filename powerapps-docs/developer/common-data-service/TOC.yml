@@ -426,9 +426,7 @@
       href: compress-extract-solution-file-solutionpackager.md
       items:
       - name: Source control with solution files
-        href: use-source-control-solution-files.md
-  - name: Create and manage custom business apps using code
-    href: create-manage-custom-business-apps-using-code.md        
+        href: use-source-control-solution-files.md       
   - name: Publish Apps on AppSource
     href: publish-app-appsource.md
     items:
