@@ -124,9 +124,8 @@ You can use additional headers to enable specific capabilities.
 |400 BadRequest|Expect this when an argument is invalid.|Client Error|  
 |404 Not Found|Expect this when the resource doesn’t exist.|Client Error|  
 |405 Method Not Allowed|This error occurs for incorrect method and resource combinations. For example, you can’t use DELETE or PATCH on a collection of entities.<br /><br /> Expect this for the following types of errors:<br /><br /> -   CannotDeleteDueToAssociation<br />-   InvalidOperation<br />-   NotSupported|Client Error|  
-|412 Precondition Failed|Expect this for the following types of errors:<br /><br /> -   ConcurrencyVersionMismatch<br />-   DuplicateRecord|Client Error|  
-<!-- TODO:
-|429 Too Many Requests|Expect this when API limits are exceeded. More information:[API Limits](../api-limits.md)|Client Error|   -->
+|412 Precondition Failed|Expect this for the following types of errors:<br /><br /> -   ConcurrencyVersionMismatch<br />-   DuplicateRecord|Client Error|
+|429 Too Many Requests|Expect this when API limits are exceeded. More information:[API Limits](../api-limits.md)|Client Error|  
 |501 Not Implemented|Expect this when some requested operation isnt implemented.|Server Error|  
 |503 Service Unavailable|Expect this when the web API service isn’t available.|Server Error|  
   

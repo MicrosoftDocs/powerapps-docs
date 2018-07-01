@@ -18,9 +18,9 @@ manager: "amyla"
 ---
 # Create and update entity definitions using the Web API
 
-<!-- 
-TODO:
-You can perform all the same operations on model entities that you can with the organization service. This topic focuses on working with metadata entities using the Web API. To find details about the entity metadata properties, see [Customize Entity Metadata](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" />.   -->
+
+
+You can perform all the same operations on model entities that you can with the organization service. This topic focuses on working with metadata entities using the Web API. To find details about the entity metadata properties, see [Customize entity metadata](../customize-entity-metadata.md) and <xref href="Microsoft.Dynamics.CRM.EntityMetadata?text=EntityMetadata EntityType" />.  
 
 <a name="bkmk_createEntities"></a>
 
@@ -45,9 +45,9 @@ To create an entity, POST the JSON representation of the entity data to the `Ent
 |Primary Attribute property|Value|  
 |--------------------------------|-----------|  
 |SchemaName|new_AccountName|  
-|RequiredLevel|None **Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty?text=AttributeRequiredLevelManagedProperty ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevel?text=AttributeRequiredLevel EnumType" />.|  
+|RequiredLevel|None <br />**Note:**  For the values you can set here, see <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty?text=AttributeRequiredLevelManagedProperty ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.AttributeRequiredLevel?text=AttributeRequiredLevel EnumType" />.|  
 |MaxLength|100|  
-<!--  TODO: |FormatName|Text **Note:**  The primary name attribute must use Text format. For format options available for other string attributes, see [StringAttributeMetadata formats](../customize-entity-attribute-metadata.md#BKMK_StringAttributeMetadataFormats).|   -->
+|FormatName|Text <br />**Note:**  The primary name attribute must use Text format. For format options available for other string attributes, see [String formats](../entity-attribute-metadata.md#string-formats).|  
 |DisplayName|Account Name|  
 |Description|Type the name of the bank account.|  
 |IsPrimaryName|true|  
@@ -55,8 +55,7 @@ To create an entity, POST the JSON representation of the entity data to the `Ent
 > [!NOTE]
 >  When you create or update labels using the <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" />, you only need to set the `LocalizedLabels` property. The `UserLocalizedLabel` value returned is based on the user’s language preference and is read-only.  
   
- <!-- TODO:
-The following example shows the creation of a custom entity with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE[LCID](../../includes/lcid.md)]   -->
+The following example shows the creation of a custom entity with the properties set. The language is English using the locale ID (LCID) of 1033. [!INCLUDE [lcid](../../../includes/lcid.md)]  
   
  **Request**  
 ```http 
@@ -170,8 +169,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(417129e1-207c
   
  When you update an entity or attribute, you must use the 
  <xref href="Microsoft.Dynamics.CRM.PublishXml?text=PublishXml Action" /> or 
- <!-- TODO:
-<xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action" /> before the changes you make will be applied to the application. More information:[Publish Customizations](../customize-dev/publish-customizations.md)   -->
+<xref href="Microsoft.Dynamics.CRM.PublishAllXml?text=PublishAllXml Action" /> before the changes you make will be applied to the application. More information: [Publish customizations](../../model-driven-apps/publish-customizations.md)  
   
  Typically, you will retrieve the JSON definition of the attribute and modify the properties before you send it back. The following example contains all the metadata properties of the entity created in the [Create entities](create-update-entity-definitions-using-web-api.md#bkmk_createEntities) example, but with the DisplayName changed to “Bank Business Name.” It may be useful to note that the JSON here provides the default values for properties not set in the [Create entities](create-update-entity-definitions-using-web-api.md#bkmk_createEntities) example.  
   
@@ -572,8 +570,9 @@ The following example will use these properties to create a money attribute.
 |DisplayName|Balance|  
 |Description|Enter the balance amount.|  
 |RequiredLevel|None|  
-<!-- TODO:
-|PrecisionSource|2 **Note:**  For information on the valid values for PrecisionSource, see [Quantity data attributes](../introduction-entity-attributes.md#quantity-data-attributes). The value 2 means that the level of decimal precision will match TransactionCurrency.CurrencyPrecision that is associated with the current record.|   -->
+|PrecisionSource|2 <br />**Note:**  For information on the valid values for PrecisionSource, see [MoneyType](../entity-attribute-metadata.md#money_type). The value 2 means that the level of decimal precision will match TransactionCurrency.CurrencyPrecision that is associated with the current record.|  
+
+
   
 The following example creates a money attribute using the properties and adds it to the entity with the MetadataId value of 402fa40f-287c-e511-80d2-00155d2a68d2. The URI for the attribute is returned in the response.  
   
@@ -799,6 +798,6 @@ As mentioned in [Update entities](create-update-entity-definitions-using-web-api
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Model entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />
-<!-- TODO:
-[Use the Organization service with Common Data Service for Apps metadata](../org-service/use-organization-service-metadata.md)<br />
-[Customize Entity Attribute Metadata](../customize-entity-attribute-metadata.md) -->
+
+[Work with metadata using the Organization service](../org-service/work-with-metadata.md)<br />
+[Attribute metadata](../entity-attribute-metadata.md)

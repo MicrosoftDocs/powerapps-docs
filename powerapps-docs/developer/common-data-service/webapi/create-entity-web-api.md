@@ -62,8 +62,7 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(7eb682f1-ca75-e511-80d
 
 ```
 
-<!-- TODO:
-To create a new entity you must identify the valid property names and types. For all system entities and attributes, you can find this information in the topic for that entity in the [Web API EntityType Reference](../about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL metadata document](web-api-types-operations.md#bkmk_csdl). More information:[Entity types](web-api-types-operations.md#bkmk_entityTypes) -->
+To create a new entity you must identify the valid property names and types. For all system entities and attributes, you can find this information in the topic for that entity in the [About the Entity Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-types-operations.md#csdl-metadata-document) . More information:[Entity types](web-api-types-operations.md#entity-types)
 
 <a name="bkmk_CreateRelated"></a>
 
@@ -163,8 +162,8 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000
 
 ## Check for Duplicate records
 
-<!-- TODO:
-By default, duplicate detection is suppressed when you are creating records using the Web API. You must include the `MSCRM.SuppressDuplicateDetection: false` header with your POST request to enable duplicate detection . Duplicate detection only applies when the organization has enabled duplicate detection, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied. More information:[Detect duplicate data for developers](../detect-duplicate-data-for-developers.md) -->
+
+By default, duplicate detection is suppressed when you are creating records using the Web API. You must include the `MSCRM.SuppressDuplicateDetection: false` header with your POST request to enable duplicate detection . Duplicate detection only applies when the organization has enabled duplicate detection, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied. More information: [Detect duplicate data for developers](../detect-duplicate-data-for-developers.md)
 
 See [Manage duplicate detection during Create and Update operations using Web API](manage-duplicate-detection-create-update.md#bkmk_create) for more information on how to check for duplicate records during Create operation.
 

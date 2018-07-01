@@ -18,15 +18,17 @@ manager: "amyla"
 ---
 # Create and update entity relationships using the Web API
 
-<!-- TODO: 
-The Web API supports working with relationship metadata. The concepts described in [Customize Entity Relationship Metadata](../customize-entity-relationship-metadata.md) also apply to the Web API.   -->
+
+The Web API supports working with relationship metadata. The concepts described in [Entity relationship metadata](../entity-relationship-metadata.md) also apply to the Web API.  
 
 <a name="bkmk_RelationshipEligibility"></a>
 
 ## Eligibility for relationships
 
-<!-- TODO:
-Before you create an entity relationship you should confirm whether the entity is eligible to participate in the relationship. You can use the actions listed in the following table to determine eligibility. These actions correspond to the organization service messages described in [Entity relationship eligibility](../entity-relationship-eligibility.md).   -->
+
+Before you create an entity relationship you should confirm whether the entity is eligible to participate in the relationship. You can use the actions listed in the following table to determine eligibility. These actions correspond to the organization service messages described in [Entity relationship eligibility](../entity-relationship-eligibility.md).  
+
+
   
 |Action|Description|  
 |------------|-----------------|  
@@ -41,8 +43,7 @@ Before you create an entity relationship you should confirm whether the entity i
 
 ## Create a one-to-many relationship
 
-<!-- TODO:
-When you create a one-to-many relationship, you define it by using the <xref href="Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType" />. This definition includes the lookup attribute, which is defined by using <xref href="Microsoft.Dynamics.CRM.LookupAttributeMetadata?text=LookupAttributeMetadata EntityType" /> and also requires complex properties using <xref href="Microsoft.Dynamics.CRM.AssociatedMenuConfiguration?text=AssociatedMenuConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType" />. The lookup attribute is set to the Lookup single-valued navigation property of the `OneToManyRelationshipMetadata` object and gets created at the same time using *deep insert*. More information:[Create related entities in one operation](create-entity-web-api.md#bkmk_CreateRelated) and [One-to-many relationships](../customize-entity-relationship-metadata.md#BKMK_OneToManyRelationships)   -->
+When you create a one-to-many relationship, you define it by using the <xref href="Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType" />. This definition includes the lookup attribute, which is defined by using <xref href="Microsoft.Dynamics.CRM.LookupAttributeMetadata?text=LookupAttributeMetadata EntityType" /> and also requires complex properties using <xref href="Microsoft.Dynamics.CRM.AssociatedMenuConfiguration?text=AssociatedMenuConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.CascadeConfiguration?text=CascadeConfiguration ComplexType" />, <xref href="Microsoft.Dynamics.CRM.Label?text=Label ComplexType" /> and <xref href="Microsoft.Dynamics.CRM.LocalizedLabel?text=LocalizedLabel ComplexType" />. The lookup attribute is set to the Lookup single-valued navigation property of the `OneToManyRelationshipMetadata` object and gets created at the same time using *deep insert*. More information: [Create related entities in one operation](create-entity-web-api.md#bkmk_CreateRelated) and [Entity relationship metadata](../entity-relationship-metadata.md)
   
 If you want to apply a custom navigation property name for a one-to-many relationship you can set values for the `ReferencingEntityNavigationPropertyName` and `ReferencedEntityNavigationPropertyName` properties.  
   
