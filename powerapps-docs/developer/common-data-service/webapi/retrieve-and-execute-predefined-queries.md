@@ -29,9 +29,9 @@ Common Data Service for Apps allows you to define, save, and execute two types o
 
 |Query type|Description|
 |----------------|-----------------|
-<!-- TODO:
-|**Saved Query**|System-defined views for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />. More information:[Customize Entity Views](../customize-dev/customize-entity-views.md)| 
-|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information:[UserQuery (Saved View) Entity](../userquery-saved-view-entity.md)|-->
+TODO:
+|**Saved Query**|System-defined views for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />. More information: [Customize entity views](../../model-driven-apps/customize-entity-views.md)| 
+|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information:[UserQuery (saved view) entity](../userquery-saved-view-entity.md)|
 
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
