@@ -19,9 +19,9 @@ ms.author: gregli
 
 With every release we make changes and add features to make PowerApps the best tool to fit your needs.  We move the product forward.  
 
-But with any change or improvement there is a risk that we may introduce an unintended side effect and your existing app may not work exactly the way it did before.  We take backward compatibility very seriously but it is impossible to catch all breaking changes.
+But with any change or improvement there is a risk that we may introduce an unintended side effect and your existing app may not work exactly the way it did before.  We take backward compatibility very seriously.
 
-## Feature roll out
+## Feature roll out stages
 
 To help balance improvements with impact on existing apps, we take larger features through a progression of stages.  In summary these stages are:
 
@@ -39,7 +39,7 @@ Here are some more details of each stage:
 |----|----|----|-----|------|
 | **Experimental** | If you are an early adopter, see something useful to you, and would like to help test the feature. | No.  Experimental features can radically change or completely disappear at any time. | No. Authors must explicitly opt in to the feature.  |  The description in the Advanced Settings may be all there is, especially in the early days of a feature.  The [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/) may have additional information.  |
 | **Preview** | New apps will automatically include this feature.  Start enabling and testing in existing apps as this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues, this is the main reason the feature is in Preview.  | [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started) and [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  There may also be a [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/) post announcing the feature. | 
-| **Shipped** (no longer appears in Advanced settings) | All apps will have this feature. | Yes. | Yes.  Most cannot be turned off.  |  [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started) and [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). |
+| **Shipped** (no longer appears in Advanced settings) | All apps will have this feature. | Yes. | Yes.  Most cannot be disabled.  |  [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started) and [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). |
 
 ## Feature control
 
