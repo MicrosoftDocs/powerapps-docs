@@ -3,7 +3,7 @@ title: Responding to DSR requests for Common Data Service (CDS) for Apps custome
 description: Walkthrough of how to respond to DSR requests for Common Data Service (CDS) for Apps customer data
 author: jamesol-msft
 ms.reviewer: paulliew
-manager: kvivek
+manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

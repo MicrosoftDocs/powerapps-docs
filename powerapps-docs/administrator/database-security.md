@@ -2,7 +2,7 @@
 title: Configure environment security | Microsoft Docs
 description: This topic explains how to configure environment security.
 author: manasmams
-manager: kvivek
+manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

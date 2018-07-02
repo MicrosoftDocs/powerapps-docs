@@ -2,7 +2,7 @@
 title: Export and import resources | Microsoft Docs
 description: Learn how to export and import resources in PowerApps
 author: nimakms
-manager: kvivek
+manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

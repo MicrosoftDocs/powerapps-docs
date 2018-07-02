@@ -2,7 +2,7 @@
 title: Data groups | Microsoft Docs
 description: Walkthrough of how to use data groups in PowerApps.
 author: manasmams
-manager: kvivek
+manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

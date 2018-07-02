@@ -1,1 +1,0 @@
-We expect changes to this feature, so you shouldn’t use it in production. Use it only in test and development environments.

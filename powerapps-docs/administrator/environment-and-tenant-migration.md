@@ -2,7 +2,7 @@
 title: Migrate apps between environments and tenants | Microsoft Docs
 description: Walkthrough of how to migrate PowerApps apps between environments and tenants
 author: jamesol-msft
-manager: kvivek
+manager: kfile
 ms-topic: conceptual
 ms.service: powerapps
 ms.component: pa-admin

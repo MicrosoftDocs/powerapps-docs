@@ -1,5 +1,5 @@
 ---
-title: Download a list of active users in your tenant | Microsoft Docs
+title: Quickstart to download a list of active users in your tenant | Microsoft Docs
 description: In this quickstart, you learn how to download a list of active users in your tenant
 author: jimholtz
 
@@ -7,15 +7,15 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: jimholtz
+ms.author: jimh
 ---
 
-# Download a list of active users in your tenant
+# Quickstart: Download a list of active users in your tenant
 If you're a 365 Global admin or Azure Active Directory Tenant admin, you can download a list of active users in your tenant, so you can see not only who's accessed PowerApps, Microsoft Flow, or both, but also the licenses assigned to those users.
 
-In this topics, you'll learn how to download a list of active users to a .csv file, and then view that list in Excel.
+In this quickstart, you'll learn how to download a list of active users to a .csv file, and then view that list in Excel.
 
-To follow the steps, you need Office 365 Global Admin or Azure Active Directory Tenant Admin permissions.
+To follow this quickstart, you need Office 365 Global Admin or Azure Active Directory Tenant Admin permissions.
 
 ## Sign in to the PowerApps Admin center
 Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).
@@ -41,7 +41,7 @@ If a user has left the organization, the list will show **Unknown** in the **Use
 To add user licenses, open the [Office 365 admin center](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 ## Next steps
-In this topic, you learned how to download and view a list of active users in your tenant. To learn how to download and view a list of apps created in your environments, continue to the next topic.
+In this quickstart, you learned how to download and view a list of active users in your tenant. To learn how to download and view a list of apps created in your environments, continue to the next quickstart.
 
 > [!div class="nextstepaction"]
 > [Download a list of apps created in your environments](admin-view-apps.md)

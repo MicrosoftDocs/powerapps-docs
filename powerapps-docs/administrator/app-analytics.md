@@ -2,7 +2,7 @@
 title: View analytics reports for your app | Microsoft Docs
 description: View reports to see the usage and performance of your PowerApps apps.
 author: jamesol-msft
-manager: kvivek
+manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

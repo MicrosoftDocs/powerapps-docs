@@ -2,7 +2,7 @@
 title: Regions overview | Microsoft Docs
 description: Learn about regions in PowerApps
 author: manasmams
-manager: kvivek
+manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

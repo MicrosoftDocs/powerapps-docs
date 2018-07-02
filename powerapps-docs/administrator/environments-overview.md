@@ -2,7 +2,7 @@
 title: Environments overview | Microsoft Docs
 description: Learn about environments in PowerApps and how to use them
 author: manasmams
-manager: kvivek
+manager: kfile
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

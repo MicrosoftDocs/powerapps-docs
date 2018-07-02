@@ -1,1 +1,0 @@
-You can find this information in the metadata for your organization. See the preceding metadata browser information.
