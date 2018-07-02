@@ -47,4 +47,146 @@
 - name: Resources
   items:
   - name: Community Tools
-    href: community-tools.md        
+    href: community-tools.md
+- name: TBD
+  items: 
+  - name: Build queries with LINQ (.NET language-integrated query)
+    href: build-queries-with-linq-net-language-integrated-query.md
+  - name: Build queries with QueryExpression
+    href: build-queries-with-queryexpression.md
+  - name: Create custom entity
+    href: create-custom-entity.md
+  - name: Detect Duplicate Data using the Organization service
+    href: detect-duplicate-data.md
+  - name: Discovery Service
+    href: discovery-service.md
+  - name: Early-bound Programming using the Organization service
+    href: early-bound-programming.md
+  - name: Associate and disassociate entities
+    href: entity-operations-associate-disassociate.md
+  - name: Perform Conditional operations
+    href: entity-operations-conditional-operations.md
+  - name: Create entities
+    href: entity-operations-create.md
+  - name: Query data using the Organization service
+    href: entity-operations-query-data.md
+  - name: Retrieve and execute predefined queries
+    href: entity-operations-retrieve-execute-predefined-queries.md
+  - name: Retrieve an entity
+    href: entity-operations-retrieve.md
+  - name: Update and Delete entities
+    href: entity-operations-update-delete.md
+  - name: Entity Operations using the Organization service
+    href: entity-operations.md
+  - name: Execute multiple requests using the Organization service
+    href: execute-multiple-requests.md
+  - name: Create extensions for the code generation tool
+    href: extend-code-generation-tool.md
+  - name: Generate classes for early-bound programming using the Organization service
+    href: generate-early-bound-classes.md
+  - name: Handle exceptions in your code
+    href: handle-exceptions-code.md
+  - name: Impersonate another user
+    href: impersonate-another-user.md
+  - name: Import data using the Organization service
+    href: import-data.md
+  - name: IOrganizationService Interface
+    href: iorganizationservice-interface.md
+  - name: LINQ query examples
+    href: linq-query-examples.md
+  - name: Work with attribute metadata
+    href: metadata-attributemetadata.md
+  - name: Insert, update, delete, and order global option set options
+    href: metadata-global-option-set-options.md      
+  - name: Customize global option sets
+    href: metadata-global-option-sets.md
+  - name: Create and retrieve entity relationships
+    href: metadata-relationshipmetadata.md
+  - name: Retrieve and detect changes to metadata
+    href: metadata-retrieve-detect-changes.md
+  - name: Retrieve, update, and delete entities
+    href: metadata-retrieve-update-delete-entities.md
+  - name: Order results using entity attributes with LINQ
+    href: order-results-entity-attributes-linq.md
+  - name: Using OrganizationServiceContext
+    href: organizationservicecontext.md
+  - name: Page large result sets with LINQ
+    href: page-large-result-sets-linq.md
+  - name: Page large result sets with FetchXML
+    href: page-large-result-sets-with-fetchxml.md
+  - name: Page large result sets with QueryExpression
+    href: page-large-result-sets-with-queryexpression.md
+  - name: Access the Discovery service
+    href: sample-access-discovery-service.md
+  - name: Convert queries between Fetch and QueryExpression
+    href: sample-convert-queries-fetch-queryexpression.md
+  - name: Add and remove sample data using the Organization service
+    href: sample-data.md
+  - name: Detect multiple duplicate records
+    href: sample-detect-multiple-duplicate-records.md
+  - name: Dump entity metadata to a file
+    href: sample-dump-entity-metadata-file.md
+  - name: Early-bound entity operations
+    href: sample-early-bound-entity-operations.md
+  - name: Enable duplicate detection and retrieve duplicates
+    href: sample-enable-duplicate-detection-and-retrieve-duplicates.md
+  - name: Impersonate using the ActOnBehalfOf privilege
+    href: sample-impersonate-actonbehalfof-privilege.md
+  - name: Late-bound entity operations
+    href: sample-late-bound-entity-operations.md
+  - name: Retrieve multiple with the QueryByAttribute class
+    href: sample-retrieve-multiple-querybyattribute-class.md
+  - name: Retrieve multiple with the QueryExpression class
+    href: sample-retrieve-multiple-queryexpression-class.md
+  - name: Retrieve records from an intersect table
+    href: sample-retrieve-records-intersect-table.md
+  - name: Use aggregation in FetchXML
+    href: sample-use-aggregation-fetchxml.md
+  - name: Use duplicate detection when creating and updating records
+    href: sample-use-duplicate-detection-when-creating-and-updating-records.md
+  - name: Use FetchXML with a paging cookie
+    href: sample-use-fetchxml-paging-cookie.md
+  - name: Use optimistic concurrency with update and delete operations
+    href: sample-use-optimistic-concurrency-update-delete-operations.md
+  - name: Use QueryExpression with a paging cookie
+    href: sample-use-queryexpression-with-a-paging-cookie.md
+  - name: Validate and execute a saved query
+    href: sample-validate-execute-saved-query.md
+  - name: Start a managed code project in Visual Studio
+    href: start-managed-code-project-visual-studio.md
+  - name: Subscribe to SDK assembly updates using NuGet
+    href: subscribe-sdk-assembly-updates-using-nuget.md
+  - name: Troubleshooting tips
+    href: troubleshooting-tips.md
+  - name: Use the ConditionExpression class
+    href: use-conditionexpression-class.md
+  - name: Use the early bound entity classes in code
+    href: use-early-bound-entity-classes-code.md
+  - name: Use ExecuteAsync
+    href: use-executeAsync.md
+  - name: Use ExecuteTransaction
+    href: use-executetransaction.md
+  - name: Use the FilterExpression class
+    href: use-filterexpression-class.md
+  - name: Use late-bound entity class with a LINQ query
+    href: use-late-bound-entity-class-linq-query.md
+  - name: Use the late bound entity class in code
+    href: use-late-bound-entiy-class.md
+  - name: Use a left outer join in QueryExpression to query for records "not in"
+    href: use-left-outer-join-queryexpression-query-records-not-in.md
+  - name: Use LINQ to construct a query
+    href: use-linq-construct-query.md
+  - name: Use messages with the Organization service
+    href: use-messages.md
+  - name: Use the QueryByAttribute class
+    href: use-querybyattribute-class.md
+  - name: Use the QueryExpression class
+    href: use-queryexpression-class.md
+  - name: Use the ColumnSet class
+    href: use-the-columnset-class.md
+  - name: Visual Studio and the .NET Framework
+    href: visual-studio-dot-net-framework.md
+  - name: Web service error codes
+    href: web-service-error-codes.md
+  - name: Work with metadata using the Organization service
+    href: work-with-metadata.md
