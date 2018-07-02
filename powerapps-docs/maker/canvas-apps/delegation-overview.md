@@ -113,10 +113,10 @@ In some cases, you will know that 2000 (or 1000, or 1500) will satisfy the needs
 
 To ensure your app can scale to large data sets, reduce this setting down to 1.  Anything that cannot be delegated will now only return a single record, which should be easy to detect when testing your app.  This can help avoid surprises when trying to take a proof of concept app to production.
 
-## Blue dot suggestions
-To make it easier to know what is and is not being delegated, the authoring experience provides blue dot suggestions when a formula contains something that cannot be delegated.
+## Delegation warnings
+To make it easier to know what is and is not being delegated, the authoring experience provides warning (yellow triangle) when a formula contains something that cannot be delegated.
 
-Blue dots are only shown on formulas that operate on delegable data sources.  If you don't see a blue dot and you believe your formula is not being properly delegated, check the type of data source against the list of <a href="#delegable-data-sources">delegable data sources</a> above.
+Delegation warnings are only shown on formulas that operate on delegable data sources.  If you don't see a warning and you believe your formula is not being properly delegated, check the type of data source against the list of <a href="#delegable-data-sources">delegable data sources</a> above.
 
 ## Examples
 In this example, we will use a SQL Server table that contains products, in particular fruits, names **[dbo].[Products]**.  On the New screen, PowerApps can create a basic three screen app connected to this data source:
@@ -135,12 +135,12 @@ You will notice that we are seeing a match for both "Apple" and "Pineapple".  Th
 
 ![Remove SortByColumns call](./media/delegation-overview/products-apple-bluedot.png)
 
-This appears to be working, only **"Apples"** is correctly showing now and **"Pineapple"** is not.  However, there is a blue dot showing next to the gallery and there is a blue wavy line under a portion of the formula.  There is even a blue dot showing in the screen thumbnail.  If we hover over the blue dot next to the gallery, we see the following:
+This appears to be working, only **"Apples"** is correctly showing now and **"Pineapple"** is not.  However, there is a warning showing next to the gallery and there is a blue wavy line (which indicates a warning) under a portion of the formula.  There is even a warning that appears in the screen thumbnail.  If you hover over the warning next to the gallery, you will see the following:
 
 ![Hover over blue dot](./media/delegation-overview/products-apple-bluepopup.png)
 
 Although we are using **Filter** which is a delegable function, with SQL Server which is a delegable data source, the formula we used within **Filter** is not delegable.  **Mid** and **Len** cannot be delegated to any data source.
 
-But it worked, didn't it?  Well, kind of.  And that is why this is a blue dot instead of a yellow hazard icon and red wavy error.  If the **[dbo].[Products]** table contains less than 500 records, then yes, this worked perfectly.   All records were brought to the device and the **Filter** was applied locally.  
+But it worked, didn't it?  Well, kind of.  And that is why this is a warning and not a red wavy squiggle.  If the **[dbo].[Products]** table contains fewer than 500 records, then yes, this worked perfectly.   All records were brought to the device and the **Filter** was applied locally.  
 
-If instead this table contains more than 500 records, then only fruit which begin with **"Apple"** *in the first 500 records of the table* will be displayed in the gallery.  If **"Apple, Fuji"** appears as a name in record 501 or 500,001 it will not be found.
+If instead this table contains more than 500 records, then only fruit records that start with **"Apple"** *in the first 500 records of the table* will be displayed in the gallery.  If **"Apple, Fuji"** appears as a name in record 501 or 500,001, it won't be found.
