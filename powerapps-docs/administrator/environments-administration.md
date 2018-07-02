@@ -2,7 +2,7 @@
 title: Administer environments | Microsoft Docs
 description: Learn how to administer environments in PowerApps, including creation, renaming, deletion, and security
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
@@ -42,7 +42,7 @@ You also need either a PowerApps Plan 2 or Microsoft Flow Plan 2 license to acce
 > Any changes that you make in PowerApps admin center affect the [Microsoft Flow admin center][4] and vice versa.
 
 ## Create an environment
-For instructions on how to create an environment, see [Quickstart: Create an environment](create-environment.md).
+For instructions on how to create an environment, see [Create an environment](create-environment.md).
 
 ## View your environments
 When you open the admin center, the Environments tab appears by default and lists all the environments for which you are an Environment Admin (as shown below):

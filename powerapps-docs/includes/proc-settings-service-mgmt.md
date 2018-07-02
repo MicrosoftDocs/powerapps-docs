@@ -1,0 +1,1 @@
+Choose **Settings** > **Service Management**.

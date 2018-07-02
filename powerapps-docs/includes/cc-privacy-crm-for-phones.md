@@ -1,0 +1,5 @@
+Licensed Dynamics 365 Online users with specific Security Roles (CEO – Business Manager, Sales Manager, Salesperson, System Administrator, System Customizer, and Vice President of Sales) are automatically authorized to access the service by using Dynamics 365 for phones, as well as other clients.  
+  
+ An administrator has full control (at the user security role or entity level) over the ability to access and the level of authorized access associated with the phone client. Users can then access Dynamics 365 (online) by using Dynamics 365 for phones, and Customer Data will be cached on the device running the specific client.  
+  
+ Based on the specific settings at the user security and entity levels, the types of Customer Data that can be exported from Dynamics 365 (online) and cached on an end user’s device include record data, record metadata, entity data, entity metadata, and business logic.

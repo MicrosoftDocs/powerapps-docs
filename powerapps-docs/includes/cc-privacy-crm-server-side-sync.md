@@ -1,0 +1,3 @@
+If you use Dynamics 365, when you use server-side sync, Dynamics 365 contacts and activities (including emails, appointments, contacts, and tasks) are synchronized to your specified email system (such as Exchange).  
+  
+ An administrator can configure server-side sync functionality to specify which users have the ability to send emails or appointments from Dynamics 365 or synchronize activities and contacts between Dynamics 365 and the user’s mailbox. Both the administrator and end users can further customize filter criteria, and administrators can even define which entity fields synchronize.

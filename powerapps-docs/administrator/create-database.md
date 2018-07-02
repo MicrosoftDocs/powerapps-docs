@@ -3,7 +3,7 @@ title: Create a Common Data Service (CDS) for Apps database | Microsoft Docs
 description: Walkthrough of how to create a Common Data Service (CDS) for Apps database.
 services: powerapps
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual

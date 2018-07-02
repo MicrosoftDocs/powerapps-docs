@@ -1,0 +1,1 @@
+﻿**Note:** For more information about additional [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] service offerings, see the [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/).

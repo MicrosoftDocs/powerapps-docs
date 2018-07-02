@@ -1,0 +1,1 @@
+Choose **Sales** > **Competitors**.
