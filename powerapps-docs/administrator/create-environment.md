@@ -1,5 +1,5 @@
 ---
-title: Quickstart to create an environment | Microsoft Docs
+title: Create an environment | Microsoft Docs
 description: In this quickstart, you learn how to create an environment
 author: jimholtz
 
@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: jimh
+ms.author: jimholtz
 ---
 
-# Quickstart: Create an environment
+# Create an environment
 An environment is a space to store, manage, and share your organization’s business data, apps, and flows. It also serves as a container to separate apps that may have different roles, security requirements, or target audiences. PowerApps automatically creates a single default environment for each tenant, which is shared by all users in that tenant.
 
 Every environment can have zero or one Common Data Service database, which provides storage for apps. When users create an app in an environment, that app can connect to any data source, including connections, gateways, and flows. However, the app is only permitted to connect to the Common Data Service databases in that same environment. How you choose to leverage environments depends on your organization and the apps you're trying to build. For more information, see [Environments overview](environments-overview.md).
 
-In this quickstart, you'll learn how to create an environment and a database for that environment.
+In this topic, you'll learn how to create an environment and a database for that environment.
 
 ## Prerequisites
- To follow this quickstart, the following items are required:
+ To follow this topic, the following items are required:
  * Either a PowerApps Plan 2 or Microsoft Flow Plan 2 license. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
  * PowerApps Environment Admin, Office 365 Global Admin, or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
@@ -34,8 +34,6 @@ Sign in to the Admin center at [https://admin.powerapps.com](https://admin.power
     ![File and Share](./media/create-environment/new-environment-dialog.png)
 3. Once the environment is created, you'll receive a confirmation message in the dialog box and you'll be prompted to create a database. Click or tap **Create database** to enable access to the Common Data Service.
 
-    **Note:** At this time, you can only create a database in the Azure Active Directory Tenant home region.
-
     ![File and Share](./media/create-environment/create-database-dialog.png)
 4. Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, click or tap **Create database**.
 
@@ -48,7 +46,7 @@ Sign in to the Admin center at [https://admin.powerapps.com](https://admin.power
     Click or tap the environment to view the environment details.
 
 ## Next steps
-In this quickstart, you learned how to create an environment and database for that environment. Next, learn how to administer environments in your organization.
+In this topic, you learned how to create an environment and database for that environment. Next, learn how to administer environments in your organization.
 
 > [!div class="nextstepaction"]
 > [Administer environments in PowerApps](environments-administration.md)

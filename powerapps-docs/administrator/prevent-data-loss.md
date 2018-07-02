@@ -2,7 +2,7 @@
 title: Manage data loss prevention (DLP) policies | Microsoft Docs
 description: Walkthrough of how to manage data loss prevention policies for PowerApps.
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
@@ -15,7 +15,7 @@ An organization's data is critical to its success. Its data needs to be readily 
 
 To create, edit, or delete DLP policies, you must have either Environment Admin or Azure Active Directory Tenant Admin permissions. For more information, see [Environments administration in PowerApps](environments-administration.md).
 
-For instructions on how to create a DLP policy, see [Quickstart: Create a data loss prevention (DLP) policy](create-dlp-policy.md).
+For instructions on how to create a DLP policy, see [Create a data loss prevention (DLP) policy](create-dlp-policy.md).
 
 ## Find a DLP policy
 1. Sign in to the Admin center at [https://admin.powerapps.com]([https://admin.powerapps.com).

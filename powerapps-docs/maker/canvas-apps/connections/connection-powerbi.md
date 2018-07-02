@@ -1,14 +1,9 @@
 ---
 title: Overview of the Power BI connection | Microsoft Docs
 description: See the available Power BI connections
-documentationcenter: ''
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 10/12/2016

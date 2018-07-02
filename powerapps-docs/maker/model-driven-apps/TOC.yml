@@ -1,0 +1,188 @@
+- name: Create apps
+  href: /powerapps/maker/
+- name: Canvas apps
+  href: ../canvas-apps/index.md
+- name: Model-driven apps
+  href: model-driven-app-overview.md
+  expanded: true
+  items:
+# DO NOT CHANGE ABOVE    
+  - name: Quickstarts
+    items:
+    - name: Build your first model-driven app
+      href: build-first-model-driven-app.md
+    - name: Create or edit a main form
+      href: create-edit-main-forms.md
+    - name: Create or edit quick create forms
+      href: create-edit-quick-create-forms.md
+    - name: Create a quick view form
+      href: create-edit-quick-view-forms.md
+    - name: Add form navigation for related entities
+      href: add-edit-form-navigation-related-entities.md
+    - name: Add a field to a form
+      href: add-field-form.md
+    - name: Create or edit a view
+      href: create-and-edit-views.md
+    - name: Access a view definition
+      href: accessing-view-definitions.md
+    - name: Create a system chart
+      href: create-edit-system-chart.md 
+    - name: Create or edit dashboards
+      href: create-edit-dashboards.md                  
+  - name: Tutorials
+    items:
+    - name: Work with views
+      items: 
+      - name: Create and edit views with app designer
+        href: create-edit-views-app-designer.md
+      - name: Choose and configure columns in views
+        href: choose-and-configure-columns.md
+    - name: Apply business logic
+      items:
+      - name: Create a business process flow
+        href: create-business-process-flow.md           
+      - name: Enhance business process flows with branching
+        href: enhance-business-process-flows-branching.md  
+      - name: Create business rules and recommendations
+        href: create-business-rules-recommendations-apply-logic-form.md          
+    - name: Work with apps
+      items: 
+      - name: Create a model-driven app
+        href: create-edit-app.md
+      - name: Create a site map for an app
+        href: create-site-map-app.md 
+      - name: Add or edit app components in app designer
+        href: add-edit-app-components.md
+      - name: Export, import, or remove an app
+        href: export-import-remove-app.md                            
+    - name: Use custom controls for data visualizations
+      href: use-custom-controls-data-visualizations.md
+    - name: Share a model-driven app with PowerApps
+      href: share-model-driven-app.md            
+  - name: Samples
+    items:
+    - name: Overview of sample apps
+      href: overview-model-driven-samples.md   
+  - name: Concepts
+    items:
+    - name: Get started with app making
+      href: getting-started-customization.md
+    - name: Privileges required for customization
+      href: privileges-required-customization.md       
+    - name: Work with forms
+      items: 
+      - name: Create and design forms
+        href: create-design-forms.md
+      - name: Overview of the form editor 
+        href: form-editor-user-interface-legacy.md
+      - name: Design considerations for main forms
+        href: design-considerations-main-forms.md
+      - name: Type of forms
+        href: types-forms.md                        
+      - name: Control access to forms
+        href: control-access-forms.md
+      - name: Form properties
+        href: form-properties-legacy.md
+      - name: How main forms appear 
+        href: main-form-presentations.md
+      - name: Sub-grid properties overview
+        href: sub-grid-properties-legacy.md
+      - name: Tab properties overview
+        href: tab-properties-legacy.md
+      - name: Show or hide form elements
+        href: visibility-options-legacy.md
+      - name: Change navigation within a form
+        href: use-the-form-editor-legacy.md                                                
+    - name: Understand views
+      href: create-edit-views.md    
+    - name: Work with fields
+      items: 
+      - name: Common field properties
+        href: common-field-properties-legacy.md 
+      - name: Overview of special field properties
+        href: special-field-properties-legacy.md      
+    - name: Apply business logic
+      items: 
+      - name: Create custom business logic
+        href: guide-staff-through-common-tasks-processes.md
+      - name: Business process flows overview
+        href: business-process-flows-overview.md
+    - name: Design custom business apps
+      href: design-custom-business-apps-using-app-designer.md
+    - name: Timer control overview
+      href: timer-control-legacy.md
+    - name: Create or edit web resources
+      href: create-edit-web-resources.md      
+    - name: Web resource properties
+      href: web-resource-properties-legacy.md
+    - name: Set properties for a chart or list
+      href: set-properties-chart-list-included-dashboard.md                  
+  - name: How-to guides
+    items:
+    - name: Change custom entity icons
+      href: change-custom-entity-icons.md
+    - name: Work with forms
+      items:  
+      - name: Use the main form and its components
+        href: use-main-form-and-components.md   
+      - name: Open the form editor
+        href: open-form-editor.md   
+      - name: iFrame properties
+        href: iframe-properties-legacy.md   
+      - name: Optimize form performance
+        href: optimize-form-performance.md   
+      - name: Section properties
+        href: section-properties-legacy.md                                                           
+      - name: Configure Bing maps
+        href: configure-bing-maps-legacy.md   
+      - name: Assign form order
+        href: assign-form-order.md   
+      - name: Configure event handlers
+        href: configure-event-handlers-legacy.md   
+      - name: Disable auto-save
+        href: manage-auto-save.md   
+    - name: Work with views
+      items: 
+       - name: Make grids editable
+         href: make-grids-lists-editable-custom-control.md     
+       - name: Sort records in a view
+         href: configure-sorting.md 
+       - name: Edit filter criteria and sort order
+         href: edit-filter-criteria.md 
+       - name: Managed properties for views
+         href: managed-properties-views.md 
+       - name: Specify a default view
+         href: specify-default-views.md 
+       - name: Delete or deactivate a view
+         href: remove-views.md  
+    - name: Configure interactive experience dashboards
+      href: configure-interactive-experience-dashboards.md
+    - name: Work with apps
+      items: 
+       - name: Manage app properties
+         href: manage-app-properties.md  
+       - name: Specify properties for Unified Interface apps
+         href: specify-properties-for-unified-interface-apps.md 
+       - name: Validate and publish an app
+         href: validate-app.md                          
+    - name: Use controls
+      items:  
+       - name: Set up the Notes control
+         href: notes-control-legacy.md 
+       - name: Quick view control properties
+         href: quick-view-control-properties-legacy.md 
+       - name: Additional controls for Dynamics 365 for phones and tablets
+         href: additional-controls-for-dynamics-365-for-phones-and-tablets.md                                                                
+    - name: Translate localizable text
+      href: translate-localizable-text.md
+    - name: Navigate to advanced app making areas
+      href: advanced-navigation.md                 
+  - name: Resources
+    items: 
+    - name: Accessibility in PowerApps app designer
+      href: Accessibility-app-designer-site-map-designer-my-apps-page.md    
+# DO NOT CHANGE BELOW  
+- name: Common Data Service for Apps
+  href: ../common-data-service/index.md
+- name: Common Data Model
+  href: ../../common-data-model/index.md       

@@ -1,0 +1,1 @@
+Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require you to reinstall the operating system and Microsoft Dynamics 365. We can’t guarantee that these problems can be resolved. Modify the registry at your own risk.

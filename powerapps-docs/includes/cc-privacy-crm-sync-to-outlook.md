@@ -1,0 +1,3 @@
+If you use Dynamics 365 (online), when you use the Sync to Outlook feature, the Dynamics 365 data you are syncing is “exported” to Outlook. A link is maintained between the information in Outlook and the information in Dynamics 365 (online) to ensure that the information remains current between the two. Outlook Sync downloads only the relevant Dynamics 365 record IDs to use when a user attempts to track and set regarding an Outlook item. The company data is not stored on the device.  
+  
+ An administrator determines whether your organization’s users are permitted to sync Dynamics 365 data to Outlook by using security roles.
