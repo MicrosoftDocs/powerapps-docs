@@ -1,0 +1,1 @@
+# Use a left outer join in QueryExpression to query for records "not in"

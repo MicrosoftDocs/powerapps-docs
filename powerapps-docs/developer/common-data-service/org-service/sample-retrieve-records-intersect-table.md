@@ -1,0 +1,1 @@
+# Sample: Retrieve records from an intersect table

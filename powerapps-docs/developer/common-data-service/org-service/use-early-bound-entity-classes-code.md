@@ -1,0 +1,1 @@
+# Use the early bound entity classes in code

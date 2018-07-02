@@ -1,0 +1,1 @@
+# Sample: Dump entity metadata to a file

@@ -10,4 +10,11 @@ author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Generate classes for late-bound programming using the Organization service
+# Generate classes for early-bound programming using the Organization service
+
+<!-- create-early-bound-entity-classes-code-generation-tool.md 
+
+Merge in content from helper-code-enumerations-option-sets.md
+
+Include with the Sample to extend CrmSvcUtil.exe; samples should not use it.
+-->

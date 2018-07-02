@@ -11,3 +11,5 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Using OrganizationServiceContext
+
+<!-- use-the-organizationservicecontext-class.md -->

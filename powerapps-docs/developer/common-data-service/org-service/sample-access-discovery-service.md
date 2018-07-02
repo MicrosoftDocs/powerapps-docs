@@ -1,0 +1,1 @@
+# Sample: Access the Discovery service

@@ -1,0 +1,1 @@
+# Sample: Impersonate using the ActOnBehalfOf privilege

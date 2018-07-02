@@ -1,0 +1,1 @@
+# Sample: Use optimistic concurrency with update and delete operations

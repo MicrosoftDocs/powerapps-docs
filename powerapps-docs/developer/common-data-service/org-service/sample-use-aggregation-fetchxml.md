@@ -1,0 +1,1 @@
+# Sample: Use aggregation in FetchXML

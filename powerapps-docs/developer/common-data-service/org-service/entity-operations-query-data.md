@@ -11,3 +11,5 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Query data using the Organization service
+
+<!-- retrieve-data-queries-sdk-assemblies.md -->

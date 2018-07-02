@@ -1,0 +1,1 @@
+# Web service error codes

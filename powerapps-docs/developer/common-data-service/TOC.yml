@@ -215,6 +215,17 @@
       href: flow.md
     - name: Workflow Extensions
       href: workflow-extensions.md
+  - name: Use FetchXML to construct a query
+    href: use-fetchxml-construct-query.md
+    items:
+    - name: Use FetchXML aggregation
+      href: use-fetchxml-aggregation.md
+    - name: Fiscal date and older than datetime query operators in FetchXML
+      href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
+    - name: Use a left outer join in FetchXML to query for records "not in"
+      href: use-fetchxml-left-outer-join-query-records-not-in.md
+  - name: Query Hierarchical data
+    href: query-hierarchical-data.md
   - name: Security Model
     # See notes within this topic
     href: security-model.md 
@@ -543,6 +554,8 @@
     href: customization-solutions-file-schema.md
   - name: Solution component file reference (SolutionPackager) 
     href: solution-component-file-reference-solutionpackager.md
+  - name: FetchXML schema
+    href: fetchxml-schema.md
 # - name: On-premises options
 - name: TBD
   items:
