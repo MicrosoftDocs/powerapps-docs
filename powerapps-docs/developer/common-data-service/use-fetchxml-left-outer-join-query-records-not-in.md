@@ -1,0 +1,1 @@
+# Use a left outer join in FetchXML to query for records "not in"

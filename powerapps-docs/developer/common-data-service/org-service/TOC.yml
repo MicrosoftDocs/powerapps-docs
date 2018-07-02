@@ -31,13 +31,13 @@
   - name: Execute Multiple requests
     href: execute-multiple-requests.md
   - name: Query Data
-    href: query-data.md
+    href: entity-operations-query-data.md
   - name: Use OrganizationServiceContext
     href: organizationservicecontext.md
   - name: Detect Duplicate Data
     href: detect-duplicate-data.md
-  - name: Generate classes for late-bound programming
-    href: generate-late-bound-classes.md
+  - name: Generate classes for early-bound programming
+    href: generate-early-bound-classes.md
   - name: Work with metadata
     href: work-with-metadata.md
   - name: Import data
