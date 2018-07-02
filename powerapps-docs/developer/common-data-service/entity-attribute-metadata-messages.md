@@ -37,5 +37,5 @@ An entity attribute is a container for a piece of data in an entity. The term *a
 
 [Attribute metadata](entity-attribute-metadata.md)<br />
 [Create auto-number attribute](create-auto-number-attributes.md)<br />
-[Work with Attributes](org-service/work-attribute-metadata.md)<br />
-[Sample: Work with Attributes](org-service/sample-work-attribute-metadata.md)
+<!-- TODO: [Work with Attributes](org-service/work-attribute-metadata.md)<br />
+[Sample: Work with Attributes](org-service/sample-work-attribute-metadata.md) -->
