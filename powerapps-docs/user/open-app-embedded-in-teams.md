@@ -24,7 +24,7 @@ To follow this quickstart, you need an [Office 365 subscription](https://signup.
 
 ## Sign in to PowerApps
 
-Sign into PowerApps at [https://web.powerapps.com](https://web.powerapps.com).
+Sign into PowerApps at [https://web.powerapps.com]([https://web.powerapps.com).
 
 ## Add an app
 
