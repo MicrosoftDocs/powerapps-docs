@@ -39,7 +39,7 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 ## Learn more
 * Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
 * Work through the self-paced [Guided Learning courses](https://docs.microsoft.com/powerapps/guided-learning/).
-* Check out the [webinars](webinars-listing.md) that you can access on-demand to help you leverage the features and functions of PowerApps.
+* Check out the [upcoming webinars](webinars-listing.md#upcoming-webinars), which can help you leverage the features and functions of PowerApps. You can also access [past webinars](webinars-listing.md#past-webinars) on demand.
 
 ## Share your experience
 * Read and post in the [PowerApps Community](https://aka.ms/powerapps-community), where anyone who uses PowerApps can post a question and others can answer. Before you post a question, search the community to see whether your question has already been answered.
