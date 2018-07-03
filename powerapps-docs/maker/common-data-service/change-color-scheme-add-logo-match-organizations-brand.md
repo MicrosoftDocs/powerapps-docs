@@ -66,12 +66,19 @@ You can create a custom look and feel (a theme), for your app by making changes 
 ## Copy and alter the existing theme  
  The easiest and quickest way to create a new theme is to clone and alter an existing theme, then save it, preview and publish. 
  
-1. Go to **Settings > Customizations**. 
-2. Choose **Themes**, and then choose **Dynamics 365 Default Theme**. 
+1.	Sign in to [PowerApps](https://web.powerapps.com).
 
-The following screenshot shows the default theme setup.  
+2.	Select **Model-driven** (lower left). 
+
+3.	Select ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
+
+4. Under **Themes** select **All themes**. 
+
+5. Select **CRM Default Theme**. 
+
+The following screenshot shows a portion of the default theme setup.  
   
- ![Default theme colors](media/cust1-themes-default-theme.png "Default theme colors")  
+![Default theme](media/default-theme.png) 
   
  We cloned the default theme and changed the colors. The following screenshots show the new colors for navigation and highlighting. You can also choose a new logo for product.  
   
@@ -104,7 +111,7 @@ The following screenshot shows the default theme setup.
 ### Theme contrast  
  We recommend the following approach to providing contrast colors:  
   
--   Carefully choose the contrasting colors.  Dynamics 365 out-of-the-box default theme has the correct contrast ratios to ensure optimal usability. Use similar rations for your new themes.  
+-   Carefully choose the contrasting colors. The Common Data Service for Apps out-of-the-box default theme has the correct contrast ratios to ensure optimal usability. Use similar rations for your new themes.  
   
 -   For high contrast mode, use the default color settings.  
   

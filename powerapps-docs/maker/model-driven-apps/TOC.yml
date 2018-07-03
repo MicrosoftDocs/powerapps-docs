@@ -155,6 +155,8 @@
          href: specify-default-views.md 
        - name: Delete or deactivate a view
          href: remove-views.md  
+    - name: Configure interactive experience dashboards
+      href: configure-interactive-experience-dashboards.md
     - name: Work with apps
       items: 
        - name: Manage app properties
@@ -168,7 +170,11 @@
        - name: Set up the Notes control
          href: notes-control-legacy.md 
        - name: Quick view control properties
-         href: quick-view-control-properties-legacy.md                                                                    
+         href: quick-view-control-properties-legacy.md 
+       - name: Additional controls for Dynamics 365 for phones and tablets
+         href: additional-controls-for-dynamics-365-for-phones-and-tablets.md                                                                
+    - name: Translate localizable text
+      href: translate-localizable-text.md
     - name: Navigate to advanced app making areas
       href: advanced-navigation.md
     - name: Developer How-to guides

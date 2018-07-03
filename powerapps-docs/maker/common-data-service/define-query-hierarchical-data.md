@@ -83,9 +83,9 @@ The following examples illustrate scenarios for querying hierarchies:
   
 ![Query account's related opportunities](media/query-account-related-opportunities.png)  
   
-### See also 
+## See also 
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships](create-edit-1n-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
-[Visualize hierarchical data with model-driven apps](../model-driven-apps/visualize-hierarchical-data.md)<br />
+[Visualize hierarchical data with model-driven apps](visualize-hierarchical-data.md)<br />
 [Video: Hierarchical Security Modelling](http://www.youtube.com/watch?v=kx5So32DrCo&index=10&list=PLC3591A8FE4ADBE07)<br />
 [Video: Hierarchy Visualization](http://www.youtube.com/watch?v=_dGBE6icLNw&index=9&list=PLC3591A8FE4ADBE07)
