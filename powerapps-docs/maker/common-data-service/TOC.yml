@@ -79,6 +79,8 @@
           href: types-of-fields.md       
         - name: Set managed properties for fields
           href: set-managed-properties-for-field.md 
+        - name: Behavior and format of the Date and Time field
+          href: behavior-format-date-time-field.md          
       - name: Apply business logic
         items: 
         - name: Use Workflow processes to automate processes 
@@ -205,8 +207,6 @@
     items:
     - name: View or download developer resources
       href: view-download-developer-resources.md  
-    - name: Behavior and format of the Date and Time field
-      href: behavior-format-date-time-field.md
 # DO NOT CHANGE BELOW  
 - name: Common Data Model
   href: ../../common-data-model/index.md     
