@@ -1,13 +1,13 @@
 ---
 title: Quickstart to create an environment | Microsoft Docs
 description: In this quickstart, you learn how to create an environment
-author: skjerland
-manager: kfile
+author: jimholtz
+
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: sharik
+ms.author: jimh
 ---
 
 # Quickstart: Create an environment
@@ -33,8 +33,6 @@ Sign in to the Admin center at [https://admin.powerapps.com](https://admin.power
 
     ![File and Share](./media/create-environment/new-environment-dialog.png)
 3. Once the environment is created, you'll receive a confirmation message in the dialog box and you'll be prompted to create a database. Click or tap **Create database** to enable access to the Common Data Service.
-
-    **Note:** At this time, you can only create a database in the Azure Active Directory Tenant home region.
 
     ![File and Share](./media/create-environment/create-database-dialog.png)
 4. Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, click or tap **Create database**.

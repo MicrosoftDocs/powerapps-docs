@@ -1,14 +1,8 @@
 ---
 title: Overview of the Dynamics AX connection | Microsoft Docs
 description: See the available Dynamics AX functions, responses, and examples
-documentationcenter: ''
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 09/13/2016
