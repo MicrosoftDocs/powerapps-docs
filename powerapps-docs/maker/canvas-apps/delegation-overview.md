@@ -26,7 +26,7 @@ Where this becomes complicated, and the reason this article exists, is because n
 
 **Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need. Take heed of delegation warnings that flag places where delegation is not possible.  If you're working with small data sets (less than 500 records), you can use any data source and formula as processing can be done locally if the formula cannot be delegated. 
 
-> [!NOTE]
+> [!NOTE] 
 	> Delegation warnings were previously flagged in PowerApps as "blue dot" suggestions. Delegation suggestions were re-classified as warnings because you might get wrong results. If the data in your data source exceeds 500 records and there is a formula delegation issue, then there is a possibility that when PowerApps retrieves data, it will not get all of the data and your app may have wrong results. The delegation warnings are intended to help you manage your app so that it has correct results.
 
 ## Delegable data sources
@@ -122,7 +122,7 @@ To make it easier to know what is and is not being delegated, the authoring expe
 Delegation warnings are only shown on formulas that operate on delegable data sources.  If you don't see a warning and you believe your formula is not being properly delegated, check the type of data source against the list of <a href="#delegable-data-sources">delegable data sources</a> above.
 
 ## Examples
-In this example, we will use a SQL Server table that contains products, in particular fruits, names **[dbo].[Products]**.  On the New screen, PowerApps can create a basic three screen app connected to this data source:
+In this example, we will use a SQL Server table that contains products, in particular fruits, names **[dbo].[Fruit]**.  On the New screen, PowerApps can create a basic three screen app connected to this data source:
 
 ![Three-screen app](./media/delegation-overview/products-afd.png)
 
@@ -132,7 +132,7 @@ Let's type **"Apple"** into the search text-input control.  If we are very obser
 
 ![Search text-input control](./media/delegation-overview/products-apple.png)
 
-Because this is all delegable, even if the **[dbo].[Products]** table contains millions of records, we will still find them all, paging through them in the gallery as the user scrolls through the results.
+Because this is all delegable, even if the **[dbo].[Fruit]** table contains millions of records, we will still find them all, paging through them in the gallery as the user scrolls through the results.
 
 You will notice that we are seeing a match for "Apple", "Crab apples", and "Pineapple".  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
 
@@ -144,6 +144,6 @@ This appears to be working, only **"Apples"** is correctly showing now and **"Pi
 
 Although we are using **Filter** which is a delegable function, with SQL Server which is a delegable data source, the formula we used within **Filter** is not delegable.  **Mid** and **Len** cannot be delegated to any data source.
 
-But it worked, didn't it?  Well, kind of.  And that is why this is a warning and not a red wavy squiggle.  If the **[dbo].[Products]** table contains fewer than 500 records, then yes, this worked perfectly.   All records were brought to the device and the **Filter** was applied locally.  
+But it worked, didn't it?  Well, kind of.  And that is why this is a warning and not a red wavy squiggle.  If the **[dbo].[Fruit]** table contains fewer than 500 records, then yes, this worked perfectly.   All records were brought to the device and the **Filter** was applied locally.  
 
 If instead this table contains more than 500 records, then only fruit records that start with **"Apple"** *in the first 500 records of the table* will be displayed in the gallery.  If **"Apple, Fuji"** appears as a name in record 501 or 500,001, it won't be found.
