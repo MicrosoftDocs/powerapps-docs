@@ -24,7 +24,10 @@ The key to building efficient apps is to minimize the amount of data that needs 
 
 Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a PowerApps formula can be delegated to every data source.  The PowerApps language mimics Excel's formula language, designed with complete and instant access to a full workbook in memory, with a wide variety of numerical and text manipulation functions.  As a result, the PowerApps language is far richer than most data sources can support, including powerful database engines such as SQL Server.
 
-**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need. Take heed of [blue-dot suggestions](delegation-overview.md#blue-dot-suggestions) that flag places where delegation is not possible.  If you're working with small data sets (less than 500 records), you can use any data source and formula as processing can be done locally if the formula cannot be delegated. 
+**Working with large data sets requires using data sources and formulas that can be delegated.**  It is the only way to keep your app performing well and ensure users can access all the information they need. Take heed of delegation warnings that flag places where delegation is not possible.  If you're working with small data sets (less than 500 records), you can use any data source and formula as processing can be done locally if the formula cannot be delegated. 
+
+> [!NOTE]
+	> Delegation warnings were previously flagged in PowerApps as "blue dot" suggestions. Delegation suggestions were re-classified as warnings because you might get wrong results. If the data in your data source exceeds 500 records and there is a formula delegation issue, then there is a possibility that when PowerApps retrieves data, it will not get all of the data and your app may have wrong results. The delegation warnings are intended to help you manage your app so that it has correct results.
 
 ## Delegable data sources
 See the [delegation list](delegation-list.md) for the full list of which data sources support delegation and to what extent.
@@ -34,7 +37,7 @@ We are continuing to add delegation support to existing data sources, as well as
 Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full PowerApps language can be applied.
 
 ## Delegable functions
-The next step is to use only those formulas that can be delegated. Included here are the formula elements that could be delegated.  However, every data source is different, and not all of them support all of these elements. Check for blue-dot suggestions in your particular formula.
+The next step is to use only those formulas that can be delegated. Included here are the formula elements that could be delegated.  However, every data source is different, and not all of them support all of these elements. Check for delegation warnings in your particular formula.
 
 These lists will change over time. We're working to support more functions and operators with delegation.
 
@@ -131,13 +134,15 @@ Let's type **"Apple"** into the search text-input control.  If we are very obser
 
 Because this is all delegable, even if the **[dbo].[Products]** table contains millions of records, we will still find them all, paging through them in the gallery as the user scrolls through the results.
 
-You will notice that we are seeing a match for both "Apple" and "Pineapple".  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
+You will notice that we are seeing a match for "Apple", "Crab apples", and "Pineapple".  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
 
-![Remove SortByColumns call](./media/delegation-overview/products-apple-yellowwarning.png)
+![Remove SortByColumns call]
+(./media/delegation-overview/products-apple-delegationwarning.png)
 
 This appears to be working, only **"Apples"** is correctly showing now and **"Pineapple"** is not.  However, there is a warning showing next to the gallery and there is a blue wavy line (which indicates a warning) under a portion of the formula.  There is even a warning that appears in the screen thumbnail.  If you hover over the warning next to the gallery, you will see the following:
 
-![Hover over delegation warning](./media/delegation-overview/products-apple-delegationwarning.png)
+![Hover over delegation warning]
+(./media/delegation-overview/products-apple-yellowwarning.png)
 
 Although we are using **Filter** which is a delegable function, with SQL Server which is a delegable data source, the formula we used within **Filter** is not delegable.  **Mid** and **Len** cannot be delegated to any data source.
 
