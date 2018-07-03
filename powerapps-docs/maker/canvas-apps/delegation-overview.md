@@ -134,11 +134,11 @@ Let's type **"Apple"** into the search text-input control.  If we are very obser
 
 Because this is all delegable, even if the **[dbo].[Fruit]** table contains millions of records, we will still find them all, paging through them in the gallery as the user scrolls through the results.
 
-You will notice that we are seeing a match for "Apple", "Crab apples", and "Pineapple".  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
+You will notice that we are seeing a match for **"Apple"**, **"Crab apples"**, and **"Pineapple"**.  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
 
 ![Remove SortByColumns call](./media/delegation-overview/products-apple-delegationwarning.png)
 
-This appears to be working, only **"Apples"** is correctly showing now and **"Pineapple"** is not.  However, there is a warning showing next to the gallery and there is a blue wavy line (which indicates a warning) under a portion of the formula.  There is even a warning that appears in the screen thumbnail.  If you hover over the warning next to the gallery, you will see the following:
+This appears to be working, only **"Apples"** is correctly showing now and **"Crab apples"** and **"Pineapple"** are not.  However, there is a warning showing next to the gallery and there is a blue wavy line (which indicates a warning) under a portion of the formula.  There is even a warning that appears in the screen thumbnail.  If you hover over the warning next to the gallery, you will see the following:
 
 ![Hover over delegation warning](./media/delegation-overview/products-apple-yellowwarning.png)
 
