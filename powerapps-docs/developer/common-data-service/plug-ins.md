@@ -25,9 +25,12 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/debug
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/analyze-plugin-performance
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-create-basic-plugin
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-web-access-sandboxed-plugin
+
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/plug-in-entities
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/plug-in-registration-entities
 
 Notes:
 https://microsoft-my.sharepoint.com/:w:/p/jdaly/ETkwQsIe2VtCvxAyqTPKfTIBKDrLhcEjAm4JaJPfakQ8ww?e=2pxLqD -->
+
+[Sample: Web access from a sandboxed plug-in](sample-web-access-plugin.md)
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-web-access-sandboxed-plugin -->
