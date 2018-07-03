@@ -147,7 +147,7 @@ You can also build a formula that calculates data for an individual record, take
 
 3. In the **File** menu, select **Collections.**
 
-![](media/working-with-tables/selected-collection.png)
+    ![](media/working-with-tables/selected-collection.png)
 
 This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **SampleText** column, which matches the **SampleText** column in the original table, and a **Subtitle1** column, which represents the label that shows the data from that column. Select the table icon in the **Subtitle1** column to drill into that data.
 
