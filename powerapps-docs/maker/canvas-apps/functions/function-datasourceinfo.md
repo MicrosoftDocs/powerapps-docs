@@ -1,14 +1,9 @@
 ---
 title: DataSourceInfo function | Microsoft Docs
 description: Reference information, including syntax and examples, for the DataSourceInfo function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 11/11/2015

@@ -1,13 +1,9 @@
 ---
 title: Common Data Model overview | Microsoft Docs
 description: Learn how the common data model connects the Common Data Service for Apps with the Common Data Service for Analytics.
-documentationcenter: na
 author: RobertBruckner
-manager: kfile
-editor: ''
-tags: ''
+
 ms.service: powerapps
-ms.devlang: na
 ms.topic: article
 ms.date: 03/14/2018
 ms.author: jdaly
