@@ -92,7 +92,7 @@ Let's walk through some simple examples.
     > Some controls have been rearranged and enlarged for illustration purposes.
 
 2. Instead of setting the **[Items](controls/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:<br>
-    **Sort(CustomGallerySample, SampleHeading, Descending))**
+    **Sort(CustomGallerySample, SampleHeading, Descending)**
 
     This formula incorporates the **[Sort](functions/function-sort.md)** function, which takes the name of a table as its first argument and the name of a column in that table as its second argument. The function also supports an optional third argument, which stipulates that you want to sort the data in descending order.
 
