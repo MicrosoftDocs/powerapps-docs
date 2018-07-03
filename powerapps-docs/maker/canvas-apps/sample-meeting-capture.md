@@ -27,7 +27,7 @@ Meeting Capture is available in the Tablet form factor.
 
 ### Tablet
 
-![Meeting Capture](media/sample-meeting-capture/Meeting Capture GIF.gif)
+![Meeting Capture](media/sample-meeting-capture/MeetingCapture.png)
 
 ## Show me!
 
