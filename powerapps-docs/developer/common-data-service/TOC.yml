@@ -3,8 +3,10 @@
   href: overview.md
 - name: Quick Starts
   items:
-  - name: Simple Web API quick-start sample (C#)
+  - name: Web API quick-start sample (C#)
     href: webapi/simple-web-api-quick-start-sample-csharp.md
+  - name: Organization service quick-start sample (C#)
+    href: org-service/quick-start-org-service-console-app.md
 - name: Tutorials
   items:
   - name: Create and register a plug-in
@@ -17,7 +19,7 @@
     href: walkthrough-register-app-azure-active-directory.md
   - name: Register an Azure-aware plug-in using the Plug-in Registration Tool
     href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-  - name: Registering and configuring a SPA application with adal.js
+  - name: Register and configuring a SPA application with adal.js
     href: walkthrough-registering-configuring-simplespa-application-adal-js.md
   - name: Update a service endpoint imported from a solution
     href: walkthrough-update-service-endpoint-imported-solution.md                           
@@ -101,8 +103,6 @@
     href: sample-query-working-hours-multiple-users.md
   - name: Query the working hours of a user
     href: sample-query-working-hours-user.md
-  - name: Quick start
-    href: sample-quick-start.md
   - name: Release a queue item to the queue
     href: sample-release-queue-item-queue-early-bound.md
   - name: REST listener

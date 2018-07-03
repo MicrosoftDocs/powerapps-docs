@@ -10,4 +10,11 @@ author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Quick Start: Create a console app using the organization service
+# Quick Start: Organization service sample (C#)
+
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-quick-start
+
+ - put on PowerApps-samples Github
+ - re-write to use new style (without ServerConnection classes)
+ -  -->

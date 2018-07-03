@@ -2,7 +2,7 @@
   href: overview.md
 - name: Quick Starts
   items:
-  - name: Org service quick start one
+  - name: Create a console app
     href: quick-start-org-service-console-app.md
 # - name: Tutorials
 #   items:
