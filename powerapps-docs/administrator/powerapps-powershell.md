@@ -91,7 +91,8 @@ To perform the administration operations in the admin cmdlets, you'll need the f
 | Read, update, and delete environment permissions <br><br> *These cmdlets only work for environments that do not have a Common Data Service (CDS) for Apps database.* | Get-AdminEnvironmentRoleAssignment <br> Set-AdminEnvironmentRoleAssignment <br> Remove-AdminEnvironmentRoleAssignment
 | Read and remove canvas apps | Get-AdminApp <br> Remove-AdminApp
 | Read, update, and delete canvas app permissions | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
-| Read, update, and delete flows | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
+| Read, update, and delete flows | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow
+| Read, update, and delete flow permissions | Get-AdminFlowOwnerRole <br> Set-AdminFlowOwnerRole <br> Remove-AdminFlowOwnerRole
 | Read and delete connections | Get-AdminConnection <br> Remove-AdminConnection
 | Read, update, and delete connection permissions | Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br> Remove-AdminConnectionRoleAssignment
 | Read and delete custom connectors | Get-AdminConnector <br> Remove-AdminConnector
