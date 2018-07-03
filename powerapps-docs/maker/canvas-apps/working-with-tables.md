@@ -149,14 +149,14 @@ You can also build a formula that calculates data for an individual record, take
 
 ![](media/working-with-tables/selected-collection.png)
 
-This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **SampleHeading** column, which matches the **SampleHeading** column in the original table, and a **Title1** column, which represents the label that shows the data from that column. Select the table icon in the **Title1** column to drill into that data.
+This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **SampleText** column, which matches the **SampleText** column in the original table, and a **Subtitle1** column, which represents the label that shows the data from that column. Select the table icon in the **Subtitle1** column to drill into that data.
 
 > [!NOTE]
-> The **Title1** column might be named **Title2** or similar if you've added elements other than those that this topic specifies.
+> The **Subtitle1** column might be named **Subtitle2** or similar if you've added elements other than those that this topic specifies.
 
 Now that you have the selected record, you can extract individual fields from it with the **.** operator.
 
-1. Add a **[Label](controls/control-label.md)** control, and then move it under the gallery and the button.
+1. Add a **[Label](controls/control-text-box.md)** control, and then move it under the gallery and the button.
 
 1. Set the label's **[Text](controls/properties-core.md)** property to this expression:<br>
     **"Selected: " & Gallery1.Selected.SampleHeading**
