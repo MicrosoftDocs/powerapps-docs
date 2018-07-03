@@ -152,7 +152,7 @@ You can also build a formula that calculates data for an individual record, take
 
 ![](media/working-with-tables/selected-collection.png)
 
-This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body1** column, which represents the label that shows the data from that column. Select the table icon in the **Body1** column to drill into that data.
+This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body2** column, which represents the label that shows the data from that column. Select the table icon in the **Body2** column to drill into that data.
 
 Now that you have the selected record, you can extract individual fields from it with the **.** operator.
 
