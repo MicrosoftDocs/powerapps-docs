@@ -133,11 +133,11 @@ Because this is all delegable, even if the **[dbo].[Products]** table contains m
 
 You will notice that we are seeing a match for both "Apple" and "Pineapple".  The **Search** function will find a search term anywhere in a text column.  If instead, let's say we wanted to only find the search term at the beginning of the fruit's name.  We can use another delegable function, **Filter**, with a more complicated search term (for simplicity we'll remove the **SortByColumns** call):
 
-![Remove SortByColumns call](./media/delegation-overview/products-apple-bluedot.png)
+![Remove SortByColumns call](./media/delegation-overview/products-apple-yellowwarning.png)
 
 This appears to be working, only **"Apples"** is correctly showing now and **"Pineapple"** is not.  However, there is a warning showing next to the gallery and there is a blue wavy line (which indicates a warning) under a portion of the formula.  There is even a warning that appears in the screen thumbnail.  If you hover over the warning next to the gallery, you will see the following:
 
-![Hover over blue dot](./media/delegation-overview/products-apple-bluepopup.png)
+![Hover over delegation warning](./media/delegation-overview/products-apple-delegationwarning.png)
 
 Although we are using **Filter** which is a delegable function, with SQL Server which is a delegable data source, the formula we used within **Filter** is not delegable.  **Mid** and **Len** cannot be delegated to any data source.
 
