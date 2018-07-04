@@ -38,7 +38,7 @@ First go to [Microsoft CRM Web API Functions and Actions Sample (C#)](http://go.
 |----------|--------------------------|  
 |Program.cs|Contains the primary source code for this sample.|  
 |App.config|The application configuration file, which contains placeholder Common Data Service for Apps server connection information.|  
-|Authentication.cs<br />Configuration.cs<br />Exceptions.cs|Located in the folder **Web API Helper Code**, these files comprise the supplemental library detailed in [Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md).|  
+|Authentication.cs<br />Configuration.cs<br />Exceptions.cs|Located in the folder **Web API Helper Code**, these files comprise the supplemental library detailed in [Use the Common Data Service for Apps Web API Helper Library (C#)](../use-microsoft-dynamics-365-web-api-helper-library-csharp.md).|  
 |FunctionsAndActions.sln <br />FunctionsAndActions.csproj <br />Packages.config <br />AssemblyInfo.cs|The standard Visual Studio 2015 solution, project, NuGet package configuration, and assembly information files for this sample.|  
 |WebAPIFunctionsandActions_1_0_0_0_managed.zip|A custom managed solution containing two custom actions called by this sample.|  
   
