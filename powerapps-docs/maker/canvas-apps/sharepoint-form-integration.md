@@ -62,7 +62,7 @@ The default generated form consists of the following controls and their correspo
 
     * **OnCancel** - Resets the changes to **SharePointForm1**. SharePoint always hides the form when a user clicks or taps **Cancel** in SharePoint.
 
-        **SubmitForm(SharePointForm1)**
+        **ResetForm(SharePointForm1)**
 
 These defaults ensure that the form works when running within SharePoint - they change the PowerApps form mode as the user interacts with it in SharePoint, and they ensure that the changes are submitted to SharePoint.
 
