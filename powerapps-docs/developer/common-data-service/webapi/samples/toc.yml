@@ -6,7 +6,7 @@
     - name: Query Data
       href: query-data-csharp.md
     - name: Conditional Operations
-      href: onditional-operations-csharp.md
+      href: conditional-operations-csharp.md
     - name: Functions and Actions
       href: functions-actions-csharp.md
 - name: Client-side JavaScript Samples
@@ -17,6 +17,6 @@
   - name: Query Data
     href: query-data-client-side-javascript.md
   - name: Conditional Operations
-    href: onditional-operations-client-side-javascript.md
+    href: conditional-operations-client-side-javascript.md
   - name: Functions and Actions
-    href: unctions-actions-client-side-javascript.md
+    href: functions-actions-client-side-javascript.md
