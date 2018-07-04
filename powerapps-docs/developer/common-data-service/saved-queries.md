@@ -10,6 +10,18 @@ author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# UserQuery (saved view) entity
+# Saved Queries
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/userquery-saved-view-entity -->
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/userquery-saved-view-entity 
+
+This topic needs to be adapted to describe the concept of saved queries, both user-queries and systemviews
+
+It should cover using these messages 
+
+ExecuteByIdUserQuery 
+ExecuteByIdSavedQuery
+
+And support the Web API content here:
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/retrieve-and-execute-predefined-queries
+
+-->

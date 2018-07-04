@@ -17,6 +17,6 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 This topic also exists for CDS. This topic should focus on MDA issues or be removed altogether.
 If kept, link to the CDS version
 
-[UserQuery (saved view) entity](../common-data-service/userquery-saved-view-entity.md)
+[UserQuery (saved view) entity](../common-data-service/saved-queries.md)
 
 -->

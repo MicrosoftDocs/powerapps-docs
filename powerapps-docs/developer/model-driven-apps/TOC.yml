@@ -32,7 +32,7 @@
     href: customize-entity-views.md
     items:
     - name: UserQuery (saved view) entity
-      href: userquery-saved-view-entity.md
+      href: saved-queries.md
   - name: Customize visualizations and dashboards
     href: customize-visualizations-dashboards.md
     items:
