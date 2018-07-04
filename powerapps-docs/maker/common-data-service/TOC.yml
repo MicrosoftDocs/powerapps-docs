@@ -52,9 +52,9 @@
         - name: Code samples
           items:
           - name: Web API
-            href: ./developer/common-data-service/webapi/samples/toc.yml
+            href: ../../developer/common-data-service/webapi/samples/toc.yml
           - name: Organization Service
-            href: ./developer/common-data-service/org-service/samples/toc.yml
+            href: ../../developer/common-data-service/org-service/samples/toc.yml
   - name: Concepts
     items:
       - name: App building practices
