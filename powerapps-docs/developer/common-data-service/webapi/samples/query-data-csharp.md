@@ -883,7 +883,7 @@ namespace Microsoft.Crm.Sdk.Samples
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Query Data Sample](web-api-query-data-sample.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
-[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)<br />
-[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)
+[Web API Query Data Sample (Client-side JavaScript)](query-data-client-side-javascript.md)<br />
+[Web API Basic Operations Sample (C#)](basic-operations-csharp.md)<br />
+[Web API Conditional Operations Sample (C#)](conditional-operations-csharp.md)<br />
+[Web API Functions and Actions Sample (C#)](functions-actions-csharp.md)
