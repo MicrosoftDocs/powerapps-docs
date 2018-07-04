@@ -18,7 +18,7 @@ manager: "amyla"
 ---
 # Perform operations using the Web API
 
-The Web API is new for CDS for Apps. It provides a modern, RESTful web service you can use to interact with data in Common Data Service for Apps using a wide variety of platforms, programming languages and devices.
+The Web API provides a modern, RESTful web service you can use to interact with data in Common Data Service for Apps using a wide variety of platforms, programming languages and devices.
 
 ## In this section
 
