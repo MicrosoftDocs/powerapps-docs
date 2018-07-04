@@ -75,6 +75,8 @@
           href: create-edit-virtual-entities.md
         - name: Virtual entity OData v4 data provider
           href: virtual-entity-odata-provider-requirements.md 
+        - name: Entity metadata
+          href: ../../developer/common-data-service/entity-metadata.md
       - name: Work with relationships
         items:  
         - name: Create and edit relationships
@@ -83,12 +85,16 @@
           href: create-edit-1n-relationships-portal.md 
         - name: Create many-to-many entity relationships
           href: create-edit-nn-relationships.md
+        - name: Relationship metadata
+          href: ../../developer/common-data-service/entity-relationship-metadata.md
       - name: Work with fields
         items: 
         - name: Types of fields
           href: types-of-fields.md       
         - name: Set managed properties for fields
-          href: set-managed-properties-for-field.md 
+          href: set-managed-properties-for-field.md
+        - name: Attribute metadata
+          href: ../../developer/common-data-service/entity-attribute-metadata.md
       - name: Apply business logic
         items: 
         - name: Use Workflow processes to automate processes 
@@ -99,6 +105,8 @@
           href: actions.md
         - name: Best practices for workflow processes
           href: best-practices-workflow-processes.md
+        - name: Apply business logic with code
+          href: ../../developer/common-data-service/apply-business-logic-with-code.md
       - name: Work with solutions
         items:     
         - name: Solutions overview
@@ -108,7 +116,9 @@
         - name: Use the default solution to customize
           href: use-solutions-for-your-customizations.md
         - name: Set managed properties overview
-          href: set-managed-properties.md                       
+          href: set-managed-properties.md
+        - name: Solutions for developers
+          href: ../../developer/common-data-service/introduction-solutions.md
   - name: How-to guides
     items:
     - name: Work with entities
