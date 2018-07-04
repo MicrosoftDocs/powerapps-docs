@@ -21,7 +21,7 @@ manager: "amyla"
 This sample demonstrates how to perform conditional operations using Common Data Service for Apps  Web API using client-side JavaScript.  
   
 > [!NOTE]
->  This sample implements the operations detailed in the [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)  
+>  This sample implements the operations detailed in the [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
 
 <a name="bkmk_prerequisites"></a>
  
@@ -37,7 +37,7 @@ This sample demonstrates how to perform conditional operations using Common Data
  
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824046) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your CDS for Apps organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824046) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your CDS for Apps organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_sampleCode"></a>
 
@@ -436,12 +436,12 @@ Sdk.startSample = function () {
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](overview.md)<br />
-[Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
-[Web API Samples](web-api-samples.md)<br />
-[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)<br />
-[Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)<br />
-[Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
-[Web API Basic Operations Sample (Client-side JavaScript)](sample-web-api-basic-operations-client-side-javascript.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)<br />
-[Web API Functions and Actions Sample (Client-side JavaScript)](sample-web-api-functions-actions-client-side-javascript.md)
+[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Perform conditional operations using the Web API](../perform-conditional-operations-using-web-api.md)<br />
+[Web API Samples](../web-api-samples.md)<br />
+[Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)<br />
+[Web API Conditional Operations Sample (C#)](conditional-operations-csharp.md)<br />
+[Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)<br />
+[Web API Basic Operations Sample (Client-side JavaScript)](basic-operations-client-side-javascript.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](query-data-client-side-javascript.md)<br />
+[Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)

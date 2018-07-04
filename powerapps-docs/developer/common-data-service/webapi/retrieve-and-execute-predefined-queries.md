@@ -31,7 +31,7 @@ Common Data Service for Apps allows you to define, save, and execute two types o
 |----------------|-----------------|
 TODO:
 |**Saved Query**|System-defined views for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />. More information: [Customize entity views](../../model-driven-apps/customize-entity-views.md)| 
-|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information:[UserQuery (saved view) entity](../userquery-saved-view-entity.md)|
+|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information:[UserQuery (saved view) entity](../saved-queries.md)|
 
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
@@ -219,8 +219,8 @@ OData-Version: 4.0
 
 ## See also
 
-[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)<br />
+[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

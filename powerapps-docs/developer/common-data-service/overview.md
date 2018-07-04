@@ -62,9 +62,9 @@ If you are going to distribute the extensions you create or any customizations t
 
 When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are creating a client application. A simple console client application is a good way to familiarize yourself with the CDS for Apps APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
 - [Authentication](authentication.md)
-- [Create a client application](create-client-application.md)
+- [Create Client applications](connect-cds.md)
 - [Quick Start: Create a console app using the organization service](org-service/quick-start-org-service-console-app.md)
-- [Simple Web API quick-start sample (C#)](webapi/simple-web-api-quick-start-sample-csharp.md)
+- [Simple Web API quick-start sample (C#)](webapi/samples/quick-start-csharp.md)
 - [Sample: Quick start for XRM Tooling API](xrm-tooling/sample-quick-start-xrm-tooling-api.md)
 
 ### Web services

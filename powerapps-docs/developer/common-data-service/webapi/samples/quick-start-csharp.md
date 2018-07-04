@@ -45,7 +45,7 @@ Authentication is required before a client application can access any Common Dat
 Common Data Service for Apps environments require the registration of client application beforehand,  and then uses a multi-step OAuth authentication process. The  registration process for Common Data Service for Apps is described in the  article [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).    -->
 
 <!-- TODO:
-Each subsequent Web API request must be authenticated with OAuth. Luckily, much of the complexity of OAuth authentication can be simplified through the use of Active Directory Authentication Libraries ([ADAL](/azure/active-directory/active-directory-authentication-libraries)) for .NET clients, which is added to the sample as the NuGet package [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/). OAuth authorization is further encapsulated in this sample with the inclusion of the `OAuthMessageHandler` class, which adds the required OAuth authorization header to message requests. In future samples, supporting authentication functionality is separated into the [Web API Helper Library](use-microsoft-dynamics-365-web-api-helper-library-csharp.md).    -->
+Each subsequent Web API request must be authenticated with OAuth. Luckily, much of the complexity of OAuth authentication can be simplified through the use of Active Directory Authentication Libraries ([ADAL](/azure/active-directory/active-directory-authentication-libraries)) for .NET clients, which is added to the sample as the NuGet package [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/). OAuth authorization is further encapsulated in this sample with the inclusion of the `OAuthMessageHandler` class, which adds the required OAuth authorization header to message requests. In future samples, supporting authentication functionality is separated into the [Web API Helper Library](../use-microsoft-dynamics-365-web-api-helper-library-csharp.md).    -->
   
  The Common Data Service for Apps Web API is a REST API based on the [OData specification](http://www.odata.org/documentation/), so it supports standardized HTTP requests against entities, and calling functions and actions. This sample demonstrates invoking the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> function with a GET request, then using the information provided by this function in the resulting HTTP response. Several standard libraries are leveraged by this sample to assist in this invocation:  
   
@@ -235,6 +235,6 @@ namespace Microsoft.Crm.Sdk.Samples
 ### See also
 
 [Web API Reference](/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9)<br />
-[Web API Samples](web-api-samples.md)<br />
-[Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)<br />
+[Web API Samples](../web-api-samples.md)<br />
+[Use the Common Data Service for Apps Web API Helper Library (C#)](../use-microsoft-dynamics-365-web-api-helper-library-csharp.md)<br />
 

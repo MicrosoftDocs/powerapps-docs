@@ -32,5 +32,6 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/plug-
 Notes:
 https://microsoft-my.sharepoint.com/:w:/p/jdaly/ETkwQsIe2VtCvxAyqTPKfTIBKDrLhcEjAm4JaJPfakQ8ww?e=2pxLqD -->
 
-[Sample: Web access from a sandboxed plug-in](sample-web-access-plugin.md)
+[Sample: Web access from a sandboxed plug-in](org-service/samples/web-access-plugin.md)
+
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-web-access-sandboxed-plugin -->

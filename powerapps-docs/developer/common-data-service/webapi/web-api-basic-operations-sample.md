@@ -20,7 +20,7 @@ manager: "amyla"
 
 This group of samples demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Common Data Service for Apps Web API.  
   
--   [Web API Basic Operations Sample (C#)](sample-web-api-basic-operations-csharp.md)  
+-   [Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)  
   
  This topic describes a common set of operations implemented by each sample in this group. This topic describes the HTTP requests and responses and text output that each sample in this group will perform without the language specific details. See the language specific descriptions and the individual samples for details about how these operations are performed.  
   
@@ -855,5 +855,5 @@ This section demonstrates how to delete entity instances. The corresponding mess
 [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
 [Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
 [Associate and disassociate entities using the Web API](associate-disassociate-entities-using-web-api.md)<br />
-[Web API Basic Operations Sample (C#)](sample-web-api-basic-operations-csharp.md)<br />
+[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)<br />
 

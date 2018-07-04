@@ -195,8 +195,8 @@ GET [Organization URI]/api/data/v9.0/accounts?$select=name,accountnumber&$filter
   
 ### See also
 
-[Web API Functions and Actions Sample (C#)](sample-web-api-functions-actions-csharp.md)<br />
-[Web API Functions and Actions Sample (Client-side JavaScript)](sample-web-api-functions-actions-client-side-javascript.md)<br />
+[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)<br />
+[Web API Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

@@ -50,10 +50,10 @@ The following table lists the samples implemented in C#.  Each sample is describ
   
 |Sample|Sample Group|Description|  
 |------------|------------------|-----------------|  
-|[Web API Basic Operations Sample (C#)](sample-web-api-basic-operations-csharp.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Common Data Service for Apps entity records.|  
-|[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Common Data Service for Apps query functions. Includes examples of working with pre-defined queries and using FetchXML to perform queries.|  
-|[Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations you specify with ETag criteria.|  
-|[Web API Functions and Actions Sample (C#)](sample-web-api-functions-actions-csharp.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|Demonstrates how to use bound and unbound functions and actions, including custom actions.|  
+|[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Common Data Service for Apps entity records.|  
+|[Web API Query Data Sample (C#)](samples/query-data-csharp.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Common Data Service for Apps query functions. Includes examples of working with pre-defined queries and using FetchXML to perform queries.|  
+|[Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations you specify with ETag criteria.|  
+|[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|Demonstrates how to use bound and unbound functions and actions, including custom actions.|  
   
 <a name="bkmk_howDownloadRun"></a>
 
@@ -224,7 +224,7 @@ httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(
 
 #### CreateRequiredRecords method
  
-This method creates and initializes entity records required by the sample, only when these operations are not of primary interest in the sample.  For example, the [Web API Basic Operations Sample (C#)](sample-web-api-basic-operations-csharp.md) does not contain this method because record creation is a primary consideration of the sample.  
+This method creates and initializes entity records required by the sample, only when these operations are not of primary interest in the sample.  For example, the [Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md) does not contain this method because record creation is a primary consideration of the sample.  
   
 <a name="bkmk_runAsync"></a>
 
@@ -249,7 +249,7 @@ This companion method optionally deletes sample records and other Common Data Se
 [Use the Common Data Service for Apps Web API](overview.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
-[Web API Basic Operations Sample (C#)](sample-web-api-basic-operations-csharp.md)<br />
-[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)<br />
-[Web API Functions and Actions Sample (C#)](sample-web-api-functions-actions-csharp.md)
+[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)<br />
+[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
+[Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)<br />
+[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)
