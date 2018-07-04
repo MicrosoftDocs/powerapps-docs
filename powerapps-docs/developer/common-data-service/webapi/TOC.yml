@@ -68,7 +68,7 @@
     href: create-update-entity-relationships-using-web-api.md
 - name: Discover the URL for your organization
   href: discover-url-organization-web-api.md
-- name: Samples
+- name: Sample Templates
   href: web-api-samples.md
   items:
   - name: Basic Operations
@@ -79,16 +79,6 @@
     href: web-api-conditional-operations-sample.md
   - name: Functions and Actions
     href: web-api-functions-actions-sample.md
-- name: (C#) Samples
-  href: web-api-samples-csharp.md
-  items:
-    - name: Basic Operations
-      href: sample-web-api-basic-operations-csharp.md
-    - name: Query Data
-      href: sample-web-api-query-data-csharp.md
-    - name: Conditional Operations
-      href: sample-web-api-conditional-operations-csharp.md
-    - name: Functions and Actions
-      href: sample-web-api-functions-actions-csharp.md
-- name: Client-side JavaScript Samples
-  href: web-api-samples-client-side-javascript.md
+- name: Samples
+  href: samples/toc.yml
+

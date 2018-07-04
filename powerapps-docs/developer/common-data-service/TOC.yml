@@ -26,27 +26,7 @@
 - name: Samples
   items:
   - name: Web API
-    items:
-    - name: (C#)
-      items: 
-      - name: Basic Operations
-        href: webapi/sample-web-api-basic-operations-csharp.md
-      - name: Query Data
-        href: webapi/sample-web-api-query-data-csharp.md
-      - name: Conditional Operations
-        href: webapi/sample-web-api-conditional-operations-csharp.md
-      - name: Functions and Actions
-        href: webapi/sample-web-api-functions-actions-csharp.md
-    - name: client-side JavaScript
-      items: 
-      - name: Basic Operations
-        href: webapi/sample-web-api-basic-operations-client-side-javascript.md
-      - name: Query Data
-        href: webapi/sample-web-api-query-data-client-side-javascript.md
-      - name: Conditional Operations
-        href: webapi/sample-web-api-conditional-operations-client-side-javascript.md
-      - name: Functions and Actions
-        href: webapi/sample-web-api-functions-actions-client-side-javascript.md
+    href: webapi/samples/toc.yml
   - name: Organization Service
     href: org-service/samples/toc.yml
 - name: Concepts
