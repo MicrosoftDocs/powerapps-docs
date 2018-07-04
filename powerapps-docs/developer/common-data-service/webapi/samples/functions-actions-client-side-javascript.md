@@ -706,9 +706,9 @@ Sdk.createAccountWithOpportunityToWin = function () {
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](overview.md)<br />
-[Use Web API functions](use-web-api-functions.md)<br />
-[Use Web API actions](use-web-api-actions.md)<br />
+[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Use Web API functions](../use-web-api-functions.md)<br />
+[Use Web API actions](../use-web-api-actions.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md)<br />
 [Web API Functions and Actions Sample (C#)](functions-actions-csharp.md)<br />

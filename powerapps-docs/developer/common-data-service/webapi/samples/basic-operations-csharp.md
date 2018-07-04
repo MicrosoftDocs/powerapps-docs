@@ -879,11 +879,11 @@ namespace Microsoft.Crm.Sdk.Samples
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](overview.md)<br />
-[Create an entity using the Web API](create-entity-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
+[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Create an entity using the Web API](../create-entity-web-api.md)<br />
+[Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />
+[Retrieve an entity using the Web API](../retrieve-entity-using-web-api.md)<br />
+[Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)
 [Web API Query Data Sample (C#)](query-data-csharp.md)<br />
