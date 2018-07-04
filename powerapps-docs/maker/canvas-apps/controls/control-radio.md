@@ -16,19 +16,22 @@ ms.author: fikaradz
 
 ---
 # Radio control in PowerApps
-A list that shows all options but the user can select only one at a time.
+An input control that shows multiple options allowing the user to select only one.
 
 ## Description
-A **Radio** control, with which users have decades of experience, is best used with only a few options that are mutually exclusive.
+A **Radio** control, a standard HTML input control, is best used with only a few options that are mutually exclusive.
+
+The control can have horizontal or vertical layout.
 
 ## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
+**Layout** – Whether the radio options are laid out vertically or horizontally.
 
 **[Value](properties-core.md)** – The value of an input control.
+
 
 ## All properties
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
@@ -119,14 +122,14 @@ A **Radio** control, with which users have decades of experience, is best used w
 ## Example
 1. Add a **Radio** control, name it **Pricing**, and set its **[Items](properties-core.md)** property to this formula:
    <br>**["Standard", "Premium"]**
-   
+
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Add a **[Label](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](properties-core.md)** property of the **[Label](control-text-box.md)** control to this formula:
    <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
-   
+
     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, and then choose either option in the **Radio** control.
-   
+
     The **[Label](control-text-box.md)** control shows the appropriate text for your choice.
 4. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
 5. To return to the default workspace, press Esc.
@@ -147,4 +150,3 @@ This is in addition to the [standard color contrast requirements](../accessible-
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
- 
