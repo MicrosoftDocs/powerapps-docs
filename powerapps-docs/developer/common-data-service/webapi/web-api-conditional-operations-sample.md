@@ -19,7 +19,7 @@ ms.author: "jdaly"
 
 This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Common Data Service for Apps server and/or currently maintained by the client. For more information, see [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md). This sample is implemented as a separate project for the following languages:  
   
- [Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)  
+ [Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)  
  
  The Common Data Service for Apps Web API follows the conventions of the [OData v4.0](http://www.odata.org/documentation/) protocol, which uses [ETags](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752236) to implement resource version control. Web API conditional operations depend upon this versioning  mechanism.  
   
@@ -485,4 +485,4 @@ This group of samples demonstrate how to perform operations that are conditional
 
 [Use the Common Data Service for Apps Web API](overview.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
-[Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)   
+[Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)   

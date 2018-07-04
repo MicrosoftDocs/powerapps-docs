@@ -219,8 +219,8 @@ OData-Version: 4.0
 
 ## See also
 
-[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)<br />
+[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

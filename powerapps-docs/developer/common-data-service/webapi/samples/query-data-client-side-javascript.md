@@ -756,8 +756,8 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Query Data Sample](web-api-query-data-sample.md)<br />
-[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)<br />
+[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
 [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
-[Web API Basic Operations Sample (Client-side JavaScript)](sample-web-api-basic-operations-client-side-javascript.md)<br />
-[Web API Conditional Operations Sample (Client-side JavaScript)](sample-web-api-conditional-operations-client-side-javascript.md)<br />
-[Web API Functions and Actions Sample (Client-side JavaScript)](sample-web-api-functions-actions-client-side-javascript.md)
+[Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
+[Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)<br />
+[Web API Functions and Actions Sample (Client-side JavaScript)](samples/functions-actions-client-side-javascript.md)

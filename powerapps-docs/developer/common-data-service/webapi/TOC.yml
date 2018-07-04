@@ -6,7 +6,7 @@
     href: get-started-dynamics-365-web-api-csharp.md
     items:
     - name: Simple Quick-start sample (C#)
-      href: simple-web-api-quick-start-sample-csharp.md
+      href: samples/quick-start-csharp.md
     - name: Start a Web API project in Visual Studio (C#)
       href: start-web-api-project-visual-studio-csharp.md
     - name: Use the CDS for Apps Web API Helper Library (C#)
