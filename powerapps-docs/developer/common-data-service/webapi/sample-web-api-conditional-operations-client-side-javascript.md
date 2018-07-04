@@ -440,8 +440,8 @@ Sdk.startSample = function () {
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)<br />
-[Web API Conditional Operations Sample (C#)](web-api-conditional-operations-sample-csharp.md)<br />
+[Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)<br />
 [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
-[Web API Basic Operations Sample (Client-side JavaScript)](web-api-basic-operations-sample-client-side-javascript.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](web-api-query-data-sample-client-side-javascript.md)<br />
-[Web API Functions and Actions Sample (Client-side JavaScript)](web-api-functions-actions-sample-client-side-javascript.md)
+[Web API Basic Operations Sample (Client-side JavaScript)](sample-web-api-basic-operations-client-side-javascript.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)<br />
+[Web API Functions and Actions Sample (Client-side JavaScript)](sample-web-api-functions-actions-client-side-javascript.md)

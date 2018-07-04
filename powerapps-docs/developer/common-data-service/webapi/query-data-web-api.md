@@ -789,8 +789,8 @@ Generally, using FetchXML should provide better performance because the filterin
   
 ### See also
 
-[Web API Query Data Sample (C#)](web-api-query-data-sample-csharp.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](web-api-query-data-sample-client-side-javascript.md)<br />
+[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Create an entity using the Web API](create-entity-web-api.md)<br />

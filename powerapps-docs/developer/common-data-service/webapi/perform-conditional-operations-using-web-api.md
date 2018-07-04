@@ -246,8 +246,8 @@ OData-Version: 4.0
   
 ### See also
 
-[Web API Conditional Operations Sample (C#)](web-api-conditional-operations-sample-csharp.md)<br />
-[Web API Conditional Operations Sample (Client-side JavaScript)](web-api-conditional-operations-sample-client-side-javascript.md)<br />
+[Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)<br />
+[Web API Conditional Operations Sample (Client-side JavaScript)](sample-web-api-conditional-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

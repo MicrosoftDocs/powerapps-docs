@@ -20,9 +20,9 @@ manager: "amyla"
 
 This group of  samples demonstrate how to query data using the Common Data Service for Apps Web API. This sample is implemented as a separate project for the following languages:
 
-- [Web API Query Data Sample (Client-side JavaScript)](web-api-query-data-sample-client-side-javascript.md)
+- [Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)
 
-- [Query Data Sample (C#)](web-api-query-data-sample-csharp.md)
+- [Query Data Sample (C#)](sample-web-api-query-data-csharp.md)
 
 This topic describes a common set of operations implemented by each sample in this group. This topic describes the HTTP requests and responses and text output that each sample in this group will perform without the language specific details. See the language specific descriptions and the individual samples for details about how this operations are performed.
 
@@ -2231,5 +2231,5 @@ Saved User Query:
 [Use the Common Data Service for Apps Web API](overview.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br />
-[Web API Query Data Sample (C#)](web-api-query-data-sample-csharp.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](web-api-query-data-sample-client-side-javascript.md)
+[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)

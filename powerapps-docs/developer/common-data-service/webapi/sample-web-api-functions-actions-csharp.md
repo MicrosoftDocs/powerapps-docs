@@ -685,6 +685,6 @@ namespace Microsoft.Crm.Sdk.Samples
 [Use Web API actions](use-web-api-actions.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Functions and Actions Sample](web-api-functions-actions-sample.md)
-[Web API Basic Operations Sample (C#)](web-api-basic-operations-sample-csharp.md)<br />
-[Web API Query Data Sample (C#)](web-api-query-data-sample-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](web-api-conditional-operations-sample-csharp.md)
+[Web API Basic Operations Sample (C#)](sample-web-api-basic-operations-csharp.md)<br />
+[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)<br />
+[Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)

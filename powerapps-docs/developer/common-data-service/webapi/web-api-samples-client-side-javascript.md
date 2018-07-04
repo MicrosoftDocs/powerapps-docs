@@ -35,10 +35,10 @@ If you are using an earlier version of Common Data Service for Apps Customer Eng
   
 |Sample|Sample Group|Description|  
 |------------|------------------|-----------------|  
-|[Web API Basic Operations Sample (Client-side JavaScript)](web-api-basic-operations-sample-client-side-javascript.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate CDS for Apps entity records.|  
-|[Web API Query Data Sample (Client-side JavaScript)](web-api-query-data-sample-client-side-javascript.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Common Data Service for Apps query functions. Includes demonstration of working with pre-defined queries and using FetchXML to perform  queries.|  
-|[Web API Conditional Operations Sample (Client-side JavaScript)](web-api-conditional-operations-sample-client-side-javascript.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations. The behavior of these operations depends on criteria you specify.|  
-|[Web API Functions and Actions Sample (Client-side JavaScript)](web-api-functions-actions-sample-client-side-javascript.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|Demonstrates how to use bound and unbound functions and actions, including custom actions.|  
+|[Web API Basic Operations Sample (Client-side JavaScript)](sample-web-api-basic-operations-client-side-javascript.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate CDS for Apps entity records.|  
+|[Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Common Data Service for Apps query functions. Includes demonstration of working with pre-defined queries and using FetchXML to perform  queries.|  
+|[Web API Conditional Operations Sample (Client-side JavaScript)](sample-web-api-conditional-operations-client-side-javascript.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations. The behavior of these operations depends on criteria you specify.|  
+|[Web API Functions and Actions Sample (Client-side JavaScript)](sample-web-api-functions-actions-client-side-javascript.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|Demonstrates how to use bound and unbound functions and actions, including custom actions.|  
   
 <a name="bkmk_howToDownload"></a>   
 ## How to download the source code for the sample.  

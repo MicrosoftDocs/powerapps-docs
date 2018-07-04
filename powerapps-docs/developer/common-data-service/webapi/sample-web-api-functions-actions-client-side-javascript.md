@@ -711,8 +711,8 @@ Sdk.createAccountWithOpportunityToWin = function () {
 [Use Web API actions](use-web-api-actions.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Functions and Actions Sample](web-api-functions-actions-sample.md)<br />
-[Web API Functions and Actions Sample (C#)](web-api-functions-actions-sample-csharp.md)<br />
+[Web API Functions and Actions Sample (C#)](sample-web-api-functions-actions-csharp.md)<br />
 [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
-[Web API Basic Operations Sample (Client-side JavaScript)](web-api-basic-operations-sample-client-side-javascript.md)<br />
-[Web API Query Data Sample (Client-side JavaScript)](web-api-query-data-sample-client-side-javascript.md)<br />
-[Web API Conditional Operations Sample (Client-side JavaScript)](web-api-conditional-operations-sample-client-side-javascript.md)
+[Web API Basic Operations Sample (Client-side JavaScript)](sample-web-api-basic-operations-client-side-javascript.md)<br />
+[Web API Query Data Sample (Client-side JavaScript)](sample-web-api-query-data-client-side-javascript.md)<br />
+[Web API Conditional Operations Sample (Client-side JavaScript)](sample-web-api-conditional-operations-client-side-javascript.md)

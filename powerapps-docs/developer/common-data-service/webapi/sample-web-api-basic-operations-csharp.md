@@ -886,6 +886,6 @@ namespace Microsoft.Crm.Sdk.Samples
 [Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Basic Operations Sample](web-api-basic-operations-sample.md)
-[Web API Query Data Sample (C#)](web-api-query-data-sample-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](web-api-conditional-operations-sample-csharp.md)<br />
-[Web API Functions and Actions Sample (C#)](web-api-functions-actions-sample-csharp.md)
+[Web API Query Data Sample (C#)](sample-web-api-query-data-csharp.md)<br />
+[Web API Conditional Operations Sample (C#)](sample-web-api-conditional-operations-csharp.md)<br />
+[Web API Functions and Actions Sample (C#)](sample-web-api-functions-actions-csharp.md)

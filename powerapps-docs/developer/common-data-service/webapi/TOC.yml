@@ -82,12 +82,12 @@
     href: web-api-samples-csharp.md
     items:
       - name: Web API Basic Operations Sample (C#)
-        href: web-api-basic-operations-sample-csharp.md
+        href: sample-web-api-basic-operations-csharp.md
       - name: Web API Query Data Sample (C#)
-        href: web-api-query-data-sample-csharp.md
+        href: sample-web-api-query-data-csharp.md
       - name: Web API Conditional Operations Sample (C#)
-        href: web-api-conditional-operations-sample-csharp.md
+        href: sample-web-api-conditional-operations-csharp.md
       - name: Web API Functions and Actions Sample (C#)
-        href: web-api-functions-actions-sample-csharp.md
+        href: sample-web-api-functions-actions-csharp.md
   - name: Web API Samples (Client-side JavaScript)
     href: web-api-samples-client-side-javascript.md

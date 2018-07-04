@@ -19,7 +19,7 @@ ms.author: "jdaly"
 
 This group of samples demonstrate how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service for Apps Web API. This sample is implemented as a separate project for the following languages:  
   
--   [Functions and Actions Sample (C#)](web-api-functions-actions-sample-csharp.md)  
+-   [Functions and Actions Sample (C#)](sample-web-api-functions-actions-csharp.md)  
   
 This topic explains the structure and content of the sample at a higher, language-neutral level. Review the linked sample topics above for language-specific implementation details about how to perform the operations described in this topic.  
   
@@ -484,5 +484,5 @@ Expected custom error: ContactFirstName and ContactLastName are required when Cu
 [Use the Common Data Service for Apps Web API](overview.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
-[Web API Functions and Actions Sample (C#)](web-api-functions-actions-sample-csharp.md)<br />
+[Web API Functions and Actions Sample (C#)](sample-web-api-functions-actions-csharp.md)<br />
 
