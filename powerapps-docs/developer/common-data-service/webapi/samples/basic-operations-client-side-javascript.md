@@ -21,7 +21,7 @@ manager: "amyla"
 This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on entity instances using client-side JavaScript.  
   
 > [!NOTE]
->  This sample implements the operations detailed in the [Web API Basic Operations Sample](web-api-basic-operations-sample.md) and uses the common JavaScript constructs described in [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)  
+>  This sample implements the operations detailed in the [Web API Basic Operations Sample](../web-api-basic-operations-sample.md) and uses the common JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)
   
 <a name="bkmk_prerequisites"></a>
 
@@ -37,7 +37,7 @@ This sample demonstrates how to perform basic CRUD (create, retrieve, update, an
 
 ## Run this sample
 
-To run this sample, download the solution package here [Microsoft CRM Web API Basic Operations Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824043). Download the Microsoft CRM Web API Basic Operations Sample (Client-side JavaScript).zip file and extract the contents. Locate the  WebAPIBasicOperations_1_0_0_1_managed.zip solution and import it into your CDS for Apps organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md).  
+To run this sample, download the solution package here [Microsoft CRM Web API Basic Operations Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824043). Download the Microsoft CRM Web API Basic Operations Sample (Client-side JavaScript).zip file and extract the contents. Locate the  WebAPIBasicOperations_1_0_0_1_managed.zip solution and import it into your CDS for Apps organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codesample"></a>
 
@@ -864,10 +864,10 @@ Sdk.deleteSampleData = function () {
 [Create an entity using the Web API](create-entity-web-api.md)<br />
 [Retrieve an entity using the Web API](retrieve-entity-using-web-api.md)<br />
 [Update and delete entities using the Web API](update-delete-entities-using-web-api.md)<br />
-[Web API Samples](web-api-samples.md)<br />
-[Web API Basic Operations Sample](web-api-basic-operations-sample.md)<br />
+[Web API Samples](../web-api-samples.md)<br />
+[Web API Basic Operations Sample](../web-api-basic-operations-sample.md)<br />
 [Web API Basic Operations Sample (C#)](basic-operations-csharp.md)<br />
-[Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
+[Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](query-data-client-side-javascript.md)<br />
 [Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)<br />
 [Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)

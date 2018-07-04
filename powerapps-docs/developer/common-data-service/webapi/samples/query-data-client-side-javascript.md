@@ -20,7 +20,7 @@ manager: "amyla"
 This sample demonstrates how to perform basic query requests using the Common Data Service for Apps Web API using client-side JavaScript  
   
 > [!NOTE]
->  This sample implements the operations detailed in the [Web API Query Data Sample](web-api-query-data-sample.md) and uses the common  client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)  
+>  This sample implements the operations detailed in the [Web API Query Data Sample](../web-api-query-data-sample.md) and uses the common  client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
   
 <a name="bkmk_prereq"></a>
 
@@ -36,7 +36,7 @@ This sample demonstrates how to perform basic query requests using the Common Da
 
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824050) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your CDS for Apps organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824050) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your CDS for Apps organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 
@@ -754,10 +754,10 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
 
 [Use the Common Data Service for Apps Web API](overview.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
-[Web API Samples](web-api-samples.md)<br />
-[Web API Query Data Sample](web-api-query-data-sample.md)<br />
+[Web API Samples](../web-api-samples.md)<br />
+[Web API Query Data Sample](../web-api-query-data-sample.md)<br />
 [Web API Query Data Sample (C#)](query-data-csharp.md)<br />
-[Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
+[Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](basic-operations-client-side-javascript.md)<br />
 [Web API Conditional Operations Sample (Client-side JavaScript)](conditional-operations-client-side-javascript.md)<br />
 [Web API Functions and Actions Sample (Client-side JavaScript)](functions-actions-client-side-javascript.md)

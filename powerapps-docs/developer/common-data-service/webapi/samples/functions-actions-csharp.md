@@ -20,13 +20,13 @@ ms.author: "jdaly"
 This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service for Apps Web API.  
   
 > [!NOTE]
->  This sample implements the operations detailed in the [Web API Functions and Actions Sample](web-api-functions-actions-sample.md) and uses the common client-side C# constructs described in [Web API Samples (C#)](web-api-samples-csharp.md).  
+>  This sample implements the operations detailed in the [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md) and uses the common client-side C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).  
  
 <a name="bkmk_prerequisites"></a>
 
 ## Prerequisites
 
-Prerequisites for all Common Data Service for Apps Web API C# samples are detailed in the [Prerequisites](web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](web-api-samples-csharp.md).  
+Prerequisites for all Common Data Service for Apps Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 <a name="bkmk_runSample"></a>
  
@@ -46,7 +46,7 @@ Next, use the following procedure to run this sample.
   
 1.  Locate and double-click on the solution file, FunctionsAndActions.sln, to load the solution into Visual Studio. Build the **FunctionsAndActions** solution.  This should automatically download and install all the required NuGet packages that are either missing or need to be updated.  
   
-2.  Edit the application configuration file, App.config, to specify connection information for your Common Data Service for Apps server.  For more information, see [Helper code: Configuration classes](web-api-helper-code-configuration-classes.md).  
+2.  Edit the application configuration file, App.config, to specify connection information for your Common Data Service for Apps server.  For more information, see [Helper code: Configuration classes](../web-api-helper-code-configuration-classes.md).  
   
 3.  Run the **FunctionsAndActions** project from within Visual Studio.  All sample solutions are configured to run in debug mode by default.  
   
@@ -683,8 +683,8 @@ namespace Microsoft.Crm.Sdk.Samples
 [Use the Common Data Service for Apps Web API](overview.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
-[Web API Samples](web-api-samples.md)<br />
-[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)
+[Web API Samples](../web-api-samples.md)<br />
+[Web API Functions and Actions Sample](../web-api-functions-actions-sample.md)
 [Web API Basic Operations Sample (C#)](basic-operations-csharp.md)<br />
 [Web API Query Data Sample (C#)](query-data-csharp.md)<br />
 [Web API Conditional Operations Sample (C#)](conditional-operations-csharp.md)

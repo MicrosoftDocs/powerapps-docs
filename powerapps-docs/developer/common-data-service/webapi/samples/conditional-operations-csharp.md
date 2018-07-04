@@ -20,13 +20,13 @@ ms.author: "kvivek"
 This sample demonstrates how to perform conditional operations using CDS for Apps Web API and C#.  
   
 > [!NOTE]
->  This sample implements the Common Data Service for Apps operations and console output detailed in [Web API Conditional Operations Sample](web-api-conditional-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](web-api-samples-csharp.md).  
+>  This sample implements the Common Data Service for Apps operations and console output detailed in [Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md) and uses the common C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 <a name="bkmk_Prereqs"></a>
 
 ## Prerequisites
 
-Prerequisites for all CDS for Apps Web API C# samples are detailed in the [Prerequisites](web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](web-api-samples-csharp.md).  
+Prerequisites for all CDS for Apps Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
   
 <a name="bkmk_RunSample"></a>
  
@@ -516,8 +516,8 @@ namespace Microsoft.Crm.Sdk.Samples
 
 [Use the Common Data Service for Apps Web API](overview.md)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)<br />
-[Web API Samples](web-api-samples.md)<br />
-[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)
+[Web API Samples](../web-api-samples.md)<br />
+[Web API Conditional Operations Sample](../web-api-conditional-operations-sample.md)
 [Web API Basic Operations Sample (C#)](basic-operations-csharp.md)<br />
 [Web API Query Data Sample (C#)](query-data-csharp.md)<br />
 [Web API Functions and Actions Sample (C#)](functions-actions-csharp.md)

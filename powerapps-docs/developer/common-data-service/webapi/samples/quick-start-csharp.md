@@ -235,6 +235,6 @@ namespace Microsoft.Crm.Sdk.Samples
 ### See also
 
 [Web API Reference](/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9)<br />
-[Web API Samples](web-api-samples.md)<br />
+[Web API Samples](../web-api-samples.md)<br />
 [Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)<br />
 
