@@ -32,6 +32,9 @@
           - name: Organization Service
             tocHref: /powerapps/developer/common-data-service/org-service/
             topicHref: /powerapps/developer/common-data-service/org-service/index
+          - name: Web API
+            tocHref: /powerapps/developer/common-data-service/webapi/
+            topicHref: /powerapps/developer/common-data-service/webapi/index
     - name: Create apps
       tocHref: /powerapps/developer/model-driven-apps/
       topicHref: /powerapps/maker/index
