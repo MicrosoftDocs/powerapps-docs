@@ -150,7 +150,7 @@ The user can specify data by typing into a text-input control. Depending on how 
    **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
    
     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-3. Press F5, and then type **P@ssw0rd** in **inputPassword**.
+3. Press F5, and then type <strong>P@ssw0rd</strong> in **inputPassword**.
    
     When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
 4. To return to the default workspace, press Esc.

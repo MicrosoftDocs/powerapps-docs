@@ -49,29 +49,29 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 	![Add a list screen](./media/data-platform-create-app-scratch/list-screen.png)
 
-1. In the left navigation bar, click or tap **TemplateGalleryList1** to select it, and then set the value of the **Items** property to this formula:
+2. In the left navigation bar, click or tap **TemplateGalleryList1** to select it, and then set the value of the **Items** property to this formula:
 
 	`SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
 	This formula specifies that:
 
-	- The gallery should show data from the **Accounts** entity.
-	- The data should be sorted in ascending order until a user clicks or taps the sort button to toggle the sort order.
-	- If a user types or pastes one or more characters into the search bar, the list will show only those accounts for which the name field contains the characters that the user specified.
+   - The gallery should show data from the **Accounts** entity.
+   - The data should be sorted in ascending order until a user clicks or taps the sort button to toggle the sort order.
+   - If a user types or pastes one or more characters into the search bar, the list will show only those accounts for which the name field contains the characters that the user specified.
 
-	You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
+     You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
 
-	![Set the gallery's Items property](./media/data-platform-create-app-scratch/gallery-items.png)
+     ![Set the gallery's Items property](./media/data-platform-create-app-scratch/gallery-items.png)
 
-1. Set the gallery's layout to show only the name of each account, and configure the title bar to show the word **Browse**, as [Customize a gallery](customize-layout-sharepoint.md) describes.
+3. Set the gallery's layout to show only the name of each account, and configure the title bar to show the word **Browse**, as [Customize a gallery](customize-layout-sharepoint.md) describes.
 
 	![Browse screen](./media/data-platform-create-app-scratch/final-browse.png)
 
-1. In the left navigation bar, hover over **Screen1**, click or tap the ellipsis icon (...), and then click or tap **Delete**.
+4. In the left navigation bar, hover over **Screen1**, click or tap the ellipsis icon (...), and then click or tap **Delete**.
 
-1. In the left navigation bar, hover over **Screen2**, click or tap the ellipsis icon (...), and then click or tap **Rename**.
+5. In the left navigation bar, hover over **Screen2**, click or tap the ellipsis icon (...), and then click or tap **Rename**.
 
-1. Type or paste **BrowseScreen**, and then rename the gallery in that screen as **BrowseGallery**.
+6. Type or paste **BrowseScreen**, and then rename the gallery in that screen as **BrowseGallery**.
 
 	![Rename Browse screen, gallery](./media/data-platform-create-app-scratch/rename-browse.png)
 

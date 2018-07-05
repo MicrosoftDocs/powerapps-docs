@@ -90,16 +90,16 @@ If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.
 
 	The value of this property appears in the formula bar. You set this property to specify not only the data source for the gallery but also the columns by which users can sort and search the data.
 
-1. Copy this formula, and then paste it in the formula bar.
+3. Copy this formula, and then paste it in the formula bar.
 
     ```SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, Descending, Ascending))```
 
 	By using this formula, you ensure that:
 
-    - If a user types one or more characters in the search bar, the gallery shows only those account names that contain the text that the user typed.
-    - If a user selects the sort icon, the gallery is sorted alphabetically by account name in either ascending or descending order, depending on how many times the user selects the icon.
+   - If a user types one or more characters in the search bar, the gallery shows only those account names that contain the text that the user typed.
+   - If a user selects the sort icon, the gallery is sorted alphabetically by account name in either ascending or descending order, depending on how many times the user selects the icon.
 
-    For more information about these and other functions, see the [formula reference](formula-reference.md).
+     For more information about these and other functions, see the [formula reference](formula-reference.md).
 
 ### Test sorting and searching
 1. Open Preview mode by pressing F5 (or by selecting the play button near the upper-right corner).

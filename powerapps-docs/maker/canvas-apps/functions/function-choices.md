@@ -53,42 +53,42 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
 	For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
 
-1. [Generate an app](../data-platform-create-app.md) from the **Accounts** entity.
+2. [Generate an app](../data-platform-create-app.md) from the **Accounts** entity.
 
-1. In the list of screens and controls near the left edge, scroll down until **EditScreen1** appears, and then select **EditForm1** just under it.
+3. In the list of screens and controls near the left edge, scroll down until **EditScreen1** appears, and then select **EditForm1** just under it.
 
 	![In the left navigation bar, select EditForm1 on EditScreen1](media/function-choices/select-editform.png)
 
-1. On the **Properties** tab of the right pane, select **Accounts**.
+4. On the **Properties** tab of the right pane, select **Accounts**.
 
 	![Select Accounts to open the Data pane](media/function-choices/open-data-pane.png)
 
-1. In the **Data** pane, scroll down to the list of fields.
+5. In the **Data** pane, scroll down to the list of fields.
 
 	![Select Accounts to open the Data pane](media/function-choices/field-list.png)
 
-1. Find the **Primary Contact** check box, and then select it if it's cleared.
+6. Find the **Primary Contact** check box, and then select it if it's cleared.
 
-1. (optional) Drag the **Primary Contact** field from the bottom to the top of the list of fields.
+7. (optional) Drag the **Primary Contact** field from the bottom to the top of the list of fields.
 
-1. In the card for **Primary Contact**, select the **Combo box** control.
+8. In the card for **Primary Contact**, select the **Combo box** control.
 
     The **Items** property of that control is set to one of two formulas based on the state of the **Use column display names** check box in advanced settings.
 
-    - If the check box is selected, the property is set to this formula:<br>**Choices( Accounts.'Primary Contact' )**
-    - If the check box is cleared, the property is set to this formula:<br>**Choices( Accounts.primarycontactid )**
+   - If the check box is selected, the property is set to this formula:<br>**Choices( Accounts.'Primary Contact' )**
+   - If the check box is cleared, the property is set to this formula:<br>**Choices( Accounts.primarycontactid )**
 
-	![A canvas screen with a form control. The **Combo box** control within the **Primary Contact** card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
+     ![A canvas screen with a form control. The **Combo box** control within the **Primary Contact** card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
 
-1. On the **Home** tab, select **New screen**, and then select **Blank**.
+9. On the **Home** tab, select **New screen**, and then select **Blank**.
 
-1. On the **Insert** tab, select **Data table**.
+10. On the **Insert** tab, select **Data table**.
 
-1. Set the **Items** property of the **Data table** control to one of these formulas:
+11. Set the **Items** property of the **Data table** control to one of these formulas:
 
-    - If the **Use column display names** check box in advanced settings is selected, use this formula:<br>**Choices( Accounts.'Primary Contact' )**
-    - Otherwise, use this formula:<br>**Choices( Accounts.primarycontactid )**
+     - If the **Use column display names** check box in advanced settings is selected, use this formula:<br>**Choices( Accounts.'Primary Contact' )**
+     - Otherwise, use this formula:<br>**Choices( Accounts.primarycontactid )**
 
-1. Open the **Data** pane, and then select the check boxes for **firstname**, **lastname**, or any other field that you want to show.
+12. Open the **Data** pane, and then select the check boxes for **firstname**, **lastname**, or any other field that you want to show.
 
-	![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts entity](media/function-choices/full-accounts-pc.png)
+     ![A canvas screen with a data table control. The Items property is set to the formula Choices( Accounts.'Primary Contact' ), and the table shows the firstname and lastname columns for the first set of records from the Contacts entity](media/function-choices/full-accounts-pc.png)

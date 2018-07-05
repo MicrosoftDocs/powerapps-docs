@@ -32,18 +32,18 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 ## Create a blank app
 1. [Sign up for PowerApps](../signup-for-powerapps.md), and then do *either* of the following:
 
-1. [Open PowerApps](https://create.powerapps.com) in a browser on a device that has a camera.
+2. [Open PowerApps](https://create.powerapps.com) in a browser on a device that has a camera.
 
-2. Under **Start with a blank canvas or template**, click or tap **Phone layout** in the **Blank app** tile.
+3. Under **Start with a blank canvas or template**, click or tap **Phone layout** in the **Blank app** tile.
 
     ![Create an app from scratch](./media/scan-barcode/create-from-blank.png)
 
-3. If you haven't used PowerApps before, get familiar with key areas of the app by taking the intro tour (or click or tap **Skip**).
+4. If you haven't used PowerApps before, get familiar with key areas of the app by taking the intro tour (or click or tap **Skip**).
 
     ![Opening screen of the quick tour](./media/scan-barcode/quick-tour.png)
 
     > [!NOTE]
-> You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
+   > You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
 ## Add a Barcode control
 1. On the **Insert** tab, click or tap **Media**, and then click or tap **Barcode**.
@@ -57,7 +57,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 3. On the **Home** tab, click or tap **Barcode1**, and then type or paste **MyScanner** under **Rename**.
 
     > [!TIP]
-> The first **Barcode** control that you add is named **Barcode1** by default. If you delete that control and add another **Barcode** control, it will be named **Barcode2** by default. By manually renaming a control, you ensure that formulas will refer to the control by its correct name.
+   > The first **Barcode** control that you add is named **Barcode1** by default. If you delete that control and add another **Barcode** control, it will be named **Barcode2** by default. By manually renaming a control, you ensure that formulas will refer to the control by its correct name.
 
     ![Rename the barcode control](./media/scan-barcode/rename-barcode.png)
 

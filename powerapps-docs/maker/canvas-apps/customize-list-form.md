@@ -44,12 +44,12 @@ In the center of your screen, PowerApps shows your form, but it contains some fi
 
 - In the **Data** pane, clear the check boxes for these fields.
 
-    - **Title**
-    - **Modified**
-    - **Created**
-    - **Created By**
-    - **Modified By**
-    - **ID**
+  - **Title**
+  - **Modified**
+  - **Created**
+  - **Created By**
+  - **Modified By**
+  - **ID**
 
     Those fields disappear from the form, leaving only the fields that you created.
 
@@ -99,17 +99,17 @@ To [customize your form further](sharepoint-form-integration.md), open it, selec
 
 1. From your list in SharePoint, open the settings page (by selecting the gear icon near the upper-right corner), and then select **List settings**.
 
-1. Under **General settings**, select **Form settings**.
+2. Under **General settings**, select **Form settings**.
 
-1. On the **Form Settings** page, select one of these options, and then select **OK**.
+3. On the **Form Settings** page, select one of these options, and then select **OK**.
 
-    * **Use the default SharePoint form** - When a user opens your list and selects **New** in the command bar, the default form for the list will appear.
+   * **Use the default SharePoint form** - When a user opens your list and selects **New** in the command bar, the default form for the list will appear.
 
-    * **Use a custom form created in PowerApps** - When a user opens your list and selects **New** in the command bar, your custom form will appear. (As an alternative, you can publish the form again in PowerApps.)
+   * **Use a custom form created in PowerApps** - When a user opens your list and selects **New** in the command bar, your custom form will appear. (As an alternative, you can publish the form again in PowerApps.)
 
-    You can toggle back and forth between options, as needed.
+     You can toggle back and forth between options, as needed.
 
-    ![Form Settings options](./media/customize-list-form/form-settings.png)
+     ![Form Settings options](./media/customize-list-form/form-settings.png)
 
 ## Delete the custom form
 1. From your list in SharePoint, open the settings page (by selecting the gear icon near the upper-right corner), and then select **List settings**.
