@@ -45,7 +45,7 @@ For background (asynchronous) workflows, we recommend selecting the **Automatica
 
 <a name="BKMK_AutoDeleteCompletedWorkflowJobs"></a>   
 ## Keep logs for workflow jobs that encountered errors  
-For workflows that don't run in the background (synchronous), we recommend selecting the **Keep logs for workflow jobs that encountered errors** option in the in the workflow definition. Selecting this option allows logs from failed workflow executions to be saved for troubleshooting. Logs from successful workflow executions will always be deleted to save space.   
+For workflows that don't run in the background (synchronous), we recommend selecting the **Keep logs for workflow jobs that encountered errors** option in the workflow definition. Selecting this option allows logs from failed workflow executions to be saved for troubleshooting. Logs from successful synchronous workflow executions will always be deleted to save space.   
 
 ![Keep logs for failed workflows option](media/keep-logs-for-workflows.png)
   
