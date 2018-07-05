@@ -136,7 +136,7 @@ This tutorial shows you how to create a business process flow with PowerApps. To
 
   Specify privileges by selecting the appropriate radio buttons, and click Save. For more information about privileges, see [Business process flow privileges](business-process-flows-overview.md#BKMK_MultipleBPF).
 
-Next, don't forget to assign the security role to appropriate users in your organization.
+  Next, don't forget to assign the security role to appropriate users in your organization.
 
 > [!TIP] 
 >  Here are a few tips to keep in mind as you work on your task flow in the designer window:  
