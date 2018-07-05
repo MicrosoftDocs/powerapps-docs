@@ -25,12 +25,17 @@ Take advantage of your existing data analysis and reporting by displaying your *
 Once shared, the PowerApp will be accessible by all users who have permissions to access the app.  However in order to make the Power BI content visible to those users, the dashboard where the tile comes from needs to be
 [shared](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) with the user on Power BI.  This ensures that Power BI sharing permissions are respected when Power BI content is accessed in an app.
 
+## Performance
+It is not recommended to have more than three Power BI tiles loaded at the same time within an app.  Tile loading and unloading can be controlled by setting the **LoadPowerBIContent** property.
+
 ## Key properties
 **Workspace** – The Power BI workspace where the tile comes from.
 
 **Dashboard** – The Power BI dashboard where the tile comes from.
 
 **Tile** – The name of the Power BI tile you want to display.
+
+**LoadPowerBIContent** – When set to false the Power BI content is unloaded, releasing memory and optimizing performance.  When set to true, the Power BI content is loaded and shown.
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -56,11 +61,11 @@ Once shared, the PowerApp will be accessible by all users who have permissions t
 ## Example
 1. Add a **Power BI tile** control from the **Insert** tab, **Controls** menu.  
 2. In the **Data** tab on options panel choose "My Workspace" for the **Workspace** setting.  Choose a dashboard from the list of dashboards, and a tile from the list of tiles.
-   
+
     The control renders the Power BI tile.
-   
+
     Don't know how to [add and configure a control](../add-configure-controls.md)?
-   
+
    Don't have have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 
 
