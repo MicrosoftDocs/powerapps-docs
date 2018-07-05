@@ -154,11 +154,11 @@ Next, don't forget to assign the security role to appropriate users in your orga
  ![Expanded details section of a business process flow](media/business-process-flow-details.png "Expanded details section of a business process flow")  
   
   
- ## Other things to know about business process flows
+## Other things to know about business process flows
  **Edit Stages**  
- Business process flows can have up to 30 stages.    
+Business process flows can have up to 30 stages.    
   
- You can add or change the following properties of a stage:  
+You can add or change the following properties of a stage:  
   
 - **Stage Name**  
   
@@ -172,27 +172,26 @@ Next, don't forget to assign the security role to appropriate users in your orga
   
     -   When you select **Next Stage** on the process bar for a record, any records that use the relationship will be listed in the process flow, thereby promoting reuse of records in the process. In addition, you can use workflows to automate creation of records so that the user simply selects it instead of creating one to further streamline the process.  
   
- **Edit Steps**  
+**Edit Steps**  
  Each stage can have up to 30 steps.    
   
- **Add branch**  
- To learn about adding a branch to a stage, see [Enhance business process flows with branching](enhance-business-process-flows-branching.md).  
+**Add branch**  
+To learn about adding a branch to a stage, see [Enhance business process flows with branching](enhance-business-process-flows-branching.md).  
   
- To make a business process flow available for people to use, you must order the process flow, enable security roles, and activate it.  
+To make a business process flow available for people to use, you must order the process flow, enable security roles, and activate it.  
   
- **Set Process Flow Order**  
+**Set Process Flow Order**  
  When you have more than one business process flow for an entity (record type), you’ll need to set which process is automatically assigned to new records.. In the command bar, select **Order Process Flow**. For new records or records that do not already have a process flow associated with them, the first business process flow that a user has access to is the one that will be used.  
   
- **Enable Security Roles**  
- Users have access to a business process flow depending on the privilege defined on the business process flow in the security role assigned to the user. 
+**Enable Security Roles**  
+Users have access to a business process flow depending on the privilege defined on the business process flow in the security role assigned to the user. 
 
- By default, only the **System Administrator** and **System Customizer** security roles can view a new business process flow.  
+By default, only the **System Administrator** and **System Customizer** security roles can view a new business process flow. 
 
 To specify privileges on a business process flow, open the business process flow for eidint, and then select Edit Security Roles on the command bar of the business process flow designer. See step 13 under [Create a business process flow](#create-a-business-process-flow) listed earlier in this topic.
   
- 
- **Activate**  
- Before anyone can use the business process flow, you must activate it. In the command bar, select **Activate**. After you confirm the activation, the business process flow is ready to use. If a business process flow has errors, you will not be able to activate it until the errors are corrected.  
+**Activate**  
+Before anyone can use the business process flow, you must activate it. In the command bar, select **Activate**. After you confirm the activation, the business process flow is ready to use. If a business process flow has errors, you will not be able to activate it until the errors are corrected.  
 
 ## Preview feature: Add an on-demand action to a business process flow
 The Dynamics 365 (online), version 9.0 update introduces a new business process flow feature: business process flow automation with Action Steps. You can add a button to a business process flow that will trigger an action or workflow.
