@@ -10,7 +10,7 @@ ms.author: tahoon
 
 ---
 # Accessible colors in PowerApps
-Colors used in an app should be accessible to color-blind and low-vision users. All PowerApps themes are accessible by default. When modifying colors used in an app, follow these guidelines to ensure that they remain accessible.
+Colors used in an app should be accessible to color-blind and low-vision users. All PowerApps themes are accessible by default. When modifying colors used in an app, follow these guidelines to ensure that they remain accessible. A useful tool is the **[Color Contrast Analyzer](https://developer.paciellogroup.com/resources/contrastanalyser/)** which can help you identify color contrast issues.
 
 ## Minimum contrast for text
 * Text and its background must have a contrast ratio of at least 4.5:1
@@ -54,4 +54,4 @@ Ensure that the app does not convey information with just color. For example, us
 Additional cues like an **[Icon](controls/control-shapes-icons.md)** or text styles like **[Italic](controls/properties-text.md)** and **[Underline](controls/properties-text.md)** can help convey meaning.
 
 ## Next steps
-Learn about [accessibility properties](controls/properties-accessibility.md) in PowerApps controls.
+Learn about [accessibility properties](controls/properties-accessibility.md) in PowerApps controls and try **[using the Accessibility checker](canvas-apps/accessibility-checker.md)**.
