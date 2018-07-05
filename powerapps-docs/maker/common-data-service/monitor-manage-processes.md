@@ -72,7 +72,7 @@ If your organization uses background workflows or business process flows that ru
 4. In the **Look for** list, select **System Jobs**.
 5. The following conditions are used to create a bulk record deletion job to delete process log records. 
  - **System Job Type Equals Workflow**. This targets workflow records. 
-Status Equals Completed. Only completed workflows are valid to run the job against.
+ - **Status Equals Completed**. Only completed workflows are valid to run the job against.
  - **Status Reason Equals Succeeded**. Delete successful, canceled, and failed jobs. Failed or canceled jobs will be retained for investigation.
  - **Completed On Older than X Days 30**. Use the Completed On field to only delete workflow process log records that are older than 30 days.
  ![custom-bulk-record-deletion.png](media/custom-bulk-record-deletion.png)
