@@ -13,6 +13,8 @@ ms.author: fikaradz
 # Create accessible apps
 An accessible app will allow users with vision, hearing and other impairments to successfully use the app.  In addition to being a requirement for many governments and organizations, following the below guidelines increases usability for all users, regardless of their abilities.
 
+Use the **[Accessibility Checker](canvas-apps/accessibility-checker.md)** to help review potential accessibility issues in your app. 
+
 ## Layout and color
 Common sense and uncomplicated design helps apps be more accessible to all users.  When doing heavy customization of apps take note of the below suggestions.  PowerApps themes are by default accessible.
 - Ensure all elements are clearly visible and text is of sufficient size.  All content must be easily read and understood by the naked eye.
@@ -56,4 +58,6 @@ If you have a signature field that uses the PenInput control you need to enable 
 
 
 Related:
-**[Accessibility properties](controls/properties-accessibility.md)**
+- **[Accessibility properties](controls/properties-accessibility.md)**
+- **[Use the Accessibility checker](canvas-apps/accessibility-checker.md)**
+- **[Accessible colors in PowerApps](canvas-apps/accessible-apps-color.md)**
