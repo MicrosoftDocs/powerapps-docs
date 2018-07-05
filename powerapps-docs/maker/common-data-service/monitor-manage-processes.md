@@ -64,7 +64,7 @@ To monitor and manage processes, you must locate the process, evaluate the statu
 
 ## Deleting process log records
 
-If your organization uses background workflows or business process flows that generate large amounts of record create, update, or delete activity, process log records can become large enough to cause performance issues as well as consume significant amounts of storage in your environment. To delete process log records not removed sufficiently by one of the standard bulk record deletion jobs, you can use the bulk delete system jobs feature to create a custom bulk record deletion job.
+If your organization uses background workflows or business process flows that generate large amounts of record create, update, or delete activity, the amount of process log records can become large enough to cause performance issues as well as consume significant amounts of storage. To delete process log records not removed sufficiently by one of the standard bulk record deletion jobs, you can use the bulk delete system jobs feature to create a custom bulk record deletion job.
 
 1. Go to **Settings** > **Data Management** > **Bulk Record Deletion**.
 2. From the **Bulk Record Deletion** area, select **New**. 
