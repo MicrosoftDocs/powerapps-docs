@@ -80,8 +80,8 @@ Controls on this screen have another option. They can use a relative reference: 
 ## Disambiguation operator
 Some functions create [record scopes](../working-with-tables.md#record-scope) for accessing the fields of table while processing each record, such as **Filter**, **AddColumns**, and **Sum**.  Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the **@** disambiguation operator:
 
-* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>*Table*[@*FieldName*]
-* To access global values, such as data sources, collections, and context variables, use the pattern **[@*ObjectName*]** (without a table designation).
+* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>_Table_**[@**_FieldName_**]**
+* To access global values, such as data sources, collections, and context variables, use the pattern **[@**_ObjectName_**]** (without a table designation).
 
-For more information and examples, see the discussion on [record scopes](../working-with-tables.md#record-scope).
+For more information and examples, see [record scopes](../working-with-tables.md#record-scope).
 
