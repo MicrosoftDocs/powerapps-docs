@@ -124,7 +124,20 @@ This tutorial shows you how to create a business process flow with PowerApps. To
     >  As long as a process is a draft, people won’t be able to use it.  
   
 12. To activate the process and make it available to your team, select **Activate** on the action bar.  
-  
+
+13. To provide control over who can create, read, update, or delete the business process flow instance, select **Edit Security Roles** on the command bar of the designer. For example, for service-related processes, you could provide full access for customer service reps to change the business process flow instance, but provide read-only access to the instance for sales reps so they can monitor post-sales activities for their customers.
+
+In the **Security Roles** screen, select the name of a role to open the security role information page. Select the Business Process Flows tab, and then assign appropriate privileges on the business process flow for a security role.
+
+> [!NOTE]
+> The System Administrator and System Customizer security roles have access to new business process flows by default.
+
+   ![Assign privileges to a business process flow](media/bpf-assign-privileges.png)
+
+Specify privileges by selecting the appropriate radio buttons, and click Save. For more information about privileges, see [Business process flow privileges](business-process-flows-overview.md#business-process-flow-privileges).
+
+Next, don't forget to assign the security role to appropriate users in your organization.
+
 > [!TIP] 
 >  Here are a few tips to keep in mind as you work on your task flow in the designer window:  
 >   
