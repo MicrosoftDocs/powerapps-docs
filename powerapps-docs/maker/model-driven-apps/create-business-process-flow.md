@@ -184,12 +184,13 @@ Next, don't forget to assign the security role to appropriate users in your orga
  When you have more than one business process flow for an entity (record type), you’ll need to set which process is automatically assigned to new records.. In the command bar, select **Order Process Flow**. For new records or records that do not already have a process flow associated with them, the first business process flow that a user has access to is the one that will be used.  
   
  **Enable Security Roles**  
- People will only be able to use business process flows that are associated with security roles assigned to their user account. By default, only the **System Administrator** and **System Customizer** security roles can view a new business process flow.  
+ Users have access to a business process flow depending on the privilege defined on the business process flow in the security role assigned to the user. 
+
+ By default, only the **System Administrator** and **System Customizer** security roles can view a new business process flow.  
+
+To specify privileges on a business process flow, open the business process flow for eidint, and then select Edit Security Roles on the command bar of the business process flow designer. See step 13 under [Create a business process flow](#create-a-business-process-flow) listed earlier in this topic.
   
--   To set these roles, in the command bar, select **Enable Security Roles**. You can choose either the **Enable for Everyone** or **Enable only for the selected security roles** options.  
-  
--   If you choose **Enable only for the selected security roles**, you can select which security roles will allow access to the business process flow.  
-  
+ 
  **Activate**  
  Before anyone can use the business process flow, you must activate it. In the command bar, select **Activate**. After you confirm the activation, the business process flow is ready to use. If a business process flow has errors, you will not be able to activate it until the errors are corrected.  
 
