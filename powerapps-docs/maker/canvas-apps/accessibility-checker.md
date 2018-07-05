@@ -19,19 +19,19 @@ The Accessibility checker is intended to be for guidance rather than an absolute
 
 1. Select the App Checker icon in the top right corner. 
 
-    ![App checker icon](./media/accessibility-checker/app-checker-icon.png/)
+    ![App checker icon](./media/accessibility-checker/app-checker-icon.png)
 
 2.  Select **Accessibility** in the list of options in the pane that opens.
 
-    ![App checker pane list of options](./media/accessibility-checker/app-checker-pane.png/)
+    ![App checker pane list of options](./media/accessibility-checker/app-checker-pane.png)
 
 3. A list of the issues within your app will be displayed in a list according to severity, then ordered by Screen. Selecting the item will navigate to the property with the issue. This is a very useful shortcut. Select "Re-check" in order to update the list of issues. Resolved items will disappear from the list, and new items will appear.
 
-    ![Accessibility checker pane and list of items](./media/accessibility-checker/accessibility-checker-pane.png/)
+    ![Accessibility checker pane and list of items](./media/accessibility-checker/accessibility-checker-pane.png)
 
 4. Select the chevron on the item to open up more details about the issue in the pane. Select the back arrow to return to the list of items. 
 
-    ![Accessibility checker details](./media/accessibility-checker/details-pane.png/)
+    ![Accessibility checker details](./media/accessibility-checker/details-pane.png)
 
 
 ## Severity of issues
