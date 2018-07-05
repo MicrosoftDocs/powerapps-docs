@@ -83,5 +83,5 @@ Some functions create [record scopes](../working-with-tables.md#record-scope) fo
 * To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>_Table_**[@**_FieldName_**]**
 * To access global values, such as data sources, collections, and context variables, use the pattern **[@**_ObjectName_**]** (without a table designation).
 
-For more information and examples, see the discussion on [record scopes](../working-with-tables.md#record-scope).
+For more information and examples, see [record scopes](../working-with-tables.md#record-scope).
 
