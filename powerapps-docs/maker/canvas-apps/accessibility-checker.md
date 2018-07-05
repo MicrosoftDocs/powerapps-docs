@@ -12,7 +12,7 @@ ms.author: emcoope-msft
 
 # The Accessibility Checker
 An accessible app will allow users with vision, hearing and other impairments to successfully use the app.  To help ensure that your PowerApps apps are accessible, use the Accessibility Checker, a free tool available in the canvas studio. It finds accessibility issues and explains why each might be a potential problem for someone with a disability. It also offers suggestions on how to resolve each issue.
-The Accessibility Checker will detect screen reader and keyboard issues, however it is not able to detect color contrast issues yet. Reference **[accessible colors](canvas-apps/accessible-apps-color.md)** documentation for more information on ensuring proper color contrast. 
+The Accessibility Checker will detect screen reader and keyboard issues, however it is not able to detect color contrast issues yet. Reference **[accessible colors](/accessible-apps-color.md)** documentation for more information on ensuring proper color contrast. 
 
 ## How to use the App checker for Accessibility
 The Accessibility checker is intended to be for guidance rather than an absolute rule of what is wrong. There will always be scenarios where the author of the app will have to make some decisions about accessibility themselves. The following steps explain how to take advantage of the Accessibility Checker. 
