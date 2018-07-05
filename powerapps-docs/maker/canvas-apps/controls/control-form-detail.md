@@ -147,9 +147,9 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 
 * This property applies only to the **Edit form** control.
 * A **Form** control's **Valid** property aggregates the **Valid** properties of all the **[Card](control-card.md)** controls in the form. A form's **Valid** property is **true** only if the data in all cards in that form is valid; otherwise, the form's **Valid** property is **false**.
-* To enable a button to save changes only when the data in a form is valid but hasn't yet been submitted, set the button's **Enabled** to this formula:
+* To enable a button to save changes only when the data in a form is valid but hasn't yet been submitted, set the button's **DisplayMode** property to this formula:
   
-    **SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**
+    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid, DisplayMode.Edit, DisplayMode.Disabled)**
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
