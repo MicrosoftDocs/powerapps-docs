@@ -37,7 +37,7 @@ People may have access to multiple CDS for Apps environments. Unless your applic
 
 To use the discovery service you must authenticate the user for the discovery service and retrieve the environments that are available for them. Usually you will provide a method for the to choose which environment they want to connect to. The next step is to use the information about that environment to authenticate them a second time for access to that specific environment.
 
-### Authenticaion
+### Authentication
 
 When you know which environment to connect the user to, you the must authenticate them with that environment.
 

@@ -23,7 +23,7 @@
       href: data-platform-create-business-rule.md
     - name: Delete a custom entity
       href: data-platform-delete-entity.md
-    - name: Developer Quick starts
+    - name: 'Developer: Quick starts'
       items:
       - name: Console app using the organization service
         href: ../../developer/common-data-service/org-service/quick-start-org-service-console-app.md
@@ -49,7 +49,7 @@
     items:
         - name: Samples and other resources
           href: samples-resources.md
-        - name: Code samples
+        - name: 'Developer: Code samples'
           items:
           - name: Web API
             href: ../../developer/common-data-service/webapi/samples/toc.yml
@@ -75,7 +75,7 @@
           href: create-edit-virtual-entities.md
         - name: Virtual entity OData v4 data provider
           href: virtual-entity-odata-provider-requirements.md 
-        - name: Entity metadata
+        - name: 'Developer: Entity metadata'
           href: ../../developer/common-data-service/entity-metadata.md
       - name: Work with relationships
         items:  
@@ -85,7 +85,7 @@
           href: create-edit-1n-relationships-portal.md 
         - name: Create many-to-many entity relationships
           href: create-edit-nn-relationships.md
-        - name: Relationship metadata
+        - name: 'Developer: Relationship metadata'
           href: ../../developer/common-data-service/entity-relationship-metadata.md
       - name: Work with fields
         items: 
@@ -93,7 +93,7 @@
           href: types-of-fields.md       
         - name: Set managed properties for fields
           href: set-managed-properties-for-field.md
-        - name: Attribute metadata
+        - name: 'Developer: Attribute metadata'
           href: ../../developer/common-data-service/entity-attribute-metadata.md
       - name: Apply business logic
         items: 
@@ -105,7 +105,7 @@
           href: actions.md
         - name: Best practices for workflow processes
           href: best-practices-workflow-processes.md
-        - name: Apply business logic with code
+        - name: 'Developer: Apply business logic with code'
           href: ../../developer/common-data-service/apply-business-logic-with-code.md
       - name: Work with solutions
         items:     
@@ -117,7 +117,7 @@
           href: use-solutions-for-your-customizations.md
         - name: Set managed properties overview
           href: set-managed-properties.md
-        - name: Solutions for developers
+        - name: 'Developer: Solutions'
           href: ../../developer/common-data-service/introduction-solutions.md
   - name: How-to guides
     items:
@@ -227,25 +227,25 @@
       href: data-platform-restricted-entities.md
     - name: Entity Reference
       href: ../../developer/common-data-service/reference/entities/toc.yml
-    - name: Web API Reference
+    - name: 'Developer: Web API Reference'
       href: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
-    - name: Organization Service assemblies
+    - name: 'Developer: Organization Service assemblies'
       href: /dotnet/api/?view=dynamics-general-ce-9
-    - name: XRM Tooling assemblies
+    - name: 'Developer: XRM Tooling assemblies'
       href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-    - name: Virtual Entity assemblies
+    - name: 'Developer: Virtual Entity assemblies'
       href: /dotnet/api/?view=dynamics-virtualentity-ce-9
-    - name: Workflow assemblies
+    - name: 'Developer: Workflow assemblies'
       href: /dotnet/api/?view=dynamics-workflow-ce-9
-    - name: Package Deployer assemblies
+    - name: 'Developer: Package Deployer assemblies'
       href: /dotnet/api/?view=dynamics-deployer-ce-9
-    - name: Outlook Client assemblies
+    - name: 'Developer: Outlook Client assemblies'
       href: /dotnet/api/?view=dynamics-outlookclient-ce-9
-    - name: Deployment Service assemblies
+    - name: 'Developer: Deployment Service assemblies'
       href: /dotnet/api/?view=dynamics-deployment-ce-9
-    - name: Online Management API
+    - name: 'Developer: Online Management API'
       href: /rest/api/admin.services.crm.dynamics.com/
-    - name: XML Schemas
+    - name: 'Developer: XML Schemas'
       href: /dynamics365/customer-engagement/developer/schemas-used-dynamics-365
   - name: Resources
     items:
@@ -253,7 +253,7 @@
       href: view-download-developer-resources.md  
     - name: Behavior and format of the Date and Time field
       href: behavior-format-date-time-field.md
-    - name: Community tools for developers
+    - name: 'Developer: Community tools'
       href: ../../developer/common-data-service/community-tools.md
 # DO NOT CHANGE BELOW  
 - name: Common Data Model
