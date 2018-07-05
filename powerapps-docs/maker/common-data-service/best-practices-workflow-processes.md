@@ -38,6 +38,12 @@ This topic contains best practices for creating and managing workflow processes.
 ## Use child workflows  
  If you apply the same logic in different workflows or in conditional branches, define that logic as a child workflow so you don’t have to replicate that logic manually in each workflow or conditional branch. This helps make your workflows easier to maintain. Instead of examining many workflows that may apply the same logic, you can just update one workflow.  
   
+## Automatically delete completed workflow jobs
+
+For background workflows, we recommend selecting the **Automatically delete completed workflow jobs (to save disk space)** option in the workflow definition. Checking this box allows the system to delete workflow logs for successful executions to save space. Notice that logs from failed workflow executions will always be saved for troubleshooting.  
+
+![Workflow job retention](media/workflow-job-retention.png)
+
 <a name="BKMK_AutoDeleteCompletedWorkflowJobs"></a>   
 ## Keep fewer logs  
  To save disk space, clear the **Keep logs for workflow jobs that encounter errors** check box if you don’t need to keep this data.  
