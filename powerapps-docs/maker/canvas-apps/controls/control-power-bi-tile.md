@@ -29,6 +29,9 @@ When you share an app that contains Power BI content, you must share not only th
 ## Performance
 It's not recommended to have more than three Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
 
+## Performance
+It is not recommended to have more than three Power BI tiles loaded at the same time within an app.  Tile loading and unloading can be controlled by setting the **LoadPowerBIContent** property.
+
 ## Key properties
 **Workspace** – The Power BI workspace where the tile comes from.
 
@@ -37,6 +40,8 @@ It's not recommended to have more than three Power BI tiles loaded at the same t
 **Tile** – The name of the Power BI tile that you want to display.
 
 **LoadPowerBIContent** – When set to true, the Power BI content is loaded and shown. When set to false, the Power BI content is unloaded, which releases memory and optimizes performance.
+
+**LoadPowerBIContent** – When set to false the Power BI content is unloaded, releasing memory and optimizing performance.  When set to true, the Power BI content is loaded and shown.
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -60,6 +65,7 @@ It's not recommended to have more than three Power BI tiles loaded at the same t
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
+
 1. On the **Insert** tab, open the **Controls** menu, and then add a **Power BI tile** control.
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?

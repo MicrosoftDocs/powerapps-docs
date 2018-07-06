@@ -16,6 +16,7 @@ ms.author: fikaradz
 
 ---
 # Radio control in PowerApps
+
 An input control that shows multiple options, of which users can select only one at a time.
 
 ## Description
@@ -147,5 +148,6 @@ In addition to the [standard color contrast requirements](../accessible-apps-col
 * Consider adding a **[Label](control-text-box.md)** immediately before the **Radio** control to serve as the heading.
 
 ### Keyboard support
+
 * Set the **[TabIndex](properties-accessibility.md)** property to zero or greater so that keyboard users can navigate to it.
 * Set the **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** properties so that focus indicators are clearly visible.
