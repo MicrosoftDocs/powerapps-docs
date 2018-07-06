@@ -28,19 +28,9 @@ If you add this control, the user can update a data source with one or more phot
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
-**Brightness** – How much light the user is likely to perceive in an image.
-
-**Contrast** – How easily the user can distinguish between similar colors in an image.
-
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
-
-**[OnSelect](properties-core.md)** – How the app responds when the user clicks or taps a control.
-
-**OnStream** – How the app responds when the **Stream** property is updated.
-
-**Photo** – The image captured  when the user takes a picture.
 
 **ShowLiveBarcodeDetection** – Whether visual cues are shown to indicate the status of barcode detection. Yellow rectangles represent areas that are being examined. A green line across a rectangle indicates successful barcode identification.
 
@@ -59,8 +49,6 @@ If you add this control, the user can update a data source with one or more phot
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
-
-**Zoom** – The percentage by which an image from a barcode scanner is magnified or the view of a file in a PDF viewer.
 
 ## Related functions
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
