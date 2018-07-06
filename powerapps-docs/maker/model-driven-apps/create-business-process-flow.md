@@ -188,7 +188,7 @@ Users have access to a business process flow depending on the privilege defined 
 
 By default, only the **System Administrator** and **System Customizer** security roles can view a new business process flow. 
 
-To specify privileges on a business process flow, open the business process flow for eidint, and then select Edit Security Roles on the command bar of the business process flow designer. See step 13 under [Create a business process flow](#create-a-business-process-flow) listed earlier in this topic.
+To specify privileges on a business process flow, open the business process flow for edit, and then select **Edit Security Roles** on the command bar of the business process flow designer. See step 13 under [Create a business process flow](#create-a-business-process-flow) listed earlier in this topic.
   
 **Activate**  
 Before anyone can use the business process flow, you must activate it. In the command bar, select **Activate**. After you confirm the activation, the business process flow is ready to use. If a business process flow has errors, you will not be able to activate it until the errors are corrected.  
