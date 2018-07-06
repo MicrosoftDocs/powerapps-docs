@@ -46,7 +46,7 @@ description: Microsoft PowerApps Documentation
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Create apps</h3>
-                                                    <p>Learn how to build custom apps for managing your organization&#39;s mission-critical data.</p>
+                                                    <p>Learn how to build custom apps for managing your organization's mission-critical data.</p>
                                                 </div>
                                             </div>
                                         </div>
