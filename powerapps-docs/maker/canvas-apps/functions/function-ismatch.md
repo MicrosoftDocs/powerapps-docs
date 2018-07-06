@@ -1,14 +1,10 @@
 ---
 title: IsMatch function | Microsoft Docs
 description: Reference information, including syntax, for the IsMatch function in PowerApps
-documentationcenter: na
 author: gregli-msft
 manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 02/05/2017

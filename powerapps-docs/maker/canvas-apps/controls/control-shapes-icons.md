@@ -54,25 +54,30 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
+
 [**Navigate**( *ScreenName*, *ScreenTransition* )](../functions/function-navigate.md)
 
 ## Example
+
 1. Name the default **[Screen](control-screen.md)** control **Target**, add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to show **Target**.
-   
+
     Don't know how to [add and configure a control](../add-configure-controls.md)?
+
 2. Add a **[Screen](control-screen.md)** control, and name it **Source**.
-3. In **Source**, add a **Shape** control, and set its **[OnSelect](properties-core.md)** property to this formula:
-   <br>**Navigate(Target, ScreenTransition.Fade)**
+3. In **Source**, add a **Shape** control, and set its **[OnSelect](properties-core.md)** property to this formula:<br>**Navigate(Target, ScreenTransition.Fade)**
 4. Press F5, and then click or tap the **Shape** control.
-   
+
     The **Target** screen appears.
+
 5. (optional) Press Esc to return to the default workspace, add a **Shape** control to **Target**, and set the **[OnSelect](properties-core.md)** property of the **Shape** control to this formula:
    <br>**Navigate(Source, ScreenTransition.Fade)**
 
 
 ## Accessibility guidelines
+
 ### Color contrast
-The following only applies to graphics that are used as buttons or are otherwise not just for decoration.
+
+The following applies only to graphics that are used as buttons or are otherwise not just for decoration.
 
 For icons:
 * **[Color](properties-color-border.md)** and **[Fill](properties-color-border.md)**
@@ -91,7 +96,8 @@ For shapes without borders:
 * **[AccessibleLabel](properties-accessibility.md)** must be present, if the graphic is used as a button or is otherwise not just for decoration.
 * **[AccessibleLabel](properties-accessibility.md)** must be empty or the empty string **""**, if the graphic is purely for decoration. This causes screen readers to ignore the graphic.
 * **[AccessibleLabel](properties-accessibility.md)** can be empty or the empty string **""**, if the graphic provides redundant information.
-  * For example, a **Settings** icon with its **[AccessibleLabel](properties-accessibility.md)** set to **Settings**. This icon is not used as a button. It is next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read the icon as **Settings**, and the label as **Settings** again. This is unnecessarily verbose. In this case, the icon does not need an **[AccessibleLabel](properties-accessibility.md)**.
+
+    For example, a **Settings** icon with its **[AccessibleLabel](properties-accessibility.md)** set to **Settings**. This icon is not used as a button. It is next to a **[Label](control-text-box.md)** that also says **Settings**. Screen readers will read the icon as **Settings**, and the label as **Settings** again. This is unnecessarily verbose. In this case, the icon does not need an **[AccessibleLabel](properties-accessibility.md)**.
 
     > [!IMPORTANT]
     > Screen readers will always read icons or shapes that have **[TabIndex](properties-accessibility.md)** of zero or greater, even if **[AccessibleLabel](properties-accessibility.md)** is empty. This is because they are rendered as buttons. If no **[AccessibleLabel](properties-accessibility.md)** is provided, screen readers will simply read the graphic as **button**.

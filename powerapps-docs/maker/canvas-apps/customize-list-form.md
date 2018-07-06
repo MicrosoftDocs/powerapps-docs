@@ -1,8 +1,7 @@
 ---
 title: Customize a SharePoint list form | Microsoft Docs
 description: Use PowerApps to customize the form with which users create and update entries in a SharePoint list.
-documentationcenter: na
-author: aftowen
+author: AFTOwen
 
 ms.service: powerapps
 ms.topic: conceptual
@@ -12,6 +11,7 @@ ms.author: anneta
 
 ---
 # Customize a SharePoint list form by using PowerApps
+
 You can easily customize the form for a SharePoint list by opening PowerApps in a browser. You don't need to write traditional code, such as C#, or download another app, such as InfoPath. When you publish your changes, the form is embedded within the SharePoint list for use by all of its users. In PowerApps, you can also review analytics reports, easily create conditional formatting, and connect to other data sources.
 
 To follow the steps in this topic, you'll create a simple list so that you can see how customization works, and then you can apply the same concepts to your own list.
@@ -20,6 +20,7 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 > If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [PowerApps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md).
 
 ## Prerequisites
+
 On a SharePoint site, create a list that contains these columns:
 
 - **ProductName** (single line of text)
@@ -29,6 +30,7 @@ On a SharePoint site, create a list that contains these columns:
 - **Color** (choice)
 
 ## Open the form in PowerApps
+
 1. Open the list that you created, and then select **New** in the command bar.
 
     The form opens and shows the fields that you added, plus **Title** and **Attachments**.
@@ -40,6 +42,7 @@ On a SharePoint site, create a list that contains these columns:
 1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
 
 ## Hide extra fields
+
 In the center of your screen, PowerApps shows your form, but it contains some fields that you might not want to show.
 
 - In the **Data** pane, clear the check boxes for these fields.
@@ -56,6 +59,7 @@ In the center of your screen, PowerApps shows your form, but it contains some fi
     ![Field list](./media/customize-list-form/field-list.png)
 
 ## Set conditional formatting
+
 You can configure the **Price**, **Availability**, and **Colors** fields to appear only if **Details** is set to yes.
 
 1. Select the **Price** card by clicking or tapping it.
@@ -80,11 +84,12 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. (optional) Customize your form in a variety of other ways, including these:
 
-    * Change its size, orientation, or both (for example, to [make the form wider](set-aspect-ratio-portrait-landscape.md)).
-    * Add a control so that users can [upload attachments](controls/properties-text.md).
-    * Create a [lookup field](sharepoint-lookup-fields.md).
+    - Change its size, orientation, or both (for example, to [make the form wider](set-aspect-ratio-portrait-landscape.md)).
+    - Add a control so that users can [upload attachments](controls/properties-text.md).
+    - Create a [lookup field](sharepoint-lookup-fields.md).
 
 ## Save, publish, and show the form
+
 1. Open the **File** menu, select **Save**, and then select **Publish to SharePoint** twice.
 
 1. In the upper-left corner, select the back arrow, and then select **Back to SharePoint**.
@@ -103,15 +108,16 @@ To [customize your form further](sharepoint-form-integration.md), open it, selec
 
 3. On the **Form Settings** page, select one of these options, and then select **OK**.
 
-   * **Use the default SharePoint form** - When a user opens your list and selects **New** in the command bar, the default form for the list will appear.
+    - **Use the default SharePoint form** - When a user opens your list and selects **New** in the command bar, the default form for the list will appear.
 
-   * **Use a custom form created in PowerApps** - When a user opens your list and selects **New** in the command bar, your custom form will appear. (As an alternative, you can publish the form again in PowerApps.)
+    - **Use a custom form created in PowerApps** - When a user opens your list and selects **New** in the command bar, your custom form will appear. (As an alternative, you can publish the form again in PowerApps.)
 
-     You can toggle back and forth between options, as needed.
+    You can toggle back and forth between options, as needed.
 
-     ![Form Settings options](./media/customize-list-form/form-settings.png)
+    ![Form Settings options](./media/customize-list-form/form-settings.png)
 
 ## Delete the custom form
+
 1. From your list in SharePoint, open the settings page (by selecting the gear icon near the upper-right corner), and then select **List settings**.
 
 1. Under **General settings**, select **Form settings**.
