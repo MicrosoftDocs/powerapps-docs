@@ -34,6 +34,7 @@ You can combine the **Defaults** function with the **[Patch](function-patch.md)*
 * *DataSource* – Required. The data source for which you want default values.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Defaults(&nbsp;Scores&nbsp;)** |Returns the default values for the **Scores** data source. |**{ Score: 0 }** |

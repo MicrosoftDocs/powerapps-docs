@@ -37,6 +37,7 @@ By trimming spaces between words, **Trim** is consistent with the function of th
 * *SingleColumnTable* - Required. A single-column table of strings to remove spaces from.
 
 ## Example
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Trim(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** |Removes all spaces from the start and end of a string and extra spaces from within the string. |"Hello World" |

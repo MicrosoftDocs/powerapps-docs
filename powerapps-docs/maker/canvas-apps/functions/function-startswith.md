@@ -39,6 +39,7 @@ Use **EndsWith** and **StartsWith** with the **[Filter](function-filter-lookup.m
 * *StartText* – Required.  The text to search for at the beginning of *Text*.  If *StartText* is an empty string, **StartsWith** returns *true*.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **EndsWith( "Hello World", "world" )** |Tests whether **"Hello World"** ends with **"world"**.  The test is case insensitive. |**true** |

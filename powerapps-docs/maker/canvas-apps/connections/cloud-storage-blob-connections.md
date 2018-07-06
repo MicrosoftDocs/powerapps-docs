@@ -43,7 +43,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
     ![Select the Excel table](./media/cloud-storage-blob-connections/selecttable.png)
    
     > [!NOTE]
-> Remember, the Excel data must be formatted as a table.
+   > Remember, the Excel data must be formatted as a table.
 
 ## Using the Excel data in your app
 1. On the **Insert** tab, select **Gallery**, and then select a **With text** gallery control.

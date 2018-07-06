@@ -73,6 +73,7 @@ With the individual environment, you get the following functionality:
 \*\*Creating a database with the Common Data Service is currently unavailable in an individual environment, and will be available again soon. If you had created a database earlier, then you can continue using it without any issues. 
 
 ## What are the capacity limits for the individual environment?
+
 | **Capacity** |  |
 | --- | --- |
 | Flow runs/month |750 |

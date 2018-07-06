@@ -90,8 +90,8 @@ In this step, we'll first connect to the two lists. Then we'll clean up the data
    
     ![Remove columns](./media/sharepoint-scenario-build-report/05-01-07-remove-column.png)
 3. Remove the two columns after the **Id** column: **ServerRedirectedEmbedURL** and **ContentTypeId**. 
-> [!TIP]
-> Use the Shift key to select both columns, then click or tap **Remove Columns**.
+   > [!TIP]
+   > Use the Shift key to select both columns, then click or tap **Remove Columns**.
 4. Remove all columns to the right of the **PMAssigned** column (a total of 22 columns). The table should match the following image:
    
     ![Project Details table in Query Editor](./media/sharepoint-scenario-build-report/05-01-08-table-details.png)

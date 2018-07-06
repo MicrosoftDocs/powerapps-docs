@@ -151,7 +151,7 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
      ![Update button text](./media/sharepoint-scenario-build-app/04-03-08-buttons-final.png)
      
      > [!NOTE]
-> The button is labeled **Update Details**, but we first navigate to the **ViewProjects** screen to select a project to update.
+     > The button is labeled **Update Details**, but we first navigate to the **ViewProjects** screen to select a project to update.
 
 ### Run the app
 The app doesn't do a lot yet, but you can run it if you like:

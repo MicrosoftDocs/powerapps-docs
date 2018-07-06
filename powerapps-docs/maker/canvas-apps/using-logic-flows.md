@@ -48,7 +48,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
    3. In the **Site Address** box, type or paste the URL of a SharePoint Online site that contains a list.
 
        > [!NOTE]
-> Specify the URL for the site not including the list.
+      > Specify the URL for the site not including the list.
 
    4. In the **List Name** box, select the list that you want to use.
 
@@ -82,7 +82,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 6. In the pane that appears, select the flow that you created in the previous procedure.
 
     > [!NOTE]
-> If the flow that you created isn't available, confirm whether PowerApps is set to the environment in which you created the flow.
+   > If the flow that you created isn't available, confirm whether PowerApps is set to the environment in which you created the flow.
 
     ![Add a flow from the customization pane](./media/using-logic-flows/add-flow-from-pane.png)
 
