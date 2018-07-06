@@ -1,14 +1,10 @@
 ---
 title: 'Power BI tile control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Power BI tile control
-documentationcenter: na
 author: fikaradz
 manager: kfile
-editor: ''
-tags: ''
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 07/07/2016
@@ -16,23 +12,25 @@ ms.author: fikaradz
 
 ---
 # Power BI tile control in PowerApps
+
 A control that shows a [Power BI](https://powerbi.microsoft.com) tile inside an app.
 
 Don't have have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 
 ## Description
+
 Take advantage of your existing data analysis and reporting by displaying your **[Power BI tiles](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** inside your apps. Specify the tile that you want to show by setting its **Workspace**, **Dashboard**, and **Tile** properties in the **Data** tab of the options panel.
 
 ## Sharing and security
+
 When you share an app that contains Power BI content, you must share not only the app itself but also the [dashboard](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) where the tile comes from. Otherwise, the Power BI content won't appear even for users who open the app. Apps that contain Power BI content respect the permissions for that content.
 
 ## Performance
+
 It's not recommended to have more than three Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
 
-## Performance
-It is not recommended to have more than three Power BI tiles loaded at the same time within an app.  Tile loading and unloading can be controlled by setting the **LoadPowerBIContent** property.
-
 ## Key properties
+
 **Workspace** – The Power BI workspace where the tile comes from.
 
 **Dashboard** – The Power BI dashboard where the tile comes from.
@@ -41,9 +39,8 @@ It is not recommended to have more than three Power BI tiles loaded at the same 
 
 **LoadPowerBIContent** – When set to true, the Power BI content is loaded and shown. When set to false, the Power BI content is unloaded, which releases memory and optimizes performance.
 
-**LoadPowerBIContent** – When set to false the Power BI content is unloaded, releasing memory and optimizing performance.  When set to true, the Power BI content is loaded and shown.
-
 ## Additional properties
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -77,6 +74,7 @@ It is not recommended to have more than three Power BI tiles loaded at the same 
     The control renders the Power BI tile.
 
 ## Accessibility guidelines
+
 The **Power BI tile** is simply a container for Power BI content. Learn how to create accessible content with these [Power BI accessibility tips](https://docs.microsoft.com/power-bi/desktop-accessibility).
 
 If the Power BI content doesn't have a title, consider adding a heading using a **[Label](control-text-box.md)** control to support screen readers. You can position the label immediately before the Power BI tile.
