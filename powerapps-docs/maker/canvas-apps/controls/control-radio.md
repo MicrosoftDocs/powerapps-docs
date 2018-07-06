@@ -16,19 +16,20 @@ ms.author: fikaradz
 
 ---
 # Radio control in PowerApps
-An input control that shows multiple options allowing the user to select only one.
+
+An input control that shows multiple options, of which users can select only one at a time.
 
 ## Description
-A **Radio** control, a standard HTML input control, is best used with only a few options that are mutually exclusive.
+A **Radio** control, a standard HTML input control, is best used with only a few, mutually exclusive options.
 
-The control can have horizontal or vertical layout.
+The control can have a horizontal or vertical layout.
 
 ## Key properties
-**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The value of a control before the user changes it.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-**Layout** – Whether the radio options are laid out vertically or horizontally.
+**Layout** – Whether the options are laid out vertically or horizontally.
 
 **[Value](properties-core.md)** – The value of an input control.
 
@@ -102,7 +103,7 @@ The control can have horizontal or vertical layout.
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+**[TabIndex](properties-accessibility.md)** – Keyboard-navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -124,29 +125,29 @@ The control can have horizontal or vertical layout.
    <br>**["Standard", "Premium"]**
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+
 2. Add a **[Label](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](properties-core.md)** property of the **[Label](control-text-box.md)** control to this formula:
    <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
 
     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-3. Press F5, and then choose either option in the **Radio** control.
+
+3. While holding down the Alt key, select either option in the **Radio** control.
 
     The **[Label](control-text-box.md)** control shows the appropriate text for your choice.
-4. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
-5. To return to the default workspace, press Esc.
 
+4. (optional) While holding down the Alt key, select the other option to confirm that the appropriate text appears.
 
 ## Accessibility guidelines
 ### Color contrast
-There must be adequate color contrast between:
+In addition to the [standard color contrast requirements](../accessible-apps-color.md), ensure adequate color contrast between:
 * **RadioSelectionFill** and **RadioBackgroundFill**
 * **RadioBackgroundFill** and **[Fill](properties-color-border.md)**
 
-This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
-
-### Screen reader support
-* There must be a **[Value](properties-core.md)** for every radio option.
+### Screen-reader support
+* Ensure that every option has a **[Value](properties-core.md)**.
 * Consider adding a **[Label](control-text-box.md)** immediately before the **Radio** control to serve as the heading.
 
 ### Keyboard support
-* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
-* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+
+* Set the **[TabIndex](properties-accessibility.md)** property to zero or greater so that keyboard users can navigate to it.
+* Set the **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** properties so that focus indicators are clearly visible.
