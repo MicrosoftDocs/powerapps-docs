@@ -85,6 +85,8 @@ Other elements include:
 
 **[Concatenate](functions/function-concatenate.md)** – Concatenates strings.
 
+**[Concurrent](functions/function-concurrent.md)** – Evaluates multiple formulas concurrently with one another. 
+
 **[Connection](functions/signals.md)** – Returns information about your network connection.
 
 **[Count](functions/function-table-counts.md)** – Counts table records that contain numbers.

@@ -231,10 +231,10 @@ Note that in the above, we used double quotes (") in some places and single quot
 ### Disambiguation
 Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](functions/operators.md) operator:
 
-* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.  
-* To access global values, such as data sources, collections, and context variables, use the pattern **[@*ObjectName*]** (without a table designation).
+* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>_Table_**[@**_FieldName_**]**
+* To access global values, such as data sources, collections, and context variables, use the pattern **[@**_ObjectName_**]** (without a table designation).
 
-If the table being operated upon is an expression, such as **Filter( *table*, ... )**, then the disambiguation operator cannot be used.  Only the innermost record scope can access fields from this table expression, by not using the disambiguation operator.
+If the table being operated upon is an expression, such as **Filter(** _Table_**,** ... **)**, then the disambiguation operator cannot be used.  Only the innermost record scope can access fields from this table expression, by not using the disambiguation operator.
 
 For example, imagine having a collection **X**:
 
