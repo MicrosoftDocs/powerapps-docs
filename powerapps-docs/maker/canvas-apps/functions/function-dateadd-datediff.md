@@ -52,6 +52,7 @@ Also see [working with dates and times](../show-text-dates-times.md) for more in
 In all of these examples, assume that the current date and time is **July 15, 2013, 1:02 PM**.
 
 ### Simple DateAdd
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Text( DateAdd( Now(), 3 ),<br>"dd-mm-yyyy hh:mm" )** |Adds three days (default units) to the current date and time. |"18-07-2013 13:02" |
@@ -60,6 +61,7 @@ In all of these examples, assume that the current date and time is **July 15, 20
 | **Text( DateAdd( Now(), &#8209;30, Minutes ),<br>"dd-mm-yyyy hh:mm" )** |Subtracts 30 minutes from the current date and time. |"15-07-2013 12:32" |
 
 ### Simple DateDiff
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **DateDiff( Now(), DateValue("1/1/2014") )** |Returns the difference between the two units in the default units of **Days** |170 |

@@ -32,6 +32,7 @@ Use the **[Concat](function-concatenate.md)** function to recombine the string (
 * *Separator* - Required.  Separator to use in splitting the string.  Can be zero, one, or more characters.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Split( "Apples,&nbsp;Oranges,&nbsp;Bananas", "," )** |Splits the different fruits apart, based on the comma separator.  The split is performed based on only the comma and not the space after it, resulting in a space at the front of "&nbsp;Oranges" and "&nbsp;Bananas". |<style> img { max-width: none; } </style> ![](media/function-split/fruit1.png) |

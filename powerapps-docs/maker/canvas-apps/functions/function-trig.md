@@ -88,6 +88,7 @@ If an argument would result in an undefined value, the result is *blank*.  This 
 
 ## Examples
 ### Single number
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Cos(&nbsp;1.047197&nbsp;)** |Returns the cosine of 1.047197 radians or 60 degrees. |0.5 |

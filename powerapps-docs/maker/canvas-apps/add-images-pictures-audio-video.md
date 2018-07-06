@@ -44,14 +44,14 @@ You can choose the kind of media file to add (for example, images, video, or aud
     ![Set image property](./media/add-images-pictures-audio-video/imageproperty.png)
 
     > [!NOTE]
-> Specify the file name only, without the extension, inside single quotes.
+   > Specify the file name only, without the extension, inside single quotes.
 
 7. If you added a video or audio control, set its **Media** property to the file that you added:  
 
     ![Set media property](./media/add-images-pictures-audio-video/mediaproperty.png)
 
     > [!NOTE]
-> Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
+   > Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
 ## Add media from Azure Media Services
 1. From your Azure Media Services account, upload and publish your video asset from **AMS > Settings > Assets**.

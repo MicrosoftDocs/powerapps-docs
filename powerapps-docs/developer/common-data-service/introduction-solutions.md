@@ -34,8 +34,8 @@ A **managed** solution is a completed solution that is intended to be distribute
 - You can add unmanaged customizations to components of a managed solution. When you do this, you create a dependency between your unmanaged customizations and the managed solution. When a dependency exists, the managed solution cannot be uninstalled until you remove the dependency.
 - When a managed solution is deleted (uninstalled), all the customizations and extensions included with it are removed.
 
- > [!IMPORTANT]
- > When you uninstall a managed solution, the following data is lost: data stored in custom entities that are part of the managed solution and data stored in custom attributes that are part of the managed solution on other entities that are not part of the managed solution.
+  > [!IMPORTANT]
+  > When you uninstall a managed solution, the following data is lost: data stored in custom entities that are part of the managed solution and data stored in custom attributes that are part of the managed solution on other entities that are not part of the managed solution.
 
 An **unmanaged** solution is one that is still under development or isn’t intended to be distributed. 
 - While a solution is unmanaged, you can continue to add and remove components to it. 
@@ -43,8 +43,8 @@ An **unmanaged** solution is one that is still under development or isn’t inte
 - When an unmanaged solution is deleted, only the solution container of any customizations included in it is deleted. All the unmanaged customizations remain in effect and belong to the default solution. 
 - When the unmanaged solution is complete and you want to distribute it, export it as a managed solution.
 
- > [!NOTE]
- > You cannot import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
+  > [!NOTE]
+  > You cannot import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
 
 ## Solution publishers
 

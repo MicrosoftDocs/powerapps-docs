@@ -166,4 +166,4 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 
     > [!NOTE]
-> The tab key navigates to or away from the **List box**. Arrow keys navigate the contents of the **List box**.
+  > The tab key navigates to or away from the **List box**. Arrow keys navigate the contents of the **List box**.

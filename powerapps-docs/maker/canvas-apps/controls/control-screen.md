@@ -79,4 +79,4 @@ In addition to text, consider checking color contrast with essential graphical o
 * There must be a meaningful name for each **Screen**. The screen name can be viewed and edited in the same way as other controls: in the tree view of the controls pane or in the header of the properties pane.
 
     > [!NOTE]
-> When a new **Screen** is loaded, screen readers will announce its name. 
+  > When a new **Screen** is loaded, screen readers will announce its name. 

@@ -47,6 +47,7 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 * *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white.  
 
 ## Built in colors
+
 | Color enumeration | ColorValue with Hex Code | RGBA | Color Swatch |
 | --- | --- | --- | --- |
 | **Color.AliceBlue** |**ColorValue( "#f0f8ff" )** |**RGBA( 240, 248, 255, 1 )** |![aliceblue](./media/function-colors/color-aliceblue.png) |
