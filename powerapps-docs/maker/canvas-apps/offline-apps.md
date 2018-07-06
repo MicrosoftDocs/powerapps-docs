@@ -1,4 +1,3 @@
-
 ---
 title: Develop offline-capable apps | Microsoft Docs
 description: Develop offline-capable apps so your users are productive whether they are online or offline.
@@ -38,19 +37,19 @@ To keep the focus on the offline aspects of app development, we'll show you a si
 At a high level, the app does the following:
 
 1. On app startup (based on the first screen's **OnVisible** property):
-   
+
    * If the device is online, we access the Twitter connector directly to fetch data, and populate a collection with that data.
    * If the device is offline, we load the data from a local cache file using [LoadData](../canvas-apps/functions/function-savedata-loaddata.md).
    * We enable the user to submit tweets - if online we post directly to Twitter and refresh the local cache.
 2. Every 5 minutes, if online:
-   
+
    * We post any tweets that we have in the local cache.
    * We refresh the local cache and save it using [SaveData](../canvas-apps/functions/function-savedata-loaddata.md).
 
 ### Step 1: Create a new phone app
 1. Open PowerApps Studio.
 2. Click or tap **New** > **Blank app** > **Phone layout**.
-   
+
     ![Blank app, phone layout](./media/offline-apps/blank-app.png)
 
 ### Step 2: Add a Twitter connection
@@ -60,7 +59,7 @@ At a high level, the app does the following:
 2. Click or tap **New Connection** , select **Twitter** , and click or tap **Create**.
 
 3. Enter your credentials, and create the connection.
-   
+
     ![Add a Twitter connection](./media/offline-apps/twitter-connection.png)
 
 ### Step 3: Load tweets into a LocalTweets collection on app startup
@@ -124,20 +123,20 @@ This formula checks if the device is online. If it is, the text of the label is 
 ### Step 7: Add a button to post the tweet
 1. Add a **Button** control, and set the **Text** property to "Tweet".
 2. Set the **OnSelect** property to the following formula:
-   
+
     ```
     If (Connection.Connected,
-   
+
         Twitter.Tweet("", {tweetText: NewTweetTextInput.Text}),
-   
+
         Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-   
+
         SaveData(LocalTweetsToPost, "LocalTweetsToPost")
-   
+
     );
-   
+
     UpdateContext({resetNewTweet: true});
-   
+
     UpdateContext({resetNewTweet: false})
     ```  
 
@@ -156,18 +155,18 @@ Add a new **Timer** control:
 * Set the **AutoStart** property to true.
 
 * Set the **OnTimerEnd** to the following formula:
-  
+
     ```
     If(Connection.Connected,
-  
+
         ForAll(LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}));
-  
+
         Clear(LocalTweetsToPost);
-  
+
         Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-  
+
         SaveData(LocalTweetsToPost, "LocalTweetsToPost");
-  
+
         UpdateContext({statusText: "Online data"})
     )
     ```

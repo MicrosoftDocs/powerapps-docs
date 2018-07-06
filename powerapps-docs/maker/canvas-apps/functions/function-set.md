@@ -51,6 +51,7 @@ Global variables cannot use the same name as an existing collection or control. 
 * *Value* - Required.  The value to assign to the context variable.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Set(&nbsp;Counter,&nbsp;1&nbsp;)** |Creates or modifies the global variable **Counter**, setting its value to **1**. |**Counter** has the value **1**. You can reference that variable by using the name **Counter** in a formula on any screen. |

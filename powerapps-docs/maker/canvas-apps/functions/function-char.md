@@ -27,6 +27,7 @@ The **Char** function returns a string that contains the appropriate ASCII chara
 * *CharacterCode* - Required. ASCII character code to translate.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Char( 65 )** |Returns the character that corresponds to ASCII code 65. |A |

@@ -53,7 +53,7 @@ For more information about access and scope privileges, see [Security roles](htt
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
 5. Select the **Custom Entities** tab, and then locate the custom entity that you want. For this example, the custom entity named **Pet** is used. 
 6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
-![New security role](media/share-model-driven-app/custom-security-role.png)
+   ![New security role](media/share-model-driven-app/custom-security-role.png)
 7. Because the pet grooming app also has a relationship with the account entity, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
 8. Select **Save and Close**. 
 9. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 

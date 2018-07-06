@@ -35,6 +35,7 @@ Storage is encrypted and in a private location on the local device, isolated fro
 * *IgnoreNonexistentFile* - Optional. Boolean (**true**/**false**) value that indicates whether **LoadData** function should display or ignore errors when it can't locate a matching file. If you specify **false**, errors will be displayed. If you specify **true**, errors will be ignored, which is useful for offline scenarios. **SaveData** may create a file if the device is offline (that is, if the **Connection.Connected** status is **false**).
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **If(Connection.Connected, ClearCollect(LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100})),LoadData(LocalTweets, "Tweets", true))** |If the device is connected, load the LocalTweets collection from the Twitter service; otherwise, load the collection from the local file cache. |The content is rendered whether the device is online or offline. |

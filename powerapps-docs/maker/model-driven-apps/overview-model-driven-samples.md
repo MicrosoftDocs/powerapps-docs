@@ -67,7 +67,7 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
     ![Delete solution](media/overview-model-driven-samples/delete-solution.png)
 
-*Alternatively navigate to the list of solutions by clicking **Advanced** in the maker portal and delete everything in the URL after .dynamics.com/*
+<em>Alternatively navigate to the list of solutions by clicking **Advanced</em>* in the maker portal and delete everything in the URL after .dynamics.com/*
 
 > [!IMPORTANT]
 > Do not delete other system solutions unless you're aware of the impact.

@@ -137,7 +137,7 @@ Add a formula that clears the **Text input** control between entries.
     **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
    
     > [!NOTE]
-> Separate multiple formulas with a semi-colon “**;**”.
+   > Separate multiple formulas with a semi-colon “**;**”.
 3. Set the **[Default](properties-core.md)** property of **Source** to **ClearInput**.
 4. Press **F5**, and then test the app by adding several numbers together.
 

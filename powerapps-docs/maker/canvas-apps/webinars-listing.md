@@ -1,4 +1,3 @@
-
 ---
 title: Webinar listing | Microsoft Docs
 description: Displays a listing of past and future webinars, including time/date and topics covered.
