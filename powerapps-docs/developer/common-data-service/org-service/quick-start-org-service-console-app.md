@@ -38,6 +38,9 @@ You will need:
 
     ![Start a console app project](../media/quick-start-org-service-console-app-1.png)
 
+    > [!NOTE]
+    > This screenshot shows the name `OrgServiceQuickStart`, but you can choose to name the project and solution whatever you want. 
+
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu.
 
     ![Add NuGet package](../media/quick-start-org-service-console-app-2.png)
@@ -58,7 +61,7 @@ You will need:
     using Microsoft.Xrm.Tooling.Connector;
     ```
 
-1. Relplace the `Main` method with the following code:
+1. Replace the `Main` method with the following code:
 
     ```csharp
     static void Main(string[] args)
@@ -94,9 +97,16 @@ You will need:
 
 1. Edit the following values to add information for your environment:
 
-    - `<your environment url>`
-    - `<your user name>`
-    - `<your password>`
+    ```csharp
+    // i.e. https://yourorg.crm.dynamics.com
+    string url = "<your environment url>";
+    // i.e. you@yourorg.onmicrosoft.com
+    string userName = "<your user name>";
+    // i.e. y0urp455w0rd
+    string password = "<your password>";
+    ```
+
+## Run the program
 
 1. Press F5 to run the program. The output should look like this:
 
@@ -105,6 +115,9 @@ You will need:
     Press any key to exit.
     ```
 
-## Congratulations! 
+### Congratulations!
 
 You have successfully connected to the organization service.
+
+
+<!-- TODO: Include link to next steps topics -->
