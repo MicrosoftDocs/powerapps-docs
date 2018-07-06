@@ -257,6 +257,8 @@
          href: ./canvas-apps/functions/function-concatenate.md
        - name: Concatenate
          href: ./canvas-apps/functions/function-concatenate.md
+       - name: Concurrent
+         href: ./canvas-apps/functions/function-concurrent.md
        - name: Connection
          href: ./canvas-apps/functions/signals.md
        - name: Count
