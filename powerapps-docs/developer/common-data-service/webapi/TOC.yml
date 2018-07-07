@@ -5,7 +5,7 @@
   - name: (C#)
     href: get-started-dynamics-365-web-api-csharp.md
     items:
-    - name: 'Quick Start: Web API sample (C#)''
+    - name: 'Quick Start: Web API sample (C#)'
       href: quick-start-console-app-csharp.md
     - name: Start a Web API project in Visual Studio (C#)
       href: start-web-api-project-visual-studio-csharp.md
