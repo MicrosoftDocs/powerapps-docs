@@ -1,5 +1,5 @@
 ---
-title: "Simple Web API quick-start sample (C#) (Common Data Service for Apps)| Microsoft Docs"
+title: "Quick Start: Web API sample (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "This sample demonstrates how to authenticate with a Common Data Service for Apps Server and then call a basic Web API operation, the WhoAmI Function"
 ms.custom: ""
 ms.date: 08/01/2018
@@ -10,14 +10,14 @@ author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
+# Quick Start: Web API sample (C#)
 
-In this quick start you will create a minimum console application to connect to your Common Data Service for Apps environment the Web API.
+In this quick start you will create a simple console application to connect to your Common Data Service for Apps environment using the Web API.
 
-You will authenticate using OAuth2 and use an `HttpClient` to send a `POST` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value value.
+You will authenticate using OAuth2 and use an [HttpClient](/dotnet/api/system.net.http.httpclient) to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value value.
 
 > [!NOTE]
 > This quick start example does not include error handling. This is a minimum example of what you need to connect to and use the Web API.
-
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ You will authenticate using OAuth2 and use an `HttpClient` to send a `POST` requ
  - Basic understanding of the Visual C# language
 
 > [!NOTE]
-> To authenticate using OAuth2 you must have an app registered in Azure Active Directory. This quick start example provides app registration values you can use for the purpose of running this sample. For your own applications you must register your apps. More information: [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
+> To authenticate using OAuth2 you must have an app registered in Azure Active Directory. This quick start example provides app registration clientid value you can use for the purpose of running this sample. For your own applications you must register your apps. More information: [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
 
 ## Create Visual Studio project
 
@@ -89,7 +89,6 @@ You will authenticate using OAuth2 and use an `HttpClient` to send a `POST` requ
         // Azure Active Directory registered app clientid for this sample
         string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
 
-        
         var userCredential = new UserCredential(userName, password);
         string apiVersion = "9.0";
         string webApiUrl = $"{url}/api/data/v{apiVersion}/";
