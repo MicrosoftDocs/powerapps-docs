@@ -16,5 +16,5 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 Merge in content from helper-code-enumerations-option-sets.md
 
-Include with the Sample to extend CrmSvcUtil.exe; samples should not use it.
+Include with the Sample to extend CrmSvcUtil.exe.
 -->

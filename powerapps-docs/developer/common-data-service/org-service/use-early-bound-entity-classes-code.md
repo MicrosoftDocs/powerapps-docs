@@ -11,3 +11,5 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use the early bound entity classes in code
+
+<!-- Not sure we need this  -->

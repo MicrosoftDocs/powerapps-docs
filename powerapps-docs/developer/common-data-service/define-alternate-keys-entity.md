@@ -10,6 +10,15 @@ author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Define alternate keys for an entity
+# Work with alternate keys
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/define-alternate-keys-entity -->
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/define-alternate-keys-entity 
+
+This should not duplicate information found in the maker content
+
+../../../maker/common-data-service/define-alternate-keys-reference-records.md
+
+
+-->
+
+[Define alternate keys to reference records](../../maker/common-data-service/define-alternate-keys-reference-records.md)
