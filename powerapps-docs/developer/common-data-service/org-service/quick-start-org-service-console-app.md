@@ -22,8 +22,6 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 
 ## Prerequisites
 
-You will need:
-
  - Visual Studio (2017 recommended)
  - Internet connection
  - Valid user account for a Common Data Service for Apps instance

@@ -17,6 +17,8 @@ ms.author: "jdaly"
 ---
 # Simple Web API quick-start sample (C#)
 
+<!-- This should be retired in favor of powerapps-docs/developer/common-data-service/webapi/quick-start-console-app-csharp.md -->
+
 This sample demonstrates how to authenticate with Common Data Service for Apps and then call a basic Web API operation, the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" />. Unlike other Web API samples, this sample doesn't depend on other nonstandard helper libraries or additional source files. All of its source code is in a single file, Program.cs to help make logic flow and the authentication process easier to understand.  The sample will work with online, on-premise and internet-facing deployments (IFDs).  
   
 ## Requirements
