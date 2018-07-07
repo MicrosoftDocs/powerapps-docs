@@ -79,11 +79,11 @@ You will authenticate using OAuth2 and use an [HttpClient](/dotnet/api/system.ne
     static void Main(string[] args)
     {
         // Set these values:
-        // i.e. https://yourorg.crm.dynamics.com
+        // e.g. https://yourorg.crm.dynamics.com
         string url = "<your environment url>";
-        // i.e. you@yourorg.onmicrosoft.com
+        // e.g. you@yourorg.onmicrosoft.com
         string userName = "<your user name>";
-        // i.e. y0urp455w0rd
+        // e.g. y0urp455w0rd
         string password = "<your password>";
 
         // Azure Active Directory registered app clientid for Microsoft samples
@@ -129,11 +129,11 @@ You will authenticate using OAuth2 and use an [HttpClient](/dotnet/api/system.ne
 1. Edit the following values to add information for your environment:
 
     ```csharp
-    // i.e. https://yourorg.crm.dynamics.com
+    // e.g. https://yourorg.crm.dynamics.com
     string url = "<your environment url>";
-    // i.e. you@yourorg.onmicrosoft.com
+    // e.g. you@yourorg.onmicrosoft.com
     string userName = "<your user name>";
-    // i.e. y0urp455w0rd
+    // e.g. y0urp455w0rd
     string password = "<your password>";
     ```
 

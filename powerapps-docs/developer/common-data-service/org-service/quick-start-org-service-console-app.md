@@ -64,11 +64,11 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
     ```csharp
     static void Main(string[] args)
     {            
-        // i.e. https://yourorg.crm.dynamics.com
+        // e.g. https://yourorg.crm.dynamics.com
         string url = "<your environment url>";
-        // i.e. you@yourorg.onmicrosoft.com
+        // e.g. you@yourorg.onmicrosoft.com
         string userName = "<your user name>";
-        // i.e. y0urp455w0rd
+        // e.g. y0urp455w0rd
         string password = "<your password>";
 
         string conn = $@"
@@ -96,11 +96,11 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 1. Edit the following values to add information for your environment:
 
     ```csharp
-    // i.e. https://yourorg.crm.dynamics.com
+    // e.g. https://yourorg.crm.dynamics.com
     string url = "<your environment url>";
-    // i.e. you@yourorg.onmicrosoft.com
+    // e.g. you@yourorg.onmicrosoft.com
     string userName = "<your user name>";
-    // i.e. y0urp455w0rd
+    // e.g. y0urp455w0rd
     string password = "<your password>";
     ```
 
