@@ -4,7 +4,7 @@
 - name: Quick Starts
   items:
   - name: Web API quick-start sample (C#)
-    href: webapi/samples/quick-start-csharp.md
+    href: webapi/quick-start-console-app-csharp.md
   - name: Organization service quick-start sample (C#)
     href: org-service/quick-start-org-service-console-app.md
 - name: Tutorials

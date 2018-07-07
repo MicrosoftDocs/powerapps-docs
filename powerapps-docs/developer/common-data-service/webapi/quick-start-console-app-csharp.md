@@ -30,7 +30,7 @@ You will authenticate using OAuth2 and use an [HttpClient](/dotnet/api/system.ne
  - Basic understanding of the Visual C# language
 
 > [!NOTE]
-> To authenticate using OAuth2 you must have an app registered in Azure Active Directory. This quick start example provides app registration clientid value you can use for the purpose of running this sample. For your own applications you must register your apps. More information: [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
+> To authenticate using OAuth2 you must have an app registered in Azure Active Directory. This quick start example provides an app registration clientid value you can use for the purpose of running sample code published by Microsoft. For your own applications you must register your apps. More information: [Walkthrough: Register an app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md)
 
 ## Create Visual Studio project
 
@@ -86,7 +86,7 @@ You will authenticate using OAuth2 and use an [HttpClient](/dotnet/api/system.ne
         // i.e. y0urp455w0rd
         string password = "<your password>";
 
-        // Azure Active Directory registered app clientid for this sample
+        // Azure Active Directory registered app clientid for Microsoft samples
         string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
 
         var userCredential = new UserCredential(userName, password);

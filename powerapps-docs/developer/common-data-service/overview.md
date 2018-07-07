@@ -64,7 +64,7 @@ When you create extensions that apply business logic on the server you will not 
 - [Authentication](authentication.md)
 - [Create Client applications](connect-cds.md)
 - [Quick Start: Create a console app using the organization service](org-service/quick-start-org-service-console-app.md)
-- [Simple Web API quick-start sample (C#)](webapi/samples/quick-start-csharp.md)
+- [Quick Start: Web API sample (C#)](webapi/quick-start-console-app-csharp.md)
 - [Sample: Quick start for XRM Tooling API](xrm-tooling/sample-quick-start-xrm-tooling-api.md)
 
 ### Web services

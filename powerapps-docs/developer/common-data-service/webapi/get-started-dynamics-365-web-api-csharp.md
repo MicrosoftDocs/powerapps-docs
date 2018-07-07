@@ -18,13 +18,13 @@ manager: "amyla"
 ---
 # Get started with Common Data Service for Apps Web API (C#)
 
-This section shows you how to access the Common Data Service for Apps Web API using the C# programming language. The first topic, [Simple Web API quick-start sample (C#)](samples/quick-start-csharp.md), provides the quickest example of how to accomplish this, as all source code is simplified and provided in one file. The rest of this section shows you how to create and configure Visual Studio projects that use the Common Data Service for Apps Web API to perform common business data operations. You will be shown how to add helper libraries and references to your project to facilitate authentication and communication to your Common Data Service for Apps Server.  
+This section shows you how to access the Common Data Service for Apps Web API using the C# programming language. The first topic, [Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md), provides the quickest example of how to accomplish this, as all source code is simplified and provided in one file. The rest of this section shows you how to create and configure Visual Studio projects that use the Common Data Service for Apps Web API to perform common business data operations. You will be shown how to add helper libraries and references to your project to facilitate authentication and communication to your Common Data Service for Apps Server.  
   
 After completing this guide, you will have learned enough to explore the many other business operations that are supported by the Common Data Service for Apps Web API.   You will also have a better understanding about how the [Web API Samples (C#)](web-api-samples-csharp.md) are structured.  
   
 ## In this section
 
-[Simple Web API quick-start sample (C#)](samples/quick-start-csharp.md)<br />
+[Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md)<br />
 [Start a Web API project in Visual Studio (C#)](start-web-api-project-visual-studio-csharp.md)<br />
 [Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)
   
