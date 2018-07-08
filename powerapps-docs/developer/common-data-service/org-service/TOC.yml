@@ -45,7 +45,7 @@
     - name: Perform Conditional operations
       href: entity-operations-conditional-operations.md    
     - name: Use the late bound entity class in code #Not sure we need this. Late-bound is kind of the 'default' unless you choose to use early bound classes.
-      href: use-late-bound-entiy-class.md
+      href: use-late-bound-entity-class.md
   - name: Use messages
     href: use-messages.md
   - name: Special Operations
