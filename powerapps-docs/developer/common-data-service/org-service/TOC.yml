@@ -5,9 +5,6 @@
   - name: Create a console app
     href: quick-start-org-service-console-app.md
 # - name: Tutorials
-#   items:
-#   - name: Org service tutorial one
-#     href: tutorial-org-service-1.md
 - name: Samples
   href: samples/toc.yml
 - name: Concepts

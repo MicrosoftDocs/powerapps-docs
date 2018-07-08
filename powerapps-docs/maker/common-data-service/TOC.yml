@@ -83,6 +83,8 @@
           href: create-edit-entity-relationships.md 
         - name: Create one-to-many or many-to-one relationships
           href: create-edit-1n-relationships-portal.md 
+        - name: Entity relationship behavior
+          href: entity-relationship-behavior.md
         - name: Create many-to-many entity relationships
           href: create-edit-nn-relationships.md
         - name: 'Developer: Relationship metadata'

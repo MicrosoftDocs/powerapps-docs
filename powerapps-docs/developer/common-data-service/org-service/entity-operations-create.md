@@ -49,7 +49,7 @@ var account = new Entity("account");
     // Int
     account["numberofemployees"] = 500;
     // Money
-    account["revenue"] = 5000000.00;
+    account["revenue"] = new Money(new decimal(5000000.00));
     // Picklist (Option set)
     account["accountcategorycode"] = new OptionSetValue(1); //Preferred customer
                 
@@ -59,8 +59,9 @@ Guid accountid = svc.Create(account);
 
 ### Early-bound example
 
-Most of the time you use the generated properties in the same way as the late-bound style, but for certain types, such as the <xref:Microsoft.Xrm.Sdk.Money> type used for the `Revenue` property below, you will need to cast a value to a specific type.
+The following example shows using the generated `Account` class to create an account record using the  <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method.
 
+The `Account` class is derived from the <xref:Microsoft.Xrm.Sdk.Entity> class
 
 ```csharp
 var account = new Account();
@@ -87,7 +88,7 @@ Guid accountid = svc.Create(account);
 
 ## Use the CreateRequest class
 
-Instead of using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method, you can use either the late-bound <xref:Microsoft.Xrm.Sdk.Entity> class or the early-bound class with the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class by setting the instance to the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest.Target> property and then using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method to get a <xref:Microsoft.Xrm.Sdk.Messages.CreateResponse>. The id of the created record will be in the <xref:Microsoft.Xrm.Sdk.Messages.CreateResponse.id> property value.
+Instead of using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method, you can use either the late-bound <xref:Microsoft.Xrm.Sdk.Entity> class or the early-bound entity classes with the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class by setting the entity instance to the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest.Target> property and then using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method to get a <xref:Microsoft.Xrm.Sdk.Messages.CreateResponse>. The id of the created record will be in the <xref:Microsoft.Xrm.Sdk.Messages.CreateResponse.id> property value.
 
 ```csharp
 var request = new CreateRequest() { Target = account };
@@ -179,7 +180,7 @@ Guid accountid = svc.Create(account);
 
 You can associate any new record with an existing record when you create it in the same way you would when updating it. You must use an <xref:Microsoft.Xrm.Sdk.EntityReference> to set the value of a lookup attribute.
 
-This assignment is the same for both early and late-bound styles.
+This lookup attribute assignment is the same for both early and late-bound styles.
 
 ```csharp
 //Use Entity class with entity logical name
@@ -206,6 +207,9 @@ You can use the alternate <xref:Microsoft.Xrm.Sdk.EntityReference> constructors 
 ```csharp
 account["primarycontactid"] = new EntityReference("contact", "sample_username", "john.smith123");
 ```
+> [!NOTE]
+> Alternate keys are usually used only for data integration scenarios
+
 More information: 
 - [Define alternate keys to reference records](../../../maker/common-data-service/define-alternate-keys-reference-records.md)
 - [Use an alternate key to create a record](../use-alternate-key-create-record.md)
@@ -244,7 +248,7 @@ if (response.DuplicateCollection.Entities.Count >= 1)
 }
 ```
 
-### Throw an Exception when duplicate record is detected
+### Throw an exception when duplicate record is detected
 
 If you want to have the platform throw an error when a new record you create is determined to be a duplicate record, or you update an existing record so that duplicate detection rules will be evaluated, you must use the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method and apply the `SuppressDuplicateDetection` parameter set to `false`.
 
