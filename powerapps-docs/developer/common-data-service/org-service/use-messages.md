@@ -11,3 +11,9 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use messages with the Organization service
+
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-messages-request-response-classes-execute-method -->
+
+[When to use the CreateRequest class](entity-operations-create.md#when-to-use-the-createrequest-class)
+

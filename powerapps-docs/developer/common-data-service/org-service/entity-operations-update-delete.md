@@ -18,3 +18,161 @@ use-early-bound-entity-classes-create-update-delete.md
 manage-duplicate-detection-create-update.md
 
 -->
+
+This topic will include examples using both late-bound and early-bound programming styles. More information: [Early-bound and Late-bound programming using the Organization service](early-bound-programming.md)
+
+<!-- TODO make this an include? -->
+Each of the examples uses a `svc` variable that represents an instance of a class that implmenents the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
+
+> [!IMPORTANT]
+>  When updating an entity, only include the attributes you are changing. Simply updating the attributes of an entity that you previously retrieved will update each attribute even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause attributes to appear to have been updated in auditing data when in fact they haven’t actually changed. 
+>
+> You should create a new entity instance, set the id attribute and any attribute values you are changing, and use that entity instance to update the record.
+
+## Basic update
+
+Each of the examples below uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method to set attribute values for an entity that was previously retrieved.
+
+Use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Id> property to transfer the unique identifier value of the retrieved entity to the entity instance used to perform the update operation.
+
+### Late-bound example
+
+```csharp
+var retrievedAccount = new Entity("account", new Guid("a976763a-ba1c-e811-a954-000d3af451d6"));
+
+//Use Entity class with entity logical name
+var account = new Entity("account");
+account.Id = retrievedAccount.Id;
+// set attribute values
+// Boolean (Two option)
+account["creditonhold"] = true;
+// DateTime
+account["lastonholdtime"] = DateTime.Now;
+// Double
+account["address1_latitude"] = 47.642311;
+account["address1_longitude"] = -122.136841;
+// Int
+account["numberofemployees"] = 400;
+// Money
+account["revenue"] = new Money(new Decimal(2000000.00));
+// Picklist (Option set)
+account["accountcategorycode"] = new OptionSetValue(2); //Standard customer
+
+//Update the account
+svc.Update(account);
+```
+
+### Early-bound example
+
+```csharp
+var retrievedAccount = new Account()
+{ Id = new Guid("a976763a-ba1c-e811-a954-000d3af451d6") };
+
+var account = new Account();
+account.Id = retrievedAccount.Id;
+// set attribute values
+// Boolean (Two option)
+account.CreditOnHold = true;
+// DateTime
+account.LastOnHoldTime = DateTime.Now;
+// Double
+account.Address1_Latitude = 47.642311;
+account.Address1_Longitude = -122.136841;
+// Int
+account.NumberOfEmployees = 400;
+// Money
+account.Revenue = new Money(new Decimal(2000000.00));
+// Picklist (Option set)
+account.AccountCategoryCode = new OptionSetValue(2); //Standard customer
+
+//Update the account
+svc.Update(account);
+```
+
+## Use the UpdateRequest class
+
+Instead of using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method, you can use either the late-bound <xref:Microsoft.Xrm.Sdk.Entity> class or the early-bound class with the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class by setting the instance to the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target> property and then using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+
+> [!NOTE]
+> The <xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse> has no properties so it isn't necessary to access access it.
+ 
+```csharp
+var request = new UpdateRequest()
+{ Target = account };
+svc.Execute(request);
+```
+### When to use the UpdateRequest class
+
+You must use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to pass optional parameters. There are two cases where you might need special parameters.
+ - When you want duplicate detection rules to be applied. More information: [Check for Duplicate records](entity-operations-create.md#check-for-duplicate-records)
+ - When you are creating a record that represents a solution component, such as a [WebResource](../reference/entities/webresource.md) and want to associate it with a specific solution. In this case, you would include the value of the [Solution.UniqueName](../reference/entities/solution.md#BKMK_UniqueName) using the `SolutionUniqueName` parameter. More information: [Use messages with the Organization service](use-messages.md)
+
+You must also use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to specify an optimistic concurrency behavior. More information: [Optimistic concurrency behavior](#optimistic-concurrency-behavior)
+
+## Check for Duplicate records
+
+When updating an entity you may change the values so that the record represents a duplicate of another record. More information: [Check for Duplicate records](entity-operations-create.md#check-for-duplicate-records)
+
+## Use Upsert
+
+## Delete
+
+
+## Optimistic concurrency behavior
+
+You can also specify the optimistic concurrency behavior for the operation by setting the `ConcurrencyBehavior` property of the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> classes.
+
+The logic to update or delete the record may be based on stale data. If the current data is different because it has changed since it was retrieved, optimistic concurrency provides a way to cancel an update or delete operation so you might retrieve it again and use the current data to determine whether to proceed.
+
+To determine whether the entity has been changed, you don't need to compare all the values, you can use the <xref:Microsoft.Xrm.Sdk.Entity.RowVersion> property to see if it has changed.
+
+The following example will succeed only when:
+- The `RowVersion` of the entity in the database equals `986323`
+- The account entity is enabled for optimistic concurrency (<xref href="Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled?text=EntityMetadata.IsOptimisticConcurrencyEnabled" /> is `true`)
+- The `RowVersion` property is set on the entity passed with the request.
+
+If the `RowVersion` doesn't match, an error with the message `The version of the existing record doesn't match the RowVersion property provided.` will occur.
+
+```csharp
+var retrievedAccount = new Account()
+{   
+    Id = new Guid("a976763a-ba1c-e811-a954-000d3af451d6"), 
+    RowVersion = "986323" 
+};
+
+var account = new Account();
+account.Id = retrievedAccount.Id;
+account.RowVersion = retrievedAccount.RowVersion;
+
+// set attribute values
+account.CreditOnHold = true;
+
+//Update the account
+var request = new UpdateRequest()
+{ 
+    Target = account,
+    ConcurrencyBehavior = ConcurrencyBehavior.IfRowVersionMatches 
+};
+
+try
+{
+    svc.Execute(request);
+}
+catch (FaultException<OrganizationServiceFault> ex)
+{
+    switch (ex.Detail.ErrorCode)
+    {
+        case -2147088254: // ConcurrencyVersionMismatch 
+        case -2147088253: // OptimisticConcurrencyNotEnabled 
+            throw new InvalidOperationException(ex.Detail.Message);                       
+        case -2147088243: // ConcurrencyVersionNotProvided
+            throw new ArgumentNullException(ex.Detail.Message);
+        default:
+            throw ex;
+    }
+}
+```
+
+More information: 
+- [Optimistic Concurrency](../optimistic-concurrency.md)
+- <xref:Microsoft.Xrm.Sdk.ConcurrencyBehavior>

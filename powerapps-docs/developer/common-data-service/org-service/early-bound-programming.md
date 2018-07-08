@@ -38,13 +38,43 @@ There is also an option to extend the code generation tool to change the output.
 
 However, because the classes are generated using metadata from a specific instance, and each instance may have different entities and attributes, and these can change over time. You may need to write code to work for entities that are not present when you generate the strongly typed classes.
 
+### Advantages:
+
+ - IntelliSense makes code easier to write and read
+
+### Disadvantages:
+
+- You need to regenerate the classes as you modify the schema
+
 ## Late-Bound
 
-Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class and you need to refer to entities, attributes and relationships  using their `LogicalName` property values: 
+Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class and you need to refer to entities, and attributes using their `LogicalName` property values: 
 - <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalName> 
 - <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.LogicalName>
-- <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.LogicalName>
+
+Relationships do not have a `LogicalName` property, so the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName> property is used.
+
+The main advantage for late-bound programming is that you don't need to generate the classes or include that generated file within your projects. The generated file can be quite large.
+
+### Advantages:
+
+ - You don't need to regenerate the entity classes
+ - Very slightly more performant
+
+### Disadvantages:
+
+- No IntelliSense for entities, attributes, and relationships
+- More, less readable code
 
 ## Mix early and late bound
 
 Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class used with late-bound programming, you can work with entities, attributes, and relationships not defined within classes.
+
+<!-- TODO: So much debate and opinions about which to use e.g. https://stackoverflow.com/questions/15038699/what-are-the-disadvantages-of-early-bound/15040087 
+
+Seems like the need to call the EnableProxyTypes is only needed for the proxy that is passed into plug-ins?
+
+https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.client.organizationserviceproxy.enableproxytypes
+
+Using CrmServiceClient I don't need it.
+-->

@@ -12,4 +12,17 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Manage duplicate detection for create and update operations
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicate-detection-create-update -->
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicate-detection-create-update 
+
+this should point to the ways that this is managed in both Web API and Organization service
+
+[Check for Duplicate records](org-service/entity-operations-create.md#check-for-duplicate-records)
+
+
+- [Detect duplicate data for developers](../detect-duplicate-data-for-developers.md)
+- [Sample: Use duplicate detection when creating and updating records](samples/use-duplicate-detection-when-creating-and-updating-records.md)
+- [Duplicate detection messages](../duplicate-detection-messages.md)
+- [Detect duplicate data so you can fix or remove it](/dynamics365/customer-engagement/admin/detect-duplicate-data)
+
+-->
+
