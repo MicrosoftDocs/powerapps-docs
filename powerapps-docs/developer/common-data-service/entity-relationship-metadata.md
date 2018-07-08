@@ -44,6 +44,8 @@ More information:
 - [Common Data Service for Apps Customization Guide: Create 1:N (one-to-many) or N:1 (many-to-one) relationships > Relationship behavior](/dynamics365/customer-engagement/customize/create-and-edit-1n-relationships#relationship-behavior)
 - [Entity relationship behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)
 
+<!-- TODO: include information from here: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/entity-relationship-behavior#configure-entity-relationship-behavior -->
+
 
 ## Create a hierarchy of entities
 

@@ -22,7 +22,7 @@ manage-duplicate-detection-create-update.md
 This topic will include examples using both late-bound and early-bound programming styles. More information: [Early-bound and Late-bound programming using the Organization service](early-bound-programming.md)
 
 <!-- TODO make this an include? -->
-Each of the examples uses a `svc` variable that represents an instance of a class that implmenents the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
+Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
 
 > [!IMPORTANT]
 >  When updating an entity, only include the attributes you are changing. Simply updating the attributes of an entity that you previously retrieved will update each attribute even though the value is unchanged. This can cause system events that can trigger business logic that expects that the values have actually changed. This can also cause attributes to appear to have been updated in auditing data when in fact they haven’t actually changed. 
@@ -98,7 +98,7 @@ svc.Update(account);
 Instead of using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method, you can use either the late-bound <xref:Microsoft.Xrm.Sdk.Entity> class or the generated early-bound entity classes with the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class by setting the entity instance to the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest.Target> property and then using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 > [!NOTE]
-> The <xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse> has no properties so it isn't necessary to access access it.
+> The <xref:Microsoft.Xrm.Sdk.Messages.UpdateResponse> has no properties. While it is returned by the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method, it isn't necessary to refer to it.
  
 ```csharp
 var request = new UpdateRequest()
@@ -113,11 +113,62 @@ You must use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you wa
 
 You must also use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class if you want to specify an optimistic concurrency behavior. More information: [Optimistic concurrency behavior](#optimistic-concurrency-behavior)
 
+## Update related entities in one operation
+
+In a similar manner to how you can [Create related entities in one operation](entity-operations-create.md#create-related-entities-in-one-operation), you can also update related entities.
+
+To do this, you have to retrieve an entity with the related records so that you can access the id values. More information: [Retrieve with related records](entity-operations-retrieve.md#retrieve-with-related-records)
+
+### Late-bound example
+
+<!-- TODO -->
+
+### Early-bound example
+
+```csharp
+var account = new Account();
+account.Id = retrievedAccount.Id;
+
+//Update the account
+account.Name = "New Account name";
+
+//Update the email address for the primary contact of the the account
+account.account_primary_contact = new Contact
+{ Id = retrievedAccount.PrimaryContactId.Id, EMailAddress1 = "someone_a@example.com" };
+
+// Find related Tasks that need to be updated
+List<Task> tasksToUpdate = retrievedAccount.Account_Tasks
+    .Where(t => t.Subject.Equals("Example Task")).ToList();
+
+// A list to put the updated tasks
+List<Task> updatedTasks = new List<Task>();
+
+//Fill the list of updated tasks based on the tasks that need to but updated
+tasksToUpdate.ForEach(t =>
+{
+    updatedTasks
+    .Add(new Task() {
+        ActivityId = t.ActivityId,
+        Subject = "Updated Subject"
+    });
+
+});
+
+//Set the updated tasks to the collection
+account.Account_Tasks = updatedTasks;
+
+//Update the account and related contact and tasks
+svc.Update(account);
+```
+
+
 ## Check for Duplicate records
 
 When updating an entity you may change the values so that the record represents a duplicate of another record. More information: [Check for Duplicate records](entity-operations-create.md#check-for-duplicate-records)
 
 ## Use Upsert
+
+<!-- TODO -->
 
 ## Delete
 
@@ -126,17 +177,33 @@ The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrgan
 ```csharp
 svc.Delete(retrievedEntity.LogicalName, retrievedEntity.Id);
 ```
-Or you can use the raw values:
+Or you can use the values:
 ```csharp
 svc.Delete("account", new Guid("e5fa5509-2582-e811-a95e-000d3af40ae7"));
 ```
 > [!IMPORTANT]
 > Delete operations can initiate cascading operations that may delete child records to maintain data integity depending on logic defined for the relationships in the environment. More information: [Entity relationship behavior](../../../maker/common-data-service/entity-relationship-behavior.md)
 
-
-
-
 ## Use the DeleteRequest class
+
+You can use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> instead of the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*> method, but it is only required when you want to specify optimistic concurrency behavior.
+
+```csharp
+var retrievedEntity = new Entity("account")
+{
+    Id = new Guid("c81ffd82-cd82-e811-a95c-000d3af49bf8"),
+    RowVersion = "986335"
+
+};
+
+var request = new DeleteRequest()
+{
+    Target = retrievedEntity.ToEntityReference(),
+    ConcurrencyBehavior = ConcurrencyBehavior.IfRowVersionMatches
+};
+
+svc.Execute(request);
+```
 
 ## Optimistic concurrency behavior
 
@@ -196,3 +263,7 @@ catch (FaultException<OrganizationServiceFault> ex)
 More information: 
 - [Optimistic Concurrency](../optimistic-concurrency.md)
 - <xref href="Microsoft.Xrm.Sdk.ConcurrencyBehavior?text=ConcurrencyBehavior Enum" />
+
+## Legacy update messages
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update -->
