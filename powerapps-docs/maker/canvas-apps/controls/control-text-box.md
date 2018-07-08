@@ -125,7 +125,7 @@ A label shows data that you specify as a literal string of text, which appears e
   **Today()**
   
     > [!NOTE]
-> When you specify a formula, you don't use quotation marks unless an argument of the formula is a literal string. In that case, enclose the argument, not the formula, in double quotation marks.
+  > When you specify a formula, you don't use quotation marks unless an argument of the formula is a literal string. In that case, enclose the argument, not the formula, in double quotation marks.
   
     Want more information about the **[Today](../functions/function-now-today-istoday.md)** function or [other functions](../formula-reference.md)?
 
@@ -155,7 +155,7 @@ There must be adequate color contrast between:
 * **[Text](properties-core.md)** must be present.
 
     > [!NOTE]
-> Screen readers will treat **Label**s as buttons when **[TabIndex](properties-accessibility.md)** is zero or greater.
+  > Screen readers will treat **Label**s as buttons when **[TabIndex](properties-accessibility.md)** is zero or greater.
 
 ### Low vision support
 * **Label** should look like a link, if it is used as a link.

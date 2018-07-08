@@ -135,7 +135,7 @@ There must be adequate color contrast between:
 * Consider adding a summary of the chart graphic. For example, "The line chart shows a steady increase in sales between March and August this year."
 
     > [!NOTE]
-> Chart graphics and **Legend** are hidden from screen reader users. As an alternative, a tabular form of the data is presented to them. They can also cycle through buttons that select data in the chart.
+  > Chart graphics and **Legend** are hidden from screen reader users. As an alternative, a tabular form of the data is presented to them. They can also cycle through buttons that select data in the chart.
 
 ### Low vision support
 * There must be a **Legend** if more than one series is shown.
@@ -146,4 +146,4 @@ There must be adequate color contrast between:
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 
     > [!NOTE]
-> When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.
+  > When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.

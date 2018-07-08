@@ -237,23 +237,23 @@ This list stores the lines items associated with expense reports.
 
 ## Import the Expense Report PowerApp
 
-1.	In a web browser, navigate to https://web.powerapps.com.
-2.	Sign in by providing the same credentials that you used to sign up.
-3.	In the menu on the left, select **Apps**. 
-4.	Click **Import package(preview)**.
+1. In a web browser, navigate to https://web.powerapps.com.
+2. Sign in by providing the same credentials that you used to sign up.
+3. In the menu on the left, select **Apps**. 
+4. Click **Import package(preview)**.
 	
-	![Import package screen](./media/expense-report-install/import-package.png)
+   ![Import package screen](./media/expense-report-install/import-package.png)
 
-5.	Click the **Upload** button and select the PowerApp package you downloaded in previous steps.
-6.	For the **App** and **Flow** resource types, set **IMPORT SETUP** to **Create as new**.
-7.	For the **SharePoint** and **Outlook** connections, set **IMPORT SETUP** to **Select during import**.
+5. Click the **Upload** button and select the PowerApp package you downloaded in previous steps.
+6. For the **App** and **Flow** resource types, set **IMPORT SETUP** to **Create as new**.
+7. For the **SharePoint** and **Outlook** connections, set **IMPORT SETUP** to **Select during import**.
 	
-	![Import settings screen](./media/expense-report-install/import-settings.png)
+   ![Import settings screen](./media/expense-report-install/import-settings.png)
 
-8.  Click the **red icon** for the **SharePoint Connection**.
-9.  In the connections list, click the item with your username.
+8. Click the **red icon** for the **SharePoint Connection**.
+9. In the connections list, click the item with your username.
 
-	![Import settings screen](./media/expense-report-install/import-settings-sharepoint.png)
+   ![Import settings screen](./media/expense-report-install/import-settings-sharepoint.png)
 
 10. Click **Save**.
 11. Click the **red icon** for the **Approval Connection**.
@@ -261,9 +261,9 @@ This list stores the lines items associated with expense reports.
 
 	![Import settings screen](./media/expense-report-install/import-settings-approvals.png)
 
-13.  Click **Save**.
-14.  Click the **red icon** for the **Office 365 Outlook Connection**.
-15.  In the connections list, click the item with your username.
+13. Click **Save**.
+14. Click the **red icon** for the **Office 365 Outlook Connection**.
+15. In the connections list, click the item with your username.
 
 	![Import settings screen](./media/expense-report-install/import-settings-office365outlook.png)
 
@@ -379,7 +379,7 @@ Watch this video to see how to use the Expense Report PowerApp Sample.
 
 [![Expense Report Install Video](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
 
-##Next steps
+## Next steps
 - [Customize a SharePoint list form](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
 - [Add and configure a control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
 - [Edit and manage permissions for a SharePoint list or library](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

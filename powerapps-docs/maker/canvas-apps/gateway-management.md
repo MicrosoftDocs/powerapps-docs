@@ -63,7 +63,7 @@ For **Can use** and **Can use + share** permission levels, select the data sourc
 3. To share a connection, click or tap **Share**, and then add or remove users.
 
     > [!NOTE]
-> You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
+   > You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
 
 For more information about how to manage a connection, see [Manage your connections](add-manage-connections.md).
 

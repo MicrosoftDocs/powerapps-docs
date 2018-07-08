@@ -24,43 +24,43 @@ Sign in to [PowerApps](https://web.powerapps.com/). If you don’t already have 
 
 ## Create your model-driven app
 
-1.	Select the environment you want, or go to the [PowerApps admin center](https://admin.powerapps.com/) to create a new one.
-2.	From the left navigation pane, select **Model-driven**. 
+1. Select the environment you want, or go to the [PowerApps admin center](https://admin.powerapps.com/) to create a new one.
+2. From the left navigation pane, select **Model-driven**. 
 
-    ![Model-driven](media/build-first-model-driven-app/choose-design-mode.png)
+   ![Model-driven](media/build-first-model-driven-app/choose-design-mode.png)
 
-  > [!IMPORTANT]
-  > If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+   > [!IMPORTANT]
+   > If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
 3. From the left pane, select **Apps**, and then select **Create an app**.
 
-4.	On the **Create a New App** page, enter the following details, and then select **Done**: 
-  - **Name**: Enter a name for the app, such as *Myfirstapp*. 
-  - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
-For information about the additional app properties, see [Create an app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
+4. On the **Create a New App** page, enter the following details, and then select **Done**: 
+   - **Name**: Enter a name for the app, such as *Myfirstapp*. 
+   - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
+   For information about the additional app properties, see [Create an app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
  
-    ![Create-new-app](media/build-first-model-driven-app/create-new-app.png)
+   ![Create-new-app](media/build-first-model-driven-app/create-new-app.png)
 
 ## Add components to your app
 From the app designer you add components to your app.
-1.	Select the **Open the Site Map Designer** arrow to open the sitemap designer. 
+1. Select the **Open the Site Map Designer** arrow to open the sitemap designer. 
 
-    ![Create-new-sitemap](media/build-first-model-driven-app/new-sitemap.png)
+   ![Create-new-sitemap](media/build-first-model-driven-app/new-sitemap.png)
 
-2.	On the sitemap designer select **New Subarea**, in the right pane select the **Properties** tab, and then select the following properties.
-  - **Type**: Entity
-  - **Entity**: Account
+2. On the sitemap designer select **New Subarea**, in the right pane select the **Properties** tab, and then select the following properties.
+   - **Type**: Entity
+   - **Entity**: Account
 
-    ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png)
+   ![Add components to sitemap](media/build-first-model-driven-app/sitemap.png)
 
-3.	Select **Save And Close**.
-4.	On the app designer canvas select **Forms**, and then on the right pane under the **Main Forms** group select the **Account** form.
+3. Select **Save And Close**.
+4. On the app designer canvas select **Forms**, and then on the right pane under the **Main Forms** group select the **Account** form.
 
-    ![Account main form](media/build-first-model-driven-app/main-form.png)
+   ![Account main form](media/build-first-model-driven-app/main-form.png)
 
-5.	On the app designer canvas select **Views**, and then select the **Active Accounts**, **All Accounts**, and **My Active Accounts** views.
+5. On the app designer canvas select **Views**, and then select the **Active Accounts**, **All Accounts**, and **My Active Accounts** views.
 
-    ![Account views](media/build-first-model-driven-app/views.png)
+   ![Account views](media/build-first-model-driven-app/views.png)
 
 6. On the app designer canvas select **Charts**, and then select the **Accounts by Industry** chart.
 7. On the app designer toolbar, select **Save**.

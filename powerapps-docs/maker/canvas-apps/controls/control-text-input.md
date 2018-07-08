@@ -145,17 +145,23 @@ The user can specify data by typing into a text-input control. Depending on how 
 6. (optional) Add more names to the collection, and then press Esc to return to the default workspace.
 
 ### Prompt for a password
+
 1. Add a text-input control, name it **inputPassword**, and set its **Mode** property to **Password**.
-2. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
+
+1. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
    **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
-   
+
     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-3. Press F5, and then type **P@ssw0rd** in **inputPassword**.
-   
+
+1. Press F5, and then type **P@ssw0rd** in **inputPassword**.
+
     When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
-4. To return to the default workspace, press Esc.
-5. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
-6. (optional) Add a button, configure its **[Text](properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
+
+1. To return to the default workspace, press Esc.
+
+1. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
+
+1. (optional) Add a button, configure its **[Text](properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
 
 
 ## Accessibility guidelines

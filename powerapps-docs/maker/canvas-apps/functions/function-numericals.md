@@ -49,6 +49,7 @@ If an argument would result in an undefined valued, the result is *blank*.  This
 
 ## Examples
 ### Single number
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Abs( -55 )** |Returns the number without the negative sign. |55 |

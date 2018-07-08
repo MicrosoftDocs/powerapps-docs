@@ -26,8 +26,8 @@ Where this becomes complicated, and the reason this article exists, is because n
 
 **Working with large data sets requires using data sources and formulas that can be delegated.**  It's the only way to keep your app performing well and ensure users can access all the information they need. Take heed of delegation warnings that identify places where delegation isn't possible. If you're working with small data sets (fewer than 500 records), you can use any data source and formula because the app can process data locally if the formula can't be delegated. 
 
-> [!NOTE] 
-	> Delegation warnings were previously flagged in PowerApps as "blue dot" suggestions, but delegation suggestions have since been re-classified as warnings. If the data in your data source exceeds 500 records and a function can't be delegated, PowerApps might not be able to retrieve all of the data, and your app may have wrong results. Delegation warnings help you manage your app so that it has correct results.
+> [!NOTE]
+> Delegation warnings were previously flagged in PowerApps as "blue dot" suggestions, but delegation suggestions have since been re-classified as warnings. If the data in your data source exceeds 500 records and a function can't be delegated, PowerApps might not be able to retrieve all of the data, and your app may have wrong results. Delegation warnings help you manage your app so that it has correct results.
 
 ## Delegable data sources
 See the [delegation list](delegation-list.md) for the full list of which data sources support delegation and to what extent.

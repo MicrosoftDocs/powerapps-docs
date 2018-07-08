@@ -97,7 +97,7 @@ There must be adequate color contrast between:
 * **[AccessibleLabel](properties-accessibility.md)** should be present.
 
     > [!IMPORTANT]
-> **Pen input** is not accessible to screen reader users. Always provide an alternative form of input. For example, if a sketch is required, consider adding an **[Add picture](control-add-picture.md)** control for users to upload an image. Both methods can be offered and the user can choose the one they are more comfortable with.
+  > **Pen input** is not accessible to screen reader users. Always provide an alternative form of input. For example, if a sketch is required, consider adding an **[Add picture](control-add-picture.md)** control for users to upload an image. Both methods can be offered and the user can choose the one they are more comfortable with.
 
 ### Keyboard support
 
