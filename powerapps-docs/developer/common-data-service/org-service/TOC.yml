@@ -38,6 +38,8 @@
       href: entity-operations-create.md
     - name: Retrieve an entity
       href: entity-operations-retrieve.md
+    - name: Update and Delete entities
+      href: entity-operations-update-delete.md
     - name: Associate and disassociate entities
       href: entity-operations-associate-disassociate.md
     - name: Perform Conditional operations
