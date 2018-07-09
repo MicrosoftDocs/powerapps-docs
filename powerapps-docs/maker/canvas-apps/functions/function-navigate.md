@@ -3,7 +3,7 @@ title: Back and Navigate functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Navigate and Back functions in PowerApps
 documentationcenter: na
 author: gregli-msft
-manager: kfile
+manager: kvivek
 editor: ''
 tags: ''
 
