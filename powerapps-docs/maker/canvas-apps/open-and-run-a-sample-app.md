@@ -1,14 +1,10 @@
 ---
 title: Use a sample app (quickstart) | Microsoft Docs
 description: Step-by-step instructions for creating a canvas app based on a sample in PowerApps
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/11/2018
