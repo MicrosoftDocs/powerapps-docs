@@ -20,6 +20,7 @@ manager: kvivek
 
 > [!NOTE]
 > ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
+
 ## New Dynamics 365 support center 
 
 Admins, use the Help + support experience to contact a Microsoft support representative for Dynamics 365 (online) to get resolution for your issue. 

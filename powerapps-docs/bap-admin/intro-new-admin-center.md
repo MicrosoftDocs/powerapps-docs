@@ -21,7 +21,7 @@ ms.author: jimholtz
 # Overview: Introducing the Business Application Platform admin center
 
 > [!NOTE]
-> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")
+> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
 
 If you've managed Dynamics 365 (online) tenants and instances, you've used the Dynamics 365 admin center.
 
