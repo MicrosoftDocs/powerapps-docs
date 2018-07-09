@@ -48,6 +48,10 @@ For background (asynchronous) workflows, we recommend selecting the **Automatica
 For workflows that don't run in the background (synchronous), we recommend selecting the **Keep logs for workflow jobs that encountered errors** option in the workflow definition. Selecting this option allows logs from failed workflow executions to be saved for troubleshooting. Logs from successful synchronous workflow executions will always be deleted to save space.   
 
 ![Keep logs for failed workflows option](media/keep-logs-for-workflows.png)
+
+## Limit the number of workflows that update the same entity
+Running more than one workflow that updates the same entity can cause resource lock issues. Imagine several workflows running where every opportunity update triggers an update to the associated account. Multiple instances of these workflows running and attempting to update the same account record at the same time can result in resource locking issues. Workflow failures occur and an error message, such as **SQL Timeout: Cannot obtain lock on resource *resource name***, is recorded. 
+
   
 <a name="BKMK_DocumentChangesUsingNotes"></a>   
 ## Use Notes to keep track of changes  
