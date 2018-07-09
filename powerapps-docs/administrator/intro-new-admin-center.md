@@ -21,15 +21,15 @@ ms.author: jimholtz
 # Overview: Introducing the Business Application Platform admin center
 
 > [!NOTE]
-> ![This page is under construction. Check back soon!](../media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../../includes/cc-under-construction.md)]
+> ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")
 
 If you've managed Dynamics 365 (online) tenants and instances, you've used the Dynamics 365 admin center.
 
-![Dynamics 365 admin center](../media/old-admin-center50.png)
+![Dynamics 365 admin center](./media/old-admin-center50.png)
 
 With the merge of Common Data Service and the Dynamics 365 platform, we're launching a new admin center experience bringing PowerApps, Flow, and Dynamics 365 administration capabilities together on a single site - the Business Application Platform admin center.
 
-![Business Application Platform admin center](../media/new-admin-center-environments.png)
+![Business Application Platform admin center](./media/new-admin-center-environments.png)
 
 Benefits of the Business Application Platform admin center include:
 
@@ -52,7 +52,7 @@ See blog - press release for more information about the new admin center.
 ## A tour of the interface
 Let's go through the various parts of the new admin center.
 
-![Walkthrough of the new admin center](../media/new-admin-center-menu75.png)
+![Walkthrough of the new admin center](./media/new-admin-center-menu75.png)
 
 |Element  |Description  |
 |---------|---------|
@@ -72,11 +72,11 @@ We're moving Admin settings from the Dynamics 365 Customer Engagement product to
 
 Many of these settings...
 
-![Dynamics 365 Settings](../media/old-settings.png)
+![Dynamics 365 Settings](./media/old-settings.png)
 
 ...are moving here.
 
-![Dynamics 365 settings](../media/new-admin-center-settings.png)
+![Dynamics 365 settings](./media/new-admin-center-settings.png)
 
 Use the links on this page to manage organization-wide settings. App-specific settings will remain in Dynamics 365 based on your licensing. 
 
@@ -89,7 +89,7 @@ You'll continue to use the Office 365 admin center to manage settings like:
 > - service health
 > - usage and security reports
 
-![Office 365 admin center](../media/o365-admin-center.png)
+![Office 365 admin center](./media/o365-admin-center.png)
 
 
 
