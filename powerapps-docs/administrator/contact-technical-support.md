@@ -1,5 +1,5 @@
 ---
-title: "Contact Technical Support | MicrosoftDocs"
+title: "Get Help + Support | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/30/2018
 ms.reviewer: ""
@@ -16,7 +16,7 @@ caps.latest.revision: 63
 ms.author: "jimholtz"
 manager: kvivek
 ---
-# Contact Technical Support 
+# Get Help + Support
 
 > [!NOTE]
 > ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
