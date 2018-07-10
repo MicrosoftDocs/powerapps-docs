@@ -1,11 +1,11 @@
-- name: Introducing Business Application Platform Admin Center
+- name: Preview: Introducing Business Application Platform Admin Center
   href: admin-guide-bap.md
   items:
-  - name: Get Help + Support
+  - name: Preview: Get Help + Support
     href: contact-technical-support.md
-  - name: View analytics
+  - name: Preview: View analytics
     href: ce-analytics.md
-  - name: Administer CDS for Apps Environments
+  - name: Preview: Administer CDS for Apps Environments
     href: admin-cds-apps-environments.md
 - name: Administer PowerApps
   href: admin-guide-pa.md
