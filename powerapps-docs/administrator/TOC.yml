@@ -1,8 +1,6 @@
 - name: Introducing Business Application Platform Admin Center
   href: admin-guide-bap.md
   items:
-  - name: About the new Admin center
-    href: intro-new-admin-center.md
   - name: Get Help + Support
     href: contact-technical-support.md
   - name: View analytics
