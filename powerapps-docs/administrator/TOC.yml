@@ -10,7 +10,7 @@
   - name: Administer CDS for Apps Environments
     href: admin-cds-apps-environments.md
 - name: Administer PowerApps
-  href: admin-guide.mp
+  href: admin-guide-pa.md
   items:
   - name: Quickstarts
     items:
