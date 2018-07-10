@@ -66,9 +66,8 @@
         - name: Virtual entity OData v4 data provider
           href: virtual-entity-odata-provider-requirements.md 
       - name: Work with relationships
+        href: create-edit-entity-relationships.md
         items:  
-        - name: Create and edit relationships
-          href: create-edit-entity-relationships.md 
         - name: Create one-to-many or many-to-one relationships
           href: create-edit-1n-relationships-portal.md 
         - name: Create many-to-many entity relationships
