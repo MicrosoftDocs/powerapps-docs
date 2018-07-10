@@ -1,5 +1,5 @@
 ---
-title: "Preview: Administer CDS for Apps Environments | MicrosoftDocs"
+title: "Administer CDS for Apps Environments | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/30/2018
 ms.reviewer: ""
@@ -15,12 +15,7 @@ author: "jimholtz"
 ms.author: "jimholtz"
 manager: kvivek
 ---
-# Preview: Administer CDS for Apps Environments 
-
-> [!IMPORTANT]
-> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]  
-> - [!INCLUDE[cc_preview_features_expect_changes](../includes/cc-preview-features-expect-changes.md)]  
-> - [!INCLUDE[cc_preview_features_no_MS_support](../includes/cc-preview-features-no-ms-support.md)]  
+# Administer CDS for Apps Environments 
 
 > [!NOTE]
 > ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]

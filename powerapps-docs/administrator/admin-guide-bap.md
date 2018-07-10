@@ -18,13 +18,14 @@ manager: "kvivek"
 ---
 # Preview: Administer Business Application Platform
 
-Administrators will find the resources and topics provided in this guide to help you manage Business Application environments and process.
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!IMPORTANT]
 > - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]  
 > - [!INCLUDE[cc_preview_features_expect_changes](../includes/cc-preview-features-expect-changes.md)]  
 > - [!INCLUDE[cc_preview_features_no_MS_support](../includes/cc-preview-features-no-ms-support.md)]  
 
+Administrators will find the resources and topics provided in this guide to help you manage Business Application environments and process.
 
 <!-- 
 > [!NOTE]
