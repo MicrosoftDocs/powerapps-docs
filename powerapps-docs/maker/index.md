@@ -46,7 +46,7 @@ When you create a model-driven app, you can use all of the power of the Common D
 
 Getting started with model-driven apps is simple, and you can begin with these topics:
 
-- [Create an app](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/create-edit-app)
+- [Create an app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app)
 - [Create and design forms](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-design-forms)
 - [Create or edit views](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-views)
 - [Create or edit a system chart](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-system-chart)
