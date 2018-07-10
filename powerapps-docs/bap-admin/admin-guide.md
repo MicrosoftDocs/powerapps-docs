@@ -16,9 +16,9 @@ author: "jimholtz"
 ms.author: "jimholtz"
 manager: "kvivek"
 ---
-# Administer PowerApps
+# Administer Business Application Platform
 
-Administrators for PowerApps will find the resources and topics provided in this guide to help you manage Business Application environments and process.
+Administrators will find the resources and topics provided in this guide to help you manage Business Application environments and process.
 
 <!-- 
 > [!NOTE]

@@ -55,8 +55,13 @@
     #   href: global-service-administrators-can-administer-without-license.md
     # - name: Volume licensing FAQ
     #   href: volume-licensing-faq-dynamics-365-online-customer-engagement.md
-  - name: Administer environments
+  - name: Analytics
     items:
+      - name: Dynamics 365 Customer Engagement
+      - name: Microsoft Flow
+      - name: PowerApps
+  # - name: Administer environments
+  #   items:
     # - name: Manage storage
     #   href: manage-storage.md
     # - name: Manage environments
@@ -101,8 +106,8 @@
     #   href: add-edit-multiregional-environments.md
     # - name: "'Troubleshooting: Unblock required URLs'"
     #   href: troubleshooting-unblock-urls-required.md
-  - name: Manage subscriptions and user accounts
-    items:
+  # - name: Manage subscriptions and user accounts
+  #  items:
     # - name: Mange subscription with the Office 365 admin center
     #   href: use-office-365-admin-center-manage-subscription.md
     # - name: Policies and communications
