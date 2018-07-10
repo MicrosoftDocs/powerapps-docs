@@ -81,7 +81,7 @@
         - name: Behavior and format of the Date and Time field
           href: behavior-format-date-time-field.md          
       - name: Apply business logic
-        href: guide-staff-through-common-tasks-processes.md
+        href: ..\model-driven-apps\guide-staff-through-common-tasks-processes.md
         items: 
         - name: Use Workflow processes to automate processes 
           href: workflow-processes.md 
