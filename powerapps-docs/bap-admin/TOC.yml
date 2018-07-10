@@ -1,12 +1,10 @@
-- name: Administer PowerApps
+- name: Administer Business Application Platform
   href: admin-guide.md
   items:
   - name: Getting started
     items:
     - name: Introducing the new Admin center
       href: intro-new-admin-center.md
-    - name: What's the role of a PowerApps administrator?
-      href: overview-role-powerapps-admin.md
     # - name: Terminology used in the product and documentation
     #   href: online-terminology.md
     # - name: What is Office 365 and how does it relate?
@@ -49,8 +47,8 @@
     #    href: signup-question-and-answer.md
     # - name: Manage licenses - duplicate topic
     #   href: manage-licenses.md
-    - name: Purchase PowerApps
-      href: signup-for-powerapps-admin.md
+    # - name: Purchase PowerApps
+    #   href: signup-for-powerapps-admin.md
     # - name: Purchase and assign licenses
     #   href: purchase-assign-online-licenses.md
     # - name: Administer without a license
