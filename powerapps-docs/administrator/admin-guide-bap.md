@@ -1,5 +1,5 @@
 ---
-title: "Administer Business Application Platform | MicrosoftDocs"
+title: "Preview: Administer Business Application Platform | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/30/2018
 ms.reviewer: ""
@@ -16,9 +16,15 @@ author: "jimholtz"
 ms.author: "jimholtz"
 manager: "kvivek"
 ---
-# Administer Business Application Platform
+# Preview: Administer Business Application Platform
 
 Administrators will find the resources and topics provided in this guide to help you manage Business Application environments and process.
+
+> [!IMPORTANT]
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]  
+> - [!INCLUDE[cc_preview_features_expect_changes](../includes/cc-preview-features-expect-changes.md)]  
+> - [!INCLUDE[cc_preview_features_no_MS_support](../includes/cc-preview-features-no-ms-support.md)]  
+
 
 <!-- 
 > [!NOTE]

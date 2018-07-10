@@ -1,5 +1,5 @@
 ---
-title: "Analytics - Dynamics 365 Customer Engagement | MicrosoftDocs"
+title: "Preview: Analytics - Dynamics 365 Customer Engagement | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/30/2018
 ms.reviewer: ""
@@ -15,7 +15,12 @@ author: "jimholtz"
 ms.author: "jimholtz"
 manager: kvivek
 ---
-# Analytics - Dynamics 365 Customer Engagement
+# Preview: Analytics - Dynamics 365 Customer Engagement
+
+> [!IMPORTANT]
+> - [!INCLUDE[cc_preview_features_definition](../includes/cc-preview-features-definition.md)]  
+> - [!INCLUDE[cc_preview_features_expect_changes](../includes/cc-preview-features-expect-changes.md)]  
+> - [!INCLUDE[cc_preview_features_no_MS_support](../includes/cc-preview-features-no-ms-support.md)]  
 
 > [!NOTE]
 > ![This page is under construction. Check back soon!](media/under_construction.png "Coming soon")  [!INCLUDE[cc-under-construction](../includes/cc-under-construction.md)]
