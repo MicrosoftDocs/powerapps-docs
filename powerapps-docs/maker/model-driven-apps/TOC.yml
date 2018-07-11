@@ -70,9 +70,8 @@
     - name: Privileges required for customization
       href: privileges-required-customization.md       
     - name: Work with forms
+      href: create-design-forms.md
       items: 
-      - name: Create and design forms
-        href: create-design-forms.md
       - name: Overview of the form editor 
         href: form-editor-user-interface-legacy.md
       - name: Design considerations for main forms
@@ -102,9 +101,8 @@
       - name: Overview of special field properties
         href: special-field-properties-legacy.md      
     - name: Apply business logic
+      href: guide-staff-through-common-tasks-processes.md
       items: 
-      - name: Create custom business logic
-        href: guide-staff-through-common-tasks-processes.md
       - name: Business process flows overview
         href: business-process-flows-overview.md
     - name: Design custom business apps
