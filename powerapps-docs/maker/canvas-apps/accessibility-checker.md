@@ -58,6 +58,6 @@ These are the list of issues raised by the Accessibility Checker.
 
 
 Related:
-- **[Create accessible apps](/accessible-apps.md)**
-- **[Accessible colors in PowerApps](/accessible-apps-color.md)**
-- **[Accessibility properties](controls/properties-accessibility.md)**
+- [Create accessible apps](accessible-apps.md)
+- [Accessible colors in PowerApps](accessible-apps-color.md)
+- [Accessibility properties](controls/properties-accessibility.md)

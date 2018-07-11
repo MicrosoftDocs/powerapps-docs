@@ -54,4 +54,4 @@ Ensure that the app does not convey information with just color. For example, us
 Additional cues like an **[Icon](controls/control-shapes-icons.md)** or text styles like **[Italic](controls/properties-text.md)** and **[Underline](controls/properties-text.md)** can help convey meaning.
 
 ## Next steps
-Learn about **[accessibility properties](controls/properties-accessibility.md)** in PowerApps controls and try **[using the Accessibility checker](accessibility-checker.md)**.
+Learn about [accessibility properties](controls/properties-accessibility.md) in PowerApps controls and try [using the Accessibility checker](accessibility-checker.md).
