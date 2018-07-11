@@ -414,7 +414,7 @@ Organization Insights for [!INCLUDE[pn_dyn_365_online](../includes/pn-crm-online
 <a name="BKMK_ODataSupport"></a>   
 
 ## OData Support
-Organization Insights supports retrieving chart data through the Web API OData v4 web service. For information about the Web API, see [Use the Microsoft Dynamics 365 Web API](../developer/use-microsoft-dynamics-365-web-api.md).
+Organization Insights supports retrieving chart data through the Web API OData v4 web service. <!-- For information about the Web API, see [Use the Microsoft Dynamics 365 Web API](../developer/use-microsoft-dynamics-365-web-api.md). -->
 
 The entity set name for the `SavedOrgInsightsConfiguration` entity is `savedorginsightsconfigurations` which needs the `SavedOrgInsightsConfigurationId`, `JSONDataStartTime` and `JSONDataEndTime` to return data in the given time range. The data can then be used to render custom charts or do further post-processing as required.
 
