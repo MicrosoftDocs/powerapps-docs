@@ -155,6 +155,8 @@
          href: remove-views.md  
     - name: Configure interactive experience dashboards
       href: configure-interactive-experience-dashboards.md
+    - name: Add an on-demand workflow to a business process flow
+      href: bpf-add-on-demand-workflow.md
     - name: Work with apps
       items: 
        - name: Manage app properties
