@@ -22,7 +22,7 @@
           "**/*.png",
           "**/*.jpg",
           "**/*.gif",
-		  "**/*.svg",
+          "**/*.svg",
           "**/includes/media/**"
         ],
         "exclude": [
@@ -35,15 +35,22 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-MSPowerApps",
-      "contributors_to_exclude": ["openpublishingbuild","sudeepku","v-thepet","PRMerger10"],
+      "contributors_to_exclude": [
+        "openpublishingbuild",
+        "sudeepku",
+        "v-thepet",
+        "PRMerger10"
+      ],
       "breadcrumb_path": "breadcrumb/toc.yml",
       "extendBreadcrumb": true,
-      "searchScope": ["PowerApps"],
+      "searchScope": [
+        "PowerApps"
+      ],
       "titleSuffix": "PowerApps"
-      
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "powerapps-docs"
+    "dest": "powerapps-docs",
+    "markdownEngineName": "markdig"
   }
 }

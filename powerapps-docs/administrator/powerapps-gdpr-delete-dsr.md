@@ -67,15 +67,15 @@ In order to determine if you are a member of an unmanaged tenant please follow t
 1. Open the following URL in a browser, making sure to replace your email address in the URL: https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
 
 2. If you are a member of an **unmanaged tenant** then you will see an `"IsViral": true` in the response.
-```
-{
-  ...
-  "Login": "foobar@unmanagedcontoso.com",
-  "DomainName": "unmanagedcontoso.com",
-  "IsViral": true,
-  ...
-}
-```
+   ```
+   {
+   ...
+   "Login": "foobar@unmanagedcontoso.com",
+   "DomainName": "unmanagedcontoso.com",
+   "IsViral": true,
+   ...
+   }
+   ```
 
 3. Otherwise, you belong to a **managed tenant**.
 

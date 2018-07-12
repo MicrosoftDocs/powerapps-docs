@@ -5,8 +5,11 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/21/2018
+ms.date: 07/09/2018
 ms.author: matp
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid:  
 ---
 
 # Quickstart: Run a canvas app on a mobile device

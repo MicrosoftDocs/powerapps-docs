@@ -28,7 +28,7 @@ This article shows you how to restore an app to a previous version that was save
     ![Filter on apps you own](./media/restore-an-app/filter-list.png)
 
     > [!NOTE]
-> If the app that you want to restore doesn't appear, make sure that you're in the right environment.
+   > If the app that you want to restore doesn't appear, make sure that you're in the right environment.
 
 3. Near the right edge, click or tap the info icon for the app that you want to restore.
 

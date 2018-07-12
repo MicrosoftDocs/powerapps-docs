@@ -62,7 +62,7 @@ The default generated form consists of the following controls and their correspo
 
     * **OnCancel** - Resets the changes to **SharePointForm1**. SharePoint always hides the form when a user clicks or taps **Cancel** in SharePoint.
 
-        **SubmitForm(SharePointForm1)**
+        **ResetForm(SharePointForm1)**
 
 These defaults ensure that the form works when running within SharePoint - they change the PowerApps form mode as the user interacts with it in SharePoint, and they ensure that the changes are submitted to SharePoint.
 
@@ -99,8 +99,8 @@ Now that you have a better understanding of the default generated form and the *
 
 * Use the **OnSave** formula of the **SharePointIntegration** control to customize what happens when a user clicks or taps **Save** in SharePoint. If you have multiple forms, make sure to submit the changes only for the form currently being used.
 
-    >[!TIP]
-     Set different values for a variable in the **OnNew**, **OnView**, and **OnEdit** formulas. You can use this variable in the **OnSave** formula to determine which form is being used.
+  > [!TIP]
+  >    Set different values for a variable in the **OnNew**, **OnView**, and **OnEdit** formulas. You can use this variable in the **OnSave** formula to determine which form is being used.
 
 * Make sure to include **RequestHide()** in the **OnSuccess** formula of all your forms. If you forget this, SharePoint will not know when to hide the form.
 

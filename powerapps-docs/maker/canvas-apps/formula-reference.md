@@ -1,14 +1,10 @@
 ---
 title: Functions, signals, and enumerations | Microsoft Docs
 description: Reference information for functions, signals, and enumerations in PowerApps.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 06/05/2018
@@ -61,6 +57,8 @@ Other elements include:
 
 **[Char](functions/function-char.md)** – Translates a character code into a string.
 
+**[Choices](functions/function-choices.md)** – Returns a table of the possible values for a lookup column.
+
 **[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
@@ -82,6 +80,8 @@ Other elements include:
 **[Concat](functions/function-concatenate.md)** – Concatenates strings in a data source.  
 
 **[Concatenate](functions/function-concatenate.md)** – Concatenates strings.
+
+**[Concurrent](functions/function-concurrent.md)** – Evaluates multiple formulas concurrently with one another. 
 
 **[Connection](functions/signals.md)** – Returns information about your network connection.
 

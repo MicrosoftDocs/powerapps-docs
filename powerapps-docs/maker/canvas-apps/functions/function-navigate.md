@@ -3,7 +3,7 @@ title: Back and Navigate functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Navigate and Back functions in PowerApps
 documentationcenter: na
 author: gregli-msft
-manager: kfile
+manager: kvivek
 editor: ''
 tags: ''
 
@@ -59,6 +59,7 @@ You can use these functions only within a [behavior formula](../working-with-for
 * *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the context variables of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Navigate( Details, ScreenTransition.None )** |Displays the **Details** screen with no transition or change in value for a context variable. |The **Details** screen appears quickly. |
