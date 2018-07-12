@@ -22,7 +22,7 @@ To add a workflow to a business process flow, the workflow must have the followi
 - The **As an on-demand process workflow** attribute selected.
 - The same primary entity for the workflow is also used for the process or the business process flow stage.
 
-## Add an on-demand workflow to a business process flow
+## Add an on-demand workflow to a business process flow stage
 
 You add an on-demand  workflow from the business process flow designer by dragging the workflow component to a process stage or to the global workflows section. 
 
@@ -48,10 +48,11 @@ Alternatively, you can drag **Workflow** to the **Global Workflows** section, wh
 4. On the **Properties** tab under **Trigger** select either **Stage Entry** or **Stage Exit**.  
     ![Select workflow trigger](media/workflow-trigger.png)
    
-    Alternatively, when you drop the workflow onto the **Global Workflow** section, the trigger options are **Process applied**, **Process reactivated**, **Process abandoned**, and **Process completed**.
+    Alternatively, when you drop the workflow onto the **Global Workflows** section, the trigger options are **Process applied**, **Process reactivated**, **Process abandoned**, and **Process completed**.
 
 5. Select **Update** on the business process flow designer toolbar.
  
 ## Next steps
 [Use Workflow processes to automate processes that don't require user interaction](../common-data-service/workflow-processes.md) <br/>
-[Tutorial: Create a business process flow to standardize processes](create-business-process-flow.md) 
+[Tutorial: Create a business process flow to standardize processes](create-business-process-flow.md) <br/>
+[Business process flow automation in Dynamics 365](https://blogs.msdn.microsoft.com/crm/2017/03/28/business-process-flow-automation-in-dynamics-365/)
