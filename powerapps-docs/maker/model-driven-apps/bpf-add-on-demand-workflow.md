@@ -1,0 +1,50 @@
+---
+title: Add an on-demand workflow to a business process flow
+description: 
+author: Mattp123
+ms.author: matp
+manager: kvivek
+ms.date: 07/12/2018
+ms.topic: article
+applies_to: 
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - PowerApps
+ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
+---
+
+# Add an on-demand workflow to a business process flow
+
+You can trigger on-demand workflows from inside a business process flow. For example, you can add an on-demand workflow to a business process flow so that an activity, such as a task or email, is created whenever a stage is completed. 
+
+To add a workflow to a business process flow, the workflow must have the following. 
+
+- The **As an on-demand process workflow** attribute selected.
+- The same primary entity for the workflow is used for the process or the business process flow stage.
+
+## Add a workflow to a business process flow
+
+You add a workflow from the business process flow designer by dragging the workflow component to a process stage or to the global workflows section. 
+
+On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane). 
+
+Open the business process flow designer. You can do this in one of two ways.
+- If the business process flow is already added to an app, go to **Apps**, next to the app you want select **…**, and then select **Edit**. In the app designer, select the business process flow, and then select ![Open business process flow designer](media/dynamics365-open-designer.PNG).  
+- Otherwise, open [solution explorer](advanced-navigation.md#solution-explorer), in the left navigation pane select Processes, and then select the business process flow that you want. 
+
+Decide whether you want the workflow to be triggered by one of the following business process flow events. 
+- On-demand stage processes. Triggers the workflow on entry or on exit of the stage. The workflow must have the same primary entity as the stage.
+- On-demand global processes. Triggers the workflow either on process activation or process archival (where the status transitions to a Finished or Abandoned state). The workflow must have the same primary entity as the process.
+
+ In the example below, the workflow is added to Stage 1 of the business process flow. 
+
+1. Expand stage 1 to reveal the **Triggered Process** section. 
+2. Select the **Components** tab and drag **Workflow** to the **Triggered Process** section.
+    ![Add workflow to a stage](media/add-workflow-to-bpf-1.png)
+3. In the search box of the **Properties** tab, enter the name of the on-demand workflow you want to add to the business process flow stage, and then select **Apply**.
+    ![Enter name and select apply](media/add-workflow-to-bpf-2.png)
+4. Select **Update** on the business process flow toolbar.
+ 
+## Next steps
+[Use Workflow processes to automate processes that don't require user interaction](../common-data-service/workflow-processes.md) <br/>
+[Tutorial: Create a business process flow to standardize processes](create-business-process-flow.md) 
