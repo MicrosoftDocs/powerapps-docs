@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.reviewer:
+ms.reviewer: anneta
 ---
 # Connect to SQL Server from PowerApps
 ![SQL Server icon](./media/connection-azure-sqldatabase/sqlicon.png)

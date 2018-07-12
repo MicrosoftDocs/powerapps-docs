@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/02/2016
 ms.author: lanced
-ms.reviewer:
+ms.reviewer: anneta
 ---
 # Connect to Excel from PowerApps
 ![Excel](./media/connection-excel/excelicon.png)

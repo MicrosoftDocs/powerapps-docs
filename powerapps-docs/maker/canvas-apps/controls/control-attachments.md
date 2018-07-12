@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 04/23/2018
 ms.author: fikaradz
-ms.reviewer:
+ms.reviewer: anneta
 
 ---
 # Attachments control in PowerApps

@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: anneta
 ms.date: 04/24/2017
 ms.author: gregli
 

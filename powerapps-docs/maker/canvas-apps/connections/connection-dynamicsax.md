@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 09/13/2016
 ms.author: lanced
-ms.reviewer:
+ms.reviewer: anneta
 ---
 # Connect from Microsoft PowerApps to Dynamics AX
 ![Dynamics AX Online](./media/connection-dynamicsax/dynamics-ax.png)

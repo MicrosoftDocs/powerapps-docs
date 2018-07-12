@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.reviewer:
+ms.reviewer: anneta
 ---
 # Connect to cloud-storage from PowerApps
 PowerApps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  

@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: lanced
-ms.reviewer:
+ms.reviewer: anneta
 ---
 # Connect to Microsoft Translator from PowerApps
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)

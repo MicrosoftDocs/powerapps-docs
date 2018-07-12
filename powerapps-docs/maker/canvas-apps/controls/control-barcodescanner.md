@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer:
+ms.reviewer: anneta
 ---
 # Barcode scanner control (experimental) in PowerApps
 An experimental control with which the user can take photos by using the barcode scanner on the device.

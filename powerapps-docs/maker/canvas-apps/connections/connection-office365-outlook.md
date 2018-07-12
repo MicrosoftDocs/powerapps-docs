@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/20/2017
 ms.author: lanced
-ms.reviewer:
+ms.reviewer: anneta
 
 ---
 # Connect to Office 365 Outlook from PowerApps

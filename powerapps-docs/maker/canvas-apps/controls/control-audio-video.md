@@ -9,7 +9,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer:
+ms.reviewer: anneta
 ---
 # Audio and Video controls in PowerApps
 A control that plays an audio file, a video file, or a video on YouTube.
