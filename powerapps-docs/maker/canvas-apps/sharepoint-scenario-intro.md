@@ -1,16 +1,13 @@
 ---
 title: Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online (Introduction) | Microsoft Docs
 description: 'This series of tutorials explores how to build out a basic project-management app based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Microsoft Flow, and Power BI.'
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 12/19/2017
 ms.author: mblythe
 

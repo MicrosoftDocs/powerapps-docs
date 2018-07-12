@@ -2,11 +2,12 @@
 title: 'Power BI tile control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Power BI tile control
 author: fikaradz
-manager: kfile
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/07/2016
 ms.author: fikaradz
 

@@ -1,10 +1,12 @@
 ---
 title: Create an Excel app from scratch | Microsoft Docs
 author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 04/23/2018
 ms.author: anneta
 

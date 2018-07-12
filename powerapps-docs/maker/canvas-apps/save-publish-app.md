@@ -1,16 +1,13 @@
 ---
 title: Save and publish an app | Microsoft Docs
 description: Step-by-step instructions for saving and publishing app for app makers
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 09/14/2017
 ms.author: anneta
 

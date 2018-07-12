@@ -1,16 +1,13 @@
 ---
 title: Understand data-form layout | Microsoft Docs
 description: Create great-looking form layouts using rows and columns.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/17/2017
 ms.author: gregli
 

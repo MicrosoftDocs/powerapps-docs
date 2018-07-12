@@ -1,16 +1,13 @@
 ---
 title: Send a push notification | Microsoft Docs
 description: Learn how to send native push notifications to an app in PowerApps.
-documentationcenter: na
 author: jamesol-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 08/08/2017
 ms.author: jamesol
 

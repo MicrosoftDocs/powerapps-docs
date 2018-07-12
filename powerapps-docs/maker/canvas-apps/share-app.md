@@ -2,10 +2,12 @@
 title: Share an app | Microsoft Docs
 description: Share your app by giving other users permission to run or modify it
 author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 06/14/2018
 ms.author: anneta
 

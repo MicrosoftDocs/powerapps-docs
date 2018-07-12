@@ -1,14 +1,13 @@
 ---
 title: Generate an app from Excel | Microsoft Docs
 description: Use PowerApps to automatically generate an app using an Excel file stored in a cloud-storage account
-documentationcenter: na
-author: AFTOWen
-manager: kfile
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/18/2018
 ms.author: anneta
 

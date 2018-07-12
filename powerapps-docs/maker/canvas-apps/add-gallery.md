@@ -1,16 +1,13 @@
 ---
 title: Show a list of items | Microsoft Docs
 description: Use a gallery to show a list of items in your app, and filter the list by specifying a criterion.
-documentationcenter: na
 author: karthik-1
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 09/28/2017
 ms.author: sharik
 
