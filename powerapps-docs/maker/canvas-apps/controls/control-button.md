@@ -2,13 +2,14 @@
 title: 'Button control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Button control
 author: fikaradz
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+ms.reviewer:
 ---
 # Button control in PowerApps
 A control that the user can click or tap to interact with the app.

@@ -2,12 +2,14 @@
 title: 'Attachments control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Attachments control
 author: fikaradz
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 04/23/2018
 ms.author: fikaradz
+ms.reviewer:
 
 ---
 # Attachments control in PowerApps

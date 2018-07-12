@@ -1,16 +1,13 @@
 ---
 title: Accessibility properties | Microsoft Docs
 description: Reference information about properties such as TabIndex, Tooltip
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 01/26/2017
 ms.author: fikaradz
 

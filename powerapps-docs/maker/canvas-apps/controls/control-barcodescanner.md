@@ -2,13 +2,14 @@
 title: 'Barcode scanner control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the barcode scanner control
 author: fikaradz
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+ms.reviewer:
 ---
 # Barcode scanner control (experimental) in PowerApps
 An experimental control with which the user can take photos by using the barcode scanner on the device.

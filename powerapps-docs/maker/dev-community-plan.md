@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.date: 05/01/2016
 ms.author: mblythe
-ms.reviewer: anneta
+ms.reviewer:
 
 ---
 # PowerApps Community Plan: a free development environment for individual use

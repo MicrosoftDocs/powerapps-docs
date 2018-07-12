@@ -1,16 +1,13 @@
 ---
 title: 'Combo box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the combo box control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 09/13/2017
 ms.author: fikaradz
 

@@ -1,19 +1,15 @@
 ---
 title: Sign up for a free trial license | Microsoft Docs
 description: Sign up for a free license to try PowerApps for 30 days as an individual.
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
 ms.date: 03/12/2018
 ms.author: anneta
-
+ms.reviewer:
 ---
 # Sign up for a free license to try PowerApps
 To create an app in PowerApps, you need one of several types of licenses that offer different levels of functionality. You already have a license for PowerApps if your organization has purchased any of several versions of Office 365 or Dynamics 365 for you, or your organization purchased PowerApps Plan 1 or Plan 2 licenses for you.

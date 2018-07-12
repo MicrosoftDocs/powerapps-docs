@@ -1,16 +1,13 @@
 ---
 title: Size and location properties | Microsoft Docs
 description: Reference material for properties such as Height and Width
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 10/25/2016
 ms.author: gregli
 

@@ -1,16 +1,13 @@
 ---
 title: 'Display form and Edit form controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Display form and Edit form controls
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 07/06/2017
 ms.author: gregli
 

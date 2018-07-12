@@ -9,7 +9,7 @@ ms.custom: canvas
 ms.topic: landing-page
 ms.date: 10/27/2017
 ms.author: anneta
-ms.reviewer: anneta
+ms.reviewer:
 ---
 <div id="main" class="v2">
     <div class="container">
