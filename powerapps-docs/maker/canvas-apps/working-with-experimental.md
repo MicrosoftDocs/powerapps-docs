@@ -1,16 +1,13 @@
 ---
 title: Understand preview and experimental features | Microsoft Docs
 description: Test and begin adoption of new features.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/30/2018
 ms.author: gregli
 
