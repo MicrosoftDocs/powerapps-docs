@@ -1,16 +1,13 @@
 ---
 title: Format a table in Excel | Microsoft Docs
 description: In order to use Excel data, formatting the data into a table is needed. Adding "image" keyword in column names
-documentationcenter: na
 author: yifwang
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: yifwang
 

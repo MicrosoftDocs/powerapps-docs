@@ -1,16 +1,13 @@
 ---
-title: Create an app to manage projects  | Microsoft Docs
+title: Create an app to manage projects | Microsoft Docs
 description: In this task, we'll build an app from scratch. This app allows a user to assign a manager to projects and to update project details.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 06/12/2017
 ms.author: mblythe
 

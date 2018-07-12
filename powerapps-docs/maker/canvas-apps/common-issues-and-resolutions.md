@@ -2,10 +2,12 @@
 title: Common issues and resolutions for PowerApps | Microsoft Docs
 description: A list of common issues and resolutions within PowerApps.
 author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 05/10/2018
 ms.author: anneta
 ---

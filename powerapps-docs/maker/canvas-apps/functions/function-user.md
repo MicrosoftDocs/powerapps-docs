@@ -1,16 +1,13 @@
 ---
 title: User function | Microsoft Docs
 description: Reference information, including syntax, for the User function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2016
 ms.author: gregli
 

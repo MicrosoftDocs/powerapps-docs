@@ -1,15 +1,13 @@
 ---
 title: Start a flow in an app | Microsoft Docs
 description: Create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in an app.
-documentationcenter: ''
 author: stepsic-microsoft-com
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: sharik
 

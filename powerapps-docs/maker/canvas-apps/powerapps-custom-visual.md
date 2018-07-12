@@ -1,16 +1,13 @@
 ---
 title: PowerApps custom visual for Power BI | Microsoft Docs
 description: Procedure and limitations for embedding an app that uses the same data source and can be filtered like other report items in Power BI 
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/15/2018
 ms.author: mblythe
 ---

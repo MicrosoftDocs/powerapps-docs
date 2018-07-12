@@ -1,16 +1,13 @@
 ---
 title: Scan a barcode | Microsoft Docs
 description: Scan a variety of barcode types, such as UPC and Codabar
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 10/23/2016
 ms.author: anneta
 

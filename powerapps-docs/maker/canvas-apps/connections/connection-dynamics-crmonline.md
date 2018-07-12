@@ -2,13 +2,14 @@
 title: Overview of the Dynamics 365 connection | Microsoft Docs
 description: Create an app for managing data in Dynamics 365
 author: Mattp123
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: matp
-
+ms.reviewer:
 ---
 # Connect to Dynamics 365 from PowerApps
 PowerApps lets you quickly generate, customize, share, and run mobile apps with little or no code. By using the Dynamics 365 connector, you can create useful mobile apps to share with your organization in just a few minutes.

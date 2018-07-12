@@ -2,11 +2,12 @@
 title: Create an app from scratch using Common Data Service for Apps | Microsoft Docs
 description: Create an app to add, update, and delete records.
 author: AFTOwen
-manager: kfile
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/18/2018
 ms.author: anneta
 

@@ -2,10 +2,12 @@
 title: Understand tables | Microsoft Docs
 description: Reference information for working with tables, columns, and records
 author: gregli-msft
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
 

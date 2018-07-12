@@ -1,16 +1,13 @@
 ---
 title: Generate an app from within a SharePoint list | Microsoft Docs
 description: Generate a three-screen app to manage items from within a SharePoint list, whether the site is on-premises or in the cloud.
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/18/2018
 ms.author: anneta
 

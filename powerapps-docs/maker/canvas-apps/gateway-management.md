@@ -1,16 +1,13 @@
 ---
 title: Manage an on-premises data gateway | Microsoft Docs
 description: Manage an on-premises data gateway and its connections
-documentationcenter: na
 author: archnair
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/30/2016
 ms.author: archanan
 
