@@ -22,9 +22,9 @@ To add a workflow to a business process flow, the workflow must have the followi
 - The **As an on-demand process workflow** attribute selected.
 - The same primary entity for the workflow is also used for the process or the business process flow stage.
 
-## Add a workflow to a business process flow
+## Add an on-demand workflow to a business process flow
 
-You add a workflow from the business process flow designer by dragging the workflow component to a process stage or to the global workflows section. 
+You add an on-demand  workflow from the business process flow designer by dragging the workflow component to a process stage or to the global workflows section. 
 
 On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane). 
 
@@ -32,11 +32,11 @@ Open the business process flow designer. You can do this in one of two ways.
 - If the business process flow is already added to an app, go to **Apps**, next to the app you want select **…**, and then select **Edit**. In the app designer, select the business process flow, and then select ![Open business process flow designer](media/dynamics365-open-designer.PNG).  
 - Otherwise, open [solution explorer](advanced-navigation.md#solution-explorer), in the left navigation pane select **Processes**, and then select the business process flow that you want. 
 
-Decide whether you want the workflow to be triggered by one of the following business process flow events. 
+Decide whether you want the on-demand workflow to be triggered by one of the following business process flow events. 
 - On-demand stage processes. Triggers the workflow on entry or on exit of the stage. 
 - On-demand global processes. Triggers the workflow either on process activation or process archival (when the status transitions to a **Finished** or **Abandoned** state). 
 
-In the example below, a workflow named **My on demand workflow** is added to **Stage 1** of the business process flow. 
+In the example below, an on-demand workflow named **My on demand workflow** is added to **Stage 1** of the business process flow. 
 
 1. Expand stage 1 to reveal the **Triggered Process** section. 
 2. Select the **Components** tab and drag **Workflow** to the **Triggered Process** section.
