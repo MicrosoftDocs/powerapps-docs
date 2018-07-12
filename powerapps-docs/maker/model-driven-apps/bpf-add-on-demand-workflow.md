@@ -20,7 +20,7 @@ You can trigger on-demand workflows from inside a business process flow. For exa
 To add a workflow to a business process flow, the workflow must have the following. 
 
 - The **As an on-demand process workflow** attribute selected.
-- The same primary entity for the workflow is used for the process or the business process flow stage.
+- The same primary entity for the workflow is also used for the process or the business process flow stage.
 
 ## Add a workflow to a business process flow
 
@@ -33,17 +33,17 @@ Open the business process flow designer. You can do this in one of two ways.
 - Otherwise, open [solution explorer](advanced-navigation.md#solution-explorer), in the left navigation pane select Processes, and then select the business process flow that you want. 
 
 Decide whether you want the workflow to be triggered by one of the following business process flow events. 
-- On-demand stage processes. Triggers the workflow on entry or on exit of the stage. The workflow must have the same primary entity as the stage.
-- On-demand global processes. Triggers the workflow either on process activation or process archival (where the status transitions to a Finished or Abandoned state). The workflow must have the same primary entity as the process.
+- On-demand stage processes. Triggers the workflow on entry or on exit of the stage. 
+- On-demand global processes. Triggers the workflow either on process activation or process archival (when the status transitions to a **Finished** or **Abandoned** state). 
 
- In the example below, the workflow is added to Stage 1 of the business process flow. 
+ In the example below, a workflow named **My on demand workflow** is added to **Stage 1** of the business process flow. 
 
 1. Expand stage 1 to reveal the **Triggered Process** section. 
 2. Select the **Components** tab and drag **Workflow** to the **Triggered Process** section.
     ![Add workflow to a stage](media/add-workflow-to-bpf-1.png)
-3. In the search box of the **Properties** tab, enter the name of the on-demand workflow you want to add to the business process flow stage, and then select **Apply**.
+3. In the search box of the **Properties** tab, enter and search the name of the on-demand workflow you want to add to the business process flow stage, and then select **Apply**.
     ![Enter name and select apply](media/add-workflow-to-bpf-2.png)
-4. Select **Update** on the business process flow toolbar.
+4. Select **Update** on the business process flow designer toolbar.
  
 ## Next steps
 [Use Workflow processes to automate processes that don't require user interaction](../common-data-service/workflow-processes.md) <br/>
