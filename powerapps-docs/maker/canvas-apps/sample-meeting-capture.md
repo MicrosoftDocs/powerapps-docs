@@ -1,21 +1,18 @@
 ---
 title: Meeting Capture PowerApps Sample | Microsoft Docs
 description: Learn about the Meeting Capture PowerApps sample with setup, overview, and deep dives into how the app was built.
-documentationcenter: na
 author: caburk
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: sample
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/03/2018
 ms.author: caburk
 
 ---
-# Setup and learn about the Meeting Capture PowerApps sample
+# Set up and learn about the Meeting Capture PowerApps sample
 
 ## Overview
 
