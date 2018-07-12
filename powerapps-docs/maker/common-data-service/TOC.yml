@@ -183,12 +183,8 @@
         href: set-managed-properties-metadata.md
       - name: Publish changes
         href: publish-changes-for-use-customer-service-hub.md                                                 
-    - name: Work with analytics
-      items: 
-      - name: Create a Power BI report
-        href: data-platform-powerbi-connector.md
-      - name: Customize and organize reports
-        href: customize-organize-reports.md 
+    - name: Create a Power BI report
+      href: data-platform-powerbi-connector.md
     - name: Define alternate keys using solution explorer
       href: define-alternate-keys-solution-explorer.md
     - name: Translate customized entity and field text
