@@ -41,9 +41,16 @@ In the example below, an on-demand workflow named **My on demand workflow** is a
 1. Expand stage 1 to reveal the **Triggered Process** section. 
 2. Select the **Components** tab and drag **Workflow** to the **Triggered Process** section.
     ![Add workflow to a stage](media/add-workflow-to-bpf-1.png)
+Alternatively, you can drag **Workflow** to the **Global Workflows** section, which triggers the workflow either on process activation or process archival.
+    ![Add worfklow to process activation or archival](media/add-workflow-to-bpf-global.png)
 3. In the search box of the **Properties** tab, enter and search the name of the on-demand workflow you want to add to the business process flow stage, and then select **Apply**.
     ![Enter name and select apply](media/add-workflow-to-bpf-2.png)
-4. Select **Update** on the business process flow designer toolbar.
+4. On the **Properties** tab under **Trigger** select either **Stage Entry** or **Stage Exit**.  
+    ![Select workflow trigger](media/workflow-trigger.png)
+   
+    Alternatively, when you drop the workflow onto the **Global Workflow** section, the trigger options are **Process applied**, **Process reactivated**, **Process abandoned**, and **Process completed**.
+
+5. Select **Update** on the business process flow designer toolbar.
  
 ## Next steps
 [Use Workflow processes to automate processes that don't require user interaction](../common-data-service/workflow-processes.md) <br/>
