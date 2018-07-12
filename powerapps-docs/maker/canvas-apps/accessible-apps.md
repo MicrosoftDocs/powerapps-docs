@@ -58,6 +58,6 @@ If you have a signature field that uses the PenInput control you need to enable 
 
 
 Related:
-- **[Accessibility properties](controls/properties-accessibility.md)**
-- **[Use the Accessibility checker](accessibility-checker.md)**
-- **[Accessible colors in PowerApps](accessible-apps-color.md)**
+- [Accessibility properties](controls/properties-accessibility.md)
+- [Use the Accessibility checker](accessibility-checker.md)
+- [Accessible colors in PowerApps](accessible-apps-color.md)
