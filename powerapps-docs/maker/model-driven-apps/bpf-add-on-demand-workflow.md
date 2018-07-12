@@ -34,7 +34,7 @@ Open the business process flow designer. You can do this in one of two ways.
 
 Decide whether you want the on-demand workflow to be triggered by one of the following business process flow events. 
 - On-demand stage processes. Triggers the workflow on entry or on exit of the stage. 
-- On-demand global processes. Triggers the workflow either on process activation or process archival (when the status transitions to a **Finished** or **Abandoned** state). 
+- On-demand global processes. Triggers the workflow either on process activation or process archival (when the status transitions to an applied, completed, reactivated, or abandoned state). 
 
 In the example below, an on-demand workflow named **My on demand workflow** is added to **Stage 1** of the business process flow. 
 
