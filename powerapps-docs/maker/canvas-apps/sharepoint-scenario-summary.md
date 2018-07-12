@@ -1,16 +1,13 @@
 ---
 title: End-to-end walkthrough of SharePoint Online integration scenario | Microsoft Docs
 description: Take an end-to-end walk through the scenario we've built out in this series of tutorials.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 06/12/2017
 ms.author: mblythe
 

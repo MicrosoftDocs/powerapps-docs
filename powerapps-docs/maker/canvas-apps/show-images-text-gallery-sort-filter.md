@@ -1,15 +1,13 @@
 ---
 title: Show, sort, and filter data in a gallery | Microsoft Docs
 description: Use a gallery to display images and text. Sort and filter the images in PowerApps.
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 06/02/2015
 ms.author: lonu
 

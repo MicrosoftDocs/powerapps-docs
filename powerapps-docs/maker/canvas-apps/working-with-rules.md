@@ -1,16 +1,13 @@
 ---
 title: Create a rule | Microsoft Docs
 description: Step-by-step instructions for building app logic by creating rules
-documentationcenter: na
 author: karthik-1
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 11/10/2017
 ms.author: sharik
 

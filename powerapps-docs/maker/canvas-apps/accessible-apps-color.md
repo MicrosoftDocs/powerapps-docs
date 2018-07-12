@@ -2,9 +2,12 @@
 title: Accessible colors | Microsoft Docs
 description: Color contrast guidelines for PowerApps
 author: tahoon
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: article
+ms.custom: canvas
+ms.reviewer:
 ms.date: 04/23/2018
 ms.author: tahoon
 

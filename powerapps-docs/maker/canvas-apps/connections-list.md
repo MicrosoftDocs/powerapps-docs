@@ -1,16 +1,13 @@
 ---
 title: Connectors overview | Microsoft Docs
 description: Overview of all the available connections you can use to build apps
-documentationcenter: ''
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 08/28/2017
 ms.author: lanced
 

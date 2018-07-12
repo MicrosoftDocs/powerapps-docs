@@ -6,7 +6,8 @@ manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 06/05/2018
 ms.author: gregli
 

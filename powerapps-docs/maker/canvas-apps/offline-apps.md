@@ -1,16 +1,13 @@
 ---
 title: Develop offline-capable apps | Microsoft Docs
 description: Develop offline-capable apps so your users are productive whether they are online or offline.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 05/09/2017
 ms.author: mblythe
 

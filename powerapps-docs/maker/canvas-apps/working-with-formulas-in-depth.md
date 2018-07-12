@@ -1,16 +1,13 @@
 ---
 title: Understand behavior formulas | Microsoft Docs
 description: Reference information for working with behavior formulas
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/10/2015
 ms.author: gregli
 

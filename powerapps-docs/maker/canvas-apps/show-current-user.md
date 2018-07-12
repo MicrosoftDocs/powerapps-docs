@@ -1,15 +1,13 @@
 ---
 title: Show details about the current user | Microsoft Docs
 description: Insert the User function to display the name and email address of the signed-in user in PowerApps
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 10/16/2016
 ms.author: lonu
 

@@ -1,15 +1,13 @@
 ---
 title: Create and update a collection | Microsoft Docs
 description: Create collections and add columns to existing collections in PowerApps
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 11/30/2015
 ms.author: lonu
 

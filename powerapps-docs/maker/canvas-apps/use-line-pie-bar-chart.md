@@ -1,15 +1,13 @@
 ---
 title: Create charts | Microsoft Docs
 description: Show categories of data as line charts, pie charts, or bar charts
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 10/23/2016
 ms.author: lonu
 

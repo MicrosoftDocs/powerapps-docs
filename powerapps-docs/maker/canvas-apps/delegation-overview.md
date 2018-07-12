@@ -1,18 +1,15 @@
 ---
 title: Understand delegation | Microsoft Docs
 description: Use delegation to process large data sets efficiently.
-documentationcenter: na
-author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+author: lancedMicrosoft
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 07/05/2018
-ms.author: gregli
+ms.author: lanced
 
 ---
 # Understand delegation

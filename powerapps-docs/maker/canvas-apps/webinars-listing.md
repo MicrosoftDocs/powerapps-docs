@@ -2,10 +2,12 @@
 title: Webinar listing | Microsoft Docs
 description: Displays a listing of past and future webinars, including time/date and topics covered.
 author: audrieMSFT
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 4/18/2018
 ms.author: audrie
 
