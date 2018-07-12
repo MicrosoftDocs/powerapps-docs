@@ -23,7 +23,7 @@ The Accessibility checker helps you identify settings that you might want to cha
 
     ![App checker icon](./media/accessibility-checker/app-checker-icon.png)
 
-2. in the menu that appears, select **Accessibility**.
+2. In the menu that appears, select **Accessibility**.
 
     ![App checker pane list of options](./media/accessibility-checker/app-checker-menu.png)
 
@@ -55,7 +55,7 @@ The Accessibility checker classifies each issue as an error, a warning, or a tip
 
 | Issue Title                            | Severity | Issue Description  | How to fix | Why fix|
 | ------------------------------         |:---------| -----| ------|------ |
-| **Missing accessible label**           | Error    | When the accessible-label property of an interactive control contains no text. An interactive control can be inherently interactive, as a button is, or it has interactive properties. For example, you might have set the **OnSelect** property of an image or set its **TabIndex** property to 0 or higher.)  | Edit the accessible-label property to describe the item. | If the accessible-label property contains no text, people who can’t see the screen won't understand what’s in images and controls. |
+| **Missing accessible label**           | Error    | When the accessible-label property of an interactive control contains no text. An interactive control can be inherently interactive, as a button is, or it has interactive properties. For example, you might have set the **OnSelect** property of an image or set its **TabIndex** property to 0 or higher.  | Edit the accessible-label property to describe the item. | If the accessible-label property contains no text, people who can’t see the screen won't understand what’s in images and controls. |
 | **Focus isn't showing**                | Error    | When the **FocusBorderThickness** of a control is set to 0. It is good practice to ensure a proper color-contrast ratio between the focus border and the control itself so it's clearly visible. | Change the **FocusedBorderThickness** property to a value that's higher than 0.  | If the focus isn't visible, people who don't use a mouse can't see it when they interact with the app.   |
 | **Missing captions**                   | Warning  | When the **ClosedCaptionsURL** property of an **Audio** or **Video** control is empty. | Set the **ClosedCaptionsURL** property to the URL for captions. | Without captions, people who have disabilities might not get any information from a video or audio segment. |
 | **Missing helpful control settings**   | Warning  | When any of several settings (such as showing labels and markers for charts and showing default controls for **Audio**, **Video**, and **Pen input** controls) are turned off. | Select the warning, and then set the property to **true**. | By changing this property setting, you give the user better information about how the controls in your app function. |
