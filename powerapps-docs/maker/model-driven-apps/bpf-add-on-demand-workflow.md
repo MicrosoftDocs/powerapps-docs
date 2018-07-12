@@ -36,7 +36,7 @@ Decide whether you want the workflow to be triggered by one of the following bus
 - On-demand stage processes. Triggers the workflow on entry or on exit of the stage. 
 - On-demand global processes. Triggers the workflow either on process activation or process archival (when the status transitions to a **Finished** or **Abandoned** state). 
 
- In the example below, a workflow named **My on demand workflow** is added to **Stage 1** of the business process flow. 
+In the example below, a workflow named **My on demand workflow** is added to **Stage 1** of the business process flow. 
 
 1. Expand stage 1 to reveal the **Triggered Process** section. 
 2. Select the **Components** tab and drag **Workflow** to the **Triggered Process** section.
