@@ -1,14 +1,14 @@
 ---
 title: Topic title that doesn't specify PowerApps | Microsoft Docs
 description: Longer summary of topic with customer-centric keywords and PowerApps reference
-author: GitHub alias for PM or writer
-manager: MSFT alias for manager of PM or writer 
+author: PM's or writer's GitHub alias
+manager: writer's manager's MSFT alias 
 
-ms.author: MSFT alias for manager of PM or writer
-ms.reviewer: MSFT alias for writer 
+ms.author: PM's or writer's MSFT alias 
+ms.reviewer: writer's MSFT alias 
 ms.service: powerapps
 ms.topic: article
-ms.custom: Delete all but one of these: canvas, model, admin, user, or cds
+ms.custom: Delete all but one of these (canvas, model, cds, admin, user)
 ms.date: 04/26/2018 (change this to today's date when you update the topic)
 
 ---
