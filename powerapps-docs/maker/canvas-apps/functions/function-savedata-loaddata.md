@@ -1,16 +1,13 @@
 ---
 title: SaveData and LoadData functions | Microsoft Docs
 description: Reference information, including syntax, for the SaveData and LoadData functions in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 11/07/2015
 ms.author: gregli
 

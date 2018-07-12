@@ -1,17 +1,13 @@
 ---
 title: Defaults function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Defaults function in PowerApps
-services: ''
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 11/01/2015
 ms.author: gregli
 

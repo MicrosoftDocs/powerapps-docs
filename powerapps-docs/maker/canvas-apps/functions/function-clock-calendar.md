@@ -1,16 +1,13 @@
 ---
 title: Calendar and Clock functions | Microsoft Docs
 description: Reference information for the Calendar and Clock functions in PowerApps, including syntax and examples
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 11/07/2015
 ms.author: gregli
 

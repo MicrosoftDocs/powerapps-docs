@@ -1,16 +1,13 @@
 ---
 title: Len function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Len function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 11/07/2015
 ms.author: gregli
 
