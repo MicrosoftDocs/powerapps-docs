@@ -9,12 +9,14 @@ metadata:
   nextTutorialTitle: Creating an app from SharePoint
   displayType: one-column
   author: AFTOwen
+  manager: kvivek
 
   ms.service: powerapps
-  ms.component: canvas
+  ms.custom: canvas
   ms.topic: interactive-tutorial
   ms.date: 10/27/2017
   ms.author: anneta
+  ms.reviewer: anneta
 items:
 - durationInMinutes: 1
   content: |
