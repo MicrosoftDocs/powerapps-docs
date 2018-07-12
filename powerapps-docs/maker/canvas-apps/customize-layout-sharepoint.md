@@ -10,7 +10,6 @@ ms.custom: canvas
 ms.reviewer:
 ms.date: 05/06/2018
 ms.author: anneta
-#As a business analyst with little or no coding experience, I want to change the data that appears in the default gallery of a generated app and make other changes so that my users can more easily manage information.
 ---
 # Tutorial: Customize a gallery in PowerApps
 

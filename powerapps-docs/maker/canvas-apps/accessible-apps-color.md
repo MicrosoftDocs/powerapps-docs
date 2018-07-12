@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: anneta
 ms.date: 04/23/2018
 ms.author: tahoon
 

@@ -1,7 +1,7 @@
 ---
 title: Add and configure a control | Microsoft Docs
 description: Step-by-step instructions for adding and configuring controls directly, from the toolbar, in the Properties tab, or in the formula bar.
-author: aftowen
+author: AFTOwen
 manager: kvivek
 
 ms.service: powerapps

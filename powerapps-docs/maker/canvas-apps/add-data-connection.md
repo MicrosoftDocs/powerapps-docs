@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: anneta
 ms.date: 04/06/2018
 ms.author: lanced
 

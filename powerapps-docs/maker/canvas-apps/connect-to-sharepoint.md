@@ -1,7 +1,7 @@
 ---
 title: Create a connection to SharePoint from PowerApps | Microsoft Docs
 description: In powerapps.com, create a connection to SharePoint, for use in generating an app automatically or building one from scratch.
-author: aftowen
+author: AFTOwen
 manager: kvivek
 
 ms.service: powerapps
