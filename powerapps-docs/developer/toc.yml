@@ -1,0 +1,4 @@
+- name: Common Data Service for Apps
+  href: powerapps/developer/common-data-service/toc.yml
+- name: Model-driven apps
+  href: powerapps/developer/model-driven-apps/toc.yml
