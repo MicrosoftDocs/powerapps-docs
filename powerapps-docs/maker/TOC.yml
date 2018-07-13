@@ -2,7 +2,6 @@
   href: index.md
   expanded: true
   items:
-  # DO NOT CHANGE ABOVE  
   - name: Sign up for a 30-day trial version
     href: signup-for-powerapps.md
   - name: Sign up for the PowerApps Community Plan
@@ -12,8 +11,7 @@
   - name: Common issues and resolutions
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Upcoming and recent webinars
-    href: ./canvas-apps/webinars-listing.md
-# DO NOT CHANGE BELOW    
+    href: ./canvas-apps/webinars-listing.md  
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
@@ -603,7 +601,6 @@
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
-   
   - name: Quickstarts
     items:
     - name: Build your first model-driven app
@@ -778,15 +775,9 @@
     items: 
     - name: Accessibility in PowerApps app designer
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md    
-
-
-
-
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
-
-
   - name: Quickstarts
     items:
     - name: Create an entity
@@ -979,9 +970,5 @@
     items:
     - name: View or download developer resources
       href: ./common-data-service/view-download-developer-resources.md  
-
-
-
-
 - name: Common Data Model
   href: ../common-data-model/index.md
