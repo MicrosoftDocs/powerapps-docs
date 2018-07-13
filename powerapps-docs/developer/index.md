@@ -1,3 +1,3 @@
 ---
-redirect_url: /powerapps/developer/common-data-service/overview
+redirect_url: /powerapps/developer/common-data-service/index
 ---
