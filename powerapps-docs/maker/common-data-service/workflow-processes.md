@@ -143,5 +143,6 @@ Developers can create workflows using information in the [Dynamics 365 Customer 
  Workflows are saved when they are activated, so it is not necessary to save them before activating them.  
   
 ## Next steps  
- [Configuring workflow processes](configure-workflow-steps.md)   
+ [Configuring workflow processes](configure-workflow-steps.md)  <br/>
+[Add an on-demand workflow to a business process flow](../model-driven-apps/bpf-add-on-demand-workflow.md) 
 

@@ -61,6 +61,35 @@ To monitor and manage processes, you must locate the process, evaluate the statu
 |Suspended|Waiting|  
 |Locked|In Progress<br /><br /> Pausing<br /><br /> Canceling|  
 |Completed|Succeeded<br /><br /> Failed<br /><br /> Canceled|  
+
+## Deleting process log records
+
+If your organization uses background workflows or business process flows that run frequently, the amount of process log records can become large enough to cause performance issues as well as consume significant amounts of storage. To delete process log records not removed sufficiently by one of the standard bulk record deletion jobs you can use the bulk delete system jobs feature to create a custom bulk record deletion job.
+
+1. Go to **Settings** > **Data Management** > **Bulk Record Deletion**.
+2. From the **Bulk Record Deletion** area, select **New**. 
+3. On the **Bulk Deletion Wizard** start page, select **Next**.
+4. In the **Look for** list, select **System Jobs**.
+5. The following conditions are used to create a bulk record deletion job to delete process log records. 
+ - **System Job Type Equals Workflow**. This targets workflow records. 
+ - **Status Equals Completed**. Only completed workflows are valid to run the job against.
+ - **Status Reason Equals Succeeded**. Delete successful, canceled, and failed jobs.
+ - **Completed On Older than X Days 30**. Use the Completed On field to only delete workflow process log records that are older than 30 days.
+ ![custom-bulk-record-deletion.png](media/custom-bulk-record-deletion.png)
+6. Click **Next**.
+7. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [Using the immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018 and every 30 days thereafter. 
+![Bulk record deletion options](media/custom-bulk-record-delete-options.png)
+
+### Using the immediately option
+
+Notice that you have the option of performing an immediate synchronous bulk delete of the records by selecting the **Immediately** option. This delete is performed with direct SQL Server execution rather than passing each record through the delete event pipeline, which can reduce the impact to system performance. This is a good option if you want to quickly clean up the extra workflow records instead of the bulk delete job waiting in the asynchronous queue for processing. 
+
+The **Immediately** option is enabled when the following conditions are true: 
+- Bulk delete job is for the System Jobs entity.
+- The search criteria has the condition system job type equals workflow. 
+- The user creating the bulk delete job has global depth for the delete privilege on the AsyncOperation entity. The system administrator security role has this privilege.  
+
+The synchronous bulk delete will only delete AsyncOperation records in the completed state. A maximum of one million records are processed for each invocation. You will need to execute the job multiple times if your environment has more than one million records to remove.  
   
 ## Next steps   
  [Best practices for workflow processes](best-practices-workflow-processes.md) <br />

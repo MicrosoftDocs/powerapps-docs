@@ -20,6 +20,4 @@ manager: "kvivek"
 
 Implementers and administrators for PowerApps will find the resources and topics provided in this guide to help you manage PowerApps environments and process.
 
-> [!NOTE]
-> We are transitioning documentation from the [Administrator Guide for Dynamics 365 Customer Engagement](https://docs.microsoft.com/dynamics365/customer-engagement/admin/admin-guide) to this site. We appreciate your patience during this move.
 
