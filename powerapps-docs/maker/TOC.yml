@@ -783,6 +783,205 @@
 
 
 - name: Common Data Service for Apps
-  href: common-data-service/index.md
+  href: ./common-data-service/data-platform-intro.md
+  items:
+
+
+  - name: Quickstarts
+    items:
+    - name: Create an entity
+      href: ./common-data-service/data-platform-create-entity.md
+    - name: Create a custom entity from data
+      href: ./common-data-service/data-platform-cds-newentity-pq.md
+    - name: Create an option set
+      href: ./common-data-service/custom-picklists.md
+    - name: Create a relationship
+      href: ./common-data-service/data-platform-entity-lookup.md
+    - name: Create a business rule
+      href: ./common-data-service/data-platform-create-business-rule.md
+    - name: Delete a custom entity
+      href: ./common-data-service/data-platform-delete-entity.md
+  - name: Tutorials
+    items:
+    - name: Create a custom entity that has components
+      href: ./common-data-service/create-custom-entity.md
+    - name: Work with fields
+      items: 
+      - name: Create and edit fields
+        href: ./common-data-service/create-edit-fields.md
+      - name: Create and edit global option sets
+        href: ./common-data-service/create-edit-global-option-sets.md
+      - name: Define calculated fields
+        href: ./common-data-service/define-calculated-fields.md
+      - name: Define rollup fields
+        href: ./common-data-service/define-rollup-fields.md
+    - name: Define alternate keys using PowerApps portal
+      href: ./common-data-service/define-alternate-keys-portal.md
+    - name: Create a solution
+      href: ./common-data-service/create-solution.md
+  - name: Samples
+    items:
+        - name: Samples and other resources
+          href: ./common-data-service/samples-resources.md
+  - name: Concepts
+    items:
+      - name: App building practices
+        href: ./common-data-service/overview.md
+      - name: License requirements for entities
+        href: ./common-data-service/data-platform-entity-licenses.md
+      - name: Work with entities
+        items: 
+        - name: Entities and metadata
+          href: ./common-data-service/create-edit-metadata.md
+        - name: Types of entities
+          href: ./common-data-service/types-of-entities.md 
+        - name: Create and edit entities
+          href: ./common-data-service/create-edit-entities.md
+        - name: Edit an entity
+          href: ./common-data-service/edit-entities.md
+        - name: Create and edit virtual entities
+          href: ./common-data-service/create-edit-virtual-entities.md
+        - name: Virtual entity OData v4 data provider
+          href: ./common-data-service/virtual-entity-odata-provider-requirements.md 
+      - name: Work with relationships
+        href: ./common-data-service/create-edit-entity-relationships.md
+        items:  
+        - name: Create one-to-many or many-to-one relationships
+          href: ./common-data-service/create-edit-1n-relationships-portal.md 
+        - name: Create many-to-many entity relationships
+          href: ./common-data-service/create-edit-nn-relationships.md
+      - name: Work with fields
+        items: 
+        - name: Types of fields
+          href: ./common-data-service/types-of-fields.md       
+        - name: Set managed properties for fields
+          href: ./common-data-service/set-managed-properties-for-field.md 
+        - name: Behavior and format of the Date and Time field
+          href: ./common-data-service/behavior-format-date-time-field.md          
+      - name: Apply business logic
+        items: 
+        - name: Use Workflow processes to automate processes 
+          href: ./common-data-service/workflow-processes.md 
+        - name: Configure workflow steps
+          href: ./common-data-service/configure-workflow-steps.md          
+        - name: Actions overview
+          href: ./common-data-service/actions.md
+        - name: Best practices for workflow processes
+          href: ./common-data-service/best-practices-workflow-processes.md
+      - name: Work with solutions
+        href: ./common-data-service/solutions-overview.md
+        items:     
+        - name: Use the solution explorer
+          href: ./common-data-service/use-solution-explorer.md
+        - name: Use the default solution to customize
+          href: ./common-data-service/use-solutions-for-your-customizations.md
+        - name: Set managed properties overview
+          href: ./common-data-service/set-managed-properties.md                       
+  - name: How-to guides
+    items:
+    - name: Work with entities
+      items: 
+      - name: Create entities using PowerApps portal
+        href: ./common-data-service/create-edit-entities-portal.md
+      - name: Create entities using solution explorer
+        href: ./common-data-service/create-edit-entities-solution-explorer.md  
+      - name: Import or export data
+        href: ./common-data-service/data-platform-import-export.md
+      - name: Open entity data in Excel
+        href: ./common-data-service/data-platform-excel-addin.md
+      - name: Define alternate keys
+        href: ./common-data-service/define-alternate-keys-reference-records.md
+      - name: Define status reason transitions
+        href: ./common-data-service/define-status-reason-transitions.md  
+      - name: Delete a custom entity
+        href: ./common-data-service/data-platform-delete-entity.md  
+      - name: Display custom icons
+        href: ./common-data-service/display-custom-icons-instead.md
+      - name: Edit system entity messages
+        href: ./common-data-service/edit-system-entity-messages.md
+      - name: Configure an entity for feedback/ratings
+        href: ./common-data-service/configure-entity-feedback.md
+      - name: Azure Cosmos DB SQL API Data Provider
+        href: ./common-data-service/virtual-entity-documentdb-provider-requirements.md
+      - name: Virtual entity walkthrough
+        href: ./common-data-service/virtual-entity-walkthrough-using-odata-provider.md                                              
+    - name: Work with relationships
+      items: 
+      - name: Create many-to-many relationships using PowerApps portal
+        href: ./common-data-service/create-edit-nn-relationships-portal.md
+      - name: Create many-to-many relationships using PowerApps solution explorer
+        href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md  
+      - name: Set managed properties for relationships
+        href: ./common-data-service/set-managed-properties-relationships.md
+      - name: Visualize hierarchical data
+        href: ./common-data-service/visualize-hierarchical-data.md
+      - name: Query and visualize hierarchically related data
+        href: ./common-data-service/query-visualize-hierarchical-data.md 
+      - name: Define and query hierarchically related data
+        href: ./common-data-service/define-query-hierarchical-data.md
+      - name: Configure connection roles
+        href: ./common-data-service/configure-connection-roles.md  
+    - name: Work with fields
+      items: 
+      - name: Manage fields
+        href: ./common-data-service/data-platform-manage-fields.md
+      - name: Create fields using PowerApps portal
+        href: ./common-data-service/create-edit-field-portal.md 
+      - name: Create fields using PowerApps solution explorer
+        href: ./common-data-service/create-edit-field-solution-explorer.md
+      - name: Create global option sets using PowerApps portal
+        href: ./common-data-service/create-edit-global-option-sets-portal.md
+      - name: Create global option sets using solution explorer  
+        href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
+      - name: Map entity fields
+        href: ./common-data-service/map-entity-fields.md
+      - name: Delete fields
+        href: ./common-data-service/delete-fields.md     
+    - name: Apply business logic
+      items: 
+      - name: Create a mobile task flow
+        href: ./common-data-service/create-mobile-task-flow.md  
+      - name: Invoke custom actions from a workflow
+        href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
+      - name: Configure custom actions from a workflow
+        href: ./common-data-service/configure-actions.md
+      - name: Monitor and manage workflow processes
+        href: ./common-data-service/monitor-manage-processes.md
+    - name: Work with solutions
+      items:  
+      - name: Import, update, and export solutions
+        href: ./common-data-service/import-update-export-solutions.md 
+      - name: Navigate to a specific solution
+        href: ./common-data-service/navigate-specific-solution.md
+      - name: Use segmented solutions
+        href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
+      - name: Change the solution publisher prefix
+        href: ./common-data-service/change-solution-publisher-prefix.md
+      - name: Set managed properties in metadata
+        href: ./common-data-service/set-managed-properties-metadata.md
+      - name: Publish changes
+        href: ./common-data-service/publish-changes-for-use-customer-service-hub.md                                                 
+    - name: Create a Power BI report
+      href: ./common-data-service/data-platform-powerbi-connector.md
+    - name: Define alternate keys using solution explorer
+      href: ./common-data-service/define-alternate-keys-solution-explorer.md
+    - name: Translate customized entity and field text
+      href: ./common-data-service/export-customized-entity-field-text-translation.md
+    - name: Import translated entity and field text into an app
+      href: ./common-data-service/import-translated-entity-field-text.md 
+    - name: Create a theme
+      href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md  
+  - name: Reference
+    items: 
+      - name: Restricted entities requiring Dynamics 365 licenses
+        href: ./common-data-service/data-platform-restricted-entities.md
+  - name: Resources
+    items:
+    - name: View or download developer resources
+      href: ./common-data-service/view-download-developer-resources.md  
+
+
+
+
 - name: Common Data Model
   href: ../common-data-model/index.md
