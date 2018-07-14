@@ -130,6 +130,6 @@ With PowerApps you can call one app from another, so instead of the mass InfoPat
 
 With the information above you are now ready to go out into the world and start conquering it one PowerApps app at a time. As you continue on your journey, below are some handy links to help. One of which is a link to the PowerApps community site. Engage today with the community and grow your skills much faster than you would on your own.
 
-[**Formula reference**](https://docs.microsoft.com/en-us/powerapps/formula-reference) - Always a great way to become inspired, just browsing some of the default functions.
+[**Formula reference**](https://docs.microsoft.com/powerapps/formula-reference) - Always a great way to become inspired, just browsing some of the default functions.
 
 [**PowerApps community**](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) - See examples, engage with others, ask and answer questions and help the PowerApps community grow.
