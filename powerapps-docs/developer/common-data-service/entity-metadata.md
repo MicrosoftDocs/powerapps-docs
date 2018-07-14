@@ -4,7 +4,7 @@ description: Learn about the entity metadata use in Common Data Service for Apps
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
+author: "mayadumesh" # GitHub ID
 manager: kvivek
 editor: ''
 tags: ''
@@ -16,7 +16,13 @@ ms.workload: na
 ms.date: 03/19/2018
 ms.author: jdaly
 ---
-<!-- This topic was not migrated it was written for PowerApps -->
+<!-- 
+Was Mike Carter
+This topic was not migrated it was written for PowerApps 
+
+Overlap with content in https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-entities
+
+-->
 # Entity metadata
 
 Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in Common Data Service for Apps.

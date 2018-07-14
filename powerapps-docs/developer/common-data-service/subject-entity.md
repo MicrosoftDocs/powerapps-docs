@@ -6,12 +6,17 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "rjmax" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Subject entity
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/subject-entity
+<!-- 
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/subject-entity
 Make sure to update for CDS
+
+Used by service & sales solutions, docs say 'The information organized in the subject tree can be used by any entity in Dynamics 365'. So what if I want to use this for my custom entity? Can I?
+
  -->

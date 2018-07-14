@@ -4,7 +4,7 @@ description: Learn how solutions are used to create model apps.
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
+author: "shmcarth" # GitHub ID
 manager: kvivek
 editor: ''
 tags: ''
@@ -18,7 +18,9 @@ ms.author: jdaly
 ---
 
 <!-- TODO: Work in any missing content from original topic
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-solutions -->
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-solutions 
+
+-->
 
 
 # Introduction to solutions

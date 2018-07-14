@@ -6,11 +6,13 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Workflow extensions
 
 <!-- This would be a high-level topic to explain what workflow activites (assemblies) are
-Not necessarily the same as https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies -->
+Not necessarily the same as https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies 
+
+-->

@@ -6,10 +6,14 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "jamesol-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Online Management API
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/online-management-api -->
+<!-- 
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/online-management-api 
+
+-->

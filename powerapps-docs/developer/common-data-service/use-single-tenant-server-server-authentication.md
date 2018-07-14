@@ -6,10 +6,16 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use Single-Tenant Server-to-server authentication
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-single-tenant-server-server-authentication -->
+<!--
+
+ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-single-tenant-server-server-authentication 
+
+Can this scenario be hightlighted here: https://crmtipoftheday.com/767/server-to-server-authentication-is-here/
+
+-->

@@ -4,7 +4,7 @@ description: Learn about the entity relationship metadata used in Common Data Se
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
+author: "mayadumesh" # GitHub ID
 manager: kvivek
 editor: ''
 tags: ''
@@ -16,7 +16,13 @@ ms.workload: na
 ms.date: 03/12/2018
 ms.author: jdaly
 ---
-<!-- This topic was not migrated it was written for PowerApps -->
+<!-- 
+
+This topic was not migrated it was written for PowerApps
+Overlap with https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata
+Was Mike Carter
+
+ -->
 # Entity relationship metadata
 
 When you look at the solution explorer or the three relationship collections in the `EntityMetadata`, you might think that there are three types of entity relationships. Actually, there are only two, as shown in the following table.

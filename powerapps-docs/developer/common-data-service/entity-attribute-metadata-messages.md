@@ -6,13 +6,15 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Entity attribute metadata messages
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/entity-attribute-metadata-messages -->
+<!-- 
+Was Mike Carter
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/entity-attribute-metadata-messages -->
 
 An entity attribute is a container for a piece of data in an entity. The term *attribute* and *property* (class property) are often used interchangeably with the term *entity attribute*. Model-driven applications use the term *field* when they refer to entity attributes.  
 

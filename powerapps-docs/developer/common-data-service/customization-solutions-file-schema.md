@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "schemas"
 ms.assetid: 71e3e594-0240-4af1-99b4-135042b7a000
 caps.latest.revision: 19
-author: "JimDaly"
+author: "shmcarth" # GitHub ID
 ms.author: "jdaly"
-manager: "kvivek"
+manager: "ryjones"
 ---
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customization-solutions-file-schema -->
 

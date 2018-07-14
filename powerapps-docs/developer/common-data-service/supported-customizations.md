@@ -6,10 +6,16 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
+
+<!-- This is the portion of the old topic that applies to CDS
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-extensions
+ -->
+
+
 # Supported Customizations for Common Data Service for Apps
 
 You can customize Common Data Service for Apps by using tools that are available in the PowerApps portal or that are described in the official documentation. These customizations are supported and can be upgraded.

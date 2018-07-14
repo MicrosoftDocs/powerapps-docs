@@ -6,10 +6,14 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Link custom attributes of the recurring appointment master and appointment entities
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/link-custom-attributes-recurring-master-appointment-entities -->
+<!-- 
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/link-custom-attributes-recurring-master-appointment-entities 
+
+-->

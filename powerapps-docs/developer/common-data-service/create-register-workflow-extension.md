@@ -6,7 +6,7 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
@@ -17,4 +17,6 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/workf
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/register-deploy-plugins
 
 Plug-ins and workflow activities are both 'plug-ins'
-Yet, I think workflow activities are easier to understand as 'workflow extensions' - because that is what they do... -->
+Yet, I think workflow activities are easier to understand as 'workflow extensions' - because that is what they do... 
+
+-->

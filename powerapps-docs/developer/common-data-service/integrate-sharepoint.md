@@ -6,10 +6,14 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "rjmax" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Integrate Common Data Service for Apps with SharePoint
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/integration-dev/integrate-sharepoint -->
+<!-- 
+Owner Prob Welly Lee
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/integration-dev/integrate-sharepoint 
+
+-->

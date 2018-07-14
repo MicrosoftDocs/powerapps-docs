@@ -6,7 +6,7 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
@@ -30,7 +30,11 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/plug-
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/plug-in-registration-entities
 
 Notes:
-https://microsoft-my.sharepoint.com/:w:/p/jdaly/ETkwQsIe2VtCvxAyqTPKfTIBKDrLhcEjAm4JaJPfakQ8ww?e=2pxLqD -->
+https://microsoft-my.sharepoint.com/:w:/p/jdaly/ETkwQsIe2VtCvxAyqTPKfTIBKDrLhcEjAm4JaJPfakQ8ww?e=2pxLqD 
+
+See tutorials
+https://microsoft-my.sharepoint.com/:w:/p/jdaly/EZ1SzmOh-B5Bnt4C9rxGWysB6NtUQonOxq5sGSPkn5vNAA?e=bGWQN3
+-->
 
 [Sample: Web access from a sandboxed plug-in](org-service/samples/web-access-plugin.md)
 

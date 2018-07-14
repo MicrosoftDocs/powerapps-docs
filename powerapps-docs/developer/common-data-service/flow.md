@@ -6,10 +6,17 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "rjmax" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Flow
 
-<!-- Added this as a starting point to talk about how flow can be integrated -->
+<!-- 
+
+Added this as a starting point to talk about how flow can be integrated
+We have no information now except that it is another way to apply business logic.
+What is the develoer story?
+Is there supposed to be one?
+
+ -->

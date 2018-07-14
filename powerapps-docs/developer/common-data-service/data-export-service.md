@@ -6,10 +6,14 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "sabinn-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Data export service
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/data-export-service -->
+<!-- 
+Was assigned to Narinder Singh, now Sabin Nair seems to have taken it over
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/data-export-service 
+
+-->

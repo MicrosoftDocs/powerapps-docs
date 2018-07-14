@@ -6,13 +6,15 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Manage duplicate detection for create and update operations
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicate-detection-create-update 
+<!-- 
+Was Mike Carter
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicate-detection-create-update 
 
 this should point to the ways that this is managed in both Web API and Organization service
 

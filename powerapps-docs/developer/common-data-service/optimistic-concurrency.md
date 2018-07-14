@@ -6,14 +6,20 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "rjmax" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Optimistic Concurrency
 
-<!-- Is this just a duplicate or rename of https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/reduce-potential-data-loss-using-optimistic-concurrency 
+<!-- 
+
+This should introduce the common concepts for this capability and include links to the specific implementations in Web API and Organization Service
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/reduce-potential-data-loss-using-optimistic-concurrency 
 
 Make sure organization service update and delete operations topic refer to this
+
+
 
 -->

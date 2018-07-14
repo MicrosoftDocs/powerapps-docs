@@ -11,9 +11,9 @@ ms.topic: "article"
 applies_to: 
     - "Dynamics 365 (online)"
 ms.assetid: d4e6e932-61cd-42fd-a280-ef63bbad45f0
-author: "JimDaly"
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+manager: "ryjones"
 ---
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies

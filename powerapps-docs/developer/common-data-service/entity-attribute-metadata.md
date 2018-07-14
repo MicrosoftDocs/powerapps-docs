@@ -4,7 +4,7 @@ description: Learn about the attribute metadata use in Common Data Service for A
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
+author: "mayadumesh" # GitHub ID
 manager: kvivek
 editor: ''
 tags: ''
@@ -17,7 +17,11 @@ ms.date: 03/12/2018
 ms.author: jdaly
 ---
 
-<!-- This topic was not migrated it was written for PowerApps -->
+<!-- This topic was not migrated it was written for PowerApps 
+Was Mike Carter
+Overlap with https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-entity-attributes
+
+-->
 # Attribute metadata
 
 Entities include a collection of attributes that represent the data that can be included within each record. Developers need to understand the different types of attributes and how to work with them. 
