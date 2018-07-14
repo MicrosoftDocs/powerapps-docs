@@ -7,6 +7,19 @@
     href: webapi/quick-start-console-app-csharp.md
   - name: Organization service quick-start sample (C#)
     href: org-service/quick-start-org-service-console-app.md
+- name: Web Services
+  href: use-web-services.md
+  items:
+  - name: Web API
+    href: webapi/toc.yml    
+    # href: webapi/index.md
+  - name: Organization Service
+    href: org-service/toc.yml    
+    # href: org-service/overview.md
+  - name: API Limits
+    href: api-limits.md
+  - name: Metadata services
+    href: metadata-services.md    
 - name: Tutorials
   items:
   - name: Create and register a plug-in
@@ -50,19 +63,7 @@
       href: use-managed-properties.md
     - name: Understand how managed solutions are merged
       href: understand-managed-solutions-merged.md
-  - name: Web Services
-    href: use-web-services.md
-    items:
-    - name: Web API
-      href: webapi/toc.yml    
-      # href: webapi/index.md
-    - name: Organization Service
-      href: org-service/toc.yml    
-      # href: org-service/overview.md
-    - name: API Limits
-      href: api-limits.md
-    - name: Metadata services
-      href: metadata-services.md
+
   - name: Apply business logic with code
     href: apply-business-logic-with-code.md
     items:
