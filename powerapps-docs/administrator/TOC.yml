@@ -1,15 +1,8 @@
-- name: "Preview: Introducing Business Application Platform Admin Center"
-  href: admin-guide-bap.md
-  items:
-  - name: Get Help + Support
-    href: contact-technical-support.md
-  - name: View analytics
-    href: ce-analytics.md
-  - name: Administer CDS for Apps Environments
-    href: admin-cds-apps-environments.md
 - name: Administer PowerApps
   href: admin-guide-pa.md
   items:
+  - name: Introducing the new Power platform Admin center
+    href: intro-new-admin-center.md
   - name: Quickstarts
     items:
     - name: Create an environment # not in TOC previously
