@@ -11,10 +11,10 @@
   href: use-web-services.md
   items:
   - name: Web API
-    href: webapi/toc.yml    
+    href: webapi/TOC.yml    
     # href: webapi/index.md
   - name: Organization Service
-    href: org-service/toc.yml    
+    href: org-service/TOC.yml    
     # href: org-service/overview.md
   - name: API Limits
     href: api-limits.md

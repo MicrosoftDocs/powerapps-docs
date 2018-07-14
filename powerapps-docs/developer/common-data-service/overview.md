@@ -1,5 +1,5 @@
 ---
-title: Common Data Service for Apps Developer Overview | Microsoft Docs
+title: Common Data Service for Apps Developer Guide | Microsoft Docs
 description: Learn how developers can add value using Common Data Service for Apps.
 services: ''
 suite: powerapps
@@ -17,7 +17,7 @@ ms.date: 03/20/2018
 ms.author: jdaly
 ---
 <!-- This topic was not migrated it was written for PowerApps -->
-# Common Data Service for Apps Developer Overview
+# Common Data Service for Apps Developer Guide
 
 PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the expansion of the Common Data Service, now called Common Data Service for Apps which now contains the core functionality of the Dynamics 365 Customer Engagement platform that powers Dynamics 365 Customer Engagement for Sales, Marketing, Customer Service.
 
