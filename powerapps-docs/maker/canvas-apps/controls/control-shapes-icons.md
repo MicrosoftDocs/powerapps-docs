@@ -1,16 +1,13 @@
 ---
 title: 'Shape controls and icon controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about shape controls and icon controls
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 

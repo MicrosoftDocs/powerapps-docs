@@ -1,15 +1,13 @@
 ---
 title: Show text and format a date or time | Microsoft Docs
 description: Add and format dates and times using PowerApps
-documentationcenter: ''
 author: AFTOwen
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 10/16/2016
 ms.author: anneta
 

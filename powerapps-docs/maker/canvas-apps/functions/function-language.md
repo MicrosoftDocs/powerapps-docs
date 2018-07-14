@@ -1,16 +1,13 @@
 ---
 title: Language function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Language function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: gregli
 

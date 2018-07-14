@@ -1,14 +1,15 @@
 ---
 title: System requirements, limits, and configuration values | Microsoft Docs
 description: System requirements, limits, and configuration values for PowerApps
-author: skjerland
+author: AFTOwen
+manager: kvivek
 
-
-ms.service: PowerApps
+ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/07/2018
-ms.author: sharik
+ms.author: anneta
 
 ---
 # System requirements, limits, and configuration values

@@ -2,11 +2,12 @@
 title: 'Radio control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Radio control
 author: fikaradz
-manager: kfile
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/06/2018
 ms.author: fikaradz
 
