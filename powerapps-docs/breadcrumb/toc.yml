@@ -23,14 +23,22 @@
       items:
       - name: Common Data Service for Apps
         tocHref: /powerapps/developer/common-data-service/
-        topicHref: /powerapps/maker/common-data-service/
+        topicHref: /powerapps/maker/common-data-service/index 
+        items:
+        - name: Developer
+          tocHref: /powerapps/developer/common-data-service/
+          topicHref: /powerapps/developer/common-data-service/index 
     - name: Create apps
       tocHref: /powerapps/developer/model-driven-apps/
       topicHref: /powerapps/maker/index
       items:
       - name: Model-driven apps
         tocHref: /powerapps/developer/model-driven-apps/
-        topicHref: /powerapps/maker/model-driven-apps/
+        topicHref: /powerapps/maker/model-driven-apps/index 
+        items:
+        - name: Developer
+          tocHref: /powerapps/developer/model-driven-apps/
+          topicHref: /powerapps/developer/model-driven-apps/index        
     - name: Guided Learning
       tocHref: /powerapps/guided-learning/
       topicHref: /powerapps/guided-learning/index
