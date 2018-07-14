@@ -1024,5 +1024,7 @@
       href: ./common-data-service/view-download-developer-resources.md
     - name: 'Developer: Community tools'
       href: ../developer/common-data-service/community-tools.md
+  - name: Developer Guide
+    href: ../developer/common-data-service/toc.yml
 - name: Common Data Model
   href: ../common-data-model/overview.md
