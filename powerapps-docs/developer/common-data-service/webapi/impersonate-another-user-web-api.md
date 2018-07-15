@@ -108,7 +108,7 @@ ETag: W/"506868"
 ### See also
 
 [Impersonate another user](../impersonate-another-user.md)<br />
-[Impersonate another user using the Organization service](../org-service/impersonate-another-user.md)<br />
+[Impersonate another user using the Organization service](../org-service/impersonate-another-user-org-service.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

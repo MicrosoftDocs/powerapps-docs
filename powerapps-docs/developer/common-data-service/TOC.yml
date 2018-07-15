@@ -63,7 +63,6 @@
       href: use-managed-properties.md
     - name: Understand how managed solutions are merged
       href: understand-managed-solutions-merged.md
-
   - name: Apply business logic with code
     href: apply-business-logic-with-code.md
     items:
@@ -126,6 +125,8 @@
     href: discovery-service.md
   - name: Authentication
     href: authentication.md
+  - name: Impersonate another user
+    href: impersonate-another-user.md
   - name: Entities
     href: entities.md
     items:

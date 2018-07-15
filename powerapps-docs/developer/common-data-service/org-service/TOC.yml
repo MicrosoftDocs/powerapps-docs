@@ -116,7 +116,7 @@
     - name: Retrieve, update, and delete entities
       href: metadata-retrieve-update-delete-entities.md
   - name: Impersonate another user
-    href: impersonate-another-user.md  
+    href: impersonate-another-user-org-service.md  
   - name: Import data
     href: ../import-data.md #Topic is for both Web API and Organization service
   - name: Sample data
