@@ -12,6 +12,22 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Retrieve an entity
 
+<!-- This is the Organization service topic that aligns with the Web API topic 
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/retrieve-entity-using-web-api 
+
+Needs to cover these scenarios:
+
+- Basic Retrieve example + Retrieve specific properties using ColumnSet
+- Retrieve with related records (late-bound example below)
+- Retrieve using an alternate key
+- Detect if an entity has changed since it was retrieved (Optimistic concurrency)
+- Access formatted values (link to where this should be covered in entity-operations-query-data)
+
+
+
+
+-->
+
 ## Retrieve with related records
 
 ```csharp

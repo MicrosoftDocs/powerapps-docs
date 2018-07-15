@@ -12,4 +12,4 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Using OrganizationServiceContext
 
-<!-- use-the-organizationservicecontext-class.md -->
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-the-organizationservicecontext-class -->

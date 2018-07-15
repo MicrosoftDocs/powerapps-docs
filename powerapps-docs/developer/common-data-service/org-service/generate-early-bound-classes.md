@@ -12,9 +12,12 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Generate classes for early-bound programming using the Organization service
 
-<!-- create-early-bound-entity-classes-code-generation-tool.md 
+<!-- 
 
-Merge in content from helper-code-enumerations-option-sets.md
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool
+
+Merge in content from 
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/helper-code-enumerations-option-sets
 
 Include with the Sample to extend CrmSvcUtil.exe.
 -->

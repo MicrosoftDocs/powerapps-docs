@@ -11,3 +11,5 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use a left outer join in QueryExpression to query for records "not in"
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-left-outer-join-queryexpression-query-records-not-in -->

@@ -12,4 +12,10 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Subscribe to SDK assembly updates using NuGet
 
-<!-- Should be more prominent. Remove information about old versions -->
+<!-- 
+
+Should be more prominent. Remove information about old versions
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/subscribe-sdk-assembly-updates-using-nuget
+
+-->

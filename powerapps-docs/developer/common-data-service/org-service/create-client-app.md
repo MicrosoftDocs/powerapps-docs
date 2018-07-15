@@ -6,10 +6,18 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Create a client application
 
-<!-- New page to be the focus for the tasks surrounding discovery service and authentication -->
+<!-- 
+
+New page to be the focus for the tasks surrounding discovery service and authentication to create a client application for the organization service.
+
+For .NET this could just direct people to Xrm.Tooling 
+
+But what if someone is creating a client using Java? 
+
+ -->

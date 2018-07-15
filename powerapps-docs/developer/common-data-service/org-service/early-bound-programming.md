@@ -12,10 +12,12 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Early-bound and Late-bound programming using the Organization service
 
-<!-- Late-bound is the 'default mode' that can be used without running CrmSvcUtil.exe
+<!-- 
+
+Late-bound is the 'default mode' that can be used without running CrmSvcUtil.exe
 This topic should describe the pros and cons of the different style. 
 
-mix-early-late-bound-entities.md
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/mix-early-late-bound-entities
 -->
 
 When you work with the Organization service assemblies you have two styles you can use: *early-bound* and *late-bound*.

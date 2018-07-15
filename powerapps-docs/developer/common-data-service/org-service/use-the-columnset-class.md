@@ -11,3 +11,12 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use the ColumnSet class
+
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-the-columnset-class
+
+Make sure  to callout that setting allColumns parameter to true is not recommended.
+
+Also mention that this class is used by QueryByAttribute and several messages also use this as a parameter
+
+ -->

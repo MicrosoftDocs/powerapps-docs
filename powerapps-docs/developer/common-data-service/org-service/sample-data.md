@@ -11,3 +11,13 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Add and remove sample data using the Organization service
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-data
+
+Calling these messages is so trivial, the sample here was cut:
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-install-remove-sample-data
+
+Move the sample snippet in-line with this topic
+
+ -->
+

@@ -12,4 +12,8 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Retrieve and detect changes to metadata
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata -->
+<!-- 
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata 
+
+-->

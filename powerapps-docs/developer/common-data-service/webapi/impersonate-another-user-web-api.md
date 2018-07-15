@@ -16,6 +16,11 @@ author: "JimDaly"
 ms.author: "jdaly"
 manager: "amyla"
 ---
+
+<!-- TOD0: The higher level topic [Impersonate another user](../impersonate-another-user.md) should include all generic concepts.
+This topic should only cover the Web API specific details -->
+
+
 # Impersonate another user using the Web API
 
 There are times when your code will need to perform operations on behalf of another user. If the system account running your code has the necessary privileges, you can perform operations on behalf of other users.  
@@ -101,6 +106,9 @@ ETag: W/"506868"
 ```  
   
 ### See also
+
+[Impersonate another user](../impersonate-another-user.md)<br />
+[Impersonate another user using the Organization service](../org-service/impersonate-another-user.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />

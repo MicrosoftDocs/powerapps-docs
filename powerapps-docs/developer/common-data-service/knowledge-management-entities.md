@@ -20,13 +20,14 @@ knowledgearticle is one of the restricted entities
 
 https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-restricted-entities
 
-other 'standard entities' include
-entitlement
-goal
-incident
-journey
-routingrule
-sla
+other 'standard entities' included in CDS
+- goal
+- routingrule
+- sla
 
-- Not sure whether all are in a default CDS for apps instance
+not in CDS:
+- entitlement
+- incident
+- journey
+
  -->

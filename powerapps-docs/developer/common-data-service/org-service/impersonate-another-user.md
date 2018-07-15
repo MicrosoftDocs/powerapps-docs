@@ -10,6 +10,15 @@ author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Impersonate another user
+# Impersonate another user using the Organization service
 
-<!-- Higher level topic required with link to Org Service specific details here -->
+<!-- 
+
+Higher level topic (../impersonate-another-user.md) coveres the general concepts and this covers the organiziation service specifics
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/impersonate-another-user
+
+-->
+[Impersonate another user](../impersonate-another-user.md)
+[Sample: Impersonate using the ActOnBehalfOf privilege](samples/impersonate-actonbehalfof-privilege.md)
+[Impersonate another user using the Web API](../webapi/impersonate-another-user-web-api.md)

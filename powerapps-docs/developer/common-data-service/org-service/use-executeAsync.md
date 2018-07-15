@@ -12,6 +12,9 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use ExecuteAsync
 
-<!-- From use-messages-request-response-classes-execute-method.md
-I think this only works with importSolution
+<!-- From 
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-messages-request-response-classes-execute-method
+
+This only works with ImportSolutionRequest
  -->

@@ -13,7 +13,14 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Use messages with the Organization service
 
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-messages-request-response-classes-execute-method -->
+<!-- 
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-messages-request-response-classes-execute-method 
+
+This should provide some examples of using the raw OrganizationRequest/OrganizationResponse
+Key scenario is calling custom actions when you haven't generated classes for them.
+
+Much of this information is being pulled out into separate topics, for ExecuteTransaction and ExecuteAsync
+-->
 
 [When to use the CreateRequest class](entity-operations-create.md#when-to-use-the-createrequest-class)
 

@@ -17,5 +17,11 @@ Was Mike Carter
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/detect-duplicate-data-for-developers 
 
+organization service specific topic:
+powerapps-docs/developer/common-data-service/org-service/detect-duplicate-data.md
+
 
 -->
+
+[Detect Duplicate Data using the Organization service](org-service/detect-duplicate-data.md)
+[Manage duplicate detection for create and update operations using the Web API](webapi/manage-duplicate-detection-create-update.md)

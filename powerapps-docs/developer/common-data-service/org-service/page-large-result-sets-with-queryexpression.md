@@ -12,4 +12,9 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Page large result sets with QueryExpression
 
-<!-- Key is PagingInfo class which is also used by QueryByAttribute -->
+<!-- 
+
+Key is PagingInfo class which is also used by QueryByAttribute
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/page-large-result-sets-with-queryexpression
+ -->

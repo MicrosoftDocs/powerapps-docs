@@ -13,9 +13,15 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Use the late bound entity class in code
 
 <!-- 
-Not sure we need this
 
-use-late-bound-entity-class-code.md
-use-entity-class-create-update-delete.md 
-use-entity-class-add-update-associations-records.md
+With the new entity-operations* topics...
+Not sure we need these?
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-late-bound-entity-class-code
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-entity-class-create-update-delete
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-entity-class-add-update-associations-records
+
+Rather than separate early & late binding as two separate choices, the Late bound style should be considered the 'default' and early bound should represent an enhancement that provides a cleaner coding experience with better readability. 
+
+This topic could remain to call out this style
 -->

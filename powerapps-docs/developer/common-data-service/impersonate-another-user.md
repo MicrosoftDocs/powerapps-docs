@@ -10,4 +10,15 @@ author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Import data using the Organization service
+# Impersonate another user
+
+<!--
+General information that applieds to both services goes here
+
+ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/impersonate-another-user 
+
+Then hand-off to sub-topics for specific implementations
+-->
+
+[Impersonate another user using the Web API](../webapi/impersonate-another-user-web-api.md)
+[Impersonate another user using the Organization service](org-service/impersonate-another-user.md)

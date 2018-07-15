@@ -20,8 +20,6 @@
   - name: Create a client app
     href: create-client-app.md
     items:
-    - name: Start a managed code project in Visual Studio
-      href: start-managed-code-project-visual-studio.md
     - name: Subscribe to SDK assembly updates using NuGet
       href: subscribe-sdk-assembly-updates-using-nuget.md
     - name: Visual Studio and the .NET Framework

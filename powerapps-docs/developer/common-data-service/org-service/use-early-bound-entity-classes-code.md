@@ -12,4 +12,13 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use the early bound entity classes in code
 
-<!-- Not sure we need this  -->
+<!-- 
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-early-bound-entity-classes-create-update-delete
+
+This topic has more about the OrganizationServiceContext class. It should be moved to the content about OrganizationServiceContext class
+
+powerapps-docs/developer/common-data-service/org-service/organizationservicecontext.md
+
+Seems like people don't use OrganizationServiceContext for CRUD b/c we provide no way to filter unchanged attributes on update, therefore it breaks one of our most important best practices. Yet this topic says 'a best practice is to use the generated organization service context class.'
+
+-->

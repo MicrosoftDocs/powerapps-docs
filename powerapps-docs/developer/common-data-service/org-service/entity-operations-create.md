@@ -12,8 +12,12 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Create entities using the Organization Service
 
-<!-- use-early-bound-entity-classes-create-update-delete.md
-manage-duplicate-detection-create-update.md -->
+<!-- 
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-early-bound-entity-classes-create-update-delete
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/manage-duplicate-detection-create-update
+
+-->
 
 This topic will include examples using both late-bound and early-bound programming styles. More information: [Early-bound and Late-bound programming using the Organization service](early-bound-programming.md)
 

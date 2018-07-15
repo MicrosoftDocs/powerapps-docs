@@ -11,3 +11,5 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # LINQ query examples using OrganizationServiceContext with Common Data Service for Apps
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/linq-query-examples -->

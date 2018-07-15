@@ -12,4 +12,21 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # IOrganizationService Interface
 
-organization-service-methods.md
+<!-- 
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/organization-service-methods 
+
+The focus of this topic must change. Instead of just being a list of the methods in the interface, this topic should also
+
+call out the  classes we ship that implement this interface, such as OrganizationServiceProxy and CrmServiceClient, etc.
+
+
+Something else to consider:
+    Since we seem to have spun up so many different classes that implement this interface, are there any scenarios where an ISV would do the same?
+
+    Is this an example?
+
+    https://www.linkedin.com/pulse/using-singleton-design-pattern-call-dynamics-crm-web-service-kanlica/
+
+
+
+-->

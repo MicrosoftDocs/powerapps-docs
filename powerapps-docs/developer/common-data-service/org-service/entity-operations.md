@@ -12,8 +12,12 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Entity Operations using the Organization service
 
-<!-- This new topic will be the Organization service version of the Web API topic
+<!-- 
+
+This new topic will be the Organization service version of the Web API topic
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/perform-operations-web-api
 
-OR it may just be a TOC node -->
+OR it may just be a TOC node 
+
+-->

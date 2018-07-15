@@ -11,3 +11,8 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Web service error codes
+
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/web-service-error-codes
+
+Topic content is generated
+ -->
