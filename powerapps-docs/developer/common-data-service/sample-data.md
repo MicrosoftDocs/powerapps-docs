@@ -75,3 +75,7 @@ service.Execute(request);
 
 > [!NOTE]
 > Neither the <xref:Microsoft.Crm.Sdk.Messages.InstallSampleDataResponse> or <xref:Microsoft.Crm.Sdk.Messages.UninstallSampleDataResponse> classes returned by these operations include any properties to examine.
+
+### See also
+
+[Import data](import-data.md)
