@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 <!--
 Was Mike Carter
- See [Import data](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/import-data) 
+
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/import-data
 

@@ -20,5 +20,5 @@ General information that applieds to both services goes here
 Then hand-off to sub-topics for specific implementations
 -->
 
-[Impersonate another user using the Web API](../webapi/impersonate-another-user-web-api.md)
+[Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md)
 [Impersonate another user using the Organization service](org-service/impersonate-another-user.md)

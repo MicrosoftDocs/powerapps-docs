@@ -118,7 +118,7 @@
   - name: Impersonate another user
     href: impersonate-another-user.md  
   - name: Import data
-    href: import-data.md
+    href: ../import-data.md #Topic is for both Web API and Organization service
   - name: Sample data
     href: sample-data.md
   - name: Coding practices

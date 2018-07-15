@@ -70,17 +70,21 @@
     href: create-update-optionsets.md
 - name: Discover the URL for your organization
   href: discover-url-organization-web-api.md
-- name: Sample Templates
-  href: web-api-samples.md
-  items:
-  - name: Basic Operations
-    href: web-api-basic-operations-sample.md
-  - name: Query Data
-    href: web-api-query-data-sample.md
-  - name: Conditional Operations
-    href: web-api-conditional-operations-sample.md
-  - name: Functions and Actions
-    href: web-api-functions-actions-sample.md
+- name: Import data
+  href: ../import-data.md #Topic is for both Web API and Organization service
 - name: Samples
-  href: samples/toc.yml
+  items:
+  - name: Sample Templates
+    href: web-api-samples.md
+    items:
+    - name: Basic Operations
+      href: web-api-basic-operations-sample.md
+    - name: Query Data
+      href: web-api-query-data-sample.md
+    - name: Conditional Operations
+      href: web-api-conditional-operations-sample.md
+    - name: Functions and Actions
+      href: web-api-functions-actions-sample.md
+    - name: Samples
+      href: samples/toc.yml
 
