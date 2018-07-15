@@ -120,7 +120,7 @@
   - name: Import data
     href: ../import-data.md #Topic is for both Web API and Organization service
   - name: Sample data
-    href: sample-data.md
+    href: ../sample-data.md #Topic is for both Web API and Organization service
   - name: Coding practices
     items:
     - name: Handle exceptions in your code

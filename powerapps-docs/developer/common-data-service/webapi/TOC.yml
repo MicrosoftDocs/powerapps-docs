@@ -72,6 +72,8 @@
   href: discover-url-organization-web-api.md
 - name: Import data
   href: ../import-data.md #Topic is for both Web API and Organization service
+- name: Sample data
+  href: ../sample-data.md #Topic is for both Web API and Organization service
 - name: Samples
   items:
   - name: Sample Templates
