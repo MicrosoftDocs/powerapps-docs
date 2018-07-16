@@ -359,16 +359,15 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
 
    3. Use the override method definition of `RunSolutionUpgradeMigrationStep` to perform data transformation or upgrade between two versions of a solution This method is called only if the solution you are importing is already present in the target CDS for Apps instance.  
 
-       This function expects the following parameters:  
+        This function expects the following parameters:  
 
-
-      |    Parameter    |            Description             |
-      |-----------------|------------------------------------|
-      | `solutionName`  |        Name of the solution        |
-      |  `oldVersion`   | Version number of the old solution |
-      |  `newVersion`   | Version number of the new solution |
-      | `oldSolutionId` |     GUID of the old solution.      |
-      | `newSolutionId` |     GUID of the new solution.      |
+        |    Parameter    |            Description             |
+        |-----------------|------------------------------------|
+        | `solutionName`  |        Name of the solution        |
+        |  `oldVersion`   | Version number of the old solution |
+        |  `newVersion`   | Version number of the new solution |
+        | `oldSolutionId` |     GUID of the old solution.      |
+        | `newSolutionId` |     GUID of the new solution.      |
 
 
    4. Enter custom code to execute before the solution import completes in the override definition of the `BeforeImportStage` method. The sample data and some flat files for solutions specified in the `ImportConfig.xml` file are imported before the solution import completes.  
@@ -471,13 +470,13 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
 
 ## Best practices for creating and deploying packages  
 
- While creating packages, developers must ensure that the package assemblies are signed.  
+While creating packages, developers must ensure that the package assemblies are signed.  
 
- While deploying the packages, CDS for Apps administrators must:  
+While deploying the packages, CDS for Apps administrators must:  
 
-    - Insist on a signed package assembly so that you can track an assembly back to its source.  
-    - Test the package on a pre-production instance (preferably a mirror image of the production instance) before running it on a production instance.  
-    - Back up the production instance before deploying the package.  
+- Insist on a signed package assembly so that you can track an assembly back to its source.  
+- Test the package on a pre-production instance (preferably a mirror image of the production instance) before running it on a production instance.  
+- Back up the production instance before deploying the package.  
 
 
 
