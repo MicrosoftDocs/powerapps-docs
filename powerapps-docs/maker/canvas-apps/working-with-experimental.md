@@ -48,7 +48,7 @@ Toward the end of Preview we may enable the feature for all existing apps one ti
 
 Where should you go for information on these features?  We treat Preview features as finished features and you can learn more about them just as you do any other product features: 
 - [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
-- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will be working with the new feature too - learn from their experience and share your experience too.
+- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will be working with the new feature too; learn from their experience and share yours.
 - [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/).  Often, but not always, there is a blog post to accompany a new feature.
 
 Experimental features are different.  They are a work in progress and we do not consider them finished.  There may be no more information available than the short description in the App settings pane (see below).  Normally they do not appear in the documentation.  The community forum is likely your best source of information.  In some cases, there may be an early blog post that describes the feature.  If you aren't finding enough information, ask in the forums, or wait for the feature to move to the Preview stage.
