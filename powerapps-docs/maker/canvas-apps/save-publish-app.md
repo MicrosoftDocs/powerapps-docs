@@ -40,7 +40,7 @@ PowerApps can also periodically save the app every 2 minutes. If you have saved 
    ![Review Publish](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-   > We recommend that you update and/or re-publish your app within six months of last publishing it to keep it in sync with the latest version of PowerApps. If you don't update and/or re-publish within six months, the app may stop working without warning.
+   > We recommend that you update and/or re-publish your app within six months of last publishing it to keep it in sync with the latest version of PowerApps.
 
 ## Identify the live version
 In [powerapps.com](https://web.powerapps.com), click or tap **Apps** on the **File** menu (on the left edge), click or tap the details icon for an app, and then click or tap the **Versions** tab.
