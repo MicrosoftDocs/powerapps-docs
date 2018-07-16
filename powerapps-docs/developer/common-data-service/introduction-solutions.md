@@ -17,8 +17,14 @@ ms.date: 03/19/2018
 ms.author: jdaly
 ---
 
-<!-- TODO: Work in any missing content from original topic
+<!-- TODO: 
+This topic wasn't migrated it was written for the initial PA release
+This content was the 'bare minimum' conceptual information to introduce solutoins.
+
+Work in any missing content from original topic(s)
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-solutions 
+
+Or add additional topics
 
 -->
 
@@ -125,7 +131,7 @@ More information: [Introduction to solutions > Unmanaged and managed solutions](
 
 When you distribute a managed solution, anyone who installs your solution can include their own unmanaged customizations to it. Those unmanaged customizations can then be added to a solution that they distributed as a managed solution that depends on your solution. But what if you don’t want people to do this? As the publisher of the managed solution you can use managed properties to disable specific customizations for the components of your managed solution.
 
-More information: [Use managed properties](/dynamics365/customer-engagement/developer/use-managed-properties)
+More information: [Use managed properties](use-managed-properties.md)
 
 ## Modular solutions
 
@@ -145,7 +151,7 @@ Use the *Package Deployer* to create a custom installer for a package that can i
 - Custom code that can run before, while, or after the package is deployed.
 - HTML content specific to the package that can display at the beginning and end of the deployment process. This can be useful to provide a description of the solutions and files that are deployed in the package.
 
-More information: [Create packages for the CDS for Apps Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer).
+More information:  [Create packages for the CDS for Apps Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer).
 
 ## Team development of solutions
 
