@@ -58,7 +58,7 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
    3. Select **Dynamics 365 Package**.  
    4. Specify the name and location of the project, and click **OK**.  
 
-    ![New project for creating a custom package](../crm-sdkv6-packagedeployer-01.png)
+    ![New project for creating a custom package](../media/crm-sdkv6-packagedeployer-01.png)
 
 <a name="Step2"></a>   
 
@@ -217,7 +217,7 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
    |`importtoentity`|Can be the name of the exe in the zip file, a url, or an .msi file to provide a link to invoke at the end of the process.|  
 
     `<filesmapstoimport>` node  
-    This node contains an array of `<configmapimportfile>` nodes to import. The order of the map files in this node indicates the order in which they are imported. For information about data maps, see [Create Data Maps for Import](create-data-maps-for-import.md).  
+    This node contains an array of `<configmapimportfile>` nodes to import. The order of the map files in this node indicates the order in which they are imported. For information about data maps, see [Create data maps for import](../create-data-maps-for-import.md).  
 
     `<configimportmapfile>` node  
     Use this node under the `<filesmapstoimport>` node to provide information about an individual map file to import in CDS for Apps.  
