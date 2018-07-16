@@ -22,9 +22,9 @@ manager: "kvivek"
 # Use the Common Data Services default solution  
 
 All PowerApps environments include the following solutions.
--	Common Data Services default solution. Base solution that is available for makers to use as the default solution for the environment.
--	Default Solution. Legacy solution that contains all available solutions in the environment. 
--	Base Custom Controls Core. Includes a core set of custom controls. Controls are used in user interface elements, such as fields, lists, and views. 
+-	Common Data Services default solution. This is a base solution that is available for makers to use as the default solution for an environment.
+-	Default Solution. This is a legacy solution that contains all available solutions in an environment. 
+-	Base Custom Controls Core. This solution includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. 
 
 Notice that if you have installed or imported other applications or solutions, additional solutions may be available in the solutions list.  
 
