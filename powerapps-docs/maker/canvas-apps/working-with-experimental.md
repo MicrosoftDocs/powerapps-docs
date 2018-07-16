@@ -36,13 +36,22 @@ How long does a feature remain in each stage?  This varies from feature to featu
 
 This table may help you decide when you should jump in: 
 
-| Stage | When should I use it? | Can I use it with confidence? | Is it enabled by default for new apps? | Where do I go for information? | 
+| Stage | When should I use it? | Can I use it with confidence? | Is it enabled by default for new apps? | 
 |----|----|----|-----|------|
-| **Experimental** | If you are an early adopter, see something useful to you, and would like to help test the feature. | No.  Experimental features can radically change or completely disappear at any time. | No. Authors must explicitly opt in to the feature.  |  The description in the Advanced Settings may be all there is, especially in the early days of a feature.  The [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/) may have additional information.  |
-| **Preview** | New apps will automatically include this feature.  Start enabling and testing in existing apps as this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues, this is the main reason the feature is in Preview.  | [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started) and [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  There may also be a [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/) post announcing the feature. | 
-| **Shipped** (no longer appears in Advanced settings) | All apps will have this feature. | Yes. | Yes.  Most cannot be disabled.  |  [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started) and [PowerApps Community Forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). |
+| **Experimental** | If you are an early adopter, see something useful to you, and would like to help test the feature. | No.  Experimental features can radically change or completely disappear at any time. | No. Authors must explicitly opt in to the feature.  |  
+| **Preview** | New apps will automatically include this feature.  Start enabling and testing in existing apps as this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues, this is the main reason the feature is in Preview.  | 
+| **Shipped** (no longer appears in Advanced settings) | All apps will have this feature. | Yes. | Yes.  Most cannot be disabled.  |  
 
-Toward the end of **Preview** we may enable the feature for all existing apps one time.  When we do, we will mark the feature as being in **final validation**.  This gives the widest audience a last chance to try out the feature while still being able to turn it off.  Timely feedback is critical in this period as the next stage is fully shipped and it will no longer be possible to turn it off.   
+Toward the end of **Preview** we may enable the feature for all existing apps one time.  When we do, we will mark the feature as being in **final validation**.  This gives the widest audience a last chance to try out the feature while still being able to turn it off.  Timely feedback is critical in this period as the next stage is fully shipped and it will no longer be possible to turn it off.  
+
+## Documentation
+
+Where should you go for information on these features?  We treat Preview features as finished features and you can learn more about them just as you do other product features: 
+- [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started).  
+- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).
+- [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/)
+
+Experimental features are a little different.  They are not done.  Normally they do not appear in the documentation.  There may be no more information than is available in the short description in the App settings pane (see below).  The community forum is likely your best source of information.  In some cases, there may also be a blog post that describes the feature.  
 
 ## Controlling what features are enabled
 
