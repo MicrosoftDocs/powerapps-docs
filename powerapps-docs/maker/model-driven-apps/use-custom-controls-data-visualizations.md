@@ -22,11 +22,16 @@ manager: "kvivek"
 
 In this tutorial you learn how to configure a custom control for a field. 
 
-Custom controls let you transform fields that traditionally contain text into visualizations. Similarly, you can use custom controls to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Custom controls can appear as visualizations on forms, dashboards, views, and homepage grids. You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a number input custom control for a field in web browser clients and a slider custom control for the phone app. After the customization is published, users can fully interact with the control to change the value, such as by sliding the control when using the linear slider custom control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  field on a form.  
+Custom controls let you transform app user interface components, such as a field or view, that traditionally contain text into visualizations. Custom controls can be configured on fields, forms, dashboards, views, and grids. 
+For example, this slider control that is configured on a number field.
+   ![Custom slider control](media/slider-control.PNG "Slider control for a field")
+
+Or this editable grid control that is configured on the Active Accounts view. 
+   ![Editable grid control](media/editable-grid-example.png)
+
+You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a number input custom control for a field in web browser clients and a slider custom control for the phone app. After the customization is published, users can fully interact with the control to change the value, such as by sliding the control when using the linear slider custom control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  field on a form.  
   
-   ![Custom slider control](media/slider-control.PNG "Custom slider control")  
-  
-## Use a custom control to add visualizations to a field  
+### Use a custom control to add visualizations to a field  
  Following the steps in this procedure will change the default label and text box field  of the **Budget Amount** field to the slider custom control on the Opportunity entity. You can use similar steps to replace an existing field with a custom control or configure a custom control for a custom field.  
   
 1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
@@ -82,12 +87,16 @@ Custom controls let you transform fields that traditionally contain text into vi
   
 10. Select **Save and Close** to close the form editor.  
   
-## See the custom control in action  
+### See the custom control in action  
  Open a record that includes the field with the custom control, such as the opportunity form from the previous example, and view how the field is changed.  
   
    ![Slider control rendered on form](media/slider-control.PNG "Slider control rendered on form")  
   
- The field is now rendered as a slider control instead of the text field.  
+ The field is now rendered as a slider control instead of the text field. 
+
+## Use the editable grid control on a view or sub-grid
+
+With editable grids, users can do rich in-line editing directly from views and sub-grids whether they’re using a web app, tablet, or phone. More information: [Make grids (lists) editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md) 
   
 ## Next steps  
 [Create and edit fields](../common-data-service/create-edit-fields.md)
