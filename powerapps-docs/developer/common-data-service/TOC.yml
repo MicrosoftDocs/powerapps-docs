@@ -342,8 +342,10 @@
       href: store-appsource-package-azure-storage.md
     - name: 'Next steps: Submit your app on Cloud Partner Portal'
       href: next-steps-submit-app-cloud-partner-portal.md
+  - name: Create packages for the Dynamics 365 Package Deployer
+    href: package-deployer/create-packages-package-deployer.md
   - name: Import Data
-    href: import-data.md #Topic is for both Web API and Organization service
+    href: import-data.md #Topics are for both Web API and Organization service
     items:
     - name: Prepare source files for import
       href: prepare-source-files-import.md

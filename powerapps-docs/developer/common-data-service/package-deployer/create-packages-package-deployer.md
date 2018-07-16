@@ -1,6 +1,6 @@
 ---
-title: "Create packages for the Package Deployer (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Create packages for the  Dynamics 365 Package Deployer (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Create packages that administrators can deploy on Common Data Service for Apps instances." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -10,16 +10,13 @@ author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Create packages for the Package Deployer
+# Create packages for the  Dynamics 365 Package Deployer
 
 Package Deployer lets administrators deploy packages on Common Data Service for Apps instances. A *package* can consist of any or all of the following:  
 
 - One or more CDS for Apps solution files.  
-
 - Flat files or exported configuration data file from the Configuration Migration tool. For more information about the tool, see  [Move configuration data across instances and organizations with the Configuration Migration tool](/dynamics365/customer-engagement/admin/manage-configuration-data).  
-
 - Custom code that can run before, while, or after the package is deployed to the CDS for Apps instance.  
-
 - HTML content specific to the package that can display at the beginning and end of the deployment process. This can be useful to provide a description of the solutions and files that are deployed in the package.  
 
 CDS for Apps provides you with a Visual Studio template for creating these packages that can be used with the Package Deployer tool to deploy them to a CDS for Apps instance.
@@ -29,14 +26,10 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
 ## Prerequisites  
 
 - Ensure that you have all the solutions and files ready that you want to include in the package.  
-
 - Microsoft .NET Framework 4.5.2
-
 - Visual Studio 2012, Visual Studio 2013, or Visual Studio 2015
-
 - NuGet Package Manager for [Visual Studio 2012](http://visualstudiogallery.msdn.microsoft.com/27077b70-9dad-4c64-adcf-c7cf6bc9970c), [Visual Studio 2013](http://visualstudiogallery.msdn.microsoft.com/4ec1526c-4a8c-4a84-b702-b21a8f5293ca), or [Visual Studio 2015](https://visualstudiogallery.msdn.microsoft.com/5d345edc-2e2d-4a9c-b73b-d53956dc458d)
     - In Visual Studio 2017, NuGet and the NuGet Package Manager are automatically installed when you select any .NET-related workloads.
-
 - Microsoft Dynamics CRM SDK Templates for Visual Studio that contains the package template. You can get it by downloading the [Microsoft Dynamics CRM SDK Templates](http://go.microsoft.com/fwlink/p/?LinkId=400925) and double-click the `CRMSDKTemplates.vsix` file to install the template in Visual Studio.  
 
 
@@ -58,7 +51,7 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
 #### Step 1: Create a project using the template  
 
 1. Start Visual Studio, and create a new project.  
-2. In the **New Project** dialog box:  
+2. In the **New Project** dialog box: 
 
    1. From the list of installed templates, expand **Visual C#**, and select **Dynamics 365 SDK Templates**.  
    2. Ensure that **.NET Framework 4.5.2** is selected.  
@@ -117,7 +110,6 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
    - You can also import a localized version of the configuration data file based on the locale ID (LCID) specified using new runtime settings while running the package deployer. Use the `<cmtdatafile>` node (explained later) to specify the localized versions of the configuration data file in a package and then use the  `OverrideConfigurationDataFileLanguage` method (explained later) to specify the logic for importing the configuration data file based on the locale ID specified using the runtime settings. You cannot import more than one configuration data file using a package at a time.  
 
    - For CDS for Apps (on-premises), if your configuration data file contains user information, and both the source and target CDS for Apps instances are on the same Active Directory Domain, user information will be imported to the target CDS for Apps instance. To import user information to a CDS for Apps (on-premises) instance on a different domain, you must include the user map file (.xml) generated using the Configuration Migration tool in your project, and specify it along with the configuration data file using the `usermapfilename` attribute in the `<cmtdatafile>` node explained later. User information cannot be imported to CDS for Apps instances.  
-
      `<solutions>` node  
      Contains an array of `<configsolutionfile>` nodes that describe the solutions to import. The order of the solutions under this node indicates the order in which the solutions will be imported on the target CDS for Apps instance.  
 
@@ -183,7 +175,6 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
    ```  
 
     This has the following attributes:  
-
 
    |Attribute|Description|
    |--|-|
@@ -472,7 +463,7 @@ CDS for Apps provides you with a Visual Studio template for creating these packa
 
  After you create a package, you can deploy it on the CDS for Apps instance by using either the Package Deployer tool or Windows PowerShell. 
 
- The package deployer tool is distributed as part of the [Microsoft.CrmSdk.XrmTooling.PackageDeployment.WPF](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment) NuGet package.To download the package deployer tool, see [Download tools from NuGet](download-tools-nuget.md).
+ The package deployer tool is distributed as part of the [Microsoft.CrmSdk.XrmTooling.PackageDeployment.WPF](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment) NuGet package.To download the package deployer tool, see [Download tools from NuGet](../download-tools-nuget.md).
 
  For detailed information, see [Deploy packages using CRM Package Deployer or Windows PowerShell](/dynamics365/customer-engagement/admin/deploy-packages-using-package-deployer-windows-powershell).  
 
