@@ -42,16 +42,16 @@ This table may help you decide when you should jump in:
 | **Preview** | New apps will automatically include this feature.  Start enabling and testing in existing apps as this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues, this is the main reason the feature is in Preview.  | 
 | **Shipped** (no longer appears in Advanced settings) | All apps will have this feature. | Yes. | Yes.  Most cannot be disabled.  |  
 
-Toward the end of **Preview** we may enable the feature for all existing apps one time.  When we do, we will mark the feature as being in **final validation**.  This gives the widest audience a last chance to try out the feature while still being able to turn it off.  Timely feedback is critical in this period as the next stage is fully shipped and it will no longer be possible to turn it off.  
+Toward the end of Preview we may enable the feature for all existing apps one time.  When we do, we will mark the feature as being in **final validation**.  This gives the widest audience a last chance to try out the feature while still being able to turn it off.  Timely feedback is critical in this period as the next stage is fully shipped and it will no longer be possible to turn it off.  
 
 ## Documentation
 
-Where should you go for information on these features?  We treat Preview features as finished features and you can learn more about them just as you do other product features: 
-- [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started).  
-- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).
-- [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/)
+Where should you go for information on these features?  We treat Preview features as finished features and you can learn more about them just as you do any other product features: 
+- [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
+- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will be working with the new feature too - learn from their experience and share your experience too.
+- [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/).  Often, but not always, there is a blog post to accompany a new feature.
 
-Experimental features are a little different.  They are not done.  Normally they do not appear in the documentation.  There may be no more information than is available in the short description in the App settings pane (see below).  The community forum is likely your best source of information.  In some cases, there may also be a blog post that describes the feature.  
+Experimental features are different.  They are a work in progress and we do not consider them finished.  There may be no more information available than the short description in the App settings pane (see below).  Normally they do not appear in the documentation.  The community forum is likely your best source of information.  In some cases, there may be an early blog post that describes the feature.  If you aren't finding enough information, ask in the forums, or wait for the feature to move to the Preview stage.
 
 ## Controlling what features are enabled
 
