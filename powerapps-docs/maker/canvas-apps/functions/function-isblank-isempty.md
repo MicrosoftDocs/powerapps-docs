@@ -1,15 +1,13 @@
 ---
 title: Blank, Coalesce, IsBlank, and IsEmpty functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Blank, Coalesce, IsBlank, and IsEmpty functions in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
@@ -42,7 +40,7 @@ The **IsBlank** function tests for a *blank* value. *Blank* values are found in 
 * The *else* portion of an **[If](function-if.md)** function wasn't specified, and all conditions were **false**.
 * You used the **[Update](function-update-updateif.md)** function but didn't specify a value for all columns. As a result, no values were placed in the columns that you didn't specify.
 
-The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank*.  Use this function to replace a *blank* value with a different value but leave non-*blank* values unchanged.  If all of the arguments are *blank*, then the function returns *blank*.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  **Coalesce( value1, value2 )** is the more concise equivalent of **If( IsBlank( value1 ) value1, value2 )** and doesn't require **value1** to be evaluated twice.  
+The **Coalesce** function evaluates its arguments in order and returns the first value that isn't *blank*.  Use this function to replace a *blank* value with a different value but leave non-*blank* values unchanged.  If all of the arguments are *blank*, then the function returns *blank*.  All arguments to **Coalesce** must be of the same type; for example, you can't mix numbers with text strings.  **Coalesce( value1, value2 )** is the more concise equivalent of **If( Not( IsBlank( value1 ) ), value1, value2 )** and doesn't require **value1** to be evaluated twice.  
 
 The **IsEmpty** function tests whether a table contains any records. It's equivalent to using the **[CountRows](function-table-counts.md)** function and checking for zero. You can check for data-source errors by combining **IsEmpty** with the **[Errors](function-errors.md)** function.
 
@@ -70,32 +68,33 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 
 1. Create an app from scratch, and add a **Button** control.
 2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
-   
+
     **ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )**
 3. Preview your app, click or tap the button that you added, and then close Preview.  
 4. On the **File** menu, click or tap **Collections**.
-   
+
      The **Cities** collection appears, showing one record with "Seattle" and "Rainy":
-   
+
     ![Collection showing Seattle with Rainy weather](./media/function-isblank-isempty/seattle-rainy.png)
 5. Click or tap the back arrow to return to the default workspace.
 6. Add a **Label** control, and set its **Text** property to this formula:
-   
+
     **IsBlank( First( Cities ).Weather )**
-   
+
     The label shows **false** because the **Weather** field contains a value ("Rainy").
 7. Add a second button, and set its **OnSelect** property to this formula:
-   
+
     **Patch( Cities, First( Cities ), { Weather: Blank() } )**
 8. Preview your app, click or tap the button that you added, and then close Preview.  
-   
+
     The **Weather** field of the first record in **Cities** is replaced with a *blank*, removing the "Rainy" that was there previously.
-   
+
     ![Collection showing Seattle with a blank Weather field](./media/function-isblank-isempty/seattle-blank.png)
-   
+
     The label shows **true** because the **Weather** field no longer contains a value.
 
 ### Coalesce
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Coalesce( Blank(), 1 )** |Tests the return value from the **Blank** function, which always returns a *blank* value. Because the first argument is *blank*, evaluation continues with the next argument until a non-*blank* value is found. |**1** |
@@ -104,12 +103,12 @@ The return value for both **IsBlank** and **IsEmpty** is a Boolean **true** or *
 ### IsBlank
 1. Create an app from scratch, add a text-input control, and name it **FirstName**.
 2. Add a label, and set its **[Text](../controls/properties-core.md)** property to this formula:
-   
+
     **If( IsBlank( FirstName.Text ), "First Name is a required field." )**
-   
+
     By default, the **[Text](../controls/properties-core.md)** property of a text-input control is set to **"Text input"**. Because the property contains a value, it isn't blank, and the label doesn't display any message.
 3. Remove all the characters from the text-input control, including any spaces.
-   
+
     Because the **[Text](../controls/properties-core.md)** property no longer contains any characters, it's *blank*, and **IsBlank( FirstName.Text )** will be **true**. The required field message is displayed.
 
 For information about how to perform validation by using other tools, see the **[Validate](function-validate.md)** function and [working with data sources](../working-with-data-sources.md).  
@@ -128,24 +127,24 @@ Other examples:
 ### IsEmpty
 1. Create an app from scratch, and add a **Button** control.
 2. Set the button's **[OnSelect](../controls/properties-core.md)** property to this formula:
-   
+
     **Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
 3. Preview your app, click or tap the button that you added, and then close Preview.  
-   
+
     A collection named **IceCream** is created and contains this data:
-   
+
     ![](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
-   
+
     This collection has two records and isn't empty. **IsEmpty( IceCream )** returns **false**, and **CountRows( IceCream )** returns **2**.
 4. Add a second button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
-   
+
     **Clear( IceCream )**
 5. Preview your app, click or tap the second button, and then close Preview.  
-   
+
     The collection is now empty:
-   
+
     ![](media/function-isblank-isempty/icecream-clear.png)
-   
+
     The **[Clear](function-clear-collect-clearcollect.md)** function removes all the records from a collection, resulting in an empty collection. **IsEmpty( IceCream )** returns **true**, and **CountRows( IceCream )** returns **0**.
 
 You can also use **IsEmpty** to test whether a calculated table is empty, as these examples show:

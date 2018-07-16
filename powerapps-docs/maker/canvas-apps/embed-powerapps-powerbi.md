@@ -1,16 +1,13 @@
 ---
 title: Embed a new app in a Power BI Report | Microsoft Docs
 description: Embed an app that uses the same data source and can be filtered like other report items 
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/15/2018
 ms.author: mblythe
 ---

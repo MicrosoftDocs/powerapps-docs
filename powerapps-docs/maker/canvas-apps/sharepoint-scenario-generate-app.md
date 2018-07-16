@@ -1,16 +1,13 @@
 ---
 title: Generate an app to handle project requests | Microsoft Docs
 description: In this task, we'll generate a basic *three screen app* directly from a SharePoint list.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 06/12/2017
 ms.author: mblythe
 

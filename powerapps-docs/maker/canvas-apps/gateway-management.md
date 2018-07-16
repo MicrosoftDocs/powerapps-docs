@@ -1,16 +1,13 @@
 ---
 title: Manage an on-premises data gateway | Microsoft Docs
 description: Manage an on-premises data gateway and its connections
-documentationcenter: na
 author: archnair
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/30/2016
 ms.author: archanan
 
@@ -63,7 +60,7 @@ For **Can use** and **Can use + share** permission levels, select the data sourc
 3. To share a connection, click or tap **Share**, and then add or remove users.
 
     > [!NOTE]
-> You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
+   > You can share only some types of connections, such as SQL Server. For more information, see [Share app resources](share-app-resources.md).
 
 For more information about how to manage a connection, see [Manage your connections](add-manage-connections.md).
 

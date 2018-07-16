@@ -1,14 +1,13 @@
 ---
 title: Quickstart for generating an app in PowerApps from SharePoint | Microsoft Docs
 description: Automatically generate an app in PowerApps to manage data in a SharePoint list
-documentationcenter: na
 author: AFTOwen
-manager: kfile
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/12/2018
 ms.author: anneta
 

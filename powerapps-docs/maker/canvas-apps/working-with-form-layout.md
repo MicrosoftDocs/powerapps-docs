@@ -1,16 +1,13 @@
 ---
 title: Understand data-form layout | Microsoft Docs
 description: Create great-looking form layouts using rows and columns.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/17/2017
 ms.author: gregli
 
@@ -53,17 +50,17 @@ If you're new to PowerApps (or have only generated apps automatically), you'll w
     The label shows the sales-order number of the record that you selected in the gallery.
 3. (optional) Format the label as follows:
    
-    1. Set its **Align** property to **Center**.
+   1. Set its **Align** property to **Center**.
    
-    2. Set its **Size** property to **20**.
+   2. Set its **Size** property to **20**.
    
-    3. Set its **Fill** property to **Navy**.
+   3. Set its **Fill** property to **Navy**.
    
-    4. Set its **Color** property to **White**.
+   4. Set its **Color** property to **White**.
    
-    5. Set its **Width** property to **Parent.Width**.
+   5. Set its **Width** property to **Parent.Width**.
    
-    6. Set its **X** and **Y** properties to **0**.
+   6. Set its **X** and **Y** properties to **0**.
       
       ![Title bar](./media/working-with-form-layout/title-bar.png)
 

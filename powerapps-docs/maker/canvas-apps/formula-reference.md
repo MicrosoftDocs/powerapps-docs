@@ -1,16 +1,13 @@
 ---
 title: Functions, signals, and enumerations | Microsoft Docs
 description: Reference information for functions, signals, and enumerations in PowerApps.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/05/2018
 ms.author: gregli
 
@@ -84,6 +81,8 @@ Other elements include:
 **[Concat](functions/function-concatenate.md)** – Concatenates strings in a data source.  
 
 **[Concatenate](functions/function-concatenate.md)** – Concatenates strings.
+
+**[Concurrent](functions/function-concurrent.md)** – Evaluates multiple formulas concurrently with one another. 
 
 **[Connection](functions/signals.md)** – Returns information about your network connection.
 

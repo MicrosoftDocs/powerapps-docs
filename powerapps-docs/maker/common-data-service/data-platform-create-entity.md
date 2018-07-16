@@ -35,10 +35,10 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com).
 
 3. In the **New entity** panel, in the **Display name** box, enter **Product review**, and then optionally enter a description (descriptions are helpful if other people will use this entity). Other fields in the panel are autopopulated, as described below. When you're done, click **Next**.
 
-    * **Plural display name** - This field is autopopulated when you enter a display name, but you can change it if needed. The plural display name is the name of the entity in the Common Data Service WebAPI and is used when interacting with this entity from PowerApps or Flow.
-    * **Name** - This field is also autopopulated when you enter a display name. The prefix was set up when the environment was created and ensures that the entities you create can be exported and imported into other environments without conflicting with other entity names. You can change this prefix by updating the prefix on your Publisher for the Common Data Service Default Solution. To keep existing apps from breaking, you cannot change the name after saving the entity.
+   * **Plural display name** - This field is autopopulated when you enter a display name, but you can change it if needed. The plural display name is the name of the entity in the Common Data Service WebAPI and is used when interacting with this entity from PowerApps or Flow.
+   * **Name** - This field is also autopopulated when you enter a display name. The prefix was set up when the environment was created and ensures that the entities you create can be exported and imported into other environments without conflicting with other entity names. You can change this prefix by updating the prefix on your Publisher for the Common Data Service Default Solution. To keep existing apps from breaking, you cannot change the name after saving the entity.
      
-    ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New entity panel")
+     ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New entity panel")
 
 4. On the entity details page, click or tap the **Primary Name** field to open the **Primary Name** panel, and then in the **Display name** box, replace **Primary Name** with **Product Review**. In the **Name** box, replace **PrimaryName** with **ProductReview**, and then click or tap **Done**.
  
@@ -63,15 +63,15 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com).
     ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
 
 6. Repeat the previous step to add three more fields with the following configurations:
-    * **Display name** = Product Rating; **Data type** = Whole Number; click or tap **Required** check box
-    * **Display name** = Reviewer Name; **Data type** = Text
-    * **Display name** = Reviewer Comment; **Data type** = Text
+   * **Display name** = Product Rating; **Data type** = Whole Number; click or tap **Required** check box
+   * **Display name** = Reviewer Name; **Data type** = Text
+   * **Display name** = Reviewer Comment; **Data type** = Text
 
-    When you're done, you should have five fields listed on your entity details page.
+     When you're done, you should have five fields listed on your entity details page.
 
-    ![Field list](./media/data-platform-cds-create-entity/addedfields.png "List of fields")
+     ![Field list](./media/data-platform-cds-create-entity/addedfields.png "List of fields")
 
-    Note that all entities have read-only system fields. By default, system fields are not shown in the list of fields even though they exist in the entity. To see all fields, change the filter on the command bar from **Default** to **All**. For more information on the metadata related to an entity, see [Entity metadata](../../developer/common-data-service/entity-metadata.md).
+     Note that all entities have read-only system fields. By default, system fields are not shown in the list of fields even though they exist in the entity. To see all fields, change the filter on the command bar from **Default** to **All**. For more information on the metadata related to an entity, see [Entity metadata](../../developer/common-data-service/entity-metadata.md).
 
 7. Click **Save entity** to save your entity and make it available for use in apps.
 

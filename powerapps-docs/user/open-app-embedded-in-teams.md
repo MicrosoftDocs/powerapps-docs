@@ -2,12 +2,15 @@
 title: Quickstart to add an app to Microsoft Teams | Microsoft Docs
 description: In this quickstart, you learn how to add an app to a Microsoft Teams channel so that people you've shared the app with can open it in that channel.
 author: mgblythe
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 01/18/2018
-ms.author: mblythe
+ms.author: matp
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
 ---
 
 # Quickstart: Add an app to Microsoft Teams

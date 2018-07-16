@@ -1,16 +1,13 @@
 ---
 title: Delete an app | Microsoft Docs
 description: How to delete an existing app in PowerApps
-documentationcenter: na
 author: jamesol-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: jamesol
 
@@ -27,7 +24,7 @@ This article shows you how to delete an app from your PowerApps account and from
     ![](./media/delete-app/filter-list.png)
    
     > [!NOTE]
-> If the app that you want to delete doesn't appear, make sure that you're in the right environment.
+   > If the app that you want to delete doesn't appear, make sure that you're in the right environment.
 3. Near the right edge, click or tap the info icon for the app that you want to delete.
    
     ![](./media/delete-app/app-options.png)
@@ -36,11 +33,11 @@ This article shows you how to delete an app from your PowerApps account and from
     ![](./media/delete-app/delete-icon.png)
    
     > [!NOTE]
-> You must have the **Contributor** permission for an app before you can delete it.
+   > You must have the **Contributor** permission for an app before you can delete it.
 5. In the dialog box that appears, click or tap **Delete from cloud**.  
    
     > [!IMPORTANT]
-> This action will permanently delete this app not only from your account but also from the accounts of all users with whom this app was shared.
+   > This action will permanently delete this app not only from your account but also from the accounts of all users with whom this app was shared.
    
     ![](./media/delete-app/delete-button.png)
 

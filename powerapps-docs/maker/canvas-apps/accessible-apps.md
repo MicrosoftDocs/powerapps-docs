@@ -2,16 +2,20 @@
 title: Create accessible apps | Microsoft Docs
 description: How to make apps accessible for people with disabilities
 author: fikaradz
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: fikaradz
 
 ---
 # Create accessible apps
 An accessible app will allow users with vision, hearing and other impairments to successfully use the app.  In addition to being a requirement for many governments and organizations, following the below guidelines increases usability for all users, regardless of their abilities.
+
+Use the **[Accessibility Checker](accessibility-checker.md)** to help review potential accessibility issues in your app. 
 
 ## Layout and color
 Common sense and uncomplicated design helps apps be more accessible to all users.  When doing heavy customization of apps take note of the below suggestions.  PowerApps themes are by default accessible.
@@ -56,4 +60,6 @@ If you have a signature field that uses the PenInput control you need to enable 
 
 
 Related:
-**[Accessibility properties](controls/properties-accessibility.md)**
+- [Accessibility properties](controls/properties-accessibility.md)
+- [Use the Accessibility checker](accessibility-checker.md)
+- [Accessible colors in PowerApps](accessible-apps-color.md)

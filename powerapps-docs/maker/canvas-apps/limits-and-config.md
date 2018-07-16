@@ -1,20 +1,22 @@
 ---
 title: System requirements, limits, and configuration values | Microsoft Docs
 description: System requirements, limits, and configuration values for PowerApps
-author: skjerland
+author: AFTOwen
+manager: kvivek
 
-
-ms.service: PowerApps
+ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/07/2018
-ms.author: sharik
+ms.author: anneta
 
 ---
 # System requirements, limits, and configuration values
 This topic contains device platform and web browser requirements, as well as limits and configuration values for PowerApps.
 
 ## Supported platforms for running apps using the PowerApps app
+
 | **Minimum required** | **Recommended** |
 | --- | --- |
 | iOS 9.3 or later |iOS 10 or later with at least 2GB of RAM |
@@ -22,6 +24,7 @@ This topic contains device platform and web browser requirements, as well as lim
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
 ## Supported browsers for running apps
+
 | **Browser** | **Operating system** |
 | --- | --- |
 | Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>Android 5 or later <br>iOS 8 or later<br>macOS |
@@ -31,6 +34,7 @@ This topic contains device platform and web browser requirements, as well as lim
 | Apple Safari (latest version) |iOS 8 or later <br>macOS |
 
 ## Supported browsers for PowerApps Studio
+
 | **Browser** | **Operating system** |
 | --- | --- |
 | Google Chrome (latest version)<br>(recommended) |Windows 7 SP1, 8.1, and 10 <br>macOS |
@@ -55,7 +59,7 @@ Calls made from an API connected through an app (for example, the SQL API or the
 
 You should use these addresses if, for example, you must whitelist IP addresses for an Azure SQL database.
 
->   [!IMPORTANT] 
+> [!IMPORTANT]
 >   If you have existing configurations, please update them as soon as possible before September 1, 2018 so they include and match the IP addresses in this list for the regions where your PowerApps apps exist.
 
 | Region | Outbound IP |
