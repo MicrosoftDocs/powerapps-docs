@@ -22,11 +22,11 @@ manager: "kvivek"
 
 In this tutorial you learn how to configure a custom control for a field. 
 
-Custom controls let you transform app user interface components, such as a field or view, that traditionally contain text into visualizations. Custom controls can be configured on fields, forms, dashboards, views, and grids. 
-For example, this slider control that is configured on a number field.
+Custom controls let you transform app user interface components, such as a field or view that traditionally contain text, into visualizations. Custom controls can be configured on fields, forms, dashboards, views, and grids. 
+For example, a slider control can be configured on a number field.
    ![Custom slider control](media/slider-control.PNG "Slider control for a field")
 
-Or this editable grid control that is configured on the Active Accounts view. 
+Or the editable grid control can be configured on a view. 
    ![Editable grid control](media/editable-grid-example.png)
 
 You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a number input custom control for a field in web browser clients and a slider custom control for the phone app. After the customization is published, users can fully interact with the control to change the value, such as by sliding the control when using the linear slider custom control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  field on a form.  
