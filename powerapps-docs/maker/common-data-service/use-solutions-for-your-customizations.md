@@ -38,7 +38,7 @@ By default,  when you build or customize a model-driven app, you work with the C
 3. In the list of solutions, select **Common Data Services Default Solution**.
   
 > [!TIP]
->  If you plan to export the applications your make, consider changing the solution publisher customization prefix. More information: [Solution publisher prefix](change-solution-publisher-prefix.md).  
+>  If you plan to distribute the applications your make, consider changing the solution publisher customization prefix. More information: [Solution publisher prefix](change-solution-publisher-prefix.md).  
   
 <a name="BKMK_PrivacyNotice"></a>   
 
