@@ -18,7 +18,7 @@ With every release, we make changes and add features to make PowerApps the best 
 
 We take backward compatibility very seriously. However, with any change or improvement, we might introduce an unintended side effect, and your app might not work exactly the way it did before.
 
-To help balance improvements against impact on existing apps, we take larger features through a progression of stages. This article describes this process and how you can control your exposure to features that are under development.
+To help balance improvement against impact on existing apps, we take larger features through a progression of stages. This article describes this process and how you can control your exposure to features that are under development.
 
 ## Feature roll-out stages
 
@@ -38,20 +38,20 @@ This table may help you decide when you should jump in:
 
 | Stage | When should I use it? | Can I use it with confidence? | Is it enabled by default for new apps? | 
 |----|----|----|-----|------|
-| **Experimental** | If you're an early adopter, see something useful to you, and would like to help test the feature. | No.  Experimental features can radically change or completely disappear at any time. | No. Makers must explicitly opt in to the feature.  |  
+| **Experimental** | If you're an early adopter, see something useful to you, and would like to help test the feature. | No.  Experimental features can radically change or completely disappear at any time. | No. You must explicitly opt in to the feature.  |  
 | **Preview** | New apps automatically include this feature.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview. | 
-| **Shipped** (no longer appears in **Advanced setting**) | All apps have this feature. | Yes. | Yes.  Most can't be disabled.  |  
+| **Shipped** (no longer appears in **Advanced settings**) | All apps have this feature. | Yes. | Yes.  Most can't be disabled.  |  
 
-Toward the end of Preview, we may enable the feature for all existing apps one time.  When we do, we mark the feature as being in **final validation**.  This gives the most people a last chance to try out the feature while still being able to turn it off.  Timely feedback is critical in this period because, in the next stage, the feature is fully shipped and you can't turn it off.  
+Toward the end of Preview, we might enable the feature for all apps one time, and we mark it as being in **final validation**.  This change gives the most people a last chance to try out the feature while they can still turn it off. Timely feedback is critical in this period because, in the next stage, the feature is fully shipped, and you can't turn it off.  
 
 ## Documentation
 
-Where should you go for information about these features?  We treat Preview features as finished features, and you can learn more about them just as you do any other product features: 
+Where can you find information about these features?  We treat Preview features as finished features, and you can learn more about them just as you do any other product features: 
 - [PowerApps documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started). We'll provide the basics on the new feature: the benefits, how to get started, and reference information.
-- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will epxlore the new feature along with you; learn from their experience, and share yours.
+- [PowerApps community forum](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Others will explore the new feature along with you. Learn from their experience, and share yours.
 - [PowerApps blog](https://powerapps.microsoft.com/en-us/blog/).  Often, but not always, a blog post accompanies a new feature.
 
-Experimental features are different.  They are works in progress, and we don't consider them finished.  There might be no more information available than the short description in the **App settings** pane (see below).  Experimental features don't normally appear in the documentation.  The community forum is likely your best source of information.  In some cases, an early blog post describes the feature.  If you aren't finding enough information, ask in the forums, or wait for the feature to move to the Preview stage.
+Experimental features are different.  They are works in progress, and we don't consider them finished. The short description in the **App settings** pane (see below) might be the only information about them. Experimental features don't normally appear in the documentation. The community forum is likely your best source of information.  In some cases, an early blog post describes the feature.  If you aren't finding enough information, ask in the forums, or wait for the feature to move to the Preview stage.
 
 ## Controlling what features are enabled
 
@@ -61,8 +61,8 @@ Experimental and preview features are listed in the app's **Advanced settings**.
 
 Each feature has a toggle switch.  **Off** means that the feature is disabled.  Having all switches turned off is the baseline and safest way to run your app.
 
-In some cases, you might need to close and reopen the app after you change a setting.  The feature description should indicate when this is required.   
+In some cases, you might need to close and reopen the app after you change a setting.  The feature description should indicate when you must perform this step.
 
-At the top of the **Advanced settings** panel appear settings for fully shipped features that aren't preview or experimental and that you can completely depend on. 
+At the top of the **Advanced settings** panel, you can find settings for fully shipped features that aren't preview or experimental and that you can completely depend on. 
 
-Note that these settings are per app.  Changing a toggle switch will have an impact only for the app currently open.  Creating an app will revert these switches to their default settings.
+These settings are specific to each app, so changing a toggle switch affects only the app that's currently open. If you create an app, these switches revert to their default settings for that app.
