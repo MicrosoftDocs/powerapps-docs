@@ -17,8 +17,8 @@ ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
 
 You can trigger on-demand workflows from inside a business process flow. For example, you can add an on-demand workflow to a business process flow so that an activity, such as a task or email, is created whenever a stage is completed. 
 
-To add a workflow to a business process flow, the workflow must have the following.
-- For workflows added to a stage in the BPF: You can only use active, on-demand workflows created for the same entity of the stage where you add the workflow.  
+Notice the following requirements when you add a workflow to a business process flow.
+- For workflows added to a stage: You can only use active, on-demand workflows created for the same entity of the stage where you add the workflow.  
 - For global workflows: You can only use active, on-demand workflows created for the primary entity of the business process flow.
 
 ## Add an on-demand workflow to a business process flow stage
