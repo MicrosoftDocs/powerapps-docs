@@ -19,17 +19,26 @@ ms.author: "matp"
 manager: "kvivek"
 --- 
 
-# Use the default solution to customize  
+# Use the Common Data Services default solution  
 
- When you customize a model-driven app, you may work with the default solution. To open the default solution, open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).  
+All PowerApps environments include the following solutions.
+-	Common Data Services default solution. Base solution that is available for makers to use as the default solution for the environment.
+-	Default Solution. Legacy solution that contains all available solutions in the environment. 
+-	Base Custom Controls Core. Includes a core set of custom controls. Controls are used in user interface elements, such as fields, lists, and views. 
+
+Notice that if you have installed or imported other applications or solutions, additional solutions may be available in the solutions list.  
+
+By default,  when you build or customize a model-driven app, you work with the Common Data Services default solution. You can open the Common Data Services default solution to view or edit the components that are contained in the solution. To do this, follow these steps.
+ 
+1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+
+    ![Model-driven design mode](../model-driven-apps/media/model-driven-switch.png)
+
+2. On the left navigation pane select **Solutions**.
+3. In the list of solutions, select **Common Data Services Default Solution**.
   
 > [!TIP]
->  After you have the default solution open, use `Ctrl+D` to create a favorite or bookmark in your browser. This will help you open it faster even if you don’t already have the web application open.  
-  
- Every environment has a default solution and it has some unique properties. The default solution contains all the solution components available in your environment. Other solutions may include a subset of the solution components visible in the default solution, but the default solution contains all of them.  
-  
-> [!TIP]
->  Before you start creating new customizations, remember to change the solution publisher customization prefix. More information: [Solution publisher prefix](change-solution-publisher-prefix.md).  
+>  If you plan to export the applications your make, consider changing the solution publisher customization prefix. More information: [Solution publisher prefix](change-solution-publisher-prefix.md).  
   
 <a name="BKMK_PrivacyNotice"></a>   
 
