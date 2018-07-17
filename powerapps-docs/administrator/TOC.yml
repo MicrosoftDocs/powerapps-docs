@@ -2,7 +2,7 @@
   href: admin-guide-pa.md
   items:
   - name: Introducing the new Power platform Admin center
-    href: intro-new-admin-center.md
+    href: /power-platform-pr/power-platform/admin/admin-guide.md
   - name: Quickstarts
     items:
     - name: Create an environment # not in TOC previously
