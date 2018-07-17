@@ -209,8 +209,6 @@ namespace Microsoft.Crm.Sdk.Samples.HelperCode
 
 ### Related Topics  
 
-[Get started with Online Management API](get-started-online-management-api.md)
-
-[Operations supported by Online Management API](operations-supported.md)
-
+[Get started with Online Management API](get-started-online-management-api.md)<br />
+[Operations supported by Online Management API](operations-supported.md)<br />
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)

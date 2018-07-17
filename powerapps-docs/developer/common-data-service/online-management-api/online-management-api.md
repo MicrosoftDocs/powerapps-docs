@@ -30,6 +30,6 @@ Using the Online Management API, you can perform various tasks on your online in
 >- [PowerShell cmdlets](/powershell/dynamics365/customer-engagement/overview#get-started-using-the-microsoftxrmonlinemanagementapi-module) 
   
 ### Related Sections  
-[Online Management REST API Reference](/rest/api/admin.services.crm.dynamics.com)
 
+[Online Management REST API Reference](/rest/api/admin.services.crm.dynamics.com)<br />
 [Common Data Service for Apps Developer Guide](../overview.md)

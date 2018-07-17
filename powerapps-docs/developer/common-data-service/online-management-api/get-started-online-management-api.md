@@ -74,8 +74,6 @@ See [Authenticate to use the Online Management API](authentication.md) to know a
     
 ### Related Topics  
 
-[Authenticate to use Online Management API](authentication.md)
-
-[Operations supported by Online Management API](operations-supported.md)
-
+[Authenticate to use Online Management API](authentication.md)<br />
+[Operations supported by Online Management API](operations-supported.md)<br />
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)

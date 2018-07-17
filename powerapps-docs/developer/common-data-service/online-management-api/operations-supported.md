@@ -66,8 +66,6 @@ Application identity hs to be created before it can be registered with the Onlin
 
 ### Related Topics  
 
-[Get started with Online Management API](get-started-online-management-api.md)
-
-[Authenticate to use Online Management API](authentication.md)
-
+[Get started with Online Management API](get-started-online-management-api.md)<br />
+[Authenticate to use Online Management API](authentication.md)<br />
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)

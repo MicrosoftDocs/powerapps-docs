@@ -88,8 +88,6 @@ You are all set to execute messages against the Online Management API. For a sam
 
 ### Related Topics  
 
-[Sample: Authentication helper for the Online Management API](sample-authentication-helper.md)
-
-[Get started with Online Management API](get-started-online-management-api.md)
-
+[Sample: Authentication helper for the Online Management API](sample-authentication-helper.md)<br />
+[Get started with Online Management API](get-started-online-management-api.md)<br />
 [Online Management API Reference](/rest/api/admin.services.crm.dynamics.com)
