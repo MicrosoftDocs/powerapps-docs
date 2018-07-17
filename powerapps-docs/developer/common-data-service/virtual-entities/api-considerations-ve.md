@@ -18,7 +18,7 @@ There are two broad categories of changes to the metadata system that are associ
 - Addition of a new assembly, namespaces, classes and other types to support development of custom virtual entity data providers
 - Changes to the core platform, including a few additional properties to support external data source mapping, and modification of behaviors of existing entity and attribute properties that reflect the limitations of the initial implementation of this feature
 
-## New Dynamics 365 Data SDK assembly
+## Dynamics 365 Data SDK assembly
 
 The Dynamics 365 Data SDK assembly, `Microsoft.Xrm.Sdk.Data.dll`, contains types to aid in the creation of custom virtual entity data providers. It is comprised of the following namespaces:
 

@@ -12,4 +12,4 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Walkthrough: Configure assembly security for an offline plug-in
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-configure-assembly-security-offline-plugin
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-configure-assembly-security-offline-plugin -->
