@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/online-management-api/get-started-online-management-api -->
 
-This topic provides basic information to help you get started with the Online Admin API for Customer Engagement.
+This topic provides basic information to help you get started with the Online Admin API for Common Data Service for Apps.
 
 ## Office 365 Admin roles
 

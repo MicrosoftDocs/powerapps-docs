@@ -83,7 +83,7 @@ These are the broad steps to authenticate to the Online Management API service.
     }
     ```
 
-You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Customer Engagement instances in your Office 365 tenant, see [Quick Start Sample: Retrieve instances in your tenant](sample-quick-start.md)
+You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all CDS for Apps instances in your Office 365 tenant, see [Quick Start Sample: Retrieve instances in your tenant](sample-quick-start.md)
 
 
 ### Related Topics  
