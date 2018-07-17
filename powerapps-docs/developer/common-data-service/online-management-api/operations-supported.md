@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
 author: "jamesol-msft" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: "kvivek" # MSFT alias of Microsoft employees only
+manager: "chlama" # MSFT alias of manager or PM counterpart
 ---
 # Operations supported by Online Management API
 
