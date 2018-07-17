@@ -12,7 +12,7 @@ ms.date: 07/16/2018
 ms.author: gregli
 
 ---
-# Understand preview and experimental features in PowerApps
+# Understand experimental and preview features in PowerApps
 
 With every release, we make changes and add features to make PowerApps the best tool to fit your needs. We move the product forward.  
 
@@ -53,7 +53,7 @@ Where can you find information about these features?  We treat Preview features 
 
 Experimental features are different.  They are works in progress, and we don't consider them finished. The short description in the **App settings** pane (see below) might be the only information about them. Experimental features don't normally appear in the documentation. The community forum is likely your best source of information.  In some cases, an early blog post describes the feature.  If you aren't finding enough information, ask in the forums, or wait for the feature to move to the Preview stage.
 
-## Controlling what features are enabled
+## Controlling which features are enabled
 
 Experimental and preview features are listed in the app's **Advanced settings**.  From within the app, select the **File** menu, select **App settings**, and then select **Advanced settings**. Scroll down to the **Preview features** and **Experimental features** sections:
 
