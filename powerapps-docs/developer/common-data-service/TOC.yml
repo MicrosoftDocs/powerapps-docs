@@ -13,11 +13,9 @@
   - name: Web API
     # href: webapi/index.md
     href: webapi/
-    maintainContext: true
   - name: Organization Service
     # href: org-service/overview.md
     href: org-service/
-    maintainContext: true
   - name: Discovery Services
     href: discovery-service.md
   - name: API Limits
