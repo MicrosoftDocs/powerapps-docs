@@ -7,7 +7,7 @@
 - name: On a phone (model-driven)
   href: run-app-client-model-driven.md
 - name: On a SharePoint Online page
-  href: https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c  
+  href: powerapps-web-part.md  
 - name: In Microsoft Teams
   href: open-app-embedded-in-teams.md  
 - name: From AppSource
