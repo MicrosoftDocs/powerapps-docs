@@ -782,7 +782,7 @@
     - name: Accessibility in PowerApps app designer
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Developer Guide
-    href: ../developer/model-driven-apps/toc.yml         
+    href: ../developer/model-driven-apps/index.md     
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
@@ -1024,7 +1024,7 @@
     items:
     - name: View or download developer resources
       href: ./common-data-service/view-download-developer-resources.md
-    - name: Developer Guide
-      href: ../developer/common-data-service/index.md
+  - name: Developer Guide
+    href: ../developer/common-data-service/index.md
 - name: Common Data Model
   href: ../common-data-model/overview.md
