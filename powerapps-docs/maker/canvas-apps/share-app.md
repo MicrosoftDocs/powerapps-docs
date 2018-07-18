@@ -76,7 +76,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 ### Common Data Service for Apps
 
-If you create an app based on the Common Data Service for Apps, you must also ensure that the users who will run it have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and/or deleting relevant records. If no such role exists, you can create one and then add users to it.
+If you create an app based on Common Data Service for Apps, you must also ensure that the users who will run it have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and/or deleting relevant records. If you have **System administrator** or **System customizer** permissions for the database in this environment, you can create a custom role and then add users to it.
 
 #### Create a security role
 
