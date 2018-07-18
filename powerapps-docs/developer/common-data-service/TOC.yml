@@ -14,8 +14,9 @@
     # href: webapi/toc.yml
     href: webapi/index.md
   - name: Organization Service
-    # href: org-service/toc.yml    
     href: org-service/overview.md
+  - name: Organization Services
+    href: discovery-service.md
   - name: API Limits
     href: api-limits.md
   - name: Metadata services
@@ -303,6 +304,8 @@
         href: use-single-tenant-server-server-authentication.md
       - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
         href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+    - name: Discover user organizations
+      href: discovery-service.md
     - name: Disaster recovery 
       href: disaster-recovery.md
   - name: How to manage solutions
