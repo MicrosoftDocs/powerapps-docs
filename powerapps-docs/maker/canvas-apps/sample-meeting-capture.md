@@ -33,12 +33,10 @@ Watch these videos to find out:
 
 ## How do I build the app myself?
 
-Meeting Capture includes a lot of functionality commonly used in PowerApps. These videos describe the common functionality and show you how to implement it so you can implement the same functionality and patterns in your own apps.
+Meeting Capture includes a lot of functionality commonly used in PowerApps. By watching these videos, you can explore this functionality and find out how to implement it so you can implement the same functionality and patterns in your own apps.
 
-Watch these videos to find out:
-
-- How to [export content](https://www.youtube.com/watch?v=0TyTsSYuJcE&index=4&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU) from PowerApps to OneNote.
-- How to [find available meeting times](https://www.youtube.com/watch?v=BESlW1bavJA&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU&index=2) for attendees.
+- [Export content](https://www.youtube.com/watch?v=0TyTsSYuJcE&index=4&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU) from PowerApps to OneNote.
+- [Find available meeting times](https://www.youtube.com/watch?v=BESlW1bavJA&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU&index=2) for attendees.
 
 Meeting Capture connects to these services in Office 365.
 
