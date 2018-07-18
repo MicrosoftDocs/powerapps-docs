@@ -143,7 +143,7 @@
       href: actions-visualizations-charts.md
     - name: Create a visualization (chart)
       href: create-visualization-chart.md
-  - name: dashboards
+  - name: Dashboards
     items:
     - name: Actions on dashboards
       href: actions-dashboards.md
