@@ -11,8 +11,8 @@
   href: use-web-services.md
   items:
   - name: Web API
-    # href: webapi/toc.yml
     href: webapi/index.md
+    maintainContext: true
   - name: Organization Service
     href: org-service/overview.md
   - name: Organization Services
@@ -20,6 +20,7 @@
   - name: API Limits
     href: api-limits.md
   - name: Metadata services
+    displayName: Schema APIs
     href: metadata-services.md    
 - name: Tutorials
   items:
