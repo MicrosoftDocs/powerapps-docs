@@ -22,7 +22,7 @@ ms.author: caburk
 
 ## Where can I run the app?
 
-You can run this sample template on a tablet or other device with a similar form factor.
+You can run this sample template on a tablet or other device that has a similar form factor.
 
 ## How do I open the template and run the app?
 
@@ -33,6 +33,13 @@ Watch these videos to find out:
 
 ## How do I build the app myself?
 
+Meeting Capture includes a lot of functionality commonly used in PowerApps. These videos describe the common functionality and show you how to implement it so you can implement the same functionality and patterns in your own apps.
+
+Watch these videos to find out:
+
+- How to [export content](https://www.youtube.com/watch?v=0TyTsSYuJcE&index=4&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU) from PowerApps to OneNote.
+- How to [find available meeting times](https://www.youtube.com/watch?v=BESlW1bavJA&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU&index=2) for attendees.
+
 Meeting Capture connects to these services in Office 365.
 
 - [Office 365 Users](https://docs.microsoft.com/en-us/connectors/office365users/)
@@ -40,13 +47,6 @@ Meeting Capture connects to these services in Office 365.
 - [Planner](https://docs.microsoft.com/en-us/connectors/planner/)
 - [OneNote (Business)](https://docs.microsoft.com/en-us/connectors/onenote/)
 - [Content Conversion](https://docs.microsoft.com/en-us/connectors/conversionservice/)
-
-Meeting Capture includes a lot of functionality commonly used in PowerApps. These videos describe the common functionality and show you how to implement it so you can implement the same functionality and patterns in your own apps.
-
-Watch these videos to find out:
-
-- How to [export content](https://www.youtube.com/watch?v=0TyTsSYuJcE&index=4&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU) from PowerApps to OneNote.
-- How to [find available meeting times](https://www.youtube.com/watch?v=BESlW1bavJA&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU&index=2) for attendees
 
 We hope you enjoy exploring Meeting Capture, and we look forward to hearing how you extend it for your organization!
 
