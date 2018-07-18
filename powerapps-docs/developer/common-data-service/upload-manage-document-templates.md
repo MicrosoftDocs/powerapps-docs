@@ -16,7 +16,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 Was Mike Carter
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/upload-manage-document-templates
 
-Added the short description from  https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/template-entities which was not migrated.
+Add the short description from  https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/template-entities which was not migrated.
 -->
 
 In Common Data Service for Apps, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).

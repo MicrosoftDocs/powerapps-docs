@@ -13,7 +13,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Impersonate another user
 
 <!--
-General information that applieds to both services goes here
+General information that applies to both services goes here
 
  https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/impersonate-another-user 
 

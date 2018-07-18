@@ -19,7 +19,7 @@ ms.author: jdaly
 
 <!-- TODO: 
 This topic wasn't migrated it was written for the initial PA release
-This content was the 'bare minimum' conceptual information to introduce solutoins.
+This content was the 'bare minimum' conceptual information to introduce solutions.
 
 Work in any missing content from original topic(s)
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-solutions 

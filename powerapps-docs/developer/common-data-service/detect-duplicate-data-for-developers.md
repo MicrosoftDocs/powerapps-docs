@@ -17,9 +17,20 @@ Was Mike Carter
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/detect-duplicate-data-for-developers 
 
-organization service specific topic:
+Tells the high level story
+powerapps-docs/developer/common-data-service/detect-duplicate-data-for-developers.md 
+Tells the org service story
 powerapps-docs/developer/common-data-service/org-service/detect-duplicate-data.md
+Tells the Web API Story
+powerapps-docs/developer/common-data-service/webapi/detect-duplicate-data.md
 
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/detect-duplicate-data-for-developers
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/enable-disable-duplicate-detection
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/run-duplicate-detection
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicate-detection-create-update
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicate-detection-messages
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicaterule-entities
 
 -->
 

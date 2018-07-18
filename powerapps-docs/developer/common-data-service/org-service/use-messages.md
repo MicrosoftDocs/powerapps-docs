@@ -20,6 +20,8 @@ This should provide some examples of using the raw OrganizationRequest/Organizat
 Key scenario is calling custom actions when you haven't generated classes for them.
 
 Much of this information is being pulled out into separate topics, for ExecuteTransaction and ExecuteAsync
+
+This should also point out that messages are what the Event Framework uses.
 -->
 
 [When to use the CreateRequest class](entity-operations-create.md#when-to-use-the-createrequest-class)

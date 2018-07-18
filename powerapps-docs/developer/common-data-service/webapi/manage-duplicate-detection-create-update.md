@@ -33,9 +33,11 @@ Use `MSCRM.SuppressDuplicateDetection` header during `POST` request, to detect c
 
 Use preference header `MSCRM.SuppressDuplicateDetection` and set its value to `false` in the Web API request.
 
-<!-- TODO:
+
 > [!NOTE]
->  Make sure there are appropriate duplicate detection rules in place. Common Data Service for Apps includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. For information on how to create a duplicate detection rule, see [Set up duplicate detection rules to keep your data clean](../../../administrator/set-up-duplicate-detection-rules-keep-data-clean.md). -->
+> Make sure there are appropriate duplicate detection rules in place. Common Data Service for Apps includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. For information on how to create a duplicate detection rule, see [Set up duplicate detection rules to keep your data clean](../../../administrator/set-up-duplicate-detection-rules-keep-data-clean.md). 
+
+
 
 <a name="bkmk_create"></a>
 

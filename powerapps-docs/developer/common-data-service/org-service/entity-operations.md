@@ -18,6 +18,18 @@ This new topic will be the Organization service version of the Web API topic
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/perform-operations-web-api
 
-OR it may just be a TOC node 
+OR it may just be a TOC node?
+
+I think there is some value in having a single URL addressable link to this topic
+
+Needs to have something to say.
 
 -->
+
+[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Retrieve an entity](entity-operations-retrieve.md)<br />
+[Update and Delete entities](entity-operations-update-delete.md)<br />
+[Query data using the Organization service](entity-operations-query-data.md)<br />
+[Associate and disassociate entities](entity-operations-associate-disassociate.md)<br />
+[Perform Conditional operations](entity-operations-conditional-operations.md)<br />
+[Retrieve and execute predefined queries](entity-operations-retrieve-execute-predefined-queries.md)

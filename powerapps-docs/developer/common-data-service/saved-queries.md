@@ -25,6 +25,8 @@ It should cover using these messages
 ExecuteByIdUserQuery 
 ExecuteByIdSavedQuery
 
+or is an entity-operations- topic enough?
+
 And support the Web API content here:
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/retrieve-and-execute-predefined-queries
 

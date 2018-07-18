@@ -22,10 +22,12 @@ The Discovery service for the Common Data Service for Apps Web API enables your 
   
  Clients applications may need access to a CDS for Apps instance where the instance URL may change over time.  For example, when a CDS for Apps instance is moved from one CDS for Apps datacenter to another. The Discovery service allows clients instance to persist the instance ID or instance unique name and then use the Discovery service to look-up the current instance access URL.  
   
- <!-- TODO:
-In addition to datacenter specific Discovery services, that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only global Discovery service that spans all operational datacenters. For more information about the Discovery service on the 2011 endpoint see [Discover the URL for your organization using the Organization Service](../org-service/discover-url-organization-organization-service.md).   -->
+
+In addition to datacenter specific Discovery services, that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only global Discovery service that spans all operational datacenters. For more information about the Discovery service on the 2011 endpoint see [Discovery Service](../org-service/discovery-service.md)
+
   
-## Information provided by the Discovery service  
+## Information provided by the Discovery service 
+ 
  Organization information is stored in the `Instance` entity of the Discovery service.  To see the kind of information contained in that entity, send an HTTP GET request to the service for one of your instances.  
   
 ```http  

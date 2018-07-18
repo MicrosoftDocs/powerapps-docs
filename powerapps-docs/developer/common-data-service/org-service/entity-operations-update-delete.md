@@ -12,7 +12,10 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Update and Delete entities
 
-<!-- include information from https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update 
+<!-- 
+Adding parity with Web API topics
+
+include information from https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update 
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-early-bound-entity-classes-create-update-delete
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/manage-duplicate-detection-create-update

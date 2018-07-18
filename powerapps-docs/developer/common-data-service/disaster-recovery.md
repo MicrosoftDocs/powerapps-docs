@@ -13,7 +13,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Disaster recovery in Common Data Service for Apps
 
 <!-- 
-Owner is James Olenik, but the content here is really about writing a client that can respond to disaster recovery
+Owner is James Oleinik, but the content here is really about writing a client that can respond to disaster recovery
 
 Sent him an e-mail about best owner
 

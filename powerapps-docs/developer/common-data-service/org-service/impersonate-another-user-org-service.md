@@ -6,7 +6,7 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 <!-- 
 
-Higher level topic (../impersonate-another-user.md) coveres the general concepts and this covers the organiziation service specifics
+Higher level topic (../impersonate-another-user.md) covers the general concepts and this covers the org-service specifics
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/impersonate-another-user
 

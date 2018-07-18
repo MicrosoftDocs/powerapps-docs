@@ -16,4 +16,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/online-management-api 
 
+Isn't this a duplicate of the topic in the online admin api folder?
+
 -->

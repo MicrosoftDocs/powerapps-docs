@@ -13,6 +13,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Use late-bound entity class with a LINQ query
 
 <!-- 
-Convert examples to static methods that accept an OrganizationServiceContext parameter?
+
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-late-bound-entity-class-linq-query
 -->
