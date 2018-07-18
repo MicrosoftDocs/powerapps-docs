@@ -40,7 +40,7 @@ PowerApps can also periodically save the app every 2 minutes. If you have saved 
    ![Review Publish](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-   > We recommend that you update and/or re-publish your app within six months of last publishing it to keep it in sync with the latest version of PowerApps.
+   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of PowerApps – which means it will get   the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
 
 ## Identify the live version
 In [powerapps.com](https://web.powerapps.com), click or tap **Apps** on the **File** menu (on the left edge), click or tap the details icon for an app, and then click or tap the **Versions** tab.
