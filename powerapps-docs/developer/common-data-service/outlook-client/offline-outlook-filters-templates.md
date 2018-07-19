@@ -6,7 +6,7 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "sriharibs" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
@@ -49,7 +49,7 @@ You can reset the filters for a user to the default by using the <xref:Microsoft
   
 ### See also
 
-[Extend Dynamics 365 Customer Engagement for Outlook](extend-dynamics-365-outlook.md)<br />
+[Extend Dynamics 365 for Outlook](extend-dynamics-365-outlook.md)<br />
 [SavedQuery Entity Reference](../reference/entities/savedquery.md)<br />
 [Sample: Retrieve Outlook Filters](sample-create-retrieve-outlook-filters.md)<br /> 
 <xref:Microsoft.Crm.Sdk.Messages.InstantiateFiltersRequest><br />

@@ -1,5 +1,6 @@
 ---
 title: "API considerations of virtual entities (Common Data Service for Apps) | Microsoft Docs"
+description: "Describes API considerations of virtual entities"
 ms.date: 06/17/2018
 ms.service: "crm-online"
 ms.topic: "article"

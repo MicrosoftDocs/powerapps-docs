@@ -6,7 +6,7 @@ ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
+author: "sriharibs" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
@@ -80,7 +80,7 @@ if (outlookService.IsCrmClientLoaded)
   
 ### See also  
 
-[Extend Dynamics 365 Customer Engagement for Outlook](extend-dynamics-365-outlook.md)<br />
+[Extend Dynamics 365 for Outlook](extend-dynamics-365-outlook.md)<br />
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService><br />
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService.GoOnline><br />
 <xref:Microsoft.Crm.Outlook.Sdk.CrmOutlookService.GoOffline>
