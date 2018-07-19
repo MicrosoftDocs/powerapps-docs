@@ -18,7 +18,7 @@ To run the PowerShell cmdlets for app creators, do the following:
 
 1. Download the [PowerShell scripts file](https://go.microsoft.com/fwlink/?linkid=2006349).
 
-2. Unzip the file into a folder.
+2. Unzip the file into a folder. 
 
 3. Open a PowerShell command window (as administrator) in that same folder.
 
