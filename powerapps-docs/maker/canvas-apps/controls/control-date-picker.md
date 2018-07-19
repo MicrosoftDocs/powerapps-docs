@@ -1,16 +1,13 @@
 ---
 title: 'Date Picker control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Date Picker control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -66,6 +63,10 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
+**IconFill** – The foreground color of a the date picker icon.
+
+**IconBackground** – The background color of a the date picker icon.
+
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
@@ -97,14 +98,14 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 ## Example
 1. Add a **Date Picker** control, and name it **Deadline**.
-   
+
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 2. Add a **[Label](control-text-box.md)** control, and set its **[Text](properties-core.md)** property to this formula:
    <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
-   
+
     Want more information about the **[DateDiff](../functions/function-dateadd-datediff.md)** function or [other functions](../formula-reference.md)?
 3. Press F5, choose a date in **Deadline**, and then click or tap **OK**.
-   
+
     The **[Label](control-text-box.md)** control shows the number of days between today and the date that you chose.
 4. To return to the default workspace, press Esc.
 
@@ -119,4 +120,3 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
- 

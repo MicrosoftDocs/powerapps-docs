@@ -2,13 +2,14 @@
 title: What are canvas apps? | Microsoft Docs
 description: Design and build canvas apps in PowerApps so that users can manage line-of-business data in a browser or on their mobile devices
 author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: overview
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 04/26/2018
 ms.author: anneta
-#As a business analyst with little/no coding experience, I want to design and build an app without writing traditional code so that my users can manage data in any of a variety of sources.
 ---
 # What are canvas apps in PowerApps?
 Design and build a business app from a canvas in Microsoft PowerApps without writing code in a traditional programming language such as C#. Design the app by dragging and dropping elements onto a canvas, just as you would design a slide in PowerPoint. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so that users can run it in a browser or on a mobile device, and embed your app so that users can run it in SharePoint, Power BI, or Teams.
@@ -39,7 +40,7 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 ## Learn more
 * Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
 * Work through the self-paced [Guided Learning courses](https://docs.microsoft.com/powerapps/guided-learning/).
-* Check out the [upcoming webinars](webinars-listing.md#upcoming-webinars), which can help you leverage the features and functions of PowerApps. You can also access [past webinars](webinars-listing.md#past-webinars) on demand.
+* Check out the [webinars](webinars-listing.md) that you can access on-demand to help you leverage the features and functions of PowerApps.
 
 ## Share your experience
 * Read and post in the [PowerApps Community](https://aka.ms/powerapps-community), where anyone who uses PowerApps can post a question and others can answer. Before you post a question, search the community to see whether your question has already been answered.

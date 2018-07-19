@@ -1,17 +1,14 @@
 ---
 title: Functions, signals, and enumerations | Microsoft Docs
 description: Reference information for functions, signals, and enumerations in PowerApps.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
-ms.date: 08/28/2017
+ms.custom: canvas
+ms.reviewer: anneta
+ms.date: 06/05/2018
 ms.author: gregli
 
 ---
@@ -61,6 +58,8 @@ Other elements include:
 
 **[Char](functions/function-char.md)** – Translates a character code into a string.
 
+**[Choices](functions/function-choices.md)** – Returns a table of the possible values for a lookup column.
+
 **[Clear](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a [collection](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Deletes all data from a collection and then adds a set of [records](working-with-tables.md#records).
@@ -82,6 +81,8 @@ Other elements include:
 **[Concat](functions/function-concatenate.md)** – Concatenates strings in a data source.  
 
 **[Concatenate](functions/function-concatenate.md)** – Concatenates strings.
+
+**[Concurrent](functions/function-concurrent.md)** – Evaluates multiple formulas concurrently with one another. 
 
 **[Connection](functions/signals.md)** – Returns information about your network connection.
 
@@ -216,6 +217,8 @@ Other elements include:
 
 **[Not](functions/function-logicals.md)** – Boolean logic NOT.  Returns **true** if its argument is **false**, and returns **false** if its argument is **true**.  You can also use the [**!** operator](functions/operators.md).
 
+**[Notify](functions/function-showerror.md)** – Displays a banner message to the user.
+
 **[Now](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
 ## O
@@ -274,11 +277,11 @@ Other elements include:
 
 **[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
 
+**[Select](functions/function-select.md)** – Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
+
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
-
-**[ShowError](functions/function-showerror.md)** – Displays an error message to the user.
 
 **[Shuffle](functions/function-shuffle.md)** – Randomly reorders the records of a table.
 

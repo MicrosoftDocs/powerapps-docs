@@ -1,16 +1,13 @@
 ---
 title: 'PDF viewer control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the PDF viewer control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -92,15 +89,17 @@ In case the document cannot be opened in PowerApps, the option to open the docum
 **Zoom** – The percentage by which an image from a camera is magnified or the view of a file in a PDF viewer.
 
 ## Example
-* Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:<br>
+
+Add a **PDF viewer** control, and set its **Document** property to the URL, enclosed in double quotation marks, of a PDF file as in this example:
+
   **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
     The control shows the PDF file.
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 
-
 ## Accessibility guidelines
+
 Not all accessibility features of PDF documents are supported because the **PDF viewer** is still in the experimental stage. Therefore, **ShowControls** should be set to **true** to allow users to open the document in an external application.
 
 Learn how to create accessible PDF documents with the [WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/pdf.html) and [PDF/UA](https://www.pdfa.org/pdfua-the-iso-standard-for-universal-accessibility/) standards.

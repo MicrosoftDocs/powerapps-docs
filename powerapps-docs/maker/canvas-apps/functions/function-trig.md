@@ -1,16 +1,13 @@
 ---
 title: Acos, Acot, Asin, Atan, Atan2, Cos, Cot, Degrees, Pi, Radians, Sin, and Tan functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Abs and Sqrt functions in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 09/13/2016
 ms.author: gregli
 
@@ -88,6 +85,7 @@ If an argument would result in an undefined value, the result is *blank*.  This 
 
 ## Examples
 ### Single number
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Cos(&nbsp;1.047197&nbsp;)** |Returns the cosine of 1.047197 radians or 60 degrees. |0.5 |

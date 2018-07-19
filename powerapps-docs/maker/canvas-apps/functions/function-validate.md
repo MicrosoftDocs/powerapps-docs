@@ -1,16 +1,13 @@
 ---
 title: Validate function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Validate function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/01/2015
 ms.author: gregli
 
@@ -51,12 +48,14 @@ If **Validate** finds a problem, the function returns an error message that you 
 For these examples, values in the **Percentage** column of the **Scores** data source must be between 0 and 100, inclusive. If the data passes validation, the function returns *blank*. Otherwise, the function returns an error message.
 
 ### Validate with a single column
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Validate( Scores, Percentage, 10 )** |Checks whether **10** is a valid value for the **Percentage** column in the **Scores** data source. |*blank* |
 | **Validate( Scores, Percentage, 120 )** |Checks whether **120** is a valid value for the **Percentage** column in the **Scores** data source. |"Values must be between 0 and 100." |
 
 ### Validate with a complete record
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Validate( Scores, EditRecord, Gallery.Updates )** |Checks whether **10** is a valid value for the **Percentage** column in the **Scores** data source. |*blank* |

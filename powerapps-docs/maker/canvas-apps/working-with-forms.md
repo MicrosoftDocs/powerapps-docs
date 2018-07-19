@@ -1,16 +1,13 @@
 ---
 title: Understand forms | Microsoft Docs
 description: Use forms to collect and display information from a data source.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/27/2016
 ms.author: gregli
 
@@ -153,7 +150,7 @@ To follow the rest of this topic exactly, create a SharePoint list named "Ice Cr
 * Create an app from blank, for phones, and [connect it to your data source](add-data-connection.md).
   
     > [!NOTE]
-> Tablet apps are very similar, but you may want a different [screen layout](#screen-design) to make the most of the extra screen space.
+  > Tablet apps are very similar, but you may want a different [screen layout](#screen-design) to make the most of the extra screen space.
   
     The examples in the rest of the topic are based on a data source named **Ice Cream**.
 

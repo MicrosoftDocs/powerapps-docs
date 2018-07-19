@@ -1,15 +1,13 @@
 ---
 title: Create and update a collection | Microsoft Docs
 description: Create collections and add columns to existing collections in PowerApps
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/30/2015
 ms.author: lonu
 
@@ -80,7 +78,7 @@ The following steps show you how to create a collection within your app using th
    ![][10]  
    
     > [!NOTE]
-> You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
+   > You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
 6. On the **Insert** tab, select **Button**. Set its **[OnSelect](controls/properties-core.md)** property to the following function:  
    ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
    
@@ -88,7 +86,7 @@ The following steps show you how to create a collection within your app using th
     ![][11]  
    
     > [!NOTE]
-> You can use this same function to add additional columns to this collection. For example, you can add another text-input control for Country to add a Countries column:
+   > You can use this same function to add additional columns to this collection. For example, you can add another text-input control for Country to add a Countries column:
    
     `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
 7. Rename the button control **AddCityStateButton**, and set its **[Text](controls/properties-core.md)** property to **Add City and State**:  
@@ -151,7 +149,7 @@ There are a few sections in this walk-through. When complete, you'll know how to
     ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
    
     > [!NOTE]
-> When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
+   > When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
 4. Select the **Screen** tab and set the **[OnVisible](controls/control-screen.md)** property to the following expression:  
    
     ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```

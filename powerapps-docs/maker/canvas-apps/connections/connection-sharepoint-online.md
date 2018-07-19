@@ -1,16 +1,13 @@
 ---
 title: Overview of the SharePoint connection | Microsoft Docs
 description: See the available functions, responses, and examples for SharePoint
-documentationcenter: ''
 author: sarafankit
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: ankitsar
 

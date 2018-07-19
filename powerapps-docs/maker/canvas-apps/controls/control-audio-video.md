@@ -1,19 +1,15 @@
 ---
 title: 'Audio and Video controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Audio and Video controls
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+ms.reviewer: anneta
 ---
 # Audio and Video controls in PowerApps
 A control that plays an audio file, a video file, or a video on YouTube.
@@ -100,7 +96,7 @@ A **Video** control plays a video clip from a file or from YouTube or Azure Medi
 4. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
 
     > [!TIP]
-> The play button of the **Video** control appears when you hover over the control.
+   > The play button of the **Video** control appears when you hover over the control.
 5. Press Esc to return to the default workspace.
 
 ### Play a YouTube video

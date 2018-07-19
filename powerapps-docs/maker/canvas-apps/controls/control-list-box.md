@@ -1,16 +1,13 @@
 ---
 title: 'List Box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the List Box control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -166,4 +163,4 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 
     > [!NOTE]
-> The tab key navigates to or away from the **List box**. Arrow keys navigate the contents of the **List box**.
+  > The tab key navigates to or away from the **List box**. Arrow keys navigate the contents of the **List box**.

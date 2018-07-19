@@ -1,19 +1,15 @@
 ---
 title: Overview of the Microsoft Translator connection | Microsoft Docs
 description: See how to connect to Microsoft Translator, step through some examples, and see all the functions
-documentationcenter: ''
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: lanced
-
+ms.reviewer: anneta
 ---
 # Connect to Microsoft Translator from PowerApps
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
@@ -29,46 +25,46 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 
 ## Connect to Microsoft Translator
 1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
-   
+
    ![Open a blank app](./media/connection-microsoft-translator/blank-app.png)
 2. In the right-hand pane, click or tap **Data** tab, and then click or tap **Add data source**.
 3. Select **New connection**, and then select **Microsoft Translator**:  
-   
+
     ![Connect to Microsoft Translator](./media/connection-microsoft-translator/addconnection.png)
-   
+
     ![Connect to Microsoft Translator](./media/connection-microsoft-translator/add-translator.png)
 4. Select **Connect**. Your connection appears under **Data sources**:  
-   
+
     ![Connect to Microsoft Translator](./media/connection-microsoft-translator/translatordatasource.png)
 
 ## Use the Microsoft Translator connection in your app
 ### Translate text
 1. On the **Insert** menu, select **Text**, and then select **Text input**. Rename the text input control to **Source**:  
-   
+
     ![Rename](./media/connection-microsoft-translator/renametosource.png)
 2. Add a **Drop down** list (**Insert** menu > **Controls**), rename it to **TargetLang**, and move it below **Source**.
 3. Set the **[Items](../controls/properties-core.md)** property of **TargetLang** to the following formula:  
-   
+
     `MicrosoftTranslator.Languages()`
 4. Add a label, move it below **TargetLang**, and set its **[Text](../controls/properties-core.md)** property to the following formula:  
-   
+
     `MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
 5. Type some text into **Source**, and select a language in **TargetLang**. The label shows the text that you entered in the language you chose:  
-   
+
     ![Translate text from English to Spanish](./media/connection-microsoft-translator/translate-text.png)
 
 ### Speak translated text
 If you haven't already, follow the steps in the previous section to translate some text. These next steps use the same controls.
 
 1. Set the **[Items](../controls/properties-core.md)** property of the **TargetLang** drop-down list to the following formula:  
-   
+
     `MicrosoftTranslator.SpeechLanguages()`
 2. Rename the second label (not the **Source** box) to **Target**.
 3. Add an **Audio** control (**Insert** menu > **Media**), and set its **Media** property to the following formula:  
-   
+
     `MicrosoftTranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)`
 4. Press F5, or select the Preview button (![](./media/connection-microsoft-translator/preview.png)). Type some text into **Source**, select a language in **TargetLang**, and then select the play button in the audio control.
-   
+
     The app plays an audio version of the text that you entered in the language you chose.
 5. Press Esc to return to the default workspace.
 
@@ -76,10 +72,10 @@ If you haven't already, follow the steps in the previous section to translate so
 These next steps use the same **Source** text input and **Target** text controls. You can create new controls if you prefer, just update the names in the formula.
 
 1. Select the **Target** text control, and set the **[Text](../controls/properties-core.md)** property to the following formula:  
-   
+
     `MicrosoftTranslator.Detect(Source.Text).Name`
 2. Type some text into **Source**.
-   
+
     The label shows you the language of the text that you typed. For example, the label shows **French** if you type **bonjour**, or **Italian** if you type **ciao**.
 
 ## View the available functions
@@ -100,6 +96,7 @@ Get languages: Retrieves all languages that Microsoft Translator supports
 None.
 
 #### Output properties
+
 | Property Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | Code |string |No | |
@@ -109,6 +106,7 @@ None.
 Translate text: Translates text to a specified language using Microsoft Translator
 
 #### Input properties
+
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | query |string |yes |Text to translate |
@@ -123,11 +121,13 @@ None.
 Detect language: Detects source language of given text
 
 #### Input properties
+
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | query |string |yes |Text whose language will be identified |
 
 #### Output properties
+
 | Property Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | Code |string |No | |
@@ -140,6 +140,7 @@ Get speech languages: Retrieves the languages available for speech synthesis
 None.
 
 #### Output properties
+
 | Property Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | Code |string |No | |
@@ -149,6 +150,7 @@ None.
 Text to speech: Converts a given text into speech as an audio stream in wave format
 
 #### Input properties
+
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | query |string |yes |Text to convert |

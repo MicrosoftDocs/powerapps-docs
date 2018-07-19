@@ -1,16 +1,13 @@
 ---
 title: Embed the Power BI project report in SharePoint Online | Microsoft Docs
 description: In this task, we'll embed our Power BI report in the same SharePoint Online site that hosts our two lists.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 01/30/2018
 ms.author: mblythe
 

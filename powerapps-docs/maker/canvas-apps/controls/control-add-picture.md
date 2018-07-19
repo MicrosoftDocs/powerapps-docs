@@ -1,18 +1,15 @@
 ---
 title: 'Add picture control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Add picture control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
+ms.reviewer: anneta
 
 ---
 # Add picture control in PowerApps

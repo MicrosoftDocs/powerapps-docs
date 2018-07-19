@@ -1,19 +1,15 @@
 ---
 title: 'Button control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Button control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+ms.reviewer: anneta
 ---
 # Button control in PowerApps
 A control that the user can click or tap to interact with the app.
@@ -142,7 +138,7 @@ Add a formula that clears the **Text input** control between entries.
     **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
    
     > [!NOTE]
-> Separate multiple formulas with a semi-colon “**;**”.
+   > Separate multiple formulas with a semi-colon “**;**”.
 3. Set the **[Default](properties-core.md)** property of **Source** to **ClearInput**.
 4. Press **F5**, and then test the app by adding several numbers together.
 

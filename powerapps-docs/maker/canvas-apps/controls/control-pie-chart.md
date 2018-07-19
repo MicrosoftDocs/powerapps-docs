@@ -1,16 +1,13 @@
 ---
 title: 'Pie chart control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Pie chart control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -100,7 +97,7 @@ There must be adequate color contrast between:
 * There must be a **[Label](control-text-box.md)** immediately before the chart graphic to serve as the title.
 
     > [!NOTE]
-> Chart graphics and **Legend** are hidden from screen reader users. As an alternative, a tabular form of the data is presented to them. They can also cycle through buttons that select data in the chart.
+  > Chart graphics and **Legend** are hidden from screen reader users. As an alternative, a tabular form of the data is presented to them. They can also cycle through buttons that select data in the chart.
 
 ### Low vision support
 * There must be a **Legend**.
@@ -111,4 +108,4 @@ There must be adequate color contrast between:
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
 
     > [!NOTE]
-> When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.
+  > When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.
