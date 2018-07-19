@@ -14,7 +14,9 @@
   - name: Early-bound programming
     href: early-bound-programming.md
   - name: OrganizationServiceContext
-    href: organizationservicecontext.md     
+    href: organizationservicecontext.md
+  - name: XRM Tooling
+    href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md    
 - name: How-to Guides
   items:
   - name: Create a client app
@@ -26,6 +28,8 @@
       href: visual-studio-dot-net-framework.md
     - name: Discovery Service
       href: discovery-service.md
+    - name: Use XRM Tooling
+      href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
   - name: Entity operations
     href: entity-operations.md
     items:
