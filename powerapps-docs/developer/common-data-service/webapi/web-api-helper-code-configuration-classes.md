@@ -12,7 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 3b86c11a-15e1-40a1-aca0-34a9bab2f04a
 caps.latest.revision: 14
-author: "JimDaly"
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 ---
 # Web API Helper code: Configuration classes

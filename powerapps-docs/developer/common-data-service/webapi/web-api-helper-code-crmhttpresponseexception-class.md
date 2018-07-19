@@ -12,7 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 8deb0bc5-6f4a-4ca7-a3a2-75c06dc7f967
 caps.latest.revision: 11
-author: "JimDaly"
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 ---
 # Web API Helper code: CrmHttpResponseException class

@@ -12,7 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: f2e5d22b-93fe-43b7-af15-3e281f3b3084
 caps.latest.revision: 13
-author: "JimDaly"
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 ---
 # Web API Conditional Operations Sample

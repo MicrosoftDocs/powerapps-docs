@@ -11,7 +11,7 @@ ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
 caps.latest.revision: 15
-author: "JimDaly"
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "ryjones"
 ---

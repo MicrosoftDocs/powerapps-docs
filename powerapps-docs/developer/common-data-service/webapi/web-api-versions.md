@@ -12,7 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: d9bb79a5-2bfa-4ffe-8cb4-60f192359489
 caps.latest.revision: 34
-author: "JimDaly"
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 ---
 # Common Data Service for Apps Web API Versions

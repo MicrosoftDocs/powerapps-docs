@@ -12,7 +12,7 @@ applies_to:
 - "CDS for Apps (online)"
 ms.assetid: b7ae4dd3-e9ee-45cc-a345-2fb7be5eddc6
 caps.latest.revision: 12
-author: "JimDaly"
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
 ---

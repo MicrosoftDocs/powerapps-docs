@@ -6,7 +6,7 @@ ms.topic: "get-started-article"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 14c5fbbc-98db-4e49-b245-2c84c1cd11cd
-author: "jimdaly"
+author: "mayadumesh" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
 ---

@@ -12,7 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 91183105-bc99-4e34-a1b3-1085e1a51f82
 caps.latest.revision: 16
-author: "JimDaly"
+author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 ---
 # Web API Query Data Sample (C#)
