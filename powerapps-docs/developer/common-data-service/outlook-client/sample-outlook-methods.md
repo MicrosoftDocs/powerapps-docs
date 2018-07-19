@@ -1,19 +1,14 @@
 ---
 title: "Sample: Use Dynamics 365 for Outlook methods (Common Data Service for Apps)| Microsoft Docs"
+description: "This sample shows how to use the methods available in the `Microsoft.Crm.Outlook.Sdk.dll` assembly."
 ms.custom: ""
-ms.date: 06/17/2018
+ms.date: 08/01/2018
 ms.reviewer: ""
-ms.service: "crm-online"
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "samples"
-applies_to: 
-  - "Dynamics 365 (online)"
-ms.assetid: b739acc8-d4b9-423e-983f-3e70e01ec37b
-caps.latest.revision: 21
-author: "JimDaly"
-ms.author: "jdaly"
-manager: "amyla"
+ms.service: "powerapps"
+ms.topic: "article"
+author: "JimDaly" # GitHub ID
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
+manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Use Dynamics 365 for Outlook methods
 
