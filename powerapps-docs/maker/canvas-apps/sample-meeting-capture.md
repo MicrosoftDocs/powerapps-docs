@@ -1,5 +1,4 @@
 ---
-
 title: Meeting Capture sample template | Microsoft Docs
 description: Learn about the Meeting Capture sample template in PowerApps with setup, overview, and deep dives into how the app was built.
 author: caburk
@@ -17,7 +16,7 @@ ms.author: caburk
 
 ## Overview
 
- In PowerApps, the Meeting Capture sample template is an all-in-one tool for capturing information from meetings as they happen. If you run the app, you can view meeting details, capture notes, take pictures of whiteboards, draw sketches and assign tasks. You can also export all of these items, send them to all meeting attendees and schedule follow up meetings quickly and easily.
+ In PowerApps, the Meeting Capture sample template is an all-in-one tool for capturing information from meetings as they happen. If you run the app, you can view meeting details, capture notes, take pictures of whiteboards, draw sketches and assign tasks. You can also export all of these items, send them to all meeting attendees, and schedule followup meetings quickly and easily.
 
 ![Meeting Capture](media/sample-meeting-capture/MeetingCapture.png)
 
