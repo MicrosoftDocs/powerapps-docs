@@ -1,4 +1,4 @@
----
+ ---
 title: Install and configure the Help Desk PowerApps sample | Microsoft Docs
 description: Step-by-step instructions for installing and configuring the Help Desk PowerApps sample.
 author: caburk
@@ -12,7 +12,7 @@ ms.date: 04/08/2018
 ms.author: caburk
 
 ---
-# Install and configure the Help Desk PowerApps sample
+# Install and configure the Help Desk sample in PowerApps
 
 Step-by-step instructions for installing and configuring the Help Desk PowerApps sample.
 
