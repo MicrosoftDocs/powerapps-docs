@@ -12,9 +12,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 845a198f-a2b1-4c38-83e8-0968e684b627
 caps.latest.revision: 13
-author: "KumarVivek"
+author: "ashvarma"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "kvivek"
 ---
 # Use XRM tooling to execute actions in CDS for Apps
 

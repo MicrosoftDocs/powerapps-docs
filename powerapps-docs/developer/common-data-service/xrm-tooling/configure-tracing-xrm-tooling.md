@@ -12,9 +12,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: d7586a5a-40da-427e-bbeb-4f8a371a8dcf
 caps.latest.revision: 8
-author: "KumarVivek"
+author: "ashvarma"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "kvivek"
 ---
 # Configure tracing for XRM tooling
 

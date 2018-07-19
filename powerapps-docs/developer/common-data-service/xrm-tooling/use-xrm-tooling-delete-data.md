@@ -12,9 +12,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 7e503d2c-89df-4846-8528-632b5ee12bd5
 caps.latest.revision: 14
-author: "KumarVivek"
+author: "ashvarma"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "kvivek"
 ---
 # Use XRM tooling to delete data
 

@@ -12,9 +12,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 74862506-a955-4846-a148-ac266f65592f
 caps.latest.revision: 27
-author: "KumarVivek"
+author: "ashvarma"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "kvivek"
 ---
 # Use CrmServiceClient constructors to connect to CDS for Apps
 

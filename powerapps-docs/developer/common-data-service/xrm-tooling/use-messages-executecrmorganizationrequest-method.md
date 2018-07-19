@@ -12,9 +12,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 1ba60f67-522d-4540-a6f9-0787d7074a79
 caps.latest.revision: 17
-author: "KumarVivek"
+author: "ashvarma"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "kvivek"
 ---
 # Use messages with the ExecuteCrmOrganizationRequest method
 

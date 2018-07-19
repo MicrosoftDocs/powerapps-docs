@@ -12,9 +12,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 2afc057e-8f70-4bea-bad4-d01e18ed92fd
 caps.latest.revision: 14
-author: "KumarVivek"
+author: "ashvarma"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "kvivek"
 ---
 # Use XRM tooling to retrieve data
 

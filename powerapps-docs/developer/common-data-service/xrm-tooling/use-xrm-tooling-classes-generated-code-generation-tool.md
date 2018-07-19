@@ -12,9 +12,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 7c81c1e5-2229-4a15-8374-6ee9456d18a9
 caps.latest.revision: 19
-author: "KumarVivek"
+author: "ashvarma"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "kvivek"
 ---
 # Use XRM tooling with classes generated using the code-generation tool
 
