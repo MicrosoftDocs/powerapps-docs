@@ -10,7 +10,7 @@ author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Discovery Service
+# Use the Discovery Service with the Microsoft.Xrm.Sdk.Discovery NameSpace
 
 <!-- 
 
@@ -23,3 +23,13 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-s
 
 
 -->
+[!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
+
+
+
+
+
+
+### See also
+
+[Discovery Services](../discovery-service.md)

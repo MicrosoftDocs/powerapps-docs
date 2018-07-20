@@ -10,9 +10,18 @@ author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Discovery Service
+# Discovery Services
 
-<!-- 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-discovery-service
+[!INCLUDE [cc-discovery-service-description](includes/cc-discovery-service-description.md)]
 
--->
+
+A Discovery service is accessed through either the Web API or the Organization Service.
+
+- For the Web API see: [Discover the URL for your organization using the Web API](webapi/discover-url-organization-web-api.md)
+- For the Organization Service see: [Use the Discovery Service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
+
+### See Also
+
+[Use Common Data Service for Apps web services](use-web-services.md)
+[Use the Common Data Service for Apps Web API](webapi/overview.md)
+[Use the Common Data Service for Apps Organization Service](org-service/overview.md)

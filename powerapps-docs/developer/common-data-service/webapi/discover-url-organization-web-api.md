@@ -18,11 +18,10 @@ manager: "amyla"
 ---
 # Discover the URL for your organization using the Web API
 
-The Discovery service for the Common Data Service for Apps Web API enables your applications to determine at run-time the organizations, also known as *instances*, that the logged-on user belongs to.  You can retrieve detailed information about those instances like the instance service URL, the CDS for Apps release version, the instance ID and more. You can use standard `$filter` and `$select` parameters to a Web API service request to customize the returned list of instance data. The Discovery service is supported by all CDS for Apps deployment types: Online, on-premises, and IFD.  
-  
- Clients applications may need access to a CDS for Apps instance where the instance URL may change over time.  For example, when a CDS for Apps instance is moved from one CDS for Apps datacenter to another. The Discovery service allows clients instance to persist the instance ID or instance unique name and then use the Discovery service to look-up the current instance access URL.  
-  
+[!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
+With the Web API discovery service, you can use standard `$filter` and `$select` parameters to a Web API service request to customize the returned list of instance data.
+<!-- TODO should only talk about the global discovery service -->
 In addition to datacenter specific Discovery services, that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only global Discovery service that spans all operational datacenters. For more information about the Discovery service on the 2011 endpoint see [Discovery Service](../org-service/discovery-service.md)
 
   
