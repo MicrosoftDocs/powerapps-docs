@@ -67,7 +67,7 @@ Now that you have the Text Analytics API up and running, you connect to it from 
 ### Create the app and add a connection
 First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in PowerApps](add-manage-connections.md).
 
-1. In [web.powerapps.com](https://web.powerapps.com), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
+1. In [web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
 
     ![Start from blank](./media/cognitive-services-api/start-from-blank.png)
 

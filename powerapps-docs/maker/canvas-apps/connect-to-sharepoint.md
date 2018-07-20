@@ -22,7 +22,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 ## Specify a SharePoint connection
 1. If you haven't already signed up, [sign up for PowerApps](../signup-for-powerapps.md).
 
-2. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
+2. Sign in to [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 3. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
 
