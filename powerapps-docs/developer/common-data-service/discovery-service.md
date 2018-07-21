@@ -22,6 +22,6 @@ A Discovery service is accessed through either the Web API or the Organization S
 
 ### See Also
 
-[Use Common Data Service for Apps web services](use-web-services.md)
-[Use the Common Data Service for Apps Web API](webapi/overview.md)
+[Use Common Data Service for Apps web services](use-web-services.md)<br />
+[Use the Common Data Service for Apps Web API](webapi/overview.md)<br />
 [Use the Common Data Service for Apps Organization Service](org-service/overview.md)
