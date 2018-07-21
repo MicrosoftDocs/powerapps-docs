@@ -30,7 +30,7 @@ To use the discovery service using the SDK assemblies, add a reference to the `M
 
 The <xref:Microsoft.Xrm.Sdk.Client.DiscoveryServiceProxy> implements the <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService> interface.
 
-The <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService> interface provides <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService.Execute(Microsoft.Xrm.Sdk.Discovery.DiscoveryRequest)> method you will use to pass a instance of the abstract <xref:Microsoft.Xrm.Sdk.Discovery.Discovery.DiscoveryRequest> class.
+The <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService> interface provides <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService.Execute(Microsoft.Xrm.Sdk.Discovery.DiscoveryRequest)> method you will use to pass a instance of the abstract <xref:Microsoft.Xrm.Sdk.Discovery.DiscoveryRequest> class.
 
 ## Regional Discovery services
 
