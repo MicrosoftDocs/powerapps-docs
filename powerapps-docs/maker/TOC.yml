@@ -1,3 +1,5 @@
+- name: Find and run apps
+  href: ../user/index.md
 - name: Create apps
   href: index.md
   expanded: true
@@ -665,3 +667,5 @@
     href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
   href: ../common-data-model/overview.md
+- name: Administer apps
+  href: ../administrator/index.md
