@@ -26,7 +26,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Using a custom image as an app icon**
 
-	In PowerApps Studio for Windows version 3.18043, you cannot upload a custom image to use as an app icon. To work around this issue, use [PowerApps Studio for web](https://web.powerapps.com) to upload a custom image. Alternatively, you can use one of the icons included with PowerApps Studio for Windows and customize the background color.
+	In PowerApps Studio for Windows version 3.18043, you cannot upload a custom image to use as an app icon. To work around this issue, use [PowerApps Studio for web](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to upload a custom image. Alternatively, you can use one of the icons included with PowerApps Studio for Windows and customize the background color.
 
 1. **Copying and pasting screens across apps**
 
@@ -66,7 +66,7 @@ This article lists some common issues that you might encounter while using Power
 
 6. **Running an app on Windows 8.1**
 
-    If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com) or using PowerApps Mobile.
+    If you install [this update for Windows 8.1](https://technet.microsoft.com/library/security/ms16-118), you can't run apps that you open in PowerApps Studio on that operating system. However, you can still run apps that you open in  [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or using PowerApps Mobile.
 
 7. **Column names with spaces**
 

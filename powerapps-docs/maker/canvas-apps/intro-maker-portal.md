@@ -13,7 +13,7 @@ ms.author: litran
 
 ---
 # Introduction to powerapps.com
-The PowerApps team is re-introducing [powerapps.com](http://web.powerapps.com) as the new home for app creators. We've re-designed the page as the primary site for creators to easily get started on creating apps, use the Microsoft Common Data Service, and manage their apps all in one location. In this article, I will walk you through the following:
+The PowerApps team is re-introducing [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) as the new home for app creators. We've re-designed the page as the primary site for creators to easily get started on creating apps, use the Microsoft Common Data Service, and manage their apps all in one location. In this article, I will walk you through the following:
 
 * the header
 * the homepage
@@ -41,7 +41,7 @@ Next to settings, you will see a question-mark icon for help. Click or tap this 
 ![Header Help](./media/intro-maker-portal/help_items2.png)
 
 ## Homepage
-After you sign in to [powerapps.com](http://web.powerapps.com), you'll land on the homepage by default. We have changed the layout of this homepage to help you get started quickly, whether you're creating apps or want to explore the Common Data Service.
+After you sign in to [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you'll land on the homepage by default. We have changed the layout of this homepage to help you get started quickly, whether you're creating apps or want to explore the Common Data Service.
 
 If you've signed in to PowerApps before and run or created some apps, the first section you will see on your homepage is a list of **Recent apps**. They are sorted by the date on which they were most recently opened.
 
@@ -92,7 +92,7 @@ Below the **Use the Microsoft Common Data Service** banner, you'll see a set of 
     ![Connected Sample Apps](./media/intro-maker-portal/connectedsampleapps2.png)
 
 ## New Apps page
-You can access the **Apps** page via the left navigation bar on [powerapps.com](http://web.powerapps.com).
+You can access the **Apps** page via the left navigation bar on [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ![Left navigation](./media/intro-maker-portal/leftnav2.png)
 

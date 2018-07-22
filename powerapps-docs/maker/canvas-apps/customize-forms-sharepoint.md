@@ -23,7 +23,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 [Generate an app](data-platform-create-app.md) from the Common Data Service, and then [customize the gallery](customize-layout-sharepoint.md) in that app.
 
 ## Show and hide cards
-1. Sign in to [PowerApps](http://web.powerapps.com).
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Home page of PowerApps site](./media/customize-forms-sharepoint/sign-in.png)
 

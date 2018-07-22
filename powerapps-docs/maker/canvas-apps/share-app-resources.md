@@ -28,14 +28,14 @@ You can also share your connections, custom connectors and on-premises data gate
 ## Connections
 Some types of connections, such as SQL Server, are shared automatically, but others require users to create their own connections to the data source or sources in the app.
 
-On [powerapps.com](https://web.powerapps.com), you can determine whether a connection will be shared automatically, and you can update sharing permissions. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap a connection. If the **Share** tab appears, the connection will be shared automatically.
+On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you can determine whether a connection will be shared automatically, and you can update sharing permissions. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap a connection. If the **Share** tab appears, the connection will be shared automatically.
 
   ![Share tab in connection details page](./media/share-app-resources/shared-connections.png)
 
 ## On-premises data gateways
 If you create and share an app that includes data from an on-premises source, the [on-premises data gateway](gateway-management.md) itself and certain types of connections to that gateway will be shared automatically. For any connection that isn’t shared automatically, you can share it manually (as the previous section shows) or let the app prompt users to create their own connections. To show the connection or connections with which a gateway has been configured:
 
-1. Open [powerapps.com](https://web.powerapps.com), click or tap **Manage** in the left navigation bar, and then click or tap **Gateways**.
+1. Open [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), click or tap **Manage** in the left navigation bar, and then click or tap **Gateways**.
 2. Click or tap a gateway, and then click or tap the **Connections** tab.
 
 > [!NOTE]
@@ -47,7 +47,7 @@ If you create and share an app that includes data from an on-premises source, th
 ## Custom connectors
 When you share an app that uses a custom connector, it is automatically shared, but users must create their own connections to it.
 
-On [powerapps.com](https://web.powerapps.com), you can view or update permissions for a custom connector. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap **New connection** (in the upper-right corner). Click or tap **Custom**, and then click or tap a custom connector to display details about it.
+On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you can view or update permissions for a custom connector. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap **New connection** (in the upper-right corner). Click or tap **Custom**, and then click or tap a custom connector to display details about it.
 
 ## Excel workbooks
 If a shared app uses data to which not all users have access (such as an Excel workbook in a cloud-storage account), [share the data](share-app-data.md).

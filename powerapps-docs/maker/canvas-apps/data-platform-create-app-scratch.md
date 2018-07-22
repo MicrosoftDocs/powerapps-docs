@@ -25,7 +25,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 ## Open a blank app
 
-1. Sign in to [PowerApps](http://web.powerapps.com).
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![PowerApps home page](./media/data-platform-create-app-scratch/sign-in.png)
 

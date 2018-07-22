@@ -29,7 +29,7 @@ For an overview, see [Understand data cards](working-with-cards.md).
 ## Customize a locked card
 In this procedure, you'll replace a **[Text-input](controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md)** control without unlocking the card.
 
-1. Sign in to [PowerApps](http://web.powerapps.com).
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Home page for PowerApps](./media/customize-card/sign-in.png)
 

@@ -23,7 +23,7 @@ You can create a list that's far more complex with many columns of various types
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Generate an app
-1. Sign in to [PowerApps](https://web.powerapps.com).
+1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 	![PowerApps home page](./media/app-from-sharepoint/sign-in.png)
 

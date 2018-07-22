@@ -52,7 +52,7 @@ In an app for which you have the **Contributor** permission, add a PowerApps Not
 ## Send a notification from an app
 You can send a push notification from one app to another or to the same app.
 
-1. In [PowerApps](https://web.powerapps.com/), go to the app to which you want to send push notifications.
+1. In [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc/), go to the app to which you want to send push notifications.
 2. On the **Details** tab, copy the **App ID** of that app.
 
     ![Get App ID](./media/add-notifications/grab-id.png)
