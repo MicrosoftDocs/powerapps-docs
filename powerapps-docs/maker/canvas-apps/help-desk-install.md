@@ -32,7 +32,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 ## Prerequisites
 
-- [Sign up](https://web.powerapps.com/) for PowerApps.
+- [Sign up](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc/) for PowerApps.
 - Must have a valid SharePoint Online license and permission to create lists.
 
 ## Create the HelpDesk SharePoint list
@@ -56,7 +56,7 @@ This list stores the Help Desk tickets.
 
 ### Create Description column
 
-1. Select the elipsis next to the HelpDesk list and click **Settings**.
+1. Select the ellipsis next to the HelpDesk list and click **Settings**.
 2. Click **Create column**.
 3. In the **Column name** textbox enter **Description**.
 4. In the **type of information in this column is** radio button list, select **Multiple lines of text**.
@@ -136,7 +136,7 @@ This list stores the Help Desk tickets.
 
 ## Create connections
 
-1.	In a web browser, navigate to https://web.powerapps.com.
+1.	In a web browser, navigate to [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Data** then **Connections**.
 	

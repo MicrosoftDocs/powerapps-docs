@@ -21,7 +21,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 * Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow
-1. Sign in to [powerapps.com](http://web.powerapps.com), and then select **Flows** in the left navigation bar.
+1. Sign in to [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Flows** in the left navigation bar.
 
 2. On the **My Flows** page, select **Create from blank**.
 
