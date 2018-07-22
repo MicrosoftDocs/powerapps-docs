@@ -604,18 +604,18 @@
   - name: Get started with model-driven apps
     href: ./model-driven-apps/getting-started-customization.md
     items:
-    - name: Quickstart: Build your first model-driven app
+    - name: Quickstart - Build your first model-driven app
       href: ./model-driven-apps/build-first-model-driven-app.md
     - name: Privileges required for creating apps and customization
       href: ./model-driven-apps/privileges-required-customization.md
   - name: Work with forms
     href: ./model-driven-apps/create-design-forms.md
     items: 
-    - name: Quickstart: Create or edit a main form
+    - name: Quickstart - Create or edit a main form
       href: ./model-driven-apps/create-edit-main-forms.md
-    - name: Quickstart: Create or edit quick create forms
+    - name: Quickstart - Create or edit quick create forms
       href: ./model-driven-apps/create-edit-quick-create-forms.md
-    - name: Quickstart: Create a quick view form
+    - name: Quickstart - Create a quick view form
       href: ./model-driven-apps/create-edit-quick-view-forms.md
     - name: Overview of the form editor 
       href: ./model-driven-apps/form-editor-user-interface-legacy.md
