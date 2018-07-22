@@ -22,7 +22,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 * Connect to SQL Server, and update a table from your app.
 
 ## Prerequisites
-[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com) by providing the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
 ## Add a data source
 1. On the **Home** tab, hover over the **Start from blank** tile, and then select **Make this app.**

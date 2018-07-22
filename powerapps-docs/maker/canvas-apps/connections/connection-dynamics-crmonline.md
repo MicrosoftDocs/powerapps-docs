@@ -20,7 +20,7 @@ By following the steps in this topic, you'll create an app in which users can br
 To follow this tutorial, you need a Microsoft Office 365 account that includes a Dynamics 365 subscription.
 
 ## Create a connection
-1. [Sign in to PowerApps](https://web.powerapps.com/).
+1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc/).
 2. In the left navigation pane, click **Connections**.
    
     ![Connection option on File menu](./media/connection-dynamics-crmonline/file-connections.png)
@@ -38,7 +38,7 @@ To follow this tutorial, you need a Microsoft Office 365 account that includes a
     A connection is created.
 
 ## Generate an app automatically
-1. [Sign in to PowerApps](https://web.powerapps.com/), and then click **New app** near the lower-left corner.
+1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc/), and then click **New app** near the lower-left corner.
    
     ![New app](./media/connection-dynamics-crmonline/new-app.png)
 2. Under **Start with your data**, click **Phone layout** on the **Dynamics 365** tile.

@@ -16,7 +16,7 @@ ms.author: jamesol
 This article shows you how to delete an app from your PowerApps account and from the accounts of anybody with whom the app was shared.
 
 ## Delete an app from your account
-1. Open [powerapps.com](https://web.powerapps.com), and then click or tap **Apps** in the left navigation bar.
+1. Open [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap **Apps** in the left navigation bar.
    
     ![](./media/delete-app/file-apps.png)
 2. (optional) Near the upper-left corner, filter the list of apps to show only those apps that you own or only those apps to which you contribute.
