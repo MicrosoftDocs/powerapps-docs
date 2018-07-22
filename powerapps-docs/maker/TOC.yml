@@ -662,7 +662,7 @@
         href: ./model-driven-apps/assign-form-order.md   
       - name: How to configure event handlers in a form
         href: ./model-driven-apps/configure-event-handlers-legacy.md   
-      - name: How to disable auto-save in a formm
+      - name: How to disable auto-save in a form
         href: ./model-driven-apps/manage-auto-save.md
   - name: Work with views
     href: ./model-driven-apps/create-edit-views.md
@@ -675,6 +675,20 @@
       href: ./model-driven-apps/create-edit-views-app-designer.md
     - name: Choose and configure columns in views
       href: ./model-driven-apps/choose-and-configure-columns.md
+    - name: "How to guides: Views"
+      items: 
+       - name: How to make grids editable
+         href: ./model-driven-apps/make-grids-lists-editable-custom-control.md     
+       - name: How to sort records in a view
+         href: ./model-driven-apps/configure-sorting.md 
+       - name: How to edit filter criteria and sort order
+         href: ./model-driven-apps/edit-filter-criteria.md 
+       - name: How to set managed properties for views
+         href: ./model-driven-apps/managed-properties-views.md 
+       - name: How to Specify a default view
+         href: ./model-driven-apps/specify-default-views.md 
+       - name: How to delete or deactivate a view
+         href: ./model-driven-apps/remove-views.md  
     - name: Apply business logic
       items:
       - name: Create a business process flow
@@ -696,11 +710,7 @@
     - name: Use custom controls for data visualizations
       href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Share a model-driven app with PowerApps
-      href: ./model-driven-apps/share-model-driven-app.md            
-  - name: Samples
-    items:
-    - name: Overview of sample apps
-      href: ./model-driven-apps/overview-model-driven-samples.md   
+      href: ./model-driven-apps/share-model-driven-app.md
   - name: Concepts
     items:
     - name: Get started with app making
@@ -708,8 +718,6 @@
     - name: Privileges required for customization
       href: ./model-driven-apps/privileges-required-customization.md       
 
-    - name: Understand views
-      href: ./model-driven-apps/create-edit-views.md    
     - name: Work with fields
       items: 
       - name: Common field properties
@@ -736,20 +744,6 @@
     - name: Change custom entity icons
       href: ./model-driven-apps/change-custom-entity-icons.md
 
-    - name: Work with views
-      items: 
-       - name: Make grids editable
-         href: ./model-driven-apps/make-grids-lists-editable-custom-control.md     
-       - name: Sort records in a view
-         href: ./model-driven-apps/configure-sorting.md 
-       - name: Edit filter criteria and sort order
-         href: ./model-driven-apps/edit-filter-criteria.md 
-       - name: Managed properties for views
-         href: ./model-driven-apps/managed-properties-views.md 
-       - name: Specify a default view
-         href: ./model-driven-apps/specify-default-views.md 
-       - name: Delete or deactivate a view
-         href: ./model-driven-apps/remove-views.md  
     - name: Configure interactive experience dashboards
       href: ./model-driven-apps/configure-interactive-experience-dashboards.md
     - name: Add an on-demand workflow to a business process flow
