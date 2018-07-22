@@ -637,7 +637,7 @@
       href: ./model-driven-apps/visibility-options-legacy.md
     - name: Change navigation within a form
       href: ./model-driven-apps/use-the-form-editor-legacy.md
-    - name: How-to guides: Forms
+    - name: How-to guides - Forms
       items:  
       - name: How to use the main form and its components
         href: ./model-driven-apps/use-main-form-and-components.md   
