@@ -19,17 +19,18 @@ ms.author: "matp"
 manager: "kvivek"
 tags: 
 ---
-# Type of forms
+# Type of forms in PowerApps
 
- There are several different types of forms and each type has a specific functionality or use. The following table describes the types of forms available.  
+ There are different types of forms and each type has a specific functionality or use. The following table describes the types of forms available.  
   
-|Form Type|Description|  
-|---------------|-----------------|  
-|**Main**|Used in all client types including, Unified Interface, the classic web application, Dynamics 365 for Outlook, and Dynamics 365 for tablets.<br /><br /> These forms provide the main user interface for interacting with entity data. More information: [Create and edit main forms](design-considerations-main-forms.md)|  
-|**Mobile**|Used for the Dynamics 365 for phones pages. This simplified form is designed to be used for mobile devices.<br /><br /> The mobile forms for updated entities are not changed. |  
-|**Quick Create**|Used in all client types including, Unified Interface, the classic web application, Dynamics 365 for Outlook, and Dynamics 365 for tablets.<br /><br /> For updated entities, these forms provide a basic form optimized for creating new records. More information: [Quickstart: Create or edit quick create forms for a streamlined data entry experience](create-edit-quick-create-forms.md)
-|**Quick View**|Used in all client types including, Unified Interface, the classic web application, Dynamics 365 for Outlook, and Dynamics 365 for tablets.<br /><br /> For updated entities, these forms appear within the main form to display additional data for a record that is referenced by a lookup field in the form. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)
-| **Card** | Card forms are read only in runtime. Use them to create forms that are for reading purposes only.   |
+|Form type|Description|More information|  
+|---------------|-----------------|-----------------|  
+|**Main**|Used in PowerApps apps, the Dynamics 365 customer engagement web application, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> These forms provide the main user interface for interacting with entity data.|[Design considerations for main forms](design-considerations-main-forms.md)|  
+|**Mobile**|Used for the Dynamics 365 for phones pages. This simplified form is designed to be used for mobile devices.|[Customize the mobile app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets)  |  
+|**Quick Create**|Used in PowerApps apps, the Dynamics 365 customer engagement web application, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated entities, these forms provide a basic form optimized for creating new records.|[Create and edit quick create forms](create-edit-quick-view-forms.md) |  
+|**Quick View**|Used in PowerApps apps, the Dynamics 365 customer engagement web application, Dynamics 365 for tablets, and Dynamics 365 for Outlook.<br /><br /> For updated entities, these forms appear within the main form to display additional data for a record that is referenced by a lookup field in the form.|[Create and edit quick view forms](create-edit-quick-view-forms.md)|  
+
+While each form type has specific needs, when working with forms you use the Form Editor. More information: [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
 
 
 ## Next steps
