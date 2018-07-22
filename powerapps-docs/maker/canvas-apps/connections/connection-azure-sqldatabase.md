@@ -18,7 +18,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 
 ## Prerequisites
 
-* [Sign up](../../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com) by providing the same credentials that you used to sign up.
+* [Sign up](../../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 * Gather the following information for a database that contains at least one table with a primary key:
   
   * the name of the database
@@ -59,7 +59,7 @@ Connect to SQL Server, in either Azure or an on-premises database, so that you c
 8. Customize the app by using techniques that are similar to those that [Create an app from Excel](../get-started-create-from-data.md) describes, starting with changing the app layout.
 
 ## Build an app from scratch
-1. Sign in to [powerapps.com](https://web.powerapps.com) with the same account that you used to sign up for PowerApps.
+1. Sign in to [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with the same account that you used to sign up for PowerApps.
 2. In the left navigation bar, click or tap **Connections**:  
    
     ![Manage connections](./media/connection-azure-sqldatabase/manage-connections.png)

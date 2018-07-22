@@ -205,7 +205,7 @@ This list stores the lines items associated with expense reports.
 
 ## Create connections
 
-1.	In a web browser, navigate to https://web.powerapps.com.
+1.	In a web browser, navigate to [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Connections**.
 

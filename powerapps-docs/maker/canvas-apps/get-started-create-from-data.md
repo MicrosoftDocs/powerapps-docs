@@ -26,7 +26,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 > You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md). 
 
 ## Generate the app
-1. Sign in to [PowerApps](https://web.powerapps.com).
+1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![PowerApps home page](./media/get-started-create-from-data/sign-in.png)
 

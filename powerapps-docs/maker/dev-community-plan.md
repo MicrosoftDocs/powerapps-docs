@@ -29,7 +29,7 @@ Anyone with a [work or school account](signup-for-powerapps.md#faq) can sign up 
 ## Where can I sign up for the PowerApps Community Plan?
 Sign up on the [PowerApps Community Plan website](https://powerapps.microsoft.com/communityplan). If you are an existing user of PowerApps with Office 365 or Dynamics 365, you can also [create an environment for individual use](https://web.powerapps.com/community/signup).
 
-After signing up for the Community Plan, you will be redirected to the [PowerApps site](https://web.powerapps.com) and will land in your individual environment. The environment is named with your name, for example 'John Doe's environment'. If there is already an environment with that name, the individual environment will be named as 'John Doe's (1) environment'.  The following image shows how the environment appears.
+After signing up for the Community Plan, you will be redirected to the [PowerApps site](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and will land in your individual environment. The environment is named with your name, for example 'John Doe's environment'. If there is already an environment with that name, the individual environment will be named as 'John Doe's (1) environment'.  The following image shows how the environment appears.
 
 ![Individual environment for Community Plan](./media/dev-community-plan/individual-environment.png)
 

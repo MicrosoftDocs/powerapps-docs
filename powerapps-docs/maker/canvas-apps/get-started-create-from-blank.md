@@ -38,7 +38,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 > You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
 ## Open a blank app
-1. Sign in to [PowerApps](http://web.powerapps.com).
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 	![PowerApps home page](./media/get-started-create-from-blank/sign-in.png)
 

@@ -28,7 +28,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 ## Share an app
 
-1. [Sign in](https://web.powerapps.com) to PowerApps, and then select **Apps** near the left edge.
+1. [Sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then select **Apps** near the left edge.
 
     ![Show list of apps](./media/share-app/file-apps.png)
 
@@ -54,7 +54,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     If you grant users permission to modify the app, the message also contains a separate link to open the app for editing in PowerApps Studio.
 
-    Regardless of whether you send an invitation, users can run the app from AppSource on [Dynamics 365](http://home.dynamics.com). Users who have **Can edit** permission can also edit the app from within [PowerApps](http://web.powerapps.com).
+    Regardless of whether you send an invitation, users can run the app from AppSource on [Dynamics 365](http://home.dynamics.com). Users who have **Can edit** permission can also edit the app from within [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Specify the permission for each user or security group, and then select **Save**.
 
@@ -80,7 +80,7 @@ If you create an app based on Common Data Service for Apps, you must also ensure
 
 #### Create a security role
 
-1. [Sign in to PowerApps](https://web.powerapps.com), and make sure that you're in the same environment as the app that you want to share.
+1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and make sure that you're in the same environment as the app that you want to share.
 
 1. In the upper-right corner, select the gear icon, and then select **Advanced customizations**.
 

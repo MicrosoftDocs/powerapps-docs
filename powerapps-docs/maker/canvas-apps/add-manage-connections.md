@@ -13,7 +13,7 @@ ms.author: lanced
 
 ---
 # Manage your connections in PowerApps
-In [powerapps.com](https://web.powerapps.com), create a connection from PowerApps to one or more data sources, delete a connection, or update its credentials.
+In [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), create a connection from PowerApps to one or more data sources, delete a connection, or update its credentials.
 
 Your app's data connection can connect to SharePoint, SQL Server, Office 365, OneDrive for Business, Salesforce, Excel, and many other [data sources](connections-list.md).
 
@@ -28,7 +28,7 @@ Your next step after this article is to display and manage data from the data so
 
 ## Prerequisites
 1. [Sign up](../signup-for-powerapps.md) for PowerApps.
-2. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
+2. Sign in to [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 ## Background on data connections
 Most PowerApps apps use external information called **Data Sources** that is stored in cloud services. A common example is a table in an Excel file stored in OneDrive for Business. Apps are able to access these data sources by using **Connections**.
@@ -39,17 +39,17 @@ There are other kinds of data sources that are not tables, such as email, calend
 
 Using the **[Gallery](controls/control-gallery.md)**, **[Display form](controls/control-form-detail.md)**, and **[Edit form](controls/control-form-detail.md)** controls, it is easy to create an app that reads and writes data from a data source. To get started, read the article [Understand data forms](working-with-forms.md).
 
-In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com), you also create connections when you do these tasks:
+In addition to creating and managing connections in [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you also create connections when you do these tasks:
 
 * Automatically generate an [app from data](app-from-sharepoint.md), such as a custom SharePoint list.
 * Update an existing app, or create one from scratch as [add a connection](add-data-connection.md) describes.
 * Open an app that another user created and [shared with you](share-app.md).
 
 > [!NOTE]
-> If you want to use PowerApps Studio instead, open the **File** menu, and then click or tap **Connections**, [powerapps.com](https://web.powerapps.com) opens so that you can create and manage connections there.
+> If you want to use PowerApps Studio instead, open the **File** menu, and then click or tap **Connections**, [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) opens so that you can create and manage connections there.
 
 ## Create a new connection
-1. If you have not already done so, log in to [powerapps.com](https://web.powerapps.com).
+1. If you have not already done so, log in to [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. In the left navigation bar, click or tap **Connections**.
    
     ![Connections Manage](./media/add-manage-connections/open-connections.png)
