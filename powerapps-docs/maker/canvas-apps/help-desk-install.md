@@ -32,7 +32,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 ## Prerequisites
 
-- [Sign up](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc/) for PowerApps.
+- [Sign up](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for PowerApps.
 - Must have a valid SharePoint Online license and permission to create lists.
 
 ## Create the HelpDesk SharePoint list
