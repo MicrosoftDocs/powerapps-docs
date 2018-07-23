@@ -11,7 +11,7 @@
   items:
   - name: IOrganizationService Interface
     href: iorganizationservice-interface.md
-  - name: Early-bound programming
+  - name: Late and Early-bound programming
     href: early-bound-programming.md
   - name: OrganizationServiceContext
     href: organizationservicecontext.md
