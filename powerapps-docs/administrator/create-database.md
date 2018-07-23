@@ -36,7 +36,7 @@ There are various ways to create a database:
 
 
 ## Create a database in the Entities pane of PowerApps
-1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
 2. Click **Create Database** to create the database.
 
