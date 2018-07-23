@@ -51,7 +51,9 @@ You can perform the following operations to manage system jobs using the [AsyncO
 > Creating system jobs with code is not supported. Although the `AsyncOperation` entity supports several writeable attributes and create operations, only the following attributes are supported for update:
 > - [StateCode](reference/entities/asyncoperation.md#BKMK_StateCode)
 > - [StatusCode](reference/entities/asyncoperation.md#BKMK_StatusCode)
-> - [PostPoneUntil](reference/entities/asyncoperation.md#BKMK_PostPoneUntil)
+> - [PostPoneUntil](reference/entities/asyncoperation.md#BKMK_PostponeUntil)
+
+
 
 ## Retrieve system jobs
 
@@ -295,4 +297,10 @@ Whether the requested operation will occur depends on the state of the system jo
 
 ## Postpone system jobs
 
-The `PostPoneUntil` attribute contains a datetime value when the system job will change state from 1 (Suspended) to 0 (Ready). Together with the `StateCode` and `StatusCode` attributes, these are the only attributes supported for update when using the AsyncOperation entity.
+The `PostPoneUntil` attribute contains a datetime value when the system job will change state from 1 (Suspended) to 0 (Ready). Together with the `StateCode` and `StatusCode` attributes, these are the only attributes supported for update when using the `AsyncOperation` entity.
+
+### See also
+
+[Create and register a plug-in](create-register-plugin.md)<br />
+[Write plug-ins to extend business processes](plug-ins.md) <br />
+[Write and register a plug-in](write-register-plug-in.md)
