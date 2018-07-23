@@ -119,6 +119,24 @@ Which style you choose to use is up to you. The following table provides the adv
 
 Because all the generated classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class used with late-bound programming, you can work with entities, attributes, and relationships not defined within classes.
 
+### Example
+
+If a custom attribute was not included in the generated classes, you can still use it.
+
+
+```csharp
+var account = new Account();
+// set attribute values
+    // string primary name
+    account.Name = "Contoso";
+    // A custom boolean attribute not included in the generated classes.
+    account["sample_customboolean"] = false;
+
+
+//Create the account
+Guid accountid = svc.Create(account);
+```
+
 ### See also
 
 [IOrganizationService Interface](iorganizationservice-interface.md)<br />
