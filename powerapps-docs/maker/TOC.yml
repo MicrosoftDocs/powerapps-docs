@@ -608,6 +608,12 @@
   - name: Model-driven sample apps
     href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Define data for your model-driven app
+    href: ./model-driven-apps/define-data-model-driven-app.md
+    items: 
+    - name: Common field properties
+      href: ./model-driven-apps/common-field-properties-legacy.md 
+    - name: Overview of special field properties
+      href: ./model-driven-apps/special-field-properties-legacy.md
   - name: Define UI for your model-driven app
     items:
     - name: Design a model-driven app
@@ -706,13 +712,6 @@
           href: ./model-driven-apps/specify-default-views.md 
         - name: How to delete or deactivate a view
           href: ./model-driven-apps/remove-views.md  
-    - name: Work with fields (attributes)
-      href: ./model-driven-apps/work-with-fields-mda.md
-      items: 
-      - name: Common field properties
-        href: ./model-driven-apps/common-field-properties-legacy.md 
-      - name: Overview of special field properties
-        href: ./model-driven-apps/special-field-properties-legacy.md      
     - name: Translate localizable text
       href: ./model-driven-apps/translate-localizable-text.md
   - name: Apply business logic to your model-driven app

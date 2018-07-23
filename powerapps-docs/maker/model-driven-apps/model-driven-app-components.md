@@ -1,6 +1,6 @@
 ---
-title: Work with fields (attributes) in PowerApps | MicrosoftDocs
-description: "Understand how to work with fields in your model-driven app"
+title: Understand model-driven app components in PowerApps | MicrosoftDocs
+description: "Understand various components of a model-driven app such as data, UI, logic, and visualization."
 Keywords: fields, attributes, model-driven app
 author: Mattp123
 applies_to: 
@@ -18,7 +18,7 @@ applies_to:
   - "powerapps"
 
 ---
-# Model-driven app components and designers
+# Understand model-driven app components
 A well designed model-driven app consists of several components you select using the designer to build the appearance and functionality of the finished app. The components and component properties that designers use to make up an app become the metadata. 
 
 To understand how each of these components relates to app design, they’re separated here into *data*, *UI*, *logic*, and *visualization* categories. 
@@ -33,6 +33,8 @@ These components determine what data the app will be based upon.
 |Field     | A property that is associated with an entity. A field is defined by a data type, which determines the type of data that can be entered or selected. Examples include text, number, date and time, currency, or lookup (creates a relationship with another entity). Fields typically are used with forms, views, and searches.        | [!INCLUDE [powerapps](../../includes/powerapps.md)] entity designer   |
 |Relationship     | Entity relationships define how entities can be related to each other. There are 1:N (one-to-many), N:1 (many-to-one), and N:N (many-to-many) types of relationships . For example, adding a lookup field to an entity creates a new 1:N relationship between the two entities and lets you put that lookup field on a form.   | [!INCLUDE [powerapps](../../includes/powerapps.md)] entity designer        |
 |Option set field     | This is a special type of field, which provides the user a set of predetermined options. Each option has a number value and label. When added to a form, this field displays a control for the user to select an option.  There are two kinds of option sets; option sets, where the user can only select one option, and multi-select options sets, which allow more than one selection.  | [!INCLUDE [powerapps](../../includes/powerapps.md)] option set designer     |
+
+More information: [Define data for your model-driven app](define-data-model-driven-app.md) 
 
 ## UI
 These components determine how users interact with the app. 
@@ -60,6 +62,8 @@ Determines the business processes, rules, and automation the app will have. [!IN
 
 ![Workflow, action, and business process flow designers](media/model-driven-app-overview/designer-mash.png)
 
+More information: [Apply business logic in your model-driven app](guide-staff-through-common-tasks-processes.md)
+
 ## Visualizations
 Determines what type of data visualizations and reporting the app will have available.
 
@@ -82,3 +86,11 @@ To open solution explorer, select **Model-driven** on the left pane of [!INCLUDE
   ![Select Model-driven](media/model-driven-app-overview/app-type-picker-mod.png)
 
 Then select the **Advanced** tab.
+
+More information: [Advanced app making and customization](advanced-navigation.md)
+
+## Related topics
+
+[Validate and publish your model-driven app](validate-app.md)
+
+[Share your model-driven app](share-model-driven-app.md)

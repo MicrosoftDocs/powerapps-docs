@@ -15,7 +15,7 @@ ms.date: 03/21/2018
 ms.author: matp
 
 ---
-# What are model-driven apps in PowerApps
+# What are model-driven apps in PowerApps?
 
 Model-driven app design is a component-focused approach to app development. Model-driven app design doesn’t require code and the apps you make can be simple or very complex.  Unlike canvas app development where the designer has complete control over app layout, with model-driven apps much of the layout is determined for you and largely designated by the components you add to the app. 
 
@@ -45,37 +45,9 @@ After modeling data and defining processes, you build your app by selecting and 
 
 ![App designer](media/model-driven-app-overview/app-designer.png)
 
- 
-
-## Model-driven app development resources
-For more information about model-driven app development, see these topics.
-### Modeling your data
-- [Design custom business apps by using the app designer](https://docs.microsoft.com/dynamics365/customer-engagement/customize/design-custom-business-apps-using-app-designer)
-- [Create and design forms](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-design-forms)
-- [Create or edit views](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-views)  
-
-### Modeling and composing your app
-- [Create or edit entities](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-entities)
-- [Create and edit relationships](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-entity-relationships) 
-- [Create and edit fields](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-fields)
-- [Create and edit global option sets](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-global-option-sets)
-
-### Working with business logic
-- [Business process flows overview](https://docs.microsoft.com/dynamics365/customer-engagement/customize/business-process-flows-overview)
-- [Use Workflow processes to automate processes](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes)
-- [Actions overview](https://docs.microsoft.com/dynamics365/customer-engagement/customize/actions)
-- [Create business rules and recommendations to apply logic](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
-
-### Using visualizations in your app
-- [Create or edit a system chart](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-system-chart)
-- [Create or edit dashboards](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-dashboards)
-
-
-### Distributing your app
-[Create a solution](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-solution)
-
 ## Next steps
-[Quickstart: Create a custom entity](../common-data-service/data-platform-create-entity.md)
 
-[Tutorial: Create a custom entity that has components in PowerApps](../common-data-service/create-custom-entity.md)
+[Quickstart: Build your first model-driven app](build-first-model-driven-app.md)
+
+[Understand model-driven app components](model-driven-app-components.md)
 
