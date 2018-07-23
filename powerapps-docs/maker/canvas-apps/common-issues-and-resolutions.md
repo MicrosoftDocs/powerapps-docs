@@ -72,9 +72,9 @@ This article lists some common issues that you might encounter while using Power
 
     If you're using a SharePoint list or an Excel table in which a column name contains a space, PowerApps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
-8. <a name="out-of-memory"></a>**Browser running our of memory**
+8. <a name="out-of-memory"></a>**Browser running out of memory**
 
-    If you run out of memory while using PowerApps, please consider downloading a 64-bit version of Chrome, Edge, or IE.
+    If you run out of memory while using PowerApps, please consider downloading a 64-bit version of Chrome, Edge, or Internet Explorer.
 
 ## Older
 1. **Changing a flow in a shared app**
