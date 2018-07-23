@@ -601,19 +601,15 @@
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
-  - name: Get started with model-driven apps
-    href: ./model-driven-apps/getting-started-customization.md
-    items:
-    - name: "Quickstart: Build your first model-driven app"
-      href: ./model-driven-apps/build-first-model-driven-app.md
-    - name: Privileges required for creating apps and customization
-      href: ./model-driven-apps/privileges-required-customization.md
-    - name: Model-driven sample apps
-      href: ./model-driven-apps/overview-model-driven-samples.md
+  - name: "Quickstart: Build your first model-driven app"
+    href: ./model-driven-apps/build-first-model-driven-app.md
+  - name: Model-driven sample apps
+    href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Understand model-driven app components
     href: ./model-driven-apps/model-driven-app-components.md
   - name: Define data for your model-driven app
   - name: Define UI for your model-driven app
+    items:
     - name: Create and design forms
       href: ./model-driven-apps/create-design-forms.md
       items: 
