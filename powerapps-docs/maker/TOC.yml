@@ -610,7 +610,7 @@
   - name: Define data for your model-driven app
   - name: Define UI for your model-driven app
     items:
-    - name: Create and design forms
+    - name: Work with forms
       href: ./model-driven-apps/create-design-forms.md
       items: 
       - name: Type of forms in PowerApps
@@ -696,20 +696,24 @@
         href: ./model-driven-apps/common-field-properties-legacy.md 
       - name: Overview of special field properties
         href: ./model-driven-apps/special-field-properties-legacy.md      
-  - name: Apply business logic
+    - name: Design a model-driven app
+      href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
+      items: 
+      - name: Create a model-driven app
+        href: ./model-driven-apps/create-edit-app.md
+      - name: Create a site map for an app
+        href: ./model-driven-apps/create-site-map-app.md 
+      - name: Add or edit app components in app designer
+        href: ./model-driven-apps/add-edit-app-components.md
+      - name: Validate and publish an app
+        href: ./model-driven-apps/validate-app.md
+      - name: Export, import, or remove an app
+        href: ./model-driven-apps/export-import-remove-app.md
+  - name: Apply business logic to your model-driven app
     items:
     - name: Create business rules and recommendations
       href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
-  - name: Work with apps
-    items: 
-    - name: Create a model-driven app
-      href: ./model-driven-apps/create-edit-app.md
-    - name: Create a site map for an app
-      href: ./model-driven-apps/create-site-map-app.md 
-    - name: Add or edit app components in app designer
-      href: ./model-driven-apps/add-edit-app-components.md
-    - name: Export, import, or remove an app
-      href: ./model-driven-apps/export-import-remove-app.md                            
+                            
     - name: Use custom controls for data visualizations
       href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Share a model-driven app with PowerApps
@@ -744,8 +748,7 @@
          href: ./model-driven-apps/manage-app-properties.md  
        - name: Specify properties for Unified Interface apps
          href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md 
-       - name: Validate and publish an app
-         href: ./model-driven-apps/validate-app.md                          
+                                 
     - name: Use controls
       items:  
        - name: Set up the Notes control
