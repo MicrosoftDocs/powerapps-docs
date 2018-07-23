@@ -68,30 +68,40 @@ namespace DiscoveryServiceSample
 {
   class Program
   {
+
+    static OrganizationDetailCollection GetOrganizationDetails(DiscoveryServiceProxy svc)
+    {
+
+      var request = new RetrieveOrganizationsRequest()
+      {
+        AccessType = EndpointAccessType.Default,
+        Release = OrganizationRelease.Current
+      };
+      try
+      {
+        var response = (RetrieveOrganizationsResponse)svc.Execute(request);
+        return response.Details;
+      }
+      catch (Exception)
+      {
+        throw;
+      }
+    }
     static void Main(string[] args)
     {
-      //Using the Discovery URI for Canada
       string canadaUrl = "https://disco.crm3.dynamics.com/XRMServices/2011/Discovery.svc";
       Uri discoveryUri = new Uri(canadaUrl);
 
       ClientCredentials creds = new ClientCredentials();
-      creds.UserName.UserName = "someone@someorg.onmicrosoft.com";
-      creds.UserName.Password = "password";
+      creds.UserName.UserName = "you@yourorg.onmicrosoft.com";
+      creds.UserName.Password = "yourPassword";
 
       using (var svc = new DiscoveryServiceProxy(discoveryUri, null, creds, null))
       {
 
-        var request = new RetrieveOrganizationsRequest()
-        {
-          AccessType = EndpointAccessType.Default,
-          Release = OrganizationRelease.Current
-        };
-        
-        //Execute the request
-        var response = (RetrieveOrganizationsResponse)svc.Execute(request);
-        
-        //List the results
-        response.Details.ToList().ForEach(x =>
+        OrganizationDetailCollection details = GetOrganizationDetails(svc);
+
+        details.ToList().ForEach(x =>
         {
           Console.WriteLine("Organization Name: {0}", x.FriendlyName);
           Console.WriteLine("Unique Name: {0}", x.UniqueName);
