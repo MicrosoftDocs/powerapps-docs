@@ -714,7 +714,7 @@
           href: ./model-driven-apps/remove-views.md  
     - name: Translate localizable text
       href: ./model-driven-apps/translate-localizable-text.md
-  - name: Apply business logic to your model-driven app
+  - name: Apply business logic in your model-driven app
     href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
     items:
     - name: Create business rules and recommendations
