@@ -1,3 +1,16 @@
+- name: Find and run apps
+  href: ../user/index.md
+  items:
+  - name: In a browser
+    href: ../user/run-app-browser.md
+  - name: On a phone (canvas)
+    href: ../user/run-app-client.md
+  - name: On a phone (model-driven)
+    href: ../user/run-app-client-model-driven.md
+  - name: In Microsoft Teams
+    href: ../user/open-app-embedded-in-teams.md
+  - name: From AppSource
+    href: ../user/app-source.md
 - name: Create apps
   href: index.md
   expanded: true
@@ -614,6 +627,8 @@
       href: ./model-driven-apps/common-field-properties-legacy.md 
     - name: Overview of special field properties
       href: ./model-driven-apps/special-field-properties-legacy.md
+    - name: Translate localizable text
+      href: ./model-driven-apps/translate-localizable-text.md
   - name: Define UI for your model-driven app
     items:
     - name: Design a model-driven app
@@ -712,8 +727,6 @@
           href: ./model-driven-apps/specify-default-views.md 
         - name: How to delete or deactivate a view
           href: ./model-driven-apps/remove-views.md  
-    - name: Translate localizable text
-      href: ./model-driven-apps/translate-localizable-text.md
   - name: Apply business logic in your model-driven app
     href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
     items:
