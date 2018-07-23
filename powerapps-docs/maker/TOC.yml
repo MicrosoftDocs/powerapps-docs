@@ -777,6 +777,9 @@
     href: ./common-data-service/overview.md
   - name: License requirements for entities
     href: ./common-data-service/data-platform-entity-licenses.md
+    items:
+    - name: Restricted entities requiring Dynamics 365 licenses
+      href: ./common-data-service/data-platform-restricted-entities.md
   - name: Work with entities
     items:
     - name: "Quickstart: Create an entity"
@@ -821,6 +824,8 @@
         href: ./common-data-service/virtual-entity-walkthrough-using-odata-provider.md
   - name: Work with relationships
     items: 
+    - name: "Quickstart: Create a relationship"
+      href: ./common-data-service/data-platform-entity-lookup.md
     - name: Create many-to-many relationships using PowerApps portal
       href: ./common-data-service/create-edit-nn-relationships-portal.md
     - name: Create many-to-many relationships using PowerApps solution explorer
@@ -834,23 +839,47 @@
     - name: Define and query hierarchically related data
       href: ./common-data-service/define-query-hierarchical-data.md
     - name: Configure connection roles
-      href: ./common-data-service/configure-connection-roles.md  
+      href: ./common-data-service/configure-connection-roles.md
+    - name: "How-to guides: Relationships"
+      items: 
+      - name: How to create many-to-many relationships using PowerApps portal
+        href: ./common-data-service/create-edit-nn-relationships-portal.md
+      - name: How to create many-to-many relationships using PowerApps solution explorer
+        href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md  
+      - name: How to set managed properties for relationships
+        href: ./common-data-service/set-managed-properties-relationships.md
+      - name: How to visualize hierarchical data
+        href: ./common-data-service/visualize-hierarchical-data.md
+      - name: How to query and visualize hierarchically related data
+        href: ./common-data-service/query-visualize-hierarchical-data.md 
+      - name: How to define and query hierarchically related data
+        href: ./common-data-service/define-query-hierarchical-data.md
+      - name: How to configure connection roles
+        href: ./common-data-service/configure-connection-roles.md
   - name: Work with fields
     items: 
-    - name: Manage fields
-      href: ./common-data-service/data-platform-manage-fields.md
-    - name: Create fields using PowerApps portal
-      href: ./common-data-service/create-edit-field-portal.md 
-    - name: Create fields using PowerApps solution explorer
-      href: ./common-data-service/create-edit-field-solution-explorer.md
-    - name: Create global option sets using PowerApps portal
-      href: ./common-data-service/create-edit-global-option-sets-portal.md
-    - name: Create global option sets using solution explorer  
-      href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
-    - name: Map entity fields
-      href: ./common-data-service/map-entity-fields.md
-    - name: Delete fields
-      href: ./common-data-service/delete-fields.md     
+    - name: Types of fields
+      href: ./common-data-service/types-of-fields.md       
+    - name: Set managed properties for fields
+      href: ./common-data-service/set-managed-properties-for-field.md 
+    - name: Behavior and format of the Date and Time field
+      href: ./common-data-service/behavior-format-date-time-field.md     
+    - name: "How-to guides: Fields"
+      items: 
+      - name: How to manage fields
+        href: ./common-data-service/data-platform-manage-fields.md
+      - name: How to create fields using PowerApps portal
+        href: ./common-data-service/create-edit-field-portal.md 
+      - name: How to create fields using PowerApps solution explorer
+        href: ./common-data-service/create-edit-field-solution-explorer.md
+      - name: How to create global option sets using PowerApps portal
+        href: ./common-data-service/create-edit-global-option-sets-portal.md
+      - name: How to create global option sets using solution explorer  
+        href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
+      - name: How to map entity fields
+        href: ./common-data-service/map-entity-fields.md
+      - name: How to delete fields
+        href: ./common-data-service/delete-fields.md
   - name: Apply business logic
     items: 
     - name: Create a mobile task flow
