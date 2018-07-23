@@ -731,7 +731,7 @@
     items:
     - name: Create business rules and recommendations
       href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
-  - name: Apply data visualizations to your model-driven app
+  - name: Apply data visualizations in your model-driven app
     items:
     - name: Create a system chart
       href: ./model-driven-apps/create-edit-system-chart.md
@@ -753,9 +753,9 @@
         href: ./model-driven-apps/timer-control-legacy.md
     - name: Use custom controls for data visualizations
       href: ./model-driven-apps/use-custom-controls-data-visualizations.md
-  - name: Validate and publish a model-driven app
+  - name: Validate and publish your model-driven app
     href: ./model-driven-apps/validate-app.md
-  - name: Share a model-driven app with PowerApps
+  - name: Share your model-driven app
     href: ./model-driven-apps/share-model-driven-app.md
   - name: Advanced app making and customization
     href: ./model-driven-apps/advanced-navigation.md
