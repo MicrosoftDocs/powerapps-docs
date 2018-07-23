@@ -603,13 +603,30 @@
   items:
   - name: "Quickstart: Build your first model-driven app"
     href: ./model-driven-apps/build-first-model-driven-app.md
-  - name: Model-driven sample apps
-    href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Understand model-driven app components
     href: ./model-driven-apps/model-driven-app-components.md
+  - name: Model-driven sample apps
+    href: ./model-driven-apps/overview-model-driven-samples.md
   - name: Define data for your model-driven app
   - name: Define UI for your model-driven app
     items:
+    - name: Design a model-driven app
+      href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
+      items: 
+      - name: Create a model-driven app
+        href: ./model-driven-apps/create-edit-app.md
+      - name: Create a site map for an app
+        href: ./model-driven-apps/create-site-map-app.md 
+      - name: Add or edit app components in app designer
+        href: ./model-driven-apps/add-edit-app-components.md
+      - name: Manage a model-driven app
+        items:
+        - name: Export, import, or remove an app
+          href: ./model-driven-apps/export-import-remove-app.md
+        - name: Manage app properties
+          href: ./model-driven-apps/manage-app-properties.md  
+        - name: Specify properties for Unified Interface apps
+          href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
     - name: Work with forms
       href: ./model-driven-apps/create-design-forms.md
       items: 
@@ -696,75 +713,52 @@
         href: ./model-driven-apps/common-field-properties-legacy.md 
       - name: Overview of special field properties
         href: ./model-driven-apps/special-field-properties-legacy.md      
-    - name: Design a model-driven app
-      href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
-      items: 
-      - name: Create a model-driven app
-        href: ./model-driven-apps/create-edit-app.md
-      - name: Create a site map for an app
-        href: ./model-driven-apps/create-site-map-app.md 
-      - name: Add or edit app components in app designer
-        href: ./model-driven-apps/add-edit-app-components.md
-      - name: Validate and publish an app
-        href: ./model-driven-apps/validate-app.md
-      - name: Export, import, or remove an app
-        href: ./model-driven-apps/export-import-remove-app.md
+    - name: Translate localizable text
+      href: ./model-driven-apps/translate-localizable-text.md
   - name: Apply business logic to your model-driven app
+    href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
     items:
     - name: Create business rules and recommendations
       href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
-                            
+  - name: Apply data visualizations to your model-driven app
+    items:
+    - name: Create a system chart
+      href: ./model-driven-apps/create-edit-system-chart.md
+    - name: Create or edit dashboards
+      href: ./model-driven-apps/create-edit-dashboards.md
+    - name: Configure interactive experience dashboards
+      href: ./model-driven-apps/configure-interactive-experience-dashboards.md
+    - name: Set properties for a chart or list
+      href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
+    - name: Use system controls for data visualizations
+      items:  
+      - name: Set up the Notes control
+        href: ./model-driven-apps/notes-control-legacy.md 
+      - name: Quick view control properties
+        href: ./model-driven-apps/quick-view-control-properties-legacy.md 
+      - name: Additional controls for Dynamics 365 for phones and tablets
+        href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
+      - name: Timer control overview
+        href: ./model-driven-apps/timer-control-legacy.md
     - name: Use custom controls for data visualizations
       href: ./model-driven-apps/use-custom-controls-data-visualizations.md
-    - name: Share a model-driven app with PowerApps
-      href: ./model-driven-apps/share-model-driven-app.md
-    - name: Apply business logic
-      href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
-      items: 
-      - name: Business process flows overview
-        href: ./model-driven-apps/business-process-flows-overview.md
-    - name: Design custom business apps
-      href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
-    - name: Timer control overview
-      href: ./model-driven-apps/timer-control-legacy.md
+  - name: Validate and publish a model-driven app
+    href: ./model-driven-apps/validate-app.md
+  - name: Share a model-driven app with PowerApps
+    href: ./model-driven-apps/share-model-driven-app.md
+  - name: Advanced app making and customization
+    href: ./model-driven-apps/advanced-navigation.md
+    items:
+    - name: Privileges required for customization
+      href: ./model-driven-apps/privileges-required-customization.md
     - name: Create or edit web resources
       href: ./model-driven-apps/create-edit-web-resources.md      
     - name: Web resource properties
       href: ./model-driven-apps/web-resource-properties-legacy.md
-    - name: Set properties for a chart or list
-      href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md                  
-  - name: How-to guides
-    items:
     - name: Change custom entity icons
       href: ./model-driven-apps/change-custom-entity-icons.md
-
-    - name: Configure interactive experience dashboards
-      href: ./model-driven-apps/configure-interactive-experience-dashboards.md
-    - name: Add an on-demand workflow to a business process flow
-      href: ./model-driven-apps/bpf-add-on-demand-workflow.md
-    - name: Work with apps
-      items: 
-       - name: Manage app properties
-         href: ./model-driven-apps/manage-app-properties.md  
-       - name: Specify properties for Unified Interface apps
-         href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md 
-                                 
-    - name: Use controls
-      items:  
-       - name: Set up the Notes control
-         href: ./model-driven-apps/notes-control-legacy.md 
-       - name: Quick view control properties
-         href: ./model-driven-apps/quick-view-control-properties-legacy.md 
-       - name: Additional controls for Dynamics 365 for phones and tablets
-         href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md                                                                
-    - name: Translate localizable text
-      href: ./model-driven-apps/translate-localizable-text.md
-    - name: Navigate to advanced app making areas
-      href: ./model-driven-apps/advanced-navigation.md                 
-  - name: Resources
-    items: 
-    - name: Accessibility in PowerApps app designer
-      href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md    
+  - name: Accessibility in PowerApps app designer
+    href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md    
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
