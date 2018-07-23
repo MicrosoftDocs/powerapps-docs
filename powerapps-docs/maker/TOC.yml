@@ -12,8 +12,7 @@
   - name: From AppSource
     href: ../user/app-source.md
 - name: Create apps
-  href: index.md
-  expanded: true
+  href: index.md  
   items:
   - name: Sign up for a 30-day trial version
     href: signup-for-powerapps.md
