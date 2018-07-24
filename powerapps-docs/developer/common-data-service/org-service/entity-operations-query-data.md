@@ -17,17 +17,15 @@ The SDK assemblies for the organization service provide several styles to query 
 |Style|Advantages|
 |--|--|
 |<xref:Microsoft.Xrm.Sdk.Query.FetchExpression>|Use the proprietary FetchXML query language to create complex queries that return aggregates such as the sum of a value for all returned records. You can also perform group by operations with FetchXML. Can include data from linked entities.|
-|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression>|Queries are built as an object model. Supports all the features in FetchXML except for aggregates and grouping. Can include data from linked entities.|
-|<xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>|A simpler object model than `QueryExpression`, use `QueryByAttribute`for queries where you are testing whether all the attribute value criteria in your query are a match. Can only return data from the entity.|
+|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression>|You have a strongly typed object model to construct complex queries. Supports all the features in FetchXML except for aggregates and grouping. Can include data from linked entities.|
+|<xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>|A simpler object model than `QueryExpression`, use `QueryByAttribute` for queries where you are testing whether all the attribute value criteria in your query are a match. Can only return data from the entity.|
 |[LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq)|Use <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.QueryProvider> to compose queries using the popular LINQ syntax. All LINQ queries are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so the capabilities are limited to those available to  `QueryExpression` <br /> This topic will focus on the styles of queries available via the SDK assemblies. More information: [Build queries with LINQ (.NET language-integrated query)](build-queries-with-linq-net-language-integrated-query.md)|
 
 
-<xref:Microsoft.Xrm.Sdk.Query.FetchExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> derive from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase> abstract class. 
-
-There are two ways to get the results of a query defined using these classes:
+<xref:Microsoft.Xrm.Sdk.Query.FetchExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> derive from the <xref:Microsoft.Xrm.Sdk.Query.QueryBase> abstract class. There are two ways to get the results of a query defined using these classes:
 
 - You can pass an instance of any of these classes as the `query` parameter to <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method.
-- You can set the `Query` property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+- You can set the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Query> property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 > [!NOTE]
 > The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method is generally preferred. There are no special capabilities that require the use of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class.
@@ -67,6 +65,7 @@ results.Entities.ToList().ForEach(x => {
   Console.WriteLine(x.Attributes["name"]);
 });
 ```
+
 More information:
 - [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
 - [FetchXML schema](../fetchxml-schema.md)
@@ -141,13 +140,13 @@ More information:
 
 ## Access formatted values
 
-Regardless of the method you use to query data, the data will be returned as <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities>.<xref:Microsoft.Xrm.Sdk.EntityCollection.Entities>. You can access the attribute data values using the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection. But these values may be of type other than string which you would need to manipulate to get string values you can display in your application.
+Regardless of the method you use to query entities, the data will be returned as <xref:Microsoft.Xrm.Sdk.EntityCollection>.<xref:Microsoft.Xrm.Sdk.EntityCollection.Entities>. You can access the attribute data values using the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection. But these values may be of type other than string which you would need to manipulate to get string values you can display in your application.
 
 You can access string values that use the environments settings for formatting by using the values in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.FormattedValues> collection.
 
 The following sample shows how to access the formatted string values for the following account attributes:
 
-|attribute logical name|Type|
+|Attribute logical name|Type|
 |--|--|
 |`primarycontactid`|<xref:Microsoft.Xrm.Sdk.EntityReference>|
 |`createdon`|<xref:System.DateTime>|
@@ -209,7 +208,7 @@ name:Contoso Pharmaceuticals (sample)
 
 You can convert <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> queries to FetchXml and FetchXml queries to QueryExpression using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> classes.
 
-The [SavedQuery](../reference/entities/savedquery.md) entity stores system views for an entity and the [UserQuery](../reference/entities/userquery.md) entity stores saved user queries. Other entities may also store a query as a FetchXml string. These methods enable converting a fetchXml string to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so it can be manipulated using the object model and then converted back to FetchXml so it can be saved as a string.
+The [SavedQuery](../reference/entities/savedquery.md) entity stores system views for an entity and the [UserQuery](../reference/entities/userquery.md) entity stores saved user queries. Other entities may also store a query as a FetchXml string. These methods enable converting a FetchXml string to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so it can be manipulated using the object model and then converted back to FetchXml so it can be saved as a string.
 
 
 More information: [Sample: Convert queries between Fetch and QueryExpression](samples/convert-queries-fetch-queryexpression.md)
