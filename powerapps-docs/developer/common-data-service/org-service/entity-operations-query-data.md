@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Query data using the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Introduces the different ways to query data using CDS for Apps SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -12,15 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Query data using the Organization service
 
-<!-- 
-
-Introduce three ways of querying data:
-
-This topic should provide simple examples and content to compare the advantages for each with links to more specific topics in other areas.
-
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/retrieve-data-queries-sdk-assemblies 
-
--->
 The SDK assemblies for the organization service provide several styles to query data. Each provides different advantages.
 
 |Style|Advantages|
@@ -35,11 +26,11 @@ The SDK assemblies for the organization service provide several styles to query 
 
 There are two ways to get the results of a query defined using these classes:
 
-- You can pass an instance of any of these classes as the `query` parameter to <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple> method.
-- You can set the `Query` property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute> method.
+- You can pass an instance of any of these classes as the `query` parameter to <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method.
+- You can set the `Query` property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 > [!NOTE]
-> The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple> method is generally preferred. There are no special capabilities that require the use of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class.
+> The <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method is generally preferred. There are no special capabilities that require the use of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class.
 
 Both of these methods will return an <xref:Microsoft.Xrm.Sdk.EntityCollection> that contains the results of the query in the <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> collection as well as properties to manage additional queries to receive paged results. 
 
