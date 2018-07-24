@@ -99,6 +99,7 @@ var request = new CreateRequest() { Target = account };
 var response  = (CreateResponse)svc.Execute(request);
 Guid accountid = response.id;
 ```
+
 ### When to use the CreateRequest class
 
 You must use the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> class if you want to pass optional parameters. There are two cases where you might need special parameters.
@@ -201,6 +202,7 @@ account["primarycontactid"] = new EntityReference("contact", primarycontactid);
 //Create the account
 Guid accountid = svc.Create(account);
 ```
+
 ### Use alternate keys
 
 If you don't know the id of the entity and the following conditions are true:
@@ -222,7 +224,6 @@ More information:
 
 ## Check for Duplicate records
 
-<!-- TODO evaluate if this should stay here or be put someplace else -->
 When creating new records or updating existing records in code, duplicate detection is not enabled by default. If you aren't sure about whether the record you are creating or updating will be a duplicate, there are several strategies you can use:
 
 ### Run Duplicate detection 
@@ -286,6 +287,7 @@ catch (FaultException<OrganizationServiceFault> ex)
     }
 }
 ```
+
 More Information:
 - [Manage duplicate detection for create and update operations](../duplicate-detection-create-update.md)
 - [Detect duplicate data for developers](../detect-duplicate-data-for-developers.md)
@@ -293,13 +295,11 @@ More Information:
 - [Duplicate detection messages](../duplicate-detection-messages.md)
 - [Detect duplicate data so you can fix or remove it](/dynamics365/customer-engagement/admin/detect-duplicate-data)
 
-<!-- TODO: don't need all these links. Clean up the redundant ones -->
-
 ## Set default values from the primary entity
 
 When people create new records in the application they are usually created in the context of another record. For example, you might create a new contact record in the context of an account. When this happens certain attribute values from the account entity are copied into the contact form. This expedites the creation of the new related record because the new record will have some default values set so that the person creating the record doesn't need to enter those values. They can change the values if they like before saving.
 
-The values that will be copied over when a new record is created this way is controled by configurations applied to the CDS for Apps environment, so it can vary between environments. 
+The values that will be copied over when a new record is created this way is controlled by configurations applied to the CDS for Apps environment, so it can vary between environments. 
 
 More information: 
 - [Map entity fields](../../../maker/common-data-service/map-entity-fields.md)
@@ -339,4 +339,11 @@ Another way to create an entity is by using the <xref:Microsoft.Xrm.Sdk.Messages
 
 More information: [Use Upsert](entity-operations-update-delete.md#use-upsert)
 
+
+### See also
+
+[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
+[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Perform Conditional operations using the Organization Service](entity-operations-conditional-operations.md)<br />
 

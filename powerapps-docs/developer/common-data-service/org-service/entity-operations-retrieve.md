@@ -10,7 +10,7 @@ author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Retrieve an entity
+# Retrieve an entity using the Organization Service
 
 <!-- This is the Organization service topic that aligns with the Web API topic 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/retrieve-entity-using-web-api 
@@ -57,3 +57,11 @@ RetrieveResponse response = (RetrieveResponse)svc.Execute(request);
 
 Account retrievedEntity = (Account)response.Entity;
 ```
+
+
+### See also
+
+[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
+[Perform Conditional operations using the Organization Service](entity-operations-conditional-operations.md)<br />
