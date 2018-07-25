@@ -630,7 +630,7 @@
       href: ./model-driven-apps/translate-localizable-text.md
   - name: Define interface for an app
     items:
-    - name: Design a model-driven app
+    - name: Design your app
       href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
       items: 
       - name: Create an app
@@ -753,9 +753,9 @@
         href: ./model-driven-apps/timer-control-legacy.md
     - name: Use custom controls for data visualizations
       href: ./model-driven-apps/use-custom-controls-data-visualizations.md
-  - name: Validate and publish your model-driven app
+  - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
-  - name: Share your model-driven app
+  - name: Share an app
     href: ./model-driven-apps/share-model-driven-app.md
   - name: Advanced app making and customization
     href: ./model-driven-apps/advanced-navigation.md
