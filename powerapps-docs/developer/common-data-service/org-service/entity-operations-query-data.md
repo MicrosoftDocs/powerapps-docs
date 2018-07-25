@@ -18,7 +18,7 @@ The SDK assemblies for the organization service provide several styles to query 
 |--|--|
 |<xref:Microsoft.Xrm.Sdk.Query.FetchExpression>|Use the proprietary FetchXML query language to create complex queries that return aggregates such as the sum of a value for all returned records. You can also perform group by operations with FetchXML. Can include data from linked entities.|
 |<xref:Microsoft.Xrm.Sdk.Query.QueryExpression>|You have a strongly typed object model to construct complex queries. Supports all the features in FetchXML except for aggregates and grouping. Can include data from linked entities.|
-|<xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>|A simpler object model than `QueryExpression`, use `QueryByAttribute` for queries where you are testing whether all the attribute value criteria in your query are a match. Can only return data from the entity.|
+|<xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute>|A simpler object model than `QueryExpression`. Use `QueryByAttribute` for queries where you are testing whether all the attribute value criteria in your query are a match. Can only return data from the entity.|
 |[LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq)|Use <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.QueryProvider> to compose queries using the popular LINQ syntax. All LINQ queries are converted to <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> so the capabilities are limited to those available to  `QueryExpression` <br /> This topic will focus on the styles of queries available via the SDK assemblies. More information: [Build queries with LINQ (.NET language-integrated query)](build-queries-with-linq-net-language-integrated-query.md)|
 
 

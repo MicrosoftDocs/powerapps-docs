@@ -32,4 +32,3 @@ Needs to have something to say.
 [Query data using the Organization service](entity-operations-query-data.md)<br />
 [Associate and disassociate entities](entity-operations-associate-disassociate.md)<br />
 [Perform Conditional operations](entity-operations-conditional-operations.md)<br />
-[Retrieve and execute predefined queries](entity-operations-retrieve-execute-predefined-queries.md)

@@ -76,9 +76,7 @@
     - name: Use the QueryByAttribute class
       href: use-querybyattribute-class.md
     - name: Page large result sets with FetchXML
-      href: page-large-result-sets-with-fetchxml.md
-    - name: Retrieve and execute predefined queries
-      href: entity-operations-retrieve-execute-predefined-queries.md        
+      href: page-large-result-sets-with-fetchxml.md    
   - name: Use OrganizationServiceContext
     items: # We may need a topic here about CRUD?
       - name: Build queries with LINQ (.NET language-integrated query)
