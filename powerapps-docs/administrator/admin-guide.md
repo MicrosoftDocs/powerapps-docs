@@ -18,6 +18,6 @@ manager: "kvivek"
 ---
 # Administer PowerApps
 
-Implementers and administrators for PowerApps will find the resources and topics provided in this guide to help you manage PowerApps environments and process.
+Implementers and administrators for PowerApps, CDS for Apps, and Flow will find the resources and topics provided in this guide to help you manage PowerApps environments and processes.
 
 
