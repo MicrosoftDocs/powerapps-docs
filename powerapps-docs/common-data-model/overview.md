@@ -95,7 +95,7 @@ applications and offerings, and are building additional services and offering
 based on CDM schemas. The following examples show how
 organizations use the CDM:
 
--   Common Data Service (CDS) for Apps, which supports Dynamics and
+-   **Common Data Service (CDS) for Apps**, which supports Dynamics and
     PowerApps, stores data in conformances with the CDM definition. In fact,
     many of the original business entities including in the CDM came from
     Dynamics offerings such as Dynamics 365 for Sales and Dynamics 365 for
