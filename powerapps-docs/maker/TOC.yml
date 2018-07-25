@@ -49,11 +49,6 @@
         href: ./canvas-apps/get-started-create-from-blank.md
     - name: Share an app
       href: ./canvas-apps/share-app.md
-      items:
-      - name: Share Excel data
-        href: ./canvas-apps/share-app-data.md
-      - name: Share app resources
-        href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
       href: ./canvas-apps/embed-powerapps-powerbi.md
   - name: Samples
@@ -78,8 +73,6 @@
       href: ./canvas-apps/working-with-variables.md
     - name: Formulas
       href: ./canvas-apps/working-with-formulas-in-depth.md
-    - name: Experimental and preview features
-      href: ./canvas-apps/working-with-experimental.md
     - name: Dates and times
       href: ./canvas-apps/show-text-dates-times.md
     - name: Data sources
@@ -141,9 +134,7 @@
       - name: Create an accessible app
         href: ./canvas-apps/accessible-apps.md
         items:
-          - name: Find accessibility issues
-            href: ./canvas-apps/accessibility-checker.md
-          - name: Use color for accessibility
+          - name: Color
             href: ./canvas-apps/accessible-apps-color.md
     - name: Manage your app
       items:
@@ -519,7 +510,7 @@
        - name: Weekday
          href: ./canvas-apps/functions/function-datetime-parts.md
        - name: Year
-         href: ./canvas-apps/functions/function-datetime-parts.md	  
+         href: ./canvas-apps/functions/function-datetime-parts.md
     - name: Controls reference
       href: ./canvas-apps/reference-properties.md
       items:
@@ -602,7 +593,7 @@
        - name: Toggle
          href: ./canvas-apps/controls/control-toggle.md
        - name: Video
-         href: ./canvas-apps/controls/control-audio-video.md	  
+         href: ./canvas-apps/controls/control-audio-video.md
     - name: Connectors reference
       href: ./canvas-apps/connections-list.md
     - name: System requirements, limits, and configuration
@@ -623,6 +614,13 @@
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
+  - name: Licensing
+    href: ./common-data-service/data-platform-entity-licenses.md
+    items: 
+    - name: Entities with complex business logic
+      href: ./common-data-service/data-platform-complex-entities.md  
+    - name: Restricted entities requiring Dynamics 365 licenses
+      href: ./common-data-service/data-platform-restricted-entities.md    
   - name: Quickstarts
     items:
     - name: Create an entity
@@ -633,10 +631,6 @@
       href: ./common-data-service/create-custom-entity.md
   - name: Samples and resources
     href: ./common-data-service/samples-resources.md
-  - name: Concepts
-    items:
-    - name: License requirements for entities
-      href: ./common-data-service/data-platform-entity-licenses.md
   - name: How-to guides
     items:
     - name: Manage custom fields in an entity
@@ -657,10 +651,6 @@
       href: ./common-data-service/data-platform-excel-addin.md
     - name: Create a Power BI report
       href: ./common-data-service/data-platform-powerbi-connector.md
-  - name: Reference
-    items:
-    - name: Restricted entities requiring Dynamics 365 licenses
-      href: ./common-data-service/data-platform-restricted-entities.md  
   - name: For Developers
     href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
