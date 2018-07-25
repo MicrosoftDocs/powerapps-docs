@@ -1,6 +1,6 @@
 ---
 title: Development using the Common Data Model | Microsoft Docs
-description: "Common Data Model is a standardized, modular, extensible collection of data schemas published by Microsoft that are designed to make it easier for you build, use, and analyze data.
+description: "Provides information about how you can use the Common Data Model to develop apps and solutions.
 author: RobertBruckner
 ms.service: powerapps
 ms.topic: article
@@ -40,8 +40,8 @@ development tools available. For low- or no-code solutions, you can use the
 CDS for Apps and map data into entities using a graphical step-by-step
 process. Or you can use API-based approach based on the Common Data Model GitHub repository.
 
-There are development features and advantages to using the Common Data Model and the **CDS
-for Apps** that are common to both approaches. In the next section, we look at
+There are development features and advantages to using the Common Data Model and the CDS
+for Apps that are common to both approaches. In the next section, we look at
 development features that are common to either approach.
 
 Then in the two subsequent sections, we investigate using low- or no-code
@@ -81,14 +81,14 @@ environment.
 
 You can bring your data into the Common Data Model format using low- or no-code solutions.
 To do this, you use the CDS for Apps and map your data to new entities,
-using the online steps based on **Power Query** functionality that’s built into
-the CDS for Apps and made available through **PowerApps**.
+using the online steps based on Power Query functionality that’s built into
+the CDS for Apps and made available through PowerApps.
 
 Some of the advantages of the low- or no-code approach are the following:
 
 -   **Leverage packaged business applications** – many Microsoft Dynamics
     solutions, and many third-party applications, are built on top of (or at
-    least leverage) the **Common Data Service for Apps**. When your data is in
+    least leverage) the CDS for Apps. When your data is in
     the Common Data Model, you can take advantage of those packaged applications.
 
 -   **Gain access to customized solutions** – an ecosystem of extensions and
@@ -106,13 +106,13 @@ Once your data is in the Common Data Model, using the CDS for Apps to get it the
 use services that automate your business processes (again, in a graphical
 environment) by using **Microsoft Flow**. To see Flow in action, take a look at
 [create a flow that uses the Common Data
-Service](https://docs.microsoft.com/flow/common-data-model-intro).
+Service for Apps](https://docs.microsoft.com/flow/common-data-model-intro).
 
 For more information, and the steps you can take to map your data into Common Data Model
 entities using the CDS for Apps, see [Add data to an entity in the Common Data
-Service by using Power
+Service for Apps by using Power
 Query](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
-For information about the CDS for Apps, see [What is Common Data Service for
+For information about CDS for Apps, see [What is Common Data Service for
 Apps](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro).
 
 ## Using the Common Data Model GitHub repository
