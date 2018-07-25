@@ -4,11 +4,11 @@ description: "Common Data Model is a standardized, modular, extensible collectio
 author: RobertBruckner
 ms.service: powerapps
 ms.topic: article
-ms.date: 03/14/2018
+ms.date: 07/24/2018
 ms.author: robruc
 ---
 
-# What is the Common Data Model (CDM)?
+# What is the Common Data Model?
 
 If you’ve ever run into challenges with data that’s *nearly* the same or
 *should* work together – then spent significant effort transforming fields and
