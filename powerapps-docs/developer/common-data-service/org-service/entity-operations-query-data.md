@@ -36,6 +36,8 @@ Both of these methods will return an <xref:Microsoft.Xrm.Sdk.EntityCollection> t
 > To ensure best performance, each query request can return a maximum of 5000 entity records. To return larger result sets you must request additional pages.
 
 
+
+
 ## Use FetchXML with FetchExpression
 
 FetchXml is a proprietary XML-based query language that can be used with SDK Assembly queries using <xref:Microsoft.Xrm.Sdk.Query.FetchExpression> and by the Web API using the `fetchXml` query string. More information: [Web API : Retrieve and execute predefined queries > Use custom FetchXML](../webapi/retrieve-and-execute-predefined-queries.md#use-custom-fetchxml)
@@ -65,6 +67,10 @@ results.Entities.ToList().ForEach(x => {
   Console.WriteLine(x.Attributes["name"]);
 });
 ```
+
+> [!IMPORTANT]
+> When retrieving entity records you should only request the attributes values you need by setting the specific attributes using `attribute` elements rather than using the `all-attributes` element to return all attributes.
+
 
 More information:
 - [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
@@ -99,6 +105,10 @@ results.Entities.ToList().ForEach(x =>
   Console.WriteLine(x.Attributes["name"]);
 });
 ```
+
+> [!IMPORTANT]
+> When retrieving entity records you should only request the attributes values you need by setting the specific attributes using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code.
+
 
 More information:
 - [Build queries with QueryExpression](build-queries-with-queryexpression.md)
