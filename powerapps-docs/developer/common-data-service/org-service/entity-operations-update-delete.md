@@ -123,11 +123,56 @@ In a similar manner to how you can [Create related entities in one operation](en
 To do this, you have to retrieve an entity with the related records so that you can access the id values. More information: [Retrieve with related records](entity-operations-retrieve.md#retrieve-with-related-records)
 
 > [!IMPORTANT]
-> Updates to records are made in a specific order. First, primary entities are processed, and then related entities are processed. If a change is made by the primary entity for a lookup or related entity attribute, and then a related entity updates the same attribute, the related entity value is retained. In general, a lookup attribute value and its equivalent in the `RelatedEntities` for the same relationship should not be used at the same time.
+> Updates to records are made in a specific order. First, primary entities are processed, and then related entities are processed. If a change is made by the primary entity for a lookup or related entity attribute, and then a related entity updates the same attribute, the related entity value is retained. In general, a lookup attribute value and its equivalent in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.RelatedEntities> for the same relationship should not be used at the same time.
 
 ### Late-bound example
 
-<!-- TODO -->
+
+```csharp
+var account = new Entity("account");
+account.Id = retrievedAccount.Id;
+
+//Define relationships
+var primaryContactRelationship = new Relationship("account_primary_contact");
+var AccountTasksRelationship = new Relationship("Account_Tasks");
+
+//Update the account name
+account["name"] = "New Account name";
+
+//Update the email address for the primary contact of the the account
+var contact = new Entity("contact");
+contact.Id = retrievedAccount.RelatedEntities[primaryContactRelationship]
+.Entities.FirstOrDefault().Id;
+contact["emailaddress1"] = "someone_a@example.com";
+
+List<Entity> primaryContacts = new List<Entity>();
+primaryContacts.Add(contact);  
+account.RelatedEntities.Add(primaryContactRelationship, new EntityCollection(primaryContacts));
+
+// Find related Tasks that need to be updated
+List<Entity> tasksToUpdate = retrievedAccount
+.RelatedEntities[AccountTasksRelationship].Entities
+.Where(t => t["subject"].Equals("Example Task")).ToList();
+
+// A list to put the updated tasks
+List<Entity> updatedTasks = new List<Entity>();
+
+//Fill the list of updated tasks based on the tasks that need to but updated
+tasksToUpdate.ForEach(t => {
+var updatedTask = new Entity("task");
+updatedTask.Id = t.Id;
+updatedTask["subject"] = "Updated Subject";
+
+updatedTasks.Add(updatedTask);
+});
+
+//Set the updated tasks to the collection
+account.RelatedEntities.Add(AccountTasksRelationship, new EntityCollection(updatedTasks));
+
+//Update the account and related contact and tasks
+svc.Update(account);
+```
+
 
 ### Early-bound example
 
@@ -167,14 +212,48 @@ account.Account_Tasks = updatedTasks;
 svc.Update(account);
 ```
 
-
 ## Check for Duplicate records
 
 When updating an entity you may change the values so that the record represents a duplicate of another record. More information: [Check for Duplicate records](entity-operations-create.md#check-for-duplicate-records)
 
 ## Use Upsert
 
-<!-- TODO -->
+Typically in data integration scenarios you will need to create or update data in CDS for Apps from other sources. CDS for apps may already have records with the same unique identifier, which may be an alternate key. If an entity record exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This is when you want to use upsert.
+
+The following example uses <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> twice. The first time the account entity record is created, and the second time it is updated because it has an `accountnumber` value and there is an alternate key using that attribute.
+
+For both calls, the <xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse>.<xref:Microsoft.Xrm.Sdk.Messages.UpsertResponse.RecordCreated> property indicates whether the operation created a record or not.
+
+```csharp
+// This environment has an alternate key set for the accountnumber attribute.
+
+//Instantiate account entity with accountnumber value
+var account = new Entity("account", "accountnumber", "0003");
+account["name"] = "New Account";
+
+//Use Upsert the first time
+UpsertRequest request1 = new UpsertRequest() {
+Target = account
+};
+
+//The new entity is created
+var response1 = (UpsertResponse)svc.Execute(request1);
+Console.WriteLine("Record Created: {0}",response1.RecordCreated); //true
+
+//Update the name of the existing account entity
+account["name"] = "Updated Account";
+
+//Use Upsert for the second time
+UpsertRequest request2 = new UpsertRequest()
+{
+Target = account
+};
+
+//The existing entity is updated.
+var response2 = (UpsertResponse)svc.Execute(request1);
+Console.WriteLine("Record Created: {0}", response2.RecordCreated); //false
+```
+More information: [Use Upsert to insert or update a record](../use-upsert-insert-update-record.md)
 
 ## Delete
 
@@ -257,7 +336,7 @@ catch (FaultException<OrganizationServiceFault> ex)
     {
         case -2147088254: // ConcurrencyVersionMismatch 
         case -2147088253: // OptimisticConcurrencyNotEnabled 
-            throw new InvalidOperationException(ex.Detail.Message);                       
+            throw new InvalidOperationException(ex.Detail.Message);
         case -2147088243: // ConcurrencyVersionNotProvided
             throw new ArgumentNullException(ex.Detail.Message);
         default:
@@ -273,6 +352,20 @@ More information:
 ## Legacy update messages
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update -->
+
+There are several deprecated specialized messages that perform update operations. In earlier versions it was required to use these messages, but now the same operations should be performed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+
+|Deprecated message request|Attribute(s) to update|  
+|--------------------------------|-------------------------|  
+|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|*&lt;entity&gt;*.`OwnerId`|  
+|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|*&lt;entity&gt;*.`StateCode`<br />*&lt;entity&gt;*.`StatusCode`|
+|<xref:Microsoft.Crm.Sdk.Messages.SetParentSystemUserRequest>|[SystemUser](../reference/entities/systemuser.md).[ParentSystemUserId](../reference/entities/systemuser.md#BKMK_ParentSystemUserId)|  
+|<xref:Microsoft.Crm.Sdk.Messages.SetParentTeamRequest>|[Team](../reference/entities/team.md).[BusinessUnitId](../reference/entities/team.md#BKMK_BusinessUnitId)|  
+|<xref:Microsoft.Crm.Sdk.Messages.SetParentBusinessUnitRequest>|[BusinessUnit](../reference/entities/businessunit.md).[ParentBusinessUnitId](../reference/entities/businessunit.md#BKMK_ParentBusinessUnitId)|  
+|<xref:Microsoft.Crm.Sdk.Messages.SetBusinessEquipmentRequest>|[Equipment](../reference/entities/equipment.md).[BusinessUnitId](../reference/entities/equipment.md#BKMK_BusinessUnitId)|  
+|<xref:Microsoft.Crm.Sdk.Messages.SetBusinessSystemUserRequest>|[SystemUser](../reference/entities/systemuser.md).[BusinessUnitId](../reference/entities/systemuser.md#BKMK_BusinessUnitId)|  
+  
+ *&lt;entity>* refers to any entity that provides this attribute.  
 
 ### See also
 

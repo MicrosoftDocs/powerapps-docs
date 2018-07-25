@@ -18,11 +18,8 @@ This new topic will be the Organization service version of the Web API topic
 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/perform-operations-web-api
 
-OR it may just be a TOC node?
 
-I think there is some value in having a single URL addressable link to this topic
-
-Needs to have something to say.
+This can talk about the Entity class and how early bound types inherit from it.
 
 -->
 
