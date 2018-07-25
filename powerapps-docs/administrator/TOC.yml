@@ -40,6 +40,7 @@
   - name: Administer environments
     href: environments-administration.md
     items:
+    - name: Environments overview
       href: environments-overview.md
     - name: Regions overview
       href: regions-overview.md
