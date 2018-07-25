@@ -20,9 +20,11 @@ data schemas published by Microsoft that are designed to make it easier for you 
 build, use, and analyze data. This collection of predefined schemas—consisting
 of *entities*, *attributes*, *semantic metadata* and *relationships*—represent
 commonly used concepts and activities, such as Account and Campaign, to simplify
-the creation, aggregation, and analysis of data.
+the creation, aggregation, and analysis of data. More information: [CDM repo on GitHub](https://aka.ms/cdmrepo)
 
 ![Common Data Model](media/cdm-entities.png)
+
+More information: [CDM poster](https://aka.ms/cdmposter)
 
 ## Why use the Common Data Model?
 
@@ -109,7 +111,4 @@ organizations use the CDM:
 
 ## Next step
 
-[Development using the Common Data Model](development-common-data-model.md): Describes the CDM in more depth, discusses use
-cases for creating new data in the CDM or transforming your existing data into CDM,
-and also discusses programming interfaces and capabilities.
-
+[How to use the Common Data Model](use-common-data-model.md): Describes the CDM in detail, and provides information about how you can use the Common Data Model.

@@ -666,5 +666,5 @@
 - name: Common Data Model
   href: ../common-data-model/overview.md
   items:
-  - name: Development using the Common Data Model
-    href: ../common-data-model/development-common-data-model.md
+  - name: How to use the Common Data Model
+    href: ../common-data-model/use-common-data-model.md
