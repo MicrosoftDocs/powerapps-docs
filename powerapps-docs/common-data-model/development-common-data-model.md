@@ -1,5 +1,5 @@
 ---
-title: What is the Common Data Model (CDM) | Microsoft Docs
+title: Development using the Common Data Model | Microsoft Docs
 description: "Common Data Model is a standardized, modular, extensible collection of data schemas published by Microsoft that are designed to make it easier for you build, use, and analyze data.
 author: RobertBruckner
 ms.service: powerapps

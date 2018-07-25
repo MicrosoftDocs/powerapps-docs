@@ -13,8 +13,7 @@ ms.author: robruc
 If you’ve ever run into challenges with data that’s *nearly* the same or
 *should* work together – then spent significant effort transforming fields and
 tables to work with your other data – you know that common data elements can
-save effort, streamline future development, and enable faster analytics. Those
-capabilities and more are what the Common Data Model can provide.
+save effort, streamline future development, and enable faster analytics. These capabilities and more are what the Common Data Model (CDM) can provide.
 
 The **Common Data Model (CDM)** is a standardized, modular, extensible collection of
 data schemas published by Microsoft that are designed to make it easier for you to
