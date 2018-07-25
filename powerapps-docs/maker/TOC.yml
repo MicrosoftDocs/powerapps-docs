@@ -781,6 +781,7 @@
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: Work with entities
+    href: ./common-data-service/entity-overview.md
     items:
     - name: "Quickstart: Create an entity"
       href: ./common-data-service/data-platform-create-entity.md
