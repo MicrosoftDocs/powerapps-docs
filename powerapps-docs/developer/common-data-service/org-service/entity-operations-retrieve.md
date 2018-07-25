@@ -28,16 +28,16 @@ If you need to return related entity records you can include a query with your r
 
 ## Basic Retrieve
 
-You can retrieve individual records using either the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve> method or by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> class to a reference record and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+You can retrieve individual records using either the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method or by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property of the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> class to a reference record and use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
-This example shows using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve> method.
+This example shows using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method.
 
 ```csharp
 Entity entity = svc.Retrieve("account", accountid, new ColumnSet("name"));
 Console.WriteLine("account name: {0}", entity["name"]);
 ```
 
-This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleResponse> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
+This example shows using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
 
 ```csharp
 RetrieveRequest request = new RetrieveRequest()
@@ -51,18 +51,19 @@ Console.WriteLine("account name: {0}", entity["name"]);
 ```
 
 > [!NOTE]
-> Most of the time you should use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve> method.
+> Most of the time you should use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method.
 >
-> Use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method for special circumstances as described below. More information: 
+> Use <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method for special circumstances as described below. 
+> More information: 
 > - [Retrieve with related records](#retrieve-with-related-records)
 > - [Retrieve with an alternate key](#retrieve-with-an-alternate-key)
 
 
 ## Retrieve with related records
 
-When you retrieve an individual record you can also include a query to include related records by setting the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.RelatedEntitiesQuery> property of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest>.
+When you retrieve an individual record you can also include a query to include related records by setting the  <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property of the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.
 
-You can define a query using any of the classes derived from <xref:Microsoft.Xrm.Sdk.Query.QueryBase> and associate it with a specific entity relationship. Add a collection of pairs of queries and relationships to the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.RelatedEntitiesQuery> property using a <xref:Microsoft.Xrm.Sdk.RelationshipQueryCollection>.
+You can define a query using any of the classes derived from <xref:Microsoft.Xrm.Sdk.Query.QueryBase> and associate it with a specific entity relationship. Add a collection of pairs of queries and relationships to the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> property using a <xref:Microsoft.Xrm.Sdk.RelationshipQueryCollection>.
 
 The following example includes  `task` and `contact` records related to the `account` entity record that is being retrieved.
 
@@ -122,7 +123,7 @@ More information: [Query data using the Organization service](entity-operations-
 
 ## Retrieve with an alternate key
 
-If you have configured an entity to use an alternate key, you can use this alternate key to define an <xref:Microsoft.Xrm.Sdk.EntityReference> and pass this value as the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest.Target> property.
+If you have configured an entity to use an alternate key, you can use this alternate key to define an <xref:Microsoft.Xrm.Sdk.EntityReference> and pass this value as the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.Target> property.
 
 For example, if you define the `account` `accountnumber` attribute to be an alternate key, you can retrieve an account using the value of that attribute.
 
@@ -156,6 +157,9 @@ Entity entity = response.Entity;
 
 Console.WriteLine(entity["name"]);
 ```
+> [!NOTE]
+> Alternate keys are usually used only for data integration scenarios
+
 
 ## Access Formatted values
 
