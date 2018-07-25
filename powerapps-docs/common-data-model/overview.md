@@ -77,11 +77,11 @@ The CDM is used by a variety of customers, partners and products
 all with the same goal of unifying data in well-known form with semantic
 meaning.
 
--   **Application Makers/Developers –** whether these users leverage code-based
+-   **Application Makers/Developers**: Whether these users leverage code-based
     platforms or a low-code/no-code platform like PowerApps, they need to store
     and manage data for their applications.
 
--   **Data Integrators –** these users are responsible for bringing data from a
+-   **Data Integrators**: These users are responsible for bringing data from a
     variety of systems to make it accessible for Applications to use.
 
 Historically, the work to build an application has been tightly tied with data
