@@ -824,6 +824,7 @@
       - name: How to work with virtual entity
         href: ./common-data-service/virtual-entity-walkthrough-using-odata-provider.md
   - name: Work with relationships
+    href: ./commont-data-service/relationships-overview.md
     items: 
     - name: "Quickstart: Create a relationship"
       href: ./common-data-service/data-platform-entity-lookup.md
