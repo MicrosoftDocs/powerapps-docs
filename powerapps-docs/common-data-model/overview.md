@@ -96,8 +96,8 @@ applications and offerings, and are building additional services and offering
 based on Common Data Model schemas. The following examples show how
 organizations use the Common Data Model:
 
--   The Common Data Service for Applications, which supports Dynamics and
-    PowerApps, stores data in conformances with the CDM definition. In fact,
+-   Common Data Service (CDS) for Apps, which supports Dynamics and
+    PowerApps, stores data in conformances with the Common Data Model definition. In fact,
     many of the original business entities including in the CDM came from
     Dynamics offerings such as Dynamics 365 for Sales and Dynamics 365 for
     Marketing.
@@ -110,13 +110,7 @@ organizations use the Common Data Model:
 
 ## Next step
 
-
-The following articles describe the Common Data Model in more depth, discuss use
-cases for creating new data in CDM or transforming your existing data into CDM,
-and also discuss programming interfaces and capabilities.
-
-Read the following articles for more information about the **Common Data Model
-(CDM)**:
-
--   How to use the Common Data Model (CDM)
+[Development using the Common Data Model](development-common-data-model.md): Describes the Common Data Model in more depth, discusses use
+cases for creating new data in the Common Data Model or transforming your existing data into Common Data Model,
+and also discusses programming interfaces and capabilities.
 

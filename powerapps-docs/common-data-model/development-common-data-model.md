@@ -27,7 +27,7 @@ expand upon the use and insights of your data.
 
 A corresponding service called **Common Data Service (CDS) for Apps** stores
 data that conforms to and is based on data that is in the Common Data Model. CDS for Apps
-enables you to leverage and act upon your CDM-conforming data with prepackaged
+enables you to leverage and act upon your Common Data Model-conforming data with prepackaged
 Microsoft solutions, apps, and your own custom solutions.
 
 The following image shows how applications build on the Common Data Model and the CDS
