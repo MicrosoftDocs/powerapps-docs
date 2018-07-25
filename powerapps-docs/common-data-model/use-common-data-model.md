@@ -90,14 +90,10 @@ to:
     solutions](https://docs.microsoft.com/powerapps/developer/common-data-service/introduction-solutions)
     for more information.
 
-## Next steps
-
 Whatever your intent, the CDM puts your data into a
-common format so you can use, share, and analyze it more easily. The next step
-is seeing how CDM can be used in your organization, whether from existing
-Microsoft solutions, or your own development efforts.
+common format so you can use, share, and analyze it more easily.
 
-**CDS for Apps**
+**Resources for CDS for Apps**
 
 -   [What is CDS for
     Apps?](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro)

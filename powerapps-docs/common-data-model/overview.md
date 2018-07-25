@@ -42,8 +42,7 @@ Imagine you have three business applications – a materials app, a manufacturin
 app, and a sales app. Often each of the applications would be created
 independently, with different structures representing an entity, such as
 *Account*, that are nearly the same (but not) . With the CDM,
-you could build your data in a standardized format (using the **Common Data
-Model** entities, attributes, and relationships), and then each of those three
+you could build your data in a standardized format (using the CDM entities, attributes, and relationships), and then each of those three
 apps could use the same data as a basis. Of course each app could have its own
 additional data and schemas, based on the functionality of each app. But when it
 comes to development, your applications and reports could pull the common data
@@ -111,4 +110,4 @@ organizations use the CDM:
 
 ## Next step
 
-[How to use the Common Data Model](use-common-data-model.md): Describes the CDM in detail, and provides information about how you can use the Common Data Model.
+[How to use the Common Data Model](use-common-data-model.md): Describes the CDM in details, and discusses use cases for creating new data in CDM or transforming your existing data into CDM.
