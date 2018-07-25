@@ -26,20 +26,20 @@ the creation, aggregation, and analysis of data.
 
 ## Why use the Common Data Model?
 
-The Common Data Model simplifies data management and application development
+The CDM simplifies data management and application development
 by unifying data into a known form, and by applying structural and semantic
 consistency across multiple applications and deployments. In other words, once
-your data is in the Common Data Model, you can use it in many different
+your data is in the CDM, you can use it in many different
 applications, streamline the creation or use of other applications to make use
 of that existing data, and easily build reports for each of them (or all of
 them). In addition, data integrators who bring data from a variety of systems
-can focus on landing the data in the Common Data Model, instead of building
+can focus on landing the data in the CDM, instead of building
 a new model for each application.
 
 Imagine you have three business applications – a materials app, a manufacturing
 app, and a sales app. Often each of the applications would be created
 independently, with different structures representing an entity, such as
-*Account*, that are nearly the same (but not) . With the Common Data Model,
+*Account*, that are nearly the same (but not) . With the CDM,
 you could build your data in a standardized format (using the **Common Data
 Model** entities, attributes, and relationships), and then each of those three
 apps could use the same data as a basis. Of course each app could have its own
@@ -48,10 +48,10 @@ comes to development, your applications and reports could pull the common data
 elements quickly, cleanly, and with confidence.
 
 And what about the need to create a fourth app? Your data is ready, in the
-Common Data Model schema, so your development efforts can concentrate on
+CDM schema, so your development efforts can concentrate on
 business logic, not data quagmires and sticky transformations.
 
-In other words, the Common Data Model offers the following for your data:
+In other words, the CDM offers the following for your data:
 
 -   **Structural and semantic consistency** across applications and deployments.
 
@@ -66,14 +66,14 @@ In other words, the Common Data Model offers the following for your data:
 -   **Ability to extend the schema and CDM entities** to tailor the Common Data
     Model to your organization.
 
-You can use the Common Data Model to create new data repositories that
+You can use the CDM to create new data repositories that
 match the schema, and you can also transform your existing data into the Common
 Data Model schema. Either way, the efficiency you get from standardization can
 expedite and streamline whatever you do next with your data.
 
 ## Who uses the Common Data Model?
 
-The Common Data Model is used by a variety of customers, partners and products
+The CDM is used by a variety of customers, partners and products
 all with the same goal of unifying data in well-known form with semantic
 meaning.
 
@@ -85,31 +85,31 @@ meaning.
     variety of systems to make it accessible for Applications to use.
 
 Historically, the work to build an application has been tightly tied with data
-integration, but with the **Common Data Model** and the platforms that support
+integration, but with the CDM and the platforms that support
 it, the two can happen independently.
 
-## Common Data Model in Action
+## Common Data Model in action
 
-Microsoft and its partners use the Common Data Model for their own
+Microsoft and its partners use the CDM for their own
 applications and offerings, and are building additional services and offering
-based on Common Data Model schemas. The following examples show how
-organizations use the Common Data Model:
+based on CDM schemas. The following examples show how
+organizations use the CDM:
 
 -   Common Data Service (CDS) for Apps, which supports Dynamics and
-    PowerApps, stores data in conformances with the Common Data Model definition. In fact,
+    PowerApps, stores data in conformances with the CDM definition. In fact,
     many of the original business entities including in the CDM came from
     Dynamics offerings such as Dynamics 365 for Sales and Dynamics 365 for
     Marketing.
 
 -   **Industry verticals** such as Healthcare are working closely with Microsoft
-    to extend the Common Data Model to their specific business
+    to extend the CDM to their specific business
     concepts, such as *Patient* and *Care Plan*, so they can share data and
     build services so partners can easily exchange data, create interoperable
     apps and services, and create quick analytics that are easy to share.
 
 ## Next step
 
-[Development using the Common Data Model](development-common-data-model.md): Describes the Common Data Model in more depth, discusses use
-cases for creating new data in the Common Data Model or transforming your existing data into Common Data Model,
+[Development using the Common Data Model](development-common-data-model.md): Describes the CDM in more depth, discusses use
+cases for creating new data in the CDM or transforming your existing data into CDM,
 and also discusses programming interfaces and capabilities.
 
