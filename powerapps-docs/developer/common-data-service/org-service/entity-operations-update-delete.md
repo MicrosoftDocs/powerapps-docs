@@ -32,6 +32,9 @@ Each of the examples uses a `svc` variable that represents an instance of a clas
 >
 > You should create a new entity instance, set the id attribute and any attribute values you are changing, and use that entity instance to update the record.
 
+> [!NOTE]
+> The metadata for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#attribute-requirement-level)
+
 ## Basic update
 
 Both of the examples below uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method to set attribute values for an entity that was previously retrieved.
@@ -372,5 +375,4 @@ There are several deprecated specialized messages that perform update operations
 [Create entities using the Organization Service](entity-operations-create.md)<br />
 [Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
 [Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
-[Perform Conditional operations using the Organization Service](entity-operations-conditional-operations.md)<br />
 

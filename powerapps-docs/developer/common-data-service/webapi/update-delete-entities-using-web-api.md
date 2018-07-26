@@ -33,6 +33,9 @@ Update operations use the HTTP `PATCH` verb. Pass a JSON object containing the p
   
 > [!IMPORTANT]
 >  When updating an entity, only include the properties you are changing in the request body. Simply updating the properties of an entity that you previously retrieved, and including that JSON in your request, will update each property even though the value is the same. This can cause system events that can trigger business logic that expects that the values have changed. This can cause properties to appear to have been updated in auditing data when in fact they haven’t actually changed.
+
+> [!NOTE] 
+> The metadata for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#attribute-requirement-level)
   
  **Request**
 

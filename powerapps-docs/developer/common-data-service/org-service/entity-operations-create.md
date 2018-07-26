@@ -345,5 +345,4 @@ More information: [Use Upsert](entity-operations-update-delete.md#use-upsert)
 [Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
 [Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
 [Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
-[Perform Conditional operations using the Organization Service](entity-operations-conditional-operations.md)<br />
 

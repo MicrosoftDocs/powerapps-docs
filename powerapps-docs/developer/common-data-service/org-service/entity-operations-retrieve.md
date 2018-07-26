@@ -170,4 +170,3 @@ The method to access formatted values on a retrieve operation is the same you wi
 [Create entities using the Organization Service](entity-operations-create.md)<br />
 [Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
 [Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
-[Perform Conditional operations using the Organization Service](entity-operations-conditional-operations.md)<br />

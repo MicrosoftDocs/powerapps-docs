@@ -139,4 +139,3 @@ svc.Execute(request);
 [Create entities using the Organization Service](entity-operations-create.md)<br />
 [Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
 [Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
-[Perform Conditional operations using the Organization Service](entity-operations-conditional-operations.md)<br />
