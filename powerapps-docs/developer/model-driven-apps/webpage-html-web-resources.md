@@ -26,7 +26,7 @@ Because an HTML web resource is just streamed to the user's browser, it can incl
 
 ## Limitations of HTML web resources  
 
-- An HTML web resource can’t contain any code that must be executed on the server. Pages can’t be uploaded as HTML web resources.
+- An HTML web resource can’t contain any code that must be executed on the server. ASP.NET pages can’t be uploaded as HTML web resources.
 
 - HTML web resources can only accept a limited number of query string parameters. [Pass parameters to HTML web resources](webpage-html-web-resources.md#BKMK_PassingParametersToWebResources)  
 
@@ -108,7 +108,7 @@ Because of the capability for the HTML in web resources to be changed by using t
 >  - An HTML web resource added to a form can’t use global objects defined by the JavaScript library loaded in the form. An HTML web resource may interact with the `Xrm.Page` or `Xrm.Utility` objects within the form by using `parent.Xrm.Page` or `parent.Xrm.Utility`, but global objects defined by form scripts won’t be accessible using the parent. You should load any libraries that an HTML web resource needs within the HTML web resource so they’re not dependent on scripts loaded in the form.  
 > - References included in code between web resources aren’t tracked as solution dependencies.  
 
- Because web resources are also downloaded for users of [pn_crm_outlook_offline_access](../includes/pn-crm-outlook-offline-access.md), users will have access to web resource content while they’re working offline.  
+ Because web resources are also downloaded for users of Common Data Services for Apps for Microsoft Office Outlook with Offline Access, users will have access to web resource content while they’re working offline.  
 
 <a name="BKMK_PassingParametersToWebResources"></a>
 
@@ -127,9 +127,9 @@ Because of the capability for the HTML in web resources to be changed by using t
 |data|Optional Data Parameter|An optional value that may be passed.|
 |formid|Form Id|The GUID that represents a form ID.|
 |entrypoint|Entry Point|A string value. This parameter is intended to be passed as an optional value to web resources opened as custom help content for an entity. When enabled, the custom help URL will include a value of either “form” or “hierarchychart”.|
-|pagemode||[!INCLUDE[internal](../includes/internal.md)]|
-|security||[!INCLUDE[internal](../includes/internal.md)]|
-|tabSet||[!INCLUDE[internal](../includes/internal.md)]|
+|pagemode||[internal](../includes/internal.md)|
+|security||[internal](../includes/internal.md)|
+|tabSet||[internal](../includes/internal.md)|
 
  To pass more than one value in the data parameter, you must encode parameters in the value of the data parameter and then include logic to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
 
