@@ -785,6 +785,7 @@
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: Work with entities
+    href: ./common-data-service/entity-overview.md
     items:
     - name: "Quickstart: Create an entity"
       href: ./common-data-service/data-platform-create-entity.md
@@ -829,6 +830,7 @@
       - name: How to work with virtual entity
         href: ./common-data-service/virtual-entity-walkthrough-using-odata-provider.md
   - name: Work with relationships
+    href: ./common-data-service/relationships-overview.md
     items: 
     - name: "Quickstart: Create a relationship"
       href: ./common-data-service/data-platform-entity-lookup.md
@@ -863,6 +865,7 @@
       - name: How to configure connection roles
         href: ./common-data-service/configure-connection-roles.md
   - name: Work with fields
+    href: ./common-data-service/fields-overview.md
     items: 
     - name: Types of fields
       href: ./common-data-service/types-of-fields.md       
@@ -887,6 +890,7 @@
       - name: How to delete fields
         href: ./common-data-service/delete-fields.md
   - name: Apply business logic
+    href: ./common-data-service/processes-overview.md
     items: 
     - name: Create a mobile task flow
       href: ./common-data-service/create-mobile-task-flow.md  
@@ -897,6 +901,7 @@
     - name: Monitor and manage workflow processes
       href: ./common-data-service/monitor-manage-processes.md
   - name: Work with solutions
+    href: ./common-data-service/solutions-overview.md
     items:  
     - name: Import, update, and export solutions
       href: ./common-data-service/import-update-export-solutions.md 

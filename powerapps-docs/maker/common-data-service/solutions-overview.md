@@ -148,6 +148,6 @@ More information: [Whitepaper: Patterns and Principles for Solution Builders](ht
   
   
 ## Next steps  
- [Getting started with customization](../model-driven-apps/getting-started-customization.md) </br>  
- [Privileges you need for customization](../model-driven-apps/privileges-required-customization.md)   
+[Import, update, and export solutions](import-update-export-solutions.md) <br/>
+[Navigate to a specific solution](navigate-specific-solution.md)
  
