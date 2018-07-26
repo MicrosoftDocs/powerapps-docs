@@ -18,6 +18,11 @@ manager: "kvivek"
 ---
 # Administer PowerApps
 
-Implementers and administrators for PowerApps, CDS for Apps, and Flow will find the resources and topics provided in this guide to help you manage PowerApps environments and processes.
+![overview](./media/introduction-to-the-admin-center/overview.png)  
 
+In the [PowerApps Admin center](https://admin.powerapps.com), you can:
 
+* Manage users, permissions and roles in [environments](environments-administration.md). <!-- (PowerApps P2 plan required)-->
+* Manage [data loss prevention policies](prevent-data-loss.md), which control how business data is shared with services in PowerApps. <!--(PowerApps P2 plan or Office 365 Global administrator permissions required)-->
+
+Any changes that you make in the admin center are immediately available to users within the organization.     

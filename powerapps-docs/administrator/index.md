@@ -1,3 +1,3 @@
 ---
-redirect_url: /powerapps/administrator/admin-guide-pa
+redirect_url: /powerapps/administrator/admin-guide
 ---
