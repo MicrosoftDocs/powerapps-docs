@@ -287,7 +287,7 @@ AttributeProperties.PropertyNames.Add("AttributeType");
   
 ### Retrieve labels
   
- Finally, the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that lets you specify one or more integer `LCID` values for to determine which localized labels to return. [!INCLUDE[LCID](../includes/lcid.md)] If an organization has many language packs installed the labels for all languages will be returned unless you specify a <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery>.  
+ Finally, the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that lets you specify one or more integer `LCID` values for to determine which localized labels to return. Valid locale ID values can be found at [Locale ID (LCID) Chart](http://go.microsoft.com/fwlink/?LinkId=122128). If an organization has many language packs installed the labels for all languages will be returned unless you specify a <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery>.  
   
  The following example defines a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that will limit labels to only those representing the users preferred language.  
   
