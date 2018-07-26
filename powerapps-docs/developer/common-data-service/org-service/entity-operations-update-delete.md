@@ -350,7 +350,7 @@ catch (FaultException<OrganizationServiceFault> ex)
 
 More information: 
 - [Optimistic Concurrency](../optimistic-concurrency.md)
-- <xref href="Microsoft.Xrm.Sdk.ConcurrencyBehavior?text=ConcurrencyBehavior Enum" />
+- <xref href="Microsoft.Xrm.Sdk.ConcurrencyBehavior?text=ConcurrencyBehavior Enum"  />
 
 ## Legacy update messages
 
