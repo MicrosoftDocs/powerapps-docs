@@ -127,9 +127,9 @@ Because of the capability for the HTML in web resources to be changed by using t
 |data|Optional Data Parameter|An optional value that may be passed.|
 |formid|Form Id|The GUID that represents a form ID.|
 |entrypoint|Entry Point|A string value. This parameter is intended to be passed as an optional value to web resources opened as custom help content for an entity. When enabled, the custom help URL will include a value of either “form” or “hierarchychart”.|
-|pagemode||[internal](../includes/internal.md)|
-|security||[internal](../includes/internal.md)|
-|tabSet||[internal](../includes/internal.md)|
+|pagemode||For internal use only.|
+|security||For internal use only.|
+|tabSet||For internal use only.|
 
  To pass more than one value in the data parameter, you must encode parameters in the value of the data parameter and then include logic to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
 
