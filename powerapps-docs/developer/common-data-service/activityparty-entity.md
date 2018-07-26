@@ -15,8 +15,10 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 An activity party represents a person or group associated with an activity. An activity can have multiple activity parties.  
   
 <a name="ActivityPartyTypes"></a>   
+
 ## Activity Party Types  
- There are 11 activity party types in [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)]. The activity party type is stored as an integer value in the `ActivityParty.ParticipationTypeMask` attribute. The following table lists the different activity party types, the corresponding integer value for the `ActivityParty.ParticipationTypeMask` attribute, and the description.  
+
+ There are 11 activity party types in Common Data Service for Apps. The activity party type is stored as an integer value in the `ActivityParty.ParticipationTypeMask` attribute. The following table lists the different activity party types, the corresponding integer value for the `ActivityParty.ParticipationTypeMask` attribute, and the description.  
   
 |Activity party type|Value|Description|  
 |-------------------------|-----------|-----------------|  
@@ -34,7 +36,7 @@ An activity party represents a person or group associated with an activity. An a
   
 <a name="SupportedActivityPartyTypes"></a>   
 ## Activity Party Types available for each activity  
- Not all activity party types are available for each activity in [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)], except for a custom activity. A custom activity supports all activity party types. You can associate an activity party type for an activity by using the respective attribute of an activity. For example, to associate an `Organizer` activity party type with an appointment activity, you must specify a value or an array of values of the `ActivityParty` type in the `Appointment.Organizer` attribute.  
+ Not all activity party types are available for each activity in CDS for Apps, except for a custom activity. A custom activity supports all activity party types. You can associate an activity party type for an activity by using the respective attribute of an activity. For example, to associate an `Organizer` activity party type with an appointment activity, you must specify a value or an array of values of the `ActivityParty` type in the `Appointment.Organizer` attribute.  
   
  To control which email address should be used for sending emails to the activity party, or for replying to emails from the activity party, set the `ActivityParty.AddressUsed` attribute.  
   

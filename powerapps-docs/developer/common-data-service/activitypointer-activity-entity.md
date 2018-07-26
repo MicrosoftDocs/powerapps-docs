@@ -14,15 +14,13 @@ manager: "ryjones"
 
 The activity pointer (activity) entity represents any activity or task that is performed, or to be performed by a user. An activity is any action for which an entry can be made on a calendar.  
   
- Whenever you create an activity record in [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)], a corresponding activity pointer record is created. This indicates that the activity record and the corresponding activity pointer record have the same value for the `ActivityId` attribute. For example, if you create an `Email` record, the attribute values of `Email.ActivityId` and the corresponding `ActivityPointer.ActivityId` will be the same.  
+ Whenever you create an activity record in Common Data Service for Apps, a corresponding activity pointer record is created. This indicates that the activity record and the corresponding activity pointer record have the same value for the `ActivityId` attribute. For example, if you create an `Email` record, the attribute values of `Email.ActivityId` and the corresponding `ActivityPointer.ActivityId` will be the same.  
   
  The `ActivityPointer.ActivityTypeCode` attribute defines the type of the activity. The possible values for this attribute are defined in `activitypointer_activitytypecode` global option set.  
   
 <a name="bkmk_sortdate"></a>   
+
 ## Control how activities are sorted by date  
-  
-> [!NOTE]
->  This capability was introduced with [!INCLUDE[pn_crm_8_2_0_both](../includes/pn-crm-8-2-0-both.md)].  
   
  Whenever you display a list of activity entities and order them by date, you can only use the common date  attributes defined in the activitypointer entity. However, sometimes you want different sorting behaviors depending on the type of activity. For example, with the email entity you might want to sort by the senton attribute value  rather than the modifiedon attribute value.  
   
