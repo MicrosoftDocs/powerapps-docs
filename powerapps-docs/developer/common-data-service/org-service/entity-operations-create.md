@@ -42,7 +42,7 @@ var account = new Entity("account");
 
 // set attribute values
     // string primary name
-    account["name"] = "Contoso";            
+    account["name"] = "Contoso";
     // Boolean (Two option)
     account["creditonhold"] = false;
     // DateTime
@@ -56,7 +56,7 @@ var account = new Entity("account");
     account["revenue"] = new Money(new decimal(5000000.00));
     // Picklist (Option set)
     account["accountcategorycode"] = new OptionSetValue(1); //Preferred customer
-                
+
 //Create the account
 Guid accountid = svc.Create(account);
 ```
@@ -283,7 +283,7 @@ catch (FaultException<OrganizationServiceFault> ex)
         case -2147220685:
             throw new InvalidOperationException(ex.Detail.Message);
         default:
-            throw ex;                         
+            throw ex;
     }
 }
 ```
