@@ -751,8 +751,8 @@
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
     href: ./model-driven-apps/share-model-driven-app.md
-  - Distribute an app
-    href: ./model-driven-apps/distribute-model-driven-app.md"
+  - name: Distribute an app
+    href: ./model-driven-apps/distribute-model-driven-app.md
   - name: Manage an app
     items:
     - name: Manage app properties
