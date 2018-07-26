@@ -751,14 +751,16 @@
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
     href: ./model-driven-apps/share-model-driven-app.md
+  - Distribute an app
+    href: ./model-driven-apps/distribute-model-driven-app.md"
   - name: Manage an app
     items:
-    - name: Export, import, or remove an app
-      href: ./model-driven-apps/export-import-remove-app.md
     - name: Manage app properties
       href: ./model-driven-apps/manage-app-properties.md  
     - name: Specify properties for Unified Interface apps
       href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
+    - name: Delete an app
+      href: ./model-driven-apps/delete-model-driven-app.md
   - name: Advanced app making and customization
     href: ./model-driven-apps/advanced-navigation.md
     items:
