@@ -599,7 +599,7 @@
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to PowerApps
       href: ./canvas-apps/transform-infopath.md
-  - name: For enterprise developers, partners, and ISVs
+  - name: For developers
     href: ./canvas-apps/dev-enterprise-intro.md
     items:
     - name: Build and certify custom connectors

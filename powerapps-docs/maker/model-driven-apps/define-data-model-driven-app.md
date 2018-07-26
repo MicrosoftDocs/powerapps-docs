@@ -22,17 +22,16 @@ applies_to:
 
 Data for your model-driven app is defined in [Common Data Service (CDS) for Apps](../common-data-service/data-platform-intro.md). 
 
-You define your app data using the following components in PowerApps: *entity*, *field*, *relationship*, and *option set field*. More information about these data components in a model-drven app: [Data in your app](model-driven-app-components.md#data)
+You define your app data using the following components: *entity*, *field*, and *relationship*.
 
 For detailed information about working with these components in CDS for Apps to define data for your model-driven app, see the following topics under CDS for Apps section:
 
 |Component |Topic|
 |-----|----|
-|Entity| TODO: Add link|
-|Field| TODO: Add link|
-|Relationships| TODO: Add link|
-|Option set field| TODO: Add link|
+|Entity| [Work with entities](../common-data-service/entity-overview.md)|
+|Field| [Work with fields](../common-data-service/fields-overview.md)|
+|Relationships| [Work with relationships](../common-data-service/relationships-overview.md)|
 
 ## Next step
 
-**Define UI for your model-driven app** (TODO: Add link)
+[Use app designer to build an app](design-custom-business-apps-using-app-designer.md)
