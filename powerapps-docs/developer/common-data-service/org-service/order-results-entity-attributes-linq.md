@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Order results using entity attributes with LINQ (Common Data Service for Apps) | Microsoft Docs" 
+description: "Read how you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query"
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -12,4 +12,57 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Order results using entity attributes with LINQ
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/order-results-entity-attributes-linq -->
+In Common Data Service for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
+  
+## Using a Lookup Value to Order By  
+
+The following sample shows use the lookup attribute `PrimaryContactId` in an `Order By` clause.  
+  
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+ var query_orderbylookup = from a in svcContext.AccountSet
+                           where a.Address1_Name == "Contoso Pharmaceuticals"
+                           orderby a.PrimaryContactId
+                           select new
+                           {
+                            a.Name,
+                            a.Address1_City
+                           };
+ foreach (var a in query_orderbylookup)
+ {
+  System.Console.WriteLine(a.Name + " " + a.Address1_City);
+ }
+}
+
+```
+  
+## Using a Picklist to Order By  
+
+The following sample shows use of a lookup value to order by.  
+  
+```csharp
+
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+ var query_orderbypicklist = from c in svcContext.ContactSet
+                             where c.LastName != "Parker" &&
+                             c.AccountRoleCode != null
+                             orderby c.AccountRoleCode, c.FirstName
+                             select new
+                             {
+                              AccountRole = c.FormattedValues["accountrolecode"],
+                              c.FirstName,
+                              c.LastName
+                             };
+ foreach (var c in query_orderbypicklist)
+ {
+  System.Console.WriteLine(c.AccountRole + " " +
+   c.FirstName + " " + c.LastName);
+ }
+}
+```
+  
+### See also  
+ [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md)   
+ [Page large result sets with LINQ](page-large-result-sets-linq.md)
