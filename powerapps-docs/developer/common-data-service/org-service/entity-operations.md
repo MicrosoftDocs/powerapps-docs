@@ -115,7 +115,7 @@ Many message properties require only an <xref:Microsoft.Xrm.Sdk.EntityReference>
 
 ## Convert to an entity class
 
-If you are using the early bound style, you will need to convert the <xref:Microsoft.Xrm.Sdk.Entity> instance to the type of generated entity class you are using. This can usually be done with a cast, but you can also use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.ToEntity> method.
+If you are using the early bound style, you will need to convert the <xref:Microsoft.Xrm.Sdk.Entity> instance to the type of generated entity class you are using. This can usually be done with a cast, but you can also use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.ToEntity``1> method.
 
 ```csharp
 Account account1 = (Account)retrievedEntity;
