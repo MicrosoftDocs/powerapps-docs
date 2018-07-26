@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Entity Operations using the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the Entity class used for data operations using the CDS for Apps organization service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -34,8 +34,8 @@ While you can get or set the primary key value using the primary key attribute, 
 
 ## Entity.Attributes
 
-The data contained within an entity is in the <xref:Microsoft.Xrm.Sdk.Entity.Attributes> property. This property is an <xref: Microsoft.Xrm.Sdk.AttributeCollection> that provides a whole set of methods to add new attributes, check whether an attribute exists, or remove attributes.
-There are three different ways to interact with entity attributes: use the indexer on the entity, use the indexer on the `Attributes` collection, use the entity methods provided.
+The data contained within an entity is in the <xref:Microsoft.Xrm.Sdk.Entity.Attributes> property. This property is an <xref:Microsoft.Xrm.Sdk.AttributeCollection> that provides a whole set of methods to add new attributes, check whether an attribute exists, or remove attributes.
+There are four different ways to interact with entity attributes: use the indexer on the entity, use the indexer on the `Attributes` collection, use the entity methods provided, or use the generated attribute properties if you are using the early bound style.
 
 ### Use the indexer on the entity
 
@@ -44,13 +44,6 @@ In most cases using the late-bound style, you can interact with collection by us
 ```csharp
 var account = new Entity("account");
 account["name"] = "Account Name"
-```
-
-If you are using the early bound style, the generated class provides properties using the `SchemaName` for the attributes available for the entity, so you don't need to use the indexer. For example
-
-```csharp
-var account = new Account();
-account.Name = "Account Name"
 ```
 
 ### Use the indexer on the Attributes collection
@@ -77,12 +70,22 @@ account.SetAttributeValue("name", "Account Name");
 var accountName = account.GetAttributeValue<string>("name");
 ```
 
+### Use the generated attribute property
+
+If you are using the early bound style, the generated class provides properties using the `SchemaName` for the attributes available for the entity, so you don't need to use the indexer. For example
+
+```csharp
+var account = new Account();
+account.Name = "Account Name"
+```
+
 ## Entity.FormattedValues
 
 Any entity attribute value that can be displayed in the UI and is not a string will have a string formatted value that can be used to display the value in the UI. For example:
- - Money values will have a string value with the appropriate currency and precision formatting.
- - Date values will have the formatting set depending on how the system is configured
- - OptionSet values will display the localized label that represents the integer value
+
+- Money values will have a string value with the appropriate currency and precision formatting.
+- Date values will have the formatting set depending on how the system is configured
+- OptionSet values will display the localized label that represents the integer value
 
 > [!NOTE]
 > Formatted values only apply to entities that have been retrieved. Once you set the value, a new formatted value is not calculated until you save the entity and retrieve the entity again. The formatted value is generated on the server.
@@ -99,6 +102,8 @@ var formattedRevenueString2 = account.GetFormattedAttributeValue("revenue");
 More information: [Access Formatted values](entity-operations-retrieve.md#access-formatted-values)
 
 ## Entity.RelatedEntities 
+
+When you create an entity you can also define a set of related entity records to create in the same operation. More information: [Create related entities in one operation](entity-operations-create.md#create-related-entities-in-one-operation)
 
 When you retrieve an entity you can compose use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> to by setting the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest.RelatedEntitiesQuery> with a query to include related entities in the results. More information: [Retrieve with related records](entity-operations-retrieve.md#retrieve-with-related-records)
 
