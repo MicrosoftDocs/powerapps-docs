@@ -895,6 +895,7 @@
     - name: Monitor and manage workflow processes
       href: ./common-data-service/monitor-manage-processes.md
   - name: Work with solutions
+    href: ../common-data-service/solutions-overview.md
     items:  
     - name: Import, update, and export solutions
       href: ./common-data-service/import-update-export-solutions.md 
