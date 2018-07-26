@@ -23,7 +23,7 @@ Relationships using an many-to-many relationship also depend on lookup attribute
 The main value in using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*> method or the <xref:Microsoft.Xrm.Sdk.Messages.AssociateRequest> with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method is that you can:
 
 - Associate multiple records in one operation
-- Easily associate records using a Many-to-many relationship
+- Easily associate records using a Many-to-many relationship without concerning yourself with the intersect entity.
 
 To associate entity records with these APIs you need three things:
 
