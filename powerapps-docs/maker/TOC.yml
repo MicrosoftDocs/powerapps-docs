@@ -859,6 +859,7 @@
       - name: How to configure connection roles
         href: ./common-data-service/configure-connection-roles.md
   - name: Work with fields
+    href: ./common-data-service/fields-overview.md
     items: 
     - name: Types of fields
       href: ./common-data-service/types-of-fields.md       
@@ -883,6 +884,7 @@
       - name: How to delete fields
         href: ./common-data-service/delete-fields.md
   - name: Apply business logic
+    href: ./common-data-service/processes-overview.md
     items: 
     - name: Create a mobile task flow
       href: ./common-data-service/create-mobile-task-flow.md  
