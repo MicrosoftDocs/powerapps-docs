@@ -28,4 +28,4 @@ The activity pointer (activity) entity represents any activity or task that is p
   
 ### See also  
  [Activity Entities](activity-entities.md)   
- [ActivityPointer Entity](entities/activitypointer.md)
+ [ActivityPointer Entity](reference/entities/activitypointer.md)

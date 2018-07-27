@@ -57,7 +57,7 @@ An activity party represents a person or group associated with an activity. An a
 ### See also  
  [Activity Entities](activity-entities.md)   
  [Task, fax, phone call, and letter activity entities](task-fax-phone-call-letter-activity-entities.md)   
- [ActivityParty Entity](entities/activityparty.md)   
+ [ActivityParty Entity](reference/entities/activityparty.md)   
  [Sample: Book an Appointment](sample-book-appointment.md)
  [Sample: Convert a Fax to a Task](sample-convert-fax-task.md)   
  [Sample: Override Goal Total Count and Close the Goal](sample-override-goal-total-count-close-goal.md)   
