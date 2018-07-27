@@ -64,7 +64,10 @@ Understanding the structure of the messages will help you understand where to fi
 ## Using Custom actions
 
 When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the CrmSvcUtil.exe code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> instance to use them without the generated classes.
-More information: [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md#generate-classes-for-early-bound-programming-using-the-organization-service)
+More information: 
+- [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
+- [Custom Actions](../custom-actions.md)
+- 
 
 ## Passing parameters with a request
 
