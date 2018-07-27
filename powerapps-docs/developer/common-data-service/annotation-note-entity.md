@@ -36,6 +36,6 @@ Using the Web API, set the `HasNotes` property of the <xref:Microsoft.Dynamics.C
  [Sample: Upload, Retrieve, and Download an Attachment](sample-upload-retrieve-download-attachment.md)  
   
 ### See also 
- [Annotation Entity](entities/annotation.md)   
+ [Annotation Entity](reference/entities/annotation.md)   
  [Model Your Business Data](model-business-data.md)   
  [UserQuery (Saved View) Entity](userquery-saved-view-entity.md)
