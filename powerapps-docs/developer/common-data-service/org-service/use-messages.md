@@ -37,7 +37,7 @@ CreateRequest request = new CreateRequest()
 var id2 = ((CreateResponse)svc.Execute(request)).id;
 ```
 
-Using <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+Using <xref:Microsoft.Xrm.Sdk.OrganizationRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
 
 ```csharp
 ParameterCollection parameters = new ParameterCollection();
@@ -53,22 +53,22 @@ OrganizationResponse response = svc.Execute(request);
 var id = (Guid)response.Results["id"];
 ```
 
-As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and system messages are simplified by the `*Request` and `*Response` classes  in the SDK assemblies. Most of the time you will not need to use the underlying <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.Messages.OrganizationResponse> classes except for the following cases.
+As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and system messages are simplified by the `*Request` and `*Response` classes  in the SDK assemblies. Most of the time you will not need to use the underlying <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes except for the following cases.
 
 ## Working with messages in Plug-ins
 
-The data describing an operation in a plug-in will be in the form of a the <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.Messages.OrganizationResponse> classes. In the pre-operation stages it will be a request, in the post-operation stage it will be a response.
+The data describing an operation in a plug-in will be in the form of a the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. In the pre-operation stages it will be a request, in the post-operation stage it will be a response.
 
 Understanding the structure of the messages will help you understand where to find the data you want to check or change within the plug-in.
 
 ## Using Custom actions
 
-When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the CrmSvcUtil.exe code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest> instance to use them without the generated classes.
+When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the CrmSvcUtil.exe code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> instance to use them without the generated classes.
 More information: [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md#generate-classes-for-early-bound-programming-using-the-organization-service)
 
 ## Passing parameters with a request
 
-You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest.Parameters> property that is exposed for all the *Request message classes in the SDK assemblies. There are two optional parameters you can pass with messages
+You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> property that is exposed for all the *Request message classes in the SDK assemblies. There are two optional parameters you can pass with messages
 
 |`Parameter`|Description|Messages|  
 |-----------------|-----------------|--------------|  
