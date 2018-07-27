@@ -18,7 +18,7 @@ To make your experience better when you write code, all the standard system data
 
 The following examples show three different ways to create an account entity record defined this way:
 
-```
+```csharp
 var account = new Account();
 account.Name = "Test account";
 ```
@@ -61,6 +61,8 @@ The data describing an operation in a plug-in will be in the form of a the <xref
 
 Understanding the structure of the messages will help you understand where to find the data you want to check or change within the plug-in.
 
+More information: [Write plug-ins to extend business processes](../plug-ins.md)
+
 ## Using Custom actions
 
 When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the CrmSvcUtil.exe code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> instance to use them without the generated classes.
@@ -88,7 +90,7 @@ req["SuppressDuplicateDetection"] = true;
 CreateResponse response = (CreateResponse)svc.Execute(req);  
 ```  
 
-## See also
+### See also
 
 [Entity Operations using the Organization service](entity-operations.md)<br />
 [Use ExecuteAsync](use-executeAsync.md)<br />
