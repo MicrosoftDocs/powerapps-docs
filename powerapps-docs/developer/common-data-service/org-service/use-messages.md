@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use messages with the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -12,17 +12,86 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use messages with the Organization service
 
+All data operations in the organization service are defined as messages. While the <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides 7 methods to perform data operations (<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*>, and <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> ), each of these methods is a convenience wrapper around the underlying message which is ultimately invoked using the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. The underlying organization service only has the `Execute` method which as a single parameter: an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class. The value returned by the `Execute` method is an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
-<!-- 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-messages-request-response-classes-execute-method 
+To make your experience better when you write code, all the standard system data operations have a pair of `*Request` and `*Response` classes defined in the SDK assemblies. Each of these classes inherit from the respective <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes and provide a more productive experience for you when you write code.
 
-This should provide some examples of using the raw OrganizationRequest/OrganizationResponse
-Key scenario is calling custom actions when you haven't generated classes for them.
+The following examples show three different ways to create an account entity record defined this way:
 
-Much of this information is being pulled out into separate topics, for ExecuteTransaction and ExecuteAsync
+```
+var account = new Account();
+account.Name = "Test account";
+```
 
-This should also point out that messages are what the Event Framework uses.
--->
+Using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>
 
-[When to use the CreateRequest class](entity-operations-create.md#when-to-use-the-createrequest-class)
+```csharp
+var id = svc.Create(account);
+```
+
+Using <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+
+```csharp
+CreateRequest request = new CreateRequest()
+{ Target = account };
+var id2 = ((CreateResponse)svc.Execute(request)).id;
+```
+
+Using <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+
+```csharp
+ParameterCollection parameters = new ParameterCollection();
+parameters.Add("Target", account);
+
+OrganizationRequest request = new OrganizationRequest() {
+RequestName = "Create",
+Parameters = parameters
+};
+
+OrganizationResponse response = svc.Execute(request);
+
+var id = (Guid)response.Results["id"];
+```
+
+As you can see, common data operations have been streamlined using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and system messages are simplified by the `*Request` and `*Response` classes  in the SDK assemblies. Most of the time you will not need to use the underlying <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.Messages.OrganizationResponse> classes except for the following cases.
+
+## Working with messages in Plug-ins
+
+The data describing an operation in a plug-in will be in the form of a the <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.Messages.OrganizationResponse> classes. In the pre-operation stages it will be a request, in the post-operation stage it will be a response.
+
+Understanding the structure of the messages will help you understand where to find the data you want to check or change within the plug-in.
+
+## Using Custom actions
+
+When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the CrmSvcUtil.exe code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest> instance to use them without the generated classes.
+More information: [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md#generate-classes-for-early-bound-programming-using-the-organization-service)
+
+## Passing parameters with a request
+
+You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.Messages.OrganizationRequest.Parameters> property that is exposed for all the *Request message classes in the SDK assemblies. There are two optional parameters you can pass with messages
+
+|`Parameter`|Description|Messages|  
+|-----------------|-----------------|--------------|  
+|`SolutionUniqueName`|A `String` that specifies the unique name of the solution to which the operation applies. More information:  [Dependency tracking for solution components](../dependency-tracking-solution-components.md).|<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> <br /> <xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationTemplateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
+|`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Throw an exception when duplicate record is detected](entity-operations-create.md#throw-an-exception-when-duplicate-record-is-detected) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
+  
+ The following sample shows how to pass an optional parameter:  
+  
+```csharp  
+Account account = new Account();  
+account.Name = "Fabrikam";  
+CreateRequest req = new CreateRequest();  
+req.Target = account;  
+req["SuppressDuplicateDetection"] = true;  
+CreateResponse response = (CreateResponse)svc.Execute(req);  
+```  
+
+## See also
+
+[Entity Operations using the Organization service](entity-operations.md)<br />
+[Use ExecuteAsync](use-executeAsync.md)<br />
+[Use ExecuteTransaction](use-executetransaction.md)<br />
+[Execute multiple requests using the Organization service](execute-multiple-requests.md)
+
+
 
