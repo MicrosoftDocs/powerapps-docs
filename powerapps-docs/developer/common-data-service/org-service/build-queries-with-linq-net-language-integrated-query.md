@@ -35,6 +35,6 @@ You can use .NET Language-Integrated Query (LINQ) to write queries in Common Dat
   
  [Sample: RetrieveMultiple With Condition Operators Using LINQ](sample-retrieve-multiple-with-condition-operators-using-linq.md)  
   
- [Sample: More LINQ Query Examples](../../../../dynamics-365-customer-engagement-pr/ce/developer/sample-more-linq-query-examples.md)  
+ [Sample: More LINQ Query Examples](dynamics365/customer-engagement/developer/sample-more-linq-query-examples.md)  
   
  [Sample: Use LINQ with Late Binding](sample-create-linq-query-late-binding.md)
