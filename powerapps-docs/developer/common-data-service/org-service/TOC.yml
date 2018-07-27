@@ -96,8 +96,6 @@
     items:
     - name: Create extensions for the code generation tool
       href: extend-code-generation-tool.md
-    - name: Use the early bound entity classes in code
-      href: use-early-bound-entity-classes-code.md
   - name: Work with metadata
     href: work-with-metadata.md
     items:
@@ -125,8 +123,6 @@
     items:
     - name: Handle exceptions in your code
       href: handle-exceptions-code.md
-    - name: Troubleshooting tips
-      href: troubleshooting-tips.md
     - name: Web service error codes
       href: web-service-error-codes.md 
 - name: Resources

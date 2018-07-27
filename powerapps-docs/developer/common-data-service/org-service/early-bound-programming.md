@@ -14,6 +14,10 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 When you work with the Organization service assemblies you have two styles you can use: *late-bound* and *early-bound*.
 
+The key difference between early and late binding involves type conversion. While early binding provides compile-time checking of all types so that no implicit casts occur, late binding checks types only when the object is created or an action is performed on the type. The <xref:Microsoft.Xrm.Sdk.Entity> class requires types to be explicitly specified to prevent implicit casts.
+
+Late binding allows you to work with custom entities or attributes that weren't available when your code was compiled.
+
 ## Late-Bound
 
 Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class and you need to refer to entities, and attributes using their `LogicalName` property values: 
@@ -139,5 +143,11 @@ Guid accountid = svc.Create(account);
 
 ### See also
 
+[Entity Operations using the Organization service](entity-operations.md)<br />
+[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
+[Query data using the Organization service](entity-operations-query-data.md)<br />
+[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)<br />
 [IOrganizationService Interface](iorganizationservice-interface.md)<br />
-[Using OrganizationServiceContext](organizationservicecontext.md)
+[Using OrganizationServiceContext](organizationservicecontext.md)<br />
