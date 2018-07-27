@@ -33,6 +33,13 @@ To associate entity records with these APIs you need three things:
 
 Whether the relationship is a one-to-many or many-to-many relationship doesn't matter. The parameters or properties are equivalent.
 
+You can discover the names of the relationships by viewing the customization UI or in the metadata using the Metadata Browser. 
+More information: 
+
+- [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](../../../maker/common-data-service/create-edit-1n-relationships.md)
+- [Create and edit Many-to-many (N:N) entity relationships](../../../maker/common-data-service/create-edit-nn-relationships.md)
+- [Browse the metadata for your environment](../browse-your-metadata.md)
+
 The following example will set a specific contact entity (`jimGlynn`) as the primary contact for all accounts that are in Redmond.
 
 
@@ -81,9 +88,7 @@ svc.Execute(request);
 
 This operation is the same as three separate update operations to the [Account](../reference/entities/account.md).[PrimaryContactId](../reference/entities/account.md#BKMK_PrimaryContactId) lookup attribute, but it is using the [account_primary_contact](../reference/entities/contact.md#BKMK_account_primary_contact) relationship, which is a many-to-one entity relationship on the account entity and a one-to-many entity relationship on the contact entity.
 
-If you examine the properties of the relationship, you can see that the `ReferencingEntity` value is `account` and the `ReferencingAttribute` value is `primarycontactid`.
-
-When using the late-bound style you can discover the names of the relationships in the metadata using the Metadata Browser. More information: [Browse the metadata for your environment](../browse-your-metadata.md)
+If you examine the properties of the relationship metadata, you can see that the `ReferencingEntity` value is `account` and the `ReferencingAttribute` value is `primarycontactid`.
 
 
 ## Use the Disassociate method or DisassociateRequest

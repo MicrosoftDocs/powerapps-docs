@@ -12,4 +12,12 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Create extensions for the code generation tool
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/extend-code-generation-tool -->
+<!-- 
+This is not high priority and the sample code to support it needs to be moved to the Samples Repo.
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/extend-code-generation-tool 
+
+Add in the content from
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/helper-code-enumerations-option-sets 
+-->
