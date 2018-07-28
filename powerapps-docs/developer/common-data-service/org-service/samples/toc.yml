@@ -194,7 +194,5 @@
     href: use-aggregation-fetchxml.md
   - name: Use FetchXML with a paging cookie
     href: use-fetchxml-paging-cookie.md
-- name: Impersonate using the ActOnBehalfOf privilege
-  href: impersonate-actonbehalfof-privilege.md
 - name: Access the Discovery service
   href: access-discovery-service.md

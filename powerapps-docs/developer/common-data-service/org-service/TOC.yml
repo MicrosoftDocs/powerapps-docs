@@ -112,9 +112,7 @@
     - name: Retrieve and detect changes to metadata
       href: metadata-retrieve-detect-changes.md
     - name: Retrieve, update, and delete entities
-      href: metadata-retrieve-update-delete-entities.md
-  - name: Impersonate another user
-    href: impersonate-another-user-org-service.md  
+      href: metadata-retrieve-update-delete-entities.md 
   - name: Import data
     href: ../import-data.md #Topic is for both Web API and Organization service
   - name: Sample data
