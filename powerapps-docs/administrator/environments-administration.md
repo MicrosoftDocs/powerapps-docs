@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 07/30/2018
 ms.author: manasma
 ---
 
@@ -20,6 +20,8 @@ In the [PowerApps admin center][1], manage environments that you've created and 
 * Set Data Loss Prevention policies.
 * Set database security policies (as open or restricted by database roles).
 * Members of the Azure AD tenant Global administrator role (includes Office 365 Global admins) can also manage all environments that have been created in their tenant and set tenant-wide policies.
+
+For more information, see [Environments overview](environments-overview.md).
 
 ## Access the PowerApps admin center
 To access the PowerApps admin center:
@@ -218,4 +220,4 @@ Yes, the ability to view the apps and flows for an environment is available from
 [2]: https://web.powerapps.com
 [3]: https://powerapps.microsoft.com/pricing/
 [4]: https://admin.flow.microsoft.com
-[5]: https://go.microsoft.com/fwlink/?linkid=871628
+[5]: https://go.microsoft.com/fwlink/p/?linkid=871628
