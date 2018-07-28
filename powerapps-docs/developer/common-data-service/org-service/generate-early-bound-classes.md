@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Generate early-bound classes for the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "CrmSvcUtil.exe is a command-line code generation tool for use with Common Data Service for Apps. This tool generates early-bound .NET Framework  classes that represent the entity data model used by CDS for Apps." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -10,7 +10,7 @@ author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Generate classes for early-bound programming using the Organization service
+# Generate early-bound classes for the Organization service
 
 <!-- 
 
@@ -23,19 +23,20 @@ Include with the Sample to extend CrmSvcUtil.exe.
 -->
 
 
-**CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service for Apps. This tool generates early-bound .NET Framework  classes that represent the entity data model used by CDS for Apps.
+**CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service for Apps. This tool generates early-bound .NET Framework  classes that represent the entity data model used by CDS for Apps. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. 
 
-The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. For information about downloading the code generation tool (CrmSvcUtil.exe), see [Download tools from NuGet](../download-tools-NuGet.md).
+> [!NOTE]
+> For information about downloading the code generation tool (CrmSvcUtil.exe), see [Download tools from NuGet](../download-tools-NuGet.md).
 
-<a name="bkmk_about"></a>
+## Generate entity classes
 
-## About the code generation tool
+The **CrmSvcUtil.exe** tool creates a Microsoft Visual C# or Visual Basic .NET  output file that contains strongly-typed classes for entities in your organization. This includes custom entities and attributes. This output file contains one class for each entity, providing early binding and IntelliSense  support in Visual Studio to aid you as you write code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also create extensions to this tool. For more information, see [Create Extensions for the Code Generation Tool](extend-code-generation-tool.md).  
 
-The **CrmSvcUtil.exe** tool creates a Microsoft Visual C# or Visual Basic .NET  output file that contains strongly-typed classes for entities in your organization. This includes custom entities and attributes. This output file contains one class for each entity, providing early binding and IntelliSense  support in Visual Studio to aid you as you write custom code. The generated classes are partial classes that can be extended with custom business logic in separate files. You can also create extensions to this tool. For more information, see [Create Extensions for the Code Generation Tool](extend-code-generation-tool.md).  
+## Generate an OrganizationServiceContext class
 
 The tool can also be used to generate a class derived from the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext> class that acts as an entity container in the entity data model. This service context provides the facilities for tracking changes and managing identities, concurrency, and relationships. This class also exposes a <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.SaveChanges> method that writes inserts, updates, and deletes records in CDS for Apps. For more information, see [Use OrganizationServiceContext](organizationservicecontext.md).  
 
-The code generation tool takes several parameters that determine the contents of the file that is created. The parameters can be passed in from the command line when you run the tool or in a .NET-connected application configuration file.  
+## Use generated classes
 
 The classes created by the code generation tool are designed to be built into a class library that can be referenced by projects that use CDS for Apps. After you have generated the class file using the tool, you should add the file to your Visual Studio project. You must also add references to several assemblies that the generated classes are dependent upon.  
 
@@ -44,15 +45,15 @@ The following lists assemblies that must be referenced in your project when you 
 - `Microsoft.Crm.Sdk.Proxy.dll`  
 - `Microsoft.Xrm.Sdk.dll ` 
 
-You can find these assemblies in the folder where you download the tools.
-Folder path: `<Download_directory>\tools\CoreTools`.
-For example, if you download the tools in `devtools` folder on your D drive, you can find the assemblies in `D:\devtools\Tools\CoreTools`.
+These assemblies are part of the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package. Use this Nuget packages to add these assemblies to your Visual Studio project.
 
 <a name="bkmk_RuntheCodeGenerationUtility"></a>
 
 ## Run the code generation tool
 
-Run the `CrmSvcUtil.exe` tool from the `Tools\CoreTools` folder. If you run the tool from another folder location, make sure that a copy of the `Microsoft.Xrm.Sdk.dll` assembly is in that same folder.  
+The code generation tool takes several parameters that determine the contents of the file that is created. The parameters can be passed in from the command line when you run the tool or in a .NET-connected application configuration file. 
+
+Run the `CrmSvcUtil.exe` tool from the `Tools\CoreTools` folder created when you downloaded the tools using the script described in [Download tools from NuGet](../download-tools-NuGet.md). If you run the tool from another folder location, make sure that a copy of the `Microsoft.Xrm.Sdk.dll` assembly is in that same folder.  
 
 The following sample shows the format for running the tool from the command line with CDS for Apps. To use the interactive login, you can simply provide these options:
 
@@ -109,7 +110,7 @@ CrmSvcUtil.exe /?
 The following table lists the code generation tool parameters and a gives a brief description of their use.  
   
 |Parameter|Shortcut|Description|Required|
-|---------------|--------------|-----------------|--------------|
+|--|--|--|--|
 |`deviceid`|`di`|No longer needed|False|
 |`devicepassword`|`dp`|No longer needed|False|
 |`domain`|`d`|The domain to authenticate against when you connect to an on-premises server.|False|
@@ -176,3 +177,4 @@ For more information on supported tracing options see [Configure tracing for XRM
 
 [Developer tools and resources](../developer-tools.md)<br />
 [Create an Extensions for the Code Generation Tool](extend-code-generation-tool.md)<br />
+[Download tools from NuGet](../download-tools-NuGet.md)
