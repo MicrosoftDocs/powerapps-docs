@@ -18,7 +18,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
   
  Should any one of the requests fail and the transaction is rolled back, any data changes completed during the transaction are undone. In addition, a <xref:Microsoft.Xrm.Sdk.ExecuteTransactionFault> is returned identifying the index into the request collection of the request message that caused the fault.  
   
- An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> may contain one or more <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instances.  An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instance may not contain a <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest>. For more information on <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, see [Use ExecuteMultiple to Improve Performance for Bulk Data Load](use-executemultiple-improve-performance-bulk-data-load.md). 
+ An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> may contain one or more <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instances.  An <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> instance may not contain a <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest>. For more information on <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest>, see [Execute multiple requests using the Organization service](execute-multiple-requests.md). 
 
 ## Example
 
