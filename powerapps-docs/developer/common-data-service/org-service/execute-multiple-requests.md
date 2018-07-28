@@ -33,45 +33,45 @@ Custom code in the form of plug-ins and custom workflow activities can even exec
   
 ```csharp
 
-    // Create an ExecuteMultipleRequest object.
-    requestWithResults = new ExecuteMultipleRequest()
+// Create an ExecuteMultipleRequest object.
+requestWithResults = new ExecuteMultipleRequest()
+{
+    // Assign settings that define execution behavior: continue on error, return responses. 
+    Settings = new ExecuteMultipleSettings()
     {
-        // Assign settings that define execution behavior: continue on error, return responses. 
-        Settings = new ExecuteMultipleSettings()
-        {
-            ContinueOnError = false,
-            ReturnResponses = true
-        },
-        // Create an empty organization request collection.
-        Requests = new OrganizationRequestCollection()
-    };
+        ContinueOnError = false,
+        ReturnResponses = true
+    },
+    // Create an empty organization request collection.
+    Requests = new OrganizationRequestCollection()
+};
 
-    // Create several (local, in memory) entities in a collection. 
-    EntityCollection input = GetCollectionOfEntitiesToCreate();
+// Create several (local, in memory) entities in a collection. 
+EntityCollection input = GetCollectionOfEntitiesToCreate();
 
-    // Add a CreateRequest for each entity to the request collection.
-    foreach (var entity in input.Entities)
-    {
-        CreateRequest createRequest = new CreateRequest { Target = entity };
-        requestWithResults.Requests.Add(createRequest);
-    }
+// Add a CreateRequest for each entity to the request collection.
+foreach (var entity in input.Entities)
+{
+    CreateRequest createRequest = new CreateRequest { Target = entity };
+    requestWithResults.Requests.Add(createRequest);
+}
 
-    // Execute all the requests in the request collection using a single web method call.
-    ExecuteMultipleResponse responseWithResults =
-        (ExecuteMultipleResponse)service.Execute(requestWithResults);
+// Execute all the requests in the request collection using a single web method call.
+ExecuteMultipleResponse responseWithResults =
+    (ExecuteMultipleResponse)service.Execute(requestWithResults);
 
-    // Display the results returned in the responses.
-    foreach (var responseItem in responseWithResults.Responses)
-    {
-        // A valid response.
-        if (responseItem.Response != null)
-            DisplayResponse(requestWithResults.Requests[responseItem.RequestIndex], responseItem.Response);
+// Display the results returned in the responses.
+foreach (var responseItem in responseWithResults.Responses)
+{
+    // A valid response.
+    if (responseItem.Response != null)
+        DisplayResponse(requestWithResults.Requests[responseItem.RequestIndex], responseItem.Response);
 
-        // An error has occurred.
-        else if (responseItem.Fault != null)
-            DisplayFault(requestWithResults.Requests[responseItem.RequestIndex], 
-                responseItem.RequestIndex, responseItem.Fault);
-    }
+    // An error has occurred.
+    else if (responseItem.Fault != null)
+        DisplayFault(requestWithResults.Requests[responseItem.RequestIndex], 
+            responseItem.RequestIndex, responseItem.Fault);
+}
 ```
   
 More information:  [Sample: Execute multiple requests](samples/execute-multiple-requests.md)
