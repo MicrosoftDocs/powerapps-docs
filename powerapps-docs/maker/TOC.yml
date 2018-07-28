@@ -13,7 +13,6 @@
     href: ../user/app-source.md
 - name: Create apps
   href: index.md
-  expanded: true
   items:
   - name: Try PowerApps for free
     items:
