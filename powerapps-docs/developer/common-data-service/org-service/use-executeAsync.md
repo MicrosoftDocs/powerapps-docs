@@ -23,7 +23,7 @@ Use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> message to execute
   
 You can use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> message queue multiple solutions to be imported asynchronously.To do this, add one or more `ExecuteAsync` message requests to an `ExecuteMultiple` message request. Due to throttling restrictions that improve overall system performance, only one message running asynchronously is allowed to execute at a time for each organization. 
 
-For more information about the `ExecuteMultiple` message request, see [Use ExecuteMultiple to Improve Performance for Bulk Data Load](use-executemultiple-improve-performance-bulk-data-load.md).  
+For more information about the `ExecuteMultiple` message request, see [Execute multiple requests using the Organization service](execute-multiple-requests.md).  
 
 ## Example
 
@@ -48,7 +48,7 @@ var asyncResp = (ExecuteAsyncResponse)svc.Execute(asyncReq);
 
 Guid asyncOperationId = asyncResp.AsyncJobId;
 ```
-You can then poll the [AsyncOperation](../reference/entities/asyncoperation.md) entity using the `asyncOperationId` value for the system job with the matching [AsyncOperationId](../reference/entities/asyncoperation.mdBKMK_AsyncOperationId) to detect when the [StatusCode](../reference/entities/asyncoperation.mdBKMK_StatusCode) value indicates whether the operation has succeeded (30), failed (31), or was cancelled (32).
+You can then poll the [AsyncOperation](../reference/entities/asyncoperation.md) entity using the `asyncOperationId` value for the system job with the matching [AsyncOperationId](../reference/entities/asyncoperation.md#BKMK_AsyncOperationId) to detect when the [StatusCode](../reference/entities/asyncoperation.md#BKMK_StatusCode) value indicates whether the operation has succeeded (30), failed (31), or was cancelled (32).
 
 ### See Also
 
