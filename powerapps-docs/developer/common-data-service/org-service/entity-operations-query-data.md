@@ -35,6 +35,25 @@ Both of these methods will return an <xref:Microsoft.Xrm.Sdk.EntityCollection> t
 > [!NOTE]
 > To ensure best performance, each query request can return a maximum of 5000 entity records. To return larger result sets you must request additional pages.
 
+### Null attribute values are not returned
+
+When an attribute contains a null value, or if the attribute was not included in the FetchXml attributes or the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>, the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection will not include the attribute. There will be neither a key to access it or a value to access. The absence of the attribute indicates that it is null. When using the early bound style, the generated entity class properties will manage this and return a null value.
+
+When using the late bound style, if you try to access the value using an indexer on the <xref:Microsoft.Xrm.Sdk.Entity.Attributes> or <xref:Microsoft.Xrm.Sdk.Entity.FormattedValues> collections you will get an <xref:System.Collections.Generic.KeyNotFoundException> with the message `The given key was not present in the dictionary`.
+
+To avoid this when using the late-bound style, you can use two strategies:
+
+1. For an attribute that could be null, use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Contains(System.String)> method to check whether the attribute is null before attempting to access it with an indexer. For example:
+
+    `Money revenue = (entity.Contains("revenue")? entity["revenue"] : null);`
+
+1. Use <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> to access the value. For example:
+
+    `Money revenue = entity.GetAttributeValue<Money>();`
+
+  > [!NOTE]
+  > If the type specified with <xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> is a value type that cannot be null, such as <xref:System.Boolean> or <xref:System.DateTime>, the value returned will be the default value, such as `false` or `1/1/0001 12:00:00 AM` rather than null.
+
 
 
 
@@ -164,32 +183,35 @@ The following sample shows how to access the formatted string values for the fol
 |`statecode`|<xref:Microsoft.Xrm.Sdk.OptionSetValue>|
 
 ```csharp
-  var query = new QueryByAttribute("account")
-  {
-    TopCount = 50,
-    ColumnSet = new ColumnSet("name", "primarycontactid", "createdon", "revenue", "statecode")
-  };
-  query.AddAttributeValue("address1_city", "Redmond");
-  query.AddOrder("name", OrderType.Ascending);
+var query = new QueryByAttribute("account")
+{
+TopCount = 50,
+ColumnSet = new ColumnSet("name", "primarycontactid", "createdon", "revenue", "statecode")
+};
+query.AddAttributeValue("address1_city", "Redmond");
+query.AddOrder("name", OrderType.Ascending);
 
-  EntityCollection results = svc.RetrieveMultiple(query);
+EntityCollection results = svc.RetrieveMultiple(query);
 
-  results.Entities.ToList().ForEach(x =>
-  {
-    Console.WriteLine(@"
+results.Entities.ToList().ForEach(x =>
+{
+Console.WriteLine(@"
 name:{0}
-  primary contact: {1}
-  created on: {2}
-  revenue: {3}
-  status: {4}",
-      x.Attributes["name"],
-      x.FormattedValues["primarycontactid"],
-      x.FormattedValues["createdon"],
-      x.FormattedValues["revenue"],
-      x.FormattedValues["statecode"]
-      );
-  });
+primary contact: {1}
+created on: {2}
+revenue: {3}
+status: {4}",
+  x.Attributes["name"],
+  (x.Contains("primarycontactid")? x.FormattedValues["primarycontactid"]:string.Empty),
+  x.FormattedValues["createdon"],
+  (x.Contains("revenue") ? x.FormattedValues["revenue"] : string.Empty),
+  x.FormattedValues["statecode"]
+  );
+});
 ```
+
+> [!NOTE]
+> Attributes which contain null values are not returned in the query `Attributes` or `FormattedValues` collections. If an attribute may contain a null value you should check using the <xref:Microsoft.Xrm.Sdk.Entity.Contains*> method before attempting to access the value.
 
 The formatted results would display like these:
 
