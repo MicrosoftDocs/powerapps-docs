@@ -12,17 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Generate early-bound classes for the Organization service
 
-<!-- 
-
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool
-
-Merge in content from 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/helper-code-enumerations-option-sets
-
-Include with the Sample to extend CrmSvcUtil.exe.
--->
-
-
 **CrmSvcUtil.exe** is a command-line code generation tool for use with Common Data Service for Apps. This tool generates early-bound .NET Framework  classes that represent the entity data model used by CDS for Apps. The code generation tool (CrmSvcUtil.exe) is distributed as part of the [Microsoft.CrmSdk.CoreTools](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) NuGet package. 
 
 > [!NOTE]
