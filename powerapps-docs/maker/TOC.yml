@@ -21,12 +21,12 @@
       href: signup-for-powerapps.md
     - name: PowerApps Community Plan
       href: dev-community-plan.md
-  - name: Sign in
+  - name: Sign in to PowerApps
     href: ./canvas-apps/intro-maker-portal.md
     items:
   - name: Understand environments
     href: ./canvas-apps/working-with-environments.md
-  - name: "What's new in PowerApps"
+  - name: "What's new"
     href: ./canvas-apps/release-notes.md
   - name: Experimental and preview features
     href: ./canvas-apps/working-with-experimental.md
@@ -60,14 +60,14 @@
         href: ./canvas-apps/customize-forms-sharepoint.md
       - name: 3 - Cards
         href: ./canvas-apps/customize-card.md
-    - name: Create an app from Templates
-      href: ./canvas-apps/get-started-test-drive.md
     - name: Create an app yourself
       items:
       - name: From Common Data Service for Apps
         href: ./canvas-apps/data-platform-create-app-scratch.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
+    - name: Create an app from a template
+      href: ./canvas-apps/get-started-test-drive.md
   - name: Design and build an app
     items:
       - name: Connect to data
@@ -93,8 +93,6 @@
           href: ./canvas-apps/working-with-data-sources.md
         - name: Understand tables and records
           href: ./canvas-apps/working-with-tables.md
-        - name: Troubleshoot Power Query
-          href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
       - name: Design the interface
         href: ./canvas-apps/add-configure-controls.md
         items:
@@ -558,14 +556,14 @@
     items:
     - name: Edit an app
       href: ./canvas-apps/edit-app.md
-    - name: Change app name and tile
-      href: ./canvas-apps/set-name-tile.md
-    - name: Change screen size and orientation
-      href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
+    - name: Change app name and tile
+      href: ./canvas-apps/set-name-tile.md
+    - name: Change screen size and orientation
+      href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
   - name: Customize a SharePoint list form
     href: ./canvas-apps/customize-list-form.md
     items:
@@ -781,11 +779,6 @@
   items:
   - name: App building practices
     href: ./common-data-service/overview.md
-  - name: License requirements for entities
-    href: ./common-data-service/data-platform-entity-licenses.md
-    items:
-    - name: Restricted entities requiring Dynamics 365 licenses
-      href: ./common-data-service/data-platform-restricted-entities.md
   - name: Work with entities
     href: ./common-data-service/entity-overview.md
     items:
@@ -917,6 +910,11 @@
       href: ./common-data-service/set-managed-properties-metadata.md
     - name: Publish changes
       href: ./common-data-service/publish-changes-for-use-customer-service-hub.md                                                 
+  - name: License requirements for entities
+    href: ./common-data-service/data-platform-entity-licenses.md
+    items:
+    - name: Restricted entities requiring Dynamics 365 licenses
+      href: ./common-data-service/data-platform-restricted-entities.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text
@@ -945,5 +943,7 @@
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
+  - name: Troubleshoot Power Query
+    href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support
     href: https://powerapps.microsoft.com/support/
