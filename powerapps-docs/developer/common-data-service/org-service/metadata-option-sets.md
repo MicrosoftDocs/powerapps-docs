@@ -298,12 +298,6 @@ svc.Execute(deleteRequest);
 ```
 
   
-### See also  
- [Customize Dynamics 365 Customer Engagement applications](../customize-dev/customize-applications.md)   
- [Extend the Metadata Model for Dynamics 365](use-organization-service-metadata.md)   
- [Insert, update, delete, and order global option set options](insert-update-delete-order-global-option-set-options.md)   
- [Sample: Create Global Option Set](sample-create-global-option-set.md)   
- [Sample: Work with Global Option Sets](sample-work-global-option-sets.md)   
- [Sample: Dump Global Option Set Information to a File](sample-dump-global-option-set-information-file.md)
+### See also
 
 [Create and update option sets using the Web API](../webapi/create-update-optionsets.md)
