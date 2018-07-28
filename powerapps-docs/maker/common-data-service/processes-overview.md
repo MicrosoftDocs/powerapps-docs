@@ -28,5 +28,4 @@ PowerApps includes several types of processes, each designed for a different pur
 - **Workflow**. Use to automate business processes behind the scenes. Workflows are typically initiated by system events so the user doesn't need to be aware that they are running.
 - **Action**. Use when you want to automate a series of commands in the system. Actions are typically of interest to developers who want to create apps that interact with a process. 
 
-# See also 
-[Create custom business logic through processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md)
+For more information about these features, see the Flow Docs [TODO: Add the link]

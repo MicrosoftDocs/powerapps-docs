@@ -886,15 +886,6 @@
         href: ./common-data-service/delete-fields.md
   - name: Apply business logic
     href: ./common-data-service/processes-overview.md
-    items: 
-    - name: Create a mobile task flow
-      href: ./common-data-service/create-mobile-task-flow.md  
-    - name: Invoke custom actions from a workflow
-      href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
-    - name: Configure custom actions from a workflow
-      href: ./common-data-service/configure-actions.md
-    - name: Monitor and manage workflow processes
-      href: ./common-data-service/monitor-manage-processes.md
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
     items:  
