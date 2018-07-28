@@ -105,8 +105,8 @@
       href: metadata-attributemetadata.md  
     - name: Insert, update, delete, and order global option set options
       href: metadata-global-option-set-options.md
-    - name: Customize global option sets
-      href: metadata-global-option-sets.md
+    - name: Customize option sets
+      href: metadata-option-sets.md
     - name: Create and retrieve entity relationships
       href: metadata-relationshipmetadata.md
     - name: Retrieve and detect changes to metadata

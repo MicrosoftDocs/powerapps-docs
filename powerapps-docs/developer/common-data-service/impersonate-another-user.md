@@ -12,14 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Impersonate another user
 
-<!--
-General information that applies to both services goes here
-
- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/impersonate-another-user 
-
-Then hand-off to sub-topics for specific implementations
--->
-
 Use impersonation to execute business logic on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. 
 
 This is necessary because the CDS for Apps web services can be called by various clients and services on behalf of a CDS for Apps user.
