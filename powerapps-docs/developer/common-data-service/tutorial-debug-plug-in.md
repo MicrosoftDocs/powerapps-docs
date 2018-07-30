@@ -10,9 +10,27 @@ author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Custom Actions
+# Tutorial: Debug a plug-in
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-own-actions 
+This tutorial is the second in a series that will show you how to work with plug-ins. 
 
-TODO: add information about using raw OrganizationRequest and OrganizationResponse classes without using the generated classes.
--->
+- [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- Tutorial: Debug a plug-in (This tutorial)
+- [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
+
+## Prerequisites
+
+- Complete [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+
+## Install plug-in profiler
+
+## Start profiling
+
+## Debug your plug-in
+
+## Repeat
+
+## Stop profiling
+
+## Next steps
+

@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use messages with the Organization service
 
-All data operations in the organization service are defined as messages. While the <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides 7 methods to perform data operations (<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*>, and <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> ), each of these methods is a convenience wrapper around the underlying message which is ultimately invoked using the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. The underlying organization service only has the `Execute` method which as a single parameter: an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class. The value returned by the `Execute` method is an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
+All data operations in the organization service are defined as messages. While the <xref:Microsoft.Xrm.Sdk.IOrganizationService> provides 7 methods to perform data operations (<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>, <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*>, and <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> ), each of these methods is a convenience wrapper around the underlying message which is ultimately invoked using the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. The underlying organization service only has the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method which as a single parameter: an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class. The value returned by the `Execute` method is an instance of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class.
 
 To make your experience better when you write code, all the standard system data operations have a pair of `*Request` and `*Response` classes defined in the SDK assemblies. Each of these classes inherit from the respective <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes and provide a more productive experience for you when you write code.
 
@@ -34,7 +34,7 @@ Using <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> with <xref:Microsoft.Xrm.S
 ```csharp
 CreateRequest request = new CreateRequest()
 { Target = account };
-var id2 = ((CreateResponse)svc.Execute(request)).id;
+var id = ((CreateResponse)svc.Execute(request)).id;
 ```
 
 Using <xref:Microsoft.Xrm.Sdk.OrganizationRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
@@ -57,20 +57,23 @@ As you can see, common data operations have been streamlined using the <xref:Mic
 
 ## Working with messages in Plug-ins
 
-The data describing an operation in a plug-in will be in the form of a the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> and <xref:Microsoft.Xrm.Sdk.OrganizationResponse> classes. In the pre-operation stages it will be a request, in the post-operation stage it will be a response.
+The data describing an operation in a plug-in will be in the form of <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters>. These <xref:Microsoft.Xrm.Sdk.ParameterCollection> properties contain the values used for the <xref:Microsoft.Xrm.Sdk.OrganizationRequest> in the first two stages of the event execution pipeline and the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class in the stage after the main operation.
 
 Understanding the structure of the messages will help you understand where to find the data you want to check or change within the plug-in.
 
-More information: [Write plug-ins to extend business processes](../plug-ins.md)
+More information: 
+- [Write plug-ins to extend business processes](../plug-ins.md)
+- [Event Framework](../event-framework.md)
 
 ## Using Custom actions
 
-When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the CrmSvcUtil.exe code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> instance to use them without the generated classes.
+When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the CrmSvcUtil.exe code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> instance and set the <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Name> and <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> to use them without the generated classes. To work with the results, you will need to parse the values passed in from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse>.<xref:Microsoft.Xrm.Sdk.OrganizationResponse.Parameters>.
+
 More information: 
 - [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
 - [Custom Actions](../custom-actions.md)
 
-## Passing parameters with a request
+## Passing optional parameters with a request
 
 You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> property that is exposed for all the *Request message classes in the SDK assemblies. There are two optional parameters you can pass with messages
 
