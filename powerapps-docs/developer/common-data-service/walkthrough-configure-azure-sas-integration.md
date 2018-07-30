@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Walkthrough: Configure Microsoft Azure (SAS) for integration with Dynamics 365 (Common Data Service for Apps) | Microsoft Docs"
+description: "The walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Dynamics 365 Customer Engagement messages posted to the Azure Service Bus."
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
