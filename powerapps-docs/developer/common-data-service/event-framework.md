@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: " Event Framework (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -51,7 +51,7 @@ When you use the Plug-in registration tool to associate an extension with a part
 
 ![Dialog to register a step](media/register-new-step-plug-in.png)
 
-A step provides the information about which message the extensions hould respond to as well as a number of other configuration choices. Use the **Message** field to choose the message your extension will respond to.
+A step provides the information about which message the extensions should respond to as well as a number of other configuration choices. Use the **Message** field to choose the message your extension will respond to.
 
 Generally, you can expect to find a message for most of the **Request* classes in the <xref:Microsoft.Crm.Sdk.Messages> or <xref:Microsoft.Xrm.Sdk.Messages> namespaces, but you will also find messages for any custom actions that have been created in the organization. Any operations involving entity metadata are not available.
 
@@ -80,19 +80,21 @@ Multiple extensions can be registered for the same message and stage. Within the
 
 Information about registered steps is stored in the [SdkMessageProcessingStep Entity](reference/entities/sdkmessageprocessingstep.md).
 
+<!-- Move the following out to a separate topic? START -->
+
 ### Behavior of specialized update operations
 
 There are several deprecated specialized messages that perform update operations. In earlier versions it was required to use these messages, but now the same operations should be performed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
 
 [!INCLUDE [cc-legacy-update-messages](includes/cc-legacy-update-messages.md)]
 
-More information: [Legacy update messages](org-service/entity-operations-update-delete.md#legacy-update-messages)
+More information: [Legacy update messages](org-service/entity-operations-update-delete.md#legacy-update-messages) 
 
 This change introduced some special behaviors that should be noted for plug-ins and workflows. 
 
 #### For Plug-ins
 
-When update requests are processed that include both owner fields plus other standard fields for business owned entities, plug-ins registered for the **Update** message in **PreOperation** and/or **PostOperation** stages execute once for all non-owner fields, and then once for the owner fields. Examples of owner fields would be `businessunit` and `manager` (for a [SystemUser Entity](reference/entities/systemuser.md)). Examples of business owned entities include [SystemUser](reference/entities/systemuser.md), [BusinessUnit](reference/entities/businessunit.md), and [Team](reference/entities/team.md).
+When update requests are processed that include both owner fields plus other standard fields for business owned entities, plug-ins registered for the **Update** message in **PreOperation** and/or **PostOperation** stages execute once for all non-owner fields, and then once for the owner fields. Examples of owner fields would be `businessunit` and `manager` (for a [SystemUser Entity](reference/entities/systemuser.md)). Examples of business owned entities include [SystemUser](reference/entities/systemuser.md), [BusinessUnit](reference/entities/businessunit.md),[Equipment](/dynamics365/customer-engagement/developer/entities/equipment) and [Team](reference/entities/team.md).
 
 When update requests are processed that include both state/status fields plus other standard fields, plug-ins registered for the **Update** message in **PreOperation** and/or **PostOperation** stages execute once for all non-state/status fields, and then once for the state/status fields.
 
@@ -103,6 +105,8 @@ In order for plug-in code to receive the full data changes of the update, you mu
 When update requests are processed that include both owner fields plus other standard fields, workflows registered for the **Update** message execute once for all non-owner fields, and then once for the owner fields. Workflows registered for the **Assign** message by users continue to be triggered by updates to owner fields.
 
 When update requests are processed that include both state/status fields plus other standard fields, workflows registered for the **Update** message execute once for all non-state/status fields, and then once for the state/status fields. Workflows registered for the **Change Status** step continue to be triggered by updates to state/status fields.
+
+<!-- Move the following out to a separate topic? END -->
 
 ## Event context
 
