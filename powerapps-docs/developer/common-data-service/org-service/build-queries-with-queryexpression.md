@@ -68,4 +68,4 @@ In Common Data Service for Apps, you can use the <xref:Microsoft.Xrm.Sdk.Query.Q
  <xref:Microsoft.Xrm.Sdk.Query.PagingInfo.PagingCookie>  
   
 ### See also  
- [Sample: Convert queries between Fetch and QueryExpression](sample-convert-queries-fetch-queryexpression.md)
+ [Sample: Convert queries between Fetch and QueryExpression](/dynamics365/customer-engagement/developer/org-service/sample-convert-queries-fetch-queryexpression)

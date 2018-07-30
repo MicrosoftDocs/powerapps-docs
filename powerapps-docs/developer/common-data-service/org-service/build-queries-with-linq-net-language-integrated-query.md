@@ -23,18 +23,18 @@ You can use .NET Language-Integrated Query (LINQ) to write queries in Common Dat
   
  [Use Entity Lookup Attributes with LINQ](order-results-entity-attributes-linq.md)  
   
- [Order Results Using Entity Attributes with LINQ](order-results-entity-attributes-linq.md)  
+ [Order Results Using Entity Attributes with LINQ](/dynamics365/customer-engagement/developer/org-service/order-results-entity-attributes-linq)  
   
- [Paging Large Result Sets with LINQ](page-large-result-sets-linq.md)  
+ [Paging Large Result Sets with LINQ](/dynamics365/customer-engagement/developer/org-service/page-large-result-sets-linq)  
   
- [LINQ Query Examples](linq-query-examples.md)  
+ [LINQ Query Examples](/dynamics365/customer-engagement/developer/org-service/linq-query-examples)  
   
- [Sample: Create a LINQ Query](sample-create-linq-query.md)  
+ [Sample: Create a LINQ Query](/dynamics365/customer-engagement/developer/org-service/sample-create-linq-query)  
   
- [Sample: LINQ Query Examples](sample-complex-linq-queries.md)  
+ [Sample: LINQ Query Examples](/dynamics365/customer-engagement/developer/org-service/sample-complex-linq-queries)  
   
- [Sample: RetrieveMultiple With Condition Operators Using LINQ](sample-retrieve-multiple-with-condition-operators-using-linq.md)  
+ [Sample: RetrieveMultiple With Condition Operators Using LINQ](/dynamics365/customer-engagement/developer/org-service/sample-retrieve-multiple-with-condition-operators-using-linq)  
   
  [Sample: More LINQ Query Examples](/dynamics365/customer-engagement/developer/org-service/sample-more-linq-query-examples)  
   
- [Sample: Use LINQ with Late Binding](sample-create-linq-query-late-binding.md)
+ [Sample: Use LINQ with Late Binding](/dynamics365/customer-engagement/developer/org-service/sample-create-linq-query-late-binding)
