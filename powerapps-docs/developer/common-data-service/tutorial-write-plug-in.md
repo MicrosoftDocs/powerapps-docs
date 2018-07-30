@@ -270,6 +270,72 @@ To register a plug-in, you will need the plug-in registration tool
 
 ## Test plug-in
 
+1. Open a model-driven app and create an account entity.
+1. Within a short time, open the account and you can verify the creation of the task.
+
+    ![Account entity record with related task activity create by plug-in](media/tutorial-write-plug-in-test-plugin-in-model-app.png)
+
+
 ## View trace logs
 
+The sample code wrote a message to the trace log. The steps below describe how to view the logs.
+
+By default, plug-in trace logs are not enabled. 
+
+> [!TIP]
+> IF you prefer to change this setting in code:
+> This setting is in the [Organization Entity PluginTraceLogSetting attribute](reference/entities/organization.md#BKMK_PluginTraceLogSetting).
+> 
+> The valid values are:
+> 
+> |Value|Label|
+> |--|--|
+> |0|Off|
+> |1|Exception|
+> |2|All|
+
+Use the following steps to enable them in a model-driven app.
+
+1. Open the Dynamics 365 - custom  app.
+
+    ![Open the Dynamics 365 - custom  app](media/tutorial-write-plug-in-open-dynamics365-custom-app.png)
+
+1. Navigate to **Settings** > **System** > **Administration**.
+
+    ![navigate to administration](media/tutorial-write-plug-in-navigate-administration.png)
+
+1. In **Administration**, select **System Settings**.
+1. In the **System Settings** dialog, in the customization tab, set **Enable logging to plug-in trace log** to **All**.
+
+    ![System Settings Customization tab](media/tutorial-write-plug-in-system-settings-customization-tab.png)
+
+    > [!NOTE]
+    > You should disable logging after you are finished testing your plug-in, or at least set it to **Exception** rather than **All**.
+
+1. Click **OK** to close the **System Settings** dialog.
+1. Repeat the steps to test your plug-in by creating a new account.
+1. In the **Dynamics 365 -- custom app**, navigate to **Settings** > **Customization** > **Plug-In Trace Log**.
+1. You should find that a new Plug-in Trace Log record has been created.
+
+    ![Plug-in trace log record](media/tutorial-write-plug-in-plug-in-trace-log.png)
+
+1. If you open the record you might expect that it would include the information you set in your trace, but it does not. It only verifies that the trace occurred.
+1. To see the details, it is easier to query this data using the Web API in your browser using the following query with the <xref href="Microsoft.Dynamics.CRM.plugintracelog?text=plugintracelog EntityType" />, using the `typename` property to filter results in the `messageblock` property based on the name of the plug-in class:
+
+    `GET <your org uri>/api/data/v9.0/plugintracelogs?$select=messageblock&$filter=typename eq 'BasicPlugin.FollowUpPlugin'`
+
+1. You can expect to see the following returned with the Web API query:
+
+    ```json
+    {
+        "@odata.context": "<your org uri>/api/data/v9.0/$metadata#plugintracelogs(messageblock)",
+        "value": [{
+            "messageblock": "FollowupPlugin: Creating the task activity.",
+            "plugintracelogid": "f0c221d1-7f84-4f89-acdb-bbf8f7ce9f6c"
+        }]
+    }
+    ```
+
 ## Next steps
+
+In this tutorial you have created a simple plug-in and registered it. Complete [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md) to learn how to debug this plug-in.
