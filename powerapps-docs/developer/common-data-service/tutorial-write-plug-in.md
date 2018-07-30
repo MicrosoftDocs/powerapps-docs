@@ -63,15 +63,16 @@ You need to use Visual Studio to write a plug-in. Use these steps to write a bas
 
 ### Edit the Class file to enable a plug-in
 
-1.Add the following `using` statements to the top of the `FollowupPlugin.cs` file:
+1. Add the following `using` statements to the top of the `FollowupPlugin.cs` file:
 
 
 ```csharp
 using System.ServiceModel;  
 using Microsoft.Xrm.Sdk;
 ```
- 
+
 1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> Interface by editing the class.
+
     > [!NOTE]
     > If you just type  `: IPlugin` after the class name, Visual Studio will auto-suggest implementing a stub for the **Execute** Method.
 
@@ -208,7 +209,7 @@ To register a plug-in, you will need the plug-in registration tool
 
 1. After you have downloaded the Plug-in registration tool, click the `PluginRegistration.exe` to open it.
 1. Click **Create new Connection** to connect to your instance.
-1. Make sure Office 365 is selected. If you are connecting using a Microsoft account other than one you are currently using, click **Show Advanced**.
+1. Make sure **Office 365** is selected. If you are connecting using a Microsoft account other than one you are currently using, click **Show Advanced**.
 
     ![Logging in with the Plug-in registration tool](media/tutorial-write-plug-in-prt-login.png)
 
