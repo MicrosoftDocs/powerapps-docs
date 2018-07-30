@@ -46,6 +46,7 @@ Starting with CDS for Apps, if your JavaScript web resource depends on an entity
 Before this feature you would need to manually add the attribute to the form and then configure the control to be hidden. Now you can establish this dependency more directly and eliminate the possibility that someone will remove the hidden field from the form. 
 
 
+
 ## See also
 [Web resources for Common Data Services for Apps](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
