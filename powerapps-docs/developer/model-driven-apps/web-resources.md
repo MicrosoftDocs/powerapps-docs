@@ -125,13 +125,8 @@ https://MyOrganization.crm.dynamics.com/WebResources/new_/test/test.htm
 > [!NOTE]
 >  Including the ‘/’ character and a file name extension in the name of the web resource is an optional best practice.  
   
- The following sample shows a URL for on–premises [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)], where `myServer` is the server name:  
   
-```  
-http://myServer/MyOrganization/WebResources/new_/test/test.htm  
-```  
-  
- When you write code to reference a web resource that will need to work for either [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)] or on–premises [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)], you should use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) function.
+ When you write code to reference a web resource that works for CDS for Apps, you should use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) function.
 
 ## Community tools
 
