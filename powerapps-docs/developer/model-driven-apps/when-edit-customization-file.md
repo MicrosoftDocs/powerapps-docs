@@ -43,7 +43,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  Definitions of views for entities are included in the customizations.xml file and may be manually edited. The view editor in the application is the most commonly used tool for this purpose. Editing customizations.xml is an alternative method. For more information, see [Customize Entity Views in Common Data Services for Apps](customize-entity-views.md).  
   
  **Editing the ISV.config**  
- In earlier versions of Customer Engagement, ISV.Config was the way to add client application extensions as well as some other configuration options. For [!INCLUDE[pn_crm2011_and_online](../../includes/pn-crm2011-and-online.md)], the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see [Service Calendar Appearance Configuration](service-calendar-appearance-configuration.md).  
+  For CDS for Apps, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see [Service Calendar Appearance Configuration](service-calendar-appearance-configuration.md).  
   
 ## Unsupported tasks  
  Defining any other solution components by editing the exported customizations.xml file is not supported. This includes the following:  
