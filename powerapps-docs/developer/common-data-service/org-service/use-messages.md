@@ -62,14 +62,16 @@ The data describing an operation in a plug-in will be in the form of <xref:Micro
 Understanding the structure of the messages will help you understand where to find the data you want to check or change within the plug-in.
 
 More information: 
+
 - [Write plug-ins to extend business processes](../plug-ins.md)
 - [Event Framework](../event-framework.md)
 
 ## Using Custom actions
 
-When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the CrmSvcUtil.exe code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> instance and set the <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Name> and <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> to use them without the generated classes. To work with the results, you will need to parse the values passed in from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse>.<xref:Microsoft.Xrm.Sdk.OrganizationResponse.Parameters>.
+When you use a custom action there are no classes in the SDK assemblies for these operations. You can generate classes for them using the `CrmSvcUtil.exe` code generation tool by using the `generateActions` parameter, or you can instantiate an <xref:Microsoft.Xrm.Sdk.OrganizationRequest> instance and set the <xref:Microsoft.Xrm.Sdk.OrganizationRequest.RequestName> and <xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> to use them without the generated classes. To work with the results, you will need to parse the values returned from the <xref:Microsoft.Xrm.Sdk.OrganizationResponse>.<xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results> property.
 
 More information: 
+
 - [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)
 - [Custom Actions](../custom-actions.md)
 

@@ -40,16 +40,17 @@ You need to use Visual Studio to write a plug-in. Use these steps to write a bas
 
 1. Open Visual Studio 2017 and open a new **Class Library (.NET Framework)** project using **.NET Framework 4.5.2**
     ![open a new Class Library (.NET Framework) project using .NET Framework 4.5.2](media/tutorial-write-plug-in-create-visual-studio-project.png)
+
     The name used for the project will be the name of the assembly. This tutorial uses the name `BasicPlugin`.
-2. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages…** from the context menu.
+1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages…** from the context menu.
     ![Manage NuGet packages](media/tutorial-write-plug-in-manage-nuget-packages.png)
-3. Select **Browse** and search for `Microsoft.CrmSdk.CoreAssemblies` and install the latest version.
+1. Select **Browse** and search for `Microsoft.CrmSdk.CoreAssemblies` and install the latest version.
     ![Install Microsoft.CrmSdk.CoreAssemblies NuGet Package](media/tutorial-write-plug-in-install-Microsoft.CrmSdk.CoreAssemblies.png)
-4. You must select **I Accept** in the **License Acceptance** dialog.
-5. In **Solution Explorer**, right-click the `Class1.cs` file and choose **Rename** in the context menu.
+1. You must select **I Accept** in the **License Acceptance** dialog.
+1. In **Solution Explorer**, right-click the `Class1.cs` file and choose **Rename** in the context menu.
     ![Rename class](media/tutorial-write-plug-in-rename-class.png)
-6. Rename the `Class1.cs` file to `FollowupPlugin.cs`.
-7.When prompted, allow Visual Studio to re-name the class to match the file name
+1. Rename the `Class1.cs` file to `FollowupPlugin.cs`.
+1. When prompted, allow Visual Studio to re-name the class to match the file name
     ![Confirm rename dialog](media/tutorial-write-plug-in-rename-class-confirm.png)
 
 ### Edit the Class file to enable a plug-in
