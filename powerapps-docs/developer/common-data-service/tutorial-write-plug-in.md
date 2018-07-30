@@ -77,58 +77,58 @@ using Microsoft.Xrm.Sdk;
     > If you just type  `: IPlugin` after the class name, Visual Studio will auto-suggest implementing a stub for the **Execute** Method.
 
 
-    ```csharp
-    public class FollowupPlugin : IPlugin
+```csharp
+public class FollowupPlugin : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
     {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            throw new NotImplementedException();
-        }
+        throw new NotImplementedException();
     }
-    ```
+}
+```
 
 1. Replace the contents of the `Execute` method with the following code:
 
 
-    ```csharp
-    // Obtain the tracing service
-    ITracingService tracingService =
-    (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+```csharp
+// Obtain the tracing service
+ITracingService tracingService =
+(ITracingService)serviceProvider.GetService(typeof(ITracingService));
 
-    // Obtain the execution context from the service provider.  
-    IPluginExecutionContext context = (IPluginExecutionContext)
-        serviceProvider.GetService(typeof(IPluginExecutionContext));
+// Obtain the execution context from the service provider.  
+IPluginExecutionContext context = (IPluginExecutionContext)
+    serviceProvider.GetService(typeof(IPluginExecutionContext));
 
-    // The InputParameters collection contains all the data passed in the message request.  
-    if (context.InputParameters.Contains("Target") &&
-        context.InputParameters["Target"] is Entity)
+// The InputParameters collection contains all the data passed in the message request.  
+if (context.InputParameters.Contains("Target") &&
+    context.InputParameters["Target"] is Entity)
+{
+    // Obtain the target entity from the input parameters.  
+    Entity entity = (Entity)context.InputParameters["Target"];
+
+    // Obtain the organization service reference which you will need for  
+    // web service calls.  
+    IOrganizationServiceFactory serviceFactory =
+        (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
+    IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
+
+    try
     {
-        // Obtain the target entity from the input parameters.  
-        Entity entity = (Entity)context.InputParameters["Target"];
-
-        // Obtain the organization service reference which you will need for  
-        // web service calls.  
-        IOrganizationServiceFactory serviceFactory =
-            (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-        IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
-
-        try
-        {
-            // Plug-in business logic goes here.  
-        }
-
-        catch (FaultException<OrganizationServiceFault> ex)
-        {
-            throw new InvalidPluginExecutionException("An error occurred in FollowUpPlugin.", ex);
-        }
-
-        catch (Exception ex)
-        {
-            tracingService.Trace("FollowUpPlugin: {0}", ex.ToString());
-            throw;
-        }
+        // Plug-in business logic goes here.  
     }
-    ```
+
+    catch (FaultException<OrganizationServiceFault> ex)
+    {
+        throw new InvalidPluginExecutionException("An error occurred in FollowUpPlugin.", ex);
+    }
+
+    catch (Exception ex)
+    {
+        tracingService.Trace("FollowUpPlugin: {0}", ex.ToString());
+        throw;
+    }
+}
+```
 
 ### About the code
 
@@ -232,7 +232,7 @@ To register a plug-in, you will need the plug-in registration tool
 1. Verify that the **isolation mode** is **sandbox** and the **location** to store the assembly is **Database**.
 
     > [!NOTE]
-    > Other options for **isolation mode** and **location** apply to on-premises deployments.
+    > Other options for **isolation mode** and **location** apply to on-premises Dynamics 365 deployments.
 
 1. Click **Register Selected Plug-ins**.
 1. You will see a **Registered Plug-ins** confirmation dialog.
