@@ -360,6 +360,8 @@ There are several deprecated specialized messages that perform update operations
 
 [!INCLUDE [cc-legacy-update-messages](../includes/cc-legacy-update-messages.md)]
 
+More information: [Behavior of specialized update operations](../event-framework.md#behavior-of-specialized-update-operations)
+
 ### See also
 
 [Create entities using the Organization Service](entity-operations-create.md)<br />

@@ -60,8 +60,6 @@ Data about messages is stored in the [SdkMessage](reference/entities/sdkmessage.
 > [!CAUTION]
 > The `Execute` message is available, but you should not register extensions for it since it is called by every operation.
 
-
-
 ## Event execution pipeline
 
 When you register a step using the Plug-in registration tool you must also choose the **Event Pipeline Stage of Execution**.  Each message is processed in a series of 4 stages as described in the following table:
