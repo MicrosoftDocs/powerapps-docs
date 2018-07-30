@@ -36,7 +36,7 @@ Web resources are *virtual files* that are stored in Common Data Services for Ap
  Web resources are only available by using the CDS for Apps web application security context. Only licensed CDS for Apps users who have the necessary privileges can access them.  
   
 #### Size limitations  
-[!INCLUDE[sdk_MaxUploadFileSize](../includes/sdk-maxuploadfilesize.md)]
+The maximum size of files that can be uploaded is determined by the Organization.MaxUploadFileSize property. This property is set in the Email tab of the System Settings in the Dynamics 365 application. This setting limits the size of files that can be attached to email messages, notes, and web resources. The default setting is 5 MB.
   
 <a name="BKMK_WebResourceTypes"></a>   
 ## Web resource types  
@@ -63,7 +63,7 @@ Web resources are *virtual files* that are stored in Common Data Services for Ap
   
 > [!NOTE]
 >  -   When possible, use the `$webresource` directive. Only references that use the `$webresource` directive in the site map or ribbon commands will establish dependencies. Dependencies are not created when web resources reference each other.  
-> - [!INCLUDE[sdk_silverlightwebresourcedirective](../includes/sdk-silverlightwebresourcedirective.md)]  
+>       - To display a Silverlight web resource outside an entity form or chart, create an HTML web resource to be the host page for the Silverlight web resource. Then use the $webresource: directive to open the HTML web resource.
   
 <a name="BKMK_WebResourceDirective"></a>   
 ### $webresource directive  
