@@ -1,15 +1,20 @@
 ---
 title: "Walkthrough: Configure Microsoft Azure (SAS) for integration with Dynamics 365 (Common Data Service for Apps) | Microsoft Docs"
 description: "The walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Dynamics 365 Customer Engagement messages posted to the Azure Service Bus."
-ms.custom: ""
+keywords: ""
 ms.date: 08/01/2018
-ms.reviewer: ""
-ms.service: "powerapps"
-ms.topic: "article"
-author: "brandonsimons" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.service:
+  - "powerapps"
+ms.custom:
+  - ""
+ms.topic: article
+ms.assetid: d7b24b11-57f0-ab05-4bec-0b64efee178d
+author: brandonsimons" # GitHub ID
+ms.author: jdaly" # MSFT alias of Microsoft employees only
+manager: ryjones" # MSFT alias of manager or PM counterpart
+ms.reviewer: 
 ---
+
 # Tutorial: Configure Azure (SAS) for integration with Customer Engagement
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-configure-azure-sas-integration -->
@@ -37,7 +42,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
  Refer to the [Create a Service Bus namespace using the Azure portal](/azure/service-bus-messaging/service-bus-create-namespace-portal) for instructions on how to create a Service Bus namespace and messaging entity.  
   
 ## Create a service endpoint  
- A [ServiceEndpoint Entity ](entities/serviceendpoint.md) <!-- To-Do: resolve the link --> contains configuration data that is required for external messaging with a Azure Service Bus solution endpoint. By using the Plug-in Registration Tool, you can easily create a service endpoint entity in a Dynamics 365 organization and configure  the service bus endpoint issuer, scope, and rules.  
+ A [ServiceEndpoint Entity ](reference/entities/serviceendpoint.md) contains configuration data that is required for external messaging with a Azure Service Bus solution endpoint. By using the Plug-in Registration Tool, you can easily create a service endpoint entity in a Dynamics 365 organization and configure  the service bus endpoint issuer, scope, and rules. D:\GitHub\power-apps\powerapps-docs-pr\powerapps-docs\developer\common-data-service\reference\entities\serviceendpoint.md
   
 ### Register a Service Endpoint  
   
