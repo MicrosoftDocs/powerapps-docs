@@ -37,7 +37,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
  Refer to the [Create a Service Bus namespace using the Azure portal](/azure/service-bus-messaging/service-bus-create-namespace-portal) for instructions on how to create a Service Bus namespace and messaging entity.  
   
 ## Create a service endpoint  
- A [ServiceEndpoint Entity ](entities/serviceendpoint.md) contains configuration data that is required for external messaging with a Azure Service Bus solution endpoint. By using the Plug-in Registration Tool, you can easily create a service endpoint entity in a Dynamics 365 organization and configure  the service bus endpoint issuer, scope, and rules.  
+ A [ServiceEndpoint Entity ](entities/serviceendpoint.md) <!-- To-Do: resolve the link --> contains configuration data that is required for external messaging with a Azure Service Bus solution endpoint. By using the Plug-in Registration Tool, you can easily create a service endpoint entity in a Dynamics 365 organization and configure  the service bus endpoint issuer, scope, and rules.  
   
 ### Register a Service Endpoint  
   
@@ -63,6 +63,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
   
  ![New service endpoint](media/new-service-endpoint.PNG "New service endpoint")  
   
-### See also  
- [Azure extensions for Dynamics 365](azure-extensions.md)   
+### See also
+<!-- TO-DO: Resolve link -->
+[Azure extensions for Dynamics 365](azure-extensions.md)
  [Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
