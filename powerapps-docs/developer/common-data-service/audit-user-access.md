@@ -35,7 +35,7 @@ Common Data Service for Apps support the ability to audit user access. The infor
  `UserAccessviaWeb` indicates access from the CDS for Apps web application or CDS for Apps for Outlook. `UserAccessviaWebServices` indicates a web service request from the SDK. The `AuditAction` enumeration is available to your code when you include `SampleCode\CS\HelperCode\OptionSets.cs` or `SampleCode\VB\HelperCode\OptionSets.vb` in your application’s project.  
   
 ### See also  
- [Audit Entity Data Changes in Dynamics 365](audit-entity-data-changes.md)   
- [Configure Entities and Attributes for Auditing](configure-entities-attributes-auditing.md)     
- [Sample: Audit Entity Data Changes](sample-audit-entity-data-changes.md)   
- [Sample: Audit User Access](sample-audit-user-access.md)
+ [Audit Entity Data Changes in Dynamics 365](/dynamics365/customer-engagement/developer/audit-entity-data-changes)   
+ [Configure Entities and Attributes for Auditing](/dynamics365/customer-engagement/developer/configure-entities-attributes-auditing)     
+ [Sample: Audit Entity Data Changes](/dynamics365/customer-engagement/developer/sample-audit-entity-data-changes)   
+ [Sample: Audit User Access](/dynamics365/customer-engagement/developer/sample-audit-user-access)

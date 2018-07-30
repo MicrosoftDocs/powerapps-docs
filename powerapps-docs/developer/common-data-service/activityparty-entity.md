@@ -58,9 +58,9 @@ An activity party represents a person or group associated with an activity. An a
  [Activity Entities](activity-entities.md)   
  [Task, fax, phone call, and letter activity entities](task-fax-phone-call-letter-activity-entities.md)   
  [ActivityParty Entity](reference/entities/activityparty.md)   
- [Sample: Book an Appointment](/dynamics365/customer-engagement/developer/sample-book-appointment)
+ [Sample: Book an Appointment](/dynamics365/customer-engagement/developer/sample-book-appointment)<br>
  [Sample: Convert a Fax to a Task](/dynamics365/customer-engagement/developer/sample-convert-fax-task)   
  [Sample: Override Goal Total Count and Close the Goal](/dynamics365/customer-engagement/developer/sample-override-goal-total-count-close-goal)   
  [Sample: Roll Up Goal Data for a Fiscal Period Against the Stretch Target Count](/dynamics365/customer-engagement/developer/sample-rollup-goal-data-fiscal-period-stretch-target-count)   
- [Sample: Send an E-mail Using a Template](/dynamics365/customer-engagement/developer/sample-send-email-template.md)   
- [Sample: Validate an Appointment](/dynamics365/customer-engagement/developer/sample-validate-appointment.md)
+ [Sample: Send an E-mail Using a Template](/dynamics365/customer-engagement/developer/sample-send-email-template)   
+ [Sample: Validate an Appointment](/dynamics365/customer-engagement/developer/sample-validate-appointment)
