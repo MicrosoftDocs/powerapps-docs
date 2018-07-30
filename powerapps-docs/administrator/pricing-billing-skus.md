@@ -2,7 +2,7 @@
 title: Licensing overview | Microsoft Docs
 description: Overview of licensing in PowerApps.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
