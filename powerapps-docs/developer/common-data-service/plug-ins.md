@@ -36,6 +36,10 @@ See tutorials
 https://microsoft-my.sharepoint.com/:w:/p/jdaly/EZ1SzmOh-B5Bnt4C9rxGWysB6NtUQonOxq5sGSPkn5vNAA?e=bGWQN3
 -->
 
+## Tracing
+
+## Context information available to your code
+
 [Sample: Web access from a sandboxed plug-in](org-service/samples/web-access-plugin.md)
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-web-access-sandboxed-plugin -->
