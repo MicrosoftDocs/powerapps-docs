@@ -117,9 +117,9 @@ To perform the administration operations in the admin cmdlets, you'll need the f
 > [!NOTE]
 > Use the following commands to understand syntax and view sample for each of the cmdlets:
 >```
->Get-Help Get-AdminEnvironment
->Get-Help Get-AdminEnvironment -Examples
->Get-Help Get-AdminEnvironment -Detailed
+>Get-Help Get-AdminPowerAppEnvironment
+>Get-Help Get-AdminPowerAppEnvironment -Examples
+>Get-Help Get-AdminPowerAppEnvironment -Detailed
 >```
 
 ## Questions?
