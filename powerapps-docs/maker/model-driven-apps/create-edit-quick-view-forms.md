@@ -19,9 +19,9 @@ ms.author: "matp"
 manager: "kvivek"
 ---
 
-# Quickstart: Create a quick view form to view information about a related entity
+# Create a quick view form to view information about a related entity
 
-In this quickstart you learn how to create a quick view form and how to add a quick view control to a main form. 
+In this topic you learn how to create a quick view form and how to add a quick view control to a main form. 
 
 A quick view form can be added to another form as a quick view control. It provides a template to view information about a related entity record within a form for another entity record. This means your app users do not need to navigate to a different record to see the information needed to do their work.  
   

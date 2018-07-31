@@ -16,7 +16,7 @@ caps.latest.revision: 10
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Quickstart: Create or edit dashboards
+# Create or edit dashboards
 
 There are two types of dashboards, user dashboards and system dashboards. An app user can create a dashboard visible only to them in the app areas that they have privileges to. An admin or customizer creates or customizes system dashboards that, when published, are visible to all app users. A user can choose to set their user dashboard as their default dashboard and override the system dashboard. This topic focuses on system dashboards.  
   

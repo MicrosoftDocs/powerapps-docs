@@ -18,9 +18,9 @@ caps.latest.revision: 15
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Quickstart: Add form navigation for related entities
+# Add form navigation for related entities
 
-In this quickstart, you use the form navigation pane that is used to add links to related entities. When an app user clicks one of these links in a record, the associated view for the entity is displayed.   
+In this topic, you use the form navigation pane that is used to add links to related entities. When an app user clicks one of these links in a record, the associated view for the entity is displayed.   
   
 1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
 

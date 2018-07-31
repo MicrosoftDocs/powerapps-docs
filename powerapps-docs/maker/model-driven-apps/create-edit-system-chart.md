@@ -18,9 +18,9 @@ caps.latest.revision: 29
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Quickstart: Create a system chart
+# Create a system chart
 
-In this quickstart you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can’t be assigned or shared with specific app users.  
+In this topic you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can’t be assigned or shared with specific app users.  
   
 1. On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
 

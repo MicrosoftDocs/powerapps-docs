@@ -47,7 +47,7 @@ After modeling data and defining processes, you build your app by selecting and 
 
 ## Next steps
 
-[Quickstart: Build your first model-driven app](build-first-model-driven-app.md)
+[Build your first model-driven app](build-first-model-driven-app.md)
 
 [Understand model-driven app components](model-driven-app-components.md)
 

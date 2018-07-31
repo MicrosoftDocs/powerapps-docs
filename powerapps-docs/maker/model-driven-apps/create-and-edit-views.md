@@ -18,11 +18,11 @@ caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Quickstart: Create or edit a view
+# Create or edit a view
 
 <a name="BKMK_CreatingAndEditingViews"></a>   
 
- In this quickstart, you create a new custom public view. You also edit an existing view.  
+ In this topic, you create a new custom public view. You also edit an existing view.  
   
 ### Create a new view  
   

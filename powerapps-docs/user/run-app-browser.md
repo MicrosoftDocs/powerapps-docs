@@ -1,6 +1,6 @@
 ---
-title: Quickstart to run apps in a web browser | Microsoft Docs
-description: In this quickstart, you learn how to run apps in a web browser
+title: Run apps in a web browser | Microsoft Docs
+description: In this topic, you learn how to run apps in a web browser
 author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
@@ -9,10 +9,10 @@ ms.date: 03/07/2018
 ms.author: matp
 ---
 
-# Quickstart: Run an app in a web browser
-When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
+# Run an app in a web browser
+When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
 
-To follow this quickstart, you need a [Microsoft Office 365 subscription](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) that includes Dynamics 365, and access to a [supported browser and operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to an app that you built or that someone else built and shared with you.
+To follow this procedure, you need a [Microsoft Office 365 subscription](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) that includes Dynamics 365, and access to a [supported browser and operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to an app that you built or that someone else built and shared with you.
 
 ## Sign in to Dynamics 365
 Sign in to Dynamics 365 at [https://home.dynamics.com](https://home.dynamics.com).
@@ -47,7 +47,7 @@ If an app requires a connection to a data source or permission to use the device
 To close an app, sign out of the Dynamics 365 Home page, or open another app.
 
 ## Next steps
-In this quickstart, you learned how to run a canvas or model-driven app in a web browser. To learn how to run a canvas app on a mobile device, continue to the next quickstart.
+In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to run a canvas app on a mobile device, continue to the next topic.
 
 > [!div class="nextstepaction"]
 > [Run a canvas app on a mobile device](run-app-client.md)
