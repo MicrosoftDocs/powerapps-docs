@@ -25,7 +25,7 @@ This walkthrough describes the process of registering and configuring the simple
   
 - Dynamics 365  
   
--   You must have a Dynamics 365 (online) system user account with administrator role for the [!INCLUDE[pn_MS_Office_365](../includes/pn-ms-office-365.md)].  
+-   You must have a Dynamics 365 (online) system user account with administrator role for the Office 365.  
   
 -   A Azure subscription for application registration. A trial account will also work.  
   
@@ -283,7 +283,7 @@ This walkthrough describes the process of registering and configuring the simple
   
 1.  [Sign in](http://manage.windowsazure.com) to the Azure management portal by using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Office 365 admin center by expanding the **ADMIN** item in the left navigation pane and selecting **Azure AD**.  
   
-     If you don’t have an [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] tenant (account) or you do have one but your Office 365 subscription with Dynamics 365 (online) is not available in your [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://msdn.microsoft.com/office/office365/HowTo/setup-development-environment) to associate the two accounts.  
+     If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with Dynamics 365 (online) is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) to associate the two accounts.  
   
      If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](http://azure.microsoft.com/pricing/details/active-directory/)  
   
@@ -293,7 +293,7 @@ This walkthrough describes the process of registering and configuring the simple
   
  ![List of available Active Directory entries](media/azure-active-directory.PNG "List of available Active Directory entries")  
   
-     If your [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] tenant directory isn’t shown in the directory list, click **Add**, and then select **Use existing directory** in the dialog box. Follow the prompts and instructions provided, and then go back to step 1.  
+     If your Azure tenant directory isn’t shown in the directory list, click **Add**, and then select **Use existing directory** in the dialog box. Follow the prompts and instructions provided, and then go back to step 1.  
   
 4.  With the target directory selected, click **Applications** (near the top of the page), and then click **Add**.  
   

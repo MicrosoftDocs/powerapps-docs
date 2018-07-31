@@ -21,7 +21,8 @@ ms.reviewer:
 
 This walkthrough describes how to register an application with Azure Active Directory, which enables a user with Dynamics 365 (online) user account to connect to their Dynamics 365 Online Common Data Service for Apps instance from external client applications using OAuth authentication.
 
-[!INCLUDE[cc_sdk_onpremises_note](../includes/cc-sdk-onpremises-note.md)]
+> [!NOTE]
+> The Dynamics 365 (online), version 9.0 release is not available for on-premises deployments.
 
 App registration in Azure Active Directory is typically done by ISVs who want to develop external client applications to read and write data in CDS for Apps. Registering an app in Azure Active Directory provides you with **Application ID** and **Redirect URI** values that ISVs can use in their client application's authentication code. When end users use the ISV's application for the *first time* to connect to their CDS for Apps instance by providing their CDS for Apps credentials, a consent form is presented to the end user. After consenting to use their CDS for Apps account with the ISV's application, end users can connect to CDS for Apps instance from external application. The consent form is not displayed again to other users after the first user who has already consented to use the ISV's app. Apps registered in Azure Active Directory are multi-tenant, which implies that other CDS for Apps users from other tenant can connect to their instance using the ISV's app. 
 
