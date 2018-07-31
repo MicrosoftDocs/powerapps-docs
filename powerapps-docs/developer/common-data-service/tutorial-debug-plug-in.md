@@ -25,11 +25,12 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
 
 ## Prerequisites
 
-- Complete [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- All the prerequisites for  [Tutorial: Write a plug-in](tutorial-write-plug-in.md) apply. See [Prerequisites](tutorial-write-plug-in.md#prerequisites).
+- If you haven't completed the previous tutorial, you can use the general steps below with a different registered plug-in.
 
 ## Install plug-in profiler
 
-1. If the Plug-in registration tool isn't already installed and open, follow the steps in [Tutorial: Write a plug-in](tutorial-write-plug-in.md) to open it. Complet the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) section.
+1. If the Plug-in registration tool isn't already installed and open, follow the steps in [Tutorial: Write a plug-in](tutorial-write-plug-in.md) to open it. Complete the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) section.
 1. In the Plugin Registration tool, click **Install Profiler**.
 
     ![Install Profiler](media/tutorial-debug-plug-in-install-profiler.md.png)
