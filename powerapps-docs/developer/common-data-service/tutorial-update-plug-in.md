@@ -172,18 +172,18 @@ The existing assembly from [Tutorial: Write a plug-in](tutorial-write-plug-in.md
 
 ## Configure a new step
 
-1. Configure the ValidateAccountName plugin using these settings:
+Configure the **ValidateAccountName** plugin using these settings:
 
-    |Setting|Value|
-    |--|--|
-    |Message|Update|
-    |Primary Entity|account|
-    |Filtering Attributes|name|
-    |Event Pipeline Stage of Execution|PreValidation|
-    |Execution Mode|Synchronous|
-    |Unsecure Configuration|test,<br />foo,<br />bar|
+|Setting|Value|
+|--|--|
+|Message|Update|
+|Primary Entity|account|
+|Filtering Attributes|name|
+|Event Pipeline Stage of Execution|PreValidation|
+|Execution Mode|Synchronous|
+|Unsecure Configuration|test,<br />foo,<br />bar|
 
-    ![Register New Step](media/tutorial-update-plug-in-register-new-step.png)
+![Register New Step](media/tutorial-update-plug-in-register-new-step.png)
 
 ## Add an image
 
