@@ -77,7 +77,6 @@ The following is the schema for the data description XML string for charts in vi
  </xs:complexType>  
 </xs:schema>  
 ```  
-  
 ### See also  
  [Customize Visualizations and Dashboards](customize-visualizations-dashboards.md)   
  [Schemas Used in Common Data Services for Apps](../schemas-used-dynamics-365.md)   
