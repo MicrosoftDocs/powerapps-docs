@@ -1,5 +1,5 @@
 ---
-title: "Configure Bing maps in PowerApps | MicrosoftDocs"
+title: "Configure Bing maps in a model-driven app with PowerApps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
@@ -17,7 +17,7 @@ ms.author: "matp"
 author: "Mattp123"
 manager: "kvivek"
 ---
-# Configure Bing maps
+# Configure Bing maps in a model-driven app
 
  Bing Maps can be displayed on a form for the account, contact, lead, quote, order, invoice, competitor, and system user entities. You can remove the Bing Maps area in the form editor or add it back by using the **Bing Maps** button on the **Insert** tab of the form editor.  
   

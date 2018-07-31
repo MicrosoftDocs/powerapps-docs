@@ -1,5 +1,5 @@
 ---
-title: "Main form presentations in PowerApps | MicrosoftDocs"
+title: "Model-driven app main form presentations in PowerApps | MicrosoftDocs"
 description: "Learn how main forms appear when displayed on different devices"
 ms.custom: ""
 ms.date: 06/27/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 35
 ms.author: "matp"
 manager: "kvivek"
 ---
-# How main forms appear on different devices
+# How model-driven app main forms appear on different devices
 
 The main form is used by all model-driven app clients. This form provides a consistent user experience whether someone is using a web browser,  Dynamics 365 for phones, Dynamics 365 for tablets, or Dynamics 365 for Outlook.  
   

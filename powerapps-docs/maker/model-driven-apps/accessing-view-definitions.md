@@ -1,6 +1,6 @@
 ---
-title: "Quickstart to access a view definition | MicrosoftDocs"
-description: In this quickstart you learn how to access entity views
+title: "Access a model-driven app view definition | MicrosoftDocs"
+description: In this topic you learn how to access entity views
 ms.custom: ""
 ms.date: 06/12/2018
 ms.reviewer: ""
@@ -18,9 +18,9 @@ caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Quickstart: Access a view definition in PowerApps
+# Access a model-driven app view definition in PowerApps
 
- In this quickstart you open a view definition to display properties and options to configure the view. There are several ways you can access view definitions in PowerApps. 
+ In this topic you open a view definition to display properties and options to configure the view. There are several ways you can access view definitions in PowerApps. 
   
   
 ## Open a view in PowerApps

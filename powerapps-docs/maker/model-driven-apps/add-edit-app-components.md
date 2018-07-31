@@ -1,5 +1,5 @@
 ---
-title: "Tutorial to add or edit app components with PowerApps | MicrosoftDocs"
+title: "Tutorial to add or edit model-driven app components with PowerApps | MicrosoftDocs"
 description: "Use the PowerApps app designer to add or edit components"
 keywords: ""
 ms.date: 03/30/2018
@@ -20,7 +20,7 @@ caps.latest.revision: 17
 topic-status: Drafting
 ---
 
-# Tutorial: Add or edit app components in the PowerApps app designer
+# Tutorial: Add or edit model-driven app components in the PowerApps app designer
 
 In this tutorial you learn how to add components to and remove components from a model-driven app. 
 

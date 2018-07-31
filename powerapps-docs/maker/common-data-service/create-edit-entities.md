@@ -31,7 +31,7 @@ There are two designers you can use to create an entity:
 > [!NOTE]
 > You can also create entities in your environment using the following:
 > - Import a solution that contains the definition of the entity.
-> - Use Power Query to create new entities and fill them with data. More information: [Quickstart: Add data to an entity in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
+> - Use Power Query to create new entities and fill them with data. More information: [Add data to an entity in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
 > - A developer can use [Metadata services](/powerapps/developer/common-data-service/use-web-services#metadata-services) to write a program.
 
 

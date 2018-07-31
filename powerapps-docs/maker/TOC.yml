@@ -644,11 +644,11 @@
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:
-          - name: "Quickstart: Create or edit a main form"
+          - name: "Create or edit a main form"
             href: ./model-driven-apps/create-edit-main-forms.md
-          - name: "Quickstart: Create or edit quick create forms"
+          - name: "Create or edit quick create forms"
             href: ./model-driven-apps/create-edit-quick-create-forms.md
-          - name: "Quickstart: Create a quick view form"
+          - name: "Create a quick view form"
             href: ./model-driven-apps/create-edit-quick-view-forms.md
         - name: Form editor overview 
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
@@ -670,7 +670,7 @@
         - name: Change navigation within a form
           href: ./model-driven-apps/use-the-form-editor-legacy.md
           items:
-          - name: "Quickstart: Add form navigation for related entities"
+          - name: "Add form navigation for related entities"
             href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
         - name: "How-to guides: Forms"
           items:  
@@ -695,9 +695,9 @@
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items: 
-        - name: "Quickstart: Create or edit a view"
+        - name: "Create or edit a view"
           href: ./model-driven-apps/create-and-edit-views.md
-        - name: "Quickstart: Access a view definition"
+        - name: "Access a view definition"
           href: ./model-driven-apps/accessing-view-definitions.md
         - name: Create and edit views
           href: ./model-driven-apps/create-edit-views-app-designer.md
@@ -781,7 +781,7 @@
   - name: Work with entities
     href: ./common-data-service/entity-overview.md
     items:
-    - name: "Quickstart: Create an entity"
+    - name: "Create an entity"
       href: ./common-data-service/data-platform-create-entity.md
     - name: Entities and metadata
       href: ./common-data-service/create-edit-metadata.md
@@ -826,7 +826,7 @@
   - name: Work with relationships
     href: ./common-data-service/relationships-overview.md
     items: 
-    - name: "Quickstart: Create a relationship"
+    - name: "Create a relationship"
       href: ./common-data-service/data-platform-entity-lookup.md
     - name: Create many-to-many relationships using PowerApps portal
       href: ./common-data-service/create-edit-nn-relationships-portal.md

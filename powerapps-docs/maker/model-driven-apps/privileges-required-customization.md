@@ -1,5 +1,5 @@
 ---
-title: "Privileges required for customizing | MicrosoftDocs"
+title: "Privileges required for model-driven app customizing | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
@@ -17,7 +17,7 @@ ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
 ---
-# Privileges required for customization
+# Privileges required for model-driven app customization
 
 App users can personalize the system and even share some of their customizations with others, but only users with the correct privileges can apply changes for everyone.  
   

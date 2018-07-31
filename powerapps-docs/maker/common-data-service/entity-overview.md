@@ -24,6 +24,6 @@ manager: "kvivek"
 Entities are used to model and manage business data. When you develop an app, you can use standard entities, custom entities, or both. CDS for Apps provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
 ## See also
-[Quickstart: Create a custom entity](data-platform-create-entity.md) <br/>
+[Create a custom entity](data-platform-create-entity.md) <br/>
 [Types of entities](types-of-entities.md)
 

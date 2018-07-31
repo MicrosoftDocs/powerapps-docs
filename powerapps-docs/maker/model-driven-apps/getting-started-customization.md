@@ -18,7 +18,7 @@ caps.latest.revision: 14
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Get started with app making and customization
+# Get started with model-driven app making and customization
 
 You can tailor a model-driven app to more closely fit your organization’s industry, nomenclature, and unique business processes. You can implement many customizations without writing any code.  
   

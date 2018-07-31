@@ -1,5 +1,5 @@
 ---
-title: "Create or edit quick create forms in PowerApps | MicrosoftDocs"
+title: "Create or edit model-driven app quick create forms in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
 ms.date: 05/23/2018
@@ -18,9 +18,9 @@ caps.latest.revision: 18
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Quickstart: Create or edit quick create forms for a streamlined data entry experience
+# Create or edit model-driven app quick create forms for a streamlined data entry experience
 
-In this quickstart, you create and edit a quick create form.
+In this topic, you create and edit a quick create form.
 
  With quick create forms, your app can have a streamlined data entry experience with full support for logic defined by form scripts and business rules. In a PowerApps model-driven app, quick create forms appear when you select the **Create** button in the navigation bar or when you choose **+ New** when creating a new record from a lookup or sub-grid.
   

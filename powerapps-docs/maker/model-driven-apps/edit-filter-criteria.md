@@ -1,5 +1,5 @@
 ---
-title: "Edit filter criteria and change sort order in views with PowerApps | MicrosoftDocs"
+title: "Edit filter criteria and change sort order in model-driven app views with PowerApps | MicrosoftDocs"
 description: "Learn how to edit filter criteria and change sort order in views"
 ms.custom: ""
 ms.date: 06/13/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Edit filter criteria and change sort order in views
+# Edit filter criteria and change sort order in model-driven app views
 
 <a name="BKMK_EditFilterCriteria"></a>   
 
