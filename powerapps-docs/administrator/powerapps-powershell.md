@@ -80,9 +80,9 @@ Users with a valid PowerApps license can perform the operations in these cmdlets
 > [!NOTE]
 > Use the following commands to understand syntax and view samples for each of the cmdlets:
 >```
->Get-Help Get-PowerAppsEnvironment
->Get-Help Get-PowerAppsEnvironment -Examples
->Get-Help Get-PowerAppsEnvironment -Detailed
+>Get-Help Get-PowerAppEnvironment
+>Get-Help Get-PowerAppEnvironment -Examples
+>Get-Help Get-PowerAppEnvironment -Detailed
 >```
 
 ## PowerApps cmdlets for administrators (preview)
