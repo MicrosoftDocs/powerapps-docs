@@ -1,5 +1,5 @@
 ---
-title: "Create or edit a system chart in PowerApps | MicrosoftDocs"
+title: "Create or edit a model-driven app system chart in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a chart"
 ms.custom: ""
 ms.date: 05/23/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 29
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Create a system chart
+# Create a model-driven app system chart
 
 In this topic you learn how to create a system chart. System charts are organization-owned charts, which makes them available to anyone with access to read the data running the app. System charts can’t be assigned or shared with specific app users.  
   

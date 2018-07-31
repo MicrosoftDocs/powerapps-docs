@@ -1,5 +1,5 @@
 ---
-title: "Specify properties for Unified Interface apps in PowerApps | MicrosoftDocs"
+title: "Specify properties for model-driven unified interface apps in PowerApps | MicrosoftDocs"
 description: "Learn how to configure the grid control for your app"
 keywords: ""
 ms.date: 06/06/2018
@@ -21,7 +21,7 @@ caps.latest.revision: 0
 topic-status: Drafting
 ---
 
-# Specify properties for Unified Interface apps
+# Specify properties for model-driven unified interface apps
 
 The Unified Interface framework uses responsive design principles to provide an optimal viewing and interaction experience for any screen size or orientation. With model-driven apps that use the Unified Interface framework, the grid (view) control is responsive. As the size of the container decreases—for example, on phones and smaller viewports—the grid is transformed into a list. 
 

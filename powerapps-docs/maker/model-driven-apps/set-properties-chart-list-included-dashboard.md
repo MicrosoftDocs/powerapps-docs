@@ -1,5 +1,5 @@
 ---
-title: "Set properties for a chart or list included in a dashboard in PowerApps | MicrosoftDocs"
+title: "Set properties for a model-driven app chart or list included in a dashboard in PowerApps | MicrosoftDocs"
 description: "Learn how to set properties for  chart or list included in a dashboard"
 ms.custom: ""
 ms.date: 06/06/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 26
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Set properties for a chart or list included in a dashboard
+# Set properties for a model-driven app chart or list included in a dashboard
 
 To edit a chart or list component from the dashboard designer, select the chart or list you want and then select Edit Component on the dashboard designer toolbar.   
 

@@ -1,5 +1,5 @@
 ---
-title: "Open the form editor  | MicrosoftDocs"
+title: "Open the model-driven app form editor in PowerApps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
@@ -18,7 +18,7 @@ ms.author: "matp"
 manager: "kvivek"
 ---
 
-# Open the form editor 
+# Open the model-driven app form editor 
 The form editor is where you design forms by dropping components such as sections, tabs, fields, and controls onto the form editor canvas. In this topic you learn how several different ways to access the form editor.
  
 If you create any new solution components in the process of editing the form, for example web resources, the names of the components will use the solution publisher customization prefix for the default solution and these components will only be included in the default solution. If you want any new solution components to be included in a specific unmanaged solution, you should open the form editor through that unmanaged solution.  

@@ -1,5 +1,5 @@
 ---
-title: "Add a field to a form in PowerApps | MicrosoftDocs"
+title: "Add a field to a model-driven app form in PowerApps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
@@ -17,7 +17,7 @@ caps.latest.revision: 30
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Add a field to a form 
+# Add a field to a model-driven app form 
 
 If a PowerApps form for a standard entity doesn’t meet your organization’s business requirements, you can customize the form by changing existing fields or by adding new fields. While it might be simpler to edit the existing fields on a form, sometimes it’s better to add a field to address a specific business scenario.
 

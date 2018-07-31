@@ -1,5 +1,5 @@
 ---
-title: "Create or edit web resources in PowerApps | MicrosoftDocs"
+title: "Create or edit model-driven app web resources in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a web resource"
 ms.custom: ""
 ms.date: 06/02/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 21
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Create or edit web resources to extend an app
+# Create or edit model-driven app web resources to extend an app
 
 Web resources are typically used by developers to extend an app using files that are used in web development. App users may need to manage web resources provided by a developer or designer.  
 

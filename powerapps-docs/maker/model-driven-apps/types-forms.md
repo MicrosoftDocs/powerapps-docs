@@ -1,5 +1,5 @@
 ---
-title: "Type of forms in PowerApps | MicrosoftDocs"
+title: "Type of model-driven app forms in PowerApps | MicrosoftDocs"
 description: "Understand the different types of forms"
 ms.custom: ""
 ms.date: 06/27/2018
@@ -19,7 +19,7 @@ ms.author: "matp"
 manager: "kvivek"
 tags: 
 ---
-# Type of forms in PowerApps
+# Type of model-driven app forms in PowerApps
 
  There are different types of forms and each type has a specific functionality or use. The following table describes the types of forms available.  
   

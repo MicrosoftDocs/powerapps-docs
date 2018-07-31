@@ -1,5 +1,5 @@
 ---
-title: "Manage app properties in the PowerApps app designer | MicrosoftDocs"
+title: "Manage model-driven app properties in the PowerApps app designer | MicrosoftDocs"
 description: "Learn how to manage the properties for your app"
 keywords: ""
 ms.date: 06/27/2018
@@ -21,7 +21,7 @@ caps.latest.revision: 14
 topic-status: Drafting
 ---
 
-# Manage app properties in the app designer
+# Manage model-driven app properties in the app designer
 
 App properties define important details about the app, like its title or URL. You define app properties when you create an app. If you want to change those properties later, you can do that in the app designer.  
   

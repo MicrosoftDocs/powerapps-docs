@@ -6,7 +6,6 @@ author: Mattp123
 manager: kfile
 editor: ''
 tags: ''
-
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual

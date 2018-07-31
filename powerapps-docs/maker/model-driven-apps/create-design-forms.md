@@ -1,5 +1,5 @@
 ---
-title: "Create and design forms | MicrosoftDocs"
+title: "Create and design model-driven app forms | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/26/2018
 ms.reviewer: ""
@@ -13,12 +13,12 @@ applies_to:
   - "PowerApps"
 ms.assetid: 99c795e0-9165-4112-85b1-6b5e1a4aa5ec
 caps.latest.revision: 33
-ms.author: "rdubois"
-manager: "brycho"
+ms.author: "matp"
+manager: "kvivek"
 tags: 
  - "Links to topic not migrated"
 ---
-# Create and design forms 
+# Create and design model-driven app forms 
 
 With PowerApps, forms provide the user interface that people use to interact with the data they need to do their work. It's important that the forms people use are designed to allow them to find or enter the information they need efficiently. 
 

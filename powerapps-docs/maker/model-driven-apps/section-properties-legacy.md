@@ -1,5 +1,5 @@
 ---
-title: Section properties for Main forms in PowerApps | MicrosoftDocs
+title: Section properties for model-driven app main forms in PowerApps | MicrosoftDocs
 description: Understand the section properties for a main form
 Keywords: Main form; Section properties; Dynamics 365
 author: Mattp123
@@ -14,7 +14,7 @@ ms.service: crm-online
 ms.topic: article
 ms.assetid: 2d3af6e9-e8a4-4129-b708-383b2740c015
 ---
-# Section properties
+# Model-driven app form section properties
 
  A section in a form occupies the space available in a tab column. Sections have a label that can be displayed and a line may be shown below the label.  
   

@@ -19,7 +19,7 @@ applies_to:
 ms.assetid: 60281cab-23d5-4421-ae51-f7e6c1176729
 ---
 
-# Navigate to advanced app making and customization areas
+# Navigate to advanced model-driven app making and customization areas
 
 This topic describes how to access advanced customization and administration areas that are available within a PowerApps environment.
 

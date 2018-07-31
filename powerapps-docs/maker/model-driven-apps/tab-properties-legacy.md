@@ -1,5 +1,5 @@
 ---
-title: Tab properties for forms in PowerApps | MicrosoftDocs
+title: Tab properties for for model-driven app forms in PowerApps | MicrosoftDocs
 description: Understand the tab properties for main forms 
 Keywords: Tab properties; Dynamics 365; Main forms
 author: matp
@@ -14,7 +14,7 @@ ms.service: crm-online
 ms.topic: article
 ms.assetid: e0790865-c5a4-4e86-bce2-584af2b8ed93
 ---
-# Tab properties overview
+# Tab properties for model-driven app forms overview
 
  In the body of a form, tabs provide horizontal separation. Tabs have a label that can be displayed. If the label is displayed, tabs can be expanded or collapsed to show or hide their content by choosing the label.  
   

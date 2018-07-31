@@ -1,5 +1,5 @@
 ---
-title: Common field properties in PowerApps | MicrosoftDocs
+title: Model-driven app common field properties in PowerApps | MicrosoftDocs
 description: Understand the Common field properties for Main form in Dynamics 365 for Customer Engagement
 Keywords: Main form; Common field properties; Dynamics 365
 author: Mattp123
@@ -19,7 +19,7 @@ applies_to:
   - "powerapps"
 ms.assetid: 2b91ee28-7f09-435e-9fae-5225aa698e22
 ---
-# Common field properties
+# Model-driven app common field properties
 
  Fields in a form display controls people use to view or edit data in an entity record. Fields can be formatted to occupy up to four columns within a section.  
 

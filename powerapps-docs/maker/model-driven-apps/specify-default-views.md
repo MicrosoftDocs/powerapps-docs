@@ -1,5 +1,5 @@
 ---
-title: "Specify a default view in PowerApps | MicrosoftDocs"
+title: "Specify a model-driven app default view in PowerApps | MicrosoftDocs"
 description: "Learn how to specificy a default view"
 ms.custom: ""
 ms.date: 06/12/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Specify a default view
+# Specify a model-driven app default view
 
 <a name="BKMK_SetDefaultView"></a>   
 

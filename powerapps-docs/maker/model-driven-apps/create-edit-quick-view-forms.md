@@ -1,5 +1,5 @@
 ---
-title: "Create or edit quick view forms in PowerApps | MicrosoftDocs"
+title: "Create or edit model-driven app quick view forms in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a quick view form"
 ms.custom: ""
 ms.date: 05/23/2018
@@ -19,7 +19,7 @@ ms.author: "matp"
 manager: "kvivek"
 ---
 
-# Create a quick view form to view information about a related entity
+# Create a model-driven app quick view form to view information about a related entity
 
 In this topic you learn how to create a quick view form and how to add a quick view control to a main form. 
 
