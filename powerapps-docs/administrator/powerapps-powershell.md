@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: reference
-ms.date: 05/23/2018
+ms.date: 07/31/2018
 ms.author: jamesol
 ---
 
@@ -80,9 +80,9 @@ Users with a valid PowerApps license can perform the operations in these cmdlets
 > [!NOTE]
 > Use the following commands to understand syntax and view samples for each of the cmdlets:
 >```
->Get-Help Get-PowerAppsEnvironment
->Get-Help Get-PowerAppsEnvironment -Examples
->Get-Help Get-PowerAppsEnvironment -Detailed
+>Get-Help Get-PowerAppEnvironment
+>Get-Help Get-PowerAppEnvironment -Examples
+>Get-Help Get-PowerAppEnvironment -Detailed
 >```
 
 ## PowerApps cmdlets for administrators (preview)
