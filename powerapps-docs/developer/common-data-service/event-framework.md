@@ -31,7 +31,7 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-s
 
 The capability to extend the default behavior of Common Data Service for apps depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events. 
 
-All capablities to extend the default behavior of the platform depend on the event framework. When you configure a workflow to respond to an event using the workflow designer without writing code, that event is provided by the event framework. 
+All capabilities to extend the default behavior of the platform depend on the event framework. When you configure a workflow to respond to an event using the workflow designer without writing code, that event is provided by the event framework. 
 
 As a developer, you will use the *Plug-in registration tool* to configure plug-ins, Azure integrations, virtual entity data providers, and Web Hooks to respond to events that are provided by the event framework. When events occur and an extension is registered to respond to them, contextual information about the data involved in the operation is passed to the extension. Depending on how the registration for the event is configured, the extension can modify the data passed into it, intiate some automated process to be applied immediately, or define that an action is added to a queue to be be performed later.
 

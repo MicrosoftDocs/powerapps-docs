@@ -13,7 +13,10 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Write and register a plug-in
 
 <!-- This should be the how-to topic supporting the tutorial 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool -->
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool 
+
+This is a tutorial and should b updated
+-->
 
 ## Debug a plug-in
 

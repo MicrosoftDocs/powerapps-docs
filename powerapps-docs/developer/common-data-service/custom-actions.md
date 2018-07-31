@@ -12,4 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Custom Actions
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-own-actions -->
+<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-own-actions 
+
+TODO: add information about using raw OrganizationRequest and OrganizationResponse classes without using the generated classes.
+-->
