@@ -90,45 +90,45 @@ You need to use Visual Studio to write a plug-in. Use these steps to write a bas
 1. Replace the contents of the `Execute` method with the following code:
 
 
-    ```csharp
-    // Obtain the tracing service
-    ITracingService tracingService =
-    (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+```csharp
+// Obtain the tracing service
+ITracingService tracingService =
+(ITracingService)serviceProvider.GetService(typeof(ITracingService));
 
-    // Obtain the execution context from the service provider.  
-    IPluginExecutionContext context = (IPluginExecutionContext)
-        serviceProvider.GetService(typeof(IPluginExecutionContext));
+// Obtain the execution context from the service provider.  
+IPluginExecutionContext context = (IPluginExecutionContext)
+    serviceProvider.GetService(typeof(IPluginExecutionContext));
 
-    // The InputParameters collection contains all the data passed in the message request.  
-    if (context.InputParameters.Contains("Target") &&
-        context.InputParameters["Target"] is Entity)
+// The InputParameters collection contains all the data passed in the message request.  
+if (context.InputParameters.Contains("Target") &&
+    context.InputParameters["Target"] is Entity)
+{
+    // Obtain the target entity from the input parameters.  
+    Entity entity = (Entity)context.InputParameters["Target"];
+
+    // Obtain the organization service reference which you will need for  
+    // web service calls.  
+    IOrganizationServiceFactory serviceFactory =
+        (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
+    IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
+
+    try
     {
-        // Obtain the target entity from the input parameters.  
-        Entity entity = (Entity)context.InputParameters["Target"];
-
-        // Obtain the organization service reference which you will need for  
-        // web service calls.  
-        IOrganizationServiceFactory serviceFactory =
-            (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-        IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
-
-        try
-        {
-            // Plug-in business logic goes here.  
-        }
-
-        catch (FaultException<OrganizationServiceFault> ex)
-        {
-            throw new InvalidPluginExecutionException("An error occurred in FollowUpPlugin.", ex);
-        }
-
-        catch (Exception ex)
-        {
-            tracingService.Trace("FollowUpPlugin: {0}", ex.ToString());
-            throw;
-        }
+        // Plug-in business logic goes here.  
     }
-    ```
+
+    catch (FaultException<OrganizationServiceFault> ex)
+    {
+        throw new InvalidPluginExecutionException("An error occurred in FollowUpPlugin.", ex);
+    }
+
+    catch (Exception ex)
+    {
+        tracingService.Trace("FollowUpPlugin: {0}", ex.ToString());
+        throw;
+    }
+}
+```
 
 ### About the code
 
