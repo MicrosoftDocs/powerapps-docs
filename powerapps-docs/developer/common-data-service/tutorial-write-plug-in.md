@@ -66,70 +66,69 @@ You need to use Visual Studio to write a plug-in. Use these steps to write a bas
 
 1. Add the following `using` statements to the top of the `FollowupPlugin.cs` file:
 
-
-```csharp
-using System.ServiceModel;  
-using Microsoft.Xrm.Sdk;
-```
+    ```csharp
+    using System.ServiceModel;  
+    using Microsoft.Xrm.Sdk;
+    ```
 
 1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> Interface by editing the class.
 
     > [!NOTE]
     > If you just type  `: IPlugin` after the class name, Visual Studio will auto-suggest implementing a stub for the **Execute** Method.
 
-
-```csharp
-public class FollowupPlugin : IPlugin
-{
-    public void Execute(IServiceProvider serviceProvider)
+    ```csharp
+    public class FollowupPlugin : IPlugin
     {
-        throw new NotImplementedException();
+        public void Execute(IServiceProvider serviceProvider)
+        {
+            throw new NotImplementedException();
+        }
     }
-}
-```
+    ```
+
 
 1. Replace the contents of the `Execute` method with the following code:
 
 
-```csharp
-// Obtain the tracing service
-ITracingService tracingService =
-(ITracingService)serviceProvider.GetService(typeof(ITracingService));
+    ```csharp
+    // Obtain the tracing service
+    ITracingService tracingService =
+    (ITracingService)serviceProvider.GetService(typeof(ITracingService));
 
-// Obtain the execution context from the service provider.  
-IPluginExecutionContext context = (IPluginExecutionContext)
-    serviceProvider.GetService(typeof(IPluginExecutionContext));
+    // Obtain the execution context from the service provider.  
+    IPluginExecutionContext context = (IPluginExecutionContext)
+        serviceProvider.GetService(typeof(IPluginExecutionContext));
 
-// The InputParameters collection contains all the data passed in the message request.  
-if (context.InputParameters.Contains("Target") &&
-    context.InputParameters["Target"] is Entity)
-{
-    // Obtain the target entity from the input parameters.  
-    Entity entity = (Entity)context.InputParameters["Target"];
-
-    // Obtain the organization service reference which you will need for  
-    // web service calls.  
-    IOrganizationServiceFactory serviceFactory =
-        (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-    IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
-
-    try
+    // The InputParameters collection contains all the data passed in the message request.  
+    if (context.InputParameters.Contains("Target") &&
+        context.InputParameters["Target"] is Entity)
     {
-        // Plug-in business logic goes here.  
-    }
+        // Obtain the target entity from the input parameters.  
+        Entity entity = (Entity)context.InputParameters["Target"];
 
-    catch (FaultException<OrganizationServiceFault> ex)
-    {
-        throw new InvalidPluginExecutionException("An error occurred in FollowUpPlugin.", ex);
-    }
+        // Obtain the organization service reference which you will need for  
+        // web service calls.  
+        IOrganizationServiceFactory serviceFactory =
+            (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
+        IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
 
-    catch (Exception ex)
-    {
-        tracingService.Trace("FollowUpPlugin: {0}", ex.ToString());
-        throw;
+        try
+        {
+            // Plug-in business logic goes here.  
+        }
+
+        catch (FaultException<OrganizationServiceFault> ex)
+        {
+            throw new InvalidPluginExecutionException("An error occurred in FollowUpPlugin.", ex);
+        }
+
+        catch (Exception ex)
+        {
+            tracingService.Trace("FollowUpPlugin: {0}", ex.ToString());
+            throw;
+        }
     }
-}
-```
+    ```
 
 ### About the code
 
