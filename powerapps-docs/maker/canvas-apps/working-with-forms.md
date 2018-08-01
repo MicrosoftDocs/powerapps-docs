@@ -1,6 +1,6 @@
 ---
-title: Understand forms | Microsoft Docs
-description: Use forms to collect and display information from a data source.
+title: Understand canvas-app forms | Microsoft Docs
+description: Use forms in a canvas app to collect and display information from a data source.
 author: gregli-msft
 manager: kvivek
 
@@ -12,8 +12,9 @@ ms.date: 04/27/2016
 ms.author: gregli
 
 ---
-# Understand data forms in Microsoft PowerApps
-Add three types of controls so that the user can browse for a record, display details about that record, and edit or create a record:
+# Understand canvas-app forms in Microsoft PowerApps
+
+Add three types of controls to a canvas app so that the user can browse for a record, display details about that record, and edit or create a record:
 
 | Activity | Control | Description |
 | --- | --- | --- |

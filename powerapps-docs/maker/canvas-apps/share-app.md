@@ -1,6 +1,6 @@
 ---
-title: Share an app | Microsoft Docs
-description: Share your app by giving other users permission to run or modify it
+title: Share a canvas app | Microsoft Docs
+description: Share your canvas app by giving other users permission to run or modify it
 author: AFTOwen
 manager: kvivek
 
@@ -11,9 +11,9 @@ ms.reviewer:
 ms.date: 07/11/2018
 ms.author: anneta
 ---
-# Share an app in PowerApps
+# Share a canvas app in PowerApps
 
-After you build an app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name, or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
+After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name, or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Common Data Service for Apps](#common-data-service-for-apps) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
