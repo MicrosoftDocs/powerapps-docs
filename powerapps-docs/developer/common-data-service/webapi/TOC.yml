@@ -70,13 +70,16 @@
     href: create-update-optionsets.md
 - name: Discover the URL for your organization
   href: discover-url-organization-web-api.md
+  items:
+  - name: Web API Global Discovery Service Sample (C#)
+    href: samples/global-discovery-service-csharp.md
 - name: Import data
   href: ../import-data.md #Topic is for both Web API and Organization service
 - name: Sample data
   href: ../sample-data.md #Topic is for both Web API and Organization service
 - name: Samples
   items:
-  - name: Sample Templates
+  - name:  Data operations Sample Templates
     href: web-api-samples.md
     items:
     - name: Basic Operations

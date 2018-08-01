@@ -1,5 +1,5 @@
 ---
-title: "Web API Samples (C#) (Common Data Service for Apps)| Microsoft Docs"
+title: "Web API  Data operations  Samples (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "This topic provides a description of various Web API samples that are implemented using C#"
 ms.custom: ""
 ms.date: 06/15/2018
@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 ---
-# Web API Samples (C#)
+# Web API Data operations Samples (C#)
 
 This topic provides information about the Web API samples implemented with C#. While each sample focuses on a different aspect of the Common Data Service for Apps Web API, they share similar characteristics and structure.  
   

@@ -1,4 +1,4 @@
-- name: (C#) Samples
+- name: (C#)  Data operations Samples
   href: ../web-api-samples-csharp.md
   items:
     - name: Basic Operations
@@ -9,7 +9,7 @@
       href: conditional-operations-csharp.md
     - name: Functions and Actions
       href: functions-actions-csharp.md
-- name: Client-side JavaScript Samples
+- name: Client-side JavaScript  Data operations Samples
   href: ../web-api-samples-client-side-javascript.md
   items:
   - name: Basic Operations
@@ -20,3 +20,5 @@
     href: conditional-operations-client-side-javascript.md
   - name: Functions and Actions
     href: functions-actions-client-side-javascript.md
+- name: Global Discovery Service Sample
+  href: global-discovery-service-csharp.md

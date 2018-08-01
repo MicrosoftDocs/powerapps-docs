@@ -1,5 +1,5 @@
 ---
-title: "Web API Samples (Common Data Service for Apps) | Microsoft Docs"
+title: "Web API Data operations Samples (Common Data Service for Apps) | Microsoft Docs"
 description: "The Common Data Service for Apps SDK provides a matrix of samples demonstrating how to use the Web API in a number of different ways. Find here the C# and JavaScript implementations of Basic Operations, Query Data, Conditional Operations and Functions and Actions sample"
 ms.custom: ""
 ms.date: 06/15/2018
@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 ---
-# Web API Samples
+# Web API Data operations Samples
 
 You can use the Common Data Service for Apps Web API with a wide variety of programming languages or libraries. This guide provides a matrix of samples demonstrating how to use the Web API in a number of different ways. This topic introduces the samples available for each group of operations and how to perform these operations using different languages or libraries.
 

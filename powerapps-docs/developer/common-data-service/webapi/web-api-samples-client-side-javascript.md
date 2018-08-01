@@ -1,5 +1,5 @@
 ---
-title: "Web API Samples (Client-side JavaScript) (Common Data Service for Apps)| Microsoft Docs"
+title: "Web API  Data operations Samples (Client-side JavaScript) (Common Data Service for Apps)| Microsoft Docs"
 description: "This topic provides a description of various Web API samples that are implemented using Client-side JavaScript"
 ms.custom: ""
 ms.date: 06/15/2018
@@ -16,7 +16,7 @@ author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
 ---
-# Web API Samples (Client-side JavaScript)
+# Web API  Data operations Samples (Client-side JavaScript)
 
 
 
