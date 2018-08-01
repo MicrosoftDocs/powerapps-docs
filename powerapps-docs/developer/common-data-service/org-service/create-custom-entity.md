@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 This topic shows how to create a custom user-owned entity called **Bank Account** and add four different types of attributes to it.  
   
- You can also create organization-owned custom entities. More information: [Entity ownership](../introduction-entities.md#entity-ownership)  
+ You can also create organization-owned custom entities. More information: [Entity ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
   
 > [!NOTE]
 >  You won’t be able to see this entity in the application navigation unless the entity properties are edited to set the **Areas that display this entity** are set.  
