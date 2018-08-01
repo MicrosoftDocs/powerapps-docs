@@ -1,6 +1,6 @@
 ---
 title: Understand variables in canvas apps | Microsoft Docs
-description: Reference information for working with state, context variables, and collections in canvas apps
+description: Reference information about working with state, context variables, and collections in canvas apps
 author: gregli-msft
 manager: kvivek
 

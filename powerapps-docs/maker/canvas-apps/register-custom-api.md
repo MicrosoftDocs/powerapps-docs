@@ -17,7 +17,7 @@ ms.author: mblythe
 
 Without writing any code, you can build workflows and canvas apps with [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow](https://flow.microsoft.com), and [PowerApps](https://powerapps.microsoft.com). To help you integrate your data and business processes, these services offer [180+ connectors](https://docs.microsoft.com/connectors/) - for Microsoft services and products, as well as other services, such as GitHub, Salesforce, and Twitter.
 
-Sometimes though, you might want to call APIs, services, and systems that aren't available as pre built connectors. To support more tailored scenarios, you can build *custom connectors* with their own triggers and actions. We have a complete set of basic and advanced tutorials for custom connectors on the Connectors documentation site. We recommend that you start with the [custom connector overview](https://docs.microsoft.com/connectors/custom-connectors/), but you can also go straight to the following topics for details on a specific area:
+Sometimes though, you might want to call APIs, services, and systems that aren't available as pre-built connectors. To support more tailored scenarios, you can build *custom connectors* with their own triggers and actions. We have a complete set of basic and advanced tutorials for custom connectors on the Connectors documentation site. We recommend that you start with the [custom connector overview](https://docs.microsoft.com/connectors/custom-connectors/), but you can also go straight to the following topics for details on a specific area:
 
 * [Create a custom connector from an OpenAPI definition](https://docs.microsoft.com/connectors/custom-connectors/define-openapi-definition)
 
