@@ -20,5 +20,5 @@
     href: conditional-operations-client-side-javascript.md
   - name: Functions and Actions
     href: functions-actions-client-side-javascript.md
-- name: Global Discovery Service Sample
+- name: Global Discovery Service Sample (C#)
   href: global-discovery-service-csharp.md

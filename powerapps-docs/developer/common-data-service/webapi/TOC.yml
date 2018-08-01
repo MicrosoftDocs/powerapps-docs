@@ -71,7 +71,7 @@
 - name: Discover the URL for your organization
   href: discover-url-organization-web-api.md
   items:
-  - name: Web API Global Discovery Service Sample (C#)
+  - name: Global Discovery Service Sample (C#)
     href: samples/global-discovery-service-csharp.md
 - name: Import data
   href: ../import-data.md #Topic is for both Web API and Organization service
