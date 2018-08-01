@@ -64,7 +64,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
 > [!IMPORTANT]
 >  -   Once you create a date and time attribute with behavior set to `DateOnly` or `TimeZoneIndependent`, you cannot change the behavior of the attribute. More information: [Change the behavior of a DateTime attribute](behavior-format-date-time-attribute.md#ChangeBehavior)  
-> -   The date and time attributes with the `DateOnly` or `TimeZoneIndependent` behavior will be treated like having the `UserLocal` behavior when edited in an earlier version of the CDS for Apps for Outlook client in the offline mode. This is because the client doesn’t understand the new behaviors and won’t treat them differently from `UserLocal`. No date and time attributes are converted to the new behaviors on upgrade so the best practice here would be to upgrade all CDS for Apps clients to the latest release before a customizer adopts one of the new behaviors. When online, editing data for fields with the new behaviors will work fine.  
+> -   The date and time attributes with the `DateOnly` or `TimeZoneIndependent` behavior will be treated like having the `UserLocal` behavior when edited in an earlier version of the Dynamics 365 for Outlook client in the offline mode. This is because the client doesn’t understand the new behaviors and won’t treat them differently from `UserLocal`. No date and time attributes are converted to the new behaviors on upgrade so the best practice here would be to upgrade all CDS for Apps clients to the latest release before a customizer adopts one of the new behaviors. When online, editing data for fields with the new behaviors will work fine.  
   
 <a name="SpecifyFormat"></a>   
 
@@ -88,7 +88,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
 -   Next X Hours  
   
- More information: [Date and time query operators in FetchXML](org-service/fiscal-date-older-datetime-query-operators-fetchxml.md)  
+ More information: [Date and time query operators in FetchXML](/dynamics365/customer-engagement/developer/org-service/fiscal-date-older-datetime-query-operators-fetchxml)  
   
 <a name="ChangeBehavior"></a>
    
@@ -176,7 +176,7 @@ Console.WriteLine("Published customizations to the Account entity.\n");
  
 ``` 
   
- For the complete sample code, see [Sample: Convert date and time values](org-service/sample-convert-date-time-behavior.md).  
+ For the complete sample code, see [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior).  
   
 <a name="Convert"></a>   
 ## Convert behavior of existing date and time values in the database 
@@ -231,11 +231,11 @@ ConvertDateAndTimeBehaviorResponse response = (ConvertDateAndTimeBehaviorRespons
 
 ```
   
- For the complete sample code, see [Sample: Convert date and time values](org-service/sample-convert-date-time-behavior.md)  
+ For the complete sample code, see [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior)  
   
 ### See also  
- [Sample: Convert date and time values](org-service/sample-convert-date-time-behavior.md)   
+ [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior.md)   
  [Behavior and format of the Date and Time field](../customize/behavior-format-date-time-field.md)   
- [Customize Entity Attribute Metadata](customize-entity-attribute-metadata.md)          
+ [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)          
  <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest>      
  <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> 
