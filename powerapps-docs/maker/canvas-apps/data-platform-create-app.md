@@ -1,6 +1,6 @@
 ---
-title: Quickstart - Generate an app from Common Data Service for Apps | Microsoft Docs
-description: In this quickstart, you automatically generate an app in PowerApps to manage data in Common Data Service for Apps
+title: Generate a canvas app from Common Data Service for Apps | Microsoft Docs
+description: In PowerApps, automatically generate a canvas app to manage data in Common Data Service for Apps
 author: AFTOwen
 manager: kvivek
 
@@ -12,16 +12,18 @@ ms.date: 05/06/2018
 ms.author: anneta
 
 ---
-# Quickstart: Generate an app from Common Data Service for Apps in PowerApps
+# Generate a canvas app from Common Data Service for Apps in PowerApps
 
-In this quickstart, you'll use Microsoft PowerApps to automatically generate an app based on a list of sample accounts in [Common Data Service (CDS) for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
+In PowerApps, automatically generate a canvas app based on a list of sample accounts in [Common Data Service (CDS) for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
 If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 ## Prerequisites
+
 To follow this quickstart, you must [switch to an environment](working-with-environments.md) in which a database in CDS for Apps has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
 ## Generate an app
+
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, switch environments as specified earlier in this topic.
 
 	![PowerApps home page](./media/data-platform-create-app/sign-in.png)

@@ -1,6 +1,6 @@
 ---
-title: Create charts | Microsoft Docs
-description: Show categories of data as line charts, pie charts, or bar charts
+title: Create a chart in a canvas app | Microsoft Docs
+description: In PowerApps, show categories of data as line charts, pie charts, or bar charts in a canvas app
 author: lonu
 manager: kvivek
 
@@ -13,7 +13,8 @@ ms.author: lonu
 
 ---
 # Show data in a line, pie, or bar chart in PowerApps
-Use line charts, pie charts, and bar charts to display your data. When working with charts, the data that you import should be structured like the following:
+
+Use line charts, pie charts, and bar charts to display your data in a canvas app. When you work with charts, the data that you import should be structured based on these criteria:
 
 * Each series should be in the first row.
 * Labels should be in the leftmost column.
@@ -25,6 +26,7 @@ For example, your data should look similar to the following:
 You can create and use these charts within PowerApps. Let's get started.
 
 ## Prerequisites
+
 * [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 * Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.

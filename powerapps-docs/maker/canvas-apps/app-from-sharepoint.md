@@ -1,6 +1,6 @@
 ---
-title: Quickstart for generating an app in PowerApps from SharePoint | Microsoft Docs
-description: Automatically generate an app in PowerApps to manage data in a SharePoint list
+title: Generate a canvas app in PowerApps from SharePoint | Microsoft Docs
+description: In PowerApps, automatically generate a canvas app to manage data in a SharePoint list
 author: AFTOwen
 manager: kvivek
 
@@ -12,9 +12,9 @@ ms.date: 03/12/2018
 ms.author: anneta
 
 ---
-# Quickstart for generating an app in PowerApps from SharePoint
+# Generate a canvas app in PowerApps from SharePoint data
 
-In this quickstart, you'll use PowerApps to automatically generate your first app based on a list that you create in SharePoint. In this app, you can browse all items in the list, show details of a single item, and create, update, or delete an item.
+In this topic, you'll use PowerApps to automatically generate your first canvas app based on a list that you create in SharePoint. In this app, you can browse all items in the list, show details of a single item, and create, update, or delete an item.
 
 You can learn concepts and techniques from this quickstart if you have any list in SharePoint. To follow this quickstart exactly, create a list, named **SimpleApp**, that contains a column named **Title**, in a SharePoint Online site. In the list, create entries for **Vanilla**, **Chocolate**, and **Strawberry**.
 

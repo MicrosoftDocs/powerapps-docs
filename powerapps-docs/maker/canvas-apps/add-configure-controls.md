@@ -1,6 +1,6 @@
 ---
-title: Add and configure a control | Microsoft Docs
-description: Step-by-step instructions for adding and configuring controls directly, from the toolbar, in the Properties tab, or in the formula bar.
+title: Add and configure a canvas-app control | Microsoft Docs
+description: Step-by-step instructions for adding and configuring canvas-app controls directly, from the toolbar, in the Properties tab, or in the formula bar.
 author: AFTOwen
 manager: kvivek
 
@@ -12,10 +12,12 @@ ms.date: 07/10/2017
 ms.author: anneta
 
 ---
-# Add and configure a control in PowerApps
-Add a variety of UI elements to your app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
+# Add and configure a canvas-app control in PowerApps
+
+Add a variety of UI elements to your canvas app, and configure aspects of their appearance and behavior directly, from the toolbar, in the **Properties** tab, or in the formula bar. These UI elements are called controls, and the aspects that you configure are called properties.
 
 ## Prerequisites
+
 1. [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
 2. In PowerApps Studio, click or tap **New** on the **File** menu (near the left edge).
