@@ -247,7 +247,7 @@ If an `INTERVAL` value is not set, it will be interpreted as `1`.
 You can delete system jobs in the application or in code just like any other entity if you have the necessary privileges to do so.
 
 > [!NOTE]
-> When registering asynchronous plug-ins, there is an option to automatically delete successful operations. It is recommended that you use it. More information: [Create and register a plug-in](create-register-plugin.md)
+> When registering asynchronous plug-ins, there is an option to automatically delete successful operations. It is recommended that you use it. More information: [Write a plug-in](write-plug-in.md)
 
 The common practice is to create a recurring bulk deletion job that will delete those jobs which succeeded. More information [Remove a large amount of specific, targeted data with bulk deletion](/dynamics365/customer-engagement/admin/delete-bulk-records)
 
@@ -301,6 +301,6 @@ The `PostPoneUntil` attribute contains a datetime value when the system job will
 
 ### See also
 
-[Create and register a plug-in](create-register-plugin.md)<br />
+[Write a plug-in](write-plug-in.md)<br />
 [Write plug-ins to extend business processes](plug-ins.md) <br />
-[Write and register a plug-in](write-register-plug-in.md)
+

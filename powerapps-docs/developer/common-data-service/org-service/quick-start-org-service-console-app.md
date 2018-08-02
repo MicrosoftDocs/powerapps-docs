@@ -12,6 +12,8 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Quick Start: Organization service sample (C#)
 
+This is where you begin working with the .NET SDK assemblies to work with data using Common Data Service for Apps.
+
 In this quick start you will create a minimum console application to connect to the Organization service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. You will pass  your connection information using a connection string passed to the constructor.
 
 You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class, and you will display the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value.

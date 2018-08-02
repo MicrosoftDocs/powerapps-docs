@@ -54,5 +54,5 @@ Each of the classes which implement the <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 
 [Use messages with the Organization service](use-messages.md)<br />
 [Create a client application](create-client-app.md)<br />
-[Write and register a plug-in](../write-register-plug-in.md)<br />
+[Write a plug-in](../write-plug-in.md)<br />
 [Entity Operations using the Organization service](entity-operations.md)
