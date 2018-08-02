@@ -52,7 +52,7 @@ Content in this topic supports the following tutorials:
 
 A plug-in is a class within an assembly created using a .NET Framework Class library project using .NET Framework 4.5.2 in Visual Studio. Each class in the project that will be registered as a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
 
-The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService``1>. You will use this method to get several different types of services that you can use in your code.
+The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService*. You will use this method to get several different types of services that you can use in your code.
 
 ## Services you can use in your code
 
@@ -61,7 +61,7 @@ Within your plug-in you will need to:
  - Access the Organization web service so you can write code to query data, work with entity records, use messages to perform operations.
  - Write messages to the Tracing service so you can evaluate how your code is executing.
 
-The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService``1> method provides you with a way to access these services as needed. To get an instance of the service you invoke the `GetService` method passing the type of service.
+The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method provides you with a way to access these services as needed. To get an instance of the service you invoke the `GetService` method passing the type of service.
 
 > [!NOTE]
 > When you write a plug-in that uses Azure Service Bus integration, you will use a notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this will not be described here. More information: [Azure Integration](azure-integration.md)
@@ -86,7 +86,7 @@ But the rest of the information available is provided by the <xref:Microsoft.Xrm
 
 All the properties of the execution context are read-only. But the `InputParameters` and `OutputParameters` are <xref:Microsoft.Xrm.Sdk.ParameterCollection> values. You can manipulate the values of the items in these collections to change the behavior of the operation, depending on the stage in the event execution pipeline your plug-in is registered for.
 
-The <xref:Microsoft.Xrm.Sdk.ParameterCollection> values are defined as <xref:System.Collections.Generic.KeyValuePair%602> structures. In order to access a property you will need to know the name of the property that is exposed by the message. For example, to access the <xref:Microsoft.Xrm.Sdk.Entity> property that is passed as part of the <xref:Microsoft.Xrm.Sdk.CreateRequest>, you need to know that the name of that property is `Target`. Then you can access this value using code like this:
+The <xref:Microsoft.Xrm.Sdk.ParameterCollection> values are defined as <xref:System.Collections.Generic.KeyValuePair%602> structures. In order to access a property you will need to know the name of the property that is exposed by the message. For example, to access the <xref:Microsoft.Xrm.Sdk.Entity> property that is passed as part of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, you need to know that the name of that property is `Target`. Then you can access this value using code like this:
 
 ```csharp
 var entity = (Entity)context.InputParameters["Target"];
