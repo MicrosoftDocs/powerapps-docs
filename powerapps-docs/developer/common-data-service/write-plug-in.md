@@ -42,6 +42,7 @@ The process of writing a plug-in is:
     1. Debug the assembly as needed
 
 Content in this topic supports the following tutorials:
+
 - [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
@@ -51,7 +52,7 @@ Content in this topic supports the following tutorials:
 
 A plug-in is a class within an assembly created using a .NET Framework Class library project using .NET Framework 4.5.2 in Visual Studio. Each class in the project that will be registered as a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
 
-The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService(Type)>. You will use this method to get several different types of services that you can use in your code.
+The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService``1>. You will use this method to get several different types of services that you can use in your code.
 
 ## Services you can use in your code
 
@@ -60,7 +61,7 @@ Within your plug-in you will need to:
  - Access the Organization web service so you can write code to query data, work with entity records, use messages to perform operations.
  - Write messages to the Tracing service so you can evaluate how your code is executing.
 
-The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService(Type)> method provides you with a way to access these services as needed. To get an instance of the service you invoke the `GetService` method passing the type of service.
+The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService``1> method provides you with a way to access these services as needed. To get an instance of the service you invoke the `GetService` method passing the type of service.
 
 > [!NOTE]
 > When you write a plug-in that uses Azure Service Bus integration, you will use a notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this will not be described here. More information: [Azure Integration](azure-integration.md)
@@ -80,8 +81,6 @@ This <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides some information 
 
 But the rest of the information available is provided by the <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface that this class implements. All the properties of this class provide useful information you may need to access in your code, but two of the most important are the 
 <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties. 
-
-
 
 ### Work with ParameterCollections
 
