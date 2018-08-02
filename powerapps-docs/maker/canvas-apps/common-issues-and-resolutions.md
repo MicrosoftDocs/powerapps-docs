@@ -24,6 +24,10 @@ This article lists some common issues that you might encounter while using Power
     - You can play videos in multiple **Video** controls at the same time on all platforms except for iPhone devices.
     - You can record audio with multiple **Microphone** controls at the same time on all platforms except for the web player.
 
+1. **Republishing apps** (Aug. 2, 2018)
+
+    If you haven't updated your app in several months, republish it to sync with the latest version of PowerApps and the most recent performance improvements and other fixes.
+
 1. <a name="out-of-memory"></a>**Browser running out of memory** (July 23, 2018)
 
     If you run out of memory while using PowerApps, please consider downloading a 64-bit version of Chrome, Edge, or Internet Explorer.
@@ -49,10 +53,6 @@ This article lists some common issues that you might encounter while using Power
     While customizing a SharePoint list form in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, click **Undo**.
 
 ## Added in or before February 2018
-
-1. **App won't work**
-
-    If an app you created stops working without warning, it might be because you haven't updated or re-published it in the last six months. To resolve this issue, update and/or re-publish your app to sync it with the latest version of PowerApps, and then make sure that you continue to update and/or re-publish the app within six months of last publishing it.
 
 1. **Data Table control**
 
