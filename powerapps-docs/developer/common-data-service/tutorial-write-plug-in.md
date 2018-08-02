@@ -17,6 +17,12 @@ This tutorial is the first in a series that will show you how to work with plug-
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
+For detailed explanation of supporting concepts and technical details see:
+
+- [Use plug-ins to extend business processes](plug-ins.md)
+- [Write a plug-in](write-plug-in.md)
+- [Debug Plug-ins](debug-plug-in.md)
+
 ## Goal
 
 Create an asynchronous plug-in registered on the Create message of the account entity. The plug-in will create a task activity that will remind the creator of the account to follow up one week later.

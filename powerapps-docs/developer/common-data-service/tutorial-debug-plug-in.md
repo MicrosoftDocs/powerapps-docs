@@ -18,9 +18,17 @@ This tutorial is the second in a series that will show you how to work with plug
 - Tutorial: Debug a plug-in (This tutorial)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
+For detailed explanation of supporting concepts and technical details see:
+
+- [Use plug-ins to extend business processes](plug-ins.md)
+- [Write a plug-in](write-plug-in.md)
+- [Debug Plug-ins](debug-plug-in.md)
+
+
 ## Goal
 
 Because the plug-in executes on a remote server, you cannot attach a debugger to the process. The plug-in profiler captures a profile of an executing plug-in and allows you to re-play the execution of the plug-in using Visual Studio locally.
+
 
 
 ## Prerequisites

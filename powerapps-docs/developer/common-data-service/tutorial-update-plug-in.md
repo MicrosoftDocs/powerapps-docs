@@ -18,6 +18,12 @@ This tutorial is the third in a series that will show you how to work with plug-
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - Tutorial: Update a plug-in (This tutorial)
 
+For detailed explanation of supporting concepts and technical details see:
+
+- [Use plug-ins to extend business processes](plug-ins.md)
+- [Write a plug-in](write-plug-in.md)
+- [Debug Plug-ins](debug-plug-in.md)
+
 ## Goal
 
 This tutorial will describe additional common things you will do with plug-ins. In this tutorial you will:
