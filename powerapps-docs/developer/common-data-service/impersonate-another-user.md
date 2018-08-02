@@ -54,6 +54,11 @@ To impersonate another user, set the `CallerId` property to the Guid value of th
 - <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.CallerId>
 - <xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient.CallerId>
 
+## Impersonate another using in Plug-ins
+
+You can register a plug-in you can specify a user that the operations should use. Within the code of a plug-in you can override this setting.
+More information: [Impersonation](plug-ins.md#impersonation)
+
 
 ### See also
 
