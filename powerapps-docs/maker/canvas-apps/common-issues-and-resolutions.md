@@ -26,7 +26,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. **Republishing apps** (Aug. 2, 2018)
 
-    If you haven't updated your app in several months, republish it to sync with the most recent version of PowerApps, which include performance improvements and other fixes.
+    If you haven't updated your app in several months, republish it to sync with the most recent version of PowerApps, which includes performance improvements and other fixes.
 
 1. <a name="out-of-memory"></a>**Browser running out of memory** (July 23, 2018)
 
