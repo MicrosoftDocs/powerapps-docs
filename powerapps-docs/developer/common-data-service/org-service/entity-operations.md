@@ -125,7 +125,10 @@ Account account2 = retrievedEntity.ToEntity<Account>();
 > [!NOTE]
 > This method cannot be used to convert a generated entity instance to another generated class or to <xref:Microsoft.Xrm.Sdk.Entity> . It can only be used to convert an <xref:Microsoft.Xrm.Sdk.Entity> instance to one of the generated classes that inherit from it. If the <xref:Microsoft.Xrm.Sdk.Entity> instance isn't actually an instance of the generated class this message will throw an error.
 
-### See also
+## Next Steps
+
+These topics will explain more about working with CDS for Apps entities.
+
 [Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)<br />
 [Create entities using the Organization Service](entity-operations-create.md)<br />
 [Retrieve an entity](entity-operations-retrieve.md)<br />

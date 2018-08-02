@@ -118,4 +118,12 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 You have successfully connected to the organization service.
 
 
-<!-- TODO: Include link to next steps topics -->
+## Next Steps
+
+These topics will explain how to work with CDS for Apps entities:
+
+[Entity Operations using the Organization service](entity-operations.md)<br />
+[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
+[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)
