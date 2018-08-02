@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 A plug-in is a .NET assembly that you can upload to the Common Data Service for Apps. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform.
 
-The classes in the assembly that can be registered to a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface. This interface exposes a single method: <xref:Microsoft.Xrm.Sdk.IPlugin.Execute>. When an event occurs that has a class registered to it, contextual data is passed to the `Execute` method. Within the `Execute` method you can:
+The classes in the assembly that can be registered to a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface. This interface exposes a single method: <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*>. When an event occurs that has a class registered to it, contextual data is passed to the `Execute` method. Within the `Execute` method you can:
 
 - Cancel the event and display an error to the user
 - Make changes to the data in the operation
@@ -101,14 +101,14 @@ When you register a plug-in step you can specify a user account to use when the 
 
 You can override the setting specified at registration at run time by setting the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory>.<xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> `userId` parameter.
 
-This is typically set to the <xref:Microsoft.Xrm.Sdk.ExecutionContext>.<xref:Microsoft.Xrm.Sdk.ExecutionContext.UserId> value which will apply the user account defined by the plug-in step registration.
+This is typically set to the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.UserId> value which will apply the user account defined by the plug-in step registration.
 
 ```csharp
 (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
     IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
 ```
 
-If you want to override the step registration you can pass the value of the <xref:Microsoft.Xrm.Sdk.ExecutionContext>.<xref:Microsoft.Xrm.Sdk.ExecutionContext.InitiatingUserId> to have a service that will use the user account that initiated the action that caused the plug-in to run.
+If you want to override the step registration you can pass the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> to have a service that will use the user account that initiated the action that caused the plug-in to run.
 
 You can also provide the [SystemUser.SystemUserId](reference/entities/systemuser.md#BKMK_SystemUserId) from any valid user account. This will work as long as that user has the permissions to perform the operations in the plug-in.
 
