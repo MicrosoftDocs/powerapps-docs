@@ -80,12 +80,12 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
         Password = {password};
         RequireNewInstance = True";
 
-        using (var crmSvc = new CrmServiceClient(conn))
+        using (var svc = new CrmServiceClient(conn))
         {
 
             WhoAmIRequest request = new WhoAmIRequest();
 
-            WhoAmIResponse response = (WhoAmIResponse)crmSvc.Execute(request);
+            WhoAmIResponse response = (WhoAmIResponse)svc.Execute(request);
 
             Console.WriteLine("Your UserId is {0}", response.UserId);
 
