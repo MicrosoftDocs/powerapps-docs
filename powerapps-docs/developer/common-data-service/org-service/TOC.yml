@@ -33,6 +33,9 @@
   - name: Entity operations
     href: entity-operations.md
     items:
+    - name: Query Data
+      href: entity-operations-query-data.md
+      maintainContext: true
     - name: Create entities
       href: entity-operations-create.md
     - name: Retrieve an entity
