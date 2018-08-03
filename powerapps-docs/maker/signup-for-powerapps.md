@@ -69,7 +69,7 @@ Otherwise, you're prompted to check your email.
 
 In the email message, select the link to verify your email address, and (if prompted) provide more information.
 
-When this dialog box appears, select **Start**, and then start to use [PowerApps](http://web.powerapps.com)!
+When this dialog box appears, select **Start**, and then start to use [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)!
 
 ![Click start](./media/signup-for-powerapps/almost-there.png)
 
@@ -113,7 +113,7 @@ After 30 days, you'll be prompted to request an extension of the trial or purcha
 * If your only access to PowerApps is through the trial (for which you signed up on the [PowerApps site](http://powerapps.microsoft.com/) or the [pricing page](http://powerapps.microsoft.com/pricing)), you can request a 30-day extension of the trial license to retain access to PowerApps.
 
 ### When will my trial license expire?
-To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://web.powerapps.com), and then select **Plan(s)**.
+To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
 
 ![](./media/signup-for-powerapps/show-duration.png)
 

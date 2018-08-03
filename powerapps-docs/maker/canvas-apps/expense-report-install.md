@@ -1,6 +1,6 @@
 ---
-title: Install and configure the Expense Report PowerApps sample | Microsoft Docs
-description: Step-by-step instructions for installing and configuring the Expense Report PowerApps sample.
+title: Install and configure the Expense Report sample for canvas apps | Microsoft Docs
+description: Step-by-step instructions for, in PowerApps, installing and configuring the Expense Report sample for canvas apps.
 author: caburk
 manager: kvivek
 
@@ -12,16 +12,15 @@ ms.date: 04/08/2018
 ms.author: caburk
 
 ---
-# Install and configure the Expense Report PowerApps sample
+# Install and configure the Expense Report sample for canvas apps in PowerApps
 
-Step-by-step instructions for installing and configuring the Expense Report PowerApps sample.
+Step-by-step instructions for installing and configuring the Expense Report sample.
 
 Estimated time to complete these steps: **10-15 minutes**
 
 > [!TIP]
-> Watch [this](https://youtu.be/DOR28V5kCkw) video to see how to use the Expense Report PowerApps Sample. 
+> Watch [this video](https://youtu.be/DOR28V5kCkw) for a demonstration of how to use the Expense Report sample app. 
 
-## Expense Report PowerApps sample overview
 Track expense reports from submission to approval. Tally line items as individual expenses accrue and submit for approval when ready. This app requires a small amount of setup to make it your own.
 
 ![Opening screen of the Expense Report PowerApp](./media/expense-report-install/expense-report-powerapp.png)
@@ -203,7 +202,7 @@ This list stores the lines items associated with expense reports.
 
 ## Create connections
 
-1.	In a web browser, navigate to https://web.powerapps.com.
+1.	In a web browser, navigate to [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Connections**.
 

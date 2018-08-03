@@ -1,6 +1,6 @@
 ---
-title: Understand forms | Microsoft Docs
-description: Use forms to collect and display information from a data source.
+title: Understand canvas-app forms | Microsoft Docs
+description: In PowerApps, add a form to a canvas app so that you can collect and display information from a data source.
 author: gregli-msft
 manager: kvivek
 
@@ -12,8 +12,9 @@ ms.date: 04/27/2016
 ms.author: gregli
 
 ---
-# Understand data forms in Microsoft PowerApps
-Add three types of controls so that the user can browse for a record, display details about that record, and edit or create a record:
+# Understand canvas-app forms in Microsoft PowerApps
+
+Add three types of controls to a canvas app so that the user can browse for a record, display details about that record, and edit or create a record:
 
 | Activity | Control | Description |
 | --- | --- | --- |
@@ -29,7 +30,7 @@ As this topic describes, combine these controls with formulas to create the over
 
 ## Prerequisites
 
-* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com) by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Explore a generated app

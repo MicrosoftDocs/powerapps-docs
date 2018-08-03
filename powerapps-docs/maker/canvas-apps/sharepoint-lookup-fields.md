@@ -1,6 +1,6 @@
 ---
-title: Create a relationship between SharePoint lists via a lookup field | Microsoft Docs
-description: Create a relationship between SharePoint lists by using a lookup field.
+title: Create a relationship between SharePoint lists via a lookup field in a canvas app | Microsoft Docs
+description: In PowerApps, create a relationship between SharePoint lists by using a lookup field in a canvas app.
 author: skjerland
 manager: kvivek
 
@@ -12,10 +12,12 @@ ms.date: 01/20/2017
 ms.author: sharik
 
 ---
-# How to link SharePoint lists using lookup fields
-This tutorial shows how you can connect two SharePoint lists with lookup fields.
+# How to link SharePoint lists using a lookup field in PowerApps
+
+This tutorial shows how you can connect two SharePoint lists with a lookup field in a canvas app.
 
 ## Overview
+
 SharePoint provides two types of lookup fields:
 
 * **Lookup**: links to another list: for example an *Orders* list may have a lookup field that links to customers in a *Customer* list;
@@ -23,7 +25,8 @@ SharePoint provides two types of lookup fields:
 
 In this tutorial, you build an app that uses these kinds of lookup fields.
 
-### What do you use lookup fields for?
+### Why use a lookup field
+
 Data in an enterprise is large and complex. Data in one SharePoint list often relates to data in another list. Lookup fields are the primary way such business data comes together.
 
 For example, you might have an **Orders** list which has a lookup field that links to a **Customers** list, to show which customer placed the order. The lookup field in the **Orders** list lets you get other data from the **Customers** list as well. You might also use a lookup field to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, manufacturer details, etc.
@@ -85,7 +88,7 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 ## Create an app from the Assets list
 You use this app to add data to the **Assets** list.
 
-1. [Sign in to PowerApps Studio](http://web.powerapps.com). If you are new to PowerApps, [sign up for free](https://powerapps.microsoft.com) using your organizational email address.
+1. [Sign in to PowerApps Studio](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). If you are new to PowerApps, [sign up for free](https://powerapps.microsoft.com) using your organizational email address.
 
 2. In the **File** menu (along the left edge), click or tap **New**, and then click or tap **SharePoint**.
 

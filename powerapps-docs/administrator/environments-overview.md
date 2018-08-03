@@ -2,7 +2,7 @@
 title: Environments overview | Microsoft Docs
 description: Learn about environments in PowerApps and how to use them
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
@@ -34,13 +34,13 @@ Environments have two built-in roles that provide access to permissions within a
 
 * The Environment Admin role can perform all administrative actions on an environment including the following:
 
-  * Add or remove a user or group from either the Environment Admin or Environment Maker role
+    * Add or remove a user or group from either the Environment Admin or Environment Maker role
 
-  * Provision a Common Data Service database for the environment
+    * Provision a Common Data Service database for the environment
 
-  * View and manage all resources created within an environment
+    * View and manage all resources created within an environment
 
-  * Set data loss prevention policies. For more information see [Data loss prevention policies](prevent-data-loss.md).
+    * Set data loss prevention policies. For more information see [Data loss prevention policies](prevent-data-loss.md).
 
     After creating the database in the environment, you can use System Administrator role instead of Environment Admin role.
 

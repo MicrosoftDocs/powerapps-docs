@@ -49,5 +49,5 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 
 ## Next steps
 - [Sign up for a free license.](../signup-for-powerapps.md)
-- [Sign in to PowerApps.](https://web.powerapps.com)
+- [Sign in to PowerApps.](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 - [Open a sample app.](open-and-run-a-sample-app.md)

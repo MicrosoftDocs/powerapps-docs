@@ -1,6 +1,6 @@
 ---
-title: Share an app | Microsoft Docs
-description: Share your app by giving other users permission to run or modify it
+title: Share a canvas app | Microsoft Docs
+description: Share your canvas app by giving other users permission to run or modify it
 author: AFTOwen
 manager: kvivek
 
@@ -11,9 +11,9 @@ ms.reviewer:
 ms.date: 07/11/2018
 ms.author: anneta
 ---
-# Share an app in PowerApps
+# Share a canvas app in PowerApps
 
-After you build an app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name, or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
+After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name, or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
 
 > [!IMPORTANT]
 > For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Common Data Service for Apps](#common-data-service-for-apps) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
@@ -28,7 +28,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 ## Share an app
 
-1. [Sign in](https://web.powerapps.com) to PowerApps, and then select **Apps** near the left edge.
+1. [Sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then select **Apps** near the left edge.
 
     ![Show list of apps](./media/share-app/file-apps.png)
 
@@ -54,7 +54,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     If you grant users permission to modify the app, the message also contains a separate link to open the app for editing in PowerApps Studio.
 
-    Regardless of whether you send an invitation, users can run the app from AppSource on [Dynamics 365](http://home.dynamics.com). Users who have **Can edit** permission can also edit the app from within [PowerApps](http://web.powerapps.com).
+    Regardless of whether you send an invitation, users can run the app from AppSource on [Dynamics 365](http://home.dynamics.com). Users who have **Can edit** permission can also edit the app from within [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Specify the permission for each user or security group, and then select **Save**.
 
@@ -80,7 +80,7 @@ If you create an app based on Common Data Service for Apps, you must also ensure
 
 #### Create a security role
 
-1. [Sign in to PowerApps](https://web.powerapps.com), and make sure that you're in the same environment as the app that you want to share.
+1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and make sure that you're in the same environment as the app that you want to share.
 
 1. In the upper-right corner, select the gear icon, and then select **Advanced customizations**.
 

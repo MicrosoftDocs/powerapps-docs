@@ -1,6 +1,6 @@
 ---
 title: PowerApps custom visual for Power BI | Microsoft Docs
-description: Procedure and limitations for embedding an app that uses the same data source and can be filtered like other report items in Power BI 
+description: Procedure and limitations for embedding a canvas app that uses the same data source and can be filtered like other report items in Power BI 
 author: mgblythe
 manager: kvivek
 
@@ -14,7 +14,7 @@ ms.author: mblythe
 
 # PowerApps custom visual for Power BI
 
-Power BI enables data insights and better decision-making, while PowerApps enables everyone to build and use apps that connect to business data. Using the PowerApps custom visual, you can pass context-aware data to a PowerApps app, which updates in real time as you make changes to your report. Now, your app users can derive business insights and take actions from right within their Power BI reports and dashboards.
+Power BI enables data insights and better decision-making, while PowerApps enables everyone to build and use apps that connect to business data. Using the PowerApps custom visual, you can pass context-aware data to a canvas app, which updates in real time as you make changes to your report. Now, your app users can derive business insights and take actions from right within their Power BI reports and dashboards.
 
 ## Using the PowerApps custom visual
 
