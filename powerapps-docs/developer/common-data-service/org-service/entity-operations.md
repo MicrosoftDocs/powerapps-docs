@@ -129,9 +129,10 @@ Account account2 = retrievedEntity.ToEntity<Account>();
 
 These topics will explain more about working with CDS for Apps entities.
 
-[Generate classes for early-bound programming using the Organization service](generate-early-bound-classes.md)<br />
-[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Quick Start: Organization service sample (C#)](quick-start-org-service-console-app.md)
+[Query data](entity-operations-query-data.md)<br />
+[Create entities](entity-operations-create.md)<br />
 [Retrieve an entity](entity-operations-retrieve.md)<br />
 [Update and Delete entities](entity-operations-update-delete.md)<br />
-[Query data using the Organization service](entity-operations-query-data.md)<br />
 [Associate and disassociate entities](entity-operations-associate-disassociate.md)<br />
+[Generate classes for early-bound programming](generate-early-bound-classes.md)<br />

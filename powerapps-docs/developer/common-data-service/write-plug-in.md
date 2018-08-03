@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Write a plug-in (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the concepts and technical details necessary when writing plug-ins" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -178,6 +178,13 @@ This will cause an <xref:System.Runtime.Serialization.SerializationException> to
 
 ## Passing Configuration values to a plug-in
 
-### See also
+## Next steps
+[Register a plug-in](register-plug-in.md#register-a-plug-in)<br />
+[Debug Plug-ins](debug-plug-in.md#debug-plug-ins)
 
-[Write plug-ins to extend business processes](plug-ins.md)
+
+### See also
+[Write plug-ins to extend business processes](plug-ins.md)<br />
+[Tutorial: Write a plug-in](tutorial-write-plug-in.md)<br />
+[Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />
+[Tutorial: Update a plug-in](tutorial-update-plug-in.md)<br />
