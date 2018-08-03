@@ -22,6 +22,7 @@ For detailed explanation of supporting concepts and technical details see:
 
 - [Use plug-ins to extend business processes](plug-ins.md)
 - [Write a plug-in](write-plug-in.md)
+- [Register a plug-in](register-plug-in.md)
 - [Debug Plug-ins](debug-plug-in.md)
 
 

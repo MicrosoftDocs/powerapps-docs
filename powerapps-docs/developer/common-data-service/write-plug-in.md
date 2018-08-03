@@ -34,6 +34,8 @@ The process of writing a plug-in is:
 1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
 1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.
 1. Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface
+    1. Get references to services you need
+    1. Add your business logic
 1. Sign & build the assembly
 1. Test the assembly
     1. Register the assembly in a test environment
@@ -47,19 +49,40 @@ Content in this topic supports the following tutorials:
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
+## Assembly constraints
+
+When creating assemblies keep the following in mind:
+
+### Optimize assembly development
+
+The assembly should include multiple types, but can be no larger than 16 MB. It is recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB. More information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
+
+### Assemblies must be signed
+All assemblies must be signed before they can be registered. This can be done using Visual Studio Signing tab on the project or by using [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).
+
+### Do not depend on .NET assemblies that interact with low-level Windows APIs
+
+Plug-in assemblies must contain all the necessary logic within the respective dll.  Plugins may reference some core .Net assemblies. However, we do not support dependencies on .Net assemblies that interact with low-level Windows APIs, such as the graphics design interface.
+
 
 ## IPlugin interface
 
 A plug-in is a class within an assembly created using a .NET Framework Class library project using .NET Framework 4.5.2 in Visual Studio. Each class in the project that will be registered as a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
 
+> [!IMPORTANT]
+> When implementing `IPlugin`, do not use member fields and properties and write the `Execute` method as a stateless operation. All per invocation state information should be accessed via the execution context only. Do not attempt to store any execution state data in member fields or properties for use during the current or next plug-in invocation unless that data was obtained from the configuration parameter provided to the overloaded constructor. More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
+
 The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService*>. You will use this method to get several different types of services that you can use in your code.
+
+
 
 ## Services you can use in your code
 
-Within your plug-in you will need to: 
- - Access the contextual information about what is happening in the event your plug-in was registered to handle. This is called the *execution context*.
- - Access the Organization web service so you can write code to query data, work with entity records, use messages to perform operations.
- - Write messages to the Tracing service so you can evaluate how your code is executing.
+Within your plug-in you will need to:
+ 
+- Access the contextual information about what is happening in the event your plug-in was registered to handle. This is called the *execution context*.
+- Access the Organization web service so you can write code to query data, work with entity records, use messages to perform operations.
+- Write messages to the Tracing service so you can evaluate how your code is executing.
 
 The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method provides you with a way to access these services as needed. To get an instance of the service you invoke the `GetService` method passing the type of service.
 
@@ -69,7 +92,6 @@ The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> me
 ## Execution Context
 
 You can get a variable that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface using the following code:
-
 
 ```csharp
 // Obtain the execution context from the service provider.  
@@ -124,11 +146,37 @@ This data provides a comparison point for entity data as it flows through the ev
 
 ## Organization Service
 
+To work with data within a plug-in you use the organization service. Do not try to use the Web API. Plug-ins are optimized to use the .NET SDK assemblies.
+
+To gain access to a `svc` variable that implements the <xref:Microsoft.Xrm.Sdk.IOrganizationInterface> interface, use the following code:
+
+
+```csharp
+// Obtain the organization service reference which you will need for  
+// web service calls.  
+IOrganizationServiceFactory serviceFactory =
+    (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
+IOrganizationService svc = serviceFactory.CreateOrganizationService(context.UserId);
+```
+The `context.UserId` variable used with <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory>.<xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> comes from execution context the <xref:Microsoft.Xrm.Sdk.IExecutionContext.UserId> property, so this is call is done after the execution context has been accessed.
+
+You can use early bound types within a plug-in. Just include the generated types file in your project. But you should be aware that all entity types that are provided by the execution context input parameters will be late-bound types. You will need to convert them to early bound types. For example you can do the following when you know the `Target` parameter represents an account entity.
+
+```csharp
+Account acct = context.InputParameters["Target"].ToEntity<Account>();
+``` 
+But you should never try to set the value using an early bound type. Don't try to do this:
+
+```csharp
+context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRONG: Do not do this. 
+```
+This will cause an <xref:System.Runtime.Serialization.SerializationException> to occur.
+
 
 
 ## Tracing service
 
-
+## Passing Configuration values to a plug-in
 
 ### See also
 

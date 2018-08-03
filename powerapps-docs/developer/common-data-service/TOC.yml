@@ -275,6 +275,10 @@
     items:
     - name: Write a plug-in
       href: write-plug-in.md
+    - name: Register a plug-in
+      href: register-plug-in.md
+    - name: Debug a plug-in
+      href: debug-plug-in.md
   - name: Workflow extensions
     items: 
     - name: Create a workflow extension
