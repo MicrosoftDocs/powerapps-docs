@@ -32,9 +32,7 @@ Microsoft Flow includes several  types of processes, each designed for a differe
   
 -   Business process flows.  Ensure that people enter data consistently and follow the same steps every time they work in an app by creating a business process flow. More information: [Business process flows overview](/flow/business-process-flows-overview)
 
--   Common Data Service for Apps. Dynamics 365 customer engagement customizers may be familar with the classic collection of Common Data Service for Apps processes, which are: workflows, actions, and dialogs. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/flow/actions)
-  
- 
+-   Common Data Service for Apps. Dynamics 365 customer engagement customizers may be familar with the classic Common Data Service for Apps processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/flow/actions)
   
 ## See also  
 [Tutorial: Create business rules and recommendations to apply logic in a model-driven app form](create-business-rules-recommendations-apply-logic-form.md)
