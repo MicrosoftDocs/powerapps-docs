@@ -67,9 +67,9 @@ When you register a step using the Plug-in registration tool you must also choos
 |Name|Description|
 |--|--|
 |**PreValidation**<br />Stage: 10|[!INCLUDE [cc-prevalidation-description](../../includes/cc-prevalidation-description.md)]|
-|**PreOperation**<br />Stage: 20|Occurs before the main system operation and within the database transaction.<br /><br />If you want to change any values for an entity included in the message, you should do it here.<br /><br />Avoid cancelling an operation here. Canceling will trigger a rollback of the transaction and have significant performance impact.|
+|**PreOperation**<br />Stage: 20|[!INCLUDE [cc-preoperation-description](../../includes/cc-preoperation-description.md)]|
 |**MainOperation**<br />Stage: 30|For internal use only.|
-|**PostOperation**<br />Stage: 40|Occurs after the main system operation and within the database transaction.<br /><br />Use this stage to modify any properties of the message before it is returned to the caller.<br /><br />Avoid applying changes to an entity included in the message because this will trigger a new Update event.|
+|**PostOperation**<br />Stage: 40|[!INCLUDE [cc-postoperation-description](../../includes/cc-postoperation-description.md)]|
 
 The stage you should choose depends on the purpose of the extension. You don't need to apply all your business logic within a single step. You can apply multiple steps so that your logic about whether to allow a operation to proceed can be in the **PreValidation** stage and your logic to make modifications to the message properties can occur in the **PostOperation** stage.
 

@@ -1,0 +1,1 @@
+Occurs before the main system operation and within the database transaction.<br /><br />If you want to change any values for an entity included in the message, you should do it here.<br /><br />Avoid cancelling an operation here. Canceling will trigger a rollback of the transaction and have significant performance impact.
