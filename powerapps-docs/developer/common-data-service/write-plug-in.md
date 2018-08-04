@@ -28,22 +28,22 @@ Yet, I think workflow activities are easier to understand as 'workflow extension
 
 -->
 
-The process of writing a plug-in is:
+The process of writing, registering, and debugging a plug-in is:
 
-1. Create a .NET Framework Class library project in Visual Studio
-1. Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project
-1. Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.
-1. Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface
-    1. Get references to services you need
-    1. Add your business logic
-1. Sign & build the assembly
+1. **Create a .NET Framework Class library project in Visual Studio**
+1. **Add the `Microsoft.CrmSdk.CoreAssemblies` NuGet package to the project**
+1. **Implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface on classes that will be registered as steps.**
+1. **Add your code to the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method required by the interface**
+    1. **Get references to services you need**
+    1. **Add your business logic**
+1. **Sign & build the assembly**
 1. Test the assembly
     1. Register the assembly in a test environment
     1. Test the behavior of the assembly
     1. Verify expected trace logs are written
     1. Debug the assembly as needed
 
-Content in this topic supports the following tutorials:
+Content in this topic coverts the steps **in bold** above and supports the following tutorials:
 
 - [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
@@ -72,9 +72,21 @@ A plug-in is a class within an assembly created using a .NET Framework Class lib
 > [!IMPORTANT]
 > When implementing `IPlugin`, the class should be *stateless*. This is because the platform caches a class instance and re-uses it for performance reasons. A simple way of thinking about this is that you shouldn't add any properties or methods to the class and everything should be included within the `Execute` method. There are some exceptions to this. For example you can have a property that represents a constant and you can have methods that represent functions that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These change with every invocation and you don't want that data to be cached and applied to subsequent invocations.  More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
 
-The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService*>. You will use this method to get several different types of services that you can use in your code.
+The <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method accepts a single <xref:System.IServiceProvider> parameter. The `IServiceProvider` has a single method:  <xref:System.IServiceProvider.GetService*>. You will use this method to get several different types of services that you can use in your code. More information: [Services you can use in your code](#services-you-can-use-in-your-code)
 
+## Pass configuration data to your plug-in
 
+When you register a plug-in you have the ability to pass configuration data to it. Configuration data allows you to define how a specific instance of a registered plug-in should behave. This information is passed as string data to parameters in the constructor of your class. There are two parameters: `unsecure` and `secure`.
+Use the first `unsecure` parameter for data that you don't mind if people can see. Use the second `secure` parameter for sensitive data. 
+
+The following code shows the three possible signatures for a plug-in class named `SamplePlugin`.
+
+```csharp
+public SamplePlugin()  
+public SamplePlugin(string unsecure)  
+public SamplePlugin(string unsecure, string secure)
+```
+The secure configuration data is stored in a separate entity which only system administrators have privileges to read. More information: [Set configuration data](register-plug-in.md#set-configuration-data)
 
 ## Services you can use in your code
 
@@ -148,7 +160,7 @@ This data provides a comparison point for entity data as it flows through the ev
 
 To work with data within a plug-in you use the organization service. Do not try to use the Web API. Plug-ins are optimized to use the .NET SDK assemblies.
 
-To gain access to a `svc` variable that implements the <xref:Microsoft.Xrm.Sdk.IOrganizationInterface> interface, use the following code:
+To gain access to a `svc` variable that implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface, use the following code:
 
 
 ```csharp
@@ -172,16 +184,31 @@ context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRO
 ```
 This will cause an <xref:System.Runtime.Serialization.SerializationException> to occur.
 
+## Use the tracing service
+
+Use the tracing service to write messages to the [PluginTraceLog Entity](reference/entities/plugintracelog.md#plugintracelog-entity-reference) so that you can review the logs to understand what occurred when the plug-in ran.
+
+To write to the tracelog, you need to get an instance of the tracing service. The following code shows how to get an instance of the tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
 
 
-## Tracing service
+```csharp
+// Obtain the tracing service
+ITracingService tracingService =
+(ITracingService)serviceProvider.GetService(typeof(ITracingService));
+```
 
-## Passing Configuration values to a plug-in
+To write to the trace, use the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Microsoft.Xrm.Sdk.ITracingService.Trace> method.
+
+```csharp
+tracingService.Trace("Write {0} {1}.", "your", "message");
+```
+
+More information: [Use Tracing](debug-plug-in.md#use-tracing).
 
 ## Next steps
+
 [Register a plug-in](register-plug-in.md#register-a-plug-in)<br />
 [Debug Plug-ins](debug-plug-in.md#debug-plug-ins)
-
 
 ### See also
 [Write plug-ins to extend business processes](plug-ins.md)<br />
