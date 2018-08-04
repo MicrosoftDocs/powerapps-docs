@@ -40,7 +40,7 @@ An extra step is required after importing into an organization a solution contai
 6.  Select **Save**.  
   
 ### See also  
- [Azure extensions for Dynamics 365](azure-extensions.md)  
-<!-- To-Do: File not found-->
+<!-- [Azure extensions for Dynamics 365](azure-extensions.md)  
+ TODO: File not found-->
 
  [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/)

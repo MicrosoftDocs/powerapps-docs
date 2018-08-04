@@ -69,6 +69,6 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
  ![New service endpoint](media/new-service-endpoint.PNG "New service endpoint")  
   
 ### See also
-<!-- TO-DO: Resolve link -->
-[Azure extensions for Dynamics 365](azure-extensions.md)
+<!-- TODO: Resolve link 
+[Azure extensions for Dynamics 365](azure-extensions.md)-->
  [Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)

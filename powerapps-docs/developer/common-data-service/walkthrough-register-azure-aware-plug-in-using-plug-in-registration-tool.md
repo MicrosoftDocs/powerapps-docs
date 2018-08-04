@@ -25,7 +25,7 @@ This walkthrough demonstrates how to register a service endpoint step using the 
   
 -   Access to the Plug-in Registration Tool. [!INCLUDE[proc-download-plugin-registration-tool](../../includes/proc-download-plugin-registration-tool.md)]
   
--   Your Dynamics 365 system user account must have the System Customizer or System Administrator role. For more information, see [How Role-Based Security Can Be Used to Control Access to Entities In Dynamics 365](security-dev/how-role-based-security-control-access-entities.md).<!-- topic not found-->
+-   Your Dynamics 365 system user account must have the System Customizer or System Administrator role. 
   
 -   Have access to a Azure platform service namespace that is configured for SAS authorization, to which Dynamics 365 will post a message.  
   
@@ -70,9 +70,9 @@ This walkthrough demonstrates how to register a service endpoint step using the 
 2.  Navigate to the **Register** menu and click **Register New Step**.  
   
 3.  Fill out the **Register New Step** dialog box for an account create event as shown in the following figure.  
-  <!-- To-Do: Image is not present and need to fix it-->
+  <!-- TODO: Image is not present and need to fix it
 
- ![Creating a service endpoint step](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")
+ ![Creating a service endpoint step](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")-->
   
 4.  Click **Register New Step**.  
   
@@ -97,6 +97,6 @@ This walkthrough demonstrates how to register a service endpoint step using the 
  You can now unregister the endpoint, if so desired, by selecting it in the tool’s tree view and click **Unregister**.  
   
 ### See also  
- [Azure Extensions for Dynamics 365](azure-extensions.md) <!-- To-Do: The file is not found to fix the link-->
+ <!--[Azure Extensions for Dynamics 365](azure-extensions.md)  TODO: The file is not found to fix the link-->
  
  [Introduction to Microsoft Azure Integration with Dynamics 365](azure-integration.md)
