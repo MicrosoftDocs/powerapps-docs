@@ -58,7 +58,10 @@ Generally, you can expect to find a message for most of the **Request* classes i
 Data about messages is stored in the [SdkMessage](reference/entities/sdkmessage.md) and [SdkMessageFilter](reference/entities/sdkmessagefilter.md) entities. The Plug-in registration tool will filter this information to only show valid messages.
 
 > [!CAUTION]
-> The `Execute` message is available, but you should not register extensions for it since it is called by every operation.
+> The `Execute` message is available, but you should typically not register extensions for it since it is called by every operation.
+
+> [!NOTE]
+> There are certain cases where plug-ins and workflows that are registed for the Update event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
 
 ## Event execution pipeline
 
@@ -79,34 +82,6 @@ The stage you should choose depends on the purpose of the extension. You don't n
 Multiple extensions can be registered for the same message and stage. Within the step registration the **Execution Order** value determines the order in which multiple extensions should be processed for a given stage.
 
 Information about registered steps is stored in the [SdkMessageProcessingStep Entity](reference/entities/sdkmessageprocessingstep.md).
-
-<!-- Move the following out to a separate topic? START -->
-
-### Behavior of specialized update operations
-
-There are several deprecated specialized messages that perform update operations. In earlier versions it was required to use these messages, but now the same operations should be performed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
-
-[!INCLUDE [cc-legacy-update-messages](includes/cc-legacy-update-messages.md)]
-
-More information: [Legacy update messages](org-service/entity-operations-update-delete.md#legacy-update-messages) 
-
-This change introduced some special behaviors that should be noted for plug-ins and workflows. 
-
-#### For Plug-ins
-
-When update requests are processed that include both owner fields plus other standard fields for business owned entities, plug-ins registered for the **Update** message in **PreOperation** and/or **PostOperation** stages execute once for all non-owner fields, and then once for the owner fields. Examples of owner fields would be `businessunit` and `manager` (for a [SystemUser Entity](reference/entities/systemuser.md)). Examples of business owned entities include [SystemUser](reference/entities/systemuser.md), [BusinessUnit](reference/entities/businessunit.md),[Equipment](/dynamics365/customer-engagement/developer/entities/equipment) and [Team](reference/entities/team.md).
-
-When update requests are processed that include both state/status fields plus other standard fields, plug-ins registered for the **Update** message in **PreOperation** and/or **PostOperation** stages execute once for all non-state/status fields, and then once for the state/status fields.
-
-In order for plug-in code to receive the full data changes of the update, you must register the plug-in in the **PreOperation** and then store relevant information in <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> in the plug-in context for later plug-ins (in the pipeline) to consume.
-
-#### For Workflows
-
-When update requests are processed that include both owner fields plus other standard fields, workflows registered for the **Update** message execute once for all non-owner fields, and then once for the owner fields. Workflows registered for the **Assign** message by users continue to be triggered by updates to owner fields.
-
-When update requests are processed that include both state/status fields plus other standard fields, workflows registered for the **Update** message execute once for all non-state/status fields, and then once for the state/status fields. Workflows registered for the **Change Status** step continue to be triggered by updates to state/status fields.
-
-<!-- Move the following out to a separate topic? END -->
 
 ## Event context
 
@@ -137,30 +112,4 @@ When you register a step for a plug-in that includes an entity as one of the par
 This data provides a comparison point for entity data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve an entity just to compare the attribute values
 
 
-## Time and resource constraints
-
-There is a 2-minute time limit for message operations to complete. There are also limitations on the amount of CPU and memory resources that can be used by extensions. If the limits are exceeded an exception is thrown and the operation will be cancelled.
-
-If the time limit is exceeded, an <xref:System.TimeoutException> will be thrown. If any custom extension exceeds threshold CPU, memory, or handle limits or is otherwise unresponsive, that process will be killed by the platform. At that point any current extension in that process will fail with exceptions. However, the next time that the extension is executed it will run normally.
-
-## Monitor Performance
-
-Run-time information about plug-ins and custom workflow extensions is captured and store in the [PluginTypeStatistic Entity](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This entity provides the following data points:
-
-|**Attribute**|**Description**|
-|--|--|
-|AverageExecuteTimeInMilliseconds|The average execution time (in milliseconds) for the plug-in type. |
-|CrashContributionPercent|The plug-in type percentage contribution to crashes. |
-|CrashCount|Number of times the plug-in type has crashed. |
-|CrashPercent|Percentage of crashes for the plug-in type. |
-|ExecuteCount|Number of times the plug-in type has been executed. |
-|FailureCount |Number of times the plug-in type has failed. |
-|FailurePercent|Percentage of failures for the plug-in type. |
-|PluginTypeIdName|Unique identifier of the user who last modified the plug-in type statistic. |
-|TerminateCpuContributionPercent |The plug-in type percentage contribution to Worker process termination due to excessive CPU usage. |
-|TerminateHandlesContributionPercent |The plug-in type percentage contribution to Worker process termination due to excessive handle usage. |
-|TerminateMemoryContributionPercent|The plug-in type percentage contribution to Worker process termination due to excessive memory usage. |
-|TerminateOtherContributionPercent|The plug-in type percentage contribution to Worker process termination due to unknown reasons. |
-
-This data is also available for you to browse using the [Organization Insights Plug-ins dashboard](/dynamics365/customer-engagement/admin/use-organization-insights-solution-view-instance-metrics#plug-ins), along with many other useful reports.
 

@@ -154,7 +154,9 @@ The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows f
 
 When you register a step for a plug-in that includes an entity as one of the parameters, you have the option to specify that a copy of the entity data be included as *snapshot* or image using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and/or <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
 
-This data provides a comparison point for entity data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve an entity just to compare the attribute values
+This data provides a comparison point for entity data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve an entity just to compare the attribute values.
+
+More information: [Define entity images](register-plug-in.md#define-entity-images)
 
 ## Organization Service
 
@@ -204,6 +206,52 @@ tracingService.Trace("Write {0} {1}.", "your", "message");
 ```
 
 More information: [Use Tracing](debug-plug-in.md#use-tracing).
+
+
+
+## Cancelling an operation
+
+Your code can cause an operation to be cancelled by throwing an exception. Any unhandled exception will cause the operation to be cancelled so it is important that you apply coding practices to manage any exceptions that are thrown and decide whether to allow it to cancel the operation or not.
+
+If your business logic dictates that the operation should be cancelled, you should throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception and provide a message to explain why the operation was cancelled.
+
+When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception within a synchronous plug-in an error dialog with your message will be displayed to the user. If you don't provide a message, a generic error dialog will be shown to the user. If any other type of exception is thrown, the user will see an error dialog with a generic message and the exception message and stack trace will be written to the [PluginTraceLog Entity](reference/entities/plugintracelog.md#plugintracelog-entity-reference)
+
+Ideally, you should only cancel operations using synchronous plug-ins registered in the **PreValidation** stage. This stage *usually* occurs outside the main database transaction. Cancelling an operation before it reaches the transaction is highly desireable because the cancelled operation has to be rolled back. Rolling back the operation requires significant resources and has a performance impact on the system. Operations in the **PreOperation** and **PostOperation** stages are always within the database transaction.
+
+Sometimes **PreValidation** stages will be within a transaction when they are initated by logic in another operation. For example, if you create a task entity record in the **PreOperation** stage of the creation of an account, the task creation will pass through the event execution pipeline and occur within the **PreValidation** stage yet it will be part of the transaction that is creating the account entity record. You can tell whether an operation is within a transaction by the value of the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>.<xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.IsInTransaction> property.
+
+## Performance considerations
+
+When you add the business logic for your plug-in you need to be very aware of the impact they will have on overall performance. The business logic in plug-ins should take no more than 2 seconds to complete.
+
+### Time and resource constraints
+
+There is a 2-minute time limit for message operations to complete. There are also limitations on the amount of CPU and memory resources that can be used by extensions. If the limits are exceeded an exception is thrown and the operation will be cancelled.
+
+If the time limit is exceeded, an <xref:System.TimeoutException> will be thrown. If any custom extension exceeds threshold CPU, memory, or handle limits or is otherwise unresponsive, that process will be killed by the platform. At that point any current extension in that process will fail with exceptions. However, the next time that the extension is executed it will run normally.
+
+### Monitor Performance
+
+Run-time information about plug-ins and custom workflow extensions is captured and store in the [PluginTypeStatistic Entity](reference/entities/plugintypestatistic.md). These records are populated within 30 minutes to one hour after the custom code executes. This entity provides the following data points:
+
+|**Attribute**|**Description**|
+|--|--|
+|AverageExecuteTimeInMilliseconds|The average execution time (in milliseconds) for the plug-in type. |
+|CrashContributionPercent|The plug-in type percentage contribution to crashes. |
+|CrashCount|Number of times the plug-in type has crashed. |
+|CrashPercent|Percentage of crashes for the plug-in type. |
+|ExecuteCount|Number of times the plug-in type has been executed. |
+|FailureCount |Number of times the plug-in type has failed. |
+|FailurePercent|Percentage of failures for the plug-in type. |
+|PluginTypeIdName|Unique identifier of the user who last modified the plug-in type statistic. |
+|TerminateCpuContributionPercent |The plug-in type percentage contribution to Worker process termination due to excessive CPU usage. |
+|TerminateHandlesContributionPercent |The plug-in type percentage contribution to Worker process termination due to excessive handle usage. |
+|TerminateMemoryContributionPercent|The plug-in type percentage contribution to Worker process termination due to excessive memory usage. |
+|TerminateOtherContributionPercent|The plug-in type percentage contribution to Worker process termination due to unknown reasons. |
+
+This data is also available for you to browse using the [Organization Insights Plug-ins dashboard](/dynamics365/customer-engagement/admin/use-organization-insights-solution-view-instance-metrics#plug-ins), along with many other useful reports.
+
 
 ## Next steps
 

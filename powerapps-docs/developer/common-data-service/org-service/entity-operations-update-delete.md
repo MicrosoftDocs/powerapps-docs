@@ -360,7 +360,7 @@ There are several deprecated specialized messages that perform update operations
 
 [!INCLUDE [cc-legacy-update-messages](../includes/cc-legacy-update-messages.md)]
 
-More information: [Behavior of specialized update operations](../event-framework.md#behavior-of-specialized-update-operations)
+More information: [Behavior of specialized update operations](../special-update-operation-behavior.md#behavior-of-specialized-update-operations)
 
 ### See also
 

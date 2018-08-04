@@ -75,6 +75,9 @@
     items:
     - name: Event Framework
       href: event-framework.md
+      items:
+      - name: Behavior of specialized update operations
+        href: special-update-operation-behavior.md
     - name: Processes
       href: processes.md
     - name: Custom Actions

@@ -109,9 +109,9 @@ When you register a step, there are many options available to you which depend o
 
 |Field|Description|
 |--|--|
-|**Message**|PRT will auto-complete available messages in the system|
-|**Primary Entity**|PRT will auto-complete valid entities that apply to the selected message. If valid entities apply, you should set this when you want to limit the number of times the plug-in is called. You can leave it blank for core entity messages like `Create`, `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message. But then the plug-in will be invoked for all the entities that support this message.|
-|**Secondary Entity**|This field remains for backward compatibility for long deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> parameters. This field is typically not used.|
+|**Message**|PRT will auto-complete available message names in the system.|
+|**Primary Entity**|PRT will auto-complete valid entities that apply to the selected message. These messages have a `Target` parameter that accepts and <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid entities apply, you should set this when you want to limit the number of times the plug-in is called. You can leave it blank for core entity messages like `Create`, `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message. But then the plug-in will be invoked for all the entities that support this message.|
+|**Secondary Entity**|This field remains for backward compatibility for long deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
 |**Filtering Attributes**|For `Create` and `Update` messages that have a **Primary Entity** set, filtering attributes limits the execution of the plug-in to cases where the selected attributes are included. This is a best practice for performance. |
 |**Event Handler**|This value will be populated based on the name of the assembly. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
@@ -119,10 +119,13 @@ When you register a step, there are many options available to you which depend o
 |**Execution Order**|Multiple steps can be registered for the same event. The number in this field determines the order in which they will be applied from lowest to highest.|
 |**Description**|A description for step. This value is prepopulated but can be overwritten.|
 
+> [!NOTE]
+> There are certain cases where plug-ins registed for the `Update` event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
+
 
 ### Event Pipeline Stage of execution
 
-There are three options:
+Choose the stage in the event pipeline that best suites the purpose for your plug-in.
 
 |Option|Description|
 |--|--|
@@ -134,22 +137,31 @@ More information: [Event execution pipeline](event-framework.md#event-execution-
 
 ### Execution Mode
 
-|Field|Description|
+There are two modes of execution asynchronous, and synchronous.
+
+|Option|Description|
 |--|--|
-|**x**||
-|**x**||
+|**Asynchronous**|The execution context and the definition of the business logic to apply is moved to system job which will execute after the operation completes.|
+|**Synchronous**|Plug-ins execute immediately according to the stage of execution and execution order. While they are running, the entire operation will wait until they complete.|
+
+Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md#asynchronous-service)
 
 ### Deployment
 
-|Field|Description|
+|Option|Description|
 |--|--|
-|**x**||
-|**x**||
+|**Server**|The plug-in will run on the CDS for apps server.|
+|**Offline**|The plug-in will run within the Dynamics 365 for Outlook client when the user is in offline mode.|
 
-
-
+<!-- TODO Add link to where more information about offline-plugins will be documented -->
 
 ## Set configuration data
+
+The **Unsecure Configuration** and **Secure Configuration** fields allow you to specify configuration data to pass to the plug-in for a specific step.
+
+You can write your plug-in to accept string values in the constructor to use this data to control how the plug-in should work for the step. More information: [Pass configuration data to your plug-in](write-plug-in.md#pass-configuration-data-to-your-plug-in)
+
+## Define entity images
 
 ## Update an assembly
 
