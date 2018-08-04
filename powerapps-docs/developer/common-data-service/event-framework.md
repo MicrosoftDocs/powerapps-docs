@@ -66,7 +66,7 @@ When you register a step using the Plug-in registration tool you must also choos
 
 |Name|Description|
 |--|--|
-|**PreValidation**<br />Stage: 10|For the initial operation, this stage will occur before the main system operation.<br /><br />This provides an opportunity to include logic to cancel the operation before the database transaction.<br /><br />Subsequent operations triggered by extensions registered in other stages will pass through this stage as well but will be included within the transaction of the calling extensions.<br /><br />This stage occurs before any security checks are preformed to verify that the calling or logged-on user has the correct permission to perform the intended operation.|
+|**PreValidation**<br />Stage: 10|[!INCLUDE [cc-prevalidation-description](../../includes/cc-prevalidation-description.md)]|
 |**PreOperation**<br />Stage: 20|Occurs before the main system operation and within the database transaction.<br /><br />If you want to change any values for an entity included in the message, you should do it here.<br /><br />Avoid cancelling an operation here. Canceling will trigger a rollback of the transaction and have significant performance impact.|
 |**MainOperation**<br />Stage: 30|For internal use only.|
 |**PostOperation**<br />Stage: 40|Occurs after the main system operation and within the database transaction.<br /><br />Use this stage to modify any properties of the message before it is returned to the caller.<br /><br />Avoid applying changes to an entity included in the message because this will trigger a new Update event.|

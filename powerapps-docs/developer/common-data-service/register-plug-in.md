@@ -111,22 +111,26 @@ When you register a step, there are many options available to you which depend o
 |--|--|
 |**Message**|PRT will auto-complete available messages in the system|
 |**Primary Entity**|PRT will auto-complete valid entities that apply to the selected message. If valid entities apply, you should set this when you want to limit the number of times the plug-in is called. You can leave it blank for core entity messages like `Create`, `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message. But then the plug-in will be invoked for all the entities that support this message.|
-|**Secondary Entity**|This field remains for backward compatibility for long deprecated messages that accepted two entity parameters, and the potential that a future message may require two entities as parameters.|
+|**Secondary Entity**|This field remains for backward compatibility for long deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> parameters. This field is typically not used.|
 |**Filtering Attributes**|For `Create` and `Update` messages that have a **Primary Entity** set, filtering attributes limits the execution of the plug-in to cases where the selected attributes are included. This is a best practice for performance. |
 |**Event Handler**|This value will be populated based on the name of the assembly. |
 |**Step Name**|The name of the step. A value is pre=populated based on the configuration of the step, but this value can be overridden.|
-|**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this to a user who has these privileges.  |
+|**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this to a user who has these privileges. More information: [Impersonation](plug-ins.md#impersonation) |
 |**Execution Order**|Multiple steps can be registered for the same event. The number in this field determines the order in which they will be applied from lowest to highest.|
 |**Description**|A description for step. This value is prepopulated but can be overwritten.|
 
 
 ### Event Pipeline Stage of execution
 
-|Field|Description|
-|--|--|
-|**x**||
-|**x**||
+There are three options:
 
+|Option|Description|
+|--|--|
+|**PreValidation**|[!INCLUDE [cc-prevalidation-description](../../includes/cc-prevalidation-description.md)]|
+|**PreOperation**||
+|**PostOperation**||
+
+More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)
 
 ### Execution Mode
 
