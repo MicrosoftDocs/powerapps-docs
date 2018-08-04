@@ -40,9 +40,9 @@ Content in this topic coverts the steps **in bold** above and supports the follo
 
 ## Use Tracing
 
-As described in [Tracing service](write-plug-in.md#tracing-service), you can write messages to the [PluginTraceLog Entity](reference/entities/plugintracelog.md) within the code of your plug-in by using the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Microsoft.Xrm.Sdk.ITracingService.Trace> method.
+As described in [Use the tracing service](write-plug-in.md#use-the-tracing-service), you can write messages to the [PluginTraceLog Entity](reference/entities/plugintracelog.md) within the code of your plug-in by using the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Microsoft.Xrm.Sdk.ITracingService.Trace*> method.
 
-Before you will be able to use this service, you must enable tracing in your CDS for Apps environment. The process is described in [View trace logs](tutorial-write-plug-in.md#view-trace-logs).
+Before you will be able to use this service, you must enable tracing in your CDS for Apps environment. The process is described in  [View trace logs](tutorial-write-plug-in.md#view-trace-logs).
 
 > [!NOTE]
 > Trace logging takes up organization storage space especially when many traces and exceptions are generated. You should only turn trace logging on for debugging and troubleshooting, and turn it off after your investigation is completed.

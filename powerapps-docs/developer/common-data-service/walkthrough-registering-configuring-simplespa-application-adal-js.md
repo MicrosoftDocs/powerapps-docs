@@ -9,9 +9,9 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: a327d2ff-e252-61cf-1190-6a974130ef19
-author: paulliew" # GitHub ID
-ms.author: jdaly" # MSFT alias of Microsoft employees only
-manager: ryjones" # MSFT alias of manager or PM counterpart
+author: "paulliew" # GitHub ID
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
+manager: "ryjones" # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
