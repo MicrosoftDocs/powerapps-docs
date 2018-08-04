@@ -35,12 +35,11 @@ Use solution explorer to perform app making and customization tasks that can’t
 
 ## Solutions
 
-The solutions page is where you can view, edit, create, import, export, and delete managed and unmanaged solutions. 
+The solutions area is where you can view, edit, create, import, export, and delete managed and unmanaged solutions. 
 
 1.	Sign in to [PowerApps](https://web.powerapps.com).
 2.	Select **Model-driven** (lower left). 
-3.	Select ![Settings icon](media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
-4.	Under **Solutions**, select **All solutions**. 
+3.	On the left navigation pane select **Solutions**. 
 
 ## My Apps
 
