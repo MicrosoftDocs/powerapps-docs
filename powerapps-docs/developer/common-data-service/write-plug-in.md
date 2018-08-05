@@ -43,7 +43,7 @@ The process of writing, registering, and debugging a plug-in is:
     1. Verify expected trace logs are written
     1. Debug the assembly as needed
 
-Content in this topic coverts the steps **in bold** above and supports the following tutorials:
+Content in this topic discusses the steps **in bold** above and supports the following tutorials:
 
 - [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
@@ -140,7 +140,7 @@ As described in [Use messages with the Organization service](org-service/use-mes
 
 As described in [Event Framework](event-framework.md), operations go through a series of stages and you can register your plug-in on stages that occur before the data is written to the database. Within the **PreValidation** and **PreOperation** stages, you can read and change the values of the `InputParameters` so that you can control the expected outcome of the data operation.
 
-If you find that the values in the `InputParameters` collection represent a condition that you cannot allow, you can throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> (preferably in the **PreValidation** stage) that will cancel the operation and display an error to the user with a synchronous plug-in, or log the error if the plug-in is asynchronous.
+If you find that the values in the `InputParameters` collection represent a condition that you cannot allow, you can throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> (preferably in the **PreValidation** stage) that will cancel the operation and display an error to the user with a synchronous plug-in, or log the error if the plug-in is asynchronous. More information: [Cancelling an operation](#cancelling-an-operation)
 
 ### OutputParameters
 
@@ -173,6 +173,16 @@ IOrganizationServiceFactory serviceFactory =
 IOrganizationService svc = serviceFactory.CreateOrganizationService(context.UserId);
 ```
 The `context.UserId` variable used with <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory>.<xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> comes from execution context the <xref:Microsoft.Xrm.Sdk.IExecutionContext.UserId> property, so this is call is done after the execution context has been accessed.
+
+More information:
+ - [Entity Operations](org-service/entity-operations.md)
+ - [Query data](org-service/entity-operations-query-data.md)
+ - [Create entities](org-service/entity-operations-create.md)
+ - [Retrieve an entity](org-service/entity-operations-retrieve.md)
+ - [Update and Delete entities](org-service/entity-operations-update-delete.md)
+ - [Associate and disassociate entities](org-service/entity-operations-associate-disassociate.md)
+ - [Use messages](org-service/use-messages.md)
+ - [Late-bound and Early-bound programming](org-service/early-bound-programming.md)
 
 You can use early bound types within a plug-in. Just include the generated types file in your project. But you should be aware that all entity types that are provided by the execution context input parameters will be late-bound types. You will need to convert them to early bound types. For example you can do the following when you know the `Target` parameter represents an account entity.
 

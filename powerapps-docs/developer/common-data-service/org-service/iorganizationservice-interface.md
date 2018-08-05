@@ -48,7 +48,7 @@ Each of the classes which implement the <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 |<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|Change the attribute values of an entity record.|
 
 > [!NOTE]
-> You may be interested to know that the underlying Organization service exposes only a the `Execute` method. The other methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface are simply wrappers around the `Execute` method. These other methods are provided for convenience. You can perform all operations using only the `Execute` method.
+> The Organization service exposes only a the `Execute` method. The other methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface are simply wrappers around the `Execute` method. These other methods are provided for convenience. You can perform all operations using only the `Execute` method. More information: [Use messages with the Organization service](use-messages.md)
 
 ## See also
 

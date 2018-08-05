@@ -29,13 +29,15 @@ The process of writing, registering, and debugging a plug-in is:
     1. Verify expected trace logs are written
     1. Debug the assembly as needed
 
-Content in this topic coverts the steps **in bold** above and supports the following tutorials:
+<!-- TODO I think we need something about adding the plug-in to a solution -->
+
+Content in this topic describes the steps **in bold** above and supports the following tutorials:
 
 - [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
-## Plugin registration tool
+## Plugin registration tool (PRT)
 
 You will use the Plugin Registration Tool (PRT) to register your plug-in assemblies and steps.
 
@@ -101,7 +103,7 @@ More information: [Use FetchXML with FetchExpression](org-service/entity-operati
 
 ## Register plug-in step
 
-When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> will be available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) to create a new step registration.
+When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> will be available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write a plug-in](tutorial-write-plug-in.md) to create a new step registration.
 
 When you register a step, there are many options available to you which depend on the stage of the event pipeline and the nature of the operation you will register your code to respond to.
 
@@ -109,14 +111,14 @@ When you register a step, there are many options available to you which depend o
 
 |Field|Description|
 |--|--|
-|**Message**|PRT will auto-complete available message names in the system.|
-|**Primary Entity**|PRT will auto-complete valid entities that apply to the selected message. These messages have a `Target` parameter that accepts and <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid entities apply, you should set this when you want to limit the number of times the plug-in is called. You can leave it blank for core entity messages like `Create`, `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message. But then the plug-in will be invoked for all the entities that support this message.|
+|**Message**|PRT will auto-complete available message names in the system. More information: [Use messages with the Organization service](org-service/use-messages.md)|
+|**Primary Entity**|PRT will auto-complete valid entities that apply to the selected message. These messages have a `Target` parameter that accepts and <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid entities apply, you should set this when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core entity messages like `Create`, `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the entities that support this message.|
 |**Secondary Entity**|This field remains for backward compatibility for long deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
 |**Filtering Attributes**|For `Create` and `Update` messages that have a **Primary Entity** set, filtering attributes limits the execution of the plug-in to cases where the selected attributes are included. This is a best practice for performance. |
-|**Event Handler**|This value will be populated based on the name of the assembly. |
+|**Event Handler**|This value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
 |**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this to a user who has these privileges. More information: [Impersonation](plug-ins.md#impersonation) |
-|**Execution Order**|Multiple steps can be registered for the same event. The number in this field determines the order in which they will be applied from lowest to highest.|
+|**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they will be applied from lowest to highest. Edit this to control the order in which plug-ins are applied in the stage.|
 |**Description**|A description for step. This value is prepopulated but can be overwritten.|
 
 > [!NOTE]
@@ -130,7 +132,7 @@ Choose the stage in the event pipeline that best suites the purpose for your plu
 |Option|Description|
 |--|--|
 |**PreValidation**|[!INCLUDE [cc-prevalidation-description](../../includes/cc-prevalidation-description.md)]|
-|**PreOperation**|[!INCLUDE [cc-preoperation-description](../../includes/cc-preoperation-description.md)]\|
+|**PreOperation**|[!INCLUDE [cc-preoperation-description](../../includes/cc-preoperation-description.md)]|
 |**PostOperation**|[!INCLUDE [cc-postoperation-description](../../includes/cc-postoperation-description.md)]|
 
 More information: [Event execution pipeline](event-framework.md#event-execution-pipeline)
