@@ -43,18 +43,35 @@ You will use the Plugin Registration Tool (PRT) to register your plug-in assembl
 
 PRT is one of the tools available for download from NuGet. Follow the instructions in [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
 
-After you download the PRT, use the steps found in [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) to connect to your CDS for Apps environment.
+After you download the PRT, use the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) steps in the [Tutorial: Write a plug-in](tutorial-write-plug-in.md) to connect to your CDS for Apps environment.
 
 ## Register an assembly
 
-With CDS for Apps, registering an assembly is the the process of uploading the assembly to the CDS for Apps database. See the instructions found at [Register your assembly](tutorial-write-plug-in.md#register-your-assembly) in the [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+Registering an assembly is the the process of uploading the assembly to the CDS for Apps database. See the instructions found at [Register your assembly](tutorial-write-plug-in.md#register-your-assembly) in the [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
 
 > [!NOTE]
 > You will find options related to the *isolation mode* and *location* for the assembly. These refer to options that apply to on-premise deployments. CDS for Apps is not available for on-premises deployments, so you will always accept the default options of **SandBox** and **Database** for these options.
 
 When an assembly is uploaded it is stored in the `PluginAssembly` entity. Most of the properties are set using reflection of the imported entity. The base64 encoded bytes of the assembly is stored in the `Content` attribute. While viewing the **Properties** of the assembly in the PRT, you can only edit the **Description** attribute value.
 
-To view information about registered assemblies without the PRT, you can use the following Web API query in your browser:
+### View registered assemblies
+
+You can view information about registered assemblies in the application solution explorer without using the PRT.
+
+[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+
+> [!NOTE]
+> Each assembly you add using PRT will be added to the system **Default Solution**, (not to be confused with the **Common Data Serices Default Solution**). To view the **Default Solution**, select All solutions under Solutions and then change the view to **All Solutions - Internal**.
+
+![All Solutions internal](media/all-solutions-internal-view.png)
+
+There you can find all the assemblies that are registered for this environment.
+
+![View all registered assemblies](media/view-plug-in-assemblies-default-solution.png)
+
+### Query registered assemblies with code
+
+To view information about registered assemblies without the PRT or the application, use the following Web API query in your browser:
 
 ```
 [org uri]]/api/data/v9.0/pluginassemblies
@@ -74,7 +91,7 @@ publickeytoken,
 version
 ```
 
-Or use following FetchXml to retrieve it.
+Or use following FetchXml to retrieve it in a program you write:
 
 ```xml
 <fetch>
@@ -100,6 +117,25 @@ Or use following FetchXml to retrieve it.
 </fetch>
 ```
 More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md#use-fetchxml-with-fetchexpression)
+
+## Add your assembly to a solution
+
+As described in [View registered assemblies](#view-registered-assemblies), the assembly registration you created was added to the system **Default Solution**. You should add your assembly to an unmanaged solution so you can distribute it to other organizations.
+
+Within the managed solution you are using, use solution explorer to navigate to **Plug-in Assemblies**. In the list menu, select **Add Existing**.
+
+![Add Existing plug-in assembly](media/add-existing-plug-in-assembly.png)
+
+Then add your assembly as a component to the solution.
+
+![Select plug-in assembly as a solution component](media/select-plug-in-assembly-as-solution-component.png)
+
+When you select the plug-in assembly you added, you can view the plug-in classes it includes.
+
+![Plug-in assemblies and classes](media/view-plug-in-classes-solution-explorer.png)
+
+> [!NOTE]
+> Any existing or subsequent step registrations are not added to the unmanaged solution that includes the plug-in assemblies. You must add each registered step to the solution separately.
 
 ## Register plug-in step
 
