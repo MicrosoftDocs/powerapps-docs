@@ -30,7 +30,6 @@ The process of writing, registering, and debugging a plug-in is:
     1. Verify expected trace logs are written
     1. Debug the assembly as needed
 
-<!-- TODO I think we need something about adding the plug-in to a solution -->
 
 Content in this topic describes the steps **in bold** above and supports the following tutorials:
 
@@ -62,7 +61,7 @@ You can view information about registered assemblies in the application solution
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
 > [!NOTE]
-> Each assembly you add using PRT will be added to the system **Default Solution**, (not to be confused with the **Common Data Serices Default Solution**). To view the **Default Solution**, select All solutions under Solutions and then change the view to **All Solutions - Internal**.
+> Each assembly you add using PRT will be added to the system **Default Solution**, (not to be confused with the **Common Data Serices Default Solution**). To view the **Default Solution**, select **All solutions** under **Solutions** and then change the view to **All Solutions - Internal**.
 
 ![All Solutions internal](media/all-solutions-internal-view.png)
 
@@ -149,8 +148,8 @@ When you register a step, there are many options available to you which depend o
 |Field|Description|
 |--|--|
 |**Message**|PRT will auto-complete available message names in the system. More information: [Use messages with the Organization service](org-service/use-messages.md)|
-|**Primary Entity**|PRT will auto-complete valid entities that apply to the selected message. These messages have a `Target` parameter that accepts and <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid entities apply, you should set this when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core entity messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the entities that support this message.|
-|**Secondary Entity**|This field remains for backward compatibility for long deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
+|**Primary Entity**|PRT will auto-complete valid entities that apply to the selected message. These messages have a `Target` parameter that accepts an <xref:Microsoft.Xrm.Sdk.Entity> or <xref:Microsoft.Xrm.Sdk.EntityReference> type. If valid entities apply, you should set this when you want to limit the number of times the plug-in is called. <br />If you leave it blank for core entity messages like `Update`, `Delete`, `Retrieve`, and `RetrieveMultiple` or any message that can be applied with the message the plug-in will be invoked for all the entities that support this message.|
+|**Secondary Entity**|This field remains for backward compatibility for deprecated messages that accepted an array of <xref:Microsoft.Xrm.Sdk.EntityReference> as the `Target` parameter. This field is typically not used anymore.|
 |**Filtering Attributes**|With the `Update` message, when you set the **Primary Entity**, filtering attributes limits the execution of the plug-in to cases where the selected attributes are included in the update. This is a best practice for performance. |
 |**Event Handler**|This value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
@@ -246,7 +245,7 @@ See [Add an image](tutorial-update-plug-in.md#add-an-image) step in the [Tutoria
 
 As mentioned in [Add your assembly to a solution](#add-your-assembly-to-a-solution), **Plug-in Assemblies** are solution components that can be added to an unmanaged solution. **Sdk Message Processing Steps** are also solution components and must also be added to an unmanaged solution in order to be distributed.
 
-The steps to add a step to a solution is similar to adding an assembly. You will use the **Add Existing** command to move it into the desired unmanaged solution. The only difference is that if you attempt to add a step but have not already added the assembly that contains the class used in the step, you will be prompted to add missing required components.
+The procedure to add a step to a solution is similar to adding an assembly. You will use the **Add Existing** command to move it into the desired unmanaged solution. The only difference is that if you attempt to add a step but have not already added the assembly that contains the class used in the step, you will be prompted to add missing required components.
 
 ![Missing required component dialog](media/missing-required-component.png)
 
@@ -258,9 +257,57 @@ Similarly, you should note that removing the assembly from the solution will not
 
 When you change and re-build an assembly that you have previously registered, you will need to update it. See the [Update the plug-in assembly registration](tutorial-update-plug-in.md#update-the-plug-in-assembly-registration) step in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md) for the steps.
 
-> [!IMPORTANT]
-> If you are making changes to a plug-in assembly that is part of a managed solution that has been deployed you need to consider the impact your changes may have when you update that managed solution.
-> 
->
+### Assembly versioning
 
-## Unregister an assembly
+If you are making changes to a plug-in assembly that is part of a managed solution that has been deployed you need to consider the impact your changes may have when you update that managed solution. The version of the assembly will control the behavior.
+
+Plug-in assemblies can be versioned using a semantic versioning format of `major.minor.build.revision` defined in the `Assembly.info` file of the Microsoft Visual Studio project. Depending on what part of the assembly version number is changed in a newer solution, the following behavior applies when an existing solution is updated through import.
+
+- **The build or revision assembly version number is changed**
+
+  This is considered an in-place upgrade. The older version of the assembly is removed when the solution containing the updated assembly is imported. Any pre-existing steps from the older solution are automatically changed to refer to the newer version of the assembly.
+
+- **The major or minor assembly version number is changed**
+
+  When an updated solution containing the revised assembly is imported, the assembly is considered a completely different assembly than the previous version of that assembly in the existing solution. Plug-in registration steps in the existing solution will continue to refer to the previous version of the assembly. If you want existing plug-in registration steps for the previous assembly to point to the revised assembly, you will need to use the Plug-in Registration tool to manually change the step configuration to refer to the revised assembly type. This should be done before exporting the updated assembly into a solution for later import.
+
+
+## Unregister or disable plug-in components
+
+You can unregister or disable plug-in components.
+
+### Unregister components
+
+The PRT provides commands to unregister assemblies, types, steps, and images. See the [Unregister assembly, plug-in, and step](tutorial-update-plug-in.md#unregister-assembly-plug-in-and-step) instructions in the [Tutorial: Update a plug-in](tutorial-update-plug-in.md#tutorial-update-a-plug-in) for the procedure.
+
+These are delete operations on the [PluginAssembly](reference/entities/pluginassembly.md), [PluginType](reference/entities/plugintype.md), [SdkMessageProcessingStep](reference/entities/sdkmessageprocessingstep.md), and [SdkMessageProcessingStepImage](reference/entities/sdkmessageprocessingstepimage.md) entities.
+
+You can also delete **Plug-in Assemblies** and **Sdk Message Processing Steps** in the solution explorer to achieve the same result.
+
+![Deleting step in solution explorer](media/delete-sdk-message-processing-step.png)
+
+> [!NOTE]
+> You cannot delete any **Plug-in Assemblies** while existing **Sdk Message Processing Steps** depend on them. Entity images are not available to be deleted separately, but they will be deleted when any steps that use them are deleted.
+
+### Disable steps
+
+The PRT provides commands to disable and enable steps.
+
+![disable a step using the PRT](media/disable-step-prt.png)
+
+![enable a step using the PRT](media/enable-step-prt.png)
+
+You can also disable steps in the solution explorer using the **Activate** and **Deactivate** commands.
+
+![foo](media/step-activate-deactivate-commands-solution-explorer.png)
+
+## Next steps
+
+[Debug Plug-ins](debug-plug-in.md)
+
+### See also
+[Write plug-ins to extend business processes](plug-ins.md)<br />
+[Write a plug-in](write-plug-in.md)<br />
+[Tutorial: Write a plug-in](tutorial-write-plug-in.md)<br />
+[Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />
+[Tutorial: Update a plug-in](tutorial-update-plug-in.md)<br />
