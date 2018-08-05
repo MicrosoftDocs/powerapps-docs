@@ -274,6 +274,8 @@ To register a plug-in, you will need the plug-in registration tool
 
     ![View the registered step](media/tutorial-write-plug-in-view-registered-step.png)
 
+> [!NOTE]
+> At this point the assembly and steps are part of the system **Default Solution**. This is a good time to add them to the unmanaged solution you will distribute. These steps are not included in this tutorial. See [Add your assembly to a solution](register-plug-in.md#add-your-assembly-to-a-solution) and [Add step to solution](register-plug-in.md#add-step-to-solution) for more information.
 
 ## Test plug-in
 

@@ -39,6 +39,7 @@ The process of writing, registering, and debugging a plug-in is:
 1. **Sign & build the assembly**
 1. Test the assembly
     1. Register the assembly in a test environment
+    1. Add your registered assembly and steps to an unmanaged solution
     1. Test the behavior of the assembly
     1. Verify expected trace logs are written
     1. Debug the assembly as needed
@@ -155,6 +156,12 @@ The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows f
 When you register a step for a plug-in that includes an entity as one of the parameters, you have the option to specify that a copy of the entity data be included as *snapshot* or image using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and/or <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
 
 This data provides a comparison point for entity data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve an entity just to compare the attribute values.
+
+When you define an entity image, you specify an entity alias value you can use to access the specific image. For example, if you define a pre entity image with the alias '`a`', you can use the following code to access the `name` attribute value.
+
+```csharp
+var oldAccountName = (string)context.PreEntityImages["a"]["name"];
+```
 
 More information: [Define entity images](register-plug-in.md#define-entity-images)
 

@@ -28,6 +28,7 @@ The process of writing, registering, and debugging a plug-in is:
 1. Sign & build the assembly
 1. Test the assembly
     1. Register the assembly in a test environment
+    1. Add your registered assembly and steps to an unmanaged solution
     1. **Test the behavior of the assembly**
     1. **Verify expected trace logs are written**
     1. **Debug the assembly as needed**
