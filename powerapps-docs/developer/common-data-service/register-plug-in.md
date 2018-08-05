@@ -144,7 +144,7 @@ There are two modes of execution asynchronous, and synchronous.
 |**Asynchronous**|The execution context and the definition of the business logic to apply is moved to system job which will execute after the operation completes.|
 |**Synchronous**|Plug-ins execute immediately according to the stage of execution and execution order. While they are running, the entire operation will wait until they complete.|
 
-Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md#asynchronous-service)
+Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)
 
 ### Deployment
 

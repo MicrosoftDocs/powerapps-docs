@@ -188,7 +188,7 @@ This will cause an <xref:System.Runtime.Serialization.SerializationException> to
 
 ## Use the tracing service
 
-Use the tracing service to write messages to the [PluginTraceLog Entity](reference/entities/plugintracelog.md#plugintracelog-entity-reference) so that you can review the logs to understand what occurred when the plug-in ran.
+Use the tracing service to write messages to the [PluginTraceLog Entity](reference/entities/plugintracelog.md) so that you can review the logs to understand what occurred when the plug-in ran.
 
 To write to the tracelog, you need to get an instance of the tracing service. The following code shows how to get an instance of the tracing service using the <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> method.
 
@@ -199,7 +199,7 @@ ITracingService tracingService =
 (ITracingService)serviceProvider.GetService(typeof(ITracingService));
 ```
 
-To write to the trace, use the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Microsoft.Xrm.Sdk.ITracingService.Trace> method.
+To write to the trace, use the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Microsoft.Xrm.Sdk.ITracingService.Trace*> method.
 
 ```csharp
 tracingService.Trace("Write {0} {1}.", "your", "message");
@@ -215,11 +215,11 @@ Your code can cause an operation to be cancelled by throwing an exception. Any u
 
 If your business logic dictates that the operation should be cancelled, you should throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception and provide a message to explain why the operation was cancelled.
 
-When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception within a synchronous plug-in an error dialog with your message will be displayed to the user. If you don't provide a message, a generic error dialog will be shown to the user. If any other type of exception is thrown, the user will see an error dialog with a generic message and the exception message and stack trace will be written to the [PluginTraceLog Entity](reference/entities/plugintracelog.md#plugintracelog-entity-reference)
+When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception within a synchronous plug-in an error dialog with your message will be displayed to the user. If you don't provide a message, a generic error dialog will be shown to the user. If any other type of exception is thrown, the user will see an error dialog with a generic message and the exception message and stack trace will be written to the [PluginTraceLog Entity](reference/entities/plugintracelog.md)
 
 Ideally, you should only cancel operations using synchronous plug-ins registered in the **PreValidation** stage. This stage *usually* occurs outside the main database transaction. Cancelling an operation before it reaches the transaction is highly desireable because the cancelled operation has to be rolled back. Rolling back the operation requires significant resources and has a performance impact on the system. Operations in the **PreOperation** and **PostOperation** stages are always within the database transaction.
 
-Sometimes **PreValidation** stages will be within a transaction when they are initated by logic in another operation. For example, if you create a task entity record in the **PreOperation** stage of the creation of an account, the task creation will pass through the event execution pipeline and occur within the **PreValidation** stage yet it will be part of the transaction that is creating the account entity record. You can tell whether an operation is within a transaction by the value of the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>.<xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.IsInTransaction> property.
+Sometimes **PreValidation** stages will be within a transaction when they are initated by logic in another operation. For example, if you create a task entity record in the **PreOperation** stage of the creation of an account, the task creation will pass through the event execution pipeline and occur within the **PreValidation** stage yet it will be part of the transaction that is creating the account entity record. You can tell whether an operation is within a transaction by the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.IsInTransaction> property.
 
 ## Performance considerations
 
@@ -255,8 +255,8 @@ This data is also available for you to browse using the [Organization Insights P
 
 ## Next steps
 
-[Register a plug-in](register-plug-in.md#register-a-plug-in)<br />
-[Debug Plug-ins](debug-plug-in.md#debug-plug-ins)
+[Register a plug-in](register-plug-in.md)<br />
+[Debug Plug-ins](debug-plug-in.md)
 
 ### See also
 [Write plug-ins to extend business processes](plug-ins.md)<br />
