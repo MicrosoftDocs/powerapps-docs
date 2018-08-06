@@ -35,7 +35,7 @@ Azure Event Hubs is a highly scalable publish-subscribe service that can ingest 
 ## 3. Register code  
  Dynamics 365 needs to know the exact operation (entity/message combination) that, when processed, would cause the Azure-aware plug-in to execute. Since you are creating an event hub, this operation would be related to the processing of Azure event data in particular. You must register a step for the Azure-aware plug-in in the Azure event execution pipeline.  For more information see  [Walkthrough: Register an Azure-aware plug-in using the Plug-in Registration Tool](walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md).  
   
- If you are using an Azure-aware custom workflow activity instead of a plug-in, you would register the activity's assembly using the Plug-in Registration Tool and incorporate that activity into a workflow. For more information, see [Sample: Azure aware custom workflow activity](sample-azure-aware-custom-workflow-activity.md).  <!-- Todo: File not found to update the link>
+ If you are using an Azure-aware custom workflow activity instead of a plug-in, you would register the activity's assembly using the Plug-in Registration Tool and incorporate that activity into a workflow. For more information, see [Sample: Azure aware custom workflow activity](/dynamics365/customer-engagement/developer/sample-azure-aware-custom-workflow-activity).
   
 ## 4. Start listening  
  Start your Azure service hub solution application listening on the service endpoint.  
