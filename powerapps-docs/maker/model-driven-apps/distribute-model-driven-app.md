@@ -54,7 +54,6 @@ To distribute your app so it can be imported into other environment or made avai
 
 	> [!NOTE]
 	> When you export an app by using a solution, the app URL is not exported.
-
   
 ## Import a solution  
 When you receive a solution zip file which contains the app that you want to import, open the solutions component page and import the solution. When the solution has been successfully imported, the app will be available in your environment.
