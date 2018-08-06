@@ -23,7 +23,7 @@ An internal plug-in named ServiceBusPlugin is provided with Dynamics 365 (online
   
  In addition, you can write a custom plug-in that includes the required lines of code to post to the service bus. The plug-in is registered in a similar way, except that it must be registered in the sandbox and run under partial trust. For more information on writing a custom plug-in that can post to the Azure Service Bus, see [Write a Custom Azure-aware Plug-in](write-custom-azure-aware-plugin.md).  
   
- You can also write a custom workflow activity that can post the execution context to the service bus and include this activity in your workflows. Sample code for a custom Azure-aware workflow activity is provided in the topic [Sample: Azure Aware Custom Workflow Activity](sample-azure-aware-custom-workflow-activity.md). <!-- Todo: This topic is not found https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-azure-aware-custom-workflow-activity --> 
+ You can also write a custom workflow activity that can post the execution context to the service bus and include this activity in your workflows. Sample code for a custom Azure-aware workflow activity is provided in the topic [Sample: Azure Aware Custom Workflow Activity](/dynamics365/customer-engagement/developer/sample-azure-aware-custom-workflow-activity) 
   
 ### See also  
  [Walkthrough: Register a Plug-in using the Plug-in Registration Tool](walkthrough-register-plugin-using-plugin-registration-tool.md)   
