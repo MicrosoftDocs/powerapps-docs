@@ -115,7 +115,7 @@ KnowledgeArticle respObject = (KnowledgeArticle)_serviceProxy.Retrieve(Knowledge
   
 - 6: Discarded (after a knowledge article is discarded)  
   
-  To change the state of the article, use the `Update` message on the knowledge article record to update the `KnowledgeArticle.StateCode` attribute. For early bound types, use the `KnowledgeArticleState` enumeration to set the possible states. More information: [Perform specialized operations using Update](org-service/perform-specialized-operations-using-update.md). <!-- Todo: Need to update the link. Page not found-->
+  To change the state of the article, use the `Update` message on the knowledge article record to update the `KnowledgeArticle.StateCode` attribute. For early bound types, use the `KnowledgeArticleState` enumeration to set the possible states. More information: [Perform specialized operations using Update](dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update.md).
   
   The following sample code shows how to publish a knowledge article record.  
   
@@ -188,7 +188,7 @@ _serviceProxy.Associate(Account.EntityLogicalName, accountId, newRelationship, r
   When you create an article, you have to associate it with a template and a subject. An article template describes the sections and formatting for the article. Subjects are used to organize the articles by business categories that are also used to group cases (incidents), sales literature, and products. A best practice is to create a subject tree hierarchy and all necessary article templates before you create an article.  
   
 > [!NOTE]
-> [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] provides several article templates. They include a standard article, a solution to a problem, a procedure, and other templates. The recommended method of creating article templates is by using the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] web application. If you want to create an article template programmatically, use existing article templates as examples of what information to include and how to format the data.  
+> Dynamics 365 provides several article templates. They include a standard article, a solution to a problem, a procedure, and other templates. The recommended method of creating article templates is by using the Dynamics 365 web application. If you want to create an article template programmatically, use existing article templates as examples of what information to include and how to format the data.  
   
  To associate an article with a template, use the `KbArticle.KbArticleTemplateId` attribute. To place an article in a specific category by specifying a subject, use the `KbArticle.SubjectId` attribute.  
   
@@ -203,7 +203,7 @@ _serviceProxy.Associate(Account.EntityLogicalName, accountId, newRelationship, r
 > [!NOTE]
 >  The comments can be added to the article in any state: Draft, Unapproved or Published.  
   
- To revise or update the article, you have to unpublish it. To unpublish an article, change the state of the article from Published to Unapproved. To delete an article from the [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)] database, change the state of the article from Published to Unapproved or Draft.  
+ To revise or update the article, you have to unpublish it. To unpublish an article, change the state of the article from Published to Unapproved. To delete an article from the Dynamics 365 database, change the state of the article from Published to Unapproved or Draft.  
   
 > [!NOTE]
 >  A knowledge base article cannot be deleted, if it is in the Published state.  
