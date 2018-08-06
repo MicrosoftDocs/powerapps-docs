@@ -23,12 +23,10 @@
   - name: Sign in to PowerApps
     href: ./canvas-apps/intro-maker-portal.md
     items:
-  - name: Understand environments
-    href: ./canvas-apps/working-with-environments.md
+#  - name: Understand environments
+#    href: ./canvas-apps/working-with-environments.md
   - name: "What's new"
     href: ./canvas-apps/release-notes.md
-  - name: Experimental and preview features
-    href: ./canvas-apps/working-with-experimental.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
@@ -596,6 +594,8 @@
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to PowerApps
       href: ./canvas-apps/transform-infopath.md
+  - name: Experimental and preview features
+    href: ./canvas-apps/working-with-experimental.md
   - name: For developers
     href: ./canvas-apps/dev-enterprise-intro.md
     items:
@@ -748,8 +748,6 @@
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
     href: ./model-driven-apps/share-model-driven-app.md
-  - name: Distribute an app
-    href: ./model-driven-apps/distribute-model-driven-app.md
   - name: Manage an app
     items:
     - name: Manage app properties
@@ -769,6 +767,8 @@
       href: ./model-driven-apps/web-resource-properties-legacy.md
     - name: Change custom entity icons
       href: ./model-driven-apps/change-custom-entity-icons.md
+    - name: Distribute an app using solutions
+      href: ./model-driven-apps/distribute-model-driven-app.md
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: For developers
@@ -776,8 +776,6 @@
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
-  - name: App building practices
-    href: ./common-data-service/overview.md
   - name: Work with entities
     href: ./common-data-service/entity-overview.md
     items:
@@ -823,16 +821,16 @@
         href: ./common-data-service/virtual-entity-documentdb-provider-requirements.md
       - name: How to work with virtual entity
         href: ./common-data-service/virtual-entity-walkthrough-using-odata-provider.md
-  - name: Work with relationships
+  - name: Work with entity relationships
     href: ./common-data-service/relationships-overview.md
     items: 
-    - name: "Create a relationship"
+    - name: "Create an entity relationship"
       href: ./common-data-service/data-platform-entity-lookup.md
-    - name: Create many-to-many relationships using PowerApps portal
+    - name: Create many-to-many entity relationships using PowerApps portal
       href: ./common-data-service/create-edit-nn-relationships-portal.md
-    - name: Create many-to-many relationships using PowerApps solution explorer
+    - name: Create many-to-many entity relationships using PowerApps solution explorer
       href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md  
-    - name: Set managed properties for relationships
+    - name: Set managed properties for entity relationships
       href: ./common-data-service/set-managed-properties-relationships.md
     - name: Visualize hierarchical data
       href: ./common-data-service/visualize-hierarchical-data.md
@@ -907,12 +905,12 @@
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
+  - name: Create a theme
+    href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md
   - name: Translate customized entity and field text
     href: ./common-data-service/export-customized-entity-field-text-translation.md
   - name: Import translated entity and field text into an app
-    href: ./common-data-service/import-translated-entity-field-text.md 
-  - name: Create a theme
-    href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md
+    href: ./common-data-service/import-translated-entity-field-text.md
   - name: For developers
     href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
