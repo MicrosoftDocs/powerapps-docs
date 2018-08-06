@@ -70,7 +70,7 @@ Common Data Service for Apps supports multiple languages. If you want your solut
   
 2. Create your solution and modify the components.  
   
-3. After you have finished developing your solution use the “Export Translations” functionality. This generates a [!INCLUDE[pn_MS_Excel_Full](../includes/pn-ms-excel-full.md)] spreadsheet (CrmTranslations.xml) that contains all the labels that need translation.  
+3. After you have finished developing your solution use the “Export Translations” functionality. This generates a Office Excel spreadsheet (CrmTranslations.xml) that contains all the labels that need translation.  
   
 4. In the spreadsheet, provide the corresponding translations.  
   

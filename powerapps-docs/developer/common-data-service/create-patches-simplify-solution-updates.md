@@ -94,7 +94,7 @@ If you add an entity to a solution and export the solution, the entity and all o
   
  For an unmanaged solution, you must uninstall all patches to the base solution first, in reverse version order that they were created, before uninstalling the base solution.  
   
- For a managed solution, you simply uninstall the base solution. The [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] system automatically uninstalls the patches in reverse version order before uninstalling the base solution. You can also just uninstall a single patch.  
+ For a managed solution, you simply uninstall the base solution. The CDS for Apps system automatically uninstalls the patches in reverse version order before uninstalling the base solution. You can also just uninstall a single patch.  
   
 ## Update a solution  
  Updating a solution involves rolling up (merging) all patches to that solution into a new version of the solution. Afterwards, that solution becomes unlocked and can once again be modified (unmanaged solution only) or exported. For a managed solution, no further modifications of the solution are allowed except for creating patches from the newly updated solution. To rollup patches into an unmanaged solution, use <xref:Microsoft.Crm.Sdk.Messages.CloneAsSolutionRequest> or the <xref href="Microsoft.Dynamics.CRM.CloneAsSolution?text=CloneAsSolution Action" />. Cloning a solution creates a new version of the unmanaged solution, incorporating all its patches, with a higher *major.minor* version number, the same unique name, and a display name.  

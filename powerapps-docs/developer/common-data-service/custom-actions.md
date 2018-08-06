@@ -168,7 +168,7 @@ outputProperty1.Attributes.Add(new ArgumentDirectionAttribute(Microsoft.Xrm.Sdk
   
 To download the CrmSvcUtil.exe, see [Download tools from NuGet](download-tools-NuGet.md).
   
- The following sample shows the format for running the tool from the command line for an on-premises installation of [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)]. You supply the parameter values for your installation.  
+ The following sample shows the format for running the tool from the command line for an on-premises installation of CDS for Apps. You supply the parameter values for your installation.  
   
 ```ms-dos  
 CrmSvcUtil.exe /url:http://<serverName>/<organizationName>/XRMServices/2011/Organization.svc /out:<outputFilename>.cs /username:<username> /password:<password> /domain:<domainName> /namespace:<outputNamespace> /serviceContextName:<serviceContextName> /generateActions  
@@ -214,8 +214,6 @@ CrmSvcUtil.exe /url:https://<organizationUrlName>.api.crm.dynamics.com/XRMServic
   
 > [!NOTE]
 >  If a custom action has unsupported parameter types, for example Picklist, Entity, or Entity Collection, the custom action isn’t listed in the **Action** list.  
-> 
->  The ability to execute an action from a process was introduced with [!INCLUDE[pn_crm_online_2015_update_1](../includes/pn-crm-online-2015-update-1.md)].  
   
  The existing <xref:Microsoft.Xrm.Sdk.IExecutionContext.Depth> platform checks ensure an infinite loop does not occur. For more information on depth limits see <xref:Microsoft.Xrm.Sdk.Deployment.WorkflowSettings.MaxDepth>.  
   
