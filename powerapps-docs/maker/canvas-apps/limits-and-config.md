@@ -1,6 +1,6 @@
 ---
-title: System requirements, limits, and configuration values | Microsoft Docs
-description: System requirements, limits, and configuration values for PowerApps
+title: System requirements, limits, and configuration values for canvas apps | Microsoft Docs
+description: System requirements, limits, and configuration values for canvas apps built in PowerApps
 author: AFTOwen
 manager: kvivek
 
@@ -12,10 +12,10 @@ ms.date: 03/07/2018
 ms.author: anneta
 
 ---
-# System requirements, limits, and configuration values
+# System requirements, limits, and configuration values for canvas apps
 This topic contains device platform and web browser requirements, as well as limits and configuration values for PowerApps.
 
-## Supported platforms for running apps using the PowerApps app
+## Supported platforms for running canvas apps using the PowerApps app
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
@@ -23,7 +23,7 @@ This topic contains device platform and web browser requirements, as well as lim
 | Android 5 or later |Android 7 or later with at least 4GB of RAM |
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
-## Supported browsers for running apps
+## Supported browsers for running canvas apps
 
 | **Browser** | **Operating system** |
 | --- | --- |
