@@ -39,8 +39,8 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
   
  You can also use one of the community-developed site map editors, such as the [XrmToolBox Site Map Editor](https://www.xrmtoolbox.com/plugins/MsCrmTools.SiteMapEditor/).   
   
- For more information, see [Change Application Navigation using the SiteMap](/developer/customize-dev/change-application-navigation-using-sitemap.md) 
- <!--Todo: This topic is not present https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap -->
+ For more information, see [Change Application Navigation using the SiteMap](dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap) 
+ 
   
  **Editing FormXml**  
  FormXml is used to define entity forms and dashboards. The form editor and dashboard designer in the application are the most commonly used tools for this purpose. Editing the customizations.xml file is an alternative method. For more information, see [Customize Entity Forms in Microsoft Dynamics 365](../model-driven-apps/customize-entity-forms.md)and [Create a Dashboard](../model-driven-apps/create-dashboard.md).
@@ -49,9 +49,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  Definitions of views for entities are included in the customizations.xml file and may be manually edited. The view editor in the application is the most commonly used tool for this purpose. Editing customizations.xml is an alternative method. For more information, see [Customize Entity Views in Microsoft Dynamics 365](../model-driven-apps/customize-entity-views.md).
   
  **Editing the ISV.config**  
- In earlier versions of Dynamics 365 CDS for Apps, ISV.Config was the way to add client application extensions as well as some other configuration options. For Microsoft Dynamics CRM 2011 and Microsoft Dynamics 365 Online, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see [Service Calendar Appearance Configuration](service-calendar-appearance-configuration.md). 
- <!--Todo: This topic is not present https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration
- -->
+ In earlier versions of Dynamics 365 CDS for Apps, ISV.Config was the way to add client application extensions as well as some other configuration options. For Microsoft Dynamics CRM 2011 and Microsoft Dynamics 365 Online, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)
   
 ## Unsupported tasks  
  Defining any other solution components by editing the exported customizations.xml file is not supported. This includes the following:  
@@ -99,6 +97,6 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  [Ribbon core schema](../model-driven-apps/ribbon-core-schema.md)
  [Ribbon types schema](../model-driven-apps/ribbon-types-schema.md)
  [Ribbon WSS schema](../model-driven-apps/ribbon-wss-schema.md)   
- [SiteMap schema](sitemap-schema.md)   <!-- Todo: This topic is not found; need to fix this link -->
+ [SiteMap schema](/dynamics365/customer-engagement/developer/customize-dev/sitemap-schema)
  [Form XML schema](../model-driven-apps/form-xml-schema.md)   
  [Schema Support for the Customization File](../model-driven-apps/edit-customizations-xml-file-schema-validation.md)
