@@ -19,13 +19,13 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/work-solutions -->
 
-This topic presents specific programming tasks included in [Sample: Work With Solutions](sample-work-solutions.md) and [Sample: Detect Solution Dependencies](sample-detect-solution-dependencies.md).  
+This topic presents specific programming tasks included in [Sample: Work With Solutions](org-service/samples/work-solutions.md) and [Sample: Detect Solution Dependencies](org-service/samples/detect-solution-dependencies.md).  
   
 <a name="BKMK_CreatePublisher"></a>
 
 ## Create a publisher
 
- Every solution requires a publisher, represented by the [Publisher Entity](entities/publisher.md). A solution cannot use the `Microsoft Corporation` publisher but it can use the `Default` publisher for the organization or a new publisher  
+ Every solution requires a publisher, represented by the [Publisher Entity](reference/entities/publisher.md). A solution cannot use the `Microsoft Corporation` publisher but it can use the `Default` publisher for the organization or a new publisher  
   
  A publisher requires the following:  
   
@@ -692,7 +692,7 @@ if (_globalOptionSetId != null)
 
 ### See also
 
- [Package and Distribute Extensions with Dynamics 365 Solutions](package-distribute-extensions-use-solutions.md)   
+ [Package and Distribute Extensions with Dynamics 365 Solutions](dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Introduction to Solutions](introduction-solutions.md)   
  [Plan For Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Dependency Tracking for Solution Components](dependency-tracking-solution-components.md)   
