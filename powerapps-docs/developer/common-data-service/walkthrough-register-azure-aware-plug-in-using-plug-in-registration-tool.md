@@ -9,9 +9,9 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
-author: "brandonsimons" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: brandonsimons" # GitHub ID
+ms.author: jdaly" # MSFT alias of Microsoft employees only
+manager: ryjones" # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
@@ -97,6 +97,6 @@ This walkthrough demonstrates how to register a service endpoint step using the 
  You can now unregister the endpoint, if so desired, by selecting it in the tool’s tree view and click **Unregister**.  
   
 ### See also  
- <!--[Azure Extensions for Dynamics 365](azure-extensions.md)  TODO: The file is not found to fix the link-->
+ [Azure integration for Dynamics 365](azure-integration.md)
  
  [Introduction to Microsoft Azure Integration with Dynamics 365](azure-integration.md)
