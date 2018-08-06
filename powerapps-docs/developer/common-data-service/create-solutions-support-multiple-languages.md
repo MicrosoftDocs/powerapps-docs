@@ -29,7 +29,7 @@ Common Data Service for Apps supports multiple languages. If you want your solut
  <a name="BKMK_Localizable_Web_Resources"></a>
 
  ## String (RESX) web resources
- With string (RESX) web resources added with CDS for Apps developers have a more robust option to create web resources that support multiple languages. More information [String (RESX) web resources](resx-web-resources.md).
+ With string (RESX) web resources added with CDS for Apps developers have a more robust option to create web resources that support multiple languages. More information [String (RESX) web resources](/dynamics365/customer-engagement/developer/resx-web-resources).
 
  For earlier versions, see [Developer option](https://msdn.microsoft.com/library/hh670609(v=crm.8).aspx#BKMK_DeveloperOption)
   
