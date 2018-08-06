@@ -882,7 +882,7 @@
       - name: How to delete fields
         href: ./common-data-service/delete-fields.md
   - name: Apply business logic
-    href: ./common-data-service/processes-overview.md
+    href: ./common-data-service/cds-processes.md
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
     items:  

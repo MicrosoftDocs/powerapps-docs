@@ -123,5 +123,5 @@ This tutorial shows you how to create business rules and recommendations to appl
   
 ## Next steps  
  [Create custom business logic through processes](guide-staff-through-common-tasks-processes.md)   
- [Create a business process flow](create-business-process-flow.md)   
+ [Create a business process flow](/flow/create-business-process-flow)   
 
