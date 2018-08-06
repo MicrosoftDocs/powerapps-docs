@@ -692,7 +692,7 @@ if (_globalOptionSetId != null)
 
 ### See also
 
- [Package and Distribute Extensions with Dynamics 365 Solutions](dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
+ [Package and Distribute Extensions with Dynamics 365 Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Introduction to Solutions](introduction-solutions.md)   
  [Plan For Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Dependency Tracking for Solution Components](dependency-tracking-solution-components.md)   
