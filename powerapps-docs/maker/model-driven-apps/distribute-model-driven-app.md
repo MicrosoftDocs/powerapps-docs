@@ -23,7 +23,7 @@ topic-status: Drafting
 
 # Distribute a model-driven app using a solution
 
-Model-driven apps are distributed as solution components. After you have created a model-driven app, you can make it available for other environments to use by packaging the app into a solution and then exporting it into a zip file. After the solution (.zip file) is successfully imported in the target environment, the packaged app is available for use. More information about solutions: [Solutions overview](../common-data-service/solutions-overview.md).
+Model-driven apps are distributed as solution components. After you have created a model-driven app, you can make it available for other environments to use by packaging the app into a solution and then exporting it into a zip file. After the solution (.zip file) is successfully imported in the target environment, the packaged app is available for use. 
   
 ## Add an app to a solution
 In order to distibute your app, you create a solution so the app can be packaged for export.
@@ -38,8 +38,8 @@ In order to distibute your app, you create a solution so the app can be packaged
 
     ![Select solution components](media/select-solution-components.png)
 
-5. If a **Missing Required Components** dialog box appears we recommend that you select **Yes, include required components** to add necessary components such as entities, views, forms, charts, and site map that are part of the app. Select **OK**.
-6. On the **Solution** page, select **Save and Close**.
+5. If a **Missing Required Components** page appears we recommend that you select **Yes, include required components** to add necessary components such as entities, views, forms, charts, and site map that are part of the app. Select **OK**.
+6. On the **Solution** page select **Save and Close**.
 
 ## Export a solution
 To distribute your app so it can be imported into other environment or made available on [Microsoft AppSource](https://appsource.microsoft.com/), you export the solution to a zip file. Then, the zip file that contains the app and components can be imported into other environments.
