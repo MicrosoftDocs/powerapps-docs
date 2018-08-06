@@ -1,8 +1,8 @@
 ---
-title: "Distribute a model-driven app | MicrosoftDocs"
+title: "Distribute a model-driven app using a solution | MicrosoftDocs"
 description: "Learn how you distribute a model-driven app using solutions"
 keywords: ""
-ms.date: 05/31/2018
+ms.date: 08/06/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -21,23 +21,51 @@ caps.latest.revision: 9
 topic-status: Drafting
 ---
 
-# Distribute a model-driven app
+# Distribute a model-driven app using a solution
 
 Model-driven apps are distributed as solution components. After you have created a model-driven app, you can make it available for other environments to use by packaging the app into a solution and then exporting it into a zip file. After the solution (.zip file) is successfully imported in the target environment, the packaged app is available for use. More information about solutions: [Solutions overview](../common-data-service/solutions-overview.md).
   
-## Export an app  
- Export an app into a solution when you want other environments to use it. The process of exporting a solution includes:  
+## Add an app to a solution
+In order to distibute your app, you create a solution so the app can be packaged for export.
 
-1. [Create a solution](../common-data-service/create-solution.md).
-2. [Add apps to the solution](../common-data-service/import-update-export-solutions.md).
-3. [Export the solution to a zip file](../common-data-service/import-update-export-solutions.md).
+1. On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+
+    ![Model-driven design mode](media/model-driven-switch.png)
+
+2. Select **Solutions** and then select **New solution**.
+3. Complete the fields on the **New Solution** page, and then select **Save**. More information: [Create a solution](../common-data-service/create-solution.md)
+4. The **Solution** page appears. Select **Add Existing**, select **App**, select the app that you want to add to the solution, and then select **OK**. 
+
+    ![Select solution components](media/select-solution-components.png)
+
+5. If a **Missing Required Components** dialog box appears we recommend that you select **Yes, include required components** to add necessary components such as entities, views, forms, charts, and site map that are part of the app. Select **OK**.
+6. On the **Solution** page, select **Save and Close**.
+
+## Export a solution
+To distribute your app so it can be imported into other environment or made available on [Microsoft AppSource](https://appsource.microsoft.com/), you export the solution to a zip file. Then, the zip file that contains the app and components can be imported into other environments.
+
+1. Open the [Solutions page](advanced-navigation.md#solutions). 
+2. Select the solution you want to export, and then on the toolbar select **Export**. 
+3. On the **Publish Customizations** page, select **Next**.
+4. If the **Missing Required Components** page appears, select **Next**. 
+5. On the **Export System Settings** page, select the optional features that you want to include, and then select **Next**. 
+6. On the **Package Type** page, select **Unmanaged** or **Managed**, and the select **Export**. For more information about solution package types, see [Solutions overview](../common-data-service/solutions-overview.md).
+7. Depending on your browser and settings, a .zip package file is built and copied to the default downloads folder. The file name of the package is based on the unique name of the solution appended with underscores and the solution version number.
 
 	> [!NOTE]
 	> When you export an app by using a solution, the app URL is not exported.
 
-Now you can share the created solution zip file with other environments to import and use the app.
   
 ## Import an app  
-When you receive the solution zip file which contains the app that you want to import, open the solutions component page and import the solution. When the solution has been successfully imported, the app will be available in your environment.
+When you receive a solution zip file which contains the app that you want to import, open the solutions component page and import the solution. When the solution has been successfully imported, the app will be available in your environment.
 
-More information: [Import, update, and export solutions](../common-data-service/import-update-export-solutions.md). 
+1. On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+
+    ![Model-driven design mode](media/model-driven-switch.png)
+
+2. Select **Solutions** and then on the toolbar select **Import**.
+3. Browse to the file you want to import, and then choose **Next**.
+4. Select **Import**.
+
+## See also
+[Change the solution publisher prefix](../common-data-service/change-solution-publisher-prefix.md)
