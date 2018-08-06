@@ -153,7 +153,7 @@ When you register a step, there are many options available to you which depend o
 |**Filtering Attributes**|With the `Update` message, when you set the **Primary Entity**, filtering attributes limits the execution of the plug-in to cases where the selected attributes are included in the update. This is a best practice for performance. |
 |**Event Handler**|This value will be populated based on the name of the assembly and the plug-in class. |
 |**Step Name**|The name of the step. A value is pre-populated based on the configuration of the step, but this value can be overridden.|
-|**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this to a user who has these privileges. More information: [Impersonation](plug-ins.md#impersonation) |
+|**Run in User's Context**|Provides options for applying impersonation for the step. The default value is **Calling User**. If the calling user doesn't have privileges to perform operations in the step, you may need to set this to a user who has these privileges. More information: [Impersonation](write-plug-in.md#impersonation) |
 |**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they will be applied from lowest to highest. Edit this to control the order in which plug-ins are applied in the stage.|
 |**Description**|A description for step. This value is prepopulated but can be overwritten.|
 

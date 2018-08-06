@@ -57,7 +57,7 @@ To impersonate another user, set the `CallerId` property to the Guid value of th
 ## Impersonate another using in Plug-ins
 
 You can register a plug-in you can specify a user that the operations should use. Within the code of a plug-in you can override this setting.
-More information: [Impersonation](plug-ins.md#impersonation)
+More information: [Impersonation](write-plug-in.md#impersonation)
 
 
 ### See also

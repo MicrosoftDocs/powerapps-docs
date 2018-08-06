@@ -37,6 +37,12 @@ While you can get or set the primary key value using the primary key attribute, 
 The data contained within an entity is in the <xref:Microsoft.Xrm.Sdk.Entity.Attributes> property. This property is an <xref:Microsoft.Xrm.Sdk.AttributeCollection> that provides a whole set of methods to add new attributes, check whether an attribute exists, or remove attributes.
 There are four different ways to interact with entity attributes: use the indexer on the entity, use the indexer on the `Attributes` collection, use the entity methods provided, or use the generated attribute properties if you are using the early bound style.
 
+<!-- 
+TODO Add a table with attribute types 
+Where to find attribute names (metadata browser, early binding, ?)
+
+-->
+
 ### Use the indexer on the entity
 
 In most cases using the late-bound style, you can interact with collection by using the indexer to get or set the value of an attribute using the `LogicalName` for the attribute. For example, to set the name attribute of an account:

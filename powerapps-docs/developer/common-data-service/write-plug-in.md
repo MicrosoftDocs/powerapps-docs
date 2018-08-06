@@ -56,15 +56,15 @@ When creating assemblies keep the following constraints in mind.
 
 ### Optimize assembly development
 
-The assembly should include multiple types, but can be no larger than 16 MB. It is recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB. More information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
+The assembly should include multiple plug-in classes (or types), but can be no larger than 16 MB. It is recommended to consolidate plug-ins and workflow assemblies into a single assembly as long as the size remains below 16 MB. More information: [Optimize assembly development](/dynamics365/customer-engagement/guidance/server/optimize-assembly-development)
 
 ### Assemblies must be signed
+
 All assemblies must be signed before they can be registered. This can be done using Visual Studio Signing tab on the project or by using [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).
 
 ### Do not depend on .NET assemblies that interact with low-level Windows APIs
 
 Plug-in assemblies must contain all the necessary logic within the respective dll.  Plugins may reference some core .Net assemblies. However, we do not support dependencies on .Net assemblies that interact with low-level Windows APIs, such as the graphics design interface.
-
 
 ## IPlugin interface
 
@@ -202,6 +202,33 @@ But you should never try to set the value using an early bound type. Don't try t
 context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRONG: Do not do this. 
 ```
 This will cause an <xref:System.Runtime.Serialization.SerializationException> to occur.
+
+## Impersonation
+
+Sometimes you need the code in a plug-in to run in the context of a different user.
+
+There are two ways to apply impersonation in plug-ins: at registration or execution.
+
+### At plug-in registration
+
+When you register a plug-in step you can specify a user account to use when the code is run by choosing from the **Run in User's Context** option. By default this is set to use the **Calling User**, which is the user account which initiated the action. When this default option is applied, the [SdkMessageProcessingStep.ImpersonatingUserId](reference/entities/sdkmessageprocessingstep.md#BKMK_ImpersonatingUserId) will be set to null or <xref:System.Guid.Empty>.
+
+More information: [Register plug-in step](register-plug-in.md#register-plug-in-step)
+
+### During plug-in execution
+
+You can override the setting specified at registration at run time by setting the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory>.<xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> `userId` parameter.
+
+This is typically set to the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.UserId> value which will apply the user account defined by the plug-in step registration.
+
+```csharp
+(IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
+    IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
+```
+
+If you want to override the step registration you can pass the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> to have a service that will use the user account that initiated the action that caused the plug-in to run.
+
+You can also provide the [SystemUser.SystemUserId](reference/entities/systemuser.md#BKMK_SystemUserId) from any valid user account. This will work as long as that user has the permissions to perform the operations in the plug-in.
 
 ## Use the tracing service
 
