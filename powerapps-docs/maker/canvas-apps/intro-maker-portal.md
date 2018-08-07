@@ -1,40 +1,82 @@
 ---
-title: Introduction to powerapps.com | Microsoft Docs
+title: Sign in for the first time | Microsoft Docs
 description: A new home for all makers of apps.
-author: linhtranms
+author: AFTOwen
 manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/28/2016
-ms.author: litran
+ms.reviewer: 
+ms.date: 08/06/2018
+ms.author: anneta
 
 ---
-# Introduction to powerapps.com
-The PowerApps team is re-introducing [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) as the new home for app creators. We've re-designed the page as the primary site for creators to easily get started on creating apps, use the Microsoft Common Data Service, and manage their apps all in one location. In this article, I will walk you through the following:
+# Sign in to PowerApps for the first time
 
-* the header
-* the homepage
-* the **Apps** page
+When you sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you a variety of options for creating your own apps and opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities, such as creating custom connections to specific data sources.
 
-## Header
-When you sign up and first sign in to powerapps.com, you will notice the site's new header. Near the left edge of the header is the Office waffle. This is a quick place for you to access all other Office products such as PowerPoint, OneNote, and Word, as well as Microsoft Flow and Dynamics 365.
+You can select options in three general areas:
 
-![Header Waffle](./media/intro-maker-portal/waffle.png)
+- the header along the top of the page
 
-Near the right edge of the header, you'll first see an environment dropdown, where you can quickly switch between environments. **Default environment** is likely selected by default. [Learn more about environments](../../administrator/environments-overview.md).
+    ![Header](media/intro-maker-portal/header.png)
 
-![Header Environment](./media/intro-maker-portal/environment.png)
+- the navigation bar along the left edge of the page
 
-Next to the environment dropdown, you will see a download icon. Click or tap this icon to display a dialog box with links to download PowerApps Mobile (for iOS or Android devices).
+    ![Navigation bar](media/intro-maker-portal/nav-bar.png)
 
-![Header Download](./media/intro-maker-portal/downloads2.png)
+- the large icons that feature prominently in the middle of the page
 
-Next to the download icon, you will see a gear icon for settings. Click or tap this icon to display links for connections, gateways, and the admin center.
+    ![Center area of the home page](media/intro-maker-portal/center-area.png)
 
-![Header Settings](./media/intro-maker-portal/settings_items2.png)
+For best results, start by ensuring that the home page is set to the right environment.
+
+## Choose an environment
+
+Whether you're creating an app, a flow, a data connection, or an entity in the Common Data Service for Apps, much of what you do in PowerApps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
+
+To verify which environment you're in, find the environment switcher near the right side of the header.
+
+![Environment switcher](media/intro-maker-portal/environment-switcher.png)
+
+If you create an app in one environment, you won't be able to see it from another environment. In addition, people who want to run your app must have access to the environment in which you created it.
+
+> [!IMPORTANT]
+> Make sure that you're in the right environment *before* you create an app, a flow, or a similar component.
+
+For more information about environments, see [Environments overview](../../administrator/environments-overview.md).
+
+## Open an app
+
+If you've already created an app (or someone else has created one and given you permission to edit it), you can open the app from either the home page or the **Apps** tab.
+
+- On the home page, you can open apps under the **Recent apps** heading. If you hover over an app's tile, you can select the play icon to run the app or the pencil icon to edit it.
+
+    ![Recent apps](media/intro-maker-portal/recent-apps.png)
+
+- On the **Apps** tab, you can filter the list of apps in multiple ways, such as by whether you opened them recently.
+
+    ![Org apps](media/intro-maker-portal/org-apps.png)
+
+    You can also search for an app by typing one or more characters in the search box near the upper-right corner.
+
+
+Download clients for running apps
+Connect to data
+Identify your plan/s
+Open the Admin center
+Perform advanced customizations
+Get more info
+
+Create an app from scratch
+Create an app from data
+Customize a pre-built app
+
+Open an app that you or someone else created
+
+Create and update entities in the Common Data Service
+Create or update a flow in Microsoft Flow
 
 Next to settings, you will see a question-mark icon for help. Click or tap this icon to display links to Guided learning, Documentation, Support, Community, Blogs, Legal and Privacy.
 
