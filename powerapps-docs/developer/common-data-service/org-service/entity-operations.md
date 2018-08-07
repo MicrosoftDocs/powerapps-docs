@@ -90,20 +90,10 @@ Attribute types can be any of the following:
 
 
 
-There are four different ways to interact with entity attributes:
-- Use the generated attribute properties if you are using the early bound style
+There are three different ways to interact with entity attributes using the late-bound style:
 - Use the indexer on the entity
 - Use the indexer on the `Attributes` collection
 - Use the entity methods provided
-
-### Use the generated attribute property
-
-If you are using the early bound style, the generated class provides properties using the `SchemaName` for the attributes available for the entity, so you don't need to use the indexer. For example
-
-```csharp
-var account = new Account();
-account.Name = "Account Name"
-```
 
 ### Use the indexer on the entity
 
@@ -176,7 +166,7 @@ var formattedRevenueString1 = account.FormattedValues["revenue"];
 var formattedRevenueString2 = account.GetFormattedAttributeValue("revenue");
 ```
 
-More information: [Access Formatted values](entity-operations-retrieve.md#access-formatted-values)
+More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
 
 ## Entity.RelatedEntities 
 
