@@ -18,7 +18,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 IFRAME and web resource controls embed content from another location in pages by using an HTML IFRAME element.  
 
 > [!NOTE]
->  The designs you choose for the form are also used for the Common Data Services for Apps for Outlook reading pane and forms used by Common Data Services for Apps for tablets. Web resources and IFRAMEs aren’t displayed using the CDS for Apps for Outlook reading pane, however, they are supported in CDS for Apps for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
+>  The designs you choose for the form are also used for the Dynamics 365 for Outlook reading pane and forms used by Dynamics 365 tablets. Web resources and IFRAMEs aren’t displayed using the Dynamics 365 for Outlook reading pane, however, they are supported in Dynamics 365 for tablets. If your IFRAME depends on access to the `Xrm` object of the page or any form event handlers, you should configure the IFRAME so that it's not visible by default.  
 
  You can use an IFRAME to display the contents from another website in a form, for example, in an ASP.NET page. Displaying an entity form within an IFrame embedded in another entity form is not supported.  
 
@@ -50,7 +50,7 @@ IFRAME and web resource controls embed content from another location in pages by
 ### Enabling IFrame communication across domains  
  There are times when you want to enable communication for an IFRAME that contains content on a different domain. `Window.postMessage` is a browser method that provides this capability for versions of Internet Explorer no earlier than Internet Explorer 8. Google Chrome, Mozilla Firefox, and Apple Safari also support it. For more information about using `postMessage`, see the following blog posts:  
 
--   [Cross domain calls to the parent CDS for Apps form](http://blogs.msdn.com/b/devkeydet/archive/2012/02/14/cross-domain-calls-to-the-parent-crm-2011-form.aspx)  
+-   [Cross domain calls to the parent form](http://blogs.msdn.com/b/devkeydet/archive/2012/02/14/cross-domain-calls-to-the-parent-crm-2011-form.aspx)  
 
 -   [Cross-Document Messaging and RPC](https://msdn.microsoft.com/magazine/ff800814.aspx)  
 
@@ -70,7 +70,7 @@ IFRAME and web resource controls embed content from another location in pages by
 | `orgname`  | Organization Name  |                    The unique name of the organization.                     |
 | `userlcid` | User Language Code |    The language code identifier that is being used by the current user.     |
 
- [!INCLUDE[languagecode](../includes/languagecode.md)]  
+ [!INCLUDE[languagecode](../../includes/languagecode.md)]  
 
 > [!NOTE]
 >  We suggest that you use the entity name instead of the type code because the entity type code for custom entities may be different between CDS for Apps organizations.  
@@ -143,6 +143,6 @@ IFrame.setSrc(newTarget);
 
 ## See Also  
 
- [Client scripting in Common Data Services for Apps using JavaScript](clientapi/client-scripting.md)   
- [Use JavaScript with Common Data Services for Apps](use-javascript.md)   
+ [Client scripting using JavaScript](clientapi/client-scripting.md)   
+ [Use JavaScript](use-javascript.md)   
 
