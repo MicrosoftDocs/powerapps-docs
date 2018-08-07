@@ -62,4 +62,6 @@ More information: [Impersonation](write-plug-in.md#impersonation)
 
 ### See also
 
+[Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
 [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md)<br />
+[Write a plug-in](write-plug-in.md)
