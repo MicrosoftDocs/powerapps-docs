@@ -35,7 +35,7 @@ In other words, the *impersonator* is allowed to do something *if and only if* t
 
 ## Impersonation with Server-to-Server authentication
 
-If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user*account so that you do not need to use a paid CDS for Apps user license.
+If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you do not need to use a paid CDS for Apps user license.
 
 More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)
 
