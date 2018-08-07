@@ -149,7 +149,51 @@ The `OutputParameters` represent the value of the <xref:Microsoft.Xrm.Sdk.Organi
 
 ### Shared variables
 
-The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows for including data that can be passed from a plug-in to a step that occurs later in the execution pipeline. Because this is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> value, plug-ins can add, read, or modify properties to share data with subsequent steps
+The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows for including data that can be passed from a plug-in to a step that occurs later in the execution pipeline. Because this is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> value, plug-ins can add, read, or modify properties to share data with subsequent steps.
+
+The following example shows how a `PrimaryContact` value can be passed from a plug-in registered for a **PreOperation** step to a **PostOperation** step.
+
+```csharp
+public class PreOperation : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        // Obtain the execution context from the service provider.
+        Microsoft.Xrm.Sdk.IPluginExecutionContext context = (Microsoft.Xrm.Sdk.IPluginExecutionContext)
+            serviceProvider.GetService(typeof(Microsoft.Xrm.Sdk.IPluginExecutionContext));
+
+        // Create or retrieve some data that will be needed by the post event
+        // plug-in. You could run a query, create an entity, or perform a calculation.
+        //In this sample, the data to be passed to the post plug-in is
+        // represented by a GUID.
+        Guid contact = new Guid("{74882D5C-381A-4863-A5B9-B8604615C2D0}");
+
+        // Pass the data to the post event plug-in in an execution context shared
+        // variable named PrimaryContact.
+        context.SharedVariables.Add("PrimaryContact", (Object)contact.ToString());
+    }
+}
+
+public class PostOperation : IPlugin
+{
+    public void Execute(IServiceProvider serviceProvider)
+    {
+        // Obtain the execution context from the service provider.
+        Microsoft.Xrm.Sdk.IPluginExecutionContext context = (Microsoft.Xrm.Sdk.IPluginExecutionContext)
+            serviceProvider.GetService(typeof(Microsoft.Xrm.Sdk.IPluginExecutionContext));
+
+        // Obtain the contact from the execution context shared variables.
+        if (context.SharedVariables.Contains("PrimaryContact"))
+        {
+            Guid contact =
+                new Guid((string)context.SharedVariables["PrimaryContact"]);
+
+            // Do something with the contact.
+        }
+    }
+}
+```
+
 
 ### Entity Images
 
@@ -303,6 +347,7 @@ This data is also available for you to browse using the [Organization Insights P
 [Debug Plug-ins](debug-plug-in.md)
 
 ### See also
+
 [Write plug-ins to extend business processes](plug-ins.md)<br />
 [Tutorial: Write a plug-in](tutorial-write-plug-in.md)<br />
 [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />

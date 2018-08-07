@@ -53,7 +53,23 @@ These are the main advantages of plug-ins:
 
 ## Next Steps
 
-[Write a plug-in](write-plug-in.md)
+Use the following tutorial and how-to topics to learn how to write plug-ins
+
+### Tutorials
+
+These topics walk you through the process of creating some simple plug-ins.
+
+- [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
+- [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
+
+### How to topics
+
+These topics provide details that you will use to create plug-ins.
+
+- [Write a plug-in](write-plug-in.md)
+- [Register a plug-in](register-plug-in.md#register-a-plug-in)
+- [Debug Plug-ins](debug-plug-in.md#debug-plug-ins)
 
 <!-- Needs major attention
 
