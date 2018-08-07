@@ -45,21 +45,29 @@ If you create an app in one environment, you won't be able to see it from anothe
 > [!IMPORTANT]
 > Make sure that you're in the right environment *before* you create an app, a flow, or a similar component.
 
-For more information about environments, see [Environments overview](../../administrator/environments-overview.md).
+For more information, see [Environments overview](../../administrator/environments-overview.md).
 
 ## Open an app
 
-If you've already created an app (or someone else has created one and given you permission to edit it), you can open the app from either the home page or the **Apps** tab.
+If you've already created an app (or someone else has created one and shared it with you), you can open the app from either the **Home** page or the **Apps** page.
 
-- On the home page, you can open apps under the **Recent apps** heading. If you hover over an app's tile, you can select the play icon to run the app or the pencil icon to edit it.
+- On the home page (which appears by default), you can open apps under the **Recent apps** heading. If you hover over an app's tile, you can select the play icon to run the app or the pencil icon to edit it.
 
     ![Recent apps](media/intro-maker-portal/recent-apps.png)
 
-- On the **Apps** tab, you can filter the list of apps in multiple ways, such as by whether you opened them recently.
+- On the **Apps** page (which you can open from the left navigation bar), you can filter the list of apps in multiple ways, such as by whether you opened them recently.
 
     ![Org apps](media/intro-maker-portal/org-apps.png)
 
     You can also search for an app by typing one or more characters in the search box near the upper-right corner. When you find the app you want, select the ellipsis icon to show the play icon for running the app and the pencil icon for editing the app.
+
+    ![Ellipsis menu](media/intro-maker-portal/ellipsis-menu.png)
+
+## Create an app
+
+From the home page, you can create an app from a blank screen, you can generate an app automatically from your data, or you can customize a pre-built app. Each of these options appears under **Make apps like these**.
+
+- If you've already made one or more apps and explored how they're constructed, you probably have enough familiarity to try creating your own app from a blank screen. With this approach, you'll connect to data, add UI elements (which are called controls), and specific behavior by configuring controls with formulas. To start, hover over the **Start from blank** tile, and then specify whether you want to build an app for a phone or another device, such as a tablet. When you select **Make this app**, PowerApps Studio opens and shows you a welcome screen.
 
 Download clients for running apps
 Connect to data
@@ -67,10 +75,6 @@ Identify your plan/s
 Open the Admin center
 Perform advanced customizations
 Get more info
-
-Create an app from scratch
-Create an app from data
-Customize a pre-built app
 
 Create and update entities in the Common Data Service
 Create or update a flow in Microsoft Flow
