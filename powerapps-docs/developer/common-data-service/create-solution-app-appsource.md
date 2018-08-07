@@ -35,7 +35,7 @@ If your solution requires supporting or demo data:
 3. Save the schema file so that you can reuse it later to update the data in case your demo data changes.
 4. Use the schema to export the data. Ensure that you provide a meaningful name to your export file. The data is exported and as a .zip file.
 
-For detailed information about using the Configuration Migration tool to create a schema and export your data, see [Create a schema to export configuration data](/dynamics365/customer-engagement/admin/create-schema-export-configuration-data.md)
+For detailed information about using the Configuration Migration tool to create a schema and export your data, see [Create a schema to export configuration data](/dynamics365/customer-engagement/admin/create-schema-export-configuration-data)
 
 ## At the end of this step
 
