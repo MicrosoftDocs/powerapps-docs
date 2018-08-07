@@ -14,7 +14,7 @@ ms.author: anneta
 ---
 # Sign in to PowerApps for the first time
 
-When you sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you a variety of options for creating your own apps and opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities, such as creating custom connections to specific data sources.
+When you sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), the site offers you a variety of options for creating your own apps, opening apps that you or others have created, and performing related tasks. These tasks range from the most simple, such as identifying the license or licenses that give you access, to more advanced capabilities, such as creating custom connections to specific data sources.
 
 You can select options in three general areas:
 
@@ -43,31 +43,51 @@ To verify which environment you're in, find the environment switcher near the ri
 If you create an app in one environment, you won't be able to see it from another environment. In addition, people who want to run your app must have access to the environment in which you created it.
 
 > [!IMPORTANT]
-> Make sure that you're in the right environment *before* you create an app, a flow, or a similar component.
+> Make sure that you're in the right environment *before* you create an app, a flow, or a similar component. You can't easily move components from one environment to another.
 
 For more information, see [Environments overview](../../administrator/environments-overview.md).
 
-## Open an app
+## Choose an app type
 
-If you've already created an app (or someone else has created one and shared it with you), you can open the app from either the **Home** page or the **Apps** page.
+In PowerApps, you can create and run these types of apps:
 
-- On the home page (which appears by default), you can open apps under the **Recent apps** heading. If you hover over an app's tile, you can select the play icon to run the app or the pencil icon to edit it.
+- **Canvas apps** support designing custom UI and connecting to a data from a variety of sources.
+- **Model-driven apps** have a standard UI and connect to data only in Common Data Service (CDS) for Apps. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
 
-    ![Recent apps](media/intro-maker-portal/recent-apps.png)
+By default, the **Home** page shows options for creating and running canvas apps. To show model-driven options instead, choose an environment that has a CDS for Apps database, and then open the menu in the lower-left corner.
 
-- On the **Apps** page (which you can open from the left navigation bar), you can filter the list of apps in multiple ways, such as by whether you opened them recently.
+![Switch between canvas and model-driven apps](media/intro-maker-portal/mode-switcher.png)
 
-    ![Org apps](media/intro-maker-portal/org-apps.png)
+## Play or edit an app
 
-    You can also search for an app by typing one or more characters in the search box near the upper-right corner. When you find the app you want, select the ellipsis icon to show the play icon for running the app and the pencil icon for editing the app.
+If you've already created an app (or someone else has created one and shared it with you), you can play or edit it from the **Apps** page.
+
+- You can find a canvas app by filtering based on criteria such as whether you opened it recently.
+
+    ![List of canvas apps](media/intro-maker-portal/org-apps.png)
+
+    You can also search for an app or by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
 
     ![Ellipsis menu](media/intro-maker-portal/ellipsis-menu.png)
 
+- You can't filter the list of model-driven apps, but you can search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
+
+    ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/model-driven-list.png)
+
 ## Create an app
 
-From the home page, you can create an app from a blank screen, you can generate an app automatically from your data, or you can customize a pre-built app. Each of these options appears under **Make apps like these**.
+From the **Home** page, you can create apps in several ways:
 
-- If you've already made one or more apps and explored how they're constructed, you probably have enough familiarity to try creating your own app from a blank screen. With this approach, you'll connect to data, add UI elements (which are called controls), and specific behavior by configuring controls with formulas. To start, hover over the **Start from blank** tile, and then specify whether you want to build an app for a phone or another device, such as a tablet. When you select **Make this app**, PowerApps Studio opens and shows you a welcome screen.
+- [generate a canvas app automatically from a set of data](data-platform-create-app.md)
+- [customize a pre-built sample of a canvas app](open-and-run-a-sample-app.md)
+- [build a canvas app from a blank screen](data-platform-create-app-scratch.md)
+- [create your own model-driven app](../model-driven-apps/overview-model-driven-samples.md)
+- [customize a pre-built sample for a model-driven app](../model-driven-apps/build-first-model-driven-app.md)
+
+## Learn more
+
+## Other common tasks
+
 
 Download clients for running apps
 Connect to data
