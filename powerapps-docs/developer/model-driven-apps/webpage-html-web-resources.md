@@ -73,7 +73,7 @@ Because of the capability for the HTML in web resources to be changed by using t
 
 ## Reference other web resources from an HTML web resource
 
- You can create a set of related files outside of Common Data Services for Apps that use any of the web resource file types. If you’re careful to always use relative paths and import each web resource with a consistent naming convention that reflects the folder structure of your website, you’ll find that the HTML web resource will maintain links to related CSS, XML, JScript, image, and Silverlight files that have been imported as web resources.  
+ You can create a set of related files outside of Model Driven Apps that use any of the web resource file types. If you’re careful to always use relative paths and import each web resource with a consistent naming convention that reflects the folder structure of your website, you’ll find that the HTML web resource will maintain links to related CSS, XML, JScript, image, and Silverlight files that have been imported as web resources.  
 
  For example, if you create a web application project that uses the following [folder]/file structure:  
 
@@ -108,7 +108,7 @@ Because of the capability for the HTML in web resources to be changed by using t
 >  - An HTML web resource added to a form can’t use global objects defined by the JavaScript library loaded in the form. An HTML web resource may interact with the `Xrm.Page` or `Xrm.Utility` objects within the form by using `parent.Xrm.Page` or `parent.Xrm.Utility`, but global objects defined by form scripts won’t be accessible using the parent. You should load any libraries that an HTML web resource needs within the HTML web resource so they’re not dependent on scripts loaded in the form.  
 > - References included in code between web resources aren’t tracked as solution dependencies.  
 
- Because web resources are also downloaded for users of Common Data Services for Apps for Microsoft Office Outlook with Offline Access, users will have access to web resource content while they’re working offline.  
+ Because web resources are also downloaded for users of Dynamics 365 for Microsoft Office Outlook with Offline Access, users will have access to web resource content while they’re working offline.  
 
 <a name="BKMK_PassingParametersToWebResources"></a>
 
@@ -135,7 +135,7 @@ Because of the capability for the HTML in web resources to be changed by using t
 
 ### See also
 
- [Web Resources for Common Data Services for Apps](web-resources.md)   
+ [Web Resources](web-resources.md)   
  [Create Accessible Web Resources](create-accessible-web-resources.md)   
  [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   
  [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
