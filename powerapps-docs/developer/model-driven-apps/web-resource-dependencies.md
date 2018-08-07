@@ -17,7 +17,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 <!-- [!NOTE]
 > Web resource dependencies were added with the [!INCLUDE[../includes/pn-crm-9-0-0-online.md](../includes/pn-crm-9-0-0-online.md)].-->
 
-You can define dependencies between other web resources. The primary purpose of this feature is to allow association of String (RESX) web resources with the JavaScript web resources that will use them. This is also the way that web resources required by HTML web resources for use offline can be configured to also be available offline. More information [Create web resources and IFrame content for use with the Common Data Services for Apps for mobile clients](create-web-resources-iframe-mobile.md)
+You can define dependencies between other web resources. The primary purpose of this feature is to allow association of String (RESX) web resources with the JavaScript web resources that will use them. This is also the way that web resources required by HTML web resources for use offline can be configured to also be available offline. More information [Create web resources and IFrame content for use with Mode-driven Apps for mobile clients](create-web-resources-iframe-mobile.md)
 
 However there are some other behaviors which developers using JavaScript web resources can take advantage of.
 
@@ -25,7 +25,7 @@ The following image shows the dependencies tab within the web resource form. Dep
 
 ![web resource dependencies tab](media/web-resource-dependencies.PNG)
 
-Within a solution you can define dependencies within solution components. Up until CDS for Apps the main purpose of these dependencies was to prevent the deletion of a solution component when another solution component depended on it. With CDS for Apps the behavior for JavaScript web resources is enhanced so that any other web resource listed as a dependency to the JavaScript web resource will be loaded along with the JavaScript web resource. 
+Within a solution you can define dependencies within solution components. Up until Mode-driven Apps the main purpose of these dependencies was to prevent the deletion of a solution component when another solution component depended on it. With Model-driven Apps the behavior for JavaScript web resources is enhanced so that any other web resource listed as a dependency to the JavaScript web resource will be loaded along with the JavaScript web resource. 
 
 > [!NOTE]
 > The dependency is only established after it is configured and the web resource is published. Dependencies for unpublished web resources will not take effect until the web resource is published.
@@ -41,16 +41,16 @@ However, web resource dependencies are not limited to just RESX web resources. Y
 
 # Attribute dependencies
 <!--TODO: Add links to the attribute and attribute.controls collection definitions in the Client API reference -->
-Starting with CDS for Apps, if your JavaScript web resource depends on an entity attribute value that you don’t want to display in the form, you can set the attribute as a dependency for the JavaScript web resource. This means that the attribute will be available within the client API attributes collection so you can get or set the value in your code. When you add a dependency this way, the controls collection of the attribute will be empty because there will be no control on the form.
+Starting with Moe-driven Apps, if your JavaScript web resource depends on an entity attribute value that you don’t want to display in the form, you can set the attribute as a dependency for the JavaScript web resource. This means that the attribute will be available within the client API attributes collection so you can get or set the value in your code. When you add a dependency this way, the controls collection of the attribute will be empty because there will be no control on the form.
 
 Before this feature you would need to manually add the attribute to the form and then configure the control to be hidden. Now you can establish this dependency more directly and eliminate the possibility that someone will remove the hidden field from the form. 
 
 
 
 ## See also
-[Web resources for Common Data Services for Apps](web-resources.md)<br />
+[Web resources](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
-[Create web resources and IFrame content for use with the CDS for Apps for mobile clients](create-web-resources-iframe-mobile.md)<br />
+[Create web resources and IFrame content for use with Mode-driven Apps for mobile clients](create-web-resources-iframe-mobile.md)<br />
 [Webpage (HTML) web resources](webpage-html-web-resources.md)<br />
 [Silverlight (XAP) web resources](silverlight-xap-web-resources.md)<br />
 [Script (JScript) web resources](script-jscript-web-resources.md)<br />
