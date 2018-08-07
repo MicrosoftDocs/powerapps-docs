@@ -26,7 +26,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
 - **parseDataValue**: Receives the data parameter from `getDataParam` and builds a DHTML table to display any values passed within the `data` parameter.  
   
   > [!NOTE]
-  >  All characters included in the query string will be encoded using the [encodeURIComponent method](https://msdn.microsoft.com/library/xh9be5xc\(v=VS.85\).aspx). This function uses the [!INCLUDE[pn_JScript](../includes/pn-jscript.md)][decodeURIComponent method](https://msdn.microsoft.com/library/91b80x6x\(VS.85\).aspx) to decode the values passed.  
+  >  All characters included in the query string will be encoded using the [encodeURIComponent method](https://msdn.microsoft.com/library/xh9be5xc\(v=VS.85\).aspx). This function uses the JavaScript [decodeURIComponent method](https://msdn.microsoft.com/library/91b80x6x\(VS.85\).aspx) to decode the values passed.  
   
 - **noParams**: Displays a message when no parameters are passed to the page.  
   
