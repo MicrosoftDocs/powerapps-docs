@@ -14,11 +14,11 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 When you work with Common Data Service for Apps data using the organization service you will use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
 
-This topic will describe some of the most frequently used properties and methods of the <xref:Microsoft.Xrm.Sdk.Entity> class. 
+This topic will describe some of the most frequently used properties and methods of the <xref:Microsoft.Xrm.Sdk.Entity> class.
 
 ## Entity.LogicalName
 
-When you instantiate a new <xref:Microsoft.Xrm.Sdk.Entity> instance using the late-bound style you must provide a valid string value to specify what type of entity it is. The `LogicalName` is defined in the entity metadata. 
+When you instantiate a new <xref:Microsoft.Xrm.Sdk.Entity> instance using the late-bound style you must provide a valid string value to specify what type of entity it is. The `LogicalName` is defined in the entity metadata.
 
 When using the early-bound style, this value is set by the constructor of the generated class.
 
@@ -32,24 +32,90 @@ If you are retrieving an entity, it will include the primary key attribute value
 
 While you can get or set the primary key value using the primary key attribute, you can also use the <xref:Microsoft.Xrm.Sdk.Entity.Id>  property to access the value without having to remember the name of the primary key attribute.
 
-## Entity.Attributes
+## Early bound access to attributes
 
-The data contained within an entity is in the <xref:Microsoft.Xrm.Sdk.Entity.Attributes> property. This property is an <xref:Microsoft.Xrm.Sdk.AttributeCollection> that provides a whole set of methods to add new attributes, check whether an attribute exists, or remove attributes.
+If you are using the early-bound style with generated classes, you will find typed properties for each attribute in the class. The properties for the attributes use the <xref:Microsoft.Xrm.Sdk.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.AttributeMetadata.SchemaName> and they can be accessed directly on the entity instance.
+For example: 
+
+
+```csharp
+//Using the early-bound Account entity class
+var account = new Account();
+// set attribute values
+// string primary name
+account.Name = "Contoso";
+// Boolean (Two option)
+account.CreditOnHold = false;
+// DateTime
+account.LastOnHoldTime = new DateTime(2017, 1, 1);
+// Double
+account.Address1_Latitude = 47.642311;
+account.Address1_Longitude = -122.136841;
+// Int
+account.NumberOfEmployees = 500;
+// Money
+account.Revenue = new Money(new decimal(5000000.00));
+// Picklist (Option set)
+account.AccountCategoryCode = new OptionSetValue(1); //Preferred customer
+```
+
+## Late bound access to attributes
+
+The data contained within an entity is in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> property. This property is an <xref:Microsoft.Xrm.Sdk.AttributeCollection> that provides a whole set of methods to add new attributes, check whether an attribute exists, or remove attributes.
+
+### Discover attribute names and data types
+
+In the late-bound style, you need to know the <xref:Microsoft.Xrm.Sdk.AttributeMetadata>.<xref:Microsoft.Xrm.Sdk.AttributeMetadata.LogicalName> for the attribute and the data type. The `LogicalName` is the lowercase version of the `SchemaName`. You can discover the `LogicalName` and type for attributes in several ways:
+
+- View the definition of the attribute in the customization tools
+- For system entities, you can review the [Entity Reference](../reference/about-entity-reference.md)
+- Use a tool to browse the metadata for entities, such as the Metadata Browser described in [Browse the metadata for your environment](../browse-your-metadata.md)
+
+Attribute types can be any of the following:
+
+|Type|Description|
+|--|--|
+|<xref:Microsoft.Xrm.Sdk.EntityReference>|A **Lookup** attribute. A link to another record.|
+|<xref:Microsoft.Xrm.Sdk.ManagedProperty>|Used only for entities that can be solution components, such as the [WebResource Entity](../reference/entities/webresource.md). More information: [Use managed properties](../use-managed-properties.md)|
+|<xref:Microsoft.Xrm.Sdk.Money>|A **Currency** attribute.|
+|<xref:Microsoft.Xrm.Sdk.OptionSetValue>|An **Option Set** attribute. **State** and **Status** attributes also use this type. |
+|<xref:System.Boolean>|A **Two Option** attribute.|
+|<xref:System.Byte>[]|An **Image** attribute. Each entity can have one image and the attribute is named `entityimage`. A URL to download the image can be retrieved in a companion attribute named `entityimage_url`. More information: [Image attributes](../image-attributes.md#image-attributes) |
+|<xref:System.DateTime>|A **Date and Time** attribute usually uses a UTC value. More information: [Behavior and format of the date and time attribute](../behavior-format-date-time-attribute.md)|
+|<xref:System.Decimal>|A **Decimal Number** attribute.|
+|<xref:System.Double>|A **Floating Point Number** attribute.|
+|<xref:System.Guid>|Usually used as the unique identifier for the entity. |
+|<xref:System.Integer>|A **Whole Number** attribute.|
+|<xref:System.String>|**Multiple Lines of Text** and **Single Line of Text** attributes use this type.|
+
+
+
 There are four different ways to interact with entity attributes: use the indexer on the entity, use the indexer on the `Attributes` collection, use the entity methods provided, or use the generated attribute properties if you are using the early bound style.
 
-<!-- 
-TODO Add a table with attribute types 
-Where to find attribute names (metadata browser, early binding, ?)
-
--->
 
 ### Use the indexer on the entity
 
 In most cases using the late-bound style, you can interact with collection by using the indexer to get or set the value of an attribute using the `LogicalName` for the attribute. For example, to set the name attribute of an account:
 
 ```csharp
+//Use Entity class with entity logical name
 var account = new Entity("account");
-account["name"] = "Account Name"
+// set attribute values
+// string primary name
+account["name"] = "Contoso";
+// Boolean (Two option)
+account["creditonhold"] = false;
+// DateTime
+account["lastonholdtime"] = new DateTime(2017, 1, 1);
+// Double
+account["address1_latitude"] = 47.642311;
+account["address1_longitude"] = -122.136841;
+// Int
+account["numberofemployees"] = 500;
+// Money
+account["revenue"] = new Money(new decimal(5000000.00));
+// Picklist (Option set)
+account["accountcategorycode"] = new OptionSetValue(1); //Preferred customer
 ```
 
 ### Use the indexer on the Attributes collection
