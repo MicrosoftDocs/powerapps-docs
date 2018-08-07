@@ -17,15 +17,15 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 Visualizations let you see your business data graphically. A visualization is attached to an entity in Common Data Services for Apps. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard. More information: [Analyze Data with Dashboards](analyze-data-with-dashboards.md)  
   
- You can use a chart or a web resource as a visualization in CDS for Apps. For charts, you can use the chart designer in CDS for Apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into CDS for Apps. More information: [Sample: Create, Retrieve, Update, and Delete a Chart](sample-create-retrieve-update-delete-chart.md)  
+ You can use a chart or a web resource as a visualization in CDS for Apps. For charts, you can use the chart designer in Model-driven Apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into Model-driven Apps. More information: [Sample: Create, Retrieve, Update, and Delete a Chart](sample-create-retrieve-update-delete-chart.md)  
   
 <a name="VisualizationTypes"></a>   
 ## Visualization ownership  
- In CDS for Apps, there are two types of visualization ownership: organization-owned and user-owned.  
+ In Model-driven Apps, there are two types of visualization ownership: organization-owned and user-owned.  
   
-- An organization-owned visualization is owned by an organization, and cannot be assigned or shared. The `SavedQueryVisualization` entity represents the organization-owned visualization. These visualizations are solution-aware entities in CDS for Apps. Whenever you update a saved query visualization, you must publish the changes for the updates to be available across the organization by using the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message. This entity is referred to as a *System Chart* in the CDS for Apps web application.  
+- An organization-owned visualization is owned by an organization, and cannot be assigned or shared. The `SavedQueryVisualization` entity represents the organization-owned visualization. These visualizations are solution-aware entities in Model-driven Apps. Whenever you update a saved query visualization, you must publish the changes for the updates to be available across the organization by using the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message. This entity is referred to as a *System Chart* in the Model-driven Apps web application.  
   
-- A user-owned visualization is owned by an individual user, and can be assigned and shared with other users and teams. The `UserQueryVisualization` entity represents the user-owned visualization. This entity is referred to as a *User Chart* in the CDS for Apps web application, and is displayed under **My Charts** in the chart drop-down list.  
+- A user-owned visualization is owned by an individual user, and can be assigned and shared with other users and teams. The `UserQueryVisualization` entity represents the user-owned visualization. This entity is referred to as a *User Chart* in the Model-driven Apps web application, and is displayed under **My Charts** in the chart drop-down list.  
   
   A user query visualization is not associated with a user query (view), despite the entity name. The view aspect of this entity is used only for setting the filter criteria.  
   
@@ -43,13 +43,13 @@ Visualizations let you see your business data graphically. A visualization is at
   
 <a name="ChartTypes"></a>   
 ### Chart types in Microsoft chart controls  
- Microsoft Chart Controls is used to build charts in CDS for Apps. Microsoft Chart Controls enable you to create various chart types such as column, bar, area, stacked, line, bubble, and pie.  
+ Microsoft Chart Controls is used to build charts in Model-driven Apps. Microsoft Chart Controls enable you to create various chart types such as column, bar, area, stacked, line, bubble, and pie.  
   
  The following chart types are supported out-of-box in CDS for Apps: *Column*, *Area*, *Bar*, *Line*, *Pie*, and *Funnel*. However, you can extend the functionality by creating other supported Microsoft Chart Controls chart types such as multi-series, stacked, and 100% stacked (comparison) charts by specifying appropriate content in the data description and presentation description XML strings for a chart. More information: [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)  
   
 <a name="WebResources"></a>   
 ## Web resource visualizations  
- Web resources are virtual files that are stored in the CDS for Apps database and may be retrieved using a unique URL address. You can display an existing web resource as a visualization, and display it in the **Charts** area in CDs for Apps together with other charts for an entity. For more information about web resources, see [Web Resources for Common Data Services for Apps](../web-resources.md).  
+ Web resources are virtual files that are stored in the Model-driven Apps database and may be retrieved using a unique URL address. You can display an existing web resource as a visualization, and display it in the **Charts** area in Model-driven Apps together with other charts for an entity. For more information about web resources, see [Web Resources](../web-resources.md).  
   
  You can use the following types of web resources in a visualization: [WWebpage (HTML) web resources](../webpage-html-web-resources.md) and [Image (JPG, PNG, GIF, ICO) Web Resources](../image-web-resources.md). For more information about how to create a visualization with a web resource, see [Create a Web Resource Visualization](create-visualization-chart.md#CreateWRVisualization).  
   
@@ -114,7 +114,7 @@ Territory
 UoMSchedule  
   
 ### See also  
- [Chart and Analyze Data in Common Data Services for Apps](customize-visualizations-dashboards.md)   
+ [Chart and Analyze Data](customize-visualizations-dashboards.md)   
  [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)   
  [Actions on Chart](actions-visualizations-charts.md)   
  [Create a Chart](create-visualization-chart.md)   
