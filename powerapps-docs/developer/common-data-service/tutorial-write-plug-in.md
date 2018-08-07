@@ -284,6 +284,62 @@ To register a plug-in, you will need the plug-in registration tool
 
     ![Account entity record with related task activity create by plug-in](media/tutorial-write-plug-in-test-plugin-in-model-app.png)
 
+### What if the task wasn't created?
+
+Because this is an asynchronous plug-in, the operation to create the task occurs after the account is created. Usually, this will happen immediately, but if it doesn't you may still be able to view the system job in the queue waiting to be applied. This step registration used the **Delete AsyncOperation if StatusCode = Successful** option which is a best practice. This means as soon as the system job completes successfully, you will not be able to view the system job data.
+
+However, if there was an error, you can view the system job to see the error message.
+
+## View System jobs
+
+Use the **Dynamics 365 --custom** app to view system jobs.
+
+1. In your model-driven app, navigate to the 
+
+    ![view the dynamics 365 custom app](media/dynamics-365-custom-app.png)
+
+1. In the **Dynamics 365 --custom** app, navigate to **Settings** > **System** > **System Jobs**.
+
+    ![navigate to system jobs](media/navigate-system-jobs.png)
+
+1. When viewing system jobs, you can filter by **Entity**. Select **Account**.
+
+    ![foo](media/system-jobs-filter-entity-account.png)
+
+1. If the job failed, you should see a record with the name **BasicPlugin.FollowupPlugin: Create of account**
+
+    ![Failed system job](media/failed-system-job.png)
+
+1. If you open the system job, you can expand the **Details** section to view the information written to the trace and details about the error.
+
+    ![system job details](media/system-job-failed-plug-in.png)
+
+### Query System jobs
+
+You can use the following Web API query to return failed system jobs for asynchronous plug-ins
+
+```
+GET <your org uri>/api/data/v9.0/asyncoperations?$filter=operationtype eq 1 and statuscode eq 31&$select=name,message
+```
+More information: [Query Data using the Web API](webapi/query-data-web-api.md)
+
+
+Or use the following FetchXml:
+
+```xml
+<fetch top='50' >
+  <entity name='asyncoperation' >
+    <attribute name='message' />
+    <attribute name='name' />
+    <filter type='and' >
+      <condition attribute='operationtype' operator='eq' value='1' />
+      <condition attribute='statuscode' operator='eq' value='31' />
+    </filter>
+  </entity>
+</fetch>
+```
+More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md)
+
 
 ## View trace logs
 
