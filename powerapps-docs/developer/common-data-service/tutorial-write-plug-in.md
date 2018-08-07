@@ -286,7 +286,7 @@ To register a plug-in, you will need the plug-in registration tool
 
 ### What if the task wasn't created?
 
-Because this is an asynchronous plug-in, the operation to create the task occurs after the account is created. Usually, this will happen immediately, but if it doesn't you may still be able to view the system job in the queue waiting to be applied. This step registration used the **Delete AsyncOperation if StatusCode = Successful** option which is a best practice. This means as soon as the system job completes successfully, you will not be able to view the system job data.
+Because this is an asynchronous plug-in, the operation to create the task occurs after the account is created. Usually, this will happen immediately, but if it doesn't you may still be able to view the system job in the queue waiting to be applied. This step registration used the **Delete AsyncOperation if StatusCode = Successful** option which is a best practice. This means as soon as the system job completes successfully, you will not be able to view the system job data unless you re-register the plug-in with the **Delete AsyncOperation if StatusCode = Successful** option unselected.
 
 However, if there was an error, you can view the system job to see the error message.
 
