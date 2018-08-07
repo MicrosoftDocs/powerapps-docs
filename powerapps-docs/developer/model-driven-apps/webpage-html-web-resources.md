@@ -134,7 +134,6 @@ Because of the capability for the HTML in web resources to be changed by using t
  To pass more than one value in the data parameter, you must encode parameters in the value of the data parameter and then include logic to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
 
 ### See also
-
  [Web Resources](web-resources.md)   
  [Create Accessible Web Resources](create-accessible-web-resources.md)   
  [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   
