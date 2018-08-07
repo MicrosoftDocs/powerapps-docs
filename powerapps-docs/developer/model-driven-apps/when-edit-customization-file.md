@@ -27,20 +27,20 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  **Editing the ribbon**  
  This documentation describes the process of editing the ribbon by editing the customization.xml file directly. Several people have created ribbon editors that provide a user interface to make editing the ribbon easier. The most popular one so far is the [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx). For support using this program, contact the program publisher.  
   
- For more information about editing the ribbon by editing the customization.xml manually, see [Customize the Ribbon for Common Data Services for Apps](customize-commands-ribbon.md).  
+ For more information about editing the ribbon by editing the customization.xml manually, see [Customize the Ribbon](customize-commands-ribbon.md).  
   
  **Editing the SiteMap**  
- The SDK describes the process of editing the SiteMap by editing the customization.xml file directly. However, its recommended that you use the site map designer in CDS for Apps to create or update site maps. More information: [Create a site map for an app using the site map designer](../../customize/create-site-map-app.md)  
+ The SDK describes the process of editing the SiteMap by editing the customization.xml file directly. However, its recommended that you use the site map designer in Model Driven Apps to create or update site maps. More information: [Create a site map for an app using the site map designer](../../customize/create-site-map-app.md)  
   
  You can also use one of the community-developed site map editors, such as the [XrmToolBox Site Map Editor](https://www.xrmtoolbox.com/plugins/MsCrmTools.SiteMapEditor/).   
   
  For more information, see [Change Application Navigation using the SiteMap](/developer/customize-dev/change-application-navigation-using-sitemap.md)  
   
  **Editing FormXml**  
- FormXml is used to define entity forms and dashboards. The form editor and dashboard designer in the application are the most commonly used tools for this purpose. Editing the customizations.xml file is an alternative method. For more information, see [Customize Entity Forms in Common Data Services for Apps](customize-entity-forms.md) and [Create a Dashboard](create-dashboard.md).  
+ FormXml is used to define entity forms and dashboards. The form editor and dashboard designer in the application are the most commonly used tools for this purpose. Editing the customizations.xml file is an alternative method. For more information, see [Customize Entity Forms](customize-entity-forms.md) and [Create a Dashboard](create-dashboard.md).  
   
  **Editing saved queries**  
- Definitions of views for entities are included in the customizations.xml file and may be manually edited. The view editor in the application is the most commonly used tool for this purpose. Editing customizations.xml is an alternative method. For more information, see [Customize Entity Views in Common Data Services for Apps](customize-entity-views.md).  
+ Definitions of views for entities are included in the customizations.xml file and may be manually edited. The view editor in the application is the most commonly used tool for this purpose. Editing customizations.xml is an alternative method. For more information, see [Customize Entity Views](customize-entity-views.md).  
   
  **Editing the ISV.config**  
   For CDS for Apps, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see [Service Calendar Appearance Configuration](service-calendar-appearance-configuration.md).  
@@ -86,7 +86,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
   
 
 ### See also  
- [Customize Common Data Services for Apps](customize-applications.md)   
+ [Customize Model Driven Apps](customize-applications.md)   
  [Customization XML Reference](../customization-xml-reference.md)   
  [Customization Solutions File Schema](customization-solutions-file-schema.md)   
  [Ribbon core schema](ribbon-core-schema.md)
