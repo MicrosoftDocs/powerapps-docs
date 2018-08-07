@@ -60,7 +60,7 @@ To view the entity metadata for your organization, install the Metadata Browser 
 ```  
   
 > [!NOTE]
->  When this data is retrieved in unmanaged code from the web service, for example when using [!INCLUDE[pn_JavaScript](../includes/pn-javascript.md)], it will be escaped and appear like the following example.  
+>  When this data is retrieved in unmanaged code from the web service, for example when using JavaScript, it will be escaped and appear like the following example.  
   
 ```  
 &lt;allowedtransitions xmlns="http://schemas.microsoft.com/crm/2009/WebServices"&gt;  
