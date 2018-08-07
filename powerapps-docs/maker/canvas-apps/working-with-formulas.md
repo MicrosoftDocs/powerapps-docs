@@ -1,6 +1,6 @@
 ---
-title: Get started with formulas | Microsoft Docs
-description: Use formulas to customize an app.
+title: Get started with formulas in a canvas app | Microsoft Docs
+description: In PowerApps, use formulas to customize a canvas app.
 author: gregli-msft
 manager: kvivek
 
@@ -12,8 +12,9 @@ ms.date: 04/26/2016
 ms.author: gregli
 
 ---
-# Get started with formulas
-Configure your app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
+# Get started with canvas-app formulas in PowerApps
+
+Configure your canvas app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
 * In Excel, you build formulas that, for example, populate cells and create tables and charts.
 * In PowerApps, you build similar formulas as you configure controls instead of cells. In addition, you build formulas that apply specifically to apps instead of spreadsheets.

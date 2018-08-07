@@ -1,6 +1,6 @@
 ---
-title: Show text and format a date or time | Microsoft Docs
-description: Add and format dates and times using PowerApps
+title: Show text, dates, and times in a canvas app | Microsoft Docs
+description: In PowerApps, show text, dates, and times in a canvas app
 author: AFTOwen
 manager: kvivek
 
@@ -12,8 +12,8 @@ ms.date: 10/16/2016
 ms.author: anneta
 
 ---
-# Show text and format dates and times in PowerApps
-Add dates and times, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
+# Show text, dates, and times in PowerApps
+In PowerApps, add dates and times to a canvas app, and format them to show the right level of detail or to reflect your locale. Calculate the amount of time between two dates, or calculate a date that's a certain amount of time before or after a date that you specify. Convert dates to or from separate values for days, months, and years, and convert times to or from separate values for hours, minutes, and seconds.
 
 For example, add data from users about stock trades or client meetings, data from an external source, or data from another app created in PowerApps. If that data includes times down to the millisecond, round it to the nearest minute for simplicity. Calculate how many days remain before a major milestone. If you want to schedule client meetings every five days, calculate those dates automatically. If May 10, 1985, is stored in separate fields for the day, the month, and the year, consolidate them into a single value. Conversely, break each date into separate values if your app manages them separately.
 

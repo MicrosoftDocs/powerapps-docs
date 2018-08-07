@@ -1,6 +1,6 @@
 ---
-title: Understand on-premises data gateways | Microsoft Docs
-description: Reference information, including installation and troubleshooting, for on-premises data gateways
+title: Understand on-premises data gateways for canvas apps | Microsoft Docs
+description: Reference information about on-premises data gateways including installation in PowerApps and troubleshooting
 author: AFTOwen
 manager: kvivek
 
@@ -12,7 +12,7 @@ ms.date: 10/20/2017
 ms.author: anneta
 
 ---
-# Understand on-premises data gateways for Microsoft PowerApps
+# Understand on-premises data gateways for canvas apps
 ## Installation and configuration
 **Prerequisites**
 

@@ -1,6 +1,6 @@
 ---
-title: Share resources used in your app | Microsoft Docs
-description: Understand how resources used in your app are shared, when an app is shared
+title: Share resources used in your canvas app | Microsoft Docs
+description: Understand how you share resources that your canvas app uses in PowerApps
 author: archnair
 manager: kvivek
 
@@ -12,8 +12,9 @@ ms.date: 06/28/2016
 ms.author: archanan
 
 ---
-# Share app resources
-Before you [share an app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
+# Share canvas-app resources in PowerApps
+
+Before you [share a canvas app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
 * a connection to a data source
 * an on-premises data gateway
@@ -26,6 +27,7 @@ Some of these resources are shared automatically when you share the app. Other r
 You can also share your connections, custom connectors and on-premises data gateway with your entire organization.
 
 ## Connections
+
 Some types of connections, such as SQL Server, are shared automatically, but others require users to create their own connections to the data source or sources in the app.
 
 On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), you can determine whether a connection will be shared automatically, and you can update sharing permissions. In the left navigation bar, click or tap **Manage**, click or tap **Connections**, and then click or tap a connection. If the **Share** tab appears, the connection will be shared automatically.

@@ -1,6 +1,6 @@
 ---
-title: Install and configure the Help Desk PowerApps sample | Microsoft Docs
-description: Step-by-step instructions for installing and configuring the Help Desk PowerApps sample.
+title: Install and configure the Help Desk sample for canvas apps | Microsoft Docs
+description: Step-by-step instructions for, in PowerApps, installing and configuring the Help Desk sample for canvas apps.
 author: caburk
 manager: kvivek
 
@@ -12,17 +12,17 @@ ms.date: 04/08/2018
 ms.author: caburk
 
 ---
-# Install and configure the Help Desk PowerApps sample
+# Install and configure the Help Desk sample in PowerApps
 
-Step-by-step instructions for installing and configuring the Help Desk PowerApps sample.
+Step-by-step instructions for, in PowerApps, installing and configuring the Help Desk sample for canvas apps.
 
 Estimated time to complete these steps: **10-15 minutes**
 
 > [!TIP]
-> If you would like to see a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
+> For a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
 
+## Overview of the sample
 
-## Help Desk PowerApps sample overview
 Help Desk provides a user-friendly experience to connect end users with support professionals. Quickly find answers to your most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
 
 ![Opening screen of the Help Desk PowerApp](./media/help-desk-install/Login-screen.png)

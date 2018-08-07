@@ -1,6 +1,6 @@
 ---
-title: Create an app from scratch using Common Data Service for Apps | Microsoft Docs
-description: Create an app to add, update, and delete records.
+title: Create a canvas app from scratch using Common Data Service for Apps | Microsoft Docs
+description: In PowerApps, create a canvas app to add, update, and delete records in Common Data Service for Apps.
 author: AFTOwen
 manager: kvivek
 
@@ -12,9 +12,9 @@ ms.date: 03/18/2018
 ms.author: anneta
 
 ---
-# Create an app from scratch using Common Data Service for Apps
+# Create a canvas app from scratch using Common Data Service for Apps
 
-Build an app to manage data that's stored in Common Data Service for Apps, using standard entities (which are built in), custom entities (which your organization creates), or both.
+Build a canvas app to manage data that's stored in Common Data Service for Apps, using standard entities (which are built in), custom entities (which your organization creates), or both.
 
 When you build an app from the Common Data Service, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You only need to specify the entities that you want to show, manage, or use for both activities in the app.
 

@@ -1,6 +1,6 @@
 ---
-title: Develop offline-capable apps | Microsoft Docs
-description: Develop offline-capable apps so your users are productive whether they are online or offline.
+title: Develop offline-capable canvas apps | Microsoft Docs
+description: Develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mgblythe
 manager: kvivek
 
@@ -12,15 +12,17 @@ ms.date: 05/09/2017
 ms.author: mblythe
 
 ---
-# Develop offline-capable apps with PowerApps
-One of the most common scenarios you face as a mobile app developer is enabling your users to be productive when there is limited connectivity or no connectivity at all. PowerApps has a set of features and behaviors that help you to develop offline-capable apps. You can:
+# Develop offline-capable canvas apps with PowerApps
 
-* Launch the PowerApps mobile app when offline.
-* Run apps you develop when offline.
+One of the most common scenarios you face as a mobile-app developer is enabling your users to be productive when there is limited connectivity or no connectivity at all. PowerApps has a set of features and behaviors that help you to develop offline-capable canvas apps. You can:
+
+* Launch PowerApps Mobile when offline.
+* Run apps that you develop when offline.
 * Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
 * Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
 ## How to build offline capable apps
+
 The first thing to think about in offline scenarios is how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and the Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
 ![PowerApps app with connectors](./media/offline-apps/online-app.png)

@@ -1,6 +1,6 @@
 ---
-title: Start a flow in an app | Microsoft Docs
-description: Create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in an app.
+title: Start a flow in a canvas app | Microsoft Docs
+description: Create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in a canvas app.
 author: stepsic-microsoft-com
 manager: kvivek
 
@@ -12,8 +12,9 @@ ms.date: 06/05/2017
 ms.author: sharik
 
 ---
-# Start a flow in an app
-You can use Microsoft Flow to create logic that performs one or more tasks when an event occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close PowerApps.
+# Start a flow in a canvas app
+
+You can use Microsoft Flow to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close PowerApps.
 
 ## Prerequisites
 
@@ -21,6 +22,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 * Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow
+
 1. Sign in to [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Flows** in the left navigation bar.
 
 2. On the **My Flows** page, select **Create from blank**.
