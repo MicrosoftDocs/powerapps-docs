@@ -20,7 +20,7 @@ This topic will describe some of the most frequently used properties and methods
 
 When you instantiate a new <xref:Microsoft.Xrm.Sdk.Entity> instance using the late-bound style you must provide a valid string value to specify what type of entity it is. The `LogicalName` is defined in the entity metadata.
 
-When using the early-bound style, this value is set by the constructor of the generated class.
+When using the early-bound style, this value is set by the constructor of the generated class. For example: `var account = new Entity("account");`
 
 In your code, if you later want to retrieve the string value that describes the type of entity, you can use the <xref:Microsoft.Xrm.Sdk.Entity.LogicalName> property. This is useful for the many APIs that require an entity logical name as a parameter.
 
@@ -90,8 +90,20 @@ Attribute types can be any of the following:
 
 
 
-There are four different ways to interact with entity attributes: use the indexer on the entity, use the indexer on the `Attributes` collection, use the entity methods provided, or use the generated attribute properties if you are using the early bound style.
+There are four different ways to interact with entity attributes:
+- Use the generated attribute properties if you are using the early bound style
+- Use the indexer on the entity
+- Use the indexer on the `Attributes` collection
+- Use the entity methods provided
 
+### Use the generated attribute property
+
+If you are using the early bound style, the generated class provides properties using the `SchemaName` for the attributes available for the entity, so you don't need to use the indexer. For example
+
+```csharp
+var account = new Account();
+account.Name = "Account Name"
+```
 
 ### Use the indexer on the entity
 
@@ -142,14 +154,7 @@ account.SetAttributeValue("name", "Account Name");
 var accountName = account.GetAttributeValue<string>("name");
 ```
 
-### Use the generated attribute property
 
-If you are using the early bound style, the generated class provides properties using the `SchemaName` for the attributes available for the entity, so you don't need to use the indexer. For example
-
-```csharp
-var account = new Account();
-account.Name = "Account Name"
-```
 
 ## Entity.FormattedValues
 
