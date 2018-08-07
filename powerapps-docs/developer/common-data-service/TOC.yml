@@ -318,8 +318,6 @@
         href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
     - name: Discover user organizations
       href: discovery-service.md
-    - name: Disaster recovery 
-      href: disaster-recovery.md
   - name: How to manage solutions
     href: how-manage-solutions.md
     items:
