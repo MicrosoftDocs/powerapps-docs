@@ -68,8 +68,8 @@ These topics walk you through the process of creating some simple plug-ins.
 These topics provide details that you will use to create plug-ins.
 
 - [Write a plug-in](write-plug-in.md)
-- [Register a plug-in](register-plug-in.md#register-a-plug-in)
-- [Debug Plug-ins](debug-plug-in.md#debug-plug-ins)
+- [Register a plug-in](register-plug-in.md)
+- [Debug Plug-ins](debug-plug-in.md)
 
 <!-- Needs major attention
 
