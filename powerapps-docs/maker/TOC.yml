@@ -805,7 +805,7 @@
         href: ./common-data-service/create-edit-entities-solution-explorer.md  
       - name: How to import or export data
         href: ./common-data-service/data-platform-import-export.md
-      - name: How to ppen entity data in Excel
+      - name: How to open entity data in Excel
         href: ./common-data-service/data-platform-excel-addin.md
       - name: How to define alternate keys
         href: ./common-data-service/define-alternate-keys-reference-records.md
