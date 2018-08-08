@@ -1,12 +1,11 @@
 ---
-title: Quickstart to build your first model-driven app from scratch with PowerApps | Microsoft Docs
+title: Build your first model-driven app from scratch with PowerApps | Microsoft Docs
 description: Learn how to build a simple model-driven app
 documentationcenter: ''
 author: Mattp123
-manager: kfile
+manager: kvivek
 editor: ''
 tags: ''
-
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
@@ -16,8 +15,11 @@ ms.author: matp
 
 ---
 
-# Quickstart: Build your first model-driven app from scratch
-Model-driven app design is a component-focused approach to app development. In this quickstart, you simplify how to create a model-driven app by using one of the standard entities that's available in your [!INCLUDE [powerapps](../../includes/powerapps.md)] environment. 
+# Build your first model-driven app from scratch
+Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard entities that's available in your PowerApps environment.
+
+> [!TIP]
+> To learn all about building model-driven apps, start here: [Understand model-driven app components](model-driven-app-components.md). 
 
 ## Sign in to PowerApps
 Sign in to [PowerApps](https://web.powerapps.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link. 
@@ -85,5 +87,7 @@ After publishing the app it's ready for you to run or share with others.
 ![Simple account entity app](media/build-first-model-driven-app/accounts-quickstart-app.png)
 
 ## Next steps
-In this quickstart, you built a simple model-driven app. To see how your app looks when you run it, see [Quickstart: Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md).
-To learn how to share your app, continue to the tutorial for how to share a model-driven app [Share a model-driven app](share-model-driven-app.md).
+In this topic, you built a simple model-driven app. 
+- To see how your app looks when you run it, see [Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md).
+- To learn how to share your app, see [Share a model-driven app](share-model-driven-app.md).
+- To get started and learn all about building model-driven apps, see [Understand model-driven app components](model-driven-app-components.md)
