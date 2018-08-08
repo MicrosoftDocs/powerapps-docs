@@ -147,7 +147,7 @@
             href: ./canvas-apps/accessible-apps-color.md
     - name: Manage your app
       items:
-      - name: Introduction to powerapps.com
+      - name: Sign in to PowerApps
         href: ./canvas-apps/intro-maker-portal.md
       - name: Work with environments
         href: ./canvas-apps/working-with-environments.md
