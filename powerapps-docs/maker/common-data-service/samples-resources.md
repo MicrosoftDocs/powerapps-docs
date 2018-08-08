@@ -12,7 +12,7 @@ ms.author: clwesene
 
 # Samples and other resources for Common Data Service for Apps
 ## Samples
-There are several samples that use Common Data Service (CDS) for Apps. To find these samples, go to [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Home** in the navigation pane.
+There are several samples that use Common Data Service (CDS) for Apps. To find these samples, go to [powerapps.com](https://web.powerapps.com), and then select **Home** in the navigation pane.
 
 ## Videos
 You can find videos on YouTube on the [MS PowerApps](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) and [Microsoft Ignite](https://www.youtube.com/channel/UCrhJmfAGQ5K81XQ8_od1iTg) channels.

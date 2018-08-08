@@ -23,7 +23,7 @@ To use Power BI with the Common Data Service for Apps, you need the following:
 
 ## Finding your Common Data Service for Apps Environment URL
 
-1. Open [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you're going to connect to and click the **settings gear** in the top right corner, and click **Advanced customizations**
+1. Open [PowerApps](https://web.powerapps.com) and select the environment you're going to connect to and click the **settings gear** in the top right corner, and click **Advanced customizations**
 
     ![CDS for Apps Environment](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "CDS for Apps Environment")
 
@@ -51,11 +51,11 @@ To use Power BI with the Common Data Service for Apps, you need the following:
 
 4. The Navigator will show you all entities available for your environment grouped into three folders. Expand the **Common Data Model** folder.
 
-   * Common Data Model - these are standard entities which are commonly used and available in all environments as part of the Common Data Model.
-   * Custom Entities - are entities that you have created or imported in your environment.
-   * System - contains all entities in your environment, including the Common Data Model and Custom entities.
+    * Common Data Model - these are standard entities which are commonly used and available in all environments as part of the Common Data Model.
+    * Custom Entities - are entities that you have created or imported in your environment.
+    * System - contains all entities in your environment, including the Common Data Model and Custom entities.
 
-     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
+    ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
 
 5. Select the **Account** entity to see a preview of your data in the right pane, and click **Load**.
 

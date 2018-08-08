@@ -6,22 +6,15 @@ manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 07/25/2018
+ms.date: 05/01/2018
 ms.author: clwesene
 ---
 
 # License requirements for entities
-App makers can use most of the entities available within Common Data Service (CDS) for Apps (including custom entities and entities that are part of the Common Data Model) to create apps and flows for users who have a PowerApps Plan 1 or Microsoft Flow Plan 1 license. In some cases, entities contain complex business logic or are tied to Dynamics 365 applications that require app users to have a specific license. 
-
-
-|Entity  |Description  |Requirement  |
-|---------|---------|---------|
-|Entities with complex business logic  | These are entities that use complex server-side business logic. For example, any entity that uses a real-time workflow or code plug-in.     | [PowerApps Plan 2](https://powerapps.microsoft.com/pricing/) or [Flow Plan 2](https://flow.microsoft.com/pricing/)  | 
-|Restricted entities    | These are entities that are not standard with Common Data Service for Apps but are included in a Dynamics 365 customer engagement application or third-party solution. For example, the knowledge article, goal, and entitlement entities.    | [A Dynamics 365 plan](https://dynamics.microsoft.com/pricing/)    |
-
+App makers can use most of the entities available within Common Data Service (CDS) for Apps (including custom entities and entities that are part of the Common Data Model) to create apps and flows for users who have only a PowerApps Plan 1 or Microsoft Flow Plan 1 license. In some cases, entities contain complex business logic or are tied to Dynamics 365 products that require app users to have a specific license. For more information about available plans, see the [PowerApps pricing page](https://powerapps.microsoft.com/pricing).
 
 > [!NOTE]
-> Apps and flows that use these entities require the app and flow user to be licensed appropriately-not the maker or developer of the app or flow.
+> Apps and flows that use these entities require the app and flow user to be licensed appropriately&mdash;not the maker or developer of the app or flow.
 
 ## Entities with complex business logic
 Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a PowerApps Plan 2 or Microsoft Flow Plan 2 license:
@@ -32,15 +25,15 @@ Entities that include the following complex server-side logic require users of a
     > [!NOTE]
     >  Only workflows that are converted to a real-time workflow are considered real-time and synchronous. Workflows that are run in the background can still be used with the appropriate PowerApps plan and do not require additional licenses.
 
-To know whether or not you added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment. For the list of entities which may contain server side logic after installing a Dynamics 365 application, see [Complex entities requiring PowerApps Plan 2 licenses](data-platform-complex-entities.md) 
+To know whether or not you added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment.
 
-### Impacting license requirements when adding complex business logic
+## Impacting license requirements when adding complex business logic
 App makers can add code plug-ins and real-time workflows to entities within CDS for Apps, but doing so could change the license requirements for users of apps already deployed. App makers should be cautious when adding complex business logic to an entity and should first check which apps use the entity and whether users of those apps have the appropriate licenses.
 
-## Restricted entities
-Certain entities that are tied to the functionality of Dynamics 365 applications require app users to have the corresponding license for that application if they want to create, update, or delete records within the entities. For a full list of restricted entities, see [Restricted entities requiring Dynamics 365 licenses](data-platform-restricted-entities.md).
+## Entities restricted to Dynamics 365 licenses
+Certain entities that are tied to the functionality of Dynamics 365 products require app users to have the corresponding license for that product if they want to create, update, or delete records within the entities. For a full list of restricted entities, see [Restricted entities requiring Dynamics 365 licenses](data-platform-restricted-entities.md).
 
-## Licensing examples
+## Licensing example
 Barb and Isaac are creating apps in PowerApps using CDS for Apps to store their data.
 
 Barb is creating two canvas apps:
@@ -89,5 +82,5 @@ App users need the following licenses:
 
 The only app impacted by this change is App 1, which previously required a PowerApps Plan 1 license, but now requires a PowerApps Plan 2 license, since it contains an entity with complex business logic. 
 
-## More about licensing
+## Licensing
 For more information about PowerApps and Dynamics 365 licenses, see [Licensing overview](../../administrator/pricing-billing-skus.md).
