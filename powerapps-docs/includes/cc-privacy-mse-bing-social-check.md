@@ -1,0 +1,1 @@
+For every new or changed search topic configuration we run an initial estimation with third-party social content providers to assess the amount of posts we will acquire with your provided search topic configuration. For this purpose your keywords, inclusions, exclusions, and applied language filters will be submitted to third-party social content providers.

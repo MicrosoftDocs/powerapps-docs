@@ -1,0 +1,1 @@
+To make sure users get the right information when they click the **Help** button, you need to set [!INCLUDE[pn_crm_shortest](pn-crm-shortest.md)] to use custom Help. Go to **Settings** > **Administration**, click **System Settings**, click the **General** tab, and select **Yes** for **Use custom Help for customizable entities**.

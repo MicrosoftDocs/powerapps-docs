@@ -1,0 +1,1 @@
+Internet connection is required to download the sample project and to restore the NuGet packages used in the sample project.
