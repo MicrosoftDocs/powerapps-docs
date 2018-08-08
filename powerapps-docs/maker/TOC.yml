@@ -23,8 +23,6 @@
   - name: Sign in to PowerApps
     href: ./canvas-apps/intro-maker-portal.md
     items:
-#  - name: Understand environments
-#    href: ./canvas-apps/working-with-environments.md
   - name: "What's new"
     href: ./canvas-apps/release-notes.md
 - name: Canvas apps
@@ -917,6 +915,9 @@
     href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
   href: ../common-data-model/overview.md
+  items:
+  - name: How to use the Common Data Model
+    href: ../common-data-model/use-common-data-model.md
 - name: Learn from others
   items:
   - name: Webinars
