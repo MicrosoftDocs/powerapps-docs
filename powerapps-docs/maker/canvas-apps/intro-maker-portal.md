@@ -51,7 +51,7 @@ For more information, see [Environments overview](../../administrator/environmen
 
 In PowerApps, you can create and run these types of apps:
 
-- **Canvas apps** support designing custom UI and connecting to a data from a variety of sources.
+- **Canvas apps** support designing custom UI and connecting to data from a variety of sources.
 - **Model-driven apps** have a standard UI and connect to data only in Common Data Service (CDS) for Apps. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
 
 By default, the **Home** page shows options for creating and running canvas apps. To show model-driven options instead, choose an environment that has a CDS for Apps database, and then open the menu in the lower-left corner.
@@ -86,15 +86,35 @@ From the **Home** page, you can create apps in several ways:
 
 ## Learn more
 
+You can find more information about either canvas apps or model-driven apps in two ways:
+
+- In the left navigation bar, select **Learn**.
+- In the header, select the question-mark icon.
+
+    ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/help-icon.png)
+
+Both options show links to this documentation set, the PowerApps Community (where you can share information with users in other organizations), and the PowerApps blog (where the newest features are announced).
+
 ## Other common tasks
 
+By selecting options in the header and left navigation bar, you can do more than create and open apps.
 
-Download clients for running apps
-Connect to data
-Identify your plan/s
-Open the Admin center
-Perform advanced customizations
-Get more info
+### From the header
 
-Create and update entities in the Common Data Service
-Create or update a flow in Microsoft Flow
+- Select the down arrow to download mobile and other clients in which you can run apps.
+
+    For more information, see [Find and run apps](../../user/index.md).
+
+- Select the gear icon to perform tasks such as connecting to data sources, identifying your PowerApps license or licenses, and opening the page where you can perform administrative tasks.
+
+    For more information, see these topics:
+
+  - [Overview of canvas-app connectors](connections-list.md)
+  - [Build and certify custom connectors for canvas apps](register-custom-api.md)
+  - [Manage an on-premises data gateway](gateway-management.md)
+  - [Administer PowerApps](../../administrator/index.md)
+  - [Licensing overview](../../administrator/pricing-billing-skus.md)
+
+### From the left navigation bar
+
+In the left navigation bar, you can manage entities, option sets, and data integration in [Common Data Service for Apps](../common-data-service/data-platform-intro.md), and you can configure business logic in [Microsoft Flow](https://docs.microsoft.com/flow/getting-started).

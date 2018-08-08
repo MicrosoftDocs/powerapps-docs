@@ -149,8 +149,6 @@
       items:
       - name: Sign in to PowerApps
         href: ./canvas-apps/intro-maker-portal.md
-      - name: Work with environments
-        href: ./canvas-apps/working-with-environments.md
       - name: Edit an app
         href: ./canvas-apps/edit-app.md
       - name: Change screen size and orientation
