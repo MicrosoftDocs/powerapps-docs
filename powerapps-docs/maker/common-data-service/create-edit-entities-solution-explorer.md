@@ -104,7 +104,7 @@ You can also make the following changes:
 - [Create and edit fields for Common Data Service for Apps](create-edit-fields.md)
 - [Create and edit relationships between entities](create-edit-entity-relationships.md)
 - [Create and design forms](../model-driven-apps/create-design-forms.md)
-- [Create a business process flow to standardize processes](../model-driven-apps/create-business-process-flow.md)
+- [Create a business process flow to standardize processes](/flow/create-business-process-flow)
 
 ## Delete an entity
 

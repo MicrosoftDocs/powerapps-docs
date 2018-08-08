@@ -32,4 +32,4 @@ If your organization already has a specific solution you should work in, this is
  When you’re in the solution, you’ll see solution components. More information: [Add Solution Components](solutions-overview.md)  
 
  ## Next steps
-[Monitor and manage workflow processes](monitor-manage-processes.md)
+[Monitor and manage workflow processes](/flow/monitor-manage-processes)

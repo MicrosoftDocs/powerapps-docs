@@ -1,5 +1,5 @@
 ---
-title: "Optimize form performance in PowerApps | MicrosoftDocs"
+title: "Optimize model-driven app form performance in PowerApps | MicrosoftDocs"
 description: "Learn how to avoid form designs that cause a form to load slowly"
 ms.custom: ""
 ms.date: 06/27/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 8
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Optimize form performance
+# Optimize model-driven app form performance
 
 Forms that load slowly can reduce productivity and user adoption. Follow these recommendations to maximize how quickly your forms will load. Many of these recommendations are about how a developer may implement form scripts for your organization. Be sure to discuss these recommendations with developers who create form scripts for your forms.  
   

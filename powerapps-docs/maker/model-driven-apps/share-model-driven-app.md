@@ -123,7 +123,7 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 *Privilege is global scope unless specified otherwise.
 
 ## Next steps
-[Quickstart: Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
+[Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
 
 
 

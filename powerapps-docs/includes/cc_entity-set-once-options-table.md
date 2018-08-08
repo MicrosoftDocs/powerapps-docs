@@ -1,7 +1,7 @@
 |Option   |Description  |
 |---------|---------|
 |**Activities**|Associate activities to records for this entity.|
-|**Business process flows**|Create business process flows for this entity. More information: [Create a business process flow to standardize processes](../maker/model-driven-apps/create-business-process-flow.md)|
+|**Business process flows**|Create business process flows for this entity. More information: [Create a business process flow to standardize processes](/flow/create-business-process-flow)|
 |**Connections**|Use the connections feature to show how records for this entity have connections to records of other entities that also have connections enabled.|
 |**Feedback**|Let customers write feedback for any entity record, or rate entity records within a defined rating range. More information: [Enable an entity for feedback/ratings](../maker/common-data-service/configure-entity-feedback.md)|
 |**Notes**|Append notes to records for this entity. Notes include the ability to add attachments.|

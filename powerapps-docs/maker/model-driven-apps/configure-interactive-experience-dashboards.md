@@ -1,5 +1,5 @@
 ---
-title: "Configure interactive experience dashboards in PowerApps | Microsoft Docs"
+title: "Configure model-driven app interactive experience dashboards in PowerApps | Microsoft Docs"
 description: "Know how to configure interactive experience dashboards in PowerApps"
 keywords: Interactive dashboards; Customer Service; Microsoft Dynamics 365; Interactive service hub
 author: Mattp123
@@ -19,7 +19,7 @@ applies_to:
 ms.assetid: d1446a95-14bf-4b15-a905-72fce07f4c76
 ---
 
-# Configure interactive experience dashboards
+# Configure model-driven app interactive experience dashboards
 
 Interactive experience dashboards can be a one-stop workplace for app users, such as service reps, to see workload information and take action. They're fully configurable, security-role based, and deliver workload information across multiple streams in real time. Interactive dashboard users don't need to page through the application looking for a particular record; they can act on a it directly from the dashboard. 
 
