@@ -53,7 +53,7 @@ For more information about access and scope privileges, see [Security roles](htt
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
 5. Select the **Custom Entities** tab, and then locate the custom entity that you want. For this example, the custom entity named **Pet** is used. 
 6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
-   ![New security role](media/share-model-driven-app/custom-security-role.png)
+![New security role](media/share-model-driven-app/custom-security-role.png)
 7. Because the pet grooming app also has a relationship with the account entity, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
 8. Select **Save and Close**. 
 9. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 
@@ -66,10 +66,6 @@ For more information about access and scope privileges, see [Security roles](htt
 
 ## Assign security roles to users
 Security roles control a user’s access to data through a set of access levels and permissions. The combination of access levels and permissions that are included in a specific security role sets limits on the user’s view of data and on the user’s interactions with that data.
-
-> [!IMPORTANT]
-> To use a model-driven app, all app users in your environment must at least have the Common Data Service User security role regardless of additional security roles you assign. In most cases, the Common Data Service User security role provides sufficient privileges to perform the basic tasks required to use an app.
-> Notice that users who have the Common Data Service User security role also have read and write access to all account, contact, and connection standard entity records regardless of who owns them. If you don’t want app users to have privileges to these records, create a custom security role. The easiest way is to copy the Common Data Service User security role and remove the appropriate privileges. More information: [Copy a security role](https://docs.microsoft.com/dynamics365/customer-engagement/admin/copy-security-role)
 
 ### Assign a security role to Pet Grooming Technicians
 1. From the **Share this app** dialog, under **Assign users to the security role** select **Security Users**.
@@ -127,7 +123,7 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 *Privilege is global scope unless specified otherwise.
 
 ## Next steps
-[Quickstart: Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
+[Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
 
 
 

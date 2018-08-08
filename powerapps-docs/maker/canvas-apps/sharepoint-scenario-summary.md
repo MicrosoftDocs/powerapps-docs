@@ -16,7 +16,7 @@ ms.author: mblythe
 > [!NOTE]
 > This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
-We have covered a huge amount of ground in this series of tutorials, from building apps and flows, to creating reports and embedding them in SharePoint. We hope you've learned a lot and have enough exposure to how these technologies integrate, so that you can integrate apps, flows, and reports into SharePoint based on your own needs. Before we finish, we want to walk through the scenario end-to-end and see how all the parts work together.
+We have covered a huge amount of ground in this series of tutorials, from building canvas apps and flows, to creating reports and embedding them in SharePoint. We hope you've learned a lot and have enough exposure to how these technologies integrate, so that you can integrate canvas apps, flows, and reports into SharePoint based on your own needs. Before we finish, we want to walk through the scenario end-to-end and see how all the parts work together.
 
 ## Step 1: Add a project to the Project Requests list
 1. In the **Project Requests** list, click or tap **All Items**, then **Project Requests app**.

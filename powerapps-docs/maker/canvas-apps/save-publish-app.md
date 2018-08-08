@@ -1,6 +1,6 @@
 ---
-title: Save and publish an app | Microsoft Docs
-description: Step-by-step instructions for saving and publishing app for app makers
+title: Save and publish a canvas app | Microsoft Docs
+description: Step-by-step instructions for saving and publishing canvas apps for app makers
 author: AFTOwen
 manager: kvivek
 
@@ -12,8 +12,8 @@ ms.date: 09/14/2017
 ms.author: anneta
 
 ---
-# Save and publish an app in PowerApps
-Whenever you save changes to an app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you must explicitly publish them to make them available to everyone with whom the app is shared.
+# Save and publish a canvas app in PowerApps
+Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you must explicitly publish them to make them available to everyone with whom the app is shared.
 
 For information about how to share an app, see [Share an app](share-app.md).
 

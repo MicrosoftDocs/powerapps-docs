@@ -17,7 +17,7 @@ You can create and update one or more custom fields in any entity. When you crea
 > Every entity has system fields, such as fields that indicate when a record was last updated, and who updated it. In addition, standard entities have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
-1. On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
     ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
@@ -66,7 +66,7 @@ Calculated fields let you automate manual calculations used in your business pro
 For more details on the types of expressions supported and examples, see [Define calculated fields](/dynamics365/customer-engagement/customize/define-calculated-fields)
 
 ## Update or delete a field
-1. On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane, and then click or tap an entity.
+1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane, and then click or tap an entity.
 2. In the list of fields for the entity that you selected, click or tap a field, and then follow one of these steps:
    
    * Change one or more properties of the field.
