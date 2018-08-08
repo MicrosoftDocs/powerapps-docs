@@ -114,7 +114,12 @@ By selecting options in the header and left navigation bar, you can do more than
   - [Manage an on-premises data gateway](gateway-management.md)
   - [Administer PowerApps](../../administrator/index.md)
   - [Licensing overview](../../administrator/pricing-billing-skus.md)
+  - [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md)
 
 ### From the left navigation bar
 
-In the left navigation bar, you can manage entities, option sets, and data integration in [Common Data Service for Apps](../common-data-service/data-platform-intro.md), and you can configure business logic in [Microsoft Flow](https://docs.microsoft.com/flow/getting-started).
+Extend the functionality of your apps by performing these tasks:
+
+- Manage entities, option sets, and data integration in [Common Data Service for Apps](../common-data-service/data-platform-intro.md).
+- Configure business logic in [Microsoft Flow](https://docs.microsoft.com/flow/getting-started).
+- Author, package, and maintain [solutions](../../developer/common-data-service/introduction-solutions.md).
