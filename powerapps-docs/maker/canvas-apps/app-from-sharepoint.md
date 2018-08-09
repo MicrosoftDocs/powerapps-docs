@@ -1,5 +1,5 @@
 ---
-title: Generate a canvas app from a SharePoint list| Microsoft Docs
+title: Generate a canvas app from a SharePoint list | Microsoft Docs
 description: In PowerApps, automatically generate a canvas app to manage data in a SharePoint list
 author: AFTOwen
 manager: kvivek
@@ -13,20 +13,23 @@ ms.author: anneta
 ---
 # Generate a canvas app in PowerApps from a SharePoint list
 
-In this topic, you'll use PowerApps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within PowerApps or from within SharePoint Online. Either way, the app will contain three screens:
+In this topic, you'll use PowerApps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within PowerApps or SharePoint Online. From within PowerApps, you can generate the app based on a list in an on-premises SharePoint site if you [connect to it](connect-to-sharepoint.md) through a data gateway.
 
-- In the default screen, you can browse all items in the list.
+The app that you generate will contain three screens:
+
+- In the browse screen, you can scroll through all items in the list.
 - In the details screen, you can show all information about a single item in the list.
 - In the edit screen, you can create an item or update information about an existing item.
 
-You can apply the concepts and techniques in this topic to any list in SharePoint. To follow the steps exactly, create a list in a SharePoint Online site, name the list **SimpleApp**, and (if necessary) add a column named **Title**. In the list, create entries for **Vanilla**, **Chocolate**, and **Strawberry**.
+You can apply the concepts and techniques in this topic to any list in SharePoint. To follow the steps exactly:
 
-You can create a list that's far more complex with many columns of various types, such as text, dates, numbers, and currency. The principles of generating an app won't change. You can also generate an app from a list in an on-premises SharePoint site if you [connect to the site](connect-to-sharepoint.md) through a data gateway.
+1. In a SharePoint Online site, create a list named **SimpleApp**.
+2. In a column named **Title**, create entries for **Vanilla**, **Chocolate**, and **Strawberry**.
+
+The principles of generating an app won't change even if you create a list that's far more complex, with many columns of various types such as text, dates, numbers, and currency.
 
 > [!IMPORTANT]
 > PowerApps doesn't support all types of SharePoint data. For more information, see [Known issues](connections/connection-sharepoint-online.md#known-issues).
-
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Generate an app from within PowerApps
 
@@ -64,7 +67,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     ![Create an app](./media/app-from-sharepoint/generate-new-app.png)
 
-2. In the panel that appears, type a name for your app, and then click or tap **Create**.
+2. In the panel that appears, type a name for your app, and then select **Create**.
 
     ![Name the app](./media/app-from-sharepoint/app-name.png)
 
@@ -72,7 +75,7 @@ If you create an app of a custom list from the SharePoint Online command bar, th
 
     ![Default app](./media/app-from-sharepoint/default-app.png)
 
-3. (optional) Select the browser tab for your SharePoint list, refresh the tab (for example, by pressing F5), and then follow these steps to run or manage your app:
+3. (optional) Refresh the browser tab for your SharePoint list (by selecting it and then, for example, pressing F5), and then follow these steps to run or manage your app:
 
     - To run the app (in a separate browser tab), select **Open**.
     - To let others in your organization run the app, select **Make this view public**.
