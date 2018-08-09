@@ -34,7 +34,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 ### Step by step
 1. Add a **[Text input](../controls/control-text-input.md)** control, name it **Tweet**, and type this sentence into it:
    
-    **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#@")**
+    **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#\@")**
 2. Add a vertical custom gallery, and set its **[Items](../controls/properties-core.md)** property to this function:
    
     **HashTags(Tweet.Text)**
