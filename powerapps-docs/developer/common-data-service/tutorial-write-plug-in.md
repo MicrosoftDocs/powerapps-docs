@@ -139,8 +139,8 @@ if (context.InputParameters.Contains("Target") &&
 
 ### About the code
 
-- The <xref:Microsoft.Xrm.Sdk.ITracingService> enables writing to the tracing log.  You can see an example in the final catch block. More information: [Tracing](plug-ins.md#tracing)
-- The <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides access to the context for the event that executed the plugin.  More information: [Context information available to your code](plug-ins.md#context-information-available-to-your-code).
+- The <xref:Microsoft.Xrm.Sdk.ITracingService> enables writing to the tracing log.  You can see an example in the final catch block. More information: [Use Tracing](debug-plug-in.md#use-tracing)
+- The <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides access to the context for the event that executed the plugin.  More information: [Execution Context](write-plug-in.md#execution-context).
 - The code verifies that the context <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> includes the expected parameters for the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> that this plug-in will be registered for. If the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest.Target> property is present, the <xref:Microsoft.Xrm.Sdk.Entity> that was passed to the request will be available.
 - The <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory> interface provides access to a service variable that implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface which provides the methods you will use to interact with the service to create the task.
 
@@ -283,6 +283,62 @@ To register a plug-in, you will need the plug-in registration tool
 1. Within a short time, open the account and you can verify the creation of the task.
 
     ![Account entity record with related task activity create by plug-in](media/tutorial-write-plug-in-test-plugin-in-model-app.png)
+
+### What if the task wasn't created?
+
+Because this is an asynchronous plug-in, the operation to create the task occurs after the account is created. Usually, this will happen immediately, but if it doesn't you may still be able to view the system job in the queue waiting to be applied. This step registration used the **Delete AsyncOperation if StatusCode = Successful** option which is a best practice. This means as soon as the system job completes successfully, you will not be able to view the system job data unless you re-register the plug-in with the **Delete AsyncOperation if StatusCode = Successful** option unselected.
+
+However, if there was an error, you can view the system job to see the error message.
+
+## View System jobs
+
+Use the **Dynamics 365 --custom** app to view system jobs.
+
+1. In your model-driven app, navigate to the 
+
+    ![view the dynamics 365 custom app](media/dynamics-365-custom-app.png)
+
+1. In the **Dynamics 365 --custom** app, navigate to **Settings** > **System** > **System Jobs**.
+
+    ![navigate to system jobs](media/navigate-system-jobs.png)
+
+1. When viewing system jobs, you can filter by **Entity**. Select **Account**.
+
+    ![foo](media/system-jobs-filter-entity-account.png)
+
+1. If the job failed, you should see a record with the name **BasicPlugin.FollowupPlugin: Create of account**
+
+    ![Failed system job](media/failed-system-job.png)
+
+1. If you open the system job, you can expand the **Details** section to view the information written to the trace and details about the error.
+
+    ![system job details](media/system-job-failed-plug-in.png)
+
+### Query System jobs
+
+You can use the following Web API query to return failed system jobs for asynchronous plug-ins
+
+```
+GET <your org uri>/api/data/v9.0/asyncoperations?$filter=operationtype eq 1 and statuscode eq 31&$select=name,message
+```
+More information: [Query Data using the Web API](webapi/query-data-web-api.md)
+
+
+Or use the following FetchXml:
+
+```xml
+<fetch top='50' >
+  <entity name='asyncoperation' >
+    <attribute name='message' />
+    <attribute name='name' />
+    <filter type='and' >
+      <condition attribute='operationtype' operator='eq' value='1' />
+      <condition attribute='statuscode' operator='eq' value='31' />
+    </filter>
+  </entity>
+</fetch>
+```
+More information: [Use FetchXML with FetchExpression](org-service/entity-operations-query-data.md)
 
 
 ## View trace logs

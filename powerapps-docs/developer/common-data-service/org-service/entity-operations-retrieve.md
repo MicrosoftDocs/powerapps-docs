@@ -165,6 +165,8 @@ Console.WriteLine(entity["name"]);
 
 The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
 
+<!-- TODO Move the information about accessing formatted values here, where the topic is shorter rather than the query topic which is longer -->
+
 ### See also
 
 [Create entities using the Organization Service](entity-operations-create.md)<br />
