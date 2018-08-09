@@ -64,7 +64,7 @@ Predefined patterns provide a simple way to match one of a set of characters, or
 | **Any** |Matches any character. |**.** |
 | **Comma** |Matches a comma. |**,** |
 | **Digit** |Matches a single digit ("0" through "9"). |**\\d** |
-| **Email** |Matches an email address that contains an "at" symbol ("@") and a domain name that contains a dot (".") |**.+@.+\\.[^\\.]{2,}** |
+| **Email** |Matches an email address that contains an "at" symbol ("\@") and a domain name that contains a dot (".") |**.+\@.+\\.[^\\.]{2,}** |
 | **Hyphen** |Matches a hyphen. |**\\-** |
 | **LeftParen** |Matches a left parenthesis "(". |**\\(** |
 | **Letter** |Matches a letter. |**\\p{L}** |
