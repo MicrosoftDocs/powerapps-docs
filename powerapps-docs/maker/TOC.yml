@@ -916,7 +916,8 @@
   - name: Import translated entity and field text into an app
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: For developers
-    href: ../developer/common-data-service/TOC.yml
+    href: ../developer/common-data-service/overview
+    # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
 - name: Common Data Model
   href: ../common-data-model/overview.md
   items:
