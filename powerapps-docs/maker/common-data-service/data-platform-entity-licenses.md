@@ -25,15 +25,15 @@ Entities that include the following complex server-side logic require users of a
     > [!NOTE]
     >  Only workflows that are converted to a real-time workflow are considered real-time and synchronous. Workflows that are run in the background can still be used with the appropriate PowerApps plan and do not require additional licenses.
 
-To know whether or not you added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment.
+To know whether or not you added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment. More information: [Complex entities and licensing](data-platform-complex-entities.md)
 
-## Impacting license requirements when adding complex business logic
+### Impacting license requirements when adding complex business logic
 App makers can add code plug-ins and real-time workflows to entities within CDS for Apps, but doing so could change the license requirements for users of apps already deployed. App makers should be cautious when adding complex business logic to an entity and should first check which apps use the entity and whether users of those apps have the appropriate licenses.
 
 ## Entities restricted to Dynamics 365 licenses
 Certain entities that are tied to the functionality of Dynamics 365 products require app users to have the corresponding license for that product if they want to create, update, or delete records within the entities. For a full list of restricted entities, see [Restricted entities requiring Dynamics 365 licenses](data-platform-restricted-entities.md).
 
-## Licensing example
+## Licensing examples
 Barb and Isaac are creating apps in PowerApps using CDS for Apps to store their data.
 
 Barb is creating two canvas apps:
