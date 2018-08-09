@@ -99,7 +99,7 @@ This formula checks if the device is online:
 
 3. Add four **Label** controls to display data from each tweet, and set the **Text** properties to:
    * **ThisItem.TweetText**
-   * **ThisItem.UserDetails.FullName & " @" & ThisItem.UserDetails.UserName**
+   * **ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName**
    * **"RT: " & ThisItem.RetweetCount**
    * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
 4. Add an **Image** control, and set the **Image** property to **ThisItem.UserDetails.ProfileImageUrl**.
