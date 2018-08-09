@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use plug-ins to extend business processes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "A plug-in is a .NET assembly that you can upload to the Common Data Service for Apps. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -53,7 +53,23 @@ These are the main advantages of plug-ins:
 
 ## Next Steps
 
-[Write a plug-in](write-plug-in.md)
+Use the following tutorial and how-to topics to learn how to write plug-ins
+
+### Tutorials
+
+These topics walk you through the process of creating some simple plug-ins.
+
+- [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
+- [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
+
+### How to topics
+
+These topics provide details that you will use to create plug-ins.
+
+- [Write a plug-in](write-plug-in.md)
+- [Register a plug-in](register-plug-in.md)
+- [Debug Plug-ins](debug-plug-in.md)
 
 <!-- Needs major attention
 
@@ -79,41 +95,9 @@ See tutorials
 https://microsoft-my.sharepoint.com/:w:/p/jdaly/EZ1SzmOh-B5Bnt4C9rxGWysB6NtUQonOxq5sGSPkn5vNAA?e=bGWQN3
 
 This is conceptual
-write-plug-in.md should be how-to?
-
-
-Need to move the items below
+write-plug-in.md is how-to.
 -->
 
-## Tracing
 
-## Context information available to your code
-
-## Impersonation
-
-There are two ways to apply impersonation in plug-ins: at registration or execution.
-
-### At plug-in registration
-
-When you register a plug-in step you can specify a user account to use when the code is run by choosing from the **Run in User's Context** option. By default this is set to use the **Calling User**, which is the user account which initiated the action. When this default option is applied, the [SdkMessageProcessingStep.ImpersonatingUserId](reference/entities/sdkmessageprocessingstep.md#BKMK_ImpersonatingUserId) will be set to null or <xref:System.Guid.Empty>.
-
-### During plug-in execution
-
-You can override the setting specified at registration at run time by setting the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory>.<xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> `userId` parameter.
-
-This is typically set to the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.UserId> value which will apply the user account defined by the plug-in step registration.
-
-```csharp
-(IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-    IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
-```
-
-If you want to override the step registration you can pass the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> to have a service that will use the user account that initiated the action that caused the plug-in to run.
-
-You can also provide the [SystemUser.SystemUserId](reference/entities/systemuser.md#BKMK_SystemUserId) from any valid user account. This will work as long as that user has the permissions to perform the operations in the plug-in.
-
-## See also
-
-[Sample: Web access from a sandboxed plug-in](org-service/samples/web-access-plugin.md)
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-web-access-sandboxed-plugin -->

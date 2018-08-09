@@ -70,7 +70,7 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
 
 ## Debug your plug-in
 
-1. In the **Replay Plug-in Execution**dialog, on the **Setup** tab, in the **Specify Assembly** section, click the ellipses (**…**) button and choose the location of your `BasicPlugin.dll`.
+1. In the **Replay Plug-in Execution** dialog, on the **Setup** tab, in the **Specify Assembly** section, click the ellipses (**…**) button and choose the location of your `BasicPlugin.dll`.
 
     ![Replay plug-in execution](media/tutorial-debug-plug-in-replay-plug-in-execution.png)
 
@@ -102,7 +102,7 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
 
 ## Repeat
 
-To repeat, in your Visual Studio project select **Debug** > **Reattach** to process and in the**Replay Plug-in Execution** dialog click **Start Execution** again.
+To repeat, in your Visual Studio project select **Debug** > **Reattach** to process and in the **Replay Plug-in Execution** dialog click **Start Execution** again.
 
 ## Stop profiling
 

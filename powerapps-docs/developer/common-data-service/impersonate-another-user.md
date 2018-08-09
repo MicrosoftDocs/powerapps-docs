@@ -35,7 +35,7 @@ In other words, the *impersonator* is allowed to do something *if and only if* t
 
 ## Impersonation with Server-to-Server authentication
 
-If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user*account so that you do not need to use a paid CDS for Apps user license.
+If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you do not need to use a paid CDS for Apps user license.
 
 More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)
 
@@ -57,9 +57,11 @@ To impersonate another user, set the `CallerId` property to the Guid value of th
 ## Impersonate another using in Plug-ins
 
 You can register a plug-in you can specify a user that the operations should use. Within the code of a plug-in you can override this setting.
-More information: [Impersonation](plug-ins.md#impersonation)
+More information: [Impersonation](write-plug-in.md#impersonation)
 
 
 ### See also
 
+[Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
 [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md)<br />
+[Write a plug-in](write-plug-in.md)
