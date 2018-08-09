@@ -17,10 +17,12 @@ ms.date: 03/19/2018
 ms.author: jdaly
 ---
 # Common Data Service for Apps Developer Overview
+
 PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the expansion of the Common Data Service, now called Common Data Service for Apps which now contains the core functionality of the Dynamics 365 platform that powers Dynamics 365 for Sales, Marketing, Customer Service.
 
 
 ## Get Started
+
 If you are already experienced with the Dynamics 365 for Sales, Marketing, or Customer Service apps, you will find that you will be able to apply your experience to customize and extend Common Data Service for Apps.
 
 If you are new to the Dynamics 365 for Sales, Marketing, or Customer Service apps, the following topics provide a high-level overview of the important concepts to help you get started working with Common Data Service for Apps.
@@ -46,7 +48,7 @@ The following tools are distributed in NuGet packages. The [Developer Guide: Dow
 |Plug-in Registration Tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to server events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Dynamics 365 Customer Engagement Developer Guide: Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)|
 |SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a Common Data Service for Apps compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development of solutions](introduction-solutions.md#team-development-of-solutions)<br />[Dynamics 365 Customer Engagement Developer Guide: Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
 
-### .NET SDK Assemblies 
+### .NET SDK Assemblies
 
 The following are assemblies .NET developers can use. The latest versions are available to download in the corresponding NuGet packages.
 
