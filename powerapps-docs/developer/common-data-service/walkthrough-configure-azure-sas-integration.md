@@ -9,9 +9,9 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: d7b24b11-57f0-ab05-4bec-0b64efee178d
-author: "brandonsimons" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: brandonsimons # GitHub ID
+ms.author: jdaly # MSFT alias of Microsoft employees only
+manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
@@ -69,6 +69,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
  ![New service endpoint](media/new-service-endpoint.PNG "New service endpoint")  
   
 ### See also
-<!-- TODO: Resolve link 
-[Azure extensions for Dynamics 365](azure-extensions.md)-->
- [Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
+
+[Azure integration for Dynamics 365](azure-integration.md)
+
+[Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)

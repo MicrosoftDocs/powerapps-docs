@@ -9,9 +9,9 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
-author: "brandonsimons" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: kabala123 # GitHub ID - Brandon Simmons
+ms.author: jdaly" # MSFT alias of Microsoft employees only
+manager: ryjones" # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
@@ -69,10 +69,9 @@ This walkthrough demonstrates how to register a service endpoint step using the 
   
 2.  Navigate to the **Register** menu and click **Register New Step**.  
   
-3.  Fill out the **Register New Step** dialog box for an account create event as shown in the following figure.  
-  <!-- TODO: Image is not present and need to fix it
+3.  Fill out the **Register New Step** dialog box for an account create event as shown in the following figure.
 
- ![Creating a service endpoint step](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")-->
+ ![Creating a service endpoint step](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")
   
 4.  Click **Register New Step**.  
   
@@ -97,6 +96,6 @@ This walkthrough demonstrates how to register a service endpoint step using the 
  You can now unregister the endpoint, if so desired, by selecting it in the tool’s tree view and click **Unregister**.  
   
 ### See also  
- <!--[Azure Extensions for Dynamics 365](azure-extensions.md)  TODO: The file is not found to fix the link-->
+ [Azure integration for Dynamics 365](azure-integration.md)
  
  [Introduction to Microsoft Azure Integration with Dynamics 365](azure-integration.md)
