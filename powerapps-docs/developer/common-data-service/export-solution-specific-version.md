@@ -13,7 +13,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Export a solution for a specific version
 
 > [!NOTE]
->  This topic describes functionality that is available for minor version updates to major versions of Common Data Service for Apps. This capability is not available for the initial release of CDS for Apps, but will be when minor version updates included additional functionality.  
+>  This topic describes functionality that is available for minor version updates to major versions of Common Data Service for Apps. This capability is not available for the initial release of Dynamics 365, but will be when minor version updates included additional functionality.  
 
  Each new version of CDS for Apps will contain capabilities not found in earlier versions. Solutions that use new capabilities can’t be imported into an earlier version organization. Solutions exported from older version organizations can be imported into newer version organizations.  
 
