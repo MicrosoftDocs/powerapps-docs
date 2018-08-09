@@ -1,5 +1,5 @@
 ---
-title: "Change navigation within a form in PowerApps | MicrosoftDocs"
+title: "Change navigation within a model-driven app form in PowerApps | MicrosoftDocs"
 description: "Learn how to change the navigation within a form"
 ms.custom: ""
 ms.date: 06/06/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 63
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Change navigation within a form
+# Change navigation within a model-driven app form
 
  Navigation within a form allows app users to view lists of related records. Each entity relationship has properties to control whether it should be shown. More information: [Navigation pane item for primary entity](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity)  
   

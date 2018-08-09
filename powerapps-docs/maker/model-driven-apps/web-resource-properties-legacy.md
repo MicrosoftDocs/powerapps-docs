@@ -1,5 +1,5 @@
 ---
-title: Web resource properties for Main forms in PowerApps | MicrosoftDocs
+title: Web resource properties for model-driven app main forms in PowerApps | MicrosoftDocs
 description: Understand the Web resource properties for Main forms
 Keywords: Main form; Web resource properties; Dynamics 365
 author: Mattp123
@@ -18,7 +18,7 @@ applies_to:
   - "powerapps"
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
 ---
-# Web resource properties
+# Web resource properties for model-driven app forms
 
 You can add or edit web resources on a form to make it more appealing or useful to app users. Form enabled web resources are images or HTML files controls.
 

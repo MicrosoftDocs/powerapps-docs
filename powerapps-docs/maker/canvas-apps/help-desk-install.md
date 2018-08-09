@@ -1,31 +1,28 @@
 ---
-title: Install and configure the Help Desk PowerApps sample | Microsoft Docs
-description: Step-by-step instructions for installing and configuring the Help Desk PowerApps sample.
-documentationcenter: na
+title: Install and configure the Help Desk sample for canvas apps | Microsoft Docs
+description: Step-by-step instructions for, in PowerApps, installing and configuring the Help Desk sample for canvas apps.
 author: caburk
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: sample
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
 
 ---
-# Install and configure the Help Desk PowerApps sample
+# Install and configure the Help Desk sample in PowerApps
 
-Step-by-step instructions for installing and configuring the Help Desk PowerApps sample.
+Step-by-step instructions for, in PowerApps, installing and configuring the Help Desk sample for canvas apps.
 
 Estimated time to complete these steps: **10-15 minutes**
 
 > [!TIP]
-> If you would like to see a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
+> For a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
 
+## Overview of the sample
 
-## Help Desk PowerApps sample overview
 Help Desk provides a user-friendly experience to connect end users with support professionals. Quickly find answers to your most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
 
 ![Opening screen of the Help Desk PowerApp](./media/help-desk-install/Login-screen.png)
@@ -35,7 +32,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 ## Prerequisites
 
-- [Sign up](https://web.powerapps.com/) for PowerApps.
+- [Sign up](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for PowerApps.
 - Must have a valid SharePoint Online license and permission to create lists.
 
 ## Create the HelpDesk SharePoint list
@@ -59,7 +56,7 @@ This list stores the Help Desk tickets.
 
 ### Create Description column
 
-1. Select the elipsis next to the HelpDesk list and click **Settings**.
+1. Select the ellipsis next to the HelpDesk list and click **Settings**.
 2. Click **Create column**.
 3. In the **Column name** textbox enter **Description**.
 4. In the **type of information in this column is** radio button list, select **Multiple lines of text**.
@@ -139,7 +136,7 @@ This list stores the Help Desk tickets.
 
 ## Create connections
 
-1.	In a web browser, navigate to https://web.powerapps.com.
+1.	In a web browser, navigate to [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Data** then **Connections**.
 	
@@ -169,27 +166,27 @@ This list stores the Help Desk tickets.
 
 ## Import the Help Desk PowerApp
 
-1.	In a web browser, navigate to https://web.powerapps.com.
-2.	Sign in by providing the same credentials that you used to sign up.
-3.	In the menu on the left, select **Apps**. 
-4.	Click **Import package(preview)**.
+1. In a web browser, navigate to https://web.powerapps.com.
+2. Sign in by providing the same credentials that you used to sign up.
+3. In the menu on the left, select **Apps**. 
+4. Click **Import package(preview)**.
 	
-	![Import package screen](./media/help-desk-install/import-package.png)
+   ![Import package screen](./media/help-desk-install/import-package.png)
 
-5.	Click the **Upload** button and select the PowerApp package you downloaded in previous steps.
-6.	For the **App** and **Flow** resource types, set **IMPORT SETUP** to **Create as new**.
-7.	For the **SharePoint** and **Outlook** connections, set **IMPORT SETUP** to **Select during import**.
+5. Click the **Upload** button and select the PowerApp package you downloaded in previous steps.
+6. For the **App** and **Flow** resource types, set **IMPORT SETUP** to **Create as new**.
+7. For the **SharePoint** and **Outlook** connections, set **IMPORT SETUP** to **Select during import**.
 	
-	![Import settings screen](./media/help-desk-install/import-settings.png)
+   ![Import settings screen](./media/help-desk-install/import-settings.png)
 
-8.  Click the **red icon** for the **SharePoint Connection**.
-9.  In the connections list, click the item with your username.
+8. Click the **red icon** for the **SharePoint Connection**.
+9. In the connections list, click the item with your username.
 
-	![Import settings screen](./media/help-desk-install/import-settings-sharepoint.png)
+   ![Import settings screen](./media/help-desk-install/import-settings-sharepoint.png)
 
 10. Click **Save**.
-11.  Click the **red icon** for the **Office 365 Outlook Connection**.
-12.  In the connections list, click the item with your username.
+11. Click the **red icon** for the **Office 365 Outlook Connection**.
+12. In the connections list, click the item with your username.
 
 	![Import settings screen](./media/help-desk-install/import-settings-office365outlook.png)
 
@@ -237,15 +234,15 @@ This list stores the Help Desk tickets.
 1. Select the **LoginScreen**.
 2. Select **OnStart** in the dropdown.
 3. Expand the formula window and find the **AdminList** collection.
-4. Replace **user@microsoft.com** with your HelpDesk administrator(s).
+4. Replace <strong>user@microsoft.com</strong> with your HelpDesk administrator(s).
 
 	![Update Admin list](./media/help-desk-install/Change-admin.png)
 	
-	> [!TIP] 
-	> If you have more than 1 admin, please use a comma to delimit the admin.  Example:
-	> "admin1@microsoft.com","admin2@microsoft.com".
-	> To ensure the addresses in the AdminList match the format PowerApps expects, select
-	> View > Variables > Global > MyProfile and look at the 'Mail' column to see the expected email format.
+   > [!TIP]
+   > If you have more than 1 admin, please use a comma to delimit the admin.  Example:
+   > "admin1@microsoft.com","admin2@microsoft.com".
+   > To ensure the addresses in the AdminList match the format PowerApps expects, select
+   > View > Variables > Global > MyProfile and look at the 'Mail' column to see the expected email format.
 
 5. Click **File**.
 6. Click **Save**.
@@ -289,7 +286,7 @@ This list stores the Help Desk tickets.
 
 
 ## Next steps
-- [Customize a SharePoint list form](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
-- [Add and configure a control](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
+- [Customize a SharePoint list form](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
+- [Add and configure a control](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-configure-controls)
 - [Edit and manage permissions for a SharePoint list or library](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
  

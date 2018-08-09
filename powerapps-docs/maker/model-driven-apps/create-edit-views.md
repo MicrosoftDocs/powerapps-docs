@@ -1,5 +1,5 @@
 ---
-title: "Create or edit a view in PowerApps | MicrosoftDocs"
+title: "Create or edit a model-driven app view in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a view"
 ms.custom: ""
 ms.date: 06/11/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Understand views
+# Understand model-driven app views
 
 <a name="BKMK_CreatingAndEditingViews"></a>   
 

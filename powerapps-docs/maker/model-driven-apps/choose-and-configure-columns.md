@@ -1,5 +1,5 @@
 ---
-title: "Choose and configure columns in views in PowerApps | MicrosoftDocs"
+title: "Choose and configure columns in model-driven app views in PowerApps | MicrosoftDocs"
 description: "Learn how to select and configure views for your app"
 keywords: ""
 ms.date: 06/11/2018
@@ -21,7 +21,7 @@ caps.latest.revision: 25
 topic-status: Drafting
 ---
 
-# Tutorial: Choose and configure columns in views
+# Tutorial: Choose and configure columns in model-driven app views
 
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 

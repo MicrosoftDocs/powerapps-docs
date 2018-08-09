@@ -1,22 +1,19 @@
 ---
-title: Save and publish an app | Microsoft Docs
-description: Step-by-step instructions for saving and publishing app for app makers
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+title: Save and publish a canvas app | Microsoft Docs
+description: Step-by-step instructions for saving and publishing canvas apps for app makers
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 09/14/2017
 ms.author: anneta
 
 ---
-# Save and publish an app in PowerApps
-Whenever you save changes to an app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you must explicitly publish them to make them available to everyone with whom the app is shared.
+# Save and publish a canvas app in PowerApps
+Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you must explicitly publish them to make them available to everyone with whom the app is shared.
 
 For information about how to share an app, see [Share an app](share-app.md).
 
@@ -43,10 +40,10 @@ PowerApps can also periodically save the app every 2 minutes. If you have saved 
    ![Review Publish](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-> We recommend that you update and/or re-publish your app within six months of last publishing it to keep it in sync with the latest version of PowerApps. If you don't update and/or re-publish within six months, the app may stop working without warning.
+   > Whenever you publish a canvas app, your app will be upgraded to run on the latest version of PowerApps – which means it will get   the benefit of all the latest features and performance upgrades we’ve added since you last published. If you haven’t published an update in several months, you’ll likely see an immediate performance benefit from republishing now.
 
 ## Identify the live version
-In [powerapps.com](https://web.powerapps.com), click or tap **Apps** on the **File** menu (on the left edge), click or tap the details icon for an app, and then click or tap the **Versions** tab.
+In [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), click or tap **Apps** on the **File** menu (on the left edge), click or tap the details icon for an app, and then click or tap the **Versions** tab.
 
 The **Live** version is published for everyone with whom the app is shared. The most recent version of any app is available only to those who have edit permissions for it.
 

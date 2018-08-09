@@ -21,7 +21,7 @@ caps.latest.revision: 10
 topic-status: Drafting
 ---
 
-# Validate and publish an app using the app designer
+# Validate and publish a model-driven app using the app designer
 
 Validate an app to check for asset dependencies that are required for the app to work, but haven't yet been added to the app. After a successful validation, you publish the app. 
   

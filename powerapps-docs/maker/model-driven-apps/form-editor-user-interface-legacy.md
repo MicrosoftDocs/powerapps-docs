@@ -1,5 +1,5 @@
 ---
-title: Overview of the form editor user interface for PowerApps | MicrosoftDocs
+title: Overview of the model-driven app form editor user interface for PowerApps | MicrosoftDocs
 description: Know the form editor user interface to edit forms in PowerApps
 keywords: Forms; Main form;  Unified interface apps; Dynamics 365 for customer engagement
 author: Mattp123
@@ -11,7 +11,7 @@ ms.author: "matp"
 manager: "kvivek"
 ms.assetid: 146f8035-4fcd-4572-8e71-4270cd150495
 ---
-# Overview of the form editor user interface
+# Overview of the model-driven app form editor user interface
 
 The form editor displays commands in three tabs: **File**, **Home**, and **Insert**.  
 

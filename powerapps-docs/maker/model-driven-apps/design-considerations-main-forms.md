@@ -1,5 +1,5 @@
 ---
-title: "Design considerations for main forms with PowerApps | MicrosoftDocs"
+title: "Design considerations for model-driven app main forms with PowerApps | MicrosoftDocs"
 description: "Learn how to design main forms"
 ms.custom: ""
 ms.date: 06/27/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 17
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Design considerations for main forms
+# Design considerations for model-driven app main forms
 
 Main forms are the primary user interface where people view and interact with their data. Main forms provide the widest range of options and are available for model-driven apps, the exception being Dynamics 365 for phones.  
   

@@ -1,22 +1,20 @@
 ---
-title: Understand variables | Microsoft Docs
-description: Reference information for working with state, context variables, and collections
-documentationcenter: na
+title: Understand variables in canvas apps | Microsoft Docs
+description: Reference information about working with state, context variables, and collections in canvas apps
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
 
 ---
-# Understand variables in PowerApps
-If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** PowerApps is a little different and requires a different approach. Instead of reaching for a variable, ask yourself: **What would I do in Excel?**
+# Understand canvas-app variables in PowerApps
+
+If you've used another programming tool, such as Visual Basic or JavaScript, you may be asking: **Where are the variables?** PowerApps is a little different and requires a different approach. Instead of reaching for a variable when you build a canvas app, ask yourself: **What would I do in Excel?**
 
 In other tools, you may have explicitly performed a calculation and stored the result in a variable. However, PowerApps and Excel both automatically recalculate formulas as the input data changes, so you usually don't need to create and update variables. By taking this approach whenever possible, you can  more easily create, understand, and maintain your app.
 
@@ -25,6 +23,7 @@ In some cases, you'll need to use variables in PowerApps, which extends Excel's 
 In general, avoid using variables. But sometimes only a variable can enable the experience you want.
 
 ## Translate Excel into PowerApps
+
 ### Excel
 Let's review how Excel works. A cell can contain a value, such as a number or a string, or a formula that's based on the values of other cells. After the user enters a different value into a cell, Excel automatically recalculates any formulas that depend on the new value. You don't have to do any programming to enable this behavior.
 

@@ -2,12 +2,15 @@
 title: Discover apps via AppSource | Microsoft Docs
 description: Discover the apps shared with your organization via AppSource
 author: linhtranms
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/28/2016
-ms.author: litran
+ms.date: 07/09/2018
+ms.author: matp
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid:
 ---
 
 # Discover apps via AppSource

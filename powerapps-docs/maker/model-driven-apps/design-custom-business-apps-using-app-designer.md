@@ -1,5 +1,5 @@
 ---
-title: "Design custom business apps by using the app designer | MicrosoftDocs"
+title: "Design model-driven apps by using the app designer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
@@ -22,9 +22,9 @@ caps.latest.revision: 17
 topic-status: Drafting
 ---
 
-# Design custom business apps by using the app designer
+# Design model-driven apps by using the app designer
 
-With PowerApps, custom business apps are comprised of components such as entities, dashboards, forms, views, charts, and business processes.  
+With PowerApps, model-driven apps are comprised of components such as entities, dashboards, forms, views, charts, and business processes.  
   
  The app designer helps you bring together all these components quickly. Its tile-based information structure and simplified interface make the process of building an app much easier, and you can create apps that are specific to your business roles and functions without having to write any code.  
   

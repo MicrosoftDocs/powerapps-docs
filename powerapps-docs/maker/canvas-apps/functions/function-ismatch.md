@@ -1,16 +1,13 @@
 ---
 title: IsMatch function | Microsoft Docs
 description: Reference information, including syntax, for the IsMatch function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 02/05/2017
 ms.author: gregli
 
@@ -130,21 +127,23 @@ The user types **Hello world** into **TextInput1**.
 | **IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )** |Tests whether the user's input contains the word "hello" (case insensitive). |**true** |
 
 ### Predefined patterns
-| Formula | Description | Result |
-| --- | --- | --- |
-| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit & Digit )** |Matches a United States Social Security Number |**true** |
-| **IsMatch( "joan@contoso.com", Email )** |Matches an email address |**true** |
-| **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )** |Matches a sequence of digits, a period, and then zero or more digits. |**true** |
-| **IsMatch( "123", MultipleDigits & Period & OptionalDigits )** |Matches a sequence of digits, a period, and then zero or more digits. A period doesn't appear in the text, so this pattern isn't matched. |**false** |
+
+|                                                            Formula                                                            |                                                                Description                                                                |  Result   |
+|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit & Digit )** |                                              Matches a United States Social Security Number                                               | **true**  |
+|                                           **IsMatch( "joan@contoso.com", Email )**                                            |                                                         Matches an email address                                                          | **true**  |
+|                              **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )**                               |                                   Matches a sequence of digits, a period, and then zero or more digits.                                   | **true**  |
+|                                **IsMatch( "123", MultipleDigits & Period & OptionalDigits )**                                 | Matches a sequence of digits, a period, and then zero or more digits. A period doesn't appear in the text, so this pattern isn't matched. | **false** |
 
 ### Regular expressions
-| Formula | Description | Result |
-| --- | --- | --- |
-| **IsMatch( "986", "\d+" )** |Matches a an integer greater than zero. |**true** |
-| **IsMatch( "1.02", "\d+(\.\d\d)?" )** |Matches a positive currency amount. If the input contains a decimal point, the input must also contain 2 numeric characters after the decimal point. For example, 3.00 is valid, but 3.1 isn't. |**true** |
-| **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** |Matches a positive or negative currency amount. If the input contains a decimal point, the input must also contain 2 numeric characters after the decimal point. |**true** |
-| **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** |Matches a United States Social Security number.  Validates the format, type, and length of the supplied input field. The string to match must consist of 3 numeric characters followed by a dash, then 2 numeric characters followed by a dash, and then 4 numeric characters. |**true** |
-| **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** |Same as the previous example, but one of the hyphens is out of place in the input. |**false** |
-| **IsMatch( "weakpassword", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )** |Validates a strong password, which must contain 8, 9, or 10 characters, in addition to at least one digit and at least one alphabetic character. The string must not contain special characters. |**false** |
-| **IsMatch( "http://microsoft.com", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]\*)?" )** |Validates an http, https, or ftp URL. |**true** |
+
+|                                                                              Formula                                                                              |                                                                                                                                  Description                                                                                                                                   |  Result   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+|                                                                    **IsMatch( "986", "\d+" )**                                                                    |                                                                                                                    Matches a an integer greater than zero.                                                                                                                     | **true**  |
+|                                                               **IsMatch( "1.02", "\d+(\.\d\d)?" )**                                                               |                                        Matches a positive currency amount. If the input contains a decimal point, the input must also contain 2 numeric characters after the decimal point. For example, 3.00 is valid, but 3.1 isn't.                                         | **true**  |
+|                                                            **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )**                                                             |                                                        Matches a positive or negative currency amount. If the input contains a decimal point, the input must also contain 2 numeric characters after the decimal point.                                                        | **true**  |
+|                                                         **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )**                                                         | Matches a United States Social Security number.  Validates the format, type, and length of the supplied input field. The string to match must consist of 3 numeric characters followed by a dash, then 2 numeric characters followed by a dash, and then 4 numeric characters. | **true**  |
+|                                                         **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )**                                                         |                                                                                               Same as the previous example, but one of the hyphens is out of place in the input.                                                                                               | **false** |
+|                                         **IsMatch( "weakpassword", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )**                                         |                                        Validates a strong password, which must contain 8, 9, or 10 characters, in addition to at least one digit and at least one alphabetic character. The string must not contain special characters.                                        | **false** |
+| **IsMatch( "<http://microsoft.com>", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]\*)?" )** |                                                                                                                     Validates an http, https, or ftp URL.                                                                                                                      | **true**  |
 

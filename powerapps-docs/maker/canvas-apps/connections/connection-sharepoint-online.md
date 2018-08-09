@@ -2,10 +2,12 @@
 title: Overview of the SharePoint connection | Microsoft Docs
 description: See the available functions, responses, and examples for SharePoint
 author: sarafankit
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: ankitsar
 
@@ -43,7 +45,7 @@ Columns that contain spaces can by read by PowerApps, but the spaces are replace
 ## Prerequisites
 1. [Sign up](../../signup-for-powerapps.md) for PowerApps.
 
-1. [Sign in](http://web.powerapps.com) to PowerApps by providing the same credentials that you used to sign up.
+1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps by providing the same credentials that you used to sign up.
 
 1. Near the left edge, select **Apps**, and then select **Create an app** in the banner.
 

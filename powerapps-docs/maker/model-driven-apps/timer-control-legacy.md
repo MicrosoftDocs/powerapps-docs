@@ -1,5 +1,5 @@
 ---
-title: "Timer control in PowerApps | MicrosoftDocs"
+title: "Model-driven app timer control in PowerApps | MicrosoftDocs"
 description: "Understand how you can use the timer control"
 ms.custom: ""
 ms.date: 06/06/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 63
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Timer control overview
+# Model-driven app timer control overview
 
  Use a timer control with forms where records need to meet a specific time-based milestone. A timer control shows people how much time is available to complete an action in the resolution of an active record or how much time has passed since the time to complete the action has passed. At a minimum, timer controls must be configured to show success or failure in completing the action. In addition, they can be configured to display warnings when the conditions are approaching failure.  
   

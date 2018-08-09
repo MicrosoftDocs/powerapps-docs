@@ -1,16 +1,13 @@
 ---
 title: 'Rating control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Rating control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -101,7 +98,7 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
 
     > [!NOTE]
-> Screen readers treat the **Rating** control as radio buttons.
+  > Screen readers treat the **Rating** control as radio buttons.
 
 ### Keyboard support
 * **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
@@ -109,4 +106,4 @@ This is in addition to the [standard color contrast requirements](../accessible-
 * Consider using a different control if there are too many stars. It can be tedious to navigate with a keyboard and difficult to select accurately with a touch screen.
 
     > [!NOTE]
-> The same keyboard interactions for radio buttons can be used on **Rating**.
+  > The same keyboard interactions for radio buttons can be used on **Rating**.

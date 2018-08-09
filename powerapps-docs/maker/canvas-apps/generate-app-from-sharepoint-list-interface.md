@@ -1,23 +1,20 @@
 ---
-title: Generate an app from within a SharePoint list | Microsoft Docs
-description: Generate a three-screen app to manage items from within a SharePoint list, whether the site is on-premises or in the cloud.
-documentationcenter: na
+title: Generate a canvas app from within a SharePoint list | Microsoft Docs
+description: Generate a three-screen canvas app to manage items from within a SharePoint list, whether the site is on-premises or in the cloud.
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/18/2018
 ms.author: anneta
 
 ---
-# Generate an app from within SharePoint using PowerApps
+# Generate a canvas app from within SharePoint by using PowerApps
 
-In PowerApps, automatically generate an app in which users can manage items in a custom SharePoint Online list. The app will have three screens in which users can:
+In PowerApps, automatically generate a canvas app in which users can manage items in a custom SharePoint Online list. The app will have three screens, in which users can:
 
 * browse through all records in the list (**BrowseScreen1**)
 * view all fields for a specific record (**DetailsScreen1**)

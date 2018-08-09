@@ -1,5 +1,5 @@
 ---
-title: Special field properties for main forms in PowerApps | MicrosoftDocs
+title: Model-driven app special field properties for main forms in PowerApps | MicrosoftDocs
 description: Understand the special field properties for main forms
 Keywords: Main forms; Special field properties; Dynamics 365
 author: Mattp123
@@ -18,7 +18,7 @@ applies_to:
   - "powerapps"
 ms.assetid: 6ad7e43c-b6a1-48c4-9dfb-ed830142a841
 ---
-# Overview of special field properties
+# Overview of model-driven app special field properties
 
  All fields have the properties listed in [Common field properties](common-field-properties-legacy.md), but certain fields have additional properties, such as this entitlement field that can be opened from the main form for the case entity.  
 

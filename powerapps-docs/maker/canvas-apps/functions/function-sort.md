@@ -1,16 +1,13 @@
 ---
 title: Sort and SortByColumns functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Sort and SortByColumns functions in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
 
@@ -53,7 +50,7 @@ In addition to sorting ascending or descending, **SortByColumns** can sort based
 * *SortOrder(s)* - Optional.  **SortOrder.Ascending** or **SortOrder.Descending**.  **SortOrder.Ascending** is the default.  If multiple *ColumnNames* are supplied, all but the last column must include a *SortOrder*.
   
     > [!NOTE]
-> For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
+  > For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
 
 **SortByColumns**( *Table*, *ColumnName*, *SortOrderTable* )
 
@@ -62,7 +59,7 @@ In addition to sorting ascending or descending, **SortByColumns** can sort based
 * *SortOrderTable* - Required.  Single column table of values to sort by.
   
     > [!NOTE]
-> For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
+  > For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
 
 ## Examples
 For the following examples, we'll use the **IceCream** [data source](../working-with-data-sources.md), which contains the data in this table:

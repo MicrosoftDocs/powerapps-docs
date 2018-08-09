@@ -1,15 +1,13 @@
 ---
 title: Create and update a collection | Microsoft Docs
 description: Create collections and add columns to existing collections in PowerApps
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/30/2015
 ms.author: lonu
 
@@ -20,7 +18,7 @@ Use a collection to store data that can be used in your app. A collection is a g
 You can create and use collections within PowerApps. Let's get started.
 
 ### Prerequisites
-* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com) by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 * Create an app or open an existing app in PowerApps.
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 * These steps use the [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
@@ -80,7 +78,7 @@ The following steps show you how to create a collection within your app using th
    ![][10]  
    
     > [!NOTE]
-> You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
+   > You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
 6. On the **Insert** tab, select **Button**. Set its **[OnSelect](controls/properties-core.md)** property to the following function:  
    ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
    
@@ -88,7 +86,7 @@ The following steps show you how to create a collection within your app using th
     ![][11]  
    
     > [!NOTE]
-> You can use this same function to add additional columns to this collection. For example, you can add another text-input control for Country to add a Countries column:
+   > You can use this same function to add additional columns to this collection. For example, you can add another text-input control for Country to add a Countries column:
    
     `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
 7. Rename the button control **AddCityStateButton**, and set its **[Text](controls/properties-core.md)** property to **Add City and State**:  
@@ -151,7 +149,7 @@ There are a few sections in this walk-through. When complete, you'll know how to
     ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
    
     > [!NOTE]
-> When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
+   > When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
 4. Select the **Screen** tab and set the **[OnVisible](controls/control-screen.md)** property to the following expression:  
    
     ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```

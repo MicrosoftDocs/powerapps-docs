@@ -1,24 +1,26 @@
 ---
-title: Transform your InfoPath forms to PowerApps | Microsoft Docs
-description: Get started transforming your InfoPath forms to PowerApps with more information on common InfoPath scenarios and how to create these items in PowerApps.
+title: Transform your InfoPath form to a canvas app | Microsoft Docs
+description: Start to transform your InfoPath form to PowerApps with information about common scenarios and how to create these items in a canvas app.
 author: richardriley99
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: article
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/05/2018
 ms.author: rriley
 
 ---
-# Transform your InfoPath forms to PowerApps
+# Transform your InfoPath form to PowerApps
 
 Are you a builder of great things in InfoPath who is looking to learn how to deliver those great things on a more robust platform?
 
 ## Key advantages of PowerApps over InfoPath
 
-If you are like most InfoPath Power Users, you have been using your unique skill set to build awesome forms for a while now. While you are very satisfied with the forms you produce you know they are not without their limitations: the &quot;classic&quot; feel, a less than ideal experience for mobile devices, the uncertainty of their future viability, and always being trapped in a box when it comes to connecting to other services without writing code.
+Like most InfoPath Power Users, you've been using your unique skill set to build awesome forms for a while. You're very satisfied with your forms, but you also know their limitations: the &quot;classic&quot; feel, a less-than-ideal experience for mobile devices, the uncertainty of their future viability, and always being trapped in a box when it comes to connecting to other services without writing code.
 
-The PowerApps team have heard these challenges and the challenges of many others. They have worked hard to incorporate a better experience for you in PowerApps. Their goal is to enable you to create apps by leveraging your business and existing technology skills. Enabling you with PowerApps to quickly build and deploy the right business solutions without writing code.
+The PowerApps team has heard these and many other challenges. They've worked hard to incorporate a better experience and enable you to create canvas apps by leveraging your existing business and technology skills. By using PowerApps, you can quickly build and deploy the right business solutions without writing code.
 
 **PowerApps enable a powerful future**  
 PowerApps is a Software as a Service (SaaS) platform that is designed to let you quickly build high functioning apps that you can deploy to the web, to SharePoint, Dynamics 365, Teams, Power BI or to a mobile device without any extra work. And because they are so easy to deploy (just give someone the URL to your published app), they are also just as easy to update.
@@ -128,6 +130,6 @@ With PowerApps you can call one app from another, so instead of the mass InfoPat
 
 With the information above you are now ready to go out into the world and start conquering it one PowerApps app at a time. As you continue on your journey, below are some handy links to help. One of which is a link to the PowerApps community site. Engage today with the community and grow your skills much faster than you would on your own.
 
-[**Formula reference**](https://docs.microsoft.com/en-us/powerapps/formula-reference) - Always a great way to become inspired, just browsing some of the default functions.
+[**Formula reference**](https://docs.microsoft.com/powerapps/formula-reference) - Always a great way to become inspired, just browsing some of the default functions.
 
 [**PowerApps community**](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) - See examples, engage with others, ask and answer questions and help the PowerApps community grow.

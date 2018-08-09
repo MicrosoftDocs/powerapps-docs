@@ -1,16 +1,13 @@
 ---
 title: 'Timer control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the timer control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -161,6 +158,6 @@ Some scenarios are exempt from these requirements. Learn more in the [WCAG 2.0 g
 * Do not use **[Text](properties-core.md)** for time-sensitive and important information. Screen reader users will not be alerted to changes to **[Text](properties-core.md)**.
 
     > [!NOTE]
-> Screen readers will announce the elapsed time every 5 seconds. However, the timer **[Text](properties-core.md)** will not be included in the announcement.
+  > Screen readers will announce the elapsed time every 5 seconds. However, the timer **[Text](properties-core.md)** will not be included in the announcement.
 
 * Consider adding a **[Label](control-text-box.md)** to show the elapsed time. Use the timer's **[Text](properties-core.md)** to instruct the user to start or stop the timer.

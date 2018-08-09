@@ -1,5 +1,5 @@
 ---
-title: "Use custom controls for data visualizations in PowerApps | MicrosoftDocs"
+title: "Use custom controls for model-driven app data visualizations in PowerApps | MicrosoftDocs"
 description: "Learn how to use custom controls for fields"
 ms.custom: ""
 ms.date: 06/07/2018
@@ -18,7 +18,7 @@ author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Tutorial: Use custom controls for data visualizations
+# Tutorial: Use custom controls for model-driven app data visualizations
 
 In this tutorial you learn how to configure a custom control for a field. 
 

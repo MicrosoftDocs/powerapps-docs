@@ -1,16 +1,13 @@
 ---
 title: UpdateContext function | Microsoft Docs
 description: Reference information, including syntax and examples, for the UpdateContext function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/08/2015
 ms.author: gregli
 
@@ -64,6 +61,7 @@ Every context variable is scoped to a screen. If you want to define a context va
 * *ContextVariable2*: *Value2*, ... - Optional. Additional context variables to create or update and their values.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **UpdateContext( {&nbsp;Counter:&nbsp;1&nbsp;} )** |Creates or modifies the context variable **Counter**, setting its value to **1**. |**Counter** has the value **1**. You can reference that variable by using the name **Counter** in a formula. |
@@ -81,10 +79,10 @@ Every context variable is scoped to a screen. If you want to define a context va
 6. On the **Target** screen, select **Shapes** on the **Insert** tab, and then select the Back arrow.
 7. Set the Back arrow's **[OnSelect](../controls/properties-core.md)** property to this formula:<br>**Navigate(Source, ScreenTransition.Fade)**
 8. From the **Source** screen, press F5, and then select the button for either language.
-   
+
     On the **Target** screen, the label appears in the language that corresponds to the button that you selected.
 9. Select the Back arrow to return to the **Source** screen, and then select the button for the other language.
-   
+
     On the **Target** screen, the label appears in the language that corresponds to the button that you selected.
 10. Press Esc to return to the default workspace.
 

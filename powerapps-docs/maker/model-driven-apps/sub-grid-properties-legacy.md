@@ -1,5 +1,5 @@
 ---
-title: Sub-Grid properties for main forms in PowerApps | MicrosoftDocs
+title: Sub-grid properties for model-driven app main forms in PowerApps | MicrosoftDocs
 description: Understand the Sub-Grid properties for main forms
 Keywords: Main form; Sub-Grid properties; Dynamics 365
 author: Mattp123
@@ -14,7 +14,7 @@ ms.service: crm-online
 ms.topic: article
 ms.assetid: 82892cd3-3436-4677-b96b-f2ccd0a4f078
 ---
-# Sub-Grid properties overview
+# Sub-grid properties for model-driven app main forms overview
 
 You can configure a sub-grid on a form to display a list of records or a chart. Select **Show Chart Only** on the **Display** tab to show a chart instead of a list.  
 
