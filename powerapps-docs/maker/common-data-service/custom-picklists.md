@@ -18,7 +18,7 @@ Option sets can be created in two ways, either from the Option set list within t
 
 ## Creating an Option set while adding a field.
 
-1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
     ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
@@ -56,7 +56,7 @@ Option sets can be created in two ways, either from the Option set list within t
 
 ## Creating an Option set from the Option set list
 
-1. On [powerapps.com](https://web.powerapps.com), expand the **Data** section and click or tap **Option sets** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Option sets** in the left navigation pane.
 
     ![Option sets](./media/data-platform-cds-newoptionset/optionsetlist.png "Option set List")
 

@@ -31,7 +31,7 @@ There are two designers you can use to create or edit global option sets:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)|
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information: [Create and edit global option sets for Common Data Service for Apps using solution explorer](create-edit-global-option-sets-solution-explorer.md) |
 
 > [!NOTE]
@@ -41,7 +41,7 @@ There are two designers you can use to create or edit global option sets:
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the [PowerApps portal](https://web.powerapps.com) to work with global option sets unless you need to address any of the following requirements:
+You should use the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to work with global option sets unless you need to address any of the following requirements:
 
 - Assign colors to options
 - Change the order of options

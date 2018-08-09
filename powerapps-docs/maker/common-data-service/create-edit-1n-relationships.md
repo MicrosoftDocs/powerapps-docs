@@ -29,7 +29,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps portal](create-edit-1n-relationships-portal.md)|
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps portal](create-edit-1n-relationships-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information: [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md) |
 
 > [!NOTE]
