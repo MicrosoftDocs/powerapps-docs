@@ -25,7 +25,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 <a name="BKMK_ExportSolutionForVersion"></a>   
 
 ## Target a specific version when you export a solution  
- When you export a solution from CDS for Apps you will have the option to target the solution for a specific Dynamics 365 version. For 7.1.0.0 version the options are 7.1 (default) and 7.0. When you choose 7.0, any new capabilities introduced in 7.1.0.0 will not be included in the exported solution and any organizations still using earlier versions of 7.1.0.0 will be able to install the solution.  
+ When you export a solution from CDS for Apps you will have the option to target the solution for a specific Dynamics 365 version. For Dynamics 365 7.1.0.0 version the options are 7.1 (default) and 7.0. When you choose 7.0, any new capabilities introduced in 7.1.0.0 will not be included in the exported solution and any organizations still using earlier versions of 7.1.0.0 will be able to install the solution.  
 
  When you export your solution to target an earlier version the export dialog can display two possible messages:  
 
@@ -40,7 +40,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 <a name="BKMK_Changes"></a>   
 
 ## What changes are applied to a solution exported for an earlier version?  
- Starting with the 6.0.0.0 release, each type of solution component has an `IntroducedVersion` property. This value captures the current version number of the solution that the solution component was associated with when it was created. All solution components introduced by Microsoft are part of a hidden system solution where the version number corresponds with the CDS for Apps version.  
+ Starting with the Dynamics 365 6.0.0.0 release, each type of solution component has an `IntroducedVersion` property. This value captures the current version number of the solution that the solution component was associated with when it was created. All solution components introduced by Microsoft are part of a hidden system solution where the version number corresponds with the CDS for Apps version.  
 
 <!--
 | IntroducedVersion Value |                                                             Solution components introduced                                                             |
@@ -70,7 +70,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 <a name="BKMK_TargetVersion"></a>   
 ## Select a target version programmatically  
 
- Use the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> to export a solution programmatically. After 6.0.0.0 this message has a new optional <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.TargetVersion>`String` property you can use to set to “7.0.0.0” if you wish to export to the earlier version.  
+ Use the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> to export a solution programmatically. After Dynamics 365 6.0.0.0 this message has a new optional <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.TargetVersion>`String` property you can use to set to “7.0.0.0” if you wish to export to the earlier version.  
 
 ### See also  
  [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
