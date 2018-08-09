@@ -73,7 +73,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
  Use the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> to export a solution programmatically. After 6.0.0.0 this message has a new optional <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.TargetVersion>`String` property you can use to set to “7.0.0.0” if you wish to export to the earlier version.  
 
 ### See also  
- [Package and distribute extensions using solutions](package-distribute-extensions-use-solutions.md)   
+ [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Create, Export, or Import an Unmanaged Solution](create-export-import-unmanaged-solution.md)   
  [Create, Install, and Update a Managed Solution](create-install-update-managed-solution.md)   
  [Maintain Managed Solutions](maintain-managed-solutions.md)   
