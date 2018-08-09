@@ -9,9 +9,9 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: 1ef66369-71c9-3b89-ac1a-09d523ca737b
-author: brandonsimons" # GitHub ID
-ms.author: jdaly" # MSFT alias of Microsoft employees only
-manager: ryjones" # MSFT alias of manager or PM counterpart
+author: brandonsimons # GitHub ID
+ms.author: jdaly # MSFT alias of Microsoft employees only
+manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
@@ -26,11 +26,11 @@ An internal plug-in named ServiceBusPlugin is provided with Dynamics 365 (online
  You can also write a custom workflow activity that can post the execution context to the service bus and include this activity in your workflows. Sample code for a custom Azure-aware workflow activity is provided in the topic [Sample: Azure Aware Custom Workflow Activity](/dynamics365/customer-engagement/developer/sample-azure-aware-custom-workflow-activity) 
   
 ### See also  
- [Walkthrough: Register a Plug-in using the Plug-in Registration Tool](walkthrough-register-plugin-using-plugin-registration-tool.md)  <!-- Todo -links needs to be updated --> 
+  <!-- [Walkthrough: Register a Plug-in using the Plug-in Registration Tool](walkthrough-register-plugin-using-plugin-registration-tool.md) -links needs to be updated --> 
  [Writing a Plug-in](write-plug-in.md)   
- [Plug-in Isolation, Trust, and Statistics](plugin-isolation-trusts-statistics.md)   <!-- Todo -links needs to be updated --> 
- [Understand the Data Context Passed to a Plug-in](understand-data-context-passed-plugin.md)   <!-- Todo -links needs to be updated --> 
- [Registering Plug-ins](register-deploy-plugins.md) <!-- Todo -links needs to be updated -->   
+  <!-- [Plug-in Isolation, Trust, and Statistics](plugin-isolation-trusts-statistics.md)   Todo -links needs to be updated --> 
+  <!--[Understand the Data Context Passed to a Plug-in](understand-data-context-passed-plugin.md) -links needs to be updated --> 
+ <!--[Registering Plug-ins](register-deploy-plugins.md) -links needs to be updated -->   
  [Event Execution Pipeline](event-framework.md)   
  [Azure Extensions for Dynamics 365](azure-integration.md) 
  [ServiceEndPoint Entity](reference/entities/serviceendpoint.md)

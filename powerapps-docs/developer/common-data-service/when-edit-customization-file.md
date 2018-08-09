@@ -39,7 +39,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
   
  You can also use one of the community-developed site map editors, such as the [XrmToolBox Site Map Editor](https://www.xrmtoolbox.com/plugins/MsCrmTools.SiteMapEditor/).   
   
- For more information, see [Change Application Navigation using the SiteMap](dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap) 
+ For more information, see [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap) 
  
   
  **Editing FormXml**  
@@ -91,7 +91,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
 -   Field Security Profiles  
   
 ### See also  
- [Customize Microsoft Dynamics 365 and Microsoft Dynamics 365 (online)](customize-applications.md)   
+ [Customize Microsoft Dynamics 365 and Microsoft Dynamics 365 (online)](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)   <!-- TODO Need to find the topic in powerapps repo-->
  [Customization XML Reference](../model-driven-apps/customization-xml-reference.md)
  [Customization Solutions File Schema](customization-solutions-file-schema.md)  
  [Ribbon core schema](../model-driven-apps/ribbon-core-schema.md)
