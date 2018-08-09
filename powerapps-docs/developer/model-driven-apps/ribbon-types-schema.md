@@ -857,5 +857,5 @@ For more information, see [Package and Distribute Extensions with Microsoft Dyna
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Ribbon Core Schema](ribbon-core-schema.md)   
  [Ribbon WSS Schema](ribbon-wss-schema.md)   
- [Schemas Used in Microsoft Dynamics 365](../schemas-used-dynamics-365.md)   
+ [Schemas Used in Model-driven Apps](../schemas-used-dynamics-365.md)   
  [Customization XML Reference](../customization-xml-reference.md)
