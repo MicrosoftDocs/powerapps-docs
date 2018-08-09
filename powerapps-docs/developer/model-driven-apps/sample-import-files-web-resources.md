@@ -81,7 +81,17 @@ When you develop a large number of files to use as Web resources you can save yo
 ### Uploading Files from Disk  
  The WebResource.Content property requires a Base 64 string representing the binary contents of the file. The following sample is the method used to convert the file into the required type.  
   
- [!code-csharp[ImportWebResources#ImportWebResources3](../snippets/csharp/CRMV8/importwebresources/cs/importwebresources3.cs#importwebresources3)]  
+```C#
+//Encodes the Web Resource File
+static public string getEncodedFileContents(String pathToFile)
+{
+    FileStream fs = new FileStream(pathToFile, FileMode.Open, FileAccess.Read);
+    byte[] binaryData = new byte[fs.Length];
+    long bytesRead = fs.Read(binaryData, 0, (int)fs.Length);
+    fs.Close();
+    return System.Convert.ToBase64String(binaryData, 0, binaryData.Length);
+}
+```
   
 ### Combining Web Resource Record Data with File Data  
  The ImportJob.xml file demonstrates how the data about the files being imported and the data about the Web Resource to create are combined. In particular, in order for relative links between related files to continue to function, the name of the Web resources you create must preserve information about the relative position of the files on disk using simulated directories in the file name. Because of the data in the ImportJob.xml file all these related Web resource files will be created under a common virtual folder.  
@@ -96,7 +106,52 @@ When you develop a large number of files to use as Web resources you can save yo
   
 - `_ImportWebResourcesSolutionUniqueName` : The unique name of the **Import Web Resources Sample Solution** created in this sample. The value is `ImportWebResourcesSample`.  
   
-  [!code-csharp[ImportWebResources#ImportWebResources1](../snippets/csharp/CRMV8/importwebresources/cs/importwebresources1.cs#importwebresources1)]  
+```C#
+//Read the descriptive data from the XML file
+XDocument xmlDoc = XDocument.Load("../../ImportJob.xml");
+
+//Create a collection of anonymous type references to each of the Web Resources
+var webResources = from webResource in xmlDoc.Descendants("webResource")
+                   select new
+                   {
+                       path = webResource.Element("path").Value,
+                       displayName = webResource.Element("displayName").Value,
+                       description = webResource.Element("description").Value,
+                       name = webResource.Element("name").Value,
+                       type = webResource.Element("type").Value
+                   };
+
+// Loop through the collection creating Web Resources
+int counter = 0;
+foreach (var webResource in webResources)
+{
+    //Set the Web Resource properties
+    WebResource wr = new WebResource
+    {
+        Content = getEncodedFileContents(@"../../" + webResource.path),
+        DisplayName = webResource.displayName,
+        Description = webResource.description,
+        Name = _customizationPrefix + webResource.name,
+        LogicalName = WebResource.EntityLogicalName,
+        WebResourceType = new OptionSetValue(Int32.Parse(webResource.type))
+    };
+
+    // Using CreateRequest because we want to add an optional parameter
+    CreateRequest cr = new CreateRequest
+    {
+        Target = wr
+    };
+    //Set the SolutionUniqueName optional parameter so the Web Resources will be
+    // created in the context of a specific solution.
+    cr.Parameters.Add("SolutionUniqueName", _ImportWebResourcesSolutionUniqueName);
+
+    CreateResponse cresp = (CreateResponse)_serviceProxy.Execute(cr);
+    // Capture the id values for the Web Resources so the sample can delete them.
+    _webResourceIds[counter] = cresp.id;
+    counter++;
+    Console.WriteLine("Created Web Resource: {0}", webResource.displayName);
+}
+```
   
   It is not necessary to publish Web resources when they are created. It is necessary to publish them when they are updated.  
   
