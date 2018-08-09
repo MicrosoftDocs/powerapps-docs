@@ -9,7 +9,7 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: 93d0442e-5fc9-c43c-c8c1-a433687f3d0a
-author: brandonsimons" # GitHub ID
+author: brandonsimons # GitHub ID
 ms.author: jdaly" # MSFT alias of Microsoft employees only
 manager: ryjones" # MSFT alias of manager or PM counterpart
 ms.reviewer: 
@@ -41,7 +41,76 @@ In the following sample plug-in code has been added to obtain the Azure service 
 >
 > You can query available service endpoints for your environment using a `GET` request to Web API using your browser with a query like this: *`[organization Uri]`*`/api/data/v9.0/serviceendpoints?$select=name,description,serviceendpointid`
   
-[!code-csharp[WindowsAzure#SandboxPlugin](../snippets/csharp/CRMV8/windowsazure/cs/sandboxplugin.cs#sandboxplugin)]  
+```csharp
+using System;
+using System.Diagnostics;
+using System.Threading;
+using System.Runtime.Serialization;
+
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.ServiceModel.Description;
+
+using Microsoft.Xrm.Sdk;
+
+namespace Microsoft.Crm.Sdk.Samples
+{
+    /// <summary>
+    /// A custom plug-in that can post the execution context of the current message to the Windows
+    /// Azure Service Bus. The plug-in also demonstrates tracing which assist with
+    /// debugging for plug-ins that are registered in the sandbox.
+    /// </summary>
+    /// <remarks>This sample requires that a service endpoint be created first, and its ID passed
+    /// to the plug-in constructor through the unsecure configuration parameter when the plug-in
+    /// step is registered.</remarks>
+    public sealed class SandboxPlugin : IPlugin
+    {
+        private Guid serviceEndpointId; 
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public SandboxPlugin(string config)
+        {
+            if (String.IsNullOrEmpty(config) || !Guid.TryParse(config, out serviceEndpointId))
+            {
+                throw new InvalidPluginExecutionException("Service endpoint ID should be passed as config.");
+            }
+        }
+
+        public void Execute(IServiceProvider serviceProvider)
+        {
+            // Retrieve the execution context.
+            IPluginExecutionContext context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
+
+            // Extract the tracing service.
+            ITracingService tracingService = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+            if (tracingService == null)
+                throw new InvalidPluginExecutionException("Failed to retrieve the tracing service.");
+
+            IServiceEndpointNotificationService cloudService = (IServiceEndpointNotificationService)serviceProvider.GetService(typeof(IServiceEndpointNotificationService));
+            if (cloudService == null)
+                throw new InvalidPluginExecutionException("Failed to retrieve the service bus service.");
+
+            try
+            {
+                tracingService.Trace("Posting the execution context.");
+                string response = cloudService.Execute(new EntityReference("serviceendpoint", serviceEndpointId), context);
+                if (!String.IsNullOrEmpty(response))
+                {
+                    tracingService.Trace("Response = {0}", response);
+                }
+                tracingService.Trace("Done.");
+            }
+            catch (Exception e)
+            {
+                tracingService.Trace("Exception: {0}", e.ToString());
+                throw;
+            }
+        }
+    }
+}
+```  
   
 In your plug-in code, you can update the writeable data in the context before initiating the post. For example, you can add a key/value pair to the shared variables in the context. 
   
@@ -57,7 +126,7 @@ For a plug-in registered to execute in asynchronous mode, this also means that t
  
 ## Handle a failed service bus post
 
-The expected behavior from a failed service bus post is dependent on whether the plug-in was registered for synchronous or asynchronous execution. For asynchronous plug-ins, the system job that actually posts the execution context to the service bus will retry the post. For a synchronous registered plug-in, an exception is returned. More information [Management and Notification of Run-time Errors](azure-integration.md#bkmk_management)  
+The expected behavior from a failed service bus post is dependent on whether the plug-in was registered for synchronous or asynchronous execution. For asynchronous plug-ins, the system job that actually posts the execution context to the service bus will retry the post. For a synchronous registered plug-in, an exception is returned. More information [Management and Notification of Run-time Errors](azure-integration.md)  
   
 > [!IMPORTANT]
 >  For asynchronous registered plug-ins only, when the asynchronous job that posts to the Azure Service Bus is retried after a post failure, the entire plug-in logic is executed again. Because of this, don’t add any other logic to the custom Azure aware plug-in other than just modifying the context and posting to the service bus.  

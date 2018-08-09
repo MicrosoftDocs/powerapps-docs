@@ -69,10 +69,9 @@ This walkthrough demonstrates how to register a service endpoint step using the 
   
 2.  Navigate to the **Register** menu and click **Register New Step**.  
   
-3.  Fill out the **Register New Step** dialog box for an account create event as shown in the following figure.  
-  <!-- TODO: Image is not present and need to fix it
+3.  Fill out the **Register New Step** dialog box for an account create event as shown in the following figure.
 
- ![Creating a service endpoint step](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")-->
+ ![Creating a service endpoint step](media/crm-v6s-pr-service-endpoint-step.png "Creating a service endpoint step")
   
 4.  Click **Register New Step**.  
   
