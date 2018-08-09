@@ -772,7 +772,8 @@
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: For developers
-    href: ../developer/model-driven-apps/TOC.yml
+    href: ../developer/model-driven-apps/  
+    # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
