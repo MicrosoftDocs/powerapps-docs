@@ -20,7 +20,6 @@ ms.author: jdaly
 
 PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the expansion of the Common Data Service, now called Common Data Service for Apps which now contains the core functionality of the Dynamics 365 platform that powers Dynamics 365 for Sales, Marketing, Customer Service.
 
-
 ## Get Started
 
 If you are already experienced with the Dynamics 365 for Sales, Marketing, or Customer Service apps, you will find that you will be able to apply your experience to customize and extend Common Data Service for Apps.
@@ -84,6 +83,7 @@ Use these assemblies to facilitate connecting to the organization service and to
 More information [Dynamics 365 Customer Engagement Developer Guide: Build Windows client applications using the XRM tools](/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools)
 
 **NuGet Packages**:
+
 - [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) (Microsoft.Xrm.Tooling.Connector.dll)
 - [Microsoft.CrmSdk.XrmTooling.WpfControls](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.WpfControls/) 
 
@@ -128,8 +128,6 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Extend Dyna
 |Assembly|Namespace|
 |---------|---------|
 |Microsoft.Crm.Outlook.Sdk.dll|[Microsoft.Crm.Outlook.Sdk](/dotnet/api/microsoft.crm.outlook.sdk)|
-
-
 
 ## Community Tools for Common Data Service for Apps
 
