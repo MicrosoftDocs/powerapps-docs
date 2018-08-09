@@ -9,9 +9,9 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: c7eb3bdf-9d6f-9bcc-8114-4c3dc5be2976
-author: JimDaly" # GitHub ID
-ms.author: jdaly" # MSFT alias of Microsoft employees only
-manager: shilpas" # MSFT alias of manager or PM counterpart
+author: JimDaly # GitHub ID
+ms.author: jdaly # MSFT alias of Microsoft employees only
+manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
@@ -29,17 +29,17 @@ Using the Dynamics 365 Common Data Service for Apps Web Services, you can perfor
   > [!NOTE]
   >  After updating an organization-owned visualization, you must publish the metadata changes to make it visible across the organization by using the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message. Alternatively, whenever you publish an entity, all the unpublished organization-owned visualizations that are attached to the entity are published automatically.  
   
-- Query and retrieve all the organization-owned visualizations that are attached to an entity using the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute. Multiple organization-owned visualizations can be attached to a single entity. For a list of entities with which you can attach a visualization, see [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to an entity, see [Sample: Retrieve all Charts Attached to an Entity](sample-retrieve-all-charts-attached-entity.md).  
+- Query and retrieve all the organization-owned visualizations that are attached to an entity using the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute. Multiple organization-owned visualizations can be attached to a single entity. For a list of entities with which you can attach a visualization, see [Entities Supported for Visualizations](view-data-with-visualizations-charts.md#SupportedVisualizationEntities). For a code sample that demonstrates how to retrieve all the organization-owned visualizations attached to an entity, see [Sample: Retrieve all Charts Attached to an Entity](/dynamics365/customer-engagement/developer/customize-dev/sample-retrieve-all-charts-attached-entity).
   
   > [!NOTE]
-  >  You cannot change or update a visualization to attach it with a different entity after you have created the visualization. It implies that the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute is not valid for the update action on the organization-owned visualization.  
+  >  You cannot change or update a visualization to attach it with a different entity after you have created the visualization. It implies that the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute is not valid for the update action on the organization-owned visualization.
   
-- Specify an organization-owned visualization as the default visualization for the associated entity by setting the `SavedQueryVisualization.IsDefault` attribute to `true`. When you set an organization-owned visualization as the default visualization for an entity, the visualization is displayed by default when you select to view the visualizations for this entity in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] CDS for Apps.  
+- Specify an organization-owned visualization as the default visualization for the associated entity by setting the `SavedQueryVisualization.IsDefault` attribute to `true`. When you set an organization-owned visualization as the default visualization for an entity, the visualization is displayed by default when you select to view the visualizations for this entity in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] CDS for Apps.
   
   > [!NOTE]
   >  Using the Dynamics 365 CDS for Apps Web Services, if you set an organization-owned visualization as default for an entity that already has another visualization set as default, both the visualizations are marked as default visualizations for the entity.  To set a visualization as a default visualization for an entity, make sure that no other visualization is set as the default visualization for the entity.  
   
-  For a list of supported messages on the organization-owned visualization entity, see [SavedQueryVisualization Entity](../entities/savedqueryvisualization.md).  
+  For a list of supported messages on the organization-owned visualization entity, see [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md).
   
 ## Actions on user-owned visualizations  
  You can perform the following actions on a user-owned visualization (`UserQueryVisualization`):  

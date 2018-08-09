@@ -9,9 +9,9 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: 339eb79d-5dec-885b-496f-bfa26e9cae08
-author: JimDaly" # GitHub ID
-ms.author: jdaly" # MSFT alias of Microsoft employees only
-manager: shilpas" # MSFT alias of manager or PM counterpart
+author: JimDaly # GitHub ID
+ms.author: jdaly # MSFT alias of Microsoft employees only
+manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
@@ -53,6 +53,6 @@ You can perform actions such as create, retrieve, update, or delete, on organiza
  [Using FormXML for Dashboards](understand-dashboards-dashboard-components-formxml.md)   
  [Create a Dashboard](create-dashboard.md)   
  [Sample Dashboards](sample-dashboards.md)   
- [Dashboard Entities](dashboard-entities.md)   
- [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard) <!-- TODO Need to update the powerapps repo's topic link. As of now not found-->.   
+ [Dashboard Entities](/dynamics365/customer-engagement/developer/customize-dev/dashboard-entities) <!-- TODO Need to update the powerapps repo's topic link. As of now not found-->  
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard) <!-- TODO Need to update the powerapps repo's topic link. As of now not found-->   
  [Sample: Assign a User-Owned Dashboard to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-user-owned-dashboard-another-user) <!-- TODO Need to update the powerapps repo's topic link. As of now not found-->
