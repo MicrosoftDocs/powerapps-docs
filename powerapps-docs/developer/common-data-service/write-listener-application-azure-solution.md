@@ -37,7 +37,7 @@ A *topic* is similar to a queue but implements a publish/subscribe model. One or
 > [!IMPORTANT]
 >  To use these queue or topic contracts, you must write your listener applications using the [Azure SDK](http://azure.microsoft.com/downloads/archive-net-downloads/) version 1.7 or higher.  
   
-Use of queues and topics in your multisystem software design can result in the decoupling of systems. If the listener application ever becomes unavailable, the message delivery from Dynamics 365 will still succeed and the listener application can continue processing the queue message when it is back online. [!INCLUDEMore information [Queues, Topics, and Subscriptions](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
+Use of queues and topics in your multi-system software design can result in the decoupling of systems. If the listener application ever becomes unavailable, the message delivery from Dynamics 365 will still succeed and the listener application can continue processing the queue message when it is back online. [!INCLUDEMore information [Queues, Topics, and Subscriptions](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
   
 <a name="bkmk_writeoneway"></a>
 
