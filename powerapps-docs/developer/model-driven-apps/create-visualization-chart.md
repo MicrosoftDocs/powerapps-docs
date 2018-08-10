@@ -13,3 +13,9 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 # Create a visualization (chart)
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/create-visualization-chart -->
+
+## Before you create a visualization
+
+## Create a chart visualization
+
+## Create a web resource visualization

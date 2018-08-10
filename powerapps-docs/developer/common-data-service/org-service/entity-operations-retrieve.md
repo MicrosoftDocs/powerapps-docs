@@ -21,7 +21,7 @@ You have some options to define the data returned when you retrieve an entity re
 
 
 > [!IMPORTANT]
-> When retrieving entity records you should only request the attributes values you need by setting the specific attributes using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code.
+> When retrieving entity records you should only request the attributes values you need by setting the specific attributes using the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor. Although <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class constructor provides an overload that accepts a boolean `allColumns` parameter, you should not use this in production code. More information: [Do not retrieve Entity all columns via query APIs](/dynamics365/customer-engagement/guidance/data/retrieve-specific-columns-entity-via-query-apis)
 
 If you need to return related entity records you can include a query with your retrieve request to define which related records to return.
 
@@ -164,6 +164,8 @@ Console.WriteLine(entity["name"]);
 ## Access Formatted values
 
 The method to access formatted values on a retrieve operation is the same you will use when accessing them in the results of a query. More information: [Access formatted values](entity-operations-query-data.md#access-formatted-values)
+
+<!-- TODO Move the information about accessing formatted values here, where the topic is shorter rather than the query topic which is longer -->
 
 ### See also
 

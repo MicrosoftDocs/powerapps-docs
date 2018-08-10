@@ -25,8 +25,12 @@
     href: metadata-services.md    
 - name: Tutorials
   items:
-  - name: Create and register a plug-in
-    href: create-register-plugin.md
+  - name: Write a plug-in
+    href: tutorial-write-plug-in.md
+  - name: Debug a plug-in
+    href: tutorial-debug-plug-in.md
+  - name: Update a plug-in
+    href: tutorial-update-plug-in.md
   - name: Create and register a workflow extension
     href: create-register-workflow-extension.md
   - name: Configure Azure (SAS) for integration with Customer Engagement
@@ -71,6 +75,9 @@
     items:
     - name: Event Framework
       href: event-framework.md
+      items:
+      - name: Behavior of specialized update operations
+        href: special-update-operation-behavior.md
     - name: Processes
       href: processes.md
     - name: Custom Actions
@@ -269,10 +276,12 @@
       href: write-listener-application-azure-solution.md
   - name: Plug-ins
     items:
-    - name: Write and register a plug-in
-      href: write-register-plug-in.md
-    - name: Create and register a plug-in
-      href: create-register-plugin.md
+    - name: Write a plug-in
+      href: write-plug-in.md
+    - name: Register a plug-in
+      href: register-plug-in.md
+    - name: Debug a plug-in
+      href: debug-plug-in.md
   - name: Workflow extensions
     items: 
     - name: Create a workflow extension
@@ -309,8 +318,6 @@
         href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
     - name: Discover user organizations
       href: discovery-service.md
-    - name: Disaster recovery 
-      href: disaster-recovery.md
   - name: How to manage solutions
     href: how-manage-solutions.md
     items:

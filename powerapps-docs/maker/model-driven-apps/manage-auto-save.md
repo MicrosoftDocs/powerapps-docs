@@ -1,5 +1,5 @@
 ---
-title: "Disable auto-save | MicrosoftDocs"
+title: "Disable auto-save in a model-driven app with PowerApps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 06/18/2018
 ms.reviewer: ""
@@ -16,7 +16,7 @@ caps.latest.revision: 14
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Disable auto-save
+# Disable auto-save in a model-driven app
 
 Auto-save helps app users focus on their work without having to manage saving data in the form. Most people will appreciate not having to explicitly save data each time they update a record, but some organizations may have customizations that were designed expecting an explicit save. For these organizations there are options to manage how auto-save is applied.  
   

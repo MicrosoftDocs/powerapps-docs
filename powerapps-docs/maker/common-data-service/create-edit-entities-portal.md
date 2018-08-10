@@ -106,7 +106,7 @@ See [Create or edit dashboards](../model-driven-apps/create-edit-dashboards.md)
 
 ### Charts
 
-See [Quickstart: Create a system chart](../model-driven-apps/create-edit-system-chart.md)
+See [Create a system chart](../model-driven-apps/create-edit-system-chart.md)
 
 ### Keys
 

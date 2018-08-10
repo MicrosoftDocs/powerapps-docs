@@ -1,24 +1,23 @@
 ---
-title: Show a list of items | Microsoft Docs
-description: Use a gallery to show a list of items in your app, and filter the list by specifying a criterion.
-documentationcenter: na
+title: Show a list of items in a canvas app | Microsoft Docs
+description: Use a gallery to show a list of items in your canvas app, and filter the list by specifying a criterion.
 author: karthik-1
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 09/28/2017
 ms.author: sharik
 
 ---
 # Show a list of items in PowerApps
-Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
+
+Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your canvas app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
 
 ## Prerequisites
+
 * Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 
 * Set up the sample data:
@@ -48,7 +47,7 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 7. Click or tap **List screen** to add a screen that contains a **Gallery** control and other controls such as a search bar.
 
     > [!NOTE]
-> Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the **Gallery** control to select it, click or tap **Flooring Estimates** in the right-hand pane, and then click or tap a different layout in the **Data** pane. For this tutorial, leave the default layout.
+   > Whether you add a **Gallery** control to a new screen or an existing one, you can click or tap near the bottom of the **Gallery** control to select it, click or tap **Flooring Estimates** in the right-hand pane, and then click or tap a different layout in the **Data** pane. For this tutorial, leave the default layout.
 
     ![Choose gallery layout](./media/add-gallery/select-layout.png)
 

@@ -1,18 +1,23 @@
 ---
-title: Create an Excel app from scratch | Microsoft Docs
+title: Create an canvas app from scratch based on Excel data | Microsoft Docs
+description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
 author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 04/23/2018
 ms.author: anneta
 
 ---
-# Create an Excel app from scratch
-Create your own app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but experienced app makers can use it to build the best app for their needs.
+# Create an canvas app from scratch based on Excel data
+
+Create your own canvas app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but experienced app makers can use it to build the best app for their needs.
 
 ## Prerequisites
+
 To follow the steps in this tutorial exactly, first create an Excel file using this sample data.
 
 1. Copy this data, and then paste it into an Excel file.
@@ -36,7 +41,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 > You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
 ## Open a blank app
-1. Sign in to [PowerApps](http://web.powerapps.com).
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 	![PowerApps home page](./media/get-started-create-from-blank/sign-in.png)
 
@@ -80,31 +85,31 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     ![Open Data pane](./media/get-started-create-from-blank/custom-gallery-sample.png)
 
-1. Under **Data source**, select the down arrow to open the list of data sources for the app, and then select **Schedule**.
+4. Under **Data source**, select the down arrow to open the list of data sources for the app, and then select **Schedule**.
 
     ![Select a data source](./media/get-started-create-from-blank/select-schedule.png)
 
-1. Under **Layout**, select the down arrow to open the list of layouts, and then select **Title, subtitle, and body**.
+5. Under **Layout**, select the down arrow to open the list of layouts, and then select **Title, subtitle, and body**.
 
     ![Select layout](./media/get-started-create-from-blank/select-layout.png)
 
-1. Under **Title2**, change the column shown from **Backup** to **Volunteer**.
+6. Under **Title2**, change the column shown from **Backup** to **Volunteer**.
 
      ![Change column in label](./media/get-started-create-from-blank/change-title2.png)
 
-1. Close the **Data** pane by selecting the close icon in the upper-right corner.
+7. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
     The gallery shows the name of each volunteer and the day and time of that volunteer's shift.
 
     ![The Schedule data in the gallery unsorted](./media/get-started-create-from-blank/show-data-unsorted.png)
 
-4. Select the gallery, and confirm that the property list shows **[Items](controls/properties-core.md)**.
+8. Select the gallery, and confirm that the property list shows **[Items](controls/properties-core.md)**.
 
     As the formula bar shows, the value of that property is **Schedule**.
 
     ![The Schedule data in the gallery unsorted](./media/get-started-create-from-blank/set-property.png)
 
-1. Change the value of the **Items** property by copying this formula and pasting it into the formula bar:
+9. Change the value of the **Items** property by copying this formula and pasting it into the formula bar:
 
     **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer"), "Volunteer", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
@@ -114,22 +119,22 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     Users can sort and filter the gallery by volunteer name based on the **SortByColumns** and **Search** functions in that formula.
 
-    - If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer** field contains the text that the user typed.
-    - If a user selects the sort button, the gallery shows the records in ascending or descending order (depending on how many times the user selects the button) based on the **Volunteer** field.
+   - If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer** field contains the text that the user typed.
+   - If a user selects the sort button, the gallery shows the records in ascending or descending order (depending on how many times the user selects the button) based on the **Volunteer** field.
 
-    For more information about these and other functions, see the [formula reference](formula-reference.md).
+     For more information about these and other functions, see the [formula reference](formula-reference.md).
 
-5. Type an **i** in the search box, select the sort button by clicking or tapping it, and then select it one more time (or an odd number of additional times).
+10. Type an **i** in the search box, select the sort button by clicking or tapping it, and then select it one more time (or an odd number of additional times).
 
-    The gallery shows these results.
+     The gallery shows these results.
 
-    ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
+     ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
 
-1. Clear all text from the search box.
+11. Clear all text from the search box.
 
-6. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
+12. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
 
-    ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
+     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
 
 ## Create the change screen
 1. On the **Home** tab, select the down arrow next to **New screen**, and then select **Form screen**.

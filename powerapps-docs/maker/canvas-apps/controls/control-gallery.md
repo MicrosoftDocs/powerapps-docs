@@ -1,18 +1,15 @@
 ---
 title: 'Gallery control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Gallery control
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 05/25/2017
-ms.author: sharik
+ms.author: fikaradz
 
 ---
 # Gallery control in PowerApps
@@ -103,11 +100,11 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
 
     > [!NOTE]
-> Screen readers will annnouce when items in the gallery change. The **AccessibleLabel** is also mentioned. This gives context to the announcement and is even more important when there are multiple galleries on the same screen.
+  > Screen readers will annnouce when items in the gallery change. The **AccessibleLabel** is also mentioned. This gives context to the announcement and is even more important when there are multiple galleries on the same screen.
 
 ### Keyboard support
 * Consider setting **ShowScrollbar** to **true**. On most touch screen devices, the scrollbar will not show until scrolling begins.
 * If clicking anywhere in a gallery item is meant to select it, there must also be way for keyboard users to select the gallery item. For example, adding a **[Button](control-button.md)** that has its **OnSelect** property set to **Select(Parent)**.
 
     > [!NOTE]
-> Controls outside the gallery are not considered in the keyboard navigation order within the gallery. **[TabIndex](properties-accessibility.md)** of controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.
+  > Controls outside the gallery are not considered in the keyboard navigation order within the gallery. **[TabIndex](properties-accessibility.md)** of controls inside a gallery are scoped. See [accessibility properties](properties-accessibility.md) to learn more.

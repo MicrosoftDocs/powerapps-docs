@@ -1,16 +1,13 @@
 ---
 title: Customize a card | Microsoft Docs
 description: Change the default control that appears in a card on a Details or Edit form in PowerApps
-documentationcenter: ''
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/18/2018
 ms.author: anneta
 
@@ -32,7 +29,7 @@ For an overview, see [Understand data cards](working-with-cards.md).
 ## Customize a locked card
 In this procedure, you'll replace a **[Text-input](controls/control-text-input.md)** control with a **[Slider](controls/control-slider.md)** control without unlocking the card.
 
-1. Sign in to [PowerApps](http://web.powerapps.com).
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![Home page for PowerApps](./media/customize-card/sign-in.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "Create or edit main forms in PowerApps | MicrosoftDocs"
+title: "Create or edit model-driven app main forms in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a main form"
 ms.custom: ""
 ms.date: 05/23/2018
@@ -18,9 +18,9 @@ caps.latest.revision: 18
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Quickstart: Create or edit a main form for an entity 
+# Create or edit a model-driven app main form for an entity 
 
-In this quickstart you learn how to create or edit a main form for an entity.
+In this topic you learn how to create or edit a main form for an entity.
 
 When you create a new form for an entity, its form type is Main. When the new form opens, it is identical to the form named Information. You can add or edit fields, sections, tabs, navigation, and properties associated with the form, and then save the form.
 

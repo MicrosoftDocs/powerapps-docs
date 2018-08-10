@@ -1,21 +1,20 @@
 ---
-title: Show details about the current user | Microsoft Docs
-description: Insert the User function to display the name and email address of the signed-in user in PowerApps
-documentationcenter: ''
+title: Show details about the current user in a canvas app | Microsoft Docs
+description: In PowerApps, display the name and email address of the signed-in user in a canvas app
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: lonu
 
 ---
-# Show information about a PowerApps user
-The User function can show the full name, the email address, and the picture that's associated with the user who's signed in. You can use this information to automatically fill in a form.
+# Show information about a PowerApps user in a canvas app
+
+In PowerApps, show the full name, the email address, and the picture that's associated with the user who's signed in to a canvas app. You can use this information, for example, to automatically fill in a form.
 
 For example, you can use this feature to:
 
@@ -28,6 +27,7 @@ Basically, you can use this anywhere users would benefit from a form or labels t
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## Show user details
+
 1. On the **Insert** tab, click or tap **Media**, and then click or tap **Image**.
    
    ![][2]

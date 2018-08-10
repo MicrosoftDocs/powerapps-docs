@@ -19,7 +19,7 @@ applies_to:
 ms.assetid: 60281cab-23d5-4421-ae51-f7e6c1176729
 ---
 
-# Navigate to advanced app making and customization areas
+# Navigate to advanced model-driven app making and customization areas
 
 This topic describes how to access advanced customization and administration areas that are available within a PowerApps environment.
 
@@ -35,12 +35,11 @@ Use solution explorer to perform app making and customization tasks that can’t
 
 ## Solutions
 
-The solutions page is where you can view, edit, create, import, export, and delete managed and unmanaged solutions. 
+The solutions area is where you can view, edit, create, import, export, and delete managed and unmanaged solutions. 
 
 1.	Sign in to [PowerApps](https://web.powerapps.com).
 2.	Select **Model-driven** (lower left). 
-3.	Select ![Settings icon](media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
-4.	Under **Solutions**, select **All solutions**. 
+3.	On the left navigation pane select **Solutions**. 
 
 ## My Apps
 

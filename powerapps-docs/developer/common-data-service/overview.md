@@ -13,21 +13,16 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/20/2018
+ms.date: 03/19/2018
 ms.author: jdaly
 ---
-<!-- 
 
-This topic was not migrated it was written for PowerApps 
-
--->
 # Common Data Service for Apps Developer Guide
 
 PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the expansion of the Common Data Service, now called Common Data Service for Apps which now contains the core functionality of the Dynamics 365 Customer Engagement platform that powers Dynamics 365 Customer Engagement for Sales, Marketing, Customer Service.
 
 > [!NOTE]
 > If you are already experienced with the the Dynamics 365 Customer Engagement for Sales, Marketing, or Customer Service apps, you will find that you will be able to apply your experience to customize and extend Common Data Service for Apps.
-
 
 ## Get Started
 
@@ -58,13 +53,14 @@ The most common extensions created using code involve automating the processes u
 ### Solutions
 
 If you are going to distribute the extensions you create or any customizations that they depend on, you will need to understand solutions. Solutions created by an individual are relatively simple to work with and don't require the skills of a developer. But for a team of developers to work productively with solutions and use effective application lifecycle management principles requires a more sophisticated approach. More information:
+
  - [Introduction to solutions](introduction-solutions.md)
  - [How to manage solutions](how-manage-solutions.md)
-
 
 ### Authentication
 
 When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are creating a client application. A simple console client application is a good way to familiarize yourself with the CDS for Apps APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
+
 - [Authentication](authentication.md)
 - [Create Client applications](connect-cds.md)
 - [Quick Start: Create a console app using the organization service](org-service/quick-start-org-service-console-app.md)
@@ -79,14 +75,10 @@ There are two different web services you can use to work with data. Which one yo
 
 Entities store the business data you will work with. An understanding what they are and how to work with them is essential.
 More information:
+
 - [Common Data Service for Apps entities](entities.md)
 - [About the Entity Reference](reference/about-entity-reference.md)
 
 ## Content for on-premises deployments
 
 CDS for Apps is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing (IFD) deployments. For information related to these options see the [Software Development Kit for Microsoft Dynamics 365 (online) and Dynamics 365 (on-premises)](https://msdn.microsoft.com/library/hh547453.aspx)
-
-
-
-
-

@@ -33,7 +33,7 @@ There are two designers you can use to create or edit fields:
 > You can also create fields in your environment using the following:
 > - In model-driven apps, select **New Field** from the form editor.
 > - Import a solution that contains the definition of the fields.
-> - Use Power Query to create new entities and fill them with data.<br />More information: [Quickstart: Add data to an entity in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
+> - Use Power Query to create new entities and fill them with data.<br />More information: [Add data to an entity in the Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq).
 > - A developer can use [Metadata services](/powerapps/developer/common-data-service/use-web-services#metadata-services) to write a program to create and update fields.
 
 Information in this topic will help you choose which designer you can use. 

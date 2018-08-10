@@ -1,16 +1,13 @@
 ---
 title: IfError function | Microsoft Docs
 description: Reference information, including syntax and examples, for the IfError function in PowerApps
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 03/21/2018
 ms.author: gregli
 

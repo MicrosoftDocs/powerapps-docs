@@ -1,5 +1,5 @@
 ---
-title: "Show or hide form elements with PowerApps | MicrosoftDocs"
+title: "Show or hide model-driven app form elements with PowerApps | MicrosoftDocs"
 description: "Learn how to display or hide from elements, such as tabs, sections, or fields"
 ms.custom: ""
 ms.date: 06/11/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 63
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Show or hide form elements
+# Show or hide model-driven app form elements
 
  Several types of form elements have the option to be shown or hidden by default. Tabs, sections, fields, iFrames, and web resources all provide this option. Using form scripts or business rules the visibility of these elements can be controlled to create a dynamic form to provide a user interface that adapts to conditions in the form.  
   

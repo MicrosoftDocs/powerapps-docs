@@ -1,16 +1,13 @@
 ---
 title: Working with environments | Microsoft Docs
 description: Switch environments and understand how the content on your pages change.
-documentationcenter: na
 author: linhtranms
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/14/2016
 ms.author: litran
 
@@ -38,7 +35,7 @@ You can create apps in an environment that you create or for which you've been g
 
 To create an app in the right environment, do either of the following:
 
-- If PowerApps Studio isn't open, [sign in](http://web.powerapps.com), select the environment you would like to create your app in, select **Apps** near the left edge, and then select **Create an app**.
+- If PowerApps Studio isn't open, [sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you would like to create your app in, select **Apps** near the left edge, and then select **Create an app**.
 
 - If PowerApps Studio is open, select the environment again at the top right corner.
 
@@ -53,6 +50,6 @@ To create an app in the right environment, do either of the following:
     ![Studio switch environment](./media/working-with-environments/new-app.PNG)
 
 ## View apps in the right environment
-Whether you are working in [powerapps.com](http://web.powerapps.com) or PowerApps Studio, the list of apps, connections, etc. that you see is always filtered based on the environment that's selected in the dropdown. If you don't see the apps you are looking for, always confirm whether the right environment is selected.
+Whether you are working in [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or PowerApps Studio, the list of apps, connections, etc. that you see is always filtered based on the environment that's selected in the dropdown. If you don't see the apps you are looking for, always confirm whether the right environment is selected.
 
 For more information about environments, see [this overview](../../administrator/environments-overview.md).

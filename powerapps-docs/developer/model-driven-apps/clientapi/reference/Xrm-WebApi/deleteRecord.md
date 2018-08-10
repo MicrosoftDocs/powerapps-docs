@@ -65,7 +65,7 @@ On success, returns a promise object containing the attributes specified earlier
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
+These examples use some of the same request objects as demonstrated in [Update and delete entities using the Web API](../../../../common-data-service/webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
 
 Deletes an account with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
 

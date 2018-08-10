@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Update and Delete entities using the Organization Service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to update and delete entities using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -360,7 +360,7 @@ There are several deprecated specialized messages that perform update operations
 
 [!INCLUDE [cc-legacy-update-messages](../includes/cc-legacy-update-messages.md)]
 
-More information: [Behavior of specialized update operations](../event-framework.md#behavior-of-specialized-update-operations)
+More information: [Behavior of specialized update operations](../special-update-operation-behavior.md)
 
 ### See also
 

@@ -1,5 +1,5 @@
 ---
-title: "Managed properties for views with PowerApps | MicrosoftDocs"
+title: "Model-driven app managed properties for views with PowerApps | MicrosoftDocs"
 description: "Learn how to set managed properties for a view"
 ms.custom: ""
 ms.date: 06/12/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Managed properties for views
+# Model-driven app managed properties for views
 
 <a name="BKMK_ManagedProperties"></a>   
  

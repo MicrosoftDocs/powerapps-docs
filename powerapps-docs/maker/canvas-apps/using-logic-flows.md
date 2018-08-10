@@ -1,21 +1,20 @@
 ---
-title: Start a flow in an app | Microsoft Docs
-description: Create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in an app.
-documentationcenter: ''
+title: Start a flow in a canvas app | Microsoft Docs
+description: Create a flow that performs one or more tasks after an event, such as a user selecting a button, occurs in a canvas app.
 author: stepsic-microsoft-com
-manager: kfile
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: sharik
 
 ---
-# Start a flow in an app
-You can use Microsoft Flow to create logic that performs one or more tasks when an event occurs in an app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close PowerApps.
+# Start a flow in a canvas app
+
+You can use Microsoft Flow to create logic that performs one or more tasks when an event occurs in a canvas app. For example, configure a button so that, when a user selects it, an item is created in a SharePoint list, an email or meeting request is sent, a file is added to the cloud, or all of these. You can configure any control in the app to start the flow, which continues to run even if you close PowerApps.
 
 ## Prerequisites
 
@@ -23,7 +22,8 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 * Learn how to [configure a control](add-configure-controls.md).
 
 ## Create a flow
-1. Sign in to [powerapps.com](http://web.powerapps.com), and then select **Flows** in the left navigation bar.
+
+1. Sign in to [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Flows** in the left navigation bar.
 
 2. On the **My Flows** page, select **Create from blank**.
 
@@ -48,7 +48,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
    3. In the **Site Address** box, type or paste the URL of a SharePoint Online site that contains a list.
 
        > [!NOTE]
-> Specify the URL for the site not including the list.
+      > Specify the URL for the site not including the list.
 
    4. In the **List Name** box, select the list that you want to use.
 
@@ -82,7 +82,7 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 6. In the pane that appears, select the flow that you created in the previous procedure.
 
     > [!NOTE]
-> If the flow that you created isn't available, confirm whether PowerApps is set to the environment in which you created the flow.
+   > If the flow that you created isn't available, confirm whether PowerApps is set to the environment in which you created the flow.
 
     ![Add a flow from the customization pane](./media/using-logic-flows/add-flow-from-pane.png)
 

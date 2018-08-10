@@ -1,5 +1,5 @@
 ---
-title: "Control access to forms in PowerApps | MicrosoftDocs"
+title: "Control access to model-driven app forms in PowerApps | MicrosoftDocs"
 description: "Learn how to control acces to main forms"
 ms.custom: ""
 ms.date: 06/27/2018
@@ -19,7 +19,7 @@ ms.author: "matp"
 manager: "kvivek"
 tags: 
 ---
-# Control access to forms
+# Control access to model-driven app forms
 
  There are two ways you can control access to main forms:  
   

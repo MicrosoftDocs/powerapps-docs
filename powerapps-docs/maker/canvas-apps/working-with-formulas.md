@@ -1,22 +1,20 @@
 ---
-title: Get started with formulas | Microsoft Docs
-description: Use formulas to customize an app.
-documentationcenter: na
+title: Get started with formulas in a canvas app | Microsoft Docs
+description: In PowerApps, use formulas to customize a canvas app.
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
 
 ---
-# Get started with formulas
-Configure your app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
+# Get started with canvas-app formulas in PowerApps
+
+Configure your canvas app with formulas that not only calculate values and perform other tasks (as they do in Excel) but also respond to user input (as an app requires).
 
 * In Excel, you build formulas that, for example, populate cells and create tables and charts.
 * In PowerApps, you build similar formulas as you configure controls instead of cells. In addition, you build formulas that apply specifically to apps instead of spreadsheets.
@@ -29,7 +27,7 @@ This topic provides only an overview of working with formulas. Browse the [formu
 
 ## Prerequisites
 
-* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com) by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
 ## Show a simple value
@@ -66,7 +64,7 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
     In Excel, you can show a number, such as **42**, by typing it into a cell or by typing a formula that resolves to that number, such as **=SUM(30,12)**. In PowerApps, you can achieve the same effect by setting the **Text** property of a control, such as a label, to **42** or **Sum(30,12)**. The cell and the label will always show that number regardless of what else changes in the worksheet or the app.
    
     > [!NOTE]
-> In PowerApps, you don't precede a formula with an equals sign or a plus sign as you do in Excel. The formula bar treats anything you type there as a formula by default. You also don't surround a formula with double quotation marks ("), as you did earlier to specify a string of text.
+   > In PowerApps, you don't precede a formula with an equals sign or a plus sign as you do in Excel. The formula bar treats anything you type there as a formula by default. You also don't surround a formula with double quotation marks ("), as you did earlier to specify a string of text.
 5. In the **[Text](controls/properties-core.md)** property of the label, replace **"Hello World"** with **Sum(1,2,3)**.
    
     ![Typing the partial function Sum(1,2,3 without a closing parenthesis shows errors](./media/working-with-formulas/label-sum-partial.png)
@@ -94,7 +92,7 @@ In Excel, you can use conditional formatting to show, for example, negative valu
 1. Set the **[Color](controls/properties-color-border.md)** property of the label to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
    
     > [!NOTE]
-> In a formula, specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **[Text](controls/properties-core.md)** property of **TextBox1** by typing **TextBox1.Text**.
+   > In a formula, specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **[Text](controls/properties-core.md)** property of **TextBox1** by typing **TextBox1.Text**.
    
     ![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color1.png)
 2. In **TextInput1** and **TextInput2**, specify two numbers that, when added together, result in a negative number.

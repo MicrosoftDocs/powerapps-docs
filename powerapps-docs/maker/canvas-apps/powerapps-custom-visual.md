@@ -1,23 +1,20 @@
 ---
 title: PowerApps custom visual for Power BI | Microsoft Docs
-description: Procedure and limitations for embedding an app that uses the same data source and can be filtered like other report items in Power BI 
-documentationcenter: na
+description: Procedure and limitations for embedding a canvas app that uses the same data source and can be filtered like other report items in Power BI 
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/15/2018
 ms.author: mblythe
 ---
 
 # PowerApps custom visual for Power BI
 
-Power BI enables data insights and better decision-making, while PowerApps enables everyone to build and use apps that connect to business data. Using the PowerApps custom visual, you can pass context-aware data to a PowerApps app, which updates in real time as you make changes to your report. Now, your app users can derive business insights and take actions from right within their Power BI reports and dashboards.
+Power BI enables data insights and better decision-making, while PowerApps enables everyone to build and use apps that connect to business data. Using the PowerApps custom visual, you can pass context-aware data to a canvas app, which updates in real time as you make changes to your report. Now, your app users can derive business insights and take actions from right within their Power BI reports and dashboards.
 
 ## Using the PowerApps custom visual
 
@@ -27,11 +24,11 @@ Let's look at the steps required to use the PowerApps custom visual in your Powe
 
     ![Custom visual in marketplace](./media/powerapps-custom-visual/powerapps-store.png) 
 
-1. Add the PowerApps visual to your report, and set the data fields associated with it.
+2. Add the PowerApps visual to your report, and set the data fields associated with it.
 
     ![Select report data](./media/powerapps-custom-visual/add-visual-set-data.png)
 
-1. You can choose an existing app or create one. If you choose to create an app, you can choose in which environment to create it.
+3. You can choose an existing app or create one. If you choose to create an app, you can choose in which environment to create it.
 
     ![New or existing app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
 
@@ -41,19 +38,19 @@ Let's look at the steps required to use the PowerApps custom visual in your Powe
 
     ![New app](./media/powerapps-custom-visual/new-app.png)
 
-1. Now in PowerApps Studio, you can use the data fields you set in step 2. The `PowerBIIntegration` object acts like any other PowerApps read-only data source or collection. You can use the object to populate any control, or join and filter with other data sources.
+4. Now in PowerApps Studio, you can use the data fields you set in step 2. The `PowerBIIntegration` object acts like any other PowerApps read-only data source or collection. You can use the object to populate any control, or join and filter with other data sources.
 
     ![Custom formula](./media/powerapps-custom-visual/custom-formula.png)
 
     This formula joins Power BI data with the Customer data source: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
- The Power BI report and the instance of PowerApps Studio that was launched share a live data connection. While they are both open, you can filter or change the data in your report to see the updated data reflect immediately in your app in PowerApps Studio.
+   The Power BI report and the instance of PowerApps Studio that was launched share a live data connection. While they are both open, you can filter or change the data in your report to see the updated data reflect immediately in your app in PowerApps Studio.
 
-1. After you have completed building or making changes to your app, save and publish the app in PowerApps to see your app in the Power BI report.
+5. After you have completed building or making changes to your app, save and publish the app in PowerApps to see your app in the Power BI report.
 
-1. Once you are satisfied with your changes, make sure to share the PowerApps app with users of your report and then save your report.
+6. Once you are satisfied with your changes, make sure to share the PowerApps app with users of your report and then save your report.
 
-1. And with that, you have created a report in which your users can take actions as they gain insights from your data.
+7. And with that, you have created a report in which your users can take actions as they gain insights from your data.
 
     ![Working report](./media/powerapps-custom-visual/working-report.gif)
 

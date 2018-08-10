@@ -37,6 +37,6 @@ Provides properties and methods to use Web API to create and manage records and 
 
 ### Related topics
 
-[Use the model-driven apps Web API](../../use-microsoft-dynamics-365-web-api.md)
+[Use the Common Data Service for Apps Web API](../../../common-data-service/webapi/overview.md)
 
 [Client API Xrm object](../clientapi-xrm.md)

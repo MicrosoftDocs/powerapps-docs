@@ -12,6 +12,8 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Quick Start: Organization service sample (C#)
 
+This is where you begin working with the .NET SDK assemblies to work with data using Common Data Service for Apps.
+
 In this quick start you will create a minimum console application to connect to the Organization service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. You will pass  your connection information using a connection string passed to the constructor.
 
 You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class, and you will display the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value.
@@ -78,12 +80,12 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
         Password = {password};
         RequireNewInstance = True";
 
-        using (var crmSvc = new CrmServiceClient(conn))
+        using (var svc = new CrmServiceClient(conn))
         {
 
             WhoAmIRequest request = new WhoAmIRequest();
 
-            WhoAmIResponse response = (WhoAmIResponse)crmSvc.Execute(request);
+            WhoAmIResponse response = (WhoAmIResponse)svc.Execute(request);
 
             Console.WriteLine("Your UserId is {0}", response.UserId);
 
@@ -118,4 +120,12 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 You have successfully connected to the organization service.
 
 
-<!-- TODO: Include link to next steps topics -->
+## Next Steps
+
+These topics will explain how to work with CDS for Apps entities:
+
+[Entity Operations using the Organization service](entity-operations.md)<br />
+[Create entities using the Organization Service](entity-operations-create.md)<br />
+[Retrieve an entity using the Organization Service](entity-operations-retrieve.md)<br />
+[Update and Delete entities using the Organization Service](entity-operations-update-delete.md)<br />
+[Associate and disassociate entities using the Organization Service](entity-operations-associate-disassociate.md)

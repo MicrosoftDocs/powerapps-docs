@@ -1,5 +1,5 @@
 ---
-title: "Change custom entity icons in PowerApps | MicrosoftDocs"
+title: "Change model-driven app custom entity icons in PowerApps | MicrosoftDocs"
 definition: "Learn how to change the icon for a custom entity"
 ms.custom: ""
 ms.date: 05/17/2018
@@ -20,7 +20,7 @@ manager: "kvivek"
 tags: 
  - "Links to topic not migrated"
 ---
-# Change custom entity icons 
+# Change model-driven app custom entity icons 
 
 When you create a custom entity, it is automatically assigned a default icon. All custom entities use the same icon by default. Use custom icons to differentiate how your custom entities look. You can’t modify the icons assigned to system entities.  
   
