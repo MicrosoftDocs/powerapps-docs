@@ -15,7 +15,7 @@ manager: "amyla"
 
 [!INCLUDE[./includes/invokeProcessAction-description.md](./includes/invokeProcessAction-description.md)] 
 
-For more information about actions, see [Actions overview](../../../../customize/actions.md)
+For more information about actions, see [Use actions](/flow/actions)
 
 ## Syntax
 
@@ -36,7 +36,7 @@ On success, returns Web API result along with any action output.
 
 ### Related topics
 
-[Actions overview](../../../../customize/actions.md)
+[Use actions](/flow/actions)
 
 [Xrm.Utility](../xrm-utility.md)
 

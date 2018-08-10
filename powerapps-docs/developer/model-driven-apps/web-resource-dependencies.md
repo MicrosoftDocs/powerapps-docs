@@ -17,7 +17,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 <!-- [!NOTE]
 > Web resource dependencies were added with the [!INCLUDE[../includes/pn-crm-9-0-0-online.md](../includes/pn-crm-9-0-0-online.md)].-->
 
-You can define dependencies between other web resources. The primary purpose of this feature is to allow association of String (RESX) web resources with the JavaScript web resources that will use them. This is also the way that web resources required by HTML web resources for use offline can be configured to also be available offline. More information [Create web resources and IFrame content for use with Mode-driven Apps for mobile clients](create-web-resources-iframe-mobile.md)
+You can define dependencies between other web resources. The primary purpose of this feature is to allow association of String (RESX) web resources with the JavaScript web resources that will use them. This is also the way that web resources required by HTML web resources for use offline can be configured to also be available offline. 
 
 However there are some other behaviors which developers using JavaScript web resources can take advantage of.
 
@@ -50,16 +50,14 @@ Before this feature you would need to manually add the attribute to the form and
 ## See also
 [Web resources](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
-[Create web resources and IFrame content for use with Mode-driven Apps for mobile clients](create-web-resources-iframe-mobile.md)<br />
 [Webpage (HTML) web resources](webpage-html-web-resources.md)<br />
-[Silverlight (XAP) web resources](silverlight-xap-web-resources.md)<br />
 [Script (JScript) web resources](script-jscript-web-resources.md)<br />
 [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md)<br />
 [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
 [Data (XML) Web resources](data-xml-web-resources.md)<br />
 [CSS web resources](css-web-resources.md)<br />
 [RESX web resources](resx-web-resources.md)<br />
-[WebResource entity messages and methods](webresource-entity-messages-methods.md)<br />
+[WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
 [Sample: Import files as web resources](sample-import-files-web-resources.md)<br />
 [Sample: Web resource utility](sample-web-resource-utility.md)<br />

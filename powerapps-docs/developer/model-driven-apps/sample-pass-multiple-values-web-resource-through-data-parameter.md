@@ -197,4 +197,3 @@ An (HTML) web resource page can only accept a single custom parameter called `da
  [Web Resources](web-resources.md)   
  [Sample: Import Files as Web Resources](sample-import-files-web-resources.md)   
  [Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
- [Silverlight (XAP) Web Resources](silverlight-xap-web-resources.md)

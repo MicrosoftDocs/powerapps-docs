@@ -27,7 +27,9 @@ When you develop a large number of files to use as Web resources you can save yo
 [!INCLUDE[sdk-prerequisite](../../includes/sdk-prerequisite.md)]
   
 ## Requirements  
-[!INCLUDE[sdk_SeeConnectionHelper](../../includes/sdk-seeconnectionhelper.md)]
+
+
+<!-- TODO: This should be written so that the connection helper code is not required. [!INCLUDE[sdk_SeeConnectionHelper](../../includes/sdk-seeconnectionhelper.md)] -->
   
  The sample code included in the SDK download package includes the following files required by this sample:  
   
@@ -156,6 +158,6 @@ foreach (var webResource in webResources)
   It is not necessary to publish Web resources when they are created. It is necessary to publish them when they are updated.  
   
 ### See also  
- [Sample: Web Resource Utility](sample-web-resource-utility.md)   
- [Web Resource Messages and Methods](webresource-entity-messages-methods.md)   
+ [Sample: Web Resource Utility](sample-web-resource-utility.md)
+ [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)
  [Web Resources](web-resources.md)

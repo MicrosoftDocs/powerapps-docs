@@ -31,7 +31,7 @@ Web resources are *virtual files* that are stored in Common Data Services for Ap
   
 <a name="BKMK_LimitationsOfWebResources"></a>   
 ### Limitations of web resources  
- There is no type of web resource that supports the capabilities of an ASP.NET(.aspx) page to execute code on the server. Web resources are limited to static files or files that are processed in the browser. A web resource can contain code that is processed in the browser to execute web service calls to interact with CDS for Apps data. For more information, see [Work with CDS for Apps data using web resources](work-data-using-web-resources.md). 
+ There is no type of web resource that supports the capabilities of an ASP.NET(.aspx) page to execute code on the server. Web resources are limited to static files or files that are processed in the browser. A web resource can contain code that is processed in the browser to execute web service calls to interact with CDS for Apps data.
   
  Web resources are only available by using the CDS for Apps web application security context. Only licensed CDS for Apps users who have the necessary privileges can access them.  
   
@@ -137,18 +137,17 @@ https://MyOrganization.crm.dynamics.com/WebResources/new_/test/test.htm
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com). 
   
 ### See also  
- [Write Client Application Extensions for Common Data Services for Apps](extend-client.md)<br />
+
  [Create Accessible Web Resources](create-accessible-web-resources.md)<br />
  [Web Page (HTML) Web Resources](webpage-html-web-resources.md)<br />
- [Silverlight (XAP) Web Resources](silverlight-xap-web-resources.md)<br />
  [Script (JScript) Web Resources](script-jscript-web-resources.md)<br />
  [Image Web Resources](image-web-resources.md)<br />
  [Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)<br />
  [Data (XML) Web Resources](data-xml-web-resources.md)<br />
  [Style Sheet (CSS) Web Resources](css-web-resources.md)<br />
- [Web Resource Messages and Methods](webresource-entity-messages-methods.md)<br />
+ [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br />
  [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
  [Sample: Web Resource Utility](sample-web-resource-utility.md)<br />
  [Sample: Importing Files as Web Resources](sample-import-files-web-resources.md)<br />
- [Use Web Service Data in Web Resources (REST and SOAP Endpoint)](work-data-using-web-resources.md)<br />
+ [Use JavaScript with model-driven apps](use-javascript.md)
  [Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)
