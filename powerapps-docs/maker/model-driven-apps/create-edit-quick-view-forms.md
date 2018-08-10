@@ -33,7 +33,7 @@ A quick view form can be added to another form as a quick view control. It provi
 ## Create a quick view form  
  You create quick view forms using the form editor in a manner similar to the way you create other forms. Quick view forms are read-only. Use them to create forms that are for reading purposes only.  
   
-1. On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+1. On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
 
     ![Model-driven design mode](media/model-driven-switch.png)
 
@@ -70,7 +70,7 @@ A quick view form can be added to another form as a quick view control. It provi
 ## Add a quick view control to a main form  
  Quick view forms can only be added to a main form where a lookup field exists that targets the entity of the quick view form.  
   
-1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
 
     > [!IMPORTANT]
     > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
