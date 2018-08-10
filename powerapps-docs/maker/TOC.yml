@@ -772,7 +772,8 @@
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: For developers
-    href: ../developer/model-driven-apps/TOC.yml
+    href: ../developer/model-driven-apps/  
+    # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
@@ -916,7 +917,8 @@
   - name: Import translated entity and field text into an app
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: For developers
-    href: ../developer/common-data-service/TOC.yml
+    href: ../developer/common-data-service/overview.md
+    # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
 - name: Common Data Model
   href: ../common-data-model/overview.md
   items:

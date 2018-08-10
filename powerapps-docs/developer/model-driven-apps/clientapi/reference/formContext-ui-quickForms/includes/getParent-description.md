@@ -1,0 +1,1 @@
+Returns a reference to the section object that contains the control.

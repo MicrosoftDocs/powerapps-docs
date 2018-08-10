@@ -5,7 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: JimDaly
-manager: faisalmo
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -16,7 +16,7 @@ ms.workload: na
 ms.date: 03/17/2018
 ms.author: jdaly
 ---
-
+<!-- This topic was not migrated it was written for PowerApps -->
 # Customize commands with model-driven apps 
 
 The commands that appear within a form or list command bar are customizable. Commands are based on the XML schemas used in Office ribbons, so the term *ribbon* is still used. When you create a command, you can define three elements:
@@ -29,6 +29,6 @@ Custom commands are positioned based on any existing commands. You must compose 
 
 There is no designer provided for commands. Fortunately, the community has provided tools. The [Ribbon Workbench](http://www.develop1.net/public/rwb/ribbonworkbench.aspx) provides a graphical interface and is the most commonly used tool to customize commands.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Customize commands and the ribbon](/dynamics365/customer-engagement/developer/customize-dev/customize-commands-ribbon)
+More information: [Customize commands and the ribbon](/dynamics365/customer-engagement/developer/customize-dev/customize-commands-ribbon)
 
 

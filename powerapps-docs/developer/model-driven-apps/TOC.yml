@@ -1,8 +1,200 @@
+# This TOC is a work in progress. The specific location of items is not locked down
 - name: Overview
   href: overview.md
-- name: Use web resources
-  href: web-resources.md  
-- name: Client scripting
-  href: client-scripting.md
-- name: Customize commands
-  href: customize-commands.md
+# - name: Quick Starts
+- name: Tutorials
+  items:
+  - name: Write your first client script
+    href: clientapi/walkthrough-write-your-first-client-script.md
+- name: Samples
+  items:
+  - name: Export ribbon definitions
+    href: sample-export-ribbon-definitions.md
+  - name: Pass multiple values to a  web resource through the data parameter
+    href: sample-pass-multiple-values-web-resource-through-data-parameter.md
+  - name: Create and manage web resources
+    items: 
+    - name: Import files as web resources
+      href: sample-import-files-web-resources.md
+    - name: Web resource utility
+      href: sample-web-resource-utility.md
+  - name: Sample charts
+    href: sample-charts.md
+  - name: Sample dashboards
+    href: sample-dashboards.md
+- name: Concepts
+  items:
+  - name: Supported customizations
+    href: supported-customizations.md
+  - name: Customize entity forms
+    href: customize-entity-forms.md
+  - name: Customize entity views
+    href: customize-entity-views.md
+    items:
+    - name: UserQuery (saved view) entity
+      href: userquery-saved-view-entity.md
+  - name: Customize visualizations and dashboards
+    href: customize-visualizations-dashboards.md
+    items:
+    - name: Analyze data with dashboards
+      href: analyze-data-with-dashboards.md
+      items: 
+      - name: 'Understand dashboards: Dashboard components and FormXML'
+        href: understand-dashboards-dashboard-components-formxml.md
+    - name: View data with visualizations (charts)
+      href: view-data-with-visualizations-charts.md
+      items:
+      - name: 'Understand charts: Underlying data and chart representation'
+        href: understand-charts-underlying-data-chart-representation.md    
+  - name: Web resources for model-driven apps
+    href: web-resources.md
+  - name: Use web resources
+    href: use-web-resources.md
+    items:
+    - name: Webpage (HTML) web resources
+      href: webpage-html-web-resources.md
+      items:
+      - name: Create accessible web resources
+        href: create-accessible-web-resources.md
+    - name: Script (JScript) web resources
+      href: script-jscript-web-resources.md
+    - name: CSS web resources
+      href: css-web-resources.md
+    - name: Image web resources
+      href: image-web-resources.md
+    - name: Data (XML) Web resources
+      href: data-xml-web-resources.md
+    - name: RESX web resources
+      href: resx-web-resources.md
+    - name: Stylesheet (XSL) web resources
+      href: stylesheet-xsl-web-resources.md
+    - name: Web resource dependencies
+      href: web-resource-dependencies.md
+  - name: Client scripting
+    href: client-scripting.md
+  - name: Use JavaScript with model-driven apps
+    href: use-javascript.md
+  - name: Customize commands
+    href: customize-commands.md
+  - name: When to edit the customizations file
+    href: when-edit-customization-file.md
+  - name: Publish customizations
+    href: publish-customizations.md
+- name: How-to Guides
+  items:
+  - name: Client Scripting
+    href: clientapi/client-scripting.md
+    items:
+    - name: Web resource development using Fiddler AutoResponder
+      href: streamline-javascript-development-fiddler-autoresponder.md
+  - name: Customize commands and the ribbon
+    href: customize-commands-ribbon.md
+    items:
+    - name: Ribbons available
+      href: ribbons-available.md
+    - name: Command bar or ribbon presentation
+      href: command-bar-ribbon-presentation.md
+    - name: Export, prepare to edit, and import the ribbon
+      href: export-prepare-edit-import-ribbon.md
+    - name: Export ribbon definitions
+      href: export-ribbon-definitions.md
+    - name: Use localized labels with ribbons
+      href: use-localized-labels-ribbons.md
+    - name: Define ribbon commands
+      href: define-ribbon-commands.md
+    - name: Define ribbon enable rules
+      href: define-ribbon-enable-rules.md
+    - name: Define ribbon display rules
+      href: define-ribbon-display-rules.md
+    - name: Define ribbon actions
+      href: define-ribbon-actions.md
+    - name: Pass data from a page as a parameter to Ribbon Actions
+      href: pass-data-page-parameter-ribbon-actions.md
+    - name: Define custom actions to modify the ribbon
+      href: define-custom-actions-modify-ribbon.md
+    - name: Define scaling for ribbon elements
+      href: define-scaling-ribbon-elements.md
+    - name: Define ribbon tab display rules
+      href: define-ribbon-tab-display-rules.md
+    - name: Pass parameters to a URL by using the ribbon
+      href: pass-parameters-url-by-using-ribbon.md
+  - name: Edit the customizations XML file with schema validation
+    href: edit-customizations-xml-file-schema-validation.md
+  - name: Open forms, views, dialogs, and reports with a URL
+    href: open-forms-views-dialogs-reports-url.md
+    items:
+    - name: Set field values using parameters passed to a form
+      href: set-field-values-using-parameters-passed-form.md
+    - name: Configure a form to accept custom querystring parameters
+      href: configure-form-accept-custom-querystring-parameters.md
+  - name: Open forms, views, and dashboards in Dynamics 365 mobile client with a URL
+    href: open-forms-views-dashboards-mobile-client-url.md
+  - name: Use IFRAME and web resource controls on a form
+    href: use-iframe-and-web-resource-controls-on-a-form.md
+  - name: Create and manage custom business apps using code
+    href: create-manage-custom-business-apps-using-code.md
+  - name: Query and edit an organization theme
+    href: query-and-edit-an-organization-theme.md
+  - name: Create or edit how business rules are initiated
+    href: create-edit-how-business-rules-initiated.md
+  - name: Visualizations (Charts)
+    items:
+    - name: Actions on visualizations (charts)
+      href: actions-visualizations-charts.md
+    - name: Create a visualization (chart)
+      href: create-visualization-chart.md
+  - name: Dashboards
+    items:
+    - name: Actions on dashboards
+      href: actions-dashboards.md
+    - name: Create a dashboard
+      href: create-dashboard.md
+  - name: Use editable grids
+    href: use-editable-grids.md
+- name: Resources
+  items:
+  - name: Developer Tools
+    href: developer-tools.md
+- name: Reference
+  items:
+  - name: Client Scripting
+    href: clientapi/reference.md
+  - name: Customization XML reference
+    href: customization-xml-reference.md
+  - name: Ribbon Schemas
+    items:
+    - name: Ribbon core schema
+      href: ribbon-core-schema.md
+    - name: Ribbon types schema
+      href: ribbon-types-schema.md
+    - name: Ribbon WSS schema
+      href: ribbon-wss-schema.md
+  - name: Form XML schema
+    href: form-xml-schema.md
+  - name: Publish request schema
+    href: publish-request-schema.md
+  - name: Visualization data description schema
+    href: visualization-data-description-schema.md
+  
+
+
+  
+
+  
+
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -4,8 +4,8 @@ description: Learn about the entity metadata use in Common Data Service for Apps
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
-manager: faisalmo
+author: "mayadumesh" # GitHub ID
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -16,7 +16,13 @@ ms.workload: na
 ms.date: 03/19/2018
 ms.author: jdaly
 ---
+<!-- 
+Was Mike Carter
+This topic was not migrated it was written for PowerApps 
 
+Overlap with content in https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-entities
+
+-->
 # Entity metadata
 
 Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in Common Data Service for Apps.
@@ -30,7 +36,7 @@ Each entity has a unique name defined when it is created. This name is presented
 |`CollectionSchemaName`|A plural form of the Schema name. i.e. Accounts|
 |`LogicalName`|All lower-case version of the schema name. i.e. account|
 |`LogicalCollectionName`|All lower-case version of the collection schema name. i.e. accounts|
-|`EntitySetName`|Used to identify collections with the Web API. By default, it is the same as the logical collection name.<br />It is possible to change the Entity Set name by programmatically updating the metadata. But this should only be done before any Web API code is written for the entity. More information: [Dynamics 365 Customer Engagement Developer Guide: Web API types and operations > Change the name of an entity set](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#change-the-name-of-an-entity-set)|
+|`EntitySetName`|Used to identify collections with the Web API. By default, it is the same as the logical collection name.<br />It is possible to change the Entity Set name by programmatically updating the metadata. But this should only be done before any Web API code is written for the entity. More information: [Web API types and operations > Change the name of an entity set](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#change-the-name-of-an-entity-set)|
 
 > [!NOTE]
 > When you create a custom entity, the name you choose will be prepended with the customization prefix value of the solution publisher associated with the solution that the entity was created within. Other than the entity set name, you cannot change the names of an entity after it is created. If you want consistent names for metadata items in your solution, you should create them in the context of a solution you create associated with a solution publisher that contains the customization prefix you want to use. More information : [Create a solution publisher and solution](introduction-solutions.md#create-a-solution-publisher-and-solution)
@@ -44,7 +50,7 @@ Each entity also has three properties that can display localized values:
 |`DisplayCollectionName`|A plural form of the Display name. i.e. Accounts|
 |`Description`|A short sentence describing the entity i.e. *Business that represents a customer or potential customer. The company that is billed in business transactions.*|
 
-These are the localizable values that are used to refer to the entities in an app. These values can be changed at any time. To add or edit localized values see  [Dynamics 365 Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
+These are the localizable values that are used to refer to the entities in an app. These values can be changed at any time. To add or edit localized values see  [CDS for Apps Customization Guide: Translate customized entity and field text into other languages](/dynamics365/customer-engagement/customize/export-customized-entity-field-text-translation).
 
 
 ## Primary key
@@ -79,8 +85,8 @@ Each entity that supports entity images will have three supporting attributes.
 |`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image|
 
 More information: 
-- [Dynamics 365 Customer Engagement Developer Guide Image attributes](/dynamics365/customer-engagement/developer/image-attributes)
-- [Dynamics 365 Customer Engagement Developer Guide Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
+- [Common Data Service for Apps Developer Guide Image attributes](/dynamics365/customer-engagement/developer/image-attributes)
+- [Common Data Service for Apps Developer Guide Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
 
 > [!NOTE]
 > This is different from the icon displayed for an entity in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
@@ -131,7 +137,7 @@ This entity is used to add structure to activity entity `PartyListType` attribut
 
 You can query the `ActivityParty` entity, but you cannot create, retrieve, update, or delete an activity party outside of the activity that it is related to.
 More information: 
-- [Dynamics 365 Customer Engagement Developer Guide: ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
+- [ActivityParty entity](/dynamics365/customer-engagement/developer/activityparty-entity).
 
 
 ### Child entities
@@ -145,8 +151,8 @@ For example, `PostComment`, `PostLike`, and `PostRole` are each children of the 
 Each alternate key definition describes one or more attributes in combination that will uniquely identify an entity instance. Alternate keys are typically only applied for integration with external systems. You can define alternate keys to uniquely identify a record. This is valuable if you are integrating data with a system that doesn’t support GUID unique identifier keys. You can define a single field value or combination of field values to uniquely identify an entity. Adding an alternate key will enforce a uniqueness constraint on these attributes. You will not be able to create or update another entity record to have the same values.
 
 More information: 
- - [Dynamics 365 Customer Engagement Customization Guide: Define alternate keys to reference Dynamics 365 records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
- - [Dynamics 365 Customer Engagement Developer Guide: Define alternate keys for an entity and Developer Guide: Synchronize Dynamics 365 data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
+ - [Common Data Service for Apps Customization Guide: Define alternate keys to reference CDS for Apps records](/dynamics365/customer-engagement/customize/define-alternate-keys-reference-records)
+ - [Define alternate keys for an entity and Developer Guide: Synchronize CDS for Apps data with external systems](/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems)
 
 ## Entity states
 
@@ -176,8 +182,8 @@ The set of valid state codes for an entity is not customizable, but the status c
 
 For custom entities, you can define additional criteria for valid transitions between statuses. 
 More information: 
-- [Dynamics 365 Customer Engagement Developer Guide: Customize entity attribute metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
-- [Dynamics 365 Customer Engagement Developer Guide: Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions).
+- [Customize entity attribute metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)
+- [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions).
 
 ### See also
 
