@@ -13,7 +13,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Export a solution for a specific version
 
 > [!NOTE]
->  This topic describes functionality that is available for minor version updates to major versions of Common Data Service for Apps. This capability is not available for the initial release of Dynamics 365, but will be when minor version updates included additional functionality.  
+>  This topic describes functionality that is available for minor version updates to major versions of Common Data Service for Apps. This capability is not available for the initial release of CDS for Apps, but will be when minor version updates included additional functionality.  
 
  Each new version of CDS for Apps will contain capabilities not found in earlier versions. Solutions that use new capabilities can’t be imported into an earlier version organization. Solutions exported from older version organizations can be imported into newer version organizations.  
 
@@ -25,7 +25,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 <a name="BKMK_ExportSolutionForVersion"></a>   
 
 ## Target a specific version when you export a solution  
- When you export a solution from CDS for Apps you will have the option to target the solution for a specific Dynamics 365 version. For Dynamics 365 7.1.0.0 version the options are 7.1 (default) and 7.0. When you choose 7.0, any new capabilities introduced in 7.1.0.0 will not be included in the exported solution and any organizations still using earlier versions of 7.1.0.0 will be able to install the solution.  
+ When you export a solution from CDS for Apps you will have the option to target the solution for a specific Dynamics 365 version. For Dynamics 365 8.2.0.0 version the options are 8.2 (default), 8.1 and 8.0. When you choose 8.0, any new capabilities introduced in 8.1.0.0 will not be included in the exported solution and any organizations still using earlier versions of 8.1.0.0 will be able to install the solution.  
 
  When you export your solution to target an earlier version the export dialog can display two possible messages:  
 
@@ -35,7 +35,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
  **The following components are removed or modified as part of the export**  
  Below this message a table lists the solution component items that were modified or not included in the exported solution.  
 
- The information visible in the dialog can also be found in the exported solution file. When you export a solution to target a specific version, the name of the file will specify the target solution using the following naming convention:*Solution Name*<em>*Solution_Version_Number*_target_CRM\\</em>*Target Dynamics 365 version number*.zip. For example, an unmanaged solution with the name Sample Solution with solution version 2.0 that is exported to target the version 7.0 will have the name SampleSolution_2_0_target_CRM_7.0.zip. When you extract the contents of this compressed file you will find a filteredcomponents.xml file containing data detailing which actions were performed. You can open this file using Excel to view a report of which solution components were edited or removed.  
+ The information visible in the dialog can also be found in the exported solution file. When you export a solution to target a specific version, the name of the file will specify the target solution using the following naming convention:*Solution Name*<em>*Solution_Version_Number*_target_CRM\\</em>*Target Dynamics 365 version number*.zip. For example, an unmanaged solution with the name Sample Solution with solution version 2.0 that is exported to target the version 8.0 will have the name SampleSolution_2_0_target_CRM_8.0.zip. When you extract the contents of this compressed file you will find a filteredcomponents.xml file containing data detailing which actions were performed. You can open this file using Excel to view a report of which solution components were edited or removed.  
 
 <a name="BKMK_Changes"></a>   
 
@@ -68,6 +68,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
  When a solution component existed in the targeted version but was modified to have a dependency on a solution component that will be removed, that solution component may be replaced with the definition of the solution component that was defined for the targeted version.  
 
 <a name="BKMK_TargetVersion"></a>   
+
 ## Select a target version programmatically  
 
  Use the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> to export a solution programmatically. After Dynamics 365 6.0.0.0 this message has a new optional <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.TargetVersion>`String` property you can use to set to “7.0.0.0” if you wish to export to the earlier version.  
