@@ -26,7 +26,7 @@ The tutorial will follow the company, Contoso, which is a pet grooming business 
 
 ## Prerequisites
 
-Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already have a PowerApps account, select the **Get started free** link from [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). If you don’t already have a PowerApps account, select the **Get started free** link from [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Create a custom entity
 
