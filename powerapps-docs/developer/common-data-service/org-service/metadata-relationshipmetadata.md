@@ -144,7 +144,7 @@ public bool EligibleCreateOneToManyRelationship(string referencedEntity,
 
 ## Create an N:N entity relationship  
 
- The following sample uses a [EligibleCreateManyToManyRelationship](create-retrieve-entity-relationships.md#BKMK_EligibleCreateManyToManyRelationship) method to verify that the `Account` and `Campaign` entities can participate in a N:N entity relationship and then creates the entity relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>.  
+ The following sample uses a [EligibleCreateManyToManyRelationship](#EligibleCreateManyToManyRelationship) method to verify that the `Account` and `Campaign` entities can participate in a N:N entity relationship and then creates the entity relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>.  
   
 ```csharp
 bool accountEligibleParticipate =
