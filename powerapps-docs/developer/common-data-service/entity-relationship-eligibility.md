@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Entity relationship eligibility (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "The article lists the messages that you can use to determine whether entities can participate in entity relationships" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -12,6 +12,22 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Entity relationship eligibility
 
-<!-- 
-Was Mike Carter
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/entity-relationship-eligibility -->
+Before you create an entity relationship you should confirm whether the entity is eligible to participate in the relationship. The following table lists the messages that you can use to determine whether entities can participate in entity relationships.  
+  
+|Message|Web API Operation|SDK Assembly|  
+|-------------|-----------------|----------------|  
+|CanBeReferenced</br>Checks whether the specified entity can be the primary entity (one) in a one-to-many relationship.|<xref href="Microsoft.Dynamics.CRM.CanBeReferenced?text=CanBeReferenced Action" />|<xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencedRequest>|  
+|CanBeReferencing</br>Checks whether the specified entity can be the referencing entity (many) in a one-to-many relationship.|<xref href="Microsoft.Dynamics.CRM.CanBeReferencing?text=CanBeReferencing Action" />|<xref:Microsoft.Xrm.Sdk.Messages.CanBeReferencingRequest>|  
+|CanManyToMany</br>Checks whether the entity can participate in a many-to-many relationship.|<xref href="Microsoft.Dynamics.CRM.CanManyToMany?text=CanManyToMany Action" />|<xref:Microsoft.Xrm.Sdk.Messages.CanManyToManyRequest>|  
+|GetValidManyToMany</br>Returns the set of entities that can participate in a many-to-many relationship.|<xref href="Microsoft.Dynamics.CRM.GetValidManyToMany?text=GetValidManyToMany Function" />|<xref:Microsoft.Xrm.Sdk.Messages.GetValidManyToManyRequest>|  
+|GetValidReferencedEntities</br>Returns the set of entities that are valid as the primary entity (one) from the specified entity in a one-to-many relationship.|<xref href="Microsoft.Dynamics.CRM.GetValidReferencedEntities?text=GetValidReferencedEntities Function" />|<xref:Microsoft.Xrm.Sdk.Messages.GetValidReferencedEntitiesRequest>|  
+|GetValidReferencingEntities</br>Returns the set of entities that are valid as the related entity (many) to the specified entity in a one-to-many relationship.|<xref href="Microsoft.Dynamics.CRM.GetValidReferencingEntities?text=GetValidReferencingEntities Function" />|<xref:Microsoft.Xrm.Sdk.Messages.GetValidReferencingEntitiesRequest>|  
+  
+### See also  
+ [Customize Entity Relationship Metadata](customize-entity-relationship-metadata.md)   
+ [Extend the Metadata Model for Dynamics 365](org-service/use-organization-service-metadata.md)   
+ [Entity Relationship Metadata](customize-entity-relationship-metadata.md)   
+ [Entity Relationship Messages](entity-relationship-metadata-messages.md)   
+ [Entity Relationship Behavior](entity-relationship-behavior.md)   
+ [Create a 1:N Entity Relationship](org-service/create-retrieve-entity-relationships.md#BKMK_Create1NEntityRelationship)   
+ [Create an N:N Entity Relationship](org-service/create-retrieve-entity-relationships.md#BKMK_CreateNNEntityRelationship)
