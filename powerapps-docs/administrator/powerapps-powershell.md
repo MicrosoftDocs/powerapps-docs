@@ -11,7 +11,7 @@ ms.author: jamesol
 ---
 
 # PowerShell support for PowerApps (preview)
-With the preview launch of the PowerShell cmdlets for app creators and administrators, you can automate many of the monitoring and management tasks that are only possible manually today in [PowerApps](https://web.powerapps.com) or the [PowerApps Admin center](https://admin.powerapps.com).
+With the preview launch of the PowerShell cmdlets for app creators and administrators, you can automate many of the monitoring and management tasks that are only possible manually today in [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or the [PowerApps Admin center](https://admin.powerapps.com).
 
 ## Installation
 To run the PowerShell cmdlets for app creators, do the following:
