@@ -18,7 +18,7 @@ manager: "brycho"
 
 Solution explorer provides one way to Create and edit global option sets for Common Data Service for Apps using Common Data Service for Apps.
 
-The [PowerApps portal](https://web.powerapps.com) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit global option sets for Common Data Service for Apps](create-edit-global-option-sets.md)
 - [Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)
 

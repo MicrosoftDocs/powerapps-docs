@@ -20,7 +20,7 @@ manager: "kvivek"
 
 # Create and edit entities using PowerApps portal
 
-The [PowerApps portal](https://web.powerapps.com) provides an easy way to create and edit entities for  Common Data Service for Apps.
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entities for  Common Data Service for Apps.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create and edit entities in Common Data Service for Apps](create-edit-entities.md)
@@ -28,7 +28,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View entities
 
-1. From the [PowerApps portal](https://web.powerapps.com), select either **Model-driven** or **Canvas** design mode.
+1. From the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
 2. Select **Data** > **Entities**
 
 ![View entities](media/view-entities-portal.png)

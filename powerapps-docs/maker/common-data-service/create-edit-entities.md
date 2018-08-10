@@ -25,7 +25,7 @@ There are two designers you can use to create an entity:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: <br />[Tutorial: Create a custom entity that has components in PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />[Create and edit entities using PowerApps portal](create-edit-entities-portal.md)|
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: <br />[Tutorial: Create a custom entity that has components in PowerApps](/powerapps/maker/common-data-service/create-custom-entity)<br />[Create and edit entities using PowerApps portal](create-edit-entities-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information [Create and edit entities using solution explorer](create-edit-entities-solution-explorer.md)|
 
 > [!NOTE]
