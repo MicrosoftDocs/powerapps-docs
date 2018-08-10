@@ -49,9 +49,9 @@ For example, a salesperson may want to know the weighted revenue for an opportun
 
 ## Create a calculated field
 
-Use the field editor to specify a calculated field. In this example we will use [PowerApps](https://web.powerapps.com) but the steps are similar using solution explorer. More information: [Create and edit fields](create-edit-fields.md)
+Use the field editor to specify a calculated field. In this example we will use [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) but the steps are similar using solution explorer. More information: [Create and edit fields](create-edit-fields.md)
   
-1. Open [PowerApps](https://web.powerapps.com)
+1. Open [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 1. Expand **Data** > **Entities**.  
 1. Select the entity you want and choose **Fields**. Choose **Add Field**.  
 1. Provide the required information for the field, including the **Display name**, **Name** and **Data type**. 

@@ -32,7 +32,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 
 ## Specify the source data
 
-1. Sign in to [PowerApps](https://web.powerapps.com), and then click or tap the down arrow for **Data** near the left edge.
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
 
 	![PowerApps home page](./media/data-platform-cds-newentity-pq/sign-in.png)
 

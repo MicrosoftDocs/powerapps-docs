@@ -21,7 +21,7 @@ manager: "kvivek"
 
  When you create or edit a view you can configure the sort order for either ascending or descending.   
   
-1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
 
     ![Model-driven design mode](media/model-driven-switch.png)
 
