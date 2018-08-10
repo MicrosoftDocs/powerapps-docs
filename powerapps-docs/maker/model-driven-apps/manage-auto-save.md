@@ -52,7 +52,7 @@ Auto-save helps app users focus on their work without having to manage saving da
 > [!NOTE]
 >  Auto-save will be disabled for the form, but data will still be saved whenyou  select the ![Auto save button](media/auto-save-icon.png "Auto save button") button in the lower-right corner. If you attempt to navigate away from a form or close a form where data has been changed they will get prompt to save their changes before they are allowed to navigate away or close the form.  
   
-1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
 
     ![Model-driven design mode](../model-driven-apps/media/model-driven-switch.png)
 
