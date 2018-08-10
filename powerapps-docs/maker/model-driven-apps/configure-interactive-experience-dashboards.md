@@ -149,7 +149,7 @@ The following procedure provides the steps to enable the security roles for the 
   
 ### Configure a multi-stream interactive dashboard using the 4-column layout  
  
-1.	Sign in to [PowerApps](https://web.powerapps.com).
+1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.	Select **Model-driven** (lower left).  
   
@@ -205,7 +205,7 @@ The following procedure provides the steps to enable the security roles for the 
   
 #### Edit or delete individual streams of an existing dashboard  
   
-1. Sign in to [PowerApps](https://web.powerapps.com).   
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).   
   
 2. Select **Model-driven** (lower left), **Data** > **Entities** > select the entity you want. Select the **Dashboards** tab.  
   
@@ -226,7 +226,7 @@ The following procedure provides the steps to enable the security roles for the 
 ### Configure an entity-specific dashboard  
  An entity-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but you do it in the different place in the UI and there are other minor differences. For example, instead of selecting an entity, some fields in the entity-specific dashboard are preset to the entity for which you are creating the dashboard.  
   
-1.	Sign in to [PowerApps](https://web.powerapps.com).
+1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.	Select **Model-driven** (lower left).  
   
