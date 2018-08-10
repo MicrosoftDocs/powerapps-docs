@@ -71,7 +71,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 ## Select a target version programmatically  
 
- Use the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> to export a solution programmatically. After Dynamics 365 6.0.0.0 this message has a new optional <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.TargetVersion>`String` property you can use to set to “7.0.0.0” if you wish to export to the earlier version.  
+ Use the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> to export a solution programmatically. After Dynamics 365 6.0.0.0 this message has a new optional <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.TargetVersion>`String` property you can use to set to “8.0.0.0” if you wish to export to the earlier version.  
 
 ### See also  
  [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
