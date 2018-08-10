@@ -6,7 +6,7 @@ manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 07/25/2018
+ms.date: 05/01/2018
 ms.author: clwesene
 ---
 
@@ -14,10 +14,10 @@ ms.author: clwesene
 App makers can use most of the entities available within Common Data Service (CDS) for Apps (including custom entities and entities that are part of the Common Data Model) to create apps and flows for users who have a PowerApps Plan 1 or Microsoft Flow Plan 1 license. In some cases, entities contain complex business logic or are tied to Dynamics 365 applications that require app users to have a specific license. 
 
 
-|Entity  |Description  |Requirement  |
+|Entity    |Description    |Requirement    |
 |---------|---------|---------|
-|Entities with complex business logic  | These are entities that use complex server-side business logic. For example, any entity that uses a real-time workflow or code plug-in.     | [PowerApps Plan 2](https://powerapps.microsoft.com/pricing/) or [Flow Plan 2](https://flow.microsoft.com/pricing/)  | 
-|Restricted entities    | These are entities that are not standard with Common Data Service for Apps but are included in a Dynamics 365 customer engagement application or third-party solution. For example, the knowledge article, goal, and entitlement entities.    | [A Dynamics 365 plan](https://dynamics.microsoft.com/pricing/)    |
+|Entities with complex business logic   | These are entities that use complex server-side business logic. For example, any entity that uses a real-time workflow or code plug-in.       |  [PowerApps Plan 2](https://powerapps.microsoft.com/pricing/) or [Flow Plan 2](https://flow.microsoft.com/pricing/)        |
+|Restricted entities  |  These are entities that are not standard with Common Data Service for Apps but are included in a Dynamics 365 customer engagement application or third-party solution. For example, the knowledge article, goal, and entitlement entities.     |  [A Dynamics 365 plan](https://dynamics.microsoft.com/pricing/)      | 
 
 
 > [!NOTE]
@@ -32,7 +32,7 @@ Entities that include the following complex server-side logic require users of a
     > [!NOTE]
     >  Only workflows that are converted to a real-time workflow are considered real-time and synchronous. Workflows that are run in the background can still be used with the appropriate PowerApps plan and do not require additional licenses.
 
-To know whether or not you added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment. For the list of entities which may contain server side logic after installing a Dynamics 365 application, see [Complex entities requiring PowerApps Plan 2 licenses](data-platform-complex-entities.md) 
+To know whether or not you added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment. For the list of entities which may contain server side logic after installing a Dynamics 365 application, see [Complex entities requiring PowerApps Plan 2 licenses](data-platform-complex-entities.md)  
 
 ### Impacting license requirements when adding complex business logic
 App makers can add code plug-ins and real-time workflows to entities within CDS for Apps, but doing so could change the license requirements for users of apps already deployed. App makers should be cautious when adding complex business logic to an entity and should first check which apps use the entity and whether users of those apps have the appropriate licenses.

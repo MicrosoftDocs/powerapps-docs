@@ -3,8 +3,7 @@ title: Model-driven sample apps
 description: Understand how to get, customize, and remove model-driven sample apps.
 documentationcenter: na
 author: caburk
-manager: kfile
-
+manager: kvivek
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
@@ -67,7 +66,7 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
     ![Delete solution](media/overview-model-driven-samples/delete-solution.png)
 
-<em>Alternatively navigate to the list of solutions by clicking **Advanced</em>* in the maker portal and delete everything in the URL after .dynamics.com/*
+*Alternatively navigate to the list of solutions by clicking **Advanced** in the maker portal and delete everything in the URL after .dynamics.com/*
 
 > [!IMPORTANT]
 > Do not delete other system solutions unless you're aware of the impact.

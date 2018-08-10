@@ -37,7 +37,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 
 ## Create a business rule
   
-1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
+1. Sign in to [PowerApps](https://web.powerapps.com), and then click or tap the down arrow for **Data** near the left edge.
 
 2. In the list that appears, click or tap **Entities**.
   
