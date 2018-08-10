@@ -42,7 +42,7 @@ Depending on where your JavaScript code is executed, you get the **gridContext**
 For more information about working with methods and events available for grids and subgrids, see [Grids and subgrids](reference/grids.md).
 
 > [!NOTE]
-> Getting the **gridContext** object for JavaScript functions for ribbon actions is different from how you get it in form scripting. More information: [Form and grid context in ribbon actions](../customize-dev/pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions)
+> Getting the **gridContext** object for JavaScript functions for ribbon actions is different from how you get it in form scripting. More information: [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions)
 
 ## Related topics
 
