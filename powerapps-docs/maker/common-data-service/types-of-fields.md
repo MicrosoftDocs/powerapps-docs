@@ -20,7 +20,7 @@ ms.tgt_pltfrm:
 ---
 # Types of fields
 
-The names used for types depends on the designer used. [PowerApps portal](https://web.powerapps.com) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
+The names used for types depends on the designer used. [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
 |Portal Data type |Solution Explorer  type| API type|
 |--|--|--|
