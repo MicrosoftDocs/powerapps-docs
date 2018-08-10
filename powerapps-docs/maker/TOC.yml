@@ -39,17 +39,15 @@
       href: ./canvas-apps/help-desk-install.md
   - name: Create your first app
     items:
-    - name: Generate an app from data
+    - name: 1 - Generate an app from data
       items:
       - name: From Common Data Service for Apps
         href: ./canvas-apps/data-platform-create-app.md
       - name: From SharePoint
         href: ./canvas-apps/app-from-sharepoint.md
-      - name: From within SharePoint
-        href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-data.md
-    - name: Make basic customizations
+    - name: 2 - Make basic customizations
       items:
       - name: 1 - Galleries
         href: ./canvas-apps/customize-layout-sharepoint.md
@@ -57,7 +55,7 @@
         href: ./canvas-apps/customize-forms-sharepoint.md
       - name: 3 - Cards
         href: ./canvas-apps/customize-card.md
-    - name: Create an app yourself
+    - name: 3 - Create an app yourself
       items:
       - name: From Common Data Service for Apps
         href: ./canvas-apps/data-platform-create-app-scratch.md
