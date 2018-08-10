@@ -17,7 +17,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 Visualizations let you see your business data graphically. A visualization is attached to an entity in Common Data Services for Apps. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard. More information: [Analyze Data with Dashboards](analyze-data-with-dashboards.md)  
   
- You can use a chart or a web resource as a visualization in CDS for Apps. For charts, you can use the chart designer in Model-driven Apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into Model-driven Apps. More information: [Sample: Create, Retrieve, Update, and Delete a Chart](sample-create-retrieve-update-delete-chart.md)  
+ You can use a chart or a web resource as a visualization in CDS for Apps. For charts, you can use the chart designer in Model-driven Apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into Model-driven Apps.
   
 <a name="VisualizationTypes"></a>   
 ## Visualization ownership  
@@ -49,9 +49,9 @@ Visualizations let you see your business data graphically. A visualization is at
   
 <a name="WebResources"></a>   
 ## Web resource visualizations  
- Web resources are virtual files that are stored in the Model-driven Apps database and may be retrieved using a unique URL address. You can display an existing web resource as a visualization, and display it in the **Charts** area in Model-driven Apps together with other charts for an entity. For more information about web resources, see [Web Resources](../web-resources.md).  
+ Web resources are virtual files that are stored in the Model-driven Apps database and may be retrieved using a unique URL address. You can display an existing web resource as a visualization, and display it in the **Charts** area in Model-driven Apps together with other charts for an entity. For more information about web resources, see [Web resources for model-driven apps](web-resources.md).  
   
- You can use the following types of web resources in a visualization: [WWebpage (HTML) web resources](../webpage-html-web-resources.md) and [Image (JPG, PNG, GIF, ICO) Web Resources](../image-web-resources.md). For more information about how to create a visualization with a web resource, see [Create a Web Resource Visualization](create-visualization-chart.md#CreateWRVisualization).  
+ You can use the following types of web resources in a visualization: [Webpage (HTML) web resources](webpage-html-web-resources.md) and [Image (JPG, PNG, GIF, ICO) Web Resources](image-web-resources.md). For more information about how to create a visualization with a web resource, see [Create a web resource visualization](create-visualization-chart.md#create-a-web-resource-visualization).  
   
 <a name="SupportedVisualizationEntities"></a>   
 ## Entities supported for visualizations  
@@ -119,9 +119,8 @@ UoMSchedule
  [Actions on Chart](actions-visualizations-charts.md)   
  [Create a Chart](create-visualization-chart.md)   
  [Sample Charts](sample-charts.md)   
- [Sample Code for Charts](sample-code-charts-visualizations.md)   
- [SavedQueryVisualization Entity](../entities/savedqueryvisualization.md)   
- [UserQueryVisualization Entity](../entities/userqueryvisualization.md)
+ [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md)   
+ [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md)
  [Download: Chart Controls for .NET Framework Language Pack](http://www.microsoft.com/downloads/details.aspx?FamilyId=581FF4E3-749F-4454-A5E3-DE4C463143BD&displaylang=en)   
  [Download: Chart Controls Add-on for Visual Studio](http://www.microsoft.com/downloads/details.aspx?FamilyId=1D69CE13-E1E5-4315-825C-F14D33A303E9&displaylang=en)   
  [Download: Chart Controls for .NET Framework Documentation](http://go.microsoft.com/fwlink/p/?LinkId=128301)   

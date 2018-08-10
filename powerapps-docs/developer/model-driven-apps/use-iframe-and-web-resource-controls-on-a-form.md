@@ -26,12 +26,8 @@ IFRAME and web resource controls embed content from another location in pages by
 
 -   [Web Page (HTML) Web Resources](webpage-html-web-resources.md)  
 
--   [Silverlight (XAP) Web Resources](silverlight-xap-web-resources.md)  
-
 -   [Image (JPG, PNG, GIF, ICO) Web Resources](image-web-resources.md)  
 
-> [!NOTE]
-> Silverlight is included for backward compatibility only and is not recommended. More inforamtion: [Silverlight (XAP) Web Resources](silverlight-xap-web-resources.md)  
 
  The following sections describe your options if you want these controls to show more than static content.  
 

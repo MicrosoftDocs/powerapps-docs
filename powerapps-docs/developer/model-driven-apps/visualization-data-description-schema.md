@@ -79,7 +79,6 @@ The following is the schema for the data description XML string for charts in vi
 ```  
 ### See also  
  [Customize Visualizations and Dashboards](customize-visualizations-dashboards.md)   
- [Schemas Used in Common Data Services for Apps](../schemas-used-dynamics-365.md)   
  [Understanding Charts: Underlying Data and Chart Representation](understand-charts-underlying-data-chart-representation.md)   
  [Sample Charts](sample-charts.md)   
- [Use FetchXML to Construct a Query](../org-service/use-fetchxml-construct-query.md)
+ [Use FetchXML to construct a query](../common-data-service/use-fetchxml-construct-query.md)

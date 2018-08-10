@@ -79,7 +79,7 @@ On success, returns a promise that contains an array of JSON objects (**entities
 
 ## Examples
 
-Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../webapi/query-data-web-api.md) can be achieved using the **retrieveMutipleRecords** method. Some of the examples are listed below.
+Most of the scenarios/examples mentioned in [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md) can be achieved using the **retrieveMutipleRecords** method. Some of the examples are listed below.
 
 ### Basic retrieve multiple
 
@@ -188,12 +188,12 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=prim
 ```
 
 
-For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../webapi/query-data-web-api.md).
+For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md).
 
  
 ### Related topics
 
-[Query Data using the Web API](../../../webapi/query-data-web-api.md)
+[Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md)
 
 [Xrm.WebApi.retrieveRecord](retrieveRecord.md)
 

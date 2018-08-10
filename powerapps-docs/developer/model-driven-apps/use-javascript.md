@@ -32,7 +32,7 @@ Model-driven Apps provide many opportunities to use JavaScript. All JavaScript u
 
 ### Command bar (ribbon) commands  
 
- When you customize the Model-driven Apps command bar, you can configure commands for controls that you add. These commands contain rules that control whether the control is enabled and what action is performed when the control is used. For more information, see [Customize commands and the ribbon](../developer/customize-dev/customize-commands-ribbon.md).  
+ When you customize the Model-driven Apps command bar, you can configure commands for controls that you add. These commands contain rules that control whether the control is enabled and what action is performed when the control is used. For more information, see [Customize commands and the ribbon](customize-commands-ribbon.md).  
   
 <a name="bkmk_webResources"></a>   
 
@@ -131,11 +131,9 @@ Model-driven Apps provides an organization-owned entity that stores a binary rep
   
 ### See also
 
- [Write Client Application Extensions](extend-client.md)<br />
- [Work data using web resources](work-data-using-web-resources.md)<br />
  [Client scripting using JavaScript](clientapi/client-scripting.md)<br />
- [Customize the Ribbon](customize-dev/customize-commands-ribbon.md)<br />
+ [Customize commands and the ribbon](customize-commands-ribbon.md)
  [Web Resources](web-resources.md)<br />
- [Use the Web API with web resources](webapi/get-started-web-api-client-side-javascript.md)<br />
+ [Get started with the Common Data Service for Apps Web API (client-side JavaScript)](../common-data-service/webapi/get-started-web-api-client-side-javascript.md)<br />
  [Understand the Client API Object Model](clientapi/understand-clientapi-object-model.md)<br />
  [Blog: Debugging JavaScript code using browser developer tools](http://go.microsoft.com/fwlink/p/?LinkId=715699)<br />
