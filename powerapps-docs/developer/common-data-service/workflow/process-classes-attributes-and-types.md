@@ -191,6 +191,6 @@ public InArgument<EntityReference> Contact { get; set; }
   
 ### See also  
 
-[Custom workflow activities (workflow assemblies)](../custom-workflow-activities-workflow-assemblies.md)<br />
+[Custom workflow activities (workflow assemblies)](custom-workflow-activities-workflow-assemblies.md)<br />
 [Adding Metadata to the Custom Workflow Activity](add-metadata-custom-workflow-activity.md)<br />
 [Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)

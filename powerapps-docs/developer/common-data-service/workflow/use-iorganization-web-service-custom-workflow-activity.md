@@ -47,7 +47,7 @@ protected override void Execute(CodeActivityContext executionContext)
   
 ### See also  
 
-[Custom workflow activities (workflow assemblies)](../custom-workflow-activities-workflow-assemblies.md)<br />
+[Custom workflow activities (workflow assemblies)](custom-workflow-activities-workflow-assemblies.md)<br />
 [Register and use a custom workflow activity assembly](register-use-custom-workflow-activity-assembly.md)<br />
 [Sample: Create a Custom Workflow Activity](sample-create-custom-workflow-activity.md)<br />
 <!-- TODO:
