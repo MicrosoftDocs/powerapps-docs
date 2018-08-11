@@ -178,12 +178,12 @@ _serviceProxy.Execute(req);
 ```
   
 ### See also  
- [Use the IOrganizationService Sample and Helper Code](use-sample-helper-code.md)   
+ [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)   
  <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>   
  [Customize entity metadata](../customize-entity-metadata.md)   
- [Which Entities are Customizable?](../which-entities-are-customizable.md)   
- [Retrieve, update, and delete entities](retrieve-update-delete-entities.md)   
- [Create and update an entity than can be emailed](create-update-entity-emailed.md)   
+ [Which Entities are Customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
+ [Retrieve, update, and delete entities](/dynamics365/customer-engagement/developer/retrieve-update-delete-entities)   
+ [Create and update an entity than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
  [Create a custom activity entity](create-custom-activity-entity.md)   
- [Change Entity Icons](../modify-icons-entity.md)   
- [Change Entity Messages](../modify-messages-entity.md)
+ [Change Entity Icons](/dynamics365/customer-engagement/developer/modify-icons-entity)   
+ [Change Entity Messages](/dynamics365/customer-engagement/developer/modify-messages-entity)

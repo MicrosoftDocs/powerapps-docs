@@ -38,17 +38,17 @@ In Common Data Service for Apps, you can use the <xref:Microsoft.Xrm.Sdk.Query.Q
   
  [Use a left outer join in QueryExpression to query for records "not in"](use-left-outer-join-queryexpression-query-records-not-in.md)  
   
- [Testing for a Null Value](test-null-value.md)  
+ [Testing for a Null Value](/dynamics365/customer-engagement/developer/test-null-value)  
   
  [Page Large Result Sets with Query Expression and FetchXML](page-large-result-sets-with-queryexpression.md)  
   
- [Sample: Retrieve With One-To-Many Relationship](sample-retrieve-with-one-to-many-relationship.md)  
+ [Sample: Retrieve With One-To-Many Relationship](/dynamics365/customer-engagement/developer/org-service/sample-retrieve-with-one-to-many-relationship)  
   
- [Sample: Retrieve Multiple with Query By Attribute](sample-retrieve-multiple-querybyattribute-class.md)  
+ [Sample: Retrieve Multiple with Query By Attribute](org-service/samples/retrieve-multiple-querybyattribute-class.md)  
   
- [Sample: Retrieve Multiple with Query Expression](sample-retrieve-multiple-queryexpression-class.md)  
+ [Sample: Retrieve Multiple with Query Expression](org-service/samples/retrieve-multiple-queryexpression-class.md)  
   
- [Sample: Use QueryExpression with a paging cookie](sample-use-queryexpression-with-a-paging-cookie.md)  
+ [Sample: Use QueryExpression with a paging cookie](/dynamics365/customer-engagement/developer/org-service/sample-use-queryexpression-with-a-paging-cookie)  
   
 ## Reference  
  <xref:Microsoft.Xrm.Sdk.Query.QueryBase>  

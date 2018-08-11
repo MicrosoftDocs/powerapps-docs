@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> classes let you build efficient metadata queries and capture changes to metadata as they occur over time.  
   
- All code examples referenced in this document are found in [Sample: Query Metadata and Detect Changes](org-service/sample-query-metadata-detect-changes.md).  
+ All code examples referenced in this document are found in [Sample: Query Metadata and Detect Changes](/dynamics365/customer-engagement/developer/org-service/sample-query-metadata-detect-changes).  
   
  The technical article [Query Metadata Using JavaScript](https://msdn.microsoft.com/library/jj919080.aspx) provides a JavaScript library to use the objects and messages in client-sided code.  
   
@@ -44,9 +44,9 @@ The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xr
   
  With a persistent metadata cache your application will have to query all the necessary metadata the first time it connects. Then you will save that data in the application. The next time the application connects to the server you can retrieve just the difference since your last query, which should be much less data to transmit, and then merge the changes into your metadata cache when your application is loading.  
   
- How frequently you should poll for metadata changes depends on the expected volatility of metadata for your application and how long your application will remaining running. There is no event available that you can use to detect when metadata changes occur. There is a limit to the number of days that deleted metadata changes are saved and a request for changes that occurs beyond that limit will require a full re-initialization of the metadata cache. For more information see [Deleted metadata expiration](retrieve-detect-changes-metadata.md#BKMK_DeletedMetadataExpiration).  
+ How frequently you should poll for metadata changes depends on the expected volatility of metadata for your application and how long your application will remaining running. There is no event available that you can use to detect when metadata changes occur. There is a limit to the number of days that deleted metadata changes are saved and a request for changes that occurs beyond that limit will require a full re-initialization of the metadata cache. For more information see [Deleted metadata expiration](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata#BKMK_DeletedMetadataExpiration).  
   
- When there are no changes the query should respond quickly and there will be no data to transmit back. However, if there are changes, especially if there are deleted metadata items that have to be removed from your cache, you can expect that the request may take some additional time to finish. More information: [Performance When Retrieving Deleted Metadata](retrieve-detect-changes-metadata.md#BKMK_PerformanceRetrievingDeletedMetadata)  
+ When there are no changes the query should respond quickly and there will be no data to transmit back. However, if there are changes, especially if there are deleted metadata items that have to be removed from your cache, you can expect that the request may take some additional time to finish. More information: [Performance When Retrieving Deleted Metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata#BKMK_PerformanceRetrievingDeletedMetadata)  
   
 <a name="BKMK_RetrieveJusttheMetadataYouNeed"></a>
    
@@ -379,7 +379,7 @@ protected RetrieveMetadataChangesResponse getMetadataChanges(
    
 ## Retrieve information about deleted metadata  
 
- The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse.DeletedMetadata> property will return a <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataCollection> when the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.DeletedMetadataFilters> properties are set on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest>. The <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataCollection> contains the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> values of any <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>,  <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> or <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase> objects that have been deleted from the system in a time limit. For more information, see [Deleted metadata expiration](retrieve-detect-changes-metadata.md#BKMK_DeletedMetadataExpiration).  
+ The <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse.DeletedMetadata> property will return a <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataCollection> when the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.ClientVersionStamp> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.DeletedMetadataFilters> properties are set on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest>. The <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataCollection> contains the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> values of any <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>,  <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata> or <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase> objects that have been deleted from the system in a time limit. For more information, see [Deleted metadata expiration](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata#BKMK_DeletedMetadataExpiration).  
   
  Use the <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters> enumeration with the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest>.<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest.DeletedMetadataFilters> to limit the information to only those types of metadata you are interested in. The <xref:Microsoft.Xrm.Sdk.Metadata.Query.DeletedMetadataFilters> enumeration provides the following options:  
   
@@ -451,10 +451,10 @@ protected String updateOptionLabelList(EntityQueryExpression entityQueryExpressi
   
 ### See also  
  [Write Applications and Server Extensions](extend-dynamics-365-server.md)   
- [Offline Use of the Dynamics 365 Services](org-service/offline-use-services.md)   
- [Sample: Query Metadata and Detect Changes](org-service/sample-query-metadata-detect-changes.md)   
- [Extend the Metadata Model for Dynamics 365](org-service/use-organization-service-metadata.md)   
- [Customize Entity Metadata](customize-entity-metadata.md)   
- [Customize Entity Attribute Metadata](customize-entity-attribute-metadata.md)   
- [Customize Entity Relationship Metadata](customize-entity-relationship-metadata.md)   
+ [Offline Use of the Dynamics 365 Services](/dynamics365/customer-engagement/developer/org-service/offline-use-services)   
+ [Sample: Query Metadata and Detect Changes](/dynamics365/customer-engagement/developer/org-service/sample-query-metadata-detect-changes)   
+ [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
+ [Customize Entity Metadata](/dynamics365/customer-engagement/developer/customize-entity-metadata)   
+ [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
+ [Customize Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
  [Query Metadata Using JavaScript](https://msdn.microsoft.com/library/jj919080.aspx)

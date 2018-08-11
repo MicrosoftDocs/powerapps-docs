@@ -36,4 +36,4 @@ Document management can be enabled for those entities in Common Data Service for
 ### See also  
  [SharePoint Extensions for Dynamics 365](integrate-sharepoint.md)   
  [Actions on SharePoint Location Records](actions-on-sharepoint-location-records.md)   
- [Sample: Enable SharePoint Integration](sample-enable-document-management-entities.md)
+ [Sample: Enable SharePoint Integration](/dynamics365/customer-engagement/developer/integration-dev/sample-enable-document-management-entities)

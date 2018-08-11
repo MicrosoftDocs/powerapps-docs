@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 You use field security entities to apply field-level security, which restricts field access to specified users and teams. The scope of field-level security is global, which means that it applies to all records within the organization, regardless of the business unit hierarchical level to which the record or the user belongs. Field security works in all Common Data Service for Apps clients, including the Web client, Dynamics 365 for Outlook, and Dynamics. It applies to all components, such as the CDS for Apps web services, reports, search, offline, filtered views, auditing, and duplicate detection. For this release, field security can be applied to both custom fields and many out-of-box (OOB) fields.  
   
- For more information about how secured fields change the behavior of methods, see [How Field Security Can Be Used to Control Access to Field Values in Dynamics 365](security-dev/use-field-security-control-access-field-values.md).  
+ For more information about how secured fields change the behavior of methods, see [How Field Security Can Be Used to Control Access to Field Values in Dynamics 365](/dynamics365/customer-engagement/developer/security-dev/use-field-security-control-access-field-values).  
   
 > [!IMPORTANT]
 >  Field-level security profiles prevent unintended users from getting access to CDS for Apps data based on the profile definitions. If the SQL Server ACLs are misconfigured, or if there is a SQL injection issue, adversaries can get direct access to data in SQL Server thereby bypassing field level security restrictions. For more information, see [Overview of Web Application Security Threats](https://msdn.microsoft.com/library/f13d73y6.aspx).  
@@ -82,12 +82,12 @@ You use field security entities to apply field-level security, which restricts f
 |Use the <xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest> message to remove record access for a user or team.|Use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> message or the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*> method to remove secured field access for a user or team.|  
   
 ### See also  
- [The Security Model of Dynamics 365](/dynamics365/customer-engagement/developer/security-dev/security-model)   
+ [The Security Model of Dynamics 365](security-model.md)   
  [Administration and security entities](/dynamics365/customer-engagement/developer/administration-security-entities)   
  [FieldSecurityProfile Entity](/reference/entities/fieldsecurityprofile.md)   
  [FieldPermission Entity](/reference/entities/fieldpermission.md)   
  [PrincipalObjectAttributeAccess Entity](/reference/entities/principalobjectattributeaccess.md)   
  [Field-level data encryption](field-level-data-encryption.md)   
  [Sample: Retrieve Field Permissions](/dynamics365/customer-engagement/developer/sample-retrieve-field-permissions)   
- [Sample: Enable Field Security For An Entity](/dynamics365/customer-engagement/developer/sample-enable-field-security-entity)   
+ [Sample: Enable Field Security For An Entity](org-service/samples/enable-field-security-entity.md)   
  [Sample: Retrieve Field Sharing Records](/dynamics365/customer-engagement/developer/sample-retrieve-field-sharing-records)

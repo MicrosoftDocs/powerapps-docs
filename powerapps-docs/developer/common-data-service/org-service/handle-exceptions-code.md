@@ -125,8 +125,8 @@ Sync workflow 'Name of Entity Scope Business Rule returning Error' terminated wi
  When an uncaught exception is thrown that contains sensitive information that the user doesn’t have permission to see, the sensitive information in the exception is hidden from the user and a reference number is provided. This reference number refers to the related server event log entry and server trace entry. A system administrator can look up those entries and find more information about the exception.  
   
 ### See also  
- [Troubleshooting and error handling](troubleshooting-error-handling.md)   
- [Troubleshooting tips](troubleshooting-tips.md)   
+ [Troubleshooting and error handling](/dynamics365/customer-engagement/developer/troubleshooting-error-handling)   
+ [Troubleshooting tips](/dynamics365/customer-engagement/developer/troubleshooting-tips)   
  [Web service error codes](web-service-error-codes.md)   
- [Handle exceptions in plug-ins](../handle-exceptions-plugins.md)   
+ [Handle exceptions in plug-ins](/dynamics365/customer-engagement/developer/handle-exceptions-plugins)   
  [.NET Framework Developer Center](https://docs.microsoft.com/en-us/dotnet/framework/development-guide)

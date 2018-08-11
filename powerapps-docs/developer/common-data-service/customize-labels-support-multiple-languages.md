@@ -103,7 +103,7 @@ When you create customizations in Common Data Service for Apps, you can support 
 ### See also  
  [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
  [Customize Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)   
- [Modify Messages for an Entity](modify-messages-entity.md)     
+ [Modify Messages for an Entity](/dynamics365/customer-engagement/developer/modify-messages-entity)     
  <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata>   
  <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>    
  <xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata> 
