@@ -31,8 +31,8 @@
     href: tutorial-debug-plug-in.md
   - name: Update a plug-in
     href: tutorial-update-plug-in.md
-  - name: Create and register a workflow extension
-    href: create-register-workflow-extension.md
+  - name: Create workflow extension
+    href: workflow/tutorial-create-workflow-extension.md
   - name: Configure Azure (SAS) for integration with Customer Engagement
     href: walkthrough-configure-azure-sas-integration.md
   - name: Register an app with Azure Active Directory
@@ -85,7 +85,7 @@
     - name: Plug-ins
       href: plug-ins.md
     - name: Custom workflow activities 
-      href: custom-workflow-activities-workflow-assemblies.md
+      href: workflow/custom-workflow-activities-workflow-assemblies.md
     - name: Azure Integration
       href: azure-integration.md
       items: 
@@ -285,9 +285,7 @@
   - name: Workflow extensions
     items: 
     - name: Create a workflow extension
-      href: create-workflow-extension.md
-    - name: Create and register a workflow extension
-      href: create-register-workflow-extension.md
+      href: workflow/workflow-extensions.md
   - name: Web Hooks
     items:
     - name: Register a web hook

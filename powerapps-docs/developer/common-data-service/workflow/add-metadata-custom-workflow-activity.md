@@ -97,7 +97,7 @@ protected override void Execute(CodeActivityContext context)
   
 ### See also
 
-[Custom workflow activities (workflow assemblies)](../custom-workflow-activities-workflow-assemblies.md)   
+[Custom workflow activities (workflow assemblies)](custom-workflow-activities-workflow-assemblies.md)   
 [Creating a Custom Workflow Activity](create-custom-workflow-activity.md)   
 [Using the IOrganization Web Service within a Custom Workflow Activity](use-iorganization-web-service-custom-workflow-activity.md)   
 [Sample: Create a Custom Workflow Activity](sample-create-custom-workflow-activity.md)   

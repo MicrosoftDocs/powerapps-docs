@@ -271,7 +271,7 @@ namespace Microsoft.Crm.Sdk.Samples
   
 ### See also 
  
-[Custom Workflow Activities (Workflow Assemblies)](../custom-workflow-activities-workflow-assemblies.md)<br />
+[Custom Workflow Activities (Workflow Assemblies)](custom-workflow-activities-workflow-assemblies.md)<br />
 [Sample: Update Next Birthday Using a Custom Workflow Activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
 <!-- TODO:
 [Sample Code for Processes](../sample-code-processes.md)<br /> -->

@@ -1,5 +1,5 @@
 - name: Custom workflow activities (workflow assemblies)
-  href: ../custom-workflow-activities-workflow-assemblies.md
+  href: custom-workflow-activities-workflow-assemblies.md
   items:
   - name: Create a custom workflow activity
     href: create-custom-workflow-activity.md

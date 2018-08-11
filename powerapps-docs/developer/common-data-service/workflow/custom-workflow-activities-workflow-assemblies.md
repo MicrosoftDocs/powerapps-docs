@@ -16,7 +16,15 @@ ms.author: "jdaly"
 manager: "ryjones"
 ---
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies
+<!-- 
+
+I've started (and nearly completed a new topic which could condense many of the topics in this section.
+powerapps-docs/developer/common-data-service/workflow/workflow-extensions.md is new
+It supports a new tutorial: powerapps-docs/developer/common-data-service/workflow/tutorial-create-workflow-extension.md
+
+The rest of these are rather old and not clear why all separated into separate sections.
+
+https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/custom-workflow-activities-workflow-assemblies
  -->
 # Custom workflow activities (workflow assemblies)
 
@@ -28,16 +36,16 @@ After you have created an assembly that contains one or more custom workflow act
   
 ## In This Section  
 
-[Creating a Custom Workflow Activity](workflow/create-custom-workflow-activity.md)<br />
-[Adding Metadata to the Custom Workflow Activity](workflow/add-metadata-custom-workflow-activity.md)<br />
-[Using the Web Services within a Custom Workflow Activity](workflow/use-iorganization-web-service-custom-workflow-activity.md)<br />
-[Registering the Workflow Assembly](workflow/register-use-custom-workflow-activity-assembly.md)<br />
-[Debugging a Custom Workflow Activity](workflow/debug-custom-workflow-activity.md)<br />
-[Updating or Upgrading Custom Workflow Activity: Assembly Versioning](workflow/update-custom-workflow-activity-using-assembly-versioning.md)<br />
-[Process Classes, Attributes, and Dynamics 365 Types](workflow/process-classes-attributes-and-types.md)<br />
-[Sample: Create a custom workflow activity](workflow/sample-create-custom-workflow-activity.md)<br />
-[Sample: Update Next Birthday Using a Custom Workflow Activity](workflow/sample-update-next-birthday-using-custom-workflow-activity.md)<br />
-[Sample: Calculate a Credit Score with a Custom Workflow Activity](workflow/sample-calculate-credit-score-custom-workflow-activity.md)<br />
+[Creating a Custom Workflow Activity](create-custom-workflow-activity.md)<br />
+[Adding Metadata to the Custom Workflow Activity](add-metadata-custom-workflow-activity.md)<br />
+[Using the Web Services within a Custom Workflow Activity](use-iorganization-web-service-custom-workflow-activity.md)<br />
+[Registering the Workflow Assembly](register-use-custom-workflow-activity-assembly.md)<br />
+[Debugging a Custom Workflow Activity](debug-custom-workflow-activity.md)<br />
+[Updating or Upgrading Custom Workflow Activity: Assembly Versioning](update-custom-workflow-activity-using-assembly-versioning.md)<br />
+[Process Classes, Attributes, and Dynamics 365 Types](process-classes-attributes-and-types.md)<br />
+[Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)<br />
+[Sample: Update Next Birthday Using a Custom Workflow Activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
+[Sample: Calculate a Credit Score with a Custom Workflow Activity](sample-calculate-credit-score-custom-workflow-activity.md)<br />
   
 ## Related Sections
 

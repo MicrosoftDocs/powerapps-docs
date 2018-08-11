@@ -30,5 +30,5 @@ or
 To debug a custom workflow activity, copy the .pdb file for the assembly to the `%installdir%\server\bin\assembly` folder. The assembly can be deployed as on-disk or stored in the database. The recommended deployment is in the database, but for debugging you should select on-disk. Next, attach the debugger to the `CrmAsyncService.exe` process. Make sure that you remove the .pdb file when you’ve finished debugging because it uses memory to have it loaded. For detailed information, see [Debug a plug-In](../debug-plugin.md).   -->
   
 ### See also  
-[Custom workflow activities (workflow assemblies)](../custom-workflow-activities-workflow-assemblies.md)   
+[Custom workflow activities (workflow assemblies)](custom-workflow-activities-workflow-assemblies.md)   
 [Update a custom workflow activity using assembly versioning](update-custom-workflow-activity-using-assembly-versioning.md)
