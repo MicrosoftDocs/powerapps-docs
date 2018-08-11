@@ -64,7 +64,7 @@ You can extend the functionality of Common Data Service for Apps by creating cus
 ## Create an action using code  
  Typically, an action would be implemented by a customizer using the interactive workflow designer of the web application. However, developers can implement actions using SDK calls and deploy to an on-premises or IFD server if desired.  
   
- The workflow entity attributes that are used for an action are described in the following table. Sample code for a real-time workflow can be found in the topic [Create a real-time workflow in code](create-real-time-workflows.md#bkmk_create).  
+ The workflow entity attributes that are used for an action are described in the following table. Sample code for a real-time workflow can be found in the topic [Create a real-time workflow in code](/dynamics365/customer-engagement/developer/create-real-time-workflows.md#bkmk_create).  
   
 |Workflow attribute|Description|  
 |------------------------|-----------------|  
@@ -160,7 +160,7 @@ outputProperty1.Attributes.Add(new ArgumentDirectionAttribute(Microsoft.Xrm.Sdk
 <a name="bkmk_package"></a>   
 
 ## Package an action for distribution  
- To distribute your action so that it can be imported into a CDS for Apps organization, add your action to a CDS for Apps solution. This is easily done using the web application by navigating to **Settings** > **Customizations** > **Solutions**. You can also write code to create the solution. For more information about solutions, see [Package and distribute extensions](package-distribute-extensions-use-solutions.md).  
+ To distribute your action so that it can be imported into a CDS for Apps organization, add your action to a CDS for Apps solution. This is easily done using the web application by navigating to **Settings** > **Customizations** > **Solutions**. You can also write code to create the solution. For more information about solutions, see [Package and distribute extensions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).  
   
 <a name="bkmk_gentypes"></a>   
 ## Generate early-bound types for an action  
@@ -225,8 +225,8 @@ CrmSvcUtil.exe /url:https://<organizationUrlName>.api.crm.dynamics.com/XRMServic
 >  A best practice recommendation is that long running operations should be executed outside of CDS for Apps using .NET asynchronous or background processes.  
   
 ### See also  
- [Create real-time workflows](create-real-time-workflows.md)   
- [Use dialogs for guided processes](use-dialogs-guided-processes.md)   
- [Event Execution Pipeline](event-execution-pipeline.md)   
- [Write Workflows to Automate Business Processes](automate-business-processes-customer-engagement.md)   
+ [Create real-time workflows](/dynamics365/customer-engagement/developer/create-real-time-workflows)   
+ [Use dialogs for guided processes](/dynamics365/customer-engagement/developer/use-dialogs-guided-processes)   
+ [Event Execution Pipeline](/dynamics365/customer-engagement/developer/event-execution-pipeline)   
+ [Write Workflows to Automate Business Processes](/dynamics365/customer-engagement/developer/automate-business-processes-customer-engagement)   
  [Customize your system](https://technet.microsoft.com/library/dn531158.aspx)

@@ -184,6 +184,6 @@ _serviceProxy.Execute(req);
  [Which Entities are Customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
  [Retrieve, update, and delete entities](/dynamics365/customer-engagement/developer/retrieve-update-delete-entities)   
  [Create and update an entity than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
- [Create a custom activity entity](create-custom-activity-entity.md)   
+ [Create a custom activity entity](/dynamics365/customer-engagement/developer/create-custom-activity-entity)   
  [Change Entity Icons](/dynamics365/customer-engagement/developer/modify-icons-entity)   
  [Change Entity Messages](/dynamics365/customer-engagement/developer/modify-messages-entity)

@@ -450,7 +450,7 @@ protected String updateOptionLabelList(EntityQueryExpression entityQueryExpressi
  When a metadata item is deleted it is saved in the database and not in the Dynamics 365 metadata cache. Although the deleted metadata is limited to just the <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase.MetadataId> and the type of metadata item, accessing the database is an operation that will require more server resources than just querying for changes.  
   
 ### See also  
- [Write Applications and Server Extensions](extend-dynamics-365-server.md)   
+ [Write Applications and Server Extensions](/dynamics365/customer-engagement/developer/extend-dynamics-365-server)   
  [Offline Use of the Dynamics 365 Services](/dynamics365/customer-engagement/developer/org-service/offline-use-services)   
  [Sample: Query Metadata and Detect Changes](/dynamics365/customer-engagement/developer/org-service/sample-query-metadata-detect-changes)   
  [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   

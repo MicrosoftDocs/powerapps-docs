@@ -41,7 +41,7 @@ You can specify custom state transitions for the `Incident` (**Case**) entity or
   
  This data is stored in the <xref:Microsoft.Xrm.Sdk.Metadata.StatusOptionMetadata> class, which represents the options in the <xref:Microsoft.Xrm.Sdk.Metadata.StatusAttributeMetadata> class.  
   
-To view the entity metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](../developer/browse-your-metadata.md). You can also browse the reference documentation for entities in the [Entity Reference](../developer/about-entity-reference.md).
+To view the entity metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](browse-your-metadata.md). You can also browse the reference documentation for entities in the [Entity Reference](/reference/about-entity-reference.md).
   
 <a name="BKMK_DetectValidStatusTransitions"></a>   
 
@@ -75,6 +75,6 @@ To view the entity metadata for your organization, install the Metadata Browser 
   
 ### See also  
  [Sample: Retrieve Valid Status Transitions](/dynamics365/customer-engagement/developer/sample-retrieve-valid-status-transitions)   
- [Record state and status](introduction-entities.md#bkmk_RecordStateandStatus)   
- [Retrieve and Detect Changes to Metadata](retrieve-detect-changes-metadata.md)   
+ [Record state and status](/dynamics365/customer-engagement/developer/introduction-entities#bkmk_RecordStateandStatus)   
+ [Retrieve and Detect Changes to Metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata)   
  [Define status reason transitions](http://go.microsoft.com/fwlink/p/?LinkId=393657)

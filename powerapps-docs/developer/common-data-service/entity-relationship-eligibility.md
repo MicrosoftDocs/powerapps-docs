@@ -24,10 +24,10 @@ Before you create an entity relationship you should confirm whether the entity i
 |GetValidReferencingEntities</br>Returns the set of entities that are valid as the related entity (many) to the specified entity in a one-to-many relationship.|<xref href="Microsoft.Dynamics.CRM.GetValidReferencingEntities?text=GetValidReferencingEntities Function" />|<xref:Microsoft.Xrm.Sdk.Messages.GetValidReferencingEntitiesRequest>|  
   
 ### See also  
- [Customize Entity Relationship Metadata](customize-entity-relationship-metadata.md)   
- [Extend the Metadata Model for Dynamics 365](org-service/use-organization-service-metadata.md)   
+ [Customize Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
+ [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
  [Entity Relationship Metadata](customize-entity-relationship-metadata.md)   
  [Entity Relationship Messages](entity-relationship-metadata-messages.md)   
  [Entity Relationship Behavior](entity-relationship-behavior.md)   
- [Create a 1:N Entity Relationship](org-service/create-retrieve-entity-relationships.md#BKMK_Create1NEntityRelationship)   
- [Create an N:N Entity Relationship](org-service/create-retrieve-entity-relationships.md#BKMK_CreateNNEntityRelationship)
+ [Create a 1:N Entity Relationship](/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships#BKMK_Create1NEntityRelationship)   
+ [Create an N:N Entity Relationship](/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships#BKMK_CreateNNEntityRelationship)

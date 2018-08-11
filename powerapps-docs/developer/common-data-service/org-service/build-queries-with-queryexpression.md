@@ -21,7 +21,7 @@ In Common Data Service for Apps, you can use the <xref:Microsoft.Xrm.Sdk.Query.Q
 > [!WARNING]
 >  Don’t retrieve all attributes in a query because of the negative effect on performance. This is particularly true if the query is used as a parameter to an update request. In an update, if all attributes are included this sets all field values, even if they are unchanged, and often triggers cascaded updates to child records.  
   
- There are two additional ways to create queries to retrieve records from CDS for Apps. FetchXML, the proprietary CDS for Apps query language, can be used to perform some queries by using XML-based queries. For more information, see [Building Queries with FetchXML](build-queries-fetchxml.md). You can also use .NET Language-Integrated Query (LINQ) to write queries. More information: [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md).  
+ There are two additional ways to create queries to retrieve records from CDS for Apps. FetchXML, the proprietary CDS for Apps query language, can be used to perform some queries by using XML-based queries. For more information, see [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml). You can also use .NET Language-Integrated Query (LINQ) to write queries. More information: [Build Queries with LINQ (.NET Language-Integrated Query)](build-queries-with-linq-net-language-integrated-query.md).  
   
  To save a query, you can convert it to FetchXML by using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and save it as a saved view by using the `userquery` entity.  
   
@@ -44,9 +44,9 @@ In Common Data Service for Apps, you can use the <xref:Microsoft.Xrm.Sdk.Query.Q
   
  [Sample: Retrieve With One-To-Many Relationship](/dynamics365/customer-engagement/developer/org-service/sample-retrieve-with-one-to-many-relationship)  
   
- [Sample: Retrieve Multiple with Query By Attribute](org-service/samples/retrieve-multiple-querybyattribute-class.md)  
+ [Sample: Retrieve Multiple with Query By Attribute](/org-service/samples/retrieve-multiple-querybyattribute-class.md)  
   
- [Sample: Retrieve Multiple with Query Expression](org-service/samples/retrieve-multiple-queryexpression-class.md)  
+ [Sample: Retrieve Multiple with Query Expression](/org-service/samples/retrieve-multiple-queryexpression-class.md)  
   
  [Sample: Use QueryExpression with a paging cookie](/dynamics365/customer-engagement/developer/org-service/sample-use-queryexpression-with-a-paging-cookie)  
   

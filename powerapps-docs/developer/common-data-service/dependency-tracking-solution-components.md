@@ -89,7 +89,7 @@ Solutions are made of solution components. You’ll use the **Solutions** area i
 ### Application ribbons (RibbonCustomization)  
  Ribbon customizations for the application ribbon and entity ribbon templates. Application ribbons don’t include definitions of ribbons at the entity or form level.  
   
- Custom application ribbons frequently have published dependencies on web resources. Web resources are used to define ribbon button icons and JavaScript functions to control when ribbon elements are displayed or what actions are performed when a particular ribbon control is used. Dependencies are only created when the ribbon definitions use the `$webresource:` directive to associate the web resource to the ribbon. More information: [$webresource directive](web-resources.md#BKMK_WebResourceDirective)  
+ Custom application ribbons frequently have published dependencies on web resources. Web resources are used to define ribbon button icons and JavaScript functions to control when ribbon elements are displayed or what actions are performed when a particular ribbon control is used. Dependencies are only created when the ribbon definitions use the `$webresource:` directive to associate the web resource to the ribbon. More information: [$webresource directive](/dynamics365/customer-engagement/developer/web-resources#BKMK_WebResourceDirective)  
   
 <a name="BKMK_KBArticleTemplate"></a>   
 ### Article template (KBArticleTemplate)  
@@ -158,21 +158,21 @@ Solutions are made of solution components. You’ll use the **Solutions** area i
   
 <a name="BKMK_SiteMap"></a>   
 ### Site map (SiteMap)  
- XML data used to control the application navigation pane. The site map may be linked to display an HTML web resource or an icon in the site map may use an image web resource. When the `$webresource:` directive is used to establish these associations a published dependency is created. More information: [$webresource directive](web-resources.md#BKMK_WebResourceDirective)  
+ XML data used to control the application navigation pane. The site map may be linked to display an HTML web resource or an icon in the site map may use an image web resource. When the `$webresource:` directive is used to establish these associations a published dependency is created. More information: [$webresource directive](/dynamics365/customer-engagement/developer/web-resources#BKMK_WebResourceDirective)  
   
 <a name="BKMK_WebResource"></a>   
 ### Web resource (WebResource)  
- Data equivalent to files used in web development. Web resources provide client-side components that are used to provide custom user interface elements. Web resources may have published dependencies with entity forms, ribbons and the SiteMap. When the `$webresource:` directive is used to establish associations in a ribbon or the SiteMap, a published dependency is created. For more information, see [$webresource directive](web-resources.md#BKMK_WebResourceDirective).  
+ Data equivalent to files used in web development. Web resources provide client-side components that are used to provide custom user interface elements. Web resources may have published dependencies with entity forms, ribbons and the SiteMap. When the `$webresource:` directive is used to establish associations in a ribbon or the SiteMap, a published dependency is created. For more information, see [$webresource directive](/dynamics365/customer-engagement/developer/web-resources#BKMK_WebResourceDirective).  
   
 > [!NOTE]
 >  Web resources may depend on other web resources based on relative links. For example, an HTML web resource may use a CSS or script web resource. A Silverlight web resource displayed outside of an entity form or chart must have an HTML web resource to host it. These dependencies aren’t tracked as solution dependencies.  
   
 ### See also  
- [Package and Distribute Extensions with Dynamics 365 Solutions](package-distribute-extensions-use-solutions.md)   
+ [Package and Distribute Extensions with Dynamics 365 Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Introduction to Solutions](introduction-solutions.md)   
- [Plan For Solution Development](plan-solution-development.md)   
+ [Plan For Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Create, Export, or Import an Unmanaged Solution](create-export-import-unmanaged-solution.md)   
  [Create, install, and update a managed solution](create-install-update-managed-solution.md)   
  [Create, Install, and Update a Managed Solution](create-install-update-managed-solution.md)   
  [Uninstall or Delete a solution](uninstall-delete-solution.md)   
- [Solution entities](solution-entities.md)
+ [Solution entities](/dynamics365/customer-engagement/developer/solution-entities)
