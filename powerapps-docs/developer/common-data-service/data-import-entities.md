@@ -49,7 +49,7 @@ The Common Data Service for Apps data import entities are used to create data ma
  [TransformationMapping Entity](reference/entities/transformationmapping.md)    
  [TransformationParameterMapping Entity](reference/entities/transformationparametermapping.md)   
  <!-- jdaly These links will have content  when we re-gen docs after bug 689487 is checked in. END -->
- [Sample: Export and Import a Data Map](sample-export-import-data-map.md)   
+ [Sample: Export and Import a Data Map](/dynamics365/customer-engagement/developer/sample-export-import-data-map)   
  [Create data maps for import](create-data-maps-for-import.md)<br />
  [Add transformation mappings for import](add-transformation-mappings-import.md)<br />
  [Configure data import](configure-data-import.md)<br />

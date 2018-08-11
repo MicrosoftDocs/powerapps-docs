@@ -60,7 +60,7 @@ _serviceProxy.Execute(request);
 ```
   
 ### See also  
- [Use the IOrganizationService Sample and Helper Code](use-sample-helper-code.md)   
+ [Use the IOrganizationService Sample and Helper Code](/dynamics365/customer-engagement/developer/use-sample-helper-code)   
  [Customize entity metadata](../customize-entity-metadata.md)   
- [Create and update an entity than can be emailed](create-update-entity-emailed.md)   
+ [Create and update an entity than can be emailed](/dynamics365/customer-engagement/developer/create-update-entity-emailed)   
  [Create a Custom Entity](create-custom-entity.md)

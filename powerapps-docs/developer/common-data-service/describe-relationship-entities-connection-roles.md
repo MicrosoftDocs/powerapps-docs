@@ -48,10 +48,10 @@ You can describe the relationship between records through the roles that you ass
   >  To find the connection roles for an account entity, in the query, specify all roles that are linked to the account entity (Entity Type Code = 1) or to all entities (Entity Type Code = 0).  
   
 ## Associate and Disassociate Connection Roles  
- To associate the roles in the connection, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*> method. To disassociate the roles, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> method. For more information about the `Associate` message and the `Disassociate` message, see [Introduction to Entities in Dynamics 365](introduction-entities.md).  
+ To associate the roles in the connection, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Associate*> method. To disassociate the roles, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService.Disassociate*> method. For more information about the `Associate` message and the `Disassociate` message, see [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities).  
   
 ### See also  
  [Connection Entities](connection-entities.md)   
- [Sample Code for Connection Entities](sample-code-connection-entities.md)   
- [Sample: Create Reciprocal Connection Role (Early Bound)](sample-create-reciprocal-connection-role-early-bound.md)   
+ [Sample Code for Connection Entities](/dynamics365/customer-engagement/developer/sample-code-connection-entities)   
+ [Sample: Create Reciprocal Connection Role (Early Bound)](/dynamics365/customer-engagement/developer/sample-create-reciprocal-connection-role-early-bound)   
  [Connection Entity](/reference/entities/connection.md)

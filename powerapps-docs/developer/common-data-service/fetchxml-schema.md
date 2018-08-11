@@ -562,6 +562,6 @@ Download the [Schemas](http://download.microsoft.com/download/B/9/7/B97655A4-4E4
 ```  
   
 ### See also  
- [Retrieve data with queries](retrieve-data-queries-sdk-assemblies.md)   
- [Schemas used in Dynamics 365](../schemas-used-dynamics-365.md)   
- [Build Queries with FetchXML](build-queries-fetchxml.md)
+ [Retrieve data with queries](/dynamics365/customer-engagement/developer/retrieve-data-queries-sdk-assemblies)   
+ [Schemas used in Dynamics 365](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)   
+ [Build Queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)

@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Duplicate Rule entities
 
-For information about how to configure duplicate rules in the application, see [Administrators Guide: Set up duplicate detection rules to keep your data clean](../admin/set-up-duplicate-detection-rules-keep-data-clean.md).
+For information about how to configure duplicate rules in the application, see [Administrators Guide: Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 Duplicate detection rules are defined using the following entities:
 
@@ -124,6 +124,6 @@ The following special messages can also be used:
 <a href="enable-disable-duplicate-detection.md" data-raw-source="[Enable and disable duplicate detection](enable-disable-duplicate-detection.md)">Enable and disable duplicate detection</a><br />
 <a href="run-duplicate-detection.md" data-raw-source="[Run duplicate detection](run-duplicate-detection.md)">Run duplicate detection</a><br />
 <a href="duplicate-detection-messages.md" data-raw-source="[Duplicate detection messages](duplicate-detection-messages.md)">Duplicate detection messages</a><br />
-<a href="org-service/sample-enable-duplicate-detection-and-retrieve-duplicates.md" data-raw-source="[Sample: Enable duplicate detection and retrieve duplicates](org-service/sample-enable-duplicate-detection-and-retrieve-duplicates.md)">Sample: Enable duplicate detection and retrieve duplicates</a><br />
-<a href="org-service/sample-use-duplicate-detection-when-creating-and-updating-records.md" data-raw-source="[Sample: Use duplicate detection when creating and updating records](org-service/sample-use-duplicate-detection-when-creating-and-updating-records.md)">Sample: Use duplicate detection when creating and updating records</a><br />
-<a href="org-service/sample-detect-multiple-duplicate-records.md" data-raw-source="[Sample: Detect multiple duplicate records](org-service/sample-detect-multiple-duplicate-records.md)">Sample: Detect multiple duplicate records</a><br />
+<a href="org-service/sample-enable-duplicate-detection-and-retrieve-duplicates.md" data-raw-source="[Sample: Enable duplicate detection and retrieve duplicates](/dynamics365/customer-engagement/developer/org-service/sample-enable-duplicate-detection-and-retrieve-duplicates)">Sample: Enable duplicate detection and retrieve duplicates</a><br />
+<a href="org-service/sample-use-duplicate-detection-when-creating-and-updating-records.md" data-raw-source="[Sample: Use duplicate detection when creating and updating records](/dynamics365/customer-engagement/developer/org-service/sample-use-duplicate-detection-when-creating-and-updating-records)">Sample: Use duplicate detection when creating and updating records</a><br />
+<a href="/dynamics365/customer-engagement/developer/org-service/sample-detect-multiple-duplicate-records" data-raw-source="[Sample: Detect multiple duplicate records](org-service/sample-detect-multiple-duplicate-records.md)">Sample: Detect multiple duplicate records</a><br />

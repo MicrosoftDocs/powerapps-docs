@@ -27,7 +27,7 @@ The email activity lets you track and manage email communications with customers
   
 - Send mass or bulk email messages.  
   
-- Configure incoming email messages to be delivered from Microsoft Exchange Server to any user or queue, or outgoing messages to be sent from any user or queue to Microsoft Exchange Server. For information about how to configure incoming email messages for queues, see  [Configure email for incoming messages](configure-email-incoming-messages.md).  
+- Configure incoming email messages to be delivered from Microsoft Exchange Server to any user or queue, or outgoing messages to be sent from any user or queue to Microsoft Exchange Server. For information about how to configure incoming email messages for queues, see  [Configure email for incoming messages](/dynamics365/customer-engagement/developer/configure-email-incoming-messages).  
   
    If the `Organization.RequireApprovalForuserEmail` and `Organization.RequireApprovalForQueueEmail` (process emails only for approved users/queues) organization attributes are set to **true** (1),  the following occurs: email messages are delivered or sent from a user or queue only if the primary email address of the user or queue is approved. The `SystemUser.EmailRouterAccessApproval` and the `Queue.EmailRouterAccessApproval` attributes indicate the status of the primary email address of the user and queue respectively, and the value must be set to 1. Otherwise, the incoming and outgoing messages will be blocked. You can update the user or queue record to change the attribute value, if it is not already in the approved state, provided your user account has the **prvApproveRejectEmailAddress** privilege assigned.
   
@@ -76,7 +76,7 @@ ActivityMimeAttachment _sampleAttachment = new ActivityMimeAttachment{
 ObjectId = new EntityReference(Template.EntityLogicalName, _templateId), ObjectTypeCode = Template.EntityLogicalName,  
 ```  
   
- For complete code sample about how to create email attachments, see [Sample: Create, Retrieve, Update, and Delete an E-Mail Attachment](sample-create-retrieve-update-delete-email-attachment.md).  
+ For complete code sample about how to create email attachments, see [Sample: Create, Retrieve, Update, and Delete an E-Mail Attachment](/dynamics365/customer-engagement/developer/sample-create-retrieve-update-delete-email-attachment).  
   
 ### Reusing Email Attachments  
  When you create an email attachment record, the attached file is saved as a file BLOB. The `ActivityMimeAttachment.AttachmentId` attribute of the email attachment record uniquely identifies the file BLOB. This is done to facilitate the reuse of the file attachments with other email and email template records, without creating and storing multiple copies of the same file in the database.  
@@ -103,6 +103,6 @@ ObjectId = new EntityReference(Template.EntityLogicalName, _templateId), ObjectT
   
 ### See also  
  [Activity Entities](activity-entities.md)   
- [Sample code for activity entities](sample-code-activity-entities.md)   
+ [Sample code for activity entities](/dynamics365/customer-engagement/developer/sample-code-activity-entities)   
  [Email Entity](/reference/entities/email.md)   
  [ActivityMimeAttachment Entity](/reference/entities/activitymimeattachment.md)

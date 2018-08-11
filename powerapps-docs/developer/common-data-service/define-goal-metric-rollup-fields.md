@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Define goal metric and rollup fields
 
-To specify the goal metric type, participating entities, and whether you track actuals, custom or in-progress data, use the goal metric entity (`Metric`) and the rollup field (`RollupField`) entity. The goal metric and the rollup fields have a parental relationship in which all operations on the parent record are propagated to the child records. For more information about parental relationship and cascading rules, see [Entity Relationship Behavior](entity-relationship-behavior.md).  
+To specify the goal metric type, participating entities, and whether you track actuals, custom or in-progress data, use the goal metric entity (`Metric`) and the rollup field (`RollupField`) entity. The goal metric and the rollup fields have a parental relationship in which all operations on the parent record are propagated to the child records. For more information about parental relationship and cascading rules, see [Entity Relationship Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior).  
   
 > [!IMPORTANT]
 >  All goals in the hierarchy must be based on the same goal metric and time period. If you create a child goal that is based on a different goal metric, an exception is thrown. If you specify a different time period for a child goal, the system will ignore the specified time period and use the parent goal time period. You can associate a goal with a new metric, if the goal does not have a parent goal or a child goal. Otherwise, an exception is thrown when you update the goal record.  

@@ -67,7 +67,7 @@ You use field security entities to apply field-level security, which restricts f
   
 - Option set attributes can be secured for create, update, and read when a default value is unspecified.  
   
-  There are thousands of attributes that can be secured, so there are two easier ways to look for this information. To view the entity metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](../developer/browse-your-metadata.md). You can also browse the reference documentation for entities in the [Entity Reference](../developer/about-entity-reference.md).  
+  There are thousands of attributes that can be secured, so there are two easier ways to look for this information. To view the entity metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata). You can also browse the reference documentation for entities in the [Entity Reference](/dynamics365/customer-engagement/developer/about-entity-reference).  
   
 <a name="bkmk_sharing"></a>   
 ## Share secured fields  
@@ -82,12 +82,12 @@ You use field security entities to apply field-level security, which restricts f
 |Use the <xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest> message to remove record access for a user or team.|Use the <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> message or the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*> method to remove secured field access for a user or team.|  
   
 ### See also  
- [The Security Model of Dynamics 365](security-dev/security-model.md)   
- [Administration and security entities](administration-security-entities.md)   
+ [The Security Model of Dynamics 365](/dynamics365/customer-engagement/developer/security-dev/security-model)   
+ [Administration and security entities](/dynamics365/customer-engagement/developer/administration-security-entities)   
  [FieldSecurityProfile Entity](/reference/entities/fieldsecurityprofile.md)   
  [FieldPermission Entity](/reference/entities/fieldpermission.md)   
  [PrincipalObjectAttributeAccess Entity](/reference/entities/principalobjectattributeaccess.md)   
  [Field-level data encryption](field-level-data-encryption.md)   
- [Sample: Retrieve Field Permissions](sample-retrieve-field-permissions.md)   
- [Sample: Enable Field Security For An Entity](sample-enable-field-security-entity.md)   
- [Sample: Retrieve Field Sharing Records](sample-retrieve-field-sharing-records.md)
+ [Sample: Retrieve Field Permissions](/dynamics365/customer-engagement/developer/sample-retrieve-field-permissions)   
+ [Sample: Enable Field Security For An Entity](/dynamics365/customer-engagement/developer/sample-enable-field-security-entity)   
+ [Sample: Retrieve Field Sharing Records](/dynamics365/customer-engagement/developer/sample-retrieve-field-sharing-records)

@@ -52,6 +52,6 @@ WHERE ab.RegardingObjectId is null
   
 ### See also  
  [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   
- [Test for a Null Value](test-null-value.md)   
+ [Test for a Null Value](/dynamics365/customer-engagement/developer/test-null-value)   
  [Using the QueryExpression Class](use-queryexpression-class.md)   
  [Using the QueryByAttribute Class](use-querybyattribute-class.md)
