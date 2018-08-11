@@ -95,7 +95,7 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
 |                                **Add or Remove Views**                                 |                                                                                                                                As long as the managed property `CanCreateViews.Value` allows for creating views, you can use the `SavedQuery` entity to create views for an entity.                                                                                                                                 |
 |                                **Add or Remove Charts**                                |              As long as the managed property `CanCreateCharts.Value` allows for creating charts and the `IsEnabledForCharts` entity property is true, you can use the [SavedQueryVisualization Entity](/reference/entities/savedqueryvisualization.md) to create charts for an entity. For more information, see [View Data with Visualizations (Charts)](/dynamics365/customer-engagement/developer/customize-dev/view-data-with-visualizations-charts).              |
 |                         **Add or Remove Entity Relationships**                         |                                                                                        There are several managed properties that control the types of entity relationships that you can create for an entity. For more information, see [Customize Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata).                                                                                        |
-|                                    **Change Icons**                                    |                                                                                                                                             You can change the icons used for custom entities. For more information, see [Modify Entity Icons](modify-icons-entity.md).                                                                                                                                             |
+|                                    **Change Icons**                                    |                                                                                                                                             You can change the icons used for custom entities. For more information, see [Modify Entity Icons](/dynamics365/customer-engagement/developer/modify-icons-entity).                                                                                                                                             |
 |                        **Can Change Hierarchical Relationship**                        |                                                                                        `CanChangeHierarchicalRelationship.Value` controls whether the hierarchical state of entity relationships included in your managed solutions can be changed. More information:                                                                                         |
   
 <a name="BKMK_MessagesForCustomEntites"></a>
@@ -105,15 +105,15 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
   
 ### See also  
  [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
- [Introduction to Entities in Dynamics 365](introduction-entities.md)   
+ [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities.md)   
  [Browse the Metadata for Your Organization](browse-your-metadata.md)   
- [Customize Entity Attribute Metadata](customize-entity-attribute-metadata.md)   
+ [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
  [Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
  [Detect Duplicate Data in Dynamics 365](detect-duplicate-data-for-developers.md)   
  [Enable Document Management for Entities](/dynamics365/customer-engagement/developer/integration-dev/enable-document-management-entities)   
  [Configure Entities and Attributes for Auditing](configure-entities-attributes-auditing.md)  
  [View Data using Charts (Visualizations)](/dynamics365/customer-engagement/developer/customize-dev/view-data-with-visualizations-charts)   
- [Which Entities are Customizable?](which-entities-are-customizable.md)   
+ [Which Entities are Customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
  [Create a Custom Entity](/dynamics365/customer-engagement/developer/org-service/create-custom-entity)   
  [Retrieve, Update and Delete Entities](/dynamics365/customer-engagement/developer/org-service/retrieve-update-delete-entities)   
  [Create and Update an Emailable Entity](/dynamics365/customer-engagement/developer/org-service/create-update-entity-emailed)   

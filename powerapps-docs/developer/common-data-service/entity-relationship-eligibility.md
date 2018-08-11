@@ -26,8 +26,8 @@ Before you create an entity relationship you should confirm whether the entity i
 ### See also  
  [Customize Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
  [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
- [Entity Relationship Metadata](customize-entity-relationship-metadata.md)   
+ [Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
  [Entity Relationship Messages](entity-relationship-metadata-messages.md)   
- [Entity Relationship Behavior](entity-relationship-behavior.md)   
+ [Entity Relationship Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)   
  [Create a 1:N Entity Relationship](/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships#BKMK_Create1NEntityRelationship)   
  [Create an N:N Entity Relationship](/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships#BKMK_CreateNNEntityRelationship)
