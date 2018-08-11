@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 Configure folder-level tracking rules to map a Microsoft Exchange inbox folder to a Common Data Service for Apps record so that all the emails in the Microsoft Exchange folder get automatically tracked against the mapped record in CDS for Apps. Folder-level tracking of emails will work only if:  
 
-- The folder-level tracking feature is enabled for your CDS for Apps instance. You can enable folder-level tracking by using the web client or Dynamics 365 for Outlook. More information: [Configure folder-level tracking](../admin/configure-outlook-exchange-folder-level-tracking.md)  
+- The folder-level tracking feature is enabled for your CDS for Apps instance. You can enable folder-level tracking by using the web client or Dynamics 365 for Outlook. More information: [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)  
 
 - The folder that you are tracking is under the **Inbox** folder in Microsoft Exchange. Emails in the folders that are not under the **Inbox** folder won’t be tracked.  
 
@@ -27,8 +27,8 @@ Configure folder-level tracking rules to map a Microsoft Exchange inbox folder t
 
 |                                   Attribute                                   |                                                                                                                                                                                                                Description                                                                                                                                                                                                                 |
 |-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  [ExchangeFolderId](entities/mailboxtrackingfolder.md#BKMK_ExchangeFolderId)  | Specify the Microsoft Exchange folder ID that you want to map. You can use the Exchange Web Services (EWS) to retrieve the ID of a folder under your Inbox folder. For more information, see [MSDN: How to: Work with folders by using EWS in Exchange](https://msdn.microsoft.com/library/office/dn535504.aspx). This is a required attribute. |
-|         [MailboxId](entities/mailboxtrackingfolder.md#BKMK_MailboxId)         |                                                                                                                                         Specify the mailbox ID in CDS for Apps that you want to create the rule for. This is a required attribute.                                                                                                                                          |
+|  [ExchangeFolderId](/reference/entities/mailboxtrackingfolder.md#BKMK_ExchangeFolderId)  | Specify the Microsoft Exchange folder ID that you want to map. You can use the Exchange Web Services (EWS) to retrieve the ID of a folder under your Inbox folder. For more information, see [MSDN: How to: Work with folders by using EWS in Exchange](https://msdn.microsoft.com/library/office/dn535504.aspx). This is a required attribute. |
+|         [MailboxId](/reference/entities/mailboxtrackingfolder.md#BKMK_MailboxId)         |                                                                                                                                         Specify the mailbox ID in CDS for Apps that you want to create the rule for. This is a required attribute.                                                                                                                                          |
 | [RegardingObjectId](/reference/entities/mailboxtrackingfolder.md#BKMK_RegardingObjectId) |                                                                                                       Set the regarding object in CDS for Apps that you want the specified Microsoft Exchange folder to be mapped to. This is an optional attribute.                                                                                                       |
 
  The following sample code shows how you can create a folder-level tracking rule.  
@@ -83,7 +83,7 @@ foreach (var folderMapping in resp.MailboxTrackingFolderMappings)
 
 ### See also  
  <xref href="Microsoft.Dynamics.CRM.RetrieveMailboxTrackingFolders?text=RetrieveMailboxTrackingFolders Function" /><br />
- [MailboxTrackingFolder Entity](entities/mailboxtrackingfolder.md)<br />
- [Mailbox Entity](entities/mailbox.md)<br />
- [Configure folder-level tracking](../admin/configure-outlook-exchange-folder-level-tracking.md)<br />
+ [MailboxTrackingFolder Entity](/reference/entities/mailboxtrackingfolder.md)<br />
+ [Mailbox Entity](/reference/entities/mailbox.md)<br />
+ [Configure folder-level tracking](/dynamics365/customer-engagement/admin/configure-outlook-exchange-folder-level-tracking)<br />
  [Server-side Synchronization Entities](server-side-synchronization-entities.md)<br />

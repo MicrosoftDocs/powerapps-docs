@@ -100,6 +100,6 @@ httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("
 ```  
   
 ### See also  
- [Walkthrough: Register a Dynamics 365 app with Azure Active Directory](walkthrough-register-dynamics-365-app-azure-active-directory.md)   
+ [Walkthrough: Register a Dynamics 365 app with Azure Active Directory](/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory)   
  [Multi-Factor Authentication documentation](https://azure.microsoft.com/en-us/documentation/services/multi-factor-authentication/)   
  [OAuth 2.0](http://oauth.net/2/)

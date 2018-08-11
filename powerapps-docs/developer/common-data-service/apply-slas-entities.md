@@ -38,7 +38,7 @@ Service level agreements (SLAs) in Common Data Service for Apps help you define 
 
  To apply SLAs to an entity, you must set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsSLAEnabled> attribute to true for the entity. You can’t change this setting after it’s been enabled. By default, the `Incident` entity is enabled for SLAs.  
   
- You can also use the customization tool to enable entities for SLAs. More information: [Enable entities for service level agreements](../customer-service/enable-entities-service-level-agreements.md)  
+ You can also use the customization tool to enable entities for SLAs. More information: [Enable entities for service level agreements](/dynamics365/customer-engagement/customer-service/enable-entities-service-level-agreements)  
   
  After you have enabled an entity forSLAs, new SLA-related attributes, such as `SLAId` and `SLAInvokedId`, will be automatically added to the entity.  
   
@@ -67,5 +67,5 @@ Service level agreements (SLAs) in Common Data Service for Apps help you define 
 -   You can have a maximum of 5 SLA KPIs per entity for active SLAs. You will encounter an error on activating an SLA if this limit is exceeded. This limit is not applicable for the `Incident` entity.  
   
 ### See also  
- [Service entities in Customer Engagement](service-entities.md)   
- [Enhanced service level agreements (SLAs)](../admin/enhanced-service-level-agreements.md)
+ [Service entities in Customer Engagement](/dynamics365/customer-engagement/developer/service-entities)   
+ [Enhanced service level agreements (SLAs)](/dynamics365/customer-engagement/admin/enhanced-service-level-agreements)

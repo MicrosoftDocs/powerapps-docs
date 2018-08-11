@@ -47,7 +47,7 @@ Within an organization instance, API requests made by each of your licensed user
 |C|As time passes and reaches 5+2X, user 3 makes about 40K API requests, while user 1 and user 2 make 8K and 9K calls, respectively. This results in user 3 reaching 65K API requests within five minutes, which causes 5K (65K-60K=5K) of his requests to be denied.|
 
 > [!NOTE]
-> Requests that perform multiple API requests like <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> using the .NET SDK assemblies, or `$batch` using the Web API, count as a single request to calculate this limit. However, these API requests must follow the [Run-time limitations](org-service/use-executemultiple-improve-performance-bulk-data-load.md#run-time-limitations) for these types of operations.
+> Requests that perform multiple API requests like <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> using the .NET SDK assemblies, or `$batch` using the Web API, count as a single request to calculate this limit. However, these API requests must follow the [Run-time limitations](org-service/execute-multiple-requests.md#limitations) for these types of operations.
 
 ## What should I do if my application exceeds the limit?
 
@@ -142,4 +142,4 @@ public class Retry
 [Use the Dynamics 365 Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)<br />
 [Use the Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)<br />
 [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)<br />
-[Use ExecuteMultiple to improve performance for bulk data load](/dynamics365/customer-engagement/developer/org-service/use-executemultiple-improve-performance-bulk-data-load.md)
+[Use ExecuteMultiple to improve performance for bulk data load](org-service/execute-multiple-requests.md)

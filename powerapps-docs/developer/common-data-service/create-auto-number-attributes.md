@@ -268,5 +268,5 @@ Please see the [Developer tools](developer-tools.md) topic for community develop
 
 
 ### See Also
-[Metadata and data models](metadata-data-models.md)  
-[Customize entity attribute metadata](customize-entity-attribute-metadata.md) 
+[Metadata and data models](/dynamics365/customer-engagement/developer/metadata-data-models)  
+[Customize entity attribute metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata) 

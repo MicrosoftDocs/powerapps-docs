@@ -103,8 +103,8 @@ If you add an entity to a solution and export the solution, the entity and all o
   
 ### See also  
  [Use segmented solutions and patches to simplify solution updates](https://technet.microsoft.com/library/mt628808.aspx)   
- [Plan For Solution Development](plan-solution-development.md)   
- [Package and distribute extensions using solutions](package-distribute-extensions-use-solutions.md)   
+ [Plan For Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
+ [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Solution Entity](/reference/entities/solution.md)   
  [Maintain Managed Solutions](maintain-managed-solutions.md)   
  [Publish your app on AppSource](publish-app-appsource.md)

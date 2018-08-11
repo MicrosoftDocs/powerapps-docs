@@ -69,8 +69,8 @@ There are three levels where auditing can be configured: organization, entity, a
 |WorkflowLog|  
   
 ### See also  
- [Data Management in Dynamics 365](manage-data.md)   
- [Audit entity data changes](audit-entity-data-changes.md)   
+ [Data Management in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)   
+ [Audit entity data changes](/dynamics365/customer-engagement/developer/audit-entity-data-changes)   
  [Retrieve and delete the history of audited data changes](retrieve-and-delete-the-history-of-audited-data-changes.md)   
- [Sample: Audit Entity Data Changes](sample-audit-entity-data-changes.md)   
- [Auditing Data Changes in Dynamics 365](audit-entity-data-changes.md)
+ [Sample: Audit Entity Data Changes](/dynamics365/customer-engagement/developer/sample-audit-entity-data-changes)   
+ [Auditing Data Changes in Dynamics 365](/dynamics365/customer-engagement/developer/audit-entity-data-changes)

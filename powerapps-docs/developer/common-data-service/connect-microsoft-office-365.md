@@ -24,8 +24,7 @@ Common Data Service for Apps is part of the Office 365 collaboration and product
  [Sample: Authenticate Users with Dynamics 365 Web Services](/dynamics365/customer-engagement/developer/sample-authenticate-users-web-services)  
   
 ## Related Sections  
- [Authenticate Users with Dynamics 365 Web Services](authenticate-users.md)  
+ [Authenticate Users with Dynamics 365 Web Services](/dynamics365/customer-engagement/developer/authenticate-users)  
   
- [Connect to the Dynamics 365 Web Services](authenticate-office-365-users-customer-engagement-web-services.md)  
-  
- [Access the Web Services (Authentication) in Dynamics 365](authenticate-users.md)
+ [Connect to the Dynamics 365 Web Services](/dynamics365/customer-engagement/developer/authenticate-office-365-users-customer-engagement-web-services)  
+ 

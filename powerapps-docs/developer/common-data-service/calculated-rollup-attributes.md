@@ -63,7 +63,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
  Calculated attribute values are available in the retrieve plug-in pipeline. Post image of entity record update or create contains the calculated attribute value in stage 40. More information: [Event Execution Pipeline](event-execution-pipeline.md)  
   
 ### Limitations  
- You can’t use values in calculated attributes that reference a related entity, another calculated attribute, or a *logical value* in the same entity to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated attribute, the sort direction will be ignored and will not throw an error. If the calculated attribute references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated field using the `SourceTypeMask` property on the attribute metadata. More information: [Logical attributes](introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
+ You can’t use values in calculated attributes that reference a related entity, another calculated attribute, or a *logical value* in the same entity to sort data returned by a query. Although your query can specify that the results should be ordered using a calculated attribute, the sort direction will be ignored and will not throw an error. If the calculated attribute references only simple values in the same record, sorting works normally. You can determine the sources used in a calculated field using the `SourceTypeMask` property on the attribute metadata. More information: [Logical attributes](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes.md#BKMK_LogicalAttributes)  
   
  Only attributes from an immediate parent entity can be used in a calculated attribute.  
   
@@ -174,6 +174,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
   
 ### See also  
  [Video: Rollup and Calculated Fields in Microsoft Dynamics CRM 2015](http://youtu.be/RoahCH1p3T8)   
- [Introduction to entity attributes](introduction-to-entity-attributes.md)   
+ [Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-to-entity-attributes)   
  [Define calculated fields](https://technet.microsoft.com/library/dn832103.aspx)   
  [Define rollup fields](https://technet.microsoft.com/library/dn832103.aspx)

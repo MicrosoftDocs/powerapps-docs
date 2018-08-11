@@ -15,7 +15,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 If you have users and offices around the world, it is important to properly represent date and time values in multiple time zones. The `DateTimeAttributeMetadata` (<xref href="Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> class) is used to define and manage attributes of type `DateTime` in Common Data Service for Apps. Use the `DateTimeBehavior` property (For Organization Service see, <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.DateTimeBehavior>) to define whether to store date and time values with or without time zone information, and use the `DateTimeAttributeMetadata.Format` property to specify the display format of these attributes.  
 
   
- You can also use the customization area in CDS for Apps to define the behavior and format of the date and time attributes. More information: [Behavior and format of the Date and Time field](../customize/behavior-format-date-time-field.md).  
+ You can also use the customization area in CDS for Apps to define the behavior and format of the date and time attributes. More information: [Behavior and format of the Date and Time field](/dynamics365/customer-engagement/customize/behavior-format-date-time-field).  
   
 > [!NOTE]
 >  All date and time attributes in Common Data Service for Apps support values as early as 1/1/1753 12:00 AM.  
@@ -60,7 +60,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
  In the sample code, you can also set the value of the `DateTimeBehavior` property by directly specifying the string value: `DateTimeBehavior = "UserLocal"`  
   
- If you do not specify the behavior while creating a date and time attribute, the attribute is created with the `UserLocal` behavior by default. For the complete sample code, see [Sample: Convert date and time values](org-service/sample-convert-date-time-behavior.md).  
+ If you do not specify the behavior while creating a date and time attribute, the attribute is created with the `UserLocal` behavior by default. For the complete sample code, see [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior).  
   
 > [!IMPORTANT]
 >  -   Once you create a date and time attribute with behavior set to `DateOnly` or `TimeZoneIndependent`, you cannot change the behavior of the attribute. More information: [Change the behavior of a DateTime attribute](behavior-format-date-time-attribute.md#ChangeBehavior)  
@@ -101,7 +101,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
 >   
 >  At the minimum, after changing the behavior of a date and time attribute, you should open each business rule, workflow, calculated attribute, and rollup attribute record that is dependent on the changed date and time attribute, review the information, and save the record to ensure that the latest attribute behavior and value is used.  
 >   
->  After changing the data and time behavior of a calculated or rollup attribute, open the calculated or rollup field definition editor, and save the field definition to ensure that the attribute is still valid after the behavior change. System customizers can open the field definition editor for calculated or rollup attribute by clicking **Edit** next to **Field Type** in the customization area in CDS for Apps. More information: [Define calculated fields](../customize/define-calculated-fields.md) and [Define rollup fields](../customize/define-rollup-fields.md)  
+>  After changing the data and time behavior of a calculated or rollup attribute, open the calculated or rollup field definition editor, and save the field definition to ensure that the attribute is still valid after the behavior change. System customizers can open the field definition editor for calculated or rollup attribute by clicking **Edit** next to **Field Type** in the customization area in CDS for Apps. More information: [Define calculated fields](/dynamics365/customer-engagement/customize/define-calculated-fields) and [Define rollup fields](/dynamics365/customer-engagement/developer/customize/define-rollup-fields)  
   
 -   The behavior of the `CreatedOn` and `ModifiedOn` attributes for the out-of-box and custom entities is set to `UserLocal` by default, and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `False`, which implies that you cannot change the behavior of these attributes. Although users can change the value of the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property of these attributes for custom entities, but they still can’t change the behavior of the attributes.  
   
@@ -235,7 +235,7 @@ ConvertDateAndTimeBehaviorResponse response = (ConvertDateAndTimeBehaviorRespons
   
 ### See also  
  [Sample: Convert date and time values](/dynamics365/customer-engagement/developer/org-service/sample-convert-date-time-behavior.md)   
- [Behavior and format of the Date and Time field](../customize/behavior-format-date-time-field.md)   
+ [Behavior and format of the Date and Time field](/dynamics365/customer-engagement/developer/customize/behavior-format-date-time-field)   
  [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)          
  <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest>      
  <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> 

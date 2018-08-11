@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 Create a managed solution to include all the components for your app. You might find these topics helpful as you plan and create a managed solution to package your app components:
 - [Introduction to solutions](introduction-solutions.md)
-- [Plan for solution development](plan-solution-development.md) 
+- [Plan for solution development](/dynamics365/customer-engagement/developer/plan-solution-development) 
 - [Create, install, and update a managed solution](create-install-update-managed-solution.md)
 
 ## Display name and description of your solution

@@ -63,10 +63,10 @@ You create a managed solution by exporting an unmanaged solution as a managed so
 >  You may want to direct people who install your managed solution to use the **Overwrite customizations** option when investigating issues where the customizations conflict with the behavior of your solutions. They should always export their unmanaged solutions first so that they can re-apply them if they need to.  
   
 ### See also  
- [Package and Distribute Extensions with Dynamics 365 Solutions](package-distribute-extensions-use-solutions.md)   
+ [Package and Distribute Extensions with Dynamics 365 Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Introduction to Solutions](introduction-solutions.md)   
- [Planning for Solution Development](plan-solution-development.md)   
+ [Planning for Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Solution Components and Dependency Tracking](dependency-tracking-solution-components.md)   
  [Create, Export, or Import an Unmanaged Solution](create-export-import-unmanaged-solution.md)   
  [Uninstall or Delete a solution](uninstall-delete-solution.md)   
- [Customization Solutions File Schema](customize-dev/customization-solutions-file-schema.md)
+ [Customization Solutions File Schema](/dynamics365/customer-engagement/developer/customize-dev/customization-solutions-file-schema)

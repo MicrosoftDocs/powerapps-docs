@@ -47,7 +47,7 @@ In addition to being a prerequisite to creating a managed solution, an unmanaged
 |        **Name**         |                               CDS for Apps generates a unique name is based on the **Display Name**. The unique name can only contain alphanumeric characters and the underscore character. **Note:**  You use the `Unique Name` to uniquely identify a `Publisher`. Managed solutions that share the same publisher can update each other.                               |
 |     **Description**     |                                                                                                                                                                           Use this field to include any relevant details about your solution.                                                                                                                                                                            |
 |       **Prefix**        |                   The customization prefix helps you identify which publisher added a solution component. For example the prefix is added to the logical name of any entities or attributes created in the context of a solution associated with this publisher. The prefix must be between two and eight characters long, and can contain only alphanumeric characters. It cannot start with ‘mscrm’.                   |
-| **Option Value Prefix** | This value lets you help separate options that you add to option sets to support merging options. A value is auto-generated based on the **Prefix** text to help make it more unique. The value must be between 10,000 and 99,999.<br /><br /> More information: [Merging Option set options](understand-managed-solutions-merged.md#BKMK_MergingOptionSetOptions) |
+| **Option Value Prefix** | This value lets you help separate options that you add to option sets to support merging options. A value is auto-generated based on the **Prefix** text to help make it more unique. The value must be between 10,000 and 99,999.<br /><br /> More information: [Merging Option set options](/dynamics365/customer-engagement/developer/understand-managed-solutions-merged#BKMK_MergingOptionSetOptions) |
 |   **Contact Details**   |                                                                                                                                                           Use these fields to add information that will enable people who install the solution to contact you.                                                                                                                                                           |
 
  See [Create a Publisher](work-solutions.md#BKMK_CreatePublisher) for information about how to create a publisher programmatically.  
@@ -93,7 +93,7 @@ In addition to being a prerequisite to creating a managed solution, an unmanaged
 > [!IMPORTANT]
 >  Changes applied by importing an unmanaged solution cannot be uninstalled. Do not install an unmanaged solution if you want to roll back the changes.  
 
- This operation is performed programmatically by using the <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> message. You can write code to execute this message asynchronously. More information: [Execute messages in the background (asynchronously)](org-service/use-messages-request-response-classes-execute-method.md#bkmk_executeasync). You can track the progress of the import or generate a report of the success of the import by using the `ImportJob` entity. More information: [Install or Upgrade a Solution](work-solutions.md#BKMK_InstallUpgradeSolution)  
+ This operation is performed programmatically by using the <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> message. You can write code to execute this message asynchronously. More information: [Execute messages in the background (asynchronously)](/dynamics365/customer-engagement/developer/org-service/use-messages-request-response-classes-execute-method#bkmk_executeasync). You can track the progress of the import or generate a report of the success of the import by using the `ImportJob` entity. More information: [Install or Upgrade a Solution](work-solutions.md#BKMK_InstallUpgradeSolution)  
 
 > [!IMPORTANT]
 >  Installing a solution or publishing customizations can interfere with normal system operation. We recommend that you schedule solution imports when it’s least disruptive to users.  
@@ -107,8 +107,8 @@ In addition to being a prerequisite to creating a managed solution, an unmanaged
  Change the maximum allowed size by editing the [\<httpRuntime>](https://msdn.microsoft.com/library/e1f13641\(v=vs.100\).aspx) element in the web.config file for the application. Edit the `executionTimeout` and `maxRequestLength` attributes to allow for the necessary size. After you finish installing the solution you can set it to the size you want.  
 
 ### See also  
- [Plan For Solution Development](plan-solution-development.md)   
- [Package and Distribute Extensions with Dynamics 365 Solutions](package-distribute-extensions-use-solutions.md)   
+ [Plan For Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
+ [Package and Distribute Extensions with Dynamics 365 Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Customization Solutions File Schema](/dynamics365/customer-engagement/developer/customize-dev/customization-solutions-file-schema)   
  [Create, Install, and Update a Managed Solution](create-install-update-managed-solution.md)   
  [Uninstall or Delete a solution](uninstall-delete-solution.md)

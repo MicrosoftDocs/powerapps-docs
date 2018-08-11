@@ -22,13 +22,13 @@ In Common Data Service for Apps, activities are tasks that you or your teams per
   
  **Other activity entities**  
   
--   The scheduling activities enables you to schedule your services and resources, and thus define work schedules. The scheduling activity entities are `Appointment`, `ServiceAppointment`, and `RecurringAppointmentMaster`. For more information, see [Schedule and Appointment Entities](schedule-appointment-entities.md).  
+-   The scheduling activities enables you to schedule your services and resources, and thus define work schedules. The scheduling activity entities are `Appointment`, `ServiceAppointment`, and `RecurringAppointmentMaster`. For more information, see [Schedule and Appointment Entities](/dynamics365/customer-engagement/developer/schedule-appointment-entities).  
   
--   The marketing activity, `CampaignResponse`, enables you to capture responses from the customers for a marketing campaign, while the `CampaignActivity` entity represents a step in a campaign. For more information, see [Campaign Entities](campaign-entities.md).  
+-   The marketing activity, `CampaignResponse`, enables you to capture responses from the customers for a marketing campaign, while the `CampaignActivity` entity represents a step in a campaign. For more information, see [Campaign Entities](/dynamics365/customer-engagement/developer/campaign-entities).  
   
--   The sales force automation entities `OpportunityClose`, `OrderClose`, and `QuoteClose` activities capture information about each of these events. For more information, see [Sales Entities (Lead, Opportunity, Competitor, Quote, Order, Invoice)](sales-entities-lead-opportunity-competitor-quote-order-invoice.md).  
+-   The sales force automation entities `OpportunityClose`, `OrderClose`, and `QuoteClose` activities capture information about each of these events. For more information, see [Sales Entities (Lead, Opportunity, Competitor, Quote, Order, Invoice)](/dynamics365/customer-engagement/developer/sales-entities-lead-opportunity-competitor-quote-order-invoice).  
   
--   The customer service entity `IncidentResolution` activity captures information about the resolution of a case. For more information, see [Incident (Case) Entities](incident-case-entities.md).  
+-   The customer service entity `IncidentResolution` activity captures information about the resolution of a case. For more information, see [Incident (Case) Entities](/dynamics365/customer-engagement/developer/incident-case-entities).  
   
 ## In This Section  
  [Custom Activities in Dynamics 365](custom-activities.md)  
@@ -41,10 +41,10 @@ In Common Data Service for Apps, activities are tasks that you or your teams per
   
  [E-mail Activity Entities](email-activity-entities.md)  
   
- [Sample Code for Activity Entities](sample-code-activity-entities.md)  
+ [Sample Code for Activity Entities](/dynamics365/customer-engagement/developer/sample-code-activity-entities)  
   
 ## Related Sections  
- [Model Your Business Data with Dynamics 365 Customer Engagement](model-business-data.md)  
+ [Model Your Business Data with Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/developer/model-business-data)  
   
  [Server-side Synchronization Entities](server-side-synchronization-entities.md)  
   

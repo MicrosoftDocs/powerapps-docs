@@ -19,7 +19,7 @@ You can use the Entity Metadata Browser to view entities and their properties in
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Common Data Service for Apps | [Microsoft Downloads: MetadataBrowser_3_0_0_5_managed.zip](http://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip) |
 
-After you download the solution, you must install it. For information about how to install a managed solution, see [Import, update, and export solutions](../customize/import-update-export-solutions.md)  
+After you download the solution, you must install it. For information about how to install a managed solution, see [Import, update, and export solutions](/dynamics365/customer-engagement/developer/customize/import-update-export-solutions)  
 
 ## Open as an app
 CDS for Apps is configured as an app. After you install the **Entity Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual entities.
@@ -86,5 +86,5 @@ You can perform the following actions:
  [Customize Entity Metadata](customize-entity-metadata.md)<br />
  [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)<br />
  [Create Early Bound Entity Classes with the Code Generation Tool (CrmSvcUtil.exe)](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
- [Analyze Plug-in Performance](analyze-plugin-performance.md)<br />
+ [Analyze Plug-in Performance](/dynamics365/customer-engagement/developer/analyze-plugin-performance)<br />
  [Solution Tools for Team Development](solution-tools-team-development.md)<br />

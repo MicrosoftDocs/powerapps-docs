@@ -33,9 +33,9 @@ Using the Web API, set the `HasNotes` property of the <xref:Microsoft.Dynamics.C
  To upload or remove an attachment, use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> message, setting the `Annotation.Filename` and `Annotation.MimeType` properties. This uploads an attachment that has been decoded into a base64 string format. The [System.Convert.ToBase64String](https://msdn.microsoft.com/library/system.convert.tobase64string.aspx) method can be used to convert the contents of a data file into a base64-formatted string. The maximum size of files that can be uploaded is determined by the **Organization.MaxUploadFileSize** property. This property is set in the **Email** tab of the **System Settings** in the Dynamics 365 application. This setting limits the size of files that can be attached to email messages, notes, and web resources. The default setting is 5 MB.  
   
 ## In This Section  
- [Sample: Upload, Retrieve, and Download an Attachment](sample-upload-retrieve-download-attachment.md)  
+ [Sample: Upload, Retrieve, and Download an Attachment](/dynamics365/customer-engagement/developer/sample-upload-retrieve-download-attachment)  
   
 ### See also 
  [Annotation Entity](reference/entities/annotation.md)   
- [Model Your Business Data](model-business-data.md)   
- [UserQuery (Saved View) Entity](userquery-saved-view-entity.md)
+ [Model Your Business Data](/dynamics365/customer-engagement/developer/model-business-data)   
+ [UserQuery (Saved View) Entity](/dynamics365/customer-engagement/developer/userquery-saved-view-entity)

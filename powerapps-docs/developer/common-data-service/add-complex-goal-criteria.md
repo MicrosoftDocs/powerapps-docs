@@ -57,5 +57,5 @@ If you want to add complex rollup criteria for a goal, you can use a rollup quer
   
 ### See also  
  [Goal Management Entities](goal-management-entities.md)   
- [Sample: Use Rollup Queries to Track Goals](sample-use-rollup-queries-track-goals.md)   
+ [Sample: Use Rollup Queries to Track Goals](/dynamics365/customer-engagement/developer/sample-use-rollup-queries-track-goals)   
  [Roll Up Goal Totals](roll-up-goal-totals.md)
