@@ -50,7 +50,7 @@ Common Data Service for Apps supports multiple languages. If you want your solut
   
  The `<SubArea>` element allows for passing the user’s language preference by using the `userlcid` parameter so that content that is the target 
  of the `SubArea.Url` attribute can be aware of the user’s language preference and adjust accordingly. 
- More information: [Passing Parameters to a URL Using SiteMap](customize-dev/pass-parameters-url-using-sitemap.md)  
+ More information: [Passing Parameters to a URL Using SiteMap](/dynamics365/customer-engagement/developer/customize-dev/pass-parameters-url-using-sitemap)  
   
 <a name="BKMK_ExportAndImportTranslations"></a>   
 
@@ -108,7 +108,7 @@ Common Data Service for Apps supports multiple languages. If you want your solut
 > [!IMPORTANT]
 >  You can only import translated text back into the same organization it was exported from.  
   
- After you have exported the customized entity or attribute text and had it translated, you can import the translated text strings in the web application by using the <xref:Microsoft.Crm.Sdk.Messages.ImportTranslationRequest> message. The file that you import must be a compressed file that contains the CrmTranslations.xml and the [Content_Types].xml file at the root. For more information, see [Import Translated Entity and Field Text](../customize/import-translated-entity-field-text.md).  
+ After you have exported the customized entity or attribute text and had it translated, you can import the translated text strings in the web application by using the <xref:Microsoft.Crm.Sdk.Messages.ImportTranslationRequest> message. The file that you import must be a compressed file that contains the CrmTranslations.xml and the [Content_Types].xml file at the root. For more information, see [Import Translated Entity and Field Text](/dynamics365/customer-engagement/customize/import-translated-entity-field-text).  
   
  After you import the completed translations, customized text appears for users who work in the languages that you had the text translated into.  
   
@@ -326,12 +326,12 @@ protected void ExecutePreValidateAccountDelete(LocalPluginContext localContext)
 ```  
   
 ### See also  
- [Package and Distribute Extensions with Dynamics 365 Solutions](package-distribute-extensions-use-solutions.md)   
+ [Package and Distribute Extensions with Dynamics 365 Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Introduction to Solutions](introduction-solutions.md)   
- [Plan For Solution Development](plan-solution-development.md)   
+ [Plan For Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Dependency Tracking for Solution Components](dependency-tracking-solution-components.md)   
  [Create, Export, or Import an Unmanaged Solution](create-export-import-unmanaged-solution.md)   
  [Create, Install, and Update a Managed Solution](create-install-update-managed-solution.md)   
  [Uninstall or Delete a solution](uninstall-delete-solution.md)   
- [Solution entities](solution-entities.md)   
- [Localize product property values](localize-product-property-values.md)
+ [Solution entities](/dynamics365/customer-engagement/developer/solution-entities)   
+ [Localize product property values](/dynamics365/customer-engagement/developer/localize-product-property-values)

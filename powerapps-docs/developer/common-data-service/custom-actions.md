@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 You can extend the functionality of Common Data Service for Apps by creating custom messages known as *actions*. These actions will have associated request/response classes and a Web API action will be generated. Actions are typically used to add new domain specific functionality to the organization web service or to combine multiple organization web service message requests into a single request. For example, in a support call center, you may want to combine the Create, Assign, and Setstate messages into a single new Escalate message.  
   
- The business logic of an action is implemented using a workflow. When you create an action, the associated real-time workflow is automatically registered to execute in stage 30 (core operation) of the execution pipeline. For more information about real-time workflows, see [Workflow types](process-categories.md).  
+ The business logic of an action is implemented using a workflow. When you create an action, the associated real-time workflow is automatically registered to execute in stage 30 (core operation) of the execution pipeline. For more information about real-time workflows, see [Workflow types](/dynamics365/customer-engagement/developer/process-categories).  
   
  While actions are supported in both CDS for Apps, creating an action in code (using XAML) is only supported by  on-premises and IFD deployments. Online customers must create actions interactively in the web application.  
   
@@ -34,7 +34,7 @@ You can extend the functionality of Common Data Service for Apps by creating cus
   
 - Is available through the Web API or `organization.svc` and `organization.svc/web` endpoints.  
   
-- Can be executed using a JavaScript web resource. More information: [Execute an action using a JavaScript web resource](create-own-actions.md#BKMK_JavaScript)  
+- Can be executed using a JavaScript web resource. More information: [Execute an action using a JavaScript web resource](/dynamics365/customer-engagement/developer/create-own-actions#BKMK_JavaScript)  
   
 - Always runs under the security context of the calling user.  
   
