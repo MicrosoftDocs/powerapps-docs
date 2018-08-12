@@ -102,9 +102,9 @@ More information: [Get started with virtual entities](/dynamics365/customer-enga
 
 ### Extend Outlook Client
 
-Use this assembly to interact with Microsoft CDS for Apps for Outlook and Microsoft CDS for Apps for Microsoft Office Outlook with Offline Access. 
+Use this assembly to interact with Microsoft Dynamics 365 for Outlook and Microsoft CDS for Apps for Microsoft Office Outlook with Offline Access. 
 
-More information: [Extend Common Data Service for Apps for Outlook](/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook)
+More information: [Extend Dynamics 365 for Outlook](/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook)
 
 **NuGet Package**: [Microsoft.CrmSdk.Outlook](https://www.nuget.org/packages/Microsoft.CrmSdk.Outlook/)
 

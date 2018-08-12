@@ -16,7 +16,7 @@ This sample code is for Common Data Service for Apps. To download the sample, re
 
 ## Prerequisites
 
-[!INCLUDE [sdk-prerequisite](../../../includes/sdk-prerequisite.md)]
+Internet connection is required to download the sample project and to restore the NuGet packages used in the sample project.
   
 ## Demonstrates  
  This sample shows how to use the methods available in the `Microsoft.Crm.Outlook.Sdk.dll` assembly.  

@@ -12,13 +12,14 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Create and retrieve Outlook filters
 
-This sample code is for Common Data Service for Apps. To download the sample, refer [Sample: Create and retrieve Outlook filters](https://msdn.microsoft.com/en-us/library/gg309283.aspx).
+This sample code is for Common Data Service for Apps. To download the sample, refer [Sample: Create and retrieve Outlook filters](/dynamics365/customer-engagement/developer/outlook-client/sample-create-retrieve-outlook-filters).
 
 ## Prerequisites
 
-[!INCLUDE [sdk-prerequisite](../../../includes/sdk-prerequisite.md)]
-  
+Internet connection is required to download the sample project and to restore the NuGet packages used in the sample project.
+
 ## Demonstrates  
+
  This sample shows how to retrieve filters for Microsoft Dynamics 365 for Outlook..  
   
 ## Example  

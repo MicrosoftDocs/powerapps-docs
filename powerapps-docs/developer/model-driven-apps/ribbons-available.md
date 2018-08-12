@@ -157,10 +157,13 @@ This topic describes where ribbons are defined and modified in Model-driven Apps
 |           Chart Editor tab           | `Mscrm.VisualizationDesignerTab` |                                       Displays when editing a chart from the solutions window.                                        |
 |    Search Tools Contextual Group     |      `Mscrm.ArticleSearch`       |                                             Displays when viewing the `KBarticle` entity.                                             |
 
-<a name="BKMK_RibbonsForCustomPages"></a>   
-## Ribbons for custom pages  
- You can display custom pages in the application navigation using the SiteMap. These pages will always display the [Basic Home Tab](ribbons-available-microsoft-dynamics-365.md#BKMK_BasicHomeTab) (`Mscrm.BasicHomeTab`). 
- It is not possible to use a `<PageRule>` to enable or display custom ribbon components on custom pages.  
+<a name="BKMK_RibbonsForCustomPages"></a>
+
+## Ribbons for custom pages
+
+You can display custom pages in the application navigation using the SiteMap. These pages will always display the [Basic Home Tab](ribbons-available.md#BKMK_BasicHomeTab) (`Mscrm.BasicHomeTab`). 
+
+It is not possible to use a `<PageRule>` to enable or display custom ribbon components on custom pages.  
 
 ### See also  
  [Customize the Ribbon](customize-commands-ribbon.md)   
