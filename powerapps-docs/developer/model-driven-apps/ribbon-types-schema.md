@@ -19,6 +19,7 @@ The following is the schema definition for the ribbon types portion of an import
 Download the [Schemas](http://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
 For more information, see [TODO: Package and Distribute Extensions with Microsoft Dynamics 365 Solutions]<!--(../package-distribute-extensions-use-solutions.md)-->.
+
   
 ## Schema  
   
@@ -857,5 +858,4 @@ For more information, see [TODO: Package and Distribute Extensions with Microsof
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Ribbon Core Schema](ribbon-core-schema.md)   
  [Ribbon WSS Schema](ribbon-wss-schema.md)   
- [TODO: Schemas Used in Model-driven Apps]<!--(../schemas-used-dynamics-365.md) -->  
  [Customization XML Reference](customization-xml-reference.md)

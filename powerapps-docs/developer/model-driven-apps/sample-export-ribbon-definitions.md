@@ -22,6 +22,7 @@ This sample code is for Mode-driven Apps. [Download the Export ribbon definition
   
 <!--## Requirements  
 [!INCLUDE[sdk_SeeConnectionHelper](../../includes/sdk-seeconnectionhelper.md)]-->
+
   
 ## Demonstrates  
  This sample shows how to export Ribbon definitions. It uses the <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> and <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest> messages.  

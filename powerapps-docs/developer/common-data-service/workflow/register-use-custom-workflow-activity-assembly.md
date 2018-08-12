@@ -47,7 +47,7 @@ To use your custom workflow activity in a process:
 
 ### See also
 
-[Custom workflow activities (workflow assemblies)](../custom-workflow-activities-workflow-assemblies.md)<br />
+[Custom workflow activities (workflow assemblies)](custom-workflow-activities-workflow-assemblies.md)<br />
 [Debug a custom workflow activity](debug-custom-workflow-activity.md)<br />
 <!-- TODO:
 [Plug-in isolation, trusts, and statistics](../plugin-isolation-trusts-statistics.md)<br />

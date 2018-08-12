@@ -181,5 +181,5 @@ public sealed partial class RetrieveCreditScore : CodeActivity
   
 ### See also
 
-[Custom Workflow Activities (Workflow Assemblies)](../custom-workflow-activities-workflow-assemblies.md)   
+[Custom Workflow Activities (Workflow Assemblies)](custom-workflow-activities-workflow-assemblies.md)   
 [Add Metadata to a Custom Workflow Activity](add-metadata-custom-workflow-activity.md)

@@ -59,5 +59,5 @@ You might want to make significant changes to your custom workflow activity such
   
 ### See also
  
-[Custom workflow activities (workflow assemblies)](../custom-workflow-activities-workflow-assemblies.md)   
+[Custom workflow activities (workflow assemblies)](custom-workflow-activities-workflow-assemblies.md)   
 [Process classes, attributes, and types](process-classes-attributes-and-types.md)

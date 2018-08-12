@@ -91,7 +91,7 @@ After this custom workflow activity is registered, you can use it from the CDS f
   
 ### See also
 
-[Custom workflow activities (workflow assemblies)](../custom-workflow-activities-workflow-assemblies.md)<br />
+[Custom workflow activities (workflow assemblies)](custom-workflow-activities-workflow-assemblies.md)<br />
 [Adding Metadata to the Custom Workflow Activity](add-metadata-custom-workflow-activity.md)<br />
 [Using the IOrganization Web Service within a Custom Workflow Activity](use-iorganization-web-service-custom-workflow-activity.md)<br />
 [Sample: Create a Custom Workflow Activity](sample-create-custom-workflow-activity.md)<br />
