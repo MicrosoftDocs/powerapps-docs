@@ -33,14 +33,14 @@ To delete data in bulk, you have to submit a bulk delete job by using the <xref:
   
  To run a bulk delete job, a user must have the `BulkDelete` and `Delete` privileges for the entity types being deleted. The user must also have read permissions to the entity records that are specified in the <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> message. By default, a system administrator has the necessary permissions; however, other users must be granted these permissions.  
   
- You can perform a bulk deletion on all entities that are supported by the delete action. For information about possible actions on entity records, see [Actions on Entity Records](introduction-entities.md#ActionsOnEntityRecords).  
+ You can perform a bulk deletion on all entities that are supported by the delete action. For information about possible actions on entity records, see [Actions on Entity Records](/dynamics365/customer-engagement/developer/introduction-entities#ActionsOnEntityRecords).  
   
  If a plug-in or a workflow (process) is triggered by the delete action on a specific entity type, it is triggered every time that an entity record of this type is deleted by the bulk delete job.  
   
 ### See also
 
  [Delete Data in Bulk in Dynamics 365](delete-data-bulk.md)   
- [Data Management in Dynamics 365 (Auditing, Duplicate Detection, Bulk Delete, Data Import)](manage-data.md)    
+ [Data Management in Dynamics 365 (Auditing, Duplicate Detection, Bulk Delete, Data Import)](/dynamics365/customer-engagement/developer/manage-data)    
  [Entity Relationship Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)   
  [Recurrence Pattern in Asynchronous Job Execution](/dynamics365/customer-engagement/developer/recurrence-pattern-asynchronous-job-execution)   
  [Sample: Bulk Delete Exported Records](org-service/samples/bulk-delete-exported-records.md)   
