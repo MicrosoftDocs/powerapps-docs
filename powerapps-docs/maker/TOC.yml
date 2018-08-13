@@ -536,6 +536,8 @@
             href: ./canvas-apps/accessibility-checker.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
+      - name: Experimental and preview features
+        href: ./canvas-apps/working-with-experimental.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app
@@ -592,8 +594,6 @@
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to PowerApps
       href: ./canvas-apps/transform-infopath.md
-  - name: Experimental and preview features
-    href: ./canvas-apps/working-with-experimental.md
   - name: For developers
     href: ./canvas-apps/dev-enterprise-intro.md
     items:
