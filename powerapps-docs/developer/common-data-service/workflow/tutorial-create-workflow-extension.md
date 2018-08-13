@@ -211,6 +211,9 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
     ![registered plug-in dialog](media/tutorial-create-workflow-activity-register-plug-in-dialog.png)
 
 1. Click **OK** to close the **Register New Assembly** dialog.
+
+### Configure activity names
+
 1. In the list of **Registered Plugins and Custom Workflow Activities** locate the **(Assembly) SampleWorkflowActivity** and expand it to show the **(Workflow Activity) SampleWorkflow.Activity.IncrementByTen - Isolatable**.
 1. Select the **(Workflow Activity) SampleWorkflow.Activity.IncrementByTen - Isolatable** and in the **Properties** area edit the **Editable properties** using the values in the following table:
 

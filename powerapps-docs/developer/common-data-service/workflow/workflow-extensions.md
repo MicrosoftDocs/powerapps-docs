@@ -38,12 +38,14 @@ By default, these processes include a common set of activities you can perform a
 |Stop Dialog|||X|
 
 You can use the **Perform Action** activity to execute any custom actions or the following system messages called **Command Actions**:
+
 ||||
 |--|--|--|
 |AddToQueue|AddUserToRecordTeam|RemoveUserFromRecordTeam|
 |SetProcess|SetWordTemplate||
 
 If you have Dynamics 365 Customer Engagement Sales or Service solutions, you can find other command actions depending on the solution:
+
 ||||
 |--|--|--|
 |ApplyRoutingRule|CalculateActualValue|CloseOpportunity|
