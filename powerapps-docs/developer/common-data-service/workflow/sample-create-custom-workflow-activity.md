@@ -273,5 +273,6 @@ namespace Microsoft.Crm.Sdk.Samples
  
 [Workflow extensions](workflow-extensions.md)<br />
 [Tutorial: Create workflow extension](tutorial-create-workflow-extension.md)<br />
-[Sample: Update Next Birthday Using a Custom Workflow Activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
+[Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
+[Sample: Calculate a credit score with a custom workflow activity](sample-calculate-credit-score-custom-workflow-activity.md)
 

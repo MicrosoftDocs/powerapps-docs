@@ -54,7 +54,11 @@ If you have Dynamics 365 Customer Engagement Sales or Service solutions, you can
 |ResolveIncident|ResolveQuote|Revise|
 |UnlockInvoicePricing|UnlockSalesOrderPricing|
 
-More information: [Configure workflow stages and steps](/flow/configure-workflow-steps), [Use CDS for Apps dialogs for guided processes](/flow/use-cds-for-apps-dialogs), and [Create a custom action](/flow/create-actions)
+More information: 
+
+- [Configure workflow stages and steps](/flow/configure-workflow-steps)
+- [Use CDS for Apps dialogs for guided processes](/flow/use-cds-for-apps-dialogs)
+- [Create a custom action](/flow/create-actions)
 
 
 
@@ -377,3 +381,11 @@ If you make changes that include significant changes to public classes or method
     ![workflow set version](media/workflow-set-version.png)
 
 When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to Unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
+
+
+### See also
+
+[Tutorial: Create workflow extension](tutorial-create-workflow-extension.md)<br />
+[Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)<br />
+[Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
+[Sample: Calculate a credit score with a custom workflow activity](sample-calculate-credit-score-custom-workflow-activity.md)

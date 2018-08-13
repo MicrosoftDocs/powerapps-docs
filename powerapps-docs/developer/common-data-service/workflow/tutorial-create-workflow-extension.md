@@ -37,7 +37,8 @@ This tutorial uses a very simple example to focus on the requirements and proces
 
 ## Goal
 
-The example below will create a simple custom workflow activity that may be used in a workflow, dialog, or action process.
+The example below will create a simple custom workflow activity that may be used in a workflow, dialog, or action process. [Configure workflow stages and steps](/flow/configure-workflow-steps)
+
 This custom workflow activity will match the following requirements:
 
 1. Accept an integer input parameter
@@ -333,3 +334,10 @@ To distribute a custom workflow activity in a solution, you must add the registe
 1. In the **Select solution components** dialog, select the SampleWorkflowActivity you created and click **OK**.
 
     ![Add SampleWorkflowActivity](media/tutorial-create-workflow-activity-add-solution-component.png)
+
+### See also
+
+[Workflow extensions](workflow-extensions.md)<br />
+[Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)<br />
+[Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
+[Sample: Calculate a credit score with a custom workflow activity](sample-calculate-credit-score-custom-workflow-activity.md)

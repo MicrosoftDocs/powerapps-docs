@@ -182,4 +182,6 @@ public sealed partial class RetrieveCreditScore : CodeActivity
 ### See also
 
 [Workflow extensions](workflow-extensions.md)<br />
-[Tutorial: Create workflow extension](tutorial-create-workflow-extension.md)
+[Tutorial: Create workflow extension](tutorial-create-workflow-extension.md)<br />
+[Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)<br />
+[Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)
