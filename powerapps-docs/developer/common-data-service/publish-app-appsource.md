@@ -58,4 +58,4 @@ More information: [Next steps: Submit your app on Cloud Partner Portal](next-ste
 ### See also  
 [Video: Microsoft AppSource: find the right app for your business](https://youtu.be/hpq_Y9LuIB8)
 
-[Package and distribute extensions using solutions](package-distribute-extensions-use-solutions.md) 
+[Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions) 

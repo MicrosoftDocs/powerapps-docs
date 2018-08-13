@@ -42,6 +42,6 @@ When multiple developers have to work on the same solution, you may want to crea
  In development organizations, solutions are deployed into various test and staging environments for analysis before they are deployed into a production environment. The white paper [Deploying Microsoft Dynamics CRM 2011 and CRM Online Solutions from Development through Test and Production Environments](http://go.microsoft.com/fwlink/p/?LinkId=232288) explores how to deploy real-world Dynamics 365 solutions across test and production environments in reliable and repeatable ways by using automation. The paper also highlights specific constraints that exist when you deploy and test solutions in CDS for Apps.  
   
 ### See also  
- [Planning for Solution Development](plan-solution-development.md)   
+ [Planning for Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Modularize your Solutions](organize-solutions.md)   
  [White Paper: Deploying Dynamics 365 Customer Engagement and CRM Online Solutions from Development through Test and Production Environments](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27824)

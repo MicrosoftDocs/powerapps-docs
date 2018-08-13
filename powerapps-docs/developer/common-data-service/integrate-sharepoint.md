@@ -29,7 +29,7 @@ SharePoint Server is a collaboration and content management application that sim
   
  [Define custom claim mapping for SharePoint server-based integration](define-custom-claim-mapping-sharepoint-server-based-integration.md)  
   
- [Sample: Enable Document Management for Entities](org-service/samples/enable-document-management-entities.md)  
+ [Sample: Enable Document Management for Entities](/dynamics365/customer-engagement/developer/integration-dev/sample-enable-document-management-entities)  
   
  [Sample: Create, Retrieve, Update, and Delete a SharePoint Location Record](/dynamics365/customer-engagement/developer/integration-dev/create-retrieve-update-delete-sharepoint-location-record)  
   
