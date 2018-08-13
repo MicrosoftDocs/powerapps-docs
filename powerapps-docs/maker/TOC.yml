@@ -536,6 +536,8 @@
             href: ./canvas-apps/accessibility-checker.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
+      - name: Experimental and preview features
+        href: ./canvas-apps/working-with-experimental.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app
@@ -592,8 +594,6 @@
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to PowerApps
       href: ./canvas-apps/transform-infopath.md
-  - name: Experimental and preview features
-    href: ./canvas-apps/working-with-experimental.md
   - name: For developers
     href: ./canvas-apps/dev-enterprise-intro.md
     items:
@@ -781,6 +781,8 @@
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
+    - name: Add data to an entity using Power Query
+      href: ./common-data-service/data-platform-cds-newentity-pq.md  
     - name: Entities and metadata
       href: ./common-data-service/create-edit-metadata.md
     - name: Types of entities

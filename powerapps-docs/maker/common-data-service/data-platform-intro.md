@@ -46,6 +46,7 @@ Building an app typically involves data from more than one source, while this ca
 * **Transform and import data using PowerQuery** &ndash; Transforming data when importing into the Common Data Service can be done through PowerQuery from many online data sources, a common tool used across Excel and Power BI.
 * **One time import of data** &ndash; Simple import and export of Excel and CSV files can be used for a one time or infrequent import of data into the Common Data Service for Apps.
 
+For more infomation about integrating data into the Common Data Service, see [Add data to an entity in Common Data Service for Apps by using Power Query](data-platform-cds-newentity-pq.md).
 
 ## Interacting with entities
 When you develop an app, you can use standard entities, custom entities, or both. CDS for Apps provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
