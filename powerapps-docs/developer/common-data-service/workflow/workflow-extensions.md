@@ -16,7 +16,7 @@ You can extend the options available within the designer for workflows used in C
 
 You can use these custom extensions within the designer used for workflows, custom actions, and dialogs.
 
-## When to create a workflow extension?
+## When to create a workflow extension
 
 If you don’t find the functionality you require using the default process activities, you can add custom activities so that they are available in the editor used to compose workflow, dialog, and action processes.
 
@@ -135,6 +135,7 @@ When you define parameters for your class you must define them as [InArgument<T>
 When your custom workflow activity uses input or output parameters you must add appropriate .NET Attributes to the public class properties that define them. This data will be read by the process designer to define how the parameters can be set in the process designer.
 
 You can use the following types of properties as input or output parameters:
+
 ||||
 |--|--|--|
 |[bool](/dotnet/api/system.boolean)|[DateTime](/dotnet/api/system.datetime)|[Decimal](/dotnet/api/system.decimal)|
@@ -283,11 +284,43 @@ protected override void Execute(CodeActivityContext context)
 
 ## Register your assembly
 
-<!-- TODO -->
+You will use the Plug-in Registration Tool (PRT) to register assemblies containing custom workflow activities. This is the same tool you use to register plug-ins. For both plug-ins and custom workflow activities, you must register the assembly which will upload it to the environment. However, you do not register steps for custom workflow activities.
+
+For custom workflow activites you must specify the following properties to control what is displayed in the workflow process designer.
+
+|Field|Description|
+|--|--|
+|Description|Not visible in the UI of the process designer, but may be useful when generating documentation from data drawn from the PluginType Entity that stores this information.|
+|FriendlyName|User friendly name for the plug-in.|
+|Name|The name of the menu represented|
+|WorkflowActivityGroupName|The name of the submenu added to the main menu in the CDS for Apps process designer.|
+
+![Set descriptive properties](media/create-workflow-activity-set-properties.png)
+
+> [!NOTE]
+> These values will not be visible in the unmanaged solution when you test your workflow activity. However, when you export a managed solution that includes this workflow activity these values will be visible in the process designer.
 
 ## Debug Workflow Activities
 
-<!-- TODO can't use profiler only tracing -->
+With custom workflow activities deployed to CDS for apps you must depend on using the tracing service to write information to an entity. Use this information to confirm the values and logic within your workflow activity.
+
+```csharp
+protected override void Execute(CodeActivityContext context)
+{
+//Create the tracing service
+ITracingService tracingService = executionContext.GetExtension<ITracingService>();
+
+//Use the tracing service
+tracingService.Trace("{0} {1} {2}.","Add","your","message");
+
+...
+```
+> [!NOTE]
+> The capability used to replay and debug plug-in cannot be used with custom workflow activities.
+
+More information:
+ - [Use Tracing](../debug-plug-in.md#use-tracing)
+ - [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
 
 ## Add to Solution
 
