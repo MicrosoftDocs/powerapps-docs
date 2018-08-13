@@ -781,7 +781,7 @@
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
-    - name: Add data to an entity in Common Data Service for Apps by using Power Query
+    - name: Add data to an entity using Power Query
       href: ./common-data-service/data-platform-cds-newentity-pq.md  
     - name: Entities and metadata
       href: ./common-data-service/create-edit-metadata.md
