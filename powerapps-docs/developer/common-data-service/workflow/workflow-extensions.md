@@ -289,7 +289,7 @@ protected override void Execute(CodeActivityContext context)
 
 ## Add to Solution
 
-<!-- TODO -->
+When you register assemblies using the plug-in registration tool they will be added to the **Default solution**, not to be confused with the **Common Data Service Default Solution**. Because the **Default solution** contains all the unmanaged customizations applied to the environment, before you can distribute your custom workflow activity using a solution you must add it to an unmanaged solution. For example, you could add it to the **Common Data Service Default Solution** or any unmanaged solution you have created.
 
 ## Manage changes to custom workflow activities
 

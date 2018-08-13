@@ -27,7 +27,13 @@ This tutorial uses a very simple example to focus on the requirements and proces
 
 ## Prerequisites
 
-You must have Windows Workflow Foundation included as an individual component with Visual Studio 2017.  More information: [Visual Studio requirements](workflow-extensions.md#visual-studio-requirements)
+- You must have Windows Workflow Foundation included as an individual component with Visual Studio 2017.  More information: [Visual Studio requirements](workflow-extensions.md#visual-studio-requirements)
+- A Common Data Service for Apps instance and administrator privileges
+- Understanding of how to configure workflows. More information: [Classic Common Data Service (CDS) for Apps workflows](/flow/workflow-processes)
+- A model-driven app that allows you to edit accounts and invoke on-demand workflows.
+
+    > [!IMPORTANT]
+    > At the time of this writing, **Unified Interface** model-driven apps do not provide the ability to invoke on-demand workflows. The model-driven app must use the **Web** client.
 
 ## Goal
 
@@ -185,13 +191,13 @@ Add the logic within the Execute method to apply the logic to increment the inpu
 
 Custom workflow activity assemblies are registered using the Plug-in Registration tool. The tool provides a graphical user interface and supports registering assemblies that contain plug-ins or custom workflow activities. To get the Plug-in Registration tool see: [Download tools from NuGet](../download-tools-nuget.md)
 
-<!-- TODO make the connect information an include so it can be included here without a link-->
+[!INCLUDE [cc-connect-plugin-registration-tool](../includes/cc-connect-plugin-registration-tool.md)]
 
-1. Open the Plug-in Registration Tool and connect to your Customer Engagement instance. More information: [Connect using the Plug-in Registration tool](../tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) 
+### Register your assembly
 
 1. Select **Register** > **Register New Assembly**
 
-    ![foo](media/tutorial-create-workflow-activity-register-assembly.png)
+    ![register assembly command](media/tutorial-create-workflow-activity-register-assembly.png)
 
 1. In the **Register New Assembly** dialog, click the ellipses button (**…**) and navigate to the `SampleWorkflowActivity.dll` in the `/bin/Debug` folder.
 
@@ -222,8 +228,8 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
 
     ![Save workflow activity properties](media/tutorial-create-workflow-activity-set-workflow-activity-properties.png)
 
-> [!NOTE]
-> These values will not be visible in the unmanaged solution when you test your workflow activity. However, when you export a managed solution that includes this workflow activity these values will be visible in the process designer.
+    > [!NOTE]
+    > These values will not be visible in the unmanaged solution when you test your workflow activity. However, when you export a managed solution that includes this workflow activity these values will be visible in the process designer.
 
 ## Test your assembly
 
@@ -255,12 +261,73 @@ You can test your new workflow activity by creating a process that will use it. 
     |Scope|Organization|
     |Start when: Record is created|deselected|
 
-    ![foo](media/tutorial-create-workflow-activity-configuration-test-workflow.png)
+    ![configuration of a test workflow](media/tutorial-create-workflow-activity-configuration-test-workflow.png)
 
     > [!NOTE]
-> This creates an on-demand workflow that can be applied by anyone in the organization.
+    > This creates an on-demand workflow that can be applied by anyone in the organization.
 
-<!-- TODO Continue from here https://microsoft-my.sharepoint.com/:w:/p/jdaly/EXY24IVNSEdOp1HleDjUS-wB7GJs2FQAv9k0tTVe4UPugw?e=UPDqtm -->
+1. Add the following **Step**:
 
+    ![Add the SampleWorkflowActivity.IncrementByTen step](media/tutorial-create-workflow-activity-use-sample-step.png)
+
+    > [!NOTE]
+    > As mentioned earlier, the custom values you set in [Register your assembly](#register-your-assembly) will not be applied in the designer until after the workflow activity is imported as part of a managed solution.
+
+1. Set the Step **Description** to **Get incremented Account Credit Limit** and click **Set properties**.
+1. Set the value of the **Integer input** property to the Credit Limit of the account with a default value of 0.
+
+    ![Set the integer input property](media/tutorial-create-workflow-activity-configure-first-step.png)
+
+1. Click **Save and Close**.
+1. Add an **Update Record** step:
+
+    ![Add an update record step](media/tutorial-create-workflow-activity-add-update-record-step.png)
+
+1. Click **Set Properties** and set the value of the **Credit Limit** to the value of the **Get incremented Account Credit Limit** step.
+
+    ![Set the value of the credit limit](media/tutorial-create-workflow-activity-set-credit-limit.png)
+
+    The workflow steps should look like this:
+
+    ![The completed workflow](media/tutorial-create-workflow-activity-completed-workflow.png)
+
+1. Click **Save and Close**.
+1. Activate the workflow by clicking **Activate** in the menu...
+
+    ![activate workflow command](media/tutorial-create-workflow-activity-activate-command.png)
+
+1. And click **Activate** in the **Process Activate Confirmation** dialog.
+
+    ![Process Activate Confirmation dialog](media/tutorial-create-workflow-activity-process-activate-confirmation-dialog.png)
+
+1. Navigate to a model-driven app and view a list of acccounts.
+1. Select an account.
+1. In the command bar, select the elipsis (**...**) and choose **Run Workflow.**
+
+    ![foo](media/tutorial-create-workflow-activity-run-workflow.png)
+
+1. In the **Lookup Record** dialog, select the **Test of SampleWorkflowActivity.IncrementByTen** workflow you created and click **Add**.
+
+    ![select the test workflow](media/tutorial-create-workflow-select-test-workflow.png)
+
+1. In the **Confirm Application of Workflow** dialog, click **OK**.
+
+    ![confirm application of workflow](media/tutorial-create-workflow-activity-confirm-dialog.png)
+
+1. Open the account you applied the workflow to and verify that the **Credit Limit** value has increased by 10.
+
+    ![verify account credit limit incremented](media/tutorial-create-workflow-verify-credit-limit.png)
 
 ## Add your assembly to a solution
+
+To distribute a custom workflow activity in a solution, you must add the registered assembly that contains it to an unmanaged solution.
+
+1. Open the unmanaged solution you want to add the assembly to using Solution Explorer.
+1. Select **Plug-in Assemblies** in the list of components.
+1. Click **Add Existing** in the command bar.
+
+    ![select add existing](media/tutorial-create-workflow-activity-add-existing-solution-component.png)
+
+1. In the **Select solution components** dialog, select the SampleWorkflowActivity you created and click **OK**.
+
+    ![Add SampleWorkflowActivity](media/tutorial-create-workflow-activity-add-solution-component.png)
