@@ -46,5 +46,5 @@ The *goal management* in Common Data Service for Apps lets you set sales, market
  [Metric Entity](reference/entities/metric.md)<br />
  [RollupField Entity](reference/entities/rollupfield.md)<br />
  [GoalRollupQuery Entity](reference/entities/goalrollupquery.md)<br />
- [Model your business data with Dynamics 365](model-business-data.md)<br />
- [Product Catalog Entities](product-catalog-entities.md)<br />
+ [Model your business data with Dynamics 365](/dynamics365/customer-engagement/developer/model-business-data)<br />
+ [Product Catalog Entities](/dynamics365/customer-engagement/developer/product-catalog-entities)<br />

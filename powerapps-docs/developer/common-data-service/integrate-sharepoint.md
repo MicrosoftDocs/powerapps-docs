@@ -1,6 +1,6 @@
 ---
 title: "Integrate Common Data Service for Apps with SharePoint (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The SharePoint integration feature enables you to store and manage documents on SharePoint in the context of a Common Data Service for Apps record, and use the SharePoint document management abilities in CDS for Apps, such as checking the document in and out, viewing version history, and changing document properties." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -31,9 +31,9 @@ SharePoint Server is a collaboration and content management application that sim
   
  [Sample: Enable Document Management for Entities](org-service/samples/enable-document-management-entities.md)  
   
- [Sample: Create, Retrieve, Update, and Delete a SharePoint Location Record](org-service/samples/create-retrieve-update-delete-sharepoint-location-record.md)  
+ [Sample: Create, Retrieve, Update, and Delete a SharePoint Location Record](/dynamics365/customer-engagement/developer/integration-dev/create-retrieve-update-delete-sharepoint-location-record)  
   
- [Sample: Retrieve Absolute URL and Site Collection URL of a Location Record](org-service/samples/retrieve-absolute-url-and-site-collection-url-of-a-location-record.md)  
+ [Sample: Retrieve Absolute URL and Site Collection URL of a Location Record](/dynamics365/customer-engagement/developer/integration-dev/retrieve-absolute-url-and-site-collection-url-of-a-location-record)  
   
 ## Reference  
  [Manage your documents using SharePoint](https://technet.microsoft.com/library/dn531062.aspx)  
