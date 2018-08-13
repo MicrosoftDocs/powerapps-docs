@@ -95,8 +95,6 @@
         href: work-event-data-azure-event-hub-solution.md
     - name: Web Hooks
       href: web-hooks.md
-    - name: Workflow Extensions
-      href: workflow-extensions.md
   - name: Use FetchXML to construct a query
     href: use-fetchxml-construct-query.md
     items:

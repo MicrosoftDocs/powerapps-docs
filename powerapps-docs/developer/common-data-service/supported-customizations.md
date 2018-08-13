@@ -77,7 +77,7 @@ The ability to create custom business logic using the plug-in mechanism describe
 
 ### Workflow extensions
 
-The ability to create custom workflow activities (assemblies) to be called from workflow rules is fully supported and upgradeable. Custom workflow activities can only be registered and executed in the sandbox (isolation). More information: [Workflow extensions](workflow-extensions.md) Automate your business processes in Customer Engagement
+The ability to create custom workflow activities (assemblies) to be called from workflow rules is fully supported and upgradeable. Custom workflow activities can only be registered and executed in the sandbox (isolation). More information: [Workflow extensions](workflow/workflow-extensions.md) Automate your business processes in Customer Engagement
 
 ## Support for .NET Framework Versions
 
