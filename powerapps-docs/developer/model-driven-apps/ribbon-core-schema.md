@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
-ms.author: "kvivek # MSFT alias of Microsoft employees only
+ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 ---
 # Ribbon core schema
