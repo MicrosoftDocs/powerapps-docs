@@ -16,7 +16,7 @@ You can extend the options available within the designer for workflows used in C
 
 You can use these custom extensions within the designer used for workflows, custom actions, and dialogs.
 
-## When to create a workflow extension?
+## When to create a workflow extension
 
 If you don’t find the functionality you require using the default process activities, you can add custom activities so that they are available in the editor used to compose workflow, dialog, and action processes.
 
@@ -38,12 +38,14 @@ By default, these processes include a common set of activities you can perform a
 |Stop Dialog|||X|
 
 You can use the **Perform Action** activity to execute any custom actions or the following system messages called **Command Actions**:
+
 ||||
 |--|--|--|
 |AddToQueue|AddUserToRecordTeam|RemoveUserFromRecordTeam|
 |SetProcess|SetWordTemplate||
 
 If you have Dynamics 365 Customer Engagement Sales or Service solutions, you can find other command actions depending on the solution:
+
 ||||
 |--|--|--|
 |ApplyRoutingRule|CalculateActualValue|CloseOpportunity|
@@ -52,7 +54,11 @@ If you have Dynamics 365 Customer Engagement Sales or Service solutions, you can
 |ResolveIncident|ResolveQuote|Revise|
 |UnlockInvoicePricing|UnlockSalesOrderPricing|
 
-More information: [Configure workflow steps](/dynamics365/customer-engagement/customize/configure-workflow-steps), [Actions on dialogs](/dynamics365/customer-engagement/developer/actions-dialogs), and [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions)
+More information: 
+
+- [Configure workflow stages and steps](/flow/configure-workflow-steps)
+- [Use CDS for Apps dialogs for guided processes](/flow/use-cds-for-apps-dialogs)
+- [Create a custom action](/flow/create-actions)
 
 
 
@@ -128,11 +134,12 @@ These are general steps used to create a custom workflow activity using Visual S
 
 ## Add parameters
 
-When you define parameters for your class you must define them as [InArgument<T>](/dotnet/api/system.activities.inargument-1), [OutArgument<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: Add your code to the Execute method
+When you define parameters for your class you must define them as [InArgument<T>](/dotnet/api/system.activities.inargument-1), [OutArgument<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
 
 When your custom workflow activity uses input or output parameters you must add appropriate .NET Attributes to the public class properties that define them. This data will be read by the process designer to define how the parameters can be set in the process designer.
 
 You can use the following types of properties as input or output parameters:
+
 ||||
 |--|--|--|
 |[bool](/dotnet/api/system.boolean)|[DateTime](/dotnet/api/system.datetime)|[Decimal](/dotnet/api/system.decimal)|
@@ -281,15 +288,47 @@ protected override void Execute(CodeActivityContext context)
 
 ## Register your assembly
 
-<!-- TODO -->
+You will use the Plug-in Registration Tool (PRT) to register assemblies containing custom workflow activities. This is the same tool you use to register plug-ins. For both plug-ins and custom workflow activities, you must register the assembly which will upload it to the environment. However, you do not register steps for custom workflow activities.
+
+For custom workflow activites you must specify the following properties to control what is displayed in the workflow process designer.
+
+|Field|Description|
+|--|--|
+|Description|Not visible in the UI of the process designer, but may be useful when generating documentation from data drawn from the PluginType Entity that stores this information.|
+|FriendlyName|User friendly name for the plug-in.|
+|Name|The name of the menu represented|
+|WorkflowActivityGroupName|The name of the submenu added to the main menu in the CDS for Apps process designer.|
+
+![Set descriptive properties](media/create-workflow-activity-set-properties.png)
+
+> [!NOTE]
+> These values will not be visible in the unmanaged solution when you test your workflow activity. However, when you export a managed solution that includes this workflow activity these values will be visible in the process designer.
 
 ## Debug Workflow Activities
 
-<!-- TODO can't use profiler only tracing -->
+With custom workflow activities deployed to CDS for apps you must depend on using the tracing service to write information to an entity. Use this information to confirm the values and logic within your workflow activity.
+
+```csharp
+protected override void Execute(CodeActivityContext context)
+{
+//Create the tracing service
+ITracingService tracingService = executionContext.GetExtension<ITracingService>();
+
+//Use the tracing service
+tracingService.Trace("{0} {1} {2}.","Add","your","message");
+
+...
+```
+> [!NOTE]
+> The capability used to replay and debug plug-ins using plug-in profiler cannot be used with custom workflow activities.
+
+More information:
+ - [Use Tracing](../debug-plug-in.md#use-tracing)
+ - [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
 
 ## Add to Solution
 
-<!-- TODO -->
+When you register assemblies using the plug-in registration tool they will be added to the **Default solution**, not to be confused with the **Common Data Service Default Solution**. Because the **Default solution** contains all the unmanaged customizations applied to the environment, before you can distribute your custom workflow activity using a solution you must add it to an unmanaged solution. For example, you could add it to the **Common Data Service Default Solution** or any unmanaged solution you have created.
 
 ## Manage changes to custom workflow activities
 
@@ -342,3 +381,11 @@ If you make changes that include significant changes to public classes or method
     ![workflow set version](media/workflow-set-version.png)
 
 When all processes are converted to use the new assembly, you can use the Plug-in Registration tool to Unregister the assembly, so it will no longer be available. More information: [Unregister components](../register-plug-in.md#unregister-components)
+
+
+### See also
+
+[Tutorial: Create workflow extension](tutorial-create-workflow-extension.md)<br />
+[Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)<br />
+[Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
+[Sample: Calculate a credit score with a custom workflow activity](sample-calculate-credit-score-custom-workflow-activity.md)

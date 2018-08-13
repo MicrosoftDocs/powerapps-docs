@@ -84,8 +84,8 @@
       href: custom-actions.md
     - name: Plug-ins
       href: plug-ins.md
-    - name: Custom workflow activities 
-      href: workflow/custom-workflow-activities-workflow-assemblies.md
+    - name: Workflow extensions
+      href: workflow/workflow-extensions.md
     - name: Azure Integration
       href: azure-integration.md
       items: 
@@ -95,8 +95,6 @@
         href: work-event-data-azure-event-hub-solution.md
     - name: Web Hooks
       href: web-hooks.md
-    - name: Workflow Extensions
-      href: workflow-extensions.md
   - name: Use FetchXML to construct a query
     href: use-fetchxml-construct-query.md
     items:
