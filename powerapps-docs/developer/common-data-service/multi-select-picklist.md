@@ -280,7 +280,7 @@ foreach (Contact contact in nonHikers.Entities)
 
 ## Create a multi-select picklist with code
 
-The easiest way to create a multi-select picklist is to use the attribute editor in the customization tools. More information [Create and edit fields](../customize/create-edit-fields.md)
+The easiest way to create a multi-select picklist is to use the attribute editor in the customization tools. More information [Create and edit fields](/dynamics365/customer-engagement/customize/create-edit-fields)
 
 But if you need to automate creation of this kind of attribute you can use C# code like the following with the organization service which creates a multi-select picklist to allow choices of outdoor activities to the `contact` entity. More information [Create attributes](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata.md#create-attributes)
 
@@ -319,9 +319,9 @@ But if you need to automate creation of this kind of attribute you can use C# co
 ```
 
 ### See also
-[Introduction to entity attributes](introduction-entity-attributes.md)<br />
+[Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-entity-attributes)<br />
 [Create an entity using the Web API](webapi/create-entity-web-api.md)<br />
 [Query Data using the Web API](webapi/query-data-web-api.md)<br />
-[Work with attribute metadata](org-service/work-attribute-metadata.md)<br />
-[Sample: Work with attribute metadata](org-service/samples/work-attribute-metadata.md)<br />
+[Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)<br />
+[Sample: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/sample-work-attribute-metadata)<br />
 [Late-bound and early-bound programming using the Organization Service](org-service/early-bound-programming.md)

@@ -21,7 +21,7 @@ Before you release your managed solution you should consider how you will mainta
   
 ![Solution version compatiblity](media/crm_v9.0_solution_compatibility_chart.png)
   
- As additional update rollups or service updates are applied to CDS for Apps, solutions exported from organizations with those updates cannot be imported into organizations which do not have those updates. More information: [Introduction to Solutions: Version compatibility](introduction-solutions.md#BKMK_VersionCompat).  
+ As additional update rollups or service updates are applied to CDS for Apps, solutions exported from organizations with those updates cannot be imported into organizations which do not have those updates. More information: [Introduction to Solutions](introduction-solutions.md).  
   
  The `<ImportExportXml>` root element uses a `SolutionPackageVersion` attribute to set the value for the version that the solution is compatible with. You should not manually edit this value.  
   

@@ -36,8 +36,7 @@ Refer to the sample link at the end of this topic for sample code that demonstra
 
 ### See also
 
- [Data Management in Dynamics 365](manage-data.md)<br />
- [Audit entity data changes](audit-entity-data-changes.md)<br />
+ [Data Management in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)<br />
+ [Audit entity data changes](/dynamics365/customer-engagement/developer/audit-entity-data-changes)<br />
  [Audit user access](audit-user-access.md) <br />
- [Sample: Audit Entity Data Changes](org-service/samples/audit-entity-data-changes.md)<br />
- [Auditing Entity Data Changes in Dynamics 365](audit-entity-data-changes.md)<br />
+ [Sample: Audit Entity Data Changes](org-service/samples/audit-entity-data-changes.md)

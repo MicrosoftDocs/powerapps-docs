@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 You can link the custom attributes created for the `RecurringAppointmentMaster` entity with the custom attributes created for the `Appointment` entity to automatically copy the data from the recurring appointment master custom attribute to the linked recurring appointment instances custom attribute, every time it is expanded.  
   
- There is a 1:1 mapping between the custom attributes, which implies that a custom attribute of the recurring appointment master entity can be linked to only one custom attribute of the appointment entity. Moreover, the custom attributes that are to be linked together must be of the same type. For example, you cannot link a custom attribute of type `string` with a `decimal` custom attribute. For information about different types of attributes, see [Customize Entity Attribute Metadata](customize-entity-attribute-metadata.md).  
+ There is a 1:1 mapping between the custom attributes, which implies that a custom attribute of the recurring appointment master entity can be linked to only one custom attribute of the appointment entity. Moreover, the custom attributes that are to be linked together must be of the same type. For example, you cannot link a custom attribute of type `string` with a `decimal` custom attribute. For information about different types of attributes, see [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata).  
   
 > [!NOTE]
 >  You cannot link the custom attributes that have *field-level security* enabled. Similarly, you cannot enable field-level security for linked custom attributes.  
@@ -31,7 +31,7 @@ You can link the custom attributes created for the `RecurringAppointmentMaster` 
   
 ### See also
 
- [Recurring Appointment Entities](recurring-appointment-entities.md)   
+ [Recurring Appointment Entities](/dynamics365/customer-engagement/developer/recurring-appointment-entities)   
  [RecurringAppointmentMaster Entity](/reference/entities/recurringappointmentmaster.md)   
  [Sample: Link Custom Attributes between Series and Instances](org-service/samples/link-custom-attributes-between-series-instances.md)   
- [Customize Entity Attribute Metadata](customize-entity-attribute-metadata.md)
+ [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)

@@ -45,5 +45,5 @@ Common Data Service for Apps implements a partial expansion model to create recu
 ### See also  
  [Recurring Appointment Entities](/dynamics365/customer-engagement/developer/recurring-appointment-entities)   
  [Create a Recurring Appointment Series, Instance or Exception](create-recurring-appointment-series-instance-exception.md)   
- [Delete or End a Recurring Appointment Series or Instance](delete-or-end-a-recurring-appointment-series-or-instance.md)   
+ [Delete or End a Recurring Appointment Series or Instance](/dynamics365/customer-engagement/developer/delete-or-end-a-recurring-appointment-series-or-instance)   
  [Update a Recurring Appointment](update-recurring-appointment.md)
