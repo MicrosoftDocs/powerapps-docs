@@ -1,7 +1,7 @@
 # - name: Custom workflow activities (workflow assemblies)
 #   href: custom-workflow-activities-workflow-assemblies.md
 - name: Workflow extensions
-  href:workflow-extensions.md
+  href: workflow-extensions.md
   items:
   - name: "Tutorial: Create workflow extension"
     href: tutorial-create-workflow-extension.md
