@@ -84,8 +84,8 @@
       href: custom-actions.md
     - name: Plug-ins
       href: plug-ins.md
-    - name: Custom workflow activities 
-      href: workflow/custom-workflow-activities-workflow-assemblies.md
+    - name: Workflow extensions
+      href: workflow/workflow-extensions.md
     - name: Azure Integration
       href: azure-integration.md
       items: 

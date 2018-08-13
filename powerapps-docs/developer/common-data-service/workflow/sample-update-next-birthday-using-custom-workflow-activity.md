@@ -297,7 +297,6 @@ namespace Microsoft.Crm.Sdk.Samples
   
 ### See also
 
-[Custom Workflow Activities (Workflow Assemblies)](custom-workflow-activities-workflow-assemblies.md)<br />
+[Workflow extensions](workflow-extensions.md)<br />
+[Tutorial: Create workflow extension](tutorial-create-workflow-extension.md)<br />
 [Sample: Calculate a Credit Score with a Custom Workflow Activity](sample-calculate-credit-score-custom-workflow-activity.md)<br />
-[Add Metadata to a Custom Workflow Activity](add-metadata-custom-workflow-activity.md)<br />
-<xref:Microsoft.Xrm.Sdk.Workflow.IWorkflowContext>

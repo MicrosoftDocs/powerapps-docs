@@ -54,7 +54,7 @@ If you have Dynamics 365 Customer Engagement Sales or Service solutions, you can
 |ResolveIncident|ResolveQuote|Revise|
 |UnlockInvoicePricing|UnlockSalesOrderPricing|
 
-More information: [Configure workflow steps](/dynamics365/customer-engagement/customize/configure-workflow-steps), [Actions on dialogs](/dynamics365/customer-engagement/developer/actions-dialogs), and [Create your own actions](/dynamics365/customer-engagement/developer/create-own-actions)
+More information: [Configure workflow stages and steps](/flow/configure-workflow-steps), [Use CDS for Apps dialogs for guided processes](/flow/use-cds-for-apps-dialogs), and [Create a custom action](/flow/create-actions)
 
 
 
@@ -130,7 +130,7 @@ These are general steps used to create a custom workflow activity using Visual S
 
 ## Add parameters
 
-When you define parameters for your class you must define them as [InArgument<T>](/dotnet/api/system.activities.inargument-1), [OutArgument<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: Add your code to the Execute method
+When you define parameters for your class you must define them as [InArgument<T>](/dotnet/api/system.activities.inargument-1), [OutArgument<T>](/dotnet/api/system.activities.outargument-1), or [InOutArgument<T>](/dotnet/api/system.activities.inoutargument-1) types. These types provide methods inherited from a common [Argument Class](/dotnet/api/system.activities.argument) to Get or Set the parameters. Your code will use these methods in the Execute method. More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
 
 When your custom workflow activity uses input or output parameters you must add appropriate .NET Attributes to the public class properties that define them. This data will be read by the process designer to define how the parameters can be set in the process designer.
 
@@ -316,7 +316,7 @@ tracingService.Trace("{0} {1} {2}.","Add","your","message");
 ...
 ```
 > [!NOTE]
-> The capability used to replay and debug plug-in cannot be used with custom workflow activities.
+> The capability used to replay and debug plug-ins using plug-in profiler cannot be used with custom workflow activities.
 
 More information:
  - [Use Tracing](../debug-plug-in.md#use-tracing)
