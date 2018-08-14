@@ -29,7 +29,9 @@ You can easily customize the data that your app retrieves by customing the Items
 
 For more information on how to to customize your formula with tables see the following articles:
 
-  [Understand data sources in PowerApps](working-with-data-sources.md),  [Generate an app from Excel data](get-started-create-from-data.md),  [Create an app from scratch](get-started-create-from-blank.md),  [Understand tables and records in PowerApps](working-with-tables.md)
+  [Understand data sources in PowerApps](working-with-data-sources.md) <br> 
+  [Generate an app from Excel data](get-started-create-from-data.md) <br> 
+  [Create an app from scratch](get-started-create-from-blank.md) <br> [Understand tables and records in PowerApps](working-with-tables.md)
 
     > [!NOTE]
   > To connect to data in Excel, the workbook must be hosted in a cloud-storage service like OneDrive. For more information, see [Connect to cloud-storage from PowerApps](connections/cloud-storage-blob-connections.md).
