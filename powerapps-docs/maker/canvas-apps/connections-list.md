@@ -33,9 +33,8 @@ For more information on how to to customize your formula with tables see the fol
   [Generate an app from Excel data](get-started-create-from-data.md) <br> 
   [Create an app from scratch](get-started-create-from-blank.md) <br> [Understand tables and records in PowerApps](working-with-tables.md)
 
-    > [!NOTE]
+  > [!NOTE]
   > To connect to data in Excel, the workbook must be hosted in a cloud-storage service like OneDrive. For more information, see [Connect to cloud-storage from PowerApps](connections/cloud-storage-blob-connections.md).
-
 
 ## Actions
 
