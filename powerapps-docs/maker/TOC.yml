@@ -795,6 +795,8 @@
       href: ./common-data-service/create-edit-virtual-entities.md
     - name: Virtual entity OData v4 data provider
       href: ./common-data-service/virtual-entity-odata-provider-requirements.md
+    - name: Define alternate keys using PowerApps portal
+      href: ./common-data-service/define-alternate-keys-portal.md   
     - name: Define alternate keys using solution explorer
       href: ./common-data-service/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Entity"
@@ -891,6 +893,10 @@
         href: ./common-data-service/custom-picklists.md
       - name: How to create global option sets using solution explorer  
         href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
+      - name: How to define calculated fields
+        href: ./common-data-service/define-calculated-fields.md
+      - name: How to define rollup fields
+        href: ./common-data-service/define-rollup-fields.md
       - name: How to map entity fields
         href: ./common-data-service/map-entity-fields.md
       - name: How to delete fields
