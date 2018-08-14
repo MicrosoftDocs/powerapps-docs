@@ -26,7 +26,7 @@ There are two designers you can use to create or edit fields:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit fields for Common Data Service for Apps using PowerApps portal](create-edit-field-portal.md)|
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit fields for Common Data Service for Apps using PowerApps portal](create-edit-field-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit fields for Common Data Service for Apps using PowerApps solution explorer](create-edit-field-solution-explorer.md) |
 
 > [!NOTE]

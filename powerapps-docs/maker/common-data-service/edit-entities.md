@@ -29,7 +29,7 @@ There are two ways to edit an entity using a designer:
 
 |Designer|Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com)|Provides an easy streamlined experience, but some special settings are not available.|
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements.|
 
 In both the PowerApps portal and solution explorer you can perform the following:

@@ -20,7 +20,7 @@ manager: "kvivek"
 
 Solution explorer provides one way to view and create alternate keys for Common Data Service for Apps.
 
-The [PowerApps portal](https://web.powerapps.com) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
 - [Define alternate keys using PowerApps portal](define-alternate-keys-portal.md)
 
