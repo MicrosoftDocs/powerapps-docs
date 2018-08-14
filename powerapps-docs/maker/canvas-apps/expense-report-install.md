@@ -14,12 +14,12 @@ ms.author: caburk
 ---
 # Install and configure the Expense Report sample for canvas apps in PowerApps
 
-Step-by-step instructions for installing and configuring the Expense Report sample.
+Step-by-step instructions for installing and configuring the Expense Report sample. You can also preview the sample app [here](https://aka.ms/previewmyexpenses).
 
 Estimated time to complete these steps: **10-15 minutes**
 
 > [!TIP]
-> Watch [this video](https://youtu.be/DOR28V5kCkw) for a demonstration of how to use the Expense Report sample app. 
+> Watch [this video](https://youtu.be/kJXZPILfbwU) for a demonstration of how to use the Expense Report sample app. 
 
 Track expense reports from submission to approval. Tally line items as individual expenses accrue and submit for approval when ready. This app requires a small amount of setup to make it your own.
 
