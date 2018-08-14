@@ -48,6 +48,6 @@ By default,  when you build or customize a model-driven app, you work with the C
  [!INCLUDE[cc_privacy_crm_customizations](../../includes/cc-privacy-crm-customizations.md)]  
   
 ## See Also  
-  [Getting started with customization](../model-driven-apps/getting-started-customization.md)  
+[Understand model-driven app components](../model-driven-apps/model-driven-app-components.md)
  <br/>
  [Whitepaper: Patterns and Principles for Solution Builders](http://go.microsoft.com/fwlink/p/?LinkID=533946)
