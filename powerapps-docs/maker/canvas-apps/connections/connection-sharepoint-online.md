@@ -99,7 +99,7 @@ Columns that contain spaces can by read by PowerApps, but the spaces are replace
 
     ![Select the tables in SharePoint](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Not all types of lists appear by default. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter a custom list name**.
+    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists.  If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter a custom list name**.
 
     ![Custom list in SharePoint](./media/connection-sharepoint-online/custom-list.png)
 
