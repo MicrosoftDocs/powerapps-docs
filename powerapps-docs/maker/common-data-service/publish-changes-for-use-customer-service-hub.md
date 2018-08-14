@@ -31,4 +31,4 @@ tags:
 >  Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.  
 
 ## Next steps
-[Get started with app making and customization](../model-driven-apps/getting-started-customization.md)
+[Understand model-driven app components](../model-driven-apps/model-driven-app-components.md)

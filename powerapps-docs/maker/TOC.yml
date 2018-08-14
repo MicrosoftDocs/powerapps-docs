@@ -663,6 +663,8 @@
           href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
+        - name: Add a field to a form
+          href: ./model-driven-apps/add-field-form.md 
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
         - name: Change navigation within a form
