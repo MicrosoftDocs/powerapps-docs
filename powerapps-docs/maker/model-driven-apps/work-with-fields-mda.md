@@ -22,4 +22,5 @@ applies_to:
 
 Fields define the individual data items that can be used to store data in an entity. Fields are sometimes called attributes by developers. You can use the customization tools in the PowerApps portal to edit system fields that allow customization, or to create, edit, or delete custom fields.
 
-For more information about working with fields, see [Work with fields (Common Data Service for Apps)]().
+## See also
+[Add a field to a model-driven app form](add-field-form.md)

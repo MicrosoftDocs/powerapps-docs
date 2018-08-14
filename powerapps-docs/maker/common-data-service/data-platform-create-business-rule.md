@@ -10,7 +10,7 @@ ms.date: 03/21/2018
 ms.author: clwesene
 ---
 
-# Create a business rule
+# Create a business rule for an entity
 
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins.  Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. 
   
