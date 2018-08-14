@@ -1,5 +1,5 @@
 ---
-title: "Create and edit fields for Common Data Service for Apps| MicrosoftDocs"
+title: "How to create and edit fields for Common Data Service for Apps| MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/18/2018
 ms.reviewer: ""
@@ -16,7 +16,7 @@ caps.latest.revision: 55
 ms.author: "matp"
 manager: "brycho"
 ---
-# Create and edit fields
+# How to create and edit fields
 
 In Common Data Service for Apps fields define the individual data items that can be used to store data in an entity. Fields are sometimes called *attributes* by developers. 
   

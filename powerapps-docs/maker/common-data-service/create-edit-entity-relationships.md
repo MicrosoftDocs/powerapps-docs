@@ -1,5 +1,5 @@
 ---
-title: "Create and edit entity relationships for Common Data Service for Apps | MicrosoftDocs"
+title: "Entity relationships overview for Common Data Service for Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/26/2018
 ms.reviewer: ""
@@ -16,7 +16,7 @@ caps.latest.revision: 28
 ms.author: "matp"
 manager: "brycho"
 ---
-# Create and edit relationships between entities 
+# Entity relationships overview
 
 Entity relationships define how records can be related to each other in the database. At the simplest level, adding a lookup field to an entity creates a new 1:N (one-to-many) relationship between the two entities and lets you put that lookup field in a form. With the lookup field, users can associate multiple *child* records of that entity to a single *parent* entity record.  
   
