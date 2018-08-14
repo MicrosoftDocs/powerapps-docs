@@ -40,7 +40,7 @@ You can add data from a custom list but not a library. In addition, not all type
 | Managed Metadata |Yes (read-only) | |
 | Rating |No | |
 
-Columns that contain spaces can by read by PowerApps, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+PowerApps can read columns that contain spaces, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
 ## Prerequisites
 1. [Sign up](../../signup-for-powerapps.md) for PowerApps.
