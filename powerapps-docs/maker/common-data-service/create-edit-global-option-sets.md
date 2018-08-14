@@ -31,7 +31,7 @@ There are two designers you can use to create or edit global option sets:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)|
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create an option set](custom-picklists.md) |
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information: [Create and edit global option sets for Common Data Service for Apps using solution explorer](create-edit-global-option-sets-solution-explorer.md) |
 
 > [!NOTE]
@@ -52,7 +52,7 @@ You should use the [PowerApps portal](https://web.powerapps.com/?utm_source=pado
 
 ## See also
 
-[Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)<br />
+[Create an option set](custom-picklists.md)<br />
 [Create and edit global option sets for Common Data Service for Apps using solution explorer](create-edit-global-option-sets-solution-explorer.md)<br />
 [Developer documentation: Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
   
