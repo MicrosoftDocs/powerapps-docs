@@ -18,25 +18,25 @@ ms.author: caburk
 
  In PowerApps, the Meeting Capture sample template is an all-in-one tool for capturing information from meetings as they happen. If you run the app, you can view meeting details, capture notes, take pictures of whiteboards, draw sketches and assign tasks. You can also export all of these items, send them to all meeting attendees, and schedule followup meetings quickly and easily.
 
-![Meeting Capture](media/sample-meeting-capture/MeetingCapture.png)
+[![Meeting Capture](media/sample-meeting-capture/MeetingCapture.png)](https://aka.ms/previewmeetingcapture)
 
 ## Where can I run the app?
 
-You can run this sample template on a tablet or other device that has a similar form factor.
+You can run this sample app in your browser, on a tablet, or other device that has a similar form factor.
 
 ## How do I open the template and run the app?
 
-Watch these videos to find out:
+[Preview Meeting Capture](https://aka.ms/previewmeetingcapture) or watch these videos to find out more:
 
 - How to [open the template](https://www.youtube.com/watch?v=MTsbjln1AcA&index=1&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU).
-- How to [run the app](https://www.youtube.com/watch?v=sqxQO8tpvWY&index=4&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU&t=0s) from start to finish.
+- How to [run the app](https://youtu.be/mGyxyJL4gJk) from start to finish.
 
 ## How do I build the app myself?
 
 Meeting Capture includes a lot of functionality commonly used in PowerApps. By watching these videos, you can explore this functionality and find out how to implement it so you can implement the same functionality and patterns in your own apps.
 
-- [Export content](https://www.youtube.com/watch?v=0TyTsSYuJcE&index=4&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU) from PowerApps to OneNote.
-- [Find available meeting times](https://www.youtube.com/watch?v=BESlW1bavJA&list=PL8IYfXypsj2B5FizD0ZVVuzf49vr8yXFU&index=2) for attendees.
+- [Export content](https://youtu.be/D6kmeM0UFH0) from PowerApps to OneNote.
+- [Find available meeting times](https://youtu.be/gSD8m6d_Gv0) for attendees.
 
 Meeting Capture connects to these services in Office 365.
 
