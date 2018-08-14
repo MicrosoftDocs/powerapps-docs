@@ -718,7 +718,7 @@
     - name: Apply business logic in an app
       href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
       items:
-      - name: Create business rules and recommendations
+      - name: Create a business rule  for a form
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
     - name: Apply data visualizations in an app
       items:
@@ -887,8 +887,8 @@
         href: ./common-data-service/create-edit-field-portal.md 
       - name: How to create fields using PowerApps solution explorer
         href: ./common-data-service/create-edit-field-solution-explorer.md
-      - name: How to create global option sets using PowerApps portal
-        href: ./common-data-service/create-edit-global-option-sets-portal.md
+      - name: How to create an option set using PowerApps portal
+        href: ./common-data-service/custom-picklists.md
       - name: How to create global option sets using solution explorer  
         href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
       - name: How to map entity fields
@@ -897,9 +897,14 @@
         href: ./common-data-service/delete-fields.md
   - name: Apply business logic
     href: ./common-data-service/cds-processes.md
+    items: 
+      - name: Create a business rule for an entity 
+        href: ./common-data-service/data-platform-create-business-rule.md
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
     items:  
+    - name: Solutions overview
+      href: ./common-data-service/solutions-overview.md
     - name: Import, update, and export solutions
       href: ./common-data-service/import-update-export-solutions.md 
     - name: Navigate to a specific solution
