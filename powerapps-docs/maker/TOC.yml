@@ -826,8 +826,16 @@
   - name: Work with entity relationships
     href: ./common-data-service/relationships-overview.md
     items: 
-    - name: "Create an entity relationship"
+    - name: Entity relationships overview
+      href: /common-data-service/create-edit-entity-relationships.md  
+    - name: How to create one-to-many entity relationships
+      href: ./common-data-service/create-edit-1n-relationships.md
+    - name: Create an entity relationship
       href: ./common-data-service/data-platform-entity-lookup.md
+    - name: Create one-to-many entity relationships 
+      href: ./common-data-service/create-edit-1n-relationships-portal.md
+    - name: Create one-to-many entity relationships using solution explorer
+      href: ./common-data-service/create-edit-1n-relationships-solution-explorer.md 
     - name: Create many-to-many entity relationships using PowerApps portal
       href: ./common-data-service/create-edit-nn-relationships-portal.md
     - name: Create many-to-many entity relationships using PowerApps solution explorer
