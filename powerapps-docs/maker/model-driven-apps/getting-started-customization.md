@@ -67,6 +67,5 @@ You can tailor a model-driven app to more closely fit your organization’s indu
 >  When using Dynamics 365 App for Outlook it can take at least an hour for customization changes to take effect. You can make the changes appear immediately in Internet Explorer by clearing the cache. To do this, go to **Tools** > **Internet Options** and under **Browsing history** select the **Delete** button. Uncheck all browsing history items except “Temporary Internet files and website files” and “Cookies and website data” and then select **Delete**.  
   
 ## See also  
- [Customization concepts](../common-data-service/overview.md)  
- [Using solutions](../common-data-service/use-solutions-for-your-customizations.md)  
- [Create a custom theme or brand](../common-data-service/change-color-scheme-add-logo-match-organizations-brand.md)  
+[Build your first model-driven app from scratch](build-first-model-driven-app.md) <br/>
+[What is Common Data Service for Apps?](../common-data-service/data-platform-intro.md)
