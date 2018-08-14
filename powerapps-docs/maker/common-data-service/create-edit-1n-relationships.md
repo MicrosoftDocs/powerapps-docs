@@ -1,5 +1,5 @@
 ---
-title: "How to create 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps | MicrosoftDocs"
+title: "Create 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps overview | MicrosoftDocs"
 description: "Learn how to create one-to-many or many-to-one entity relationships"
 ms.custom: ""
 ms.date: 05/27/2018
@@ -19,7 +19,7 @@ ms.author: "matp"
 manager: "kvivek"
 tags: 
 ---
-# How to create 1:N (one-to-many) or N:1 (many-to-one) entity relationships
+# Create one-to-many or many-to-one entity relationships overview
 
 In Common Data Service for Apps 1:N (one-to-many) or N:1 (many-to-one) relationships define how two entities are related to each other. 
   

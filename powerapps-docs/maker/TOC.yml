@@ -827,9 +827,11 @@
     href: ./common-data-service/relationships-overview.md
     items: 
     - name: Entity relationships overview
-      href: /common-data-service/create-edit-entity-relationships.md  
-    - name: How to create one-to-many entity relationships
+      href: ./common-data-service/create-edit-entity-relationships.md  
+    - name: Create one-to-many entity relationships overview
       href: ./common-data-service/create-edit-1n-relationships.md
+    - name: Create many-to-many entity relationships overview
+      href: ./common-data-service/create-edit-nn-relationships.md
     - name: Create an entity relationship
       href: ./common-data-service/data-platform-entity-lookup.md
     - name: Create one-to-many entity relationships 
@@ -838,8 +840,6 @@
       href: ./common-data-service/create-edit-1n-relationships-solution-explorer.md 
     - name: Create many-to-many entity relationships using PowerApps portal
       href: ./common-data-service/create-edit-nn-relationships-portal.md
-    - name: Create many-to-many entity relationships using PowerApps solution explorer
-      href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md  
     - name: Set managed properties for entity relationships
       href: ./common-data-service/set-managed-properties-relationships.md
     - name: Visualize hierarchical data
@@ -870,13 +870,17 @@
     href: ./common-data-service/fields-overview.md
     items: 
     - name: Types of fields
-      href: ./common-data-service/types-of-fields.md       
+      href: ./common-data-service/types-of-fields.md
+    - name: Global option sets overview
+      href: ./common-data-service/create-edit-global-option-sets.md
     - name: Set managed properties for fields
       href: ./common-data-service/set-managed-properties-for-field.md 
     - name: Behavior and format of the Date and Time field
       href: ./common-data-service/behavior-format-date-time-field.md     
     - name: "How-to guides: Fields"
       items: 
+      - name: How to create fields 
+        href: ./common-data-service/create-edit-fields.md 
       - name: How to manage fields
         href: ./common-data-service/data-platform-manage-fields.md
       - name: How to create fields using PowerApps portal

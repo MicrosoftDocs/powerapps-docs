@@ -1,5 +1,5 @@
 ---
-title: "Create and edit global option sets (picklists) for Common Data Service for Apps | MicrosoftDocs"
+title: "Create and edit global option sets (picklists) overview for Common Data Service for Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/26/2018
 ms.reviewer: ""
@@ -16,9 +16,9 @@ caps.latest.revision: 11
 ms.author: "matp"
 manager: "brycho"
 ---
-# Create and edit global option sets (picklists) for Common Data Service for Apps 
+# Create and edit global option sets overview 
 
-An option set is a type of field that can be included in an entity. It defines a set of options. When an option set is displayed in a form it uses a drop-down list control. When displayed in **Advanced Find** it uses a *picklist control*. Sometimes option sets are called picklists by developers.  
+An option set (picklist) is a type of field that can be included in an entity. It defines a set of options. When an option set is displayed in a form it uses a drop-down list control. When displayed in **Advanced Find** it uses a *picklist control*. Sometimes option sets are called picklists by developers.  
   
 You can define an option set to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other option set fields. 
 
