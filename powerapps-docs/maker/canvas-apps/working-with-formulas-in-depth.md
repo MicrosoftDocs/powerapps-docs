@@ -1,27 +1,22 @@
 ---
-title: Understand behavior formulas | Microsoft Docs
-description: Reference information for working with behavior formulas
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Understand behavior formulas in a canvas app | Microsoft Docs
+description: Reference information about working with behavior formulas, which change the state of a canvas app in PowerApps
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/10/2015
 ms.author: gregli
 
 ---
-# Understand behavior formulas in PowerApps
+# Understand behavior formulas for canvas apps in PowerApps
 
 Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might want to show the value in a **[Label](controls/control-text-box.md)** control in red if the value is less than zero or in black otherwise. So you can set the **[Color](controls/properties-color-border.md)** property of that control to this formula:
-<br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
+
+**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 
 In this context, what does it mean when the user selects a **[Button](controls/control-button.md)** control?  No value has changed, so there is nothing new to calculate. Excel has no equivalent to a **[Button](controls/control-button.md)** control.  
 

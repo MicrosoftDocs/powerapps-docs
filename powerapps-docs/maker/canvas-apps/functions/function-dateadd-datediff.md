@@ -1,19 +1,13 @@
 ---
 title: DateAdd, DateDiff, and TimeZoneOffset functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the DateAdd, DateDiff, and TimeZoneOffset functions in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 05/23/2017
 ms.author: gregli
 
@@ -55,6 +49,7 @@ Also see [working with dates and times](../show-text-dates-times.md) for more in
 In all of these examples, assume that the current date and time is **July 15, 2013, 1:02 PM**.
 
 ### Simple DateAdd
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Text( DateAdd( Now(), 3 ),<br>"dd-mm-yyyy hh:mm" )** |Adds three days (default units) to the current date and time. |"18-07-2013 13:02" |
@@ -63,6 +58,7 @@ In all of these examples, assume that the current date and time is **July 15, 20
 | **Text( DateAdd( Now(), &#8209;30, Minutes ),<br>"dd-mm-yyyy hh:mm" )** |Subtracts 30 minutes from the current date and time. |"15-07-2013 12:32" |
 
 ### Simple DateDiff
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **DateDiff( Now(), DateValue("1/1/2014") )** |Returns the difference between the two units in the default units of **Days** |170 |

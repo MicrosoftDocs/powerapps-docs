@@ -1,19 +1,13 @@
 ---
 title: Use a sample app (quickstart) | Microsoft Docs
 description: Step-by-step instructions for creating a canvas app based on a sample in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/11/2018
 ms.author: anneta
 
@@ -26,7 +20,7 @@ Each sample showcases a real-world scenario but uses fictitious data. To store t
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Open a sample app
-1. Sign in to [PowerApps](https://web.powerapps.com).
+1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 	![](./media/open-and-run-a-sample-app/sign-in.png)
 

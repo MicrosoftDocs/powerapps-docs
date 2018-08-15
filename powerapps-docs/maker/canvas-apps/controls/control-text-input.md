@@ -1,19 +1,13 @@
 ---
 title: 'Text-input control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the text-input control
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -30,6 +24,8 @@ The user can specify data by typing into a text-input control. Depending on how 
 **[Text](properties-core.md)** – Text that appears on a control or that the user types into a control.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -37,8 +33,6 @@ The user can specify data by typing into a text-input control. Depending on how 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **Clear** – Whether a text-input control shows an "X" that the user can tap or click to clear the contents of that control.
 
@@ -55,6 +49,10 @@ The user can specify data by typing into a text-input control. Depending on how 
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -112,7 +110,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -144,15 +142,33 @@ The user can specify data by typing into a text-input control. Depending on how 
 6. (optional) Add more names to the collection, and then press Esc to return to the default workspace.
 
 ### Prompt for a password
-1. Add a text-input control, name it **inputPassword**, and set its **Mode** property to **Password**.
-2. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
-   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
-   
-    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-3. Press F5, and then type **P@ssw0rd** in **inputPassword**.
-   
-    When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
-4. To return to the default workspace, press Esc.
-5. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
-6. (optional) Add a button, configure its **[Text](properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
 
+1. Add a text-input control, name it **inputPassword**, and set its **Mode** property to **Password**.
+
+1. Add a label, and set its **[Text](properties-core.md)** property to this formula:<br>
+   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
+
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+
+1. Press F5, and then type **P@ssw0rd** in **inputPassword**.
+
+    When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
+
+1. To return to the default workspace, press Esc.
+
+1. (optional) Add a control such as an arrow, configure it to navigate to another screen, and show it only after the user types the password.
+
+1. (optional) Add a button, configure its **[Text](properties-core.md)** property to show **Sign in**, add a timer, and disable the input-text control for a certain amount of time if the user types the wrong password and then clicks or taps the **Sign in** button.
+
+
+## Accessibility guidelines
+### Color contrast
+* [Standard color contrast requirements](../accessible-apps-color.md) apply.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+ 

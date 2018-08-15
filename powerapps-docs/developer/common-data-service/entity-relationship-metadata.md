@@ -1,6 +1,6 @@
 ---
 title: Entity relationship metadata | Microsoft Docs
-description: Learn about the entity relationship metadata used in the Common Data Service for Apps.
+description: Learn about the entity relationship metadata used in Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na

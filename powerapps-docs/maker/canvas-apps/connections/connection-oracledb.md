@@ -1,21 +1,15 @@
 ---
 title: Connect to Oracle Database | Microsoft Docs
 description: Learn how to connect to Oracle Database and use it for building apps in PowerApps.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/14/2017
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Connect to an Oracle database from PowerApps

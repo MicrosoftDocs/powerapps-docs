@@ -1,33 +1,29 @@
 ---
 title: Understand data cards | Microsoft Docs
-description: Use form cards to collect and display information from a data source.
-services: ''
-suite: powerapps
-documentationcenter: na
+description: In PowerApps, use form cards to collect and display information from a data source.
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
 
 ---
-# Understand data cards
-**[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls. The form represents the entire record, and each card represents a single field of that record.
+# Understand data cards in PowerApps
+
+**[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls in canvas apps. The form represents the entire record, and each card represents a single field of that record.
 
 You can interact with cards most easily in the right-hand pane after you select a form control in the design workspace. In that pane, you can choose which fields to show, how to show each field, and in what order to show them. This example shows an **Edit form** control in an app built from a SharePoint list that's named **Assets**.
 
-![](./media/working-with-cards/first-screen.png)
+![First screen](./media/working-with-cards/first-screen.png)
 
 To get started with cards, see [add a form](add-form.md) and [understand data forms](working-with-forms.md). The remainder of this topic goes into more detail about how cards work and how you can customize or even create your own.
 
 ## Predefined cards
+
 PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
 
 ![](./media/working-with-cards/selected-card.png)

@@ -1,21 +1,15 @@
 ---
 title: Overview of the Office 365 Users connection | Microsoft Docs
 description: See how to connect to Office 365 Users, step through some examples, and see all the functions
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/07/2016
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Connect to Office 365 Users connection from PowerApps
@@ -31,7 +25,7 @@ This topic shows you how to add Office 365 Users as a connection, add Office 365
 
 ## Add a connection
 1. [Add a data connection](../add-data-connection.md) and select **Office 365 Users**:  
-   
+
     ![Connect to Office 365](./media/connection-office365-users/add-office.png)
 2. Select **Connect**, and if prompted to sign in, enter your work account.
 
@@ -41,7 +35,7 @@ The Office 365 Users connection has been created and added to your app. Now, it'
 ### Show information about the current user
 1. On the **Insert** menu, select **Label**
 2. In the function bar, set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
-   
+
     `Office365Users.MyProfile().Department`  
     `Office365Users.MyProfile().DisplayName`  
     `Office365Users.MyProfile().GivenName`  
@@ -58,13 +52,13 @@ The label shows the information that you entered about the current user.
 
 ### Show information about another user
 1. On the **Insert** menu, select **Text**, and then select **Text input**. Rename it **InfoAbout**:  
-   
+
     ![Rename control](./media/connection-office365-users/renameinfoabout.png)
 2. In **InfoAbout**, type or paste an email address of a user in your organization. For example, type in *yourName*@*yourCompany.com*.
 3. Add a **Label** (**Insert** menu), and set its **[Text](../controls/properties-core.md)** property to any of the following formulas:
-   
+
    * To show information about another user:  
-     
+
        `Office365Users.UserProfile(InfoAbout.Text).Department`  
        `Office365Users.UserProfile(InfoAbout.Text).DisplayName`  
        `Office365Users.UserProfile(InfoAbout.Text).GivenName`  
@@ -77,7 +71,7 @@ The label shows the information that you entered about the current user.
        `Office365Users.UserProfile(InfoAbout.Text).UserPrincipalName`  
        `Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
    * To show information about another user's manager:  
-     
+
        `Office365Users.Manager(InfoAbout.Text).Department`  
        `Office365Users.Manager(InfoAbout.Text).DisplayName`  
        `Office365Users.Manager(InfoAbout.Text).GivenName`  
@@ -104,28 +98,28 @@ If you create a contact and select that contact in the browse screen of the app,
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **InfoAbout**.
 2. In **InfoAbout**, enter the email address of a user in your organization. For example, enter *yourManagersName*@*yourCompany.com*
 3. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
-   
+
     `Office365Users.DirectReports(InfoAbout.Text)`
-   
+
     The gallery shows information about the direct reports of the user you entered.
-   
+
     With the gallery selected, the right-hand pane shows options for that gallery.
 4. In the second list, select **JobTitle**. In the third list, select **DisplayName**. The gallery is updated to show these values.  
-   
+
 > [!NOTE]
 > The first box is actually an image control. If you don't have an image, you can delete the image control, and add a label in its place. [Add and configure controls](../add-configure-controls.md) is a good resource.
 
 ### Search for users
 1. Add a **Text input** control (**Insert** menu > **Text**), and rename it **SearchTerm**. Enter a name to search. For example, enter your first name.
 2. Add a **With text** gallery (**Insert** menu > **Gallery**), and set its **[Items](../controls/properties-core.md)** property to the following formula:
-   
+
     `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
-   
+
     The gallery shows users whose name contains the search text you entered.
-   
+
     With the gallery selected, the right-hand pane shows options for that gallery.
 3. In the second list, select **Mail**. In the third list, select **DisplayName**.
-   
+
     The second and third labels in the gallery are updated.
 
 ## View the available functions
@@ -146,6 +140,7 @@ Get my profile: Retrieves the profile for the current user.
 None.
 
 #### Output properties
+
 | Property Name | Type | Description |
 | --- | --- | --- |
 | Department |string |Department of the user. |
@@ -164,11 +159,13 @@ None.
 Get user profile: Retrieves a specific user profile.
 
 #### Input properties
+
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | Id |string |yes |User principal name or email id |
 
 #### Output properties
+
 | Property Name | Type | Description |
 | --- | --- | --- |
 | Department |string |Department of the user. |
@@ -187,11 +184,13 @@ Get user profile: Retrieves a specific user profile.
 Get manager: Retrieves user profile for the manager of the specified user
 
 #### Input properties
+
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | Id |string |yes |User principal name or email id |
 
 #### Output properties
+
 | Property Name | Type | Description |
 | --- | --- | --- |
 | Department |string |Department of the user. |
@@ -210,11 +209,13 @@ Get manager: Retrieves user profile for the manager of the specified user
 Get direct reports: Get direct reports
 
 #### Input properties
+
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | Id |string |yes |User principal name or email id |
 
 #### Output properties
+
 | Property Name | Type | Description |
 | --- | --- | --- |
 | Department |string |Department of the user. |
@@ -233,11 +234,13 @@ Get direct reports: Get direct reports
 Search for users: Retrieves search results of user profiles
 
 #### Input properties
+
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
 | searchTerm |string |no |Search string. Applies to: display name, given name, surname, mail, mail nickname, and user principal name |
 
 #### Output properties
+
 | Property Name | Type | Description |
 | --- | --- | --- |
 | Department |string |Department of the user. |

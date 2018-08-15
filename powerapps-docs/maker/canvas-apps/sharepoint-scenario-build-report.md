@@ -1,19 +1,13 @@
 ---
 title: Create a Power BI report to analyze projects | Microsoft Docs
 description: In this task, we'll create a Power BI report based on two SharePoint lists.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 01/10/2018
 ms.author: mblythe
 
@@ -93,8 +87,8 @@ In this step, we'll first connect to the two lists. Then we'll clean up the data
    
     ![Remove columns](./media/sharepoint-scenario-build-report/05-01-07-remove-column.png)
 3. Remove the two columns after the **Id** column: **ServerRedirectedEmbedURL** and **ContentTypeId**. 
-> [!TIP]
-> Use the Shift key to select both columns, then click or tap **Remove Columns**.
+   > [!TIP]
+   > Use the Shift key to select both columns, then click or tap **Remove Columns**.
 4. Remove all columns to the right of the **PMAssigned** column (a total of 22 columns). The table should match the following image:
    
     ![Project Details table in Query Editor](./media/sharepoint-scenario-build-report/05-01-08-table-details.png)

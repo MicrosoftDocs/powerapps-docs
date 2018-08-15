@@ -1,19 +1,13 @@
 ---
 title: 'Drop down control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Drop down control
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
 
@@ -29,18 +23,18 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
-
+When you add a gallery, a list, or a chart, the property list shows **Items** by default so that you can easily specify the data that the new control should show. For example, you might set the **Items** property of a gallery to the **Account** table in Salesforce, a table named **Inventory** that you created in Excel and uploaded to the cloud, or a SharePoint list named **ConferenceSpeakers**.
+   
 **Selected** – The selected item.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **ChevronBackground** – The color behind the down arrow in a dropdown list.
 
@@ -57,6 +51,10 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -100,7 +98,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -133,3 +131,19 @@ A **Drop down** control conserves screen real estate, especially when the list c
    
     The **Text gallery** control shows only those cities in the country that you chose.
 
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **ChevronFill** and **ChevronBackground**
+* **ChevronHoverFill** and **ChevronHoverBackground**
+* **SelectionColor** and **SelectionFill**
+* **SelectionFill** and **[Fill](properties-color-border.md)**
+
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.

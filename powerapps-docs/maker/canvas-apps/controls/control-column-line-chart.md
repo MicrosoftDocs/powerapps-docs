@@ -1,35 +1,28 @@
 ---
 title: 'Column chart control and Line chart control: reference | Microsoft Docs'
 description: Information, including properties and examples, about Column chart controls and Line chart controls
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+ms.reviewer: anneta
 ---
 # Column chart and Line chart controls in PowerApps
 Controls that show data as graphs with x- and y-axes.
 
 ## Description
-By default, a **Column chart** control or a **Line chart** control comprises multiple controls grouped together. These controls show a title, data, and a legend.
+**Column chart** and **Line chart** are grouped controls. Each group contains three controls: a **[Label](control-text-box.md)** for the title, the chart graphic, and a **Legend**.
 
-## Key properties
+## Chart key properties
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
 **NumberOfSeries** – How many columns of data are reflected in a column or line chart.
 
-## All properties
+## Additional chart properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -38,9 +31,9 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
-**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
-
 **[DisabledBorderColor](properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
+
+**[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -88,6 +81,8 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
@@ -100,11 +95,11 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
 
 **YAxisMax** – The maximum value of the y-axis for a line chart.
 
-* The **YAxisMax** property is available for the **Column chart** control but not the **Line chart** control.
+* The **YAxisMax** property is available for the **Line chart** control but not the **Column chart** control.
 
 **YAxisMin** – The minimum value of the y-axis for a line chart.
 
-* The **YAxisMin** property is available for the **Column chart** control but not the **Line chart** control.
+* The **YAxisMin** property is available for the **Line chart** control but not the **Column chart** control.
 
 **YLabelAngle** – The angle of the labels next to the y-axis of a line or column chart.
 
@@ -123,3 +118,28 @@ By default, a **Column chart** control or a **Line chart** control comprises mul
    
     The control shows revenue data for each product over three years.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* each item in **ItemColorSet**
+* every item in **ItemColorSet** and the background color
+* **[Color](properties-color-border.md)** and the background color
+
+### Screen reader support
+* There must be a **[Label](control-text-box.md)** immediately before the chart graphic to serve as the title.
+* Consider adding a summary of the chart graphic. For example, "The line chart shows a steady increase in sales between March and August this year."
+
+    > [!NOTE]
+  > Chart graphics and **Legend** are hidden from screen reader users. As an alternative, a tabular form of the data is presented to them. They can also cycle through buttons that select data in the chart.
+
+### Low vision support
+* There must be a **Legend** if more than one series is shown.
+* Consider setting **GridStyle** to GridStyle.All, which shows both axes. This helps all users accurately determine the scale of the data.
+* For **Column chart**, consider setting **Markers** to **true**. This helps low-vision users determine the value of a column.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+
+    > [!NOTE]
+  > When keyboard users navigate to the chart, they can cycle through buttons that select data in the chart.

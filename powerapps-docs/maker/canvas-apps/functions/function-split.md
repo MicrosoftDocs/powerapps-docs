@@ -1,19 +1,13 @@
 ---
 title: Split function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Split function in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta anneta
 ms.date: 08/28/2017
 ms.author: gregli
 
@@ -35,6 +29,7 @@ Use the **[Concat](function-concatenate.md)** function to recombine the string (
 * *Separator* - Required.  Separator to use in splitting the string.  Can be zero, one, or more characters.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Split( "Apples,&nbsp;Oranges,&nbsp;Bananas", "," )** |Splits the different fruits apart, based on the comma separator.  The split is performed based on only the comma and not the space after it, resulting in a space at the front of "&nbsp;Oranges" and "&nbsp;Bananas". |<style> img { max-width: none; } </style> ![](media/function-split/fruit1.png) |

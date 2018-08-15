@@ -1,19 +1,13 @@
 ---
 title: GroupBy and Ungroup functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the GroupBy and Ungroup functions in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
 
@@ -50,7 +44,7 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 * *GroupColumnName* - Required.  The column name for the storage of record data not in the *ColumnName(s)*.
   
     > [!NOTE]
-> For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
+  > For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
 
 **Ungroup**( *Table*, *GroupColumnName* )
 
@@ -58,7 +52,7 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 * *GroupColumnName* - Required. The column that contains the record data setup with the **GroupBy** function.
   
     > [!NOTE]
-> For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
+  > For SharePoint and Excel data sources that contain column names with spaces, specify each space as **"\_x0020\_"**. For example, specify **"Column Name"** as **"Column_x0020_Name"**.
 
 ## Examples
 ### Create a collection

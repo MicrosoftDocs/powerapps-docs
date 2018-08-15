@@ -1,23 +1,15 @@
 ---
-title: Overview of environments | Microsoft Docs
-description: What environments are and how to use them
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
+title: Environments overview | Microsoft Docs
+description: Learn about environments in PowerApps and how to use them
 author: manasmams
-manager: kfile
-editor: ''
-tags: ''
-
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-
 ---
+
 # Environments overview
 An environment is a space to store, manage, and share your organization’s business data, apps, and flows. They also serve as containers to separate apps that may have different roles, security requirements, or target audiences. How you choose to leverage environments depends on your organization and the apps you are trying to build. For example:
 
@@ -78,7 +70,7 @@ The default environment is named as follows: “{Azure AD tenant name} (default)
 You can create environments for different purpose. A Trial environment is for trying out the environment and database with Common Data Service experience. It expires after certain period. For more information, see [Administer environments in PowerApps](environments-administration.md).
 
 ## Choosing an environment
-With the introduction of environments, you will now see a new experience when you come to [https://web.powerapps.com](https://web.powerapps.com).  The apps, connections, and other items that are visible in the site will now be filtered based on the current environment that is selected.  Your current environment is specified in the environment picker near the right edge of the header. To choose a different environment, click or tap the picker, and a list of available environments appears. Click or tap the one you wish to enter.
+With the introduction of environments, you will now see a new experience when you come to [https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  The apps, connections, and other items that are visible in the site will now be filtered based on the current environment that is selected.  Your current environment is specified in the environment picker near the right edge of the header. To choose a different environment, click or tap the picker, and a list of available environments appears. Click or tap the one you wish to enter.
 
 An environment will show up in your picker if you meet one of the following conditions:
 

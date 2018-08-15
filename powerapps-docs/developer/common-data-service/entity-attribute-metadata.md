@@ -1,6 +1,6 @@
 ---
 title: Attribute metadata | Microsoft Docs
-description: Learn about the attribute metadata use in the Common Data Service for Apps.
+description: Learn about the attribute metadata use in Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -116,7 +116,7 @@ This property can have the following values set:
 |`ApplicationRequired`|2|**Business Required**|The attribute is required by the business to have a value.|
 |`Recommended`|3|**Business Recommended**|It is recommended that the attribute has a value.|
 
-The Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. 
+Common Data Service for Apps only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. 
 
 Model-driven apps will enforce the `ApplicationRequired` option and use a different presentation for the `Recommended` option. Creators of custom clients may use this information to require similar validation or presentation options.
 
@@ -201,6 +201,7 @@ The organization service provides request classes you can use to retrieve the op
 Each of the attributes with options inherit from [EnumAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata) and include an [OptionSet Property](/dotnet/api/microsoft.xrm.sdk.metadata.enumattributemetadata.optionset). This property contains the [OptionSetMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata) that includes the options within the [Options property](/dotnet/api/microsoft.xrm.sdk.metadata.optionsetmetadata.options). 
 
 With the organization service you can use the following messages to retrieve information about optionsets:
+
 |Request Class|Description|
 |--|--|
 |[RetrieveAllOptionSetsRequest](/dotnet/api/microsoft.xrm.sdk.messages.retrievealloptionsetsrequest) |Retrieves data about all *global* optionsets|

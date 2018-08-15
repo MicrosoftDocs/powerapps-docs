@@ -1,33 +1,33 @@
 ---
-title: Generate an app from Excel | Microsoft Docs
-description: Use PowerApps to automatically generate an app using an Excel file stored in a cloud-storage account
-services: ''
-suite: powerapps
-documentationcenter: na
-author: AFTOWen
-manager: kfile
+title: Generate a canvas app from Excel | Microsoft Docs
+description: Use PowerApps to automatically generate a canvas app using an Excel file stored in a cloud-storage account
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.custom: mvc
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/18/2018
 ms.author: anneta
 
 ---
-# Generate an app from Excel in PowerApps
-In this topic, you'll automatically generate your first app in PowerApps using data from an Excel table. You'll select an Excel file, generate an app, and then run the app that you generate. Every generated app includes screens to browse records, show record details, and create or update records. By generating an app, you can quickly get a working app using Excel data, and then you can customize the app to better suit your needs. 
+# Generate a canvas app from Excel in PowerApps
+
+In this topic, you'll automatically generate your first canvas app in PowerApps using data from an Excel table. You'll select an Excel file, generate an app, and then run the app that you generate. Every generated app includes screens to browse records, show record details, and create or update records. By generating an app, you can quickly get a working app using Excel data, and then you can customize the app to better suit your needs. 
 
 The Excel file must be in a cloud-storage account, such as OneDrive, Google Drive, or Dropbox. This topic uses OneDrive for Business.
 
-To follow this topic, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md). As an alternative, you can use your own Excel file if the data is [formatted as a table](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664). 
-
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
+## Prerequisites ##
+To follow this topic exactly, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
+
+> [!IMPORTANT]
+> You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md). 
+
 ## Generate the app
-1. Sign in to [PowerApps](https://web.powerapps.com).
+1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![PowerApps home page](./media/get-started-create-from-data/sign-in.png)
 

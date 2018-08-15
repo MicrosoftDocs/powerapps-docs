@@ -1,23 +1,15 @@
 ---
 title: Administer environments | Microsoft Docs
-description: Administer environments in PowerApps, including creation, renaming, deletion, and security
-services: 'powerapps'
-suite: powerapps
-documentationcenter: na
+description: Learn how to administer environments in PowerApps, including creation, renaming, deletion, and security
 author: manasmams
-manager: kfile
-editor: ''
-tags: ''
-
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/21/2018
+ms.component: pa-admin
+ms.topic: conceptual
+ms.date: 07/30/2018
 ms.author: manasma
-
 ---
+
 # Administer environments in PowerApps
 In the [PowerApps admin center][1], manage environments that you've created and those for which you have been added to the Environment Admin or System Administrator role. From the admin center, you can perform these administrative actions:
 
@@ -28,6 +20,8 @@ In the [PowerApps admin center][1], manage environments that you've created and 
 * Set Data Loss Prevention policies.
 * Set database security policies (as open or restricted by database roles).
 * Members of the Azure AD tenant Global administrator role (includes Office 365 Global admins) can also manage all environments that have been created in their tenant and set tenant-wide policies.
+
+For more information, see [Environments overview](environments-overview.md).
 
 ## Access the PowerApps admin center
 To access the PowerApps admin center:
@@ -44,13 +38,13 @@ To manage an environment in the PowerApps admin center, you must have one of the
 
 * The Global Administrator role of your Azure AD or Office 365 tenant.
 
-You also need either PowerApps Plan 2 or Flow Plan 2 to access the admin center. For more information, see the [PowerApps pricing page][3].
+You also need either a PowerApps Plan 2 or Microsoft Flow Plan 2 license to access the admin center. For more information, see the [PowerApps pricing page][3].
 
 > [!IMPORTANT]
-> Any changes that you make in PowerApps admin center affect the [Flow admin center][4] and vice versa.
+> Any changes that you make in PowerApps admin center affect the [Microsoft Flow admin center][4] and vice versa.
 
 ## Create an environment
-For instructions on how to create an environment, see [Quickstart: Create an environment](create-environment.md).
+For instructions on how to create an environment, see [Create an environment](create-environment.md).
 
 ## View your environments
 When you open the admin center, the Environments tab appears by default and lists all the environments for which you are an Environment Admin (as shown below):
@@ -60,13 +54,10 @@ When you open the admin center, the Environments tab appears by default and list
 If you are a member of the Global Administrator role of your Azure AD or Office 365 tenant, all the environments that have been created by users in your tenant appear, because you're automatically an Environment Admin for all of them.
 
 ## Rename your environment
-
-If there is no database in the environment, follow the below mentioned steps to rename your environment. If you have a database in your environment, then you can only rename your production environment (and not a trial environment) from Dynamics 365 Admin center.
-
 1. Open the [PowerApps admin center][1], find the environment to be renamed in the list, and click or tap it.
 
     ![](./media/environment-admin/environment-list-updated3.png)
- 
+
 2. Click or tap **Details**.
 
     ![](./media/environment-admin/environment-rename-details-2.png)
@@ -223,4 +214,4 @@ Yes, the ability to view the apps and flows for an environment is available from
 [2]: https://web.powerapps.com
 [3]: https://powerapps.microsoft.com/pricing/
 [4]: https://admin.flow.microsoft.com
-[5]: https://go.microsoft.com/fwlink/?linkid=871628
+[5]: https://go.microsoft.com/fwlink/p/?linkid=871628

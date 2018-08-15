@@ -1,0 +1,1 @@
+Go to **Marketing** >  **Marketing Lists**.

@@ -1,19 +1,13 @@
 ---
 title: 'Display form and Edit form controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Display form and Edit form controls
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
 
@@ -150,9 +144,9 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 
 * This property applies only to the **Edit form** control.
 * A **Form** control's **Valid** property aggregates the **Valid** properties of all the **[Card](control-card.md)** controls in the form. A form's **Valid** property is **true** only if the data in all cards in that form is valid; otherwise, the form's **Valid** property is **false**.
-* To enable a button to save changes only when the data in a form is valid but hasn't yet been submitted, set the button's **Enabled** to this formula:
+* To enable a button to save changes only when the data in a form is valid but hasn't yet been submitted, set the button's **DisplayMode** property to this formula:
   
-    **SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**
+    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid, DisplayMode.Edit, DisplayMode.Disabled)**
 
 ## Additional properties
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -176,3 +170,6 @@ The form switches from **New** mode to **Edit** mode when any of these changes o
 ## More information
 For a comprehensive overview of how forms work, see [Understand data forms](../working-with-forms.md).
 
+## Accessibility guidelines
+### Screen reader support
+* Consider adding a heading to the form using a **[Label](control-text-box.md)**.

@@ -1,19 +1,13 @@
 ---
 title: DateValue, TimeValue, and DateTimeValue functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the DateValue, TimeValue, and DateTimeValue functions in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
 
@@ -60,7 +54,7 @@ If you typed **10/11/2014** into a text-input control named **Startdate** and th
     The label would show **Saturday, October 11, 2014**, if your computer were set to the **en** locale.
   
     > [!NOTE]
-> You can use several options, other than **LongDateTime**, with the **DateTimeFormat** parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
+  > You can use several options, other than **LongDateTime**, with the **DateTimeFormat** parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
 * **Text(DateValue(Startdate.Text, "fr"), DateTimeFormat.LongDate)**
   
     The label would show **Monday, November 10, 2014**.
@@ -79,7 +73,7 @@ If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Sta
     The label would show **Saturday, October 11, 2014 1:50:24 PM** if your computer were set to the "en" locale.
   
     > [!NOTE]
-> You can use several options, other than **LongDateTime**, with the **DateTimeFormat** parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
+  > You can use several options, other than **LongDateTime**, with the **DateTimeFormat** parameter. To display a list of those options, type the parameter, followed immediately by an exclamation point, in the function box.
 * **Text(DateTimeValue(Start.Text, "fr"), DateTimeFormat.LongDateTime)**
   
     The label would show **Monday, November 10, 2014 1:50:24 PM**.

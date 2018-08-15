@@ -1,19 +1,13 @@
 ---
 title: Count, CountA, CountIf, and CountRows functions | Microsoft Docs
 description: Reference information, including syntax and an example, for the Count, CountA, CounfIf, and CountRows functions in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
 

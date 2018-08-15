@@ -1,29 +1,25 @@
 ---
-title: Scan a barcode | Microsoft Docs
+title: Scan a barcode in a canvas app | Microsoft Docs
 description: Scan a variety of barcode types, such as UPC and Codabar
-services: ''
-suite: powerapps
-documentationcenter: na
-author: aftowen
-manager: anneta
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 10/23/2016
 ms.author: anneta
 
 ---
-# Scan a barcode in Microsoft PowerApps
-Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](connections-list.md).
+# Scan a barcode in PowerApps
+
+Scan several types of barcodes by creating a canvas app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](connections-list.md).
 
 If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 ## Known limitations
+
 * Barcodes should be at least 1" (2.5cm) high and 1.5" (4cm) wide.
 * To scan barcodes by using a phone, hold it in portrait orientation, and slowly move it from 7" (18cm) to 10" (25cm) away from the barcode.
 * Long barcode types (such as I2of5, which can have 15 or more characters) can give truncated or otherwise incorrect results, especially if the barcode isn't printed clearly.
@@ -35,19 +31,18 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 ## Create a blank app
 1. [Sign up for PowerApps](../signup-for-powerapps.md), and then do *either* of the following:
 
-   * [Open PowerApps](https://create.powerapps.com/api/start) in a browser on a device that has a camera.
-   * [Install PowerApps](http://aka.ms/powerappsinstall) from the Windows Store on a device that has a camera. Open PowerApps, sign in, and then click or tap **New** on the **File** menu (along the left edge).
+2. [Open PowerApps](https://create.powerapps.com) in a browser on a device that has a camera.
 
-2. Under **Start with a blank canvas or template**, click or tap **Phone layout** in the **Blank app** tile.
+3. Under **Start with a blank canvas or template**, click or tap **Phone layout** in the **Blank app** tile.
 
     ![Create an app from scratch](./media/scan-barcode/create-from-blank.png)
 
-3. If you haven't used PowerApps before, get familiar with key areas of the app by taking the intro tour (or click or tap **Skip**).
+4. If you haven't used PowerApps before, get familiar with key areas of the app by taking the intro tour (or click or tap **Skip**).
 
     ![Opening screen of the quick tour](./media/scan-barcode/quick-tour.png)
 
     > [!NOTE]
-> You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
+   > You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
 
 ## Add a Barcode control
 1. On the **Insert** tab, click or tap **Media**, and then click or tap **Barcode**.
@@ -61,7 +56,7 @@ If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 3. On the **Home** tab, click or tap **Barcode1**, and then type or paste **MyScanner** under **Rename**.
 
     > [!TIP]
-> The first **Barcode** control that you add is named **Barcode1** by default. If you delete that control and add another **Barcode** control, it will be named **Barcode2** by default. By manually renaming a control, you ensure that formulas will refer to the control by its correct name.
+   > The first **Barcode** control that you add is named **Barcode1** by default. If you delete that control and add another **Barcode** control, it will be named **Barcode2** by default. By manually renaming a control, you ensure that formulas will refer to the control by its correct name.
 
     ![Rename the barcode control](./media/scan-barcode/rename-barcode.png)
 

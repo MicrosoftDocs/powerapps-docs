@@ -1,24 +1,18 @@
 ---
 title: Send a push notification | Microsoft Docs
 description: Learn how to send native push notifications to an app in PowerApps.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: jamesol-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 08/08/2017
 ms.author: jamesol
 
 ---
-# Send a pull notification in PowerApps
+# Send a push notification in PowerApps
 Push notifications are used in mobile apps for consumer and business scenarios primarily to engage app users and help them prioritize key tasks. In PowerApps, you can send notifications by using the PowerApps Notification connector. You can send native push notifications to any app that you create in PowerApps. We plan to add more notification types in the future.
 
 ![Example of what a push notification looks like](./media/add-notifications/pic1-notification-screenshot.png)
@@ -40,40 +34,40 @@ In an app for which you have the **Contributor** permission, add a PowerApps Not
 > If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time currently.
 
 1. In [Microsoft Flow](https://flow.microsoft.com), create a trigger that specifies when the push notification is sent.
-   
+
     For example, you might want to send a notification when a record is added to the **Case** entity in the Common Data Service.
-   
+
     ![Screenshot of creating a flow with a Common Data Service trigger](./media/add-notifications/pic4-step1-flowupdated.png)
 2. Create an action for the flow by using the **PowerApps Notification** connector, and enter the **App ID** of the app to which you want to send notifications.
-   
+
     You can also rename the connection to reflect your scenario.
-   
+
     ![Screenshot of creating a connection to the PowerApps that will receive these push notifications](./media/add-notifications/pic5-step2-create-connection.jpg)
 3. (optional) Pass parameters to the app when it opens (after the user taps the push notification).
-   
+
     In our example, we pass along the **Case ID** and **Initial Owner** fields for the selected contact.
-   
+
     ![Screenshot of passing optional parameters into the push notification](./media/add-notifications/pic6-step3-configure-notif.jpg)
 
 ## Send a notification from an app
 You can send a push notification from one app to another or to the same app.
 
-1. In [PowerApps](https://web.powerapps.com/), go to the app to which you want to send push notifications.
+1. In [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to the app to which you want to send push notifications.
 2. On the **Details** tab, copy the **App ID** of that app.
-   
+
     ![Get App ID](./media/add-notifications/grab-id.png)
 3. On the **Connections** tab, create a connection to the PowerApps Notification connector, and paste in the app ID from the previous step.
-   
+
     ![Create connection](./media/add-notifications/create-connection.png)
 4. Add the connection to the trigger app.
-   
+
     In our example, we use the same app as the trigger app. The user who reassigns the case also triggers a push notification to the new case owner.
-   
+
     ![Add connection](./media/add-notifications/add-connection.png)
 5. From the push notification connection, call the **SendPushNotification** method.
-   
+
     In our example, we trigger this notification by using the **OnSuccess** property in a form.
-   
+
     ![PowerApps formula](./media/add-notifications/powerapps-function.png)
 
 ## Load a specific page and context when a user taps the notification
@@ -90,16 +84,18 @@ You can set your app to open, for example, the **Case details** page as soon as 
 
 > [!TIP]
 > It's a good idea to create a unique first page in the app for the notification:
-
->1. Create an empty page that your app doesn't already open, add a **Text Input** control, and set its **timer.Duration** value.
->2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
+> 
+> 1. Create an empty page that your app doesn't already open, add a **Text Input** control, and set its **timer.Duration** value.
+> 2. When you create the app, set the timer to a non-zero value. When you're ready to publish the app, set the value to **0** to immediately trigger the timer.
 
 ## Syntax
+
 | Name | Description |
 | --- | --- |
 | SendPushNotification |Sends a push notification to the app that's specified in the connection settings for the notification. |
 
 ### Parameters
+
 | Name | Type | Description |
 | --- | --- | --- |
 | recipients |String array, required |A list of: <ul> <li>Email addresses for users or security groups</li> <li>Object IDs for users or security groups in Azure Active Directory</li></ul> |

@@ -1,25 +1,20 @@
 ---
-title: Show, edit, or add a record from a table | Microsoft Docs
-description: Use a form to show, edit, or add a record from a table in your data source.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Show, edit, or add a record from a table in a canvas app | Microsoft Docs
+description: Use a canvas-app form to show, edit, or add a record from a table in your data source.
 author: karthik-1
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/06/2017
 ms.author: sharik
 
 ---
 # Show, edit, or add a record from a table in PowerApps
-To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control.
+
+To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control in a canvas app. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control in a canvas app.
 
 ## Prerequisites
 
@@ -35,7 +30,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
     **FlooringEstimates.Name**
 
     > [!NOTE]
-> If you're not sure how to add a control, rename it, or set a property, see [Add and configure controls](add-configure-controls.md).
+   > If you're not sure how to add a control, rename it, or set a property, see [Add and configure controls](add-configure-controls.md).
 
     The list shows names of flooring products from the data source.
 
@@ -44,7 +39,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
     ![Add a form](./media/add-form/add-a-form.png)
 
     > [!NOTE]
-> This topic describes the **Edit form** control, but similar principles apply to the **Display form** control.
+   > This topic describes the **Edit form** control, but similar principles apply to the **Display form** control.
 
 3. Set the **[DataSource](controls/control-form-detail.md)** property of the form to **FlooringEstimates** and the **[Item](controls/control-form-detail.md)** property of the form to this formula:
 
@@ -55,7 +50,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 4. In the **Data** pane, click or tap the checkbox for each field to show it.
 
     > [!NOTE]
-> If the **Data** pane is closed, open it by selecting the form in the left-hand pane and then clicking or tapping **Data** in the right-hand pane.
+   > If the **Data** pane is closed, open it by selecting the form in the left-hand pane and then clicking or tapping **Data** in the right-hand pane.
 
     ![Show fields on form](./media/add-form/checkbox.png)
 

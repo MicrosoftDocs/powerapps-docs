@@ -1,19 +1,13 @@
 ---
 title: Text function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Text function in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
 
@@ -30,6 +24,7 @@ The **Text** function formats a number or a date/time value based on one of thes
 See [working with dates and times](../show-text-dates-times.md) for more information.
 
 ### <a name="predefined-datetime-formats"></a> Predefined date/time formats
+
 | Predefined Format | Description |
 | --- | --- |
 | **DateTimeFormat.LongDate** |Full year, month, day of the month, and day of the week. The names of the month and the day of the week aren't abbreviated. |
@@ -45,6 +40,7 @@ See [working with dates and times](../show-text-dates-times.md) for more informa
 | **DateTimeFormat.UTC** |The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. |
 
 ### Number placeholders
+
 | Placeholder | Description |
 | --- | --- |
 | **0** (*zero*) |Displays insignificant zeros if a number has fewer digits than there are zeros in the format. For example, use the format **#.00** if you want to display **8.9** as **8.90**. |
@@ -55,28 +51,29 @@ See [working with dates and times](../show-text-dates-times.md) for more informa
 If a number has more digits to the right of the decimal point than there are placeholders in the format, the number rounds to as many decimal places as there are placeholders. If there are more digits to the left of the decimal point than there are placeholders, the extra digits are displayed. If the format contains only number signs (#) to the left of the decimal point, numbers less than 1 start with a decimal point (for example, **.47**).
 
 ### Date and time placeholders
-| Placeholder | Description |
-| --- | --- |
-| **m** |Displays the month as a number without a leading zero. |
-| **mm** |Displays the month as a number with a leading zero when appropriate. |
-| **mmm** |Displays the month as an abbreviation (**Jan** to **Dec**). |
-| **mmmm** |Displays the month as a full name (**January** to **December**). |
-| **d** |Displays the day as a number without a leading zero. |
-| **dd** |Displays the day as a number with a leading zero when appropriate. |
-| **ddd** |Displays the day as an abbreviation (**Sun** to **Sat**). |
-| **dddd** |Displays the day as a full name (**Sunday** to **Saturday**). |
-| **yy** |Displays the year as a two-digit number. |
-| **yyyy** |Displays the year as a four-digit number. |
-| **h** |Displays the hour as a number without a leading zero. |
-| **hh** |Displays the hour as a number with a leading zero when appropriate. If the format contains **AM** or **PM**, the hour is shown based on the 12-hour clock. Otherwise, the hour is shown based on the 24-hour clock. |
-| **m** |Displays the minute as a number without a leading zero.  > [!NOTE]
-> The **m** or the **mm** code must appear immediately after the **h** or **hh** code or immediately before the **ss** code; otherwise, **Text** returns the month instead of minutes. |
-| **mm** |Displays the minute as a number with a leading zero when appropriate. > [!NOTE]
-> The **m** or the **mm** placeholder must appear immediately after the **h** or **hh** placeholder or immediately before the **ss** placeholder. Otherwise, **Text** returns the month  instead of minutes. |
-| **s** |Displays the second as a number without a leading zero. |
-| **ss** |Displays the second as a number with a leading zero when appropriate. |
-| **f** |Displays the fractions of seconds. |
-| **AM/PM**, **am/pm**, **A/P**, **a/p** |Displays the hour based on a 12-hour clock. **Text** returns "AM", "am", "A", or "a" for times from midnight until noon and "PM", "pm", "P", or "p" for times from noon until midnight |
+
+|                                                                                                 Placeholder                                                                                                  |                                                                                                     Description                                                                                                     |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                    **m**                                                                                                     |                                                                               Displays the month as a number without a leading zero.                                                                                |
+|                                                                                                    **mm**                                                                                                    |                                                                        Displays the month as a number with a leading zero when appropriate.                                                                         |
+|                                                                                                   **mmm**                                                                                                    |                                                                             Displays the month as an abbreviation (**Jan** to **Dec**).                                                                             |
+|                                                                                                   **mmmm**                                                                                                   |                                                                          Displays the month as a full name (**January** to **December**).                                                                           |
+|                                                                                                    **d**                                                                                                     |                                                                                Displays the day as a number without a leading zero.                                                                                 |
+|                                                                                                    **dd**                                                                                                    |                                                                         Displays the day as a number with a leading zero when appropriate.                                                                          |
+|                                                                                                   **ddd**                                                                                                    |                                                                              Displays the day as an abbreviation (**Sun** to **Sat**).                                                                              |
+|                                                                                                   **dddd**                                                                                                   |                                                                            Displays the day as a full name (**Sunday** to **Saturday**).                                                                            |
+|                                                                                                    **yy**                                                                                                    |                                                                                      Displays the year as a two-digit number.                                                                                       |
+|                                                                                                   **yyyy**                                                                                                   |                                                                                      Displays the year as a four-digit number.                                                                                      |
+|                                                                                                    **h**                                                                                                     |                                                                                Displays the hour as a number without a leading zero.                                                                                |
+|                                                                                                    **hh**                                                                                                    | Displays the hour as a number with a leading zero when appropriate. If the format contains **AM** or **PM**, the hour is shown based on the 12-hour clock. Otherwise, the hour is shown based on the 24-hour clock. |
+|                                                                                                    **m**                                                                                                     |                                                                         Displays the minute as a number without a leading zero.  > [!NOTE]                                                                          |
+|            > The **m** or the **mm** code must appear immediately after the **h** or **hh** code or immediately before the **ss** code; otherwise, **Text** returns the month instead of minutes.            |                                                                                                                                                                                                                     |
+|                                                                                                    **mm**                                                                                                    |                                                                   Displays the minute as a number with a leading zero when appropriate. > [!NOTE]                                                                   |
+| > The **m** or the **mm** placeholder must appear immediately after the **h** or **hh** placeholder or immediately before the **ss** placeholder. Otherwise, **Text** returns the month  instead of minutes. |                                                                                                                                                                                                                     |
+|                                                                                                    **s**                                                                                                     |                                                                               Displays the second as a number without a leading zero.                                                                               |
+|                                                                                                    **ss**                                                                                                    |                                                                        Displays the second as a number with a leading zero when appropriate.                                                                        |
+|                                                                                                    **f**                                                                                                     |                                                                                         Displays the fractions of seconds.                                                                                          |
+|                                                                                    **AM/PM**, **am/pm**, **A/P**, **a/p**                                                                                    |               Displays the hour based on a 12-hour clock. **Text** returns "AM", "am", "A", or "a" for times from midnight until noon and "PM", "pm", "P", or "p" for times from noon until midnight                |
 
 ### Literal placeholders
 You can include any of these characters in your format string.  They will appear in the result of **Text** as is. Additional characters are reserved for future placeholders, so you shouldn't use them.
@@ -147,6 +144,7 @@ By default, **Text** uses the language of the user running the app.  The **Langu
 The user running these formulas is located in the United States and has selected English as their language.  The **Language** function is returning "en-US".
 
 ### Number
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Text(&nbsp;1234.59,&nbsp;"####.#"&nbsp;)** |Formats the number with one decimal place. |"1234.6" |
@@ -168,6 +166,7 @@ The user running these formulas is located in the United States and has selected
 | **Text( Now(), "d-mmm-yy" )** |Formats using placeholder characters: <ul><li>**d** for a single-digit or double-digit day of the month<li>**-** as a literal character copied to the result<li>**mmm** for a three-letter abbreviation of the month<li>**-** as another literal character copied to the result<li>**yy** for a two-digit abbreviation of the year</ul> |"23-Nov-15" |
 
 ### Global apps
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Text( 1234567.89, "[$-en-US]$ #,###" )** |Interprets **,** as a grouping separator placed every three characters and **$** as the currency symbol. As no decimals are to be displayed, the value is rounded up to the next higher whole number. The **[$-en-US]** is optional in this case, as this is the default. |"$ 1,234,568" |

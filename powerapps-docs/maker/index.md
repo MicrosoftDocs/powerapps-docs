@@ -1,22 +1,15 @@
 ---
 title: Overview of creating apps | Microsoft Docs
 description: Overview of creating apps in either canvas or model-driven mode and incorporating the Common Data Service
-services: powerapps
-suite: powerapps
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-
+ms.reviewer:
 ---
 
 # Overview of creating apps in PowerApps
@@ -49,7 +42,7 @@ When you create a model-driven app, you can use all of the power of the Common D
 
 Getting started with model-driven apps is simple, and you can begin with these topics:
 
-- [Create an app](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/customize/create-edit-app)
+- [Create an app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app)
 - [Create and design forms](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-design-forms)
 - [Create or edit views](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-views)
 - [Create or edit a system chart](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-system-chart)

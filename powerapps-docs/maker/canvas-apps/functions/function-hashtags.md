@@ -1,19 +1,13 @@
 ---
 title: HashTags function | Microsoft Docs
 description: Reference information, including syntax and examples, for the HashTags function in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
 
@@ -40,7 +34,7 @@ The **HashTags** function scans a string for hashtags. Hashtags start with a pou
 ### Step by step
 1. Add a **[Text input](../controls/control-text-input.md)** control, name it **Tweet**, and type this sentence into it:
    
-    **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#@")**
+    **This #app is #AMAZING and can #coUnt123 or #123abc but not #1-23 or #$\*(#\@")**
 2. Add a vertical custom gallery, and set its **[Items](../controls/properties-core.md)** property to this function:
    
     **HashTags(Tweet.Text)**

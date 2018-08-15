@@ -1,19 +1,13 @@
 ---
 title: Find a property | Microsoft Docs
 description: Find a property by control, by category, or alphabetically.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 03/17/2016
 ms.author: gregli
 
@@ -85,6 +79,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Radio](controls/control-radio.md)** – Show options that are mutually exclusive.
 
 **[Rating](controls/control-rating.md)** – Indicate a value between 1 and a specified number.
+
+**[Rich text editor (experimental)](controls/control-richtexteditor.md)** – Allows rich text formatting by app users.
 
 **[Screen](controls/control-screen.md)** – Show and update data about a specific task.
 

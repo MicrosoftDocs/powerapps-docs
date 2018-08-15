@@ -1,25 +1,19 @@
 ---
 title: Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online (Introduction) | Microsoft Docs
-description: 'This series of tutorials explores how to build out a basic project-management app based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Microsoft Flow, and Power BI.'
-services: ''
-suite: powerapps
-documentationcenter: na
+description: 'This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Microsoft Flow, and Power BI.'
 author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 12/19/2017
 ms.author: mblythe
 
 ---
 # Integrate PowerApps, Microsoft Flow, and Power BI with SharePoint Online
-Do you have SharePoint Online and want to better automate and streamline your business processes? Have you worked with PowerApps, Microsoft Flow, or Power BI, but you're not sure how to use them with SharePoint Online? You've come to the right place! This series of tutorials explores how to build out a basic project-management app based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Microsoft Flow, and Power BI. These technologies work together, making it easy to *measure* your business, *act* on the results, and *automate* your workflows. When you're done with this series, you will have a cool scenario like the following:
+Do you have SharePoint Online and want to better automate and streamline your business processes? Have you worked with PowerApps, Microsoft Flow, or Power BI, but you're not sure how to use them with SharePoint Online? You've come to the right place! This series of tutorials explores how to build out a basic canvas app for project management based on SharePoint lists and three key technologies that integrate with SharePoint Online: PowerApps, Microsoft Flow, and Power BI. These technologies work together, making it easy to *measure* your business, *act* on the results, and *automate* your workflows. When you're done with this series, you will have a cool scenario like the following:
 
 ![Diagram of completed scenario](./media/sharepoint-scenario-intro/composite-with-background.png)
 

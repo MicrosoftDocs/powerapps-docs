@@ -1,21 +1,15 @@
 ---
 title: Overview of the SharePoint connection | Microsoft Docs
 description: See the available functions, responses, and examples for SharePoint
-services: ''
-suite: powerapps
-documentationcenter: ''
 author: sarafankit
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/12/2017
-ms.author: sharik
+ms.author: ankitsar
 
 ---
 # Connect to SharePoint from PowerApps
@@ -46,16 +40,14 @@ You can add data from a custom list but not a library. In addition, not all type
 | Managed Metadata |Yes (read-only) | |
 | Rating |No | |
 
-Columns that contain spaces can by read by PowerApps, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+PowerApps can read columns that contain spaces, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
 ## Prerequisites
-Open PowerApps by taking *either* of these steps:
+1. [Sign up](../../signup-for-powerapps.md) for PowerApps.
 
-* [Sign up](../../signup-for-powerapps.md) for PowerApps, [install PowerApps Studio for Windows](http://aka.ms/powerappsinstall), open it, and then sign in by providing the same credentials that you used to sign up.
+1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps by providing the same credentials that you used to sign up.
 
-* [Open PowerApps Studio for the web](https://create.powerapps.com/api/start) in a browser.
-
-    For a list of supported browsers and limitations in the preview release of PowerApps Studio for the web, see [Create or edit apps in a browser](../create-app-browser.md).
+1. Near the left edge, select **Apps**, and then select **Create an app** in the banner.
 
 ## Create an app
 * [Generate an app automatically](../app-from-sharepoint.md) based on data in a SharePoint list.
@@ -107,7 +99,7 @@ Open PowerApps by taking *either* of these steps:
 
     ![Select the tables in SharePoint](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Not all types of lists appear by default. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter a custom list name**.
+    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists.  If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter a custom list name**.
 
     ![Custom list in SharePoint](./media/connection-sharepoint-online/custom-list.png)
 

@@ -1,25 +1,18 @@
 ---
-title: Quickstart for adding data to an entity in the Common Data Service using Power Query | Microsoft Docs
-description: Quickstart with step-by-step instructions for using Power Query to add data to a new or existing entity in the Common Data Service for Apps from another data source.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Add data to an entity in Common Data Service for Apps by using Power Query | Microsoft Docs
+description: Step-by-step instructions for how to use Power Query to add data to a new or existing entity in Common Data Service (CDS) for Apps from another data source.
 author: AFTOwen
 manager: kfile
-editor: ''
-tags: ''
-
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: cds
 ms.date: 03/21/2018
 ms.author: anneta
-
 ---
-# Quickstart: Add data to an entity in the Common Data Service by using Power Query
-In this procedure, you'll create an entity in the [Common Data Service for Apps](data-platform-intro.md) and fill that entity with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
+
+# Add data to an entity in Common Data Service for Apps by using Power Query
+In this procedure, you'll create an entity in [Common Data Service (CDS) for Apps](data-platform-intro.md) and fill that entity with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
 
 * SQL Server
 * Salesforce
@@ -39,7 +32,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 
 ## Specify the source data
 
-1. Sign in to [PowerApps](https://web.powerapps.com), and then click or tap the down arrow for **Data** near the left edge.
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
 
 	![PowerApps home page](./media/data-platform-cds-newentity-pq/sign-in.png)
 

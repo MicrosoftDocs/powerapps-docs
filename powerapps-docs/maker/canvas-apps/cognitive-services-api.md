@@ -1,25 +1,19 @@
 ---
 title: Use Cognitive Services in PowerApps | Microsoft Docs
-description: Build a basic app that uses the Microsoft Cognitive Services Text Analytics API to analyze text.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
+description: Build a basic canvas app that uses the Microsoft Cognitive Services Text Analytics API to analyze text.
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 12/08/2017
-ms.author: mblythe
+ms.author: anneta
 
 ---
 # Use Cognitive Services in PowerApps
-This article shows you how to build a basic app that uses the [Microsoft Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) to analyze text. We'll show you how to set up the Text Analytics API, and connect to it with the [Text Analytics connector](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Then we'll show you how to create an app that calls the API.
+This article shows you how to build a basic canvas app that uses the [Microsoft Cognitive Services Text Analytics API](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) to analyze text. We'll show you how to set up the Text Analytics API, and connect to it with the [Text Analytics connector](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Then we'll show you how to create a canvas app that calls the API.
 
 > [!NOTE]
 > If you are new to building apps in PowerApps, we recommend reading [Create an app from scratch](get-started-create-from-blank.md) before diving into this article.
@@ -73,7 +67,7 @@ Now that you have the Text Analytics API up and running, you connect to it from 
 ### Create the app and add a connection
 First, you create a blank phone app and add a connection with the **Text Analytics** connector. If you need more information about these tasks, see [Create an app from scratch](get-started-create-from-blank.md) and [Manage your connections in PowerApps](add-manage-connections.md).
 
-1. In [web.powerapps.com](https://web.powerapps.com), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
+1. In [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), choose **Start from blank** > ![Phone app icon](./media/cognitive-services-api/icon-phone-app.png) (phone) > **Make this app**.
 
     ![Start from blank](./media/cognitive-services-api/start-from-blank.png)
 

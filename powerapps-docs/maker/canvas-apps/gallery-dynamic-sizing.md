@@ -1,19 +1,13 @@
 ---
 title: Show items of different heights in a gallery | Microsoft Docs
 description: Add and configure a flexible height gallery to automatically fit the amount of content in each item of the gallery
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/01/2017
 ms.author: fikaradz
 

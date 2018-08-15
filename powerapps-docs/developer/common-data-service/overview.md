@@ -1,6 +1,6 @@
 ---
 title: Common Data Service for Apps Developer Overview | Microsoft Docs
-description: Learn how developers can add value using the Common Data Service for apps.
+description: Learn how developers can add value using Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -17,22 +17,24 @@ ms.date: 03/19/2018
 ms.author: jdaly
 ---
 # Common Data Service for Apps Developer Overview
-PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the new Common Data Service for Apps. The Common Data Service for Apps now contains the core functionality of the Dynamics 365 Customer Engagement platform.
+
+PowerApps offers users, businesses, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release is the expansion of the Common Data Service, now called Common Data Service for Apps which now contains the core functionality of the Dynamics 365 platform that powers Dynamics 365 for Sales, Marketing, Customer Service.
 
 
 ## Get Started
-If you are already experienced with the Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience to customize and extend the Common Data Service for Apps.
 
-If you are new to the Dynamics 365 Customer Engagement applications, the following topics provide a high-level overview of the important concepts to help you get started working with the Common Data Service for apps.
+If you are already experienced with the Dynamics 365 for Sales, Marketing, or Customer Service apps, you will find that you will be able to apply your experience to customize and extend Common Data Service for Apps.
+
+If you are new to the Dynamics 365 for Sales, Marketing, or Customer Service apps, the following topics provide a high-level overview of the important concepts to help you get started working with Common Data Service for Apps.
 
 > [!NOTE]
-> - Model-driven apps connect to the Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps Developer Overview](../model-driven-apps/overview.md). Content in this section will refer only to extensions developers can do at the service level. 
-> - Because the Common Data Service for Apps and Dynamics 365 Customer Engagement leverage the same platform, you will find more complete information for developers in the [Dynamics 365 Customer Engagement Developer Guide](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
+> - Model-driven apps connect to Common Data Service for Apps. For information about how developers can add value at the application level, see [Model-driven apps Developer Overview](../model-driven-apps/overview.md). Content in this section will refer only to extensions developers can do at the service level. 
+> - Because Common Data Service for Apps is the same platform used by Dynamics 365 for Sales, Marketing, or Customer Service apps, you will find more complete information for developers in the [Dynamics 365 Customer Engagement Developer Guide](/dynamics365/customer-engagement/developer/developer-guide). These topics will provide an overview with links to the developer guide and other guides for more information.
 
 
 ## Tools and resources for developers
 
-Developers will use the following tools and resources when working with solutions using the common data service for apps.
+Developers will use the following tools and resources when working with solutions using Common Data Service for apps.
 
 ### Tools available for download from NuGet
 
@@ -46,7 +48,7 @@ The following tools are distributed in NuGet packages. The [Developer Guide: Dow
 |Plug-in Registration Tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to server events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Dynamics 365 Customer Engagement Developer Guide: Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)|
 |SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a Common Data Service for Apps compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development of solutions](introduction-solutions.md#team-development-of-solutions)<br />[Dynamics 365 Customer Engagement Developer Guide: Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
 
-### .NET SDK Assemblies 
+### .NET SDK Assemblies
 
 The following are assemblies .NET developers can use. The latest versions are available to download in the corresponding NuGet packages.
 
@@ -129,11 +131,11 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Extend Dyna
 
 
 
-### Community Tools for Common Data Service for apps
+## Community Tools for Common Data Service for Apps
 
 The Dynamics 365 community creates tools! Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service for Apps, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming.
 
-The following is a selected list of community tools distributed via the XrmToolBox that you can use with the Common Data Service for Apps.
+The following is a selected list of community tools distributed via the XrmToolBox that you can use with Common Data Service for Apps.
 
 |Tool  |Description  |
 |---------|---------|

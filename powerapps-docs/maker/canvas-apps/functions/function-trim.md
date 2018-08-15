@@ -1,19 +1,13 @@
 ---
 title: Trim and TrimEnds functions | Microsoft Docs
 description: Reference information, including syntax and an example, for the Trim and TrimEnds functions in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 09/09/2016
 ms.author: gregli
 
@@ -40,6 +34,7 @@ By trimming spaces between words, **Trim** is consistent with the function of th
 * *SingleColumnTable* - Required. A single-column table of strings to remove spaces from.
 
 ## Example
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Trim(&nbsp;"&nbsp;&nbsp;&nbsp;Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World&nbsp;&nbsp;&nbsp;"&nbsp;)** |Removes all spaces from the start and end of a string and extra spaces from within the string. |"Hello World" |

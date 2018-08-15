@@ -1,19 +1,22 @@
 ### YamlMime:Tutorial
 title: Getting started
 metadata:
-  title: Getting started | Microsoft PowerApps
+  title: Getting started | Microsoft Docs
   description: Understand what PowerApps is - its software elements, and related technologies.
   audience: Business User
   level: Beginner
-  nextTutorialHref: create-app-sharepoint
+  nextTutorialHref: create-app-sharepoint.yml
   nextTutorialTitle: Creating an app from SharePoint
   displayType: one-column
   author: AFTOwen
-  manager: kfile
+  manager: kvivek
+
   ms.service: powerapps
-  ms.topic: get-started-article
+  ms.custom: canvas
+  ms.topic: interactive-tutorial
   ms.date: 10/27/2017
   ms.author: anneta
+  ms.reviewer:
 items:
 - durationInMinutes: 1
   content: |

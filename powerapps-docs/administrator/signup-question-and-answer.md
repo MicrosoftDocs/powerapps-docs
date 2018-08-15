@@ -1,25 +1,17 @@
 ---
-title: Manage licenses in my org | Microsoft Docs
+title: Manage licenses in your organization | Microsoft Docs
 description: Common questions and answers about licenses, administration, and users signing up for PowerApps in your Office 365 tenant
-services: powerapps
-suite: powerapps
-documentationcenter: na
 author: jamesol-msft
-manager: kfile
-editor: ''
-tags: ''
-
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: jamesol
-
 ---
-# Manage licenses in my org
-This topic describes how users in your organization can get access to use PowerApps, and how you can control access to the PowerApps service.
+
+# Manage PowerApps licenses in your organization
+This article describes how users in your organization can get access to use PowerApps, and how you can control access to the PowerApps service.
 
 ## Sign up for PowerApps
 ### What is PowerApps?

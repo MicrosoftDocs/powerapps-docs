@@ -1,19 +1,13 @@
 ---
 title: Create a flow to manage project approvals | Microsoft Docs
 description: In this task we'll create a flow that drives the process of approving projects.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 01/09/18
 ms.author: mblythe
 

@@ -1,20 +1,15 @@
 ---
 title: 'Data table control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Data table control
-services: powerapps
-documentationcenter: na
 author: jasongre
-manager: kfend
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/05/2017
-ms.author: kfend
+ms.author: jasongre
 
 ---
 # Data table control in PowerApps
@@ -142,3 +137,16 @@ PowerApps introduced the **Data table** control on May 5, 2017. This section pro
    
     ![Edit form connected to the Data table](./media/control-data-table/connected-form-data-table.png)
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* [**Color**](properties-color-border.md) and [**Fill**](properties-color-border.md)
+* **HeadingColor** and **HeadingFill**
+* **SelectedColor** and **SelectedFill**
+* [**HoverColor**](properties-color-border.md) and [**HoverFill**](properties-color-border.md)
+
+This is in addition to the [standard color contrast requirements](../accessible-apps-color.md).
+
+### Screen reader support
+* **NoDataText** must be present.

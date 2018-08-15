@@ -1,29 +1,27 @@
 ---
-title: Embed multimedia files into an app and upload | Microsoft Docs
-description: Show multimedia files in an app, and upload them to a data source
-services: ''
-suite: powerapps
-documentationcenter: ''
+title: Embed multimedia files into a canvas app and upload | Microsoft Docs
+description: Show multimedia files in a canvas app, and upload them to a data source
 author: karthik-1
-manager: anneta
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: sharik
 
 ---
 # Using multimedia files in PowerApps
-This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive for Business.
+
+This topic shows you how to embed multimedia files in your canvas app, upload pen drawings to a data source, and show images from a data source in your canvas app. The data source used in this topic is an Excel file in OneDrive for Business.
 
 ## Prerequisites
-[Sign up](../signup-for-powerapps.md) for PowerApps, and [install](http://aka.ms/powerappsinstall) it. When you open PowerApps, sign in using the same credentials that you used to sign up.
+
+[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 ## Add media from a file or the cloud
+
 You can choose the kind of media file to add (for example, images, video, or audio).
 
 1. On the **Content** tab, select **Media**.
@@ -47,14 +45,14 @@ You can choose the kind of media file to add (for example, images, video, or aud
     ![Set image property](./media/add-images-pictures-audio-video/imageproperty.png)
 
     > [!NOTE]
-> Specify the file name only, without the extension, inside single quotes.
+   > Specify the file name only, without the extension, inside single quotes.
 
 7. If you added a video or audio control, set its **Media** property to the file that you added:  
 
     ![Set media property](./media/add-images-pictures-audio-video/mediaproperty.png)
 
     > [!NOTE]
-> Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
+   > Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
 
 ## Add media from Azure Media Services
 1. From your Azure Media Services account, upload and publish your video asset from **AMS > Settings > Assets**.

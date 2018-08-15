@@ -1,19 +1,13 @@
 ---
 title: Set function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Set function in PowerApps
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/29/2017
 ms.author: gregli
 
@@ -54,6 +48,7 @@ Global variables cannot use the same name as an existing collection or control. 
 * *Value* - Required.  The value to assign to the context variable.
 
 ## Examples
+
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Set(&nbsp;Counter,&nbsp;1&nbsp;)** |Creates or modifies the global variable **Counter**, setting its value to **1**. |**Counter** has the value **1**. You can reference that variable by using the name **Counter** in a formula on any screen. |

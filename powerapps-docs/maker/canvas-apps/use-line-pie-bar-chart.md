@@ -1,24 +1,20 @@
 ---
-title: Create charts | Microsoft Docs
-description: Show categories of data as line charts, pie charts, or bar charts
-services: ''
-suite: powerapps
-documentationcenter: ''
+title: Create a chart in a canvas app | Microsoft Docs
+description: In PowerApps, show categories of data as line charts, pie charts, or bar charts in a canvas app
 author: lonu
-manager: anneta
-editor: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
 
 ---
 # Show data in a line, pie, or bar chart in PowerApps
-Use line charts, pie charts, and bar charts to display your data. When working with charts, the data that you import should be structured like the following:
+
+Use line charts, pie charts, and bar charts to display your data in a canvas app. When you work with charts, the data that you import should be structured based on these criteria:
 
 * Each series should be in the first row.
 * Labels should be in the leftmost column.
@@ -30,7 +26,8 @@ For example, your data should look similar to the following:
 You can create and use these charts within PowerApps. Let's get started.
 
 ## Prerequisites
-* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [install](http://aka.ms/powerappsinstall) PowerApps. When you open PowerApps, sign in using the same credentials that you used to sign up.
+
+* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 * Create an app from a [template](get-started-test-drive.md), from [data](get-started-create-from-data.md), or from [scratch](get-started-create-from-blank.md).
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 * Download [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), which contains sample data as an XML file. Follow the steps in this topic to import it directly into your app. As an alternative, decompress the .zip file, open the XML file in Excel, and save it to a [cloud-storage account](connections/cloud-storage-blob-connections.md).

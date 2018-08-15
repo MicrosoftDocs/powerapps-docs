@@ -1,28 +1,23 @@
 ---
 title: 'Audio and Video controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Audio and Video controls
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+ms.reviewer: anneta
 ---
 # Audio and Video controls in PowerApps
 A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description
-An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file. A **Video** control plays a video clip from a file or from YouTube if you specify a URL with optional closed captions.
+An **Audio** control plays a sound clip from a file, a recording from a **[Microphone](control-microphone.md)** control, or the audio track from a video file.
+
+A **Video** control plays a video clip from a file or from YouTube or Azure Media Services.  Closed captions can optionally be shown when specified.
 
 ## Key properties
 **Loop** – Whether an audio or video clip automatically starts over as soon as it finishes playing.
@@ -32,6 +27,8 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 **ShowControls** – Whether an audio or video player shows, for example, a play button and a volume slider, and a pen control shows, for example, icons for drawing, erasing, and clearing.
 
 ## Additional properties
+**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should be the title of the video or audio clip.
+
 **AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.
 
 **AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
@@ -47,6 +44,10 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -69,6 +70,8 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 **StartTime** – The time after the start of an audio or video clip when the clip starts to play.
 
 **Time** – A media control's current position.
+
+**[TabIndex](properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -93,10 +96,44 @@ An **Audio** control plays a sound clip from a file, a recording from a **[Micro
 4. Press F5, and then play the clip by clicking or tapping the play button of the control that you added.
 
     > [!TIP]
-> The play button of the **Video** control appears when you hover over the control.
+   > The play button of the **Video** control appears when you hover over the control.
 5. Press Esc to return to the default workspace.
 
 ### Play a YouTube video
-1. Add a **Video** control, and set its **Media** property to the URL, enclosed in double quotation marks, of a YouTube video.
+1. Add a **Video** control, and set its **Media** property to the URL of the YouTube video, enclosed in double quotation marks.
 2. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
 3. Press Esc to return to the default workspace.
+
+### Play a video from Azure Media Services
+1. After the videos are published on AMS, copy the manifest URL. Start the streaming endpoint of your service, if not already.
+1. Add a **Video** control, and set its **Media** property to the URL of the AMS video, enclosed in double quotation marks.
+2. Press F5, and then play the clip by clicking or tapping the play button of the **Video** control.
+3. Press Esc to return to the default workspace.
+
+
+## Accessibility guidelines
+### Audio and video alternatives
+* **ShowControls** must be true so that users can listen or watch multimedia at their own pace. This also allows users to toggle closed captions and full-screen mode on video players.
+* Closed captions must be provided for videos.
+  *  For YouTube videos, use authoring tools provided by YouTube to add captions.
+  *  For other videos, create captions in WebVTT format, upload them, and set **ClosedCaptionsUrl** to the url location. There are several limitations. Server(s) hosting video and captions needs to be CORS-enabled and serve them using HTTPS protocol. Captioning does not work on Internet Explorer.
+* Consider providing an audio or video transcript using one of these methods:
+  1. Put the text in a **[Label](control-text-box.md)** and position it adjacent to the multimedia player. Optionally, create a **[Button](control-button.md)** to toggle the display of the text.
+  2. Put the text in a different screen. Create a **[Button](control-button.md)** that navigates to the screen and position the button adjacent to the multimedia player.
+  3. If the description is short, it can be put it in the **[AccessibleLabel](properties-accessibility.md)**.
+
+### Color contrast
+There must be adequate color contrast between:
+* **[FocusedBorderColor](properties-color-border.md)** and the outside color
+* **[Image](properties-visual.md)** and the multimedia player controls (if applicable)
+* **[Fill](properties-color-border.md)** and the multimedia player controls (if the fill is visible)
+
+Provide closed captions and/or transcript if the video content has color contrast issues.
+
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+* Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+* **AutoStart** should be false because it can be difficult for keyboard users to stop playback quickly.

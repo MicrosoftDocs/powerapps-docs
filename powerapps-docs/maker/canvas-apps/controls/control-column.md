@@ -1,20 +1,15 @@
 ---
 title: 'Column control: reference | Microsoft Docs'
 description: This topic provides information about the Column control in Microsoft PowerApps.
-services: powerapps
-documentationcenter: na
-author: jasongre
-manager: kfend
-editor: ''
-tags: ''
+author: fikaradz
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/05/2017
-ms.author: kfend
+ms.author: fikaradz
 
 ---
 # Column control in PowerApps
@@ -61,3 +56,7 @@ The [**Data table**](control-data-table.md) control shows a dataset in a tabular
    
     ![Column control resized](./media/control-column/post-resize-column.png)
 
+
+## Accessibility guidelines
+### Screen reader support
+* **DisplayName** must be present.

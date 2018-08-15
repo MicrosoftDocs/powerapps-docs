@@ -1,34 +1,31 @@
 ---
-title: Add a scrolling screen | Microsoft Docs
-description: Create a screen that users can scroll to show more types of content than the screen can show at a time.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Add a scrolling screen to a canvas app | Microsoft Docs
+description: In PowerApps, create a screen that users can scroll to show more types of content than the screen can show at a time in a canvas app.
 author: lonu
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: lonu
 
 ---
-# Add a scrolling screen in PowerApps
-Create a screen that users can scroll to show different items. For example, you might want to create an app that displays data in a column chart and line chart. By adding a scrolling screen, you can add multiple controls, which users can display if they scroll.
+# Add a scrolling screen to a canvas app in PowerApps
+
+In a canvas app, create a screen that users can scroll to show different items. For example, create a phone app that shows data in several charts, which users can display if they scroll.
 
 When you add multiple controls in a section, the controls maintain their relative positions within that section, regardless if it's a phone app or a tablet app. Note that the screen size and orientation may determine how the sections are arranged.  
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## Create a scrolling screen
+
 1. On the **Home** tab, click or tap **New screen**:
-   
+
     ![Option to add a screen to an app][1]
+
 2. On the **Home** tab, click or tap **Layouts**, and then click or tap the option to add an infinite scrolling canvas:  
    
     ![Option to add an infinite scrolling canvas][2]

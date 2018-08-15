@@ -1,23 +1,15 @@
-
 ---
 title: 'Card control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Card control
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-
+ms.reviewer: anneta
 ---
 # Card control in PowerApps
 Provides the display and editing experience for a single field of a **[Display form](control-form-detail.md)** or **[Edit form](control-form-detail.md)** control.
@@ -99,3 +91,11 @@ See [Understand data cards](../working-with-cards.md) for examples of how to cus
 ## Examples
 See [Understand data cards](../working-with-cards.md) and [Understand data form layout](../working-with-form-layout.md) for examples.
 
+
+## Accessibility guidelines
+### Color contrast
+There must be adequate color contrast between:
+* **[Fill](properties-color-border.md)** and any child controls. For example, if a card contains a **[Label](control-text-box.md)** and the label has transparent fill, then the card's **[Fill](properties-color-border.md)** effectively becomes the background color for the label. Thus, there should be adequate contrast between the card's **[Fill](properties-color-border.md)** and the label's **[Color](properties-color-border.md)**.
+
+### Screen reader support
+* **DisplayName** must be present.

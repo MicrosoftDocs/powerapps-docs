@@ -1,19 +1,13 @@
 ---
 title: Color enumeration and ColorFade, ColorValue, and RGBA functions | Microsoft Docs
 description: Reference information for the Color enumeration and ColorFade, ColorValue, and RGBA functions in PowerApps, including syntax and examples
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2015
 ms.author: gregli
 
@@ -50,6 +44,7 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 * *FadeAmount* - Required.  A number between -1 and 1.  -1 fully darkens a color to black, 0 has no impact on the color, and 1 fully brightens a color to white.  
 
 ## Built in colors
+
 | Color enumeration | ColorValue with Hex Code | RGBA | Color Swatch |
 | --- | --- | --- | --- |
 | **Color.AliceBlue** |**ColorValue( "#f0f8ff" )** |**RGBA( 240, 248, 255, 1 )** |![aliceblue](./media/function-colors/color-aliceblue.png) |

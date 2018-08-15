@@ -1,19 +1,16 @@
 ---
 title: Tutorial for sharing a model-driven app with PowerApps | Microsoft Docs
 description: In this tutorial learn how to share a model-driven app
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: Mattp123
-manager: brycho
+manager: kfile
 editor: ''
 tags: ''
 
 ms.service: powerapps
-ms.workload: na
-ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
+ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
 
@@ -27,9 +24,6 @@ In this tutorial you perform the tasks for sharing a mode-driven app so that oth
 - Create a custom security role
 - Assign users to the custom security role
 - Assign the security role to an app
-
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## Prerequisites
 To share an app you must have the [!INCLUDE [powerapps](../../includes/powerapps.md)] Environment Admin or System Admin role. 
@@ -129,7 +123,7 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 *Privilege is global scope unless specified otherwise.
 
 ## Next steps
-[Quickstart: Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
+[Run a model-driven app on a mobile device](../../user/run-app-client-model-driven.md)
 
 
 

@@ -1,39 +1,39 @@
 ---
 title: 'Radio control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Radio control
-services: ''
-suite: powerapps
-documentationcenter: na
 author: fikaradz
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/25/2016
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: anneta
+ms.date: 07/06/2018
 ms.author: fikaradz
 
 ---
 # Radio control in PowerApps
-A list that shows all options but the user can select only one at a time.
+
+An input control that shows multiple options, of which users can select only one at a time.
 
 ## Description
-A **Radio** control, with which users have decades of experience, is best used with only a few options that are mutually exclusive.
+
+A **Radio** control, a standard HTML input control, is best used with only a few, mutually exclusive options.
+
+The control can have a horizontal or vertical layout.
 
 ## Key properties
-**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+
+**[Default](properties-core.md)** – The value of a control before the user changes it.
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
+**Layout** – Whether the options are laid out vertically or horizontally.
 
 **[Value](properties-core.md)** – The value of an input control.
 
 ## All properties
+
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -41,8 +41,6 @@ A **Radio** control, with which users have decades of experience, is best used w
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[FocusedBorderThickness](properties-color-border.md)** – The thickness of the control's border when it has keyboard focus.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 
@@ -55,6 +53,10 @@ A **Radio** control, with which users have decades of experience, is best used w
 **[DisabledFill](properties-color-border.md)** – The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
 **[Fill](properties-color-border.md)** – The background color of a control.
+
+**[FocusedBorderColor](properties-color-border.md)** – The color of a control's border when the control is focused.
+
+**[FocusedBorderThickness](properties-color-border.md)** – The thickness of a control's border when the control is focused.
 
 **[Font](properties-text.md)** – The name of the family of fonts in which text appears.
 
@@ -100,7 +102,7 @@ A **Radio** control, with which users have decades of experience, is best used w
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 
-**[TabIndex](properties-accessibility.md)** – Customizes the tab order of controls at runtime when set to a non-zero value.
+**[TabIndex](properties-accessibility.md)** – Keyboard-navigation order in relation to other controls.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
@@ -115,20 +117,44 @@ A **Radio** control, with which users have decades of experience, is best used w
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
+
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
 
 ## Example
-1. Add a **Radio** control, name it **Pricing**, and set its **[Items](properties-core.md)** property to this formula:
-   <br>**["Standard", "Premium"]**
-   
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **[Label](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](properties-core.md)** property of the **[Label](control-text-box.md)** control to this formula:
-   <br>**If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
-   
-    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
-3. Press F5, and then choose either option in the **Radio** control.
-   
-    The **[Label](control-text-box.md)** control shows the appropriate text for your choice.
-4. (optional) In the **Radio** control, choose the other option to confirm that the appropriate text appears.
-5. To return to the default workspace, press Esc.
 
+1. Add a **Radio** control, name it **Pricing**, and set its **[Items](properties-core.md)** property to this formula:
+
+    **["Standard", "Premium"]**
+
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+
+2. Add a **[Label](control-text-box.md)** control, move it below the **Radio** control, and set the **[Text](properties-core.md)** property of the **[Label](control-text-box.md)** control to this formula:
+
+    **If("Premium" in Pricing.Selected.Value, "$200 per day", "$150 per day")**
+
+    Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
+
+3. While holding down the Alt key, select either option in the **Radio** control.
+
+    The **[Label](control-text-box.md)** control shows the appropriate text for your choice.
+
+4. (optional) While holding down the Alt key, select the other option to confirm that the appropriate text appears.
+
+## Accessibility guidelines
+
+### Color contrast
+
+In addition to the [standard color contrast requirements](../accessible-apps-color.md), ensure adequate color contrast between:
+
+* **RadioSelectionFill** and **RadioBackgroundFill**
+* **RadioBackgroundFill** and **[Fill](properties-color-border.md)**
+
+### Screen-reader support
+
+* Ensure that every option has a **[Value](properties-core.md)**.
+* Consider adding a **[Label](control-text-box.md)** immediately before the **Radio** control to serve as the heading.
+
+### Keyboard support
+
+* Set the **[TabIndex](properties-accessibility.md)** property to zero or greater so that keyboard users can navigate to it.
+* Set the **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** properties so that focus indicators are clearly visible.

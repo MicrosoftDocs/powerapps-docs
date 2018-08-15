@@ -1,292 +1,241 @@
 ---
-title: Create an app from scratch | Microsoft Docs
-description: Create an app from the ground up by configuring each UI element and behavior to manage the everyday data that fuels your business.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: karthik-1
-manager: anneta
-editor: ''
-tags: ''
+title: Create an canvas app from scratch based on Excel data | Microsoft Docs
+description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/16/2016
-ms.author: sharik
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
+ms.date: 04/23/2018
+ms.author: anneta
 
 ---
-# Create an app from scratch
-Create your own app from scratch using any one of a variety of data sources, adding more sources later if you want. Specify the appearance and behavior of each UI element so that you can optimize the result for your exact goals and workflow. This approach is much more time-intensive than [generating an app automatically](get-started-create-from-data.md), but experienced app makers can build the best app for their needs.
+# Create an canvas app from scratch based on Excel data
 
-> [!NOTE]
-> This topic was written for PowerApps Studio for Windows, but the steps are similar if you [open PowerApps in a browser](create-app-browser.md).
-
-By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records:
-
-![Screen in which a user can scroll through a set of data](./media/get-started-create-from-blank/first-screen-final.png)
-
-On the other screen, users can create a record, update one or more fields in a record, or delete an entire record:
-
-![Screen in which a user can add or update data](./media/get-started-create-from-blank/changescreen-final.png)
+Create your own canvas app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but experienced app makers can use it to build the best app for their needs.
 
 ## Prerequisites
-You can review this tutorial for general concepts only, or you can follow it exactly if you complete these steps.
+
+To follow the steps in this tutorial exactly, first create an Excel file using this sample data.
 
 1. Copy this data, and then paste it into an Excel file.
 
-   | Start Day | Start Time | Volunteer 1 | Volunteer 2 |
-   | --- | --- | --- | --- |
-   | Saturday |10am-noon |Vasquez |Kumashiro |
-   | Saturday |noon-2pm |Ice |Singhal |
-   | Saturday |2pm-4-pm |Myk |Mueller |
-   | Sunday |10am-noon |Li |Adams |
-   | Sunday |10am-noon |Singh |Morgan |
-   | Sunday |10am-noon |Batye |Nguyen |
+    | StartDay | StartTime | Volunteer | Backup |
+    | --- | --- | --- | --- |
+    | Saturday |10am-noon |Vasquez |Kumashiro |
+    | Saturday |noon-2pm |Ice |Singhal |
+    | Saturday |2pm-4-pm |Myk |Mueller |
+    | Sunday |10am-noon |Li |Adams |
+    | Sunday |10am-noon |Singh |Morgan |
+    | Sunday |10am-noon |Batye |Nguyen |
 
 2. Format that data as a table, named **Schedule**, so that PowerApps can parse the information.
 
-    For more information, see [Create an Excel table in a worksheet](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+    For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
-3. Save the file under the name **eventsignup.xls**, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
+3. Save the file under the name **eventsignup.xls**, close it, and then upload it to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive.
 
-4. If you're new to PowerApps:
+> [!IMPORTANT]
+> You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
-   * Learn how to [add a control and set its properties](add-configure-controls.md), which determine how the control appears and behaves.
-   * Learn how to [add and rename a screen](add-screen-context-variables.md).
+## Open a blank app
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-## Create a blank app, and connect to data
-1. In PowerApps Studio, click or tap **New** on the **File menu** (near the left edge of the screen).
+	![PowerApps home page](./media/get-started-create-from-blank/sign-in.png)
 
-    ![New option on the File menu](./media/get-started-create-from-blank/file-new.png)
+	You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
 
-2. On the **Blank app** tile, click or tap **Phone layout**.
+1. Under **Make apps like these**, hover over the **Start from blank** tile, select the phone icon, and then select **Make this app**.
 
-    ![Option to create an app from data](./media/get-started-create-from-blank/create-from-blank.png)
+	![Blank-app tile](./media/get-started-create-from-blank/blank-app.png)
 
-3. If prompted, take the intro tour to understand the main areas of PowerApps (or click or tap **Skip**).
+    PowerApps Studio creates a blank app for phones.
 
-    ![Quick tour](./media/get-started-create-from-blank/quick-tour.png)
+1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
 
-    You can always take the tour later by clicking or tapping the question-mark icon near the upper-left corner of the screen and then clicking or tapping **Take the intro tour**.
+## Connect to data
+1. In the middle of the screen, select **connect to data**.
 
-4. In the left navigation bar, click or tap an icon in the upper-right corner to switch to the thumbnail view.
+1. In the **Data** pane, select the connection for your cloud-storage account if it appears. Otherwise, follow these steps to add a connection:
 
-    ![Toggle the views](./media/get-started-create-from-blank/toggle-view.png)
+    1. Select **New connection**, select the tile for your cloud-storage account, and then select **Create**.
+    2. If prompted, provide your credentials for that account.
 
-5. In the right-hand pane, click or tap **Add data source**.
+1. Under **Choose an Excel file**, type or paste the first letters of **eventsignup** to filter the list, and then select the file that you uploaded.
 
-    ![Add data source](./media/get-started-create-from-blank/add-data-source.png)
+1. Under **Choose a table**, select the checkbox for **Schedule**, and then select **Connect**.
 
-6. Perform either of these steps:
+## Create the view screen
 
-   * If you already have a connection to your cloud-storage account, click or tap it.
-   * If you don't have a connection to your cloud-storage account, click or tap **Add Connection**, click or tap your account type, click or tap **Connect**, and then (if prompted) provide your credentials.
+1. On the **Home** tab, select the down-arrow next to **New screen** to open a list of screen types, and then select **List screen**.
 
-7. Under **Choose an Excel file**, browse to **eventsignup.xlsx**, and then click or tap it.
-
-    ![Specify the Excel file that you want to use](./media/get-started-create-from-blank/select-excel-file.png)
-
-8. Under **Choose a table**, select the **Schedule** check box, and then click or tap **Connect**.
-
-    ![Specify the table in Excel that you want to use](./media/get-started-create-from-blank/select-table.png)
-
-    The **Data sources** tab of the right-hand pane shows which data sources you've added to your app.
-
-    ![Show connected data sources](./media/get-started-create-from-blank/data-connect.png)
-
-    This tutorial requires only one data source, but you can add more data sources later.
-
-## Show the data
-1. In the **Home** tab, click or tap **New screen** and then click or tap **List screen**.
-
-    ![Add a layout with a heading, a subtitle, and a body element](./media/get-started-create-from-blank/add-gallery.png)
+    ![Add a list screen](./media/get-started-create-from-blank/add-list-screen.png)
 
     A screen is added with several default controls, such as a search box and a **[Gallery](controls/control-gallery.md)** control. The gallery covers the entire screen under the search box.
 
-2. Click or tap anywhere in the gallery except an arrow, such as directly under the search box.
+2. Select the gallery by clicking or tapping near its center.
 
-    ![Select gallery](./media/get-started-create-from-blank/select-gallery.png)
+    A selection box with handles surrounds the gallery.
 
-3. In the right-hand pane, open the **Layouts** list, and then click or tap the option that shows a title, a subtitle and body.
+    ![Add a list screen](./media/get-started-create-from-blank/select-gallery.png)
 
-    ![Select gallery](./media/get-started-create-from-blank/select-layout.png)
+3. In the right-hand pane, select **CustomGallerySample** to open the **Data** pane.
 
-4. In the property list, click or tap **[Items](controls/properties-core.md)**, copy this formula, and paste it into the formula bar:
+    ![Open Data pane](./media/get-started-create-from-blank/custom-gallery-sample.png)
 
-    **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer_x0020_1"), "Volunteer_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+4. Under **Data source**, select the down arrow to open the list of data sources for the app, and then select **Schedule**.
 
-    If you're not sure where the property list is, see [Add and configure controls](add-configure-controls.md).
+    ![Select a data source](./media/get-started-create-from-blank/select-schedule.png)
 
-    > [!NOTE]
-> For Excel or SharePoint data sources that contain column names with spaces, PowerApps shows the spaces as **"\_x0020\_"**. In this example, the column **"Volunteer 1"** appears in a formula as **"Volunteer_x0020_1"**.
+5. Under **Layout**, select the down arrow to open the list of layouts, and then select **Title, subtitle, and body**.
 
-    This gallery shows the data from the **Schedule** table.
+    ![Select layout](./media/get-started-create-from-blank/select-layout.png)
 
-    ![The Schedule data in the gallery by default](./media/get-started-create-from-blank/show-data-default.png)
+6. Under **Title2**, change the column shown from **Backup** to **Volunteer**.
 
-    A search box can filter the gallery based on text that the user types. If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer 1** field contains the text that the user typed.
+     ![Change column in label](./media/get-started-create-from-blank/change-title2.png)
 
-    The sort button can sort the records based on data in the **Volunteer 1** column. If a user clicks or taps that button, the sort order toggles between ascending and descending.
+7. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
-    That formula contains the **Sort**, **If**, **IsBlank**, **Filter**, and **Text** functions. For more information about these and other functions, see the [formula reference](formula-reference.md)
+    The gallery shows the name of each volunteer and the day and time of that volunteer's shift.
 
-5. Type an **i** in the search box, and click or tap the sort button once (or an odd number of times).
+    ![The Schedule data in the gallery unsorted](./media/get-started-create-from-blank/show-data-unsorted.png)
 
-    The gallery shows these results.
+8. Select the gallery, and confirm that the property list shows **[Items](controls/properties-core.md)**.
 
-    ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
+    As the formula bar shows, the value of that property is **Schedule**.
 
-    More information about the **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)**, and [other functions](formula-reference.md)
+    ![The Schedule data in the gallery unsorted](./media/get-started-create-from-blank/set-property.png)
 
-6. Select the **[Label](controls/control-text-box.md)** control at the top of the screen by clicking or tapping the control.
+9. Change the value of the **Items** property by copying this formula and pasting it into the formula bar:
 
-    ![Select title bar](./media/get-started-create-from-blank/select-title-bar.png)
+    **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Volunteer"), "Volunteer", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
-7. In the property list, click or tap **[Text](controls/properties-core.md)**, copy this text, and then paste it in the formula bar.<br>
-   **"View Records"**
+    The gallery shows data in alphabetical order by volunteer name.
 
-    ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
+    ![The Schedule data in the gallery sorted](./media/get-started-create-from-blank/show-data-sorted.png)
 
-## Create the ChangeScreen and its banner
-1. Delete **Screen1**, and rename **Screen2** to **ViewScreen**.
+    Users can sort and filter the gallery by volunteer name based on the **SortByColumns** and **Search** functions in that formula.
 
-    ![Rename screen](./media/get-started-create-from-blank/rename-screen.png)
+   - If a user types at least one letter in the search box, the gallery shows only those records for which the **Volunteer** field contains the text that the user typed.
+   - If a user selects the sort button, the gallery shows the records in ascending or descending order (depending on how many times the user selects the button) based on the **Volunteer** field.
 
-2. Add a screen, and rename it **ChangeScreen**.
+     For more information about these and other functions, see the [formula reference](formula-reference.md).
 
-    ![Add and rename screen](./media/get-started-create-from-blank/add-screen.png)
+10. Type an **i** in the search box, select the sort button by clicking or tapping it, and then select it one more time (or an odd number of additional times).
 
-3. On the **Insert** tab, click or tap **Text**, and then click or tap  **[Label](controls/control-text-box.md)**.
+     The gallery shows these results.
 
-4. Configure the **Label** control that you just added:
+     ![Sort and filter the gallery](./media/get-started-create-from-blank/sort-filter.png)
 
-   * Set its **Text** property to this formula:
-     <br>**"Change record"**
+11. Clear all text from the search box.
 
-   * Set its **Fill** property to this formula:
-     <br>**RGBA(62, 96, 170, 1)**.
+12. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **View records**.
 
-   * Set its **Color** property to this formula:
-     <br>**RGBA(255, 255, 255, 1)**
+     ![Change title bar](./media/get-started-create-from-blank/change-title-bar.png)
 
-   * Set its **Align** property to **Center**.
-   * Set its **X** property to **0**.
+## Create the change screen
+1. On the **Home** tab, select the down arrow next to **New screen**, and then select **Form screen**.
 
-   * Set its **Width** property to **640**.
-     The **Label** control reflects your changes.
+     ![Add form screen](./media/get-started-create-from-blank/add-form-screen.png)
 
-     ![ChangeScreen with banner](./media/get-started-create-from-blank/change-screen-blank.png)
+1. In the screen that you just added, select **Connect to data** to open the **Data** pane, and then set the data source to **Schedule**.
 
-## Add and configure a form
-1. On the **Insert** tab, click or tap **Forms**, and then click or tap  **Edit**.
+1. Under **Fields**, select all the checkboxes to show all the fields in the form.
 
-2. Move and resize the form to cover most of the screen.
+     ![Show fields](./media/get-started-create-from-blank/show-fields.png)
 
-    ![Add a form](./media/get-started-create-from-blank/add-form.png)
+1. Drag the **Volunteer** field up so it appears at the top of the list of fields.
 
-    The form is named **Form1** by default unless you already added and removed a form. In that case, rename the form to **Form1**.
+     ![Reorder fields](./media/get-started-create-from-blank/reorder-fields.png)
 
-3. Set **[DataSource](controls/control-form-detail.md)** property of **Form1** to **Schedule**.
+1. Select the form, and set its **Item** property to this expression by typing or pasting it in the formula bar:<br>**BrowseGallery1.Selected**
 
-4. Set the **Item** property of **Form1** to this expression:
-   <br>**BrowseGallery1.Selected**
+1. At the top of the screen, select the **[Label](controls/control-text-box.md)** control, and then replace **[Title]** with **Change records**.
 
-5. In the right-hand pane, click or tap the checkbox for each field to show it.
+    ![Change title bar](./media/get-started-create-from-blank/change-title-bar2.png)
 
-    ![Show fields on form](./media/get-started-create-from-blank/schedule-checkbox.png)
+## Delete and rename screens
+1. In the left navigation bar, select the ellipsis (...) for **Screen1**, and then select **Delete**.
 
-6. Near the bottom of the form, click or tap **Add a custom card**.
+    ![Delete screen](./media/get-started-create-from-blank/delete-screen.png)
 
-    ![Add a custom card](./media/get-started-create-from-blank/add-custom-card.png)
+1. Select the ellipsis (...) for **Screen2**, select **Rename**, and then type or paste **ViewScreen**.
 
-7. Add a **[Label](controls/control-text-box.md)** control in the new card.
+1. Select the ellipsis (...) for **Screen3**, select **Rename**, and then type or paste **ChangeScreen**.
 
-8. Set the **[AutoHeight](controls/control-text-box.md)** property of the new control to **true**, and set its **[Text](controls/properties-core.md)** property to this formula:
-   <br>**Form1.Error**
+## Configure icons on the view screen
+1. Near the top of the **ViewScreen**, select the circular-arrow icon.
 
-    The label will show any errors from the form.
+    ![Add record](./media/get-started-create-from-blank/refresh-icon.png)
 
-9. In the left navigation bar, click or tap the thumbnail for the **ChangeScreen** to select it.
+1. Set the **OnSelect** property for that icon to this formula:<br>**Refresh(Schedule)**
 
-10. On the **Insert** tab, click or tap **Icons**, click or tap the option to add a **Back arrow**, and then move the arrow to the lower-left corner of the screen.
+    When the user selects this icon, the data from **Schedule** is refreshed from the Excel file.
 
-11. Set the arrow's **[OnSelect](controls/properties-core.md)** property to this formula:
+    For more information about this and other functions, see the [formula reference](formula-reference.md).
 
-     **ResetForm(Form1);Navigate(ViewScreen,ScreenTransition.None)**
-
-      When the user clicks or taps the arrow, the **[Navigate](functions/function-navigate.md)** function opens the **ViewScreen**.
-
-12. Add a **[Button](controls/control-button.md)** control under the form, and set the button's **[Text](controls/properties-core.md)** property to **"Save"**.
-
-     ![Add a save button](./media/get-started-create-from-blank/add-save-button.png)
-
-13. Set the **[OnSelect](controls/properties-core.md)** property of the button to this formula::
-
-    **SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
-
-    When the user clicks or taps the button, the **[SubmitForm](functions/function-form.md)** function saves any changes to the data source, and the **ViewScreen** reappears.
-
-14. At the bottom of the screen, add another button, set its **[Text](controls/properties-core.md)** property to **"Remove"**, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
-
-    **Remove(Schedule,BrowseGallery1.Selected);<br>If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
-
-    When the user clicks or taps this button, the **[Remove](functions/function-remove-removeif.md)** function removes the record, and the **ViewScreen** reappears.
-
-15. Set the **[Visible](controls/properties-core.md)** property of the **Remove** button to this formula:
-    <br>**Form1.Mode=FormMode.Edit**
-
-    This step hides the **Remove** button when the user is creating a record.
-
-    The **ChangeScreen** matches this example:
-
-    ![Final ChangeScreen](./media/get-started-create-from-blank/changescreen-final.png)
-
-## Set navigation from ViewScreen
-1. In the left navigation bar, click or tap the thumbnail for the **ViewScreen**.
-
-    ![Open ViewScreen](./media/get-started-create-from-blank/select-viewscreen.png)
-
-2. Click or tap the **Next arrow** for the first record in the gallery.
-
-    ![Next arrow](./media/get-started-create-from-blank/next-arrow.png)
-
-3. Set the **[OnSelect](controls/properties-core.md)** property of that arrow to this formula:
-
-    **Navigate(ChangeScreen,ScreenTransition.None)**
-
-4. In the upper-right corner, click or tap the plus icon.
+1. In the upper-right corner of the **ViewScreen**, select the plus icon.
 
     ![Add record](./media/get-started-create-from-blank/add-record.png)
 
-5. Set the **[OnSelect](controls/properties-core.md)** property of the selected icon to this formula:
+1. Set the **OnSelect** property for that icon to this formula:<br>**NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)**
 
-    **NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**`
+    When the user selects this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
 
-     When the user clicks or taps this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
+1. Select the right-pointing arrow for the first record in the gallery.
 
-## Run the app
-As you customize the app, test your changes by running the app in Preview mode, as the steps in this section describe.
+    ![Select arrow](./media/get-started-create-from-blank/select-arrow.png)
 
-1. In the left navigation bar, click or tap the top thumbnail to select the **ViewScreen**.
+1. Set the **OnSelect** property for the arrow to this formula:<br>**EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)**
 
-    ![Select ViewScreen](./media/get-started-create-from-blank/select-viewscreen.png)
+    When the user selects this icon, **ChangeScreen** appears with each field showing the data for the selected record, so that the user can edit or delete the record more easily.
 
-2. Open Preview mode by pressing F5 (or clicking or tapping the **Preview** icon near the upper-right corner).
+## Configure icons on the change screen
+1. On **ChangeScreen**, select the "x" icon in the upper-left corner.
+
+    ![Cancel icon](./media/get-started-create-from-blank/cancel-icon.png)
+
+1. Set the **OnSelect** property for that icon to this formula:<br>**ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)**
+
+    When the user selects this icon, any changes that the user made in this screen are discarded, and the view screen opens.
+
+1. In the upper-right corner, select the checkmark icon.
+
+    ![Checkmark icon](./media/get-started-create-from-blank/checkmark-icon.png)
+
+1. Set the **OnSelect** property for the checkmark to this formula:<br>**SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)**
+
+    When the user selects this icon, any changes that the user made is this screen are saved, and the view screen opens.
+
+1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
+
+1. Set the new icon's **Color** property to **White**, and move the new icon so it appears next to the checkmark icon.
+
+    ![Trash icon](./media/get-started-create-from-blank/trash-icon.png)
+
+1. Set the **OnSelect** property for the trash icon to this formula:<br>**Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)**
+
+    When the user selects this icon, the selected record is deleted from the data source, and the view screen opens.
+
+## Test the app
+1. Select the **ViewScreen**, and then open Preview by pressing F5 (or selecting the **Preview** icon near the upper-right corner).
 
     ![Open Preview mode](./media/get-started-create-from-blank/open-preview.png)
 
-3. Click or tap the Next arrow for a record to show details about that record.
+1. Add a record.
 
-4. On the **ChangeScreen**, change the information in one or more fields, and then save your changes by clicking or tapping **Save**, or remove the record by clicking or tapping **Remove**.
+1. Update the record that you added, and then save the changes.
 
-5. Close Preview mode by pressing Esc (or by clicking or tapping the close icon under the title bar).
+1. Update the record that you added, and then cancel the changes.
 
-    ![Close Preview mode](./media/get-started-create-from-blank/close-preview.png)
+1. Delete the record that you added.
+
+1. Close Preview mode by pressing Esc (or by selecting the close icon in the upper-right corner).
 
 ## Next steps
 * Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
 * [Share the app](share-app.md) so that other people can run it.
-* Learn more about [galleries](add-gallery.md), [forms](add-form.md), and [formulas](working-with-formulas.md).
+* Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.

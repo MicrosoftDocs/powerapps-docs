@@ -1,22 +1,15 @@
 ---
 title: Sign up for a free trial license | Microsoft Docs
 description: Sign up for a free license to try PowerApps for 30 days as an individual.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
 ms.date: 03/12/2018
 ms.author: anneta
-
+ms.reviewer:
 ---
 # Sign up for a free license to try PowerApps
 To create an app in PowerApps, you need one of several types of licenses that offer different levels of functionality. You already have a license for PowerApps if your organization has purchased any of several versions of Office 365 or Dynamics 365 for you, or your organization purchased PowerApps Plan 1 or Plan 2 licenses for you.
@@ -76,7 +69,7 @@ Otherwise, you're prompted to check your email.
 
 In the email message, select the link to verify your email address, and (if prompted) provide more information.
 
-When this dialog box appears, select **Start**, and then start to use [PowerApps](http://web.powerapps.com)!
+When this dialog box appears, select **Start**, and then start to use [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)!
 
 ![Click start](./media/signup-for-powerapps/almost-there.png)
 
@@ -103,11 +96,12 @@ For more information about functionality and capacity in the trial license, see 
 ### What email address can I use?
 You can use a work or school address to sign up for a trial license. If you use another kind of address, you might experience one of the symptoms in this table.
 
-| Symptom / Error Message | Cause and Workaround |
-| --- | --- |
-| **Personal email addresses (e.g. nancy@gmail.com)** <br> <br> You receive a message like the following during signup: <br> <br> `You entered a personal email address: Please enter your work email address so we can securely store your company's data.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` |PowerApps does not support email addresses provided by consumer email services or telecommunications providers. <br> <br> To complete signup, try again using an email address assigned by your work or school. |
-| **.gov or .mil addresses** <br> <br> You receive a message like the following during signup: <br> <br> `PowerApps unavailable: PowerApps is not available for users with .gov or .mil email addresses at this time. Use another work email address or check back later.` <br> <br> or <br> <br> `We can't finish signing you up. It looks like Microsoft PowerApps isn't currently available for your work or school.` |PowerApps does not support .gov or .mil addresses at this time. |
-| **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.` |Your organization signs in to Office 365 and other Microsoft services with IDs other than email addresses. For example, your email address might be Nancy.Smith@contoso.com, but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to you for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
+
+|                                                                                                                                                                                                                             Symptom / Error Message                                                                                                                                                                                                                             |                                                                                                                                                                                                     Cause and Workaround                                                                                                                                                                                                      |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <strong>Personal email addresses (e.g. nancy@gmail.com)</strong> <br> <br> You receive a message like the following during signup: <br> <br> `You entered a personal email address: Please enter your work email address so we can securely store your company's data.` <br> <br> or <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` |                                                                                                        PowerApps does not support email addresses provided by consumer email services or telecommunications providers. <br> <br> To complete signup, try again using an email address assigned by your work or school.                                                                                                        |
+|                             **.gov or .mil addresses** <br> <br> You receive a message like the following during signup: <br> <br> `PowerApps unavailable: PowerApps is not available for users with .gov or .mil email addresses at this time. Use another work email address or check back later.` <br> <br> or <br> <br> `We can't finish signing you up. It looks like Microsoft PowerApps isn't currently available for your work or school.`                              |                                                                                                                                                                                PowerApps does not support .gov or .mil addresses at this time.                                                                                                                                                                                |
+|                                                                                             **Email address is not an Office 365 ID** <br> <br>  You receive a message like the following during signup: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.`                                                                                              | Your organization signs in to Office 365 and other Microsoft services with IDs other than email addresses. For example, your email address might be Nancy.Smith@contoso.com, but your ID is nancys@contoso.com. <br> <br> To complete signup, use the ID that your organization has assigned to you for signing in to Office 365 or other Microsoft services.  If you don't know what this is, contact your IT administrator. |
 
 ### What happens when my trial expires?
 After 30 days, you'll be prompted to request an extension of the trial or purchase a plan. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
@@ -119,7 +113,7 @@ After 30 days, you'll be prompted to request an extension of the trial or purcha
 * If your only access to PowerApps is through the trial (for which you signed up on the [PowerApps site](http://powerapps.microsoft.com/) or the [pricing page](http://powerapps.microsoft.com/pricing)), you can request a 30-day extension of the trial license to retain access to PowerApps.
 
 ### When will my trial license expire?
-To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://web.powerapps.com), and then select **Plan(s)**.
+To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
 
 ![](./media/signup-for-powerapps/show-duration.png)
 

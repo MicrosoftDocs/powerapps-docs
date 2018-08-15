@@ -1,25 +1,19 @@
 ---
-title: Create a connection to SharePoint from PowerApps | Microsoft Docs
-description: In powerapps.com, create a connection to SharePoint, for use in generating an app automatically or building one from scratch.
-services: ''
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: anneta
-editor: ''
-tags: ''
+title: Create a connection from a canvas app to SharePoint | Microsoft Docs
+description: In PowerApps, create a connection to SharePoint, for use in generating a canvas app automatically or building one from scratch.
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 09/03/2016
-ms.author: sharik
+ms.author: anneta
 
 ---
 # Create a connection to SharePoint from PowerApps
-Create a connection to either SharePoint Online or on-premises SharePoint so that you can generate an app automatically or build one from scratch.
+Create a connection to either SharePoint Online or on-premises SharePoint so that you can generate a canvas app automatically or build one from scratch.
 
 If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
 
@@ -28,7 +22,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
 ## Specify a SharePoint connection
 1. If you haven't already signed up, [sign up for PowerApps](../signup-for-powerapps.md).
 
-2. Sign in to [powerapps.com](https://web.powerapps.com) using the same credentials that you used to sign up.
+2. Sign in to [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 3. In the left navigation bar, click or tap **Manage**, and then click or tap **Connections**.
 
@@ -60,7 +54,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
     ![Choose SharePoint on-premises](./media/connect-to-sharepoint/choose-onprem.png)
 
     > [!NOTE]
-> Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
+   > Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
 
 2. Specify your user name and your password.
 

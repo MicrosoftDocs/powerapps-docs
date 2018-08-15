@@ -1,39 +1,36 @@
 ---
-title: Understand data-form layout | Microsoft Docs
-description: Create great-looking form layouts using rows and columns.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Understand data-form layout for canvas apps | Microsoft Docs
+description: In PowerApps, create great-looking form layouts in canvas apps by using rows and columns.
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/17/2017
 ms.author: gregli
 
 ---
-# Understand data-form layout in Microsoft PowerApps
-In PowerApps, you can easily create forms that are attractive and efficient to use. For example, consider this basic form for recording sales orders:
+# Understand data-form layout for canvas apps in PowerApps
+
+Easily create an attractive and efficient form when you build a canvas app in PowerApps. For example, consider this basic form for recording sales orders:
 
 ![Sample sales order](./media/working-with-form-layout/sales-order.png)
 
 In this tutorial, we'll walk through the steps to create this form. We'll also look at some advanced topics, such as dynamic sizing of fields to fill available space.
 
 ## Before you start
+
 If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
 
 ## Add a gallery
+
 1. Create a tablet app from scratch.
-   
+
     Everything discussed in this topic also applies to phone layouts, but phone apps often have only one vertical column.
 2. Add the **Sales order** entity in the [Common Data Service](../common-data-service/data-platform-intro.md) as a data source for the app.
-   
+
     Outside of this tutorial, you can use any data source, including SharePoint lists and Excel tables.
 3. Add a vertical **Gallery** control, and set its **Items** property to **'Sales order'**.
    
@@ -56,17 +53,17 @@ If you're new to PowerApps (or have only generated apps automatically), you'll w
     The label shows the sales-order number of the record that you selected in the gallery.
 3. (optional) Format the label as follows:
    
-    1. Set its **Align** property to **Center**.
+   1. Set its **Align** property to **Center**.
    
-    2. Set its **Size** property to **20**.
+   2. Set its **Size** property to **20**.
    
-    3. Set its **Fill** property to **Navy**.
+   3. Set its **Fill** property to **Navy**.
    
-    4. Set its **Color** property to **White**.
+   4. Set its **Color** property to **White**.
    
-    5. Set its **Width** property to **Parent.Width**.
+   5. Set its **Width** property to **Parent.Width**.
    
-    6. Set its **X** and **Y** properties to **0**.
+   6. Set its **X** and **Y** properties to **0**.
       
       ![Title bar](./media/working-with-form-layout/title-bar.png)
 

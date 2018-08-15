@@ -1,25 +1,19 @@
 ---
-title: Delegable data sources | Microsoft Docs
-description: List of all supported delegable data sources
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+title: Delegable data sources in canvas apps | Microsoft Docs
+description: List of all supported delegable data sources in canvas apps
+author: lancedMicrosoft
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 08/15/2017
-ms.author: archanan
+ms.author: lanced
 
 ---
-# Delegable data sources
-As outlined in detail in the [Understand delegation](delegation-overview.md) article, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the app for processing locally.
+# Delegable data sources in canvas apps
+As the [Understand delegation](delegation-overview.md) article outlines in detail, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the canvas app for processing locally.
 
 Delegation is supported for tabular data sources only. This list identifies tabular data sources and whether they support delegation, with details in the next section.
 
@@ -45,6 +39,7 @@ This document lists the current state of supported delegation per data source.
 This list of data sources and delegable functions and predicates will be updated periodically to reflect the current status of delegation support in PowerApps.
 
 ### Top-level delegable functions
+
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Average |No |No |Yes |No |No |
@@ -60,6 +55,7 @@ This list of data sources and delegable functions and predicates will be updated
 <sup>1</sup>For string fields only
 
 ### Filter and LookUp delegable predicates
+
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Not |Yes |No |Yes |Yes |Yes |

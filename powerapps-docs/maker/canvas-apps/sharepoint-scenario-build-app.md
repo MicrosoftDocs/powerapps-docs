@@ -1,35 +1,27 @@
 ---
-title: Create an app to manage projects  | Microsoft Docs
-description: In this task, we'll build an app from scratch. This app allows a user to assign a manager to projects and to update project details.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Create a canvas app to manage projects | Microsoft Docs
+description: In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details.
 author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 06/12/2017
 ms.author: mblythe
 
 ---
-# Create an app to manage projects
+# Create a canvas app to manage projects
 > [!NOTE]
 > This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 
-In this task, we'll build an app from scratch. This app allows a user to assign a manager to projects and to update project details. You will see some of the same controls and formulas you saw in the first app, but you will build more of the app yourself this time. The process is more complex, but you'll learn more, so we think it's a fair trade-off.
+In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details. You will see some of the same controls and formulas you saw in the first app, but you will build more of the app yourself this time. The process is more complex, but you'll learn more, so we think it's a fair trade-off.
 
 > [!TIP]
 > The [download package](https://aka.ms/o4ia0f) for this scenario includes a finished version of this app: project-details-app.msapp.
 
 ## Quick review of PowerApps Studio
-You used PowerApps Studio for web in the last task, but we want to make sure you understand all the parts before we move on. You can continue to work in PowerApps Studio for web, or you can use [PowerApps Studio for Windows](https://aka.ms/powerappswin).
-
 PowerApps Studio has three panes and a ribbon that make app creation feel like building a slide deck in PowerPoint:
 
 1. Left navigation bar, which shows a hierarchical view of all the app's screens and controls, as well as thumbnails of the screens
@@ -156,7 +148,7 @@ In this step, we'll provide a way to navigate to the other screens in the app - 
      ![Update button text](./media/sharepoint-scenario-build-app/04-03-08-buttons-final.png)
      
      > [!NOTE]
-> The button is labeled **Update Details**, but we first navigate to the **ViewProjects** screen to select a project to update.
+     > The button is labeled **Update Details**, but we first navigate to the **ViewProjects** screen to select a project to update.
 
 ### Run the app
 The app doesn't do a lot yet, but you can run it if you like:

@@ -1,26 +1,20 @@
 ---
-title: Embed a new app in a Power BI Report | Microsoft Docs
-description: Embed an app that uses the same data source and can be filtered like other report items 
-services: powerapps
-suite: powerapps
-documentationcenter: na
+title: Embed a new canvas app in a Power BI Report | Microsoft Docs
+description: Embed a new canvas app that uses the same data source and can be filtered like other report items 
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
-ms.topic: tutorial
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.custom: canvas
+ms.reviewer:
 ms.date: 03/15/2018
 ms.author: mblythe
 ---
 
-# Tutorial: Embed a new app in a Power BI Report
+# Embed a new canvas app in a Power BI Report
 
-Power BI enables you to extend its capabilities by adding *custom visuals* to a report. In this tutorial, you use the PowerApps custom visual to create a new app that is embedded in a sample report. This app interacts with other items in that report.
+Power BI enables you to extend its capabilities by adding *custom visuals* to a report. In this tutorial, you use the PowerApps custom visual to create a canvas app that's embedded in a sample report. This app interacts with other items in that report.
 
 If you don't have a PowerApps subscription, [create a free account](../signup-for-powerapps.md) before you begin.
 
