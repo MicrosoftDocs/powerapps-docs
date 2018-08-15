@@ -39,7 +39,7 @@ Fact|msdyn_fact |Dynamics 365 for Project Service Automation<br>**or** Dynamics 
 Field service setting |msdyn_fieldservicesetting |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Field Service System Job |msdyn_fieldservicesystemjob |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Goal | goal | Dynamics 365 for Sales Professional, <br>**or** Dynamics 365 for Sales, Enterprise edition, <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
-Incident | incident | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
+Case | incident | Dynamics 365 for Customer Service, Enterprise edition <br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Inventory Journal |msdyn_inventoryjournal |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Invoice Process |msdyn_bpf_d8f9dc7f099f44db9d641dd81fbd470d |Dynamics 365 for Project Service Automation<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 Journey | journey | Dynamics 365 for Marketing <br> **or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
