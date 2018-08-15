@@ -1,15 +1,81 @@
 ---
-title: "<Topic Title> (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Publish customizations (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Publishing customizations makes the Web application aware of changes to the data that affects the user interface." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "KumarVivek" # GitHub ID
+ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 ---
 # Publish customizations
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/publish-customizations -->
+
+Publishing customizations makes the Web application aware of changes to the data that affects the user interface.  
+  
+<a name="BKMK_WhenToPublishCustomizations"></a>   
+## When to publish customizations  
+ Customizations are automatically published when new items are created or existing items are deleted.  
+  
+ You must publish changes after updating schema metadata or entities that affect the user interface. You can decide to wait and publish a set of related changes together.  
+  
+ Only published customizations are exported with a solution. You should always publish customizations before exporting a solution.  
+  
+ When you perform customizations that will appear in Dynamics 365 for tablets, you should always explicitly publish your customizations to make sure that every item is synchronized with the Dynamics 365 for tablets application.  
+  
+> [!NOTE]
+>  Publishing customizations can interfere with normal system operation. In a production environment, we recommend that you schedule publishing customizations when it’s least disruptive to users.  
+  
+## Publishing programmatically  
+ The following table lists the two messages that you can use to publish customizations.  
+  
+|Message|Description|  
+|-------------|-----------------|  
+|<xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest>|Publishes all customizations.|  
+|<xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest>|Publishes the specified customizations.|  
+  
+ When you use the `PublishXmlRequest` message, you specify which items you want to publish by using the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest.ParameterXml> parameter. `ParameterXML` must comply with the [Publish Request Schema](publish-request-schema.md).  
+  
+<a name="BKMK_RetrieveUnpublishedMetadata"></a>   
+## Retrieving unpublished metadata  
+ If you want to create an application to edit customizable items in Model-driven Apps, you must retrieve any unpublished definitions of those items. If a developer defines some changes but does not publish them, your application must be able to retrieve them to display them in the user interface. 
+  
+ Use the following two methods to retrieve unpublished metadata:  
+  
+ **RetrieveAsIfPublished parameter**  
+ Retrieves entity, attribute, entity relationship, and option set data by using the following messages:  
+  
+- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest>  
+  
+- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllOptionSetsRequest>  
+  
+- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAttributeRequest>  
+  
+- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>  
+  
+- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveOptionSetRequest>  
+  
+- <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRelationshipRequest>  
+  
+  **RetrieveUnpublished Request**  
+  Retrieves user interface items, such as form, template, visualization and Web resource definitions, by using the following messages:  
+  
+- <xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedRequest>  
+  
+- <xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>  
+  
+### See also  
+ [TODO: Customize Dynamics 365 Customer Engagement]<!--(customize-applications.md)-->   
+ [TODO: Extend the Metadata Model for Microsoft Dynamics 365]<!--(../org-service/use-organization-service-metadata.md)--><br />
+ [Publish request schema](publish-request-schema.md)<br />
+ [Customize Entity Forms](customize-entity-forms.md)<br />
+ [Customize Entity Views](customize-entity-views.md)<br />
+ [TODO: Customize Global Option Sets in Microsoft Dynamics 365]<!--(../org-service/customize-global-option-sets.md)--><br />
+ [TODO: Change Application Navigation using the SiteMap]<!--(/developer/customize-dev/change-application-navigation-using-sitemap.md) --><br/>
+ [Customize the Ribbon](customize-commands-ribbon.md)<br/>  
+ [Open Forms, Views, and Dialogs with a URL](open-forms-views-dialogs-reports-url.md)<br/>   
+ [Client scripting in Customer Engagement using JavaScript](clientapi/client-scripting.md)<br/>   
+ [Web Resources](web-resources.md)   
