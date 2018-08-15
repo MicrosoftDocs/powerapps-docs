@@ -195,10 +195,8 @@ If you are getting any other error message or have more questions, please connec
 ### While trying to create a database in an environment, I am getting an error. How should I resolve it?
 In following scenarios, you can get an error while trying to create a database:
 
-1. **Default environment**: Creating a database is currently not supported in a default environment of the tenant. 
-
-2. **Environment for an individual use**: You get an environment for your individual use, by signing-up from the PowerApps Community Plan. If you have not created the database yet, then currently you can't provision a database in the environment for individual use. 
-    
+**Default environment**: Creating a database is currently not supported in a default environment of the tenant. 
+  
 We are working on enabling all of the above scenarios.
 If you are getting any other error message or have more questions, please connect with us [here][5]
 
