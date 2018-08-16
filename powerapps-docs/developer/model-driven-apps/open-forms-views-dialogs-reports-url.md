@@ -205,12 +205,12 @@ function getReportURL(action,fileName,id) {
 }  
 ```  
 
-### See also  
- [Extend Dynamics 365 Customer Engagement on the client](extend-client.md)   
+### See also   
  [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)   
  [Configure a form to accept custom querystring parameters](configure-form-accept-custom-querystring-parameters.md)    
  [Customize the Ribbon](customize-commands-ribbon.md)<br />
  [Client scripting using JavaScript](clientapi/client-scripting.md) 
  [Web Resources](web-resources.md)   
+ [Extend Dynamics 365 Customer Engagement on the client](extend-client.md)  
  [TODO: Change Application Navigation using the SiteMap]<!--(customize-dev/change-application-navigation-using-sitemap.md)-->  
  [TODO: Start Dialog by using a URL]<!--(../developer/actions-dialogs.md#StartDialog)-->
