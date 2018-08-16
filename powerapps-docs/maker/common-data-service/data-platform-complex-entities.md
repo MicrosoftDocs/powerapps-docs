@@ -49,7 +49,6 @@ The following table lists entities which contain complex server side logic out-o
 * Booking Alert
 * Booking Alert Status
 * Booking Status
-* Case
 * Characteristic
 * Competency Requirement (Deprecated)
 * Competitor
