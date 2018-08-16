@@ -63,8 +63,6 @@ This table has links to more information about our most popular connectors. For 
 ## Standard and custom connectors
 PowerApps provides *standard* connectors for many commonly used data sources, such as those listed above. If PowerApps has a standard connector for the type of data source that you want to use, you should use that connector. If you want to connect to other types of data sources, such as a service that you've built, see [Register and use custom connectors](../canvas-apps/register-custom-api.md).
 
-Standard connectors behave differently depending on the type of data source that they connect to and how that source returns data:
-
 ## All standard connectors
 See the [Microsoft Connector Reference](https://docs.microsoft.com/connectors/) for a list of all the standard connectors. Premium connectors require PowerApps Plan 1 or Plan 2. For more information, see [PowerApps Plans](https://powerapps.microsoft.com/pricing/).
 
