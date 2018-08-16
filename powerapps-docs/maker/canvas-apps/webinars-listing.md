@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 4/18/2018
+ms.date: 08/16/2018
 ms.author: audrie
 
 ---
