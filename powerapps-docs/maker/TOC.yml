@@ -37,6 +37,8 @@
       href: ./canvas-apps/expense-report-install.md
     - name: Help Desk app
       href: ./canvas-apps/help-desk-install.md
+    - name: Meeting Capture app
+      href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
     - name: 1 - Generate an app from data
