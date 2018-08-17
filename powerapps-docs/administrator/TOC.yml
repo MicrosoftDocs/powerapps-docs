@@ -5,6 +5,8 @@
     items:
     - name: What's the role of a PowerApps administrator?
       href: overview-role-powerapps-admin.md
+    - name: PowerApps enterprise deployment whitepaper
+      href: admin-powerapps-enterprise-deployment.md
   - name: Licensing
     items:
     - name: Licensing overview

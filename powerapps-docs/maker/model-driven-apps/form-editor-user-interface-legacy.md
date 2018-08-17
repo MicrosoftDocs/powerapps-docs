@@ -102,7 +102,7 @@ Select the **File** tab to add/view the following options:
 ||**Form Properties**| More information: [Form Properties](form-properties-legacy.md)|  
 ||**Preview**|Use this to see how form looks after it is published. You can also preview to test scripts associated with from events.|         
 ||**Enable Security Roles**|Use this to set which security roles will have access to the forms. More information:  [Control access to forms](control-access-forms.md) **Important:**  If you create a new form, only the System Administrator and System Customizer security roles will have access to the form. You must assign access to other security roles before people can use it.|  
-||**Show Dependencies**|See which solution components depend on this form and which solution components are required by this form. More information: [Solution dependencies](../common-data-service/overview.md)|  
+||**Show Dependencies**|See which solution components depend on this form and which solution components are required by this form. |  
 ||**Managed Properties**|Managed properties command has two properties **Customizable** and **Can be Deleted**. Setting these properties to false means the form won’t be customizable and cannot be deleted after you included it in a solution, export that solution as a managed solution, and import that managed solution into a different environment. More information: [Managed properties](../common-data-service/solutions-overview.md#managed-properties)| 
 |**Upgrade**|**Merge forms**|If applicable, this option lets you merge this form with a form from a previous version of Dynamics 365 form|
   
