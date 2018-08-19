@@ -41,7 +41,7 @@ Data visualization and analytics in [!INCLUDE[pn_dynamics_crm_online](../../incl
   
  [Customize Entity Views in Dynamics 365 Customer Engagement](customize-entity-views.md)  
   
- [Customize global option sets](../org-service/customize-global-option-sets.md)  
+ [Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)  <!-- TODO Need to update relevant powerapps repo link-->
   
  [Change application navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)  <!-- TODO Need to update relevant powerapps repo link-->
   
