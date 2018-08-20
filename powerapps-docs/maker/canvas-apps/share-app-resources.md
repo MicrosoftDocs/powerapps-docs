@@ -16,6 +16,8 @@ ms.author: archanan
 
 Before you [share a canvas app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
+* entities in Common Data Service for Apps
+    For information about giving users access to this data, see [Manage entity permissions](share-app.md#manage-entity-permissions).
 * a connection to a data source
 * an on-premises data gateway
 * a custom connector
