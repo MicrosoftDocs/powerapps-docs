@@ -23,7 +23,7 @@ To use Power BI with the Common Data Service for Apps, you need the following:
 
 ## Finding your Common Data Service for Apps Environment URL
 
-1. Open [PowerApps](https://web.powerapps.com) and select the environment you're going to connect to and click the **settings gear** in the top right corner, and click **Advanced customizations**
+1. Open [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the environment you're going to connect to and click the **settings gear** in the top right corner, and click **Advanced customizations**
 
     ![CDS for Apps Environment](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "CDS for Apps Environment")
 

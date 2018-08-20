@@ -536,6 +536,8 @@
             href: ./canvas-apps/accessibility-checker.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
+      - name: Experimental and preview features
+        href: ./canvas-apps/working-with-experimental.md
   - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app
@@ -592,8 +594,6 @@
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to PowerApps
       href: ./canvas-apps/transform-infopath.md
-  - name: Experimental and preview features
-    href: ./canvas-apps/working-with-experimental.md
   - name: For developers
     href: ./canvas-apps/dev-enterprise-intro.md
     items:
@@ -663,6 +663,8 @@
           href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
+        - name: Add a field to a form
+          href: ./model-driven-apps/add-field-form.md 
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
         - name: Change navigation within a form
@@ -718,7 +720,7 @@
     - name: Apply business logic in an app
       href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
       items:
-      - name: Create business rules and recommendations
+      - name: Create a business rule  for a form
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
     - name: Apply data visualizations in an app
       items:
@@ -782,6 +784,8 @@
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
+    - name: Add data to an entity using Power Query
+      href: ./common-data-service/data-platform-cds-newentity-pq.md  
     - name: Entities and metadata
       href: ./common-data-service/create-edit-metadata.md
     - name: Types of entities
@@ -794,6 +798,8 @@
       href: ./common-data-service/create-edit-virtual-entities.md
     - name: Virtual entity OData v4 data provider
       href: ./common-data-service/virtual-entity-odata-provider-requirements.md
+    - name: Define alternate keys using PowerApps portal
+      href: ./common-data-service/define-alternate-keys-portal.md   
     - name: Define alternate keys using solution explorer
       href: ./common-data-service/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Entity"
@@ -825,12 +831,20 @@
   - name: Work with entity relationships
     href: ./common-data-service/relationships-overview.md
     items: 
-    - name: "Create an entity relationship"
+    - name: Entity relationships overview
+      href: ./common-data-service/create-edit-entity-relationships.md  
+    - name: Create one-to-many entity relationships overview
+      href: ./common-data-service/create-edit-1n-relationships.md
+    - name: Create many-to-many entity relationships overview
+      href: ./common-data-service/create-edit-nn-relationships.md
+    - name: Create an entity relationship
       href: ./common-data-service/data-platform-entity-lookup.md
+    - name: Create one-to-many entity relationships 
+      href: ./common-data-service/create-edit-1n-relationships-portal.md
+    - name: Create one-to-many entity relationships using solution explorer
+      href: ./common-data-service/create-edit-1n-relationships-solution-explorer.md 
     - name: Create many-to-many entity relationships using PowerApps portal
       href: ./common-data-service/create-edit-nn-relationships-portal.md
-    - name: Create many-to-many entity relationships using PowerApps solution explorer
-      href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md  
     - name: Set managed properties for entity relationships
       href: ./common-data-service/set-managed-properties-relationships.md
     - name: Visualize hierarchical data
@@ -861,32 +875,49 @@
     href: ./common-data-service/fields-overview.md
     items: 
     - name: Types of fields
-      href: ./common-data-service/types-of-fields.md       
+      href: ./common-data-service/types-of-fields.md
+    - name: Global option sets overview
+      href: ./common-data-service/create-edit-global-option-sets.md
     - name: Set managed properties for fields
       href: ./common-data-service/set-managed-properties-for-field.md 
     - name: Behavior and format of the Date and Time field
       href: ./common-data-service/behavior-format-date-time-field.md     
     - name: "How-to guides: Fields"
       items: 
+      - name: How to create fields 
+        href: ./common-data-service/create-edit-fields.md 
       - name: How to manage fields
         href: ./common-data-service/data-platform-manage-fields.md
       - name: How to create fields using PowerApps portal
         href: ./common-data-service/create-edit-field-portal.md 
       - name: How to create fields using PowerApps solution explorer
         href: ./common-data-service/create-edit-field-solution-explorer.md
-      - name: How to create global option sets using PowerApps portal
-        href: ./common-data-service/create-edit-global-option-sets-portal.md
+      - name: How to create an option set using PowerApps portal
+        href: ./common-data-service/custom-picklists.md
       - name: How to create global option sets using solution explorer  
         href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
+      - name: How to define calculated fields
+        href: ./common-data-service/define-calculated-fields.md
+      - name: How to define rollup fields
+        href: ./common-data-service/define-rollup-fields.md
       - name: How to map entity fields
         href: ./common-data-service/map-entity-fields.md
       - name: How to delete fields
         href: ./common-data-service/delete-fields.md
   - name: Apply business logic
     href: ./common-data-service/cds-processes.md
+    items: 
+      - name: Create a business rule for an entity 
+        href: ./common-data-service/data-platform-create-business-rule.md
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
-    items:  
+    items:   
+    - name: Solutions overview
+      href: ./common-data-service/solutions-overview.md
+    - name: Use solution explorer 
+      href: ./common-data-service/use-solution-explorer.md
+    - name: Use the Common Data Services default solution
+      href: ./common-data-service/use-solutions-for-your-customizations.md   
     - name: Import, update, and export solutions
       href: ./common-data-service/import-update-export-solutions.md 
     - name: Navigate to a specific solution

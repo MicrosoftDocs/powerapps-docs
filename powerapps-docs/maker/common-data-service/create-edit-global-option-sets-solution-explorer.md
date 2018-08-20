@@ -18,9 +18,9 @@ manager: "brycho"
 
 Solution explorer provides one way to Create and edit global option sets for Common Data Service for Apps using Common Data Service for Apps.
 
-The [PowerApps portal](https://web.powerapps.com) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit global option sets for Common Data Service for Apps](create-edit-global-option-sets.md)
-- [Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)
+- [Create an option set](custom-picklists.md)
 
 ## Open solution explorer
 
@@ -77,6 +77,6 @@ To delete a global option set, while viewing the list select the ![Delete comman
 ### See also
  
 [Create and edit global option sets for Common Data Service for Apps](create-edit-global-option-sets.md)<br />
-[Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)<br />
+[Create an option set](custom-picklists.md)<br />
 [Create and edit fields](create-edit-fields.md)<br />
 [Developer documentation: Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)

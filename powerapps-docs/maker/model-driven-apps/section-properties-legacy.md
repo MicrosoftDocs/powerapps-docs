@@ -23,7 +23,7 @@ ms.assetid: 2d3af6e9-e8a4-4129-b708-383b2740c015
  Headers and footers are similar to sections but cannot be removed. If they don’t contain anything they will not be shown. 
 
 You can access **Section properties** from the PowerApps site. 
-1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
 
      ![Model-driven design mode](media/model-driven-switch.png)
 

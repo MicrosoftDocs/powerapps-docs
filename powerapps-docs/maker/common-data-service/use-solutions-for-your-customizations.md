@@ -30,7 +30,7 @@ Notice that if you have installed or imported other applications or solutions, a
 
 By default,  when you build or customize a model-driven app, you work with the Common Data Services default solution. You can open the Common Data Services default solution to view and edit the components that are contained in the solution. To do this, follow these steps.
  
-1.  On the [PowerApps](https://web.powerapps.com) site, select **Model-driven** (lower left of the navigation pane).  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
 
     ![Model-driven design mode](../model-driven-apps/media/model-driven-switch.png)
 
@@ -48,7 +48,6 @@ By default,  when you build or customize a model-driven app, you work with the C
  [!INCLUDE[cc_privacy_crm_customizations](../../includes/cc-privacy-crm-customizations.md)]  
   
 ## See Also  
- [Customization overview](overview.md)<br/>
- [Getting started with customization](../model-driven-apps/getting-started-customization.md)  
+[Understand model-driven app components](../model-driven-apps/model-driven-app-components.md)
  <br/>
  [Whitepaper: Patterns and Principles for Solution Builders](http://go.microsoft.com/fwlink/p/?LinkID=533946)

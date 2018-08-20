@@ -49,5 +49,5 @@ App users can personalize the system and even share some of their customizations
 >  Don’t attempt to remove your System Administrator security role if you have only one user account. The system will warn you if you try, but if you proceed you could find that you won’t be able to get it back. Most security roles don’t allow editing of a user’s security roles.  
   
 ## Next steps  
- [Getting started with customization](getting-started-customization.md)
+[Understand model-driven app components](model-driven-app-components.md)
 

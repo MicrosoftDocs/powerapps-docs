@@ -271,10 +271,8 @@ namespace Microsoft.Crm.Sdk.Samples
   
 ### See also 
  
-[Custom Workflow Activities (Workflow Assemblies)](custom-workflow-activities-workflow-assemblies.md)<br />
-[Sample: Update Next Birthday Using a Custom Workflow Activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
-<!-- TODO:
-[Sample Code for Processes](../sample-code-processes.md)<br /> -->
-[Creating a Custom Workflow Activity](create-custom-workflow-activity.md)<br />
-[Adding Metadata to the Custom Workflow Activity](add-metadata-custom-workflow-activity.md)<br />
-[Using the IOrganization Web Service within a Custom Workflow Activity](use-iorganization-web-service-custom-workflow-activity.md)
+[Workflow extensions](workflow-extensions.md)<br />
+[Tutorial: Create workflow extension](tutorial-create-workflow-extension.md)<br />
+[Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />
+[Sample: Calculate a credit score with a custom workflow activity](sample-calculate-credit-score-custom-workflow-activity.md)
+

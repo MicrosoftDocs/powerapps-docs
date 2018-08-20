@@ -1,5 +1,5 @@
 ---
-title: "Create and edit global option sets (picklists) for Common Data Service for Apps | MicrosoftDocs"
+title: "Create and edit global option sets (picklists) overview for Common Data Service for Apps | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/26/2018
 ms.reviewer: ""
@@ -16,9 +16,9 @@ caps.latest.revision: 11
 ms.author: "matp"
 manager: "brycho"
 ---
-# Create and edit global option sets (picklists) for Common Data Service for Apps 
+# Create and edit global option sets overview 
 
-An option set is a type of field that can be included in an entity. It defines a set of options. When an option set is displayed in a form it uses a drop-down list control. When displayed in **Advanced Find** it uses a *picklist control*. Sometimes option sets are called picklists by developers.  
+An option set (picklist) is a type of field that can be included in an entity. It defines a set of options. When an option set is displayed in a form it uses a drop-down list control. When displayed in **Advanced Find** it uses a *picklist control*. Sometimes option sets are called picklists by developers.  
   
 You can define an option set to use a set of options defined within itself (locally) or it can use a set of options defined elsewhere (globally) which can be used by other option set fields. 
 
@@ -31,7 +31,7 @@ There are two designers you can use to create or edit global option sets:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)|
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create an option set](custom-picklists.md) |
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information: [Create and edit global option sets for Common Data Service for Apps using solution explorer](create-edit-global-option-sets-solution-explorer.md) |
 
 > [!NOTE]
@@ -41,7 +41,7 @@ There are two designers you can use to create or edit global option sets:
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the [PowerApps portal](https://web.powerapps.com) to work with global option sets unless you need to address any of the following requirements:
+You should use the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to work with global option sets unless you need to address any of the following requirements:
 
 - Assign colors to options
 - Change the order of options
@@ -52,7 +52,7 @@ You should use the [PowerApps portal](https://web.powerapps.com) to work with gl
 
 ## See also
 
-[Create and edit global option sets for Common Data Service for Apps using PowerApps portal](create-edit-global-option-sets-portal.md)<br />
+[Create an option set](custom-picklists.md)<br />
 [Create and edit global option sets for Common Data Service for Apps using solution explorer](create-edit-global-option-sets-solution-explorer.md)<br />
 [Developer documentation: Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
   

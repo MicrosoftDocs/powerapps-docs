@@ -1,23 +1,10 @@
-- name: Custom workflow activities (workflow assemblies)
-  href: custom-workflow-activities-workflow-assemblies.md
-  items:
-  - name: Create a custom workflow activity
-    href: create-custom-workflow-activity.md
-  - name: Add metadata to a custom workflow activity
-    href: add-metadata-custom-workflow-activity.md
-  - name: Use the IOrganization web service in a custom workflow activity
-    href: use-iorganization-web-service-custom-workflow-activity.md
-  - name: Register and use a custom workflow activity assembly
-    href: register-use-custom-workflow-activity-assembly.md
-  - name: Debug a custom workflow activity
-    href: debug-custom-workflow-activity.md
-  - name: Update a custom workflow activity using assembly versioning
-    href: update-custom-workflow-activity-using-assembly-versioning.md           
-  - name: Process classes, attributes, and types
-    href: process-classes-attributes-and-types.md
-  - name: "Sample: Create a custom workflow activity"
-    href: sample-create-custom-workflow-activity.md
-  - name: "Sample: Update next birthday using a custom workflow activity"
-    href: sample-update-next-birthday-using-custom-workflow-activity.md
-  - name: "Sample: Calculate a credit score with a custom workflow activity"
-    href: sample-calculate-credit-score-custom-workflow-activity.md          
+- name: Workflow extensions
+  href: workflow-extensions.md
+- name: "Tutorial: Create workflow extension"
+  href: tutorial-create-workflow-extension.md
+- name: "Sample: Create a custom workflow activity"
+  href: sample-create-custom-workflow-activity.md
+- name: "Sample: Update next birthday using a custom workflow activity"
+  href: sample-update-next-birthday-using-custom-workflow-activity.md
+- name: "Sample: Calculate a credit score with a custom workflow activity"
+  href: sample-calculate-credit-score-custom-workflow-activity.md

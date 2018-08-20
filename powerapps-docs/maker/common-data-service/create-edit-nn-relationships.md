@@ -1,5 +1,5 @@
 ---
-title: "Create Many-to-many (N:N) entity relationships in Common Data Service for Apps | MicrosoftDocs"
+title: "Create many-to-many entity relationships in Common Data Service for Apps overview | MicrosoftDocs"
 description: "Learn how to create many-to-many entity relationships"
 ms.custom: ""
 ms.date: 05/29/2018
@@ -18,7 +18,7 @@ caps.latest.revision: 33
 ms.author: "matp"
 manager: "kvivek"
 ---
-# Create Many-to-many (N:N) entity relationships
+# Create many-to-many entity relationships overview
 
 One-to-many (1:N) entity relationships establish a hierarchy between records. With Many-to-many (N:N) relationships there is no explicit hierarchy. There are no lookup fields or behaviors to configure. Records created using Many-to-many relationships can be considered peers and the relationship is reciprocal.  
   
@@ -32,7 +32,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal](create-edit-nn-relationships-portal.md)|
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal](create-edit-nn-relationships-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create N:N (many-to-many) entity relationships in Common Data Service for Apps using solution explorer](create-edit-nn-relationships-solution-explorer.md) |
 
 > [!NOTE]

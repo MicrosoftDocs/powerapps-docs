@@ -29,7 +29,7 @@ When a declarative process doesn’t meet a requirement, as a developer you have
 
 You can write a .NET assembly to provide new options within the process designer. This method provides a new option for people using the workflow designer to apply a condition or perform a new action. A workflow extension can then be re-used by people who are not developers to apply the logic in your code.
 
-More information: [Custom workflow activities (workflow assemblies)](workflow/custom-workflow-activities-workflow-assemblies.md)
+More information: [Workflow extensions](workflow/workflow-extensions.md)
 
 ## Create a plug-in
 

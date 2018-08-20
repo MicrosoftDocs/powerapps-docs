@@ -18,7 +18,7 @@ manager: "brycho"
 
 Solution explorer provides one way to Create and edit fields for Common Data Service for Apps.
 
-The [PowerApps portal](https://web.powerapps.com) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit fields for Common Data Service for Apps](create-edit-fields.md)
 - [Create and edit fields for Common Data Service for Apps using PowerApps portal](create-edit-field-portal.md)
   
