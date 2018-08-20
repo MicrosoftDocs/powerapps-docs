@@ -211,6 +211,6 @@ function getReportURL(action,fileName,id) {
  [Customize the Ribbon](customize-commands-ribbon.md)<br />
  [Client scripting using JavaScript](clientapi/client-scripting.md) 
  [Web Resources](web-resources.md)   
- [Extend Dynamics 365 Customer Engagement on the client](extend-client.md)  
+ [TODO: Extend Dynamics 365 Customer Engagement on the client]<!--(extend-client.md)-->  
  [TODO: Change Application Navigation using the SiteMap]<!--(customize-dev/change-application-navigation-using-sitemap.md)-->  
  [TODO: Start Dialog by using a URL]<!--(../developer/actions-dialogs.md#StartDialog)-->
