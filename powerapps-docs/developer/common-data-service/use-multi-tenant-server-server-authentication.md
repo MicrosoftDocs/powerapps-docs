@@ -50,7 +50,7 @@ This is the most common scenario and the one which is used for apps distributed 
   
 5. Test your application using a separate CDS for Apps tenant  
   
-   For a complete example of this process, see [Walkthrough: Multi-tenant server-to-server authentication](walkthrough-multi-tenant-server-server-authentication.md).  
+   For a complete example of this process, see [Walkthrough: Multi-tenant server-to-server authentication](/dynamics365/customer-engagement/developer/walkthrough-multi-tenant-server-server-authentication).  
   
 <a name="bkmk_CreateAMultitenantWebApp"></a>
    
@@ -79,7 +79,7 @@ This is the most common scenario and the one which is used for apps distributed 
   
  ![ASP.NET  MVC Change Authentication Dialog](media/mvc-change-authentication-dialog.png "ASP.NET  MVC Change Authentication Dialog")  
   
- When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with CDS for Apps. This is the approach demonstrated in [Walkthrough: Multi-tenant server-to-server authentication](walkthrough-multi-tenant-server-server-authentication.md).  
+ When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with CDS for Apps. This is the approach demonstrated in [Walkthrough: Multi-tenant server-to-server authentication](/dynamics365/customer-engagement/developer/walkthrough-multi-tenant-server-server-authentication).  
   
  In the process of creating and registering your application for development you will most likely use `http://localhost` as the **Sign-on URL** and **Reply URL** values so you can test and debug your application locally before publishing. You will need to change these values before you publish your app.  
   
@@ -93,7 +93,7 @@ This is the most common scenario and the one which is used for apps distributed 
   
 1. Go to [https://portal.azure.com](https://portal.azure.com) and select **Azure Active Directory**.  
   
-2. Click **App registrations** and look for the application you created using [!INCLUDE[pn_Visual_Studio_short](../includes/pn-visual-studio-short.md)].  
+2. Click **App registrations** and look for the application you created using Visual Studio.  
   
 3. You need to give your application privileges to access CDS for Apps data. In the **API Access** area click **Required permissions**. You should see that it already has permissions for **Windows Azure Active Directory**.  
   
@@ -205,12 +205,12 @@ This is the most common scenario and the one which is used for apps distributed 
   
   However, the application user cannot be included with a solution so you will need to provide a way to create this application user and associate it with the custom security role.  
   
-  There are several ways that you can achieve this, including writing your own program using the [!INCLUDE[cc-dyn365-ce-web-services](../includes/cc-dyn365-ce-web-services.md)] and having the subscriber run the program.  
+  There are several ways that you can achieve this, including writing your own program using the web services and having the subscriber run the program.  
   
-  The CRM Package deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different CDS for Apps organization. More information: [Create packages for the Dynamics 365 Package Deployer](create-packages-package-deployer.md)  
+  The CRM Package deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different CDS for Apps organization. More information: [Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)  
   
 ### See also  
- [Walkthrough: Multi-tenant server-to-server authentication](walkthrough-multi-tenant-server-server-authentication.md)   
+ [Walkthrough: Multi-tenant server-to-server authentication](/dynamics365/customer-engagement/developer/walkthrough-multi-tenant-server-server-authentication)   
  [Use Single-Tenant Server-to-server authentication](use-single-tenant-server-server-authentication.md)   
  [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)   
- [Connect to Dynamics 365](connect-customer-engagement.md)
+ [Connect to Dynamics 365](/dynamics365/customer-engagement/developer/connect-customer-engagement)

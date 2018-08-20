@@ -21,13 +21,13 @@ This section discusses the implications of virtual entities for developers. For 
 ## Virtual entities, data providers and data sources
 A virtual entity is a definition of an entity in the CDS for Apps platform metadata without the associated physical tables for entity instances created in the CDS for Apps database. Instead during runtime, when an entity instance is required, its state is dynamically retrieved from the associated external system. Each virtual entity type is associated with a *virtual entity data provider* and (optionally) some configuration information from an associated *virtual entity data source*. 
 
-A data provider is a particular type of CDS for Apps [plugin](../plugin-development.md), which is registered against CRUD events that occur in the platform. This initial release only supports READ operations. 
+A data provider is a particular type of CDS for Apps [plugin](/dynamics365/customer-engagement/developer/plugin-development), which is registered against CRUD events that occur in the platform. This initial release only supports READ operations. 
 
 The following data providers ship with CDS for Apps:
 - An [OData v4](http://www.odata.org/documentation/) provider is included with the service and is installed by default.
 - An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly _Microsoft Document DB_) provider is available from [AppSource](https://appsource.microsoft.com).
 
-Additional providers will be made available by Microsoft, its partners, or other third parties. If a data provider cannot be found for your external data source, you can develop a _custom virtual entity data provider_; for more information, see [Virtual entity data providers](custom-ve-data-providers.md).
+Additional providers will be made available by Microsoft, its partners, or other third parties. If a data provider cannot be found for your external data source, you can develop a _custom virtual entity data provider_; for more information, see [Virtual entity data providers](/dynamics365/customer-engagement/developer/custom-ve-data-providers).
 
 ## Virtual entity creation and mapping
 Initially, defining a virtual entity is the same as defining a custom entity: you specify the entity, attributes, and relationships for the new virtual entity type. However, additionally, you then connect the virtual entity to a data provider to manage data retrieval. The custom entity type and its fields must be mapped to the corresponding data in the external data source.  For example, a virtual entity might be represented as a row in an external relational database, and each of its fields might correspond to a column in that row.  (Note that these external data names are often different than their corresponding virtual entity names.) A specific, required mapping occurs for the entity ID field: the data provider must be able to provide this GUID and associate it to the external record that represents this entity instance. The most direct way to achieve this is to actually use GUIDs as primary keys in the external data source.  
@@ -52,4 +52,4 @@ In this release, there are some limitations to virtual entities that you need to
 
 <!-- TODO: Make bulleted list into table.  Make more complete by reviewing API modification tables. -->
 
-For more information about how these limitations are reflected in the CDS for Apps API, see [API considerations of virtual entities](api-considerations-ve.md). 
+For more information about how these limitations are reflected in the CDS for Apps API, see [API considerations of virtual entities](/dynamics365/customer-engagement/developer/api-considerations-ve). 

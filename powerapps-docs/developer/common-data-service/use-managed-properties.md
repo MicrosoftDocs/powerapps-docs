@@ -70,8 +70,8 @@ You can control which of your managed solution components are customizable by us
  Entity and attribute have more managed properties in addition to               `IsCustomizable`. These managed properties are not updated if               `IsCustomizable`is set to false. This means that in addition to checking the individual managed property, you must also check the               `IsCustomizable`property to see if the managed property is being enforced.  
   
 ### See also  
- [Managed properties](introduction-solutions.md#BKMK_ManagedProperties)   
- [Plan For Solution Development](plan-solution-development.md)   
+ [Managed properties](/dynamics365/customer-engagement/developer/introduction-solutions#BKMK_ManagedProperties)   
+ [Plan For Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Maintain Managed Solutions](maintain-managed-solutions.md)   
- [Package and Distribute Extensions with Dynamics 365 Solutions](package-distribute-extensions-use-solutions.md)   
+ [Package and Distribute Extensions with Dynamics 365 Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  <xref:Microsoft.Crm.Sdk.Messages.IsComponentCustomizableRequest>

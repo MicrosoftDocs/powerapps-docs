@@ -18,7 +18,7 @@ Webhooks enable developers and ISV’s to integrate Customer Engagement data wit
 
 When deciding between the webhook model and the Azure Service Bus integration, here are some items to keep in mind:
 
-- Azure Service Bus works for high scale processing, and provides a full queueing mechanism if [!INCLUDE [Dynamics 365](../includes/pn-dyn-365.md)] is pushing many events.
+- Azure Service Bus works for high scale processing, and provides a full queueing mechanism if CDS for Apps is pushing many events.
 - Webhooks can only scale to the point at which your hosted web service can handle the messages.
 - Webhooks enables synchronous and asynchronous steps. Azure Service Bus only allows for asynchronous steps.
 - Webhooks send POST requests with JSON payload and can be consumed by any programming language or web application hosted anywhere.
@@ -224,14 +224,14 @@ Before you move on to create or configure a service to consume web hooks, you sh
 2. The next page will provide a Bin URL like : `https://requestb.in/<random string>`. Copy this URL.
 3. Refresh the page and the page URL will change to `https://requestb.in/<random string>?inspect` and will show that no requests have been made to the URL.
 4. Use the plugin registration tool to register a new webhook as described under [Register a webhook](#register-a-webhook). Use the URL you copied in step 2 as the **Endpoint URL**. Set a name and any authentication properties you want. Request Bin will not evaluate these values in the way that an actual site that will process the data should, but you can see how they will be passed through.
-5. Use the plugin registration tool to register a step using the webhook you created in step 4 as described in [Register a step for a webhook](#register-a-step-for-a-webhook). Make sure to use an event that you can easily perform by editing data in the [!INCLUDE [Dynamics 365](../includes/pn-dyn-365.md)] application, such as updating a contact entity.
-6. Use the [!INCLUDE [Dynamics 365](../includes/pn-dyn-365.md)] app to perform the operation to trigger the event.
+5. Use the plugin registration tool to register a step using the webhook you created in step 4 as described in [Register a step for a webhook](#register-a-step-for-a-webhook). Make sure to use an event that you can easily perform by editing data in the CDS for Apps application, such as updating a contact entity.
+6. Use the CDS for Apps app to perform the operation to trigger the event.
 7. After you trigger the event, return to the `https://requestb.in/<random string>?inspect` page from step 3 and refresh the page. You should discover a page similar to the following:
 
     ![An example of the request logged on the request bin web site](media/request-bin-example.png)
 
 > [!NOTE]
-> The results viewed on this site do not necessarily represent the capitalization of the values sent. Http headers are case-insensitive and the RequestBin site appears to apply some formatting rules to make the values easier to read. However, values sent by [!INCLUDE [Dynamics 365](../includes/pn-dyn-365.md)] are all lower-case regardless of what is displayed here. More information: [Header Data](#header-data)
+> The results viewed on this site do not necessarily represent the capitalization of the values sent. Http headers are case-insensitive and the RequestBin site appears to apply some formatting rules to make the values easier to read. However, values sent by CDS for Apps are all lower-case regardless of what is displayed here. More information: [Header Data](#header-data)
 
 This example shows the data that is passed in the webhook request for the update of a contact where the webhook is registered to pass **HttpHeader** authentication key value pairs:
 
@@ -529,9 +529,9 @@ Because a webhook is a kind of service endpoint you can also invoke it without r
 [Extend Customer Engagement on the server](/dynamics365/customer-engagement/developer/extend-dynamics-365-server)<br />
 [Write plug-ins to extend business processes](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)<br />
 [Asynchronous service in CDS for Apps](asynchronous-service.md)<br />
-[Azure extensions for CDS for Apps](azure-extensions.md)<br />
+[Azure extensions for CDS for Apps](/dynamics365/customer-engagement/developer/azure-extensions)<br />
 [Sample: Azure aware custom plug-in](/org-service/samples/azure-aware-custom-plugin.md)<br />
-[Sample: Azure aware custom workflow activity](sample-azure-aware-custom-workflow-activity.md)<br />
+[Sample: Azure aware custom workflow activity](org-service/samples/azure-aware-custom-workflow-activity.md)<br />
 [Azure Functions](https://azure.microsoft.com/services/functions/)<br />
 [ServiceEndpoint Entity](reference/entities/serviceendpoint.md)<br />
 [SdkMessageProcessingStep Entity](reference/entities/sdkmessageprocessingstep.md)<br />

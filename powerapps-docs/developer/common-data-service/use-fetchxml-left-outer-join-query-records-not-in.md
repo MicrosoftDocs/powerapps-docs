@@ -1,5 +1,5 @@
 ---
-title: "Use a left outer join in FetchXML to query for records "not in" (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use a left outer join in FetchXML to query for records 	&bdquo;not in&bdquo; (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how to use a left outer join in FetchXML to perform a query that filters on the join table and build a query to find records “not in” a set" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
@@ -77,7 +77,7 @@ WHERE ab.RegardingObjectId is null
 ```  
   
 ### See also  
- [Build Queries with FetchXML](build-queries-fetchxml.md)   
+ [Build Queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)   
  [Sample: Use Aggregation in FetchXML](org-service/samples/use-aggregation-fetchxml.md)   
  [Use FetchXML to Construct a Query](use-fetchxml-construct-query.md)   
  [Sample: Validate and Execute a Saved Query](org-service/samples/validate-execute-saved-query.md)

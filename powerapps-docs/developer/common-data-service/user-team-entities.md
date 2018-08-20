@@ -56,15 +56,15 @@ User and team management is the area of CDS for Apps where you can create and ma
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also  
- [Administration and Security Entities](administration-security-entities.md)   
+ [Administration and Security Entities](/dynamics365/customer-engagement/developer/administration-security-entities)   
  [Use Teams to Collaborate and Share Information](use-access-teams-owner-teams-collaborate-share-information.md)   
  [Team Entity](reference/entities/team.md)   
  [Specify time zone settings for a user](specify-time-zone-settings-user.md)   
  [TeamTemplate Entity](reference/entities/teamtemplate.md)   
  [SystemUser Entity](reference/entities/systemuser.md)   
  [UserSettings Entity](reference/entities/usersettings.md)   
- [Sample: Disable a User](sample-disable-user.md)   
- [Sample: Share Records Using GrantAccess, ModifyAccess and RevokeAccess Messages](sample-share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)   
+ [Sample: Disable a User](/dynamics365/customer-engagement/developer/sample-disable-user)   
+ [Sample: Share Records Using GrantAccess, ModifyAccess and RevokeAccess Messages](org-service/samples/share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)   
  [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)   
  [Blog: Service Accounts – Non-Interactive Users](http://go.microsoft.com/fwlink/p/?LinkId=234350)   
- [Privilege and Role Entities](privilege-role-entities.md)
+ [Privilege and Role Entities](/dynamics365/customer-engagement/developer/privilege-role-entities)
