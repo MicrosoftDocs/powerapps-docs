@@ -58,7 +58,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
  An owner team can own multiple records. To create an owner team, use the `Team` entity and set the `Team.TeamType` attribute to `Owner`. For a list of the `TeamType` values, refer to the `Team` entity metadata.  
   
 > [!NOTE]
-> To view the entity metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](../developer/browse-your-metadata.md). You can also browse the reference documentation for entities in the [Entity Reference](../developer/about-entity-reference.md). 
+> To view the entity metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata). You can also browse the reference documentation for entities in the [Entity Reference](/dynamics365/customer-engagement/developer/about-entity-reference). 
   
  To make a team an owner of the record, you have to assign a record to the team. To assign, use the <xref:Microsoft.Crm.Sdk.Messages.AssignRequest> message. To assign records to an owner team in bulk, use the <xref:Microsoft.Crm.Sdk.Messages.ReassignObjectsOwnerRequest> message or the <xref:Microsoft.Crm.Sdk.Messages.ReassignObjectsSystemUserRequest> message.  
   
@@ -69,7 +69,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
  To add or remove team members, use the <xref:Microsoft.Crm.Sdk.Messages.AddMembersTeamRequest> message and the <xref:Microsoft.Crm.Sdk.Messages.RemoveMembersTeamRequest> message.  
   
 ### User-created access team  
- You can share multiple records with a user-created access team. To create an access team, use the team entity and set the `Team.TeamType` attribute to `Access`. For a list of the `TeamType` values, refer to the `Team` entity metadata. [!INCLUDE[view_metadata](../includes/view-metadata.md)]  
+ You can share multiple records with a user-created access team. To create an access team, use the team entity and set the `Team.TeamType` attribute to `Access`. For a list of the `TeamType` values, refer to the `Team` entity metadata. You can find this information in the metadata for your organization. See the preceding metadata browser information.  
   
  To share a record with the user-created access team, use the <xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest> message. For user-created teams, the `Team.SystemManaged` attribute is `false`. For a list of the `Team.SystemManaged` values, refer to the `Team` entity metadata. You can find this information in the metadata for your organization. See the preceding metadata browser information.  
   
@@ -101,13 +101,13 @@ With *owner* teams or *access* teams, you can easily share business objects and 
 |Access, auto-created (system-managed)|Unique set of users works on a single record.<br /><br /> Team members require different access rights on the records.<br /><br /> Creating teams automatically per record is desirable.|`TeamTemplate`<br /><br /> `Team`|Yes|<xref:Microsoft.Crm.Sdk.Messages.AddUserToRecordTeamRequest> <br /> <xref:Microsoft.Crm.Sdk.Messages.RemoveUserFromRecordTeamRequest>|No|Can access only one record.|No. Provides access rights on the record.|  
   
 > [!NOTE]
->  Owner teams and access teams provide access rights to the record and related records, such as to an account and all opportunities related to this account. In case of parental relationship between the records, cascading rules are applied. For the owner teams, you can access entities based on the roles assigned to the user plus the roles assigned to the team that a user is a member of. This allows a user to have privileges outside their business unit. More information: [Entity Relationship Behavior](entity-relationship-behavior.md)  
+>  Owner teams and access teams provide access rights to the record and related records, such as to an account and all opportunities related to this account. In case of parental relationship between the records, cascading rules are applied. For the owner teams, you can access entities based on the roles assigned to the user plus the roles assigned to the team that a user is a member of. This allows a user to have privileges outside their business unit. More information: [Entity Relationship Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)  
 > 
 > [!NOTE]
 >  A user must have sufficient privileges to join an access team. For example, if the access team has the Delete access right on an account, the user must have the Delete privilege on the Account entity to join the team. If you’re trying to add a user with insufficient privileges, you’ll see this error message: “You can’t add the user to the access team because the user doesn’t have sufficient privileges on the entity.”  
   
 ### See also  
- [Sample: Share a record using an access team](sample-share-record-using-access-team.md)   
+ [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)   
  [Manage teams](https://technet.microsoft.com/library/dn531089.aspx)   
  [Whitepaper: Access Teams with Microsoft Dynamics CRM 2013](http://download.microsoft.com/download/E/9/0/E9009308-CA01-4B37-B03C-435B8ACB49B4/Access%20Teams%20with%20Microsoft%20Dynamics%20CRM%202013.pdf)   
  [Whitepaper: Scalable security modeling with Microsoft Dynamics CRM](http://go.microsoft.com/fwlink/p/?LinkID=328757)   
@@ -116,5 +116,5 @@ With *owner* teams or *access* teams, you can easily share business objects and 
  [TeamTemplate Entity](reference/entities/teamtemplate.md)   
  [Administer the deployment using Windows PowerShell](https://technet.microsoft.com/library/dn531202.aspx)   
  [Use record-based security to control access to records](/dynamics365/customer-engagement/developer/security-dev/use-record-based-security-control-access-records)   
- [How Role-Based Security Can Be Used to Control Access to Entities In Dynamics 365](/dynamics365/customer-engage,ent/developer/security-dev/how-role-based-security-control-access-entities)   
- [Cascading Behavior](entity-relationship-behavior.md#BKMK_CascadingBehavior)
+ [How Role-Based Security Can Be Used to Control Access to Entities In Dynamics 365](/dynamics365/customer-engagement/developer/security-dev/how-role-based-security-control-access-entities)   
+ [Cascading Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior#BKMK_CascadingBehavior)

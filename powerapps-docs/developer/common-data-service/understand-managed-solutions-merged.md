@@ -48,8 +48,7 @@ When you prepare your managed solution to be installed, remember that an organiz
  A managed solution usually updates or adds options for option sets that are already in the organization, for example, the account Category or Industry option sets. When a managed solution modifies the options available in an option set, all the options defined in the managed solution are available in the organization. When the managed solution is uninstalled, the option set options will be returned to their original state.  
   
 ### See also  
- [Plan for Solution Development](plan-solution-development.md)   
+ [Plan for Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Use Managed Properties](use-managed-properties.md)   
- [Package and Distribute Extensions with CDS for Apps Solutions](package-distribute-extensions-use-solutions.md)   
  [Customize Entity Forms](/dynamics365/customer-engagement/developer/customize-dev/customize-entity-forms)   
  [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)

@@ -29,8 +29,8 @@ The *time zone* entities can be used when you write code that works in multiple 
 |<xref:Microsoft.Crm.Sdk.Messages.UtcTimeFromLocalTimeRequest>|Retrieves the UTC time for the specified local time.|  
   
 ### See also  
- [Business Management Entities](business-management-entities.md)   
- [Sample: Retrieve Time Zone Information](sample-retrieve-time-zone-information.md)   
+ [Business Management Entities](/dynamics365/customer-engagement/developer/business-management-entities)   
+ [Sample: Retrieve Time Zone Information](org-service/samples/retrieve-time-zone-information.md)   
  [timezonedefinition EntityType](reference/entities/timezonedefinition.md)   
  [timezonelocalizedname EntityType](reference/entities/timezonelocalizedname.md)   
  [timezonerule EntityType](reference/entities/timezonerule.md)   
