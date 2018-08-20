@@ -46,10 +46,10 @@ You delete managed and unmanaged solutions in the same way, but the resulting ac
 ```  
   
 ### See also  
- [Package and Distribute Extensions with Dynamics 365 Solutions](package-distribute-extensions-use-solutions.md)   
+ [Package and Distribute Extensions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Delete a Solution](work-solutions.md#BKMK_DeleteSolution)   
  [Introduction to Solutions](introduction-solutions.md)   
- [Planning for Solution Development](plan-solution-development.md)   
+ [Planning for Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Solution Components and Dependency Tracking](dependency-tracking-solution-components.md)   
  [Create a Managed Solution](create-install-update-managed-solution.md#BKMK_CreateManagedSolution)   
  [Export an unmanaged solution](create-export-import-unmanaged-solution.md#BKMK_UnmanagedSolution)   

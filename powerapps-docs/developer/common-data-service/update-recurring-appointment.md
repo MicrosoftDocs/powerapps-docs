@@ -43,7 +43,7 @@ You can either update the whole series or update an instance of a recurring appo
 >  Recurring appointment instances can be identified using the `Appointment.InstanceTypeCode` attribute, which will have a value of “2” (Recurring Instance). More information: [Appointment Entity](reference/entities/appointment.md)  
   
 ### See also  
- [Recurring Appointment Entities](recurring-appointment-entities.md)   
- [Delete or end a recurring appointment series or instance](delete-or-end-a-recurring-appointment-series-or-instance.md)   
+ [Recurring Appointment Entities](/dynamics365/customer-engagement/developer/recurring-appointment-entities)   
+ [Delete or end a recurring appointment series or instance](/dynamics365/customer-engagement/developer/delete-or-end-a-recurring-appointment-series-or-instance)   
  [Sample: Create, Retrieve, Update, and Delete (CRUD) a Recurring Appointment](org-service/samples/create-retrieve-update-delete-recurring-appointment.md)   
  [Sample: Reschedule and Cancel Recurring Appointment](org-service/samples/reschedule-cancel-recurring-appointment.md)
