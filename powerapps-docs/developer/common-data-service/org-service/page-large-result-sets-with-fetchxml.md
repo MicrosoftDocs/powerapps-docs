@@ -105,7 +105,7 @@ while (true)
   
 ### See also  
  [Sample: Use FetchXML with a Paging Cookie](samples/use-fetchxml-paging-cookie.md)   
- [Building Queries with FetchXML](build-queries-fetchxml.md)   
- [Fiscal date query operators in FetchXML](fiscal-date-older-datetime-query-operators-fetchxml.md)   
- [Using FetchXML](use-fetchxml-construct-query.md)   
+ [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml)   
+ [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)   
+ [Using FetchXML](../use-fetchxml-construct-query.md)   
  [Page large result sets with QueryExpression](page-large-result-sets-with-queryexpression.md)
