@@ -207,7 +207,7 @@ This is the most common scenario and the one which is used for apps distributed 
   
   There are several ways that you can achieve this, including writing your own program using the web services and having the subscriber run the program.  
   
-  The CRM Package deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different CDS for Apps organization. More information: [Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)  
+  The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different CDS for Apps organization. More information: [Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)  
   
 ### See also  
  [Walkthrough: Multi-tenant server-to-server authentication](/dynamics365/customer-engagement/developer/walkthrough-multi-tenant-server-server-authentication)   

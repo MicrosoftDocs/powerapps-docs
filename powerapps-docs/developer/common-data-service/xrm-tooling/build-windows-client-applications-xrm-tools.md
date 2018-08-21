@@ -45,7 +45,7 @@ The following applications in the current version of CDS for Apps use the common
 
 <!-- TODO: fix links when files added to admin guide
 
-- Package Deployer tool. More information: [Deploy packages using CRM Package Deployer and Windows PowerShell](../../administrator/deploy-packages-using-package-deployer-windows-powershell.md)   
+- Package Deployer tool. More information: [Deploy packages using Dynamics 365 Package Deployer and Windows PowerShell](../../administrator/deploy-packages-using-package-deployer-windows-powershell.md)   
 
 - Configuration Migration tool. More information [Manage your configuration data](../../administrator/manage-configuration-data.md)  
 

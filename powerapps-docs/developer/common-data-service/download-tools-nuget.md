@@ -103,5 +103,5 @@ To get the latest version of these tools, repeat these steps.
 [Browse the metadata for your organization](browse-your-metadata.md)<br />
 [Analyze plug-in performance](analyze-plugin-performance.md)<br />
 [Solution tools for team development](solution-tools-team-development.md)<br />
-[Deploy packages using Dynamics CRM Package Deployer and Windows PowerShell](../admin/deploy-packages-using-package-deployer-windows-powershell.md)<br />
+[Deploy packages using Dynamics Dynamics 365 Package Deployer and Windows PowerShell](../admin/deploy-packages-using-package-deployer-windows-powershell.md)<br />
 [Walkthrough: Register a plug-in using the plug-in registration tool](walkthrough-register-plugin-using-plugin-registration-tool.md)<br /> -->
