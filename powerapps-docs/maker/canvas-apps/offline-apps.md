@@ -21,6 +21,12 @@ One of the most common scenarios you face as a mobile-app developer is enabling 
 * Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
 * Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
+> [!NOTE]
+> This feature area is still under development and isn't optimized for every scenario today. The functions 
+to SaveData() to a local device and LoadData() from that device work best in their current implementation over relatively small quantities of data (for example, dozens of text records in a table) that generally don't exceed 2MB. This is useful for some basic “offline” scenarios, as well as to increase the startup performance of canvas apps by caching data locally. However, using this feature to save large amounts of data (for example, saving thousands of rows in a table or caching large images or videos) may cause errors or unexpected behavior with the current implementation and should be avoided. Also, the functions don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
+>
+> We are working to expand the capabilities of offline apps, to increase stability and size limits, and (in the future) to automatically handle decisions about what to save and how to handle conflicts. Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
+
 ## How to build offline capable apps
 
 The first thing to think about in offline scenarios is how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and the Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
