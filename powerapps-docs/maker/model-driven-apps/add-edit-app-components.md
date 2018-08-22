@@ -81,7 +81,8 @@ The app designer refers to existing metadata in the default solution. You can us
   
 4.  If the dashboard you want doesn't exist in the default solution, create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
   
-     ![Create New link on the Components tab of app designer](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
+     > [!div class="mx-imgBorder"]
+     > ![Create New link on the Components tab of app designer](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
   
      The dashboard designer opens. More information: [Create and edit dashboards](create-edit-dashboards.md)  
   
