@@ -41,8 +41,9 @@ The app designer refers to existing metadata in the default solution. You can us
  On the canvas, you'll see areas for the site map, business process flow, dashboard, and entities. When you select a dashboard or business process flow, or configure a site map, the app designer automatically adds the entities that are used in these components to the canvas. After the entities are in place, all you need to do is select each entity and add required entity assets such as forms, views, and charts to it.
  
  You can also use **Search Canvas** to search for components on the canvas. When you select **Search Canvas**, a new search tab opens to the right of the tabs in the rightmost pane.   
-  
- ![Canvas search option](media/app-designer-search-tab.png "Canvas search")
+ 
+ > [!div class="mx-imgBorder"]
+ > ![Canvas search option](media/app-designer-search-tab.png "Canvas search")
 
 ## Open an app
 1. Sign in to [PowerApps](https://web.powerapps.com/). 
