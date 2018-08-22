@@ -31,7 +31,8 @@ tags:
   
 2.  In the form list toolbar select **Form Order**.  
 
-    ![Form order toolbar command](media/form-order.png)
+     > [!div class="mx-imgBorder"] 
+     > ![Form order toolbar command](media/form-order.png)
   
 3.  Choose either **Main Form Set**, **Quick Create Form Set**, **Quick View Form Set**, or **Mobile Form Set** depending on the type of forms you want to work with. More information: [Type of forms](types-forms.md). 
   
