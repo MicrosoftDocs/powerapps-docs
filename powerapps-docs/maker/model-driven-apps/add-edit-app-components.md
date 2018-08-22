@@ -34,8 +34,9 @@ The app designer refers to existing metadata in the default solution. You can us
 ![App designer canvas](../model-driven-apps/media/app-designer-canvas-pane.png)
 
  On the right side are tabs that you'll use to select components and set component properties.  
-  
- ![App designer components](../model-driven-apps/media/app-designer-canvas-components-tab.png "App designer components")  
+ 
+ > [!div class="mx-imgBorder"]
+ > ![App designer components](../model-driven-apps/media/app-designer-canvas-components-tab.png "App designer components")  
   
  On the canvas, you'll see areas for the site map, business process flow, dashboard, and entities. When you select a dashboard or business process flow, or configure a site map, the app designer automatically adds the entities that are used in these components to the canvas. After the entities are in place, all you need to do is select each entity and add required entity assets such as forms, views, and charts to it.
  
