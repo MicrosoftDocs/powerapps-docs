@@ -3,14 +3,16 @@ title: Size and location properties | Microsoft Docs
 description: Reference material for properties such as Height and Width
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Size and location properties in PowerApps
 ## Overview

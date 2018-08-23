@@ -3,14 +3,16 @@ title: Add images to Excel | Microsoft Docs
 description: Step-by-step instructions for adding image files and pen drawings to Excel in a cloud-storage account
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 10/25/2016
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Add images to Excel from PowerApps
 Create an app automatically in which users can show, add, or delete images from files or drawings from a **Pen** control. The app is based on an Excel file that you create and upload to a cloud-storage account.

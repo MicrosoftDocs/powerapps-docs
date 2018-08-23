@@ -15,6 +15,11 @@ applies_to:
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Create and edit One-to-many or Many-to-one entity relationships using PowerApps portal
 

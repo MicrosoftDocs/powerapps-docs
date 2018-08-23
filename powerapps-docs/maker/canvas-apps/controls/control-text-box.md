@@ -3,14 +3,16 @@ title: 'Label control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the label control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Label control in PowerApps
 A box that shows data such as text, numbers, dates, or currency.

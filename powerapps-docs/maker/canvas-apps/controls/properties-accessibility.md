@@ -3,14 +3,16 @@ title: Accessibility properties | Microsoft Docs
 description: Reference information about properties such as TabIndex, Tooltip
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 01/26/2017
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Accessibility properties in PowerApps
 Configuration of properties that aid alternative ways of interacting with controls suitable for users with disabilities.

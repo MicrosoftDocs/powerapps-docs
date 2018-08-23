@@ -3,13 +3,16 @@ title: 'Column chart control and Line chart control: reference | Microsoft Docs'
 description: Information, including properties and examples, about Column chart controls and Line chart controls
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.reviewer: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Column chart and Line chart controls in PowerApps
 Controls that show data as graphs with x- and y-axes.

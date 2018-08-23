@@ -15,6 +15,11 @@ ms.assetid: ece684h8-ad40-4bfa-975a-3e5bafb854aa
 caps.latest.revision: 55
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Change the solution publisher prefix

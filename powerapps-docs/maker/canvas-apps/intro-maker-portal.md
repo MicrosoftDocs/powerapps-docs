@@ -3,14 +3,16 @@ title: Sign in for the first time | Microsoft Docs
 description: A new home for all makers of apps.
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 08/06/2018
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Sign in to PowerApps for the first time
 

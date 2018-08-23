@@ -3,14 +3,16 @@ title: Integrate PowerApps into websites and other services | Microsoft Docs
 description: Embed canvas apps in websites and other services.
 author: mgblythe
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 10/20/2017
 ms.author: mblythe
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Integrate PowerApps into websites and other services
 The apps you build are often most useful when they're available right where people are doing their work. PowerApps enables you to embed canvas apps in an iframe so that you can integrate those apps into websites and other services, such as Power BI or SharePoint.

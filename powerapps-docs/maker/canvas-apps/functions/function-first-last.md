@@ -3,14 +3,16 @@ title: First, FirstN, Last, and LastN functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the First, FirstN, Last, and LastN functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # First, FirstN, Last, and LastN functions in PowerApps
 Returns a table's first or last set of [records](../working-with-tables.md#records).

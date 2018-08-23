@@ -3,14 +3,16 @@ title: Use the Entity form control | Microsoft Docs
 description: Create apps faster by using the Entity form control to add rich forms for a Common Data Service entity.
 author: aneesmsft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/11/2017
 ms.author: aneesa
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Use the Entity form control
 Create apps faster by using the **Entity form** control to add rich forms for a Common Data Service entity.

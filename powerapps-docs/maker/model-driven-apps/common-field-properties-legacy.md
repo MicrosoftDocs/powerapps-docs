@@ -3,11 +3,6 @@ title: Model-driven app common field properties in PowerApps | MicrosoftDocs
 description: Understand the Common field properties for Main form in Dynamics 365 for Customer Engagement
 Keywords: Main form; Common field properties; Dynamics 365
 author: Mattp123
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
-author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.date: 06/18/2018
@@ -18,6 +13,11 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 ms.assetid: 2b91ee28-7f09-435e-9fae-5225aa698e22
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Model-driven app common field properties
 

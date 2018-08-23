@@ -6,14 +6,17 @@ author: Mattp123
 manager: kfile
 editor: ''
 tags: ''
-
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Tutorial: Share a model-driven app with PowerApps

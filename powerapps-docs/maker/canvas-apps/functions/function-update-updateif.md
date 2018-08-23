@@ -3,14 +3,16 @@ title: Update and UpdateIf functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Update and UpdateIf functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/21/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Update and UpdateIf functions in PowerApps
 Updates [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md).

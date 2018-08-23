@@ -3,14 +3,16 @@ title: Concat and Concatenate functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Concat and Concatenate functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/28/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Concat and Concatenate functions in PowerApps
 Concatenates individual strings of text and strings in [tables](../working-with-tables.md).

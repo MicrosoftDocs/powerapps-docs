@@ -8,6 +8,12 @@ ms.component: pa-admin
 ms.topic: reference
 ms.date: 08/23/2018
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # PowerShell support for PowerApps (preview)
