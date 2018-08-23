@@ -39,15 +39,18 @@ manager: "kvivek"
 
 4.  In the **View Properties** dialog box, provide a **Name**, such as **Accounts with 25 or more employees**, optionally a **Description** for the view, and then select **OK**.
 
-    ![View properties](media/view-properties.png)
+    > [!div class="mx-imgBorder"] 
+    > ![View properties](media/view-properties.png)
   
 5.  In the Common Tasks right pane, select **Add Columns**, in the **Add Columns** dialog box select **Number of Employees**, and then select **OK**.  
 
-    ![Number of employees column](media/column-no-employees.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Number of employees column](media/column-no-employees.png)
   
 6. In the Common Tasks right pane, select **Edit Filter Criteria**, in the Edit Filter Criteria dialog box, select **Number of Employees**, select **Is Greater Than or Equal To**, and then enter **25**.  
 
-    ![Edit filter criteria](media/edit-filter-criteria.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Edit filter criteria](media/edit-filter-criteria.png)
 
 7.  Select **OK** to close the **Edit Filter Criteria** dialog box and then select **Save and Close** on the view editor.  
   
@@ -63,7 +66,8 @@ manager: "kvivek"
 
 4. In the Common Tasks right pane, select **Edit Filter Criteria**, in the Edit Filter Criteria dialog box, add a second filter claus. Select **Address 2:State/Province**, select **Equals**, and then enter **Arizona**. 
 
-    ![Address 2: State/Province](media/column-address-2-state.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Address 2: State/Province](media/column-address-2-state.png)
 
 5. Select **OK** to close the **Edit Filter Criteria** dialog box and then select **Save and Close** on the view editor..  
   

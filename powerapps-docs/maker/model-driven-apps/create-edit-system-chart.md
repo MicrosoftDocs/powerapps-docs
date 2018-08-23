@@ -43,7 +43,8 @@ In this topic you learn how to create a system chart. System charts are organiza
   
     -   Add a description to identify the purpose of the chart, such as *This column chart displays the number of employees by account name*. 
 
-    ![Sample chart](media/sample-chart.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Sample chart](media/sample-chart.png)
   
 5.  Select **Save and Close**.  
 

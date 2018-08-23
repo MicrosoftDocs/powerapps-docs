@@ -49,7 +49,8 @@ topic-status: Drafting
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab. 
 
-    ![Views](media/available-views.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Views](media/available-views.png)
 
 3. Select an existing view to open it or on the toolbar select **Add view**. 
 
@@ -65,11 +66,13 @@ topic-status: Drafting
   
 1.  While creating and editing views, select **Add Columns**. 
 
-    ![View editor add columns](media/view-editor.png)
+    > [!div class="mx-imgBorder"] 
+    > ![View editor add columns](media/view-editor.png)
 
     The **Add Columns** dialog box appears.
 
-    ![Add columns](media/add-columns.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Add columns](media/add-columns.png)
   
 2.  Select the **Record type** if you want to include fields from related entities.  
   

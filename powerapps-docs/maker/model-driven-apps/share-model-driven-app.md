@@ -53,7 +53,8 @@ For more information about access and scope privileges, see [Security roles](htt
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
 5. Select the **Custom Entities** tab, and then locate the custom entity that you want. For this example, the custom entity named **Pet** is used. 
 6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
-![New security role](media/share-model-driven-app/custom-security-role.png)
+> [!div class="mx-imgBorder"] 
+> ![New security role](media/share-model-driven-app/custom-security-role.png)
 7. Because the pet grooming app also has a relationship with the account entity, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
 8. Select **Save and Close**. 
 9. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 
@@ -72,7 +73,8 @@ Security roles control a user’s access to data through a set of access levels 
 2. In the list that is displayed, select the pet groomers.
 3. Select **Manage Roles**.
 
-    ![Manage roles](media/share-model-driven-app/select-users-for-security-roles.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Manage roles](media/share-model-driven-app/select-users-for-security-roles.png)
 
 4. In the **Manage User Roles** dialog box, select the **Pet Grooming Technicians** security role that you created earlier, and then select **OK**.
 
@@ -92,7 +94,8 @@ Next, one or more security roles need to be assigned to the app. Users will have
 
 4. In the **Roles** section, you can choose whether to give app access to all security roles or selected roles. Select the **Pet Grooming Schedulers** and **Pet Grooming Technicians** roles you created earlier.
 
-    ![Select security roles for the app](media/share-model-driven-app/app-security-roles.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Select security roles for the app](media/share-model-driven-app/app-security-roles.png)
 
 5. Select **Save**.
  
@@ -102,11 +105,13 @@ Next, one or more security roles need to be assigned to the app. Users will have
 2. Select **Close**.
 3. Paste the app URL in a location so that your users can access it, such as by posting it on a SharePoint site or send via email.
 
-![Share the link](media/share-model-driven-app/share-model-driven-URL.PNG)
+> [!div class="mx-imgBorder"] 
+> ![Share the link](media/share-model-driven-app/share-model-driven-URL.PNG)
 
 You can also find the app URL on the **Properties** tab in app designer. 
-    
-![Copy app URL](media/share-model-driven-app/app-designer-copy-web-url.png)
+
+> [!div class="mx-imgBorder"] 
+> ![Copy app URL](media/share-model-driven-app/app-designer-copy-web-url.png)
 
 ## About predefined security roles
 These predefined roles are available with a [!INCLUDE [powerapps](../../includes/powerapps.md)] environment.
