@@ -30,7 +30,8 @@ manager: "kvivek"
 
 4.  In the view designer, select **Configure Sorting**.  
 
-    ![Configure sorting](media/configure-sorting.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Configure sorting](media/configure-sorting.png)
   
 5.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
   
