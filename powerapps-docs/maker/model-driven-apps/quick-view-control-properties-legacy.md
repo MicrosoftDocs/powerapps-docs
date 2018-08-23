@@ -19,7 +19,8 @@ ms.assetid: 68f68d5b-6c71-4b95-bb46-d48c59d9008e
 
 A quick view control on a model-driven app form displays data from a record that is selected in a lookup on the form. The data displayed in the control is defined using a quick view form. The data displayed is not editable, but when the primary field is included in the quick view form, it becomes a link to open the related record. More information: [Create and edit quick view forms](create-edit-quick-view-forms.md)  
 
-![Contact quick view form on the account form](media/quick-view-form-contact.png "Contact quick view form on the account form")  
+> [!div class="mx-imgBorder"] 
+> ![Contact quick view form on the account form](media/quick-view-form-contact.png "Contact quick view form on the account form")  
 
 You can access **Quick view control properties** from the PowerApps site. 
 1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  

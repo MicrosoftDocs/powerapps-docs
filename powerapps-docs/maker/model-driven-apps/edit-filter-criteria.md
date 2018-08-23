@@ -28,7 +28,8 @@ Along with the columns displayed in a view, the filter criteria applied to a vie
   
 2.  The dialog shows a user interface similar to **Advanced Find**. You can use **AND** and **OR** clauses to specify and group criteria by selecting the filter claus and then selecting **Group AND** or **Group OR**.  
 
-    ![Edit filter criteria](media/edit-filter-criteria.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Edit filter criteria](media/edit-filter-criteria.png)
   
 3.  Select **OK** to save and close the **Edit Filter Criteria** dialog box.  
   

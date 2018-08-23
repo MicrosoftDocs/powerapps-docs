@@ -34,14 +34,16 @@ The app designer refers to existing metadata in the default solution. You can us
 ![App designer canvas](../model-driven-apps/media/app-designer-canvas-pane.png)
 
  On the right side are tabs that you'll use to select components and set component properties.  
-  
- ![App designer components](../model-driven-apps/media/app-designer-canvas-components-tab.png "App designer components")  
+ 
+ > [!div class="mx-imgBorder"]
+ > ![App designer components](../model-driven-apps/media/app-designer-canvas-components-tab.png "App designer components")  
   
  On the canvas, you'll see areas for the site map, business process flow, dashboard, and entities. When you select a dashboard or business process flow, or configure a site map, the app designer automatically adds the entities that are used in these components to the canvas. After the entities are in place, all you need to do is select each entity and add required entity assets such as forms, views, and charts to it.
  
  You can also use **Search Canvas** to search for components on the canvas. When you select **Search Canvas**, a new search tab opens to the right of the tabs in the rightmost pane.   
-  
- ![Canvas search option](media/app-designer-search-tab.png "Canvas search")
+ 
+ > [!div class="mx-imgBorder"]
+ > ![Canvas search option](media/app-designer-search-tab.png "Canvas search")
 
 ## Open an app
 1. Sign in to [PowerApps](https://web.powerapps.com/). 
@@ -79,7 +81,8 @@ The app designer refers to existing metadata in the default solution. You can us
   
 4.  If the dashboard you want doesn't exist in the default solution, create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
   
-     ![Create New link on the Components tab of app designer](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
+     > [!div class="mx-imgBorder"]
+     > ![Create New link on the Components tab of app designer](../model-driven-apps/media/app-designer-components-tab-create-new.png "Create New link on the Components tab of the app designer")  
   
      The dashboard designer opens. More information: [Create and edit dashboards](create-edit-dashboards.md)  
   
