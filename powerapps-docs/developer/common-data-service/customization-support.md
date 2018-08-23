@@ -16,6 +16,11 @@ caps.latest.revision: 21
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Common Data Service for Apps supported and unsupported app building practices

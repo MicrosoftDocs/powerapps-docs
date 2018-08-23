@@ -3,14 +3,16 @@ title: Create a connection from a canvas app to SharePoint | Microsoft Docs
 description: In PowerApps, create a connection to SharePoint, for use in generating a canvas app automatically or building one from scratch.
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 09/03/2016
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Create a connection to SharePoint from PowerApps
 Create a connection to either SharePoint Online or on-premises SharePoint so that you can generate a canvas app automatically or build one from scratch.

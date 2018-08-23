@@ -3,14 +3,16 @@ title: Understand variables in canvas apps | Microsoft Docs
 description: Reference information about working with state, context variables, and collections in canvas apps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand canvas-app variables in PowerApps
 

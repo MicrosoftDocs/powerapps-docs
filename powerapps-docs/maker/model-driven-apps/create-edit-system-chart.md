@@ -17,6 +17,11 @@ ms.assetid: e02d58f7-6b1c-4a51-b801-a4d9f24729c5
 caps.latest.revision: 29
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # Create a model-driven app system chart
 

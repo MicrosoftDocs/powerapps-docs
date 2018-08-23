@@ -1,13 +1,17 @@
 ---
 title: Import or export data from Common Data Service for Apps
-description:  Bulk import and export data from Excel or CSV files into entities in Common Data Service for Apps by using the Get Data from Excel and Export Data functionality
+description: Bulk import and export data from Excel or CSV files into entities in Common Data Service for Apps by using the Get Data from Excel and Export Data functionality
 author: sabinn-msft
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.component: cds
 ms.date: 05/14/2018
 ms.author: sabinn
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Import or export data from Common Data Service for Apps
 

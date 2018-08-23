@@ -3,14 +3,16 @@ title: 'Rating control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Rating control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Rating control in PowerApps
 A control with which users can indicate a value between 1 and a maximum number that you specify.

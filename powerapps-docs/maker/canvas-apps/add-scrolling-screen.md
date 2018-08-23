@@ -3,14 +3,16 @@ title: Add a scrolling screen to a canvas app | Microsoft Docs
 description: In PowerApps, create a screen that users can scroll to show more types of content than the screen can show at a time in a canvas app.
 author: lonu
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: lonu
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Add a scrolling screen to a canvas app in PowerApps
 

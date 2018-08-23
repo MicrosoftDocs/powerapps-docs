@@ -11,6 +11,11 @@ ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Add an app to Microsoft Teams

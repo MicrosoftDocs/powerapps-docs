@@ -3,14 +3,16 @@ title: What's new | Microsoft Docs
 description: Updates to PowerApps, organized by release date
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 05/21/2018
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # What's new in PowerApps
 

@@ -3,13 +3,16 @@ title: 'Check Box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Check Box control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.reviewer: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Check box control in PowerApps
 A control that the user can select or clear to set its value to **true** or **false**.

@@ -13,6 +13,11 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 ms.assetid: 43bfface-4dc2-411d-99a1-83e934646989
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use the model-driven app main form and its components
 

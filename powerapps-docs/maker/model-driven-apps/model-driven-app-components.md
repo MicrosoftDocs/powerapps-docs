@@ -12,11 +12,11 @@ manager: kvivek
 ms.date: 06/27/2018
 ms.service: crm-online
 ms.topic: article
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Understand model-driven app components
 A well designed model-driven app consists of several components you select using the designer to build the appearance and functionality of the finished app. The components and component properties that designers use to make up an app become the metadata. 

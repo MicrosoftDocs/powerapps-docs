@@ -1,6 +1,6 @@
 ---
 title: "Entities and metadata in Common Data Service for Apps | MicrosoftDocs"
-description: "Learn about entities and metadata in Common Data Service for Apps" 
+description: "Learn about entities and metadata in Common Data Service for Apps"
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
@@ -17,6 +17,11 @@ ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
 caps.latest.revision: 28
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Entities and metadata in Common Data Service for Apps

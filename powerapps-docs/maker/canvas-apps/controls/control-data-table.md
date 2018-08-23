@@ -3,14 +3,16 @@ title: 'Data table control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Data table control
 author: jasongre
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: jasongre
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Data table control in PowerApps
 Shows a set of data in a tabular format.

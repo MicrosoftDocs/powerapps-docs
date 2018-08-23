@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: tutorial
 ms.date: 06/22/2018
 ms.author: matp
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Tutorial: Create a custom entity that has components in PowerApps

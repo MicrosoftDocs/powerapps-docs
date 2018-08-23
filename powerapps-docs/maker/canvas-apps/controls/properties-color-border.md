@@ -3,14 +3,16 @@ title: Color and border properties | Microsoft Docs
 description: Reference information about properties such as BorderColor, HoverBorderColor, and PressedBorderColor
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Color and border properties in PowerApps
 ## Overview

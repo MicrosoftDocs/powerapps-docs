@@ -16,6 +16,11 @@ caps.latest.revision: 13
 ms.author: "matp"
 manager: "kvivek"
 author: "Mattp123"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # Privileges required for model-driven app customization
 
