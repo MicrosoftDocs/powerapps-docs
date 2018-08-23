@@ -68,6 +68,7 @@ The PowerApps custom visual is available in preview and has these limitations:
 - The PowerApps custom visual cannot filter the data or send any data back to the report.
 - You will need to share the PowerApps app separately from your report. Learn about [sharing apps in PowerApps](share-app.md).
 - The mobile app for Power BI doesn't support the PowerApps custom visual.
+- The PowerApps custom visual is not support in Power BI Report Server
 
 ## Next steps
 
