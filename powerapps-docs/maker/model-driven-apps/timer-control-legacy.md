@@ -32,7 +32,8 @@ manager: "kvivek"
 
 To create a timer control, in the form designer select the **Insert** tab, and then on the toolbar select **Timer**. 
 
-  ![Insert timer control](media/insert-timer-control.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Insert timer control](media/insert-timer-control.png)
 
 On the Timer Control properties page, enter or select the properties that you want, and then select **OK**. 
 

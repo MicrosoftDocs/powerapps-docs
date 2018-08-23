@@ -21,12 +21,13 @@ manager: "kvivek"
 # Set properties for a model-driven app chart or list included in a dashboard
 
 To edit a chart or list component from the dashboard designer, select the chart or list you want and then select Edit Component on the dashboard designer toolbar.   
-
-  ![Dashboard designer chart edit component](media/dashboard-chart-select.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Dashboard designer chart edit component](media/dashboard-chart-select.png)
 
 This opens the **Set Properties** dialog box.
 
-  ![Chart set properties](media/set-properties-chart.png)  
+  > [!div class="mx-imgBorder"] 
+  > ![Chart set properties](media/set-properties-chart.png)  
  
 You can set the following chart properties from the **Set Properties** dialog box:  
   

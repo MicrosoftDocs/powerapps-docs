@@ -32,7 +32,8 @@ Unless someone has ‘pinned’ a different view in your app as their personal d
   
 3.  On the menu bar, select **More Actions** > **Set Default**.  
 
-    ![Set as default](media/set-as-default-menu.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Set as default](media/set-as-default-menu.png)
   
 4.  On the solution explorer toolbar, select **Publish All Customizations**.  
 
