@@ -31,7 +31,8 @@ Use solution explorer to perform app making and customization tasks that can’t
 3.	Select ![Settings icon](media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
 4.	Under **Customize**, select **Open solution explorer**. 
 
-    ![Solution explorer link](media/advanced-customization-menu.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Solution explorer link](media/advanced-customization-menu.png)
 
 ## Solutions
 
@@ -50,7 +51,8 @@ To get to My Apps:
 2.	Select **Model-driven** (lower left). 
 3. Select **…** > **Share**. 
 
-    ![Share app link](media/share-link.png) 
+    > [!div class="mx-imgBorder"] 
+    > ![Share app link](media/share-link.png) 
 
 4. Then follow these steps: [Add security roles to the app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app#add-security-roles-to-the-app)
  
@@ -64,14 +66,9 @@ To find settings not availabe from **Advanced customizations**:
 1.	Access your environment from the Dynamics 365 Administration Center. For environments located in North America go to [https://port.crm.dynamics.com/G/instances/InstancePicker.aspx](https://port.crm.dynamics.com/G/instances/InstancePicker.aspx). For other locations, see Direct sign in to the Dynamics 365 Administration Center.
 2.	Select the environment you want, and then select **Open**.
 
-    ![Open environment](media/open-environment.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Open environment](media/open-environment.png)
 
 ## Next steps
 
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)
-
-
-
-
-
-
