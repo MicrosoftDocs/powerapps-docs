@@ -127,21 +127,21 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
 1. Show the items in the list by selecting the control's down arrow while pressing the Alt key.
 
 ### List from a data source
-The principles in this procedure apply to any [data source that provides tables](connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Common Data Service for Apps database has been created and sample data added.
+The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Common Data Service for Apps database has been created and sample data added.
 
-1. [Open a blank app](data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** entity](data-platform-create-app-scratch.md#specify-an-entity).
+1. [Open a blank app](../data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** entity](../data-platform-create-app-scratch.md#specify-an-entity).
 
 1. Add a **Drop down** control, and set its **[Items](properties-core.md)** property to this formula:
 
     ```Distinct(Accounts, address1_city)```
 
-    This formula shows all the cities in the **Accounts** entity. If more than one record has the same city, the **[Distinct](function-distinct.md)** function hides the duplication in your drop-down control.
+    This formula shows all the cities in the **Accounts** entity. If more than one record has the same city, the **[Distinct](./functions/function-distinct.md)** function hides the duplication in your drop-down control.
 
 1. (optional) Rename your **Drop down** control to **Cities**, add a vertical **Gallery** control, and set the gallery's **[Items](properties-core.md)** property to this formula:
 
     ```Filter(Accounts, address1_city = Cities.Selected.Value)```
 
-    This **[Filter](function-filter-lookup.md)** function shows only those records in the **Accounts** entity for which the city matches the selected value in the **Cities** control.
+    This **[Filter](./functions/function-filter-lookup.md)** function shows only those records in the **Accounts** entity for which the city matches the selected value in the **Cities** control.
 
 ## Accessibility guidelines
 ### Color contrast
