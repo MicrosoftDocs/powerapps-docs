@@ -3,14 +3,16 @@ title: Generate a canvas app from Excel | Microsoft Docs
 description: Use PowerApps to automatically generate a canvas app using an Excel file stored in a cloud-storage account
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 03/18/2018
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Generate a canvas app from Excel in PowerApps
 

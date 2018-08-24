@@ -17,6 +17,11 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Make model-driven app grids (lists) editable using the Editable Grid custom control
 

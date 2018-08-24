@@ -17,6 +17,11 @@ caps.latest.revision: 11
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Create and edit virtual entities that contain data from an external data source
 

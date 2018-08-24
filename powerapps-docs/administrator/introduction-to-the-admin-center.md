@@ -8,6 +8,12 @@ ms.component: pa-admin
 ms.topic: overview
 ms.date: 03/21/2017
 ms.author: deonhe
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Introduction to the Business Application Platform admin center

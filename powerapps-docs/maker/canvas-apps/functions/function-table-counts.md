@@ -3,14 +3,16 @@ title: Count, CountA, CountIf, and CountRows functions | Microsoft Docs
 description: Reference information, including syntax and an example, for the Count, CountA, CounfIf, and CountRows functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Count, CountA, CountIf, and CountRows functions in PowerApps
 Counts all [records](../working-with-tables.md#records) in a [table](../working-with-tables.md), or counts all records that satisfy a condition.

@@ -17,7 +17,12 @@ author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
- - "PowerApps maker portal impact"
+  - "PowerApps maker portal impact"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # Tutorial: Create business rules and recommendations to apply logic in a model-driven app form
 

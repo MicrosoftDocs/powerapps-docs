@@ -15,6 +15,11 @@ ms.assetid: 2e7f75dd-7a3f-4716-b995-b626929c0501
 caps.latest.revision: 14
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Disable auto-save in a model-driven app
 

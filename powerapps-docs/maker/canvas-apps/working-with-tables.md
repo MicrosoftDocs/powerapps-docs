@@ -3,14 +3,16 @@ title: Understand tables in canvas apps | Microsoft Docs
 description: Reference information about working with canvas-app tables, columns, and records in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand canvas-app tables and records in PowerApps
 

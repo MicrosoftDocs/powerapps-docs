@@ -3,14 +3,16 @@ title: Links to content about custom connectors | Microsoft Docs
 description: Links to content for creating, using, sharing, and certifying custom connectors in PowerApps.
 author: mgblythe
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 05/05/2017
 ms.author: mblythe
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 
 # Custom connectors in PowerApps

@@ -3,14 +3,16 @@ title: Add a data connection in a canvas app | Microsoft Docs
 description: Add a data connection in an existing canvas app or a blank app
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/06/2018
 ms.author: lanced
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Add a data connection to a canvas app in PowerApps
 

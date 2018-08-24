@@ -3,14 +3,16 @@ title: Calendar and Clock functions | Microsoft Docs
 description: Reference information for the Calendar and Clock functions in PowerApps, including syntax and examples
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Calendar and Clock functions in PowerApps
 Retrieves calendar and clock information about the current locale.

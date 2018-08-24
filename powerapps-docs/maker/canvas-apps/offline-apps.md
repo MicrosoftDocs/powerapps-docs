@@ -3,14 +3,16 @@ title: Develop offline-capable canvas apps | Microsoft Docs
 description: Develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mgblythe
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 05/09/2017
 ms.author: mblythe
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Develop offline-capable canvas apps with PowerApps
 

@@ -6,7 +6,7 @@ ms.date: 03/30/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
-applies_to:
+applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
@@ -18,6 +18,11 @@ ms.suite:
 ms.tgt_pltfrm: 
 caps.latest.revision: 17
 topic-status: Drafting
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 
 # Tutorial: Add or edit model-driven app components in the PowerApps app designer

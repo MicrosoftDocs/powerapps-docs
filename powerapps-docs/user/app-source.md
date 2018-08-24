@@ -10,7 +10,12 @@ ms.date: 07/09/2018
 ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
-ms.assetid:
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Discover apps via AppSource

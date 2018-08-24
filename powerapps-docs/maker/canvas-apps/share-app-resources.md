@@ -3,14 +3,16 @@ title: Share resources used in your canvas app | Microsoft Docs
 description: Understand how you share resources that your canvas app uses in PowerApps
 author: archnair
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/28/2016
 ms.author: archanan
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Share canvas-app resources in PowerApps
 

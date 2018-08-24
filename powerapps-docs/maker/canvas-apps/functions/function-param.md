@@ -3,14 +3,16 @@ title: Download, Launch, and Param functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Download, Launch, and Param functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Download, Launch, and Param functions in PowerApps
 Downloads or launches a webpage or an app with parameters.  

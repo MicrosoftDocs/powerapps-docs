@@ -12,11 +12,11 @@ manager: kvivek
 ms.date: 06/27/2018
 ms.service: crm-online
 ms.topic: article
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Define data for your model-driven app
 

@@ -12,11 +12,12 @@ manager: kvivek
 ms.date: 06/27/2018
 ms.service: crm-online
 ms.topic: article
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Web resource properties for model-driven app forms
 

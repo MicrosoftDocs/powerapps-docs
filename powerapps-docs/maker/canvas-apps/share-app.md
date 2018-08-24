@@ -3,13 +3,16 @@ title: Share a canvas app | Microsoft Docs
 description: Share your canvas app by giving other users permission to run or modify it
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 07/11/2018
 ms.author: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Share a canvas app in PowerApps
 

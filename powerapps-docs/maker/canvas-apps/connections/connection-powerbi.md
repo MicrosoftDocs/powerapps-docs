@@ -3,14 +3,16 @@ title: Overview of the Power BI connection | Microsoft Docs
 description: See the available Power BI connections
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/12/2016
 ms.author: lanced
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Connect to Power BI from PowerApps
 ![Power BI](./media/connection-powerbi/powerbiicon.png)

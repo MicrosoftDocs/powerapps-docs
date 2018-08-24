@@ -15,6 +15,11 @@ applies_to:
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal

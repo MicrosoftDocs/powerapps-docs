@@ -3,14 +3,16 @@ title: ShowError function | Microsoft Docs
 description: Reference information, including syntax and examples, for the ShowError function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/05/2018
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Notify function in PowerApps
 Displays a banner message to the user.

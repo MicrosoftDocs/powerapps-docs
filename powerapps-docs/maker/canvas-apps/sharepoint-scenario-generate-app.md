@@ -3,14 +3,16 @@ title: Generate a canvas app to handle project requests | Microsoft Docs
 description: In this task, we'll generate a basic canvas app with three screens directly from a SharePoint list.
 author: mgblythe
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 06/12/2017
 ms.author: mblythe
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Generate a canvas app to handle project requests
 > [!NOTE]

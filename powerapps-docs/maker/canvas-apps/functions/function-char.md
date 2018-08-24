@@ -3,14 +3,16 @@ title: Char function | Microsoft Docs
 description: Reference information for the Char function in PowerApps, including syntax and examples
 dauthor: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Char function in PowerApps
 Translates a character code into a string.

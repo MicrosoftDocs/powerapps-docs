@@ -12,6 +12,11 @@ applies_to:
   - Dynamics 365 Version 9.x
   - PowerApps
 ms.assetid: 26c79c20-2987-476e-983a-406e0db13034
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Accessibility in PowerApps app designer, site map designer, and My Apps page
