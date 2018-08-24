@@ -1,16 +1,13 @@
 ---
 title: Share Excel files used by an app | Microsoft Docs
 description: Share Excel files in Dropbox, OneDrive, and Google Drive. Users can edit and can view files and folders.
-documentationcenter: na
 author: jamesol-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: jamesol
 
@@ -44,7 +41,7 @@ For more information, see [Sharing folders on Dropbox](https://www.dropbox.com/e
     ![Share command](./media/share-app-data/onedrive-share.png)
    
     > [!NOTE]
-> In OneDrive for Business, share the file itself, not the folder that contains the file.
+   > In OneDrive for Business, share the file itself, not the folder that contains the file.
 3. In the dialog box, select **Email**.
    
     ![Share by email](./media/share-app-data/onedrive-email.png)

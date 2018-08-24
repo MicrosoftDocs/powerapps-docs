@@ -1,16 +1,13 @@
 ---
 title: Change app name and tile | Microsoft Docs
 description: Step-by-step instructions for changing settings such the app name and icon
-documentationcenter: na
 author: lonu
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: lonu
 
@@ -42,7 +39,7 @@ Follow one or more of these steps:
 * Click or tap **Browse file**, click or tap the image that you want to use, and then click or tap **Open**.
 
     > [!NOTE]
-> For best results, use a square-shaped icon.
+  > For best results, use a square-shaped icon.
 
 ## Next step
 On the **File** menu, click or tap **Save** to republish your app with the new settings.

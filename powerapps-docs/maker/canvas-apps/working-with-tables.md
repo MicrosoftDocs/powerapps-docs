@@ -1,16 +1,13 @@
 ---
 title: Understand tables | Microsoft Docs
 description: Reference information for working with tables, columns, and records
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
 
@@ -87,26 +84,28 @@ Just as with numbers, formulas that involve tables and records are automatically
 
 Let's walk through some simple examples.
 
-1. Add a **Text gallery** control, and set its **[Items](controls/properties-core.md)** property to the name of a table.
-   
-    By default, the gallery shows placeholder text from a table named **TextualGallerySample**. The **[Items](controls/properties-core.md)** property of the gallery is automatically set to that table.
-   
-    > [!NOTE]
-> Some controls have been rearranged and enlarged for illustration purposes.
-   
+1. Create a blank app for a phone, and add a vertical **[Gallery](controls/control-gallery.md)** control that contains other controls.
+
+    By default, the screen shows placeholder text from a table named **CustomGallerySample**. The **[Items](controls/properties-core.md)** property of the screen's **[Gallery](controls/control-gallery.md)** control is automatically set to that table.
+
     ![](media/working-with-tables/gallery-items.png)
+
+    > [!NOTE]
+    > Some controls have been rearranged and enlarged for illustration purposes.
+
 2. Instead of setting the **[Items](controls/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:<br>
-   **Sort(TextualGallerySample, Heading, Descending)**
-   
+    **Sort(CustomGallerySample, SampleHeading, Descending)**
+
     This formula incorporates the **[Sort](functions/function-sort.md)** function, which takes the name of a table as its first argument and the name of a column in that table as its second argument. The function also supports an optional third argument, which stipulates that you want to sort the data in descending order.
-   
+
     ![](media/working-with-tables/gallery-items-sort.png)
+
 3. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:<br>
-   **FirstN(Sort(TextualGallerySample, Heading, Descending), 2)**
-   
+   **FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)**
+
     In this formula, you use the **[FirstN](functions/function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](functions/function-sort.md)** function as the first argument to **[FirstN](functions/function-first-last.md)** and a number (in this case, **2**) as the second argument, which specifies how many records to show.
    
-    The entire formula returns a table that contains the first two records of the **TextualGallerySample** table, sorted by the **Heading** column in descending order.
+    The entire formula returns a table that contains the first two records of the **CustomGallerySample** table, sorted by the **SampleHeading** column in descending order.
    
     ![](media/working-with-tables/gallery-items-sort-firstn.png)
 
@@ -135,7 +134,7 @@ If you specify a data source as an argument for one of these functions, it will 
 * **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** - Updates records that match one or more criteria that you specify.
 * **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** - Deletes records that match one or more criteria that you specify.
 
-The following controls have properties that are tables:
+These properties are set to values that are tables:
 
 * **Items** - Applies to galleries and list boxes. Table to display in the gallery.
 * **SelectedItems** - Applies to list boxes. Table of items that the user has selected.
@@ -146,24 +145,27 @@ You can also build a formula that calculates data for an individual record, take
 1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this formula:<br>
     **Collect( SelectedRecord, Gallery1.Selected )**
 
-2. If the button isn't selected, click it to select it, and then click it again to run the formula.
+2. While holding down the Alt key, select the button.
 
 3. In the **File** menu, select **Collections.**
 
-![](media/working-with-tables/selected-collection.png)
+    ![](media/working-with-tables/selected-collection.png)
 
-This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **Body** column, which matches the **Body** column in the original table, and a **Body1** column, which represents the label that shows the data from that column. Select the table icon in the **Body1** column to drill into that data.
+This formula returns a record that includes not only the data from the record that's currently selected in the gallery but also each control in that gallery. For example, the record contains both a **SampleText** column, which matches the **SampleText** column in the original table, and a **Subtitle1** column, which represents the label that shows the data from that column. Select the table icon in the **Subtitle1** column to drill into that data.
+
+> [!NOTE]
+> The **Subtitle1** column might be named **Subtitle2** or similar if you've added elements other than those that this topic specifies.
 
 Now that you have the selected record, you can extract individual fields from it with the **.** operator.
 
-1. Press Esc to return to the default workspace, and then add a label below the gallery.
+1. Add a **[Label](controls/control-text-box.md)** control, and then move it under the gallery and the button.
 
-2. Set the **[Text](controls/properties-core.md)** property of the label to this formula:<br>
-    **Gallery.Selected.Heading**
+1. Set the label's **[Text](controls/properties-core.md)** property to this expression:<br>
+    **"Selected: " & Gallery1.Selected.SampleHeading**
    
     ![](media/working-with-tables/gallery-selected.png)
 
-You've taken the **Selected** property, which is a record, and extracted the **Heading** property from it.  
+You've taken the **Selected** property, which is a record, and extracted the **SampleHeading** property from it.
 
 You can also use a record as a general-purpose container for related named values.
 
@@ -231,10 +233,10 @@ Note that in the above, we used double quotes (") in some places and single quot
 ### Disambiguation
 Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the [**@** disambiguation](functions/operators.md) operator:
 
-* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using the pattern ***Table*[@*FieldName*]**.  
-* To access global values, such as data sources, collections, and context variables, use the pattern **[@*ObjectName*]** (without a table designation).
+* To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>_Table_**[@**_FieldName_**]**
+* To access global values, such as data sources, collections, and context variables, use the pattern **[@**_ObjectName_**]** (without a table designation).
 
-If the table being operated upon is an expression, such as **Filter( *table*, ... )**, then the disambiguation operator cannot be used.  Only the innermost record scope can access fields from this table expression, by not using the disambiguation operator.
+If the table being operated upon is an expression, such as **Filter(** _Table_**,** ... **)**, then the disambiguation operator cannot be used.  Only the innermost record scope can access fields from this table expression, by not using the disambiguation operator.
 
 For example, imagine having a collection **X**:
 

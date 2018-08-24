@@ -2,12 +2,14 @@
 title: Get a session ID or an app ID | Microsoft Docs
 description: How to get a session ID or an app ID for troubleshooting in PowerApps
 author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 06/18/2018
-ms.author: anneta, brimcg
+ms.author: anneta
 
 ---
 # Get a session ID or an app ID

@@ -1,18 +1,15 @@
 ---
 title: Delegable data sources | Microsoft Docs
 description: List of all supported delegable data sources
-documentationcenter: na
-author: archnair
-manager: kfile
-editor: ''
-tags: ''
+author: lancedMicrosoft
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 08/15/2017
-ms.author: archanan
+ms.author: lanced
 
 ---
 # Delegable data sources
@@ -42,6 +39,7 @@ This document lists the current state of supported delegation per data source.
 This list of data sources and delegable functions and predicates will be updated periodically to reflect the current status of delegation support in PowerApps.
 
 ### Top-level delegable functions
+
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Average |No |No |Yes |No |No |
@@ -57,6 +55,7 @@ This list of data sources and delegable functions and predicates will be updated
 <sup>1</sup>For string fields only
 
 ### Filter and LookUp delegable predicates
+
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Not |Yes |No |Yes |Yes |Yes |

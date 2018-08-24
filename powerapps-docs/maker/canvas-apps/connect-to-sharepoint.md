@@ -1,16 +1,13 @@
 ---
 title: Create a connection to SharePoint from PowerApps | Microsoft Docs
 description: In powerapps.com, create a connection to SharePoint, for use in generating an app automatically or building one from scratch.
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 09/03/2016
 ms.author: anneta
 
@@ -57,7 +54,7 @@ As of this writing, PowerApps supports custom lists but not libraries. In additi
     ![Choose SharePoint on-premises](./media/connect-to-sharepoint/choose-onprem.png)
 
     > [!NOTE]
-> Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
+   > Gateways and on-premises connections can only be created and used in the user's [default environment](working-with-environments.md).
 
 2. Specify your user name and your password.
 

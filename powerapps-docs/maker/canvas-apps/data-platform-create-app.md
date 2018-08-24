@@ -2,13 +2,15 @@
 title: Quickstart - Generate an app from Common Data Service for Apps | Microsoft Docs
 description: In this quickstart, you automatically generate an app in PowerApps to manage data in Common Data Service for Apps
 author: AFTOwen
+manager: kvivek
 
 ms.service: powerapps
 ms.topic: quickstart
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer:
 ms.date: 05/06/2018
 ms.author: anneta
-#As a business analyst with little/no coding experience, I want to quickly create a custom app so that my users can manage data. 
+
 ---
 # Quickstart: Generate an app from Common Data Service for Apps in PowerApps
 
