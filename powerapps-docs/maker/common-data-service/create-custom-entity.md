@@ -95,10 +95,9 @@ Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=l
 3. Select **Done**.
 4. Select **Save Entity**.
 
-Notice that when you add a many-to-one relationship, an **Account** field with the data type **Lookup** is automatically added to your list of fields on the **Fields** tab.
-
-    > [!div class="mx-imgBorder"]
-    > ![Account lookup field](media/create-custom-entity/account-lookup-field.png)
+  Notice that when you add a many-to-one relationship, an **Account** field with the data type **Lookup** is automatically added to your list of fields on the **Fields** tab.
+  > [!div class="mx-imgBorder"]
+  > ![Account lookup field](media/create-custom-entity/account-lookup-field.png)
 
 ## Customize a view
 
