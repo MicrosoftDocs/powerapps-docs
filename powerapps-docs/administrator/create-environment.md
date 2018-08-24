@@ -32,6 +32,8 @@ Sign in to the Admin center at [https://admin.powerapps.com](https://admin.power
 2. In the **New environment** dialog box, enter a name for the environment, and then select a region and environment type from the drop-down lists. The region  defaults to the Azure Active Directory Tenant home region, but you may select any region from the drop-down list. You cannot change the region once the environment is created. When you're done, click or tap **Create environment**.
 
     ![File and Share](./media/create-environment/new-environment-dialog.png)
+
+    Select **Preview(United States)** to get early access to the upcoming PowerApps functionalities. Learn more about the [PowerApps Preview Program](preview-environments.md).
 3. Once the environment is created, you'll receive a confirmation message in the dialog box and you'll be prompted to create a database. Click or tap **Create database** to enable access to the Common Data Service.
 
     **Note:** At this time, you can only create a database in the Azure Active Directory Tenant home region.
