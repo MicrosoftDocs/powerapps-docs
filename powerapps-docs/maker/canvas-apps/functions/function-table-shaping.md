@@ -59,7 +59,7 @@ For all these functions, the result is a new table with the transform applied.  
 **RenameColumns**( *Table*, *OldColumneName1*, *NewColumnName1* [, *OldColumnName2*, *NewColumnName2*, ... ] )
 
 * *Table* - Required.  Table to operate on.
-* *OldColumnName(s)* - Required. Name(s) of the column to rename. These names must be a string (for example **"Name"** with double quotes included).
+* *OldColumnName(s)* - Required. Name(s) of the column to rename from the original table (previous renames from the argument list do not apply). These names must be a string (for example **"Name"** with double quotes included).
 * *NewColumnName(s)* - Required. Replacement name(s). You must specify a string (for example, **"Customer Name"** with double quotes included) for this argument.
 
 **ShowColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
