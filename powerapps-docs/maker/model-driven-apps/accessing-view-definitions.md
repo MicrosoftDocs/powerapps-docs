@@ -17,6 +17,11 @@ ms.assetid: 034c8bef-0d1c-4ef9-8da7-f81343c4553a
 caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # Access a model-driven app view definition in PowerApps
 
@@ -35,11 +40,13 @@ manager: "kvivek"
 2.  Expand **Data**, select **Entities**, and then select the **Account** entity.   
 3. Select the **Views** tab, and then select **Remove filter**.
 
-    ![Account view definitions](media/account-view-definitions.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Account view definitions](media/account-view-definitions.png)
 
 4. Select the view you want to open, such as the account entity **All Accounts** view.
 
-    ![All Accounts view](media/all-accounts-view.png)
+    > [!div class="mx-imgBorder"] 
+    > ![All Accounts view](media/all-accounts-view.png)
 
 5. From the view editor you can perform several tasks: 
  

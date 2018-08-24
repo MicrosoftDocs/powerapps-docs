@@ -3,14 +3,16 @@ title: Table function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Table function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Table function in PowerApps
 Creates a temporary [table](../working-with-tables.md).

@@ -2,12 +2,17 @@
 title: Data Integration for Admins customer data
 description: Identifying, exporting and deleting personal data in data integration for Admins for CDS for Apps
 author: sabinn-msft
-
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
 ms.date: 05/20/2018
 ms.author: sabinn
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 # Responding to Data Subject Rights (DSR) requests for Data Integration for Common Data Service for Apps customer data
 

@@ -13,6 +13,11 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 ms.assetid: 43bfface-4dc2-411d-99a1-83e934646989
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use the model-driven app main form and its components
 
@@ -73,7 +78,8 @@ Follow the procedures given below to access the form editor.
 
 1. With the unmanaged solution opened in solution explorer, select the **Entities** node and, in the toolbar above the list, select **Add Existing**.
 
-    ![Add existing entity](media/add-existing-entity.png)
+     > [!div class="mx-imgBorder"] 
+     > ![Add existing entity](media/add-existing-entity.png)
 
 2. In the **Select Solution Components** dialog box, with the **Component Type** selector set to **Entity**, select the entity you want to add and select **OK**.
 

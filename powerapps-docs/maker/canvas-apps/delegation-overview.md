@@ -3,14 +3,16 @@ title: Understand delegation in a canvas app | Microsoft Docs
 description: Use delegation to process large data sets efficiently in a canvas app.
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/05/2018
 ms.author: lanced
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand delegation in a canvas app
 PowerApps includes a powerful set of functions for filtering, sorting, and shaping tables of data in a canvas app: **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)**, and **[AddColumns](functions/function-table-shaping.md)** functions to name just a few. With these functions, you can provide your users with focused access to the information they need. For those with a database background, using these functions is the equivalent of writing a database query.

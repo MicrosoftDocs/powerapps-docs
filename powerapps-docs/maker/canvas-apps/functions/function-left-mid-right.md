@@ -3,14 +3,16 @@ title: Left, Mid, and Right functions| Microsoft Docs
 description: Reference information, including syntax and examples, for the Left, Mid, and Right functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Left, Mid, and Right functions in PowerApps
 Extracts the left, middle, or right portion of a string of text.

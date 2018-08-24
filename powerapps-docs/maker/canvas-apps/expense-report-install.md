@@ -3,34 +3,32 @@ title: Install and configure the Expense Report sample for canvas apps | Microso
 description: Step-by-step instructions for, in PowerApps, installing and configuring the Expense Report sample for canvas apps.
 author: caburk
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Install and configure the Expense Report sample for canvas apps in PowerApps
 
-Step-by-step instructions for installing and configuring the Expense Report sample.
+Step-by-step instructions for installing and configuring the Expense Report sample. You can also preview the sample app [here](https://aka.ms/previewmyexpenses).
 
 Estimated time to complete these steps: **10-15 minutes**
 
-For a demonstration of this process, please watch this video.
-
-[![Expense Report install Video](./media/expense-report-install/expense-report-install-video.png)](https://youtu.be/DOR28V5kCkw)
-
-## Overview of the sample
+> [!TIP]
+> Watch [this video](https://youtu.be/kJXZPILfbwU) for a demonstration of how to use the Expense Report sample app. 
 
 Track expense reports from submission to approval. Tally line items as individual expenses accrue and submit for approval when ready. This app requires a small amount of setup to make it your own.
 
 ![Opening screen of the Expense Report PowerApp](./media/expense-report-install/expense-report-powerapp.png)
 
-Watch this video to see how to use the Expense Report PowerApp Sample.
-
-[![Expense Report Install Video](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
+> [!TIP]
+> Watch [this](https://youtu.be/h6E9cdrOvMU) video to see how to use the Expense Report PowerApps Sample.
 
 ## Prerequisites
 
@@ -373,9 +371,6 @@ This list stores the lines items associated with expense reports.
 2. Click the **ellipses** next to the Expense Report PowerApp.
 3. Click **Open**.
 
-Watch this video to see how to use the Expense Report PowerApp Sample.
-
-[![Expense Report Install Video](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
 
 ## Next steps
 - [Customize a SharePoint list form](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)

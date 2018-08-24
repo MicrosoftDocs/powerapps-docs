@@ -17,6 +17,11 @@ ms.assetid: b2b64771-083b-42f9-a3d5-2218f9d8a713
 caps.latest.revision: 63
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Model-driven app timer control overview
 
@@ -32,7 +37,8 @@ manager: "kvivek"
 
 To create a timer control, in the form designer select the **Insert** tab, and then on the toolbar select **Timer**. 
 
-  ![Insert timer control](media/insert-timer-control.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Insert timer control](media/insert-timer-control.png)
 
 On the Timer Control properties page, enter or select the properties that you want, and then select **OK**. 
 

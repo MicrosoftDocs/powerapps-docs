@@ -9,6 +9,11 @@ ms.topic: conceptual
 ms.component: cds
 ms.date: 03/21/2018
 ms.author: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Add data to an entity in Common Data Service for Apps by using Power Query

@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: reference
 ms.date: 07/17/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Complex entities and licensing
@@ -49,7 +54,6 @@ The following table lists entities which contain complex server side logic out-o
 * Booking Alert
 * Booking Alert Status
 * Booking Status
-* Case
 * Characteristic
 * Competency Requirement (Deprecated)
 * Competitor

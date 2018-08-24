@@ -7,6 +7,12 @@ ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/30/2018
 ms.author: jimholtz
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Create a data loss prevention (DLP) policy

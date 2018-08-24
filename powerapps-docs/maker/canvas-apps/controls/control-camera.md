@@ -3,13 +3,16 @@ title: 'Camera control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Camera control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.reviewer: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Camera control in PowerApps
 A control with which the user can take photos by using the camera on the device.

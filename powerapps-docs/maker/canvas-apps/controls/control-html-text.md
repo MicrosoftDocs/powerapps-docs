@@ -3,14 +3,16 @@ title: 'HTML text control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the HTML text control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # HTML text control in PowerApps
 A box that shows text and converts HTML tags to formatting.

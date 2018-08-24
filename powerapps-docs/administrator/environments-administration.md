@@ -6,8 +6,14 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 07/30/2018
+ms.date: 08/15/2018
 ms.author: manasma
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Administer environments in PowerApps
@@ -174,7 +180,7 @@ Each user can provision databases in two Trial environments and two Production e
 PowerApps Plan 2.  See [PowerApps pricing page][3] for details on all the plans that include this license.
 
 ### While trying to create a new environment, I am getting an error. How should I resolve it?
-If you are getting the following error message: "Either your plan doesn’t support the environment type selected or you’ve reached the limit for that type of environment." , it can mean one of the two things
+If you are getting the following error message: "Either your plan doesn’t support the environment type selected or you’ve reached the limit for that type of environment.", it can mean one of the two things:
 
 1. You have already utilized your quota to create a specific type of environments. Say you were creating  a Trial environment and you get this error message. That means, that you have already provisioned two Trial environments. You can view all the environments in [PowerApps admin center][1].
 If you want, you can delete an existing environment of that specific type and create a new one. But, please make sure that you don't lose your data, apps, flows and other resources which you want to retain.

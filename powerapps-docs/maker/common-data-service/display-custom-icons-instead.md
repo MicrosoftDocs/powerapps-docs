@@ -17,6 +17,11 @@ ms.assetid: af866aed-2586-4b6f-bb1c-3519baae3645
 caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Display custom icons instead of values in list views
 

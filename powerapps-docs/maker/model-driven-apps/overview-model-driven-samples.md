@@ -10,7 +10,11 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 03/08/2018
 ms.author: caburk
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Model-driven sample apps

@@ -3,14 +3,16 @@ title: Rand function | Microsoft Docs
 description: Reference information, including syntax, for the Rand function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/09/2018
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Rand function in PowerApps
 Returns a pseudo-random number.

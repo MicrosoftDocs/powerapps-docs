@@ -3,14 +3,16 @@ title: Split function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Split function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta anneta
 ms.date: 08/28/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Split function in PowerApps
 Splits a text string into a table of substrings.

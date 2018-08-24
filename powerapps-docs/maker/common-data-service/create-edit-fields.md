@@ -15,6 +15,11 @@ ms.assetid: d88677fa-2caf-47b0-aec6-10a25a7ec9c3
 caps.latest.revision: 55
 ms.author: "matp"
 manager: "brycho"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # How to create and edit fields
 

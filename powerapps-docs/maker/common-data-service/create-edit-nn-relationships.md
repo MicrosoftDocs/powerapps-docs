@@ -17,6 +17,11 @@ ms.assetid: 248cecfd-c9e8-430b-b4b0-860669866084
 caps.latest.revision: 33
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Create many-to-many entity relationships overview
 

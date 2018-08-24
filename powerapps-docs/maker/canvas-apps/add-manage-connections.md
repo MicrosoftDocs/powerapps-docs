@@ -3,14 +3,16 @@ title: Add and manage connections from canvas apps | Microsoft Docs
 description: Add, delete, and update connections from canvas apps to data sources such as SharePoint, SQL Server, and OneDrive for Business
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/09/2017
 ms.author: lanced
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Manage canvas-app connections in PowerApps
 In [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), create a connection to one or more data sources, delete a connection, or update its credentials.

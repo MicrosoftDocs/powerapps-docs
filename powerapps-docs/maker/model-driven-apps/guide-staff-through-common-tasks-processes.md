@@ -17,6 +17,11 @@ caps.latest.revision: 44
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Create custom business logic with flows
 

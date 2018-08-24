@@ -17,6 +17,11 @@ ms.assetid: fecf23c9-05e6-4397-9a5d-37210bcc2816
 caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Edit filter criteria and change sort order in model-driven app views
 
@@ -28,7 +33,8 @@ Along with the columns displayed in a view, the filter criteria applied to a vie
   
 2.  The dialog shows a user interface similar to **Advanced Find**. You can use **AND** and **OR** clauses to specify and group criteria by selecting the filter claus and then selecting **Group AND** or **Group OR**.  
 
-    ![Edit filter criteria](media/edit-filter-criteria.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Edit filter criteria](media/edit-filter-criteria.png)
   
 3.  Select **OK** to save and close the **Edit Filter Criteria** dialog box.  
   

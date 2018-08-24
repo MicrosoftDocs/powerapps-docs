@@ -3,13 +3,16 @@ title: Overview of the Dynamics AX connection | Microsoft Docs
 description: See the available Dynamics AX functions, responses, and examples
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 09/13/2016
 ms.author: lanced
 ms.reviewer: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Connect from Microsoft PowerApps to Dynamics AX
 ![Dynamics AX Online](./media/connection-dynamicsax/dynamics-ax.png)

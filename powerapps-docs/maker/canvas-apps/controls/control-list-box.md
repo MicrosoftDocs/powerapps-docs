@@ -3,14 +3,16 @@ title: 'List Box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the List Box control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # List Box control in PowerApps
 A list in which the user can select one or multiple items.

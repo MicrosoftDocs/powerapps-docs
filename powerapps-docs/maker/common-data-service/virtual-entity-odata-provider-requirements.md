@@ -15,6 +15,11 @@ caps.latest.revision:
 author: "Mattp123"
 ms.author: "matp"
 manager: "brycho"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # OData v4 Data Provider configuration, requirements, and best practices

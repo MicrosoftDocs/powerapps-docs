@@ -37,6 +37,8 @@
       href: ./canvas-apps/expense-report-install.md
     - name: Help Desk app
       href: ./canvas-apps/help-desk-install.md
+    - name: Meeting Capture app
+      href: ./canvas-apps/sample-meeting-capture.md
   - name: Create your first app
     items:
     - name: 1 - Generate an app from data
@@ -210,6 +212,8 @@
           href: ./canvas-apps/working-with-formulas-in-depth.md
         - name: Show dates and times
           href: ./canvas-apps/show-text-dates-times.md
+        - name: Create a collection
+          href: ./canvas-apps/create-update-collection.md
         - name: Show the current user
           href: ./canvas-apps/show-current-user.md
         - name: Connect lists using lookups

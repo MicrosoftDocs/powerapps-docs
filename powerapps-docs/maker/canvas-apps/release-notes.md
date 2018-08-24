@@ -3,14 +3,16 @@ title: What's new | Microsoft Docs
 description: Updates to PowerApps, organized by release date
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 05/21/2018
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # What's new in PowerApps
 
@@ -90,13 +92,3 @@ For information about known limitations, see [Common issues and resolutions](com
 
 1. Add (and delete) [attachments](controls/control-attachments.md) to SharePoint lists.
 2. Open external [PDF](controls/control-pdf-viewer.md) files in a web browser. (Experimental feature)
-
-## Feb. 12
-
-* The volume control for embedded [video](controls/control-audio-video.md) and [audio](controls/control-audio-video.md) playback is now inline. To mute playback, instead of clicking or tapping a button, users must now use the volume control to lower the volume.
-
-## Feb. 7
-
-1. Removed the Zoom, Brightness, and Contrast properties from the [Camera](controls/control-camera.md) and [Barcode scanner](controls/control-barcodescanner.md) controls.
-2. Fixed the issue where Clear buttons on [Text input](controls/control-text-input.md) controls limit the space alloted for user input. As a result of this fix, the [Clear](controls/control-text-input.md#additional-properties) property of a Text input control is supported only in Microsoft Edge (latest version) and Internet Explorer 11 web browsers.
-3. Added accessibility enhancements to [multimedia](add-images-pictures-audio-video.md) controls.

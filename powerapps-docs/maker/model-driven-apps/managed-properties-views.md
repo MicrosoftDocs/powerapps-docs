@@ -17,6 +17,11 @@ ms.assetid: a9014576-8fb2-4f28-b8bb-5d2d49d76e12
 caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Model-driven app managed properties for views
 
@@ -34,11 +39,13 @@ manager: "kvivek"
   
 3.  On the menu bar, select **More Actions** > **Managed properties**.  
 
-    ![managed properties menu](media/managed-properties.png)
+    > [!div class="mx-imgBorder"] 
+    > ![managed properties menu](media/managed-properties.png)
   
 4.  Set the **Customizable** or **Can Be Deleted** options to **True** or **False**.  
 
-    ![Set managed properties](media/set-managed-properties.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Set managed properties](media/set-managed-properties.png)
   
 > [!NOTE]
 > The setting does not take effect until you export a solution that contains the view as a managed solution and install it in a different environment.  

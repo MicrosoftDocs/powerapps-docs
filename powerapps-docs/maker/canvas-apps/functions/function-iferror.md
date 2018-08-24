@@ -3,14 +3,16 @@ title: IfError function | Microsoft Docs
 description: Reference information, including syntax and examples, for the IfError function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/21/2018
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # IfError function in PowerApps
 Detects errors and provides an alternative value or takes action.
@@ -23,7 +25,7 @@ The **IfError** function tests each of its arguments in order for an error value
 
 Use **IfError** to replace error values with a valid value.  For example, if it is possible that user input may result in a division by zero, replace it with a 0 or other valid value that is appropriate for your app so that downstream calculations can proceed.
 
-Use **IfError** in [behavior formulas](../working-with-formulas-in-depth.md) to perform actions, check the results for errors, and if needed take further actions or display an error message to the user with [**ShowError**](function-showerror.md).
+Use **IfError** in [behavior formulas](../working-with-formulas-in-depth.md) to perform actions, check the results for errors, and if needed take further actions or display an error message to the user with [**Notify**](function-showerror.md).
 
 If all of the arguments to **IfError** result in an error, the value of the last argument is returned (which will be an error value). 
 
@@ -39,7 +41,7 @@ If all of the arguments to **IfError** result in an error, the value of the last
 | --- | --- | --- |
 | **IfError( 1, 2 )** |The first argument is not an error.  It is returned and subsequent arguments are not evaluated.   | 1 |
 | **IfError( 1/0, 2 )** | The first argument is returning an error value (due to division by zero).  The second argument is evaluated resulting in a non-error value which is returned. | 2 | 
-| **IfError( 1/0, ShowError( "Division by Zero" ) )** | The first argument is returning an error value (due to division by zero).  The second argument is evaluated which displays a messages to the user.  The return value of **IfError** is the return value of **ShowError**, coerced to the same type as the first argument to **IfError** (a number). | 1 |
+| **IfError( 1/0, Notify( "There was an internal problem", NotificationType.Error ) )** | The first argument is returning an error value (due to division by zero).  The second argument is evaluated which displays a messages to the user.  The return value of **IfError** is the return value of **Notify**, coerced to the same type as the first argument to **IfError** (a number). | 1 |
 | **IfError( 1/0, 1/0, 2, 1/0, 3 )** | The first argument is returning an error value (due to division by zero).  The second argument is evaluated, also resulting in an error value (another division by zero).  The third argument is evaluated, which does not return in an error value which is returned.  The fourth and fifth arguments are ignored.  | 2 |
 
 ### Step by step

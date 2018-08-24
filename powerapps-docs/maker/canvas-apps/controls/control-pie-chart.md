@@ -3,14 +3,16 @@ title: 'Pie chart control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Pie chart control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Pie chart control in PowerApps
 A control that shows relative values in comparison to each other.

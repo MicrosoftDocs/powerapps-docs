@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Create a business rule for an entity

@@ -7,7 +7,11 @@ ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
 ms.author: matp
-#Customer intent: As a system administrator, I want to create custom entities to store data, so that app creators can create apps using data that's tailored to our organization.
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Create a custom entity

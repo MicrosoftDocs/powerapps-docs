@@ -8,6 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Responding to Data Subject Rights (DSR) requests to export PowerApps customer data
@@ -287,7 +293,7 @@ Administrators can export the PowerApps notifications, user settings, and user-a
 ~~~~
 Add-PowerAppsAccount
 $userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
-Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -UserPrincipalName foobar@microsoft.com
+Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -UserPrincipalName name@microsoft.com
 ~~~~
 
 ## Step 10: Export personal data contained for a user-stored gateway or in the user’s gateway permissions
