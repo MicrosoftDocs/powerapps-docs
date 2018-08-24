@@ -19,6 +19,11 @@ ms.suite:
 ms.tgt_pltfrm: 
 caps.latest.revision: 14
 topic-status: Drafting
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Manage model-driven app properties in the app designer
