@@ -50,7 +50,7 @@ There are certain functionalities, services and portals which are available in p
 
 2. Accessing apps created in First Release environment from the Desktop Studio in Windows
 As mentioned above, desktop studio in Windows is not available in preview. Hence, creating or editing of the apps in the preview environment might not be compatible with your Desktop Studio and shows the following error message:
-![](./media/preview-environment/error2.jpg)
+![](./media/preview-environment/error2.jpg) 
 
 In such a case, we recommend you use Web Studio to create or edit an app in the preview environment.
 
