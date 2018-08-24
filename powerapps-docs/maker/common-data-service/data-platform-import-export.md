@@ -105,9 +105,11 @@ Sometimes, a primary key might not work when you integrate data from an external
 Example:  
 For an **Account** entity, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.
 
-   ![Example of creating an alternate key on a **Currency** entity](./media/data-platform-import-export/create-ak.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Example of creating an alternate key on a **Currency** entity](./media/data-platform-import-export/create-ak.png)
 
-   ![Sample export file from an **Account** entity showing **currency name** as a natural key](./media/data-platform-import-export/export-nk.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Sample export file from an **Account** entity showing **currency name** as a natural key](./media/data-platform-import-export/export-nk.png)
 
 Users can still use primary keys as identifiers after they specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data.
 
