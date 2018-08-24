@@ -99,7 +99,8 @@ SQL query filtering supports the following operators.
     |**Uri**|The URI of the resource group where the Azure Cosmos DB collection is located. The URI is formed similar to `https://contoso/documents.azure.com:443`. You can find the URI from the Azure admin portal under the **Keys** setting for the Azure Cosmos DB account. |
     |**Timeout in seconds**|Enter the number of seconds to wait for a response from the Azure Cosmos DB service before a data request time-out. For example, enter 30 to wait a maximum of thirty seconds before a time-out occurs. The default timeout is 120 seconds.|
 
-    ![Create the data source using the SQL API Data Provider.](media/cosmosdb-datasource.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Create the data source using the SQL API Data Provider.](media/cosmosdb-datasource.png)
 
 ## Best practices and limitations
 
