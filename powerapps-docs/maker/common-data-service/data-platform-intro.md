@@ -51,7 +51,8 @@ For more infomation about integrating data into the Common Data Service, see [Ad
 ## Interacting with entities
 When you develop an app, you can use standard entities, custom entities, or both. CDS for Apps provides standard entities by default. These are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization.
 
-![Screenshot showing a list of entities.](./media/data-platform-cds-intro/entitylist.png "Entity list")
+> [!div class="mx-imgBorder"] 
+> ![Screenshot showing a list of entities.](./media/data-platform-cds-intro/entitylist.png "Entity list")
 
 For a full list of entities, see the [Entity reference](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
 
