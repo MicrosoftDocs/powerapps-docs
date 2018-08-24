@@ -8,6 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Licensing overview

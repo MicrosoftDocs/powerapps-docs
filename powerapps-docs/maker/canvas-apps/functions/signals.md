@@ -3,14 +3,16 @@ title: Acceleration, App, Compass, Connection, and Location signals | Microsoft 
 description: Reference information, including syntax and examples, for the Acceleration, App, Compass, Connection, and Location sensors in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Acceleration, App, Compass, Connection, and Location signals in PowerApps
 Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.  

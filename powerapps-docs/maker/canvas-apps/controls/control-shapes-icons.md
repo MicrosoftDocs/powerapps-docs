@@ -3,14 +3,16 @@ title: 'Shape controls and icon controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about shape controls and icon controls
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Shape controls and Icon controls in PowerApps
 Graphics for which you can configure appearance and behavior properties.

@@ -3,14 +3,16 @@ title: 'Column control: reference | Microsoft Docs'
 description: This topic provides information about the Column control in Microsoft PowerApps.
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Column control in PowerApps
 Provides the display experience for a single field in a [**Data table**](control-data-table.md) control.

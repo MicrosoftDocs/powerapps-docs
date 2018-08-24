@@ -3,7 +3,6 @@ title: Blank, Coalesce, IsBlank, and IsEmpty functions | Microsoft Docs
 description: Reference information, including syntax and examples, for the Blank, Coalesce, IsBlank, and IsEmpty functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
@@ -11,7 +10,10 @@ ms.reviewer: anneta
 ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Blank, Coalesce, IsBlank, and IsEmpty functions in PowerApps
 Tests whether a value is blank or a [table](../working-with-tables.md) contains no [records](../working-with-tables.md#records), and provides a way to create *blank* values.

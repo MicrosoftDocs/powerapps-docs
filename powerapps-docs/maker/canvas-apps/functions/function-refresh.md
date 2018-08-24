@@ -3,14 +3,16 @@ title: Refresh function | Microsoft Docs
 description: Reference information, including syntax and an example, for the Refresh function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/21/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Refresh function in PowerApps
 Refreshes the [records](../working-with-tables.md#records) of a [data source](../working-with-data-sources.md).

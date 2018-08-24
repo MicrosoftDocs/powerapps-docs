@@ -3,14 +3,16 @@ title: Understand data sources for canvas apps | Microsoft Docs
 description: Reference information about working with connections and data sources for canvas apps.
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/08/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand data sources for canvas apps in PowerApps
 

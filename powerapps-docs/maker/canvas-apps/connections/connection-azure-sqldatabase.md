@@ -3,13 +3,16 @@ title: Overview of the SQL Server connection | Microsoft Docs
 description: Step-by-step instructions for how to connect to Azure SQL or an on-premises SQL Server database
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
 ms.reviewer: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Connect to SQL Server from PowerApps
 ![SQL Server icon](./media/connection-azure-sqldatabase/sqlicon.png)

@@ -13,6 +13,11 @@ ms.date: 06/07/2018
 ms.service: crm-online
 ms.topic: article
 ms.assetid: 82892cd3-3436-4677-b96b-f2ccd0a4f078
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Sub-grid properties for model-driven app main forms overview
 

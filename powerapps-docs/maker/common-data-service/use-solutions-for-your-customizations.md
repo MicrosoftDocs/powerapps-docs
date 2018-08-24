@@ -17,7 +17,12 @@ ms.assetid: f993c4ed-1fc3-4e47-bef1-d38695ddb11a
 caps.latest.revision: 57
 ms.author: "matp"
 manager: "kvivek"
---- 
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
+---
 
 # Use the Common Data Services default solution  
 

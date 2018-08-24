@@ -3,14 +3,16 @@ title: 'Date Picker control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Date Picker control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Date Picker control in PowerApps
 A control that the user can click or tap to specify a date.

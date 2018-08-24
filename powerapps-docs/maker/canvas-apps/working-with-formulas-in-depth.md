@@ -3,14 +3,16 @@ title: Understand behavior formulas in a canvas app | Microsoft Docs
 description: Reference information about working with behavior formulas, which change the state of a canvas app in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/10/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand behavior formulas for canvas apps in PowerApps
 

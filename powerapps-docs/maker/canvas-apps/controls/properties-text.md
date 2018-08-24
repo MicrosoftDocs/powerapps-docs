@@ -3,14 +3,16 @@ title: Text properties | Microsoft Docs
 description: Reference material for properties such as Text, Tooltip, and HintText
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Text properties in PowerApps
 Configure the text that appears on a control, in a tooltip, as a hint when the user types data, and specify other text-related characteristics.

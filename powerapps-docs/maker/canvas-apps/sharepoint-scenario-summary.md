@@ -3,14 +3,16 @@ title: End-to-end walkthrough of SharePoint Online integration scenario | Micros
 description: Take an end-to-end walk through the scenario we've built out in this series of tutorials.
 author: mgblythe
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 06/12/2017
 ms.author: mblythe
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Walk end-to-end through the completed SharePoint Online integration scenario
 > [!NOTE]

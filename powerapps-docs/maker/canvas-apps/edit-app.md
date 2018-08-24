@@ -3,14 +3,16 @@ title: Edit a canvas app | Microsoft Docs
 description: Step-by-step instructions for editing canvas apps and session-locking scenarios in PowerApps.
 author: karthik-1
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/19/2017
 ms.author: sharik
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Edit a canvas app in PowerApps
 Edit any canvas app that you built, that you own, or for which you have **Can edit** permissions. You can edit an app in PowerApps Studio. If you try to edit an app that's open for editing elsewhere, a message tells you whether you already have it open or another user does.

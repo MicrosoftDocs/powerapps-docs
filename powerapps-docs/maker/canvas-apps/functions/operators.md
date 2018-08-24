@@ -3,14 +3,16 @@ title: Operators | Microsoft Docs
 description: Reference information, including syntax and examples, for the operators in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/24/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Operators and data types in PowerApps
 Some of these operators are dependent on the language of the author.  See [Global apps](../global-apps.md) for more information.

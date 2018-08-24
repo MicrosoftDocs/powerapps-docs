@@ -3,14 +3,16 @@ title: Install and configure the Expense Report sample for canvas apps | Microso
 description: Step-by-step instructions for, in PowerApps, installing and configuring the Expense Report sample for canvas apps.
 author: caburk
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Install and configure the Expense Report sample for canvas apps in PowerApps
 

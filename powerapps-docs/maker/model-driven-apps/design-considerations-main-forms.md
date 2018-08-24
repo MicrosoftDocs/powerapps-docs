@@ -17,6 +17,11 @@ ms.assetid: a83872f4-9e36-413b-8561-41a1e5ffe5dd
 caps.latest.revision: 17
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Design considerations for model-driven app main forms
 

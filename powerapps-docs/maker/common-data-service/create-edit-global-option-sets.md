@@ -15,6 +15,11 @@ ms.assetid: f06b8941-8dca-4601-b965-341cfb6fc3b2
 caps.latest.revision: 11
 ms.author: "matp"
 manager: "brycho"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # Create and edit global option sets overview 
 

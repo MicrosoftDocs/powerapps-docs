@@ -17,6 +17,11 @@ ms.assetid: a9014576-8fb2-4f28-b8bb-5d2d49d76e12
 caps.latest.revision: 25
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Model-driven app managed properties for views
 

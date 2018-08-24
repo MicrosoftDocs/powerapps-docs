@@ -10,7 +10,12 @@ ms.date: 07/18/2018
 ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
-ms.assetid:  
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Run a canvas app from a SharePoint page

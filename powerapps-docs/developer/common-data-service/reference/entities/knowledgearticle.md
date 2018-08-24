@@ -1,7 +1,6 @@
 ---
 title: "KnowledgeArticle Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticle entity."
-
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -9,7 +8,6 @@ author: JimDaly
 manager: faisalmo
 editor: ''
 tags: ''
-
 ms.service: powerapps
 ms.devlang: na
 ms.topic: reference
@@ -17,6 +15,11 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/07/2018
 ms.author: jdaly
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # KnowledgeArticle Entity Reference
 

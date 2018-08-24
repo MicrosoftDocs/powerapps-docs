@@ -3,14 +3,16 @@ title: Let customers test drive your canvas app on AppSource | Microsoft Docs
 description: Use AppSource to share a canvas app with customers, and generate leads for your business.
 author: linhtranms
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/08/2017
 ms.author: litran
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Let customers test drive your canvas app on AppSource
 

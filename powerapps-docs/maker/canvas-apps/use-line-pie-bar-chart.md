@@ -3,14 +3,16 @@ title: Create a chart in a canvas app | Microsoft Docs
 description: In PowerApps, show categories of data as line charts, pie charts, or bar charts in a canvas app
 author: lonu
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Show data in a line, pie, or bar chart in PowerApps
 
