@@ -6,7 +6,7 @@ ms.date: 06/27/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
-applies_to: 
+applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
@@ -19,11 +19,6 @@ ms.suite:
 ms.tgt_pltfrm: 
 caps.latest.revision: 14
 topic-status: Drafting
-search.audienceType: 
-  - maker
-search.app: 
-  - PowerApps
-  - D365CE
 ---
 
 # Manage model-driven app properties in the app designer
@@ -31,8 +26,9 @@ search.app:
 App properties define important details about the app, like its title or URL. You define app properties when you create an app. If you want to change those properties later, you can do that in the app designer.  
   
 1.  In the app designer, on the right side, select the **Properties** tab.  
-  
-    ![App designer Properties pane](media/app-designer-properties-tab.png "App designer Properties pane")  
+
+    > [!div class="mx-imgBorder"] 
+    > ![App designer Properties pane](media/app-designer-properties-tab.png "App designer Properties pane")  
   
 2.  Change the information, as required:  
 
