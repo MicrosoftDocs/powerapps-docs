@@ -36,7 +36,7 @@ The formula is evaluated for each record of the table.
 
 The **DropColumns** function excludes columns from a table.  All other columns remain unmodified. **DropColumns** excludes columns, and **ShowColumns** includes columns.
 
-The **RenameColumns** function renames columns of a table. All other columns retain their original names.  Renaming is based on the original columns names.  New column names can include one of the original column names if the original column names has been renamed out of the way.  For example, **RenameColumns( MyTable, "A", "B", "B", "A" )** is supported. Name collisions are not allowed between renames or other columns of the table, for example **RenameColumns( MyTable, "A", "C", "B", "C" )** or **RenameColumns( MyTable, "A", "B" )** where the **B** column already exists in **MyTable** results in an error.   
+Use the **RenameColumns** function to rename columns of a table by providing argument pairs of old and new column names.  Old column names must already exist in the table while new column names must not exist. A column name may appear only once in the argument list as either an old or new column name.  To rename a column to an existing column name, first drop the existing column with **DropColumns** or rename it out of the way with a nested call to **RenameColumns**.
 
 The **ShowColumns** function includes columns of a table and drops all other columns. You can use **ShowColumns** to create a single-column table from a multi-column table.  **ShowColumns** includes columns, and **DropColumns** excludes columns.  
 
