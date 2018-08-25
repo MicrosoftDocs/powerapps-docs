@@ -73,7 +73,7 @@ The **Label** control will show **f9168c5e-ceb2-4faa-b6bf-329bf39fa1e4**.
 
 1. Set the **[OnSelect](../controls/properties-core.md)** property of a **[Button](../controls/control-button.md)** control to this formula:
 
-    **ClearCollect( NewGUIDs, ForAll( [ 1, 2, 3, 4, 5 ], GUID() ))**
+    **ClearCollect( NewGUIDs, ForAll( [ 1, 2, 3, 4, 5 ], GUID() ) )**
 
     This formula creates a single-column table that's used to iterate five times, resulting in five GUIDs.
 
