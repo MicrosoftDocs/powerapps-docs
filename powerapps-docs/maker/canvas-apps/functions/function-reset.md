@@ -3,14 +3,16 @@ title: Reset function | Microsoft Docs
 description: Reference information, including syntax and an example, for the Reset function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Reset function in PowerApps
 Resets a control to its default value, discarding any user changes.  

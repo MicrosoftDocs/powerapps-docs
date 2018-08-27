@@ -3,14 +3,16 @@ title: Find function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Find function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Find function in PowerApps
 Finds a string of text, if it exists, within another string.

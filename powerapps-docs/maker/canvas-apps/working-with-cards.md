@@ -3,14 +3,16 @@ title: Understand data cards | Microsoft Docs
 description: In PowerApps, use form cards to collect and display information from a data source.
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand data cards in PowerApps
 

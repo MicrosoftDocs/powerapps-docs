@@ -3,13 +3,16 @@ title: Overview of the Microsoft Translator connection | Microsoft Docs
 description: See how to connect to Microsoft Translator, step through some examples, and see all the functions
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: lanced
 ms.reviewer: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Connect to Microsoft Translator from PowerApps
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)

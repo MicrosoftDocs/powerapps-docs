@@ -3,14 +3,16 @@ title: 'Rich text editor control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Rich text editor control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/24/2018
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Rich text editor control (experimental) in PowerApps
 An experimental  control that allows end users to format text inside a WYSIWYG editing area.  Output format is HTML.

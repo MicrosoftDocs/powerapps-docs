@@ -3,14 +3,16 @@ title: IsNumeric function | Microsoft Docs
 description: Reference information, including syntax and examples for the IsNumeric function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/01/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # IsNumeric function in PowerApps
 Tests whether a value is numeric.

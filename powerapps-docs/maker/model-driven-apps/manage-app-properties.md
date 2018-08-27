@@ -26,8 +26,9 @@ topic-status: Drafting
 App properties define important details about the app, like its title or URL. You define app properties when you create an app. If you want to change those properties later, you can do that in the app designer.  
   
 1.  In the app designer, on the right side, select the **Properties** tab.  
-  
-    ![App designer Properties pane](media/app-designer-properties-tab.png "App designer Properties pane")  
+
+    > [!div class="mx-imgBorder"] 
+    > ![App designer Properties pane](media/app-designer-properties-tab.png "App designer Properties pane")  
   
 2.  Change the information, as required:  
 

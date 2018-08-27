@@ -16,7 +16,12 @@ caps.latest.revision: 33
 ms.author: "matp"
 manager: "kvivek"
 tags: 
- - "Links to topic not migrated"
+  - "Links to topic not migrated"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # Create and design model-driven app forms 
 

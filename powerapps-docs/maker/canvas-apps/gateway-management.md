@@ -3,14 +3,16 @@ title: Manage an on-premises data gateway for canvas apps | Microsoft Docs
 description: Manage an on-premises data gateway and its connections
 author: archnair
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/30/2016
 ms.author: archanan
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Manage an on-premises data gateway in PowerApps
 Install an on-premises data gateway to transfer data quickly and securely between a canvas app that's built in PowerApps and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. View all gateways for which you have administrative permissions, and manage permissions and connections for those gateways.

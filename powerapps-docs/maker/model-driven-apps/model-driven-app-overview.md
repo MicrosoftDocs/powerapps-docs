@@ -12,7 +12,11 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 08/09/2018
 ms.author: matp
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # What are model-driven apps in PowerApps?
 

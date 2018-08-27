@@ -3,14 +3,16 @@ title: Set up data alerts for the Power BI dashboard | Microsoft Docs
 description: In this task, we'll add an alert in Power BI to let us know if pending projects are taking too long to approve, and a flow that responds when that alert occurs.
 author: mgblythe
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 06/12/2017
 ms.author: mblythe
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Set up data alerts for the Power BI dashboard
 > [!NOTE]

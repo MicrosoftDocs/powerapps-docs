@@ -17,6 +17,11 @@ ms.assetid: 7b9e8dc2-229c-455f-ae18-49e8d879ff71
 caps.latest.revision: 63
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Show or hide model-driven app form elements
 
