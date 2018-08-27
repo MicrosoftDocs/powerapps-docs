@@ -12,22 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Write a plug-in
 
-<!-- This should be the how-to topic supporting the new tutorials
-
-• Tutorial: Write a plug-in
-• Tutorial: Debug a plug-in
-• Tutorial: Update a plug-in
-
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/write-plugin
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/register-deploy-plugins
-
-See Plug-in Tutorials written up at https://microsoft-my.sharepoint.com/:w:/p/jdaly/EZ1SzmOh-B5Bnt4C9rxGWysB6NtUQonOxq5sGSPkn5vNAA?e=wuehTb 
-
-Plug-ins and workflow activities are both 'plug-ins'
-Yet, I think workflow activities are easier to understand as 'workflow extensions' - because that is what they do... 
-
--->
-
 The process of writing, registering, and debugging a plug-in is:
 
 1. **Create a .NET Framework Class library project in Visual Studio**
@@ -46,7 +30,7 @@ The process of writing, registering, and debugging a plug-in is:
 
 Content in this topic discusses the steps **in bold** above and supports the following tutorials:
 
-- [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
@@ -349,6 +333,6 @@ This data is also available for you to browse using the [Organization Insights P
 ### See also
 
 [Write plug-ins to extend business processes](plug-ins.md)<br />
-[Tutorial: Write a plug-in](tutorial-write-plug-in.md)<br />
+[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)<br />
 [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />
 [Tutorial: Update a plug-in](tutorial-update-plug-in.md)<br />

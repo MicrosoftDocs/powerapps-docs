@@ -30,7 +30,7 @@ The process of writing, registering, and debugging a plug-in is:
 
 Content in this topic coverts the steps **in bold** above and supports the following tutorials:
 
-- [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 

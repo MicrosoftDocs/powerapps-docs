@@ -33,7 +33,7 @@ The process of writing, registering, and debugging a plug-in is:
 
 Content in this topic describes the steps **in bold** above and supports the following tutorials:
 
-- [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
@@ -43,11 +43,11 @@ You will use the Plugin Registration Tool (PRT) to register your plug-in assembl
 
 PRT is one of the tools available for download from NuGet. Follow the instructions in [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
 
-After you download the PRT, use the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) steps in the [Tutorial: Write a plug-in](tutorial-write-plug-in.md) to connect to your CDS for Apps environment.
+After you download the PRT, use the [Connect using the Plug-in Registration tool](tutorial-write-plug-in.md#connect-using-the-plug-in-registration-tool) steps in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to connect to your CDS for Apps environment.
 
 ## Register an assembly
 
-Registering an assembly is the the process of uploading the assembly to the CDS for Apps database. See the instructions found at [Register your assembly](tutorial-write-plug-in.md#register-your-assembly) in the [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+Registering an assembly is the the process of uploading the assembly to the CDS for Apps database. See the instructions found at [Register your assembly](tutorial-write-plug-in.md#register-your-assembly) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 
 > [!NOTE]
 > You will find options related to the *isolation mode* and *location* for the assembly. These refer to options that apply to on-premise deployments. CDS for Apps is not available for on-premises deployments, so you will always accept the default options of **SandBox** and **Database** for these options.
@@ -62,6 +62,8 @@ You can view information about registered assemblies in the application solution
 
 > [!NOTE]
 > Each assembly you add using PRT will be added to the system **Default Solution**, (not to be confused with the **Common Data Serices Default Solution**). To view the **Default Solution**, select **All solutions** under **Solutions** and then change the view to **All Solutions - Internal**.
+> 
+> For more information about solutions, see [Introduction to solutions](introduction-solutions.md)
 
 ![All Solutions internal](media/all-solutions-internal-view.png)
 
@@ -122,7 +124,7 @@ More information: [Use FetchXML with FetchExpression](org-service/entity-operati
 
 As described in [View registered assemblies](#view-registered-assemblies), the assembly registration you created was added to the system **Default Solution**. You should add your assembly to an unmanaged solution so you can distribute it to other organizations.
 
-Within the managed solution you are using, use solution explorer to navigate to **Plug-in Assemblies**. In the list menu, select **Add Existing**.
+Within the unmanaged solution you are using, use solution explorer to navigate to **Plug-in Assemblies**. In the list menu, select **Add Existing**.
 
 ![Add Existing plug-in assembly](media/add-existing-plug-in-assembly.png)
 
@@ -139,7 +141,7 @@ When you select the plug-in assembly you added, you can view the plug-in classes
 
 ## Register plug-in step
 
-When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> will be available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write a plug-in](tutorial-write-plug-in.md) to create a new step registration.
+When an assembly is loaded or updated, any classes that implement <xref:Microsoft.Xrm.Sdk.IPlugin> will be available in the PRT. Use the instructions in [Register a new step](tutorial-write-plug-in.md#register-a-new-step) in the [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) to create a new step registration.
 
 When you register a step, there are many options available to you which depend on the stage of the event pipeline and the nature of the operation you will register your code to respond to.
 
@@ -308,6 +310,6 @@ You can also disable steps in the solution explorer using the **Activate** and *
 ### See also
 [Write plug-ins to extend business processes](plug-ins.md)<br />
 [Write a plug-in](write-plug-in.md)<br />
-[Tutorial: Write a plug-in](tutorial-write-plug-in.md)<br />
+[Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)<br />
 [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />
 [Tutorial: Update a plug-in](tutorial-update-plug-in.md)<br />

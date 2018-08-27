@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 This tutorial is the third in a series that will show you how to work with plug-ins. 
 
-- [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - Tutorial: Update a plug-in (This tutorial)
 
@@ -46,11 +46,11 @@ The goal of this tutorial is:
 
 ## Prerequisites
 
-- Complete [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- Complete [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md) is recommended but not required.
 
 > [!NOTE]
-> Because many basic steps were described in detail in [Tutorial: Write a plug-in](tutorial-write-plug-in.md), the same level of detail is not included for the same steps in this tutorial.
+> Because many basic steps were described in detail in [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md), the same level of detail is not included for the same steps in this tutorial.
 
 ## Create a new plug-in class
 
@@ -165,7 +165,7 @@ namespace BasicPlugin
 
 ## Update the plug-in assembly registration
 
-The existing assembly from [Tutorial: Write a plug-in](tutorial-write-plug-in.md) should already be registered. To add the new **ValidateAccountName** plug-in without unregistering the existing assembly, you must update it.
+The existing assembly from [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md) should already be registered. To add the new **ValidateAccountName** plug-in without unregistering the existing assembly, you must update it.
 
 1. Select the **(Assembly) Basic Plugin** and select **Update**.
 

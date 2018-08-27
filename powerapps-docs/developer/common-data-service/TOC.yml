@@ -25,7 +25,7 @@
     href: metadata-services.md    
 - name: Tutorials
   items:
-  - name: Write a plug-in
+  - name: Write and register a plug-in
     href: tutorial-write-plug-in.md
   - name: Debug a plug-in
     href: tutorial-debug-plug-in.md

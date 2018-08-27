@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Write a plug-in (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Tutorial: Write and register a plug-in (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This tutorial is the first in a series that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
@@ -10,7 +10,7 @@ author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Tutorial: Write a plug-in
+# Tutorial: Write and register a plug-in
 
 This tutorial is the first in a series that will show you how to work with plug-ins. This tutorial is a pre-requisite for the following tutorials:
 
@@ -35,6 +35,7 @@ Create an asynchronous plug-in registered on the Create message of the account e
 
 - Administrator level access to a Common Data Service for Apps environment
 - A model-driven app that includes the account and task entities.
+    - If you don't have a model-driven app that includes these, see [Build your first model-driven app from scratch](../../maker/model-driven-apps/build-first-model-driven-app.md) for steps to make one in just a few minutes.
 - Visual Studio 2017
 - Knowledge of the Visual C# programming language
 - Download the Plug-in Registration tool.

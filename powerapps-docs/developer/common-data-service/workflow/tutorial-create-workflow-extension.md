@@ -239,6 +239,9 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
 
 You can test your new workflow activity by creating a process that will use it. Use these steps to create the Workflow process described in the [Goal](#goal) section above:
 
+1. Open [PowerApps](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+1. Switch the design mode from **Canvas** to **Model-Driven**.
+1. Select **Solutions**.
 1. Open the **Common Data Service Default Solution**.
 1. Select **Processes** in the **Components** list
 1. Select **New** and in the **Create Process** dialog enter the following:

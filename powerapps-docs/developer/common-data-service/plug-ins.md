@@ -59,7 +59,7 @@ Use the following tutorial and how-to topics to learn how to write plug-ins
 
 These topics walk you through the process of creating some simple plug-ins.
 
-- [Tutorial: Write a plug-in](tutorial-write-plug-in.md)
+- [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
 
@@ -70,34 +70,3 @@ These topics provide details that you will use to create plug-ins.
 - [Write a plug-in](write-plug-in.md)
 - [Register a plug-in](register-plug-in.md)
 - [Debug Plug-ins](debug-plug-in.md)
-
-<!-- Needs major attention
-
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/plugin-development
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/write-plugin
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/understand-data-context-passed-plugin
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/handle-exceptions-plugins
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/pass-data-between-plug-ins
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/impersonation-plugins
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/register-deploy-plugins
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/debug-plugin
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/analyze-plugin-performance
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-create-basic-plugin
-
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/plug-in-entities
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/plug-in-registration-entities
-
-Notes:
-https://microsoft-my.sharepoint.com/:w:/p/jdaly/ETkwQsIe2VtCvxAyqTPKfTIBKDrLhcEjAm4JaJPfakQ8ww?e=2pxLqD 
-
-See tutorials
-https://microsoft-my.sharepoint.com/:w:/p/jdaly/EZ1SzmOh-B5Bnt4C9rxGWysB6NtUQonOxq5sGSPkn5vNAA?e=bGWQN3
-
-This is conceptual
-write-plug-in.md is how-to.
--->
-
-
-
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-web-access-sandboxed-plugin -->
