@@ -26,7 +26,15 @@ Late-bound programming uses the <xref:Microsoft.Xrm.Sdk.Entity> class and you ne
 
 Relationships do not have a `LogicalName` property, so the <xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase>.<xref:Microsoft.Xrm.Sdk.Metadata.RelationshipMetadataBase.SchemaName> property is used.
 
-The main advantage for late-bound programming is that you don't need to generate the classes or include that generated file within your projects. The generated file can be quite large. The main disadvantage is that you don't get compile time validation of names of entities, attributes, and relationships.
+The main advantage for late-bound programming is that you don't need to generate the classes or include that generated file within your projects. The generated file can be quite large. 
+
+The main disadvantages are:
+
+- You don't get compile time validation of names of entities, attributes, and relationships.
+- You need to know the names of the attributes and relationships in the metadata. 
+
+> [!TIP]
+> A tool that you can use to find this information easily is the Metadata Browser. This is an app you can download and install in your organization. More information: [Browse the metadata for your environment](../browse-your-metadata.md)
 
 ### Example
 
