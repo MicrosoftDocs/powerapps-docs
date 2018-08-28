@@ -28,7 +28,7 @@ If you don't specify an argument, this function creates a new GUID.
 To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
 
 > [!NOTE]
-> There is currently a known bug that allows GUID values to be compared directly to strings.  Do not take a dependency on the behavior as it will be changed soon to produce an error.  To compare a string to a GUID value, first transform the string into a GUID value with the GUID function and then compare the GUID values.  If you don't do this, the GUID value will be converted to a string and the result will be dependent on the case of any alpha characters in the string.
+> There is currently a known bug that allows GUID values to be compared directly to strings.  Do not take a dependency on this behavior as it will be changed soon and will produce an error.  To compare a string to a GUID value, first transform the string into a GUID value with the GUID function and then compare the GUID values.  This normalizes both values for a clean comparison.  If you don't do this, the GUID value will be converted to a string automatically and the comparison will be dependent on the formatting of the string and the case of any alpha characters in the string.
 
 > [!NOTE]
 > There is currently no way to read or write a GUID value to a database.  Support for the Common Data Service and SQL Server will be coming soon. 
