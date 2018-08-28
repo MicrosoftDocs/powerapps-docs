@@ -156,6 +156,8 @@ Other elements include:
 ## G
 **[GroupBy](functions/function-groupby.md)** – Returns a table with records grouped together.
 
+**[GUID](functions/function-guid.md)** – Converts a GUID string to a GUID value or creates a new GUID value.
+
 ## H
 **[HashTags](functions/function-hashtags.md)** – Extracts the hashtags (#strings) from a string.
 
