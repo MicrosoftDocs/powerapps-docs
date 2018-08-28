@@ -16,16 +16,22 @@ ms.author: gregli
 Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a new GUID value.
 
 ## Description
-Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. Some database systems, such as Common Data Service for Apps and SQL Server, use GUID values as keys.
+Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as the Common Data Service for Apps and SQL Server.
 
 The string passed can contain uppercase or lowercase letters, but it must be 32 hexadecimal digits in either of these formats:
 
 - **"123e4567-e89b-12d3-a456-426655440000"** (hyphens in standard locations)
 - **"123e4567e89b12d3a456426655440000"** (no hyphens)
 
-If you don't specify an argument, this function creates a new random GUID.
+If you don't specify an argument, this function creates a new GUID.
 
-To convert a GUID value to a string, simply use it in a string context. The value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
+To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
+
+> [!NOTE]
+> There is currently a known bug that allows GUID values to be compared directly to strings.  Do not take a dependency on the behavior as it will be changed soon to produce an error.  To compare a string to a GUID value, first transform the string into a GUID value with the GUID function and then compare the GUID values.  If you don't do this, the GUID value will be converted to a string and the result will be dependent on the case of any alpha characters in the string.
+
+> [!NOTE]
+> There is currently no way to read or write a GUID value to a database.  Support for the Common Data Service and SQL Server will be coming soon. 
 
 ## Volatile functions
 **GUID** is a volatile function when used without an argument. Each time the function is evaluated, it returns a different value.  
