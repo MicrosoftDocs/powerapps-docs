@@ -39,7 +39,8 @@ To add a lookup relation to an entity, create a relation under the **Relationshi
 
 4. Click **Add relationship**, this will open a new panel for you to choose the entity you want to create a relationship to. Select the entity from the **Related entity** drop down.
 
-    ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-1.png "Many to One Relationship")
+    > [!div class="mx-imgBorder"] 
+    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-1.png "Many to One Relationship")
 
 5. After selecting an entity the Look up fields will be shown on the Primary entity, they will default with the entities name (in this example Classroom) but you can change them if needed.
 
@@ -47,7 +48,8 @@ To add a lookup relation to an entity, create a relation under the **Relationshi
 
 6. Click **Done** to add the relationship to your entity, and then click **Save entity**.
 
-    ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship")
+    > [!div class="mx-imgBorder"] 
+    > ![Many to One Relationship](./media/data-platform-cds-newrelationship/manytoone-3.png "Many to One Relationship")
 
 ## Add a One-to-many relationship
 
@@ -70,11 +72,13 @@ To add a One-to-many relationship, create a relation under the **Relationships**
     > [!NOTE]
     > In the case of a One-to-many relationships, the Look up field will be created on the related entity, not the entity you currently have selected. If you need the lookup on the current entity, please create a Many-to-one relationship.
 
-    ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-2.png "One to Many Relationship")
+    > [!div class="mx-imgBorder"] 
+    > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-2.png "One to Many Relationship")
 
 6. Click **Done** to add the relationship to your entity, and then click **Save entity**.
 
-    ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-3.png "One to Many Relationship")
+    > [!div class="mx-imgBorder"] 
+    > ![One to Many Relationship](./media/data-platform-cds-newrelationship/onetomany-3.png "One to Many Relationship")
 
 ## Add a Many-to-many relationship
 
