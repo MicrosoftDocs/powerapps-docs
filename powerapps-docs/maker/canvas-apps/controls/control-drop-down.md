@@ -3,14 +3,16 @@ title: 'Drop down control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Drop down control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Drop down control in PowerApps
 A list that shows only the first item unless the user opens it.
@@ -23,8 +25,8 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 **[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
-
+When you add a gallery, a list, or a chart, the property list shows **Items** by default so that you can easily specify the data that the new control should show. For example, you might set the **Items** property of a gallery to the **Account** table in Salesforce, a table named **Inventory** that you created in Excel and uploaded to the cloud, or a SharePoint list named **ConferenceSpeakers**.
+   
 **Selected** – The selected item.
 
 ## Additional properties
@@ -113,24 +115,33 @@ A **Drop down** control conserves screen real estate, especially when the list c
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
-1. Add a **[Button](control-button.md)** control, and set its **[Text](properties-core.md)** property to show **Collect**.
-   
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Set the **[OnSelect](properties-core.md)** property of the **[Button](control-button.md)** control to this formula:
-   <br>**ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
-   
-    Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-3. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
-4. Add a **Drop down** control, name it **Countries**, and set its **[Items](properties-core.md)** property to this formula:
-   <br>**Distinct(CityPopulations, Country)**
-5. Add a **Text gallery** control in vertical/portrait orientation, and set its **[Items](properties-core.md)** property to this formula:
-   <br>**Filter(CityPopulations, Countries.Selected.Value in Country)**
-6. In the first item of the **Text gallery** control, set the **[Text](properties-core.md)** property of the upper **[Label](control-text-box.md)** control to **ThisItem.City**, and delete the bottom **[Label](control-text-box.md)** control.
-7. Set the **[TemplateSize](control-gallery.md)** property of the **Text gallery** control to **80**.
-8. Press F5, click or tap the chevron in the **Countries** list, and then choose an option in that list.
-   
-    The **Text gallery** control shows only those cities in the country that you chose.
 
+### Simple list
+
+1. Add a **Drop down** control, and then set its **[Items](properties-core.md)** property to this expression:
+
+    ```["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]```
+
+    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
+
+1. Show the items in the list by selecting the control's down arrow while pressing the Alt key.
+
+### List from a data source
+The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Common Data Service for Apps database has been created and sample data added.
+
+1. [Open a blank app](../data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** entity](../data-platform-create-app-scratch.md#specify-an-entity).
+
+1. Add a **Drop down** control, and set its **[Items](properties-core.md)** property to this formula:
+
+    ```Distinct(Accounts, address1_city)```
+
+    This formula shows all the cities in the **Accounts** entity. If more than one record has the same city, the **[Distinct](../functions/function-distinct.md)** function hides the duplication in your drop-down control.
+
+1. (optional) Rename your **Drop down** control to **Cities**, add a vertical **Gallery** control, and set the gallery's **[Items](properties-core.md)** property to this formula:
+
+    ```Filter(Accounts, address1_city = Cities.Selected.Value)```
+
+    This **[Filter](../functions/function-filter-lookup.md)** function shows only those records in the **Accounts** entity for which the city matches the selected value in the **Cities** control.
 
 ## Accessibility guidelines
 ### Color contrast

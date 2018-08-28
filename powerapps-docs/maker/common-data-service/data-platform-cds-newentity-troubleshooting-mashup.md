@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Power Query | Microsoft Docs
-description: Resolve issues by using Power Query to create a custom entity in Common Data Service for Apps. 
+description: Resolve issues by using Power Query to create a custom entity in Common Data Service for Apps.
 author: mllopis
 manager: kfile
 ms.service: powerapps
@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/16/2018
 ms.author: millopis
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Troubleshoot Power Query

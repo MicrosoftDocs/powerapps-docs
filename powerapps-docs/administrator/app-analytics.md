@@ -2,18 +2,24 @@
 title: View analytics reports for your app | Microsoft Docs
 description: View reports to see the usage and performance of your PowerApps apps.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 08/29/2017
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # View analytics reports for your app
 Have you built an app and shared it out to your organization?  Are you curious how many of your colleagues are using it on a daily basis?
 
-Introducing the first  PowerApps analytics report that is now available from [web.powerapps.com](https://web.powerapps.com); the **App usage report**.
+Introducing the first  PowerApps analytics report that is now available from [web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc); the **App usage report**.
 
 The App usage report gives you the ability to track how many users are using your app over the past 30 days broken down by day, device platform and location.
 
@@ -25,7 +31,7 @@ All reports are available to any user with "Can edit" permission to the app, but
 ## Where do I find my app's reports?
 You can view your app's reports via the following steps:
 
-1. Go to [web.powerapps.com](https://web.powerapps.com).
+1. Go to [web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Select **Apps** from the left navigation bar
    
     ![Left navigation bar](./media/app-analytics/left-nav.png)

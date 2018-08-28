@@ -3,13 +3,16 @@ title: Tutorial - Customize a gallery in a generated app | Microsoft Docs
 description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in PowerApps.
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 05/06/2018
 ms.author: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Tutorial: Customize a gallery in PowerApps
 
@@ -34,7 +37,7 @@ You'll also add a scroll bar so that users who don't have touch screens or mouse
 
 This tutorial starts with an app that was generated from a specific data source. However, the same concepts apply to any app that you generate in PowerApps, whether from a SharePoint list, an Excel table, or some other data source.
 
-If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com) before you start.
+If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 ## Prerequisites
 
@@ -42,7 +45,7 @@ If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.
 
 ## Open the generated app
 
-1. Sign in to [PowerApps](https://web.powerapps.com), and then select **Apps** near the left edge.
+1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** near the left edge.
 
     [![PowerApps home page](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
 

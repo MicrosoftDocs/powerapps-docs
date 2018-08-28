@@ -1,19 +1,21 @@
 ---
-title: Global support | Microsoft Docs
-description: Build apps that are used worldwide.
+title: Build global support into canvas apps | Microsoft Docs
+description: Use PowerApps to build apps that are used worldwide.
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Global support
-PowerApps is a global product.  You can build and use apps in many different languages and regions.
+# Build global support into canvas apps
+PowerApps is a global product. You can build and use canvas apps in many different languages and regions.
 
 Both while building and running apps, the text displayed by PowerApps has been translated into a variety of languages.  You will see menu items, dialog boxes, ribbon tabs, and other text in your native language.  Typing in and displaying dates and numbers is also adapted for your particular language and region.  For example, some regions of the world use "." as a decimal separator while others use ",".  
 

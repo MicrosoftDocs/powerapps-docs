@@ -1,21 +1,25 @@
 ---
-title: Show a list of items | Microsoft Docs
-description: Use a gallery to show a list of items in your app, and filter the list by specifying a criterion.
+title: Show a list of items in a canvas app | Microsoft Docs
+description: Use a gallery to show a list of items in your canvas app, and filter the list by specifying a criterion.
 author: karthik-1
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 09/28/2017
 ms.author: sharik
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Show a list of items in PowerApps
-Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
+
+Show a list of items from any data source by adding a **[Gallery](controls/control-gallery.md)** control to your canvas app. This topic uses Excel as the data source. Filter the list by configuring the **Gallery** control to show only those items that match the filter criterion in a **[Text input](controls/control-text-input.md)** control.
 
 ## Prerequisites
+
 * Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 
 * Set up the sample data:

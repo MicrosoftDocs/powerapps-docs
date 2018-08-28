@@ -8,9 +8,14 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
-# Create a business rule
+# Create a business rule for an entity
 
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins.  Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. 
   
@@ -37,7 +42,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 
 ## Create a business rule
   
-1. Sign in to [PowerApps](https://web.powerapps.com), and then click or tap the down arrow for **Data** near the left edge.
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
 
 2. In the list that appears, click or tap **Entities**.
   

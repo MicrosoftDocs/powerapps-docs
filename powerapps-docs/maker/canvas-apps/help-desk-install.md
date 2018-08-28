@@ -1,28 +1,30 @@
 ---
-title: Install and configure the Help Desk PowerApps sample | Microsoft Docs
-description: Step-by-step instructions for installing and configuring the Help Desk PowerApps sample.
+title: Install and configure the Help Desk sample for canvas apps | Microsoft Docs
+description: Step-by-step instructions for, in PowerApps, installing and configuring the Help Desk sample for canvas apps.
 author: caburk
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Install and configure the Help Desk PowerApps sample
+# Install and configure the Help Desk sample in PowerApps
 
-Step-by-step instructions for installing and configuring the Help Desk PowerApps sample.
+Step-by-step instructions for, in PowerApps, installing and configuring the Help Desk sample for canvas apps.
 
 Estimated time to complete these steps: **10-15 minutes**
 
 > [!TIP]
-> If you would like to see a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
+> For a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
 
+## Overview of the sample
 
-## Help Desk PowerApps sample overview
 Help Desk provides a user-friendly experience to connect end users with support professionals. Quickly find answers to your most important questions, track progress of open tickets, and review details of previous requests. This app requires a small amount of setup to make it your own.
 
 ![Opening screen of the Help Desk PowerApp](./media/help-desk-install/Login-screen.png)
@@ -32,7 +34,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 ## Prerequisites
 
-- [Sign up](https://web.powerapps.com/) for PowerApps.
+- [Sign up](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) for PowerApps.
 - Must have a valid SharePoint Online license and permission to create lists.
 
 ## Create the HelpDesk SharePoint list
@@ -56,7 +58,7 @@ This list stores the Help Desk tickets.
 
 ### Create Description column
 
-1. Select the elipsis next to the HelpDesk list and click **Settings**.
+1. Select the ellipsis next to the HelpDesk list and click **Settings**.
 2. Click **Create column**.
 3. In the **Column name** textbox enter **Description**.
 4. In the **type of information in this column is** radio button list, select **Multiple lines of text**.
@@ -136,7 +138,7 @@ This list stores the Help Desk tickets.
 
 ## Create connections
 
-1.	In a web browser, navigate to https://web.powerapps.com.
+1.	In a web browser, navigate to [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Data** then **Connections**.
 	

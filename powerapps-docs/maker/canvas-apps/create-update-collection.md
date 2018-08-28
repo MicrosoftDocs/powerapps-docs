@@ -3,44 +3,51 @@ title: Create and update a collection | Microsoft Docs
 description: Create collections and add columns to existing collections in PowerApps
 author: lonu
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/30/2015
 ms.author: lonu
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Create and update a collection in your app
 Use a collection to store data that can be used in your app. A collection is a group of items that are similar. For example, you create a MyImages collection that stores all the product images your company sells. Within PowerApps, you can add your MyImages collection and create an app that displays all the pictures of these products. In another example, you can create a PriceList collection that lists the products and the price of each product.
 
-You can create and use collections within PowerApps. Let's get started.
-
 ### Prerequisites
-* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com) by providing the same credentials that you used to sign up.
+* [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 * Create an app or open an existing app in PowerApps.
 * Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 * These steps use the [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip) file as sample input data. The zip file includes an XML file that can be converted to Excel. Otherwise, PowerApps automatically reads the files in the .zip files and imports it successfully. You can download and use this sample data, or import your own.
 
 ## Create a single-column collection
-The following steps show you how to create a collection within your app using the Collect function, and how to add items to your collection.
+Use the **Collect** function to create a collection and add items to it.
 
-1. Open your app.
-2. On the **Insert** tab, select **Text**, and then select **Text input**:  
-   ![][1]  
-3. In the top left corner, select **Text1**, and rename the control to **Destination**:  
-   ![][2]  
-4. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **[OnSelect](controls/properties-core.md)** property is listed. Set it to the following function:  
+1. In an app, select the **Insert** tab, select **Text**, and then select **Text input**:
+
+   ![][1]
+
+1. In the top left corner, select **Text1**, and rename the control to **Destination**:
+
+   ![][2]
+
+1. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **[OnSelect](controls/properties-core.md)** property is listed. Set it to the following function:  
    
     ```Collect(Destinations, Destination!Text)```
    
-    It should look like the following:  
-    ![][3]  
-5. Select the button text, and enter **Add**:  
-   ![][5]  
-6. Select the **Add** button, and move it under your text control. You can move it anywhere:  
-   ![][6]  
+    It should look like the following:
+
+    ![][3]
+
+5. Select the button text, and enter **Add**:
+
+   ![][5]
+
+1. Select the **Add** button, and move it under your text control. You can move it anywhere:  
+   ![][6]
 
 In these steps, you used the Collect function to create a collection named **Destinations**. You also added a button control and when selected, adds new items to your collection. Now, see what you created:
 

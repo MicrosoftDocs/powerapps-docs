@@ -1,23 +1,27 @@
 ---
-title: Add a list box, a drop-down list, and radio buttons | Microsoft Docs
-description: Create or configure multiselect options in PowerApps
+title: Add a list box, a drop-down list, and radio buttons to a canvas app | Microsoft Docs
+description: In PowerApps, create or configure multiselect options in a canvas app
 author: lonu
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Add a list box, a drop-down list, or radio buttons
-PowerApps includes multi-select and single-select options, including a list box, a drop-down list, and radio buttons. In this topic, we add these controls and use a **Table** formula to build the lists. When an item is selected in the list, it updates other controls.
+# Add a list box, a drop-down list, or radio buttons to a canvas app in PowerApps
+
+PowerApps includes multi-select and single-select options for canvas apps, including a list box, a drop-down list, and radio buttons. In this topic, we add these controls and use a **Table** formula to build the lists. When an item is selected in the list, it updates other controls.
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## Add a list box
+
 1. On the **Insert** tab, select **Controls**, and then select **List box**:  
 
     ![][2]  

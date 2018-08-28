@@ -2,12 +2,18 @@
 title: Responding to DSR requests for system-generated logs in PowerApps, Microsoft Flow, and Common Data Service (CDS) for Apps  | Microsoft Docs
 description: Walkthrough of how to respond to DSR requests for system-generated logs in PowerApps, Microsoft Flow, and Common Data Service (CDS) for Apps
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Responding to DSR requests for system-generated logs in PowerApps, Microsoft Flow, and Common Data Service for Apps
@@ -98,17 +104,17 @@ To delete system-generated logs, do the following:
 
 ## Determining Tenant Type
 To determine whether or not you are a user of a managed or unmanaged tenant, perform the following actions:
-1. Open the following URL in a browser, making sure to replace your email address in the URL:[ https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1](https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1).
+1. Open the following URL in a browser, making sure to replace your email address in the URL:[ https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1](https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1).
 
 2. If you are a member of an **unmanaged tenant** then you will see an `"IsViral": true` in the response.
-   ```
+  ```
       {
       ...
-      "Login": "foobar@unmanagedcontoso.com",
+      "Login": "name@unmanagedcontoso.com",
       "DomainName": "unmanagedcontoso.com",
       "IsViral": **true**,
       ...
       }
-   ```
+  ```
 
 3. Otherwise, you belong to a managed tenant.

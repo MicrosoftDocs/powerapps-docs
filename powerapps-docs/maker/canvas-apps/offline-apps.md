@@ -1,26 +1,36 @@
 ---
-title: Develop offline-capable apps | Microsoft Docs
-description: Develop offline-capable apps so your users are productive whether they are online or offline.
+title: Develop offline-capable canvas apps | Microsoft Docs
+description: Develop offline-capable canvas apps so that your users are productive whether they are online or offline.
 author: mgblythe
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 05/09/2017
 ms.author: mblythe
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Develop offline-capable apps with PowerApps
-One of the most common scenarios you face as a mobile app developer is enabling your users to be productive when there is limited connectivity or no connectivity at all. PowerApps has a set of features and behaviors that help you to develop offline-capable apps. You can:
+# Develop offline-capable canvas apps with PowerApps
 
-* Launch the PowerApps mobile app when offline.
-* Run apps you develop when offline.
+One of the most common scenarios you face as a mobile-app developer is enabling your users to be productive when there is limited connectivity or no connectivity at all. PowerApps has a set of features and behaviors that help you to develop offline-capable canvas apps. You can:
+
+* Launch PowerApps Mobile when offline.
+* Run apps that you develop when offline.
 * Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
 * Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
+> [!NOTE]
+> This feature area is still under development and isn't optimized for every scenario today. The functions 
+to SaveData() to a local device and LoadData() from that device work best in their current implementation over relatively small quantities of data (for example, dozens of text records in a table) that generally don't exceed 2MB. This is useful for some basic “offline” scenarios, as well as to increase the startup performance of canvas apps by caching data locally. However, using this feature to save large amounts of data (for example, saving thousands of rows in a table or caching large images or videos) may cause errors or unexpected behavior with the current implementation and should be avoided. Also, the functions don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
+>
+> We are working to expand the capabilities of offline apps, to increase stability and size limits, and (in the future) to automatically handle decisions about what to save and how to handle conflicts. Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
+
 ## How to build offline capable apps
+
 The first thing to think about in offline scenarios is how your apps work with data. Apps in PowerApps primarily access data through a set of [connectors](../canvas-apps/connections-list.md) that the platform provides, such as SharePoint, Office 365, and the Common Data Service. You can also build custom connectors that enable apps to access any service that provides a RESTful endpoint. This could be a Web API or a service such as Azure Functions. All these connectors use HTTPS over the Internet, which means your users must be online for them to access data and any other capabilities that a service offers.
 
 ![PowerApps app with connectors](./media/offline-apps/online-app.png)
@@ -97,7 +107,7 @@ This formula checks if the device is online:
 
 3. Add four **Label** controls to display data from each tweet, and set the **Text** properties to:
    * **ThisItem.TweetText**
-   * **ThisItem.UserDetails.FullName & " @" & ThisItem.UserDetails.UserName**
+   * **ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName**
    * **"RT: " & ThisItem.RetweetCount**
    * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
 4. Add an **Image** control, and set the **Image** property to **ThisItem.UserDetails.ProfileImageUrl**.

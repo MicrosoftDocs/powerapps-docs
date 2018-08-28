@@ -15,6 +15,11 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/19/2018
 ms.author: jdaly
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Introduction to solutions
 
@@ -63,7 +68,7 @@ More information: [Dynamics 365 Customer Engagement Developer Guide: Maintain ma
 
 To create a  solution publisher and a solution you need to navigate to the Dynamics 365 Customization area.
 
-From [powerapps.com](https://web.powerapps.com)
+From [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
 1. Select the *Waffle* icon at the top left corner
 2. In the fly out, select **All apps**.

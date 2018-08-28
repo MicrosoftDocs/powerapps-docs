@@ -1,24 +1,29 @@
 ---
-title: Embed multimedia files into an app and upload | Microsoft Docs
-description: Show multimedia files in an app, and upload them to a data source
+title: Embed multimedia files into a canvas app and upload | Microsoft Docs
+description: Show multimedia files in a canvas app, and upload them to a data source
 author: karthik-1
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: sharik
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Using multimedia files in PowerApps
-This topic shows you how to embed multimedia files in your app, upload pen drawings to a data source, and show images from a data source in your app. The data source used in this topic is an Excel file in OneDrive for Business.
+
+This topic shows you how to embed multimedia files in your canvas app, upload pen drawings to a data source, and show images from a data source in your canvas app. The data source used in this topic is an Excel file in OneDrive for Business.
 
 ## Prerequisites
-[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com) using the same credentials that you used to sign up.
+
+[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
 ## Add media from a file or the cloud
+
 You can choose the kind of media file to add (for example, images, video, or audio).
 
 1. On the **Content** tab, select **Media**.

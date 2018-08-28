@@ -1,21 +1,25 @@
 ---
-title: Let customers test drive your apps on AppSource | Microsoft Docs
-description: Use AppSource to share apps with customers, and generate leads for your business.
+title: Let customers test drive your canvas app on AppSource | Microsoft Docs
+description: Use AppSource to share a canvas app with customers, and generate leads for your business.
 author: linhtranms
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/08/2017
 ms.author: litran
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Let customers test drive your apps on AppSource
-Are you passionate about building apps in PowerApps? Do you have an app you would like to share with customers? We now support PowerApps Test Drive solutions on [AppSource.com](https://appsource.microsoft.com) as a way for you to share apps with customers, and generate leads for your business.
+# Let customers test drive your canvas app on AppSource
+
+Are you passionate about building canvas apps in PowerApps? Do you want to share a canvas app with customers? [AppSource.com](https://appsource.microsoft.com) supports PowerApps Test Drive solutions as a way for you to share apps with customers and generate leads for your business.
 
 ## What is a Test Drive solution?
+
 A Test Drive solution enables your customers to try out a real app, without signing up for a PowerApps plan or installing any applications. Customers just sign into AppSource.com using their Azure Active Directory (AAD) account and run the app in a web browser. Without Test Drive, customers can only read about your app or watch a video that describes it. With Test Drive, customers get a better idea of what your solution is and what functionality your app has. And they have the experience of actually using the app. Customers won't be able to look under the hood to see how your app is built, so your intellectual property is protected. We collect and share lead information for users that launch your Test Drive app to help you grow your business.
 
 Here is the example of an [app listing](https://go.microsoft.com/fwlink/?linkid=848867) on AppSource.com:

@@ -3,13 +3,16 @@ title: Overview of the cloud-storage connection | Microsoft Docs
 description: See how to connect to a cloud-storage account, and display Excel data in your app
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
 ms.reviewer: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Connect to cloud-storage from PowerApps
 PowerApps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
@@ -28,7 +31,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
   4. Save your changes.
 
 ## Connect to the cloud storage connection
-1. At [powerapps.com](https://web.powerapps.com), expand **Manage**, and select **Connections**:  
+1. At [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Manage**, and select **Connections**:  
    
     ![Select Connections](./media/cloud-storage-blob-connections/connections.png)
 2. Select **New connection**, and select your cloud storage connection. For example, select **OneDrive**.

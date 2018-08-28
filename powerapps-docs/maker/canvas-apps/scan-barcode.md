@@ -1,23 +1,27 @@
 ---
-title: Scan a barcode | Microsoft Docs
+title: Scan a barcode in a canvas app | Microsoft Docs
 description: Scan a variety of barcode types, such as UPC and Codabar
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 10/23/2016
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Scan a barcode in PowerApps
-Scan several types of barcodes by creating an app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](connections-list.md).
+
+Scan several types of barcodes by creating a canvas app and running it on a device, such as a phone, that has a camera. The numerical equivalent of the barcode appears in a **Label** control, and you can upload that data to a variety of [data sources](connections-list.md).
 
 If you're unfamiliar with PowerApps, see [Get started](getting-started.md).
 
 ## Known limitations
+
 * Barcodes should be at least 1" (2.5cm) high and 1.5" (4cm) wide.
 * To scan barcodes by using a phone, hold it in portrait orientation, and slowly move it from 7" (18cm) to 10" (25cm) away from the barcode.
 * Long barcode types (such as I2of5, which can have 15 or more characters) can give truncated or otherwise incorrect results, especially if the barcode isn't printed clearly.

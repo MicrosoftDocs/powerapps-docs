@@ -1,20 +1,25 @@
 ---
-title: Create an Excel app from scratch | Microsoft Docs
+title: Create an canvas app from scratch based on Excel data | Microsoft Docs
+description: In this tutorial, you'll create a two-screen canvas app so that users can create, edit, and delete records in an Excel file.
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 04/23/2018
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Create an Excel app from scratch
-Create your own app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but experienced app makers can use it to build the best app for their needs.
+# Create an canvas app from scratch based on Excel data
+
+Create your own canvas app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but experienced app makers can use it to build the best app for their needs.
 
 ## Prerequisites
+
 To follow the steps in this tutorial exactly, first create an Excel file using this sample data.
 
 1. Copy this data, and then paste it into an Excel file.
@@ -38,7 +43,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 > You can use your own Excel file and review this tutorial for general concepts only. However, the data in the Excel file must be formatted as a table. For more information, see [Format a table in Excel](how-to-excel-tips.md).
 
 ## Open a blank app
-1. Sign in to [PowerApps](http://web.powerapps.com).
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 	![PowerApps home page](./media/get-started-create-from-blank/sign-in.png)
 

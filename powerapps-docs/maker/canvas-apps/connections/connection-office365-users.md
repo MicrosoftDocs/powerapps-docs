@@ -3,14 +3,16 @@ title: Overview of the Office 365 Users connection | Microsoft Docs
 description: See how to connect to Office 365 Users, step through some examples, and see all the functions
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/07/2016
 ms.author: lanced
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Connect to Office 365 Users connection from PowerApps
 ![Office 365 Users](./media/connection-office365-users/office365icon.png)

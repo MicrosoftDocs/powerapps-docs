@@ -3,12 +3,18 @@ title: Responding to DSR requests for Common Data Service (CDS) for Apps custome
 description: Walkthrough of how to respond to DSR requests for Common Data Service (CDS) for Apps customer data
 author: jamesol-msft
 ms.reviewer: paulliew
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data
@@ -47,7 +53,7 @@ The following actions are covered in this article:
 
 CDS for Apps and the previous version of Common Data Service (CDS) have separate processes for interacting with personal data.
 
-You can identify which type of CDS environment you have by logging into [PowerApps](https://web.powerapps.com) and following these steps:
+You can identify which type of CDS environment you have by logging into [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and following these steps:
 
 1. In the **Environment** drop-down list, select your environment.
 2. In the navigation pane, click or tap **Data**, and then click or tap **Entities**.
@@ -97,8 +103,8 @@ You can find personal data from CDS for Apps users within the following resource
 
 |Resource | Purpose | Website access | Programmatic access
 | --- | --- | --- | ---
-| Entity record | Known as the system User entity, it stores a user's personal data. | [PowerApps Admin center](https://admin.powerapps.com) | Through the [Web API](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
-| Audit history | Allows customers to identify resources that users created, accessed, changed, or deleted at an entity level. | [PowerApps Admin center](https://admin.powerapps.com) | Through the [Web API](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Entity record | Known as the system User entity, it stores a user's personal data. | [PowerApps Admin center](https://admin.powerapps.com) | Through the [Web API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Audit history | Allows customers to identify resources that users created, accessed, changed, or deleted at an entity level. | [PowerApps Admin center](https://admin.powerapps.com) | Through the [Web API](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
 
 #### User
 User personal data is stored in the Azure Active Directory and is automatically synced to all CDS for Apps environments. System administrators cannot update this personal data directly in CDS for Apps while the user is active&mdash;they must update the data from within the Office 365 Administration Center. System administrators can add personal data (for example, custom attributes) directly to CDS for Apps, but they must manually manage this data.
@@ -194,7 +200,7 @@ From the [PowerApps Admin center](https://admin.powerapps.com/), do the followin
 
 3. Go to **Settings** > **Security** > **Users**, and then select **Disabled Users View**.
 
-4. Create and download an Excel template file from the user's personal data. For step-by-step instructions, see [Create a new Excel template](https://docs.microsoft.com/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
+4. Create and download an Excel template file from the user's personal data. For step-by-step instructions, see [Create a new Excel template](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
 
 8. Open the downloaded Excel template file, remove the user's personal data, and then save the file.
 
@@ -303,12 +309,12 @@ You can find personal data from users of the previous version of CDS within the 
 
 |Resource | Purpose | Website access |	Programmatic access
 | --- | --- | --- | ---
-|Entity records	| Captures business transactions in the respective business entity. | [PowerApps](https://web.powerapps.com) |  	No
+|Entity records	| Captures business transactions in the respective business entity. | [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) |  	No
 
 #### Entity records
 An individual's personal data can be stored in any business entity.
 
-This version of the CDS contains its own database schema and infrastructure. It has its own entities, and you manage these entities in [PowerApps](http://web.powerapps.com/).
+This version of the CDS contains its own database schema and infrastructure. It has its own entities, and you manage these entities in [PowerApps](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 To see a list of your entities, do the following:
 
@@ -343,7 +349,7 @@ To rectify personal data that resides in the CDS environment, you can export the
 
 CDS System Administrators are responsible for identifying all entities that contain personal data for an individual and repeating the following steps for each of those entities.
 
-From [PowerApps](http://web.powerapps.com/), do the following:
+From [PowerApps](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), do the following:
 
 1. In the navigation pane, click or tap **Data**, and then click or tap **Entities**.
 
@@ -374,7 +380,7 @@ From [PowerApps](http://web.powerapps.com/), do the following:
 ### Export
 You can export personal data from each entity into an Excel spreadsheet and view it.
 
-From [PowerApps](http://web.powerapps.com/), do the following:
+From [PowerApps](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), do the following:
 
 1. In the navigation pane, click or tap **Data**, and then click or tap **Entities**.
 
@@ -399,7 +405,7 @@ You can delete personal data that's stored in entities by using the Export/Impor
 
 CDS System Administrators are responsible for identifying all entities that contain personal data for an individual and repeating the following steps for each of those entities.
 
-From [PowerApps](http://web.powerapps.com/), do the following:
+From [PowerApps](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), do the following:
 
 1. In the navigation pane, click or tap **Data**, and then click or tap **Entities**.
 

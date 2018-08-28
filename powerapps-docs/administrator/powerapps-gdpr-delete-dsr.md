@@ -2,12 +2,18 @@
 title: Responding to Data Subject Rights (DSR) requests to delete customer data | Microsoft Docs
 description: Walkthrough of how to respond to Data Subject Rights (DSR) requests to delete PowerApps customer data.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Responding to Data Subject Rights (DSR) requests to delete PowerApps customer data
@@ -35,7 +41,7 @@ Custom-connector permissions |
 
 For the data and resources that require manual review, PowerApps offers the following experiences to reassign (if necessary) or delete personal data for a specific user:
 
-* Website access: [PowerApps site](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Website access: [PowerApps site](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 * PowerShell access: PowerApps cmdlets for [app creators](https://go.microsoft.com/fwlink/?linkid=871448) and [administrators](https://go.microsoft.com/fwlink/?linkid=871804) and cmdlets for [on-premises gateways](https://go.microsoft.com/fwlink/?linkid=872238).
 
@@ -57,25 +63,25 @@ Custom-connector permissions | | App creator: Available <br> Admin: Available
 ## Prerequisites
 
 ### For users
-Any user with a valid PowerApps license can perform the user operations outlined in this document using the [PowerApps](https://web.powerapps.com) or [PowerShell cmdlets for app creators](https://go.microsoft.com/fwlink/?linkid=871448).
+Any user with a valid PowerApps license can perform the user operations outlined in this document using the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [PowerShell cmdlets for app creators](https://go.microsoft.com/fwlink/?linkid=871448).
 
 #### Unmanaged tenant
 If you are a member of an [unmanaged tenant](https://docs.microsoft.com/azure/active-directory/domains-admin-takeover), meaning that your Azure AD tenant does not have global administrator, then you will still be able to follow the steps outlined in this art to remove your own personal data.  However, since there is no global administrator for your tenant you will need to follow the instructions outlined in [Step 11: Delete the user from Azure Active Directory](#step-11-delete-the-user-from-azure-active-directory) below to delete your own account from the tenant.
 
 In order to determine if you are a member of an unmanaged tenant please follow these steps:
 
-1. Open the following URL in a browser, making sure to replace your email address in the URL: https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
+1. Open the following URL in a browser, making sure to replace your email address in the URL: https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1
 
 2. If you are a member of an **unmanaged tenant** then you will see an `"IsViral": true` in the response.
-   ```
-   {
-   ...
-   "Login": "foobar@unmanagedcontoso.com",
-   "DomainName": "unmanagedcontoso.com",
-   "IsViral": true,
-   ...
-   }
-   ```
+```
+{
+  ...
+  "Login": "name@unmanagedcontoso.com",
+  "DomainName": "unmanagedcontoso.com",
+  "IsViral": true,
+  ...
+}
+```
 
 3. Otherwise, you belong to a **managed tenant**.
 
@@ -205,7 +211,7 @@ Get-AdminApp -Owner $deleteDsrUserId | Set-AdminAppOwner -AppOwner $newAppOwnerU
 ```
 
 ### Delete a user’s canvas app using the PowerApps site
-A user can delete an app from the [PowerApps site](https://web.powerapps.com). For the full steps on how to delete an app, please see deleting an app.
+A user can delete an app from the [PowerApps site](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). For the full steps on how to delete an app, please see deleting an app.
 
 ### Delete a user’s canvas app using the PowerApps Admin center
 An admin can delete apps created by a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:

@@ -1,19 +1,22 @@
 ---
-title: Show, edit, or add a record from a table | Microsoft Docs
-description: Use a form to show, edit, or add a record from a table in your data source.
+title: Show, edit, or add a record from a table in a canvas app | Microsoft Docs
+description: Use a canvas-app form to show, edit, or add a record from a table in your data source.
 author: karthik-1
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/06/2017
 ms.author: sharik
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Show, edit, or add a record from a table in PowerApps
-To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control.
+
+To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control in a canvas app. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control in a canvas app.
 
 ## Prerequisites
 

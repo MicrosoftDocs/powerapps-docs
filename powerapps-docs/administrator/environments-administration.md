@@ -2,12 +2,18 @@
 title: Administer environments | Microsoft Docs
 description: Learn how to administer environments in PowerApps, including creation, renaming, deletion, and security
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 08/15/2018
 ms.author: manasma
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Administer environments in PowerApps
@@ -20,6 +26,8 @@ In the [PowerApps admin center][1], manage environments that you've created and 
 * Set Data Loss Prevention policies.
 * Set database security policies (as open or restricted by database roles).
 * Members of the Azure AD tenant Global administrator role (includes Office 365 Global admins) can also manage all environments that have been created in their tenant and set tenant-wide policies.
+
+For more information, see [Environments overview](environments-overview.md).
 
 ## Access the PowerApps admin center
 To access the PowerApps admin center:
@@ -42,7 +50,7 @@ You also need either a PowerApps Plan 2 or Microsoft Flow Plan 2 license to acce
 > Any changes that you make in PowerApps admin center affect the [Microsoft Flow admin center][4] and vice versa.
 
 ## Create an environment
-For instructions on how to create an environment, see [Quickstart: Create an environment](create-environment.md).
+For instructions on how to create an environment, see [Create an environment](create-environment.md).
 
 ## View your environments
 When you open the admin center, the Environments tab appears by default and lists all the environments for which you are an Environment Admin (as shown below):
@@ -52,10 +60,6 @@ When you open the admin center, the Environments tab appears by default and list
 If you are a member of the Global Administrator role of your Azure AD or Office 365 tenant, all the environments that have been created by users in your tenant appear, because you're automatically an Environment Admin for all of them.
 
 ## Rename your environment
-
-> [!IMPORTANT]
-> Follow the steps in this section to rename a production environment that doesn't contain a database. You can't rename trial environments, and you must use the Dynamics 365 admin center to rename any production environment that contains a database.
-
 1. Open the [PowerApps admin center][1], find the environment to be renamed in the list, and click or tap it.
 
     ![](./media/environment-admin/environment-list-updated3.png)
@@ -176,7 +180,7 @@ Each user can provision databases in two Trial environments and two Production e
 PowerApps Plan 2.  See [PowerApps pricing page][3] for details on all the plans that include this license.
 
 ### While trying to create a new environment, I am getting an error. How should I resolve it?
-If you are getting the following error message: "Either your plan doesn’t support the environment type selected or you’ve reached the limit for that type of environment." , it can mean one of the two things
+If you are getting the following error message: "Either your plan doesn’t support the environment type selected or you’ve reached the limit for that type of environment.", it can mean one of the two things:
 
 1. You have already utilized your quota to create a specific type of environments. Say you were creating  a Trial environment and you get this error message. That means, that you have already provisioned two Trial environments. You can view all the environments in [PowerApps admin center][1].
 If you want, you can delete an existing environment of that specific type and create a new one. But, please make sure that you don't lose your data, apps, flows and other resources which you want to retain.
@@ -188,10 +192,8 @@ If you are getting any other error message or have more questions, please connec
 ### While trying to create a database in an environment, I am getting an error. How should I resolve it?
 In following scenarios, you can get an error while trying to create a database:
 
-1. **Default environment**: Creating a database is currently not supported in a default environment of the tenant. 
-
-2. **Environment for an individual use**: You get an environment for your individual use, by signing-up from the PowerApps Community Plan. If you have not created the database yet, then currently you can't provision a database in the environment for individual use. 
-    
+**Default environment**: Creating a database is currently not supported in a default environment of the tenant. 
+  
 We are working on enabling all of the above scenarios.
 If you are getting any other error message or have more questions, please connect with us [here][5]
 
@@ -218,4 +220,4 @@ Yes, the ability to view the apps and flows for an environment is available from
 [2]: https://web.powerapps.com
 [3]: https://powerapps.microsoft.com/pricing/
 [4]: https://admin.flow.microsoft.com
-[5]: https://go.microsoft.com/fwlink/?linkid=871628
+[5]: https://go.microsoft.com/fwlink/p/?linkid=871628

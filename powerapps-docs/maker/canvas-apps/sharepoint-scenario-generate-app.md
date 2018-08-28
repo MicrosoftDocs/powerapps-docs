@@ -1,18 +1,20 @@
 ---
-title: Generate an app to handle project requests | Microsoft Docs
-description: In this task, we'll generate a basic *three screen app* directly from a SharePoint list.
+title: Generate a canvas app to handle project requests | Microsoft Docs
+description: In this task, we'll generate a basic canvas app with three screens directly from a SharePoint list.
 author: mgblythe
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 06/12/2017
 ms.author: mblythe
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Generate an app to handle project requests
+# Generate a canvas app to handle project requests
 > [!NOTE]
 > This article is part of a tutorial series on using PowerApps, Microsoft Flow, and Power BI with SharePoint Online. Make sure you read the [series introduction](sharepoint-scenario-intro.md) to get a sense of the big picture, as well as related downloads.
 

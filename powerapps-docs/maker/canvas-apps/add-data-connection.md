@@ -1,19 +1,22 @@
 ---
-title: Add a data connection in an app | Microsoft Docs
-description: Add a data connection in an existing app or a blank app
+title: Add a data connection in a canvas app | Microsoft Docs
+description: Add a data connection in an existing canvas app or a blank app
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/06/2018
 ms.author: lanced
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Add a data connection in PowerApps
-In PowerApps, add a data connection to an existing app or to an app that you're building from scratch. Your app can connect to SharePoint, Salesforce, OneDrive, or [many other data sources](connections-list.md).
+# Add a data connection to a canvas app in PowerApps
+
+In PowerApps, add a data connection to an existing canvas app or to an app that you're building from scratch. Your app can connect to SharePoint, Salesforce, OneDrive, or [many other data sources](connections-list.md).
 
 Your [next step](#next-steps) after this article is to display and manage data from that data source in your app, as in these examples:
 
@@ -22,7 +25,8 @@ Your [next step](#next-steps) after this article is to display and manage data f
 * Connect to SQL Server, and update a table from your app.
 
 ## Prerequisites
-[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com) by providing the same credentials that you used to sign up.
+
+[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
 ## Add a data source
 1. On the **Home** tab, hover over the **Start from blank** tile, and then select **Make this app.**

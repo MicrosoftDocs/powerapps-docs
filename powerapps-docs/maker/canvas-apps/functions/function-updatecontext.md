@@ -3,14 +3,16 @@ title: UpdateContext function | Microsoft Docs
 description: Reference information, including syntax and examples, for the UpdateContext function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/08/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # UpdateContext function in PowerApps
 Creates or updates [context variables](../working-with-variables.md#create-a-context-variable) of the current screen.

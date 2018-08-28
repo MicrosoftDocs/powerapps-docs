@@ -3,14 +3,16 @@ title: Create or edit apps in a browser | Microsoft Docs
 description: Create or edit apps in a browser by using PowerApps Studio for web.
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 03/08/2018
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Create or edit apps in PowerApps Studio for web
 Create and edit apps in PowerApps Studio for web, which opens in a browser window on Windows or other platforms.
@@ -30,7 +32,7 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 ## Known limitations
 1. **Create a connection.**
 
-    To [create a connection](add-manage-connections.md) to a data source that requires service authentication, use [powerapps.com](https://web.powerapps.com), and then [add the connection](add-data-connection.md) to an app in PowerApps Studio for web.
+    To [create a connection](add-manage-connections.md) to a data source that requires service authentication, use [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then [add the connection](add-data-connection.md) to an app in PowerApps Studio for web.
 2. **Edit and save an app locally**.
 
     For best results, use PowerApps Studio for Windows to edit and save apps locally. In a browser, you can't save changes to a local app, or you must save a new file instead of replacing the file that you opened.

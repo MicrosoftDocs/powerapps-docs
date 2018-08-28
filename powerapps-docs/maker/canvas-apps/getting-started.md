@@ -3,13 +3,16 @@ title: What are canvas apps? | Microsoft Docs
 description: Design and build canvas apps in PowerApps so that users can manage line-of-business data in a browser or on their mobile devices
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 04/26/2018
 ms.author: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # What are canvas apps in PowerApps?
 Design and build a business app from a canvas in Microsoft PowerApps without writing code in a traditional programming language such as C#. Design the app by dragging and dropping elements onto a canvas, just as you would design a slide in PowerPoint. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so that users can run it in a browser or on a mobile device, and embed your app so that users can run it in SharePoint, Power BI, or Teams.
@@ -49,5 +52,5 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 
 ## Next steps
 - [Sign up for a free license.](../signup-for-powerapps.md)
-- [Sign in to PowerApps.](https://web.powerapps.com)
+- [Sign in to PowerApps.](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 - [Open a sample app.](open-and-run-a-sample-app.md)

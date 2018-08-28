@@ -3,14 +3,16 @@ title: SaveData and LoadData functions | Microsoft Docs
 description: Reference information, including syntax, for the SaveData and LoadData functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # SaveData and LoadData functions in PowerApps
 Saves and re-loads a [collection](../working-with-data-sources.md#collections).
