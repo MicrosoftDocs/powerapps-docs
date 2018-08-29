@@ -10,13 +10,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/09/2018
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # GUID function in PowerApps
 Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a new GUID value.
 
 ## Description
-Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as the Common Data Service for Apps and SQL Server.
+Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as Common Data Service for Apps and SQL Server.
 
 The string passed can contain uppercase or lowercase letters, but it must be 32 hexadecimal digits in either of these formats:
 
@@ -28,10 +31,10 @@ If you don't specify an argument, this function creates a new GUID.
 To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
 
 > [!NOTE]
-> There is currently a known bug that allows GUID values to be compared directly to strings.  Do not take a dependency on this behavior as it will be changed soon and will produce an error.  To compare a string to a GUID value, first transform the string into a GUID value with the GUID function and then compare the GUID values.  This normalizes both values for a clean comparison.  If you don't do this, the GUID value will be converted to a string automatically and the comparison will be dependent on the formatting of the string and the case of any alpha characters in the string.
+> There is currently a known bug that allows GUID values to be compared directly to strings.  Do not take a dependency on this behavior because it will change soon and produce an error.  To compare a string to a GUID value, first transform the string into a GUID value with the GUID function and then compare the GUID values.  This normalizes both values for a clean comparison.  If you don't do this, the GUID value will be converted to a string automatically, and the comparison will depend on the formatting of the string and the case of any alpha characters in the string.
 
 > [!NOTE]
-> There is currently no way to read or write a GUID value to a database.  Support for the Common Data Service and SQL Server will be coming soon. 
+> There is currently no way to read or write a GUID value to a database.  Support for Common Data Service and SQL Server is on our roadmap. 
 
 ## Volatile functions
 **GUID** is a volatile function when used without an argument. Each time the function is evaluated, it returns a different value.  
@@ -55,7 +58,6 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **GUID*
 ## Examples
 
 #### Basic usage
-
 
 To return a GUID value based on the hexadecimal string representation:
 
