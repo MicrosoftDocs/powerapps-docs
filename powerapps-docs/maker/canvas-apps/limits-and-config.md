@@ -60,7 +60,7 @@ Calls made from an API connected through an app (for example, the SQL API or the
 You should use these addresses if, for example, you must whitelist IP addresses for an Azure SQL database.
 
 > [!IMPORTANT]
->   If you have existing configurations, please update them as soon as possible before September 1, 2018 so they include and match the IP addresses in this list for the regions where your PowerApps apps exist.
+>   If you have existing configurations, please update them as soon as possible before September 30, 2018 so they include and match the IP addresses in this list for the regions where your PowerApps apps exist.
 
 | Region | Outbound IP |
 | --- | --- |
