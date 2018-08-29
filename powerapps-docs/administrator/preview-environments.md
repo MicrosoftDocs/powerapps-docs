@@ -6,14 +6,21 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 08/23/2018
+ms.date: 08/29/2018
 ms.author: manasma
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # PowerApps Preview Program
-PowerApps updates the platform and its capabilities every few days or weeks. PowerApps Preview program is a way to get early access to those upcoming functionalities and updates, prior to, them being available in rest of the regions (where customer’s production apps are deployed).
-With this, customers using PowerApps can:
-* **Try out, learn, and dogfood upcoming functionalities**: Many functionalities will be rolled out first in the preview, for few days, to get feedback. By participating in Preview program, users can learn about new functionalities sooner, and as well provide feedback on it. Also, users will be ready to quickly take advantage of new functionalities as soon as they reach regions where their production apps are created.
+PowerApps updates the platform and its capabilities every few days or weeks. The PowerApps Preview program is a way to get early access to those upcoming functionalities and updates prior to them being available in rest of the regions (where customer production apps are deployed). 
+
+With the Preview program, customers using PowerApps can:
+* **Try out, learn, and dogfood upcoming functionalities**: Many functionalities will be rolled out first in the preview for a few days to get feedback. By participating in Preview program, users can learn about new functionalities sooner and provide feedback. Also, users will be ready to quickly take advantage of new functionalities as soon as they reach regions where their production apps are created.
 * **Enable business continuity by ensuring their current apps will continue to work** with the upcoming updates (vNext) of PowerApps.
 
 ## What all in PowerApps is available for preview?
