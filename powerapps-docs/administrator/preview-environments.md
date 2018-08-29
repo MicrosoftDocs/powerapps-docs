@@ -17,26 +17,26 @@ search.app:
 ---
 
 # PowerApps Preview Program
-PowerApps updates the platform and its capabilities every few days or weeks. The PowerApps Preview program is a way to get early access to those upcoming functionalities and updates prior to them being available in rest of the regions (where customer production apps are deployed). 
+PowerApps updates the platform and its capabilities every few days or weeks. The PowerApps Preview program is a way to get early access to those upcoming functionalities and updates prior to availability in other regions (where customer production apps are deployed). 
 
-With the Preview program, customers using PowerApps can:
-* **Try out, learn, and dogfood upcoming functionalities**: Many functionalities will be rolled out first in the preview for a few days to get feedback. By participating in Preview program, users can learn about new functionalities sooner and provide feedback. Also, users will be ready to quickly take advantage of new functionalities as soon as they reach regions where their production apps are created.
-* **Enable business continuity by ensuring their current apps will continue to work** with the upcoming updates (vNext) of PowerApps.
+With the PowerApps Preview program, you can:
+- **Try out, learn, and dogfood upcoming functionalities**: Many functionalities will be rolled out first in the preview for a few days to get feedback. By participating in the Preview program, you can learn about new functionalities sooner and provide feedback. Also, you will be ready to quickly take advantage of new functionalities as soon as they reach regions where their production apps are created.
+- **Enable business continuity by ensuring current apps will continue to work** with the upcoming updates (vNext) of PowerApps.
 
-## What all in PowerApps is available for preview?
-To access the preview functionalities across PowerApps, you need to be in context of a preview environment (More details on the preview environment are given in the next section).
-Currently we will be rolling out preview for following scenarios across PowerApps.
-1. **Creating apps**: Customers can create canvas-based apps using the next version of PowerApps. This can be done by creating apps in a preview environment. Current limitations include - Model driven apps can’t be built in preview program and we are working on it. It is in our backlog to support this scenario.
-2. **Managing apps**: You can manage and share apps using [PowerApps web portal][2]. To access the preview functionalities, all you need to do is to be in context of the preview environment, and it should take you to the preview version of [PowerApps web portal][3].
-3. **Playing apps**: You need to play the apps, in a preview environment, using web player. When you do that, you will be automatically taken to [preview version of web player][4]. (Apps will play with the vNext version of PowerApps web player). Current limitations include - PowerApps Mobile for iOS, Android, and Windows are currently not available for preview. If you play the apps created in the First Release environment, then they might not work. It is in our backlog to support this scenario with preview program.
+## What in PowerApps is available for preview?
+To access the preview functionalities across PowerApps, you need be in a preview environment. More details on the preview environment are given in the next section.
+Currently we will be rolling out preview for the following scenarios across PowerApps:
+1. **Creating apps**: You can create canvas-based apps using the next version of PowerApps. This can be done by creating apps in a preview environment. Current limitations include - model-driven apps can’t be built in the preview program - we're working on it.
+2. **Managing apps**: You can manage and share apps using [PowerApps web portal][2]. To access the preview functionalities, all you need to do is to be in a preview environment; it will take you to the preview version of [PowerApps web portal][3].
+3. **Playing apps**: You need to play the apps in a preview environment using the web player. When you do that, you will be automatically taken to [preview version of web player][4]. Apps will play with the vNext version of the PowerApps web player. Current limitations include - PowerApps Mobile for iOS, Android, and Windows are currently not available for preview. Playing the apps created in the First Release environment might not work - we're working on it.
 4. **Administrating PowerApps**: Admin experiences are available for preview using the [preview version of PowerApps admin center][1]
 
 ## How to get early access to the upcoming updates?
-For PowerApps, all the apps and related resources are stored in an environment. So, early access to all the preview functionalities are also available with an environment created in a region where the vNext (preview) bits are deployed. For now, there is only one region which is called **Preview (United States)**, as shown in the image below:
+For PowerApps, all the apps and related resources are stored in an environment. Early access to all preview functionalities are also available with an environment created in a region where the vNext (preview) is deployed. For now, there is only one region, **Preview (United States)**, as shown in the image below:
 ![](./media/preview-environment/env3-preview.png)
 
-On selecting the region for the environment as **Preview (United States)** and accepting the consent for joining the Preview Program, you can create the environment to get access to the next version (vNext) of PowerApps.
-All the apps and other resources created in this environment are on vNext version of platform (SAAS).
+Select the region for the environment as **Preview (United States)** and accept the consent for joining the Preview Program to create the environment to get access to the next version (vNext) of PowerApps.
+All the apps and other resources created in this environment are on the vNext version of the platform (SAAS).
 
 ## How to learn about the latest updates?
 You can get aware of the new functionalities which are available for preview at [What’s new in PowerApps][5]. The functionalities which are just available in the preview have a ‘Preview’ tag.
