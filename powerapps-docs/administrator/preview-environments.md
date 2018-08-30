@@ -48,21 +48,26 @@ You might like to verify your production apps, to be working fine with the next 
 We will be launching many new functionalities initially in the **Preview (United States)** region. You can try out the new functionalities prior to their being available in rest of the regions (which might impact your production environment).
 
 ## How to provide feedback to the product team?
-You can provide feedback on the [PowerApps forum][8] and as well contact [support][9].
+You can provide feedback on the [PowerApps forum][8] and/or contact [support][9].
 
 ## What are the known issues and limitations?
-1. PowerApps portals and clients which are not available in preview
-There are certain functionalities, services and portals which are available in preview:
-![](./media/preview-environment/table.png)
+1. PowerApps portals and clients which are not available in preview 
+
+   There are certain functionalities, services and portals which are available in preview:
+   
+   ![](./media/preview-environment/table.png)
 
 2. Accessing apps created in First Release environment from the Desktop Studio in Windows
-As mentioned above, desktop studio in Windows is not available in preview. Hence, creating or editing of the apps in the preview environment might not be compatible with your Desktop Studio and shows the following error message:
-![](./media/preview-environment/error2.jpg)
 
-In such a case, we recommend you use Web Studio to create or edit an app in the preview environment.
+   As mentioned above, desktop studio in Windows is not available in preview. Hence, creating or editing of the apps in the preview environment might not be compatible with your Desktop Studio and shows the following error message:
+   
+   ![](./media/preview-environment/error2.jpg)
 
-3. Database cannot be created in Preview region.
-Currently, you cannot create a database with Common Data Service for Apps in an environment in Preview (United States) region. This is in backlog.
+   In such a case, we recommend you use Web Studio to create or edit an app in the preview environment.
+
+3. Database cannot be created in Preview region
+
+   Currently, you cannot create a database with Common Data Service for Apps in an environment in Preview (United States) region. This is in backlog.
 
 
 <!--Reference links in article-->
