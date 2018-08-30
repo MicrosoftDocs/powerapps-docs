@@ -33,6 +33,7 @@ Currently we will be rolling out preview for the following scenarios across Powe
 
 ## How to get early access to the upcoming updates?
 For PowerApps, all the apps and related resources are stored in an environment. Early access to all preview functionalities are also available with an environment created in a region where the vNext (preview) is deployed. For now, there is only one region, **Preview (United States)**, as shown in the image below:
+
 ![](./media/preview-environment/env3-preview.png)
 
 Select the region for the environment as **Preview (United States)** and accept the consent for joining the Preview Program to create the environment to get access to the next version (vNext) of PowerApps.
@@ -43,21 +44,24 @@ You can get aware of the new functionalities which are available for preview at 
 
 ## Key scenarios to test with the preview program
 1. **Validate your production apps with the upcoming PowerApps updates (vNext)**
-You might like to verify your production apps, to be working fine with the next upcoming updates on PowerApps. You can [copy][6] the apps from a production environment to an environment in First Release and play the apps to test out the scenarios. Please note, all the other necessary resources like CustomAPI, Flow, etc., will also need to be moved along with it. This should just create another copy of these apps and required resources. You can start testing out the newer updates not just for playing an app, but also while editing and managing the apps.
+
+   You might like to verify your production apps, to be working fine with the next upcoming updates on PowerApps. You can [copy][6] the apps from a production environment to an environment in First Release and play the apps to test out the scenarios. Please note, all the other necessary resources like CustomAPI, Flow, etc., will also need to be moved along with it. This should just create another copy of these apps and required resources. You can start testing out the newer updates not just for playing an app, but also while editing and managing the apps.
+   
 2. **Trying out the new functionalities available in preview**
-We will be launching many new functionalities initially in the **Preview (United States)** region. You can try out the new functionalities prior to their being available in rest of the regions (which might impact your production environment).
+
+   We will be launching many new functionalities initially in the **Preview (United States)** region. You can try out the new functionalities prior to their being available in rest of the regions (which might impact your production environment).
 
 ## How to provide feedback to the product team?
 You can provide feedback on the [PowerApps forum][8] and/or contact [support][9].
 
 ## What are the known issues and limitations?
-1. PowerApps portals and clients which are not available in preview 
+1. **PowerApps portals and clients which are not available in preview** 
 
    There are certain functionalities, services and portals which are available in preview:
    
    ![](./media/preview-environment/table.png)
 
-2. Accessing apps created in First Release environment from the Desktop Studio in Windows
+2. **Accessing apps created in First Release environment from the Desktop Studio in Windows**
 
    As mentioned above, desktop studio in Windows is not available in preview. Hence, creating or editing of the apps in the preview environment might not be compatible with your Desktop Studio and shows the following error message:
    
@@ -65,7 +69,7 @@ You can provide feedback on the [PowerApps forum][8] and/or contact [support][9]
 
    In such a case, we recommend you use Web Studio to create or edit an app in the preview environment.
 
-3. Database cannot be created in Preview region
+3. **Database cannot be created in Preview region**
 
    Currently, you cannot create a database with Common Data Service for Apps in an environment in Preview (United States) region. This is in backlog.
 
