@@ -345,6 +345,8 @@
             href: ./canvas-apps/functions/function-forall.md
           - name: GroupBy
             href: ./canvas-apps/functions/function-groupby.md
+          - name: GUID
+            href: ./canvas-apps/functions/function-guid.md	    
           - name: HashTags
             href: ./canvas-apps/functions/function-hashtags.md
           - name: Hour
