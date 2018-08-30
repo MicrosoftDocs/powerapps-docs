@@ -5,7 +5,7 @@ author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
-ms.date: 03/21/2018
+ms.date: 08/29/2018
 ms.author: jimholtz
 search.audienceType: 
   - admin
