@@ -431,7 +431,9 @@
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
   - name: Community Tools
-    href: community-tools.md  
+    href: community-tools.md
+  - name: Testing tools
+    href: testing-tools-server.md
 - name: Reference
   items:
   - name: Entity reference

@@ -42,10 +42,8 @@ The attribute values or other execution context information may be different dep
 
 You may want to write a program that will automate performing the operations that will cause your plug-in to fire and include a number of possible variations.
 
-If you want to use a test automation framework, you will find that the community has created some tools for this. One example is [Fake Xrm Easy](https://dynamicsvalue.com/home)
+If you want to use a test automation framework, you will find that the community has created some tools for this. More information: [Testing tools for server-side development](testing-tools-server.md)
 
-> [!NOTE]
-> Microsoft does not provide support for tools created by the community. If you have any issues with a community tool, please contact the publisher.
 
 ## Use Tracing
 
@@ -109,58 +107,6 @@ This will download an open an XML file with the profile information. The `Contex
 
 ![example profile data](media/prt-example-profile-data.png)
 
+### More information
 
-
-<!-- 
-TODO Pri 2
-
-We documented these previously at https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/analyze-plugin-performance#run-the-plug-in-profiler-standalone
-
-This content simply elaborates on the parameters displayed with /?
-
-However, 
-1. I understand the parameters may be out of date
-2. We need to provide a use case scenario for this
-    - Why would someone do this?
-    - What are useful parameters in a scenario that doesn't use the developer toolkit?
-
-### Run Plug-in Profiler from a command window
-
-The profiler can be executed from a Command Prompt window independent of the Plug-in Registration tool. 
-
-1. Open a Command Prompt window and set the working directory to the folder where you downloaded the Plug-in registration tool.
-1. Type the command `PluginProfiler.Debugger.exe` passing in the parameters below
-
-|parameter|short-cut|description|
-|--|--|--|
-|`/nologo`||Suppresses the banner.|
-|`/url:`*&lt;url&gt;*||A url or path to the organization service endpoint to use when calling an IOrganizationService instance (not required for replay operations).|
-|`/file:`*&lt;filename&gt;*|`/f:`|The path to the debugging log file. |
-|`/assembly:`*&lt;path&gt;*|`/a:`|Path to the plug-in assembly to be executed. |
-|`/type:`*&lt;typename&gt;*|`/t:`|Plug-in type that should be instantiated with this profile.|
-|`/username:`*&lt;username&gt;*|`/u:`|Username of an administrator to use when connecting to the server.|
-|`/password:`*&lt;password&gt;*|`/p:`|Password of an administrator to use when connecting to the server. |
-|`/domain:`*&lt;domain&gt;*|`/d:`|Domain of an administrator to use when connecting to the server. |
-|`/operation:`*&lt;operation type&gt;*|`/o:`|Type of operation being executed: `Replay`, `Debug`, `Enable`, or `Remove`.|
-|`/isolation:`*&lt;mode&gt;*|`/i:`|Isolation Mode: `None` or `Sandbox`.|
-|`/id:`*&lt;id&gt;*||Id of the profiled operation or operation to be profiled.*|
-|`/name:`*&lt;name&gt;*|`/n:`|Name of the profiled operation or operation to be profiled.*|
-|`/profiledoperation:`*&lt;type&gt;*|`/po:`| Type of operation to be profiled `Plugin` or `WorkflowActivity`.*|
-|`/workflowstep:`*&lt;step name&gt;*|`/wfs:`|One or more ids for the custom activity steps in the workflow.*|
-|`/key:`*&lt;path&gt;*||File name to the key that should be used when building an instrumented assembly (Only required when enabling/disabling profiling for workflows).|
-|`/persist`||Indicates that the profile should be persisted.*|
-|`/persistkey:`*&lt;key&gt;*|`/x:`|Session key to be used when serializing the profile to an entity.*|
-|`/maxiterations:`*&lt;number&gt;*|`/max:`|Number of times the plug-in should be profiled before profiling is disabled.*|
-|`/excludesecure`||Indicates that secure information should be excluded when generating profile.*|
-|`/help`|`/?`|Show this usage message.|
-|`/connectionname:`*&lt;name&gt;*|`/connname:`|App name to use the connection profile from.|
-|`/connectionprofilename:`*&lt;name&gt;*|`/connprofile:`|Profile Name to use.|
-|`/secureconfiguration:`*&lt;config&gt;*|`/sconfig:`|Secure Configuration.|
-|`/unsecureconfiguration:`*&lt;config&gt;*|`/uconfig:`|Unsecure Configuration.|
-|`/debugprofileid:`*&lt;id&gt;*||ID of the Debugging Profile from CRM to load|
-
-*Only required when enabling/disabling profiling 
-
--->
-
-
+[Testing tools for server-side development](testing-tools-server.md)
