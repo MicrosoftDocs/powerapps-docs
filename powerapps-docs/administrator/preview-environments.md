@@ -43,12 +43,12 @@ You can get aware of the new functionalities which are available for preview at 
 
 ## Key scenarios to test with the preview program
 1. **Validate your production apps with the upcoming PowerApps updates (vNext)**
-You might like to verify your production apps, to be working fine with the next upcoming updates on PowerApps. You can [copy][6] the apps from production environment to an environment in First Release and play the apps to test out the scenarios. Please note, all the other necessary resources like CustomAPI, Flow, etc. will also need to be moved along with it. This should just create another copy of these apps and required resources, and you can start testing out the newer updates not just for playing an app, but also while editing and managing the apps.
+You might like to verify your production apps, to be working fine with the next upcoming updates on PowerApps. You can [copy][6] the apps from a production environment to an environment in First Release and play the apps to test out the scenarios. Please note, all the other necessary resources like CustomAPI, Flow, etc., will also need to be moved along with it. This should just create another copy of these apps and required resources. You can start testing out the newer updates not just for playing an app, but also while editing and managing the apps.
 2. **Trying out the new functionalities available in preview**
-We will be launching many new functionalities initially in the **Preview (United States)** region. You can try out the new functionalities prior to it being available in rest of the regions (which might impact your production environment).
+We will be launching many new functionalities initially in the **Preview (United States)** region. You can try out the new functionalities prior to their being available in rest of the regions (which might impact your production environment).
 
 ## How to provide feedback to the product team?
-You can provide feedback on the [PowerApps forum][8] and as well open contact [support][9] for it.
+You can provide feedback on the [PowerApps forum][8] and as well contact [support][9].
 
 ## What are the known issues and limitations?
 1. PowerApps portals and clients which are not available in preview
