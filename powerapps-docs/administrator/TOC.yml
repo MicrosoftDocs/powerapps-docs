@@ -50,6 +50,8 @@
       href: create-environment.md
     - name: Create a database
       href: create-database.md
+    - name: Preview environments
+      href: preview-environments.md
   - name: Configure environment security
     href: database-security.md
     items:
