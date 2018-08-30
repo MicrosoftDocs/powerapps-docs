@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Testing tools for client-side development
 
-Microsoft provides an automated UI testing framework called [Easy Repro](https://github.com/Microsoft/EasyRepro). This framework is built using the [SeleniumHQ](https://www.seleniumhq.org/) browser automation open-source project.
+Microsoft provides an automated UI testing framework specifically for model-driven apps called [Easy Repro](https://github.com/Microsoft/EasyRepro). This framework is built using the [SeleniumHQ](https://www.seleniumhq.org/) browser automation open-source project.
 
 Easy Repro provides a set of classes and methods to work with various pages in model-driven apps so you don't need to parse the HTML elements of the application when writing test cases. This makes your tests resilient to changes made in the HTML elements that compose the application pages.
 
