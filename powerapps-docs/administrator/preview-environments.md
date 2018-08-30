@@ -71,7 +71,7 @@ You can provide feedback on the [PowerApps forum][8] and/or contact [support][9]
 
 3. **Database cannot be created in Preview region**
 
-   Currently, you cannot create a database with Common Data Service for Apps in an environment in Preview (United States) region. This is in backlog.
+   Currently, you cannot create a database with Common Data Service for Apps in an environment in Preview (United States) region - we're working on it.
 
 
 <!--Reference links in article-->
