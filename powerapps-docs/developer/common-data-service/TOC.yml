@@ -93,8 +93,8 @@
         href: work-data-azure-solution.md
       - name: Work with event data in your Azure Event Hub solution
         href: work-event-data-azure-event-hub-solution.md
-    - name: Web Hooks
-      href: web-hooks.md
+    - name: Use Web Hooks
+      href: use-webhooks.md
   - name: Use FetchXML to construct a query
     href: use-fetchxml-construct-query.md
     items:
