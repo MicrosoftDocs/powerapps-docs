@@ -93,8 +93,8 @@
         href: work-data-azure-solution.md
       - name: Work with event data in your Azure Event Hub solution
         href: work-event-data-azure-event-hub-solution.md
-    - name: Web Hooks
-      href: web-hooks.md
+    - name: Use Web Hooks
+      href: use-webhooks.md
   - name: Use FetchXML to construct a query
     href: use-fetchxml-construct-query.md
     items:
@@ -286,10 +286,12 @@
       href: workflow/workflow-extensions.md
   - name: Web Hooks
     items:
-    - name: Register a web hook
-      href: register-web-hook.md
     - name: Use webhooks to create external handlers for server events
       href: use-webhooks.md
+    - name: Register a web hook
+      href: register-web-hook.md
+    - name: Test webhook registration
+      href: test-webhook-registration.md
   - name: Create Client applications
     href: connect-cds.md
     items:
@@ -431,7 +433,9 @@
     - name: Download tools from NuGet 
       href: download-tools-nuget.md
   - name: Community Tools
-    href: community-tools.md  
+    href: community-tools.md
+  - name: Testing tools
+    href: testing-tools-server.md
 - name: Reference
   items:
   - name: Entity reference

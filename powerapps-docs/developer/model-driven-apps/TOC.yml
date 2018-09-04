@@ -155,6 +155,8 @@
   items:
   - name: Developer Tools
     href: developer-tools.md
+  - name: Testing Tools
+    href: testing-tools-client.md
 - name: Reference
   items:
   - name: Client Scripting
