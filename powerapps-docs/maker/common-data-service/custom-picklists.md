@@ -74,7 +74,8 @@ Option sets can be created in two ways, either from the Option set list within t
 
 3. A new panel will open to create the Option Set, enter the **Display name** and **Name**. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
 
-    ![Option Set Create](./media/data-platform-cds-newoptionset/optionset-create.png "Option Set Create")
+    > [!div class="mx-imgBorder"] 
+    > ![Option Set Create](./media/data-platform-cds-newoptionset/optionset-create.png "Option Set Create")
 
 4. Once you've entered your items, click **Save** to create your Option set.
 
