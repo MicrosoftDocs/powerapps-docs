@@ -28,6 +28,9 @@ For information about known limitations, see [Common issues and resolutions](com
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
 
+## August 20
+* In a canvas app, use the [GUID function](functions/function-guid.md) to create a GUID value or to convert a string to a GUID value.
+
 ## July 30
 
 * Automatically [format your code](https://powerapps.microsoft.com/en-us/blog/automatically-format-your-formula/) (blog) in the formula bar for canvas apps.
