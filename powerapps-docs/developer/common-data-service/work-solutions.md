@@ -10,8 +10,8 @@ ms.custom:
 ms.topic: article
 ms.assetid: 33c9da5b-27dd-d82d-1eb1-7b3b69b6032b
 author: kabala123 # GitHub ID
-ms.author: jdaly" # MSFT alias of Microsoft employees only
-manager: ryjones" # MSFT alias of manager or PM counterpart
+ms.author: jdaly # MSFT alias of Microsoft employees only
+manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
