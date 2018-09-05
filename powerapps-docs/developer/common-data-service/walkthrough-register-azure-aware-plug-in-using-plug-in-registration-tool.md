@@ -9,7 +9,7 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: b5ef50fa-8085-f425-3968-804d012fc840
-author: kabala123 # GitHub ID - Brandon Simmons
+author: brandonsimons # GitHub ID - Brandon Simmons
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: 
