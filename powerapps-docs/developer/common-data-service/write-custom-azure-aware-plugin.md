@@ -10,8 +10,8 @@ ms.custom:
 ms.topic: article
 ms.assetid: 93d0442e-5fc9-c43c-c8c1-a433687f3d0a
 author: brandonsimons # GitHub ID
-ms.author: jdaly" # MSFT alias of Microsoft employees only
-manager: ryjones" # MSFT alias of manager or PM counterpart
+ms.author: jdaly # MSFT alias of Microsoft employees only
+manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
