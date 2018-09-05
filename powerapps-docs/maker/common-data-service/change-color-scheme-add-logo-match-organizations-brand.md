@@ -82,18 +82,21 @@ You can create a custom look and feel (a theme), for your app by making changes 
 5. Select **CRM Default Theme**. 
 
 The following screenshot shows a portion of the default theme setup.  
-  
-![Default theme](media/default-theme.png) 
+
+> [!div class="mx-imgBorder"] 
+> ![Default theme](media/default-theme.png) 
   
  We cloned the default theme and changed the colors. The following screenshots show the new colors for navigation and highlighting. You can also choose a new logo for product.  
   
  The following screenshot shows the new navigation color.  
-  
- ![Gentle green theme colors](media/theme-gentle-green.png "Gentle green theme colors")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Gentle green theme colors](media/theme-gentle-green.png "Gentle green theme colors")  
   
  The following screenshot shows the account entity grid with the new highlight color.  
-  
- ![Gentle green theme account grid](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Gentle green theme account grid](media/themes-gentle-green-account-grid.png "Gentle green theme account grid")  
   
 <a name="Publish"></a>   
 ## Preview and publish a theme  
