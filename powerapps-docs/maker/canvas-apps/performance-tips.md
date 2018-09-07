@@ -101,3 +101,12 @@ As [this list](delegation-list.md) shows, different data sources support delegat
 
 For example, SharePoint lists support delegation from the [**Filter**](../functions/function-filter.md) function but not the [**Search**](../functions/function-searchr.md) function. So you should use Filter instead of Search to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in PowerApps](https://powerapps.microsoft.com/en-us/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
 
+# Use Delayed Load
+Turn on the [experimental feature](working-with-experimental.md) for Delayed Load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and that are directly bound to the data source.  If you build this type of app and don’t enable this feature, app performance may suffer because the controls in all screens must be populated even on screens that aren’t open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
+
+# Working with large data sets
+Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, avoid hitting the data row limit of 2000 for non-delegable queries. 
+For data record columns which users can search, filter or sort data,  that indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-index-design-guide?view=sql-server-2017) and [SharePoint](https://support.office.com/en-us/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).  
+
+# Republish apps regularly
+[Republish your apps](https://powerapps.microsoft.com/en-us/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) to get performance improvements and additional features from the PowerApps platform.
