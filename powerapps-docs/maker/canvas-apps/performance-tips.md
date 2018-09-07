@@ -57,3 +57,18 @@ Without the Concurrent function, this formula loads each of four tables one at a
 	ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
 	ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
 
+You can confirm this behavior in the Developer Tools for your browser:
+
+	![Serial ClearCollect](./media/perfconcurrent1.png)
+	
+You can enclose the same formula in the Concurrent function to reduce the overall time the operation needs:
+
+	Concurrent(	
+		ClearCollect( Product, '[SalesLT].[Product]' );
+		ClearCollect( Customer, '[SalesLT].[Customer]' );
+		ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
+		ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
+		
+With this change, the tables are fetched in parallel: 
+
+	![Parellel ClearCollect](./media/perfconcurrent2.png)	
