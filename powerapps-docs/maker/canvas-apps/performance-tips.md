@@ -32,9 +32,8 @@ the app renders them by using the same process.
 additional connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources,
 memory, and network bandwidth when the app requests data from that source. 
 
-You can quickly measure your app’s performance by turning on Developer Tools in Microsoft Edge or Google Chrome while running the app.
-Your app is more likely to take longer than 15 seconds to return data if it frequently requests data from more than 30 data sources,
-such as Common Data Service for Apps, Azure SQL, SharePoint, and Excel on OneDrive.  
+You can quickly measure your app’s performance by turning on Developer Tools in [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests
+data from more than 30 data sources, such as Common Data Service for Apps, Azure SQL, SharePoint, and Excel on OneDrive.  
 
 # Limit number of controls 
 **Don’t add more than 500 controls to the same app**. PowerApps generates an HTML DOM to render each control. The more controls you add,
@@ -43,3 +42,18 @@ the more generation time PowerApps needs.
 You can, in some cases, achieve the same result and have the app starts faster if you use a gallery instead of individual controls. In
 addition, you might want to reduce the number of control types on the same screen.  Some controls (such as PDF viewer, data table and
 combo-box) pull in large execution script and take longer to render. 
+
+# Optimize OnStart function
+Use the **ClearCollect** function to cache data locally if it doesn’t change during the user session. Also, use the **Concurrent** 
+function to load data sources simultaneously.
+
+As [this reference topic](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-concurrent) demonstrates, you can
+use **Concurrent** to cut the amount of time an app needs to load data in half.
+
+Without the Concurrent function, this formula loads each of four tables one at a time:
+
+	ClearCollect( Product, '[SalesLT].[Product]' );
+	ClearCollect( Customer, '[SalesLT].[Customer]' );
+	ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
+	ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+
