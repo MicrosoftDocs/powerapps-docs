@@ -44,8 +44,7 @@ addition, you might want to reduce the number of control types on the same scree
 combo-box) pull in large execution script and take longer to render. 
 
 # Optimize OnStart function
-Use the **ClearCollect** function to cache data locally if it doesn’t change during the user session. Also, use the **Concurrent** 
-function to load data sources simultaneously.
+Use the [**ClearCollect**](../functions/function-clearcollect.md) function to cache data locally if it doesn’t change during the user session. Also, use the [**Concurrent**](../functions/function-concurrent.md) function to load data sources simultaneously.
 
 As [this reference topic](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-concurrent) demonstrates, you can
 use **Concurrent** to cut the amount of time an app needs to load data in half.
@@ -72,3 +71,33 @@ You can enclose the same formula in the Concurrent function to reduce the overal
 With this change, the tables are fetched in parallel: 
 
 	![Parellel ClearCollect](./media/perfconcurrent2.png)	
+
+# Cache lookup data
+Use the **Set** function to cache data from lookup tables locally to avoid repeatedly retrieving data from the source. This technique
+optimizes performance if the data probably won’t change during a session. As in this example, the data is retrieved from the source once
+and then referenced locally after that until the user closes the app. 
+
+	Set(CustomerOrder, Lookup(Order, id = “123-45-6789”));
+	Set(CustomerName, CustomerOrder.Name);
+	Set(CustomerAddress, CustomerOrder.Address);
+	Set(CustomerEmail, CustomerOrder.Email);
+	Set(CustomerPhone, CustomerOrder.Phone);
+
+Contact information doesn’t change frequently, and neither do default values and user information. So you can generally use this 
+technique with the **Defaults** and **User** functions also. 
+
+# Avoid controls dependency between screens
+If a control’s value depends on the value of a control on a different screen, use a variable, a collection, or a data-source reference to manage the data.
+
+# Use global variables
+To pass the app’s state from one screen to another, create or modify a global variable value by using the [**Set**](../functions/function-set.md) function instead of by using the Navigate and UpdateContext functions.
+
+# Use delegation
+Where possible, use functions that delegate data processing to the data source instead of retrieving data to the local device for processing. If an app must process data locally, the operation requires much more processing power, memory, and network bandwidth, especially if the data set is large.
+
+As [this list](delegation-list.md) shows, different data sources support delegation from different functions:
+
+	![Use delegatuin](./media/perfdelegation.png)
+
+For example, SharePoint lists support delegation from the [**Filter**](../functions/function-filter.md) function but not the [**Search**](../functions/function-searchr.md) function. So you should use Filter instead of Search to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in PowerApps](https://powerapps.microsoft.com/en-us/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
+
