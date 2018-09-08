@@ -61,13 +61,13 @@ This list of data sources and delegable functions and predicates will be updated
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Not |Yes |No |Yes |Yes |Yes |
-| IsBlank |No |No |Yes |Yes |No |
+| IsBlank |Yes |No |Yes |Yes |No |
 | TrimEnds |No |No |Yes |No |No |
 | Len |No |No |Yes |No |No |
 | +, - |No |No |Yes |No |No |
 | <, <=, =, <>, >, >= |Yes |Yes (only =) |Yes |Yes |Yes |
 | And (&&), Or (&#124;&#124;), Not (!) |Yes<sup>2</sup> |Yes (except Not(!)) |Yes |Yes |Yes |
-| in |Yes |No |Yes |No |Yes |
-| StartsWith |Yes |Yes |No |No |No |
+| in |Yes |No |Yes |Yes |Yes |
+| StartsWith |Yes |Yes |No |Yes |No |
 
 <sup>2</sup>For operators only. And/Or/Not function not delegated.
