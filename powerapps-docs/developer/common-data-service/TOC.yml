@@ -1,21 +1,46 @@
 # This TOC is a work in progress. The specific location of items is not locked down
 - name: Overview
   href: overview.md
-- name: Quick Starts
+- name: Get started
   items:
   - name: Web API quick-start sample (C#)
     href: webapi/quick-start-console-app-csharp.md
   - name: Organization service quick-start sample (C#)
     href: org-service/quick-start-org-service-console-app.md
+- name: Work with data using code
+  - name: Using Web API
+    # href: webapi/index.md
+    href: webapi/
+  - name: Using Organization Service
+    # href: org-service/overview.md
+    href: org-service/
+  - name: Audit data changes
+    href: auditing-overview.md
+    items:
+    - name: Configure entities and attributes for auditing
+      href: configure-entities-attributes-auditing.md
+    - name: Retrieve and delete the history of audited data changes
+      href: retrieve-and-delete-the-history-of-audited-data-changes.md
+    - name: Audit user access
+      href: audit-user-access.md
+    - name: Create auto-number attributes
+      href: create-auto-number-attributes.md
+  - name: Detect duplicate data
+    href: detect-duplicate-data-for-developers.md
+    items:
+    - name: Duplicate detection messages
+      href: duplicate-detection-messages.md
+    - name: Duplicate Rule entities
+      href: duplicaterule-entities.md
+  - name: Delete data in bulk
+    href: delete-data-bulk.md
+    items:
+    - name: Run bulk delete
+      href: run-bulk-delete.md
 - name: Web Services
   href: use-web-services.md
   items:
-  - name: Web API
-    # href: webapi/index.md
-    href: webapi/
-  - name: Organization Service
-    # href: org-service/overview.md
-    href: org-service/
+
   - name: Discovery Services
     href: discovery-service.md
   - name: API Limits
@@ -225,19 +250,6 @@
     href: data-synchronization.md
   - name: Data Export Service
     href: data-export-service.md
-  - name: Delete data in bulk
-    href: delete-data-bulk.md
-    items:
-    - name: Run bulk delete
-      href: run-bulk-delete.md
-  - name: Duplicate record management
-    items:
-    - name: Detect duplicate data
-      href: detect-duplicate-data-for-developers.md
-    - name: Duplicate detection messages
-      href: duplicate-detection-messages.md
-    - name: Duplicate Rule entities
-      href: duplicaterule-entities.md
   - name: Server-side synchronization
     href: server-side-synchronization-entities.md
     items:
@@ -394,16 +406,6 @@
       href: add-complex-goal-criteria.md
     - name: Roll up goal totals
       href: roll-up-goal-totals.md
-  - name: Auditing
-    items:
-    - name: Configure entities and attributes for auditing
-      href: configure-entities-attributes-auditing.md
-    - name: Retrieve and delete the history of audited data changes
-      href: retrieve-and-delete-the-history-of-audited-data-changes.md
-    - name: Audit user access
-      href: audit-user-access.md
-    - name: Create auto-number attributes
-      href: create-auto-number-attributes.md
   - name: Manage Duplicate records
     items:
     - name: Enable and Disable duplicate detection
