@@ -7,7 +7,11 @@ ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
 ms.author: matp
-#Customer intent: As a system administrator, I want to create custom entities to store data, so that app creators can create apps using data that's tailored to our organization.
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Create a custom entity
@@ -59,7 +63,8 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?u
      
     For more information, see [Manage fields in an entity](data-platform-manage-fields.md).
 
-    ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
+    > [!div class="mx-imgBorder"] 
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
 
 6. Repeat the previous step to add three more fields with the following configurations:
     * **Display name** = Product Rating; **Data type** = Whole Number; click or tap **Required** check box
@@ -76,7 +81,8 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?u
 
     The Product Review entity should appear in the list of entities in your database. If you don't see it, change the filter in the command bar from **Default** to **Custom**.
 
-    ![Filter](./media/data-platform-cds-create-entity/filter.png "Filter selection")
+    > [!div class="mx-imgBorder"] 
+    > ![Filter](./media/data-platform-cds-create-entity/filter.png "Filter selection")
 
 ## Next steps
 In this topic, you learned how to create a custom entity called Product Review that can be used to create an app that displays ratings and comments for each product sold by a particular company. Next, learn how to define relationships between entities (in this case between the standard Product entity and your custom Product Review entity) so you can associate each product with the reviews and comments it receives.

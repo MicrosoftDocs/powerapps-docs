@@ -8,6 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 08/15/2018
 ms.author: manasma
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Administer environments in PowerApps

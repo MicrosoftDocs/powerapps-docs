@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: reference
 ms.date: 05/01/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Restricted entities requiring Dynamics 365 licenses

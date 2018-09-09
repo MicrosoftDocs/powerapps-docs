@@ -3,19 +3,25 @@ title: Share resources used in your canvas app | Microsoft Docs
 description: Understand how you share resources that your canvas app uses in PowerApps
 author: archnair
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/28/2016
 ms.author: archanan
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Share canvas-app resources in PowerApps
 
 Before you [share a canvas app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
+* entities in Common Data Service for Apps
+
+    For information about giving users access to this data, see [Manage entity permissions](share-app.md#manage-entity-permissions).
+    
 * a connection to a data source
 * an on-premises data gateway
 * a custom connector

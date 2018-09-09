@@ -3,14 +3,16 @@ title: 'Text-input control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the text-input control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Text input control in PowerApps
 A box in which the user can type text, numbers, and other data.

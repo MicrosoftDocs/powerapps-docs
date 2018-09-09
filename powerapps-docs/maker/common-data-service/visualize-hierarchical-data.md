@@ -15,6 +15,11 @@ applies_to:
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Visualize hierarchical data with model-driven apps
 
@@ -29,7 +34,8 @@ The  entities that have visualizations available by default include [Account](/p
   
  If you select the hierarchy icon, you can view the hierarchy, with the tree view on the left and the tile view on the right, as shown below:  
   
- ![Account tree and tile view](media/hierachy-security-accounts-tile-view.png)  
+> [!div class="mx-imgBorder"] 
+> ![Account tree and tile view](media/hierachy-security-accounts-tile-view.png)  
   
  A few other entities can be enabled for a hierarchy. These entities include [Contact](/powerapps/developer/common-data-service/reference/entities/contact) and [Team](/powerapps/developer/common-data-service/reference/entities/team). All custom entities can be enabled for a hierarchy.  
   
@@ -76,23 +82,27 @@ Next, in the **Hierarchy Settings** grid view, we selected the `new_new_widget_n
 
 > [!IMPORTANT]
 > Each entity can have only one hierarchical relationship at a time. Changing this to a different self-referential relationship can have concequences. More information: [Define hierarchical data](../common-data-service/define-query-hierarchical-data.md#define-hierarchical-data)
-  
-![Hierarchy settings](media/hierarchy-settings.png)  
+
+> [!div class="mx-imgBorder"] 
+> ![Hierarchy settings](media/hierarchy-settings.png)  
   
 For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four fields to display in each tile.  
-  
-![Create quick form for widget](media/create-quickform.png)  
+
+> [!div class="mx-imgBorder"] 
+> ![Create quick form for widget](media/create-quickform.png)  
   
 After we completed the setup, we created two records: *Standard Widget* and *Premium Widget*. After making the Premium Widget a parent of the Standard Widget by using the lookup field, the `new_Widget` grid view depicted the hierarchy icons, as shown below:  
-  
-![Widget's hierarchy grid](media/widget-hierarchy-grid.png)  
+
+> [!div class="mx-imgBorder"] 
+> ![Widget's hierarchy grid](media/widget-hierarchy-grid.png)  
   
 > [!NOTE]
 >  The hierarchy icons don’t appear in the record grid view until the records are related using the hierarchical relationship.  
   
 Choosing the hierarchy icon displays the `new_Widget` hierarchy with the tree view on the left and the tile view on the right, showing two records. Each tile contains four fields that we provided in the **Widget Hierarchy Tile Form**.  
-  
-![Widget's tree and tiles views](media/widget-tree-tiles.png)  
+
+> [!div class="mx-imgBorder"] 
+> ![Widget's tree and tiles views](media/widget-tree-tiles.png)  
 
 Based on your needs, you can choose between using a tree view, which shows the entire hierarchy, or a tile view, which depicts a smaller portion of the hierarchy. Both views are shown side by side. You can explore a hierarchy by expanding and contracting a hierarchy tree. 
 

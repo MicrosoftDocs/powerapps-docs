@@ -3,14 +3,16 @@ title: Accessible colors in canvas apps | Microsoft Docs
 description: Color-contrast guidelines for canvas apps in PowerApps
 author: tahoon
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/23/2018
 ms.author: tahoon
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Accessible colors for canvas apps in PowerApps
 Colors used in a canvas app should be accessible to color-blind and low-vision users. All PowerApps themes are accessible by default. When modifying colors used in an app, follow these guidelines to ensure that they remain accessible. There are several tools available online which can help you identify color contrast issues.

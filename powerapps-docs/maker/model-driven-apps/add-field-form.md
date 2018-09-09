@@ -16,6 +16,11 @@ ms.assetid: 29499887-6e7b-44a1-86a7-eaad33f3075d
 caps.latest.revision: 30
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # Add a field to a model-driven app form 
 

@@ -17,16 +17,22 @@ ms.assetid: 50fb2ab0-5c1a-4a5e-8ebc-5603fecc4da0
 caps.latest.revision: 26
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Set properties for a model-driven app chart or list included in a dashboard
 
 To edit a chart or list component from the dashboard designer, select the chart or list you want and then select Edit Component on the dashboard designer toolbar.   
-
-  ![Dashboard designer chart edit component](media/dashboard-chart-select.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Dashboard designer chart edit component](media/dashboard-chart-select.png)
 
 This opens the **Set Properties** dialog box.
 
-  ![Chart set properties](media/set-properties-chart.png)  
+  > [!div class="mx-imgBorder"] 
+  > ![Chart set properties](media/set-properties-chart.png)  
  
 You can set the following chart properties from the **Set Properties** dialog box:  
   

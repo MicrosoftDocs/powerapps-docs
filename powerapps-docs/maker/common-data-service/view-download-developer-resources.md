@@ -6,7 +6,7 @@ ms.date: 06/06/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
-applies_to:
+applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
@@ -17,6 +17,11 @@ manager: kvivek
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 <!-- TODO: The Developer Resources page have to be updated to match this page -->
 

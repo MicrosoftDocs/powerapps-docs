@@ -1,5 +1,5 @@
 ---
-title:  How do I find and run apps? | Microsoft Docs
+title: How do I find and run apps? | Microsoft Docs
 description: Overview of how to find and run PowerApps apps.
 author: Mattp123
 ms.service: powerapps
@@ -10,8 +10,12 @@ ms.author: matp
 manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
-ms.assetid:  
-#Customer intent: As an employee in an organization with a PowerApps subscription, I want to know where to go to find apps that I created or that others have created and shared with me and how to run those apps so that they can help me more effectively focus on my work and complete my tasks.
+ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # How do I find and run apps?

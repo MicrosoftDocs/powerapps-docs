@@ -3,14 +3,16 @@ title: 'Display form and Edit form controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Display form and Edit form controls
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Edit form and Display form controls in PowerApps
 Display, edit, and create a record in a data source.

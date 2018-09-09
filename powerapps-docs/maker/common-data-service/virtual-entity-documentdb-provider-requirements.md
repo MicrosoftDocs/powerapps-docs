@@ -6,7 +6,7 @@ ms.date: 06/27/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
-applies_to:
+applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
@@ -19,6 +19,11 @@ ms.suite:
 ms.tgt_pltfrm: 
 caps.latest.revision: 
 topic-status: Drafting
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Preview feature: Azure Cosmos DB SQL API Data Provider requirements
@@ -94,7 +99,8 @@ SQL query filtering supports the following operators.
     |**Uri**|The URI of the resource group where the Azure Cosmos DB collection is located. The URI is formed similar to `https://contoso/documents.azure.com:443`. You can find the URI from the Azure admin portal under the **Keys** setting for the Azure Cosmos DB account. |
     |**Timeout in seconds**|Enter the number of seconds to wait for a response from the Azure Cosmos DB service before a data request time-out. For example, enter 30 to wait a maximum of thirty seconds before a time-out occurs. The default timeout is 120 seconds.|
 
-    ![Create the data source using the SQL API Data Provider.](media/cosmosdb-datasource.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Create the data source using the SQL API Data Provider.](media/cosmosdb-datasource.png)
 
 ## Best practices and limitations
 

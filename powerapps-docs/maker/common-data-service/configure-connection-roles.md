@@ -13,6 +13,11 @@ applies_to:
   - "PowerApps"
 ms.author: "matp"
 manager: "brycho"
+search.audienceType: 
+  - maker
+search.app: 
+  - "PowerApps"
+  - D365CE
 ---
 # Configure connection roles
 

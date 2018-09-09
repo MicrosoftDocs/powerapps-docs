@@ -8,6 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 07/28/2017
 ms.author: nimak
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Export and import resources

@@ -17,6 +17,11 @@ ms.assetid: 0cf62817-5ff5-40bb-ad17-e1f6b0921720
 caps.latest.revision: 42
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Query and visualize hierarchically related data
 
@@ -63,12 +68,14 @@ For some entities, such as account and user, the visualizations are provided out
 <a name="BKMK_Visualizedata"></a>   
 ## Visualize hierarchical data  
  The system entities that have visualizations available out-of-the-box include `Account`, `Position`, `Product`, and `User`. In the grid view of these entities, you can see the icon depicting the hierarchy chart, to the left of the record name. The hierarchy icon isn’t present for all records by default. The icon is shown for the records that have a parent record, a child record, or both.  
-  
- ![Active accounts](media/cust-hs-active-account.png "Active accounts")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Active accounts](media/cust-hs-active-account.png "Active accounts")  
   
  If you select the hierarchy icon, you can view the hierarchy, with the tree view on the left and the tile view on the right, as shown below:  
   
- ![Account tree and tile view](media/hierachy-security-accounts-tile-view.png "Account tree and tile view")  
+> [!div class="mx-imgBorder"] 
+> ![Account tree and tile view](media/hierachy-security-accounts-tile-view.png "Account tree and tile view")  
   
  A few other out-of the-box system entities can be enabled for a hierarchy. These entities include `Case`, `Contact`, `Opportunity`, `Order`, `Quote`, `Campaign`, and `Team`. All custom entities can be enabled for a hierarchy.  
   
@@ -93,18 +100,21 @@ For some entities, such as account and user, the visualizations are provided out
   
  For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four fields to display in each tile.  
   
- ![Create quick form for widget](media/create-quickf-orm.png "Create quick form for widget")  
+> [!div class="mx-imgBorder"] 
+> ![Create quick form for widget](media/create-quickf-orm.png "Create quick form for widget")  
   
  After we completed the setup, we created two records: Standard Widget and Premium Widget. After making the Premium Widget a parent of the Standard Widget by using the lookup field, the new_Widget grid view depicted the hierarchy icons, as shown below:  
   
- ![Widget's hierarchy grid](media/widget-hierarchy-grid.png "Widget's hierarchy grid")  
+> [!div class="mx-imgBorder"] 
+> ![Widget's hierarchy grid](media/widget-hierarchy-grid.png "Widget's hierarchy grid")  
   
 > [!TIP]
 >  The hierarchy icons don’t appear in the record grid view until the records are paired in the parent – child relationship.  
   
  Choosing the hierarchy icon displays the new_Widget hierarchy with the tree view on the left and the tile view on the right, showing two records. Each tile contains four fields that we provided in the **Widget Hierarchy Tile Form**.  
-  
- ![Widget's tree and tiles views](media/widget-tree-tiles.png "Widget's tree and tiles views")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Widget's tree and tiles views](media/widget-tree-tiles.png "Widget's tree and tiles views")  
   
 ## See also  
  [Video: Hierarchical Security Modelling](http://www.youtube.com/watch?v=kx5So32DrCo&index=10&list=PLC3591A8FE4ADBE07)   

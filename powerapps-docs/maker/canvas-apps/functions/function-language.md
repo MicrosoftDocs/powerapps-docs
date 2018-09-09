@@ -3,14 +3,16 @@ title: Language function | Microsoft Docs
 description: Reference information, including syntax and examples, for the Language function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Language function in PowerApps
 Returns the language tag of the current user.

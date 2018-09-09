@@ -17,6 +17,11 @@ caps.latest.revision: 8
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Tutorial: Use custom controls for model-driven app data visualizations
 
@@ -24,10 +29,14 @@ In this tutorial you learn how to configure a custom control for a field.
 
 Custom controls let you transform app user interface components, such as a field or view that traditionally contain text, into visualizations. Custom controls can be configured on fields, forms, dashboards, views, and grids. 
 For example, a slider control can be configured on a number field.
-   ![Custom slider control](media/slider-control.PNG "Slider control for a field")
+
+   > [!div class="mx-imgBorder"] 
+   > ![Custom slider control](media/slider-control.PNG "Slider control for a field")
 
 Or the editable grid control can be configured on a view. 
-   ![Editable grid control](media/editable-grid-example.png)
+
+   > [!div class="mx-imgBorder"] 
+   > ![Editable grid control](media/editable-grid-example.png)
 
 You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a number input custom control for a field in web browser clients and a slider custom control for the phone app. After the customization is published, users can fully interact with the control to change the value, such as by sliding the control when using the linear slider custom control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  field on a form.  
   
@@ -47,8 +56,9 @@ You can set one type of custom control to appear in the web browser client while
 4.  On the **Field Properties** page, select the **Controls** tab, and then select **Add Control**.  
   
 5.  On the Add Control page, select the control that you want, such as the **Linear Slider** control shown here, and then select **Add**.  
-  
-   ![Add linear slider control](media/add-slider.PNG "Add linear slider control")  
+
+   > [!div class="mx-imgBorder"] 
+   > ![Add linear slider control](media/add-slider.PNG "Add linear slider control")  
   
 6.  Choose the client where you want the control to appear.  
   
@@ -58,11 +68,13 @@ You can set one type of custom control to appear in the web browser client while
   
     - **Tablet**. To make the custom control available on tablet devices running Dynamics 365 for tablets, select the **Tablet** option next to the control.  
   
-   ![Choose the client apps to view the custom control](media/choose-client.png "Choose the client apps to view the custom control")  
+   > [!div class="mx-imgBorder"] 
+   > ![Choose the client apps to view the custom control](media/choose-client.png "Choose the client apps to view the custom control")  
   
 7.  Select the ![Edit custom control property icon](media/ccf-pencil-icon.png "Edit custom control property icon") pencil icon next to **Min**, **Max**, and **Step**, set the property option described below, and then select **OK**.  
   
-   ![Add custom control properties](media/ccf-add-properties.png "Add custom control properties")
+   > [!div class="mx-imgBorder"] 
+   > ![Add custom control properties](media/ccf-add-properties.png "Add custom control properties")
   
    - **Min**. Set the minimum accepted value. You can bind a static value that you enter or bind the value to an existing field. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
   
@@ -79,7 +91,8 @@ You can set one type of custom control to appear in the web browser client while
        > [!NOTE]
        >  The default control is identified with **(default)** following the control name.  
        >   
-       > ![Default control](media/default-control.png "Default control")  
+       > > [!div class="mx-imgBorder"] 
+       > > ![Default control](media/default-control.png "Default control")  
   
 8.  Select **OK**, to close the **Field Properties** page.  
   
@@ -90,7 +103,8 @@ You can set one type of custom control to appear in the web browser client while
 ### See the custom control in action  
  Open a record that includes the field with the custom control, such as the opportunity form from the previous example, and view how the field is changed.  
   
-   ![Slider control rendered on form](media/slider-control.PNG "Slider control rendered on form")  
+   > [!div class="mx-imgBorder"] 
+   > ![Slider control rendered on form](media/slider-control.PNG "Slider control rendered on form")  
   
  The field is now rendered as a slider control instead of the text field. 
 

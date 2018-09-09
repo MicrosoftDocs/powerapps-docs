@@ -3,14 +3,16 @@ title: Show items of different heights in a gallery | Microsoft Docs
 description: Add and configure a flexible height gallery to automatically fit the amount of content in each item of the gallery
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/01/2017
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Show items of different heights in a PowerApps gallery
 If different items in your data set contain different amounts of data in the same field, you can completely show items that contain more data without adding empty space after items that contain less data. Add and configure a **Flexible height** gallery control so that you can:

@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/01/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # License requirements for entities

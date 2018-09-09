@@ -3,14 +3,16 @@ title: Round, RoundDown, and RoundUp functions | Microsoft Docs
 description: Reference information, including syntax, for the Round, RoundDown, and RoundUp functions in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Round, RoundDown, and RoundUp functions in PowerApps
 Rounds a number.

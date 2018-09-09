@@ -3,14 +3,16 @@ title: 'Gallery control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Gallery control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/25/2017
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Gallery control in PowerApps
 A control that contains other controls and shows a set of data.

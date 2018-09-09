@@ -17,6 +17,11 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "powerapps"
 ms.assetid: d1446a95-14bf-4b15-a905-72fce07f4c76
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Configure model-driven app interactive experience dashboards
@@ -50,8 +55,9 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
   
 ### Multi-stream dashboard layouts  
  For multi-stream dashboards, you can choose from four different layouts.  
-  
- ![Multi-stream dashboard layouts](../model-driven-apps/media/interactive-dashboards-multi-stream-layout.png "Multi-stream dashboard layouts")  
+
+ > [!div class="mx-imgBorder"] 
+ > ![Multi-stream dashboard layouts](../model-driven-apps/media/interactive-dashboards-multi-stream-layout.png "Multi-stream dashboard layouts")  
   
 ### Multi-stream entity-specific dashboard  
  The entity-specific dashboard for the `Case` entity is shown here.  
@@ -65,8 +71,9 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
   
 ### Single-stream dashboard layouts  
  For single-stream dashboards, you can choose from four different layouts.  
-  
- ![Single-stream dashboard layouts.](../model-driven-apps/media/interactive-dashboards-single-stream-layout.png "Single-stream dashboard layouts.")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Single-stream dashboard layouts.](../model-driven-apps/media/interactive-dashboards-single-stream-layout.png "Single-stream dashboard layouts.")  
   
 <a name="BKMK_Enable"></a>   
 ## Configure entities, fields, and security roles for the interactive dashboards  
@@ -77,8 +84,9 @@ Interactive experience dashboards can be a one-stop workplace for app users, suc
   
 ### Configure fields  
  For a field to appear in the global filter and be included in the data stream sort, you have to set two flags, as shown in the example below for the **IsEscalated** field of the Case entity.  
-  
- ![Enable a field for global filter and sort](../model-driven-apps/media/global-filter-sort-8.png "Enable a field for global filter and sort")  
+
+ > [!div class="mx-imgBorder"] 
+ > ![Enable a field for global filter and sort](../model-driven-apps/media/global-filter-sort-8.png "Enable a field for global filter and sort")  
   
 ### Configure global filter fields  
  For a field to appear in the global filter, you have to set the **Appears in global filter in interactive experience** flag for this field. The fields that you configure will appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the fields on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter entity. For more information about the filter entity see the “Configure multi-stream interactive dashboard” section later in this topic.  
@@ -160,8 +168,9 @@ The following procedure provides the steps to enable the security roles for the 
 5.  Choose the layout, either 2, 3, or 4 column width.  
   
 6.  When the dashboard form opens, fill in the filtering information at the top of form, as shown here.  
-  
- ![Add visual filters](../model-driven-apps/media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Add visual filters](../model-driven-apps/media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
   
    - **Filter Entity**: The visual filters (interactive charts) and global filter attributes are based on this entity.  
       
@@ -175,14 +184,16 @@ The following procedure provides the steps to enable the security roles for the 
   
  Add the **Cases By Priority** doughnut chart.
   
- ![Add a doughnut chart component.](../model-driven-apps/media/interactive-dashboards-add-chart-circle.png "Add a doughnut chart component.")  
+ > [!div class="mx-imgBorder"] 
+ > ![Add a doughnut chart component.](../model-driven-apps/media/interactive-dashboards-add-chart-circle.png "Add a doughnut chart component.")  
   
  Some charts, such as bar charts or pie charts, render showing the data stored in the system. The doughnut charts and tag charts load as static images and don’t show the preview of the actual data.  
   
 > [!NOTE]
 >  The charts configured for the visual filters can use the fields of the **Filter** entity as well as related entities. When you use charts based on related entity fields, the customer service representatives can filter charts using these related entity fields. The fields that are based on the related entity usually have the following format in the chart configuration window: “field name (entity name)”, such as the **Modified By (Delegate)** field. To create multi-entity charts, you must add  fields of a related entity to any of the views, and then use these fields while creating charts.  
-  
- ![Creating charts for visual filters](../model-driven-apps/media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Creating charts for visual filters](../model-driven-apps/media/interactive-dashboard-visual-charts-x-y-axes.PNG "Creating charts for visual filters")  
   
  Next, configure the streams. Just like with adding components in the charts, select the element inside the stream panel. When the dialog appears, select **View** or **Queue** depending on what element you want the stream to use. Enter the required information, as shown in the following illustrations.  
   
@@ -194,12 +205,14 @@ The following procedure provides the steps to enable the security roles for the 
  ![Add a stream of my active cases.](../model-driven-apps/media/interactive-dashboards-add-stream-case.png "Add a stream of my active cases.")  
   
  The following illustration is an example of the chart panel, left to right: doughnut chart, tag chart, and bar chart:  
-  
- ![All interactive charts](../model-driven-apps/media/interactive-dashboards-add-all-charts.png "All interactive charts")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![All interactive charts](../model-driven-apps/media/interactive-dashboards-add-all-charts.png "All interactive charts")  
   
  This illustration is an example of the stream panel with several streams:  
-  
- ![Add all streams](../model-driven-apps/media/interactive-dashboards-add-all-streams.png "Add all streams")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Add all streams](../model-driven-apps/media/interactive-dashboards-add-all-streams.png "Add all streams")  
   
  After you have completed configuring the dashboard, save it and publish the customizations for your changes to take effect. Also, make sure to select **Prepare Client Customizations**.  
   
@@ -266,8 +279,9 @@ The following procedure provides the steps to enable the security roles for the 
 7.  Select **Publish** for your changes to take effect.  
   
 In the following example, we’re changing the color for the **IsEscalated** field. Use the **Edit** button to open the **Modify List Value** dialog box:  
-  
- ![Change color in the dashboard](../model-driven-apps/media/interactive-dashboards-change-color-edit-button.PNG "Change color in the dashboard")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Change color in the dashboard](../model-driven-apps/media/interactive-dashboards-change-color-edit-button.PNG "Change color in the dashboard")  
   
 When the **Modify List Value** dialog box opens, choose the color as shown here:  
   

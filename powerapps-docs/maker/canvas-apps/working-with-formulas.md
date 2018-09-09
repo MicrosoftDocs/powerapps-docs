@@ -3,14 +3,16 @@ title: Get started with formulas in a canvas app | Microsoft Docs
 description: In PowerApps, use formulas to customize a canvas app.
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Get started with canvas-app formulas in PowerApps
 

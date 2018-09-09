@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Manage custom fields in an entity
@@ -30,13 +35,15 @@ You can create and update one or more custom fields in any entity. When you crea
     > [!NOTE]
     > The **Display name** fields can be updated at anytime to display differently in your apps, the **Name** field cannot be changed after your entity has been saved as this could result in breaking an existing app.
 
-    ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
+    > [!div class="mx-imgBorder"] 
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
 
 5. Select the **Data type** of your field, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [Entity attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
 
     If you're prompted, specify additional information for the data type that you specified. Depending on the data type, different fields will be presented. If you're creating a field of type Option set or Multi Select Option Set, you can select **New Option Set** and create a new Option Set while creating your field. For more information, see [Create Option set](custom-picklists.md)
 
-    ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
+    > [!div class="mx-imgBorder"] 
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
 
 
 7. Under **Required**, select the check box if you want to recommended this field as required in your apps. This does not provide hard enforcement through all connections to the Common Data Service. If you need to ensure the field is populated, create a [Business Rule](data-platform-create-business-rule.md)

@@ -3,14 +3,16 @@ title: Understand preview and experimental features | Microsoft Docs
 description: Test and start to adopt new features.
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/16/2018
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand experimental and preview features in PowerApps
 

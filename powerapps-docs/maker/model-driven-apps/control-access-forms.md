@@ -18,6 +18,11 @@ caps.latest.revision: 33
 ms.author: "matp"
 manager: "kvivek"
 tags: 
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Control access to model-driven app forms
 

@@ -3,14 +3,16 @@ title: Understand on-premises data gateways for canvas apps | Microsoft Docs
 description: Reference information about on-premises data gateways including installation in PowerApps and troubleshooting
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 10/20/2017
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand on-premises data gateways for canvas apps
 ## Installation and configuration
@@ -22,7 +24,6 @@ Minimum:
 * 64-bit version of Windows 7 or Windows Server 2008 R2 (or later)
 
 Recommended:
-
 * 8 Core CPU
 * 8 GB Memory
 * 64-bit version of Windows 2012 R2 (or later)
@@ -46,7 +47,7 @@ Related considerations:
 
 4. In the **User Account Control** dialog boxes, click or tap **Yes** to continue.
 
-5. On the next screen of the wizard, click or tap **Sign in**.
+5. On the next screen of the wizard, click or tap **Sign in**, and then provide the same credentials that you use to sign in to PowerApps.
 
     ![Sign in](./media/gateway-reference/sign-in.png)
 

@@ -17,6 +17,11 @@ ms.assetid: 4c379202-9f0e-4003-a49c-efff53e7f79f
 caps.latest.revision: 63
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Change navigation within a model-driven app form
 
@@ -28,11 +33,13 @@ manager: "kvivek"
   
  To enable editing navigation you must first select **Navigation** from the **Select** group on the **Home** tab of the form designer.  
  
- ![Navigation command](media/navigation-command.png)
+> [!div class="mx-imgBorder"] 
+> ![Navigation command](media/navigation-command.png)
  
  In the right pane, from **Relationship Explorer** you can filter by 1:N (one-to-many) or N:N (many-to-many) relationships, or view all available relationships. The **Only show unused relationships checkbox** is disabled and selected. So you can only add each relationship one time.  
-  
- ![Relationship explorer](media/relationship-explorer.png)
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Relationship explorer](media/relationship-explorer.png)
 
  To add a relationship from the **Relationship Explorer** just double-click the relationship and it will be added below the currently selected relationship in the navigation area. Double-click a relationship in the navigation area and you can change the label on the **Display** tab. On the **Name** tab you can see information about the relationship. Use the **Edit** button to open the definition of the entity.  
   

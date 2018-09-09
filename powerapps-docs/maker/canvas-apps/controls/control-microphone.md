@@ -3,14 +3,16 @@ title: 'Microphone control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Microphone control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Microphone control in PowerApps
 A control that allows app users to record sounds from their device.

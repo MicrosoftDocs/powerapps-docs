@@ -3,14 +3,16 @@ title: System requirements, limits, and configuration values for canvas apps | M
 description: System requirements, limits, and configuration values for canvas apps built in PowerApps
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 03/07/2018
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # System requirements, limits, and configuration values for canvas apps
 This topic contains device platform and web browser requirements, as well as limits and configuration values for PowerApps.
@@ -60,7 +62,7 @@ Calls made from an API connected through an app (for example, the SQL API or the
 You should use these addresses if, for example, you must whitelist IP addresses for an Azure SQL database.
 
 > [!IMPORTANT]
->   If you have existing configurations, please update them as soon as possible before September 1, 2018 so they include and match the IP addresses in this list for the regions where your PowerApps apps exist.
+>   If you have existing configurations, please update them as soon as possible before September 30, 2018 so they include and match the IP addresses in this list for the regions where your PowerApps apps exist.
 
 | Region | Outbound IP |
 | --- | --- |

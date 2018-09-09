@@ -11,6 +11,11 @@ manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Run an app in a web browser

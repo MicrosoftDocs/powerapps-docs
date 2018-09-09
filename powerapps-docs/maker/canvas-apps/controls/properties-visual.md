@@ -3,14 +3,16 @@ title: Visual properties | Microsoft Docs
 description: Reference information about properties such as Image, ImagePosition, and BackgroundImage
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Image properties in PowerApps
 Configure graphical elements in your app, including images, photos, and elements of a pen control.

@@ -3,14 +3,16 @@ title: 'Export control and Import control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Export control and the Import control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Export control and Import control in PowerApps
 Controls for exporting data to a local file and then importing that data into another app in PowerApps.

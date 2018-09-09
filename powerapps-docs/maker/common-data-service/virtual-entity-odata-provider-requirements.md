@@ -14,7 +14,12 @@ ms.assetid:
 caps.latest.revision: 
 author: "Mattp123"
 ms.author: "matp"
-manager: "brycho"
+manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # OData v4 Data Provider configuration, requirements, and best practices
@@ -75,7 +80,8 @@ This procedure shows you how to use the out-of-box OData Data Provider to use as
     - **Pagination mode**. Select whether to use client-side or server-side paging to control how query results are paged. The default value is client-side paging. With server-side paging, the server controls how results are paged by using the $skiptoken parameter, which is added to the query string. More information:  [Skip Token System Query Option ($skiptoken)](https://msdn.microsoft.com/library/dd942121.aspx)  
         -  **Return inline count**. Returns the total number records in the result set. This setting is used to enable next page functionality when you return data to a grid. Use a value of false if your OData endpoint doesn't support the OData $inclinecount parameter. The default value is false.
     - **Request Parameters**. Optionally, you can add custom header or query string parameters used to connect to the OData web service, such as authentication parameters to the external service. Click **Query String** to toggle between header and query string parameter and value. Up to 10 header or query strings can be added. 
-        ![Virtual entity data source record](media/virtual-entity-data-source.png) 
+        > [!div class="mx-imgBorder"] 
+        > ![Virtual entity data source record](media/virtual-entity-data-source.png) 
 
 
 ## See also  

@@ -3,14 +3,16 @@ title: Delegable data sources in canvas apps | Microsoft Docs
 description: List of all supported delegable data sources in canvas apps
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/15/2017
 ms.author: lanced
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Delegable data sources in canvas apps
 As the [Understand delegation](delegation-overview.md) article outlines in detail, delegation is where PowerApps will delegate the processing of data to the data source rather than moving data to the canvas app for processing locally.

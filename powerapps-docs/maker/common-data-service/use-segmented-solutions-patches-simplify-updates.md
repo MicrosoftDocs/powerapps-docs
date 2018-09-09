@@ -17,6 +17,11 @@ ms.assetid: 5c05f683-e1bd-4885-be23-b6973128773f
 caps.latest.revision: 15
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use segmented solutions and patches to export selected entity assets
 
@@ -67,8 +72,9 @@ To gain tighter control over what you distribute in solutions and solution patch
  The following illustrations provide an example of creating a segmented solution by choosing entity assets from the `Account`, `Case`, and `Contact` entities.  
   
  Start by choosing the **Entity** component.  
-  
- ![Add existing resources.](media/solution-segmentation-add-existing-resources-admin.png "Add existing resources.")  
+
+ > [!div class="mx-imgBorder"] 
+ > ![Add existing resources.](media/solution-segmentation-add-existing-resources-admin.png "Add existing resources.")  
   
  Then, select the solution components.  
   
@@ -92,7 +98,8 @@ To gain tighter control over what you distribute in solutions and solution patch
   
  As a result, the segmented solution that’s created contains three entities, `Account`, `Case`, and `Contact`. Each entity contains only the assets that were chosen.  
   
- ![Solution with entities.](media/solution-segmentation-solution-entities-admin.png "Solution with entities.")  
+ > [!div class="mx-imgBorder"] 
+ > ![Solution with entities.](media/solution-segmentation-solution-entities-admin.png "Solution with entities.")  
   
 ## Create a solution patch  
  A patch contains changes to the parent solution, such as adding or editing components and assets. You don’t have to include the parent’s components unless you plan to edit them.  
@@ -109,7 +116,8 @@ To gain tighter control over what you distribute in solutions and solution patch
   
  The following illustrations provide an example of creating a patch for an existing solution. Start by selecting **Clone a Patch** (in the compressed view, the **Clone a Patch** icon is depicted as two small squares, as shown below).  
   
- ![Clone a patch icon.](media/solution-segmentation-click-patch-icon-admin.png "Clone a patch icon.")  
+ > [!div class="mx-imgBorder"] 
+ > ![Clone a patch icon.](media/solution-segmentation-click-patch-icon-admin.png "Clone a patch icon.")  
   
  In the **Clone To Patch** dialog box you see that the version number for the patch is based on the parent solution version number, but the build number is incremented by one. Each subsequent patch has a higher build or revision number than the preceding patch.  
   
@@ -117,7 +125,8 @@ To gain tighter control over what you distribute in solutions and solution patch
   
  The following screenshot shows the base solution **SegmentedSolutionExample**, version **1.0.1.0** and the patch **SegmentedSolutionExample_Patch**, version **1.0.2.0**.  
   
- ![A grid with solutions and patches.](media/solution-segmentation-solution-patch-grid-admin.png "A grid with solutions and patches.")  
+ > [!div class="mx-imgBorder"] 
+ > ![A grid with solutions and patches.](media/solution-segmentation-solution-patch-grid-admin.png "A grid with solutions and patches.")  
   
  In the patch we added a new custom entity called `Book`, and included all assets of the `Book` entity in the patch.  
   
@@ -138,7 +147,8 @@ To gain tighter control over what you distribute in solutions and solution patch
   
  After cloning, the new solution version contains three original entities (`Account`, `Case`, and `Contact`), and the custom entity called `Book` that was added in the patch. Each entity contains only the assets that were added in the example.  
   
- ![A cloned solution with rolled up patch.](media/solution-segmentation-solution-rolled-up-patch-admin.png "A cloned solution with rolled up patch.")  
+ > [!div class="mx-imgBorder"] 
+ > ![A cloned solution with rolled up patch.](media/solution-segmentation-solution-rolled-up-patch-admin.png "A cloned solution with rolled up patch.")  
   
 ## Next steps  
  [Solutions overview](solutions-overview.md)

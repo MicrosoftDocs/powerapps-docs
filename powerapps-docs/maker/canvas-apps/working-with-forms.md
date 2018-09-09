@@ -3,14 +3,16 @@ title: Understand canvas-app forms | Microsoft Docs
 description: In PowerApps, add a form to a canvas app so that you can collect and display information from a data source.
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/27/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand canvas-app forms in Microsoft PowerApps
 

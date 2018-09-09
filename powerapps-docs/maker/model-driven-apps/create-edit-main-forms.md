@@ -17,6 +17,11 @@ ms.assetid: <needs new guid>
 caps.latest.revision: 18
 ms.author: "matp"
 manager: "kvivek"
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Create or edit a model-driven app main form for an entity 
 

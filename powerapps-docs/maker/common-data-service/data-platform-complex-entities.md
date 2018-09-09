@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: reference
 ms.date: 07/17/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Complex entities and licensing

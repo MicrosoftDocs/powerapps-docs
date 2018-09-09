@@ -3,14 +3,16 @@ title: User function | Microsoft Docs
 description: Reference information, including syntax, for the User function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # User function in PowerApps
 Returns information about the current user.

@@ -3,14 +3,16 @@ title: Functions, signals, and enumerations | Microsoft Docs
 description: Reference information for functions, signals, and enumerations in PowerApps.
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/05/2018
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Formula reference for PowerApps
 Formulas combine many elements.  Listed below are:
@@ -153,6 +155,8 @@ Other elements include:
 
 ## G
 **[GroupBy](functions/function-groupby.md)** – Returns a table with records grouped together.
+
+**[GUID](functions/function-guid.md)** – Converts a GUID string to a GUID value or creates a new GUID value.
 
 ## H
 **[HashTags](functions/function-hashtags.md)** – Extracts the hashtags (#strings) from a string.

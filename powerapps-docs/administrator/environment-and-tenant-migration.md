@@ -8,6 +8,12 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Environment and tenant app migration through Packaging
@@ -107,12 +113,12 @@ Importing a CDS solution package unfortunately requires a manual workaround in t
 
 3. Copy the Url from your browser, make the following changes and then navigate to the new URL in your browser:
 
-    * Current URL structure: https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}
+    * Current URL structure: `https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}`
 
         ![Edit url](./media/environment-and-tenant-migration/edit-url.png)
 
     * New URL structure:
-  https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
+  `https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx`
 
         ![Select package](./media/environment-and-tenant-migration/select-package.png)
 
