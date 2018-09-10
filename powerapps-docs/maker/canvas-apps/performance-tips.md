@@ -86,7 +86,7 @@ and then referenced locally after that until the user closes the app.
 Contact information doesn’t change frequently, and neither do default values and user information. So you can generally use this 
 technique with the **Defaults** and **User** functions also. 
 
-# Avoid controls dependency between screens
+## Avoid controls dependency between screens
 If a control’s value depends on the value of a control on a different screen, use a variable, a collection, or a data-source reference to manage the data.
 
 ## Use global variables
