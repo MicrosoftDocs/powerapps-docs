@@ -159,6 +159,8 @@
       href: entity-relationship-eligibility.md
     - name: Entity relationship metadata messages
       href: entity-relationship-metadata-messages.md
+  - name: Customize labels to support multiple languages
+    href: customize-labels-support-multiple-languages.md
 - name: Package and distribute extensions using solutions
   items:
   - name: Introduction to solutions
@@ -178,6 +180,8 @@
       href: use-managed-properties.md
     - name: Understand how managed solutions are merged
       href: understand-managed-solutions-merged.md
+    - name: Create solutions that support multiple languages
+      href: create-solutions-support-multiple-languages.md
     - name: How to manage solutions
       href: how-manage-solutions.md
       items:
@@ -202,7 +206,7 @@
       href: use-source-control-solution-files.md       
   - name: Create packages for the Dynamics 365 Package Deployer
     href: package-deployer/create-packages-package-deployer.md
-  - name: Publish Apps on AppSource
+  - name: Publish your app on AppSource
     href: publish-app-appsource.md
     items:
     - name: 'Step 1: Fill the app submission form on AppSource'
@@ -217,6 +221,30 @@
       href: store-appsource-package-azure-storage.md
     - name: 'Next steps: Submit your app on Cloud Partner Portal'
       href: next-steps-submit-app-cloud-partner-portal.md
+- name: Create Client applications
+  href: connect-cds.md
+  items:
+  - name: Authentication
+    items:
+    - name: Authenticate Office 365 users
+      href: authenticate-office-365-users-cds-web-services.md
+    - name: Integration with Office 365
+      href: online-integration-office-365.md
+    - name: Connect with Microsoft Office 365
+      href: connect-microsoft-office-365.md
+    - name: Connect using OAuth
+      href: connect-web-services-using-oauth.md
+    - name: Build web applications using Server-to-Server (S2S) authentication
+      href: build-web-applications-server-server-s2s-authentication.md
+      items:
+      - name: Use Multi-Tenant Server-to-server authentication
+        href: use-multi-tenant-server-server-authentication.md
+      - name: Use Single-Tenant Server-to-server authentication
+        href: use-single-tenant-server-server-authentication.md
+    - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
+      href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+  - name: Discover user organizations
+    href: discovery-service.md
 - name: Resources
   items:
   - name: Developer resources page
@@ -385,10 +413,8 @@
     href: outlook-client.md
   - name: Multiple language support
     items:
-    - name: Create solutions that support multiple languages
-      href: create-solutions-support-multiple-languages.md
-    - name: Customize labels to support multiple languages
-      href: customize-labels-support-multiple-languages.md
+
+
   - name: Field-level data encryption
     href: field-level-data-encryption.md
   - name: Upload and manage document templates
@@ -404,30 +430,7 @@
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
 
-  - name: Create Client applications
-    href: connect-cds.md
-    items:
-    - name: Authentication
-      items:
-      - name: Authenticate Office 365 users
-        href: authenticate-office-365-users-cds-web-services.md
-      - name: Integration with Office 365
-        href: online-integration-office-365.md
-      - name: Connect with Microsoft Office 365
-        href: connect-microsoft-office-365.md
-      - name: Connect using OAuth
-        href: connect-web-services-using-oauth.md
-      - name: Build web applications using Server-to-Server (S2S) authentication
-        href: build-web-applications-server-server-s2s-authentication.md
-        items:
-        - name: Use Multi-Tenant Server-to-server authentication
-          href: use-multi-tenant-server-server-authentication.md
-        - name: Use Single-Tenant Server-to-server authentication
-          href: use-single-tenant-server-server-authentication.md
-      - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
-        href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
-    - name: Discover user organizations
-      href: discovery-service.md
+
 
 
   - name: SharePoint integration
