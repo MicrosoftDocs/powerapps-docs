@@ -8,6 +8,7 @@
   - name: Organization service quick-start sample (C#)
     href: org-service/quick-start-org-service-console-app.md
 - name: Work with data using code
+  items:
   - name: Using Web API
     # href: webapi/index.md
     href: webapi/
@@ -37,6 +38,42 @@
     items:
     - name: Run bulk delete
       href: run-bulk-delete.md
+  - name: Apply business logic using code
+    href: apply-business-logic-with-code.md
+    items:
+    - name: Event Framework
+      href: event-framework.md
+      items:
+      - name: Behavior of specialized update operations
+        href: special-update-operation-behavior.md
+    - name: Plug-ins
+      href: plug-ins.md
+      items:
+      - name: Write a plug-in
+        href: write-plug-in.md
+      - name: Register a plug-in
+        href: register-plug-in.md
+      - name: Debug a plug-in
+        href: debug-plug-in.md
+      - name: Tutorials
+        items:
+        - name: Write and register a plug-in
+          href: tutorial-write-plug-in.md
+        - name: Debug a plug-in
+          href: tutorial-debug-plug-in.md
+        - name: Update a plug-in
+          href: tutorial-update-plug-in.md
+    - name: Workflow extensions
+      href: workflow/workflow-extensions.md
+    - name: Azure Integration
+      href: azure-integration.md
+      items: 
+      - name: Work with data in your Azure solution
+        href: work-data-azure-solution.md
+      - name: Work with event data in your Azure Event Hub solution
+        href: work-event-data-azure-event-hub-solution.md
+    - name: Use Web Hooks
+      href: use-webhooks.md
 - name: Web Services
   href: use-web-services.md
   items:
@@ -95,31 +132,6 @@
       href: use-managed-properties.md
     - name: Understand how managed solutions are merged
       href: understand-managed-solutions-merged.md
-  - name: Apply business logic with code
-    href: apply-business-logic-with-code.md
-    items:
-    - name: Event Framework
-      href: event-framework.md
-      items:
-      - name: Behavior of specialized update operations
-        href: special-update-operation-behavior.md
-    - name: Processes
-      href: processes.md
-    - name: Custom Actions
-      href: custom-actions.md
-    - name: Plug-ins
-      href: plug-ins.md
-    - name: Workflow extensions
-      href: workflow/workflow-extensions.md
-    - name: Azure Integration
-      href: azure-integration.md
-      items: 
-      - name: Work with data in your Azure solution
-        href: work-data-azure-solution.md
-      - name: Work with event data in your Azure Event Hub solution
-        href: work-event-data-azure-event-hub-solution.md
-    - name: Use Web Hooks
-      href: use-webhooks.md
   - name: Use FetchXML to construct a query
     href: use-fetchxml-construct-query.md
     items:
@@ -284,14 +296,6 @@
       href: write-custom-azure-aware-plugin.md
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
-  - name: Plug-ins
-    items:
-    - name: Write a plug-in
-      href: write-plug-in.md
-    - name: Register a plug-in
-      href: register-plug-in.md
-    - name: Debug a plug-in
-      href: debug-plug-in.md
   - name: Workflow extensions
     items: 
     - name: Create a workflow extension
