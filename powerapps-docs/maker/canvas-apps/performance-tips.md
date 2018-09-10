@@ -44,7 +44,7 @@ addition, you might want to reduce the number of control types on the same scree
 combo-box) pull in large execution script and take longer to render. 
 
 ## Optimize OnStart function
-Use the [**ClearCollect**](functions/function-clearcollect.md) function to cache data locally if it doesn’t change during the user session. Also, use the [**Concurrent**](functions/function-concurrent.md) function to load data sources simultaneously.
+Use the [**ClearCollect**](functions/function-clear-collect-clearcollect.md) function to cache data locally if it doesn’t change during the user session. Also, use the [**Concurrent**](functions/function-concurrent.md) function to load data sources simultaneously.
 
 As [this reference topic](functions/function-concurrent.md) demonstrates, you can
 use **Concurrent** to cut the amount of time an app needs to load data in half.
