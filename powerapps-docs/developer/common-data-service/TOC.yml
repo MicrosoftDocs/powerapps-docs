@@ -176,23 +176,23 @@
       href: use-managed-properties.md
     - name: Understand how managed solutions are merged
       href: understand-managed-solutions-merged.md
-      - name: How to manage solutions
-        href: how-manage-solutions.md
-        items:
-        - name: Create, export, or import an unmanaged solution
-          href: create-export-import-unmanaged-solution.md
-        - name: Uninstall or delete a solution
-          href: uninstall-delete-solution.md
-        - name: Work with solutions
-          href: work-solutions.md
-        - name: Export a solution for a specific version
-          href: export-solution-specific-version.md
-        - name: Create, install, and update a managed solution
-          href: create-install-update-managed-solution.md
-        - name: Create patches to simplify solution updates
-          href: create-patches-simplify-solution-updates.md
-        - name: When to edit the customizations file
-          href: when-edit-customization-file.md
+    - name: How to manage solutions
+      href: how-manage-solutions.md
+      items:
+      - name: Create, export, or import an unmanaged solution
+        href: create-export-import-unmanaged-solution.md
+      - name: Uninstall or delete a solution
+        href: uninstall-delete-solution.md
+      - name: Work with solutions
+        href: work-solutions.md
+      - name: Export a solution for a specific version
+        href: export-solution-specific-version.md
+      - name: Create, install, and update a managed solution
+        href: create-install-update-managed-solution.md
+      - name: Create patches to simplify solution updates
+        href: create-patches-simplify-solution-updates.md
+      - name: When to edit the customizations file
+        href: when-edit-customization-file.md
   - name: SolutionPackager tool
     href: compress-extract-solution-file-solutionpackager.md
     items:
