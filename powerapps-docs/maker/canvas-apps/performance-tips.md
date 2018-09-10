@@ -44,9 +44,9 @@ addition, you might want to reduce the number of control types on the same scree
 combo-box) pull in large execution script and take longer to render. 
 
 ## Optimize OnStart function
-Use the [**ClearCollect**](../functions/function-clearcollect.md) function to cache data locally if it doesn’t change during the user session. Also, use the [**Concurrent**](../functions/function-concurrent.md) function to load data sources simultaneously.
+Use the [**ClearCollect**](functions/function-clearcollect.md) function to cache data locally if it doesn’t change during the user session. Also, use the [**Concurrent**](functions/function-concurrent.md) function to load data sources simultaneously.
 
-As [this reference topic]((../functions/function-concurrent.md) demonstrates, you can
+As [this reference topic](functions/function-concurrent.md) demonstrates, you can
 use **Concurrent** to cut the amount of time an app needs to load data in half.
 
 Without the Concurrent function, this formula loads each of four tables one at a time:
@@ -90,7 +90,7 @@ technique with the **Defaults** and **User** functions also.
 If a control’s value depends on the value of a control on a different screen, use a variable, a collection, or a data-source reference to manage the data.
 
 ## Use global variables
-To pass the app’s state from one screen to another, create or modify a global variable value by using the [**Set**](../functions/function-set.md) function instead of by using the Navigate and UpdateContext functions.
+To pass the app’s state from one screen to another, create or modify a global variable value by using the [**Set**](functions/function-set.md) function instead of by using the Navigate and UpdateContext functions.
 
 ## Use delegation
 Where possible, use functions that delegate data processing to the data source instead of retrieving data to the local device for processing. If an app must process data locally, the operation requires much more processing power, memory, and network bandwidth, especially if the data set is large.
@@ -99,7 +99,7 @@ As [this list](delegation-list.md) shows, different data sources support delegat
 
 ![Use delegatuin](./media/PerfDelegation.png)
 
-For example, SharePoint lists support delegation from the [**Filter**](../functions/function-filter.md) function but not the [**Search**](../functions/function-searchr.md) function. So you should use Filter instead of Search to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in PowerApps](https://powerapps.microsoft.com/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
+For example, SharePoint lists support delegation from the [**Filter**](functions/function-filter-lookup.md) function but not the [**Search**](functions/function-filter-lookup.md) function. So you should use Filter instead of Search to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in PowerApps](https://powerapps.microsoft.com/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
 
 ## Use Delayed Load
 Turn on the [experimental feature](working-with-experimental.md) for Delayed Load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and that are directly bound to the data source.  If you build this type of app and don’t enable this feature, app performance may suffer because the controls in all screens must be populated even on screens that aren’t open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
