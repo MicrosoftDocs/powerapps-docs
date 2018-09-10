@@ -204,7 +204,7 @@
     items:
     - name: Source control with solution files
       href: use-source-control-solution-files.md       
-  - name: Create packages for the Dynamics 365 Package Deployer
+  - name: Package Deployer tool
     href: package-deployer/create-packages-package-deployer.md
   - name: Publish your app on AppSource
     href: publish-app-appsource.md
@@ -340,17 +340,11 @@
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
-
-  - name: Discovery Service
-    href: discovery-service.md
-  - name: Authentication
-    href: authentication.md
   - name: Impersonate another user
     href: impersonate-another-user.md
   - name: Entities
     href: entities.md
     items:
-
     - name: Customize entity and attribute mappings
       href: customize-entity-attribute-mappings.md
     - name: Customer entities
