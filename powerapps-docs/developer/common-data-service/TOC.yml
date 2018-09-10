@@ -123,6 +123,8 @@
     items:
     - name: Configure Exchange folder-level tracking rules
       href: configure-exchange-folder-level-tracking-rules.md
+  - name: Using Virtual Entities
+    href: virtual-entities.md
 - name: Work with metadata using code
   href: metadata-services.md
   items:
@@ -368,8 +370,6 @@
       href: use-feedback-entity-manage-feedback-ratings-records.md
     - name: Work with knowledge articles
       href: work-knowledge-articles.md
-  - name: Virtual Entities
-    href: virtual-entities.md
   - name: Auditing overview
     href: auditing-overview.md
   - name: Optimistic Concurrency
