@@ -1,14 +1,14 @@
 ---
 title: Optimize canvas-app performance | Microsoft Docs
 description: Follow the best practices in this topic to boost the performance of canvas apps that you create in PowerApps. 
-author: anneta,yingchin
+author: yingchin
 manager: giodl
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/31/2018
-ms.author: anneta,yingchin
+ms.author: yingchin
 search.audienceType: 
   - maker
 search.app: 
@@ -27,15 +27,15 @@ retrieve data.
 4. **Render screens** - Renders the first screen of the app with controls that it has populated with data. If you open other screens, 
 the app renders them by using the same process.  
 
-# Limit data connections 
+## Limit data connections 
 **Don’t connect to more than 30 data sources from the same app**. Apps prompt new users to sign in to each connector, so every 
 additional connector increases the amount of time that the app needs to start. As an app runs, each connector requires CPU resources,
 memory, and network bandwidth when the app requests data from that source. 
 
-You can quickly measure your app’s performance by turning on Developer Tools in [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests
+You can quickly measure your app’s performance by turning on Developer Tools in [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) while running the app. Your app is more likely to take longer than 15 seconds to return data if it frequently requests
 data from more than 30 data sources, such as Common Data Service for Apps, Azure SQL, SharePoint, and Excel on OneDrive.  
 
-# Limit number of controls 
+## Limit number of controls 
 **Don’t add more than 500 controls to the same app**. PowerApps generates an HTML DOM to render each control. The more controls you add,
 the more generation time PowerApps needs. 
 
@@ -43,10 +43,10 @@ You can, in some cases, achieve the same result and have the app starts faster i
 addition, you might want to reduce the number of control types on the same screen.  Some controls (such as PDF viewer, data table and
 combo-box) pull in large execution script and take longer to render. 
 
-# Optimize OnStart function
+## Optimize OnStart function
 Use the [**ClearCollect**](../functions/function-clearcollect.md) function to cache data locally if it doesn’t change during the user session. Also, use the [**Concurrent**](../functions/function-concurrent.md) function to load data sources simultaneously.
 
-As [this reference topic](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-concurrent) demonstrates, you can
+As [this reference topic]((../functions/function-concurrent.md) demonstrates, you can
 use **Concurrent** to cut the amount of time an app needs to load data in half.
 
 Without the Concurrent function, this formula loads each of four tables one at a time:
@@ -58,7 +58,7 @@ Without the Concurrent function, this formula loads each of four tables one at a
 
 You can confirm this behavior in the Developer Tools for your browser:
 
-	![Serial ClearCollect](./media/PerfConcurrent-1.png)
+![Serial ClearCollect](./media/PerfConcurrent-1.png)
 	
 You can enclose the same formula in the Concurrent function to reduce the overall time the operation needs:
 
@@ -70,9 +70,9 @@ You can enclose the same formula in the Concurrent function to reduce the overal
 		
 With this change, the tables are fetched in parallel: 
 
-	![Parellel ClearCollect](./media/PerfConcurrent-2.png)	
+![Parellel ClearCollect](./media/PerfConcurrent-2.png)	
 
-# Cache lookup data
+## Cache lookup data
 Use the **Set** function to cache data from lookup tables locally to avoid repeatedly retrieving data from the source. This technique
 optimizes performance if the data probably won’t change during a session. As in this example, the data is retrieved from the source once
 and then referenced locally after that until the user closes the app. 
@@ -89,24 +89,24 @@ technique with the **Defaults** and **User** functions also.
 # Avoid controls dependency between screens
 If a control’s value depends on the value of a control on a different screen, use a variable, a collection, or a data-source reference to manage the data.
 
-# Use global variables
+## Use global variables
 To pass the app’s state from one screen to another, create or modify a global variable value by using the [**Set**](../functions/function-set.md) function instead of by using the Navigate and UpdateContext functions.
 
-# Use delegation
+## Use delegation
 Where possible, use functions that delegate data processing to the data source instead of retrieving data to the local device for processing. If an app must process data locally, the operation requires much more processing power, memory, and network bandwidth, especially if the data set is large.
 
 As [this list](delegation-list.md) shows, different data sources support delegation from different functions:
 
-	![Use delegatuin](./media/PerfDelegation.png)
+![Use delegatuin](./media/PerfDelegation.png)
 
-For example, SharePoint lists support delegation from the [**Filter**](../functions/function-filter.md) function but not the [**Search**](../functions/function-searchr.md) function. So you should use Filter instead of Search to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in PowerApps](https://powerapps.microsoft.com/en-us/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
+For example, SharePoint lists support delegation from the [**Filter**](../functions/function-filter.md) function but not the [**Search**](../functions/function-searchr.md) function. So you should use Filter instead of Search to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in PowerApps](https://powerapps.microsoft.com/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
 
-# Use Delayed Load
+## Use Delayed Load
 Turn on the [experimental feature](working-with-experimental.md) for Delayed Load if your app has more than 10 screens, no rules, and many controls that are on multiple screens and that are directly bound to the data source.  If you build this type of app and don’t enable this feature, app performance may suffer because the controls in all screens must be populated even on screens that aren’t open. Also, all screens of the app must be updated whenever the data source changes, such as when the user adds a record.
 
-# Working with large data sets
+## Working with large data sets
 Use data sources and formulas that can be delegated to keep your apps performing well while users can access all the information they need, avoid hitting the data row limit of 2000 for non-delegable queries. 
-For data record columns which users can search, filter or sort data,  that indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-index-design-guide?view=sql-server-2017) and [SharePoint](https://support.office.com/en-us/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).  
+For data record columns which users can search, filter or sort data,  that indexes of columns are designed well as these docs describe for [SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide?view=sql-server-2017) and [SharePoint](https://support.office.com/article/Add-an-index-to-a-SharePoint-column-f3f00554-b7dc-44d1-a2ed-d477eac463b0).  
 
-# Republish apps regularly
-[Republish your apps](https://powerapps.microsoft.com/en-us/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) to get performance improvements and additional features from the PowerApps platform.
+## Republish apps regularly
+[Republish your apps](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) to get performance improvements and additional features from the PowerApps platform.
