@@ -1,5 +1,5 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Work with metadata using code (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
@@ -17,7 +17,7 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/metad
 Was Mike Carter
 -->
 
-# Metadata services
+# Work with metadata using code
 
 Both the Web API and the organization service include capabilities to perform CRUD operations on the entity schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read metadata.
 
@@ -29,8 +29,8 @@ Some examples:
 
 Developing a good working understanding of the metadata in the system can help you understand how Common Data Service for Apps platform works. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the *Metadata Browser* which will allow you to view all the hidden entities and metadata properties that are found in the system. 
 
-More information: [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
+More information: [Browse the metadata for your organization](browse-your-metadata.md)
 
-For more information about working with metadata programmatically see:
-- [Use the Web API with metadata](/dynamics365/customer-engagement/developer/webapi/use-web-api-metadata)
-- [Use the Organization service with CDS for Apps metadata](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)
+For more information about working with metadata programmatically. see:
+- [Use the Web API with metadata](webapi/use-web-api-metadata.md)
+- [Use the Organization service with CDS for Apps metadata](org-service/work-with-metadata.md)

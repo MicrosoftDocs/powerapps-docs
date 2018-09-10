@@ -94,6 +94,23 @@
     href: asynchronous-service.md
 - name: Integrate data using code
   items:
+  - name: Import Data
+    href: import-data.md #Topics are for both Web API and Organization service
+    items:
+    - name: Prepare source files for import
+      href: prepare-source-files-import.md
+    - name: Create data maps for import
+      href: create-data-maps-for-import.md
+    - name: Add transformation mappings for import
+      href: add-transformation-mappings-import.md
+    - name: Configure data import
+      href: configure-data-import.md
+    - name: Run data import
+      href: run-data-import.md
+    - name: Data import entities
+      href: data-import-entities.md
+  - name: Data Export Service
+    href: data-export-service.md
   - name: Synchronize data
     href: data-synchronization.md
     items:
@@ -103,24 +120,45 @@
       href: use-change-tracking-synchronize-data-external-systems.md
     - name: Use Upsert to insert or update a record
       href: use-upsert-insert-update-record.md
-  - name: Data Export Service
-    href: data-export-service.md
   - name: Server-side synchronization
     href: server-side-synchronization-entities.md
     items:
     - name: Configure Exchange folder-level tracking rules
       href: configure-exchange-folder-level-tracking-rules.md
-- name: Web Services
-  href: use-web-services.md
+- name: Work with metadata using code
+  href: metadata-services.md
   items:
-
-  - name: Discovery Services
-    href: discovery-service.md
-  - name: API Limits
-    href: api-limits.md
-  - name: Metadata services
-    displayName: Schema APIs
-    href: metadata-services.md
+  - name: Browse your environment metadata
+    href: browse-your-metadata.md
+  - name: Entity metadata
+    href: entity-metadata.md
+    items:
+    - name: Customize entity metadata
+      href: customize-entity-metadata.md
+    - name: Define alternate keys for an entity
+      href: define-alternate-keys-entity.md
+  - name: Attribute metadata 
+    href: entity-attribute-metadata.md
+    items:
+    - name: Entity attribute metadata messages
+      href: entity-attribute-metadata-messages.md
+    - name: Behavior and format of the date and time attribute
+      href: behavior-format-date-time-attribute.md
+    - name: Calculated and rollup attributes
+      href: calculated-rollup-attributes.md
+    - name: Multi-Select Picklist attributes
+      href: multi-select-picklist.md
+    - name: Image attributes
+      href: image-attributes.md
+    - name: Define custom state model transitions
+      href: define-custom-state-model-transitions.md
+  - name: Entity relationships metadata
+    href: entity-relationship-metadata.md
+    items:
+    - name: Entity relationship eligibility
+      href: entity-relationship-eligibility.md
+    - name: Entity relationship metadata messages
+      href: entity-relationship-metadata-messages.md
 - name: Tutorials
   items:
   - name: Configure Azure (SAS) for integration with Customer Engagement
@@ -200,35 +238,7 @@
   - name: Entities
     href: entities.md
     items:
-    - name: Entity metadata
-      href: entity-metadata.md
-      items:
-        - name: Customize entity metadata
-          href: customize-entity-metadata.md
-        - name: Define alternate keys for an entity
-          href: define-alternate-keys-entity.md
-    - name: Attribute metadata 
-      href: entity-attribute-metadata.md
-      items:
-      - name: Entity attribute metadata messages
-        href: entity-attribute-metadata-messages.md
-      - name: Behavior and format of the date and time attribute
-        href: behavior-format-date-time-attribute.md
-      - name: Calculated and rollup attributes
-        href: calculated-rollup-attributes.md
-      - name: Multi-Select Picklist attributes
-        href: multi-select-picklist.md
-      - name: Image attributes
-        href: image-attributes.md
-      - name: Define custom state model transitions
-        href: define-custom-state-model-transitions.md
-    - name: Entity relationships metadata
-      href: entity-relationship-metadata.md
-      items:
-      - name: Entity relationship eligibility
-        href: entity-relationship-eligibility.md
-      - name: Entity relationship metadata messages
-        href: entity-relationship-metadata-messages.md
+
     - name: Customize entity and attribute mappings
       href: customize-entity-attribute-mappings.md
     - name: Customer entities
@@ -378,23 +388,7 @@
       href: next-steps-submit-app-cloud-partner-portal.md
   - name: Create packages for the Dynamics 365 Package Deployer
     href: package-deployer/create-packages-package-deployer.md
-  - name: Import Data
-    href: import-data.md #Topics are for both Web API and Organization service
-    items:
-    - name: Prepare source files for import
-      href: prepare-source-files-import.md
-    - name: Create data maps for import
-      href: create-data-maps-for-import.md
-    - name: Add transformation mappings for import
-      href: add-transformation-mappings-import.md
-    - name: Configure data import
-      href: configure-data-import.md
-    - name: Run data import
-      href: run-data-import.md
-    - name: Data import entities
-      href: data-import-entities.md
-  - name: Sample data
-    href: sample-data.md #Topic is for both Web API and Organization service
+
   - name: SharePoint integration
     href: integrate-sharepoint.md
     items:
@@ -421,8 +415,6 @@
   items:
   - name: Developer resources page
     href: developer-resources-page.md
-  - name: Browse the metadata for your environment
-    href: browse-your-metadata.md
   - name: Developer tools
     href: developer-tools.md
     items:
@@ -432,6 +424,8 @@
     href: community-tools.md
   - name: Testing tools
     href: testing-tools-server.md
+  - name: API Limits
+    href: api-limits.md
 - name: Reference
   items:
   - name: Entity reference
