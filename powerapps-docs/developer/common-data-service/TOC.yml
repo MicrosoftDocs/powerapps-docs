@@ -2,6 +2,7 @@
 - name: Overview
   href: overview.md
 - name: Get started
+  href: get-started-CDS-developers.md
   items:
   - name: Web API quick-start sample (C#)
     href: webapi/quick-start-console-app-csharp.md
@@ -15,6 +16,8 @@
   - name: Using Organization Service
     # href: org-service/overview.md
     href: org-service/
+  - name: Add and remove sample data
+    href: sample-data.md
   - name: Audit data changes
     href: auditing-overview.md
     items:
@@ -29,6 +32,12 @@
   - name: Detect duplicate data
     href: detect-duplicate-data-for-developers.md
     items:
+    - name: Enable and Disable duplicate detection
+      href: enable-disable-duplicate-detection.md
+    - name: Run duplicate detection
+      href: run-duplicate-detection.md
+    - name: Manage duplicate detection for create and update operations
+      href: duplicate-detection-create-update.md
     - name: Duplicate detection messages
       href: duplicate-detection-messages.md
     - name: Duplicate Rule entities
@@ -38,42 +47,69 @@
     items:
     - name: Run bulk delete
       href: run-bulk-delete.md
-  - name: Apply business logic using code
-    href: apply-business-logic-with-code.md
+- name: Apply business logic using code
+  href: apply-business-logic-with-code.md
+  items:
+  - name: Event Framework
+    href: event-framework.md
     items:
-    - name: Event Framework
-      href: event-framework.md
+    - name: Behavior of specialized update operations
+      href: special-update-operation-behavior.md
+  - name: Plug-ins
+    href: plug-ins.md
+    items:
+    - name: Write a plug-in
+      href: write-plug-in.md
+    - name: Register a plug-in
+      href: register-plug-in.md
+    - name: Debug a plug-in
+      href: debug-plug-in.md
+    - name: Tutorials
       items:
-      - name: Behavior of specialized update operations
-        href: special-update-operation-behavior.md
-    - name: Plug-ins
-      href: plug-ins.md
-      items:
-      - name: Write a plug-in
-        href: write-plug-in.md
-      - name: Register a plug-in
-        href: register-plug-in.md
+      - name: Write and register a plug-in
+        href: tutorial-write-plug-in.md
       - name: Debug a plug-in
-        href: debug-plug-in.md
-      - name: Tutorials
-        items:
-        - name: Write and register a plug-in
-          href: tutorial-write-plug-in.md
-        - name: Debug a plug-in
-          href: tutorial-debug-plug-in.md
-        - name: Update a plug-in
-          href: tutorial-update-plug-in.md
-    - name: Workflow extensions
-      href: workflow/workflow-extensions.md
-    - name: Azure Integration
-      href: azure-integration.md
-      items: 
-      - name: Work with data in your Azure solution
-        href: work-data-azure-solution.md
-      - name: Work with event data in your Azure Event Hub solution
-        href: work-event-data-azure-event-hub-solution.md
-    - name: Use Web Hooks
+        href: tutorial-debug-plug-in.md
+      - name: Update a plug-in
+        href: tutorial-update-plug-in.md
+  - name: Workflow extensions
+    href: workflow/workflow-extensions.md
+  - name: Azure Integration
+    href: azure-integration.md
+    items: 
+    - name: Work with data in your Azure solution
+      href: work-data-azure-solution.md
+    - name: Work with event data in your Azure Event Hub solution
+      href: work-event-data-azure-event-hub-solution.md
+  - name: Use Web Hooks
+    href: use-webhooks.md
+    items:
+    - name: Use webhooks to create external handlers for server events
       href: use-webhooks.md
+    - name: Register a web hook
+      href: register-web-hook.md
+    - name: Test webhook registration
+      href: test-webhook-registration.md
+  - name: Asynchronous service
+    href: asynchronous-service.md
+- name: Integrate data using code
+  items:
+  - name: Synchronize data
+    href: data-synchronization.md
+    items:
+    - name: Use an alternate key to create a record
+      href: use-alternate-key-create-record.md
+    - name: Use change tracking to synchronize data with external systems
+      href: use-change-tracking-synchronize-data-external-systems.md
+    - name: Use Upsert to insert or update a record
+      href: use-upsert-insert-update-record.md
+  - name: Data Export Service
+    href: data-export-service.md
+  - name: Server-side synchronization
+    href: server-side-synchronization-entities.md
+    items:
+    - name: Configure Exchange folder-level tracking rules
+      href: configure-exchange-folder-level-tracking-rules.md
 - name: Web Services
   href: use-web-services.md
   items:
@@ -84,17 +120,9 @@
     href: api-limits.md
   - name: Metadata services
     displayName: Schema APIs
-    href: metadata-services.md    
+    href: metadata-services.md
 - name: Tutorials
   items:
-  - name: Write and register a plug-in
-    href: tutorial-write-plug-in.md
-  - name: Debug a plug-in
-    href: tutorial-debug-plug-in.md
-  - name: Update a plug-in
-    href: tutorial-update-plug-in.md
-  - name: Create workflow extension
-    href: workflow/tutorial-create-workflow-extension.md
   - name: Configure Azure (SAS) for integration with Customer Engagement
     href: walkthrough-configure-azure-sas-integration.md
   - name: Register an app with Azure Active Directory
@@ -162,8 +190,7 @@
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
-  - name: Asynchronous service
-    href: asynchronous-service.md
+
   - name: Discovery Service
     href: discovery-service.md
   - name: Authentication
@@ -258,15 +285,6 @@
     href: auditing-overview.md
   - name: Optimistic Concurrency
     href: optimistic-concurrency.md
-  - name: Data Synchronization
-    href: data-synchronization.md
-  - name: Data Export Service
-    href: data-export-service.md
-  - name: Server-side synchronization
-    href: server-side-synchronization-entities.md
-    items:
-    - name: Configure Exchange folder-level tracking rules
-      href: configure-exchange-folder-level-tracking-rules.md 
   - name: Use connections to link records to each other
     href: connection-entities.md
     items:
@@ -296,18 +314,7 @@
       href: write-custom-azure-aware-plugin.md
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
-  - name: Workflow extensions
-    items: 
-    - name: Create a workflow extension
-      href: workflow/workflow-extensions.md
-  - name: Web Hooks
-    items:
-    - name: Use webhooks to create external handlers for server events
-      href: use-webhooks.md
-    - name: Register a web hook
-      href: register-web-hook.md
-    - name: Test webhook registration
-      href: test-webhook-registration.md
+
   - name: Create Client applications
     href: connect-cds.md
     items:
@@ -410,23 +417,6 @@
       href: add-complex-goal-criteria.md
     - name: Roll up goal totals
       href: roll-up-goal-totals.md
-  - name: Manage Duplicate records
-    items:
-    - name: Enable and Disable duplicate detection
-      href: enable-disable-duplicate-detection.md
-    - name: Run duplicate detection
-      href: run-duplicate-detection.md
-    - name: Manage duplicate detection for create and update operations
-      href: duplicate-detection-create-update.md
-  - name: Synchronize data with external systems
-    href: synchronize-cds-data-with-external-systems.md
-    items:
-    - name: Use an alternate key to create a record
-      href: use-alternate-key-create-record.md
-    - name: Use change tracking to synchronize data with external systems
-      href: use-change-tracking-synchronize-data-external-systems.md
-    - name: Use Upsert to insert or update a record
-      href: use-upsert-insert-update-record.md
 - name: Resources
   items:
   - name: Developer resources page
