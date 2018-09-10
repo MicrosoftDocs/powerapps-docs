@@ -4,10 +4,8 @@
 - name: Get started
   href: get-started-CDS-developers.md
   items:
-  - name: Web API quick-start sample (C#)
-    href: webapi/quick-start-console-app-csharp.md
-  - name: Organization service quick-start sample (C#)
-    href: org-service/quick-start-org-service-console-app.md
+  - name: Supported customizations
+    href: supported-customizations.md
 - name: Work with data using code
   items:
   - name: Using Web API
@@ -159,6 +157,106 @@
       href: entity-relationship-eligibility.md
     - name: Entity relationship metadata messages
       href: entity-relationship-metadata-messages.md
+- name: Package and distribute extensions using solutions
+  items:
+  - name: Introduction to solutions
+    href: introduction-solutions.md
+    items:
+    - name: Dependency tracking for solution components
+      href: dependency-tracking-solution-components.md
+    - name: Maintain managed solutions
+      href: maintain-managed-solutions.md
+    - name: Organize your solutions
+      href: organize-solutions.md
+    - name: Organize your team to develop solutions
+      href: organize-team-develop-solutions.md
+    - name: Solution tools for team development
+      href: solution-tools-team-development.md
+    - name: Use managed properties
+      href: use-managed-properties.md
+    - name: Understand how managed solutions are merged
+      href: understand-managed-solutions-merged.md
+      - name: How to manage solutions
+        href: how-manage-solutions.md
+        items:
+        - name: Create, export, or import an unmanaged solution
+          href: create-export-import-unmanaged-solution.md
+        - name: Uninstall or delete a solution
+          href: uninstall-delete-solution.md
+        - name: Work with solutions
+          href: work-solutions.md
+        - name: Export a solution for a specific version
+          href: export-solution-specific-version.md
+        - name: Create, install, and update a managed solution
+          href: create-install-update-managed-solution.md
+        - name: Create patches to simplify solution updates
+          href: create-patches-simplify-solution-updates.md
+        - name: When to edit the customizations file
+          href: when-edit-customization-file.md
+  - name: SolutionPackager tool
+    href: compress-extract-solution-file-solutionpackager.md
+    items:
+    - name: Source control with solution files
+      href: use-source-control-solution-files.md       
+  - name: Create packages for the Dynamics 365 Package Deployer
+    href: package-deployer/create-packages-package-deployer.md
+  - name: Publish Apps on AppSource
+    href: publish-app-appsource.md
+    items:
+    - name: 'Step 1: Fill the app submission form on AppSource'
+      href: fill-app-submission-form-appsource.md
+    - name: 'Step 2: Register for Microsoft Partner Network account'
+      href: register-microsoft-partner-network.md
+    - name: 'Step 3: Create a managed solution for your app'
+      href: create-solution-app-appsource.md
+    - name: 'Step 4: Create an AppSource package for your app'
+      href: create-package-app-appsource.md
+    - name: 'Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
+      href: store-appsource-package-azure-storage.md
+    - name: 'Next steps: Submit your app on Cloud Partner Portal'
+      href: next-steps-submit-app-cloud-partner-portal.md
+- name: Resources
+  items:
+  - name: Developer resources page
+    href: developer-resources-page.md
+  - name: Developer tools
+    href: developer-tools.md
+    items:
+    - name: Download tools from NuGet 
+      href: download-tools-nuget.md
+  - name: Community Tools
+    href: community-tools.md
+  - name: Testing tools
+    href: testing-tools-server.md
+  - name: API Limits
+    href: api-limits.md
+- name: Reference
+  items:
+  - name: Entity reference
+    href: reference/entities/toc.yml
+  - name: Web API Reference
+    href: /dynamics365/customer-engagement/web-api/about
+  - name: Organization Service 9.0
+    href: /dotnet/api/?view=dynamics-general-ce-9
+  - name: XRM Tooling 9.0
+    href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
+  - name: Virtual Entity 9.0
+    href: /dotnet/api/?view=dynamics-virtualentity-ce-9
+  - name: Workflow 9.0
+    href: /dotnet/api/?view=dynamics-workflow-ce-9 
+  - name: Package Deployer 9.0
+    href: /dotnet/api/?view=dynamics-deployer-ce-9
+  - name: Outlook Client 9.0
+    href: /dotnet/api/?view=dynamics-outlookclient-ce-9
+  - name: Online Management API Reference
+    href: /rest/api/admin.services.crm.dynamics.com
+  - name: Customization solutions file schema
+    href: customization-solutions-file-schema.md
+  - name: Solution component file reference (SolutionPackager) 
+    href: solution-component-file-reference-solutionpackager.md
+  - name: FetchXML schema
+    href: fetchxml-schema.md
+# - name: On-premises options
 - name: Tutorials
   items:
   - name: Configure Azure (SAS) for integration with Customer Engagement
@@ -179,25 +277,6 @@
     href: org-service/samples/toc.yml
 - name: Concepts
   items:
-  - name: Supported Customizations
-    href: supported-customizations.md
-  - name: Introduction to solutions
-    href: introduction-solutions.md
-    items:
-    - name: Dependency tracking for solution components
-      href: dependency-tracking-solution-components.md
-    - name: Maintain managed solutions
-      href: maintain-managed-solutions.md
-    - name: Organize your solutions
-      href: organize-solutions.md
-    - name: Organize your team to develop solutions
-      href: organize-team-develop-solutions.md
-    - name: Solution tools for team development
-      href: solution-tools-team-development.md
-    - name: Use managed properties
-      href: use-managed-properties.md
-    - name: Understand how managed solutions are merged
-      href: understand-managed-solutions-merged.md
   - name: Use FetchXML to construct a query
     href: use-fetchxml-construct-query.md
     items:
@@ -349,45 +428,7 @@
         href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
     - name: Discover user organizations
       href: discovery-service.md
-  - name: How to manage solutions
-    href: how-manage-solutions.md
-    items:
-    - name: Create, export, or import an unmanaged solution
-      href: create-export-import-unmanaged-solution.md
-    - name: Uninstall or delete a solution
-      href: uninstall-delete-solution.md
-    - name: Work with solutions
-      href: work-solutions.md
-    - name: Export a solution for a specific version
-      href: export-solution-specific-version.md
-    - name: Create, install, and update a managed solution
-      href: create-install-update-managed-solution.md
-    - name: Create patches to simplify solution updates
-      href: create-patches-simplify-solution-updates.md
-    - name: When to edit the customizations file
-      href: when-edit-customization-file.md
-    - name: SolutionPackager tool
-      href: compress-extract-solution-file-solutionpackager.md
-      items:
-      - name: Source control with solution files
-        href: use-source-control-solution-files.md       
-  - name: Publish Apps on AppSource
-    href: publish-app-appsource.md
-    items:
-    - name: 'Step 1: Fill the app submission form on AppSource'
-      href: fill-app-submission-form-appsource.md
-    - name: 'Step 2: Register for Microsoft Partner Network account'
-      href: register-microsoft-partner-network.md
-    - name: 'Step 3: Create a managed solution for your app'
-      href: create-solution-app-appsource.md
-    - name: 'Step 4: Create an AppSource package for your app'
-      href: create-package-app-appsource.md
-    - name: 'Step 5: Store your AppSource Package on Azure Storage and generate a URL with SAS key'
-      href: store-appsource-package-azure-storage.md
-    - name: 'Next steps: Submit your app on Cloud Partner Portal'
-      href: next-steps-submit-app-cloud-partner-portal.md
-  - name: Create packages for the Dynamics 365 Package Deployer
-    href: package-deployer/create-packages-package-deployer.md
+
 
   - name: SharePoint integration
     href: integrate-sharepoint.md
@@ -411,48 +452,7 @@
       href: add-complex-goal-criteria.md
     - name: Roll up goal totals
       href: roll-up-goal-totals.md
-- name: Resources
-  items:
-  - name: Developer resources page
-    href: developer-resources-page.md
-  - name: Developer tools
-    href: developer-tools.md
-    items:
-    - name: Download tools from NuGet 
-      href: download-tools-nuget.md
-  - name: Community Tools
-    href: community-tools.md
-  - name: Testing tools
-    href: testing-tools-server.md
-  - name: API Limits
-    href: api-limits.md
-- name: Reference
-  items:
-  - name: Entity reference
-    href: reference/entities/toc.yml
-  - name: Web API Reference
-    href: /dynamics365/customer-engagement/web-api/about
-  - name: Organization Service 9.0
-    href: /dotnet/api/?view=dynamics-general-ce-9
-  - name: XRM Tooling 9.0
-    href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - name: Virtual Entity 9.0
-    href: /dotnet/api/?view=dynamics-virtualentity-ce-9
-  - name: Workflow 9.0
-    href: /dotnet/api/?view=dynamics-workflow-ce-9 
-  - name: Package Deployer 9.0
-    href: /dotnet/api/?view=dynamics-deployer-ce-9
-  - name: Outlook Client 9.0
-    href: /dotnet/api/?view=dynamics-outlookclient-ce-9
-  - name: Online Management API Reference
-    href: /rest/api/admin.services.crm.dynamics.com
-  - name: Customization solutions file schema
-    href: customization-solutions-file-schema.md
-  - name: Solution component file reference (SolutionPackager) 
-    href: solution-component-file-reference-solutionpackager.md
-  - name: FetchXML schema
-    href: fetchxml-schema.md
-# - name: On-premises options
+
   
   
   
