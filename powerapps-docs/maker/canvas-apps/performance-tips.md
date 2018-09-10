@@ -58,7 +58,7 @@ Without the Concurrent function, this formula loads each of four tables one at a
 
 You can confirm this behavior in the Developer Tools for your browser:
 
-![Serial ClearCollect](./media/performance-tips/PerfConcurrent-1.png)
+![Serial ClearCollect](./media/performance-tips/perfconcurrent1.png)
 	
 You can enclose the same formula in the Concurrent function to reduce the overall time the operation needs:
 
@@ -70,7 +70,7 @@ You can enclose the same formula in the Concurrent function to reduce the overal
 		
 With this change, the tables are fetched in parallel: 
 
-![Parellel ClearCollect](./media/performance-tips/PerfConcurrent-2.png)	
+![Parellel ClearCollect](./media/performance-tips/perfconcurrent2.png)	
 
 ## Cache lookup data
 Use the **Set** function to cache data from lookup tables locally to avoid repeatedly retrieving data from the source. This technique
@@ -97,7 +97,7 @@ Where possible, use functions that delegate data processing to the data source i
 
 As [this list](delegation-list.md) shows, different data sources support delegation from different functions:
 
-![Use delegation](./media/performance-tips/PerfDelegation.png)
+![Use delegation](./media/performance-tips/perfdelegation1.png)
 
 For example, SharePoint lists support delegation from the [**Filter**](functions/function-filter-lookup.md) function but not the [**Search**](functions/function-filter-lookup.md) function. So you should use Filter instead of Search to find items in a gallery if the SharePoint list contains more than 500 items. For more tips, see [Working with large SharePoint lists in PowerApps](https://powerapps.microsoft.com/blog/powerapps-now-supports-working-with-more-than-256-items-in-sharepoint-lists/) (blog post). 
 
