@@ -14,8 +14,6 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions -->
 
-# Pass Customer Engagement data from a page as a parameter to ribbon actions
-
 When you define an action in a ribbon, you frequently have to pass data from the page to either a JavaScript function or a URL. This topic describes options for using the [\<CrmParameter\>](https://msdn.microsoft.com/library/gg309332.aspx) element to retrieve these values.
 
 ## Form and grid context in ribbon actions
