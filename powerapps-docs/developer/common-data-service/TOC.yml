@@ -53,6 +53,8 @@
     items:
     - name: Behavior of specialized update operations
       href: special-update-operation-behavior.md
+  - name: Asynchronous service
+    href: asynchronous-service.md
   - name: Plug-ins
     href: plug-ins.md
     items:
@@ -88,8 +90,6 @@
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-  - name: Asynchronous service
-    href: asynchronous-service.md
 - name: Integrate data using code
   items:
   - name: Import Data
@@ -124,7 +124,7 @@
     - name: Configure Exchange folder-level tracking rules
       href: configure-exchange-folder-level-tracking-rules.md
   - name: Using Virtual Entities
-    href: virtual-entities.md
+    href: virtual-entities/
 - name: Work with metadata using code
   href: metadata-services.md
   items:
