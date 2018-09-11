@@ -124,8 +124,8 @@ This topic describes where ribbons are defined and modified in Model-driven Apps
 ## Basic home tab  
  The basic home tab is displayed on the main application ribbon whenever an alternative tab is not defined because of entity context or a display rule that suppresses it for specific pages. For example, this tab is displayed when you view the MDA**Help**. The Id of the basic home tab is `Mscrm.BasicHomeTab`.  
 
-<!--> [!NOTE]
->  The Jewel that was shown in [!INCLUDE[pn_crm2011_and_online](../../includes/pn-crm2011-and-online.md)] is no longer displayed. Changes to the Jewel will not appear in [!INCLUDE[pn_dynamics_crm_online](../../includes/pn-dynamics-crm-online.md)]  -->
+<!-- [!NOTE]-->
+<!-- >  The Jewel that was shown in [!INCLUDE[pn_crm2011_and_online](../../includes/pn-crm2011-and-online.md)] is no longer displayed. Changes to the Jewel will not appear in [!INCLUDE[pn_dynamics_crm_online](../../includes/pn-dynamics-crm-online.md)]  -->
 
 <!--<a name="outlook_ribbons"></a>   
 ## [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] for Microsoft Office Outlook ribbons  
@@ -153,7 +153,7 @@ This topic describes where ribbons are defined and modified in Model-driven Apps
 |       AptbookTab Homepage tab        |        `Mscrm.AptbookTab`        |                                    Displays when viewing the Service Calendar in the Service area.                                    |
 |          Advanced Find tab           |       `Mscrm.AdvancedFind`       |                                               Displays in the **Advanced Find** window.                                               |
 |         Dashboard Editor tab         |    `Mscrm.DashboardEditorTab`    |                                                  Displays when editing a dashboard.                                                   |
-|            Documents tab             |       `Mscrm.DocumentsTab`       | Displays if [!INCLUDE[pn_SharePoint_short](../../includes/pn-sharepoint-short.md)] integration has been enabled for the organization. |
+|            Documents tab             |       `Mscrm.DocumentsTab`       | Displays if SharePoint integration has been enabled for the organization. |
 |           Chart Editor tab           | `Mscrm.VisualizationDesignerTab` |                                       Displays when editing a chart from the solutions window.                                        |
 |    Search Tools Contextual Group     |      `Mscrm.ArticleSearch`       |                                             Displays when viewing the `KBarticle` entity.                                             |
 
