@@ -52,7 +52,7 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
 ```  
   
 <a name="BKMK_ReferenceFromForm"></a>   
-## Reference an image web resource from a Dynamics 365 form  
+## Reference an image web resource from a  form  
   
 #### Add an image to an entity form  
   
