@@ -969,6 +969,8 @@
   items:
   - name: System requirements, limits, and configuration
     href: ./canvas-apps/limits-and-config.md
+  - name: Performance tips for canvas apps
+    href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
     href: ./canvas-apps/common-issues-and-resolutions.md
   - name: Get a session or app ID
