@@ -202,5 +202,5 @@ This topic contains sample dashboards along with the respective FormXML strings.
   
 ### See also  
  [Dashboards](analyze-data-with-dashboards.md)   
- [TODO:Dashboard Entities]<!--(dashboard-entities.md)-->
+ [Dashboard Entities](/dynamics365/customer-engagement/developer/customize-dev/dashboard-entities)
 

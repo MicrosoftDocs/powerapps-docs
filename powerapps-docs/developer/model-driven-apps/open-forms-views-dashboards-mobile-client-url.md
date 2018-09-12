@@ -10,7 +10,7 @@ author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 ---
-# Open forms, views, and dashboards in Dynamics 365 mobile client with a URL
+# Open forms, views, and dashboards in mobile client with a URL
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/open-forms-views-dashboards-mobile-client-url
 
@@ -56,4 +56,4 @@ ms-dynamicsxrm://?pagetype=<VALUE>&etn=<VALUE>&id=<VALUE>
 ### See also
 
  [Open Forms, Views, Dialogs and Reports with a URL](open-forms-views-dialogs-reports-url.md)  
- [TODO: Extend Dynamics 365 on the client]<!--(extend-client.md)-->
+ [Extend the client](/dynamics365/customer-engagement/developer/extend-client)
