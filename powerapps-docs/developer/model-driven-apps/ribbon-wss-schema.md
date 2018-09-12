@@ -19,7 +19,7 @@ The following is the schema definition for the ribbon types WSS of an import/exp
 Download the [Schemas](http://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
 
-For more information, see [TODO: Package and Distribute Extensions with Solutions]<!--(../package-distribute-extensions-use-solutions.md)-->.
+For more information, see [Package and Distribute Extensions with Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
 
 ## Schema  
