@@ -1872,6 +1872,6 @@ The following is the schema definition for form customizations for Model-driven 
   
 ### See also  
  [Customize entity forms](customize-entity-forms.md)   
- [TODO: Create, Install, and Update a Managed Solution]<!--(../create-install-update-managed-solution.md)-->   
- [TODO: Create, Export, or Import an Unmanaged Solution]<!--(../create-export-import-unmanaged-solution.md)-->   
+ [Create, Install, and Update a Managed Solution](../common-data-service/create-install-update-managed-solution.md) <br/>  
+ [Create, Export, or Import an Unmanaged Solution](../common-data-service/create-export-import-unmanaged-solution.md)
  [Form XML schema](form-xml-schema.md)
