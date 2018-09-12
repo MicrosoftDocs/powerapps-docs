@@ -16,6 +16,19 @@
     href: org-service/
   - name: Add and remove sample data
     href: sample-data.md
+  - name: Use FetchXML to query data
+    href: use-fetchxml-construct-query.md
+    items:
+    - name: Use FetchXML aggregation
+      href: use-fetchxml-aggregation.md
+    - name: Fiscal date and older than datetime query operators in FetchXML
+      href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
+    - name: Use a left outer join in FetchXML to query for records "not in"
+      href: use-fetchxml-left-outer-join-query-records-not-in.md
+  - name: Saved Queries
+    href: saved-queries.md
+  - name: Query Hierarchical data
+    href: query-hierarchical-data.md
   - name: Audit data changes
     href: auditing-overview.md
     items:
@@ -310,19 +323,6 @@
     href: org-service/samples/toc.yml
 - name: Concepts
   items:
-  - name: Use FetchXML to construct a query
-    href: use-fetchxml-construct-query.md
-    items:
-    - name: Use FetchXML aggregation
-      href: use-fetchxml-aggregation.md
-    - name: Fiscal date and older than datetime query operators in FetchXML
-      href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
-    - name: Use a left outer join in FetchXML to query for records "not in"
-      href: use-fetchxml-left-outer-join-query-records-not-in.md
-  - name: Saved Queries
-    href: saved-queries.md
-  - name: Query Hierarchical data
-    href: query-hierarchical-data.md
   - name: Security Model
     # See notes within this topic
     href: security-model.md 
