@@ -14,7 +14,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/ribbon-core-schema -->
 
-The following is the schema definition for the ribbon core portion of an import/export customization file. It is included from the [TODO: Customization Solutions File Schema]<!--(customization-solutions-file-schema.md)-->. `RibbonCore.xsd` schema includes `RibbonTypes.xsd` and `RibbonWss.xsd` and you can find schema  in the `Schemas\9.0.0.2090\RibbonCore.xsd` folder when you download the Schemas zip file.
+The following is the schema definition for the ribbon core portion of an import/export customization file. It is included from the [Customization Solutions File Schema](/dynamics365/customer-engagement/developer/common-data-service/customization-solutions-file-schema). `RibbonCore.xsd` schema includes `RibbonTypes.xsd` and `RibbonWss.xsd` and you can find schema  in the `Schemas\9.0.0.2090\RibbonCore.xsd` folder when you download the Schemas zip file.
 
 Download the [Schemas](http://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
