@@ -68,11 +68,11 @@ Publishing customizations makes the Web application aware of changes to the data
 - <xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>  
   
 ### See also  
- [Customize Model-driven Apps](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)
- [Extend the Metadata Model](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)
- [Publish request schema](publish-request-schema.md)
- [Customize Entity Forms](customize-entity-forms.md)
- [Customize Entity Views](customize-entity-views.md)
- [Customize Global Option Sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
+ [Customize Model-driven Apps](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)<br/>
+ [Extend the Metadata Model](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)<br/>
+ [Publish request schema](publish-request-schema.md)<br/>
+ [Customize Entity Forms](customize-entity-forms.md)<br/>
+ [Customize Entity Views](customize-entity-views.md)<br/>
+ [Customize Global Option Sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)<br/>
  [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)
 
