@@ -63,13 +63,13 @@ OData-Version: 4.0
 }  
 ```
 
- More information: [TODO: Query Data using the Web API]<!--(../webapi/query-data-web-api.md)-->.
+ More information: [Query Data using the Web API](../developer/webapi/query-data-web-api.md).
   
 <a name="BKMK_EditAndPublish"></a>
 
 ## Edit and publish theme data
 
- A theme is created by using the customization tools in the UI, without requiring a developer to write code. Details about how to apply these customizations can be found in [TODO: Change the color scheme or add a logo to match your organization’s brand]<!--(../../customize/change-color-scheme-add-logo-match-organizations-brand.md)-->.  
+ A theme is created by using the customization tools in the UI, without requiring a developer to write code. Details about how to apply these customizations can be found in [Change the color scheme or add a logo to match your organization’s brand](/dynamics365/customer-engagement/customize/change-color-scheme-add-logo-match-organizations-brand).  
 
  Most theme data is stored within the Theme entity. Customized colors for specific entities is included in the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntityColor> property. This data is exported with the entity if the entity is included in a solution.
 
@@ -107,10 +107,10 @@ OData-Version: 4.0
 
 ## Exporting and importing themes
 
- Because themes aren’t included as part of a solution, if you want to transfer themes from one organization to another you can use the Configuration Migration tool to generate a schema, export the theme data, and import it into a different organization. For details about how to use this tool, see [TODO: Move configuration data using the Configuration Migration Tool]<!--(../../admin/manage-configuration-data.md)-->.  
+ Because themes aren’t included as part of a solution, if you want to transfer themes from one organization to another you can use the Configuration Migration tool to generate a schema, export the theme data, and import it into a different organization. For details about how to use this tool, see [Move configuration data using the Configuration Migration Tool](/dynamics365/customer-engagement/admin/manage-configuration-data).  
 
 ### See also
 
- [TODO: Theme Entity]<!--(../entities/theme.md)--> <br/>
- [TODO: Create a theme]<!--(../../customize/change-color-scheme-add-logo-match-organizations-brand.md)--> <br/>
- [TODO: Developers guide to customization for Microsoft Dynamics 365]<!--customize-applications.md)-->
+ [Theme Entity](../common-data-service/reference/entities/theme.md) <br/>
+ [Create a theme](/dynamics365/customer-engagement/customize/change-color-scheme-add-logo-match-organizations-brand) <br/>
+ [Developers guide to customization](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)-->
