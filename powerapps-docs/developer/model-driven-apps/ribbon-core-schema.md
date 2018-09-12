@@ -18,7 +18,7 @@ The following is the schema definition for the ribbon core portion of an import/
 
 Download the [Schemas](http://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
 
-For more information, see [TODO: Package and Distribute Extensions with Microsoft Dynamics 365 Solutions]<!--(../package-distribute-extensions-use-solutions.md)-->.
+For more information, see [Package and Distribute Extensions with Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
   
 ## Ribbon Core Schema  
   
@@ -135,4 +135,4 @@ For more information, see [TODO: Package and Distribute Extensions with Microsof
  [Ribbon core schema](ribbon-core-schema.md)<br/>
  [Ribbon types schema](ribbon-types-schema.md)<br/>
  [Ribbon WSS schema](ribbon-wss-schema.md)<br/>
- [TODO: Customization Solutions File Schema]<!--(customization-solutions-file-schema.md)-->
+ [Customization Solutions File Schema](/dynamics365/customer-engagement/developer/common-data-service/customization-solutions-file-schema)
