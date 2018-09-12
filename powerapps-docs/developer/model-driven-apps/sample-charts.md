@@ -581,5 +581,5 @@ This topic contains sample charts along with the respective data description and
  [Visualization Data Description Schema](visualization-data-description-schema.md)   
  [Create a Chart](create-visualization-chart.md)   
  [View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)   
- [TODO: Sample Code for Charts (Visualizations)](/dynamics365/customer-engagement/developer/customize-dev/sample-code-charts-visualizations)
+ [Sample Code for Charts (Visualizations)](/dynamics365/customer-engagement/developer/customize-dev/sample-code-charts-visualizations)
 
