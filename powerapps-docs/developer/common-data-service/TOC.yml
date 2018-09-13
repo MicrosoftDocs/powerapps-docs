@@ -166,7 +166,7 @@
       href: write-custom-azure-aware-plugin.md
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
-    - name: "Tutorial: Configure Azure (SAS) for integration with Customer Engagement""
+    - name: "Tutorial: Configure Azure (SAS) for integration with Customer Engagement"
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
@@ -435,12 +435,6 @@
   - name: Field-level data encryption
     href: field-level-data-encryption.md
   - name: Upload and manage document templates
-    href: upload-manage-document-templates.md
-
-
-
-
-  
-  
+    href: upload-manage-document-templates.md 
   
   
