@@ -423,10 +423,8 @@
   - name: FetchXML schema
     href: fetchxml-schema.md
 # - name: On-premises options
-
-- name: Concepts
+- name: Miscellaneous (TO BE FIXED)
   items:
-
   - name: Impersonate another user
     href: impersonate-another-user.md
   - name: Online Management API
