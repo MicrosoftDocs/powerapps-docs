@@ -19,7 +19,8 @@ This sample shows how to convert a **Fax** to **Task**. To download the complete
 
 ## How to run this sample
 
-See [How to run this sample](/powerapps-samples/cds/How-to-run-samples) for information about how to run this sample.
+[!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
+
 
 ## What this sample does
 
