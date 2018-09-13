@@ -94,6 +94,12 @@
       href: work-data-azure-solution.md
     - name: Work with event data in your Azure Event Hub solution
       href: work-event-data-azure-event-hub-solution.md
+    - name: Configure Azure integration with Common Data Service for App
+      href: configure-azure-integration.md
+    - name: Write a custom Azure-aware plug-in
+      href: write-custom-azure-aware-plugin.md
+    - name: Write a listener application for a Azure solution
+      href: write-listener-application-azure-solution.md
   - name: Use Web Hooks
     href: use-webhooks.md
     items:
@@ -136,8 +142,19 @@
     items:
     - name: Configure Exchange folder-level tracking rules
       href: configure-exchange-folder-level-tracking-rules.md
-  - name: Using Virtual Entities
+  - name: Virtual entities
     href: virtual-entities/
+  - name: SharePoint integration
+    href: integrate-sharepoint.md
+    items:
+    - name: Get started with SharePoint integration
+      href: get-started-sharepoint-integration.md
+    - name: Enable document management for entities
+      href: enable-document-management-entities.md
+    - name: Actions on SharePoint location records
+      href: actions-on-sharepoint-location-records.md
+    - name: Define custom claim mapping for SharePoint server-based integration
+      href: define-custom-claim-mapping-sharepoint-server-based-integration.md
 - name: Work with metadata using code
   href: metadata-services.md
   items:
@@ -234,7 +251,7 @@
       href: store-appsource-package-azure-storage.md
     - name: 'Next steps: Submit your app on Cloud Partner Portal'
       href: next-steps-submit-app-cloud-partner-portal.md
-- name: Create Client applications
+- name: Create client applications
   href: connect-cds.md
   items:
   - name: Authentication
@@ -408,39 +425,12 @@
     href: online-management-api.md
   - name: Outlook Client
     href: outlook-client.md
-  - name: Multiple language support
-    items:
-
-
   - name: Field-level data encryption
     href: field-level-data-encryption.md
   - name: Upload and manage document templates
     href: upload-manage-document-templates.md
-- name: How-to Guides
-  items:
-  - name: Azure integration
-    items:
-    - name: Configure Azure integration with Common Data Service for App
-      href: configure-azure-integration.md
-    - name: Write a custom Azure-aware plug-in
-      href: write-custom-azure-aware-plugin.md
-    - name: Write a listener application for a Azure solution
-      href: write-listener-application-azure-solution.md
 
 
-
-
-  - name: SharePoint integration
-    href: integrate-sharepoint.md
-    items:
-    - name: Get started with SharePoint integration
-      href: get-started-sharepoint-integration.md
-    - name: Enable document management for entities
-      href: enable-document-management-entities.md
-    - name: Actions on SharePoint location records
-      href: actions-on-sharepoint-location-records.md
-    - name: Define custom claim mapping for SharePoint server-based integration
-      href: define-custom-claim-mapping-sharepoint-server-based-integration.md
   - name: Goal management
     href: goal-management-entities.md
     items:
