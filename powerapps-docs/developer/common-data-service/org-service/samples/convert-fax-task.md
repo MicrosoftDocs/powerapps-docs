@@ -24,7 +24,7 @@ See [How to run this sample](/powerapps-samples/cds/How-to-run-samples) for info
 ## What this sample does
 
 The `CreateRequiredRecords` method creates the sample data that is required for the sample. The `retrievedFax` method retrieves the fax. 
-The `DeleteRequiredRecords` nmethod gives an option to delete all the data that sample has created.
+The `DeleteRequiredRecords` method gives an option to delete all the data that sample has created.
 
 ## How this sample works
 
@@ -33,7 +33,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. Creates required data that this sample requires.
+1. The `WhoAmIRequest` method gets the current user details.
+1. The `ActivityParty` method creates the activity party for sending and recieving fax.
+1. The `Fax` method creates the fax required for the sample.
 
 
 ### Demonstrate
