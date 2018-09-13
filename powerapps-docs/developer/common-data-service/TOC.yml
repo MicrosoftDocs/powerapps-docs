@@ -277,6 +277,12 @@
     href: xrm-tooling/
   - name: Discover user organizations
     href: discovery-service.md
+- name: Samples
+  items:
+  - name: Web API
+    href: webapi/samples/toc.yml
+  - name: Organization Service
+    href: org-service/samples/toc.yml
 - name: Resources
   items:
   - name: Developer resources page
@@ -332,12 +338,6 @@
     href: walkthrough-registering-configuring-simplespa-application-adal-js.md
   - name: Update a service endpoint imported from a solution
     href: walkthrough-update-service-endpoint-imported-solution.md                           
-- name: Samples
-  items:
-  - name: Web API
-    href: webapi/samples/toc.yml
-  - name: Organization Service
-    href: org-service/samples/toc.yml
 - name: Concepts
   items:
   - name: Security Model
