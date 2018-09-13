@@ -58,6 +58,8 @@
     items:
     - name: Run bulk delete
       href: run-bulk-delete.md
+  - name: Use Optimistic Concurrency to reduce potential data loss
+    href: optimistic-concurrency.md
 - name: Apply business logic using code
   href: apply-business-logic-with-code.md
   items:
@@ -100,6 +102,14 @@
       href: write-custom-azure-aware-plugin.md
     - name: Write a listener application for a Azure solution
       href: write-listener-application-azure-solution.md
+    - name: Tutorial: Configure Azure (SAS) for integration with Customer Engagement
+      href: walkthrough-configure-azure-sas-integration.md
+    - name: Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool
+      href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
+    - name: Tutorial: Register and configuring a SPA application with adal.js
+      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+    - name: Tutorial: Update a service endpoint imported from a solution
+      href: walkthrough-update-service-endpoint-imported-solution.md
   - name: Use Web Hooks
     href: use-webhooks.md
     items:
@@ -189,6 +199,11 @@
       href: entity-relationship-eligibility.md
     - name: Entity relationship metadata messages
       href: entity-relationship-metadata-messages.md
+  - name: Use connections to link records to each other
+    href: connection-entities.md
+    items:
+    - name: Describe a relationship between entities with connection roles
+      href: describe-relationship-entities-connection-roles.md
   - name: Customize labels to support multiple languages
     href: customize-labels-support-multiple-languages.md
 - name: Package and distribute extensions using solutions
@@ -273,6 +288,8 @@
         href: use-single-tenant-server-server-authentication.md
     - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
       href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+    - name: Tutorial: Register an app with Azure Active Directory
+      href: walkthrough-register-app-azure-active-directory.md
   - name: Build Windows client apps using XRM tools
     href: xrm-tooling/
   - name: Discover user organizations
@@ -326,18 +343,6 @@
     href: fetchxml-schema.md
 # - name: On-premises options
 
-- name: Tutorials
-  items:
-  - name: Configure Azure (SAS) for integration with Customer Engagement
-    href: walkthrough-configure-azure-sas-integration.md
-  - name: Register an app with Azure Active Directory
-    href: walkthrough-register-app-azure-active-directory.md
-  - name: Register an Azure-aware plug-in using the Plug-in Registration Tool
-    href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-  - name: Register and configuring a SPA application with adal.js
-    href: walkthrough-registering-configuring-simplespa-application-adal-js.md
-  - name: Update a service endpoint imported from a solution
-    href: walkthrough-update-service-endpoint-imported-solution.md                           
 - name: Concepts
   items:
   - name: Security Model
@@ -414,13 +419,7 @@
       href: work-knowledge-articles.md
   - name: Auditing overview
     href: auditing-overview.md
-  - name: Optimistic Concurrency
-    href: optimistic-concurrency.md
-  - name: Use connections to link records to each other
-    href: connection-entities.md
-    items:
-    - name: Describe a relationship between entities with connection roles
-      href: describe-relationship-entities-connection-roles.md
+
   - name: Online Management API
     href: online-management-api.md
   - name: Outlook Client
