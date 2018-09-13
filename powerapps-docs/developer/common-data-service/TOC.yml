@@ -87,6 +87,8 @@
       href: field-security-entities.md
     - name: Use access teams and owner teams to collaborate and share information
       href: use-access-teams-owner-teams-collaborate-share-information.md
+  - name: Template entities
+    href: upload-manage-document-templates.md
 - name: Work with data using code
   items:
   - name: Using Web API
@@ -433,7 +435,5 @@
     href: outlook-client.md
   - name: Field-level data encryption
     href: field-level-data-encryption.md
-  - name: Upload and manage document templates
-    href: upload-manage-document-templates.md 
-  
+ 
   
