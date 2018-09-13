@@ -1,5 +1,3 @@
-# How to run samples
-
 1. Download or clone the repo so that you have a local copy.
 1. (Optional) Edit the cds/App.config file to define a connection string specifying the Common Data service for Apps instance you want to connect to.
 1. Open the sample solution in Visual Studio and press F5 to run the sample.
