@@ -29,8 +29,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1.Checks for the current version of the org.
-2.Query for a system user to send an email after bulk delete request operation completes.
+1. Checks for the current version of the org.
+2. Query for a system user to send an email after bulk delete request operation completes.
 3. The `BulkDeleteRequest` creates the bulk delete process and set the request properties.
 4. The `CheckSuccess` method queries for the `BulkDeleteOperation` until it has been completed or until the designated time runs out. It then checks to see if the operation is complete.
 
