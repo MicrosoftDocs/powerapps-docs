@@ -21,7 +21,7 @@ This sample shows how to convert a **Fax** to **Task**. To download the complete
 
 See [How to run this sample](/powerapps-samples/cds/How-to-run-samples) for information about how to run this sample.
 
-What this sample does
+## What this sample does
 
 The `CreateRequiredRecords` method creates the sample data that is required for the sample. The `retrievedFax` method retrieves the fax. 
 The `DeleteRequiredRecords` nmethod gives an option to delete all the data that sample has created.
