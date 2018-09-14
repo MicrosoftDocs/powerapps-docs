@@ -32,15 +32,7 @@ Client-side scripting using JavaScript is one of the ways to apply custom busine
 
 If your business requirement can't be achieved using a business rule, you will find that client-scripting using the client API object model provides a powerful way to extend the behavior of the application and enable automation in the client.
 
-## Resources
+## Start here
 
-The following resources for client scripting are available in the Common Data Service for Apps Developer guide.
-
-- [Client scripting with model-driven apps](client-scripting.md)
-- [Events in forms and grids in model-driven apps](clientapi/events-forms-grids.md)
-- [Understand the Client API object model](clientapi/understand-clientapi-object-model.md)
-- [Tutorial: Write your first client script](clientapi/walkthrough-write-your-first-client-script.md)
-- [Debug your JavaScript code](/dynamics365/customer-engagement/developer/clientapi/debug-javascript-code)
-- [Best practices: Client scripting](/dynamics365/customer-engagement/developer/clientapi/client-scripting-best-practices)
-- [Client API Reference](/dynamics365/customer-engagement/developer/clientapi/reference)
+[Client scripting with model-driven apps](clientapi/client-scripting.md)
 
