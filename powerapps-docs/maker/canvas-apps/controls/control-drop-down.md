@@ -23,10 +23,10 @@ A **Drop down** control conserves screen real estate, especially when the list c
 ## Key properties
 **[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
 
-**[Items](properties-core.md)** – The source of data that appears in a control such as a gallery, a list, or a chart.
+**[Items](properties-core.md)** – The source of data that contains the items shown in the drop down.  If the source collection has multiple data columns, identify the data column to be used in the drop down by setting the **Value** property.
+  
+**Value** – Data column from the Items collection whose value is displayed for each item in the dropdown.
 
-When you add a gallery, a list, or a chart, the property list shows **Items** by default so that you can easily specify the data that the new control should show. For example, you might set the **Items** property of a gallery to the **Account** table in Salesforce, a table named **Inventory** that you created in Excel and uploaded to the cloud, or a SharePoint list named **ConferenceSpeakers**.
-   
 **Selected** – The selected item.
 
 ## Additional properties
