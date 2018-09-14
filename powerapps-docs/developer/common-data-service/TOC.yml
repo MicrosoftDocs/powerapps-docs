@@ -89,36 +89,6 @@
         href: tutorial-update-plug-in.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
-  - name: Azure Integration
-    href: azure-integration.md
-    items: 
-    - name: Work with data in your Azure solution
-      href: work-data-azure-solution.md
-    - name: Work with event data in your Azure Event Hub solution
-      href: work-event-data-azure-event-hub-solution.md
-    - name: Configure Azure integration with Common Data Service for App
-      href: configure-azure-integration.md
-    - name: Write a custom Azure-aware plug-in
-      href: write-custom-azure-aware-plugin.md
-    - name: Write a listener application for a Azure solution
-      href: write-listener-application-azure-solution.md
-    - name: "Tutorial: Configure Azure (SAS) for integration with Customer Engagement"
-      href: walkthrough-configure-azure-sas-integration.md
-    - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
-      href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-    - name: "Tutorial: Register and configuring a SPA application with adal.js"
-      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
-    - name: "Tutorial: Update a service endpoint imported from a solution"
-      href: walkthrough-update-service-endpoint-imported-solution.md
-  - name: Use Web Hooks
-    href: use-webhooks.md
-    items:
-    - name: Use webhooks to create external handlers for server events
-      href: use-webhooks.md
-    - name: Register a web hook
-      href: register-web-hook.md
-    - name: Test webhook registration
-      href: test-webhook-registration.md
 - name: Integrate data using code
   items:
   - name: Import Data
@@ -154,6 +124,36 @@
       href: configure-exchange-folder-level-tracking-rules.md
   - name: Virtual entities
     href: virtual-entities/
+  - name: Azure Integration
+    href: azure-integration.md
+    items: 
+    - name: Work with data in your Azure solution
+      href: work-data-azure-solution.md
+    - name: Work with event data in your Azure Event Hub solution
+      href: work-event-data-azure-event-hub-solution.md
+    - name: Configure Azure integration with Common Data Service for App
+      href: configure-azure-integration.md
+    - name: Write a custom Azure-aware plug-in
+      href: write-custom-azure-aware-plugin.md
+    - name: Write a listener application for a Azure solution
+      href: write-listener-application-azure-solution.md
+    - name: "Tutorial: Configure Azure (SAS) for integration with Customer Engagement"
+      href: walkthrough-configure-azure-sas-integration.md
+    - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
+      href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
+    - name: "Tutorial: Register and configuring a SPA application with adal.js"
+      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+    - name: "Tutorial: Update a service endpoint imported from a solution"
+      href: walkthrough-update-service-endpoint-imported-solution.md
+  - name: Use Web Hooks
+    href: use-webhooks.md
+    items:
+    - name: Use webhooks to create external handlers for server events
+      href: use-webhooks.md
+    - name: Register a web hook
+      href: register-web-hook.md
+    - name: Test webhook registration
+      href: test-webhook-registration.md
   - name: SharePoint integration
     href: integrate-sharepoint.md
     items:
