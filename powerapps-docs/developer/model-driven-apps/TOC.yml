@@ -1,12 +1,13 @@
 # This TOC is a work in progress. The specific location of items is not locked down
 - name: Overview
   href: overview.md
-- name: Get started: Customizing model-driven apps using code
+- name: "Get started: Customizing model-driven apps using code"
   href: supported-customizations.md
 # - name: Quick Starts
 - name: Create and manage model-driven apps using code
   href: create-manage-model-driven-apps-using-code.md
-- name: Design app interface using code 
+- name: Design app interface using code
+  items:
   - name: Customize entity forms
     href: customize-entity-forms.md
   - name: Customize entity views
@@ -14,7 +15,7 @@
     items:
     - name: UserQuery (saved view) entity
       href: userquery-saved-view-entity.md
-- name:Apply data visualizations to your app using code
+- name: Apply data visualizations to your app using code
   href: customize-visualizations-dashboards.md
   items:
     - name: Analyze data with dashboards
@@ -56,8 +57,7 @@
   - name: Sample dashboards
     href: sample-dashboards.md
 - name: Concepts
-
-
+  items:
   - name: Customize visualizations and dashboards
     href: customize-visualizations-dashboards.md
   - name: Web resources for model-driven apps
