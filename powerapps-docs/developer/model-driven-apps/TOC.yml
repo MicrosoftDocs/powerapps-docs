@@ -4,7 +4,7 @@
 - name: "Get started: Customizing model-driven apps using code"
   href: supported-customizations.md
 # - name: Quick Starts
-- name: Create and manage model-driven apps using code
+- name: Create and manage app using code
   href: create-manage-model-driven-apps-using-code.md
 - name: Design app interface using code
   items:
@@ -15,7 +15,7 @@
     items:
     - name: UserQuery (saved view) entity
       href: userquery-saved-view-entity.md
-- name: Apply data visualizations to your app using code
+- name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
   items:
     - name: Analyze data with dashboards
@@ -36,71 +36,11 @@
         href: actions-visualizations-charts.md
       - name: Create a visualization (chart)
         href: create-visualization-chart.md
-- name: Tutorials
+- name: Use JavaScript with model-driven apps
+  href: use-javascript.md
   items:
-  - name: Write your first client script
-    href: clientapi/walkthrough-write-your-first-client-script.md
-- name: Samples
-  items:
-  - name: Export ribbon definitions
-    href: sample-export-ribbon-definitions.md
-  - name: Pass multiple values to a  web resource through the data parameter
-    href: sample-pass-multiple-values-web-resource-through-data-parameter.md
-  - name: Create and manage web resources
-    items: 
-    - name: Import files as web resources
-      href: sample-import-files-web-resources.md
-    - name: Web resource utility
-      href: sample-web-resource-utility.md
-  - name: Sample charts
-    href: sample-charts.md
-  - name: Sample dashboards
-    href: sample-dashboards.md
-- name: Concepts
-  items:
-  - name: Customize visualizations and dashboards
-    href: customize-visualizations-dashboards.md
-  - name: Web resources for model-driven apps
-    href: web-resources.md
-  - name: Use web resources
-    href: use-web-resources.md
-    items:
-    - name: Webpage (HTML) web resources
-      href: webpage-html-web-resources.md
-      items:
-      - name: Create accessible web resources
-        href: create-accessible-web-resources.md
-    - name: Script (JScript) web resources
-      href: script-jscript-web-resources.md
-    - name: CSS web resources
-      href: css-web-resources.md
-    - name: Image web resources
-      href: image-web-resources.md
-    - name: Data (XML) Web resources
-      href: data-xml-web-resources.md
-    - name: RESX web resources
-      href: resx-web-resources.md
-    - name: Stylesheet (XSL) web resources
-      href: stylesheet-xsl-web-resources.md
-    - name: Web resource dependencies
-      href: web-resource-dependencies.md
   - name: Client scripting
     href: client-scripting.md
-  - name: Use JavaScript with model-driven apps
-    href: use-javascript.md
-  - name: Customize commands
-    href: customize-commands.md
-  - name: When to edit the customizations file
-    href: when-edit-customization-file.md
-  - name: Publish customizations
-    href: publish-customizations.md
-- name: How-to Guides
-  items:
-  - name: Client Scripting
-    href: clientapi/client-scripting.md
-    items:
-    - name: Web resource development using Fiddler AutoResponder
-      href: streamline-javascript-development-fiddler-autoresponder.md
   - name: Customize commands and the ribbon
     href: customize-commands-ribbon.md
     items:
@@ -132,6 +72,58 @@
       href: define-ribbon-tab-display-rules.md
     - name: Pass parameters to a URL by using the ribbon
       href: pass-parameters-url-by-using-ribbon.md
+  - name: Web resources for model-driven apps
+    href: web-resources.md
+    items:
+    - name: Use web resources
+      href: use-web-resources.md
+    - name: Web resource development using Fiddler AutoResponder
+      href: streamline-javascript-development-fiddler-autoresponder.md
+    - name: Webpage (HTML) web resources
+      href: webpage-html-web-resources.md
+      items:
+      - name: Create accessible web resources
+        href: create-accessible-web-resources.md
+    - name: Script (JScript) web resources
+      href: script-jscript-web-resources.md
+    - name: CSS web resources
+      href: css-web-resources.md
+    - name: Image web resources
+      href: image-web-resources.md
+    - name: Data (XML) Web resources
+      href: data-xml-web-resources.md
+    - name: RESX web resources
+      href: resx-web-resources.md
+    - name: Stylesheet (XSL) web resources
+      href: stylesheet-xsl-web-resources.md
+    - name: Web resource dependencies
+      href: web-resource-dependencies.md
+- name: Samples
+  items:
+  - name: Export ribbon definitions
+    href: sample-export-ribbon-definitions.md
+  - name: Pass multiple values to a  web resource through the data parameter
+    href: sample-pass-multiple-values-web-resource-through-data-parameter.md
+  - name: Create and manage web resources
+    items: 
+    - name: Import files as web resources
+      href: sample-import-files-web-resources.md
+    - name: Web resource utility
+      href: sample-web-resource-utility.md
+  - name: Sample charts
+    href: sample-charts.md
+  - name: Sample dashboards
+    href: sample-dashboards.md
+- name: Concepts
+  items:
+  - name: Customize commands
+    href: customize-commands.md
+  - name: When to edit the customizations file
+    href: when-edit-customization-file.md
+  - name: Publish customizations
+    href: publish-customizations.md
+- name: How-to Guides
+  items:
   - name: Edit the customizations XML file with schema validation
     href: edit-customizations-xml-file-schema-validation.md
   - name: Open forms, views, dialogs, and reports with a URL
@@ -145,14 +137,10 @@
     href: open-forms-views-dashboards-mobile-client-url.md
   - name: Use IFRAME and web resource controls on a form
     href: use-iframe-and-web-resource-controls-on-a-form.md
-
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
   - name: Create or edit how business rules are initiated
     href: create-edit-how-business-rules-initiated.md
-  - name: Visualizations (Charts)
-    items:
-
   - name: Use editable grids
     href: use-editable-grids.md
 - name: Resources
