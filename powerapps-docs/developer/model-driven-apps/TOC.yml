@@ -112,6 +112,15 @@
       href: web-resource-dependencies.md
 - name: "Create, manage, and publish app using code"
   href: create-manage-model-driven-apps-using-code.md
+- name: Edit the customizations file
+  href: when-edit-customization-file.md
+  items:
+  - name: Edit the customizations XML file with schema validation
+    href: edit-customizations-xml-file-schema-validation.md
+  - name: Publish customizations
+    href: publish-customizations.md
+- name: Create or edit how business rules are initiated
+  href: create-edit-how-business-rules-initiated.md
 - name: Samples
   items:
   - name: Export ribbon definitions
@@ -158,11 +167,4 @@
   items:
   - name: Customize commands
     href: customize-commands.md
-  - name: When to edit the customizations file
-    href: when-edit-customization-file.md
-  - name: Publish customizations
-    href: publish-customizations.md
-  - name: Edit the customizations XML file with schema validation
-    href: edit-customizations-xml-file-schema-validation.md
-  - name: Create or edit how business rules are initiated
-    href: create-edit-how-business-rules-initiated.md
+
