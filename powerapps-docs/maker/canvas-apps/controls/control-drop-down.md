@@ -21,11 +21,11 @@ A list that shows only the first item unless the user opens it.
 A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices.
 
 ## Key properties
-**[Default](properties-core.md)** – The initial value of a control before it is changed by the user.
+**[Default](properties-core.md)** – The initial value of a control before the user specifies a different value.
 
-**[Items](properties-core.md)** – The source of data that contains the items shown in the drop down.  If the source collection has multiple data columns, identify the data column to be used in the drop down by setting the **Value** property.
+**[Items](properties-core.md)** – The source of data that contains the items that appear in the control. If the source has multiple columns, set the control's **Value** property to the column of data that you want to show.
   
-**Value** – Data column from the Items collection whose value is displayed for each item in the dropdown.
+**Value** – The column of data that you want to show in the control (for example, if a data source has multiple columns).
 
 **Selected** – The selected item.
 
