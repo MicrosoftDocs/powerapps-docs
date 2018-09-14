@@ -1,7 +1,40 @@
 # This TOC is a work in progress. The specific location of items is not locked down
 - name: Overview
   href: overview.md
+- name: Get started: Customizing model-driven apps using code
+  href: supported-customizations.md
 # - name: Quick Starts
+- name: Create and manage model-driven apps using code
+  href: create-manage-model-driven-apps-using-code.md
+- name: Design app interface using code 
+  - name: Customize entity forms
+    href: customize-entity-forms.md
+  - name: Customize entity views
+    href: customize-entity-views.md
+    items:
+    - name: UserQuery (saved view) entity
+      href: userquery-saved-view-entity.md
+- name:Apply data visualizations to your app using code
+  href: customize-visualizations-dashboards.md
+  items:
+    - name: Analyze data with dashboards
+      href: analyze-data-with-dashboards.md
+      items: 
+      - name: 'Understand dashboards: Dashboard components and FormXML'
+        href: understand-dashboards-dashboard-components-formxml.md
+      - name: Actions on dashboards
+        href: actions-dashboards.md
+      - name: Create a dashboard
+      href: create-dashboard.md
+    - name: View data with visualizations (charts)
+      href: view-data-with-visualizations-charts.md
+      items:
+      - name: 'Understand charts: Underlying data and chart representation'
+        href: understand-charts-underlying-data-chart-representation.md
+      - name: Actions on visualizations (charts)
+        href: actions-visualizations-charts.md
+      - name: Create a visualization (chart)
+        href: create-visualization-chart.md
 - name: Tutorials
   items:
   - name: Write your first client script
@@ -23,29 +56,10 @@
   - name: Sample dashboards
     href: sample-dashboards.md
 - name: Concepts
-  items:
-  - name: Supported customizations
-    href: supported-customizations.md
-  - name: Customize entity forms
-    href: customize-entity-forms.md
-  - name: Customize entity views
-    href: customize-entity-views.md
-    items:
-    - name: UserQuery (saved view) entity
-      href: userquery-saved-view-entity.md
+
+
   - name: Customize visualizations and dashboards
     href: customize-visualizations-dashboards.md
-    items:
-    - name: Analyze data with dashboards
-      href: analyze-data-with-dashboards.md
-      items: 
-      - name: 'Understand dashboards: Dashboard components and FormXML'
-        href: understand-dashboards-dashboard-components-formxml.md
-    - name: View data with visualizations (charts)
-      href: view-data-with-visualizations-charts.md
-      items:
-      - name: 'Understand charts: Underlying data and chart representation'
-        href: understand-charts-underlying-data-chart-representation.md    
   - name: Web resources for model-driven apps
     href: web-resources.md
   - name: Use web resources
@@ -131,24 +145,14 @@
     href: open-forms-views-dashboards-mobile-client-url.md
   - name: Use IFRAME and web resource controls on a form
     href: use-iframe-and-web-resource-controls-on-a-form.md
-  - name: Create and manage custom business apps using code
-    href: create-manage-custom-business-apps-using-code.md
+
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
   - name: Create or edit how business rules are initiated
     href: create-edit-how-business-rules-initiated.md
   - name: Visualizations (Charts)
     items:
-    - name: Actions on visualizations (charts)
-      href: actions-visualizations-charts.md
-    - name: Create a visualization (chart)
-      href: create-visualization-chart.md
-  - name: Dashboards
-    items:
-    - name: Actions on dashboards
-      href: actions-dashboards.md
-    - name: Create a dashboard
-      href: create-dashboard.md
+
   - name: Use editable grids
     href: use-editable-grids.md
 - name: Resources

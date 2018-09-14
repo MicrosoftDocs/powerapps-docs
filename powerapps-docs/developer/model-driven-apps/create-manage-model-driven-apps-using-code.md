@@ -1,6 +1,6 @@
 ---
-title: "Create and manage custom business apps using code (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about how to create, manage, and publish business apps in Common Data Service for Apps using code. Dynamics 365 Common Data Service for Apps business apps are purpose built that provide a limited set of functionality that is relevant for a particular area of work." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Create and manage model-driven apps using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
+description: "Learn about how to create, manage, and publish model-driven apps using code in PowerApps." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 08/01/2018
 ms.service:
@@ -15,25 +15,21 @@ manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
-# Create and manage custom business apps in Common Data Service for Apps using code
+# Create and manage model-driven apps using code
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-manage-custom-business-apps-using-code -->
 
-Business apps in CDS for Apps are modular, purpose built apps that provide role-based functionality relevant for a particular area of work. These apps make it easier for users to quickly find things they need to do every day by providing a simple and intuitive interface. For example, the **Sales** business app provides a simpler, smaller sitemap with only the appropriate set of forms, views, dashboards, and process flows that are relevant for sales people.
-
-System administrators and customizers can provide users access to these business apps using security roles; users can access only those apps that they have permission to. More information: [Business apps in Dynamics 365 CDS for Apps](/dynamics365/customer-engagement/basics/business-apps-dynamics-365)
-
-In addition to creating custom business apps using the app designer, you can now programmatically create and manage custom business apps in Dynamics 365 CDS for Apps. 
+In addition to creating a model-driven app using the PowerApps app designer, you can programmatically create and manage model-driven apps. 
 
 > [!IMPORTANT]
-> You don't have to write code to build custom business apps if you don't need to! The app designer provides a much simpler and intuitive experience for building custom business apps without having to write code by providing a tile-based information structure and simplified interface. Check it out here: [Design custom business apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)  
+> You don't have to write code to build model-driven apps if you don't need to! The app designer provides a much simpler and intuitive experience for building model-driven apps without having to write code by providing a tile-based information structure and simplified interface. Check it out here: [Design model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)  
   
-Creating a custom business app involves the following steps:
+Creating a model-driven app involves the following steps:
 1. Create an [AppModule Entity](../common-data-service/reference/entities/appmodule.md) instance to define your app and its properties.
 2. Add or remove components to your app such as entity, sitemap, and other components for your custom app using the <xref:Microsoft.Dynamics.CRM.AddAppComponents> and <xref:Microsoft.Dynamics.CRM.RemoveAppComponents> actions.
 3. Check your app for any required components thats missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
 4. Publish your app.
-5. Associate appropriate security roles to your custom business app to provide access to users.
+5. Associate appropriate security roles to your model-driven app to provide access to users.
 
 
 ## Create your business app and define its properties
@@ -193,9 +189,9 @@ OData-Version: 4.0
 
 ## Publish your business app
 
-After you have added required components to your custom business app and validated it, you must publish it to make it available to users.
+After you have added required components to your model-driven app and validated it, you must publish it to make it available to users.
 
-Use the <xref:Microsoft.Dynamics.CRM.PublishXml> action or the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> messageto publish your custom business app. The following request shows how to publish your business app with ID: dd621d4a-d898-e711-80e7-00155db763be:
+Use the <xref:Microsoft.Dynamics.CRM.PublishXml> action or the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> messageto publish your model-driven app. The following request shows how to publish your business app with ID: dd621d4a-d898-e711-80e7-00155db763be:
 
 ```http
 POST [Organization URI]/api/data/v9.0/PublishXml HTTP/1.1
@@ -272,5 +268,5 @@ You can use the following client APIs to work with business apps:
 - [getCurrentAppUrl](clientapi/reference/xrm-utility/getglobalcontext/getCurrentAppUrl.md) 
   
 ### See also  
-[Design custom business apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
+[Design model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
  
