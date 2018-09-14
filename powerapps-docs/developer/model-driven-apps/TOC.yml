@@ -7,6 +7,7 @@
   items:
   - name: Customize entity forms
     href: customize-entity-forms.md
+    items:
     - name: Use IFRAME and web resource controls on a form
       href: use-iframe-and-web-resource-controls-on-a-form.md
   - name: Customize entity views
