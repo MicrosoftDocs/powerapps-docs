@@ -3,18 +3,30 @@
   href: overview.md
 - name: "Get started: Customizing model-driven apps using code"
   href: supported-customizations.md
-# - name: Quick Starts
-- name: Create and manage app using code
-  href: create-manage-model-driven-apps-using-code.md
 - name: Design app interface using code
   items:
   - name: Customize entity forms
     href: customize-entity-forms.md
+    - name: Use IFRAME and web resource controls on a form
+      href: use-iframe-and-web-resource-controls-on-a-form.md
   - name: Customize entity views
     href: customize-entity-views.md
     items:
     - name: UserQuery (saved view) entity
       href: userquery-saved-view-entity.md
+  - name: Open forms, views, dialogs, and reports with a URL
+    href: open-forms-views-dialogs-reports-url.md
+    items:
+    - name: Set field values using parameters passed to a form
+      href: set-field-values-using-parameters-passed-form.md
+    - name: Configure a form to accept custom querystring parameters
+      href: configure-form-accept-custom-querystring-parameters.md
+  - name: Open forms, views, and dashboards in Dynamics 365 mobile client with a URL
+    href: open-forms-views-dashboards-mobile-client-url.md
+  - name: Use editable grids
+    href: use-editable-grids.md
+  - name: Query and edit an organization theme
+    href: query-and-edit-an-organization-theme.md
 - name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
   items:
@@ -98,6 +110,8 @@
       href: stylesheet-xsl-web-resources.md
     - name: Web resource dependencies
       href: web-resource-dependencies.md
+- name: "Create, manage, and publish app using code"
+  href: create-manage-model-driven-apps-using-code.md
 - name: Samples
   items:
   - name: Export ribbon definitions
@@ -114,35 +128,6 @@
     href: sample-charts.md
   - name: Sample dashboards
     href: sample-dashboards.md
-- name: Concepts
-  items:
-  - name: Customize commands
-    href: customize-commands.md
-  - name: When to edit the customizations file
-    href: when-edit-customization-file.md
-  - name: Publish customizations
-    href: publish-customizations.md
-- name: How-to Guides
-  items:
-  - name: Edit the customizations XML file with schema validation
-    href: edit-customizations-xml-file-schema-validation.md
-  - name: Open forms, views, dialogs, and reports with a URL
-    href: open-forms-views-dialogs-reports-url.md
-    items:
-    - name: Set field values using parameters passed to a form
-      href: set-field-values-using-parameters-passed-form.md
-    - name: Configure a form to accept custom querystring parameters
-      href: configure-form-accept-custom-querystring-parameters.md
-  - name: Open forms, views, and dashboards in Dynamics 365 mobile client with a URL
-    href: open-forms-views-dashboards-mobile-client-url.md
-  - name: Use IFRAME and web resource controls on a form
-    href: use-iframe-and-web-resource-controls-on-a-form.md
-  - name: Query and edit an organization theme
-    href: query-and-edit-an-organization-theme.md
-  - name: Create or edit how business rules are initiated
-    href: create-edit-how-business-rules-initiated.md
-  - name: Use editable grids
-    href: use-editable-grids.md
 - name: Resources
   items:
   - name: Developer Tools
@@ -169,26 +154,15 @@
     href: publish-request-schema.md
   - name: Visualization data description schema
     href: visualization-data-description-schema.md
-  
-
-
-  
-
-  
-
-
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+- name: Miscellaneous (To Be Fixed)
+  items:
+  - name: Customize commands
+    href: customize-commands.md
+  - name: When to edit the customizations file
+    href: when-edit-customization-file.md
+  - name: Publish customizations
+    href: publish-customizations.md
+  - name: Edit the customizations XML file with schema validation
+    href: edit-customizations-xml-file-schema-validation.md
+  - name: Create or edit how business rules are initiated
+    href: create-edit-how-business-rules-initiated.md
