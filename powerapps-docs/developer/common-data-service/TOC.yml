@@ -6,89 +6,6 @@
   items:
   - name: Supported customizations
     href: supported-customizations.md
-- name: CDS for Apps entities
-  href: entities.md
-  items:
-  - name: Customize entity and attribute mappings
-    href: customize-entity-attribute-mappings.md
-  - name: Customer entities
-    href: customer-entities-account-contact.md
-  - name: Activity entities
-    href: activity-entities.md
-    items:
-    - name: Custom activities
-      href: custom-activities.md
-    - name: Email activity entities
-      href: email-activity-entities.md
-    - name: Task, fax, phone call, and letter activity entities
-      href: task-fax-phone-call-letter-activity-entities.md
-    - name: ActivityParty entity
-      href: activityparty-entity.md
-    - name: ActivityPointer (activity) entity
-      href: activitypointer-activity-entity.md
-    - name: Recurring Appointments
-      items:
-      - name: Recurring appointment partial expansion model
-        href: recurring-appointment-partial-expansion-model.md
-      - name: Create a recurring appointment series, instance, or exception
-        href: create-recurring-appointment-series-instance-exception.md
-      - name: Update a recurring appointment
-        href: update-recurring-appointment.md
-      - name: Link custom attributes of the recurring appointment master and appointment entities
-        href: link-custom-attributes-recurring-master-appointment-entities.md
-  - name: Annotation (note) entity
-    href: annotation-note-entity.md
-  - name: Calendar entities
-    href: calendar-entities.md
-    items:
-    - name: Types of calendars
-      href: types-calendars.md
-  - name: Knowledge management entities
-    href: knowledge-management-entities.md
-  - name: Queue entities
-    href: queue-entities.md
-  - name: Subject entity
-    href: subject-entity.md
-  - name: Apply Service Level Agreements (SLAs)
-    href: apply-slas-entities.md
-  - name: Transaction Currency (currency) entity
-    href: transaction-currency-currency-entity.md
-  - name: Category entity
-    href: use-category-entity.md
-  - name: Feedback entity
-    href: use-feedback-entity-manage-feedback-ratings-records.md
-  - name: Work with knowledge articles
-    href: work-knowledge-articles.md
-  - name: Goal management entities
-    href: goal-management-entities.md
-    items:
-    - name: Create goal hierarchy, goals, and targets
-      href: create-goal-hierarchy-goals-targets.md
-    - name: Define goal metric and rollup fields
-      href: define-goal-metric-rollup-fields.md
-    - name: Add complex goal criteria
-      href: add-complex-goal-criteria.md
-    - name: Roll up goal totals
-      href: roll-up-goal-totals.md
-  - name: Security entities
-    # See notes within this topic
-    href: security-model.md 
-    items:
-    - name: User and team entities
-      href: user-team-entities.md
-      items:
-      - name: Specify time zone settings for a user
-        href: specify-time-zone-settings-user.md
-      - name: Time zone entities
-        href: time-zone-entities.md
-    - name: BusinessUnit entity
-      href: businessunit-entity.md
-    - name: Field security entities
-      href: field-security-entities.md
-    - name: Use access teams and owner teams to collaborate and share information
-      href: use-access-teams-owner-teams-collaborate-share-information.md
-  - name: Template entities
-    href: upload-manage-document-templates.md
 - name: Work with data using code
   items:
   - name: Using Web API
@@ -253,6 +170,89 @@
   items:
   - name: Browse your environment metadata
     href: browse-your-metadata.md
+  - name: CDS for Apps entities
+    href: entities.md
+    items:
+    - name: Customize entity and attribute mappings
+      href: customize-entity-attribute-mappings.md
+    - name: Customer entities
+      href: customer-entities-account-contact.md
+    - name: Activity entities
+      href: activity-entities.md
+      items:
+      - name: Custom activities
+        href: custom-activities.md
+      - name: Email activity entities
+        href: email-activity-entities.md
+      - name: Task, fax, phone call, and letter activity entities
+        href: task-fax-phone-call-letter-activity-entities.md
+      - name: ActivityParty entity
+        href: activityparty-entity.md
+      - name: ActivityPointer (activity) entity
+        href: activitypointer-activity-entity.md
+      - name: Recurring Appointments
+        items:
+        - name: Recurring appointment partial expansion model
+          href: recurring-appointment-partial-expansion-model.md
+        - name: Create a recurring appointment series, instance, or exception
+          href: create-recurring-appointment-series-instance-exception.md
+        - name: Update a recurring appointment
+          href: update-recurring-appointment.md
+        - name: Link custom attributes of the recurring appointment master and appointment entities
+          href: link-custom-attributes-recurring-master-appointment-entities.md
+    - name: Annotation (note) entity
+      href: annotation-note-entity.md
+    - name: Calendar entities
+      href: calendar-entities.md
+      items:
+      - name: Types of calendars
+        href: types-calendars.md
+    - name: Knowledge management entities
+      href: knowledge-management-entities.md
+    - name: Queue entities
+      href: queue-entities.md
+    - name: Subject entity
+      href: subject-entity.md
+    - name: Apply Service Level Agreements (SLAs)
+      href: apply-slas-entities.md
+    - name: Transaction Currency (currency) entity
+      href: transaction-currency-currency-entity.md
+    - name: Category entity
+      href: use-category-entity.md
+    - name: Feedback entity
+      href: use-feedback-entity-manage-feedback-ratings-records.md
+    - name: Work with knowledge articles
+      href: work-knowledge-articles.md
+    - name: Goal management entities
+      href: goal-management-entities.md
+      items:
+      - name: Create goal hierarchy, goals, and targets
+        href: create-goal-hierarchy-goals-targets.md
+      - name: Define goal metric and rollup fields
+        href: define-goal-metric-rollup-fields.md
+      - name: Add complex goal criteria
+        href: add-complex-goal-criteria.md
+      - name: Roll up goal totals
+        href: roll-up-goal-totals.md
+    - name: Security entities
+    # See notes within this topic
+      href: security-model.md 
+      items:
+      - name: User and team entities
+        href: user-team-entities.md
+        items:
+        - name: Specify time zone settings for a user
+          href: specify-time-zone-settings-user.md
+        - name: Time zone entities
+          href: time-zone-entities.md
+      - name: BusinessUnit entity
+        href: businessunit-entity.md
+      - name: Field security entities
+        href: field-security-entities.md
+      - name: Use access teams and owner teams to collaborate and share information
+        href: use-access-teams-owner-teams-collaborate-share-information.md
+    - name: Template entities
+      href: upload-manage-document-templates.md
   - name: Entity metadata
     href: entity-metadata.md
     items:
