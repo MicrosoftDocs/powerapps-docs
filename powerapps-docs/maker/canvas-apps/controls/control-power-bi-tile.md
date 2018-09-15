@@ -56,7 +56,7 @@ It's not recommended to have more than three Power BI tiles loaded at the same t
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control. By default, the Power BI report that's associated with the tile opens.
 
-**TileUrl** – The URL by which the tile is requested from the Power BI service.  Note that a single parameter can be passed into the Power BI tile by modifyng the URL to append the parameter (i.e. … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). Note that only the equals operator can be used in the parameter.
+**TileUrl** – The URL by which the tile is requested from the Power BI service. You can pass a single parameter into the Power BI tile by appending the parameter to the URL (for example: … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). You can use only the equals operator in the parameter.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
