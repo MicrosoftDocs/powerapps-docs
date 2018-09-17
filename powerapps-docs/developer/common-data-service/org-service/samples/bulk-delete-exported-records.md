@@ -17,6 +17,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 This sample shows how to perform a bulk deletion of records that were previously exported from Common Data Service for Apps by using the **Export to Excel** option.
 
 ## How to run this sample
+
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
@@ -40,6 +41,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-1. Display an option to delete the sample data that is creatd in [Setup](#setup).
+1. Display an option to delete the sample data that is created in [Setup](#setup).
 
     The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
