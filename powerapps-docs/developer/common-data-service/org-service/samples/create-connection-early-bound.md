@@ -16,7 +16,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 This sample shows how to create a connection between an account and a contact entity that have matching connection roles.  
   
-# How to run this sample
+## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
@@ -31,10 +31,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. Creates a connection role for account and contact entity.
-2. Creates a related connection role object type code for account and contact entity.
-3. Associates the connection role with itself.
-
+2. Creates a connection role for account and contact entity.
+3. Creates a related connection role object type code for account and contact entity.
+4. Associates the connection role with itself.
 
 ### Demonstrate
 
