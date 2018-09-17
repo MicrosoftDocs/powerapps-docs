@@ -15,8 +15,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-convert-fax-task -->
 
 
-This sample shows how to convert a **Fax** to **Task**. To download the complete sample, clone the [Samples](https://github.com/Microsoft/PowerApps-Samples) repo and go to **cds > orgsvc > C#** and search for the sample. 
-
+This sample shows how to convert a **Fax** to **Task**. 
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
@@ -46,4 +45,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 1. Displays an option to delete all the data created in the sample.
-2. The deletion is optional in case you want to exxamine the data created by the sample. You can manually delete the data to achieve same results.
+2. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
