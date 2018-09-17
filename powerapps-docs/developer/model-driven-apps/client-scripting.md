@@ -33,7 +33,7 @@ If your business requirement can't be achieved using a business rule, you will f
 
 ## Use client scripting in model-driven apps
 
-Forms in model-driven apps help display data to the user. A form in model-driven apps can contain items such as fields, a quick form, or a grid. An [event](events-forms-grids.md) occurs in model-driven apps forms whenever:
+Forms in model-driven apps help display data to the user. A form in model-driven apps can contain items such as fields, a quick form, or a grid. An [event](clientapi/events-forms-grids.md) occurs in model-driven apps forms whenever:
 - A form loads
 - Data is changed in a field or an item within the form
 - Data is saved in a form
@@ -47,20 +47,20 @@ model-driven apps provides you a rich set of **client APIs** to interact with fo
 
 ## Get started here
 
-[Events in forms and grids](events-forms-grids.md)
+[Events in forms and grids](clientapi/events-forms-grids.md)
 
-[Understand the Client API object model](understand-clientapi-object-model.md)
+[Understand the Client API object model](clientapi/understand-clientapi-object-model.md)
 
-[Walkthrough: Write your first client script](walkthrough-write-your-first-client-script.md)
+[Walkthrough: Write your first client script](clientapi/walkthrough-write-your-first-client-script.md)
 
 ## Reference
 
-[Client API reference](reference.md)
+[Client API reference](clientapi/reference.md)
 
 
 ### Related topics
 
-[Web resources for model-driven apps](../web-resources.md)
+[Web resources for model-driven apps](web-resources.md)
 
-[Customize commands and the ribbon](../customize-commands-ribbon.md)
+[Customize commands and the ribbon](customize-commands-ribbon.md)
 
