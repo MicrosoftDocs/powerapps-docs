@@ -19,7 +19,6 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sampl
 
 This sample shows how to create an import map (data map) in Common Data Service for Apps, export it as an XML formatted data, import modified mappings, and create a new import map CDS for Apps based on the imported mappings.
 
-
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
@@ -39,10 +38,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 3. The `RetrieveMappingXML` method exports the mapping that is created.
 4. The `ChangeMappingName` method parse the xml to change the name attribute.
 
-
 ### Clean up
 
-1. Display an option to delete the sample data that is creatd in [Setup](#setup).
+1. Display an option to delete the sample data that is created in [Setup](#setup).
 
     The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
 
