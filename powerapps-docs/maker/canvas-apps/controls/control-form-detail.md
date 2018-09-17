@@ -27,6 +27,10 @@ If you add a **[Gallery](control-gallery.md)** control, you can configure it to 
 ### Record selection
 For either type of form, you set its **DataSource** property to a table of records, and you set the form's **Item** property to show a specific record in that table. For example, you can set the **Item** property of a form to the **SelectedItem** property of a **[Gallery](control-gallery.md)** control. When the user selects a record in the gallery, the same record appears in the form, except that the form can show more fields. If the user returns to the gallery and selects a different record, the **SelectedItem** property of the gallery changes. This change updates the **Item** property of the form, which then shows the newly selected record.
 
+You can also set the **Item** property with controls other than galleries. For example, you might have a list, named **NewProducts**, in SharePoint, that you add as a data source to an app. You can then add a **Drop down** control, name it **ProductSelector**, and set its **Items** property to **NewProducts.Name** to show data from the **Name** column of your list in SharePoint. If you add a form, set its **DataSource** property to **NewProducts**, and set its **Item** property to this formula, the form will show the data in the list for the product that you specify in the **Drop down** control:
+
+```First(Filter(NewProducts, Name in ProductSelector.Selected.Name))```
+
 Each form control contains one or more **[Card](control-card.md)** controls. By setting the **[DataField](control-card.md)** property of a card, you [specify which field that card shows and other details](../add-form.md).
 
 ### Create a record
