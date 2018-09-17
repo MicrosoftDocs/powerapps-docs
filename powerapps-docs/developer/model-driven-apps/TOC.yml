@@ -51,6 +51,717 @@
         href: create-visualization-chart.md
 - name: Apply business logic using client scripting
   href: client-scripting.md
+  items:
+  - name: Events in forms and grids
+    href: clientapi/events-forms-grids.md
+  - name: Understand Client API object model
+    href: clientapi/understand-clientapi-object-model.md
+    items:
+    - name: Execution context
+      href: clientapi/clientapi-execution-context.md
+    - name: Form context
+      href: clientapi/clientapi-form-context.md
+    - name: Grid context
+      href: clientapi/clientapi-grid-context.md
+    - name: Xrm object
+      href: clientapi/clientapi-xrm.md
+  - name: 'Walkthrough: Write your first client script'
+    href: clientapi/walkthrough-write-your-first-client-script.md
+  - name: Debug your JavaScript code for model-driven apps
+    href: clientapi/debug-JavaScript-code.md
+  - name: 'Best practices: client scripting in model-driven apps'
+    href: clientapi/client-scripting-best-practices.md
+  - name: Client API Reference
+    href: clientapi/reference.md
+    items:
+    - name: Client-side events
+      href: clientapi/reference/events.md
+      items:
+      - name: Attribute OnChange event
+        href: clientapi/reference/events/attribute-onchange.md
+      - name: Form OnLoad event
+        href: clientapi/reference/events/form-onload.md
+      - name: Form OnSave event
+        href: clientapi/reference/events/form-onsave.md
+      - name: Form data OnLoad event
+        href: clientapi/reference/events/form-data-onload.md
+      - name: Grid OnChange event
+        href: clientapi/reference/events/grid-onchange.md
+      - name: Grid OnRecordSelect event
+        href: clientapi/reference/events/grid-onrecordselect.md
+      - name: Grid OnSave event
+        href: clientapi/reference/events/grid-onsave.md
+      - name: OnProcessStatusChange event
+        href: clientapi/reference/events/onprocessstatuschange.md
+      - name: OnReadyStateComplete event
+        href: clientapi/reference/events/onreadystatecomplete.md
+      - name: OnResultOpened event
+        href: clientapi/reference/events/onresultopened.md
+      - name: OnSelection event
+        href: clientapi/reference/events/onselection.md
+      - name: OnStageChange event
+        href: clientapi/reference/events/onstagechange.md
+      - name: OnStageSelected event
+        href: clientapi/reference/events/onstageselected.md
+      - name: PostSearch event
+        href: clientapi/reference/events/postsearch.md
+      - name: PreSearch event
+        href: clientapi/reference/events/presearch.md
+      - name: Subgrid OnLoad event
+        href: clientapi/reference/events/subgrid-onload.md
+      - name: TabStateChange event
+        href: clientapi/reference/events/tabstatechange.md
+    - name: Collections
+      href: clientapi/reference/collections.md
+      items:
+      - name: forEach
+        href: clientapi/reference/collections/forEach.md
+      - name: get
+        href: clientapi/reference/collections/get.md
+      - name: getLength
+        href: clientapi/reference/collections/getLength.md
+    - name: GetGlobalContext function and ClientGlobalContext.js.aspx
+      href: clientapi/reference/GetGlobalContext-ClientGlobalContext.js.aspx.md
+    - name: Execution context
+      href: clientapi/reference/execution-context.md
+      items:
+      - name: getDepth
+        href: clientapi/reference/executioncontext/getDepth.md
+      - name: getEventArgs
+        href: clientapi/reference/executioncontext/getEventArgs.md
+      - name: getEventSource
+        href: clientapi/reference/executioncontext/getEventSource.md
+      - name: getFormContext
+        href: clientapi/reference/executioncontext/getFormContext.md
+      - name: getSharedVariable
+        href: clientapi/reference/executioncontext/getSharedVariable.md
+      - name: setSharedVariable
+        href: clientapi/reference/executioncontext/setSharedVariable.md
+    - name: Save event arguments
+      href: clientapi/reference/save-event-arguments.md
+      items:
+      - name: getSaveMode
+        href: clientapi/reference/save-event-arguments/getSaveMode.md
+      - name: isDefaultPrevented
+        href: clientapi/reference/save-event-arguments/isDefaultPrevented.md
+      - name: preventDefault
+        href: clientapi/reference/save-event-arguments/preventDefault.md
+    - name: Attributes
+      href: clientapi/reference/attributes.md
+      items:
+      - name: Composite attributes
+        href: clientapi/reference/composite-attributes.md
+      - name: addOnChange
+        href: clientapi/reference/attributes/addOnChange.md
+      - name: controls collection
+        href: clientapi/reference/attributes/controls-collection.md
+      - name: fireOnChange
+        href: clientapi/reference/attributes/fireOnChange.md
+      - name: getAttributeType
+        href: clientapi/reference/attributes/getAttributeType.md
+      - name: getFormat
+        href: clientapi/reference/attributes/getFormat.md
+      - name: getInitialValue
+        href: clientapi/reference/attributes/getInitialValue.md
+      - name: getIsDirty
+        href: clientapi/reference/attributes/getIsDirty.md
+      - name: getIsPartyList
+        href: clientapi/reference/attributes/getIsPartyList.md
+      - name: getMax
+        href: clientapi/reference/attributes/getMax.md
+      - name: getMaxLength
+        href: clientapi/reference/attributes/getMaxLength.md
+      - name: getMin
+        href: clientapi/reference/attributes/getMin.md
+      - name: getName
+        href: clientapi/reference/attributes/getName.md
+      - name: getOption
+        href: clientapi/reference/attributes/getOption.md
+      - name: getOptions
+        href: clientapi/reference/attributes/getOptions.md
+      - name: getParent
+        href: clientapi/reference/attributes/getParent.md
+      - name: getPrecision
+        href: clientapi/reference/attributes/getPrecision.md
+      - name: getRequiredLevel
+        href: clientapi/reference/attributes/getRequiredLevel.md
+      - name: getSelectedOption
+        href: clientapi/reference/attributes/getSelectedOption.md
+      - name: getSubmitMode
+        href: clientapi/reference/attributes/getSubmitMode.md
+      - name: getText
+        href: clientapi/reference/attributes/getText.md
+      - name: getUserPrivilege
+        href: clientapi/reference/attributes/getUserPrivilege.md
+      - name: getValue
+        href: clientapi/reference/attributes/getValue.md
+      - name: isValid
+        href: clientapi/reference/attributes/isValid.md
+      - name: removeOnChange
+        href: clientapi/reference/attributes/removeOnChange.md
+      - name: setPrecision
+        href: clientapi/reference/attributes/setPrecision.md
+      - name: setRequiredLevel
+        href: clientapi/reference/attributes/setRequiredLevel.md
+      - name: setSubmitMode
+        href: clientapi/reference/attributes/setSubmitMode.md
+      - name: setValue
+        href: clientapi/reference/attributes/setValue.md
+    - name: Controls
+      href: clientapi/reference/controls.md
+      items:
+      - name: addCustomFilter
+        href: clientapi/reference/controls/addCustomFilter.md
+      - name: addCustomView
+        href: clientapi/reference/controls/addCustomView.md
+      - name: addNotification
+        href: clientapi/reference/controls/addNotification.md
+      - name: addOnPostSearch
+        href: clientapi/reference/controls/addOnPostSearch.md
+      - name: addOnResultOpened
+        href: clientapi/reference/controls/addOnResultOpened.md
+      - name: addOnSelection
+        href: clientapi/reference/controls/addOnSelection.md
+      - name: addOption
+        href: clientapi/reference/controls/addOption.md
+      - name: addPreSearch
+        href: clientapi/reference/controls/addPreSearch.md
+      - name: clearNotification
+        href: clientapi/reference/controls/clearNotification.md
+      - name: clearOptions
+        href: clientapi/reference/controls/clearOptions.md
+      - name: getAttribute
+        href: clientapi/reference/controls/getAttribute.md
+      - name: getControl
+        href: clientapi/reference/controls/getControl.md
+      - name: getControlType
+        href: clientapi/reference/controls/getControlType.md
+      - name: getData
+        href: clientapi/reference/controls/getData.md
+      - name: getDefaultView
+        href: clientapi/reference/controls/getDefaultView.md
+      - name: getDisabled
+        href: clientapi/reference/controls/getDefaultView.md
+      - name: getEntityTypes
+        href: clientapi/reference/controls/getEntityTypes.md
+      - name: getInitialUrl
+        href: clientapi/reference/controls/getInitialUrl.md
+      - name: getLabel
+        href: clientapi/reference/controls/getLabel.md
+      - name: getName
+        href: clientapi/reference/controls/getName.md
+      - name: getObject
+        href: clientapi/reference/controls/getObject.md
+      - name: getParent
+        href: clientapi/reference/controls/getParent.md
+      - name: getSearchQuery
+        href: clientapi/reference/controls/getSearchQuery.md
+      - name: getSelectedResults
+        href: clientapi/reference/controls/getSelectedResults.md
+      - name: getShowTime
+        href: clientapi/reference/controls/getShowTime.md
+      - name: getSrc
+        href: clientapi/reference/controls/getSrc.md
+      - name: getState
+        href: clientapi/reference/controls/getState.md
+      - name: getTotalResultCount
+        href: clientapi/reference/controls/getTotalResultCount.md
+      - name: getValue
+        href: clientapi/reference/controls/getValue.md
+      - name: getVisible
+        href: clientapi/reference/controls/getVisible.md
+      - name: openSearchResult
+        href: clientapi/reference/controls/openSearchResult.md
+      - name: refresh
+        href: clientapi/reference/controls/refresh.md
+      - name: removeOnPostSearch
+        href: clientapi/reference/controls/removeOnPostSearch.md
+      - name: removeOnResultOpened
+        href: clientapi/reference/controls/removeOnResultOpened.md
+      - name: removeOnSelection
+        href: clientapi/reference/controls/removeOnSelection.md
+      - name: removeOption
+        href: clientapi/reference/controls/removeOption.md
+      - name: removePreSearch
+        href: clientapi/reference/controls/removePreSearch.md
+      - name: setData
+        href: clientapi/reference/controls/setData.md
+      - name: setDefaultView
+        href: clientapi/reference/controls/setDefaultView.md
+      - name: setDisabled
+        href: clientapi/reference/controls/setDisabled.md
+      - name: setEntityTypes
+        href: clientapi/reference/controls/setEntityTypes.md
+      - name: setFocus
+        href: clientapi/reference/controls/setFocus.md
+      - name: setLabel
+        href: clientapi/reference/controls/setLabel.md
+      - name: setNotification
+        href: clientapi/reference/controls/setNotification.md
+      - name: setSearchQuery
+        href: clientapi/reference/controls/setSearchQuery.md
+      - name: setShowTime
+        href: clientapi/reference/controls/setShowTime.md
+      - name: setSrc
+        href: clientapi/reference/controls/setSrc.md
+      - name: setVisible
+        href: clientapi/reference/controls/setVisible.md
+    - name: formContext.data
+      href: clientapi/reference/formContext-data.md
+      items:
+      - name: addOnLoad
+        href: clientapi/reference/formContext-data/addOnload.md
+      - name: getIsDirty
+        href: clientapi/reference/formContext-data/getIsDirty.md
+      - name: isValid
+        href: clientapi/reference/formContext-data/isValid.md
+      - name: refresh
+        href: clientapi/reference/formContext-data/refresh.md
+      - name: removeOnLoad
+        href: clientapi/reference/formContext-data/removeOnLoad.md
+      - name: save
+        href: clientapi/reference/formContext-data/save.md
+    - name: formContext.data.entity
+      href: clientapi/reference/formContext-data-entity.md
+      items:
+      - name: addOnSave
+        href: clientapi/reference/formContext-data-entity/addOnSave.md
+      - name: getDataXml
+        href: clientapi/reference/formContext-data-entity/getDataXml.md
+      - name: getEntityName
+        href: clientapi/reference/formContext-data-entity/getEntityName.md
+      - name: getEntityReference
+        href: clientapi/reference/formContext-data-entity/getEntityReference.md
+      - name: getId
+        href: clientapi/reference/formContext-data-entity/getId.md
+      - name: getIsDirty
+        href: clientapi/reference/formContext-data-entity/getIsDirty.md
+      - name: getPrimaryAttributeValue
+        href: clientapi/reference/formContext-data-entity/getPrimaryAttributeValue.md
+      - name: isValid
+        href: clientapi/reference/formContext-data-entity/isvalid.md
+      - name: removeOnSave
+        href: clientapi/reference/formContext-data-entity/removeOnSave.md
+      - name: save
+        href: clientapi/reference/formContext-data-entity/save.md
+    - name: formContext.data.process
+      href: clientapi/reference/formContext-data-process.md
+      items:
+      - name: Event handler methods
+        items:
+        - name: addOnProcessStatusChange
+          href: clientapi/reference/formContext-data-process/eventhandlers/addOnProcessStatusChange.md
+        - name: addOnStageChange
+          href: clientapi/reference/formContext-data-process/eventhandlers/addOnStageChange.md
+        - name: addOnStageSelected
+          href: clientapi/reference/formContext-data-process/eventhandlers/addOnStageSelected.md
+        - name: removeOnProcessStatusChange
+          href: clientapi/reference/formContext-data-process/eventhandlers/removeOnProcessStatusChange.md
+        - name: removeOnStageChange
+          href: clientapi/reference/formContext-data-process/eventhandlers/removeOnStageChange.md
+        - name: removeOnStageSelected
+          href: clientapi/reference/formContext-data-process/eventhandlers/removeOnStageSelected.md
+      - name: Active Process methods
+        items:
+        - name: getActiveProcess
+          href: clientapi/reference/formContext-data-process/activeprocess/getActiveProcess.md
+        - name: setActiveProcess
+          href: clientapi/reference/formContext-data-process/activeprocess/setActiveProcess.md
+      - name: getEnabledProcesses
+        href: clientapi/reference/formContext-data-process/getEnabledProcesses.md
+      - name: Process methods
+        items:
+        - name: getId
+          href: clientapi/reference/formContext-data-process/process/getId.md
+        - name: getName
+          href: clientapi/reference/formContext-data-process/process/getName.md
+        - name: getStages
+          href: clientapi/reference/formContext-data-process/process/getStages.md
+        - name: isRendered
+          href: clientapi/reference/formContext-data-process/process/isRendered.md
+      - name: ProcessInstance methods
+        items:
+        - name: getProcessInstances
+          href: clientapi/reference/formContext-data-process/getProcessInstances.md
+        - name: setActiveProcessInstance
+          href: clientapi/reference/formContext-data-process/setActiveProcessInstance.md
+      - name: Instance methods
+        items:
+        - name: getInstanceId
+          href: clientapi/reference/formcontext-data-process/instance/getInstanceId.md
+        - name: getInstanceName
+          href: clientapi/reference/formcontext-data-process/instance/getInstanceName.md
+        - name: getStatus
+          href: clientapi/reference/formcontext-data-process/instance/getStatus.md
+        - name: setStatus
+          href: clientapi/reference/formcontext-data-process/instance/setStatus.md
+      - name: Active Stage methods
+        items:
+        - name: getActiveStage
+          href: clientapi/reference/formContext-data-process/activestage/getActiveStage.md
+        - name: setActiveStage
+          href: clientapi/reference/formContext-data-process/activestage/setActiveStage.md
+      - name: getActivePath
+        href: clientapi/reference/formContext-data-process/activepath/getActivePath.md
+      - name: getSelectedStage
+        href: clientapi/reference/formContext-data-process/getSelectedStage.md
+      - name: Stage methods
+        items:
+        - name: getCategory
+          href: clientapi/reference/formContext-data-process/stage/getCategory.md
+        - name: getEntityName
+          href: clientapi/reference/formContext-data-process/stage/getEntityName.md
+        - name: getId
+          href: clientapi/reference/formContext-data-process/stage/getId.md
+        - name: getName
+          href: clientapi/reference/formContext-data-process/stage/getName.md
+        - name: getNavigationBehavior
+          href: clientapi/reference/formContext-data-process/stage/getNavigationBehavior.md
+        - name: getStatus
+          href: clientapi/reference/formContext-data-process/stage/getStatus.md
+        - name: getSteps
+          href: clientapi/reference/formContext-data-process/stage/getSteps.md
+      - name: Step methods
+        items:
+        - name: getAttribute
+          href: clientapi/reference/formContext-data-process/step/getAttribute.md
+        - name: getName
+          href: clientapi/reference/formContext-data-process/step/getName.md
+        - name: getProgress
+          href: clientapi/reference/formContext-data-process/step/getProgress.md
+        - name: isRequired
+          href: clientapi/reference/formContext-data-process/step/isRequired.md
+        - name: setProgress
+          href: clientapi/reference/formContext-data-process/step/setProgress.md
+      - name: Navigation methods
+        items:
+        - name: moveNext
+          href: clientapi/reference/formContext-data-process/navigation/moveNext.md
+        - name: movePrevious
+          href: clientapi/reference/formContext-data-process/navigation/movePrevious.md
+    - name: formContext.ui
+      href: clientapi/reference/formcontext-ui.md
+      items:
+      - name: addOnLoad
+        href: clientapi/reference/formcontext-ui/addOnLoad.md
+      - name: clearFormNotification
+        href: clientapi/reference/formcontext-ui/clearFormNotification.md
+      - name: close
+        href: clientapi/reference/formcontext-ui/close.md
+      - name: getFormType
+        href: clientapi/reference/formcontext-ui/getFormType.md
+      - name: getViewPortHeight
+        href: clientapi/reference/formcontext-ui/getViewPortHeight.md
+      - name: getViewPortWidth
+        href: clientapi/reference/formcontext-ui/getViewPortWidth.md
+      - name: refreshRibbon
+        href: clientapi/reference/formcontext-ui/refreshRibbon.md
+      - name: removeOnLoad
+        href: clientapi/reference/formcontext-ui/removeOnLoad.md
+      - name: setFormEntityName
+        href: clientapi/reference/formcontext-ui/setFormEntityName.md
+      - name: setFormNotification
+        href: clientapi/reference/formcontext-ui/setFormNotification.md
+    - name: formContext.ui.formSelector
+      href: clientapi/reference/formcontext-ui-formselector.md
+      items:
+      - name: getId
+        href: clientapi/reference/formcontext-ui-formselector/getId.md
+      - name: getLabel
+        href: clientapi/reference/formcontext-ui-formselector/getLabel.md
+      - name: navigate
+        href: clientapi/reference/formcontext-ui-formselector/navigate.md
+    - name: formContext.ui.navigation
+      href: clientapi/reference/formcontext-ui-navigation.md
+      items:
+      - name: getId
+        href: clientapi/reference/formcontext-ui-navigation/getId.md
+      - name: getLabel
+        href: clientapi/reference/formcontext-ui-navigation/getLabel.md
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-navigation/getVisible.md
+      - name: setFocus
+        href: clientapi/reference/formcontext-ui-navigation/setFocus.md
+      - name: setLabel
+        href: clientapi/reference/formcontext-ui-navigation/setLabel.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-navigation/setVisible.md
+    - name: formContext.ui.process
+      href: clientapi/reference/formcontext-ui-process.md
+      items:
+      - name: getDisplayState
+        href: clientapi/reference/formcontext-ui-process/getDisplayState.md
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-process/getVisible.md
+      - name: reflow
+        href: clientapi/reference/formcontext-ui-process/reflow.md
+      - name: setDisplayState
+        href: clientapi/reference/formcontext-ui-process/setDisplayState.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-process/setVisible.md
+    - name: formContext.ui.quickForms
+      href: clientapi/reference/formcontext-ui-quickForms.md
+      items:
+      - name: getControl
+        href: clientapi/reference/formcontext-ui-quickForms/getControl.md
+      - name: getControlType
+        href: clientapi/reference/formcontext-ui-quickForms/getControlType.md
+      - name: getDisabled
+        href: clientapi/reference/formcontext-ui-quickForms/getDisabled.md
+      - name: getLabel
+        href: clientapi/reference/formcontext-ui-quickForms/getLabel.md
+      - name: getName
+        href: clientapi/reference/formcontext-ui-quickForms/getName.md
+      - name: getParent
+        href: clientapi/reference/formcontext-ui-quickForms/getParent.md
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-quickForms/getVisible.md
+      - name: isLoaded
+        href: clientapi/reference/formcontext-ui-quickForms/isLoaded.md
+      - name: refresh
+        href: clientapi/reference/formcontext-ui-quickForms/refresh.md
+      - name: setDisabled
+        href: clientapi/reference/formcontext-ui-quickForms/setDisabled.md
+      - name: setFocus
+        href: clientapi/reference/formcontext-ui-quickForms/setFocus.md
+      - name: setLabel
+        href: clientapi/reference/formcontext-ui-quickForms/setLabel.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-quickForms/setVisible.md
+    - name: formContext.ui.tabs
+      href: clientapi/reference/formcontext-ui-tabs.md
+      items:
+      - name: addtabStateChange
+        href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
+      - name: addtabStateChange
+        href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
+      - name: getDisplayState
+        href: clientapi/reference/formcontext-ui-tabs/getDisplayState.md
+      - name: getLabel
+        href: clientapi/reference/formcontext-ui-tabs/getLabel.md
+      - name: getName
+        href: clientapi/reference/formcontext-ui-tabs/getName.md
+      - name: getParent
+        href: clientapi/reference/formcontext-ui-tabs/getParent.md
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-tabs/getVisible.md
+      - name: removeTabStateChange
+        href: clientapi/reference/formcontext-ui-tabs/removeTabStateChange.md
+      - name: setDisplayState
+        href: clientapi/reference/formcontext-ui-tabs/setDisplayState.md
+      - name: setFocus
+        href: clientapi/reference/formcontext-ui-tabs/setFocus.md
+      - name: setLabel
+        href: clientapi/reference/formcontext-ui-tabs/setLabel.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-tabs/setVisible.md
+    - name: formContext.ui.sections
+      href: clientapi/reference/formcontext-ui-sections.md
+      items:
+      - name: getLabel
+        href: clientapi/reference/formcontext-ui-sections/getLabel.md
+      - name: getName
+        href: clientapi/reference/formcontext-ui-sections/getName.md
+      - name: getParent
+        href: clientapi/reference/formcontext-ui-sections/getParent.md
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-sections/getVisible.md
+      - name: setLabel
+        href: clientapi/reference/formcontext-ui-sections/setLabel.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-sections/setVisible.md
+    - name: Grids and subgrids
+      href: clientapi/reference/grids.md
+      items:
+      - name: GridControl
+        href: clientapi/reference/grids/gridcontrol.md
+        items:
+        - name: addOnLoad
+          href: clientapi/reference/grids/gridcontrol/addOnLoad.md
+        - name: getEntityName
+          href: clientapi/reference/grids/gridcontrol/getEntityName.md
+        - name: getFetchXml
+          href: clientapi/reference/grids/gridcontrol/getFetchXml.md
+        - name: getGrid
+          href: clientapi/reference/grids/gridcontrol/getGrid.md
+        - name: getGridType
+          href: clientapi/reference/grids/gridcontrol/getGridType.md
+        - name: getRelationship
+          href: clientapi/reference/grids/gridcontrol/getRelationship.md
+        - name: getUrl
+          href: clientapi/reference/grids/gridcontrol/getUrl.md
+        - name: getViewSelector
+          href: clientapi/reference/grids/gridcontrol/getViewSelector.md
+        - name: openRelatedGrid
+          href: clientapi/reference/grids/gridcontrol/openRelatedGrid.md
+        - name: refresh
+          href: clientapi/reference/grids/gridcontrol/refresh.md
+        - name: refreshRibbon
+          href: clientapi/reference/grids/gridcontrol/refreshRibbon.md
+        - name: removeOnLoad
+          href: clientapi/reference/grids/gridcontrol/removeOnLoad.md
+      - name: Grid
+        href: clientapi/reference/grids/grid.md
+        items:
+        - name: getRows
+          href: clientapi/reference/grids/grid/getRows.md
+        - name: getSelectedRows
+          href: clientapi/reference/grids/grid/getSelectedRows.md
+        - name: getTotalRecordCount
+          href: clientapi/reference/grids/grid/getTotalRecordCount.md
+      - name: GridRow
+        href: clientapi/reference/grids/gridrow.md
+        items:
+        - name: getData
+          href: clientapi/reference/grids/gridrow/getData.md
+      - name: GridRowData
+        href: clientapi/reference/grids/gridrowdata.md
+        items:
+        - name: getEntity
+          href: clientapi/reference/grids/gridrowdata/getEntity.md
+      - name: GridEntity
+        href: clientapi/reference/grids/gridentity.md
+        items:
+        - name: getEntityName
+          href: clientapi/reference/grids/gridentity/getEntityName.md
+        - name: getEntityReference
+          href: clientapi/reference/grids/gridentity/getEntityReference.md
+        - name: getId
+          href: clientapi/reference/grids/gridentity/getId.md
+        - name: getPrimaryAttributeValue
+          href: clientapi/reference/grids/gridentity/getPrimaryAttributeValue.md
+      - name: GridAttribute
+        href: clientapi/reference/grids/gridattribute.md
+      - name: GridCell
+        href: clientapi/reference/grids/gridcell.md
+      - name: ViewSelector
+        href: clientapi/reference/grids/viewselector.md
+        items:
+        - name: getCurrentView
+          href: clientapi/reference/grids/viewselector/getCurrentView.md
+        - name: isVisible
+          href: clientapi/reference/grids/viewselector/isVisible.md
+        - name: setCurrentView
+          href: clientapi/reference/grids/viewselector/setCurrentView.md
+    - name: Xrm.Device
+      href: clientapi/reference/xrm-device.md
+      items:
+      - name: captureAudio
+        href: clientapi/reference/xrm-device/captureAudio.md
+      - name: captureImage
+        href: clientapi/reference/xrm-device/captureImage.md
+      - name: captureVideo
+        href: clientapi/reference/xrm-device/captureVideo.md
+      - name: getBarcodeValue
+        href: clientapi/reference/xrm-device/getBarcodeValue.md
+      - name: getCurrentPosition
+        href: clientapi/reference/xrm-device/getCurrentPosition.md
+      - name: pickFile
+        href: clientapi/reference/xrm-device/pickFile.md
+    - name: Xrm.Encoding
+      href: clientapi/reference/xrm-encoding.md
+      items:
+      - name: htmlAttributeEncode
+        href: clientapi/reference/xrm-encoding/htmlAttributeEncode.md
+      - name: htmlDecode
+        href: clientapi/reference/xrm-encoding/htmlDecode.md
+      - name: htmlEncode
+        href: clientapi/reference/xrm-encoding/htmlEncode.md
+      - name: xmlAttributeEncode
+        href: clientapi/reference/xrm-encoding/xmlAttributeEncode.md
+      - name: xmlEncode
+        href: clientapi/reference/xrm-encoding/xmlEncode.md
+    - name: Xrm.Navigation
+      href: clientapi/reference/xrm-navigation.md
+      items:
+      - name: openAlertDialog
+        href: clientapi/reference/xrm-navigation/openAlertDialog.md
+      - name: openConfirmDialog
+        href: clientapi/reference/xrm-navigation/openConfirmDialog.md
+      - name: openErrorDialog
+        href: clientapi/reference/xrm-navigation/openErrorDialog.md
+      - name: openFile
+        href: clientapi/reference/xrm-navigation/openFile.md
+      - name: openForm
+        href: clientapi/reference/xrm-navigation/openForm.md
+      - name: openUrl
+        href: clientapi/reference/xrm-navigation/openUrl.md
+      - name: openWebResource
+        href: clientapi/reference/xrm-navigation/openWebResource.md
+    - name: Xrm.Panel
+      href: clientapi/reference/xrm-panel.md
+      items:
+      - name: loadPanel
+        href: clientapi/reference/xrm-panel/loadPanel.md
+    - name: Xrm.Utility
+      href: clientapi/reference/xrm-utility.md
+      items:
+      - name: closeProgressIndicator
+        href: clientapi/reference/xrm-utility/closeProgressIndicator.md
+      - name: getAllowedStatusTransitions
+        href: clientapi/reference/xrm-utility/getAllowedStatusTransitions.md
+      - name: getEntityMetadata
+        href: clientapi/reference/xrm-utility/getEntityMetadata.md
+      - name: getGlobalContext
+        href: clientapi/reference/xrm-utility/getGlobalContext.md
+        items:
+        - name: client
+          href: clientapi/reference/xrm-utility/getGlobalContext/client.md
+        - name: organizationSettings
+          href: clientapi/reference/xrm-utility/getGlobalContext/organizationSettings.md
+        - name: userSettings
+          href: clientapi/reference/xrm-utility/getGlobalContext/userSettings.md
+        - name: getAdvancedConfigSetting
+          href: clientapi/reference/xrm-utility/getGlobalContext/getAdvancedConfigSetting.md
+        - name: getClientUrl
+          href: clientapi/reference/xrm-utility/getGlobalContext/getClientUrl.md
+        - name: getCurrentAppName
+          href: clientapi/reference/xrm-utility/getGlobalContext/getCurrentAppName.md
+        - name: getCurrentAppProperties
+          href: clientapi/reference/xrm-utility/getGlobalContext/getCurrentAppProperties.md
+        - name: getCurrentAppUrl
+          href: clientapi/reference/xrm-utility/getGlobalContext/getCurrentAppUrl.md
+        - name: getVersion
+          href: clientapi/reference/xrm-utility/getGlobalContext/getVersion.md
+        - name: isOnPremises
+          href: clientapi/reference/xrm-utility/getGlobalContext/isOnPremises.md
+        - name: prependOrgName
+          href: clientapi/reference/xrm-utility/getGlobalContext/prependOrgName.md
+      - name: getLearningPathAttributeName
+        href: clientapi/reference/xrm-utility/getLearningPathAttributeName.md
+      - name: getResourceString
+        href: clientapi/reference/xrm-utility/getResourceString.md
+      - name: invokeProcessAction
+        href: clientapi/reference/xrm-utility/invokeProcessAction.md
+      - name: lookupObjects
+        href: clientapi/reference/xrm-utility/lookupObjects.md
+      - name: refreshParentGrid
+        href: clientapi/reference/xrm-utility/refreshParentGrid.md
+      - name: showProgressIndicator
+        href: clientapi/reference/xrm-utility/showProgressIndicator.md
+    - name: Xrm.WebApi
+      href: clientapi/reference/xrm-webapi.md
+      items:
+      - name: Xrm.WebApi.online
+        href: clientapi/reference/xrm-webapi/online.md
+      - name: Xrm.WebApi.offline
+        href: clientapi/reference/xrm-webapi/offline.md
+      - name: createRecord
+        href: clientapi/reference/xrm-webapi/createRecord.md
+      - name: deleteRecord
+        href: clientapi/reference/xrm-webapi/deleteRecord.md
+      - name: retrieveRecord
+        href: clientapi/reference/xrm-webapi/retrieveRecord.md
+      - name: retrieveMultipleRecords
+        href: clientapi/reference/xrm-webapi/retrieveMultipleRecords.md
+      - name: updateRecord
+        href: clientapi/reference/xrm-webapi/updateRecord.md
+      - name: isAvailableOffline
+        href: clientapi/reference/xrm-webapi/isAvailableOffline.md
+      - name: execute
+        href: clientapi/reference/xrm-webapi/execute.md
+      - name: executeMultiple
+        href: clientapi/reference/xrm-webapi/executeMultiple.md
 - name: Customize commands and ribbon
   href: customize-commands-ribbon.md
   items:
