@@ -70,6 +70,8 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
+**Live** – How the screen reader announces changes to the label's text.  Values can be **Off**, **Assertive**, and **Polite**. This property is useful for announcing dynamic changes in the app's UI in an accessible way.
+
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
 **Overflow** – Whether a scrollbar appears in a label if its **Wrap** property is set to **true** and the value of the control's **[Text](properties-core.md)** property contains more characters than the control can show at one time.
