@@ -34,16 +34,15 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. Gets the user that you have created manually in **Office 365**.
-2. Retrieve the security role needed to assign to the user. 
-3. Retrieve the default business unit needed to create the team.
-4. Instantiate a team entity record and set its property values. 
-
+2. Gets the user that you have created manually in **Office 365**.
+3. Retrieve the security role needed to assign to the user. 
+4. Retrieve the default business unit needed to create the team.
+5. Instantiate a team entity record and set its property values. 
 
 ### Demonstrate
 
 1. Creates field security profile and create the request object and set the monikers with the teamprofiles_assocation relationship.
-2. Creates custom activity entity and attributes using the `CreateEntityRequest` and `CreateAttributeRequest` mesaage.
+2. Creates custom activity entity and attributes using the `CreateEntityRequest` and `CreateAttributeRequest` message.
 3. Create the field permission for the identity attribute.
 
 ### Clean up
