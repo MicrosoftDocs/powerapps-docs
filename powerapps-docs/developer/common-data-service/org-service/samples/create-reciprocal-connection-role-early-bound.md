@@ -30,7 +30,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the currrent version of the org.
+1. Checks for the current version of the org.
 2. The `ConnectionRole` message creates connection roles required for the sample.
 3. The `ConnectionRoleObjectTypeCode` message creates the connection role object type code record for account.
 4. The `AssociateRequest` message associates the connection roles with each other.
