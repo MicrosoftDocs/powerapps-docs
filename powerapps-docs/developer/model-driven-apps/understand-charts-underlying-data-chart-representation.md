@@ -32,7 +32,7 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 - **Data representation (appearance)**: Specified using the *presentation description* XML string.  
   
 > [!NOTE]
-> [!INCLUDE[pn_ms_chart_controls_short](../../includes/pn-ms-chart-controls-short.md)] lets you create various types of charts such as column, bar, area, line, pie, funnel, bubble, and radar. The chart designer in Model-driven Apps lets you create only certain types of charts. However, using the SDK, you can create most of the chart types that are supported by [!INCLUDE[pn_ms_chart_controls_short](../../includes/pn-ms-chart-controls-short.md)].  
+> Microsoft Chart Controls lets you create various types of charts such as column, bar, area, line, pie, funnel, bubble, and radar. The chart designer in Model-driven Apps lets you create only certain types of charts. However, using the SDK, you can create most of the chart types that are supported by Microsoft Chart Controls.  
   
 ## Use the data description XML string to specify chart data  
  The data description XML string defines the data that will displayed on the chart. The contents of the XML string are validated against the visualization data description schema. For more information about the schema, see [Visualization Data Description Schema](visualization-data-description-schema.md).  
@@ -84,7 +84,7 @@ Charts display data visually by mapping textual values on two axes: horizontal (
  For more sample data description XML strings, see [Sample Charts](sample-charts.md).  
   
 ## Use the presentation description XML string to specify data representation  
- The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in [!INCLUDE[pn_ms_chart_controls_short](../../includes/pn-ms-chart-controls-short.md)]. More information: [Chart Controls](http://go.microsoft.com/fwlink/p/?LinkId=128301)  
+ The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in Microsoft Chart Controls. More information: [Chart Controls](http://go.microsoft.com/fwlink/p/?LinkId=128301)  
   
  You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.  
   

@@ -52,7 +52,7 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
 ```  
   
 <a name="BKMK_ReferenceFromForm"></a>   
-## Reference an image web resource from a Dynamics 365 form  
+## Reference an image web resource from a  form  
   
 #### Add an image to an entity form  
   
@@ -100,10 +100,10 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
 >  Using the `$webresource:` directive adds a solution dependency that prevents the referenced image web resources from being deleted as long as they are used by another solution component.  
   
 ### See also  
- [Web Resources for Dynamics 365](web-resources.md)   
+ [Web Resources](web-resources.md)   
  [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
  [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   
  [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
  [Using Data (XML) Web Resources](data-xml-web-resources.md)   
- [TODO: Using Silverlight (XAP) Web Resources]<!--(silverlight-xap-web-resources.md)-->  
+ [Using Silverlight (XAP) Web Resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
  [Using Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)

@@ -79,7 +79,7 @@ Dashboards are one of the different types of forms in Mode-driven Apps. You can 
 
 1. Open a Windows PowerShell command window.  
 
-2. Add the Model-drivven AppsWindowsPowerShell snap-in:  
+2. Add the Model-driven Apps WindowsPowerShell snap-in:  
 
    ```powershell  
    Add-PSSnapin Microsoft.Crm.PowerShell  
