@@ -35,7 +35,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Get's the organization's ID from the system user record.
+1. Gets the organization's ID from the system user record.
 2. Enabling auditing on organization and also on the sample account entity.
 3. The `RetrieveRecordChangeHistoryRequest` retrieves the audit history for the account entity and displays the result.
 
