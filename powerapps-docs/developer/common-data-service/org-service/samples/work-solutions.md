@@ -15,6 +15,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
 This sample shows how to how to perform the following actions with solutions:
+
 - Create a publisher.
 - Retrieve the default publisher.
 - Create a solution.
@@ -29,7 +30,6 @@ This sample shows how to how to perform the following actions with solutions:
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
-
 ## What this sample does
 
 This sample shows how to work with solutions. This sample covers how to create a publisher, create a solution, export and import solution and also how to delete the solution.
@@ -41,7 +41,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `Publisher` mnethod defines a new publisher. 
+1. The `Publisher` method defines a new publisher. 
 1. The `Solution` method creates a new solution.
 1. The `OptionSetMetadata` method adds a solution component.
 1. The `ExportSolutionRequest` method exports the created solution in the [Setup](#setup).
@@ -53,7 +53,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. The `querySampleSolutionResults` method checks whether the solution is already in the system.
 1. The `ExportSolutionRequest` method exports the solution. 
 1. The `ImportSolutionRequest` method imports the solution.
-
 
 ### Clean up
 
