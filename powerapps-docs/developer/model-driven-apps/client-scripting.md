@@ -38,7 +38,7 @@ Forms in model-driven apps help display data to the user. A form in model-driven
 - Data is changed in a field or an item within the form
 - Data is saved in a form
 
-You can attach your JavaScript code to "react" to these events so that your code gets executed when the event occurs on the form. You attach your JavaScript code (scripts) to these events by using a [Script web resource](../script-jscript-web-resources.md) in model-driven apps. 
+You can attach your JavaScript code to "react" to these events so that your code gets executed when the event occurs on the form. You attach your JavaScript code (scripts) to these events by using a [Script web resource](script-jscript-web-resources.md) in model-driven apps. 
 
 model-driven apps provides you a rich set of **client APIs** to interact with form objects and events to control what and when to display on a form.
 
