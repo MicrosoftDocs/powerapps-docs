@@ -1,5 +1,5 @@
 ---
-title: "<Topic Title> (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Get started with model-driven apps customization using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
@@ -10,15 +10,15 @@ author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 ---
-# Supported customizations for model-driven apps
+# Get started with model-driven apps customization using code
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-extensions
 Split to just include MDA issues
  -->
 
-You can customize Model-driven apps by using tools that are available in the PowerApps portal  or that are described in the documentation. These customizations are supported and can be upgraded.
+You can customize Model-driven apps by using tools that are available in the PowerApps portal or that are described in the documentation. These customizations are supported and can be upgraded.
 
-Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to model-driven apps. For more information, see [Unsupported customizations](#unsupported-customizations)
+Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to model-driven apps. For more information, see [Unsupported customizations](#unsupported-customizations) later in this topic.
 
 Topics covered in technical articles published on Microsoft sites such as this one are supported, but might not be upgradable.
 
@@ -57,7 +57,7 @@ You can use JavaScript within model-driven apps in three areas:
 
 <!-- TODO: Continue from here -->
 
-All interaction with Dynamics 365 application pages must only be performed through the methods with the methods documented in the [Client API Reference for model-driven apps](clientapi/reference.md). Directly accessing the Document Object Model (DOM) of any model-driven app page is not supported. The use of jQuery in form scripts and commands is not recommended. More information: [Client scripting in model-driven apps using JavaScript](clientapi/client-scripting.md).
+All interaction with Dynamics 365 application pages must only be performed through the methods with the methods documented in the [Client API Reference for model-driven apps](clientapi/reference.md). Directly accessing the Document Object Model (DOM) of any model-driven app page is not supported. The use of jQuery in form scripts and commands is not recommended. More information: [Client scripting in model-driven apps using JavaScript](client-scripting.md).
 
 You can open Model-driven app forms, views, dialogs, and reports using the methods documented in [Open forms, views, dialogs, and reports with a URL](open-forms-views-dialogs-reports-url.md).
 

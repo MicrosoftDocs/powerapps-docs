@@ -1,7 +1,7 @@
 # This TOC is a work in progress. The specific location of items is not locked down
 - name: Overview
   href: overview.md
-- name: "Get started: Customizing model-driven apps using code"
+- name: Get started
   href: supported-customizations.md
 - name: Design app interface using code
   items:
@@ -828,8 +828,6 @@
     href: edit-customizations-xml-file-schema-validation.md
   - name: Publish customizations
     href: publish-customizations.md
-- name: Create or edit how business rules are initiated
-  href: create-edit-how-business-rules-initiated.md
 - name: Samples
   items:
   - name: Export ribbon definitions
@@ -872,8 +870,3 @@
     href: publish-request-schema.md
   - name: Visualization data description schema
     href: visualization-data-description-schema.md
-- name: Miscellaneous (To Be Fixed)
-  items:
-  - name: Customize commands
-    href: customize-commands.md
-
