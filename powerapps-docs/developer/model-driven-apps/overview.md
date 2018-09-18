@@ -1,9 +1,7 @@
 ---
-title: Model-driven apps Developer Overview | Microsoft Docs
-description: Learn how developers can add value to model-driven apps.
+title: Model-driven apps in PowerApps Developer Overview | Microsoft Docs
+description: "Learn how developers can add value to model-driven apps; tutorial; introduction for model-apps developer in PowerApps"
 services: ''
-suite: powerapps
-documentationcenter: na
 author: JimDaly
 manager: kvivek
 editor: ''
@@ -13,7 +11,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/17/2018
+ms.date: 09/17/2018
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -21,12 +19,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- This topic was not migrated it was written for PowerApps -->
+
 # Model-driven apps Developer Overview
 
 PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are model-driven apps built using the new Common Data Service for Apps. Common Data Service for Apps now contains the core functionality of the Common Data Service for Apps  applications. With model-driven apps, you can build apps that use the same extensibility capabilities as those applications.
 
-Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with learning how to build a model-driven app and what options can be applied without code. 
+Model-driven apps are primarily a no-code or low-code component focused approach to app development. The value developers can provide is by extending the application. Before you start writing code, begin with [learning how to build a model-driven app](/powerapps/maker/model-driven-apps/model-driven-app-components) and what options can be applied without code. 
 
 If you are already experienced with Dynamics 365 Customer Engagement apps, you will find that you will be able to apply your experience building model-driven apps. There are some new designers available to you, but generally the concepts are the same.
 
@@ -38,3 +36,8 @@ If you are new to the Common Data Service for Apps applications, the topics in t
 
 > [!div class="nextstepaction"]
 > [Get started](supported-customizations.md)
+
+### Related topics
+
+[Understand model-driven app components](/powerapps/maker/model-driven-apps/model-driven-app-components)<br/>
+[Create your first model-driven app](/powerapps/maker/model-driven-apps/build-first-model-driven-app)
