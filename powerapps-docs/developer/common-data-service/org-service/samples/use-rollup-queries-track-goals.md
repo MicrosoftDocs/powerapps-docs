@@ -50,14 +50,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the current version of the org.
 2. Retrieves the sales manager and 2 sales representatives, created manually in **Office 365**.
 3. Creates records to support `SalesOrder` records.
-3. Creates a new unit group for the sample.
-4. Retrieves the default unit id that is automatically created when we created a new unit group.
-5. The `Product` creates few products that are required for the sample.
-6. The `PriceLevel` creates a new price list.
-7. The `ProdcutPriceLevel` creates a price list item for the first product and applies volume discount.
-8. Creates an account record for the sales order's potential customerid. 
-9. The `SalesOrderDetails` adds the product to the order with the price overriden with a negative value.
-
+4. Creates a new unit group for the sample.
+5. Retrieves the default unit id that is automatically created when we created a new unit group.
+6. The `Product` creates few products that are required for the sample.
+7. The `PriceLevel` creates a new price list.
+8. The `ProductPriceLevel` creates a price list item for the first product and applies volume discount.
+9. Creates an account record for the sales order's potential customer id. 
+10. The `SalesOrderDetails` adds the product to the order with the price overridden with a negative value.
 
 ### Demonstrate
 
