@@ -15,7 +15,7 @@ manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
-# Create and manage model-driven apps using code
+# Create, manage, and publish model-driven apps using code
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-manage-custom-business-apps-using-code -->
 
