@@ -42,7 +42,6 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
  To reference a JavaScript from a different publisher, the path must include the customization prefix for that publisher. For example, for the `new_/content/contentpage.htm` page to reference the `MyIsv_/scripts/customscripts.js` page, the `src` attribute value should be `../../MyIsv_/scripts/customscripts.js`.  
   
 ### See also  
- [Use JavaScript](use-javascript.md)   
  [Client scripting using JavaScript](client-scripting.md)   
  [Web Resources](web-resources.md)   
  [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
