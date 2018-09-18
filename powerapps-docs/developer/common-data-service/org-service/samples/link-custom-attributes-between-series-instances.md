@@ -20,18 +20,17 @@ This sample shows how to link a custom attribute that is created for a recurring
 
 The `CreateAttributeRequest` message is intended to be used in a scenario where it contains data that is needed to create custom attributes.
 
-
 ## How this sample works
 
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
 
 ### Setup
 
-1. Checks the current version of the org.
+1. Checks for the current version of the org.
 
 ### Demonstrate
 
-1. The `StringAttributeMetada` message creates custom string attributes for recurring appointment instance and appointment instance.
+1. The `StringAttributeMetadata` message creates custom string attributes for recurring appointment instance and appointment instance.
 2. The `LinkedAttributeId` links the custom attribute to the appointment's custom attribute.
 
 ### Clean up
