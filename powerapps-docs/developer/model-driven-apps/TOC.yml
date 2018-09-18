@@ -22,7 +22,7 @@
       href: set-field-values-using-parameters-passed-form.md
     - name: Configure a form to accept custom querystring parameters
       href: configure-form-accept-custom-querystring-parameters.md
-  - name: Open forms, views, and dashboards in Dynamics 365 mobile client with a URL
+  - name: "Open forms, views, and dashboards in Dynamics 365 mobile client with a URL"
     href: open-forms-views-dashboards-mobile-client-url.md
   - name: Use editable grids
     href: use-editable-grids.md
@@ -769,7 +769,7 @@
     href: ribbons-available.md
   - name: Command bar or ribbon presentation
     href: command-bar-ribbon-presentation.md
-  - name: Export, prepare to edit, and import the ribbon
+  - name: "Export, prepare to edit, and import the ribbon"
     href: export-prepare-edit-import-ribbon.md
   - name: Export ribbon definitions
     href: export-ribbon-definitions.md
@@ -798,8 +798,6 @@
   items:
   - name: Use web resources
     href: use-web-resources.md
-  - name: Web resource development using Fiddler AutoResponder
-    href: streamline-javascript-development-fiddler-autoresponder.md
   - name: Webpage (HTML) web resources
     href: webpage-html-web-resources.md
     items:
@@ -807,6 +805,9 @@
       href: create-accessible-web-resources.md
   - name: Script (JScript) web resources
     href: script-jscript-web-resources.md
+    items:
+    - name: Script web resource development using Fiddler AutoResponder
+      href: streamline-javascript-development-fiddler-autoresponder.md
   - name: CSS web resources
     href: css-web-resources.md
   - name: Image web resources
