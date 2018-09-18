@@ -22,20 +22,22 @@ This sample shows how to validate an appointment using the [ValidateRequest](htt
 
 ## What this sample does
 
-The `ValidateRequest` message is intentded to be used in the scenario where it contains data that is needed to verify that an appointment or service appointment (service activity) has valid available resources for the activity, duration, and site, as appropriate.
+The `ValidateRequest` message is intended to be used in the scenario where it contains data that is needed to verify that an appointment or service appointment (service activity) has valid available resources for the activity, duration, and site, as appropriate.
 
 ## How this sample works
 
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
 
 ### Setup
+
 1. Checks for the current version of the org.
 2. Creates sample contact and activity party records.
 3. Creates sample appointment.
 
 ### Demonstrate
+
 1. Retrieves the appointment to be validated. 
-2. The `ValidateRequest` message validates the appointment creatd in the Setup(#setup).
+2. The `ValidateRequest` message validates the appointment created in the Setup(#setup).
 
 ### Clean up
 
