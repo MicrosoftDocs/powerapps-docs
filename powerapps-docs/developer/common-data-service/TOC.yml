@@ -426,12 +426,5 @@
     href: solution-component-file-reference-solutionpackager.md
   - name: FetchXML schema
     href: fetchxml-schema.md
-# - name: On-premises options
-- name: Miscellaneous (TO BE FIXED)
-  items:
 
-  - name: Online Management API
-    href: online-management-api.md
-
- 
   
