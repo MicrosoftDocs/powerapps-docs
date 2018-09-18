@@ -1,0 +1,694 @@
+- name: Apply business logic using client scripting
+  href: ../client-scripting.md
+  items:
+  - name: Client API Reference
+    href: reference.md
+    items:
+    - name: Client-side events
+      href: ./reference/events.md
+      items:
+      - name: Attribute OnChange event
+        href: ./reference/events/attribute-onchange.md
+      - name: Form OnLoad event
+        href: ./reference/events/form-onload.md
+      - name: Form OnSave event
+        href: ./reference/events/form-onsave.md
+      - name: Form data OnLoad event
+        href: ./reference/events/form-data-onload.md
+      - name: Grid OnChange event
+        href: ./reference/events/grid-onchange.md
+      - name: Grid OnRecordSelect event
+        href: ./reference/events/grid-onrecordselect.md
+      - name: Grid OnSave event
+        href: ./reference/events/grid-onsave.md
+      - name: OnProcessStatusChange event
+        href: ./reference/events/onprocessstatuschange.md
+      - name: OnReadyStateComplete event
+        href: ./reference/events/onreadystatecomplete.md
+      - name: OnResultOpened event
+        href: ./reference/events/onresultopened.md
+      - name: OnSelection event
+        href: ./reference/events/onselection.md
+      - name: OnStageChange event
+        href: ./reference/events/onstagechange.md
+      - name: OnStageSelected event
+        href: ./reference/events/onstageselected.md
+      - name: PostSearch event
+        href: ./reference/events/postsearch.md
+      - name: PreSearch event
+        href: ./reference/events/presearch.md
+      - name: Subgrid OnLoad event
+        href: ./reference/events/subgrid-onload.md
+      - name: TabStateChange event
+        href: ./reference/events/tabstatechange.md
+    - name: Collections
+      href: reference/collections.md
+      items:
+      - name: forEach
+        href: reference/collections/forEach.md
+      - name: get
+        href: reference/collections/get.md
+      - name: getLength
+        href: reference/collections/getLength.md
+    - name: GetGlobalContext function and ClientGlobalContext.js.aspx
+      href: reference/GetGlobalContext-ClientGlobalContext.js.aspx.md
+    - name: Execution context
+      href: reference/execution-context.md
+      items:
+      - name: getDepth
+        href: reference/executioncontext/getDepth.md
+      - name: getEventArgs
+        href: reference/executioncontext/getEventArgs.md
+      - name: getEventSource
+        href: reference/executioncontext/getEventSource.md
+      - name: getFormContext
+        href: reference/executioncontext/getFormContext.md
+      - name: getSharedVariable
+        href: reference/executioncontext/getSharedVariable.md
+      - name: setSharedVariable
+        href: reference/executioncontext/setSharedVariable.md
+    - name: Save event arguments
+      href: reference/save-event-arguments.md
+      items:
+      - name: getSaveMode
+        href: reference/save-event-arguments/getSaveMode.md
+      - name: isDefaultPrevented
+        href: reference/save-event-arguments/isDefaultPrevented.md
+      - name: preventDefault
+        href: reference/save-event-arguments/preventDefault.md
+    - name: Attributes
+      href: reference/attributes.md
+      items:
+      - name: Composite attributes
+        href: reference/composite-attributes.md
+      - name: addOnChange
+        href: reference/attributes/addOnChange.md
+      - name: controls collection
+        href: reference/attributes/controls-collection.md
+      - name: fireOnChange
+        href: reference/attributes/fireOnChange.md
+      - name: getAttributeType
+        href: reference/attributes/getAttributeType.md
+      - name: getFormat
+        href: reference/attributes/getFormat.md
+      - name: getInitialValue
+        href: reference/attributes/getInitialValue.md
+      - name: getIsDirty
+        href: reference/attributes/getIsDirty.md
+      - name: getIsPartyList
+        href: reference/attributes/getIsPartyList.md
+      - name: getMax
+        href: reference/attributes/getMax.md
+      - name: getMaxLength
+        href: reference/attributes/getMaxLength.md
+      - name: getMin
+        href: reference/attributes/getMin.md
+      - name: getName
+        href: reference/attributes/getName.md
+      - name: getOption
+        href: reference/attributes/getOption.md
+      - name: getOptions
+        href: reference/attributes/getOptions.md
+      - name: getParent
+        href: reference/attributes/getParent.md
+      - name: getPrecision
+        href: reference/attributes/getPrecision.md
+      - name: getRequiredLevel
+        href: reference/attributes/getRequiredLevel.md
+      - name: getSelectedOption
+        href: reference/attributes/getSelectedOption.md
+      - name: getSubmitMode
+        href: reference/attributes/getSubmitMode.md
+      - name: getText
+        href: reference/attributes/getText.md
+      - name: getUserPrivilege
+        href: reference/attributes/getUserPrivilege.md
+      - name: getValue
+        href: reference/attributes/getValue.md
+      - name: isValid
+        href: reference/attributes/isValid.md
+      - name: removeOnChange
+        href: reference/attributes/removeOnChange.md
+      - name: setPrecision
+        href: reference/attributes/setPrecision.md
+      - name: setRequiredLevel
+        href: reference/attributes/setRequiredLevel.md
+      - name: setSubmitMode
+        href: reference/attributes/setSubmitMode.md
+      - name: setValue
+        href: reference/attributes/setValue.md
+    - name: Controls
+      href: reference/controls.md
+      items:
+      - name: addCustomFilter
+        href: reference/controls/addCustomFilter.md
+      - name: addCustomView
+        href: reference/controls/addCustomView.md
+      - name: addNotification
+        href: reference/controls/addNotification.md
+      - name: addOnPostSearch
+        href: reference/controls/addOnPostSearch.md
+      - name: addOnResultOpened
+        href: reference/controls/addOnResultOpened.md
+      - name: addOnSelection
+        href: reference/controls/addOnSelection.md
+      - name: addOption
+        href: reference/controls/addOption.md
+      - name: addPreSearch
+        href: reference/controls/addPreSearch.md
+      - name: clearNotification
+        href: reference/controls/clearNotification.md
+      - name: clearOptions
+        href: reference/controls/clearOptions.md
+      - name: getAttribute
+        href: reference/controls/getAttribute.md
+      - name: getControl
+        href: reference/controls/getControl.md
+      - name: getControlType
+        href: reference/controls/getControlType.md
+      - name: getData
+        href: reference/controls/getData.md
+      - name: getDefaultView
+        href: reference/controls/getDefaultView.md
+      - name: getDisabled
+        href: reference/controls/getDefaultView.md
+      - name: getEntityTypes
+        href: reference/controls/getEntityTypes.md
+      - name: getInitialUrl
+        href: reference/controls/getInitialUrl.md
+      - name: getLabel
+        href: reference/controls/getLabel.md
+      - name: getName
+        href: reference/controls/getName.md
+      - name: getObject
+        href: reference/controls/getObject.md
+      - name: getParent
+        href: reference/controls/getParent.md
+      - name: getSearchQuery
+        href: reference/controls/getSearchQuery.md
+      - name: getSelectedResults
+        href: reference/controls/getSelectedResults.md
+      - name: getShowTime
+        href: reference/controls/getShowTime.md
+      - name: getSrc
+        href: reference/controls/getSrc.md
+      - name: getState
+        href: reference/controls/getState.md
+      - name: getTotalResultCount
+        href: reference/controls/getTotalResultCount.md
+      - name: getValue
+        href: reference/controls/getValue.md
+      - name: getVisible
+        href: reference/controls/getVisible.md
+      - name: openSearchResult
+        href: reference/controls/openSearchResult.md
+      - name: refresh
+        href: reference/controls/refresh.md
+      - name: removeOnPostSearch
+        href: reference/controls/removeOnPostSearch.md
+      - name: removeOnResultOpened
+        href: reference/controls/removeOnResultOpened.md
+      - name: removeOnSelection
+        href: reference/controls/removeOnSelection.md
+      - name: removeOption
+        href: reference/controls/removeOption.md
+      - name: removePreSearch
+        href: reference/controls/removePreSearch.md
+      - name: setData
+        href: reference/controls/setData.md
+      - name: setDefaultView
+        href: reference/controls/setDefaultView.md
+      - name: setDisabled
+        href: reference/controls/setDisabled.md
+      - name: setEntityTypes
+        href: reference/controls/setEntityTypes.md
+      - name: setFocus
+        href: reference/controls/setFocus.md
+      - name: setLabel
+        href: reference/controls/setLabel.md
+      - name: setNotification
+        href: reference/controls/setNotification.md
+      - name: setSearchQuery
+        href: reference/controls/setSearchQuery.md
+      - name: setShowTime
+        href: reference/controls/setShowTime.md
+      - name: setSrc
+        href: reference/controls/setSrc.md
+      - name: setVisible
+        href: reference/controls/setVisible.md
+    - name: formContext.data
+      href: reference/formContext-data.md
+      items:
+      - name: addOnLoad
+        href: reference/formContext-data/addOnload.md
+      - name: getIsDirty
+        href: reference/formContext-data/getIsDirty.md
+      - name: isValid
+        href: reference/formContext-data/isValid.md
+      - name: refresh
+        href: reference/formContext-data/refresh.md
+      - name: removeOnLoad
+        href: reference/formContext-data/removeOnLoad.md
+      - name: save
+        href: reference/formContext-data/save.md
+    - name: formContext.data.entity
+      href: reference/formContext-data-entity.md
+      items:
+      - name: addOnSave
+        href: reference/formContext-data-entity/addOnSave.md
+      - name: getDataXml
+        href: reference/formContext-data-entity/getDataXml.md
+      - name: getEntityName
+        href: reference/formContext-data-entity/getEntityName.md
+      - name: getEntityReference
+        href: reference/formContext-data-entity/getEntityReference.md
+      - name: getId
+        href: reference/formContext-data-entity/getId.md
+      - name: getIsDirty
+        href: reference/formContext-data-entity/getIsDirty.md
+      - name: getPrimaryAttributeValue
+        href: reference/formContext-data-entity/getPrimaryAttributeValue.md
+      - name: isValid
+        href: reference/formContext-data-entity/isvalid.md
+      - name: removeOnSave
+        href: reference/formContext-data-entity/removeOnSave.md
+      - name: save
+        href: reference/formContext-data-entity/save.md
+    - name: formContext.data.process
+      href: reference/formContext-data-process.md
+      items:
+      - name: Event handler methods
+        items:
+        - name: addOnProcessStatusChange
+          href: reference/formContext-data-process/eventhandlers/addOnProcessStatusChange.md
+        - name: addOnStageChange
+          href: reference/formContext-data-process/eventhandlers/addOnStageChange.md
+        - name: addOnStageSelected
+          href: reference/formContext-data-process/eventhandlers/addOnStageSelected.md
+        - name: removeOnProcessStatusChange
+          href: reference/formContext-data-process/eventhandlers/removeOnProcessStatusChange.md
+        - name: removeOnStageChange
+          href: reference/formContext-data-process/eventhandlers/removeOnStageChange.md
+        - name: removeOnStageSelected
+          href: reference/formContext-data-process/eventhandlers/removeOnStageSelected.md
+      - name: Active Process methods
+        items:
+        - name: getActiveProcess
+          href: reference/formContext-data-process/activeprocess/getActiveProcess.md
+        - name: setActiveProcess
+          href: reference/formContext-data-process/activeprocess/setActiveProcess.md
+      - name: getEnabledProcesses
+        href: reference/formContext-data-process/getEnabledProcesses.md
+      - name: Process methods
+        items:
+        - name: getId
+          href: reference/formContext-data-process/process/getId.md
+        - name: getName
+          href: reference/formContext-data-process/process/getName.md
+        - name: getStages
+          href: reference/formContext-data-process/process/getStages.md
+        - name: isRendered
+          href: reference/formContext-data-process/process/isRendered.md
+      - name: ProcessInstance methods
+        items:
+        - name: getProcessInstances
+          href: reference/formContext-data-process/getProcessInstances.md
+        - name: setActiveProcessInstance
+          href: reference/formContext-data-process/setActiveProcessInstance.md
+      - name: Instance methods
+        items:
+        - name: getInstanceId
+          href: reference/formcontext-data-process/instance/getInstanceId.md
+        - name: getInstanceName
+          href: reference/formcontext-data-process/instance/getInstanceName.md
+        - name: getStatus
+          href: reference/formcontext-data-process/instance/getStatus.md
+        - name: setStatus
+          href: reference/formcontext-data-process/instance/setStatus.md
+      - name: Active Stage methods
+        items:
+        - name: getActiveStage
+          href: reference/formContext-data-process/activestage/getActiveStage.md
+        - name: setActiveStage
+          href: reference/formContext-data-process/activestage/setActiveStage.md
+      - name: getActivePath
+        href: reference/formContext-data-process/activepath/getActivePath.md
+      - name: getSelectedStage
+        href: reference/formContext-data-process/getSelectedStage.md
+      - name: Stage methods
+        items:
+        - name: getCategory
+          href: reference/formContext-data-process/stage/getCategory.md
+        - name: getEntityName
+          href: reference/formContext-data-process/stage/getEntityName.md
+        - name: getId
+          href: reference/formContext-data-process/stage/getId.md
+        - name: getName
+          href: reference/formContext-data-process/stage/getName.md
+        - name: getNavigationBehavior
+          href: reference/formContext-data-process/stage/getNavigationBehavior.md
+        - name: getStatus
+          href: reference/formContext-data-process/stage/getStatus.md
+        - name: getSteps
+          href: reference/formContext-data-process/stage/getSteps.md
+      - name: Step methods
+        items:
+        - name: getAttribute
+          href: reference/formContext-data-process/step/getAttribute.md
+        - name: getName
+          href: reference/formContext-data-process/step/getName.md
+        - name: getProgress
+          href: reference/formContext-data-process/step/getProgress.md
+        - name: isRequired
+          href: reference/formContext-data-process/step/isRequired.md
+        - name: setProgress
+          href: reference/formContext-data-process/step/setProgress.md
+      - name: Navigation methods
+        items:
+        - name: moveNext
+          href: reference/formContext-data-process/navigation/moveNext.md
+        - name: movePrevious
+          href: reference/formContext-data-process/navigation/movePrevious.md
+    - name: formContext.ui
+      href: reference/formcontext-ui.md
+      items:
+      - name: addOnLoad
+        href: reference/formcontext-ui/addOnLoad.md
+      - name: clearFormNotification
+        href: reference/formcontext-ui/clearFormNotification.md
+      - name: close
+        href: reference/formcontext-ui/close.md
+      - name: getFormType
+        href: reference/formcontext-ui/getFormType.md
+      - name: getViewPortHeight
+        href: reference/formcontext-ui/getViewPortHeight.md
+      - name: getViewPortWidth
+        href: reference/formcontext-ui/getViewPortWidth.md
+      - name: refreshRibbon
+        href: reference/formcontext-ui/refreshRibbon.md
+      - name: removeOnLoad
+        href: reference/formcontext-ui/removeOnLoad.md
+      - name: setFormEntityName
+        href: reference/formcontext-ui/setFormEntityName.md
+      - name: setFormNotification
+        href: reference/formcontext-ui/setFormNotification.md
+    - name: formContext.ui.formSelector
+      href: reference/formcontext-ui-formselector.md
+      items:
+      - name: getId
+        href: reference/formcontext-ui-formselector/getId.md
+      - name: getLabel
+        href: reference/formcontext-ui-formselector/getLabel.md
+      - name: navigate
+        href: reference/formcontext-ui-formselector/navigate.md
+    - name: formContext.ui.navigation
+      href: reference/formcontext-ui-navigation.md
+      items:
+      - name: getId
+        href: reference/formcontext-ui-navigation/getId.md
+      - name: getLabel
+        href: reference/formcontext-ui-navigation/getLabel.md
+      - name: getVisible
+        href: reference/formcontext-ui-navigation/getVisible.md
+      - name: setFocus
+        href: reference/formcontext-ui-navigation/setFocus.md
+      - name: setLabel
+        href: reference/formcontext-ui-navigation/setLabel.md
+      - name: setVisible
+        href: reference/formcontext-ui-navigation/setVisible.md
+    - name: formContext.ui.process
+      href: reference/formcontext-ui-process.md
+      items:
+      - name: getDisplayState
+        href: reference/formcontext-ui-process/getDisplayState.md
+      - name: getVisible
+        href: reference/formcontext-ui-process/getVisible.md
+      - name: reflow
+        href: reference/formcontext-ui-process/reflow.md
+      - name: setDisplayState
+        href: reference/formcontext-ui-process/setDisplayState.md
+      - name: setVisible
+        href: reference/formcontext-ui-process/setVisible.md
+    - name: formContext.ui.quickForms
+      href: reference/formcontext-ui-quickForms.md
+      items:
+      - name: getControl
+        href: reference/formcontext-ui-quickForms/getControl.md
+      - name: getControlType
+        href: reference/formcontext-ui-quickForms/getControlType.md
+      - name: getDisabled
+        href: reference/formcontext-ui-quickForms/getDisabled.md
+      - name: getLabel
+        href: reference/formcontext-ui-quickForms/getLabel.md
+      - name: getName
+        href: reference/formcontext-ui-quickForms/getName.md
+      - name: getParent
+        href: reference/formcontext-ui-quickForms/getParent.md
+      - name: getVisible
+        href: reference/formcontext-ui-quickForms/getVisible.md
+      - name: isLoaded
+        href: reference/formcontext-ui-quickForms/isLoaded.md
+      - name: refresh
+        href: reference/formcontext-ui-quickForms/refresh.md
+      - name: setDisabled
+        href: reference/formcontext-ui-quickForms/setDisabled.md
+      - name: setFocus
+        href: reference/formcontext-ui-quickForms/setFocus.md
+      - name: setLabel
+        href: reference/formcontext-ui-quickForms/setLabel.md
+      - name: setVisible
+        href: reference/formcontext-ui-quickForms/setVisible.md
+    - name: formContext.ui.tabs
+      href: reference/formcontext-ui-tabs.md
+      items:
+      - name: addtabStateChange
+        href: reference/formcontext-ui-tabs/addtabStateChange.md
+      - name: addtabStateChange
+        href: reference/formcontext-ui-tabs/addtabStateChange.md
+      - name: getDisplayState
+        href: reference/formcontext-ui-tabs/getDisplayState.md
+      - name: getLabel
+        href: reference/formcontext-ui-tabs/getLabel.md
+      - name: getName
+        href: reference/formcontext-ui-tabs/getName.md
+      - name: getParent
+        href: reference/formcontext-ui-tabs/getParent.md
+      - name: getVisible
+        href: reference/formcontext-ui-tabs/getVisible.md
+      - name: removeTabStateChange
+        href: reference/formcontext-ui-tabs/removeTabStateChange.md
+      - name: setDisplayState
+        href: reference/formcontext-ui-tabs/setDisplayState.md
+      - name: setFocus
+        href: reference/formcontext-ui-tabs/setFocus.md
+      - name: setLabel
+        href: reference/formcontext-ui-tabs/setLabel.md
+      - name: setVisible
+        href: reference/formcontext-ui-tabs/setVisible.md
+    - name: formContext.ui.sections
+      href: reference/formcontext-ui-sections.md
+      items:
+      - name: getLabel
+        href: reference/formcontext-ui-sections/getLabel.md
+      - name: getName
+        href: reference/formcontext-ui-sections/getName.md
+      - name: getParent
+        href: reference/formcontext-ui-sections/getParent.md
+      - name: getVisible
+        href: reference/formcontext-ui-sections/getVisible.md
+      - name: setLabel
+        href: reference/formcontext-ui-sections/setLabel.md
+      - name: setVisible
+        href: reference/formcontext-ui-sections/setVisible.md
+    - name: Grids and subgrids
+      href: reference/grids.md
+      items:
+      - name: GridControl
+        href: reference/grids/gridcontrol.md
+        items:
+        - name: addOnLoad
+          href: reference/grids/gridcontrol/addOnLoad.md
+        - name: getEntityName
+          href: reference/grids/gridcontrol/getEntityName.md
+        - name: getFetchXml
+          href: reference/grids/gridcontrol/getFetchXml.md
+        - name: getGrid
+          href: reference/grids/gridcontrol/getGrid.md
+        - name: getGridType
+          href: reference/grids/gridcontrol/getGridType.md
+        - name: getRelationship
+          href: reference/grids/gridcontrol/getRelationship.md
+        - name: getUrl
+          href: reference/grids/gridcontrol/getUrl.md
+        - name: getViewSelector
+          href: reference/grids/gridcontrol/getViewSelector.md
+        - name: openRelatedGrid
+          href: reference/grids/gridcontrol/openRelatedGrid.md
+        - name: refresh
+          href: reference/grids/gridcontrol/refresh.md
+        - name: refreshRibbon
+          href: reference/grids/gridcontrol/refreshRibbon.md
+        - name: removeOnLoad
+          href: reference/grids/gridcontrol/removeOnLoad.md
+      - name: Grid
+        href: reference/grids/grid.md
+        items:
+        - name: getRows
+          href: reference/grids/grid/getRows.md
+        - name: getSelectedRows
+          href: reference/grids/grid/getSelectedRows.md
+        - name: getTotalRecordCount
+          href: reference/grids/grid/getTotalRecordCount.md
+      - name: GridRow
+        href: reference/grids/gridrow.md
+        items:
+        - name: getData
+          href: reference/grids/gridrow/getData.md
+      - name: GridRowData
+        href: reference/grids/gridrowdata.md
+        items:
+        - name: getEntity
+          href: reference/grids/gridrowdata/getEntity.md
+      - name: GridEntity
+        href: reference/grids/gridentity.md
+        items:
+        - name: getEntityName
+          href: reference/grids/gridentity/getEntityName.md
+        - name: getEntityReference
+          href: reference/grids/gridentity/getEntityReference.md
+        - name: getId
+          href: reference/grids/gridentity/getId.md
+        - name: getPrimaryAttributeValue
+          href: reference/grids/gridentity/getPrimaryAttributeValue.md
+      - name: GridAttribute
+        href: reference/grids/gridattribute.md
+      - name: GridCell
+        href: reference/grids/gridcell.md
+      - name: ViewSelector
+        href: reference/grids/viewselector.md
+        items:
+        - name: getCurrentView
+          href: reference/grids/viewselector/getCurrentView.md
+        - name: isVisible
+          href: reference/grids/viewselector/isVisible.md
+        - name: setCurrentView
+          href: reference/grids/viewselector/setCurrentView.md
+    - name: Xrm.Device
+      href: reference/xrm-device.md
+      items:
+      - name: captureAudio
+        href: reference/xrm-device/captureAudio.md
+      - name: captureImage
+        href: reference/xrm-device/captureImage.md
+      - name: captureVideo
+        href: reference/xrm-device/captureVideo.md
+      - name: getBarcodeValue
+        href: reference/xrm-device/getBarcodeValue.md
+      - name: getCurrentPosition
+        href: reference/xrm-device/getCurrentPosition.md
+      - name: pickFile
+        href: reference/xrm-device/pickFile.md
+    - name: Xrm.Encoding
+      href: reference/xrm-encoding.md
+      items:
+      - name: htmlAttributeEncode
+        href: reference/xrm-encoding/htmlAttributeEncode.md
+      - name: htmlDecode
+        href: reference/xrm-encoding/htmlDecode.md
+      - name: htmlEncode
+        href: reference/xrm-encoding/htmlEncode.md
+      - name: xmlAttributeEncode
+        href: reference/xrm-encoding/xmlAttributeEncode.md
+      - name: xmlEncode
+        href: reference/xrm-encoding/xmlEncode.md
+    - name: Xrm.Navigation
+      href: reference/xrm-navigation.md
+      items:
+      - name: openAlertDialog
+        href: reference/xrm-navigation/openAlertDialog.md
+      - name: openConfirmDialog
+        href: reference/xrm-navigation/openConfirmDialog.md
+      - name: openErrorDialog
+        href: reference/xrm-navigation/openErrorDialog.md
+      - name: openFile
+        href: reference/xrm-navigation/openFile.md
+      - name: openForm
+        href: reference/xrm-navigation/openForm.md
+      - name: openUrl
+        href: reference/xrm-navigation/openUrl.md
+      - name: openWebResource
+        href: reference/xrm-navigation/openWebResource.md
+    - name: Xrm.Panel
+      href: reference/xrm-panel.md
+      items:
+      - name: loadPanel
+        href: reference/xrm-panel/loadPanel.md
+    - name: Xrm.Utility
+      href: reference/xrm-utility.md
+      items:
+      - name: closeProgressIndicator
+        href: reference/xrm-utility/closeProgressIndicator.md
+      - name: getAllowedStatusTransitions
+        href: reference/xrm-utility/getAllowedStatusTransitions.md
+      - name: getEntityMetadata
+        href: reference/xrm-utility/getEntityMetadata.md
+      - name: getGlobalContext
+        href: reference/xrm-utility/getGlobalContext.md
+        items:
+        - name: client
+          href: reference/xrm-utility/getGlobalContext/client.md
+        - name: organizationSettings
+          href: reference/xrm-utility/getGlobalContext/organizationSettings.md
+        - name: userSettings
+          href: reference/xrm-utility/getGlobalContext/userSettings.md
+        - name: getAdvancedConfigSetting
+          href: reference/xrm-utility/getGlobalContext/getAdvancedConfigSetting.md
+        - name: getClientUrl
+          href: reference/xrm-utility/getGlobalContext/getClientUrl.md
+        - name: getCurrentAppName
+          href: reference/xrm-utility/getGlobalContext/getCurrentAppName.md
+        - name: getCurrentAppProperties
+          href: reference/xrm-utility/getGlobalContext/getCurrentAppProperties.md
+        - name: getCurrentAppUrl
+          href: reference/xrm-utility/getGlobalContext/getCurrentAppUrl.md
+        - name: getVersion
+          href: reference/xrm-utility/getGlobalContext/getVersion.md
+        - name: isOnPremises
+          href: reference/xrm-utility/getGlobalContext/isOnPremises.md
+        - name: prependOrgName
+          href: reference/xrm-utility/getGlobalContext/prependOrgName.md
+      - name: getLearningPathAttributeName
+        href: reference/xrm-utility/getLearningPathAttributeName.md
+      - name: getResourceString
+        href: reference/xrm-utility/getResourceString.md
+      - name: invokeProcessAction
+        href: reference/xrm-utility/invokeProcessAction.md
+      - name: lookupObjects
+        href: reference/xrm-utility/lookupObjects.md
+      - name: refreshParentGrid
+        href: reference/xrm-utility/refreshParentGrid.md
+      - name: showProgressIndicator
+        href: reference/xrm-utility/showProgressIndicator.md
+    - name: Xrm.WebApi
+      href: reference/xrm-webapi.md
+      items:
+      - name: Xrm.WebApi.online
+        href: reference/xrm-webapi/online.md
+      - name: Xrm.WebApi.offline
+        href: reference/xrm-webapi/offline.md
+      - name: createRecord
+        href: reference/xrm-webapi/createRecord.md
+      - name: deleteRecord
+        href: reference/xrm-webapi/deleteRecord.md
+      - name: retrieveRecord
+        href: reference/xrm-webapi/retrieveRecord.md
+      - name: retrieveMultipleRecords
+        href: reference/xrm-webapi/retrieveMultipleRecords.md
+      - name: updateRecord
+        href: reference/xrm-webapi/updateRecord.md
+      - name: isAvailableOffline
+        href: reference/xrm-webapi/isAvailableOffline.md
+      - name: execute
+        href: reference/xrm-webapi/execute.md
+      - name: executeMultiple
+        href: reference/xrm-webapi/executeMultiple.md
