@@ -17,6 +17,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 This sample shows how to create a new currency, and how to retrieve and display the currency exchange rate relative to the organization’s base currency.
 
 ## How to run this sample
+
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
@@ -30,8 +31,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org. 
-2. The `TransactionCurrency` method creates a new currenncy for the sample.
-
+2. The `TransactionCurrency` method creates a new currency for the sample.
 
 ### Demonstrate
 
