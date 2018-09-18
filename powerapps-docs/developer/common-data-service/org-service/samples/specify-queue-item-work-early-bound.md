@@ -32,13 +32,12 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the current version of the org.
 2. The `Queue` method creates a private queue instance and set its property values.
-3. The `QueueItem` method creats a new instance of queueitem and intialize its properties.
-
+3. The `QueueItem` method creates a new instance of queueitem and intialize its properties.
 
 ### Demonstrate
 
 1. The `WhoAmIRequest` method retrieves the current user information.
-1. The `PickFromQueueRequest` method creats an instance of an existing queueitem in order to specify the user that will be working on it.
+1. The `PickFromQueueRequest` method creates an instance of an existing queueitem in order to specify the user that will be working on it.
 
 
 ### Clean up
