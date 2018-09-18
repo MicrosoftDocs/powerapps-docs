@@ -37,6 +37,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Demonstrate
 
 1. The `QueryExpression` retrieves all the attachments.
+
 ### Clean up
 
 1. Display an option to delete the sample data that is created in [Setup](#setup).
