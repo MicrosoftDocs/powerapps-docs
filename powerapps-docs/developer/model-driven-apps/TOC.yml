@@ -39,7 +39,7 @@
       - name: Actions on dashboards
         href: actions-dashboards.md
       - name: Create a dashboard
-      href: create-dashboard.md
+        href: create-dashboard.md
     - name: View data with visualizations (charts)
       href: view-data-with-visualizations-charts.md
       items:
