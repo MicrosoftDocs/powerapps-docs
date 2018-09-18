@@ -71,8 +71,7 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
  Editing the form definitions from an exported managed solution and then re-importing the solution is a supported method to edit entity forms. When manually editing forms we strongly recommend you use an XML editor that allows for schema validation. More information: [Edit the Customizations XML File with Schema Validation](edit-customizations-xml-file-schema-validation.md)  
 
 ### See also  
- [Customize Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)   <!-- TODO need to fic the link-->
+ [Customize Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)<br/>
  [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
  [SystemForm Entity](../common-data-service/reference/entities/systemform.md)  
- [Create or edit how business rules are initiated](create-edit-how-business-rules-initiated.md)   
  [Form XML Schema](form-xml-schema.md)

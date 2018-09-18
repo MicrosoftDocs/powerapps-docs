@@ -1,6 +1,6 @@
 ---
 title: "Developer tools (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Provides information about the community developed tools that you can use with model-driven apps in PowerApps.
+description: "Provides information about the community developed tools that you can use with model-driven apps in PowerApps."
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
