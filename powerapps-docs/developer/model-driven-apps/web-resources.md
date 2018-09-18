@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Web resources for model-driven apps
+# Web resources in model-driven apps
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/web-resources -->
 
