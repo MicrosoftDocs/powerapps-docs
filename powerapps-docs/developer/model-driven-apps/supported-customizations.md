@@ -55,9 +55,7 @@ You can use JavaScript within model-driven apps in three areas:
 
 - **Web resources and IFRAMEs**: You can use JavaScript web resources within HTML web resources. IFRAMES configured to allow cross-site scripting, or scripts within HTML web resources included in a form may interact with the documented `Xrm.Page` or `Xrm.Utility` methods within the form via the parent reference.
 
-<!-- TODO: Continue from here -->
-
-All interaction with Dynamics 365 application pages must only be performed through the methods with the methods documented in the [Client API Reference for model-driven apps](clientapi/reference.md). Directly accessing the Document Object Model (DOM) of any model-driven app page is not supported. The use of jQuery in form scripts and commands is not recommended. More information: [Client scripting in model-driven apps using JavaScript](client-scripting.md).
+All interaction with Dynamics 365 application pages must only be performed through the methods documented in the [Client API Reference for model-driven apps](clientapi/reference.md). Directly accessing the Document Object Model (DOM) of any model-driven app page is not supported. The use of jQuery in form scripts and commands is not recommended. More information: [Client scripting in model-driven apps using JavaScript](client-scripting.md).
 
 You can open Model-driven app forms, views, dialogs, and reports using the methods documented in [Open forms, views, dialogs, and reports with a URL](open-forms-views-dialogs-reports-url.md).
 
@@ -81,4 +79,7 @@ The following is a list of unsupported action types that are frequently asked ab
 
 ### See also
 
-[Supported Customizations for Common Data Service for Apps](../common-data-service/supported-customizations.md)
+[Supported Customizations for Common Data Service for Apps](../common-data-service/supported-customizations.md)<br/>
+[Apply business logic using client scripting in model-driven apps using JavaScript](client-scripting.md)<br/>
+[Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
+[Web resources in model-driven apps](web-resources.md)

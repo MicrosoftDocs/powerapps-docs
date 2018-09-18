@@ -29,7 +29,7 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
   
 <a name="BKMK_Using"></a>   
 ## Using JavaScript libraries  
- For information about developing and testing JavaScript libraries as well as how to associate them with ribbon commands and form events, see [Client scripting using JavaScript](clientapi/client-scripting.md).  
+ For information about developing and testing JavaScript libraries as well as how to associate them with ribbon commands and form events, see [Client scripting using JavaScript](client-scripting.md).  
   
 <a name="BKMK_Referencing"></a>   
 ## Referencing a script web resource from a webpage web resource  
@@ -43,7 +43,7 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
   
 ### See also  
  [Use JavaScript](use-javascript.md)   
- [Client scripting using JavaScript](clientapi/client-scripting.md)   
+ [Client scripting using JavaScript](client-scripting.md)   
  [Web Resources](web-resources.md)   
  [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
  [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   

@@ -74,4 +74,4 @@ By following the above steps, Fiddler is configured to listen to the requests an
 
 [Web resources](web-resources.md)<br />
 [Use JavaScript](use-javascript.md)<br />
-[Client scripting using JavaScript](clientapi/client-scripting.md)
+[Client scripting using JavaScript](client-scripting.md)
