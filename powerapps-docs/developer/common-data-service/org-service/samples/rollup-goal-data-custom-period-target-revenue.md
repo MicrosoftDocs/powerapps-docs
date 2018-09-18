@@ -1,6 +1,6 @@
 ---
 title: "Sample: Rollup goal data for a custom period against the target avenue (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to roll up goal data for a custom epriod against the target revenue" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "This sample shows how to roll up goal data for a custom period against the target revenue" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -34,6 +34,7 @@ This sample requires additional three users that are not in your system. Create 
 **UserName**: kcook@yourorg.onmicrosoft.com<br/>
 
 ## How to run this sample
+
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
@@ -49,10 +50,10 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks for the version of the org.
 2. Retrieves the sales manager and 2 sales representatives created manually in **Office 365**.
 3. Creates a sample unit group and retrieve the default unit id. 
-4. Creates few products and new disocunt list.
+4. Creates few products and new discount list.
 5. The `PriceLevel` creates the price list.
 6. The `ProductPriceLevel` creates a price list item for the first product and apply volume discount.
-7. Creates account record for the opportunity's potential customerid.
+7. Creates account record for the opportunity's potential customer id.
 8. Creates a new opportunity with user specified estimated revenue.
 9. Creates a catalog products and override the list price.
 10. Creates a new write-in opportunity product with a manual discount applied.
