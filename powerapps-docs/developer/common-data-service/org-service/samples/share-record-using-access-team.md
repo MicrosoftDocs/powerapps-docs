@@ -34,7 +34,7 @@ This sample requires additional users that are not in your system. Create the re
 
 ## What this sample does
 
-The `AddMembersTeamRequest`, `GrantAccessRequest`, `RemoveMembersTeamRequest` messages are intended to be used in a scenario where it contains data that is needed to Add, Grant and Remove Memebers.
+The `AddMembersTeamRequest`, `GrantAccessRequest`, `RemoveMembersTeamRequest` messages are intended to be used in a scenario where it contains data that is needed to Add, Grant and Remove Members.
 
 ## How this sample works
 
@@ -42,7 +42,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version ofthe org.
+1. Checks for the current version of the org.
 2. Creates a test account record for the sample.
 
 ### Demonstrate
