@@ -40,7 +40,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 3. The `QueryExpression` queries to get one of the email template of type `Contact`.
 4. The `SendEmailFromTemplateRequest` sends an email message by using a template.
 
-
 ### Clean up
 
 1. Display an option to delete the sample data that is created in [Setup](#setup).
