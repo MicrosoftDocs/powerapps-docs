@@ -854,8 +854,6 @@
       href: ./common-data-service/set-managed-properties-relationships.md
     - name: Visualize hierarchical data
       href: ./common-data-service/visualize-hierarchical-data.md
-    - name: Query and visualize hierarchically related data
-      href: ./common-data-service/query-visualize-hierarchical-data.md 
     - name: Define and query hierarchically related data
       href: ./common-data-service/define-query-hierarchical-data.md
     - name: Configure connection roles
@@ -868,8 +866,6 @@
         href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md  
       - name: How to set managed properties for relationships
         href: ./common-data-service/set-managed-properties-relationships.md
-      - name: How to visualize hierarchical data
-        href: ./common-data-service/visualize-hierarchical-data.md
       - name: How to query and visualize hierarchically related data
         href: ./common-data-service/query-visualize-hierarchical-data.md 
       - name: How to define and query hierarchically related data
@@ -916,9 +912,7 @@
         href: ./common-data-service/data-platform-create-business-rule.md
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
-    items:   
-    - name: Solutions overview
-      href: ./common-data-service/solutions-overview.md
+    items:
     - name: Use solution explorer 
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution

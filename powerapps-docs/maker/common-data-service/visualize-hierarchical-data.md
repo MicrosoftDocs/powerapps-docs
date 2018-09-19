@@ -2,7 +2,7 @@
 title: "Visualize hierarchical data with model-driven apps | MicrosoftDocs"
 description: "Learn how to query and visualize heirarchical related data"
 ms.custom: ""
-ms.date: 06/02/2018
+ms.date: 09/19/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -23,19 +23,16 @@ search.app:
 ---
 # Visualize hierarchical data with model-driven apps
 
-> [!NOTE]
-> Hierarchical data visualizations are available only for model-driven apps configured for the **Web** client. Visualizations are not available for the **Unified Interface** client. More information: [Create a model-driven app by using the app designer](../model-driven-apps/create-edit-app.md)
-
 When an entity is configured to have a hierarchical self-referential relationship you can configure visualizations using that hierarchy. More information: [Define and query hierarchically related data](../common-data-service/define-query-hierarchical-data.md)
 
 The  entities that have visualizations available by default include [Account](/powerapps/developer/common-data-service/reference/entities/account), [Position](/powerapps/developer/common-data-service/reference/entities/position), and [User](/powerapps/developer/common-data-service/reference/entities/systemuser). In the grid view of these entities, you can see the icon depicting the hierarchy chart, to the left of the record name. The hierarchy icon isn’t present for all records by default. The icon is shown for the records that have are related using the hierarchical relationship.  
-  
- ![Accounts with hierarchy](media/account-list-with-hierarchy.png)  
+> [!div class="mx-imgBorder"] 
+> ![View hierarchy button](media/view-hierarchy-button.png)  
   
  If you select the hierarchy icon, you can view the hierarchy, with the tree view on the left and the tile view on the right, as shown below:  
   
 > [!div class="mx-imgBorder"] 
-> ![Account tree and tile view](media/hierachy-security-accounts-tile-view.png)  
+> ![Tree and tile view in hierarchy](media/tree-view-and-tile-view-in-hierarchy.png)  
   
  A few other entities can be enabled for a hierarchy. These entities include [Contact](/powerapps/developer/common-data-service/reference/entities/contact) and [Team](/powerapps/developer/common-data-service/reference/entities/team). All custom entities can be enabled for a hierarchy.  
   
