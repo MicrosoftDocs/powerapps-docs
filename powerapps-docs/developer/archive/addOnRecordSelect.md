@@ -11,21 +11,5 @@ manager: "amyla"
 ---
 # addOnRecordSelect (Client API reference)
 
-[!INCLUDE[./includes/addOnRecordSelect-description.md](./includes/addOnRecordSelect-description.md)]
 
-## Grid types supported
-
-Read-only and editable grids
-
-## Syntax
-
-`gridContext.getGrid().addOnRecordSelect(myFunction);`
-
-|Name|Type|Required|Description|
-|--|--|--|--|
-|myFunction|function reference|Yes|The function to be executed when you select record (row) in a grid. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See [execution context](../../../clientapi-execution-context.md) for more information.
-
-## Remarks
-
-To get the `gridContext`, see [Getting the grid context](../../grids.md#bkmk_gridcontext).
 
