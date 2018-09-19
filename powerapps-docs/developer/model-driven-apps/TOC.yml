@@ -241,7 +241,7 @@
       - name: getDefaultView
         href: clientapi/reference/controls/getDefaultView.md
       - name: getDisabled
-        href: clientapi/reference/controls/getDefaultView.md
+        href: clientapi/reference/controls/getDisabled.md
       - name: getEntityTypes
         href: clientapi/reference/controls/getEntityTypes.md
       - name: getInitialUrl
