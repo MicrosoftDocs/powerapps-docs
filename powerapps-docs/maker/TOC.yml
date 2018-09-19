@@ -916,9 +916,7 @@
         href: ./common-data-service/data-platform-create-business-rule.md
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
-    items:   
-    - name: Solutions overview
-      href: ./common-data-service/solutions-overview.md
+    items:
     - name: Use solution explorer 
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution
