@@ -18,9 +18,9 @@ search.app:
 <!-- OLD: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-services -->
 # Use Common Data Service for Apps web services
 
-Common Data Service for Apps provides two web services you can use to interact with data, and two discovery services that you can use to find available instances for users.
+Common Data Service (CDS) for Apps has entities that are used to model and manage business data. You can use standard entities or create your own custom entities to store data. CDS for Apps provides two web services you can use to interact with data: **Web API** and **Organization Service**.
 
-Choose the one which best matches the requirement and your skills. 
+Choose the one that best matches the requirement and your skills. 
 
 ![Flow diagram to choose web service](media/whentousewebapi.png)
 
