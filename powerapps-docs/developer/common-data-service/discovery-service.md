@@ -1,6 +1,6 @@
 ---
 title: "Discovery Services (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "CDS for Apps Discovery service is accessed through either the Web API or the Organization Service."
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -17,11 +17,10 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 A Discovery service is accessed through either the Web API or the Organization Service.
 
-- For the Web API see: [Discover the URL for your organization using the Web API](webapi/discover-url-organization-web-api.md)
-- For the Organization Service see: [Use the Discovery Service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
+- For the Web API: [Discover the URL for your organization using the Web API](webapi/discover-url-organization-web-api.md)
+- For the Organization Service: [Use the Discovery Service with the Microsoft.Xrm.Sdk.Discovery NameSpace](org-service/discovery-service.md)
 
 ### See Also
 
-[Use Common Data Service for Apps web services](use-web-services.md)<br />
 [Use the Common Data Service for Apps Web API](webapi/overview.md)<br />
 [Use the Common Data Service for Apps Organization Service](org-service/overview.md)

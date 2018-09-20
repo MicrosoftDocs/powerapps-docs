@@ -11,8 +11,6 @@ manager: "amyla"
 ---
 # getValue (Client API reference)
 
-
-
 Retrieves the data value for an attribute.
 
 ## Attribute types supported
