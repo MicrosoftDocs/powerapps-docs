@@ -25,20 +25,25 @@
       href: environment-and-tenant-migration.md
     - name: PowerShell support for PowerApps (preview)
       href: powerapps-powershell.md
-  - name: Responding to DSR requests
-    href: powerapps-gdpr-dsr-guide-systemlogs.md
+  - name: Data integration
     items:
-    - name: System-generated logs
-      href: powerapps-gdpr-dsr-guide-systemlogs.md
-    - name: PowerApps customer data
-      href: powerapps-gdpr-dsr-guide.md
+    - name: Integrate data into CDS for Apps
+      href: data-integrator.md
+    - name: Responding to DSR requests
       items:
-      - name: Export data
-        href: powerapps-gdpr-export-dsr.md
-      - name: Delete data
-        href: powerapps-gdpr-delete-dsr.md
-    - name: CDS for Apps customer data
-      href: common-data-service-gdpr-dsr-guide.md
+      - name: System-generated logs
+        href: powerapps-gdpr-dsr-guide-systemlogs.md
+      - name: Data integrations for CDS for Apps
+        href: data-integration-gdpr-dsr-guide.md
+      - name: PowerApps customer data
+        href: powerapps-gdpr-dsr-guide.md
+        items:
+        - name: Export data
+          href: powerapps-gdpr-export-dsr.md
+        - name: Delete data
+          href: powerapps-gdpr-delete-dsr.md
+      - name: CDS for Apps customer data
+        href: common-data-service-gdpr-dsr-guide.md
   - name: Administer environments
     href: environments-administration.md
     items:
