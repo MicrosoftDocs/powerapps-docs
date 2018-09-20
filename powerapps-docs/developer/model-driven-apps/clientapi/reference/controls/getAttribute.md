@@ -33,7 +33,7 @@ Standard, Lookup, OptionSet
 
 ## Remarks
 
-The constituent controls within a [quick view control](../formContext-ui-quickForms.md) are included in the controls collection and these controls have the **getAttribute** method. However, the attribute is not part of the attribute collection for the entity. While you can retrieve the value for that attribute using [getValue](getValue.md) and even change the value using [setValue](setValue.md), changes you make will not be saved with the entity.
+The constituent controls within a [quick view control](../formContext-ui-quickForms.md) are included in the controls collection and these controls have the **getAttribute** method. However, the attribute is not part of the attribute collection for the entity. While you can retrieve the value for that attribute using [getValue](../attributes/getValue.md) and even change the value using [setValue](../attributes/setValue.md), changes you make will not be saved with the entity.
  
 The following code shows using the value the contact **mobilephone** attribute when displayed on an account entity form using a quick view control named **contactQuickForm**. This code hides the control when the value of the attribute is **null**.
 

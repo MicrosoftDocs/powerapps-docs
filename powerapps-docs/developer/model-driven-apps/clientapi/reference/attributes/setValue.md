@@ -11,8 +11,6 @@ manager: "amyla"
 ---
 # setValue (Client API reference)
 
-
-
 Sets the data value for an attribute. 
 
 ## Attribute types supported

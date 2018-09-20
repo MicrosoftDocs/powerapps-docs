@@ -49,7 +49,7 @@ The documentation on this site for developers, technical articles, and sample co
 
 ### CDS for Apps web services
 
-Use of the web services are fully supported. This includes: Web API, Organization Service, Discovery Service, and the Organization Data Service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Entity attributes may also change in future versions. For more information, see [Use Common Data Service for Apps web services](use-web-services.md)
+Use of the web services are fully supported. This includes: Web API, Organization Service, Discovery Service, and the Organization Data Service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Entity attributes may also change in future versions.
 
 ### Solution file
 

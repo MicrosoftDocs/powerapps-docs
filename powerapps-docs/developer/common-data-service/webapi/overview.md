@@ -33,7 +33,7 @@ The Web API allows you to do all the same operations as the organization service
   
 ### Related Sections
 
-[Use Common Data Service for Apps web services](../use-web-services.md)<br />
+[Work with data using code](../work-with-data-cds.md)<br />
 [OData - the best way to REST](http://www.odata.org/)<br />
 [OData Version 4.0 Part 1: Protocol Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)<br />
 [OData Version 4.0 Part 2: URL Conventions Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)<br />
