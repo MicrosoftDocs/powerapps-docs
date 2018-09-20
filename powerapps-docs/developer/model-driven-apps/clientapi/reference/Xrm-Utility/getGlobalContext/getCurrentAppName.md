@@ -35,7 +35,7 @@ If this method is called in the context of a business app, returns the name of t
 
 ### Related topics
 
-[Create and manage custom business apps using code](../../../../create-manage-custom-business-apps-using-code.md)
+[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md)
 

@@ -209,7 +209,7 @@ function getReportURL(action,fileName,id) {
  [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)   
  [Configure a form to accept custom querystring parameters](configure-form-accept-custom-querystring-parameters.md)    
  [Customize the Ribbon](customize-commands-ribbon.md)<br/>
- [Client scripting using JavaScript](clientapi/client-scripting.md)<br/>
+ [Client scripting using JavaScript](client-scripting.md)<br/>
  [Web Resources](web-resources.md) 
  [Extend the client](/dynamics365/customer-engagement/developer/extend-client) 
  [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)  

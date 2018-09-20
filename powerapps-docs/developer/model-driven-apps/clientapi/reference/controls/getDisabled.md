@@ -11,8 +11,6 @@ manager: "amyla"
 ---
 # getDisabled (Client API reference)
 
-
-
 Returns whether the control is disabled.
 
 ## Syntax
