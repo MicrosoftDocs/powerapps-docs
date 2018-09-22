@@ -44,15 +44,23 @@ For a developer who will contribute to projects it is important that they unders
 
 Where to begin depends on what problem you are trying to solve. This guide includes content about a wide range of capabilities and it is unlikely you will ever use all of them. The following includes several of the key areas to begin.
 
+> [Work with data using web services](#work-with-data-using-web-services)<br/>
+> [Applying business logic](#applying-business-logic)<br/>
+> [CDS for Apps entities](#cds-for-apps-entities)<br/>
+> [Work with metadata](#work-with-metadata)<br/>
+> [Use solutions to package and distribute extensions](#use-solutions-to-package-and-distribute-extensions)<br/>
+> [Create client applications and authentication](#create-client-applications-and-authentication)<br/>
+> [Content for on-premises deployments](#content-for-on-premises-deployments)<br/>
+
 ### Work with data using Web services
 
-There are two different web services you can use to work with data. Which one you should use depends on the type of project you are working on. For more information, see [Work with data using code](work-with-data-cds.md)
+There are two different web services that you can use to work with data. Which one you should use depends on the type of project you are working on. More information: [Work with data using code](work-with-data-cds.md)
 
 ### Applying business logic
 
 The most common extensions created using code involve automating the processes used by businesses. You can find a summary of options available for you in [Apply business logic with code](apply-business-logic-with-code.md). Each of these approaches are typically invoked based on events that occur on the server, so understanding of the [Event Framework](event-framework.md) will be valuable.
 
-### CDS for Apps Entities
+### CDS for Apps entities
 
 Entities store the business data you will work with. An understanding what they are and how to work with them is essential.
 More information:
@@ -60,14 +68,20 @@ More information:
 - [Common Data Service for Apps entities](entities.md)
 - [About the Entity Reference](reference/about-entity-reference.md)
 
-### Solutions
+### Work with metadata
+
+Developing a good working understanding of the metadata in the system can help you understand how CDS for Apps platform works. Generally you will use designers to add, update, or delete entity schema that defines metadata, but both the Web API and the Organization service web services provide capabilities to perform CRUD operations on the entity schema. More information: [Work with metadata using code](metadata-services.md) 
+
+### Use solutions to package and distribute extensions
 
 If you are going to distribute the extensions you create or any customizations that they depend on, you will need to understand solutions. Solutions created by an individual are relatively simple to work with and don't require the skills of a developer. But for a team of developers to work productively with solutions and use effective application lifecycle management principles requires a more sophisticated approach. More information:
 
  - [Introduction to solutions](introduction-solutions.md)
- - [How to manage solutions](how-manage-solutions.md)
+ - [SolutionPackager toolSolutionPackager tool](compress-extract-solution-file-solutionpackager.md)
+ - [Package Deployer tool](./package-deployer/create-packages-package-deployer.md)
+ - [Publish your app on AppSource](publish-app-appsource.md)
 
-### Authentication
+### Create client applications and authentication
 
 When you create extensions that apply business logic on the server you will not need to include code to authenticate. The only times you will need to authenticate are when you are creating a client application. A simple console client application is a good way to familiarize yourself with the CDS for Apps APIs. Enabling a means to connect to the data is an important first step. Most of the code samples provided include a means to authenticate. The Xrm.Tooling connector provides capabilities to make authentication simpler. More information:
 
