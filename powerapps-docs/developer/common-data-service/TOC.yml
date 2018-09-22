@@ -171,8 +171,6 @@
 - name: Work with CDS for Apps entities
   href: entities.md
   items:
-  - name: Customize entity and attribute mappings
-    href: customize-entity-attribute-mappings.md
   - name: Customer entities
     href: customer-entities-account-contact.md
   - name: Activity entities
@@ -285,6 +283,10 @@
       href: entity-relationship-eligibility.md
     - name: Entity relationship metadata messages
       href: entity-relationship-metadata-messages.md
+    - name: Entity relationship cascading behavior
+      href: configure-entity-relationship-cascading-behavior.md
+  - name: Customize entity and attribute mappings
+    href: customize-entity-attribute-mappings.md
   - name: Use connections to link records to each other
     href: connection-entities.md
     items:

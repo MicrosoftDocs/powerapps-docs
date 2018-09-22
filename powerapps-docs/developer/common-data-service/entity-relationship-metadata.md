@@ -21,13 +21,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- 
 
-This topic was not migrated it was written for PowerApps
-Overlap with https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata
-Was Mike Carter
-
- -->
 # Entity relationship metadata
 
 When you look at the solution explorer or the three relationship collections in the `EntityMetadata`, you might think that there are three types of entity relationships. Actually, there are only two, as shown in the following table.
@@ -42,21 +36,11 @@ The `EntityMetadata` `ManyToOneRelationships` collection contains [OneToManyRela
 > [!NOTE]
 > Although related entities are sometimes called *child entities*, don't confuse these with [Child entities](entity-metadata.md#child-entities), which refers to how security is applied to related entities.
 
-More information:
-- [Common Data Service for Apps Customization Guide: Create and edit relationships between entities](/dynamics365/customer-engagement/customize/create-edit-entity-relationships)
-- [Customize entity relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+More information: [Create relationships between entities](../../maker/common-data-service/data-platform-entity-lookup.md)
 
 ## Cascade configuration
 
-When a one-to-many entity relationship exists, there are cascading behaviors that can be configured to preserve data integrity and automate business processes.
-
-More information:
-
-- [Common Data Service for Apps Customization Guide: Create 1:N (one-to-many) or N:1 (many-to-one) relationships > Relationship behavior](/dynamics365/customer-engagement/customize/create-and-edit-1n-relationships#relationship-behavior)
-- [Entity relationship behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)
-
-<!-- TODO: include information from here: https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/entity-relationship-behavior#configure-entity-relationship-behavior -->
-
+When a one-to-many entity relationship exists, there are cascading behaviors that can be configured to preserve data integrity and automate business processes. More information: [Configure entity relationship cascading behavior](configure-entity-relationship-cascading-behavior.md)
 
 ## Create a hierarchy of entities
 
