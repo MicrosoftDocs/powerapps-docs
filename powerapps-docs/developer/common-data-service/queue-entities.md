@@ -65,9 +65,9 @@ The following information pertains to queues:
   
 <a name="BKMK_Enabling"></a>   
 ## Enable entities for queues  
- To enable a customizable entity (`EntityMetadata.IsCustomizable = true`) for queues, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsValidForQueue> attribute to `true`. For a list of customizable entities, see [Which Entities are Customizable?](which-entities-are-customizable.md). The queue entity and the queue item entity are customizable entities, but they cannot be enabled for queues.  
+ To enable a customizable entity (`EntityMetadata.IsCustomizable = true`) for queues, use the <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest> message to set the <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsValidForQueue> attribute to `true`. The queue entity and the queue item entity are customizable entities, but they cannot be enabled for queues.  
   
- The following list contains default queue-enabled entities in [!INCLUDE[pn_dynamics_crm_online](../includes/pn-dynamics-crm-online.md)]:  
+ The following list contains default queue-enabled entities in Common Data Service (CDS) for Apps:  
   
 -   Appointment  
   
@@ -95,7 +95,7 @@ The following information pertains to queues:
   
 <a name="BKMK_Inheriting"></a>   
 ## Inherit privileges and provide limited access to a queue  
- A queue and a queue item have a parental relationship in which operations on the parent queue record are propagated to the child queue item records. For more information about parental relationships and cascading rules, see [Entity Relationship Behavior](entity-relationship-behavior.md).  
+ A queue and a queue item have a parental relationship in which operations on the parent queue record are propagated to the child queue item records.  
   
 > [!NOTE]
 >  In this particular parental relationship, only the Delete action is cascaded from the parent queue entity to the child queue item entity. Other actions, such as Assign, Merge or Share are not cascaded.  
