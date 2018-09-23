@@ -1,6 +1,6 @@
 ---
 title: "Work with data using code in Common Data Service for Apps (PowerApps) | Microsoft Docs" 
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "CDS for Apps provides two web services that you can use to interact with data: Web API and Organization Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -12,11 +12,11 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Work with data using code in Common Data Service for Apps
 
-Common Data Service (CDS) for Apps has entities that are used to model and manage business data. You can use standard entities or create your own custom entities to store data. 
+Common Data Service (CDS) for Apps has [entities](entities.md) that are used to model and manage business data. You can use standard entities or create your own custom entities to store data. 
 
 ## Use web services to work with data
 
-CDS for Apps provides two web services you can use to interact with data: **Web API** and **Organization Service**. Choose the one that best matches the requirement and your skills. 
+CDS for Apps provides two web services that you can use to interact with data: **Web API** and **Organization Service**. Choose the one that best matches the requirement and your skills. 
 
 ![Flow diagram to choose web service](media/whentousewebapi.png)
 
@@ -34,7 +34,3 @@ More information: [Use the Common Data Service for Apps Organization Service](or
 
 > [!NOTE]
 > Use the Xrm.Tooling assemblies if you are creating a Windows client application. More information: [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md)
-
-## Perform various data-related operations using code
-
-You can perform a variety of data-related operations using code such as CRUD, . This section provides you information 
