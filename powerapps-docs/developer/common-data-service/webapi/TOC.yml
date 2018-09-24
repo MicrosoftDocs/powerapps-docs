@@ -1,7 +1,7 @@
 - name: Work with data using code
   href: ../work-with-data-cds.md
   items:
-  - name: Overview
+  - name: Web API overview
     href: overview.md
   - name: Get started
     items:
