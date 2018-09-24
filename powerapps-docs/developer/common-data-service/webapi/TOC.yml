@@ -1,95 +1,98 @@
-- name: Overview
-  href: overview.md
-- name: Get started
+- name: Work with data using code
+  href: ../../work-with-data-cds.md
   items:
-  - name: (C#)
-    href: get-started-dynamics-365-web-api-csharp.md
+  - name: Overview
+    href: overview.md
+  - name: Get started
     items:
-    - name: 'Quick Start: Web API sample (C#)'
-      href: quick-start-console-app-csharp.md
-    - name: Start a Web API project in Visual Studio (C#)
-      href: start-web-api-project-visual-studio-csharp.md
-    - name: Use the CDS for Apps Web API Helper Library (C#)
-      href: use-microsoft-dynamics-365-web-api-helper-library-csharp.md
+    - name: (C#)
+      href: get-started-dynamics-365-web-api-csharp.md
       items:
-      - name: 'Helper code: Configuration classes'
-        href: web-api-helper-code-configuration-classes.md
-      - name: 'Helper code: Authentication class'
-        href: web-api-helper-code-authentication-class.md
-      - name: 'Helper code: CrmHttpResponseException class'
-        href: web-api-helper-code-crmhttpresponseexception-class.md
-  - name: Client-side JavaScript
-    href: get-started-web-api-client-side-javascript.md
-- name: Authenticate
-  href: authenticate-web-api.md
-- name: Types and operations
-  href: web-api-types-operations.md
-- name: Perform operations
-  href: perform-operations-web-api.md
-  items:
-  - name: Compose HTTP requests and handle errors
-    href: compose-http-requests-handle-errors.md
-  - name: Query Data
-    href: query-data-web-api.md
-  - name: Retrieve and execute predefined queries
-    href: retrieve-and-execute-predefined-queries.md
-  - name: Create an entity
-    href: create-entity-web-api.md
-  - name: Retrieve an entity
-    href: retrieve-entity-using-web-api.md
-  - name: Update and delete entities 
-    href: update-delete-entities-using-web-api.md
-  - name: Associate and disassociate entities
-    href: associate-disassociate-entities-using-web-api.md
-  - name: Use functions
-    href: use-web-api-functions.md
-  - name: Use actions
-    href: use-web-api-actions.md
-  - name: Execute batch operations 
-    href: execute-batch-operations-using-web-api.md
-  - name: Impersonate another user
-    href: impersonate-another-user-web-api.md
-  - name: Perform conditional operations
-    href: perform-conditional-operations-using-web-api.md
-  - name: Manage duplicate detection during Create and Update operations
-    href: manage-duplicate-detection-create-update.md
-- name: Version Differences
-  href: web-api-versions.md
-- name: Work with metadata
-  href: use-web-api-metadata.md
-  items:
-  - name: Query metadata
-    href: query-metadata-web-api.md
-  - name: Retrieve metadata by name or MetadataId
-    href: retrieve-metadata-name-metadataid.md
-  - name: Create and update entity definitions
-    href: create-update-entity-definitions-using-web-api.md 
-  - name: Create and update entity relationships
-    href: create-update-entity-relationships-using-web-api.md
-  - name: Work with Option sets
-    href: create-update-optionsets.md
-- name: Discover the URL for your organization
-  href: discover-url-organization-web-api.md
-  items:
-  - name: Global Discovery Service Sample (C#)
-    href: samples/global-discovery-service-csharp.md
-- name: Import data
-  href: ../import-data.md #Topic is for both Web API and Organization service
-- name: Sample data
-  href: ../sample-data.md #Topic is for both Web API and Organization service
-- name: Samples
-  items:
-  - name:  Data operations Sample Templates
-    href: web-api-samples.md
+      - name: 'Quick Start: Web API sample (C#)'
+        href: quick-start-console-app-csharp.md
+      - name: Start a Web API project in Visual Studio (C#)
+        href: start-web-api-project-visual-studio-csharp.md
+      - name: Use the CDS for Apps Web API Helper Library (C#)
+        href: use-microsoft-dynamics-365-web-api-helper-library-csharp.md
+        items:
+        - name: 'Helper code: Configuration classes'
+          href: web-api-helper-code-configuration-classes.md
+        - name: 'Helper code: Authentication class'
+          href: web-api-helper-code-authentication-class.md
+        - name: 'Helper code: CrmHttpResponseException class'
+          href: web-api-helper-code-crmhttpresponseexception-class.md
+    - name: Client-side JavaScript
+      href: get-started-web-api-client-side-javascript.md
+  - name: Authenticate
+    href: authenticate-web-api.md
+  - name: Types and operations
+    href: web-api-types-operations.md
+  - name: Perform operations
+    href: perform-operations-web-api.md
     items:
-    - name: Basic Operations
-      href: web-api-basic-operations-sample.md
+    - name: Compose HTTP requests and handle errors
+      href: compose-http-requests-handle-errors.md
     - name: Query Data
-      href: web-api-query-data-sample.md
-    - name: Conditional Operations
-      href: web-api-conditional-operations-sample.md
-    - name: Functions and Actions
-      href: web-api-functions-actions-sample.md
-    - name: Samples
-      href: samples/toc.yml
+      href: query-data-web-api.md
+    - name: Retrieve and execute predefined queries
+      href: retrieve-and-execute-predefined-queries.md
+    - name: Create an entity
+      href: create-entity-web-api.md
+    - name: Retrieve an entity
+      href: retrieve-entity-using-web-api.md
+    - name: Update and delete entities 
+      href: update-delete-entities-using-web-api.md
+    - name: Associate and disassociate entities
+      href: associate-disassociate-entities-using-web-api.md
+    - name: Use functions
+      href: use-web-api-functions.md
+    - name: Use actions
+      href: use-web-api-actions.md
+    - name: Execute batch operations 
+      href: execute-batch-operations-using-web-api.md
+    - name: Impersonate another user
+      href: impersonate-another-user-web-api.md
+    - name: Perform conditional operations
+      href: perform-conditional-operations-using-web-api.md
+    - name: Manage duplicate detection during Create and Update operations
+      href: manage-duplicate-detection-create-update.md
+  - name: Version Differences
+    href: web-api-versions.md
+  - name: Work with metadata
+    href: use-web-api-metadata.md
+    items:
+    - name: Query metadata
+      href: query-metadata-web-api.md
+    - name: Retrieve metadata by name or MetadataId
+      href: retrieve-metadata-name-metadataid.md
+    - name: Create and update entity definitions
+      href: create-update-entity-definitions-using-web-api.md 
+    - name: Create and update entity relationships
+      href: create-update-entity-relationships-using-web-api.md
+    - name: Work with Option sets
+      href: create-update-optionsets.md
+  - name: Discover the URL for your organization
+    href: discover-url-organization-web-api.md
+    items:
+    - name: Global Discovery Service Sample (C#)
+      href: samples/global-discovery-service-csharp.md
+  - name: Import data
+    href: ../import-data.md #Topic is for both Web API and Organization service
+  - name: Sample data
+    href: ../sample-data.md #Topic is for both Web API and Organization service
+  - name: Samples
+    items:
+    - name: Data operations Sample Templates
+      href: web-api-samples.md
+      items:
+      - name: Basic Operations
+        href: web-api-basic-operations-sample.md
+      - name: Query Data
+        href: web-api-query-data-sample.md
+      - name: Conditional Operations
+        href: web-api-conditional-operations-sample.md
+      - name: Functions and Actions
+        href: web-api-functions-actions-sample.md
+      - name: Samples
+        href: samples/toc.yml
 
