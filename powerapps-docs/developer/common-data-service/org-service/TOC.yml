@@ -1,7 +1,7 @@
 - name: Work with data using code
   href: ../work-with-data-cds.md
   items:
-  - name: Use Organiation Service
+  - name: Use Organization Service
     href: overview.md
   - name: Quick Starts
     items:
