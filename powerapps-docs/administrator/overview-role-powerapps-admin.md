@@ -8,7 +8,12 @@ ms.topic: overview
 ms.date: 06/30/2018
 ms.author: jimholtz
 manager: kvivek
-#Customer intent: As a PowerApps administrator, I want to understand the PowerApps adoption journey so I can plan how to effectively protect my organization's data, manage users and data, monitor usage, deploy solutions, orchestrate updates, and identify and fix issues.
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # What's the role of a PowerApps administrator?

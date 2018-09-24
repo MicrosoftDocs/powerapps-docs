@@ -3,14 +3,16 @@ title: 'Label control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the label control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Label control in PowerApps
 A box that shows data such as text, numbers, dates, or currency.
@@ -67,6 +69,8 @@ A label shows data that you specify as a literal string of text, which appears e
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
+
+**Live** – How the screen reader announces changes to the label's text.  Values can be **Off**, **Assertive**, and **Polite**. This property is useful for announcing dynamic changes in the app's UI in an accessible way.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 

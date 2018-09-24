@@ -3,13 +3,16 @@ title: Tutorial - Customize a gallery in a generated app | Microsoft Docs
 description: In this tutorial, you customize the data that appears in the gallery and other elements of an app that was generated automatically in PowerApps.
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 05/06/2018
 ms.author: anneta
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Tutorial: Customize a gallery in PowerApps
 

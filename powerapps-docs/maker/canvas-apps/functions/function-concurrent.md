@@ -3,14 +3,16 @@ title: Concurrent function | Microsoft Docs
 description: Reference information, including syntax, for the Concurrent function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/26/2018
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Concurrent function in PowerApps
 Evaluates multiple formulas concurrently with one another.
@@ -18,7 +20,7 @@ Evaluates multiple formulas concurrently with one another.
 ## Description
 The **Concurrent** function evaluates multiple formulas at the same time. Normally, multiple formulas are evaluated by chaining them together with the [**;**](operators.md) (or [**;;**](operators.md)) operator, which evaluates each sequentially in order. When the app performs operations concurrently, users wait less for the same result.
 
-In the [**OnStart**](../controls/control-screen.md) property of your app, use **Concurrent** to improve performance when the app loads data. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app only needs to wait for the longest request time. Web browsers often improve performance by performing data operations concurrently.
+In the [**OnStart**](../controls/control-screen.md) property of your app, use **Concurrent** to improve performance when the app loads data. When data calls don't start until the previous calls finish, the app must wait for the sum of all request times. If data calls start at the same time, the app needs to wait only for the longest request time. Web browsers often improve performance by performing data operations concurrently.
 
 You can't predict the order in which formulas within the **Concurrent** function start and end evaluation. Formulas within the **Concurrent** function shouldn't contain dependencies on other formulas within the same **Concurrent** function, and PowerApps shows an error if you try. From within, you can safely take dependencies on formulas outside the **Concurrent** function because they will complete before the **Concurrent** function starts. Formulas after the **Concurrent** function can safely take dependencies on formulas within: they'll all complete before the **Concurrent** function finishes and moves on to the next formula in a chain (if you use the **;** or **;;** operator). Watch out for subtle order dependencies if you're calling functions or service methods that have side effects.
 
@@ -52,7 +54,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 	ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );<br> 
 	ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )**
 
-3. In [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/), turn on developer tools to monitor network traffic while your app is running.
+3. In [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/), turn on developer tools to monitor network traffic while your app is running.
 
 1. (optional) Turn on network throttling to exaggerate the effects of this comparison.
 
@@ -83,7 +85,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 3. While holding down the Alt key, select the second button, and then watch the network traffic.
 
-    The tools show four requests performed concurrently, similar to this example.  Again, actual times have been removed as they will vary wildly.  The graph shows that all the calls start at about the same time and do not wait for the previous to finish:
+    The tools show four requests performed concurrently, similar to this example.  Again, actual times have been removed as they will vary wildly.  The graph shows that all the calls start at about the same time and do not wait for the previous one to finish:
 
 	![Time graph of four network requests, all four starting together, covering about half of the span of time](media/function-concurrent/concurrent-network.png)
 

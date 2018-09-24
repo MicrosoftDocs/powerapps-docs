@@ -3,14 +3,16 @@ title: Core properties | Microsoft Docs
 description: Reference information about the Disabled, Visible, and ReadOnly properties
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Core properties in PowerApps
 Configure whether the user can see and interact with a control.

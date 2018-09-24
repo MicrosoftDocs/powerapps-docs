@@ -3,14 +3,16 @@ title: Webinar listing | Microsoft Docs
 description: Displays a listing of past and future webinars, including time/date and topics covered.
 author: audrieMSFT
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 4/18/2018
+ms.date: 08/16/2018
 ms.author: audrie
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # PowerApps webinar listing #
 These webinars can help you to leverage the features and functions of Microsoft PowerApps. Webinars are available on-demand after the live broadcast. Please note that, in some cases, you'll need to re-enter registration details, and then you'll be sent a link to the recording via email. 

@@ -3,14 +3,16 @@ title: Understand SharePoint forms integration | Microsoft Docs
 description: Understand how custom forms work with SharePoint
 author: sarafankit
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/11/2017
 ms.author: ankitsar
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Understand SharePoint forms integration
 You can now easily [customize any SharePoint list form](customize-list-form.md) in PowerApps. In this article, we'll walk through the details of how these forms work and how you can customize them further.

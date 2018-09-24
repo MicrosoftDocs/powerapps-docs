@@ -3,14 +3,16 @@ title: 'Display form and Edit form controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Display form and Edit form controls
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Edit form and Display form controls in PowerApps
 Display, edit, and create a record in a data source.
@@ -24,6 +26,8 @@ If you add a **[Gallery](control-gallery.md)** control, you can configure it to 
 
 ### Record selection
 For either type of form, you set its **DataSource** property to a table of records, and you set the form's **Item** property to show a specific record in that table. For example, you can set the **Item** property of a form to the **SelectedItem** property of a **[Gallery](control-gallery.md)** control. When the user selects a record in the gallery, the same record appears in the form, except that the form can show more fields. If the user returns to the gallery and selects a different record, the **SelectedItem** property of the gallery changes. This change updates the **Item** property of the form, which then shows the newly selected record.
+
+For more information about how to set a form's **Item** property (for example, by using a **Drop down** control instead of a **Gallery** control), see [Show, edit, or add a record](../add-form.md).
 
 Each form control contains one or more **[Card](control-card.md)** controls. By setting the **[DataField](control-card.md)** property of a card, you [specify which field that card shows and other details](../add-form.md).
 

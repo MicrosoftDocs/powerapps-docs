@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Manage custom fields in an entity
@@ -17,7 +22,7 @@ You can create and update one or more custom fields in any entity. When you crea
 > Every entity has system fields, such as fields that indicate when a record was last updated, and who updated it. In addition, standard entities have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
-1. On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
     ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
@@ -30,13 +35,15 @@ You can create and update one or more custom fields in any entity. When you crea
     > [!NOTE]
     > The **Display name** fields can be updated at anytime to display differently in your apps, the **Name** field cannot be changed after your entity has been saved as this could result in breaking an existing app.
 
-    ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
+    > [!div class="mx-imgBorder"] 
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
 
 5. Select the **Data type** of your field, this controls the way the information is stored as well as how it is presented in apps. For example, text is stored different to a decimal number or a URL. For more detailed information of the data types available, see [Entity attribute metadata](../../developer/common-data-service/entity-attribute-metadata.md).
 
     If you're prompted, specify additional information for the data type that you specified. Depending on the data type, different fields will be presented. If you're creating a field of type Option set or Multi Select Option Set, you can select **New Option Set** and create a new Option Set while creating your field. For more information, see [Create Option set](custom-picklists.md)
 
-    ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
+    > [!div class="mx-imgBorder"] 
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
 
 
 7. Under **Required**, select the check box if you want to recommended this field as required in your apps. This does not provide hard enforcement through all connections to the Common Data Service. If you need to ensure the field is populated, create a [Business Rule](data-platform-create-business-rule.md)
@@ -66,7 +73,7 @@ Calculated fields let you automate manual calculations used in your business pro
 For more details on the types of expressions supported and examples, see [Define calculated fields](/dynamics365/customer-engagement/customize/define-calculated-fields)
 
 ## Update or delete a field
-1. On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane, and then click or tap an entity.
+1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane, and then click or tap an entity.
 2. In the list of fields for the entity that you selected, click or tap a field, and then follow one of these steps:
    
    * Change one or more properties of the field.

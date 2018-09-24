@@ -6,8 +6,14 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 09/11/2018
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Licensing overview
@@ -81,7 +87,7 @@ If you want to build skills and learn more about PowerApps, Microsoft Flow, and 
 PowerApps licenses always include Microsoft Flow capabilities.  In addition to being included in PowerApps licenses, Microsoft Flow is also available as a standalone service. See [PowerApps pricing page][2] for more information on the specific Microsoft Flow capabilities that each PowerApps license includes.
 
 ## Resource capacity is included with each license
-The per-user licenses above come with included capacity for resources used when an app or flow is executed. These resources include data storage, file storage, and flow runs. The capacities included in the per-user licenses are pooled at the tenant level and, when the tenant’s capacity is exhausted, customers may purchase additional capacity through add-on licenses. The maximum capacity for the Common Data Service is 10 GB per database and 5 TB for file storage per environment. If you buy additional capacity and the available capacity (with licenses and add-ons combined) is more than the maximum capacity, you can use the total amount across multiple environments. See the [PowerApps pricing page][2] for the capacity quantities that each PowerApps license includes.
+The per-user licenses above come with included capacity for resources used when an app or flow is executed. These resources include data storage, file storage, and flow runs. The capacities included in the per-user licenses are pooled at the tenant level and, when the tenant’s capacity is exhausted, customers may purchase additional capacity through add-on licenses. If you buy additional capacity and the available capacity (with licenses and add-ons combined) is more than the maximum capacity, you can use the total amount across multiple environments. See the [PowerApps pricing page][2] for the capacity quantities that each PowerApps license includes.
 
 ## PowerApps licensing examples
 Let’s take a look at an example. ABC Inc. has 1,000 employees, of which 700 employees are licensed with Office 365 Enterprise 3. Early on, a power user creates a line-of-business application that simplifies how customer orders are tracked. Later, the HR department works with IT to roll out an app for reporting time off and absences, and the app is built on the Common Data Service.

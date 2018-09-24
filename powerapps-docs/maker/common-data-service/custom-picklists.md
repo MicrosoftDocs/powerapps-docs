@@ -8,6 +8,11 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Create an Option set
@@ -18,7 +23,7 @@ Option sets can be created in two ways, either from the Option set list within t
 
 ## Creating an Option set while adding a field.
 
-1. On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
     ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
@@ -28,7 +33,8 @@ Option sets can be created in two ways, either from the Option set list within t
 
 4. In the new field panel, enter the **Display name** for your field, **Name** will be automatically populated and is used as the unique name for your field. The **Display name** is used when presenting this field to your users, the **Name** is used when building your app, in expressions and formulas.
 
-    ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
+    > [!div class="mx-imgBorder"] 
+    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel.png "New Field Panel")
 
 5. Click the **Data type** drop down and select **Option set**, or **Multi select Option set**.
 
@@ -41,34 +47,40 @@ Option sets can be created in two ways, either from the Option set list within t
 
 7. A new panel will open to create the Option set, the **Display name** and **Name** will default from the name of the field but can be changed if needed. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
 
-    ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "New Option Set")
+    > [!div class="mx-imgBorder"] 
+    > ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "New Option Set")
 
 8. Once you've entered your items, click **Save** to create your Option set.
 
-    ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "New Option Set")
+    > [!div class="mx-imgBorder"] 
+    > ![New Option Set](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "New Option Set")
 
 9. Click **Done** to close the field panel, and then **Save entity** to save your entity to the Common Data Service.
 
     > [!NOTE]
     > You can select one of your items as the **Default** for this field, and it will be selected by default when users are creating new records in your entity.
 
-    ![New Field](./media/data-platform-cds-newoptionset/fieldpanel-2.png "New Field Panel")
+    > [!div class="mx-imgBorder"] 
+    > ![New Field](./media/data-platform-cds-newoptionset/fieldpanel-2.png "New Field Panel")
 
 ## Creating an Option set from the Option set list
 
-1. On [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Option sets** in the left navigation pane.
+1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Option sets** in the left navigation pane.
 
-    ![Option sets](./media/data-platform-cds-newoptionset/optionsetlist.png "Option set List")
+    > [!div class="mx-imgBorder"] 
+    > ![Option sets](./media/data-platform-cds-newoptionset/optionsetlist.png "Option set List")
 
 2. Click **New Option set**
 
 3. A new panel will open to create the Option Set, enter the **Display name** and **Name**. Click **Add new item** to start creating your list of options. Repeat this step until all your items are created.
 
-    ![Option Set Create](./media/data-platform-cds-newoptionset/optionset-create.png "Option Set Create")
+    > [!div class="mx-imgBorder"] 
+    > ![Option Set Create](./media/data-platform-cds-newoptionset/optionset-create.png "Option Set Create")
 
 4. Once you've entered your items, click **Save** to create your Option set.
 
-    ![New Option Set](./media/data-platform-cds-newoptionset/optionset-create-values.png "New Option Set")
+    > [!div class="mx-imgBorder"] 
+    > ![New Option Set](./media/data-platform-cds-newoptionset/optionset-create-values.png "New Option Set")
 
 5. You can now use this option set by creating new field on an entity.
 

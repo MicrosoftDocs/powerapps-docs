@@ -8,12 +8,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
+search.audienceType: 
+  - admin
+search.app: 
+  - D365CE
+  - PowerApps
+  - Powerplatform
 ---
 
 # Responding to Data Subject Rights (DSR) requests to export PowerApps customer data
 The “right of data portability” allows a data subject to request a copy of his or her personal data in an electronic format (that is, a structured, commonly used, machine readable and interoperable format) that may be transmitted to another data controller:
 
-* Website access: [PowerApps portal](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Website access: [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps Admin center](https://admin.powerapps.com/), and [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 * PowerShell access: PowerApps [App creator cmdlets](https://go.microsoft.com/fwlink/?linkid=871448), [Admin cmdlets](https://go.microsoft.com/fwlink/?linkid=871804) and [On-premises gateway cmdlets](https://go.microsoft.com/fwlink/?linkid=872238)
 
@@ -35,12 +41,12 @@ PowerApps user settings, user-app settings, and notifications | | App creator: A
 
 > ** With the introduction of Common Data Service (CDS) for Apps, if a database is created within the environment, environment permissions and model-driven app permissions are stored as records within the CDS for Apps database instance. For guidance on how to respond to DSR requests for users that use CDS for Apps, see [Responding to Data Subject Rights (DSR) requests for Common Data Service for Apps customer data](common-data-service-gdpr-dsr-guide.md).
 
-> *** An administrator can access these resources from the [PowerApps portal](https://web.powerapps.com) only if the owner of the resource has explicitly granted him or her access. If the administrator has not been granted access, he or she will need to leverage the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804).
+> *** An administrator can access these resources from the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) only if the owner of the resource has explicitly granted him or her access. If the administrator has not been granted access, he or she will need to leverage the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804).
 
 ## Prerequisites
 
 ### For users
-Any user with a valid PowerApps license can perform the user operations outlined in this document using the [PowerApps portal](https://web.powerapps.com) or [App creator cmdlets](https://go.microsoft.com/fwlink/?linkid=871448).
+Any user with a valid PowerApps license can perform the user operations outlined in this document using the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or [App creator cmdlets](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### For admins
 To perform the administration operations outlined in this document using the PowerApps Admin center, Microsoft Flow Admin Center, or [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804), you'll need the following:
@@ -121,7 +127,7 @@ With the introduction of the CDS for Apps, if a database is created within the e
 ## Step 3: Export personal data contained within canvas apps created by the user
 
 ### PowerApps portal
-A user can export an app from the [PowerApps portal](https://web.powerapps.com). For step-by-step instructions on how to export an app, see [Exporting an app](environment-and-tenant-migration.md#exporting-an-app).
+A user can export an app from the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). For step-by-step instructions on how to export an app, see [Exporting an app](environment-and-tenant-migration.md#exporting-an-app).
 
 ### PowerApps Admin center
 An administrator can export apps created by a user starting from the [PowerApps Admin center](https://admin.powerapps.com/) by following these steps:
@@ -142,7 +148,7 @@ An administrator can export apps created by a user starting from the [PowerApps 
 
     ![Give a user access](./media/powerapps-gdpr-export-dsr/grant-access.png)
 
-5. Once you have access to each of the user’s apps you can export an app from the [PowerApps portal](https://web.powerapps.com). For step-by-step instructions on how to export an app, see [Exporting an app](environment-and-tenant-migration.md#exporting-an-app).
+5. Once you have access to each of the user’s apps you can export an app from the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). For step-by-step instructions on how to export an app, see [Exporting an app](environment-and-tenant-migration.md#exporting-an-app).
 
 ### PowerShell cmdlets for admins
 Administrators can export apps created by a user by using the **Get-AdminApp** function in the [PowerApps Admin PowerShell cdmlets](https://go.microsoft.com/fwlink/?linkid=871804):
@@ -269,7 +275,7 @@ Get-AdminConnectorRoleAssignment -PrincipalObjectId $userId | ConvertTo-Json | O
 ~~~~
  
 ## Step 9: Export PowerApps Notifications, User Settings, and User-App Settings
-PowerApps sends several types of notifications to users, including when an app is shared with them and when a CDS for Apps export operation has completed. A user’s notification history is visible to them within the [PowerApps portal](https://web.powerapps.com).
+PowerApps sends several types of notifications to users, including when an app is shared with them and when a CDS for Apps export operation has completed. A user’s notification history is visible to them within the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 PowerApps also stores several different user preferences and settings that are used to deliver the PowerApps runtime and portal experiences, including when a user last opened an application, pinned an app, etc.
 
@@ -287,15 +293,15 @@ Administrators can export the PowerApps notifications, user settings, and user-a
 ~~~~
 Add-PowerAppsAccount
 $userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
-Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -UserPrincipalName foobar@microsoft.com
+Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -UserPrincipalName name@microsoft.com
 ~~~~
 
 ## Step 10: Export personal data contained for a user-stored gateway or in the user’s gateway permissions
 
 ### PowerApps Portal
-Users can export the personal data stored within the gateway service from the [PowerApps portal](https://web.powerapps.com) by following these steps:
+Users can export the personal data stored within the gateway service from the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by following these steps:
 
-1. From the [PowerApps portal](https://web.powerapps.com), within the default environment for your tenant, select **Gateways**, and then select **Details** for each gateway to which you have access.
+1. From the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), within the default environment for your tenant, select **Gateways**, and then select **Details** for each gateway to which you have access.
 
     ![Gateway landing page](./media/powerapps-gdpr-export-dsr/gateway-select-details.png)
 

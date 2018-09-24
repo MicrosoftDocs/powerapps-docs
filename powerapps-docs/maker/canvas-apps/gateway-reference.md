@@ -1,18 +1,20 @@
 ---
-title: Understand on-premises data gateways | Microsoft Docs
-description: Reference information, including installation and troubleshooting, for on-premises data gateways
+title: Understand on-premises data gateways for canvas apps | Microsoft Docs
+description: Reference information about on-premises data gateways including installation in PowerApps and troubleshooting
 author: AFTOwen
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer:
+ms.reviewer: 
 ms.date: 10/20/2017
 ms.author: anneta
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
-# Understand on-premises data gateways for Microsoft PowerApps
+# Understand on-premises data gateways for canvas apps
 ## Installation and configuration
 **Prerequisites**
 
@@ -22,7 +24,6 @@ Minimum:
 * 64-bit version of Windows 7 or Windows Server 2008 R2 (or later)
 
 Recommended:
-
 * 8 Core CPU
 * 8 GB Memory
 * 64-bit version of Windows 2012 R2 (or later)
@@ -46,7 +47,7 @@ Related considerations:
 
 4. In the **User Account Control** dialog boxes, click or tap **Yes** to continue.
 
-5. On the next screen of the wizard, click or tap **Sign in**.
+5. On the next screen of the wizard, click or tap **Sign in**, and then provide the same credentials that you use to sign in to PowerApps.
 
     ![Sign in](./media/gateway-reference/sign-in.png)
 
@@ -186,7 +187,7 @@ You can use the third-party tool [Azure Speed Test app](http://azurespeedtest.az
 
 #### High availability/disaster recovery
 **Question:** Are there any plans for enabling high availability scenarios with the gateway?  
-**Answer:** This is on the roadmap, but we don’t have a timeline yet.
+**Answer:** High availability is enabled by joining 2 or more gateways into the same cluster.  High availability gateway clusters require the November 2017 update to on-premises data gateway, or later.  See the [blog post announcement](https://powerapps.microsoft.com/en-us/blog/gateway-high-availability-for-powerapps-and-flow) for more details.
 
 **Question:** What options are available for disaster recovery?  
 **Answer:** You can use the recovery key to restore or move a gateway. When you install the gateway, specify the recovery key.

@@ -1,0 +1,1 @@
+Removes an existing ribbon element from being processed for the ribbon.

@@ -3,14 +3,16 @@ title: IsMatch function | Microsoft Docs
 description: Reference information, including syntax, for the IsMatch function in PowerApps
 author: gregli-msft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 02/05/2017
 ms.author: gregli
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # IsMatch function in PowerApps
 Tests whether a text string matches a pattern.
@@ -64,7 +66,7 @@ Predefined patterns provide a simple way to match one of a set of characters, or
 | **Any** |Matches any character. |**.** |
 | **Comma** |Matches a comma. |**,** |
 | **Digit** |Matches a single digit ("0" through "9"). |**\\d** |
-| **Email** |Matches an email address that contains an "at" symbol ("@") and a domain name that contains a dot (".") |**.+@.+\\.[^\\.]{2,}** |
+| **Email** |Matches an email address that contains an "at" symbol ("\@") and a domain name that contains a dot (".") |**.+\@.+\\.[^\\.]{2,}** |
 | **Hyphen** |Matches a hyphen. |**\\-** |
 | **LeftParen** |Matches a left parenthesis "(". |**\\(** |
 | **Letter** |Matches a letter. |**\\p{L}** |

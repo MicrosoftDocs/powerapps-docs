@@ -3,14 +3,16 @@ title: 'Power BI tile control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Power BI tile control
 author: fikaradz
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/07/2016
 ms.author: fikaradz
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Power BI tile control in PowerApps
 
@@ -53,6 +55,8 @@ It's not recommended to have more than three Power BI tiles loaded at the same t
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control. By default, the Power BI report that's associated with the tile opens.
+
+**TileUrl** – The URL by which the tile is requested from the Power BI service. You can pass a single parameter into the Power BI tile by appending the parameter to the URL (for example: … & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). You can use only the equals operator in the parameter.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

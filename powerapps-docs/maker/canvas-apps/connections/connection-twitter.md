@@ -3,14 +3,16 @@ title: Overview of the Twitter connection | Microsoft Docs
 description: See how to connect to Twitter, step through some examples, and see all the functions
 author: lancedMicrosoft
 manager: kvivek
-
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: lanced
-
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
 ---
 # Connect to Twitter from PowerApps
 ![Twitter](./media/connection-twitter/twittericon.png)

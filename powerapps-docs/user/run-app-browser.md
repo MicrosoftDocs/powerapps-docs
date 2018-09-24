@@ -1,6 +1,6 @@
 ---
-title: Quickstart to run apps in a web browser | Microsoft Docs
-description: In this quickstart, you learn how to run apps in a web browser
+title: Run apps in a web browser | Microsoft Docs
+description: In this topic, you learn how to run apps in a web browser
 author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
@@ -11,10 +11,15 @@ manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
+search.audienceType: 
+  - enduser
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
-# Quickstart: Run an app in a web browser
-When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this quickstart, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
+# Run an app in a web browser
+When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
 
 To follow this quickstart, you need:
 - A PowerApps license. This is available with a PowerApps plan, such as the [PowerApps Plan 2 trial](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include PowerApps. 
@@ -57,7 +62,7 @@ If an app requires a connection to a data source or permission to use the device
 To close an app, sign out of the Dynamics 365 Home page, or open another app.
 
 ## Next steps
-In this quickstart, you learned how to run a canvas or model-driven app in a web browser. To learn how to run a canvas app on a mobile device, continue to the next quickstart.
+In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to run a canvas app on a mobile device, continue to the next topic.
 
 > [!div class="nextstepaction"]
 > [Run a canvas app on a mobile device](run-app-client.md)
