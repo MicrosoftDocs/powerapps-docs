@@ -10,8 +10,7 @@
   href: work-with-data-cds.md
   items:
   - name: Using Web API
-    # href: webapi/index.md
-    href: webapi/
+    href: webapi/index.md
   - name: Using Organization Service
     # href: org-service/overview.md
     href: org-service/
