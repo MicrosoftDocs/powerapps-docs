@@ -2,7 +2,7 @@
     "redirections": [
         {
         "source_path": "powerapps-docs/guided-learning/index.md",
-        "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps",
+        "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
         "redirect_document_id": true
         },
         {
