@@ -1,22 +1,12 @@
 {
     "redirections": [
         {
-        "source_path": "https://docs.microsoft.com/powerapps/guided-learning/index.md",
+        "source_path": "powerapps-docs/guided-learning/index.md",
         "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
         "redirect_document_id": true
         },
         {
-        "source_path": "https://docs.microsoft.com/en-us/powerapps/guided-learning/index.md",
-        "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "https://docs.microsoft.com/powerapps/guided-learning/get-started?tutorial-step=1",
-        "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "https://docs.microsoft.com/en-us/powerapps/guided-learning/get-started?tutorial-step=1",
+        "source_path": "powerapps-docs/guided-learning/get-started?tutorial-step=1",
         "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
         "redirect_document_id": true
         },
