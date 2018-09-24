@@ -8,7 +8,7 @@
         {
         "source_path": "powerapps-docs/guided-learning/get-started.md",
         "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
-        "redirect_document_id": true
+        "redirect_document_id": false
         },
         {
         "source_path": "powerapps-docs/postman-collection.md",
