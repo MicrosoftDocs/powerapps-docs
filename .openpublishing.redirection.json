@@ -1,6 +1,26 @@
 {
     "redirections": [
         {
+        "source_path": "https://docs.microsoft.com/powerapps/guided-learning",
+        "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "https://docs.microsoft.com/en-us/powerapps/guided-learning",
+        "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "https://docs.microsoft.com/powerapps/guided-learning/get-started?tutorial-step=1",
+        "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "https://docs.microsoft.com/en-us/powerapps/guided-learning/get-started?tutorial-step=1",
+        "redirect_url": "https://docs.microsoft.com/learn/browse&products=bizapps-power-apps",
+        "redirect_document_id": true
+        },
+        {
         "source_path": "powerapps-docs/postman-collection.md",
         "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/define-postman-collection",
         "redirect_document_id": true
