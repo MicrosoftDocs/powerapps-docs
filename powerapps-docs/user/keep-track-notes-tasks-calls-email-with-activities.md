@@ -30,7 +30,7 @@ search.app:
 
 In [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)], you use **Activities** to keep track of all your customer communications. For example, you can take notes, send email, make phone calls, set up appointments, assign yourself tasks as you resolve a service case, and stay up-to-date with customer news. These actions are all considered types of activities.  
   
- ![Keep track of activities in Dynamics 365](../basics/media/keep-track-activities.png "Keep track of activities in Dynamics 365")  
+ ![Keep track of activities in Dynamics 365](media/keep-track-activities.png "Keep track of activities in Dynamics 365")  
   
 -   To add phone call details, tasks, notes, and more see: [Add a phone call, task, email, or appointment activity to a case or record (Customer Service)](../basics/add-phone-call-task-email-appointment-activity-case-record.md).  
   
