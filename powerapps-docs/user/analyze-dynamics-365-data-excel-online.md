@@ -95,8 +95,8 @@ To open a list of records in [!INCLUDE[pn_crm_online_shortest](../includes/pn-cr
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com). 
      
 ### See also  
- [Export data to Excel](../basics/export-data-excel.md)   
- [Export to Excel PivotTable](../basics/export-excel-pivottable.md)   
- [Export to Excel static worksheet](../basics/export-excel-dynamic-worksheet.md)   
- [Import accounts, leads, or other data](../basics/import-accounts-leads-other-data.md) 
+ [Export data to Excel](export-data-excel.md)   
+ [Export to Excel PivotTable](export-excel-pivottable.md)   
+ [Export to Excel static worksheet](export-excel-dynamic-worksheet.md)   
+ [Import accounts, leads, or other data](import-accounts-leads-other-data.md) 
  

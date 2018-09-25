@@ -50,6 +50,6 @@ The Quick Create command makes it fast and easy to enter almost any type of info
 > ![Recommended Field button](media/recommended-field-button.png "Recommended Field button") next to the field on the screen means your organization recommends that you fill in the field.  
   
 ### See also  
- [Work with accounts and contacts](../basics/accounts-contacts.md)   
+ [Work with accounts and contacts](accounts-contacts.md)   
  [Nurture sales from lead to order](../sales-enterprise/nurture-sales-from-lead-order-sales.md)      
- [Keep track of notes, tasks, calls, or email with activities](../basics/work-with-activities.md)   
+ [Keep track of notes, tasks, calls, or email with activities](work-with-activities.md)   

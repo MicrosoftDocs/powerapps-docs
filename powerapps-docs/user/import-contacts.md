@@ -129,7 +129,7 @@ To find an app, search your phone’s online store.
 3. If needed, learn about removing duplicates: [Merge duplicate records for accounts, contacts, or leads](merge-duplicate-records-accounts-contacts-leads.md).  
   
 ### See also  
- [Import accounts, leads, or other data](../basics/import-accounts-leads-other-data.md)    
+ [Import accounts, leads, or other data](import-accounts-leads-other-data.md)    
  [Select a data map](select-data-map.md)    
  [Review settings and import data](review-settings-import-data.md)   
  [Import data (for developers)](../developer/import-data.md)

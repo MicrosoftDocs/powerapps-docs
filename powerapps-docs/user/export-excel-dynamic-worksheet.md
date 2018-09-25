@@ -85,8 +85,8 @@ Export data to a [!INCLUDE[pn_MS_Excel_Full](../includes/pn-ms-excel-full.md)] w
 [!INCLUDE[cc_privacy_export_to_excel](../includes/cc-privacy-export-to-excel.md)]
   
 ### See also  
- [Export data to Excel](../basics/export-data-excel.md)   
- [Analyze with Excel Online](../basics/analyze-dynamics-365-data-excel-online.md)   
- [Export to Excel PivotTable](../basics/export-excel-pivottable.md)   
- [Edit the default filter of a report](../basics/edit-default-filter-report.md)       
- [Create, edit, or save an Advanced Find search](../basics/save-advanced-find-search.md)
+ [Export data to Excel](export-data-excel.md)   
+ [Analyze with Excel Online](analyze-dynamics-365-data-excel-online.md)   
+ [Export to Excel PivotTable](export-excel-pivottable.md)   
+ [Edit the default filter of a report](edit-default-filter-report.md)       
+ [Create, edit, or save an Advanced Find search](save-advanced-find-search.md)

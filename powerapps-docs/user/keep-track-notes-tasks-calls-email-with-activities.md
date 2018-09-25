@@ -32,12 +32,12 @@ In [!INCLUDE[pn_microsoftcrm](../includes/pn-microsoftcrm.md)], you use **Activi
   
  ![Keep track of activities in Dynamics 365](media/keep-track-activities.png "Keep track of activities in Dynamics 365")  
   
--   To add phone call details, tasks, notes, and more see: [Add a phone call, task, email, or appointment activity to a case or record (Customer Service)](../basics/add-phone-call-task-email-appointment-activity-case-record.md).  
+-   To add phone call details, tasks, notes, and more see: [Add a phone call, task, email, or appointment activity to a case or record (Customer Service)](add-phone-call-task-email-appointment-activity-case-record.md).  
   
--   To stay up-to-date with your activity feeds, see: [Stay up-to-date with customer news with the activity feed](../basics/stay-up-date-with-customer-news-with-activity-feed.md).  
+-   To stay up-to-date with your activity feeds, see: [Stay up-to-date with customer news with the activity feed](stay-up-date-with-customer-news-with-activity-feed.md).  
   
 > [!IMPORTANT]
 >  To send email, your email must be configured correctly. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Why does the email message I sent have a "Pending Send" status?](../admin/why-email-message-sent-have-pending-send-status.md)  
   
 ### See also 
- [Collaborate and communicate with Yammer](../basics/collaborate-communicate-with-yammer.md)
+ [Collaborate and communicate with Yammer](collaborate-communicate-with-yammer.md)

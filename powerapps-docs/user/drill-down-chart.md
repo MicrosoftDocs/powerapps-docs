@@ -54,6 +54,6 @@ You can drill down into a segment on a chart to filter chart data for that segme
     >  To go back to the previous chart, click **Back**.  
   
 ### See also  
- [Create or edit a chart](../basics/create-edit-chart.md)
+ [Create or edit a chart](create-edit-chart.md)
  
- [Track your progress with charts](../basics/track-your-progress-with-charts.md)
+ [Track your progress with charts](track-your-progress-with-charts.md)

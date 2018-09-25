@@ -40,4 +40,4 @@ Your user profile displays useful information about you to your entire organizat
 4.  To view other profile information, such as Work Hours, Connections, and Services, on the nav bar, choose the down arrow ![User profile security option More Options button](media/user-profile-security-option-more-button.gif "User profile security option More Options button") next to your name.  
   
 ### See also  
- [Set personal options](../basics/set-personal-options.md)
+ [Set personal options](set-personal-options.md)

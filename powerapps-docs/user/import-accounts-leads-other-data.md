@@ -25,7 +25,7 @@ search.app:
 
 Whether your data is stored in spreadsheets, databases, or other systems, you’ll probably want to import the data into [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] so you can keep track of all your customer information in one place.  
   
- You can import any type of information, such as accounts, leads, or opportunities – even activities or cases. (The different types of information are called “record types.”) Contacts typically come from an email program. You can read about this here: [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Import contacts](../basics/import-contacts.md)  
+ You can import any type of information, such as accounts, leads, or opportunities – even activities or cases. (The different types of information are called “record types.”) Contacts typically come from an email program. You can read about this here: [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Import contacts](import-contacts.md)  
   
 ## Step 1: Get your import file ready  
  First, you’ll need to get your data into a file.  
@@ -140,5 +140,5 @@ Whether your data is stored in spreadsheets, databases, or other systems, you’
 ### See also  
  [Select a data map](select-data-map.md)   
  [Review settings and import data](review-settings-import-data.md)  
- [Import contacts](../basics/import-contacts.md)  
+ [Import contacts](import-contacts.md)  
  [Import data (for developers)](../developer/import-data.md)

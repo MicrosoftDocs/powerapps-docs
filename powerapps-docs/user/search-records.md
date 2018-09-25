@@ -57,6 +57,6 @@ To find your records quickly in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynami
 -   To search against all record types, choose **None** in the **Filter with:** drop-down box  
   
 ### See also  
- [Search and Find in Dynamics 365](../basics/search-and-find-header.md)<br />
- [Use Relevance Search for faster, comprehensive search results](../basics/relevance-search-results.md)<br />
- [Create, edit, or save an Advanced Find search](../basics/save-advanced-find-search.md)   
+ [Search and Find in Dynamics 365](search-and-find-header.md)<br />
+ [Use Relevance Search for faster, comprehensive search results](relevance-search-results.md)<br />
+ [Create, edit, or save an Advanced Find search](save-advanced-find-search.md)   

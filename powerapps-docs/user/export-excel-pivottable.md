@@ -102,8 +102,8 @@ You can export [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] data 
 [!INCLUDE[cc_privacy_export_to_excel](../includes/cc-privacy-export-to-excel.md)]
   
 ### See also  
- [Export data to Excel](../basics/export-data-excel.md)   
- [Analyze with Excel Online](../basics/analyze-dynamics-365-data-excel-online.md)  
- [Export to Excel static worksheet](../basics/export-excel-dynamic-worksheet.md)  
- [Edit the default filter of a report](../basics/edit-default-filter-report.md)     
- [Create, edit, or save an Advanced Find search](../basics/save-advanced-find-search.md)  
+ [Export data to Excel](export-data-excel.md)   
+ [Analyze with Excel Online](analyze-dynamics-365-data-excel-online.md)  
+ [Export to Excel static worksheet](export-excel-dynamic-worksheet.md)  
+ [Edit the default filter of a report](edit-default-filter-report.md)     
+ [Create, edit, or save an Advanced Find search](save-advanced-find-search.md)  

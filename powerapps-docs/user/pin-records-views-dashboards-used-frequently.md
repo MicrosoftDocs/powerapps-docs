@@ -46,4 +46,4 @@ You probably work with the same records all the time. For example, you may acces
      >  Pinned items are sorted by when you pin them. Unpinned items are sorted by when you access them.  
   
 ### See also  
- [Work with accounts and contacts](../basics/accounts-contacts.md)
+ [Work with accounts and contacts](accounts-contacts.md)

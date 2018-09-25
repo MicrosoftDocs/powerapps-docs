@@ -44,6 +44,6 @@ search.app:
 - [Enhance business process flows with branching](../customize/enhance-business-process-flows-branching.md) 
   
 ### See also  
- [Understanding how data is organized in Customer Engagement](../basics/how-data-organized.md)   
- [Business apps in Dynamics 365](../basics/business-apps-dynamics-365.md)   
- [Find your business apps](../basics/where-find-business-apps.md)   
+ [Understanding how data is organized in Customer Engagement](how-data-organized.md)   
+ [Business apps in Dynamics 365](business-apps-dynamics-365.md)   
+ [Find your business apps](where-find-business-apps.md)   

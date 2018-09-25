@@ -64,5 +64,5 @@ One of the beauties of [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md
 different names for the types of records, because your organization calls that type of data something different. For example, your system administrator may have changed “account” to “company,” or “contact” to “individual.”
 
 ### See also  
- [Find your way around Dynamics 365](../basics/navigation-customer-engagement-enterprise.md)   
- [What are business processes?](../basics/what-are-business-processes.md)
+ [Find your way around Dynamics 365](navigation-customer-engagement-enterprise.md)   
+ [What are business processes?](what-are-business-processes.md)

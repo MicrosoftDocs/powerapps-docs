@@ -46,10 +46,10 @@ Do you need to analyze your data from [!INCLUDE[pn_dynamics_crm](../includes/pn-
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-|   Do an *ad-hoc* or *what if* analysis without modifying [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] data. Or, quick bulk edit to multiple [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] records.   | [Analyze your Dynamics 365 data in Excel Online](../basics/analyze-dynamics-365-data-excel-online.md) |
-|                                                                   Get a snapshot of the data at the current data and time or you want to share it with others.                                                                    |           [Export to an Excel static worksheet](../basics/export-excel-static-worksheet.md)           |
-| Get the most update-to-date information and be able to refresh it in [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] and match what you see in [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] at any time. |          [Export to an Excel dynamic worksheet](../basics/export-excel-dynamic-worksheet.md)          |
-|                                                                      View [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](../basics/export-excel-pivottable.md)                 |
+|   Do an *ad-hoc* or *what if* analysis without modifying [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] data. Or, quick bulk edit to multiple [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] records.   | [Analyze your Dynamics 365 data in Excel Online](analyze-dynamics-365-data-excel-online.md) |
+|                                                                   Get a snapshot of the data at the current data and time or you want to share it with others.                                                                    |           [Export to an Excel static worksheet](export-excel-static-worksheet.md)           |
+| Get the most update-to-date information and be able to refresh it in [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] and match what you see in [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] at any time. |          [Export to an Excel dynamic worksheet](export-excel-dynamic-worksheet.md)          |
+|                                                                      View [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](export-excel-pivottable.md)                 |
 
 ## Other considerations
 
@@ -84,6 +84,6 @@ Do you need to analyze your data from [!INCLUDE[pn_dynamics_crm](../includes/pn-
 
 ### See also  
  [Analyze your data with Excel templates](../admin/analyze-your-data-with-excel-templates.md)   
- [Analyze with Excel Online](../basics/analyze-dynamics-365-data-excel-online.md)   
- [Export to Excel PivotTable](../basics/export-excel-pivottable.md)   
- [Export to Excel static worksheet](../basics/export-excel-dynamic-worksheet.md)   
+ [Analyze with Excel Online](analyze-dynamics-365-data-excel-online.md)   
+ [Export to Excel PivotTable](export-excel-pivottable.md)   
+ [Export to Excel static worksheet](export-excel-dynamic-worksheet.md)   

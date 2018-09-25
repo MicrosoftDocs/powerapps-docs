@@ -52,9 +52,9 @@ Changing the chart view shows you a different breakdown of your data, such as op
 For example, choose "All Opportunities", then select a different view, both chart and grid will get refreshed.
 
 ### See also 
- [Create or edit a chart](../basics/create-edit-chart.md)
+ [Create or edit a chart](create-edit-chart.md)
  
- [Drill down in a chart](../basics/drill-down-chart.md)
+ [Drill down in a chart](drill-down-chart.md)
 
 
 

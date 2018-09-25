@@ -33,7 +33,7 @@ When you want to present [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.
   
 1. Open a list of records in the [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] web application or in [!INCLUDE[pn_microsoft_dynamics_crm_for_outlook](../includes/pn-microsoft-dynamics-crm-for-outlook.md)]. Choose **Export to Excel**, and then choose **Static worksheet (Page only)**.  
   
-2. By default, an exported worksheet includes the fields that are displayed in the list, using the same field order, sorting, and field widths. To make changes to the columns in an Advanced Find View, choose **Edit Columns**. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create, edit, or save an Advanced Find search](../basics/save-advanced-find-search.md)  
+2. By default, an exported worksheet includes the fields that are displayed in the list, using the same field order, sorting, and field widths. To make changes to the columns in an Advanced Find View, choose **Edit Columns**. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Create, edit, or save an Advanced Find search](save-advanced-find-search.md)  
   
 3. Choose **Save** and then save the . xlsm file. Make note of the location where you saved the file.  
   
@@ -78,5 +78,5 @@ When you want to present [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.
 [!INCLUDE[cc_privacy_export_to_excel](../includes/cc-privacy-export-to-excel.md)]
   
 ### See also  
- [Edit the default filter of a report](../basics/edit-default-filter-report.md)   
- [Create, edit, or save an Advanced Find search](../basics/save-advanced-find-search.md)
+ [Edit the default filter of a report](edit-default-filter-report.md)   
+ [Create, edit, or save an Advanced Find search](save-advanced-find-search.md)

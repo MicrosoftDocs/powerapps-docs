@@ -31,19 +31,19 @@ In [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)], you deactivate a
   
 ## Deactivate an account or contact  
   
-1.  Go to **Accounts** or **Contacts**. [How do I get there?](../basics/navigation-customer-engagement-enterprise.md)  
+1.  Go to **Accounts** or **Contacts**. [How do I get there?](navigation-customer-engagement-enterprise.md)  
   
 2.  Select the active account or contact that you want to deactivate, click or tap **Deactivate**, and then confirm the deactivation.  
   
 ## Activate an account or contact  
   
-1.  Go to **Accounts** or **Contacts**. [How do I get there?](../basics/navigation-customer-engagement-enterprise.md)  
+1.  Go to **Accounts** or **Contacts**. [How do I get there?](navigation-customer-engagement-enterprise.md)  
   
 2.  To view a deactivated account or contact, in the **System Views** list, select **Inactive Accounts** or **Inactive Contacts**.  
   
 3.  Select the inactive accounts or contacts you want to activate, click or tap **Activate**, and then confirm the activation.  
   
 ### See also  
- [Import contacts](../basics/import-contacts.md)   
- [Work with accounts and contacts](../basics/accounts-contacts.md)
- [Import accounts, leads, or other data](../basics/import-accounts-leads-other-data.md)
+ [Import contacts](import-contacts.md)   
+ [Work with accounts and contacts](accounts-contacts.md)
+ [Import accounts, leads, or other data](import-accounts-leads-other-data.md)
