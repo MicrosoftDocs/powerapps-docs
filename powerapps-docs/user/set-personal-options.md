@@ -32,7 +32,7 @@ If you’re an administrator, you can also set system settings that affect all u
   
 ## To set personal options  
   
-1.  Click the **Settings** button ![Options button for Dynamics 365](../basics/media/options-button.png "Options button for Dynamics 365") in the upper-right corner of the screen.  
+1.  Click the **Settings** button ![Options button for Dynamics 365](media/options-button.png "Options button for Dynamics 365") in the upper-right corner of the screen.  
   
 2.  Click **Options**.  
   

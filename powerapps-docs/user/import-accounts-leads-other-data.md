@@ -122,7 +122,7 @@ Whether your data is stored in spreadsheets, databases, or other systems, you’
         > [!CAUTION]
         >  In most cases, to avoid importing duplicate information, you should keep this option set to **No**.  
   
-    -   To set who owns the imported records, in the **Select Owner for the Imported Records** section, choose the **Lookup** button ![Lookup button](../basics/media/lookup-button.gif "Lookup button"). Select **Look Up More Records**, type the person’s name, and then choose **Add**.  
+    -   To set who owns the imported records, in the **Select Owner for the Imported Records** section, choose the **Lookup** button ![Lookup button](media/lookup-button.gif "Lookup button"). Select **Look Up More Records**, type the person’s name, and then choose **Add**.  
   
         > [!NOTE]
         >  How do you decide who should “own” the imported data? Usually, the owner is the person responsible for taking action on the data. Here’s an example: If your import file contains contacts you collected at a trade show and you want to assign a user to follow up with these contacts, select that person for the owner. To assign someone other than yourself as the owner of the imported records, your security role must include permissions to create records for the user. If you don’t have sufficient permissions, the wizard assigns you as the owner of the imported records by default.  

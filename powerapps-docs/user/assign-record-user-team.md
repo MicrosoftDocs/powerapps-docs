@@ -31,9 +31,9 @@ If you would like another person in your organization to handle an account or co
   
 2. In the list of records, select the record that you want.  
   
-    In the command bar, click the **More Commands** button![More commands button](../basics/media/morecommands.gif "More commands button"), and then click **Assign**.  
+    In the command bar, click the **More Commands** button![More commands button](media/morecommands.gif "More commands button"), and then click **Assign**.  
   
-3. If using the Dynamics 365 web application:    In the command bar, click More Commands (![More commands button](../basics/media/morecommands.gif "More commands button")), and then click **Assign**.  
+3. If using the Dynamics 365 web application:    In the command bar, click More Commands (![More commands button](media/morecommands.gif "More commands button")), and then click **Assign**.  
    &lt;!--&gt;  
     If using Dynamics 365 for Outlook: In the **Collaborate** group, click **Assign**.  
    -->

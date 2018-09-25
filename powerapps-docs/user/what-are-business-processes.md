@@ -31,7 +31,7 @@ search.app:
   
  In this example, the business process bar for new opportunities shows you the four stages to follow (**Qualify**, **Develop**, **Propose**, and **Close**), where you are in the process, and what to do next, so there’s no guesswork.  
   
- ![What is a business process](../basics/media/what-is-a-business-process.png "What is a business process")  
+ ![What is a business process](media/what-is-a-business-process.png "What is a business process")  
   
 ## What if your business processes look different from these examples?  
  The system comes with business processes for common sales, service, and marketing tasks. However, most organizations customize these processes to match the way they do things. Or, you may have added processes to the system that have been customized for your industry or business goals. In other words, what you see here may not match exactly with the process bars you see on your system. But regardless, the process bars work the same for everyone. You enter data in the fields, and then move the customer to the next stage.

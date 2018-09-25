@@ -96,7 +96,7 @@ You can export [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] data 
   
 - For anyone who is not on [!INCLUDE[pn_crm_online_2015_update_1_shortest](../includes/pn-crm-online-2015-update-1-shortest.md)] or [!INCLUDE[pn_crm_2016](../includes/pn-crm-2016.md)] and you are using the [!INCLUDE[pn_Office_365](../includes/pn-office-365.md)][!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] web app, you must save the file, open the file using the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] desktop application, and then resave the file to the . xlsx format. You can then reopen the [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] document in [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] Online.  
   
-- Your operating system region settings (in Windows, **Control Panel** > **Region**) and [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] region settings (**Settings** (![Settings button on the nav bar](../basics/media/settings-gear-icon.png "Settings button on the nav bar")) > **Options** > **Languages**) should be the same. If not, refreshing dynamic data with **Refresh from CRM** might cause data changes.  
+- Your operating system region settings (in Windows, **Control Panel** > **Region**) and [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] region settings (**Settings** (![Settings button on the nav bar](media/settings-gear-icon.png "Settings button on the nav bar")) > **Options** > **Languages**) should be the same. If not, refreshing dynamic data with **Refresh from CRM** might cause data changes.  
   
 ## Privacy notice  
 [!INCLUDE[cc_privacy_export_to_excel](../includes/cc-privacy-export-to-excel.md)]

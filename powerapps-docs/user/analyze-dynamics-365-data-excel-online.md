@@ -46,7 +46,7 @@ search.app:
   
 To open a list of records in [!INCLUDE[pn_crm_online_shortest](../includes/pn-crm-online-shortest.md)], click **Export to Excel** > **Open in [!INCLUDE[pn_excel_online](../includes/pn-excel-online.md)]**.  
   
- ![Export Dynamics 365 data to Excel Online](../basics/media/export-to-excel-online.png "Export Dynamics 365 data to Excel Online")  
+ ![Export Dynamics 365 data to Excel Online](media/export-to-excel-online.png "Export Dynamics 365 data to Excel Online")  
   
 > [!NOTE]
 >  By default, you can’t open your [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)] data in [!INCLUDE[pn_excel_online](../includes/pn-excel-online.md)] in the **Advanced Find** view. However, you can save your advanced find as a personal view and then go to your personal view to do an ad-hoc analysis in [!INCLUDE[pn_excel_online](../includes/pn-excel-online.md)].  
@@ -80,9 +80,9 @@ To open a list of records in [!INCLUDE[pn_crm_online_shortest](../includes/pn-cr
 
 [What-if analysis using Excel](https://www.youtube.com/embed/NZNvWz9xuZ0)
   
- To see video captions, click the **Closed Caption (CC)** button ![YouTube Closed Caption button](../basics/media/youtube-closed-caption-button.png "YouTube Closed Caption button") in the lower-right corner of the [!INCLUDE[tn_youtube](../includes/tn-youtube.md)] window.  
+ To see video captions, click the **Closed Caption (CC)** button ![YouTube Closed Caption button](media/youtube-closed-caption-button.png "YouTube Closed Caption button") in the lower-right corner of the [!INCLUDE[tn_youtube](../includes/tn-youtube.md)] window.  
   
- [![Banner for Dynamics 365 YouTube channel](../basics/media/see-more-videos-on-youtube.png "Banner for Dynamics 365 YouTube channel")](http://go.microsoft.com/fwlink/p/?LinkID=325001)  
+ [![Banner for Dynamics 365 YouTube channel](media/see-more-videos-on-youtube.png "Banner for Dynamics 365 YouTube channel")](http://go.microsoft.com/fwlink/p/?LinkID=325001)  
 <!-- The fwlink above is correct - updated to point to the how-to playlists
 -->
 

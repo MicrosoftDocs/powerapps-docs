@@ -33,11 +33,11 @@ Your user profile displays useful information about you to your entire organizat
 <!-- In Dynamics 365 for Outlook: Choose **File** > **Dynamics 365** > **Options**.  -->   
 2.  Scroll down to the very bottom of the **Set Personal Options** dialog box, and then choose **View your user information**.  
   
-3.  To check your security role, on the nav bar, choose the down arrow ![User profile security option More Options button](../basics/media/user-profile-security-option-more-button.gif "User profile security option More Options button") next to your name, and then choose **Security Roles**.  
+3.  To check your security role, on the nav bar, choose the down arrow ![User profile security option More Options button](media/user-profile-security-option-more-button.gif "User profile security option More Options button") next to your name, and then choose **Security Roles**.  
 
     ![View user profile](media/view-user-profile.png)
   
-4.  To view other profile information, such as Work Hours, Connections, and Services, on the nav bar, choose the down arrow ![User profile security option More Options button](../basics/media/user-profile-security-option-more-button.gif "User profile security option More Options button") next to your name.  
+4.  To view other profile information, such as Work Hours, Connections, and Services, on the nav bar, choose the down arrow ![User profile security option More Options button](media/user-profile-security-option-more-button.gif "User profile security option More Options button") next to your name.  
   
 ### See also  
  [Set personal options](../basics/set-personal-options.md)

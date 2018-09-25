@@ -36,7 +36,7 @@ Charts on the Unified Interface framework, give you a quick view of how you’re
             
      ![Dynamics 365 for phones and tablets expand and table view of a chart](media/TrackProgressWithCharts_18.png "Dynamics 365 for phones and tablets expand and table view of a chart")  
   
-    ![Record view of chart](../mobile-app/media/Recordview.png "Record view of chart") 
+    ![Record view of chart](media/Recordview.png "Record view of chart") 
        
 
 Two dimensions charts like Line, Bar, Column, and Area support zooming. Single dimension charts like, Funnel, Doughnut, Pie, and Tag chart don’t support zooming.
