@@ -22,7 +22,7 @@ search.app:
 
 The **Create a new record** command makes it fast and easy to enter almost any type of information into the system. The command is on the nav bar, so it’s always available whenever you need to enter new info into the system. When you use this option, you need to complete only a few fields. Later, when you have more time or more information, you can fill in more details.  
     
-- On the nav bar, click the **plus sign**![Create record button](media/create-record-button.png "Create record button"), and then click the item you want.  
+1. On the nav bar, click the **plus sign**![Create record button](media/create-record-button.png "Create record button"), and then click the item you want.  
   
 2.  Fill in the fields, and then click **Save**.  
   
