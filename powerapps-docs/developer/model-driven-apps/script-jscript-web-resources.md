@@ -1,5 +1,5 @@
 ---
-title: "Script(JScript) web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Script (JScript) web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about using JavaScript web resources to create a library of JavaScript functions that can be accessed from anywhere." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
@@ -29,7 +29,7 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
   
 <a name="BKMK_Using"></a>   
 ## Using JavaScript libraries  
- For information about developing and testing JavaScript libraries as well as how to associate them with ribbon commands and form events, see [Client scripting using JavaScript](clientapi/client-scripting.md).  
+ For information about developing and testing JavaScript libraries as well as how to associate them with ribbon commands and form events, see [Client scripting using JavaScript](client-scripting.md).  
   
 <a name="BKMK_Referencing"></a>   
 ## Referencing a script web resource from a webpage web resource  
@@ -42,8 +42,7 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
  To reference a JavaScript from a different publisher, the path must include the customization prefix for that publisher. For example, for the `new_/content/contentpage.htm` page to reference the `MyIsv_/scripts/customscripts.js` page, the `src` attribute value should be `../../MyIsv_/scripts/customscripts.js`.  
   
 ### See also  
- [Use JavaScript](use-javascript.md)   
- [Client scripting using JavaScript](clientapi/client-scripting.md)   
+ [Client scripting using JavaScript](client-scripting.md)   
  [Web Resources](web-resources.md)   
  [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
  [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   

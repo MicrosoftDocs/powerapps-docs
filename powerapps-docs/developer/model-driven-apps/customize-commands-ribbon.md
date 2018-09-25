@@ -50,4 +50,4 @@ Dynamics 365 Common Data Service for Apps displays commands in different ways de
 
  [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md) 
   
- [Client scripting using JavaScript](clientapi/client-scripting.md)
+ [Apply business logic using client scripting in model-driven apps](client-scripting.md)

@@ -1,6 +1,6 @@
 ---
-title: "Create and manage custom business apps using code (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about how to create, manage, and publish business apps in Common Data Service for Apps using code. Dynamics 365 Common Data Service for Apps business apps are purpose built that provide a limited set of functionality that is relevant for a particular area of work." # 115-145 characters including spaces. This abstract displays in the search result."
+title: "Create, manage, and publish model-driven apps using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
+description: "Learn about how to create, manage, and publish model-driven apps using code in PowerApps." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 08/01/2018
 ms.service:
@@ -15,28 +15,24 @@ manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
-# Create and manage custom business apps in Common Data Service for Apps using code
+# Create, manage, and publish model-driven apps using code
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-manage-custom-business-apps-using-code -->
 
-Business apps in CDS for Apps are modular, purpose built apps that provide role-based functionality relevant for a particular area of work. These apps make it easier for users to quickly find things they need to do every day by providing a simple and intuitive interface. For example, the **Sales** business app provides a simpler, smaller sitemap with only the appropriate set of forms, views, dashboards, and process flows that are relevant for sales people.
-
-System administrators and customizers can provide users access to these business apps using security roles; users can access only those apps that they have permission to. More information: [Business apps in Dynamics 365 CDS for Apps](/dynamics365/customer-engagement/basics/business-apps-dynamics-365)
-
-In addition to creating custom business apps using the app designer, you can now programmatically create and manage custom business apps in Dynamics 365 CDS for Apps. 
+In addition to creating a model-driven app using the PowerApps app designer, you can programmatically create and manage model-driven apps. 
 
 > [!IMPORTANT]
-> You don't have to write code to build custom business apps if you don't need to! The app designer provides a much simpler and intuitive experience for building custom business apps without having to write code by providing a tile-based information structure and simplified interface. Check it out here: [Design custom business apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)  
+> You don't have to write code to build model-driven apps if you don't need to! The app designer provides a much simpler and intuitive experience for building model-driven apps without having to write code by providing a tile-based information structure and simplified interface. Check it out here: [Design model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)  
   
-Creating a custom business app involves the following steps:
+Creating a model-driven app involves the following steps:
 1. Create an [AppModule Entity](../common-data-service/reference/entities/appmodule.md) instance to define your app and its properties.
 2. Add or remove components to your app such as entity, sitemap, and other components for your custom app using the <xref:Microsoft.Dynamics.CRM.AddAppComponents> and <xref:Microsoft.Dynamics.CRM.RemoveAppComponents> actions.
 3. Check your app for any required components thats missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
 4. Publish your app.
-5. Associate appropriate security roles to your custom business app to provide access to users.
+5. Associate appropriate security roles to your model-driven app to provide access to users.
 
 
-## Create your business app and define its properties
+## Create your model-driven app and define its properties
 
 You must have the System Administrator or System Customizer security role or equivalent permissions to be able to create an app. You can select from one of the following types for your app to specify the client that the app will the app will be used for: 
 - **Web**:  This is the classic Dynamics 365 web browser client..
@@ -74,11 +70,11 @@ OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)
 ```  
 
-## Add or remove components from your business app
+## Add or remove components from your model-driven app
 
-You can add or remove components in an app such as sitemap, entity, dashboard, business process flows, views, and forms that you want to be included in your business app. For detailed information about components that can be added to a business app, see [Add or edit app components in the app designer](../../maker/model-driven-apps/add-edit-app-components.md).
+You can add or remove components in an app such as sitemap, entity, dashboard, business process flows, views, and forms that you want to be included in your model-driven app. For detailed information about components that can be added to a model-driven app, see [Add or edit app components in the app designer](../../maker/model-driven-apps/add-edit-app-components.md).
 
-Use the <xref:Microsoft.Dynamics.CRM.AddAppComponents> action or the <xref:Microsoft.Crm.Sdk.Messages.AddAppComponentsRequest> message to add components to your business app. The action requires you to specify the following:
+Use the <xref:Microsoft.Dynamics.CRM.AddAppComponents> action or the <xref:Microsoft.Crm.Sdk.Messages.AddAppComponentsRequest> message to add components to your model-driven app. The action requires you to specify the following:
 - **AppId**: ID of the app where you want to add components
 - **Components** A collection of components to be added. You need to specify the ID and the entity type of the component you want to add. For a list of entity types in CDS for Apps Web API, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
 
@@ -128,11 +124,11 @@ Accept: application/json
 }
 ```
 
-## Validate your business app
+## Validate your model-driven app
 
-Validating an app involves checking for any dependencies for the components you have added in your business app to ensure that your app works fine. This is the same as clicking **Validate** in the app designer. More information: [Validate your app](../../maker/model-driven-apps/validate-app.md)
+Validating an app involves checking for any dependencies for the components you have added in your model-driven app to ensure that your app works fine. This is the same as clicking **Validate** in the app designer. More information: [Validate your app](../../maker/model-driven-apps/validate-app.md)
 
-Use the <xref:Microsoft.Dynamics.CRM.ValidateApp> function or the <xref:Microsoft.Crm.Sdk.Messages.ValidateAppRequest> message to validate your app. The following Web API request shows how to validate your business app with ID: dd621d4a-d898-e711-80e7-00155db763be:
+Use the <xref:Microsoft.Dynamics.CRM.ValidateApp> function or the <xref:Microsoft.Crm.Sdk.Messages.ValidateAppRequest> message to validate your app. The following Web API request shows how to validate your model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
 
 `GET [Organization URI]/api/data/v9.0/ValidateApp(AppModuleId=dd621d4a-d898-e711-80e7-00155db763be)`
 
@@ -191,11 +187,11 @@ OData-Version: 4.0
 }
 ```
 
-## Publish your business app
+## Publish your model-driven app
 
-After you have added required components to your custom business app and validated it, you must publish it to make it available to users.
+After you have added required components to your model-driven app and validated it, you must publish it to make it available to users.
 
-Use the <xref:Microsoft.Dynamics.CRM.PublishXml> action or the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> messageto publish your custom business app. The following request shows how to publish your business app with ID: dd621d4a-d898-e711-80e7-00155db763be:
+Use the <xref:Microsoft.Dynamics.CRM.PublishXml> action or the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> messageto publish your model-driven app. The following request shows how to publish your model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
 
 ```http
 POST [Organization URI]/api/data/v9.0/PublishXml HTTP/1.1
@@ -209,11 +205,11 @@ Accept: application/json
 }
 ```
 
-## Manage access to business app using security roles
+## Manage access to model-driven app using security roles
 
-To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your business apps. Users assigned to the associated security roles and can see and use your business apps in CDS for Apps. 
+To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your model-driven apps. Users assigned to the associated security roles and can see and use your model-driven apps in CDS for Apps. 
 
-Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../common-data-service/reference/entities/appmodule.md) entity to associate a business app with a security role. The following request shows how to associate a business app with a security role:
+Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../common-data-service/reference/entities/appmodule.md) entity to associate a model-driven app with a security role. The following request shows how to associate a model-driven app with a security role:
 
 ```http
 POST [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)appmoduleroles_association/$ref HTTP/1.1
@@ -227,12 +223,12 @@ Accept: application/json
 }
 ```
 
-To disassociate a security role from a business app, you use the DELETE request with the same navigation property. For example:
+To disassociate a security role from a model-driven app, you use the DELETE request with the same navigation property. For example:
 
 `DELETE	[Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)/appmoduleroles_association/$ref?$id=[Organization URI]/api/data/v9.0/roles(<roleId)
 `
 
-## Manage your business apps and its components
+## Manage your model-driven apps and its components
 
 This section provides you information information about retrieving your apps, updating app properties, retrieving app components, and deleting apps.
 
@@ -246,31 +242,31 @@ To retrieve unpublished apps, use the <xref:Microsoft.Dynamics.CRM.RetrieveUnpub
 
 `GET [Organization URI]/api/data/v9.0/appmodules/Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple()?$select=name,clienttype`
 
-### Retrieve components in a published business app
-To retrieve app components for a business app, use the <xref:Microsoft.Dynamics.CRM.RetrieveAppComponents> function or the <xref:Microsoft.Crm.Sdk.Messages.RetrieveAppComponentsRequest> message. For example:
+### Retrieve components in a published model-driven app
+To retrieve app components for a model-driven app, use the <xref:Microsoft.Dynamics.CRM.RetrieveAppComponents> function or the <xref:Microsoft.Crm.Sdk.Messages.RetrieveAppComponentsRequest> message. For example:
 
 `GET [Organization URI]/api/data/v9.0/RetrieveAppComponents(AppModuleId=dd621d4a-d898-e711-80e7-00155db763be)`
 
-### Retrieve security roles associated with published business app
+### Retrieve security roles associated with published model-driven app
 
-To retrieve the security roles associated with your business app, use the `$expand` system query option with the **appmoduleroles_association** navigation property. For example, here is the request to retrieve all the security roles associated to a business app with ID: dd621d4a-d898-e711-80e7-00155db763be:
+To retrieve the security roles associated with your model-driven app, use the `$expand` system query option with the **appmoduleroles_association** navigation property. For example, here is the request to retrieve all the security roles associated to a model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
 
 `GET [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)?$expand=appmoduleroles_association&$select=name,appmoduleroles_association`
 
-### Delete business apps
+### Delete model-driven apps
 
-Use the DELETE request to delete a business app. For example:
+Use the DELETE request to delete a model-driven app. For example:
 
 `DELETE [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)`
 
-## Client API support for business apps
+## Client API support for model-driven apps
 
-You can use the following client APIs to work with business apps:
+You can use the following client APIs to work with model-driven apps:
 
 - [getCurrentAppName](clientapi/reference/xrm-utility/getglobalcontext/getcurrentappname.md)
 - [getCurrentAppProperties](clientapi/reference/xrm-utility/getglobalcontext/getCurrentAppProperties.md)
 - [getCurrentAppUrl](clientapi/reference/xrm-utility/getglobalcontext/getCurrentAppUrl.md) 
   
 ### See also  
-[Design custom business apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
+[Design model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
  

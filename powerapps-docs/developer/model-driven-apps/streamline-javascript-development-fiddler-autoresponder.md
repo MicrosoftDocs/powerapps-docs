@@ -1,5 +1,5 @@
 ---
-title: "Streamline JavaScript web resource development using Fiddler AutoResponder (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Script web resource development using Fiddler AutoResponder (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to setup and use AutoResponder in Fiddler for local debugging of JavaScript web resources." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
@@ -10,9 +10,7 @@ author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 ---
-# Web resource development using Fiddler AutoResponder
-
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder -->
+# Script web resource development using Fiddler AutoResponder
 
 While developing and debugging JavaScript web resources, you can use AutoResponder in [Telerik Fiddler](https://www.telerik.com/fiddler) to replace the content of a web resource with content from a local file rather than uploading it in your Model-driven Apps instance and publishing each time. Use the following steps below to setup AutoResponder in Fiddler.
 
@@ -73,5 +71,4 @@ By following the above steps, Fiddler is configured to listen to the requests an
 ## See Also
 
 [Web resources](web-resources.md)<br />
-[Use JavaScript](use-javascript.md)<br />
-[Client scripting using JavaScript](clientapi/client-scripting.md)
+[Client scripting using JavaScript](client-scripting.md)

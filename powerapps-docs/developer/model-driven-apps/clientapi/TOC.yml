@@ -1,25 +1,6 @@
-- name: Client scripting
-  href: client-scripting.md
+- name: Apply business logic using client scripting
+  href: ../client-scripting.md
   items:
-  - name: Events in forms and grids
-    href: events-forms-grids.md
-  - name: Understand Client API object model
-    href: understand-clientapi-object-model.md
-    items:
-    - name: Execution context
-      href: clientapi-execution-context.md
-    - name: Form context
-      href: clientapi-form-context.md
-    - name: Grid context
-      href: clientapi-grid-context.md
-    - name: Xrm object
-      href: clientapi-xrm.md
-  - name: 'Walkthrough: Write your first client script'
-    href: walkthrough-write-your-first-client-script.md
-  - name: Debug your JavaScript code for model-driven apps
-    href: debug-JavaScript-code.md
-  - name: 'Best practices: client scripting in model-driven apps'
-    href: client-scripting-best-practices.md
   - name: Client API Reference
     href: reference.md
     items:
@@ -190,7 +171,7 @@
       - name: getDefaultView
         href: reference/controls/getDefaultView.md
       - name: getDisabled
-        href: reference/controls/getDefaultView.md
+        href: reference/controls/getDisabled.md
       - name: getEntityTypes
         href: reference/controls/getEntityTypes.md
       - name: getInitialUrl

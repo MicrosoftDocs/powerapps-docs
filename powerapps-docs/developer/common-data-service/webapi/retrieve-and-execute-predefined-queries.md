@@ -19,7 +19,7 @@ manager: "amyla"
 
 # Retrieve and execute predefined queries
 
-Common Data Service for Apps provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
+Common Data Service (CDS) for Apps provides a way for administrators to create system views that are available to all users. Individual users can save the advanced find queries for re-use in the application. Both of these represent predefined queries you can retrieve and execute using the Web API. You can also compose a query using FetchXml and use that to retrieve data.
 
 <a name="bkmk_predefinedQueries"></a>
 
@@ -29,9 +29,8 @@ Common Data Service for Apps allows you to define, save, and execute two types o
 
 |Query type|Description|
 |----------------|-----------------|
-TODO:
 |**Saved Query**|System-defined views for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />. More information: [Customize entity views](../../model-driven-apps/customize-entity-views.md)| 
-|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information:[UserQuery (saved view) entity](../saved-queries.md)|
+|**User Query**|Advanced Find searches saved by users for an entity. These views are stored in the <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" />. More information: [UserQuery (saved view) entity](../saved-queries.md)|
 
 Records for both of these types of entities contain the FetchXML definition for the data to return. You can query the respective entity type to retrieve the primary key value. With the primary key value, you can execute the query by passing the primary key value. For example, to execute the **Active Accounts** saved query, you must first get the primary key using a query like this.
 
@@ -63,8 +62,7 @@ GET [Organization URI]/api/data/v9.0/accounts(8f390c24-9c72-e511-80d4-00155d2a68
 
 ## Use custom FetchXML
 
-<!-- TODO:
-FetchXML is a proprietary query language that provides capabilities to perform aggregation. The saved queries and user queries stored in <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" /> and <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" /> respectively both include a fetchxml property that defines the query. You can use FetchXML directly with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method or with the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest>. More information:[Build Queries with FetchXML](../org-service/build-queries-fetchxml.md) -->
+FetchXML is a proprietary query language that provides capabilities to perform aggregation. More information: [Use FetchXML to query data](../use-fetchxml-construct-query.md)
 
 You can pass URL encoded FetchXML as a query to the entity set corresponding to the root entity of the query using the `fetchXml` query string parameter to return the results from the Web API. For example, you can have the following FetchXML that has account as the entity.  
 

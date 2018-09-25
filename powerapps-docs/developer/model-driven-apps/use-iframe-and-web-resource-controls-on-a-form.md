@@ -139,6 +139,6 @@ IFrame.setSrc(newTarget);
 
 ## See Also  
 
- [Client scripting using JavaScript](clientapi/client-scripting.md)   
- [Use JavaScript](use-javascript.md)   
+ [Client scripting using JavaScript](client-scripting.md)   
+ 
 

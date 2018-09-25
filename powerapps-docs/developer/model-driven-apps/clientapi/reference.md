@@ -29,7 +29,7 @@ The topics under this section are organized as follows:
 
 ### Related topics
 
-[Client scripting in model-driven apps using JavaScript](client-scripting.md)
+[Apply business logic using client scripting in model-driven apps](../client-scripting.md)
 
 [Understand the Client API object model](understand-clientapi-object-model.md)
 
