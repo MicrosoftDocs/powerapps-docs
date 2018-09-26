@@ -1,1 +1,0 @@
-Follow the steps in [View your user profile](../basics/view-your-user-profile.md).

@@ -1,1 +1,0 @@
-Specifies a value with a decimal data type that may be passed as a parameter.

@@ -1,1 +1,0 @@
-Specifies a rule that will return false when the web application is viewed in a mobile browser on a tablet device.
