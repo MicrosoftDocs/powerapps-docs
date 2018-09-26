@@ -1,1 +1,0 @@
-Azure Content Delivery Network
