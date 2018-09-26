@@ -31,14 +31,16 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks the current version of the org.
-1. 
+1. Import a managed solution (UpsertSample_1_0_0_0_managed.zip) that creates a `sample_product` entity that has an alternate key named `sample_productcode`. Verify that the indexes to support the alternate key are active.
 
 ### Demonstrate
 
-1. Creates the appointment instance using the [BookRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.crm.sdk.messages.bookrequest?view=dynamics-general-ce-9) message and verifies that the appointment has been scheduled or not.
+1. The `ProcessUpsert` method processes data in the `newsampleproduct.xml` to represent new products and creates 13 new records.
+1. The second time when the `ProcessUpsert` method is called, it processes data in `updatedsampleproduct.xml` to represent updates to products previously created. 
+1. The `UpsertRequest` method creates 6 updated records. 
 
 ### Clean up
 
-1. Display an option to delete the records created in the [Setup](#setup).
+1. Display an option to delete the managed solution created in the [Setup](#setup).
 
     The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
