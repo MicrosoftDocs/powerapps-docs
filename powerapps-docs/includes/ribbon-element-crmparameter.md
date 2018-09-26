@@ -1,1 +1,0 @@
-Represents data retrieved from the Microsoft Dynamics 365 application that may be passed as a parameter.

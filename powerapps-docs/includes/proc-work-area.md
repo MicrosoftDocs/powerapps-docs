@@ -1,1 +1,0 @@
-Go to your work area.

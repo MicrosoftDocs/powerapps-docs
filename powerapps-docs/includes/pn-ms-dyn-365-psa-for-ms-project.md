@@ -1,1 +1,0 @@
-Dynamics 365 Project Service Automation Add-in for Microsoft Project

@@ -1,1 +1,0 @@
-On the nav bar, choose **Microsoft Dynamics 365** > **Settings**.

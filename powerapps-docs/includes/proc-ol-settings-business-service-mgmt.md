@@ -1,1 +1,0 @@
-In the Navigation Pane, choose **Settings** > **Business** > **Service Management**.

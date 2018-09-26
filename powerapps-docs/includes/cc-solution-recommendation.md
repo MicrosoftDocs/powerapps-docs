@@ -1,1 +1,0 @@
-Installing a solution or publishing customizations can interfere with normal system operation. We recommend that you schedule a solution import when it’s least disruptive to users.
