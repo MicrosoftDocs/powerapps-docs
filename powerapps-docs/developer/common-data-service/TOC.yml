@@ -1,5 +1,7 @@
 # This TOC is a work in progress. The specific location of items is not locked down
-- name: Overview
+- name: Common Data Service for Apps
+  href: ../../maker/common-data-service/data-platform-intro.md
+- name: Developer overview
   href: overview.md
 - name: Get started
   href: get-started-CDS-developers.md
@@ -9,12 +11,10 @@
 - name: Work with data using code
   href: work-with-data-cds.md
   items:
-  - name: Using Web API
-    # href: webapi/index.md
-    href: webapi/
-  - name: Using Organization Service
-    # href: org-service/overview.md
-    href: org-service/
+  - name: Use Web API
+    href: webapi/index.md
+  - name: Use Organization Service
+    href: org-service/index.md
   - name: Add and remove sample data
     href: sample-data.md
   - name: Use FetchXML to query data

@@ -1,6 +1,6 @@
 ---
 title: "Optimistic concurrency (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Optimistic Concurrency provides the ability for your applications to detect whether an entity record has changed on the server in the time between when your application retrieved the record and when it tries to update or delete that record" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Optimistic concurrency
 
-On a multi-threaded and multi-user system like PowerApps, operations and data changes often happen in parallel. A problem arises when two or more update or delete operations on the same piece of data happen at the same time. This situation could potentially result in data loss. Provided in this SDK release is the ability for your applications to detect whether an entity record has changed on the server in the time between when your application retrieved the record and when it tries to update or delete that record.  
+On a multi-threaded and multi-user system like PowerApps, operations and data changes often happen in parallel. A problem arises when two or more update or delete operations on the same piece of data happen at the same time. This situation could potentially result in data loss. The optimistic concurrency feature provides the ability for your applications to detect whether an entity record has changed on the server in the time between when your application retrieved the record and when it tries to update or delete that record.  
   
  Optimistic concurrency is supported on all out-of-box entities enabled for offline sync and all custom entities. You can determine if an entity supports optimistic concurrency by retrieving the entity’s metadata using code or by viewing the metadata using the [Metadata Browser](browse-your-metadata.md), and check if the attribute **IsOptimisticConcurrencyEnabled** is set to `true`. For custom entities, this property is set to `true` by default.  
   

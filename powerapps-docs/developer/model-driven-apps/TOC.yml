@@ -1,5 +1,7 @@
 # This TOC is a work in progress. The specific location of items is not locked down
-- name: Overview
+- name: Model-driven apps
+  href: ../../maker/model-driven-apps/model-driven-app-overview.md
+- name: Developer overview
   href: overview.md
 - name: Get started
   href: supported-customizations.md
