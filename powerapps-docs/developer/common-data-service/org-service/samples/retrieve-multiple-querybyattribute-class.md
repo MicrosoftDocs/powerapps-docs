@@ -1,6 +1,6 @@
 ---
-title: "Sample: <Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Retrieve multiple with the QueryByAttribute class(Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to use QueryByAttribute class" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -14,3 +14,32 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Sample: Retrieve multiple with the QueryByAttribute class
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-retrieve-multiple-querybyattribute-class -->
+
+This sample shows how to use [QueryByAttribute](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.query.querybyattribute?view=dynamics-general-ce-9) in the [RetrieveMultiple](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method.
+
+## How to run this sample
+
+[!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
+
+
+## What this sample does
+
+The `QueryByAttribute` class is intended to be used in a scenario where it contains a query that is expressed as a set of attribute and value pairs.
+
+## How this sample works
+
+In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+
+### Setup
+
+1. Checks for the current version of the org.
+1. The `Account` method creates 2 account records.
+
+### Demonstrate
+
+1. The `QueryByAttribute` method creates query using QueryByAttribute.
+
+### Clean up
+
+1. Displays an option to delete all the data created in the sample.
+2. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
