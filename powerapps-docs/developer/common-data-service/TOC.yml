@@ -1,5 +1,7 @@
 # This TOC is a work in progress. The specific location of items is not locked down
-- name: Overview
+- name: Common Data Service for Apps
+  href: ../../maker/common-data-service/data-platform-intro.md
+- name: Developer overview
   href: overview.md
 - name: Get started
   href: get-started-CDS-developers.md
