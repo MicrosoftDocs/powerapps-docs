@@ -46,9 +46,8 @@ App registration can also be done by an application developer or individual user
   
  <!--For either deployment type, you must know the redirect URL for your application. Instructions for finding that URL are provided in the section named [Obtain the redirect URI](walkthrough-register-app-active-directory.md#bkmk_redirect).-->  
     
-<a name="bkmk_online"></a>
 
-## Create an application registration with Microsoft Azure Active Directory  
+## Create an application registration 
   
 1.  [Sign in](http://manage.windowsazure.com) to the Azure management portal by using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with.<br><br> You can also access the Azure management portal through the Office 365 [Admin center](https://portal.office.com/adminportal) by expanding the **Admin centers** item in the left navigation pane, and selecting **Azure AD**.  
   
