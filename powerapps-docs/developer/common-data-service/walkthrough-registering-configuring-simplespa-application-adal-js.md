@@ -2,7 +2,7 @@
 title: "Walkthrough: Registering and configuring SimpleSPA application with adal.js (Common Data Service for Apps) | Microsoft Docs"
 description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Customer Engagement using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 09/30/2018
 ms.service:
   - "powerapps"
 ms.custom:
@@ -31,25 +31,27 @@ This walkthrough describes the process of registering and configuring the simple
   
 - Visual Studio 2015  
   
-<a name="bkmk_goal"></a>   
-## Goal of this walkthrough  
- When you complete this walkthrough you will be able to run a simple SPA application in Visual Studio that will provide the ability for a user to authenticate and retrieve data from Dynamics 365 (online). This application consists of a single HTML page.  
+<a name="bkmk_goal"></a>
+
+## Goal of this walkthrough
+
+When you complete this walkthrough you will be able to run a simple SPA application in Visual Studio that will provide the ability for a user to authenticate and retrieve data from Dynamics 365 (online). This application consists of a single HTML page.  
+
+When you debug the application initially there will only be a **Login** button.  
+
+Click **Login** and you will be re-directed to a sign-in page to enter your credentials.  
+
+After you enter your credentials you will be directed back to the HTML page where you will find the **Login** button is hidden and a **Logout** button and a **Get Accounts** button are visible. You will also see a greeting using information from your user account.  
+
+Click the **Get Accounts** button to retrieve 10 account records from your Dynamics 365 organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
   
- When you debug the application initially there will only be a **Login** button.  
-  
- Click **Login** and you will be re-directed to a sign-in page to enter your credentials.  
-  
- After you enter your credentials you will be directed back to the HTML page where you will find the **Login** button is hidden and a **Logout** button and a **Get Accounts** button are visible. You will also see a greeting using information from your user account.  
-  
- Click the **Get Accounts** button to retrieve 10 account records from your Dynamics 365 organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
-  
- ![The SimpleSPA page](media/simple-spa.png "The SimpleSPA page")  
-  
+![The SimpleSPA page](media/simple-spa.png "The SimpleSPA page")  
+
 > [!NOTE]
 >  The initial load of data from Dynamics 365 may be slow as the operations to support authentication take place, but subsequent operations are much faster.  
-  
- Finally, you can click the **Logout** button to logout.  
-  
+
+Finally, you can click the **Logout** button to logout.  
+
 > [!NOTE]
 >  This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application.  
   
@@ -57,7 +59,7 @@ This walkthrough describes the process of registering and configuring the simple
   
 1.  Using Visual Studio 2015, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
   
-     You should be able to use earlier versions of Visual Studio as well, but these steps will describe using Visual Studio 2015.  
+    You should be able to use earlier versions of Visual Studio as well, but these steps will describe using Visual Studio 2015.  
   
 2.  Add a new HTML page named SimpleSPA.html to the project and paste in the following code:  
   
@@ -291,9 +293,9 @@ This walkthrough describes the process of registering and configuring the simple
   
 3.  Click the desired tenant directory in the directory list.  
   
- ![List of available Active Directory entries](media/azure-active-directory.PNG "List of available Active Directory entries")  
+    ![List of available Active Directory entries](media/azure-active-directory.PNG "List of available Active Directory entries")  
   
-     If your Azure tenant directory isn’t shown in the directory list, click **Add**, and then select **Use existing directory** in the dialog box. Follow the prompts and instructions provided, and then go back to step 1.  
+    If your Azure tenant directory isn’t shown in the directory list, click **Add**, and then select **Use existing directory** in the dialog box. Follow the prompts and instructions provided, and then go back to step 1.  
   
 4.  With the target directory selected, click **Applications** (near the top of the page), and then click **Add**.  
   
@@ -303,15 +305,15 @@ This walkthrough describes the process of registering and configuring the simple
   
 7.  Enter the following information :  
   
- **Sign-on URL**  
-     This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the **Create a web application project** procedure.  
+    **Sign-on URL**  
+    This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the **Create a web application project** procedure.  
   
- **APP ID URI**  
-     This must be a unique identifier for the application. Use `https://XXXX.onmicrosoft.com/SimpleSPA` where XXXX is the Active Directory tenant.  
+    **APP ID URI**  
+    This must be a unique identifier for the application. Use `https://XXXX.onmicrosoft.com/SimpleSPA` where XXXX is the Active Directory tenant.  
   
 8.  With the tab of the newly registered app selected, click **Configure**, locate the **Client id** and copy it.  
   
-     Set the `clientId` variable in the SimpleSPA.html page to this value. Refer to step 5 of the **Create a web application project** procedure.  
+    Set the `clientId` variable in the SimpleSPA.html page to this value. Refer to step 5 of the **Create a web application project** procedure.  
   
 9. Scroll to the bottom of the page and click **Add application**. In the dialog box select **Dynamics 365 Online** and close the dialog box.  
   
