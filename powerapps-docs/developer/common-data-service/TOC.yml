@@ -379,7 +379,6 @@
       href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
     - name: "Tutorial: Register and configuring a SPA application with adal.js"
       href: walkthrough-registering-configuring-simplespa-application-adal-js.md
-
   - name: Build Windows client apps using XRM tools
     href: xrm-tooling/
   - name: Discover user organizations
