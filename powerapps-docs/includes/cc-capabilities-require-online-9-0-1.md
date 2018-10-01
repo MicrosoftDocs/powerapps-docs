@@ -1,1 +1,0 @@
-The capabilities in this solution require [!INCLUDE [pn-crm-9-0-1-online](../includes/pn-crm-9-0-1-online.md)].

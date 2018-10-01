@@ -1,1 +1,0 @@
-Applies to Dynamics 365 (online), version 8.x

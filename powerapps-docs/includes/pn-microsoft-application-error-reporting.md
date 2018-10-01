@@ -1,1 +1,0 @@
-Microsoft Application Error Reporting

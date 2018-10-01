@@ -1,1 +1,0 @@
-Azure AppFabric SDK V1.0

@@ -1,1 +1,0 @@
-Azure Active Directory Access Control Service (ACS)

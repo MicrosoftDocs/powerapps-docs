@@ -1,1 +1,0 @@
-Dynamics CRM 2016 Online and Dynamics CRM 2016 on-premises

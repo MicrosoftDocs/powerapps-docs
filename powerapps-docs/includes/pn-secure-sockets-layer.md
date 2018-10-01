@@ -1,1 +1,0 @@
-Transport Layer Security (TLS) or Secure Sockets Layer (SSL)

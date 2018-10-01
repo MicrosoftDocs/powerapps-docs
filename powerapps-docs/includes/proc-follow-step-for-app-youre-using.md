@@ -1,1 +1,0 @@
-Follow the steps for the app you’re using.
