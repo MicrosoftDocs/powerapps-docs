@@ -356,17 +356,17 @@
 - name: Create client applications
   href: connect-cds.md
   items:
-  - name: Authentication
-    items:
+  # - name: Authentication
+  #   items:
     # - name: Authenticate Office 365 users
     #   href: authenticate-office-365-users-cds-web-services.md
-    - name: Authenticate
-      href: authentication.md
-      items:
-      - name: .NET Framework applications
-        href: authenticate-dot-net-framework.md
-      - name: Use OAuth
-        href: authenticate-oauth.md
+  - name: Authenticate
+    href: authentication.md
+    items:
+    - name: .NET Framework applications
+      href: authenticate-dot-net-framework.md
+    - name: Use OAuth
+      href: authenticate-oauth.md
     # - name: Integration with Office 365
     #   href: online-integration-office-365.md
     # - name: Connect with Microsoft Office 365
