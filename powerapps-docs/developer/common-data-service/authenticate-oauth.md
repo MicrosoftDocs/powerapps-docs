@@ -150,7 +150,7 @@ class SampleProgram
 
 This simple approach does not represent a good pattern to follow because the `AccessToken` will expire in about an hour. ADAL libraries will cache the token for you and will refresh it each time the `AcquireToken` method is called.
 
-The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync> method so that ADAL will call the `AcquireToken` method with each request sent by the http client.
+The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync*> method so that ADAL will call the `AcquireToken` method with each request sent by the http client.
 
 The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>
 
@@ -258,7 +258,7 @@ class SampleProgram
 }
 ```
 
-Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
+Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync*> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync*>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
 
 
 ## Connect as an app
