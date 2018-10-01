@@ -134,7 +134,7 @@ class SampleProgram
         HttpRequestMessage request = 
             new HttpRequestMessage(HttpMethod.Get, "/api/data/v9.0/WhoAmI");
         //Set the access token
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", result.accessToken);
+        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
         HttpResponseMessage response = client.SendAsync(request).Result;
         if (response.IsSuccessStatusCode)
         {
@@ -165,6 +165,7 @@ The following is an example of a custom class derived from <xref:System.Net.Http
       new AuthenticationContext("https://login.microsoftonline.com/common", false);
     private string _clientId;
     private string _serviceUrl;
+
     public OAuthMessageHandler(string serviceUrl, string clientId, string userName, string password,
             HttpMessageHandler innerHandler)
         : base(innerHandler)
