@@ -358,14 +358,21 @@
   items:
   - name: Authentication
     items:
-    - name: Authenticate Office 365 users
-      href: authenticate-office-365-users-cds-web-services.md
-    - name: Integration with Office 365
-      href: online-integration-office-365.md
-    - name: Connect with Microsoft Office 365
-      href: connect-microsoft-office-365.md
-    - name: Connect using OAuth
-      href: connect-web-services-using-oauth.md
+    # - name: Authenticate Office 365 users
+    #   href: authenticate-office-365-users-cds-web-services.md
+    - name: Authenticate
+      href: authentication.md
+      items:
+      - name: .NET Framework applications
+        href: authenticate-dot-net-framework.md
+      - name: Use OAuth
+        href: authenticate-oauth.md
+    # - name: Integration with Office 365
+    #   href: online-integration-office-365.md
+    # - name: Connect with Microsoft Office 365
+    #   href: connect-microsoft-office-365.md
+    # - name: Connect using OAuth
+    #   href: connect-web-services-using-oauth.md
     - name: "Tutorial: Register an app with Azure Active Directory"
       href: walkthrough-register-app-azure-active-directory.md      
     - name: Build web applications using Server-to-Server (S2S) authentication
