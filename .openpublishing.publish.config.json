@@ -84,6 +84,15 @@
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "dynamics365-docs-dotnet",
+      "url": "https://github.com/MicrosoftDocs/dynamics365-docs-dotnet",
+      "branch": "live",
+      "branch_mapping": {
+        "master": "master",
+        "live": "live"
+      }
     }
   ],
   "branch_target_mapping": {
