@@ -99,10 +99,167 @@ One of the significant differences between the .NET Client versions is that the 
 
 If you are not using Xrm.Tooling you may use the ADAL .NET v2 or v3 client libraries with the Web API. For an example using the v3 client library see : [ADAL v3 WhoAmI sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/ADALV3WhoAmI/ADALV3WhoAmI).
 
+## Use the AccessToken with your requests
 
-## Connect as a user
+The point of using the ADAL libraries is to get a token that you can include with your requests. 
+This only requires a few lines of code, and just a few more lines to configure an HttpClient to execute a request.
 
-<!-- TODO provide some examples -->
+The following is the minimum amount of code needed to execute a single Web Api request, but it is not the recommended approach:
+
+```csharp
+class SampleProgram
+{
+    private static string serviceUrl = "https://yourorg.crm.dynamics.com"; 
+    private static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d"; 
+    private static string userName = "you@yourorg.onmicrosoft.com";
+    private static string password = "yourpassword";
+
+    static void Main(string[] args)
+    {
+
+        AuthenticationContext authContext = 
+        new AuthenticationContext("https://login.microsoftonline.com/common", false);  
+        UserCredential credential = new UserCredential(userName, password);
+        AuthenticationResult result = authContext.AcquireToken(serviceUrl, clientId, credential);
+        //The access token
+        string accessToken = result.AccessToken;
+
+        using (HttpClient client = new HttpClient()) {
+        client.BaseAddress = new Uri(serviceUrl);
+        client.Timeout = new TimeSpan(0, 2, 0);  //2 minutes  
+        client.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
+        client.DefaultRequestHeaders.Add("OData-Version", "4.0");
+        client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+        HttpRequestMessage request = 
+            new HttpRequestMessage(HttpMethod.Get, "/api/data/v9.0/WhoAmI");
+        //Set the access token
+        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", result.accessToken);
+        HttpResponseMessage response = client.SendAsync(request).Result;
+        if (response.IsSuccessStatusCode)
+        {
+            //Get the response content and parse it.  
+            JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+            Guid userId = (Guid)body["UserId"];
+            Console.WriteLine("Your system user ID is: {0}", userId);
+        }
+
+    }
+}
+```
+
+This simple approach does not represent a good pattern to follow because the `AccessToken` will expire in about an hour. ADAL libraries will cache the token for you and will refresh it each time the `AcquireToken` method is called.
+
+The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync> method so that ADAL will call the `AcquireToken` method with each request sent by the http client.
+
+The following is an example of a custom class derived from <xref:System.Net.Http.DelegatingHandler>
+
+```csharp
+  /// <summary>  
+  ///Custom HTTP message handler that uses OAuth authentication thru ADAL.  
+  /// </summary>  
+  class OAuthMessageHandler : DelegatingHandler
+  {
+    private UserCredential _credential;
+    private AuthenticationContext _authContext = 
+      new AuthenticationContext("https://login.microsoftonline.com/common", false);
+    private string _clientId;
+    private string _serviceUrl;
+    public OAuthMessageHandler(string serviceUrl, string clientId, string userName, string password,
+            HttpMessageHandler innerHandler)
+        : base(innerHandler)
+    {
+      _credential = new UserCredential(userName, password);
+      _clientId = clientId;
+      _serviceUrl = serviceUrl;
+    }
+
+    protected override Task<HttpResponseMessage> SendAsync(
+             HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
+    {
+      try
+      {
+        request.Headers.Authorization =
+        new AuthenticationHeaderValue("Bearer", _authContext.AcquireToken(_serviceUrl, _clientId, _credential).AccessToken);
+      }
+      catch (Exception ex)
+      {
+        throw ex;
+      }      
+      return base.SendAsync(request, cancellationToken);
+    }
+  }
+```
+
+Using this `OAuthMessageHandler` class, the simple program shown above would look like this, with some additional error handling included:
+
+```csharp
+class SampleProgram
+{
+    private static string serviceUrl = "https://yourorg.crm.dynamics.com"; 
+    private static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d"; 
+    private static string userName = "you@yourorg.onmicrosoft.com";
+    private static string password = "yourpassword";
+
+    static void Main(string[] args)
+    {
+       HttpMessageHandler messageHandler;
+
+      try
+      {
+        messageHandler = new OAuthMessageHandler(serviceUrl, clientId, userName, password,
+                         new HttpClientHandler());
+        //Create an HTTP client to send a request message to the CRM Web service.  
+        using (HttpClient client = new HttpClient(messageHandler))
+        {
+          //Specify the Web API address of the service and the period of time each request   
+          // has to execute.  
+          client.BaseAddress = new Uri(serviceUrl);
+          client.Timeout = new TimeSpan(0, 2, 0);  //2 minutes
+          client.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");
+          client.DefaultRequestHeaders.Add("OData-Version", "4.0");
+          client.DefaultRequestHeaders.Accept.Add(
+              new MediaTypeWithQualityHeaderValue("application/json"));
+
+          //Send the WhoAmI request to the Web API using a GET request.   
+          var response = client.GetAsync("api/data/v9.0/WhoAmI",
+                  HttpCompletionOption.ResponseHeadersRead).Result;
+          if (response.IsSuccessStatusCode)
+          {
+            //Get the response content and parse it.  
+            JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+            Guid userId = (Guid)body["UserId"];
+            Console.WriteLine("Your system user ID is: {0}", userId);
+          }
+          else
+          {
+            throw new Exception(response.ReasonPhrase);
+          }
+        }
+      }
+      catch (Exception ex)
+      {
+        DisplayException(ex);
+      }
+    }
+
+    /// <summary> Displays exception information to the console. </summary>  
+    /// <param name="ex">The exception to output</param>  
+    private static void DisplayException(Exception ex)
+    {
+      Console.WriteLine("The application terminated with an error.");
+      Console.WriteLine(ex.Message);
+      while (ex.InnerException != null)
+      {
+        Console.WriteLine("\t* {0}", ex.InnerException.Message);
+        ex = ex.InnerException;
+      }
+    }
+}
+```
+
+Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.GetAsync> rather than the overridden <xref:System.Net.Http.HttpClient.SendAsync>, it will apply for any of the <xref:System.Net.Http.HttpClient> methods that send a request.
+
 
 ## Connect as an app
 
