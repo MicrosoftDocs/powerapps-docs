@@ -1,5 +1,5 @@
 ---
-title: "Create custom business logic through flows with Flow | MicrosoftDocs"
+title: "Create custom business logic with flows with Microsoft Flow | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
 ms.custom: ""
 ms.date: 08/02/2018
