@@ -373,19 +373,19 @@
     #   href: connect-microsoft-office-365.md
     # - name: Connect using OAuth
     #   href: connect-web-services-using-oauth.md
-    - name: "Tutorial: Register an app with Azure Active Directory"
-      href: walkthrough-register-app-azure-active-directory.md      
-    - name: Build web applications using Server-to-Server (S2S) authentication
-      href: build-web-applications-server-server-s2s-authentication.md
-      items:
-      - name: Use Multi-Tenant Server-to-server authentication
-        href: use-multi-tenant-server-server-authentication.md
-      - name: Use Single-Tenant Server-to-server authentication
-        href: use-single-tenant-server-server-authentication.md
-    - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
-      href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
-    - name: "Tutorial: Register and configuring a SPA application with adal.js"
-      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+  - name: "Tutorial: Register an app with Azure Active Directory"
+    href: walkthrough-register-app-azure-active-directory.md      
+  - name: Build web applications using Server-to-Server (S2S) authentication
+    href: build-web-applications-server-server-s2s-authentication.md
+    items:
+    - name: Use Multi-Tenant Server-to-server authentication
+      href: use-multi-tenant-server-server-authentication.md
+    - name: Use Single-Tenant Server-to-server authentication
+      href: use-single-tenant-server-server-authentication.md
+  - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
+    href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+  - name: "Tutorial: Register and configuring a SPA application with adal.js"
+    href: walkthrough-registering-configuring-simplespa-application-adal-js.md
   - name: Build Windows client apps using XRM tools
     href: xrm-tooling/
   - name: Discover user organizations
