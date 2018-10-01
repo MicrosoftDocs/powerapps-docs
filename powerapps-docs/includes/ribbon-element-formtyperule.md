@@ -1,1 +1,0 @@
-Specifies a rule that detects the type of Microsoft Dynamics 365 form.

@@ -1,1 +1,0 @@
-Actual requirements and product functionality may vary based on your system configuration and operating system.

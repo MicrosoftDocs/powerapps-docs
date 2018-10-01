@@ -1,1 +1,0 @@
-For more information about the requirements for running the sample code provided here, see [Use the sample and helper code](../developer/org-service/use-sample-helper-code.md).

@@ -1,1 +1,0 @@
-Make sure you have the System Administrator security role or equivalent permissions in Microsoft Dynamics 365.
