@@ -32,17 +32,20 @@ Use **Activities** in a Model-driven app, to keep track of your all your communi
  
 Quickly create a new activity using the shortcut on the nav bar.
 
-1. On the nav bar, click the **plus sign**![Create record button](media/create-record-button.png "Create record button"), and then choose **Activities**. 
+1. On the nav bar, click the **plus sign**![Create record button](user/media/create-record-button.png "Create record button"), and then click **Activities**. 
 
  ![Shortcut to add an Activities in PowerApps](user/media/QuickCreate.png "Shortcut to add an Activities in PowerApps")  
  
-2. 
-3. Use the **Regarding** field on the activity form to associate it with a customer
+2. Choose the type of activity you want too add.
+
+3. Fill in the required information. Use the **Regarding** field to associate the activity with a record.
+
+4. When you're done click, **Save**.
 
   
 ## Add a phone call  
   
-1.  Open the record you want to add the activity to.  
+1.  Open the record you want to add the activity to or use the shortcut on the nav bar.
   
 2.  If you do not see the **Add Phone Call** area open in the middle of the page, click **Activities** > **Add Phone Call**.  
   
