@@ -30,7 +30,7 @@ Use **Activities** in a Model-driven app, to keep track of your all your communi
  
 **Add an activity from the nav bar**
  
-Quickly create a new activity using the shortcut on the nav bar.
+Quickly create a new activity using the shortcut on the nav bar and then link it to a record. For example, you can create a phone call activity and then link it to a contact in the system using the **Regarding** field.
 
 1. On the nav bar, click the **plus sign**![Create record button](user/media/create-record-button.png "Create record button"), and then click **Activities**. 
 
@@ -45,9 +45,11 @@ Quickly create a new activity using the shortcut on the nav bar.
   
 ## Add a phone call  
   
-1.  Open the record you want to add the activity to or use the shortcut on the nav bar.
+1.  Open the record that you want to add the activity to. For exampole, contact record.
   
-2.  If you do not see the **Add Phone Call** area open in the middle of the page, click **Activities** > **Add Phone Call**.  
+2.  In the **Timeline** section, click  **plus sign** > ** Phone Call**.  
+
+![Add a Phone Activity in PowerApps](user/media/addphonecall.png "Add a Phone Activity in PowerApps")
   
 3.  In the Description area, provide a summary of the conversation with the customer. You must fill in this area before you can save the phone call.  
   
