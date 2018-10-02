@@ -28,11 +28,16 @@ Use **Activities** in a Model-driven app, to keep track of your all your communi
   
  ![Timeline view of Activities in PowerApps](user/media/TimelineViewOfActivity.png "Timeline view of Activities in PowerApps")  
  
-**Add an activity using from the command bar**
+**Add an activity from the nav bar**
  
-Quickly create a new activity using the shortcut on the command bar.
+Quickly create a new activity using the shortcut on the nav bar.
+
+1. On the nav bar, click the **plus sign**![Create record button](media/create-record-button.png "Create record button"), and then choose **Activities**. 
 
  ![Shortcut to add an Activities in PowerApps](user/media/QuickCreate.png "Shortcut to add an Activities in PowerApps")  
+ 
+2. 
+3. Use the **Regarding** field on the activity form to associate it with a customer
 
   
 ## Add a phone call  
