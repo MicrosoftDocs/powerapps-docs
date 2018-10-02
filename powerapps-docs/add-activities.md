@@ -47,7 +47,7 @@ Quickly create a new activity using the shortcut on the nav bar and then link it
   
 1.  Open the record that you want to add the activity to. For exampole, contact record.
   
-2.  In the **Timeline** section, click  **plus sign** > ** Phone Call**.  
+2.  In the **Timeline** section, click  **plus sign** > **Phone Call**.  
 
 ![Add a Phone Activity in PowerApps](user/media/addphonecall.png "Add a Phone Activity in PowerApps")
   
