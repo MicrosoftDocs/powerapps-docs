@@ -20,24 +20,20 @@ search.app:
 # Add a appointment, email, phone call, or task activity in a Model-driven app 
 
 Use **Activities** in a Model-driven app, to keep track of your all your communication with a customer or contact. For example, you can take notes, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer.
-  
-All activities that you add from within a record appear in the **Activities** area. If the **Regarding** field of an activity is set, the activity appears in the activity wall of the regarding record. You can filter the list to show just the activities that are in progress or the ones that are overdue. Select the inline **Complete** link to close the activity as **Completed**.  
-  
- ![Add activities in Dynamics 365](../customer-service/media/add-activities-dynamics-crm.png "Add activities in Dynamics 365")  
 
-> [!NOTE]
-> **Change conversation view**
-> 
-> By default, email in the Activities area are displayed as a conversation with emails grouped according to subject and tracking ID. To change the view so that emails are not grouped:
-> 1. Open an entity such as an account.
-> 2. On the top menu bar, select **Form**.
-> 3. Select the blank field in the **Social Pane**.
-> 4. On the top menu bar, select **Change Properties**.
-> 5. In Activities Tab Properties, select the **Web Client Properties** tab.
-> 6. Select the **Activity Wall** tab.
-> 7. Uncheck **Show email in conversation** view and select **Save**.
-> <br>
-> ![Show email in conversation view](media/show-email-in-conversation-view.png)
+- Activities that you add from within a record appear in the **TIMELINE** area of the record. 
+- If the **Regarding** field of an activity is set, the activity appears in the record it is associated with. 
+- You can also choose the filter pane to filter the activities by record type and date. 
+- When a new activity is created, you will get a **What you missed** notification in the **TIMELINE** area.
+  
+ ![Timeline view of Activities in PowerApps](user/media/TimelineViewOfActivity.png "Timeline view of Activities in PowerApps")  
+ 
+**Add an activity using from the command bar**
+ 
+Quickly create a new activity using the shortcut on the command bar.
+
+ ![Shortcut to add an Activities in PowerApps](user/media/QuickCreate.png "Shortcut to add an Activities in PowerApps")  
+
   
 ## Add a phone call  
   
