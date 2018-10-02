@@ -27,7 +27,7 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 
 On a SharePoint site, create a list, and then add these columns:
 
-- **Product name** (single line of text)
+- **ProductName** (single line of text)
 - **Details** (yes/no)
 - **Price** (currency)
 - **Availability** (date without time)
