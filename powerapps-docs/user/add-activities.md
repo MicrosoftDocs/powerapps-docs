@@ -1,5 +1,5 @@
 ---
-title: "Add a appointment, email, phone call, or task activity in a Model-driven appp| MicrosoftDocs"
+title: "Add a appointment, email, phone call, notes or task activity in a Model-driven appp| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -17,9 +17,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Add a appointment, email, phone call, or task activity in a Model-driven app 
+# Add a appointment, email, phone call, notes or task activity in a Model-driven app 
 
-Use **Activities** in a Model-driven app, to keep track of your all your communication with a customer or contact. For example, you can take notes, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer.
+Use **Activities** in a Model-driven app, to keep track of your all your communication with a customer or contact. For example, you can take notes, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer.
 
 - Activities that you add from within a record appear in the **TIMELINE** area of the record. 
 - If the **Regarding** field of an activity is set, the activity appears in the record it is associated with. 
