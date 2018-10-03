@@ -34,7 +34,7 @@ Have you ever tried to build an app and then publish it for iOS or Android devic
 With PowerApps, you can leverage the power of the user's mobile device. You have access to acceleration, the camera, the compass, the connection information, and location signals: all from within your app. This opens up a whole world of possibilities for building apps to get work done. Of course, touch functionality is just automatic in PowerApps: nothing extra to code when you build your app.
 
 **Get out of the box**  
-With InfoPath, you normally work with data from one source. However, things got tricky if you wanted to update another source (such as a SharePoint list in another site collection) or connect to external services. Concepts such as code behind kept you awake at night. PowerApps is designed to allow you to work with multiple data sources and service connections in one app. Currently, [more than 200 connectors](connections-list.md#all-connectors) support a combination of on-premises and cloud data, including Microsoft Office 365 and Azure services such as Microsoft Flow and Dynamics 365. You can also connect to a multitude of third-party services such as Dropbox, Google, Salesforce, Slack, and other popular targets.
+With InfoPath, you normally work with data from one source. However, things got tricky if you wanted to update another source (such as a SharePoint list in another site collection) or connect to external services. Concepts such as code behind kept you awake at night. PowerApps is designed to allow you to work with multiple data sources and service connections in one app. Currently, [more than 200 connectors](connections-list.md#all-standard-connectors) support a combination of on-premises and cloud data, including Microsoft Office 365 and Azure services such as Microsoft Flow and Dynamics 365. You can also connect to a multitude of third-party services such as Dropbox, Google, Salesforce, Slack, and other popular targets.
 
 Now you can build solutions to scale where your users need to take you, not just where the original data lived.
 
@@ -77,66 +77,95 @@ Start with a simple custom list that contains just a couple of fields of differe
 Now that you know the fundamental concepts, let's go further. With your first app under your belt, this section will help you apply some of the common InfoPath concepts in PowerApps.
 
 **Hide/show/lock a field based on a value**  
-Successful forms often enforce strong business logic by, for example, changing the state of a field based on a value or an action. With PowerApps, you can set the **DisplayMode** property of a control to **Edit** or **View** to specify whether a user can change the field. You can also use a simple **If** formula to do so conditionally. First, select the label that you want to edit, and then select the lock icon. This step unlocks the card so that you can change the value.
+Successful forms often enforce strong business logic by, for example, changing the state of a field based on a value or an action. With PowerApps, you can set the **DisplayMode** property of a control to **Edit** or **View** to specify whether a user can change the field. You can also use a simple **If** formula to do so conditionally. First, select the card that you want to edit, and then select the lock icon. This step unlocks the card so that you can change the value.
 
 ![Hide Show Lock Data Cards](./media/transform-infopath/hide-show-lock.png)
 
-Now scroll to the bottom of the card on the right, and edit the **DefaultMode** property.
+In the right-hand pane, scroll to the **DefaultMode** property so that you can edit it.
 
 ![If Else Statement Expressions](./media/transform-infopath/if-else-statement.png)
 
 In this example, use an **If** formula:
 
-```If(ThisItem.Color = &quot;Blue&quot;, DisplayMode.View, DisplayMode.Edit)```
+```If(ThisItem.Color = "Blue", DisplayMode.View, DisplayMode.Edit)```
 
 This formula says that, if the current item's **Color** field is **Blue**, the **Animal** field is read-only. Otherwise, the field is editable.
 
-If you wanted to hide the card instead of making it read-only, you could insert a similar function in the **Visible** property right above **DisplayMode**.
+To hide the card instead of making it read-only, insert a similar function in the **Visible** property right above **DisplayMode**.
 
-Other things to play with here would be hiding an approval button so that it only displays if the user's email address matches the approver's email address. Hint: User().Email is how to access the current user's email address. So you could make the button Visible value If(YourDataCard.Text = User().Email, true, false) where YourDataCard is the card where you are storing the Approver's email address.
+You can also play with, for example, showing an approval button only if the user's email address matches the approver's email address. (Hint: Use **User().Email** to access the current user's email address.) So you could store the approver's email address in **YourDataCard** and then set the button's **Visible** property to this formula:
+
+```If(YourDataCard.Text = User().Email, true, false)```
 
 **Conditional formatting**  
-In a similar manner as above where you hid the field, you can also provide visual feedback to users. Maybe you want to highlight text in red if the entered value falls out of the acceptable range or change the upload buttons text and color to delete after the upload a file. This is all done by using functions, such as If, in property fields like color or visible.
+In a similar manner as above where you hid the field, you can also provide visual feedback to users. Maybe you want to highlight text in red if the entered value falls out of the acceptable range or change an upload button's text and color after the user uploads a file. You can do both by using a function, such as **If**, in properties such as **Color** or **Visible**.
 
-For example, you could use the If function paired with the [IsMatch](https://docs.microsoft.com/powerapps/functions/function-ismatch) function to change the text color of the email field to red if the user did not enter a properly formatted email in the input box. You would do this by setting the Color value of TextInput1 to If(IsMatch(TextInput1.Text, Email), Black, Red) where TextInput1 is the field where the user types in an email address. IsMatch supports a plethora of predefined patterns like Email or the ability to create your own. For more information on conditional formatting check out this [community video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Conditional-Formatting-and-Popups/m-p/84962).
+For example, you could use the **If** function paired with the [IsMatch](functions/function-ismatch.md) function to change the text color of the email field to red if the user doesn't enter a properly formatted email in the input box. You would do this by setting the **Color** value of **TextInput1** (where the user types in an email address) to this formula:
+
+```If(IsMatch(TextInput1.Text, Email), Black, Red)```
+
+**IsMatch** supports a plethora of predefined patterns, such as Email, or you can create your own. For more information about conditional formatting, check out this [community video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Conditional-Formatting-and-Popups/m-p/84962).
 
 **Implementing role-based security**  
-The first function to consider is [DataSourceInfo](https://docs.microsoft.com/powerapps/functions/function-datasourceinfo). What information you get back from the data source will vary by the data source, but often you can use DataSourceInfo(YourDataSource, DataSourceInfo.EditPermission) to check if the user has access to edit the data. Replace YourDataSource with the name of your data source. With this, you can only show a form or button if the user has access to edit. Check out the DataSourceInfo documentation for the full list of information you can query for in the function.
+The first function to consider is [DataSourceInfo](functions/function-datasourceinfo.md). What information you get back from the data source will vary, but often you can use this formula to confirm whether the user has access to edit the data (replace *YourDataSource* with the name of your data source):
 
-If instead, you want to use Active Directory groups to manage access to buttons or forms in your app then you will need to go deeper. To do this, you will take advantage of the flexibility of PowerApps and create your own connector using the Microsoft Graph API. And while that sounds daunting, there is step-by-step [documentation](https://powerapps.microsoft.com/blog/implementing-role-based-permission/) available to guide you.
+```DataSourceInfo(YourDataSource, DataSourceInfo.EditPermission)```
+
+With this, you can show a form or button only if the user has access to edit. Check out the [DataSourceInfo](functions/function-datasourceinfo.md) documentation for the full list of information for which you can query in the function.
+
+You'll need to dig deeper if you want to use Active Directory groups to manage access to buttons or forms in your app. To do this, you'll take advantage of the flexibility of PowerApps and create your own connector using the Microsoft Graph API. If that sounds daunting, you can follow this [blog post](https://powerapps.microsoft.com/blog/implementing-role-based-permission/) for step-by-step guidance.
 
 **Send an email from your app**  
-There are many ways to send an email from PowerApps. The easiest way is to use the Office 365 Outlook Connector. With this connector, you can send an email as yourself from your app. You can also get email messages and other tasks that interact with your mailbox. There is [documentation](https://docs.microsoft.com/powerapps/connections/connection-office365-outlook) or this community [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Send-an-email-from-PowerApps/m-p/74349) on sending your email.
+You can send an email message from PowerApps in many ways, but the easiest is to use the Office 365 Outlook Connector. With this connector, you can send a message as yourself from your app. You can also get email messages and other tasks that interact with your mailbox. There is [documentation](connections/connection-office365-outlook.md) or this community [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Send-an-email-from-PowerApps/m-p/74349) about sending email.
 
-If you need to send a more complex email, maybe by creating a SharePoint approval workflow approval chain for example, then creating a Microsoft Flow and connecting your app to it is your answer. Once you connect your app to Microsoft Flow, you have opened up the full power of a workflow engine that like PowerApps is very well connected to external data and services. For more information on connecting PowerApps and Microsoft Flow check out this [documentation](https://docs.microsoft.com/powerapps/using-logic-flows).
+You can send more complex message (for example, as part of a SharePoint approval workflow) by using Microsoft Flow and connecting your app to the flow that you create. Once you connect your app to Microsoft Flow, you've opened up the full power of a workflow engine that, like PowerApps, is very well connected to external data and services. For more information about how to connect PowerApps and Microsoft Flow, check out this [documentation](using-logic-flows.md).
 
-And if you still haven't found the email option you are looking for you can also leverage the PowerApps connectors for Benchmark Email, Gmail, MailChimp, Outlook.com, SendGrid, or SMTP. That is the beauty of PowerApps, connectivity.
+If you still haven't found the email option you're looking for, you can also leverage the PowerApps connectors for Benchmark Email, Gmail, MailChimp, Outlook.com, SendGrid, or SMTP. Connectivity is the beauty of PowerApps.
 
 **Workflows**  
-Hard to talk about business apps and business logic without a workflow engine. The good news is the PowerApps team didn't reinvent the wheel and give you another workflow engine. Instead, they provide you with a robust connector to the Microsoft Flow service. Now you can automate processes and tasks across more than [200 different services](https://flow.microsoft.com/connectors/) through their easy to use workflow engine. For more information on connecting PowerApps and Microsoft Flow, check out this [documentation](https://docs.microsoft.com/powerapps/using-logic-flows).
+It's hard to talk about business apps and business logic without a workflow engine. The good news is the PowerApps team didn't reinvent the wheel and give you another workflow engine. Instead, they provide you with a robust connector to the Microsoft Flow service. You can automate processes and tasks across more than [200 different services](https://flow.microsoft.com/connectors/) through their easy-to-use workflow engine. For more information about how to connect PowerApps and Microsoft Flow, check out this [documentation](using-logic-flows.md).
 
 **Variables with PowerApps**  
-When you build solutions, it's natural to think variables must be involved. PowerApps offers multiple types of variables, but you want to use them only when you have to. Instead of thinking about getting data, storing it in a variable, and then referencing that variable, think about just referencing that data directly. The best way to equate it is Excel. In Excel, Total isn't a variable; it's the sum of other fields. So, if you want to use that value elsewhere on the sheet, you specify the field you calculated the total in. The [documentation](working-with-variables.md) has a great explanation of all of this you can read. Be open to a different thought process.
+When you build solutions, it's natural to think variables must be involved. PowerApps offers multiple types of variables, but use them only when necessary. Instead of thinking about getting data, storing it in a variable, and then referencing that variable, think about just referencing that data directly. You can better understand this model if you compare it to Excel. In Excel, Total isn't a variable; it's the sum of other fields. So, if you want to use that value elsewhere on the sheet, you specify the cell in which you calculated the total. The [documentation](working-with-variables.md) has a great explanation of all of this. Be open to a different thought process.
 
-If you still need variables (there are many cases that you do), this will help you understand the different options. Keep in mind with PowerApps you don't have to define variables. Just use one of the functions to specify a name and a value to store, and your variable is created. You can view the variables you have created by clicking View in the menu bar and selecting Variables. Variables are held in memory, and their values are lost when you close the app. The three types of variable are as follows:
+If you still need a variable (there are many cases that you do), this will help you understand the different options. Keep in mind that, with PowerApps, you don't have to define variables. Just use a function to specify a name and a value to store, and your variable is created. You can view the variables you've created by selecting **Variables** on the **View** tab. Variables are held in memory, and their values are lost when you close the app. You can create these types of variables:
 
-- Global variables are what you most commonly think of first. Here you can use the [Set](functions/function-set.md) function to specify a value for the variable and then it is available throughout your app. An example of how you use the function is Set(YourVariable, YourValue). Then you can reference YourVariable by name throughout your app.
-- Context variables are variables that are only available on the screen where they are defined. When you leave the screen, they are reset. They are often used to store information passed from a previous screen or to track if the form has been submitted for example. Common use of [UpdatedContext](functions/function-updatecontext.md) is UpdateContext( { Submitted: "true" } ) This would set the Submitted variable to true. You might make this part of the submit button on the page to track that the information has been submitted and change all of the fields to read-only. Note: You use ":" Collections are used to store tables of information that can be updated individually. Look at [Collect](functions/function-clear-collect-clearcollect.md) to get started. An example of use might be creating a shopping cart as the user tags various SharePoint items they want to send. A community [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Learn-about-PowerApps-Collections/m-p/89180) shows that concept in action.
+- Global variables are what you most commonly think of first. Use the [Set](functions/function-set.md) function to specify a value for a global variable and make it available throughout your app:
+
+```Set(YourVariable, YourValue)```
+
+Then you can reference *YourVariable* by name throughout your app.
+
+- Context variables are available only on the screen where they're defined. When you leave the screen, they're reset. They're often used, for example, to store information passed from a previous screen or to track if the form has been submitted. To set a context variable, use the [UpdateContext](functions/function-updatecontext.md) function, as in this example:
+
+```UpdateContext( { Submitted: "true" } )```
+
+This example sets the value of a variable, named **Submitted**, to **true**. You might add this formula to the **OnSelect** property of a submit button to track that the information has been submitted and change all of the fields to read-only.
+
+- Collections store tables of information that can be updated individually. Use the [Collect](functions/function-clear-collect-clearcollect.md) to create a shopping cart, for example, as the user tags various SharePoint items they want to send. A community [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Learn-about-PowerApps-Collections/m-p/89180) shows that concept in action.
 
 **Cascading dropdowns**  
-Cascading dropdowns are very useful. They allow you to filter the choices in one dropdown based on the value selected in the previous dropdown. In PowerApps, these are often created by having two data sources in your app. The first data source is the data you are working with or updating and the second data source is used to store the values to build the cascading effect you want. Below is an example of the second data source with the choice options.
+Cascading dropdowns are very useful because you can, for example, filter the choices in one dropdown based on the value selected in the previous dropdown. In PowerApps, these are often created by having two data sources in your app. The first data source is the data you're viewing or updating, and the second data source stores the values to build the cascading effect. This graphic shows an example of the second data source with the choice options.
 
 ![Cascading dropdowns](./media/transform-infopath/cascading-dropdowns.png)
 
-Now you would create your first dropdown control, and for the Items property, you would use the formula Distinct(Impacts, Title) to only show Cost, Program Impact, and Schedule in the dropdown. Then you would add a second dropdown and set the Items property to Filter(Impacts,ddSelectType.Selected.Value in SCategory) where ddSelectType is the name of the first dropdown box. Just like that you have cascading dropdowns. For more information check out this post from the PowerApps team [SharePoint: Cascading Dropdowns in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) or this [community video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813) and don't worry, you can do it just as easy without SharePoint.
+In this example, you could add a dropdown named **ddSelectType** and set its **Items** property to this formula:
+
+```Distinct(Impacts, Title)```
+
+The dropdown would show only show Cost, Program Impact, and Schedule. Then you could add a second dropdown and set its **Items** property to this formula:
+
+```Filter(Impacts,ddSelectType.Selected.Value in SCategory)```
+
+Just like that you have cascading dropdowns. For more information, check out this post from the PowerApps team [SharePoint: Cascading Dropdowns in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) or this [community video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Don't worry: you can do it just as easily without SharePoint.
 
 **Don't build one super app**  
 With PowerApps, you can call one app from another. So, instead of the mass InfoPath form you built that's held together with bubble gum, you can build a group of apps that call each other, and even pass data across, making development simpler.
 
 ## Next steps
 
-With the information in this topic, you're now ready to go out into the world and start to conquer it one PowerApps app at a time. As you continue on your journey, below are some handy links to help, such as the link to the PowerApps community site. Engage today with the community, and grow your skills much faster than you would on your own.
+With PowerApps and the information in this topic, you're now ready to go out into the world and start to conquer it one app at a time. As you continue on your journey, below are some handy links to help, such as the link to the PowerApps community site. Engage today with the community, and grow your skills much faster than you would on your own.
 
-[**Formula reference**](https://docs.microsoft.com/powerapps/formula-reference) - Always a great way to become inspired, just browsing some of the default functions.
+[**Formula reference**](formula-reference.md) - Always a great way to become inspired, just browsing some of the default functions.
 
 [**PowerApps community**](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) - See examples, engage with others, ask and answer questions, and help the PowerApps community grow.
