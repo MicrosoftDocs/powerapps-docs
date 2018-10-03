@@ -132,13 +132,13 @@ If you still need a variable (there are many cases that you do), this will help 
 
 - Global variables are what you most commonly think of first. Use the [Set](functions/function-set.md) function to specify a value for a global variable and make it available throughout your app:
 
-```Set(YourVariable, YourValue)```
+    ```Set(YourVariable, YourValue)```
 
 Then you can reference *YourVariable* by name throughout your app.
 
 - Context variables are available only on the screen where they're defined. When you leave the screen, they're reset. They're often used, for example, to store information passed from a previous screen or to track if the form has been submitted. To set a context variable, use the [UpdateContext](functions/function-updatecontext.md) function, as in this example:
 
-```UpdateContext( { Submitted: "true" } )```
+    ```UpdateContext( { Submitted: "true" } )```
 
 This example sets the value of a variable, named **Submitted**, to **true**. You might add this formula to the **OnSelect** property of a submit button to track that the information has been submitted and change all of the fields to read-only.
 
