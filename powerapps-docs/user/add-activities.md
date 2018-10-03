@@ -63,77 +63,47 @@ Quickly create a new activity using the shortcut on the nav bar and then link it
   
 ## Add a task  
   
-1. Open the record you want to add the activity to.  
+1. Open the record that you want to add the activity to. For exampole, contact record.
   
-2. In the middle of the page, click **Activities** > **Add Task**.  
-  
-3. [!INCLUDE[proc_handy_infotips](../includes/proc-handy-infotips.md)]  
+2. In the **Timeline** section, click  **plus sign** > **Task**.
   
 4. The **Owner** field is set to the current user by default. If you want to reassign the task, click the lookup icon, and then select another user or team.  
   
-5. Click **OK** to save the task.  
+5. When you're done filling in the form, click **Save** to save the activity. 
   
 ## Add an email  
  To add an email activity to a record, you must first save the record you are adding the activity to.  
   
 1. Open the record that you want to add the activity to. For exampole, contact record.
   
-2. In the **Timeline** section, click  **plus sign** > **E-mail**.
+2. In the **Timeline** section, click  **plus sign** > **E-mail**. 
+
+3. Fill in the subject of the email and use the space provide to write the email.
   
-2. In the middle of the page, click **Activities** > **More Commands**![More Commands button in Appointment Activity](../customer-service/media/morecommands.gif "More Commands button in Appointment Activity") > **Email**.  
+4. To add an attachment to the email, save the email. Then in the **Attachments** sectoion, click **+** to add an attachement.  
   
-3. [!INCLUDE[proc_handy_infotips](../includes/proc-handy-infotips.md)]  
+5. To use a template for the email body, on the command bar, click **Insert Template**, and then select the template.   
   
-4. To save the record, click **Save**.  
-  
-5. To add an attachment to the email, under **Attachments**, on the right, click **+**.  
-  
-6. To use a template for the email body, in the email editor, click **Insert Template**, and then select the template.  
-  
-7. To attach an article to the email, in the email editor, click **Insert Article**, and then add the article.  
-  
-8. Click **Save**.  
+6. When you're done filling in the form, click **Send**. 
   
 ## Add an appointment  
  To add an appointment activity to a record, you must first save the record you are adding the activity to.  
   
-1. Open the record you want to add the activity to.  
+1. Open the record that you want to add the activity to. For exampole, contact record.
   
-2. In the middle of the page, click **Activities** > **More Commands**![More Commands button in Appointment Activity](../customer-service/media/morecommands.gif "More Commands button in Appointment Activity") > **Appointment**.  
+2. In the **Timeline** section, click  **plus sign** > **Appointment**.  
   
-3. [!INCLUDE[proc_handy_infotips](../includes/proc-handy-infotips.md)]  
+3. Use the tooltips to fill in the required information.
   
-4. To save the record, click **Save**.  
-  
+4. When you're done filling in the form, click **Save** to save the appointment.
+
 ## Add notes  
- You can also easily add notes in the activities area. And if you’re on the latest version of [!INCLUDE[pn_CRM_Online](../includes/pn-crm-online.md)], you have the benefits of using OneNote to take or review customer notes from within your Dynamics 365 records. For more information on OneNote, see: [Set up OneNote integration in Dynamics 365](../admin/set-up-onenote-integration-in-dynamics-365.md).  
+ You can also easily add notes in the activities area.
   
- This doesn’t replace the current Notes feature, but gives you another way to access notes stored in OneNote.  
+1. Open the record that you want to add the activity to. For exampole, contact record.
   
- ![Add notes or OneNote notes in Dynamics 365](../customer-service/media/addnotesoronenotenotes.png "Add notes or OneNote notes in Dynamics 365")  
+2. In the **Timeline** section start typing your notes. Use **Add an attachement** to add any attachements.
+
+3. When you're done filling in the form, click **Save** to save the note.
   
-1.  Open the record you want to add the activity to.  
   
-2.  In the middle of the page, click **Notes** or **OneNote**. Then do one of the following:  
-  
-- In the **Notes** area, start typing your notes.  
-  
-- In the **OneNote** area, select a notebook to make entries.  
-  
-  ![Add Meeting Notes in OneNote](../customer-service/media/addonenotenotes.png "Add Meeting Notes in OneNote")  
-  
-  > [!NOTE]
-  >  The notebook is stored in the associated SharePoint folder for the record. If there is more than one associated folder, the notebook is created in the first folder. For more information see, [Set up OneNote integration in Dynamics 365](../admin/set-up-onenote-integration-in-dynamics-365.md).  
-  
-## Create an activity and associate it with a customer  
- You can also create an activity from the Activity area and then link it to a customer or support case.  
-  
-1. Go to your work area.  
-  
-2. [!INCLUDE[proc_activities](../includes/proc-activities.md)]  
-  
-3. On the command bar, select and add an activity. [!INCLUDE[proc_handy_infotips](../includes/proc-handy-infotips.md)]  
-  
-4. Use the **Regarding** field on the activity form to associate it with a customer or support case.  
-  
-### See Also  
