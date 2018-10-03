@@ -55,7 +55,7 @@ The fastest way to add an activity is to use the shortcut on the nav barand then
 
      In the **Notes** area, provide a summary of the conversation with the customer. 
   
-     The **Call To** field is automatically populated with the record you added the phone call activity to. You can select a different recorded if needed.  
+     The **Call To** field is automatically populated with the record you added the phone call activity to. You can select a different record if needed.  
   
 4.  By default, the direction is set to **Outgoing**. You can change it to **Incoming** by clicking **Outgoing**. 
   
