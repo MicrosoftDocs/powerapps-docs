@@ -134,13 +134,13 @@ If you still need a variable (there are many cases that you do), this will help 
 
     ```Set(YourVariable, YourValue)```
 
-Then you can reference *YourVariable* by name throughout your app.
+    Then you can reference *YourVariable* by name throughout your app.
 
 - Context variables are available only on the screen where they're defined. When you leave the screen, they're reset. They're often used, for example, to store information passed from a previous screen or to track if the form has been submitted. To set a context variable, use the [UpdateContext](functions/function-updatecontext.md) function, as in this example:
 
     ```UpdateContext( { Submitted: "true" } )```
 
-This example sets the value of a variable, named **Submitted**, to **true**. You might add this formula to the **OnSelect** property of a submit button to track that the information has been submitted and change all of the fields to read-only.
+    This example sets the value of a variable, named **Submitted**, to **true**. You might add this formula to the **OnSelect** property of a submit button to track that the information has been submitted and change all of the fields to read-only.
 
 - Collections store tables of information that can be updated individually. Use the [Collect](functions/function-clear-collect-clearcollect.md) to create a shopping cart, for example, as the user tags various SharePoint items they want to send. A community [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Learn-about-PowerApps-Collections/m-p/89180) shows that concept in action.
 
