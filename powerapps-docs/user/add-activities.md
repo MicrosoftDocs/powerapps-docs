@@ -26,15 +26,15 @@ Use **Activities** in a Model-driven app, to keep track of your all your communi
 - You can also choose the filter pane to filter the activities by record type and date. 
 - When a new activity is created, you will get a **What you missed** notification in the **TIMELINE** area.
   
- ![Timeline view of Activities in PowerApps](user/media/TimelineViewOfActivity.png "Timeline view of Activities in PowerApps")  
+ ![Timeline view of Activities in PowerApps](media/TimelineViewOfActivity.png "Timeline view of Activities in PowerApps")  
  
 **Add an activity from the nav bar**
  
 Quickly create a new activity using the shortcut on the nav bar and then link it to a record. For example, you can create a phone call activity and then link it to a contact in the system using the **Regarding** field.
 
-1. On the nav bar, click the **plus sign**![Create record button](user/media/create-record-button.png "Create record button"), and then click **Activities**. 
+1. On the nav bar, click the **plus sign**![Create record button](media/create-record-button.png "Create record button"), and then click **Activities**. 
 
- ![Shortcut to add an Activities in PowerApps](user/media/QuickCreate.png "Shortcut to add an Activities in PowerApps")  
+ ![Shortcut to add an Activities in PowerApps](media/QuickCreate.png "Shortcut to add an Activities in PowerApps")  
  
 2. Choose the type of activity you want too add.
 
@@ -49,7 +49,7 @@ Quickly create a new activity using the shortcut on the nav bar and then link it
   
 2.  In the **Timeline** section, click  **plus sign** > **Phone Call**.  
 
-![Add a Phone Activity in PowerApps](user/media/addphonecall.png "Add a Phone Activity in PowerApps")
+![Add a Phone Activity in PowerApps](media/addphonecall.png "Add a Phone Activity in PowerApps")
   
 3.  In the Description area, provide a summary of the conversation with the customer. You must fill in this area before you can save the phone call.  
   
