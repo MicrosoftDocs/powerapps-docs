@@ -30,7 +30,7 @@ Use **Activities** in a Model-driven app, to keep track of your all your communi
  
 **Add an activity from the nav bar**
  
-The fastest way to add an activity is to use the shortcut on the nav barand then link the activity to a record. For example, you can create a phone call activity and then link it to a contact in the system using the **Regarding** field.
+The fastest way to add an activity is to use the shortcut on the nav bar and then link it to a record. For example, you can create a phone call activity and then link it to a contact in the system using the **Regarding** field.
 
 1. On the nav bar, click the **plus sign**![Create record button](media/create-record-button.png "Create record button"), and then click **Activities**. 
 
