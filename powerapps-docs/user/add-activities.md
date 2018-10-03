@@ -51,20 +51,15 @@ Quickly create a new activity using the shortcut on the nav bar and then link it
 
 ![Add a Phone Activity in PowerApps](media/addphonecall.png "Add a Phone Activity in PowerApps")
   
-3.  In the Description area, provide a summary of the conversation with the customer. You must fill in this area before you can save the phone call.  
+3.  Fill in the **Subject** of the call.
+
+     In the **Notes** area, provide a summary of the conversation with the customer. 
   
-     The **Call With** field is automatically populated with the customer name you select in the account or contact field. You can select a different contact, account, lead, or user record if required.  
+     The **Call To** field is automatically populated with the record you added the phone call activity to. You can select a different recorded if needed.  
   
-4.  By default, the direction is set to **Outgoing**. You can change it to **Incoming** by clicking or tapping the **Phone Support** button in the list of case records. To select multiple records, click **Look Up More Records**, and then in the **Look Up Records** dialog box, select the records.  
+4.  By default, the direction is set to **Outgoing**. You can change it to **Incoming** by clicking **Outgoing**. 
   
-5.  Select the **Left voice mail** check box if you make an outgoing call to a customer and leave a voice mail for them. You can also select this check box if a customer leaves a voice mail message when they call you.  
-  
-6.  Click **OK** to save the activity.  
-  
-> [!NOTE]
->  By default, every phone call activity that you add in context of a record is marked Completed when the record is saved at least once. If you do not want every phone call activity to be marked Completed by default, you can use the OrgDBOrgSetting MakeSocialPanePhoneCallCompleted and set it to **false**.  [Learn more about OrgDBOrgSettings](https://support.microsoft.com/en-us/help/2691237/orgdborgsettings-tool-for-microsoft-dynamics-crm). 
-> 
->  However, if you add a phone call activity to an unsaved record, or if you create a new activity and then set the **Regarding** field of the activity to another entity record, the activity is set to an Open state. You can click the **Complete** link to close the activity as **Completed**. The **Complete** link is available only after you save the case record at least once. 
+6.  When you're done filling in the form, click **Save** to save the activity.  
   
 ## Add a task  
   
@@ -81,7 +76,9 @@ Quickly create a new activity using the shortcut on the nav bar and then link it
 ## Add an email  
  To add an email activity to a record, you must first save the record you are adding the activity to.  
   
-1. Open the record you want to add the activity to.  
+1. Open the record that you want to add the activity to. For exampole, contact record.
+  
+2. In the **Timeline** section, click  **plus sign** > **E-mail**.
   
 2. In the middle of the page, click **Activities** > **More Commands**![More Commands button in Appointment Activity](../customer-service/media/morecommands.gif "More Commands button in Appointment Activity") > **Email**.  
   
