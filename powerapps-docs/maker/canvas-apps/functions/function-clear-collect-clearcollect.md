@@ -93,11 +93,11 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this function, replacing *ListName* with the name of your SharePoint list:<br>
 **Collect**(**MySPCollection**, *ListName*)
 
-  This function creates a collection that's named **MySPCollection** and that contains the same data as your SharePoint list.
+    This function creates a collection that's named **MySPCollection** and that contains the same data as your SharePoint list.
     
 1. While holding down the Alt key, select the button.
 
 1. (optional) To preview the collection that you created, select **Collections** on the **File menu**.
 
-For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery, see [Show data in a gallery](../connections/connection-sharepoint-online.md#show-data-in-a-gallery). For information about how to show data from a SharePoint list in a form (with drop-down lists, date pickers, and people pickers), see [Edit form and 
+For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery, see [Show data in a gallery](../connections/connection-sharepoint-online.md#show-data-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers), see [Edit form and 
 Display form controls](../controls/control-form-detail).
