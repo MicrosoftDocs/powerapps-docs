@@ -1,1 +1,0 @@
-**Settings** appears on the nav bar.

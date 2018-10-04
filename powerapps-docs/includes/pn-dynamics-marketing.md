@@ -1,1 +1,0 @@
-Dynamics Marketing

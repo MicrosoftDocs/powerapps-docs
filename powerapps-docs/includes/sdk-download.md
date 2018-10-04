@@ -1,1 +1,0 @@
-[Download the Microsoft Dynamics CRM SDK package.](http://go.microsoft.com/fwlink/?LinkID=627298)

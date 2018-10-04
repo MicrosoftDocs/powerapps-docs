@@ -1,1 +1,0 @@
-Go to **Customizations** > **Customize the System**.

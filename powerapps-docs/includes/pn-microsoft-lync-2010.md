@@ -1,1 +1,0 @@
-Microsoft Lync 2010

@@ -1,2 +1,0 @@
-This feature was introduced in CRM Online 2015 Update and CRM 2015 (on-premises).   
- Interested in getting this feature? [Find your Dynamics 365 administrator or support person.](../basics/find-administrator-support.md)

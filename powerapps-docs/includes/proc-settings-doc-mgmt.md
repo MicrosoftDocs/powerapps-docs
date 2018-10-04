@@ -1,1 +1,0 @@
-Go to **Settings** > **Document Management**.

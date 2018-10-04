@@ -1,1 +1,0 @@
-security token service (STS)

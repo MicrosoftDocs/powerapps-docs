@@ -1,1 +1,0 @@
-System Center Configuration Manager
