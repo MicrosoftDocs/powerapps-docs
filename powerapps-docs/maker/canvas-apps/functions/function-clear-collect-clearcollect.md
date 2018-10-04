@@ -87,7 +87,7 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 
 ### Put a SharePoint list into a collection
 
-1. [Create a connection to a SharePoint list](connect-to-sharepoint.md). 
+1. [Create a connection to a SharePoint list](../connect-to-sharepoint.md). 
 
 1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this function, replacing *ListName* with the name of your SharePoint list:<br>
 **Collect**(**MySPCollection**, *ListName*)
