@@ -82,8 +82,9 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
    
     This function creates a collection that's named **Products** and that contains a row for each of three product names.
     
-2. While holding down the Alt key, select the button.
-3. (optional) To preview the collection that you created, select **Collections** on the **File menu**.
+1. While holding down the Alt key, select the button.
+
+1. (optional) To preview the collection that you created, select **Collections** on the **File menu**.
 
 ### Put a SharePoint list into a collection
 
@@ -95,4 +96,8 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
   This function creates a collection that's named **MySPCollection** and that contains the same data as your SharePoint list.
     
 1. While holding down the Alt key, select the button.
-1 (optional) To preview the collection that you created, select **Collections** on the **File menu**.
+
+1. (optional) To preview the collection that you created, select **Collections** on the **File menu**.
+
+For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery).
+
