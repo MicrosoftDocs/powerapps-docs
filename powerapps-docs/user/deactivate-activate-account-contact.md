@@ -33,7 +33,7 @@ In a Model-driven app, you can deactivate an account or contact rather than dele
 2.  Select the active account or contact that you want to deactivate, on the command bar click **Deactivate**, and then confirm the deactivation.
 
  ![Deactivate an account in PowerApps](media/DeactiveAccounts.png "Deactivate an account in PowerAppss")
-DeactiveAccounts
+
 
 ## Activate an account or contact  
   
