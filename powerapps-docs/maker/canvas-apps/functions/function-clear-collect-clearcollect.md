@@ -76,10 +76,23 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 | **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Adds two records to the **IceCream** collection that includes a quantity of pistachio and Orange ice cream. |![](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>The **IceCream** data source has also been modified. |
 | **Clear( IceCream )** |Removes all records from the **IceCream** collection. |![](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** data source has also been modified. |
 
-### Step by step
+### Collect a static list
+
 1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this function:<br>**Collect(Products, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
    
-    This function creates a collection that's named **Products** that contains a row for each of three product names.
-2. Press F5, click the button, and then press the Esc key to return to the design workspace.
-3. (optional) To display a preview of the collection that you created, click **Collections**  on the **Content** tab.
+    This function creates a collection that's named **Products** and that contains a row for each of three product names.
+    
+2. While holding down the Alt key, select the button.
+3. (optional) To preview the collection that you created, select **Collections** on the **File menu**.
 
+### Put a SharePoint list into a collection
+
+1. [Create a connection to a SharePoint list](connect-to-sharepoint.md). 
+
+1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this function, replacing *ListName* with the name of your SharePoint list:<br>
+**Collect**(**MySPCollection**, *ListName*)
+
+  This function creates a collection that's named **MySPCollection** and that contains the same data as your SharePoint list.
+    
+1. While holding down the Alt key, select the button.
+1 (optional) To preview the collection that you created, select **Collections** on the **File menu**.
