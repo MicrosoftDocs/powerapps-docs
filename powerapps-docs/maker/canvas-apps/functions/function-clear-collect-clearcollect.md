@@ -99,5 +99,5 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 
 1. (optional) To preview the collection that you created, select **Collections** on the **File menu**.
 
-For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery, see [Show data in a gallery](connection-sharepoint-online.md#show-data-in-a-gallery).
-
+For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery, see [Show data in a gallery](../connections/connection-sharepoint-online.md#show-data-in-a-gallery). For information about how to show data from a SharePoint list in a form (with drop-down lists, date pickers, and people pickers), see [Edit form and 
+Display form controls](../controls/control-form-detail).
