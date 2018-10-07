@@ -31,36 +31,8 @@
       },
       "JoinTOCPlugin": [
         {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/online-management-api/toc.yml",
-          "ReferenceTOCUrl": "/rest/api/dynamics365/toc.json"
-        },
-        {
           "ConceptualTOC": "powerapps-docs/developer/common-data-service/webapi/toc.yml",
           "ReferenceTOCUrl": "/dynamics365/customer-engagement/web-api/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/org-service/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-general/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/deployment-service/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-deployment/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/package-deployer/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-packagedeployer/toc.json"
-        },
-        {
-          "ConceptualTOC": "ce/developer/workflow/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-workflow/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/xrm-tooling/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-xrmtooling/toc.json"
-        },
-        {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/virtual-entities/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-virtualentity/toc.json"
         }
       ]
     }
