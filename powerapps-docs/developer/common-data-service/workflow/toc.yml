@@ -1,13 +1,12 @@
 - name: Apply business logic using code
-  href: ../../apply-business-logic-with-code.md
-  items:
-  - name: Workflow extensions
-    href: workflow-extensions.md
-  - name: "Tutorial: Create workflow extension"
-    href: tutorial-create-workflow-extension.md
-  - name: "Sample: Create a custom workflow activity"
-    href: sample-create-custom-workflow-activity.md
-  - name: "Sample: Update next birthday using a custom workflow activity"
-    href: sample-update-next-birthday-using-custom-workflow-activity.md
-  - name: "Sample: Calculate a credit score with a custom workflow activity"
-    href: sample-calculate-credit-score-custom-workflow-activity.md
+  href: ../apply-business-logic-with-code.md
+- name: Workflow extensions
+  href: workflow-extensions.md
+- name: "Tutorial: Create workflow extension"
+  href: tutorial-create-workflow-extension.md
+- name: "Sample: Create a custom workflow activity"
+  href: sample-create-custom-workflow-activity.md
+- name: "Sample: Update next birthday using a custom workflow activity"
+  href: sample-update-next-birthday-using-custom-workflow-activity.md
+- name: "Sample: Calculate a credit score with a custom workflow activity"
+  href: sample-calculate-credit-score-custom-workflow-activity.md
