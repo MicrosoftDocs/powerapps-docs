@@ -56,9 +56,6 @@
       href: duplicaterule-entities.md
   - name: Delete data in bulk
     href: delete-data-bulk.md
-    items:
-    - name: Run bulk delete
-      href: run-bulk-delete.md
   - name: Use Optimistic Concurrency to reduce potential data loss
     href: optimistic-concurrency.md
   - name: Impersonate another user
