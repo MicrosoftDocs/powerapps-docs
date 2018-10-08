@@ -36,7 +36,7 @@ The formula is evaluated for each record of the table.
 
 The **DropColumns** function excludes columns from a table.  All other columns remain unmodified. **DropColumns** excludes columns, and **ShowColumns** includes columns.
 
-Use the **RenameColumns** function to rename columns of a table by providing argument pairs of old and new column names.  Old column names must already exist in the table while new column names must not exist. A column name may appear only once in the argument list as either an old or new column name.  To rename a column to an existing column name, first drop the existing column with **DropColumns** or rename it out of the way with a nested call to **RenameColumns**.
+Use the **RenameColumns** function to rename one or more columns of a table by providing at least one argument pair that specifies the name of a column that the table contains (the old name, which you want to replace) and the name of a column that the table doesn't contain (the new name, which you want to use). The old name must already exist in the table, and the new name must not exist. Each column name may appear only once in the argument list as either an old column name or a new column name. To rename a column to an existing column name, first drop the existing column with **DropColumns**, or rename the existing column out of the way by nesting one **RenameColumns** function within another.
 
 The **ShowColumns** function includes columns of a table and drops all other columns. You can use **ShowColumns** to create a single-column table from a multi-column table.  **ShowColumns** includes columns, and **DropColumns** excludes columns.  
 
@@ -59,8 +59,8 @@ For all these functions, the result is a new table with the transform applied.  
 **RenameColumns**( *Table*, *OldColumneName1*, *NewColumnName1* [, *OldColumnName2*, *NewColumnName2*, ... ] )
 
 * *Table* - Required.  Table to operate on.
-* *OldColumnName(s)* - Required. Name(s) of the column to rename from the original table. These names must be a string (for example **"Name"** with double quotes included).
-* *NewColumnName(s)* - Required. Replacement name(s). You must specify a string (for example, **"Customer Name"** with double quotes included) for this argument.
+* *OldColumnName* - Required. Name of a column to rename from the original table. This element appears first in the argument pair (or first in each argument pair if the formula includes more than one pair). This name must be a string (for example **"Name"** with double quotation marks included).
+* *NewColumnName* - Required. Replacement name. This element appears last in the argument pair (or last in each argument pair if the formula includes more than one pair). You must specify a string (for example, **"Customer Name"** with double quotation marks included) for this argument.
 
 **ShowColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
 
