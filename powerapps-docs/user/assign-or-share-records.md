@@ -34,7 +34,7 @@ You can assign and share **Contact** records but you can only share **Account** 
 3. In the command bar, click the **Assign**.
 
 > [!NOTE]
-> If you want to keep owership of the record but let someone else work with them click **Share** instead. User the handy tooltips to guide you through the **Share** optoin. Remeber you can only share **Account** records, there is no assign option.
+> If you want to keep owership of the record but let someone else work with them click **Share** instead. Then use the handy tooltips to guide you through the **Share** optoin. Remeber you can only share **Account** records, there is no assign option.
   
 4. In the **Assign Customer** dialog box, in the **Assign to** area choose **Me** or **User or Team**.
   
