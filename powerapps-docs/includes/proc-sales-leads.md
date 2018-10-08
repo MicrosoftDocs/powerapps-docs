@@ -1,1 +1,0 @@
-Go to **Sales** > **Leads**.

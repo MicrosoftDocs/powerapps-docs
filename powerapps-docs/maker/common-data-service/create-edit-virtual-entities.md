@@ -68,7 +68,8 @@ You create fields for a Data Source in the same way as any other entity. For dat
 > [!NOTE]
 > The Data Source Secret attribute is only available with fields added to a Data Source form.
 
-![Data source secret attribute](media/datasourcesecret.png)
+> [!div class="mx-imgBorder"] 
+> ![Data source secret attribute](media/datasourcesecret.png)
   
 <a name="createVirtualEntity"></a> 
   
@@ -89,8 +90,9 @@ Part of the name of any virtual entity you create is the customization prefix. T
   
 1. In solution explorer, create a new entity. To do this, select **Entities** in the left navigation pane, and then select **New**.  
 2. On the **General** tab of the **Entity Definition**, select **Virtual Entity**, and then in the **Data Source** drop down list, select the data source that you want.  
-  
-    ![Virtual Entity option on entity definition](media/virtual-entity-click-option.png)  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Virtual Entity option on entity definition](media/virtual-entity-click-option.png)  
   
 1. On the Entity Definition, complete the following required fields.
   
@@ -101,7 +103,8 @@ Part of the name of any virtual entity you create is the customization prefix. T
       
     Here's an example of a virtual entity named *Movie* that uses a Azure Cosmos DB data provider to access document files.  
       
-    ![Virtual entity definition using the Azure Cosmos DB data provider](media/virtual-entity-definition.PNG)  
+    > [!div class="mx-imgBorder"] 
+    > ![Virtual entity definition using the Azure Cosmos DB data provider](media/virtual-entity-definition.PNG)  
       
     > [!IMPORTANT]
     > Several options, such as Access Teams, Queues, and Quick Create,  aren't available with virtual entities. More Information [Considerations when you use virtual entities](#considerations)  

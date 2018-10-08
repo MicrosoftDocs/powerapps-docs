@@ -32,9 +32,9 @@ Note that you need to preview the app in order for Timer to run in the designer.
 ## Additional properties
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
 
-**AutoPause** – Whether an audio or video clip automatically pauses if the user navigates to a different screen.
+**AutoPause** – Whether the timer control automatically pauses if the user navigates to a different screen.
 
-**AutoStart** – Whether an audio or video control automatically starts to play a clip when the user navigates to the screen that contains that control.
+**AutoStart** – Whether the timer control automatically starts to play when the user navigates to the screen that contains that control.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -86,7 +86,7 @@ Note that you need to preview the app in order for Timer to run in the designer.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
-**Start** – Whether an audio or video clip plays.
+**Start** – Whether the timer starts.
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
 

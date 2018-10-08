@@ -153,7 +153,7 @@ search.app:
 |Email Send Polling Frequency|Normal polling frequency used for sending email in Outlook.|  
 |Min Address Synchronization Frequency|Normal polling frequency used for address book synchronization in Outlook.|  
 |Min Offline Synchronization Frequency|Normal polling frequency used for background offline synchronization in Outlook.|  
-|Min Synchronization Frequency|Minimum allowed time between scheduled [!INCLUDEOutlooksynchronizations.|  
+|Min Synchronization Frequency|Minimum allowed time between scheduled Outlook synchronizations.|  
 |Auto-Tag Max Cycles|Maximum number of aggressive polling cycles executed for email auto-tagging when a new email is received.|  
 |Auto-Tag Interval|Normal polling frequency used for email auto-tagging in Outlook.|  
 |ISV Config|Service Calendar Appearance Configuration|You can define visual styles for service calendars.

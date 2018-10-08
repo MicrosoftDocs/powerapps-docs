@@ -1,1 +1,0 @@
-Microsoft Dynamics 365 for Outlook with Offline Access

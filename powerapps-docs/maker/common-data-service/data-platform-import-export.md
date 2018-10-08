@@ -41,21 +41,25 @@ Every entity has required fields that must exist in your input file. We recommen
     > [!NOTE]
     > To import data into more than one entity, in the top menu, select **Get Data**. Select **Get data from Excel**. Then you can choose multiple entities and select **Next**.
 
-    ![Example of importing data to an **Account** entity](./media/data-platform-import-export/import-data-to-account.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Example of importing data to an **Account** entity](./media/data-platform-import-export/import-data-to-account.png)
 
     d. On the **Import data** screen, choose whether to import data from an Excel or a CSV file.  
     e. Select **Upload**.  
     f. Choose your file. Follow the prompts to upload your file.  
 
-    ![Example of uploading a file to an **Account** entity](./media/data-platform-import-export/upload-account.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Example of uploading a file to an **Account** entity](./media/data-platform-import-export/upload-account.png)
 
     g. After the file is uploaded and **Mapping status** is green, select **Import** in the top-right corner. Refer to the next section to navigate and fix any mapping errors.  
 
-    ![Example of a successful **Mapping status** and **Import** button](./media/data-platform-import-export/success-map-imp.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Example of a successful **Mapping status** and **Import** button](./media/data-platform-import-export/success-map-imp.png)
 
     h. After the import finishes successfully, you'll see the total number of inserts and updates.  
 
-    ![Example of a successful import that shows the number of inserts and updates](./media/data-platform-import-export/success-imp-insert.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Example of a successful import that shows the number of inserts and updates](./media/data-platform-import-export/success-imp-insert.png)
 
     > [!NOTE]
     > Use the Upsert (Update or Insert) logic to either update the record, if it already exists, or to insert a new record.
@@ -73,11 +77,14 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
     > [!TIP]
     > Depending on whether you get a Warning or an Error, inspect **Unmapped fields** or **Fields with error** through the drop-down menu in **Field Mappings**.
 
-    ![Example of a partial match due to warnings with field mappings](./media/data-platform-import-export/partial-match.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Example of a partial match due to warnings with field mappings](./media/data-platform-import-export/partial-match.png)
 
-    ![Example of navigating field mapping issues](./media/data-platform-import-export/navigate-mappings.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Example of navigating field mapping issues](./media/data-platform-import-export/navigate-mappings.png)
 
-    ![Example of inspecting and rectifying warnings with field mappings](./media/data-platform-import-export/inspect-warnings.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Example of inspecting and rectifying warnings with field mappings](./media/data-platform-import-export/inspect-warnings.png)
 
 2. After you resolve all the errors and warnings, select **Save Changes** in the top-right corner. You'll go back to the **Import Data** screen.
 3. When the **Mapping Status** column shows **Completed** in green, select **Import** in the top-right corner.
@@ -90,16 +97,19 @@ Common Data Service for Apps entities use a primary key to uniquely identify rec
 Example:  
 The primary key for an **Account** entity is **accountid**.
 
-   ![Sample export file from an **Account** entity showing **accountid** as the primary key](./media/data-platform-import-export/export-pk.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Sample export file from an **Account** entity showing **accountid** as the primary key](./media/data-platform-import-export/export-pk.png)
 
 Sometimes, a primary key might not work when you integrate data from an external source. Use Common Data Service to define alternate keys that uniquely identify a record in place of the primary key.
 
 Example:  
 For an **Account** entity, you might set **transactioncurrencyid** as an alternate key by using a natural key-based identification. For example, use **US Dollar** instead of the GUID value **88c6c893-5b45-e811-a953-000d3a33bcb9** shown previously. You can also choose **currency symbol** or **currency name** as keys.
 
-   ![Example of creating an alternate key on a **Currency** entity](./media/data-platform-import-export/create-ak.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Example of creating an alternate key on a **Currency** entity](./media/data-platform-import-export/create-ak.png)
 
-   ![Sample export file from an **Account** entity showing **currency name** as a natural key](./media/data-platform-import-export/export-nk.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Sample export file from an **Account** entity showing **currency name** as a natural key](./media/data-platform-import-export/export-nk.png)
 
 Users can still use primary keys as identifiers after they specify alternate keys. In the preceding sample, the first file is still valid if GUIDs are valid data.
 
@@ -111,14 +121,16 @@ You can do a one-time data export from a standard entity or custom entity. And y
 1. Select the entity that you want to export data from.
 1. Select the ellipsis or menu at the top. Select **Export**. Select **Data**.
 
-    ![Example of exporting data from an **Account** entity](./media/data-platform-import-export/export-account.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Example of exporting data from an **Account** entity](./media/data-platform-import-export/export-account.png)
 
     > [!NOTE]
     > To export data from multiple entities, in the top menu, select **Export**. Select **Data**. You can choose multiple entities.
 
 1. After the export finishes successfully, you can **Download exported data**. This download gives you a link to the downloadable CSV file.
 
-    ![Sample export that shows successful export with link downloadable file](./media/data-platform-import-export/export-success.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Sample export that shows successful export with link downloadable file](./media/data-platform-import-export/export-success.png)
 
 ## Unsupported data types
 

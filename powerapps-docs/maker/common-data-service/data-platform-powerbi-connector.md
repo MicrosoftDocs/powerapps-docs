@@ -38,7 +38,8 @@ To use Power BI with the Common Data Service for Apps, you need the following:
 
 3. Copy the root of the URL in the new tab, this is the unique URL for your environment. The URL will be in the format of **https://yourenvironmentid.crm.dynamics.com/** make sure not to copy the rest of the URL. Keep this somewhere handy so you can use it when creating your PowerBI report.
 
-    ![CDS for Apps Environment](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "CDS for Apps Environment")
+    > [!div class="mx-imgBorder"] 
+    > ![CDS for Apps Environment](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "CDS for Apps Environment")
 
 ## Connecting to Common Data Service for Apps from Power BI Desktop
 

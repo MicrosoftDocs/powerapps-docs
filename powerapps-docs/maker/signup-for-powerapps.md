@@ -88,7 +88,7 @@ When this dialog box appears, select **Start**, and then start to use [PowerApps
     In the [complete list of connectors](./canvas-apps/connections-list.md), premium connectors appear with a badge:
 
     ![](./media/signup-for-powerapps/premium-badge.png)
-* **Access to the PowerApps admin center**, in which you can manage your environments, databases, user permissions, and data policies. [Learn more](../administrator/introduction-to-the-admin-center.md)
+* **Access to the PowerApps admin center**, in which you can manage your environments, databases, user permissions, and data policies. [Learn more](../administrator/admin-guide.md)
 * **Create apps in model-driven mode** in which you add components to an app and let PowerApps create its layout and other interface elements. 
 
 For more information about functionality and capacity in the trial license, see the [pricing page](https://powerapps.microsoft.com/pricing/).

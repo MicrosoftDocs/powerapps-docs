@@ -62,7 +62,7 @@ Calls made from an API connected through an app (for example, the SQL API or the
 You should use these addresses if, for example, you must whitelist IP addresses for an Azure SQL database.
 
 > [!IMPORTANT]
->   If you have existing configurations, please update them as soon as possible before September 1, 2018 so they include and match the IP addresses in this list for the regions where your PowerApps apps exist.
+>   If you have existing configurations, please update them as soon as possible before September 30, 2018 so they include and match the IP addresses in this list for the regions where your PowerApps apps exist.
 
 | Region | Outbound IP |
 | --- | --- |
@@ -93,3 +93,6 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | *.azureedge.net |https |WebAuth |
 | *.blob.core.windows.net |https |Blob storage |
 | vortex.data.microsoft.com |https |Telemetry |
+
+> [!NOTE]
+> If you're using a VPN, it must be configured to exclude localhost from tunneling for PowerApps Mobile.

@@ -1,1 +1,0 @@
-Deploying and administering Microsoft Dynamics 365
