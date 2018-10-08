@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.date: 08/24/2018
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -36,7 +36,7 @@ The formula is evaluated for each record of the table.
 
 The **DropColumns** function excludes columns from a table.  All other columns remain unmodified. **DropColumns** excludes columns, and **ShowColumns** includes columns.
 
-The **RenameColumns** function renames columns of a table. All other columns retain their original names.
+Use the **RenameColumns** function to rename columns of a table by providing argument pairs of old and new column names.  Old column names must already exist in the table while new column names must not exist. A column name may appear only once in the argument list as either an old or new column name.  To rename a column to an existing column name, first drop the existing column with **DropColumns** or rename it out of the way with a nested call to **RenameColumns**.
 
 The **ShowColumns** function includes columns of a table and drops all other columns. You can use **ShowColumns** to create a single-column table from a multi-column table.  **ShowColumns** includes columns, and **DropColumns** excludes columns.  
 
@@ -56,11 +56,11 @@ For all these functions, the result is a new table with the transform applied.  
 * *Table* - Required.  Table to operate on.
 * *ColumnName(s)* - Required. Name(s) of the column(s) to drop. You must specify a string (for example, **"Name"** with double quotes included) for this argument.
 
-**RenameColumns**( *Table*, *OldColumneName*, *NewColumnName* )
+**RenameColumns**( *Table*, *OldColumneName1*, *NewColumnName1* [, *OldColumnName2*, *NewColumnName2*, ... ] )
 
 * *Table* - Required.  Table to operate on.
-* *OldColumnName* - Required. Name of the column to rename. This name must be a string (for example **"Name"** with double quotes included).
-* *NewColumnName* - Required. Replacement name. You must specify a string (for example, **"Customer Name"** with double quotes included) for this argument.
+* *OldColumnName(s)* - Required. Name(s) of the column to rename from the original table. These names must be a string (for example **"Name"** with double quotes included).
+* *NewColumnName(s)* - Required. Replacement name(s). You must specify a string (for example, **"Customer Name"** with double quotes included) for this argument.
 
 **ShowColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
 
@@ -80,6 +80,7 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 | **DropColumns( IceCreamSales, "UnitPrice" )** |Excludes the **UnitPrice** column from the result. Use this function to exclude columns, and use **ShowColumns** to include them. |![](media/function-table-shaping/icecream-drop-price.png) |
 | **ShowColumns( IceCreamSales, "Flavor" )** |Includes only the **Flavor** column in the result. Use this function include columns, and use **DropColumns** to exclude them. |![](media/function-table-shaping/icecream-select-flavor.png) |
 | **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Renames the **UnitPrice** colum in the result. |![](media/function-table-shaping/icecream-rename-price.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Renames the **UnitPrice** and **QuantitySold** columns in the result. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
 | **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Performs the following table transforms in order, starting from the inside of the formula: <ol><li>Adds a **Revenue** column based on the per-record calculation of **UnitPrice * Quantity**.<li>Renames **UnitPrice** to **Price**.<li>Excludes the **Quantity** column.</ol>  Note that order is important. For example, we can't calculate with **UnitPrice** after it has been renamed. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### Step by step
