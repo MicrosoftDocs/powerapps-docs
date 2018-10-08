@@ -42,14 +42,12 @@
     - name: Create auto-number attributes
       href: create-auto-number-attributes.md
   - name: Detect duplicate data
-    href: detect-duplicate-data-for-developers.md
+    href: detect-duplicate-data-using-code.md
     items:
-    - name: Enable and Disable duplicate detection
+    - name: Enable and disable duplicate detection
       href: enable-disable-duplicate-detection.md
     - name: Run duplicate detection
       href: run-duplicate-detection.md
-    - name: Manage duplicate detection for create and update operations
-      href: duplicate-detection-create-update.md
     - name: Duplicate detection messages
       href: duplicate-detection-messages.md
     - name: Duplicate Rule entities
