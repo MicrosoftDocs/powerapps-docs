@@ -42,7 +42,7 @@
     - name: Create auto-number attributes
       href: create-auto-number-attributes.md
   - name: Detect duplicate data
-    href: detect-duplicate-data-using-code.md
+    href: detect-duplicate-data-with-code.md
     items:
     - name: Enable and disable duplicate detection
       href: enable-disable-duplicate-detection.md
