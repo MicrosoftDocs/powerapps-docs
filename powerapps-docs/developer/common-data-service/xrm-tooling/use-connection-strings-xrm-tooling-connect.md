@@ -28,7 +28,7 @@ With CDS for Apps, XRM tooling enables you to connect to your CDS for Apps envir
   
 ```xml  
 <connectionStrings>  
-    <add name="MyCRMServer" connectionString="AuthType=AD;Url=http://contoso:8080/Test;" />  
+    <add name="MyCDSServer" connectionString="AuthType=AD;Url=http://contoso:8080/Test;" />  
 </connectionStrings>  
 ```  
   
@@ -38,9 +38,9 @@ With CDS for Apps, XRM tooling enables you to connect to your CDS for Apps envir
  After creating the connection string, you use it to create a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object.  
   
 ```csharp  
-//Use the connection string named "MyCRMServer"  
+//Use the connection string named "MyCDSServer"  
 //from the configuration file  
-CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionStrings["MyCRMServer"].ConnectionString);  
+CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionStrings["MyCDSServer"].ConnectionString);  
 ```  
   
 > [!NOTE]
@@ -67,6 +67,9 @@ CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionSt
 |RedirectUri or ReplyUrl|Specifies the redirect URI of the application you registered in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |TokenCacheStorePath|Specifies the full path to the location where the user token cache should be stored. The running process should have access to the specified path. It is the processes responsibility to set and configure this path.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |LoginPrompt|Specifies whether the user is prompted for credentials if the credentials are not supplied. Valid values are:<br /><br /> -   `Always`: Always prompts the user to specify credentials.<br />-   `Auto`: Allows the user to select in the login control interface whether to display the prompt or not.<br />-   `Never`: Does not prompt the user to specify credentials. If using a connection method does not have a user interface, you should use this value.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
+|CertStoreName|Specifies the name of the location on the machine where certificate with thumbprint passed is located. This parameter is applicable only when the authentication type is specified as `Certificate`.|
+|CertThumbPrint| Specifies the thumbprint of the certificate to use. This parameter is applicable only when the authentication type is specified as `Certificate`.|
+|SkipDiscovery|If the parameter is set to true, the Service Uri should be used directly.| 
   
 <a name="Examples"></a>
 
@@ -91,13 +94,27 @@ The following examples show how you can use connection strings for connecting to
 ### Named account using Office 365  
   
 ```xml
-<add name="MyCRMServer" connectionString="AuthType=Office365;Username=jsmith@contoso.onmicrosoft.com; Password=passcode;Url=https://contoso.crm.dynamics.com"/>  
+<add name="MyCDSServer" 
+ connectionString="
+  AuthType=Office365;
+  Username=jsmith@contoso.onmicrosoft.com; 
+  Password=passcode;
+  Url=https://contoso.crm.dynamics.com"/>  
 ```  
   
 ### OAuth using named account in Office 365 with UX to prompt for authentication  
   
 ```xml
-<add name="MyCRMServer" connectionString="AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com; Password=passcode;Url=https://contosotest.crm.dynamics.com;AppId=<GUID>;RedirectUri =app://<GUID>;TokenCacheStorePath =c:\MyTokenCache;LoginPrompt=Auto"/>  
+<add name="MyCDSServer"
+ connectionString="
+  AuthType=OAuth;
+  Username=jsmith@contoso.onmicrosoft.com;
+  Password=passcode;
+  Url=https://contosotest.crm.dynamics.com;
+  AppId=<GUID>;
+  RedirectUri =app://<GUID>;
+  TokenCacheStorePath =c:\MyTokenCache;
+  LoginPrompt=Auto"/>  
 ```  
   
 <!-- ### OAuth using named account in CDS for Apps on-premises with UX to prompt for authentication  
