@@ -26,12 +26,11 @@ Charts in PowerApps, give you a quick view of how you’re tracking to your goal
 
 -   Click on the area of a chart to see a grid view with more details about the data in the chart.
 
--   To expand a chart, from the charts Home page grid, choose the **Expand Chart**  ![Expand chart view](media/expandviewbutton.png "Expand chart view") button.
+-   To expand a chart, click the **Expand Chart**  ![Expand chart view](media/expandviewbutton.png "Expand chart view") button.
 
--   To view records in chart or refresh the chart, choose ![More commands](media/MoreButton.png "More commands") and then choose an  action: **Refresh** or **View Records**.
+-   To view records in chart or refresh the chart, click ![More commands](media/MoreButton.png "More commands") and then choose an  action: **Refresh** or **View Records**.
             
      ![View of charts in PowerApps](media/ViewOfCharts.png "View of charts in PowerApps")  
-  
        
 
 **Change the chart view**
