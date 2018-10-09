@@ -27,7 +27,7 @@ Chagne your display settings in PowerApps to suit your preferences. For example,
   
 2.  Click **Personalization Settings**.  
   
-3.  Fill in the information, as required.  Click on a tab here to see information on settings.  
+3.  Fill in the information, as required.   
   
 4.  When you’re done, click **OK**.  
   
