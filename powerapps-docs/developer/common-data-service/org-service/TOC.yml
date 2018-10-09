@@ -93,7 +93,7 @@
           href: use-late-bound-entity-class-linq-query.md
         - name: Use LINQ to construct a query
           href: use-linq-construct-query.md
-    - name: Detect Duplicate Data
+    - name: Detect duplicate data
       href: detect-duplicate-data.md
     - name: Generate classes for early-bound programming
       href: generate-early-bound-classes.md

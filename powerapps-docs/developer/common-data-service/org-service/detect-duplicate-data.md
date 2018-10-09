@@ -41,7 +41,7 @@ if (response.DuplicateCollection.Entities.Count >= 1)
 }
 ```
 
-### Use SuppressDuplicateDetection parameter to throw errors when you create or update record
+## Use SuppressDuplicateDetection parameter to throw errors when you create or update record
 
 If you want to have the platform throw an error when a new record you create is determined to be a duplicate record, or you update an existing record so that duplicate detection rules will be evaluated, you must use the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method and apply the `SuppressDuplicateDetection` parameter set to `false`.
 
