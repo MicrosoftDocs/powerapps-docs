@@ -38,9 +38,11 @@ Charts in PowerApps, give you a quick view of how you’re tracking to your goal
  
 Changing the chart view shows you a different breakdown of your data, such as opportunities opened within a specific time period. You can change a chart view by selecting the View selector on the Grid page.
 
+For example, choose "All Opportunities", then select a different view, both chart and grid will get refreshed.
+
 ![Change a chart view in PowerApps](media/ChangeChartView.png "Change a chart view in PowerApps")
 
-For example, choose "All Opportunities", then select a different view, both chart and grid will get refreshed.
+
 
 
 
