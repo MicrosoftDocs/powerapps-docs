@@ -16,6 +16,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+---
+
 # Search for records in PowerApps
 
 You can search for records across multiple entities by using Relevance Search or Categorized Search in PowerApps. Relevance Search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. Categorized Search returns search results grouped by entity types, such as accounts, contacts or leads.
