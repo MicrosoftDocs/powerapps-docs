@@ -116,7 +116,7 @@ For more information about access and scope privileges, see [Security roles](htt
 ## Minimum privileges to run app
 When you create a custom security role, you need to assign the minimum privileges for a user to run an app. We've created a solution you can import that provides a security role with the required minimum privileges. You can either assign that role (**min prv Sec Role**) or use it as a template for a custom security role you create.  
 
-Start by downloading the solution from the Download Center: [CDS for Apps minimum privilege security role]("http://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0 (2).zip")
+Start by downloading the solution from the Download Center: [CDS for Apps minimum privilege security role](http://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0.zip)
 
 Then, follow the directions to import the solution: [Import, update, and export solutions](../maker/common-data-service/import-update-export-solutions.md).
 
