@@ -40,23 +40,23 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 |Open a lookup drop-down list| Enter|
 |Close a lookup drop-down list|Esc|
 |Open a record found in lookup with forms in edit mode| Enter|
-|Add an article to an email| Shift+Alt+A| N/A|
+|Add an article to an email| N/A|
 |Apply an email template (when editing an email message)| N/A|
 
 ## Form navigation shortcuts
 
-|Task  |Web Client | Unified Interface |
-|---------|---------|---------|
-|Move to the next option, option group, or field|Tab| Tab|
-|Move to the previous option, option group, or field| Shift+Tab | Shift+Tab |
-|Move between options in an open list, or between options in a group of options|Arrow keys| Arrow keys|
-|Go to the Command Bar| Ctrl+[ **Or** Ctrl+]| N/A |
-|Go to the landmark section of a page | N/A | Ctrl+[ |
+|Task | Unified Interface |
+|---------|---------|
+|Move to the next option, option group, or field|Tab|
+|Move to the previous option, option group, or field| Shift+Tab |
+|Move between options in an open list, or between options in a group of options|Arrow keys|
+|Go to the Command Bar| N/A |
+|Go to the landmark section of a page| Ctrl+[ |
 
 ## Editable grids (views)
 If your administrator has enabled editable grids (views), you can edit data directly in a grid (view). The following table lists the keyboard shortcuts:
 
-|Task  |Web Client and Unified Interface|
+|Task  | Unified Interface|
 |---------|---------|
 |When the focus is on a column header, sort by column | Enter key |
 |when the focus is on a column header, open filter dialog | Spacebar|
@@ -82,7 +82,7 @@ If your administrator has enabled editable grids (views), you can edit data dire
 |Move to the Refresh button when the focus is on the column header| Tab|
 
 ## Interactive dashboard shortcuts
-Interactive dashboards enable new functionality, such as filtering, sorting, and quick actions. The following table lists the keyboard shortcuts that were added to Unified Interface-based apps.
+Interactive dashboards enable new functionality, such as filtering, sorting, and quick actions. 
 
 |Task             |Unified Interface  |
 |---------|---------|
