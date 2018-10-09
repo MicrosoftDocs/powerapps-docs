@@ -174,16 +174,6 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 |Navigate between buttons | Tab |
 
 
-## Keyboard shortcuts for specific apps
-
-[Keyboard shortcuts for the Customer Service Hub](../customer-service/keyboard-navigation-support-customer-service-hub.md)
-
-[Dynamics 365 for Marketing: Keyboard shortcuts and accessibility features for content designers](../marketing/designer-shortcuts.md)
-
-[Unified Service Desk](../unified-service-desk/admin/accessibility-unified-service-desk-microsoft-dynamics-365.md)
-
-[App designer, site map designer, and My Apps page](../customize/accessibility-app-designer-site-map-designer-my-apps-page.md)
-
 ## Navigating submenus
 If you use a screen reader, follow these steps to access any of the submenus that are displayed when you hover the mouse over a navigation link.
 1. Navigate between the menu options using standard link navigation.
