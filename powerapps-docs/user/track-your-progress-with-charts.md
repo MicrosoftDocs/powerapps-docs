@@ -16,7 +16,7 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
----365CE
+  - D365CE
 ---
 # Track your progress with charts
 
