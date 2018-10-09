@@ -16,11 +16,15 @@ For information about how to configure duplicate rules in the application, see [
 
 Duplicate detection rules are defined using the following entities:
 
-- [DuplicateRule](/reference/entities/duplicaterule.md)
-- [DuplicateRuleCondition](/reference/entities/duplicaterulecondition.md)
+- [DuplicateRule](reference/entities/duplicaterule.md): To detect duplicates in the system, create a *duplicate detection rule* for a specific entity type. You can create multiple detection rules for the same entity type. However, you can publish a maximum of five duplicate detection rules per entity type at one time.  
+- [DuplicateRuleCondition](reference/entities/duplicaterulecondition.md): A rule can have one or more *duplicate detection rule conditions* that are represented by the entity. The conditions are combined by the system as in logical `AND` operation. A duplicate detection rule specifies a base entity type and a matching entity type. A duplicate rule condition specifies the name of a base attribute and the name of a matching attribute. For example, specify an account as a base entity and a contact as a matching entity to compare last names and addresses. The matching criteria consist of operators such as exactly match, first n-number of characters, or last n-number of characters. 
 
 
-These entities are related using the [DuplicateRule_DuplicateRuleConditions](/reference/entities/duplicaterule.md#BKMK_DuplicateRule_DuplicateRuleConditions) relationship.
+These two entities are related using the [DuplicateRule_DuplicateRuleConditions](/reference/entities/duplicaterule.md#BKMK_DuplicateRule_DuplicateRuleConditions) relationship.
+
+Duplicate detection works by comparing generated match codes of existing records with each new record being created. These match codes are created as each new record is created. Therefore, there is potential for one or more duplicate records to be created if they are processed at the exact same moment. In addition to detecting duplicates as they are created, you should schedule duplicate detection jobs to check for other potential duplicate records.
+ 
+ The duplicate detection rules are system-wide. You must publish them before running a duplicate detection job to detect duplicates for bulk data or retrieve duplicates for a particular entity record. To publish a duplicate detection rule, use the `PublishDuplicateRule` message(<xref href="Microsoft.Dynamics.CRM.PublishDuplicateRule?text=PublishDuplicateRule Action" /> or <xref:Microsoft.Crm.Sdk.Messages.PublishDuplicateRuleRequest>). Duplicate rule publishing is an asynchronous operation that runs in the background.
 
 The following writable attributes in these entities control the behavior of duplicate detection rules.
 

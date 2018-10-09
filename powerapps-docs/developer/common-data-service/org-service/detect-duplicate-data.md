@@ -12,19 +12,13 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Detect duplicate data using the Organization service
 
-The Organization service allows you to detect duplicate records to maintain integrity of data. For detailed information about duplicate detection feature, see . 
+The Organization service allows you to detect duplicate records to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
 
-When creating new records or updating existing records in code, duplicate detection is not enabled by default. If you aren't sure about whether the record you are creating or updating will be a duplicate, there are several strategies you can use.
+> [!NOTE]
+> Make sure there are appropriate duplicate detection rules in place. Common Data Service (CDS) for Apps includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule entities](../duplicaterule-entities.md)
 
-## Enable and disable duplicate detection
 
-You can enable duplicate detection at various levels: globally, for an entity, or for specific operations. Similarly, You can disable duplicate detection globally or for an entity type by unpublishing the duplicate detection rules or by deleting the published rules. More information: [Enable and Disable duplicate detection](../enable-disable-duplicate-detection.md)
-
-## Run Duplicate detection using UI
-
-You can run regular duplicate detection jobs and expect it will be caught later. More information: [Run bulk system jobs to detect duplicate records](/dynamics365/customer-engagement/admin/run-bulk-system-jobs-detect-duplicate-records)
-
-## Check before you programmatically create or update record
+## Use RetrieveDuplicatesRequest message to detect duplicates before you create or update record
 
 You can programmatically check whether an entity is a duplicate or will be a duplicate before creating or updating it by using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveDuplicatesRequest> class.
 
@@ -47,7 +41,7 @@ if (response.DuplicateCollection.Entities.Count >= 1)
 }
 ```
 
-### Use SuppressDuplicateDetection parameter in create/update operations to prevent duplicate records
+### Use SuppressDuplicateDetection parameter to throw errors when you create or update record
 
 If you want to have the platform throw an error when a new record you create is determined to be a duplicate record, or you update an existing record so that duplicate detection rules will be evaluated, you must use the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method and apply the `SuppressDuplicateDetection` parameter set to `false`.
 
@@ -83,9 +77,5 @@ catch (FaultException<OrganizationServiceFault> ex)
 ```
 
 ### See also
-- [Detect duplicate data using code](../detect-duplicate-with-code.md)
-- [Sample: Use duplicate detection when creating and updating records](samples/use-duplicate-detection-when-creating-and-updating-records.md)
-- [Duplicate detection messages](../duplicate-detection-messages.md)
-- [Detect duplicate data so you can fix or remove it](/dynamics365/customer-engagement/admin/detect-duplicate-data)
-- [Manage duplicate detection for create and update operations using the Web API](../webapi/manage-duplicate-detection-create-update.md)
+[Detect duplicate data using the Web API](../webapi/manage-duplicate-detection-create-update.md)
 

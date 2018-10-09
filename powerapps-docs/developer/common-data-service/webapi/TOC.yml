@@ -53,7 +53,7 @@
     href: impersonate-another-user-web-api.md
   - name: Perform conditional operations
     href: perform-conditional-operations-using-web-api.md
-  - name: Manage duplicate detection during Create and Update operations
+  - name: Detect duplicate data using Web API
     href: manage-duplicate-detection-create-update.md
 - name: Version Differences
   href: web-api-versions.md
