@@ -1,27 +1,24 @@
 ---
-title: Move around Customer Engagement apps using keyboard shortcuts | Microsoft Docs
-description: Use the keyboard shortcuts to perform common tasks in Microsoft Dynamics 365
-keywords: 
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-author: "ReneeW-CPub"
-ms.author: "renwe"
-manager: "annbe"
-ms.date: 05/30/2018
-ms.topic: article
-ms.service: dynamics-365-cross-app
-ms.assetid: 4424660b-743b-434f-9993-fb64ae4e776a
-ms.custom: 
-  - dyn365-a11y
+title: "Use keyboard shortcuts in PowerApps| MicrosoftDocs"
+ms.custom: ""
+author: mduelae
+manager: kvivek
+ms.service: powerapps
+ms.component: pa-user
+ms.topic: conceptual
+ms.date: 10/8/2018
+ms.author: mduelae
+ms.custom: ""
+ms.reviewer: ""
+ms.assetid: 
 search.audienceType: 
   - enduser
 search.app: 
+  - PowerApps
   - D365CE
----
-# Use keyboard shortcuts in Dynamics 365 Customer Engagement applications
 
-[!INCLUDE[cc-applies-to-update-9-0-0](../includes/cc_applies_to_update_9_0_0.md)]
+---
+# Use keyboard shortcuts in PowerApps
 
 Keyboard shortcuts give you an alternate way to do common tasks instead of using your mouse or tapping with your finger. They help in seamless navigation of the interface. The following keyboard shortcuts apply across Dynamics 365 Customer Engagement applications. 
 
@@ -207,7 +204,3 @@ If you’re in a record—for example, a lead—this section shows you the keybo
 - **Keyboard shortcuts in Windows**: If you are using the Windows operating system, select the following link and choose the version number from the drop-down. You can view all the shortcuts that are applicable to a Windows environment. See [Windows keyboard shortcuts](https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts). 
 - **Keyboard shortcuts in Mac**: If you are using Mac operating system, select the following link to view all the shortcuts that are applicable to a Mac environment. See [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236).
 
-## See also
-
- [Accessibility for people with disabilities](accessibility-people-with-disabilities.md)<br/>
- [Accessibility features for Customer Engagement](/dynamics365/get-started/accessibility/customer-engagement/accessibility)
