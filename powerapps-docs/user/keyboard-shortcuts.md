@@ -20,15 +20,15 @@ search.app:
 ---
 # Use keyboard shortcuts in PowerApps
 
-Keyboard shortcuts give you an alternate way to do common tasks instead of using your mouse or tapping with your finger. They help in seamless navigation of the interface. The following keyboard shortcuts apply across Dynamics 365 Customer Engagement applications. 
+Keyboard shortcuts give you an alternate way to do common tasks instead of using your mouse or tapping with your finger. They help in seamless navigation of the interface. The following keyboard shortcuts apply across PowerApps. 
 
 > [!NOTE]
 > The keyboard shortcuts described here refer to the United States keyboard layout. Keys on other keyboard layouts might not correspond exactly to the keys on a US keyboard. 
 
 ## Form shortcuts
 
-|Task  |Web Client | Unified Interface |
-|---------|---------|---------|
+|Task  | Unified Interface |
+|---------|---------|
 |Complete the command for the active option or button| Enter|  Enter|
 |Cancel a command, or close a selected list or dialog box| Esc| Esc|
 |Save| Ctrl+S |  Ctrl+S |
