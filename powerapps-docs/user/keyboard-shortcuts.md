@@ -29,19 +29,19 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 |Task  | Unified Interface |
 |---------|---------|
-|Complete the command for the active option or button| Enter|  Enter|
-|Cancel a command, or close a selected list or dialog box| Esc| Esc|
-|Save| Ctrl+S |  Ctrl+S |
-|Save and Close| Alt+S| N/A|
-|Cancel edits and close (Close) |Esc| Esc|
-|Delete the record (when forms are in edit mode)|Ctrl+D| N/A|
-|Save and then open a new form (Save and New) (when forms are in edit mode)| Ctrl+Shift+S| N/A|
-|Open the lookup menu with the most recently used items in alphabetical order|Down arrow| Down arrow|
-|Open a lookup drop-down list| Enter| Enter|
-|Close a lookup drop-down list| Esc| Esc|
-|Open a record found in lookup with forms in edit mode| Enter| Enter|
+|Complete the command for the active option or button|  Enter|
+|Cancel a command, or close a selected list or dialog box| Esc|
+|Save| Ctrl+S |
+|Save and Close| N/A|
+|Cancel edits and close (Close) |Esc|
+|Delete the record (when forms are in edit mode)| N/A|
+|Save and then open a new form (Save and New) (when forms are in edit mode)| N/A|
+|Open the lookup menu with the most recently used items in alphabetical order| Down arrow|
+|Open a lookup drop-down list| Enter|
+|Close a lookup drop-down list|Esc|
+|Open a record found in lookup with forms in edit mode| Enter|
 |Add an article to an email| Shift+Alt+A| N/A|
-|Apply an email template (when editing an email message)| Shift+Alt+T| N/A|
+|Apply an email template (when editing an email message)| N/A|
 
 ## Form navigation shortcuts
 
