@@ -21,6 +21,8 @@ A control in which the user can draw, erase, and highlight areas of an image.
 The user can use this control like a whiteboard, drawing diagrams and writing words that can be converted to typed text.
 
 ## Key properties
+**Image** – Output property representing the image drawn by the end user.
+
 **[Color](properties-color-border.md)** – The color of input strokes.
 
 **Mode** – The control is in **Draw** or **Erase** mode.  Select mode has been deprecated.
@@ -40,7 +42,7 @@ The user can use this control like a whiteboard, drawing diagrams and writing wo
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**Input** – Input.
+**Input** – **Deprecated.** Whether the input supports mouse, pen or touch inputs.  Defalut value (7) supports all three.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
