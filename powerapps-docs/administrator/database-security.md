@@ -75,7 +75,7 @@ The PowerApps environment includes predefined security roles that reflect common
 If your app uses a custom entity, its privileges must be explicitly granted in a security role before your app can be used.  You can either add these privileges in an existing security role or create a custom security role. There are a set of minimum privileges that are required in order for the new security role to be used - see [Minimum privileges to run app](#minimum-privileges-to-run-app).
 
 > [!TIP]
-> If you want to create a custom security role with the minimum required privileges to run an app, checkout the section below: [Minimum privileges to run app](#minimum-privileges-to-run-app).
+> If you want to create a custom security role with the minimum required privileges to run an app, check out the section below: [Minimum privileges to run app](#minimum-privileges-to-run-app).
 
 The environment might maintain the records which can be used by multiple apps, you might need multiple security roles to access the data with different privileges. e.g.
 - Some of the users (Type A) might only need to read, update, and attach other records so their security role will have read, write, and append privileges.
