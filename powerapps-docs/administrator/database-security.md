@@ -72,10 +72,6 @@ The PowerApps environment includes predefined security roles that reflect common
 - For the users making apps which are connecting to the database and needs to create or update entities and security roles, should be assigned System Customizer role as well, along with the Environment Maker as Environment Maker role, has no privileges on the database.
 
 ## Create or configure a custom security role
-If your app is based on a custom entity, privileges must be explicitly specified before users may work on it. To do this, you can choose to do one of the following.
-- Expand an existing predefined security role, so that it includes privileges on records based on the custom entity.
-- Create a custom security role for the purpose of managing privileges for users of the app.
-
 If your app uses a custom entity, its privileges must be explicitly granted in a security role before your app can be used.  You can either add these privileges in an existing security role or create a custom security role. There are a set of minimum privileges that are required in order for the new security role to be used - see [Minimum privileges to run app](#minimum-privileges-to-run-app).
 
 > [!TIP]
