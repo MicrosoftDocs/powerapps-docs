@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/09/2018
+ms.date: 10/10/2018
 ms.author: manasma
 search.audienceType: 
   - admin
@@ -112,7 +112,7 @@ For more information about access and scope privileges, see [Security roles](htt
 10. Select **Save and Close**.
 
 ## Minimum privileges to run app
-When you create a custom security role, you need to assign the minimum privileges for a user to run an app. We've created a solution you can import that provides a security role with the required minimum privileges.  
+When you create a custom security role, you need to include a set of minimum privileges into the security role in order for a user to run an app. We've created a solution you can import that provides a security role with the required minimum privileges.  
 
 Start by downloading the solution from the Download Center: [CDS for Apps minimum privilege security role](http://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0.zip).
 
