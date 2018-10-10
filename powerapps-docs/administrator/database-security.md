@@ -76,6 +76,8 @@ If your app is based on a custom entity, privileges must be explicitly specified
 - Expand an existing predefined security role, so that it includes privileges on records based on the custom entity.
 - Create a custom security role for the purpose of managing privileges for users of the app.
 
+If your app uses a custom entity, its privileges must be explicitly granted in a security role before your app can be used.  You can either add these privileges in an existing security role or create a custom security role. There are a set of minimum privileges that are required in order for the new security role to be used - see [Minimum privileges to run app](#minimum-privileges-to-run-app).
+
 > [!TIP]
 > If you want to create a custom security role with the minimum required privileges to run an app, checkout the section below: [Minimum privileges to run app](#minimum-privileges-to-run-app).
 
@@ -114,13 +116,13 @@ For more information about access and scope privileges, see [Security roles](htt
 10. Select **Save and Close**.
 
 ## Minimum privileges to run app
-When you create a custom security role, you need to assign the minimum privileges for a user to run an app. We've created a solution you can import that provides a security role with the required minimum privileges. You can either assign that role (**min prv Sec Role**) or use it as a template for a custom security role you create.  
+When you create a custom security role, you need to assign the minimum privileges for a user to run an app. We've created a solution you can import that provides a security role with the required minimum privileges.  
 
 Start by downloading the solution from the Download Center: [CDS for Apps minimum privilege security role](http://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0.zip).
 
 Then, follow the directions to import the solution: [Import, update, and export solutions](../maker/common-data-service/import-update-export-solutions.md).
 
-Once, when you import the solution, it creates the **min prv Sec Role** which you can assign or use a template for your own custom security role.
+When you import the solution, it creates the **min prv Sec Role** which you can copy (see: [Create a security role by Copy Role](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/create-edit-security-role#create-a-security-role-by-copy-role)). When Copying Role is complete, navigate to each tab - Core Records, Business Management, Customization, etc, and set the appropriate privileges on each tab. 
 
 > [!IMPORTANT]
 > You should try out the solution in a development environment before importing into a production environment. 
