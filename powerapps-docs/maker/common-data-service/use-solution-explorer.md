@@ -26,7 +26,7 @@ search.app:
 # Use project
 
 > [!NOTE]
-> Solutions are now referenced as Projects in PowerApps. Projects offer the same functionality as Solutions. For information about this change, see <link to blogpost>.”
+> Solutions are now referenced as Projects in PowerApps. Projects offer the same functionality as Solutions. For information about this change, see <https://aka.ms/solution-blog>.”
 
  Within PowerApps, you can view a list of projects by selecting **Projects** in the left navigation. You can then click into a project to view all of its components. 
    
@@ -41,16 +41,19 @@ search.app:
  
  You can also search for a specific component by its name or filter the all items in the list by the component type. 
  
- ![Search component](media/project-search.PNG "Search component")  
+ ![Search component](media/project-search-box.PNG "Search component")  
  
  ![Filter component by type](media/project-filter.PNG "Filter component by type")  
  
- As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the project is the default or a managed one. When you don't select any component, the command bar will show actions applied to the project itself. 
+ As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the project is the default or a managed one. 
  
  ![Component specific commands](media/component-commands.PNG "Component specific commands")  
+ 
+ When you don't select any component, the command bar will show actions applied to the project itself. 
+ 
  ![Project specific commands](media/project-commands.PNG "Project specific commands")  
  
- with projects that are unmanaged or the default one, you can use the **New** command to create different types of component. This will take you to different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the project. 
+ With projects that are unmanaged or the default one, you can use the **New** command to create different types of component. This will take you to different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the project. 
  
  ![Create new component in a project](media/project-new-component.PNG "Create new component in a project")  
  
@@ -58,18 +61,15 @@ search.app:
  
  ![Add existing component to a project](media/project-add-existing-component.PNG "Add existing component to a project")  
   
- With projects that are managed, there will be no commands available and you’ll see the message:  
+ With projects that are managed, there will be no commands available and you’ll see the message as shown below. You’ll need to locate the component in the project named **Default Solution** and try to edit it there or add it to another unmanaged project that you’ve created. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
 
-> [!NOTE]
-> You can’t directly edit the components within a managed project. If the managed properties for project components are set to allow customizations, you can edit them using a PowerApps design tool or from another unmanaged project.    
-  
- You’ll need to locate the component in the project named **Default Solution** and try to edit it there or add it to another unmanaged project that you’ve created. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
-  
+![Managed project](media/managed-project.PNG "Managed project")  
+
  Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current project that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot:  
   
  ![Demo Project showing expanded account entity](media/project-entity-account.PNG "Demo Project showing expanded account entity")  
   
- For details about customizing the individual components found in a project, see the following topics:  
+ For details about customizing the individual components in a project, see the following topics:  
   
 -   For entity, entity relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
   
