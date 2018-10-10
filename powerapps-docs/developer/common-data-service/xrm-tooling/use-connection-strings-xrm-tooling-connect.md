@@ -128,6 +128,21 @@ The following examples show how you can use connection strings for connecting to
 ```xml
 <add name="MyCRMServer" connectionString="AuthType=IFD;Url=http://contoso:8080/Test; HomeRealmUri=https://server-1.server.com/adfs/services/trust/mex/;Domain=CONTOSO; Username=jsmith; Password=passcode" />  
 ```   -->
+
+### Certificate based authentication
+
+```xml
+<add name="MyCDSServer" 
+  connectionString="
+  AuthType=Certificate;
+  SkipDiscovery=true;
+  url={InstanceUri};
+  thumbprint={CertThumbPrintId};
+  ClientId={AppId};
+  RequireNewInstance=true"
+  />
+```
+
   
 <a name="ConnectionStatus"></a>
 
