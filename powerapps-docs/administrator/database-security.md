@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/03/2018
+ms.date: 10/10/2018
 ms.author: manasma
 search.audienceType: 
   - admin
@@ -69,14 +69,15 @@ The PowerApps environment includes predefined security roles that reflect common
 
 - The Environment Maker role can not only create resources within an environment, but can also distribute the apps they build in an environment to other users in your organization. They can share the app with individual users. For more information, see [Share an app in PowerApps](../maker/canvas-apps/share-app.md).
 
-- For the users making apps which are connecting to the database and needs to create or update entities and security roles, should be assigned System Customizer role as well, along with the Environment Maker as Environment Maker role, has no priviliges on the database.
+- For the users making apps which are connecting to the database and needs to create or update entities and security roles, should be assigned System Customizer role as well, along with the Environment Maker as Environment Maker role, has no privileges on the database.
 
 ## Create or configure a custom security role
-If your app is based on a custom entity, privileges must be explicitly specified before users may work on it. To do this, you can choose to do one of the following.
-- Expand an existing predefined security role, so that it includes privileges on records based on the custom entity.
-- Create a custom security role for the purpose of managing privileges for users of the app.
+If your app uses a custom entity, its privileges must be explicitly granted in a security role before your app can be used.  You can either add these privileges in an existing security role or create a custom security role. There are a set of minimum privileges that are required in order for the new security role to be used - see [Minimum privileges to run app](#minimum-privileges-to-run-app).
 
-The environment might maintain the records which can be used by multiple apps, you might need multiple security roles to access the data with different priviliges. e.g.
+> [!TIP]
+> If you want to create a custom security role with the minimum required privileges to run an app, check out the section below: [Minimum privileges to run app](#minimum-privileges-to-run-app).
+
+The environment might maintain the records which can be used by multiple apps, you might need multiple security roles to access the data with different privileges. e.g.
 - Some of the users (Type A) might only need to read, update, and attach other records so their security role will have read, write, and append privileges.
 - Other users might need all the privileges that users of Type A has, plus the ability to create, append to, delete, and share, so their security role will have create, read, write, append, delete, assign, append to, and share privileges.
 
@@ -110,7 +111,17 @@ For more information about access and scope privileges, see [Security roles](htt
 
 10. Select **Save and Close**.
 
+## Minimum privileges to run app
+When you create a custom security role, you need to include a set of minimum privileges into the security role in order for a user to run an app. We've created a solution you can import that provides a security role with the required minimum privileges.  
 
+Start by downloading the solution from the Download Center: [CDS for Apps minimum privilege security role](http://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0.zip).
+
+Then, follow the directions to import the solution: [Import, update, and export solutions](../maker/common-data-service/import-update-export-solutions.md).
+
+When you import the solution, it creates the **min prv apps use** role which you can copy (see: [Create a security role by Copy Role](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/create-edit-security-role#create-a-security-role-by-copy-role)). When Copying Role is complete, navigate to each tab - Core Records, Business Management, Customization, etc - and set the appropriate privileges. 
+
+> [!IMPORTANT]
+> You should try out the solution in a development environment before importing into a production environment. 
 
 <!--Reference links in article-->
 [1]: https://admin.powerapps.com
