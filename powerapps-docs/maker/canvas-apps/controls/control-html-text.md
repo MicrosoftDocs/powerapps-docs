@@ -74,7 +74,7 @@ An **HTML text** control not only shows plain text and numbers but also converts
 ## Example
 1. Add a **[Label](control-text-box.md)** control, name it **Source**, and set its **[Text](properties-core.md)** property to this string:
 
-\<p> We have done an unusually \&nbsp; \&quot; deep \&quot; globalization and localization.\<p>
+"\<p>We've\&nbsp;done an unusually \&quot;deep\&quot; globalization and localization.\<p>"
 
 Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
