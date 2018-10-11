@@ -29,7 +29,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Under **Make your own app**, hover over the **Start from blank** tile, click or tap the phone icon, and then click or tap **Make this app**.
+1. Under **Make your own app**, hover over the **Start from blank** tile for canvas apps, click or tap the phone icon, and then click or tap **Make this app**.
 
     ![Blank-app tile](./media/data-platform-create-app-scratch/start-from-blank.png)
 
