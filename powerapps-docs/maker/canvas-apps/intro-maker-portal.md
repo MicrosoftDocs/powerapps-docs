@@ -56,13 +56,11 @@ In PowerApps, you can create and run these types of apps:
 - **Canvas apps** support designing custom UI and connecting to data from a variety of sources.
 - **Model-driven apps** have a standard UI and connect to data only in Common Data Service (CDS) for Apps. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
 
-Choose an environment that has a CDS for Apps database, and start to build canvas or model-driven apps from the same **Home** page.
-
-
+If you choose an environment that has a CDS for Apps database, you can build canvas or model-driven apps from the same **Home** page.
 
 ## Play or edit an app
 
-If you've already created an app (or someone else has created one and shared it with you), you can play or edit it from the **Home** page or the **Apps** page.
+If you've created an app (or someone else has created one and shared it with you), you can play or edit it from the **Home** page or the **Apps** page.
 
 - You can find a canvas app by filtering based on criteria such as whether you opened it recently.
 
