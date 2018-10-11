@@ -62,17 +62,7 @@ If you choose an environment that has a CDS for Apps database, you can build can
 
 If you've created an app (or someone else has created one and shared it with you), you can play or edit it from the **Home** page or the **Apps** page.
 
-- You can find a canvas app by filtering based on criteria such as whether you opened it recently.
-
-    ![List of canvas apps](media/intro-maker-portal/org-apps.png)
-
-    On the Apps list in the **Apps** page, you can search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
-
-    ![Ellipsis menu](media/intro-maker-portal/ellipsis-menu.png)
-
-- You can search for a model-driven app in the **Apps** page by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
-
-    ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/model-driven-list.png)
+On the **Apps** page, you can filter the list of apps based on criteria such as whether you opened it recently. You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
 ## Create an app
 
