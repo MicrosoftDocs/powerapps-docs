@@ -30,7 +30,7 @@ To follow this quickstart, you must [switch to an environment](working-with-envi
 
 	![PowerApps home page](./media/data-platform-create-app/home-page.png)
 
-1. Under **Make apps like these**, hover over **Start from data**, and then select **Make this app**.
+1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 
 	![Option to create an app](./media/data-platform-create-app/start-from-data.png)
 
