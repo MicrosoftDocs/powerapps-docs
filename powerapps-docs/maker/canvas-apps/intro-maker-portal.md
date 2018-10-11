@@ -62,7 +62,7 @@ Choose an environment that has a CDS for Apps database, and start to build canva
 
 ## Play or edit an app
 
-If you've already created an app (or someone else has created one and shared it with you), you can play or edit it from the **Apps** page.
+If you've already created an app (or someone else has created one and shared it with you), you can play or edit it from the **Home** page or the **Apps** page.
 
 - You can find a canvas app by filtering based on criteria such as whether you opened it recently.
 
