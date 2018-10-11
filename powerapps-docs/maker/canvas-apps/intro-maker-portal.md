@@ -58,7 +58,7 @@ In PowerApps, you can create and run these types of apps:
 
 Choose an environment that has a CDS for Apps database, and start to build canvas or model-driven apps from the same **Home** page.
 
-![Switch between canvas and model-driven apps](media/intro-maker-portal/mode-switcher.png)
+
 
 ## Play or edit an app
 
@@ -68,11 +68,11 @@ If you've already created an app (or someone else has created one and shared it 
 
     ![List of canvas apps](media/intro-maker-portal/org-apps.png)
 
-    You can also search for an app or by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
+    On the Apps list in the **Apps** page, you can search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
 
     ![Ellipsis menu](media/intro-maker-portal/ellipsis-menu.png)
 
-- You can't filter the list of model-driven apps, but you can search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
+- You can search for a model-driven app in the **Apps** page by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
 
     ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/model-driven-list.png)
 
