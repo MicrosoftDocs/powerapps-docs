@@ -96,12 +96,12 @@ Verify the following prerequisites before you start creating an app:
 <a name="editApp"></a>   
 ## Edit an app  
   
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
+1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 > [!IMPORTANT]
 > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. On the left navigation pane select **Apps**, select an app, and then on the toolbar select **Edit**.   
+2. On the left navigation pane select **Apps**, select a model-driven app, and then on the toolbar select **Edit**.   
 
 3. In the app designer add or edit components to the app, as required. More information: [Add or edit app components](add-edit-app-components.md)  
  
