@@ -38,14 +38,14 @@ Verify the following prerequisites before you start creating an app:
 <a name="createApp"></a>   
 ## Create an app  
 
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Start from blank** option for model-driven app.  
 
-    ![Model-driven design mode](media/model-driven-switch.png)
+    ![Model-driven start from blank](media/start-from-blank-model-driven.png)
 
     > [!IMPORTANT]
     > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. Select **Apps**, and then select **Create an app**.
+2. Select **Make this app**.
 
 3. On the **Create a New App** page, enter the following details: 
 
