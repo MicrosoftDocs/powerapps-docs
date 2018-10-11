@@ -24,8 +24,6 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 ## Open a sample app
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-	![](./media/open-and-run-a-sample-app/home-page.png)
-
 1. In the list of sample apps, hover over a sample app (such as **Cost Estimator**) with your mouse.
 
 	![](./media/open-and-run-a-sample-app/cost-estimator.png)
