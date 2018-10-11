@@ -28,11 +28,11 @@ To follow this quickstart, you must [switch to an environment](working-with-envi
 
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, switch environments as specified earlier in this topic.
 
-	![PowerApps home page](./media/data-platform-create-app/sign-in.png)
+	![PowerApps home page](./media/data-platform-create-app/home-page.png)
 
 1. Under **Make apps like these**, hover over **Start from data**, and then select **Make this app**.
 
-	![Option to create an app](./media/data-platform-create-app/make-this-app.png)
+	![Option to create an app](./media/data-platform-create-app/start-from-data.png)
 
 1. On the **Common Data Service** tile, select **Phone layout**.
 
