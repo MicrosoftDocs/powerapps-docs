@@ -20,7 +20,7 @@ A control that allows app users to record sounds from their device.
 ## Description
 App users can make audio recordings if the device where the app is running has a microphone.
 
-Audio is stored in 3gp format in Android, AAC format in iOS, and OGG format in web browser.
+Audio is stored in 3gp format in Android, AAC format in iOS, and OGG format in web browsers.
 
 ## Key properties
 **Mic** – On a device that has more than one microphone, the numeric ID of the microphone that the app uses.
