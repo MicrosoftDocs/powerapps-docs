@@ -24,11 +24,11 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 ## Open a sample app
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-	![](./media/open-and-run-a-sample-app/sign-in.png)
+	![](./media/open-and-run-a-sample-app/home-page.png)
 
 1. In the list of sample apps, hover over a sample app (such as **Cost Estimator**) with your mouse.
 
-	![](./media/open-and-run-a-sample-app/sample-tile.png)
+	![](./media/open-and-run-a-sample-app/cost-estimator.png)
 
 1. Click or tap the phone icon to create a version of the app for mobile devices (or leave the tablet icon selected), and then click or tap **Make this app**.
 
