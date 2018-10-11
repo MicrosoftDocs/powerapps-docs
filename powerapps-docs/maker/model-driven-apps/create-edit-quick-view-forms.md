@@ -40,7 +40,6 @@ A quick view form can be added to another form as a quick view control. It provi
   
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-    ![Model-driven design mode](media/model-driven-switch.png)
 
     > [!IMPORTANT]
     > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
