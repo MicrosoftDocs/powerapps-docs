@@ -149,7 +149,7 @@ ms.custom:
                             <li>
                                 <div class="container">
                                     <h2></h2>
-                                    <p>PowerApps admins can use the PowerApps admin center to manage users, permissions, and roles in environments; also manage data loss prevention policies and integrate data from various sources into Common Data Service (CDS) for Apps.</p>
+                                    <p>PowerApps admins can use the PowerApps admin center to manage environments, users, and roles. Also manage data loss prevention policies, integrate data from various sources into Common Data Service (CDS) for Apps, and respond to DSR requests.</p><br/><br/>
                                 </div>
                             </li>
                             <li>
