@@ -220,6 +220,7 @@ ms.custom:
                             <li>
                                 <div class="container">
                                     <h2></h2>
+                                    <p>App makers/creators should start here: <a href="/powerapps/maker">Create apps</a></p><hr/><br/><br/>
                                 </div>
                             </li>
                             <li>
@@ -234,9 +235,11 @@ ms.custom:
                                             <div class="cardText">
                                                 <h3>Canvas apps</h3>
                                                 <ul>
-                                                <li><a href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps</a></li>
-                                                <li><a href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app</a></li>
-                                                <li><a href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app</a></li>
+                                                <li><a href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></li>
+                                                <li><a href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app from sample</a></li>
+                                                <li><a href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app from data</a></li>
+                                                <li><a href="/powerapps/maker/canvas-apps/share-app">Share an app</a></li>
+                                                 <li><a href="/powerapps/maker/canvas-apps/sharepoint-scenario-intro">Integrate with SharePoint Online</a></li>
                                                 </ul>
                                             </div>
                                         </div>
