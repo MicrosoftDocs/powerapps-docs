@@ -82,7 +82,7 @@ ms.custom:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/learn/browse/?products=bizapps-power-apps">
+                                      <a href="https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -148,7 +148,7 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <h2></h2>
+                                    <h2>Use PowerApps admin center to manage users, permissions, and roles in environments; also manage data loss prevention policies and integrate data from various sources into Common Data Service (CDS) for Apps.</h2>
                                 </div>
                             </li>
                             <li>
@@ -157,7 +157,7 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Set up and integrate icon" src="images/i_sync.svg">
+                                                    <img alt="" src="media/index/i_billing.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -175,13 +175,14 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Customize icon" src="images/i_setup.svg">
+                                                    <img alt="" src="media/index/i_manage-setup.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Manage environments</h3>
-                                                <p><a href="/powerapps/administrator/environments-overview">Environments overview</a></p>
                                                 <p><a href="/powerapps/administrator/environments-administration">Administer environments</a></p>
+                                                <p><a href="/powerapps/administrator/database-security">Configure environment security</a></p>
+                                                <p><a href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -193,13 +194,13 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Develop icon" src="images/i_get-started.svg">
+                                                    <img alt="Develop icon" src="media/index/i_integration.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Manage apps</h3>
-                                                <p><a href="/powerapps/administrator/admin-manage-apps">Manage apps</a></p>
-                                                <p><a href="/powerapps/administrator/environment-and-tenant-migration">Move Apps</a></p>
+                                                <h3>Data integration and DSR</h3>
+                                                <p><a href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
+                                                <p><a href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
                                             </div>
                                         </div>
                                     </div>
