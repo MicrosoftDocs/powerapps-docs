@@ -145,12 +145,14 @@ ms.custom:
                     <li>
                         <a href="#admin">I'm an admin</a>
                         <ul id="admin"
-                            class="cardsL cols cols3">                            
+                            class="cardsF"> 
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">                                                
+                                            <div class="cardImageOuter">                             <div class="cardImage">
+                                                    <img alt="" src="media/index/i_env-security.svg">
+                                                </div>                     
                                             </div>
                                             <div class="cardText">
                                                 <h3>Environment and security</h3>
@@ -185,7 +187,10 @@ ms.custom:
                                 <div class="cardSize"> 
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">                                                
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="images/i_billing.svg">
+                                                </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Licensing and purchase</h3>
