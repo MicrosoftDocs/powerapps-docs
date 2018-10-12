@@ -145,15 +145,9 @@ ms.custom:
                     <li>
                         <a href="#admin">I'm an admin</a>
                         <ul id="admin"
-                            class="cardsF">
+                            class="cardsL cols cols3">
                             <li>
-                                <div class="container">
-                                    <h2></h2>
-                                    <p>PowerApps admins can use the PowerApps admin center to manage environments, users, and roles. Also manage data loss prevention policies, integrate data from various sources into Common Data Service (CDS) for Apps, and respond to DSR requests.</p><br/><br/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
+                                <div class="cardSize"> 
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
@@ -163,8 +157,10 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h3>Licensing and purchase</h3>
-                                                <p><a href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
-                                                <p><a href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></p>
+                                                <ul class="noBullet">
+                                                <li><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
+                                                <li><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -181,9 +177,11 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h3>Manage environments</h3>
-                                                <p><a href="/powerapps/administrator/environments-administration">Administer environments</a></p>
-                                                <p><a href="/powerapps/administrator/database-security">Configure environment security</a></p>
-                                                <p><a href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
+                                                <ul class="noBullet">
+                                                <li><a class="barLink" href="/powerapps/administrator/environments-administration">Administer environments</a></li>
+                                                <li><a class="barLink" href="/powerapps/administrator/database-security">Configure environment security</a></li>
+                                                <li><a class="barLink" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -200,8 +198,10 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h3>Data integration and DSR</h3>
-                                                <p><a href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
-                                                <p><a href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
+                                                <ul class="noBullet">
+                                                <li><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></li>
+                                                <li><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
