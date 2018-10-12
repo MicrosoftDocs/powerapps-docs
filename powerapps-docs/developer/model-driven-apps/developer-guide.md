@@ -16,7 +16,7 @@ search.app:
 ---
 # Developer Guide for Model-driven apps
 
-[!INCLUDE[](../includes/cc_applies_to_update_9_0_0.md)]
+<!--[!INCLUDE[](../includes/cc_applies_to_update_9_0_0.md)]
 
 Welcome to the [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] Customer Engagement Developer Guide (formerly referred to as the Dynamics 365 SDK). This documentation is for version 9.0, known as [!INCLUDE[pn_crm_9_0_0_online](../includes/pn-crm-9-0-0-online.md)], which is an online only release.
 
@@ -110,8 +110,7 @@ Welcome to the [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] Custo
 
 <li><a href="../field-service/developer/connected-field-service-developer-guide.md" data-raw-source="[Developer Guide for Connected Field Service](../field-service/developer/connected-field-service-developer-guide.md)">Developer Guide for Connected Field Service</a></li>
 <!--<li>[Developer Guide for Dynamics 365 for Marketing](../marketing/developer/marketing-developer-guide.md)</li>-->
-<li><a href="sample-code-directory.md" data-raw-source="[Sample code directory](sample-code-directory.md)">Sample code directory</a></li>
-<li><a href="download-tools-nuget.md" data-raw-source="[Tools on NuGet](download-tools-nuget.md)">Tools on NuGet</a></li>
+
 </td>
 
 <td>
@@ -129,6 +128,6 @@ Welcome to the [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] Custo
 
 [Customization Guide](../customize/overview.md)
 
-[Unified Service Desk Guide](../unified-service-desk/unified-service-desk.md)
+[Unified Service Desk Guide](../unified-service-desk/unified-service-desk.md)-->
 
 
