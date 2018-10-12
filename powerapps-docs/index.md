@@ -228,13 +228,16 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Set up and integrate icon" src="images/i_sync.svg">
+                                                    <img alt="" src="media/index/i_canvas-apps.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Canvas apps</h3>
-                                                <p><a href="/powerapps/maker/canvas-apps/get-started-test-drive">Create an app</a></p>
-                                                <p><a href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app</a></p>
+                                                <ul>
+                                                <li><a href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps</a></li>
+                                                <li><a href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app</a></li>
+                                                <li><a href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
