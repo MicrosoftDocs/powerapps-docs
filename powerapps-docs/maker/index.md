@@ -59,8 +59,17 @@ Getting started with the Common Data Service is easy. For example, you can start
 - [Create custom option sets](common-data-service/custom-picklists.md)
 - [Create a business rule](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
+## Canvas and model-driven artifacts
+Now that the experiences of canvas and model-driven apps have been merged, these artifacts will be relevant for either canvas apps or model-driven apps.
+
+| Artifact            | App Type     |
+|---------------------|--------------|
+| Entity > Views      | Model-driven |
+| Entity > Forms      | Model-driven |
+| Entity > Dashboards | Model-driven |
+| Connections         | Canvas       |
+| Gateways            | Canvas       |
+| Custom connectors   | Canvas       |
+| Apps > Import       | Canvas       |
+
 After you build your app, you can [share it](canvas-apps/share-app.md) with your team members.
-
-
-
-
