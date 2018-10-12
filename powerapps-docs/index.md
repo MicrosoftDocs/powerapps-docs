@@ -145,8 +145,7 @@ ms.custom:
                     <li>
                         <a href="#admin">I'm an admin</a>
                         <ul id="admin"
-                            class="cardsL cols cols3">
-                            <p>PowerApps admins can learn how to secure data, manage environments, monitor usage, and about PowerApps licensing.</p><br/><br/>
+                            class="cardsL cols cols3">                            
                             <li>
                                 <div class="cardSize"> 
                                     <div class="cardPadding">
