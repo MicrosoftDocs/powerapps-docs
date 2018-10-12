@@ -112,7 +112,26 @@ ms.custom:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>PowerApps Release Notes</h3>
-                                                          <p>Covers new PowerApps features releasing from Ocrober 2018 through March 2019.</p>
+                                                          <p>Covers new PowerApps features releasing from October 2018 through March 2019.</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="https://powerapps.microsoft.com/en-us/blog/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/powerapps-blog.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>PowerApps Blog</h3>
+                                                          <p>Read the official blog to know about the latest PowerApps features and announcements.</p>
                                                       </div>
                                                   </div>
                                               </div>
