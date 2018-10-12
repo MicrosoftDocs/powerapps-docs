@@ -27,7 +27,7 @@ This sample shows how to create, retrieve, update, and delete a recurring appoin
 
 ## What this sample does
 
-The `IOrganizationService` message is intended to be used in a scenario that provides programmatic access to the metadata and data for an organization.
+The `IOrganizationService` message is intended to be used in a scenario where it contains data that provides programmatic access to the metadata and data for an organization.
 
 ## How this sample works
 
@@ -42,7 +42,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Define anonymous types to define the possible recurrence pattern values, possible values for days of the week and possible values for the recurrence rule pattern end type. 
 1. The `RecurringAppointmentMaster` method creates a recurring appointment.
 1. The `QueryExpression` method retrieves the newly created recurring appointment.
-1. The `Update` methos updates the subject, number of occurences to 5, appointment interval to 2 for the retrieved recurring appointment.
+1. The `Update` method updates the subject, number of occurences to 5, appointment interval to 2 for the retrieved recurring appointment.
 
 
 ### Clean up
