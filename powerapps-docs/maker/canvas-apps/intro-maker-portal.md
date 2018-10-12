@@ -62,7 +62,11 @@ If you choose an environment that has a CDS for Apps database, you can build can
 
 If you've created an app (or someone else has created one and shared it with you), you can play or edit it from the **Home** page or the **Apps** page.
 
-On the **Apps** page, you can filter the list of apps based on criteria such as whether you opened it recently. You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
+On the **Apps** page, you can filter the list of apps based on criteria such as whether you opened it recently.
+
+![list of apps](./media/intro-maker-portal/find-apps.png)
+
+You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
 ## Create an app
 
