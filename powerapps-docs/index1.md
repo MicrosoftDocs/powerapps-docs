@@ -31,7 +31,7 @@ ms.custom:
                                                   <div class="card">
                                                       <div class="cardImageOuter">
                                                           <div class="cardImage">
-                                                              <img src="media/index/i_free-trial.svg" alt="" />
+                                                              <img src="media/index/powerapps-free-trial.svg" alt="" />
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
@@ -50,7 +50,7 @@ ms.custom:
                                                   <div class="card">
                                                       <div class="cardImageOuter">
                                                           <div class="cardImage">
-                                                              <img src="media/index/i_portal.svg" alt="" />
+                                                              <img src="media/index/powerapps-signin.svg" alt="" />
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
@@ -69,7 +69,7 @@ ms.custom:
                                                   <div class="card">
                                                       <div class="cardImageOuter">
                                                           <div class="cardImage">
-                                                              <img src="media/index/i_billing.svg" alt="" />
+                                                              <img src="media/index/powerapps-billing.svg" alt="" />
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
@@ -88,7 +88,7 @@ ms.custom:
                                                   <div class="card">
                                                       <div class="cardImageOuter">
                                                           <div class="cardImage">
-                                                              <img src="media/index/i_learning.svg" alt="" />
+                                                              <img src="media/index/powerapps-learning.svg" alt="" />
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
