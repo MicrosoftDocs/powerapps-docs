@@ -73,7 +73,7 @@ ms.custom:
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
-                                                          <h3>PowerApps Licensing</h3>
+                                                          <h3>Licensing</h3>
                                                           <p>Understand various licensing options for PowerApps.</p>
                                                       </div>
                                                   </div>
@@ -111,8 +111,8 @@ ms.custom:
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
-                                                          <h3>PowerApps Release Notes</h3>
-                                                          <p>Covers new PowerApps features releasing from October 2018 through March 2019.</p>
+                                                          <h3>Release Notes</h3>
+                                                          <p>Learn about PowerApps features releasing from October 2018 through March 2019.</p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -130,8 +130,8 @@ ms.custom:
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
-                                                          <h3>PowerApps Blog</h3>
-                                                          <p>Read the official blog to know about the latest PowerApps features and announcements.</p>
+                                                          <h3>Blog</h3>
+                                                          <p>Read the official PowerApps blog to know about the latest PowerApps features and announcements.</p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -145,7 +145,12 @@ ms.custom:
                     <li>
                         <a href="#admin">I'm an admin</a>
                         <ul id="admin"
-                            class="cardsF"> 
+                            class="cardsF">
+                            <li>
+                                <div class="container">
+                                    <p></p>
+                                </div>
+                            </li> 
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -155,7 +160,7 @@ ms.custom:
                                                 </div>                     
                                             </div>
                                             <div class="cardText">
-                                                <h3>Environment and security</h3>
+                                                <h2>Environment and security</h3>
                                                 <ul class="noBullet">
                                                 <li><a class="barLink" href="/powerapps/administrator/environments-administration">Administer environments</a></li>
                                                 <li><a class="barLink" href="/powerapps/administrator/database-security">Configure environment security</a></li>
@@ -170,10 +175,12 @@ ms.custom:
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">                                                
+                                            <div class="cardImageOuter">                            <div class="cardImage">
+                                                    <img alt="" src="media/index/i_integration.svg">
+                                                </div>                    
                                             </div>
                                             <div class="cardText">
-                                                <h3>Data integration and DSR</h3>
+                                                <h2>Data integration and DSR</h3>
                                                 <ul class="noBullet">
                                                 <li><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></li>
                                                 <li><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></li>
@@ -189,14 +196,15 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="" src="images/i_billing.svg">
+                                                    <img alt="" src="media/index/i_billing.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Licensing and purchase</h3>
+                                                <h2>Licensing and purchase</h3>
                                                 <ul class="noBullet">
                                                 <li><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
                                                 <li><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>
+                                                <li><a class="barLink"href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></li>
                                                 </ul>
                                             </div>
                                         </div>
