@@ -55,7 +55,7 @@ ms.custom:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Sign in to PowerApps</h3>
-                                                          <p>Use PowerApps to create your own apps, open apps that you or others have created, and perform related tasks.</p>
+                                                          <p>Sign in to PowerApps to create your own apps, open apps that you or others have created, and perform related tasks.</p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -93,7 +93,7 @@ ms.custom:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Learn PowerApps</h3>
-                                                          <p>Start your PowerApps learning journey by exploring our learning paths and modules.</p>
+                                                          <p>Start your PowerApps learning journey by exploring our learning paths and modules. It's free!</p>
                                                       </div>
                                                   </div>
                                               </div>
