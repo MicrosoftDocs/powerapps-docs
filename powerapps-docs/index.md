@@ -146,14 +146,12 @@ ms.custom:
                         <a href="#admin">I'm an admin</a>
                         <ul id="admin"
                             class="cardsL cols cols3">
+                            <p>PowerApps admins can learn how to secure data, manage environments, monitor usage, and about PowerApps licensing.</p><br/><br/>
                             <li>
                                 <div class="cardSize"> 
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage">
-                                                    <img alt="" src="media/index/i_billing.svg">
-                                                </div>
+                                            <div class="cardImageOuter">                                                
                                             </div>
                                             <div class="cardText">
                                                 <h3>Licensing and purchase</h3>
@@ -170,10 +168,7 @@ ms.custom:
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage">
-                                                    <img alt="" src="media/index/i_manage-setup.svg">
-                                                </div>
+                                            <div class="cardImageOuter">                                                
                                             </div>
                                             <div class="cardText">
                                                 <h3>Manage environments</h3>
@@ -191,10 +186,7 @@ ms.custom:
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage">
-                                                    <img alt="Develop icon" src="media/index/i_integration.svg">
-                                                </div>
+                                            <div class="cardImageOuter">                                                
                                             </div>
                                             <div class="cardText">
                                                 <h3>Data integration and DSR</h3>
