@@ -148,7 +148,8 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <h2>Use PowerApps admin center to manage users, permissions, and roles in environments; also manage data loss prevention policies and integrate data from various sources into Common Data Service (CDS) for Apps.</h2>
+                                    <h2></h2>
+                                    <p>PowerApps admins can use the PowerApps admin center to manage users, permissions, and roles in environments; also manage data loss prevention policies and integrate data from various sources into Common Data Service (CDS) for Apps.</p>
                                 </div>
                             </li>
                             <li>
