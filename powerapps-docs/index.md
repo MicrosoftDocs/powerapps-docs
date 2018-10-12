@@ -143,7 +143,7 @@ ms.custom:
                         </ul>
                     </li>
                     <li>
-                        <a href="#admin">I'm an admin</a>
+                        <a href="#admin"><strong>I'm an admin</strong></a>
                         <ul id="admin"
                             class="cardsF">
                             <li>
@@ -203,8 +203,8 @@ ms.custom:
                                                 <h2>Licensing and purchase</h3>
                                                 <ul class="noBullet">
                                                 <li><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
-                                                <li><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>
                                                 <li><a class="barLink"href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></li>
+                                                <li><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>      
                                                 </ul>
                                             </div>
                                         </div>
@@ -214,7 +214,7 @@ ms.custom:
                         </ul>
                     </li>
                     <li>
-                        <a href="#maker">I'm a maker</a>
+                        <a href="#maker"><strong>I'm an app maker</strong></a>
                         <ul id="maker"
                             class="cardsF">
                             <li>
@@ -279,7 +279,7 @@ ms.custom:
                         </ul>
                     </li>
                     <li>
-                        <a href="#developer">I'm a developer</a>
+                        <a href="#developer"><strong>I'm a developer</strong></a>
                         <ul id="developer"
                             class="cardsF">
                             <li>
