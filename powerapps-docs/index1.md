@@ -19,7 +19,7 @@ ms.custom:
                 <a href="#home"></a>
                 <ul id="home">
                     <li>
-                        <a href="#getstarted">Get started with PowerApps</a>
+                        <a href="#getstarted">Get started</a>
                         <ul id="getstarted"
                             class="cardsC"><br/>                            
                             <li class="fullSpan">
@@ -31,7 +31,7 @@ ms.custom:
                                                   <div class="card">
                                                       <div class="cardImageOuter">
                                                           <div class="cardImage">
-                                                              <img src="media/index/install-or-upgrade.svg" alt="" />
+                                                              <img src="media/index/i_free-trial.svg" alt="" />
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
@@ -50,7 +50,7 @@ ms.custom:
                                                   <div class="card">
                                                       <div class="cardImageOuter">
                                                           <div class="cardImage">
-                                                              <img src="media/index/business-continuity.svg" alt="" />
+                                                              <img src="media/index/i_portal.svg" alt="" />
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
@@ -69,7 +69,7 @@ ms.custom:
                                                   <div class="card">
                                                       <div class="cardImageOuter">
                                                           <div class="cardImage">
-                                                              <img src="media/index/business-continuity.svg" alt="" />
+                                                              <img src="media/index/i_billing.svg" alt="" />
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
@@ -88,7 +88,7 @@ ms.custom:
                                                   <div class="card">
                                                       <div class="cardImageOuter">
                                                           <div class="cardImage">
-                                                              <img src="media/index/business-continuity.svg" alt="" />
+                                                              <img src="media/index/i_learning.svg" alt="" />
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
