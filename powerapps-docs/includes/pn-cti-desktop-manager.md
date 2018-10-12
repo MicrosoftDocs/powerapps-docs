@@ -1,1 +1,0 @@
-CTI Desktop Manager

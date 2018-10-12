@@ -1,1 +1,0 @@
-Hosted Application Toolkit (HAT)
