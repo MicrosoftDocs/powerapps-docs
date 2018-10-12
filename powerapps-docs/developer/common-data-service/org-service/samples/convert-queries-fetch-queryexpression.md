@@ -10,14 +10,14 @@ author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Sample: Convert queries between Fetch and QueryExpression
+# Sample: Convert queries between FetchXML and QueryExpression
 
 <!-- needs supporting conceptual content 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-convert-queries-fetch-queryexpression
 
 -->
 
-This sample shows how to convert queries between FetchXML and Query Expression.
+This sample shows how to convert queries between FetchXML and QueryExpression.
 
 ## How to run this sample
 
