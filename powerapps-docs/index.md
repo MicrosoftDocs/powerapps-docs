@@ -147,30 +147,13 @@ ms.custom:
                         <ul id="admin"
                             class="cardsL cols cols3">                            
                             <li>
-                                <div class="cardSize"> 
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">                                                
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Licensing and purchase</h3>
-                                                <ul class="noBullet">
-                                                <li><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
-                                                <li><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">                                                
                                             </div>
                                             <div class="cardText">
-                                                <h3>Manage environments</h3>
+                                                <h3>Environment and security</h3>
                                                 <ul class="noBullet">
                                                 <li><a class="barLink" href="/powerapps/administrator/environments-administration">Administer environments</a></li>
                                                 <li><a class="barLink" href="/powerapps/administrator/database-security">Configure environment security</a></li>
@@ -192,6 +175,23 @@ ms.custom:
                                                 <ul class="noBullet">
                                                 <li><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></li>
                                                 <li><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize"> 
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">                                                
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Licensing and purchase</h3>
+                                                <ul class="noBullet">
+                                                <li><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
+                                                <li><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>
                                                 </ul>
                                             </div>
                                         </div>
