@@ -19,7 +19,7 @@ ms.custom:
                 <a href="#home"></a>
                 <ul id="home">
                     <li>
-                        <a href="#getstarted">Get started</a>
+                        <a href="#getstarted"><strong>Get started</strong></a>
                         <ul id="getstarted"
                             class="cardsC"><br/>                            
                             <li class="fullSpan">
