@@ -202,9 +202,9 @@ ms.custom:
                                             <div class="cardText">
                                                 <h2>Licensing and purchase</h3>
                                                 <ul class="noBullet">
-                                                <li><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
-                                                <li><a class="barLink"href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></li>
-                                                <li><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>      
+                                                <li><a href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
+                                                <li><a href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></li>
+                                                <li><a href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>      
                                                 </ul>
                                             </div>
                                         </div>
@@ -232,7 +232,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Canvas apps</h3>
+                                                <h2>Canvas apps</h2>
                                                 <ul>
                                                 <li><a href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps</a></li>
                                                 <li><a href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app</a></li>
