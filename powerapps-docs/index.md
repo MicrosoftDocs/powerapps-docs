@@ -155,7 +155,8 @@ ms.custom:
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">                             <div class="cardImage">
+                                            <div class="cardImageOuter">                             
+                                                <div class="cardImage">
                                                     <img alt="" src="media/index/i_env-security.svg">
                                                 </div>                     
                                             </div>
@@ -169,44 +170,7 @@ ms.custom:
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">                            
-                                                <div class="cardImage">
-                                                    <img alt="" src="media/index/i_integration.svg">
-                                                </div>                    
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Data integration and DSR</h3><hr/>
-                                                <p><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
-                                                <p><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</p></li>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize"> 
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage">
-                                                    <img alt="" src="media/index/i_billing.svg">
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h2>Licensing and purchase</h3><hr/>
-                                                <p><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
-                                                <p><a class="barLink"href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
-                                                <p><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></p>      
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            </li>                            
                         </ul>
                     </li>
                     <li>
