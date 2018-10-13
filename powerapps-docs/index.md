@@ -141,38 +141,7 @@ ms.custom:
                                 </ul>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#admin"><strong>I'm an admin</strong></a>
-                        <ul id="admin"
-                            class="cardsF">
-                            <li>
-                                <div class="container">                                    
-                                    <p>Admins can use the PowerApps admin center to secure data, manage environments, and monitor usage.</p><hr/><br/><br/>
-                                </div>
-                            </li> 
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">                             
-                                                <div class="cardImage">
-                                                    <img alt="" src="media/index/i_env-security.svg">
-                                                </div>                     
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Environment and security</h3><hr/>
-                                                <p><a class="barLink" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
-                                                <p><a class="barLink" href="/powerapps/administrator/database-security">Configure environment security</a></p>
-                                                <p><a class="barLink" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>                            
-                        </ul>
-                    </li>
+                    </li>                    
                     <li>
                         <a href="#maker"><strong>I'm an app maker</strong></a>
                         <ul id="maker"
