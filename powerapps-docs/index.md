@@ -147,8 +147,7 @@ ms.custom:
                         <ul id="admin"
                             class="cardsF">
                             <li>
-                                <div class="container">
-                                    <br/>
+                                <div class="container">                                    
                                     <p>Admins can use the PowerApps admin center to secure data, manage environments, and monitor usage.</p><hr/><br/><br/>
                                 </div>
                             </li> 
@@ -161,11 +160,10 @@ ms.custom:
                                                 </div>                     
                                             </div>
                                             <div class="cardText">
-                                                <h2>Environment and security</h3>
-                                                <ul class="noBullet">
-                                                <li><a class="barLink" href="/powerapps/administrator/environments-administration">Administer environments</a></li>
-                                                <li><a class="barLink" href="/powerapps/administrator/database-security">Configure environment security</a></li>
-                                                <li><a class="barLink" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></li>
+                                                <h3>Environment and security</h3><hr/>
+                                                <p><a class="barLink" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
+                                                <p><a class="barLink" href="/powerapps/administrator/database-security">Configure environment security</a></p>
+                                                <p><a class="barLink" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
                                                 </ul>
                                             </div>
                                         </div>
@@ -176,16 +174,15 @@ ms.custom:
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">                            <div class="cardImage">
+                                            <div class="cardImageOuter">                            
+                                                <div class="cardImage">
                                                     <img alt="" src="media/index/i_integration.svg">
                                                 </div>                    
                                             </div>
                                             <div class="cardText">
-                                                <h2>Data integration and DSR</h3>
-                                                <ul class="noBullet">
-                                                <li><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></li>
-                                                <li><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></li>
-                                                </ul>
+                                                <h3>Data integration and DSR</h3><hr/>
+                                                <p><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
+                                                <p><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</p></li>
                                             </div>
                                         </div>
                                     </div>
@@ -201,12 +198,10 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h2>Licensing and purchase</h3>
-                                                <ul class="noBullet">
-                                                <li><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
-                                                <li><a class="barLink"href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></li>
-                                                <li><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></li>      
-                                                </ul>
+                                                <h2>Licensing and purchase</h3><hr/>
+                                                <p><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
+                                                <p><a class="barLink"href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
+                                                <p><a class="barLink"href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></p>      
                                             </div>
                                         </div>
                                     </div>
