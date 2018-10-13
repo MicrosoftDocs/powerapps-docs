@@ -143,8 +143,8 @@ ms.custom:
                         </ul>
                     </li>
                     <li>
-                        <a href="#maker"><strong>I'm an admin</strong></a>
-                        <ul id="maker"
+                        <a href="#admin"><strong>I'm an admin</strong></a>
+                        <ul id="admin"
                             class="cardsF">
                             <li>
                                 <div class="container">
@@ -213,8 +213,8 @@ ms.custom:
                         <ul id="maker"
                             class="cardsF">
                             <li>
-                                <div class="container">                                    
-                                    <p>App makers/creators can use PowerApps to <a href="/powerapps/maker">create apps</a> to manage their organizations's mission-critical data</p><hr/><br/><br/>
+                                <div class="container">
+                                    <p>App makers/creators can use PowerApps to <a href="/powerapps/maker">create apps</a> to manage their organizations's mission-critical data</p><hr/><br/>
                                 </div>
                             </li>
                             <li>
