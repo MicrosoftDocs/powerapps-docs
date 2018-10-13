@@ -148,7 +148,7 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <p>App makers/creators can use PowerApps to <a href="/powerapps/maker">create apps</a> to manage their organizations's mission-critical data</p><hr/><br/><br/>
+                                    <p>Admins can use the PowerApps admin center to secure data, manage environments, and monitor usage.</p><hr/><br/>
                                 </div>
                             </li>
                             <li>
@@ -161,12 +161,10 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>CDS for Apps</h3><hr/>
-                                                <p><a href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
-                                                <p><a href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
-                                                <p><a href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
-                                                <p><a href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
-                                               <p><a href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
+                                                <h3>Environment and security</h3><hr/>
+                                                <p><a class="barLink" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
+                                                <p><a class="barLink" href="/powerapps/administrator/database-security">Configure environment security</a></p>
+                                                <p><a class="barLink" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -182,14 +180,9 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Canvas apps</h3><hr/>
-                                                <ul>
-                                                <li><a href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></li>
-                                                <li><a href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app from sample</a></li>
-                                                <li><a href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app from data</a></li>
-                                                <li><a href="/powerapps/maker/canvas-apps/share-app">Share an app</a></li>
-                                                 <li><a href="/powerapps/maker/canvas-apps/sharepoint-scenario-intro">Integrate with SharePoint Online</a></li>
-                                                </ul>
+                                                <h3>Data integration and DSR</h3><hr/>
+                                                <p><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
+                                                <p><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</p>
                                             </div>
                                         </div>
                                     </div>
@@ -205,9 +198,9 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Model-driven apps</h3><hr/>
-                                                <p><a href="/powerapps/maker/model-driven-apps/build-first-model-driven-app">Create an app</a></p>
-                                                <p><a href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>
+                                                <h3>Licensing and purchase</h3><hr/>
+                                                <p><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
+                                                <p><a class="barLink"href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
                                             </div>
                                         </div>
                                     </div>
