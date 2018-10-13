@@ -219,9 +219,29 @@ ms.custom:
                         <ul id="maker"
                             class="cardsF">
                             <li>
-                                <div class="container">
-                                    <br/>
+                                <div class="container">                                    
                                     <p>App makers/creators can use PowerApps to <a href="/powerapps/maker">create apps</a> to manage their organizations's mission-critical data</p><hr/><br/><br/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="media/index/i_common-data-service.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>CDS for Apps</h3><hr/>
+                                                <p><a href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
+                                                <p><a href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
+                                                <p><a href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
+                                                <p><a href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
+                                               <p><a href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                             <li>
@@ -234,7 +254,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Canvas apps</h3>
+                                                <h3>Canvas apps</h3><hr/>
                                                 <ul>
                                                 <li><a href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></li>
                                                 <li><a href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app from sample</a></li>
@@ -257,32 +277,14 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Model-driven apps</h3>
+                                                <h3>Model-driven apps</h3><hr/>
                                                 <p><a href="/powerapps/maker/model-driven-apps/build-first-model-driven-app">Create an app</a></p>
                                                 <p><a href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage">
-                                                    <img alt="Develop icon" src="images/i_common-data-service.svg">
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>CDS for Apps</h3>
-                                                <p><a href="/powerapps/maker/common-data-service/data-platform-create-entity">Create a custom entity</a></p>
-                                                <p><a href="/powerapps/maker/common-data-service/create-edit-virtual-entities">Create a virtual entity</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            </li>                            
                         </ul>
                     </li>
                     <li>
