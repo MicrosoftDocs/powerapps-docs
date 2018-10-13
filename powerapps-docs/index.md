@@ -214,6 +214,7 @@ ms.custom:
                                 </div>
                             </li>                            
                         </ul>
+                    </li>
                     <li>
                         <a href="#maker"><strong>I'm an app maker</strong></a>
                         <ul id="maker"
