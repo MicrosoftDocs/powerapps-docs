@@ -148,7 +148,8 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <p></p>
+                                    <br/>
+                                    <p>Admins can use the PowerApps admin center to secure data, manage environments, and monitor usage.</p><hr/><br/><br/>
                                 </div>
                             </li> 
                             <li>
@@ -219,8 +220,8 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <h2></h2>
-                                    <p>App makers/creators should start here: <a href="/powerapps/maker">Create apps</a></p><hr/><br/><br/>
+                                    <br/>
+                                    <p>App makers/creators can use PowerApps to <a href="/powerapps/maker">create apps</a> to manage their organizations's mission-critical data</p><hr/><br/><br/>
                                 </div>
                             </li>
                             <li>
@@ -252,7 +253,7 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Customize icon" src="images/i_setup.svg">
+                                                    <img alt="Customize icon" src="media/index/i_model-driven-apps.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -270,7 +271,7 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Develop icon" src="images/i_get-started.svg">
+                                                    <img alt="Develop icon" src="images/i_common-data-service.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
