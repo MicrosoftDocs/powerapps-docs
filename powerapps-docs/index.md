@@ -279,7 +279,7 @@ ms.custom:
                                 </div>
                             </li>
                         </ul>
-                    </li>                    
+                    </li> 
                 </ul>
             </li>
         </ul>
