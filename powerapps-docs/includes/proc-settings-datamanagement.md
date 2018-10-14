@@ -1,1 +1,0 @@
-Go to **Settings** > **Data Management**.

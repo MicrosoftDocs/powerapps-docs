@@ -1,1 +1,0 @@
-Go to **Advanced Find**.

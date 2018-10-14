@@ -50,13 +50,13 @@ Barb and Isaac are creating apps in PowerApps using CDS for Apps to store their 
 
 Barb is creating two canvas apps:
 
-* App 1 &ndash; uses the Contact entity along with a custom entity that stores related information
-* App 2 &ndash; uses the Contact entity along with the Incident entity, which is a restricted entity
+* App 1 &ndash; uses the Appointment entity along with a custom entity that stores related information
+* App 2 &ndash; uses the Appointment entity along with the Incident entity, which is a restricted entity
 
 Isaac is creating two model-driven apps:
 
-* App 3 &ndash; uses the Contact entity along with a custom entity that stores related information
-* App 4 &ndash; uses the Contact entity along with the Incident entity, which is a restricted entity
+* App 3 &ndash; uses the Appointment entity along with a custom entity that stores related information
+* App 4 &ndash; uses the Appointment entity along with the Incident entity, which is a restricted entity
 
 Barb and Isaac need the following licenses:
 * Barb needs a PowerApps Plan 1 license to create canvas apps using CDS for Apps. If she needs to create a database or create a custom entity, she would need a PowerApps Plan 2 license.

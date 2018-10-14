@@ -1,1 +1,0 @@
-Dynamics 365 Connector for SQL Server Reporting Services
