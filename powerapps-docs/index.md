@@ -214,7 +214,7 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <p>App makers/creators can use PowerApps to <a href="/powerapps/maker">create apps</a> to manage their organizations's mission-critical data</p><hr/><br/>
+                                    <p>App makers can use PowerApps to quickly <a href="/powerapps/maker">create</a> custom business apps without writing code to manage their organizations's mission-critical data.</p><hr/><br/>
                                 </div>
                             </li>
                             <li>
@@ -291,7 +291,7 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <h2></h2>
+                                    <p>Pro developers can use the Common Data Service (CDS) for Apps platform to extend business apps using code.</p><hr/><br/>
                                 </div>
                             </li>
                             <li>
@@ -300,13 +300,14 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Set up and integrate icon" src="images/i_sync.svg">
+                                                    <img alt="Set up and integrate icon" src="media/index/i_get-started.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Canvas apps</h3>
-                                                <p><a href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
-                                                <p><a href="/powerapps/administrator/signup-for-powerapps-admin">Purchase PowerApps</a></p>
+                                                <h3>Get started</h3>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/webapi/quick-start-console-app-csharp">Quickstart: Web API sample</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -318,13 +319,37 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Customize icon" src="images/i_setup.svg">
+                                                    <img alt="" src="media/index/i_data.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Model-driven apps</h3>
-                                                <p><a href="/powerapps/developer/model-driven-apps/overview">Developer overview</a></p>
-                                                <p><a href="/powerapps/developer/model-driven-apps/supported-customizations">Supported customizations</a></p>
+                                                <h3>Work with data</h3>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/webapi/overview">Use Web API</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/org-service/overview">Use Organization service</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/use-fetchxml-construct-query">Query data using FetchXML</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/detect-duplicate-data-with-code">Detect duplicate data</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/optimistic-concurrency">Use optimistic concurrency</a></p>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="images/i_entity-metadata.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Work with metadata</h3>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/metadata-services">Get started with metadata</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/browse-your-metadata">Browse your environment metadata</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/entity-metadata">Entity metadata</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/entity-attribute-metadata">Attribute metadata</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/entity-relationship-metadata">Entity relationship metadata</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -336,13 +361,35 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Develop icon" src="images/i_get-started.svg">
+                                                    <img alt="" src="images/i_get-started.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>CDS for Apps</h3>
-                                                <p><a href="/powerapps/developer/common-data-service/overview">Developer overview</a></p>
-                                                <p><a href="/powerapps/developer/common-data-service/introduction-solutions">Introduction to solutions</a></p>
+                                                <h3>Apply business logic</h3>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/model-driven-apps/client-scripting">Client scripting (Model-driven apps)</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="images/i_get-started.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Apply business logic</h3>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
+                                                <p><a class="barLink" href="/powerapps/developer/model-driven-apps/client-scripting">Client scripting (Model-driven apps)</a></p>
                                             </div>
                                         </div>
                                     </div>
