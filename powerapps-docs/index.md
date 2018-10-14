@@ -162,9 +162,11 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h3>Environment and security</h3><hr/>
-                                                <p><a href="/powerapps/administrator/environments-administration">Administer environments</a></p><hr/>
-                                                <p><a href="/powerapps/administrator/database-security">Configure environment security</a></p><hr/>
-                                                <p><a href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p><hr/>
+                                                <ul>
+                                                <li><a href="/powerapps/administrator/environments-administration">Administer environments</a></li>
+                                                <li><a href="/powerapps/administrator/database-security">Configure environment security</a></li>
+                                                <li><a href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -181,8 +183,10 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h3>Data integration and DSR</h3><hr/>
-                                                <p><a href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p><hr/>
-                                                <p><a href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p><hr/>
+                                                <ul>
+                                                <li><a href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></li>
+                                                <li><a href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -199,8 +203,10 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h3>Licensing and purchase</h3><hr/>
-                                                <p><a href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p><hr/>
-                                                <p><a href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p><hr/>
+                                                <ul>
+                                                <li><a href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
+                                                <li><a href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
