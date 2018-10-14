@@ -329,10 +329,3 @@ function displayIconTooltip(rowData, userLCID) {
 ### Set as default  
  Only one active public view can be set as the default view. To make a view the default view, set the `IsDefault` property to true.  
   
-### See also  
- [Sample: Work with Views](/dynamics365/customer-engagement/developer/customize-dev/sample-work-views)   <!-- TODO need to update the link-->
- [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml) <!-- TODO need to update the link-->
- [Extend the Metadata Model for Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   <!-- TODO need to update the link-->
- [Customize Entity Forms in Microsoft Dynamics 365](customize-entity-forms.md)   
- [Customize Global Option Sets in Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)   <!-- TODO need to update the link-->
- [Customize Dynamics 365 Common Data Service for Apps](/dynamics365/customer-engagement/developer/customize-dev/customize-applications) <!-- TODO need to update the link-->
