@@ -304,7 +304,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Get started</h3>
+                                                <h2>Get started</h2><hr/>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/webapi/quick-start-console-app-csharp">Quickstart: Web API sample</a></p>
@@ -323,7 +323,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Work with data</h3>
+                                                <h2>Work with data</h2><hr/>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/webapi/overview">Use Web API</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/org-service/overview">Use Organization service</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/use-fetchxml-construct-query">Query data using FetchXML</a></p>
@@ -340,11 +340,11 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="" src="images/i_entity-metadata.svg">
+                                                    <img alt="" src="media/index/i_entity-metadata.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Work with metadata</h3>
+                                                <h2>Work with metadata</h2><hr/>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/metadata-services">Get started with metadata</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/browse-your-metadata">Browse your environment metadata</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/entity-metadata">Entity metadata</a></p>
@@ -361,13 +361,12 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="" src="images/i_get-started.svg">
+                                                    <img alt="" src="media/index/i_get-started.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Apply business logic</h3>
+                                                <h2>Apply business logic</h2><hr/>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins</a></p>
-                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/model-driven-apps/client-scripting">Client scripting (Model-driven apps)</a></p>
                                             </div>
@@ -385,7 +384,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Apply business logic</h3>
+                                                <h2>Integrate data</h2><hr/>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
                                                 <p><a class="barLink" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
