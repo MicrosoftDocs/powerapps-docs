@@ -1,1 +1,0 @@
-Microsoft Dynamics CRM List Component for Microsoft SharePoint Server 2013

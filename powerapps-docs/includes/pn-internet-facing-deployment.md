@@ -1,1 +1,0 @@
-Internet-facing deployment (IFD)

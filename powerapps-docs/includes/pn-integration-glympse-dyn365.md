@@ -1,1 +1,0 @@
-Integration with Glympse for Dynamics 365

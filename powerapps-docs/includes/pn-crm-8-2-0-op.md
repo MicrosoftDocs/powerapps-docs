@@ -1,1 +1,0 @@
-December 2016 Service Pack for Microsoft Dynamics 365 (on-premises)
