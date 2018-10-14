@@ -161,7 +161,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.8rem">Environment and security</h3><hr/>
+                                                <h3 style="font-size: 1.5rem">Environment and security</h3><hr/>
                                                 <ul>
                                                 <li><a href="/powerapps/administrator/environments-administration">Administer environments</a></li>
                                                 <li><a href="/powerapps/administrator/database-security">Configure environment security</a></li>
@@ -182,7 +182,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.8rem">Data integration and DSR</h3><hr/>
+                                                <h3 style="font-size: 1.5rem">Data integration and DSR</h3><hr/>
                                                 <ul>
                                                 <li><a href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></li>
                                                 <li><a href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></li>
@@ -202,7 +202,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.8rem">Licensing and purchase</h3><hr/>
+                                                <h3 style="font-size: 1.5rem">Licensing and purchase</h3><hr/>
                                                 <ul>
                                                 <li><a href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></li>
                                                 <li><a href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></li>
@@ -311,9 +311,9 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h2>Get started</h2><hr/>
-                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
-                                                <p><a class="barLink" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
-                                                <p><a class="barLink" href="/powerapps/developer/common-data-service/webapi/quick-start-console-app-csharp">Quickstart: Web API sample</a></p>
+                                                <p><a class="barLink" style="font-size: 0.75rem" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
+                                                <p><a class="barLink" style="font-size: 0.75rem" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
+                                                <p><a class="barLink" style="font-size: 0.75rem" href="/powerapps/developer/common-data-service/webapi/quick-start-console-app-csharp">Quickstart: Web API sample</a></p>
                                             </div>
                                         </div>
                                     </div>
