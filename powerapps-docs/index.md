@@ -291,7 +291,7 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <p>Pro developers can use the Common Data Service (CDS) for Apps platform to extend business apps using code.</p><hr/><br/>
+                                    <p>Developers and ISVs can use the Common Data Service (CDS) for Apps platform to extend business apps using code.</p><hr/><br/>
                                 </div>
                             </li>
                             <li>
@@ -307,7 +307,9 @@ ms.custom:
                                                 <h3 style="font-size: 1.4rem">Get started</h3><hr/>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/webapi/quick-start-console-app-csharp">Quickstart: Web API sample</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/">Download CDS for Apps SDK</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/developer-tools">Developer tools and resources</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/common-data-model/overview">Common Data Model</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -361,7 +363,7 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="" src="media/index/i_get-started.svg">
+                                                    <img alt="" src="media/index/i_business-logic.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -380,15 +382,61 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="" src="images/i_get-started.svg">
+                                                    <img alt="" src="media/index/i_integration.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3 style="font-size: 1.4rem">Integrate data</h3><hr/>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins</a></p>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions</a></p>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Client scripting (Model-driven apps)</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/virtual-entities/get-started-ve">Virtual entities</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/azure-integration">Azure integration</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/use-webhooks">Webhooks</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/import-data">Import data</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/data-export-service">Data export service</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/data-synchronization">Data synchronization</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="media/index/i_model-driven-apps.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3 style="font-size: 1.4rem">Build model-driven apps</h3><hr/>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-entity-forms">Customize entity forms</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-entity-views">Customize entity views</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/use-editable-grids">Use editable grids</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-visualizations-dashboards">Customize visualizations and dashboards</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Apply business logic using client scripting</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-commands-ribbon">Customize commands and ribbon</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/web-resources">Use webresources</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/create-manage-model-driven-apps-using-code">Create, manage, and publish app</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="media/index/i_integration.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3 style="font-size: 1.4rem">Package and distribute apps/extensions</h3><hr/>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/introduction-solutions">Using solutions</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager tool</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer tool</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publish your app on AppSource</a></p>
                                             </div>
                                         </div>
                                     </div>
