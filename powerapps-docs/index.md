@@ -157,7 +157,7 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="" src="media/index/i_common-data-service.svg">
+                                                    <img alt="" src="media/index/i_env-security.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -176,13 +176,13 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="" src="media/index/i_canvas-apps.svg">
+                                                    <img alt="" src="media/index/i_integration.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>Data integration and DSR</h3><hr/>
                                                 <p><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
-                                                <p><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</p>
+                                                <p><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="Customize icon" src="media/index/i_model-driven-apps.svg">
+                                                    <img alt="Customize icon" src="media/index/i_billing.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -227,12 +227,12 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>CDS for Apps</h3><hr/>
-                                                <p><a href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
-                                                <p><a href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
-                                                <p><a href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
-                                                <p><a href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
-                                               <p><a href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
+                                                <h3>Common Data Service (CDS) for Apps</h3><hr/>
+                                                <p><a class="barLink" href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
+                                               <p><a class="barLink" href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -250,11 +250,11 @@ ms.custom:
                                             <div class="cardText">
                                                 <h3>Canvas apps</h3><hr/>
                                                 <ul>
-                                                <li><a href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></li>
-                                                <li><a href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app from sample</a></li>
-                                                <li><a href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app from data</a></li>
-                                                <li><a href="/powerapps/maker/canvas-apps/share-app">Share an app</a></li>
-                                                 <li><a href="/powerapps/maker/canvas-apps/sharepoint-scenario-intro">Integrate with SharePoint Online</a></li>
+                                                <p><a class="barLink" href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app from sample</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app from data</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/canvas-apps/share-app">Share an app</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/canvas-apps/sharepoint-scenario-intro">Integrate with SharePoint Online</a></p>
                                                 </ul>
                                             </div>
                                         </div>
@@ -272,8 +272,12 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h3>Model-driven apps</h3><hr/>
-                                                <p><a href="/powerapps/maker/model-driven-apps/build-first-model-driven-app">Create an app</a></p>
-                                                <p><a href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/model-driven-apps/model-driven-app-overview">What are model-driven apps?</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/model-driven-apps/build-first-model-driven-app">Create an app</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/model-driven-apps/model-driven-app-components">Understand app components</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes">Apply business logic</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/model-driven-apps/share-model-driven-app">Share an app</a></p>
+                                                <p><a class="barLink" href="/powerapps/maker/model-driven-apps/distribute-model-driven-app">Distribute an app</a></p>
                                             </div>
                                         </div>
                                     </div>
