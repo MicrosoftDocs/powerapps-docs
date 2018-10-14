@@ -161,7 +161,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.8rem>Environment and security</h3><hr/>
+                                                <h3>Environment and security</h3><hr/>
                                                 <p><a class="barLink" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
                                                 <p><a class="barLink" href="/powerapps/administrator/database-security">Configure environment security</a></p>
                                                 <p><a class="barLink" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
@@ -180,7 +180,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.8rem>Data integration and DSR</h3><hr/>
+                                                <h3>Data integration and DSR</h3><hr/>
                                                 <p><a class="barLink" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
                                                 <p><a class="barLink" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
                                             </div>
@@ -198,7 +198,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.8rem>Licensing and purchase</h3><hr/>
+                                                <h3>Licensing and purchase</h3><hr/>
                                                 <p><a class="barLink" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
                                                 <p><a class="barLink"href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
                                             </div>
