@@ -452,7 +452,7 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h3 style="font-size: 1.4rem">Create client applications</h3><hr/>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Authentications</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Authentication</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/discovery-service">Discover user organizations</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools">Build Windows client applications using XRM tooling</a></p>
                                             </div>
