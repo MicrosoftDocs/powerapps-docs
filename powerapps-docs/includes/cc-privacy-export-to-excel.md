@@ -1,0 +1,5 @@
+If you use Microsoft Dynamics 365 (online), exporting data to a *static* worksheet creates a local copy of the exported data and stores it on your computer. The data is transferred from Dynamics 365 (online) to your computer by using a secure connection, and no connection is maintained between this local copy and Dynamics 365 (online).  
+  
+ When you export to a *dynamic* worksheet or PivotTable, a link is maintained between the Excel worksheet and Dynamics 365 (online). Every time a dynamic worksheet or PivotTable is refreshed, you’ll be authenticated with Dynamics 365 (online) using your credentials. You’ll be able to see the data that you have permissions to view.  
+  
+ An administrator determines whether or not an organization’s users are permitted to export data to Excel by using security roles.
