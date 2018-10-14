@@ -311,9 +311,9 @@ ms.custom:
                                             </div>
                                             <div class="cardText">
                                                 <h2>Get started</h2><hr/>
-                                                <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
-                                                <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
-                                                <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/webapi/quick-start-console-app-csharp">Quickstart: Web API sample</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/webapi/quick-start-console-app-csharp">Quickstart: Web API sample</a></p>
                                             </div>
                                         </div>
                                     </div>
