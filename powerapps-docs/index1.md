@@ -22,8 +22,6 @@ ms.custom:
                         <a href="#getstarted"><strong>Get started</strong></a>
                         <ul id="getstarted"
                             class="cardsC"><br/>                            
-                            <li class="fullSpan">
-                                <ul class="cardsC panelContent singlePanelContent cols cols3" style="display:flex!important;">
                                     <li>
                                       <a href="/powerapps/maker/signup-for-powerapps">
                                           <div class="cardSize">
@@ -137,20 +135,14 @@ ms.custom:
                                               </div>
                                           </div>
                                       </a>
-                                    </li>
-                                </ul>
-                            </li>
+                                    </li>                            
                         </ul>
                     </li>
-                    </li>
-                    </li>
-                    </li>
-                    </li> 
                 </ul>
             </li>
             <li>
-                        <a href="#user"><strong>I'm an app user</strong></a>
-                        <ul id="user"
+                <a href="#user"><strong>I'm an app user</strong></a>
+                <ul id="user"
                             class="cardsF">
                             <li>
                                 <div class="container">
@@ -179,7 +171,7 @@ ms.custom:
                                     </div>
                                 </div>
                             </li>
-                        </ul>
+                </ul>
             </li>
             <li>
                   <a href="#admin"><strong>I'm an admin</strong></a>
