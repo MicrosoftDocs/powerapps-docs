@@ -19,7 +19,7 @@ ms.custom:
                 <a href="#get-started"></a>
                 <ul id="get-started">
                     <li>
-                        <a href="#getstarted"><strong>Get started</strong></a>
+                        <a href="#getstarted">Get started</a>
                         <ul id="getstarted"
                             class="cardsC"><br/>                            
                                     <li>
@@ -141,7 +141,7 @@ ms.custom:
                 </ul>
             </li>
             <li>
-                <a href="#user"><strong>I'm an app user</strong></a>
+                <a href="#user">App user</a>
                 <ul id="user"
                             class="cardsF">
                             <li>
@@ -174,7 +174,7 @@ ms.custom:
                 </ul>
             </li>
             <li>
-                  <a href="#admin"><strong>I'm an admin</strong></a>
+                  <a href="#admin">I'm an admin</a>
                         <ul id="admin"
                             class="cardsF">
                             <li>
@@ -240,7 +240,7 @@ ms.custom:
                         </ul>
             </li>
             <li>
-                        <a href="#maker"><strong>I'm an app maker</strong></a>
+                        <a href="#maker">I'm an app maker</a>
                         <ul id="maker"
                             class="cardsF">
                             <li>
@@ -328,7 +328,7 @@ ms.custom:
                         </ul>
             </li>
             <li>
-                        <a href="#developer"><strong>I'm a developer</strong></a>
+                        <a href="#developer">I'm a developer</a>
                         <ul id="developer"
                             class="cardsF">
                             <li>
