@@ -38,7 +38,7 @@ Verify the following prerequisites before you start creating an app:
 <a name="createApp"></a>   
 ## Create an app  
 
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Start from blank** option for model-driven app.  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select the **Start from blank** option for a model-driven app.  
 
     ![Model-driven start from blank](media/start-from-blank-model-driven.png)
 
