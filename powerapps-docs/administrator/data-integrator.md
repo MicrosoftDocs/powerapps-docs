@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 09/19/2018
+ms.date: 10/15/2018
 ms.author: sabinn
 search.audienceType: 
   - admin
@@ -67,6 +67,9 @@ Once you create an integration project, you get the option to run the project ma
 Before you can create a data integration project, you must provision a connection for each system that you intend to work with in the Microsoft PowerApps portal. Think of these connections as your points of integration.
 
 **To create a connection**
+
+> [!NOTE]
+> Please make sure that the account you specify for each connection has access to entities for the corresponding applications. Additionally, the account for each connection can be in a different tenant. 
 
 1. Go to [PowerApps Admin center](https://admin.powerapps.com).
 
@@ -164,8 +167,6 @@ Projects enable the flow of data between systems. A project contains mappings fo
 
 ### Execution history
 
-<!--note from editor: Do you think most people reading this will know what "upsert" means?-->
-
 Execution history shows the history of all project executions with project name, timestamp of when the project was executed, and status of execution along with the number of upserts and/or errors.
 
 -   Example of project execution history.
@@ -192,6 +193,12 @@ Execution history shows the history of all project executions with project name,
     In either case, you could also choose to manually ‘re-run execution.’
 
 ### How to set up a schedule-based refresh
+
+> [!NOTE]
+> - Currently, we support scheduling 50 integration projects at any given time per paid tenant. However you can create more projects and run them interactively.
+For trial tenants, we have an additional limitation that a scheduled project would only run for first 50 executions.
+> - While we support scheduling projects to run every minute, please bear in mind that this may put a lot of stress on your apps and in turn impact overall performance. We highly encourage users to test project executions under true load conditions and optimize for performance with less frequent refreshes.
+In production environments, we do not recommend running more than 5 projects per minute per tenant.
 
 We support two types of executions/writes today:
 
