@@ -157,53 +157,17 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt="" src="media/index/i_env-security.svg">
+                                                    <img alt="" src="media/index/i_find-run-apps.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.4rem">Run apps</h3><hr/>
+                                                <h3 style="font-size: 1.4rem">Find and run apps</h3><hr/>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-browser">In a web browser</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client">On mobile device (Canvas app)</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client-model-driven">On mobile device (Model-driven app)</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/powerapps-web-part">On SharePoint (Canvas app)</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/open-app-embedded-in-teams">In Microsoft Teams</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/app-source">From AppSource</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage">
-                                                    <img alt="" src="media/index/i_integration.svg">
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3 style="font-size: 1.4rem">Data integration and DSR</h3><hr/>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage">
-                                                    <img alt="" src="media/index/i_billing.svg">
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3 style="font-size: 1.4rem">Licensing and purchase</h3><hr/>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
                                             </div>
                                         </div>
                                     </div>
