@@ -68,9 +68,6 @@ Before you can create a data integration project, you must provision a connectio
 
 **To create a connection**
 
-> [!NOTE]
-> Please make sure that the account you specify for each connection has access to entities for the corresponding applications. Additionally, the account for each connection can be in a different tenant. 
-
 1. Go to [PowerApps Admin center](https://admin.powerapps.com).
 
 2. Under Data, select **Connections** and then select **New connection**.
@@ -86,6 +83,9 @@ Before you can create a data integration project, you must provision a connectio
 
     > [!div class="mx-imgBorder"] 
     > ![Connection list](media/data-integrator/CreateConnection1780.png "Connection list")
+
+> [!NOTE]
+> Please make sure that the account you specify for each connection has access to entities for the corresponding applications. Additionally, the account for each connection can be in a different tenant. 
 
 ### How to create a connection set
 
@@ -194,12 +194,6 @@ Execution history shows the history of all project executions with project name,
 
 ### How to set up a schedule-based refresh
 
-> [!NOTE]
-> - Currently, we support scheduling 50 integration projects at any given time per paid tenant. However you can create more projects and run them interactively.
-For trial tenants, we have an additional limitation that a scheduled project would only run for first 50 executions.
-> - While we support scheduling projects to run every minute, please bear in mind that this may put a lot of stress on your apps and in turn impact overall performance. We highly encourage users to test project executions under true load conditions and optimize for performance with less frequent refreshes.
-In production environments, we do not recommend running more than 5 projects per minute per tenant.
-
 We support two types of executions/writes today:
 
 -   Manual writes (execute and refresh project manually)
@@ -230,6 +224,12 @@ Also note that under Notifications, you can opt in for email-based alert notific
 
 > [!div class="mx-imgBorder"] 
 > ![Email notification](media/data-integrator/EmailNotification780.png "Email notification")
+
+> [!NOTE]
+> - Currently, we support scheduling 50 integration projects at any given time per paid tenant. However you can create more projects and run them interactively.
+For trial tenants, we have an additional limitation that a scheduled project would only run for first 50 executions.
+> - While we support scheduling projects to run every minute, please bear in mind that this may put a lot of stress on your apps and in turn impact overall performance. We highly encourage users to test project executions under true load conditions and optimize for performance with less frequent refreshes.
+In production environments, we do not recommend running more than 5 projects per minute per tenant.
 
 ## Customizing projects, templates, and mappings 
 
