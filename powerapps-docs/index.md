@@ -335,7 +335,7 @@ ms.custom:
                             class="cardsF">
                             <li>
                                 <div class="container">
-                                    <p>Developers and ISVs can use the Common Data Service (CDS) for Apps platform to extend business apps using code.</p><hr/><br/>
+                                    <p>Developers are <a href="/powerapps/?branch=release-crm-mig-vivek#pivot=home&panel=maker">app makers</a> who can use code to extend business apps.</p><hr/><br/>
                                 </div>
                             </li>
                             <li>
@@ -412,7 +412,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.4rem">Work with data</h3><hr/>
+                                                <h3 style="font-size: 1.4rem">Work with CDS for Apps data</h3><hr/>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/webapi/overview">Use Web API</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/org-service/overview">Use Organization service</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/use-fetchxml-construct-query">Query data using FetchXML</a></p>
@@ -433,7 +433,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.4rem">Work with metadata</h3><hr/>
+                                                <h3 style="font-size: 1.4rem">Work with CDS for Apps metadata</h3><hr/>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/metadata-services">Get started with metadata</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/browse-your-metadata">Browse your environment metadata</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/entity-metadata">Entity metadata</a></p>
@@ -473,7 +473,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.4rem">Integrate data</h3><hr/>
+                                                <h3 style="font-size: 1.4rem">Integrate data with CDS for Apps</h3><hr/>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/virtual-entities/get-started-ve">Virtual entities</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/azure-integration">Azure integration</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/use-webhooks">Webhooks</a></p>
@@ -515,7 +515,7 @@ ms.custom:
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3 style="font-size: 1.4rem">Create client applications</h3><hr/>
+                                                <h3 style="font-size: 1.4rem">Create client applications for CDS for Apps</h3><hr/>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Authentication</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/discovery-service">Discover user organizations</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools">Build Windows client applications using XRM tooling</a></p>
