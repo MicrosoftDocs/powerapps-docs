@@ -45,13 +45,11 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 ## Open a blank app
 1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-	![PowerApps home page](./media/get-started-create-from-blank/sign-in.png)
-
 	You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
 
-1. Under **Make apps like these**, hover over the **Start from blank** tile, select the phone icon, and then select **Make this app**.
+1. Under **Make your own app**, hover over the **Start from blank** tile for canvas apps, select the phone icon, and then select **Make this app**.
 
-	![Blank-app tile](./media/get-started-create-from-blank/blank-app.png)
+	![Blank-app tile](./media/get-started-create-from-blank/start-from-blank.png)
 
     PowerApps Studio creates a blank app for phones.
 

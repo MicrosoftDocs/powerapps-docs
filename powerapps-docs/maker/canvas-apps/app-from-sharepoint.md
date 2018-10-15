@@ -38,9 +38,9 @@ The principles of generating an app won't change even if you create a list that'
 
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Under **Make apps like these**, hover over **Start from data**, and then select **Make this app**.
+1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 
-	![Option to create an app](./media/app-from-sharepoint/make-this-app.png)
+	![Option to create an app](./media/app-from-sharepoint/start-from-data.png)
 
 1. On the SharePoint tile, select **Phone layout**.
 
