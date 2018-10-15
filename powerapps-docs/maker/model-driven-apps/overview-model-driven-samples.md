@@ -38,11 +38,14 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 
 ## Customize a sample app
 
-1. Sign in to [powerapps.com](https://powerapps.com) and chose **Model-driven** for the design mode. 
+1. Sign in to [powerapps.com](https://powerapps.com)  
 
-    ![Choose design mode](media/overview-model-driven-samples/choose-design-mode.png)
+    
 
-2. From the Home page, hover over the sample app and click **Customize**.
+2. From the **Create** page, hover over the sample app and click **Make this app**.
+
+![Model Sample App](media/overview-model-driven-samples/model-driven-create-page-sample.png)
+
 3. The App designer will open providing multiple options for customizing the app. 
 4. For additonal customization options, click **Advanced** from the left navigation in the portal.
 

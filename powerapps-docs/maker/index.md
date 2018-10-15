@@ -13,6 +13,7 @@ ms.reviewer:
 ---
 
 # Overview of creating apps in PowerApps
+
 PowerApps is a high-productivity development platform for business apps, and it has three major components:
 
 - [Canvas apps](canvas-apps/getting-started.md) start with your user experience, crafting a highly tailored interface with the power of a blank canvas and connecting it to your choice of 200 data sources. You can build canvas apps for web, mobile, and tablet applications.
@@ -22,6 +23,7 @@ PowerApps is a high-productivity development platform for business apps, and it 
 It's easy and simple to try building out your first app. We have a 30-day trial plan and a free community plan; find out which one is best for you and get started.
 
 ## Canvas apps
+
 Canvas apps give you the flexibility to arrange the user experience and interface the way you want it. Allow your creativity and business sense to guide how you want your apps to look and feel.
 
 You can start to build your app from Microsoft tools where your data lives, such as:
@@ -38,6 +40,7 @@ Creating a canvas app is easy; with PowerApps, you can find or create your app i
 - [Via AppSource](../user/app-source.md)
 
 ## Model-driven apps
+
 When you create a model-driven app, you can use all of the power of the Common Data Service to rapidly configure your forms, business rules, and process flows. You create a model-driven app from the PowerApps site.
 
 Getting started with model-driven apps is simple, and you can begin with these topics:
@@ -51,16 +54,28 @@ Getting started with model-driven apps is simple, and you can begin with these t
 - [Add business logic](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
 ## Common Data Service for Apps
+
 The Common Data Service allows you to securely store and manage data within a set of standard and custom entities, and you can add fields to those entities when you need them.
 
 Getting started with the Common Data Service is easy. For example, you can start with these items:
+
 - [Create a custom entity](common-data-service/data-platform-create-entity.md)
 - [Manage fields](common-data-service/data-platform-manage-fields.md)
 - [Create custom option sets](common-data-service/custom-picklists.md)
 - [Create a business rule](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
 
+## Canvas and model-driven artifacts
+
+While we merge the experiences of canvas and model-driven apps, these artifacts will be relevant for either canvas apps or model-driven apps.
+
+| Artifact            | App Type     |
+|---------------------|--------------|
+| Entity > Views      | Model-driven |
+| Entity > Forms      | Model-driven |
+| Entity > Dashboards | Model-driven |
+| Connections         | Canvas       |
+| Gateways            | Canvas       |
+| Custom connectors   | Canvas       |
+| Apps > Import       | Canvas       |
+
 After you build your app, you can [share it](canvas-apps/share-app.md) with your team members.
-
-
-
-
