@@ -143,8 +143,8 @@ ms.custom:
                         </ul>
                     </li>
                     <li>
-                        <a href="#admin"><strong>I'm an app user</strong></a>
-                        <ul id="admin"
+                        <a href="#user"><strong>I'm an app user</strong></a>
+                        <ul id="user"
                             class="cardsF">
                             <li>
                                 <div class="container">
