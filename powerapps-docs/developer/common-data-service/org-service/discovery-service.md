@@ -12,17 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Use the Discovery Service with the SDK Assemblies
 
-<!-- 
-
-Merge these topics into one
-
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/discovery-service-methods
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/discovery-service-messages-request-response-classes
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/messages-discovery-service
-
-
--->
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
 

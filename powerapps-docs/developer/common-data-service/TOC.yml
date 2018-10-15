@@ -151,17 +151,6 @@
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-  - name: SharePoint integration
-    href: integrate-sharepoint.md
-    items:
-    - name: Get started with SharePoint integration
-      href: get-started-sharepoint-integration.md
-    - name: Enable document management for entities
-      href: enable-document-management-entities.md
-    - name: Actions on SharePoint location records
-      href: actions-on-sharepoint-location-records.md
-    - name: Define custom claim mapping for SharePoint server-based integration
-      href: define-custom-claim-mapping-sharepoint-server-based-integration.md
 - name: Work with CDS for Apps entities
   href: entities.md
   items:
