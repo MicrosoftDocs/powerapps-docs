@@ -56,25 +56,17 @@ In PowerApps, you can create and run these types of apps:
 - **Canvas apps** support designing custom UI and connecting to data from a variety of sources.
 - **Model-driven apps** have a standard UI and connect to data only in Common Data Service (CDS) for Apps. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
 
-By default, the **Home** page shows options for creating and running canvas apps. To show model-driven options instead, choose an environment that has a CDS for Apps database, and then open the menu in the lower-left corner.
-
-![Switch between canvas and model-driven apps](media/intro-maker-portal/mode-switcher.png)
+If you choose an environment that has a CDS for Apps database, you can build canvas or model-driven apps from the same **Home** page.
 
 ## Play or edit an app
 
-If you've already created an app (or someone else has created one and shared it with you), you can play or edit it from the **Apps** page.
+If you've created an app (or someone else has created one and shared it with you), you can play or edit it from the **Home** page or the **Apps** page.
 
-- You can find a canvas app by filtering based on criteria such as whether you opened it recently.
+On the **Apps** page, you can filter the list of apps based on criteria such as whether you opened it recently.
 
-    ![List of canvas apps](media/intro-maker-portal/org-apps.png)
+![list of apps](./media/intro-maker-portal/find-apps.png)
 
-    You can also search for an app or by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
-
-    ![Ellipsis menu](media/intro-maker-portal/ellipsis-menu.png)
-
-- You can't filter the list of model-driven apps, but you can search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the ellipsis icon to show options for playing or editing the app.
-
-    ![List of model-driven apps with an ellipsis menu open](media/intro-maker-portal/model-driven-list.png)
+You can also search for an app by typing one or more characters in the search bar, which appears near the upper-right corner. When you find the app you want, select the banner icon to play or edit the app.
 
 ## Create an app
 

@@ -31,10 +31,9 @@ This topic describes how to access advanced customization and administration are
 ## Solution explorer
 Use solution explorer to perform app making and customization tasks that can’t be completed from the PowerApps model-driven home page.
 
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2.	Select **Model-driven** (lower left). 
-3.	Select ![Settings icon](media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
-4.	Under **Customize**, select **Open solution explorer**. 
+1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+2.	Select ![Settings icon](media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
+3.	Under **Customize**, select **Open solution explorer**. 
 
     > [!div class="mx-imgBorder"] 
     > ![Solution explorer link](media/advanced-customization-menu.png)
@@ -44,8 +43,7 @@ Use solution explorer to perform app making and customization tasks that can’t
 The solutions area is where you can view, edit, create, import, export, and delete managed and unmanaged solutions. 
 
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2.	Select **Model-driven** (lower left). 
-3.	On the left navigation pane select **Solutions**. 
+2.	On the left navigation pane select **Solutions**. 
 
 ## My Apps
 
@@ -53,8 +51,7 @@ Like the PowerApps model-driven area, the My Apps page lists all model-driven ap
 
 To get to My Apps:
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2.	Select **Model-driven** (lower left). 
-3. Select **…** > **Share**. 
+2.  Select **…** > **Share**. 
 
     > [!div class="mx-imgBorder"] 
     > ![Share app link](media/share-link.png) 
