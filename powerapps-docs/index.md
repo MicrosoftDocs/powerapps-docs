@@ -143,6 +143,75 @@ ms.custom:
                         </ul>
                     </li>
                     <li>
+                        <a href="#admin"><strong>I'm an app user</strong></a>
+                        <ul id="admin"
+                            class="cardsF">
+                            <li>
+                                <div class="container">
+                                    <p>App users can <a href="/powerapps/user">find and run</a> apps created by them or by others on a phone, tablet or web browser.</p><hr/><br/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="media/index/i_env-security.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3 style="font-size: 1.4rem">Run apps</h3><hr/>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-browser">In a web browser</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client">On mobile device (Canvas app)</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client-model-driven">On mobile device (Model-driven app)</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/powerapps-web-part">On SharePoint (Canvas app)</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/open-app-embedded-in-teams">In Microsoft Teams</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/app-source">From AppSource</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="media/index/i_integration.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3 style="font-size: 1.4rem">Data integration and DSR</h3><hr/>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img alt="" src="media/index/i_billing.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3 style="font-size: 1.4rem">Licensing and purchase</h3><hr/>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#admin"><strong>I'm an admin</strong></a>
                         <ul id="admin"
                             class="cardsF">
@@ -254,7 +323,7 @@ ms.custom:
                                                 <ul>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Create an app from a sample app</a></p>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app CDS for Apps</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app from CDS for Apps</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/connections-list">Canvas app connectors</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/add-configure-controls">Canvas app controls</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/working-with-formulas">Canvas app formulas</a></p>
@@ -311,7 +380,7 @@ ms.custom:
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img alt=" src="media/index/i_get-started.svg">
+                                                    <img alt="" src="media/index/i_get-started.svg">
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -362,7 +431,7 @@ ms.custom:
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-visualizations-dashboards">Customize visualizations and dashboards</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Apply business logic using client scripting</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-commands-ribbon">Customize commands and ribbon</a></p>
-                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/web-resources">Use webresources</a></p>
+                                                <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/web-resources">Use web resources</a></p>
                                                 <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/create-manage-model-driven-apps-using-code">Create, manage, and publish app</a></p>
                                             </div>
                                         </div>
