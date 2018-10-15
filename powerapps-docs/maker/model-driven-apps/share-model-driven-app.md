@@ -49,7 +49,7 @@ Because the environment that will maintain the pet grooming records is also used
 For more information about access and scope privileges, see [Security roles](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
 ## Create a custom security role
-1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site, select **Model-driven** > **Apps** > **…**> **Share link**.
+1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site, select **Apps** > **…**> **Share link**.
 2. From the **Share this app** dialog, under **Create a security role** select **Security Setting**.
 3. On the **Settings** page, select **New**.  
 
