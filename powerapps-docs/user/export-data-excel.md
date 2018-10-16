@@ -50,9 +50,9 @@ Export data to a standard Excel file that that you can use on any device such as
 
 
 
-- When you export data in [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)] (.xlsx format) and then add or modify columns, you can’t import the data back in to [!INCLUDE[pn_crm_shortest](../includes/pn-crm-shortest.md)]. This is not supported for .xlsx file format.  
+- When you export data in Excel (.xlsx format) and then add or modify columns, you can’t import the data back in to Dynamics 365. This is not supported for .xlsx file format.  
   
-- If you’re using [!INCLUDE[pn_ms_Excel_2010_short](../includes/pn-ms-excel-2010-short.md)], \ you may get this error message when you export data from Accounts area: 
+- If you’re using Excel 2010, you may get this error message when you export data from Accounts area: 
  
       “The file is corrupt and cannot be opened.”  
   
