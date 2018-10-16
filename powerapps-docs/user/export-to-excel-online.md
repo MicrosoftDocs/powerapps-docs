@@ -35,7 +35,7 @@ You can quickly to a ad-hoc analysis of your data that is in PowerApps by export
  The option to open data in Excel Online isn’t available in all record types. If you don’t see the option, it’s not available for that record.  
   
 > [!NOTE]
->  Updated data in Dynamics 365 won’t immediately be reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that timeframe, any updated data should show in Excel Online.
+>  Updated data in PowerApps won’t immediately be reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that timeframe, any updated data should show in Excel Online.
   
 To open a list of records in PowerApp, on the command bar click **Export to Excel** menu and then click **Open in Excel Online**.  
   
