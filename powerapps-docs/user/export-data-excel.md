@@ -56,9 +56,9 @@ Export data to a standard Excel file that that you can use on any device such as
  
       “The file is corrupt and cannot be opened.”  
   
-   The error message occurs due to a setting in [!INCLUDE[pn_Excel_short](../includes/pn-excel-short.md)]. To fix the issue, do this:  
+   The error message occurs due to a setting in Excel. To fix the issue, do this:  
   
-  1. Open [!INCLUDE[pn_ms_Excel_2010_short](../includes/pn-ms-excel-2010-short.md)]  
+  1. Open Excel 2010.  
   
   2. Go to **File** > **Options**.  
   
