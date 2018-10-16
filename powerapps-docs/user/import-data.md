@@ -1,5 +1,5 @@
 ---
-title: "Import contacts in PowerApps| MicrosoftDocs"
+title: "Import data in PowerApps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -18,24 +18,26 @@ search.app:
   - D365CE
   - D365CE
 ---
-# Import contacts
+# Import data
 
-Whether your contacts are stored in an email program, a spreadsheet, or on your phone, here’s how to import them so you have all your business contact information in PowesApps 
+Whether your data is stored in a spreadsheet, on your phone, or in an email program here’s how to import the data in to PowesApps. For example, you may want to import your customer contact list from an Excel spreadsheet into PowerApps so you can keep track of all your customer information in one place.
   
 ## Step 1: Get your import file ready  
-First, you export your contacts into a Excel file. These file formats are supported are Excel **.xlsx** or **.xml**. 
+First, you export your data into a Excel file. These file formats are supported:
+ - Excel Workbook (.xlsx)
+ - Comma-separated values (.csv)
   
 The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.  
   
-### Export contacts from an email program  
+### Export data from an email program  
   
-1.  Export the contacts into a comma separated values file (.csv).  
+1.  Export your data into a comma separated values file (.csv).  
   
      To find specific steps to export contacts from your email program, open the program’s Help, and search for “export.” Look for topics that include “exporting contacts” or “exporting your address book” or “export wizard” in the title.  
   
 2.  Save the file in a location where you can find it easily later.  
   
-### Export contacts from a spreadsheet  
+### Export data from a spreadsheet  
   
 1.  Open the spreadsheet.  
   
@@ -61,9 +63,9 @@ The maximum file size allowed for .zip files is 32 MB. For the other file format
   
 3.  Save the file.  
   
-### Export contacts from your phone  
+### Export data from your phone  
 
-Use a USB cable or an app to export your contacts from your phone to your computer.
+Use a USB cable or an app to export your data such as contacts from your phone to your computer.
   
 To find specific steps to export contacts for your brand of phone, search for “export contacts from my phone” in your favorite search engine (like Bing).  
   
@@ -71,7 +73,9 @@ To find an app, search your phone’s online store.
   
 ## Step 2: Import the file 
   
-1. On the commbar bar, click **Import from Excel**.  
+1. On the commbar bar, click **Import from Excel** or click **Import from CSV**.
+
+![Main menu in PowerApps](media/import.png "Main menu in PowerAppss")
   
 2. Browse to the folder where you saved the file that contains the export of your contacts. Select the file, and then click **Open** and then click **Next**.  
   
@@ -80,8 +84,8 @@ To find an app, search your phone’s online store.
    
 3. Review the file name and verify that the field and data delimiters are correct using the **Review Mapping** option. If everything looks good, click **Finish Import**.  
  
-## Step 3: Check that the contacts imported successfully  
- After the wizard finishes, check your list of contacts to make sure they imported correctly.  
+## Step 3: Check that the import is successfully  
+ After the wizard finishes, check your data for (example, list of contacts) to make sure they imported correctly.  
   
 1. From the main menu, go to **Contacts**.
   
