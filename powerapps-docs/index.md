@@ -185,7 +185,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>App makers can use PowerApps to quickly <a href="/powerapps/maker">create</a> custom business apps without writing code to manage their organizations's mission-critical data.</p>
+                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. Makers can create two types of apps in PowerApps: <strong>canvas app</strong> that is based on data in Common Data Service (CDS) for Apps or other data sources; <strong>model-driven app</strong> that is based on data in CDS for Apps. <br/><strong>CDS for Apps</strong> lets you securely store and manage data used by business applications. More information: <a href="/powerapps/maker">Create apps</a>.</p>
                            <hr/>
                            <br/>
                         </div>
