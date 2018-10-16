@@ -178,78 +178,7 @@ ms.custom:
                         </div>
                      </li>
                   </ul>
-               </li>
-               <li>
-                  <a href="#admin"><strong>I'm an admin</strong></a>
-                  <ul id="admin"
-                     class="cardsF">
-                     <li>
-                        <div class="container">
-                           <p>Admins can use the PowerApps admin center to secure data, manage environments, and monitor usage.</p>
-                           <hr/>
-                           <br/>
-                        </div>
-                     </li>
-                     <li>
-                        <div class="cardSize">
-                           <div class="cardPadding">
-                              <div class="card">
-                                 <div class="cardImageOuter">
-                                    <div class="cardImage">
-                                       <img alt="" src="media/index/i_env-security.svg">
-                                    </div>
-                                 </div>
-                                 <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Environment and security</h3>
-                                    <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/database-security">Configure environment security</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </li>
-                     <li>
-                        <div class="cardSize">
-                           <div class="cardPadding">
-                              <div class="card">
-                                 <div class="cardImageOuter">
-                                    <div class="cardImage">
-                                       <img alt="" src="media/index/i_integration.svg">
-                                    </div>
-                                 </div>
-                                 <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Data integration and DSR</h3>
-                                    <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </li>
-                     <li>
-                        <div class="cardSize">
-                           <div class="cardPadding">
-                              <div class="card">
-                                 <div class="cardImageOuter">
-                                    <div class="cardImage">
-                                       <img alt="" src="media/index/i_billing.svg">
-                                    </div>
-                                 </div>
-                                 <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Licensing and purchase</h3>
-                                    <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </li>
-                  </ul>
-               </li>
+               </li>               
                <li>
                   <a href="#maker"><strong>I'm an app maker</strong></a>
                   <ul id="maker"
@@ -336,6 +265,98 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/share-model-driven-app">Share an app</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/distribute-model-driven-app">Distribute an app</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </li>
+			   <li>
+                  <a href="#admin"><strong>I'm an admin</strong></a>
+                  <ul id="admin"
+                     class="cardsF">
+                     <li>
+                        <div class="container">
+                           <p>Admins can use the PowerApps and Power platform admin centers to secure data, manage environments, and monitor usage.</p>
+                           <hr/>
+                           <br/>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_env-security.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.25rem">Environment and security</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/database-security">Configure environment security</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_integration.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.25rem">Data integration and DSR</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_billing.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.25rem">Licensing and purchase</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_billing.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.25rem">Power platform</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/admin-guide">Administer Power platform</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/get-help-support">Get Help + Support</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/analytics-common-data-service">CDS for Apps analytics</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/manage-environments">Manage environments</a></p>
                                  </div>
                               </div>
                            </div>
