@@ -19,15 +19,11 @@ A control that allows users to download files to their device, as well as upload
 
 ## Limitations
 The attachment control has the following temporary limitations:
-1. Attachment download is supported in Internet Explorer only within SharePoint custom list forms.
-
-1. Attachment upload only works with SharePoint list data sources.  Support for other data sources will be introduced incrementally, starting with CDS.
+1. Attachments are currently supported with SharePoint list and CDS data sources.
 
 1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form.   Note that in order to save the file additions and deletions to the back end, the end user must save the form.
 
 1. You can only upload files up to 10 MB in size.  
-
-1. Currently, iOS devices can only upload files from documents and cloud storage accounts. To attach photos/videos, please use the web browser on your iOS device to run the app.
 
 ## Description
 An **Attachments** control lets you open files stored on a data source as well as add and delete files from a SharePoint list.
