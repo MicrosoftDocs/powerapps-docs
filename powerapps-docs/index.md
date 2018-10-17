@@ -196,30 +196,6 @@ ms.custom:
                               <div class="card">
                                  <div class="cardImageOuter">
                                     <div class="cardImage">
-                                       <img alt="Common Data Service (CDS) for Apps" src="media/index/i_common-data-service.svg">
-                                    </div>
-                                 </div>
-                                 <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">CDS for Apps</h3>
-                                    <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Use Power BI report</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/change-color-scheme-add-logo-match-organizations-brand">Use themes for branding</a></p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </li>
-                     <li>
-                        <div class="cardSize">
-                           <div class="cardPadding">
-                              <div class="card">
-                                 <div class="cardImageOuter">
-                                    <div class="cardImage">
                                        <img alt="" src="media/index/i_canvas-apps.svg">
                                     </div>
                                  </div>
@@ -265,6 +241,30 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/share-model-driven-app">Share an app</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/distribute-model-driven-app">Distribute an app</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="Common Data Service (CDS) for Apps" src="media/index/i_common-data-service.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.25rem">CDS for Apps</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Use Power BI report</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/change-color-scheme-add-logo-match-organizations-brand">Use themes for branding</a></p>
                                  </div>
                               </div>
                            </div>
