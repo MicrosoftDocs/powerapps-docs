@@ -37,7 +37,7 @@ ms.custom:
                                           </div>
                                           <div class="cardText">
                                              <h3>What is PowerApps?</h3>
-                                             <p>Get started with documentation with an overview about PowerApps.</p>
+                                             <p>Get started on docs with an overview about PowerApps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -45,7 +45,7 @@ ms.custom:
                               </a>
                            </li>
                            <li>
-                              <a href="https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps">
+                              <a href="https://docs.microsoft.com/en-us/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
@@ -56,7 +56,7 @@ ms.custom:
                                           </div>
                                           <div class="cardText">
                                              <h3>Learn PowerApps</h3>
-                                             <p>Start your PowerApps learning journey by exploring our learning paths and modules. It's free!</p>
+                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn PowerApps. It's free!</p>
                                           </div>
                                        </div>
                                     </div>
