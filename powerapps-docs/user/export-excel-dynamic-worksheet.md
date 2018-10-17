@@ -47,7 +47,7 @@ Export your app data to a Office Excel worksheet so users can have the latest in
   
 6. If you see the security warning **External Data Connections have been disabled**, click **Enable Content**.  
   
-7. To refresh data in the file, on the **Data** tab, click **Refresh from CRM**.  
+7. To refresh data in the file, on the **Data** tab, click **Refresh from Powerapps**.  
   
    > [!NOTE]
    >  If you have a phone numbers that starts with **+** or **–**, for example +1-123-456-7890, when you refresh the dynamic worksheet the phone number field will not display the number correctly.   
