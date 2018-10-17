@@ -185,7 +185,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. Makers can create two types of apps in PowerApps: <strong>canvas app</strong> that is based on data in Common Data Service (CDS) for Apps or other data sources; <strong>model-driven app</strong> that is based on data in CDS for Apps. <br/><br/><strong>CDS for Apps</strong> lets you securely store and manage data used by business applications. More information: <a href="/powerapps/maker">Create apps</a>.</p>
+                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. Makers can create two types of apps in PowerApps: <strong>Canvas app</strong> that is based on data in Common Data Service (CDS) for Apps or other data sources; <strong>Model-driven app</strong> that is based on data in CDS for Apps. <br/><br/><strong>CDS for Apps</strong> lets you securely store and manage data used by business applications. More information: <a href="/powerapps/maker">Create apps</a>.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -211,7 +211,7 @@ ms.custom:
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/customize-list-form">Customize a SharePoint form</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/connections-list">Connectors</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/reference-properties">Controls reference</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/working-with-formulas">Formulas</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/formula-reference">Formula reference</a></p>
                                     </ul>
                                  </div>
                               </div>
@@ -370,7 +370,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Developers are <a href="/powerapps/?branch=release-crm-mig-vivek#pivot=home&panel=maker">app makers</a> who can use code to extend business apps.</p>
+                           <p>Developers are <a href="/powerapps/?branch=release-crm-mig-vivek#pivot=home&panel=maker">app makers</a> who can use code to extend business apps and create client applications that connect to CDS for Apps.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -391,7 +391,27 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/dev-enterprise-intro">Canvas apps: Developer overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/common-data-model/overview">Common Data Model</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/">Download CDS for Apps SDK</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_canvas-apps.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.25rem">Extend canvas apps</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/register-custom-api">Custom connectors</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/embed-apps-dev">Integrate into websites and other services</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/offline-apps">Develop offline-capable apps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/dev-appsource-test-drive">Test drive your app on AppSource</a></p>
                                  </div>
                               </div>
                            </div>
@@ -416,27 +436,6 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-commands-ribbon">Customize commands and ribbon</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/web-resources">Use web resources</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/create-manage-model-driven-apps-using-code">Create, manage, and publish app</a></p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </li>
-                     <li>
-                        <div class="cardSize">
-                           <div class="cardPadding">
-                              <div class="card">
-                                 <div class="cardImageOuter">
-                                    <div class="cardImage">
-                                       <img alt="" src="media/index/i_canvas-apps.svg">
-                                    </div>
-                                 </div>
-                                 <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Extend canvas apps</h3>
-                                    <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/register-custom-api">Custom connectors</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/embed-apps-dev">Integrate into websites and other services</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/offline-apps">Develop offline-capable apps</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/dev-appsource-test-drive">Test drive your app on AppSource</a></p>
                                  </div>
                               </div>
                            </div>
@@ -549,7 +548,7 @@ ms.custom:
                               </div>
                            </div>
                         </div>
-                     </li>
+                     </li>     
                      <li>
                         <div class="cardSize">
                            <div class="cardPadding">
@@ -565,6 +564,26 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Authentication</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/discovery-service">Discover user organizations</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools">Build Windows client applications using XRM tooling</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_reference.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.25rem">Reference</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/reference/about-entity-reference">Entity Reference</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9">Web API Reference</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/en-us/dotnet/api/?view=dynamics-general-ce-9">Organization service Reference</a></p>
                                  </div>
                               </div>
                            </div>
