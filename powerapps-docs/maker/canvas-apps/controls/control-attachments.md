@@ -18,8 +18,8 @@ search.app:
 A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list.
 
 ## Limitations
-The attachment control has the following temporary limitations:
-1. Attachments are currently supported with SharePoint list and CDS data sources.
+The attachment control has these limitations:
+1. Attachments are supported with SharePoint lists and Common Data Service for Apps entities.
 
 1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form.   Note that in order to save the file additions and deletions to the back end, the end user must save the form.
 
