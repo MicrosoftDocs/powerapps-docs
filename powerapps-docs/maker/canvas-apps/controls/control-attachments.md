@@ -15,22 +15,18 @@ search.app:
   - PowerApps
 ---
 # Attachments control in PowerApps
-A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list.
+A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Common Data Service for Apps entity.
 
 ## Limitations
-The attachment control has the following temporary limitations:
-1. Attachment download is supported in Internet Explorer only within SharePoint custom list forms.
+The attachment control has these limitations:
+1. Attachments are supported with SharePoint lists and CDS for Apps entities.
 
-1. Attachment upload only works with SharePoint list data sources.  Support for other data sources will be introduced incrementally, starting with CDS.
-
-1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form.   Note that in order to save the file additions and deletions to the back end, the end user must save the form.
+1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form. Note that in order to save the file additions and deletions to the back end, the end user must save the form.
 
 1. You can only upload files up to 10 MB in size.  
 
-1. Currently, iOS devices can only upload files from documents and cloud storage accounts. To attach photos/videos, please use the web browser on your iOS device to run the app.
-
 ## Description
-An **Attachments** control lets you open files stored on a data source as well as add and delete files from a SharePoint list.
+An **Attachments** control lets you open, add, and delete files from a SharePoint list or a CDS for Apps entity.
 
 ## Key properties
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.
@@ -80,7 +76,7 @@ An **Attachments** control lets you open files stored on a data source as well a
 
 
 ## Example
-1. Create an app from data using a SharePoint list as a data source.  Alternatively, add a form to your app and set a SharePoint list as its data source.
+1. Create an app from data using a SharePoint list as a data source. As an alternative, add a form to your app, and set a SharePoint list as its data source.
 
 2. Select the **Form** control in the tree view on the left-hand side.
 

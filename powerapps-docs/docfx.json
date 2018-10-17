@@ -51,7 +51,17 @@
       "feedback_github_repo": "MicrosoftDocs/powerapps-docs",
       "feedback_product_url": "https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas/"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "bilingual_type": {
+        "**/*": "hover over",
+        "maker/common-data-service/**/*": "",
+        "maker/model-driven-apps/**/*": "",
+        "maker/TOC.yml": "",
+        "maker/dev-community-plan.md": "",
+        "maker/index.md": "",
+        "maker/signup-for-powerapps.md": ""
+      }
+    },
     "template": [],
     "dest": "powerapps-docs",
     "markdownEngineName": "markdig"
