@@ -23,6 +23,9 @@ If you want to create more than one app that uses the same data but not share th
 ## Warning
 Enabling this functionality in your app may expose it to security vulnerabilities and data leakage.  It is recommended to advise users to import only recognized and trusted files and only export data that is not confidential or sensitive.
 
+## Limitations
+The export functionality isn't supported in web browsers.
+
 ## Key properties
 **Data** – The name of a collection that you want to export to a local file.
 
