@@ -164,14 +164,14 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Find and run apps</h3>
+                                    <h3 style="font-size: 1.2rem">Find and run apps</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-browser">In a web browser</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client">On mobile device (Canvas app)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client-model-driven">On mobile device (Model-driven app)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/powerapps-web-part">On SharePoint (Canvas app)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/open-app-embedded-in-teams">In Microsoft Teams</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/app-source">From AppSource</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/user/run-app-browser">In a web browser</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/user/run-app-client">On mobile device (Canvas app)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/user/run-app-client-model-driven">On mobile device (Model-driven app)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/user/powerapps-web-part">On SharePoint (Canvas app)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/user/open-app-embedded-in-teams">In Microsoft Teams</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/user/app-source">From AppSource</a></p>
                                  </div>
                               </div>
                            </div>
@@ -200,18 +200,18 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Canvas apps</h3>
+                                    <h3 style="font-size: 1.2rem">Canvas apps</h3>
                                     <hr/>
                                     <ul>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app automatically</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/data-platform-create-app-scratch">Build an app yourself</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Customize a sample app</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/share-app">Share an app</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/customize-list-form">Customize a SharePoint form</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/connections-list">Connectors</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/reference-properties">Controls reference</a></p>
-                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/formula-reference">Formula reference</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/data-platform-create-app">Generate an app automatically</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/data-platform-create-app-scratch">Build an app yourself</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Customize a sample app</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/share-app">Share an app</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/customize-list-form">Customize a SharePoint form</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/connections-list">Connectors</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/reference-properties">Controls reference</a></p>
+                                       <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/formula-reference">Formula reference</a></p>
                                     </ul>
                                  </div>
                               </div>
@@ -228,19 +228,19 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Model-driven apps</h3>
+                                    <h3 style="font-size: 1.2rem">Model-driven apps</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/model-driven-app-overview">What are model-driven apps?</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/build-first-model-driven-app">Create an app</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/model-driven-app-components">Understand app components</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-design-forms">Create and design forms</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-views">Create and manage views</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes">Apply business logic</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-system-chart">Use charts</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-dashboards">Use dashboards</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/share-model-driven-app">Share an app</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/distribute-model-driven-app">Distribute an app</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/model-driven-app-overview">What are model-driven apps?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/build-first-model-driven-app">Create an app</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/model-driven-app-components">Understand app components</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/create-design-forms">Create and design forms</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/create-edit-views">Create and manage views</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes">Apply business logic</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/create-edit-system-chart">Use charts</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/create-edit-dashboards">Use dashboards</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/share-model-driven-app">Share an app</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/model-driven-apps/distribute-model-driven-app">Distribute an app</a></p>
                                  </div>
                               </div>
                            </div>
@@ -256,15 +256,15 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">CDS for Apps</h3>
+                                    <h3 style="font-size: 1.2rem">CDS for Apps</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Use Power BI report</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/change-color-scheme-add-logo-match-organizations-brand">Use themes for branding</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Use Power BI report</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/common-data-service/change-color-scheme-add-logo-match-organizations-brand">Use themes for branding</a></p>
                                  </div>
                               </div>
                            </div>
@@ -293,11 +293,11 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Environment and security</h3>
+                                    <h3 style="font-size: 1.2rem">Environment and security</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/database-security">Configure environment security</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/administrator/database-security">Configure environment security</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/administrator/admin-view-apps">View apps in your environment</a></p>
                                  </div>
                               </div>
                            </div>
@@ -313,10 +313,10 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Data integration and DSR</h3>
+                                    <h3 style="font-size: 1.2rem">Data integration and DSR</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
                                  </div>
                               </div>
                            </div>
@@ -332,10 +332,10 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Licensing and purchase</h3>
+                                    <h3 style="font-size: 1.2rem">Licensing and purchase</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
                                  </div>
                               </div>
                            </div>
@@ -351,12 +351,12 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Power platform admin center</h3>
+                                    <h3 style="font-size: 1.2rem">Power platform admin center</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/admin-guide">Administer Power platform</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/get-help-support">Get Help + Support</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/analytics-common-data-service">CDS for Apps analytics</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/manage-environments">Manage environments</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="https://docs.microsoft.com/power-platform/admin/admin-guide">Administer Power platform</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="https://docs.microsoft.com/power-platform/admin/get-help-support">Get Help + Support</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="https://docs.microsoft.com/power-platform/admin/analytics-common-data-service">CDS for Apps analytics</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="https://docs.microsoft.com/power-platform/admin/manage-environments">Manage environments</a></p>
                                  </div>
                               </div>
                            </div>
@@ -385,12 +385,12 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Get started</h3>
+                                    <h3 style="font-size: 1.2rem">Get started</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/dev-enterprise-intro">Canvas apps: Developer overview</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/common-data-model/overview">Common Data Model</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/dev-enterprise-intro">Canvas apps: Developer overview</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/common-data-model/overview">Common Data Model</a></p>
                                  </div>
                               </div>
                            </div>
@@ -406,12 +406,12 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Extend canvas apps</h3>
+                                    <h3 style="font-size: 1.2rem">Extend canvas apps</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/register-custom-api">Custom connectors</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/embed-apps-dev">Integrate into websites and other services</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/offline-apps">Develop offline-capable apps</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/dev-appsource-test-drive">Test drive your app on AppSource</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/register-custom-api">Custom connectors</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/embed-apps-dev">Integrate into websites and other services</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/offline-apps">Develop offline-capable apps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/maker/canvas-apps/dev-appsource-test-drive">Test drive your app on AppSource</a></p>
                                  </div>
                               </div>
                            </div>
@@ -427,15 +427,15 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Extend model-driven apps</h3>
+                                    <h3 style="font-size: 1.2rem">Extend model-driven apps</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-entity-forms">Customize entity forms</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-entity-views">Customize entity views</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-visualizations-dashboards">Customize visualizations and dashboards</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Apply business logic using client scripting</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-commands-ribbon">Customize commands and ribbon</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/web-resources">Use web resources</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/create-manage-model-driven-apps-using-code">Create, manage, and publish app</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/customize-entity-forms">Customize entity forms</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/customize-entity-views">Customize entity views</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/customize-visualizations-dashboards">Customize visualizations and dashboards</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/client-scripting">Apply business logic using client scripting</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/customize-commands-ribbon">Customize commands and ribbon</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/web-resources">Use web resources</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/create-manage-model-driven-apps-using-code">Create, manage, and publish app</a></p>
                                  </div>
                               </div>
                            </div>
@@ -451,13 +451,13 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Work with CDS for Apps data</h3>
+                                    <h3 style="font-size: 1.2rem">Work with CDS for Apps data</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/webapi/overview">Use Web API</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/org-service/overview">Use Organization service</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/use-fetchxml-construct-query">Query data using FetchXML</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/detect-duplicate-data-with-code">Detect duplicate data</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/optimistic-concurrency">Use optimistic concurrency</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/webapi/overview">Use Web API</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/org-service/overview">Use Organization service</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/use-fetchxml-construct-query">Query data using FetchXML</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/detect-duplicate-data-with-code">Detect duplicate data</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/optimistic-concurrency">Use optimistic concurrency</a></p>
                                  </div>
                               </div>
                            </div>
@@ -473,13 +473,13 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Work with CDS for Apps metadata</h3>
+                                    <h3 style="font-size: 1.2rem">Work with CDS for Apps metadata</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/metadata-services">Get started with metadata</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/browse-your-metadata">Browse your environment metadata</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/entity-metadata">Entity metadata</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/entity-attribute-metadata">Attribute metadata</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/entity-relationship-metadata">Entity relationship metadata</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/metadata-services">Get started with metadata</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/browse-your-metadata">Browse your environment metadata</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/entity-metadata">Entity metadata</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/entity-attribute-metadata">Attribute metadata</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/entity-relationship-metadata">Entity relationship metadata</a></p>
                                  </div>
                               </div>
                            </div>
@@ -495,11 +495,11 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Apply business logic</h3>
+                                    <h3 style="font-size: 1.2rem">Apply business logic</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins (CDS for Apps)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions (CDS for Apps)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Client scripting (Model-driven apps)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins (CDS for Apps)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions (CDS for Apps)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/model-driven-apps/client-scripting">Client scripting (Model-driven apps)</a></p>
                                  </div>
                               </div>
                            </div>
@@ -515,14 +515,14 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Integrate data with CDS for Apps</h3>
+                                    <h3 style="font-size: 1.2rem">Integrate data with CDS for Apps</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/virtual-entities/get-started-ve">Virtual entities</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/azure-integration">Azure integration</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/use-webhooks">Webhooks</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/import-data">Import data</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/data-export-service">Data export service</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/data-synchronization">Data synchronization</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/virtual-entities/get-started-ve">Virtual entities</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/azure-integration">Azure integration</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/use-webhooks">Webhooks</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/import-data">Import data</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/data-export-service">Data export service</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/data-synchronization">Data synchronization</a></p>
                                  </div>
                               </div>
                            </div>
@@ -538,12 +538,12 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Package and distribute apps/extensions</h3>
+                                    <h3 style="font-size: 1.2rem">Package and distribute apps/extensions</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/introduction-solutions">Using solutions</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager tool</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer tool</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publish your app on AppSource</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/introduction-solutions">Using solutions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager tool</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer tool</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publish your app on AppSource</a></p>
                                  </div>
                               </div>
                            </div>
@@ -559,11 +559,11 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Create client applications for CDS for Apps</h3>
+                                    <h3 style="font-size: 1.2rem">Create client applications for CDS for Apps</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Authentication</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/discovery-service">Discover user organizations</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools">Build Windows client applications using XRM tooling</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/authentication">Authentication</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/discovery-service">Discover user organizations</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools">Build Windows client applications using XRM tooling</a></p>
                                  </div>
                               </div>
                            </div>
@@ -579,11 +579,11 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Reference</h3>
+                                    <h3 style="font-size: 1.2rem">Reference</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/reference/about-entity-reference">Entity Reference</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9">Web API Reference</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk?view=dynamics-general-ce-9">Organization service Reference</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="/powerapps/developer/common-data-service/reference/about-entity-reference">Entity Reference</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9">Web API Reference</a></p>
+                                    <p><a class="barLink" style="font-size: 0.9rem" href="https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk?view=dynamics-general-ce-9">Organization service Reference</a></p>
                                  </div>
                               </div>
                            </div>
