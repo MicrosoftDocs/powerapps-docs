@@ -23,10 +23,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use project
+# Use project in PowerApps
 
 > [!NOTE]
-> Solutions are now referenced as Projects in PowerApps. Projects offer the same functionality as Solutions. For information about this change, see <https://aka.ms/solution-blog>.”
+>  Projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in the Dynamics platform. When using this functionality in PowerApps, you’ll see it described as a ‘project'. When using this functionality in Dynamics, you'll see it described as a 'solution'. 
 
  Within PowerApps, you can view a list of projects by selecting **Projects** in the left navigation. You can then click into a project to view all of its components. 
    
@@ -39,11 +39,17 @@ search.app:
  
  ![Load more components](media/load-more.PNG "Load more components")  
  
- You can also search for a specific component by its name or filter the all items in the list by the component type. 
+ ## Search and filter in a project
+ 
+ You can also search for a specific component by its name. 
  
  ![Search component](media/project-search-box.PNG "Search component")  
  
+ Or filter all items in the list by the component type.
+  
  ![Filter component by type](media/project-filter.PNG "Filter component by type")  
+ 
+ ## Contextual commands
  
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the project is the default or a managed one. 
  
@@ -53,9 +59,12 @@ search.app:
  
  ![Project specific commands](media/project-commands.PNG "Project specific commands")  
  
+ ## Create component in a project
  With projects that are unmanaged or the default one, you can use the **New** command to create different types of component. This will take you to different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the project. 
  
  ![Create new component in a project](media/project-new-component.PNG "Create new component in a project")  
+ 
+ ## Add existing component to a project
  
  With projects that are unmanaged and not the default one, you can use the **Add Existing** command to bring in components that aren’t already in the project.  
  
