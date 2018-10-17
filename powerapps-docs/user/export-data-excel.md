@@ -18,7 +18,6 @@ search.app:
   - D365CE
   - D365CE
 ---
----
 # Export data to Excel
 
 Do you need to analyze your data from PowerApps and convert that data into actionable items that help you drive more sales? Now you can do this when you export your data to Excel or Excel Online to do a quick data analysis. Also, analyzing large datasets is not a problem because you can export up to 100,000 rows of data.
