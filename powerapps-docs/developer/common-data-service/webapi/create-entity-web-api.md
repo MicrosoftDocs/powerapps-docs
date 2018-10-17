@@ -19,8 +19,6 @@ manager: "amyla"
 
 # Create an entity using the Web API
 
-
-
 Use a POST request to send data to create an entity. You can create multiple related entities in a single operation using ‘deep insert’. You also need to know how to set values to associate a new entity to existing entities using the @odata.bind annotation.  
 
 > [!NOTE]
@@ -163,9 +161,9 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-000
 ## Check for Duplicate records
 
 
-By default, duplicate detection is suppressed when you are creating records using the Web API. You must include the `MSCRM.SuppressDuplicateDetection: false` header with your POST request to enable duplicate detection . Duplicate detection only applies when the organization has enabled duplicate detection, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied. More information: [Detect duplicate data for developers](../detect-duplicate-data-for-developers.md)
+By default, duplicate detection is suppressed when you are creating records using the Web API. You must include the `MSCRM.SuppressDuplicateDetection: false` header with your POST request to enable duplicate detection . Duplicate detection only applies when the organization has enabled duplicate detection, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied. More information: [Detect duplicate data using code](../detect-duplicate-data-with-code.md)
 
-See [Manage duplicate detection during Create and Update operations using Web API](manage-duplicate-detection-create-update.md#bkmk_create) for more information on how to check for duplicate records during Create operation.
+See [Detect duplicate data using Web API](manage-duplicate-detection-create-update.md#bkmk_create) for more information on how to check for duplicate records during Create operation.
 
 <a name="bkmk_initializefrom"></a>
 

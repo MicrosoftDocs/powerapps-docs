@@ -181,68 +181,13 @@ The GUID of the base record is stored as `baserecordid` in the `DuplicateRecord`
 
 ## Detect duplicates during Create and Update operations
 
-By default, duplicate detection is suppressed when you are creating or updating a record using Web API. Use `MSCRM.SuppressDuplicateDetection` header and set its value to `false` while creating or updating a record. Duplicate detection only applies when the organization has duplicate detection enabled, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied.
+Duplicate detection while creating or updating records only applies when the organization has duplicate detection enabled, the entity is enabled for duplicate detection, and there are active duplicate detection rules being applied. By default, duplicate detection is suppressed when you are creating or updating a record using Web API or Organization service. 
 
-See more on how to detect duplicates during Create and Update operation in [Manage duplicate detection during Create and Update operation using Web API](duplicate-detection-create-update.md)
+To detect duplicate data while creating and updating records, see:
 
-<a name="BKMK_dupdetos"></a>
-###  Example: Duplicate detection using the Organization Service
+- WebAPI: [Detect duplicate data using the Web API](webapi/manage-duplicate-detection-create-update.md)
+- Organization Service: [Detect duplicate data using the Organization service](org-service/detect-duplicate-data.md)
 
- The following example shows how to pass the duplicate detection option as a part of the `CreateRequest` and `UpdateRequest` messages:  
-  
- ```csharp
-// Connect to the Organization service. 
-// The using statement assures that the service proxy will be properly disposed.
-using (_serviceProxy = new OrganizationServiceProxy(serverConfig.OrganizationUri, serverConfig.HomeRealmUri,serverConfig.Credentials, serverConfig.DeviceCredentials))
-{
-    // This statement is required to enable early-bound type support.
-    _serviceProxy.EnableProxyTypes();
-
-    _service = (IOrganizationService)_serviceProxy;
-
-    CreateRequiredRecords();
-
-    // Create and account record with the named Proseware, Inc. and already existing Account Number.
-    Account account = new Account 
-    {
-        Name = "Proseware, Inc.",
-        AccountNumber = "ACC005"
-    };
-
-    // Create operation by suppressing duplicate detection
-    CreateRequest reqCreate = new CreateRequest();
-    reqCreate.Target = account;
-    reqCreate.Parameters.Add("SuppressDuplicateDetection", true); // Change to false to activate the duplicate detection.
-    CreateResponse createResponse = (CreateResponse)_service.Execute(reqCreate);
-    _dupAccountId = createResponse.id;
-    Console.Write("Account: {0} {1} created with SuppressDuplicateDetection to true, ", 
-        account.Name, account.AccountNumber);
-    
-    // Retrieve the account containing with its few attributes.
-    ColumnSet cols = new ColumnSet(
-        new String[] { "name", "accountnumber"});
-
-    Account retrievedAccount = (Account)_service.Retrieve("account", _dupAccountId, cols);
-    Console.Write("retrieved, ");
-
-    // Update the existing account with new account number.
-    retrievedAccount.AccountNumber = "ACC006";                   
-
-    // Update operation – update record, if a duplicate is not found.
-    UpdateRequest reqUpdate = new UpdateRequest();
-    reqUpdate.Target = retrievedAccount;
-    reqUpdate["SuppressDuplicateDetection"] = false; // Duplicate detection is activated.
-
-    // Update the account record.
-    UpdateResponse updateResponse = (UpdateResponse)_service.Execute(reqUpdate);
-    Console.WriteLine("and updated.");
-
-    DeleteRequiredRecords(promptforDelete);
-}
-```
   
 ### See also  
- [Duplicate Detection](detect-duplicate-data-for-developers.md)   
- [Enable and disable duplicate detection](enable-disable-duplicate-detection.md)   
- [Use Messages (Request and Response Classes) with the Execute Method](/dynamics365/customer-engagement/developer/org-service/use-messages-request-response-classes-execute-method)   
  [Duplicate Detection Messages](duplicate-detection-messages.md)

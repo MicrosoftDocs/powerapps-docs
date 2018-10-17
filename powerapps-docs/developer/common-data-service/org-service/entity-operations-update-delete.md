@@ -24,7 +24,6 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-s
 
 This topic will include examples using both late-bound and early-bound programming styles. More information: [Early-bound and Late-bound programming using the Organization service](early-bound-programming.md)
 
-<!-- TODO make this an include? -->
 Each of the examples uses a `svc` variable that represents an instance of a class that implements the methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface. For information about the classes that support this interface see [IOrganizationService Interface](iorganizationservice-interface.md).
 
 > [!IMPORTANT]
@@ -215,9 +214,9 @@ account.Account_Tasks = updatedTasks;
 svc.Update(account);
 ```
 
-## Check for Duplicate records
+## Check for duplicate records
 
-When updating an entity you may change the values so that the record represents a duplicate of another record. More information: [Check for Duplicate records](entity-operations-create.md#check-for-duplicate-records)
+When updating an entity you may change the values so that the record represents a duplicate of another record. More information: [Detect duplicate data using the Organization service](detect-duplicate-data.md)
 
 ## Use Upsert
 

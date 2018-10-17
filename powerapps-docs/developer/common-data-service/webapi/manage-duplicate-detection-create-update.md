@@ -1,5 +1,5 @@
 ---
-title: "Manage duplicate detection for create and update operations using the Web API | Microsoft Docs"
+title: "Detect duplicate data using the the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Common Data Service for Apps Web API"
 ms.custom: ""
 ms.date: 06/15/2018
@@ -17,11 +17,11 @@ ms.author: "susikka"
 manager: "amyla"
 ---
 
-# Manage duplicate detection for create and update operations using the Web API
+# Detect duplicate data using the Web API
 
-Common Data Service for Apps Web API allows you to detect duplicate records of an existing record in order to maintain integrity of data. 
+Common Data Service (CDS) for Apps Web API allows you to detect duplicate records of an existing record in order to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md) 
 
-## Detect duplicate during Create operation
+## Detect duplicates during Create operation
 
 Use `MSCRM.SuppressDuplicateDetection` header during `POST` request, to detect creation of a duplicate record of an existing record. The value assigned to `MSCRM.SuppressDuplicateDetection` header determines whether the Create or Update operation can be completed:
 
@@ -35,7 +35,7 @@ Use preference header `MSCRM.SuppressDuplicateDetection` and set its value to `f
 
 
 > [!NOTE]
-> Make sure there are appropriate duplicate detection rules in place. Common Data Service for Apps includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. For information on how to create a duplicate detection rule, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean). 
+> Make sure there are appropriate duplicate detection rules in place. Common Data Service for Apps includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, [see Duplicate rule entities](../duplicaterule-entities.md) 
 
 
 
@@ -89,6 +89,8 @@ Assign value `true` to `MSCRM.SuppressDuplicateDetection` header to allow creati
 
 Set the value of `MSCRM.SuppressDuplicateDetection` header to `false` in your `PATCH` request to avoid creation of a duplicate record during Update operation. By default, duplicate detection is suppressed when you are updating records using the Web API.
 
+###  Example: Detect duplicates during Update operation using the Web API
+
 The example shown below attempts to update an existing lead entity record which includes the same value of `emailaddress1` attribute as an existing record.
 
 **Request**
@@ -129,6 +131,4 @@ OData-Version: 4.0
 
 ### See Also
 
-<!-- TODO:
-[Run duplicate detection](../run-duplicate-detection.md)<br />
-[Duplicate detection messages](../duplicate-detection-messages.md) -->
+[Detect duplicate data using the Organization service](../org-service/detect-duplicate-data.md)

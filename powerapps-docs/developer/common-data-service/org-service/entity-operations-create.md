@@ -217,78 +217,9 @@ More information:
 - [Work with alternate keys](../define-alternate-keys-entity.md)
 
 
-## Check for Duplicate records
+## Check for duplicate records
 
-When creating new records or updating existing records in code, duplicate detection is not enabled by default. If you aren't sure about whether the record you are creating or updating will be a duplicate, there are several strategies you can use:
-
-### Run Duplicate detection 
-
-You can run regular duplicate detection jobs and expect it will be caught later. More information: [Run bulk system jobs to detect duplicate records](/dynamics365/customer-engagement/admin/run-bulk-system-jobs-detect-duplicate-records)
-
-### Check before you create or update
-
-You can programmatically check whether an entity is a duplicate or will be a duplicate before creating or updating it by using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveDuplicatesRequest> class.
-
-```csharp
-var account = new Account();
-account.Name = "Sample Account";
-
-var request = new RetrieveDuplicatesRequest()
-{
-    BusinessEntity = account,
-    MatchingEntityName = account.LogicalName,
-    PagingInfo = new PagingInfo() { PageNumber = 1, Count = 50 }
-};
-
-var response = (RetrieveDuplicatesResponse)svc.Execute(request);
-
-if (response.DuplicateCollection.Entities.Count >= 1)
-{
-    Console.WriteLine("{0} Duplicate records found.", response.DuplicateCollection.Entities.Count);
-}
-```
-
-### Throw an exception when duplicate record is detected
-
-If you want to have the platform throw an error when a new record you create is determined to be a duplicate record, or you update an existing record so that duplicate detection rules will be evaluated, you must use the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> classes with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method and apply the `SuppressDuplicateDetection` parameter set to `false`.
-
-The following code will throw an `InvalidOperationException` exception with the message `A record was not created or updated because a duplicate of the current record already exists.` when the following are true:
-
-- Duplicate Detection is enabled for the environment when a record is created or updated.
-- The account entity is has duplicate detection enabled
-- A Duplicate Detection Rule is published that checks whether the account name value is an exact match for an existing record
-- There is an existing account with the name `Sample Account`
-
-```csharp
-var account = new Account();
-account.Name = "Sample Account";
-
-var request = new CreateRequest();
-request.Target = account;
-request.Parameters.Add("SuppressDuplicateDetection", false);
-
-try
-{
-    svc.Execute(request);
-}
-catch (FaultException<OrganizationServiceFault> ex)
-{
-    switch (ex.Detail.ErrorCode)
-    {
-        case -2147220685:
-            throw new InvalidOperationException(ex.Detail.Message);
-        default:
-            throw ex;
-    }
-}
-```
-
-More Information:
-- [Manage duplicate detection for create and update operations](../duplicate-detection-create-update.md)
-- [Detect duplicate data for developers](../detect-duplicate-data-for-developers.md)
-- [Sample: Use duplicate detection when creating and updating records](samples/use-duplicate-detection-when-creating-and-updating-records.md)
-- [Duplicate detection messages](../duplicate-detection-messages.md)
-- [Detect duplicate data so you can fix or remove it](/dynamics365/customer-engagement/admin/detect-duplicate-data)
+More information: [Detect duplicate data using the Organization service](detect-duplicate-data.md)
 
 ## Set default values from the primary entity
 

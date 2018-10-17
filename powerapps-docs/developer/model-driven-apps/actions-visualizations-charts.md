@@ -1,6 +1,6 @@
 ---
 title: "Actions on visualizations (charts) (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Using the Dynamics 365 Common Data Service for Apps web services (SDK), you can perform the following actions on the visualization entities." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Using the Common Data Service for Apps web services, you can perform the following actions on the visualization entities." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 08/01/2018
 ms.service:
@@ -19,7 +19,7 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/actions-visualizations-charts -->
 
-Using the Dynamics 365 Common Data Service for Apps Web Services, you can perform the following actions on the visualization entities.  
+Using the Common Data Service (CDS) for Apps Web Services, you can perform the following actions on the visualization entities.  
   
 ## Actions on organization-owned visualizations  
  To perform actions on an organization-owned visualization (`SavedQueryVisualization`), you must have the System Administrator or the System Customizer role. You can perform the following actions on an organization-owned visualization:  
@@ -34,10 +34,10 @@ Using the Dynamics 365 Common Data Service for Apps Web Services, you can perfor
   > [!NOTE]
   >  You cannot change or update a visualization to attach it with a different entity after you have created the visualization. It implies that the `SavedQueryVisualization.PrimaryEntityTypeCode` attribute is not valid for the update action on the organization-owned visualization.
   
-- Specify an organization-owned visualization as the default visualization for the associated entity by setting the `SavedQueryVisualization.IsDefault` attribute to `true`. When you set an organization-owned visualization as the default visualization for an entity, the visualization is displayed by default when you select to view the visualizations for this entity in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] CDS for Apps.
+- Specify an organization-owned visualization as the default visualization for the associated entity by setting the `SavedQueryVisualization.IsDefault` attribute to `true`. When you set an organization-owned visualization as the default visualization for an entity, the visualization is displayed by default when you select to view the visualizations for this entity in CDS for Apps.
   
   > [!NOTE]
-  >  Using the Dynamics 365 CDS for Apps Web Services, if you set an organization-owned visualization as default for an entity that already has another visualization set as default, both the visualizations are marked as default visualizations for the entity.  To set a visualization as a default visualization for an entity, make sure that no other visualization is set as the default visualization for the entity.  
+  >  Using the CDS for Apps Web Services, if you set an organization-owned visualization as default for an entity that already has another visualization set as default, both the visualizations are marked as default visualizations for the entity.  To set a visualization as a default visualization for an entity, make sure that no other visualization is set as the default visualization for the entity.  
   
   For a list of supported messages on the organization-owned visualization entity, see [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md).
   

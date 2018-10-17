@@ -61,7 +61,7 @@ Entity views are special saved queries that retrieve data by using a specific fi
   
   ```csharp
   System.String layoutXml =
-@"<grid name='resultset' object='3' jump='name' select='1' 
+  @"<grid name='resultset' object='3' jump='name' select='1' 
     preview='1' icon='1'>
     <row name='result' id='opportunityid'>
     <cell name='name' width='150' /> 
@@ -73,10 +73,10 @@ Entity views are special saved queries that retrieve data by using a specific fi
     <cell name='opportunitycustomeridcontactcontactid.emailaddress1' 
         width='150' disableSorting='1' /> 
     </row>
-</grid>";
+  </grid>";
 
-                    System.String fetchXml =
-                    @"<fetch version='1.0' output-format='xml-platform' 
+  System.String fetchXml =
+  @"<fetch version='1.0' output-format='xml-platform' 
     mapping='logical' distinct='false'>
     <entity name='opportunity'>
     <order attribute='estimatedvalue' descending='false' /> 
@@ -97,20 +97,21 @@ Entity views are special saved queries that retrieve data by using a specific fi
     </link-entity>
     <attribute name='opportunityid' /> 
     </entity>
-</fetch>";
+  </fetch>";
 
-                    SavedQuery sq = new SavedQuery
-                    {
-                        Name = "A New Custom Public View",
-                        Description = "A Saved Query created in code",
-                        ReturnedTypeCode = "opportunity",
-                        FetchXml = fetchXml,
-                        LayoutXml = layoutXml,
-                        QueryType = 0
-                    };
+  SavedQuery sq = new SavedQuery
+    {
+      Name = "A New Custom Public View",
+      Description = "A Saved Query created in code",
+      ReturnedTypeCode = "opportunity",
+      FetchXml = fetchXml,
+      LayoutXml = layoutXml,
+      QueryType = 0
+    };
                     
-                    _customViewId = _serviceProxy.Create(sq);
-                    Console.WriteLine("A new view with the name {0} was created.", sq.Name);```  
+  _customViewId = _serviceProxy.Create(sq);
+  Console.WriteLine("A new view with the name {0} was created.", sq.Name);
+  ```  
   
 <a name="BKMK_UpdateViews"></a>   
 ### Update views  
@@ -220,7 +221,7 @@ _serviceProxy.Execute(ssreq);
   
 <a name="BKMK_EditFilterOrSorting"></a>   
 ### Edit filter criteria or configure sorting  
- To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml) <!-- TODO need to update the link in the powerapps repo-->.  
+ To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](/powerapps/developer/common-data-service/use-fetchxml-construct-query).  
   
 > [!TIP]
 >  If you are not familiar with FetchXML the following messages can be used to convert between QueryExpression and FetchXML:<xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest>.  
@@ -235,7 +236,7 @@ _serviceProxy.Execute(ssreq);
  You can add custom icon with tooltip text to display in a column depending on the column value; you can also specify localized tooltip text. This can be done by adding the custom icons as image web resources in your Dynamics 365 instance and then using a [!INCLUDE[pn_JavaScript](../../includes/pn-javascript.md)] web resource to add [!INCLUDE[pn_JavaScript](../../includes/pn-javascript.md)] code for a column to display the icons depending on the column value.  
   
 > [!NOTE]
->  This feature was introduced in the [!INCLUDE[pn_crm_8_2_0_both](../../includes/pn-crm-8-2-0-both.md)]. Adding custom icons with tooltip is supported only for the read-only grids; this feature isn't supported for the editable grids. For more information about editable grids, see [Use editable grids](/dynamics365/customer-engagement/developer/customize-dev/use-editable-grids-dynamics-365). <!-- TODO need to update the link in the powerapps repo-->  
+>  Adding custom icons with tooltip is supported only for the read-only grids; this feature isn't supported for the editable grids. For more information about editable grids, see [Use editable grids](/powerapps/developer/model-driven-apps/use-editable-grids).  
   
  Two new attributes, `imageproviderwebresource` and `imageproviderfunctionname`,  are added to the `cell` element of the layoutxml of 
  savedquery that lets you specify the name of a web resource 
@@ -328,10 +329,3 @@ function displayIconTooltip(rowData, userLCID) {
 ### Set as default  
  Only one active public view can be set as the default view. To make a view the default view, set the `IsDefault` property to true.  
   
-### See also  
- [Sample: Work with Views](/dynamics365/customer-engagement/developer/customize-dev/sample-work-views)   <!-- TODO need to update the link-->
- [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml) <!-- TODO need to update the link-->
- [Extend the Metadata Model for Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   <!-- TODO need to update the link-->
- [Customize Entity Forms in Microsoft Dynamics 365](customize-entity-forms.md)   
- [Customize Global Option Sets in Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)   <!-- TODO need to update the link-->
- [Customize Dynamics 365 Common Data Service for Apps](/dynamics365/customer-engagement/developer/customize-dev/customize-applications) <!-- TODO need to update the link-->

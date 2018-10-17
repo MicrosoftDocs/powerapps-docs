@@ -201,7 +201,7 @@ System.Console.WriteLine("===============================");
 
 ## Max
 
- **Null** values are not considered when [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] computes the maximum of data. However, zero (0) is used.  
+ **Null** values are not considered when Common Data Service (CDS) for Apps computes the maximum of data. However, zero (0) is used.  
   
  The following example shows how to use the `max``aggregate` attribute.  
   
@@ -233,7 +233,7 @@ System.Console.WriteLine("===============================");
  
 ## Min
 
- **Null** values are not considered when [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] computes the minimum of data. However, zero (0) is used.  
+ **Null** values are not considered when CDS for Apps computes the minimum of data. However, zero (0) is used.  
   
  The following example shows how to use the `min``aggregate` attribute.  
   

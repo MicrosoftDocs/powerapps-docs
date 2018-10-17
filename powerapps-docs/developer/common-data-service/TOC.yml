@@ -42,23 +42,18 @@
     - name: Create auto-number attributes
       href: create-auto-number-attributes.md
   - name: Detect duplicate data
-    href: detect-duplicate-data-for-developers.md
+    href: detect-duplicate-data-with-code.md
     items:
-    - name: Enable and Disable duplicate detection
+    - name: Enable and disable duplicate detection
       href: enable-disable-duplicate-detection.md
     - name: Run duplicate detection
       href: run-duplicate-detection.md
-    - name: Manage duplicate detection for create and update operations
-      href: duplicate-detection-create-update.md
     - name: Duplicate detection messages
       href: duplicate-detection-messages.md
     - name: Duplicate Rule entities
       href: duplicaterule-entities.md
   - name: Delete data in bulk
     href: delete-data-bulk.md
-    items:
-    - name: Run bulk delete
-      href: run-bulk-delete.md
   - name: Use Optimistic Concurrency to reduce potential data loss
     href: optimistic-concurrency.md
   - name: Impersonate another user
@@ -156,17 +151,6 @@
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-  - name: SharePoint integration
-    href: integrate-sharepoint.md
-    items:
-    - name: Get started with SharePoint integration
-      href: get-started-sharepoint-integration.md
-    - name: Enable document management for entities
-      href: enable-document-management-entities.md
-    - name: Actions on SharePoint location records
-      href: actions-on-sharepoint-location-records.md
-    - name: Define custom claim mapping for SharePoint server-based integration
-      href: define-custom-claim-mapping-sharepoint-server-based-integration.md
 - name: Work with CDS for Apps entities
   href: entities.md
   items:
