@@ -36,46 +36,8 @@ ms.custom:
                                              </div>
                                           </div>
                                           <div class="cardText">
-                                             <h3>Try PowerApps for free</h3>
-                                             <p>Get started with documentation detailing how to try PowerApps for free.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="/powerapps/maker/canvas-apps/intro-maker-portal">
-                                 <div class="cardSize">
-                                    <div class="cardPadding">
-                                       <div class="card">
-                                          <div class="cardImageOuter">
-                                             <div class="cardImage">
-                                                <img src="media/index/powerapps-signin.svg" alt="" />
-                                             </div>
-                                          </div>
-                                          <div class="cardText">
-                                             <h3>Sign in to PowerApps</h3>
-                                             <p>Sign in to PowerApps to create your own apps, open apps that you or others have created, and perform related tasks.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="/powerapps/administrator/pricing-billing-skus">
-                                 <div class="cardSize">
-                                    <div class="cardPadding">
-                                       <div class="card">
-                                          <div class="cardImageOuter">
-                                             <div class="cardImage">
-                                                <img src="media/index/powerapps-billing.svg" alt="" />
-                                             </div>
-                                          </div>
-                                          <div class="cardText">
-                                             <h3>Licensing</h3>
-                                             <p>Understand various licensing options for PowerApps.</p>
+                                             <h3>What is PowerApps?</h3>
+                                             <p>Get started with documentation with an overview about PowerApps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -127,12 +89,50 @@ ms.custom:
                                        <div class="card">
                                           <div class="cardImageOuter">
                                              <div class="cardImage">
-                                                <img src="media/index/powerapps-blog.svg" alt="" />
+                                                <img src="media/index/i_blog.svg" alt="" />
                                              </div>
                                           </div>
                                           <div class="cardText">
                                              <h3>Blog</h3>
                                              <p>Read the official PowerApps blog to know about the latest PowerApps features and announcements.</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1">
+                                 <div class="cardSize">
+                                    <div class="cardPadding">
+                                       <div class="card">
+                                          <div class="cardImageOuter">
+                                             <div class="cardImage">
+                                                <img src="media/index/i_community.svg" alt="" />
+                                             </div>
+                                          </div>
+                                          <div class="cardText">
+                                             <h3>Community</h3>
+                                             <p>Connect with peers, share ideas, and learn from experts in the PowerApps community forum.</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/powerapps/administrator/pricing-billing-skus">
+                                 <div class="cardSize">
+                                    <div class="cardPadding">
+                                       <div class="card">
+                                          <div class="cardImageOuter">
+                                             <div class="cardImage">
+                                                <img src="media/index/powerapps-billing.svg" alt="" />
+                                             </div>
+                                          </div>
+                                          <div class="cardText">
+                                             <h3>Licensing</h3>
+                                             <p>Understand various licensing options for PowerApps.</p>
                                           </div>
                                        </div>
                                     </div>
