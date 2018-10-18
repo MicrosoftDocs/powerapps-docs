@@ -81,3 +81,8 @@ You can create an app from within a project, but you must create the app from a 
 1. Switch to the browser tab where you selected your project, and then select **Done** in the dialog box that appears.
 
     Your new app appears in the list of components for that project. If you make any changes to your app, they will be reflected in the version that's in the project.
+
+## Next steps
+
+- Add more apps or other components, such as entities, flows, and dashboards, to your project.
+- Export your project so that you can deploy it in another environment, on AppSource, etc.
