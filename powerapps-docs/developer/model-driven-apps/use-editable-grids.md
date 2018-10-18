@@ -33,7 +33,7 @@ Editable grid is a custom control that provides rich inline editing capabilities
   
 <a name="FormScripting"></a>   
 ## Form scripting support  
- The editable grids support client-side events and methods that can be used to write custom client extensions according to your business need. More information: [Grids and subgrids in model-driven apps (Client API reference)](clientapi/reference/grids.md)
+ The editable grids support client-side events and methods that can be used to write custom client extensions according to your business need. More information: [Grids and subgrids in Model-driven Apps (Client API reference)](clientapi/reference/grids.md)
   
 <a name="EntitiesSupported"></a>   
 ## Entities and views supported by editable grid  
