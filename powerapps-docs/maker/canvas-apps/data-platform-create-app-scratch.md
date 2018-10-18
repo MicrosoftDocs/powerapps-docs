@@ -154,4 +154,5 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 ## Next steps
 
-[Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
+- [Link this app to a project](add-app-project.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
+- [Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
