@@ -66,7 +66,7 @@ You can create an app from within a project, but you must create the app from a 
 
 1. [Sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps.
 
-1. If necessary, switch to the environment that contains the project to which you want to link an app.
+1. If necessary, switch to the environment that contains the project in which you want to create an app.
 
 1. In the left navigation bar, select **Projects**.
 
