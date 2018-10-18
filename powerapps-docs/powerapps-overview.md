@@ -26,7 +26,7 @@ To create an app, you start with [web.powerapps.com](https://web.powerapps.com).
 
 - **PowerApps Studio** is the app designer used for building canvas apps. The app designer makes creating apps feel more like building a slide deck in Microsoft PowerPoint. More information: [Generate an app from data]  
 
-- **App designer for model-driven apps** lets define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
+- **App designer** for model-driven apps lets you define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
 
 ## PowerApps for app users
 
@@ -41,6 +41,10 @@ Admins can also use Power platform admin center to manage environemnets, get rea
 ## PowerApps for developers
 
 Developers are app makers who can write code to extend business app creation and customization by applying server-side logic, integrating with external data, build custom connetors, embed apps into your website experiences to create integrated solutions. More information: [PowerApps for developers](/powerapps/#pivot=home&panel=developer)
+
+## PowerApps and Dynamics 365
+
+Dynamics 365 applications, like Dynamics 365 for Sales, Dynamics 365 for Service, Dynamics 365 for Talent also use the underlying data platform (CDS for Apps) used by PowerApps to store and secure data. This enables you to build apps using PowerApps and the Common Data Service for Apps directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and the Common Data Service for Apps](maker/common-data-service/data-platform-intro.md#dynamics-365-and-the-common-data-service-for-apps)
 
 ## Try PowerApps for free
 
