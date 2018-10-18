@@ -92,7 +92,7 @@ You can create an app from within a project, but you must create the app from a 
 
     PowerApps Studio opens with a blank canvas in another browser tab.
 
-1. Create your app (or at least make one change), and then save it.
+1. Create your app (or at least make one change), and then save your changes.
 
 1. On the browser tab where you selected your project, select **Done**.
 
@@ -102,5 +102,5 @@ You can create an app from within a project, but you must create the app from a 
 
 ## Next steps
 
-- Link or create more apps or other components, such as entities, flows, and dashboards, to your project.
-- [Export your project](../common-data-service/import-update-export-solutions.md#export-projects) so that you can deploy it in another environment, on AppSource, etc.
+- [Link or create more apps or other components](../common-data-service/use-solution-explorer.md#create-component-in-a-project), such as entities, flows, and dashboards, to your project.
+- [Export your project](../common-data-service/import-update-export-solutions.md#export-projects) so that you can deploy it to another environment, on AppSource, etc.
