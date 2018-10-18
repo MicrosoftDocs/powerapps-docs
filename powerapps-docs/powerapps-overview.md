@@ -12,11 +12,11 @@ ms.reviewer:
 ---
 # What is PowerApps?
 
-PowerApps is a suite of apps, services, connectors and a data platform that provides a rapid application development environment to build custom apps for your business needs. Using PowerApps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform (**Common Data Service (CDS) for Apps**) *or* to various online and on-premises data sources (SharePoint, Excel, Office 365, Dynamics 365, SQL Server, and so on). 
+PowerApps is a suite of apps, services, connectors and data platform that provides a rapid application development environment to build custom apps for your business needs. Using PowerApps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform (**Common Data Service for Apps**) *or* to various online and on-premises data sources (SharePoint, Excel, Office 365, Dynamics 365, SQL Server, and so on). 
 
-Apps built using PowerApps provide rich business logic and workflow capabilities to transform your manual business processes to digitized, automated processes. Further, apps built using PowerApps have responsive design, and can can run in browser or on mobile devices (phone or tablet). PowerApps "democratizes" the custom business app building experience by enabling users build custom business app without writing code.
+Apps built using PowerApps provide rich business logic and workflow capabilities to transform your manual business processes to digital, automated processes. Further, apps built using PowerApps have a responsive design, and can run seamlessly in browser or on mobile devices (phone or tablet). PowerApps "democratizes" the custom business app building experience by enabling users to build feature-rich, custom business apps without writing code.
 
-PowerApps also provides an extensible platform that lets pro developers extend custom business apps using code or create client apps to work with their bsuiness data in CDS for Apps.
+PowerApps also provides an extensible platform that lets pro developers use code to create custom connectors, apply server-side logic using Azure functions, plug-ins, and workflow extensions, and integrate with external data using virtual entities and webhooks.
 
 ## PowerApps for app makers/creators
 
@@ -36,17 +36,12 @@ You can run apps that you created, or that someone else created and shared with 
 
 PowerApps admins can use the PowerApps admin center ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies. More information: [Administer PowerApps](administrator/admin-guide.md)
 
-Admins can also use Power platform admin center to manage environemnets, get real-time, self-help recommendations and get support for Dynamics 365, PowerApps, and Microsoft Flow. [Administer Power platform](https://docs.microsoft.com/power-platform/admin/admin-guide)
+Admins can also use Power platform admin center to manage environemnets, get real-time, self-help recommendations and get support for Dynamics 365, PowerApps, and Microsoft Flow, and view CDS for Apps analytics. More information: [Administer Power platform](https://docs.microsoft.com/power-platform/admin/admin-guide)
 
 ## PowerApps for developers
 
-Developers are app makers who can write code to create and extend business apps in PowerApps. More information: 
-
-- [Canvas apps developer overview](maker/canvas-apps/dev-enterprise-intro.md
-)
-- [Model-driven apps developer overview](developer/model-driven-apps/overview.md)
-- [CDS for Apps developer overview](developer/common-data-service/overview.md)
+Developers are app makers who can write code to extend business app creation and customization by applying server-side logic, integrating with external data, build custom connetors, embed apps into your website experiences to create integrated solutions. More information: [PowerApps for developers](/powerapps/#pivot=home&panel=developer)
 
 ## Try PowerApps for free
 
-You can to try PowerApps for free by signing up either for a [30 day trial](maker/signup-for-powerapps.md) or [community plan](maker/dev-community-plan.md).
+You can try PowerApps for free by signing up either for a [30 day trial](maker/signup-for-powerapps.md) or [community plan](maker/dev-community-plan.md).
