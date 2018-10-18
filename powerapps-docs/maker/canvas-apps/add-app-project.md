@@ -102,5 +102,5 @@ You can create an app from within a project, but you must create the app from a 
 
 ## Next steps
 
-- Add more apps or other components, such as entities, flows, and dashboards, to your project.
-- Export your project so that you can deploy it in another environment, on AppSource, etc.
+- Link or create more apps or other components, such as entities, flows, and dashboards, to your project.
+- [Export your project](../common-data-service/import-update-export-solutions.md#export-projects) so that you can deploy it in another environment, on AppSource, etc.
