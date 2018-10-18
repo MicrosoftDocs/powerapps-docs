@@ -31,7 +31,9 @@ Let's look at the steps required to use the PowerApps custom visual in your Powe
 
     ![Select report data](./media/powerapps-custom-visual/add-visual-set-data.png)
 
-3. You can choose an existing app or create one. If you choose to create an app, you can choose in which environment to create it.
+    You can choose an existing app or create one, but the report must be published to the Power BI service and opened in Microsoft Edge or Google Chrome.
+
+3.  If you choose to create an app, you can choose in which environment to create it.
 
     ![New or existing app](./media/powerapps-custom-visual/create-new-or-choose-app.png)
 

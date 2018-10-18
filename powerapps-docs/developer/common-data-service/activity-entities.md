@@ -2,7 +2,7 @@
 title: "Activity entities (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "In Dynamics 365 (online), activities are tasks that you or your teams perform when they contact customers, for example, sending letters or making telephone calls." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/12/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

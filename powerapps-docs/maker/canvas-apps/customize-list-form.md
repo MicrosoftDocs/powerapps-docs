@@ -25,7 +25,7 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 
 ## Prerequisites
 
-On a SharePoint site, create a list that contains these columns:
+On a SharePoint site, create a list, and then add these columns:
 
 - **ProductName** (single line of text)
 - **Details** (yes/no)
@@ -47,18 +47,11 @@ On a SharePoint site, create a list that contains these columns:
 
 ## Hide extra fields
 
-In the center of your screen, PowerApps shows your form, but it contains some fields that you might not want to show.
+In the center of your screen, PowerApps shows your form, but it contains fields that you don't need.
 
-- In the **Data** pane, clear the check boxes for these fields.
+- In the **Data** pane, clear the check boxes for the **Title** and **Attachments** fields.
 
-  - **Title**
-  - **Modified**
-  - **Created**
-  - **Created By**
-  - **Modified By**
-  - **ID**
-
-    Those fields disappear from the form, leaving only the fields that you created.
+    Those fields disappear from the form, leaving only the fields that you added.
 
     ![Field list](./media/customize-list-form/field-list.png)
 
@@ -80,7 +73,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     ![Set the value of the Visible property](./media/customize-list-form/build-formula.png)
 
-1. Repeat last three steps with the **Availablity** and **Color** cards.
+1. Repeat last three steps with the **Availability** and **Color** cards.
 
 1. While holding down the Alt key, select the **Details** toggle (by clicking or tapping it) multiple times.
 
@@ -103,6 +96,8 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 1. Select the **Details** toggle multiple times to hide and show the last three fields.
 
 To [customize your form further](sharepoint-form-integration.md), open it, select **Customize** near the top of the form, and then make, save, and publish your changes.
+
+If you create one or more items with this form, the **Title** field will be empty. You can hide this field by modifying the default view.
 
 ## Use the default form
 

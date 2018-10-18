@@ -18,7 +18,7 @@ search.app:
 A list that shows only the first item unless the user opens it.
 
 ## Description
-A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices.
+A **Drop down** control conserves screen real estate, especially when the list contains a large number of choices. The control takes up only one line unless the user selects the chevron to reveal more choices.  The control will show a maximum of 500 items.
 
 ## Key properties
 **[Default](properties-core.md)** – The initial value of a control before the user specifies a different value.
