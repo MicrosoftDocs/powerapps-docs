@@ -1,5 +1,5 @@
 - name: "Get started: What is PowerApps?"
-  href: ../powerapps-overview/md
+  href: ../powerapps-overview.md
   items:
   - name: Sign up for 30-day trial version
     href: signup-for-powerapps.md
