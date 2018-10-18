@@ -1,4 +1,4 @@
-- name: Get started: What is PowerApps?
+- name: "Get started: What is PowerApps?"
   href: ../powerapps-overview/md
   items:
   - name: Sign up for 30-day trial version
@@ -30,7 +30,7 @@
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
-  - name: System requirements, limits, and configuration
+  - name: "System requirements, limits, and configuration"
     href: ./canvas-apps/limits-and-config.md
   - name: Explore sample apps
     href: ./canvas-apps/open-and-run-a-sample-app.md

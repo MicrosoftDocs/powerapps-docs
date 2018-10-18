@@ -26,7 +26,7 @@ ms.custom:
                      <li class="fullSpan">
                         <ul class="cardsC panelContent singlePanelContent cols cols3" style="display:flex!important;">
                            <li>
-                              <a href="/powerapps/maker/signup-for-powerapps">
+                              <a href="powerapps-overview.md">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
