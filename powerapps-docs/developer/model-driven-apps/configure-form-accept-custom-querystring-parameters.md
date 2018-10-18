@@ -19,9 +19,9 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/configure-form-accept-custom-querystring-parameters -->
 
-The ability to pass values to a Web page by using query strings represents a concern for security. Dynamics 365 applies the best practice of always comparing any parameter passed as a query string against a list of expected parameter names and data types.  
+The ability to pass values to a Web page by using query strings represents a concern for security. Model=driven Apps applies the best practice of always comparing any parameter passed as a query string against a list of expected parameter names and data types.  
   
- By default, Dynamics 365 allows a specified set of query string parameters to be passed to a form. You use these parameters to set default values when you create a new record in the application. Each parameter must use a standard naming convention that includes a reference to the attribute logical name. For more information, see [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).  
+ By default, Model-driven Apps allows a specified set of query string parameters to be passed to a form. You use these parameters to set default values when you create a new record in the application. Each parameter must use a standard naming convention that includes a reference to the attribute logical name. For more information, see [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md).  
   
  In your applications, you may want to pass custom query string parameters to an entity form. This topic provides information about how you can define a set of specific parameter names and data types that can be accepted for a specific entity form.  
   
