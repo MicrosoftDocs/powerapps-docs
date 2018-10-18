@@ -104,24 +104,6 @@ If working with Organization Service, use <xref:Microsoft.Xrm.Sdk.Messages.Retri
  Custom entities support the same base messages as system entities. The set of messages available depends on whether the custom entity is user-owned or organization owned. For more information, see [Actions on Entity Records](/dynamics365/customer-engagement/developer/introduction-entities#ActionsOnEntityRecords).  
   
 ### See also  
- [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
- [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities.md)   
- [Browse the Metadata for Your Organization](browse-your-metadata.md)   
- [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   
- [Entity Relationship Metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)   
- [Detect Duplicate Data in Dynamics 365](detect-duplicate-data-for-developers.md)   
- [Enable Document Management for Entities](/dynamics365/customer-engagement/developer/integration-dev/enable-document-management-entities)   
- [Configure Entities and Attributes for Auditing](configure-entities-attributes-auditing.md)  
- [View Data using Charts (Visualizations)](/dynamics365/customer-engagement/developer/customize-dev/view-data-with-visualizations-charts)   
- [Which Entities are Customizable?](/dynamics365/customer-engagement/developer/which-entities-are-customizable)   
- [Create a Custom Entity](/dynamics365/customer-engagement/developer/org-service/create-custom-entity)   
- [Retrieve, Update and Delete Entities](/dynamics365/customer-engagement/developer/org-service/retrieve-update-delete-entities)   
- [Create and Update an Emailable Entity](/dynamics365/customer-engagement/developer/org-service/create-update-entity-emailed)   
- [Create a Custom Activity Entity](/dynamics365/customer-engagement/developer/org-service/create-custom-activity-entity)   
- [Modify Entity Icons](/dynamics365/customer-engagement/developer/modify-icons-entity)   
- [Modify Entity Messages](/dynamics365/customer-engagement/developer/modify-messages-entity)   
- [Sample: Create and Update Entity Metadata](/dynamics365/customer-engagement/developer/org-service/sample-create-update-entity-metadata)   
- [Sample: Create a Custom Activity Entity](/dynamics365/customer-engagement/developer/org-service/sample-create-custom-activity-entity)   
- [Sample: Create and Update an Emailable Entity](/dynamics365/customer-engagement/developer/org-service/sample-create-update-emailable-entity)   
- [Sample: Dump Entity Metadata to a File](/dynamics365/customer-engagement/developer/org-service/sample-dump-entity-metadata-file)   
- [Sample: Dump Entity Privlege Information to a File](/dynamics365/customer-engagement/developer/org-service/sample-dump-entity-privilege-information-file)
+[Use the Web API with metadata](webapi/use-web-api-metadata.md)
+
+[Work with metadata using the Organization service](org-service/work-with-metadata.md)

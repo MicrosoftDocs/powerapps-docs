@@ -2,7 +2,7 @@
 title: "Walkthrough: Register a Dynamics 365 app with Azure Active Directory (Common Data Service for Apps) | Microsoft Docs"
 description: "This walkthrough describes how to register an application with Azure Active Directory so that it can connect to the Dynamics 365 Common Data Service for Apps Online instance, authenticate using OAuth, and access the web services."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 09/30/2018
 ms.service:
   - "powerapps"
 ms.custom:
@@ -46,8 +46,8 @@ App registration can also be done by an application developer or individual user
   
  <!--For either deployment type, you must know the redirect URL for your application. Instructions for finding that URL are provided in the section named [Obtain the redirect URI](walkthrough-register-app-active-directory.md#bkmk_redirect).-->  
     
-<a name="bkmk_online"></a>   
-## How to: Register an application with Microsoft Azure Active Directory  
+
+## Create an application registration 
   
 1.  [Sign in](http://manage.windowsazure.com) to the Azure management portal by using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with.<br><br> You can also access the Azure management portal through the Office 365 [Admin center](https://portal.office.com/adminportal) by expanding the **Admin centers** item in the left navigation pane, and selecting **Azure AD**.  
   
@@ -63,6 +63,8 @@ App registration can also be done by an application developer or individual user
     ![Copy application ID](media/Azure-copy-app-id.png "Copy application ID")
   
 1. Select **Settings** in the app info page, and use the **Redirect URIs** option on the **Settings** page to copy the redirect URI value for your app. You can also change and add additional URIs if required. For an app of **Web app / API** application type, you will see **Reply URLs** option instead of the **Redirect URIs** option.
+
+## Apply Permissions
 
 1. On the **Settings** page, select **Required permissions** > **Add** to add permissions for the registered app.
 
@@ -80,11 +82,14 @@ App registration can also be done by an application developer or individual user
     - Select **Done** to add the delegated permission to the registered app.
 
 This completes the registration of your application in Azure Active Directory.
-       
-  
-<!--### Register an application with AD FS  
-  
--   If you’re federating users between an [!INCLUDE[pn_ifd_short](../includes/pn-ifd-short.md)] server and Dynamics 365 (online), and you want to use the app with either server, you must register the application with both Dynamics 365 (online) and [!INCLUDE[pn_Active_Dir_Fed_Svcs_AD_FS](../includes/pn-active-dir-fed-svcs-ad-fs.md)] on the [!INCLUDE[pn_ifd_short](../includes/pn-ifd-short.md)] server. Follow the steps provided in this topic. Your [!INCLUDE[pn_ifd_short](../includes/pn-ifd-short.md)] server must be running [!INCLUDE[pn_windows_server_2012_r2](../includes/pn-windows-server-2012-r2.md)].-->  
+
+## Additional configuration options
+
+If your application will be a Single Page Application (SPA) that depends on CORS you must configure the app registration to support the implicit flow. 
+More information: [Walkthrough: Registering and configuring a SPA application with adal.js](walkthrough-registering-configuring-simplespa-application-adal-js.md)
+
+If your application will support server-to-server connections, see [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)
+
   
 ### See also  
  [Application registration in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)    

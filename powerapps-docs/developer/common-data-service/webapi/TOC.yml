@@ -1,4 +1,6 @@
-- name: Overview
+- name: Work with data using code
+  href: ../work-with-data-cds.md
+- name: Use Web API
   href: overview.md
 - name: Get started
   items:
@@ -51,7 +53,7 @@
     href: impersonate-another-user-web-api.md
   - name: Perform conditional operations
     href: perform-conditional-operations-using-web-api.md
-  - name: Manage duplicate detection during Create and Update operations
+  - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
 - name: Version Differences
   href: web-api-versions.md
@@ -79,7 +81,7 @@
   href: ../sample-data.md #Topic is for both Web API and Organization service
 - name: Samples
   items:
-  - name:  Data operations Sample Templates
+  - name: Data operations Sample Templates
     href: web-api-samples.md
     items:
     - name: Basic Operations
@@ -92,4 +94,3 @@
       href: web-api-functions-actions-sample.md
     - name: Samples
       href: samples/toc.yml
-

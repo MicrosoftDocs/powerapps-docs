@@ -75,6 +75,6 @@ Delete all published rules in the system to disable duplicate detection globally
 
 ## See Also
 
-[Duplicate Detection](detect-duplicate-data-for-developers.md)  
-[Running Duplicate Detection](run-duplicate-detection.md)   
-[Duplicate Rule entities](duplicaterule-entities.md) 
+[Duplicate detection](detect-duplicate-data-with-code.md)  
+[Run duplicate detection](run-duplicate-detection.md)   
+[Duplicate rule entities](duplicaterule-entities.md) 

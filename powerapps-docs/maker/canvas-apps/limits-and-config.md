@@ -93,3 +93,6 @@ This list identifies all services to which PowerApps Studio talks and their usag
 | *.azureedge.net |https |WebAuth |
 | *.blob.core.windows.net |https |Blob storage |
 | vortex.data.microsoft.com |https |Telemetry |
+
+> [!NOTE]
+> If you're using a VPN, it must be configured to exclude localhost from tunneling for PowerApps Mobile.

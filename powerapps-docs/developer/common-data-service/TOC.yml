@@ -1,5 +1,7 @@
 # This TOC is a work in progress. The specific location of items is not locked down
-- name: Overview
+- name: Common Data Service for Apps
+  href: ../../maker/common-data-service/data-platform-intro.md
+- name: Developer overview
   href: overview.md
 - name: Get started
   href: get-started-CDS-developers.md
@@ -9,12 +11,10 @@
 - name: Work with data using code
   href: work-with-data-cds.md
   items:
-  - name: Using Web API
-    # href: webapi/index.md
-    href: webapi/
-  - name: Using Organization Service
-    # href: org-service/overview.md
-    href: org-service/
+  - name: Use Web API
+    href: webapi/index.md
+  - name: Use Organization Service
+    href: org-service/index.md
   - name: Add and remove sample data
     href: sample-data.md
   - name: Use FetchXML to query data
@@ -42,23 +42,18 @@
     - name: Create auto-number attributes
       href: create-auto-number-attributes.md
   - name: Detect duplicate data
-    href: detect-duplicate-data-for-developers.md
+    href: detect-duplicate-data-with-code.md
     items:
-    - name: Enable and Disable duplicate detection
+    - name: Enable and disable duplicate detection
       href: enable-disable-duplicate-detection.md
     - name: Run duplicate detection
       href: run-duplicate-detection.md
-    - name: Manage duplicate detection for create and update operations
-      href: duplicate-detection-create-update.md
     - name: Duplicate detection messages
       href: duplicate-detection-messages.md
     - name: Duplicate Rule entities
       href: duplicaterule-entities.md
   - name: Delete data in bulk
     href: delete-data-bulk.md
-    items:
-    - name: Run bulk delete
-      href: run-bulk-delete.md
   - name: Use Optimistic Concurrency to reduce potential data loss
     href: optimistic-concurrency.md
   - name: Impersonate another user
@@ -144,8 +139,7 @@
       href: walkthrough-configure-azure-sas-integration.md
     - name: "Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool"
       href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
-    - name: "Tutorial: Register and configuring a SPA application with adal.js"
-      href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+
     - name: "Tutorial: Update a service endpoint imported from a solution"
       href: walkthrough-update-service-endpoint-imported-solution.md
   - name: Use Web Hooks
@@ -157,17 +151,6 @@
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-  - name: SharePoint integration
-    href: integrate-sharepoint.md
-    items:
-    - name: Get started with SharePoint integration
-      href: get-started-sharepoint-integration.md
-    - name: Enable document management for entities
-      href: enable-document-management-entities.md
-    - name: Actions on SharePoint location records
-      href: actions-on-sharepoint-location-records.md
-    - name: Define custom claim mapping for SharePoint server-based integration
-      href: define-custom-claim-mapping-sharepoint-server-based-integration.md
 - name: Work with CDS for Apps entities
   href: entities.md
   items:
@@ -357,27 +340,36 @@
 - name: Create client applications
   href: connect-cds.md
   items:
-  - name: Authentication
+  # - name: Authentication
+  #   items:
+    # - name: Authenticate Office 365 users
+    #   href: authenticate-office-365-users-cds-web-services.md
+  - name: Authenticate
+    href: authentication.md
     items:
-    - name: Authenticate Office 365 users
-      href: authenticate-office-365-users-cds-web-services.md
-    - name: Integration with Office 365
-      href: online-integration-office-365.md
-    - name: Connect with Microsoft Office 365
-      href: connect-microsoft-office-365.md
-    - name: Connect using OAuth
-      href: connect-web-services-using-oauth.md
-    - name: Build web applications using Server-to-Server (S2S) authentication
-      href: build-web-applications-server-server-s2s-authentication.md
-      items:
-      - name: Use Multi-Tenant Server-to-server authentication
-        href: use-multi-tenant-server-server-authentication.md
-      - name: Use Single-Tenant Server-to-server authentication
-        href: use-single-tenant-server-server-authentication.md
-    - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
-      href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
-    - name: "Tutorial: Register an app with Azure Active Directory"
-      href: walkthrough-register-app-azure-active-directory.md
+    - name: .NET Framework applications
+      href: authenticate-dot-net-framework.md
+    - name: Use OAuth
+      href: authenticate-oauth.md
+    # - name: Integration with Office 365
+    #   href: online-integration-office-365.md
+    # - name: Connect with Microsoft Office 365
+    #   href: connect-microsoft-office-365.md
+    # - name: Connect using OAuth
+    #   href: connect-web-services-using-oauth.md
+  - name: "Tutorial: Register an app with Azure Active Directory"
+    href: walkthrough-register-app-azure-active-directory.md      
+  - name: Build web applications using Server-to-Server (S2S) authentication
+    href: build-web-applications-server-server-s2s-authentication.md
+    items:
+    - name: Use Multi-Tenant Server-to-server authentication
+      href: use-multi-tenant-server-server-authentication.md
+    - name: Use Single-Tenant Server-to-server authentication
+      href: use-single-tenant-server-server-authentication.md
+  - name: Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application 
+    href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+  - name: "Tutorial: Register and configuring a SPA application with adal.js"
+    href: walkthrough-registering-configuring-simplespa-application-adal-js.md
   - name: Build Windows client apps using XRM tools
     href: xrm-tooling/
   - name: Discover user organizations

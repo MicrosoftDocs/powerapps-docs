@@ -10,6 +10,7 @@ author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
+<!---
 # Run bulk delete
 
 To delete data in bulk, you have to submit a bulk delete job by using the <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest> message. The bulk delete job runs asynchronously in the background without blocking other activities. The query expressions that describe the records on which to run the bulk delete job are specified in the <xref:Microsoft.Crm.Sdk.Messages.BulkDeleteRequest.QuerySet> property of this request.  
@@ -44,5 +45,5 @@ To delete data in bulk, you have to submit a bulk delete job by using the <xref:
  [Entity Relationship Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)   
  [Recurrence Pattern in Asynchronous Job Execution](/dynamics365/customer-engagement/developer/recurrence-pattern-asynchronous-job-execution)   
  [Sample: Bulk Delete Exported Records](org-service/samples/bulk-delete-exported-records.md)   
- [Sample: Bulk Delete Records That Match Common Criteria](org-service/samples/bulk-delete-records-match-common-criteria.md)   
- [BulkDeleteOperation Entity](reference/entities/bulkdeleteoperation.md)
+ [Sample: Bulk Delete Records That Match Common Criteria](org-service/samples/bulk-delete-records-match-common-criteria.md)  
+ [BulkDeleteOperation Entity](reference/entities/bulkdeleteoperation.md)-->

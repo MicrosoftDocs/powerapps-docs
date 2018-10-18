@@ -1,5 +1,5 @@
 ---
-title: Apply business logic with code | Microsoft Docs
+title: Apply business logic with code (Common Data Service (CDS) for Apps)| Microsoft Docs
 description: Learn how developers can use code to apply business logic in Common Data Service for Apps.
 services: ''
 suite: powerapps
@@ -22,11 +22,9 @@ search.app:
   - D365CE
 ---
 
-<!-- This topic was not migrated it was written for PowerApps -->
-
 # Apply business logic with code
 
-Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Create custom business logic through processes](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)
+Whenever possible, you should first look to applying one of several declarative process options when a requirement involves defining business logic. See [Create custom business logic with flows](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)
 
 When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.
 

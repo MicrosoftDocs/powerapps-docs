@@ -20,7 +20,7 @@ search.app:
   - D365CE
 ---
 
-# Model-driven apps Developer Overview
+# Model-driven apps Developer Guide
 
 PowerApps offers users, businesses, partners, independent software vendors (ISVs), and systems integrators (SIs) a powerful platform for building line-of-business apps. The new addition to PowerApps in this release are model-driven apps built using the new Common Data Service for Apps. Common Data Service for Apps now contains the core functionality of the Common Data Service for Apps  applications. With model-driven apps, you can build apps that use the same extensibility capabilities as those applications.
 

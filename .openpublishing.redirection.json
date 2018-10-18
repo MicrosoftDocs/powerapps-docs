@@ -1,6 +1,36 @@
 {
     "redirections": [
         {
+        "source_path": "powerapps-docs/guided-learning/create-app-sharepoint.md",
+        "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/guided-learning/manage-apps.md",
+        "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/guided-learning/get-started.md",
+        "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/guided-learning/index.md",
+        "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/guided-learning/manage-data.md",
+        "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps-docs/guided-learning/create-app-cds.md",
+        "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
+        "redirect_document_id": true
+        },
+        {
         "source_path": "powerapps-docs/postman-collection.md",
         "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/define-postman-collection",
         "redirect_document_id": true
@@ -1294,16 +1324,6 @@
         "source_path": "powerapps-docs/run-app-client.md",
         "redirect_url": "/powerapps/user/run-app-client",
         "redirect_document_id": true
-        },
-        {
-        "source_path": "powerapps-docs/guided-learning/manage-data.md",
-        "redirect_url": "/powerapps/guided-learning/get-started?tutorial-step=1",
-        "redirect_document_id": false
-		},
-		{
-		"source_path": "powerapps-docs/guided-learning/create-app-cds.md",
-		"redirect_url": "/powerapps/guided-learning/get-started?tutorial-step=1",
-		"redirect_document_id": true
         },
         {
         "source_path": "powerapps-docs/maker/model-driven-apps/run-app-client-model-driven.md",
