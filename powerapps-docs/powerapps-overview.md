@@ -26,7 +26,7 @@ To create an app, you start with [web.powerapps.com](https://web.powerapps.com).
 
 - **PowerApps Studio** is the app designer used for building canvas apps. The app designer makes creating apps feel more like building a slide deck in Microsoft PowerPoint. More information: [Generate an app from data]  
 
-- **App designer for model-driven apps** lets define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
+- **App designer** for model-driven apps lets you define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
 
 ## PowerApps for app users
 
