@@ -1,3 +1,10 @@
+- name: Get started: What is PowerApps?
+  href: ../powerapps-overview/md
+  items:
+  - name: Sign up for 30-day trial version
+    href: signup-for-powerapps.md
+  - name: Sign up for Community Plan
+    href: dev-community-plan.md
 - name: Find and run apps
   href: ../user/index.md
   items:
@@ -16,20 +23,15 @@
 - name: Create apps
   href: index.md
   items:
-  - name: Try PowerApps for free
-    items:
-    - name: 30-day trial version
-      href: signup-for-powerapps.md
-    - name: PowerApps Community Plan
-      href: dev-community-plan.md
   - name: Sign in to PowerApps
     href: ./canvas-apps/intro-maker-portal.md
-    items:
   - name: "What's new"
     href: ./canvas-apps/release-notes.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
+  - name: System requirements, limits, and configuration
+    href: ./canvas-apps/limits-and-config.md
   - name: Explore sample apps
     href: ./canvas-apps/open-and-run-a-sample-app.md
     items:
@@ -963,8 +965,6 @@
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
 - name: Troubleshoot
   items:
-  - name: System requirements, limits, and configuration
-    href: ./canvas-apps/limits-and-config.md
   - name: Performance tips for canvas apps
     href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
