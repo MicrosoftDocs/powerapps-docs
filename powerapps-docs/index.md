@@ -26,7 +26,7 @@ ms.custom:
                      <li class="fullSpan">
                         <ul class="cardsC panelContent singlePanelContent cols cols3" style="display:flex!important;">
                            <li>
-                              <a href="/powerapps/maker/signup-for-powerapps">
+                              <a href="powerapps-overview.md">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
@@ -36,8 +36,8 @@ ms.custom:
                                              </div>
                                           </div>
                                           <div class="cardText">
-                                             <h3>Try PowerApps for free</h3>
-                                             <p>Get started with documentation detailing how to try PowerApps for free.</p>
+                                             <h3>What is PowerApps?</h3>
+                                             <p>Get started on docs with an overview about PowerApps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -45,45 +45,7 @@ ms.custom:
                               </a>
                            </li>
                            <li>
-                              <a href="/powerapps/maker/canvas-apps/intro-maker-portal">
-                                 <div class="cardSize">
-                                    <div class="cardPadding">
-                                       <div class="card">
-                                          <div class="cardImageOuter">
-                                             <div class="cardImage">
-                                                <img src="media/index/powerapps-signin.svg" alt="" />
-                                             </div>
-                                          </div>
-                                          <div class="cardText">
-                                             <h3>Sign in to PowerApps</h3>
-                                             <p>Sign in to PowerApps to create your own apps, open apps that you or others have created, and perform related tasks.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="/powerapps/administrator/pricing-billing-skus">
-                                 <div class="cardSize">
-                                    <div class="cardPadding">
-                                       <div class="card">
-                                          <div class="cardImageOuter">
-                                             <div class="cardImage">
-                                                <img src="media/index/powerapps-billing.svg" alt="" />
-                                             </div>
-                                          </div>
-                                          <div class="cardText">
-                                             <h3>Licensing</h3>
-                                             <p>Understand various licensing options for PowerApps.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps">
+                              <a href="https://docs.microsoft.com/en-us/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
@@ -94,7 +56,7 @@ ms.custom:
                                           </div>
                                           <div class="cardText">
                                              <h3>Learn PowerApps</h3>
-                                             <p>Start your PowerApps learning journey by exploring our learning paths and modules. It's free!</p>
+                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn PowerApps. It's free!</p>
                                           </div>
                                        </div>
                                     </div>
@@ -127,12 +89,50 @@ ms.custom:
                                        <div class="card">
                                           <div class="cardImageOuter">
                                              <div class="cardImage">
-                                                <img src="media/index/powerapps-blog.svg" alt="" />
+                                                <img src="media/index/i_blog.svg" alt="" />
                                              </div>
                                           </div>
                                           <div class="cardText">
                                              <h3>Blog</h3>
                                              <p>Read the official PowerApps blog to know about the latest PowerApps features and announcements.</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1">
+                                 <div class="cardSize">
+                                    <div class="cardPadding">
+                                       <div class="card">
+                                          <div class="cardImageOuter">
+                                             <div class="cardImage">
+                                                <img src="media/index/i_community.svg" alt="" />
+                                             </div>
+                                          </div>
+                                          <div class="cardText">
+                                             <h3>Community</h3>
+                                             <p>Connect with peers, share ideas, and learn from experts in the PowerApps community forum.</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="/powerapps/administrator/pricing-billing-skus">
+                                 <div class="cardSize">
+                                    <div class="cardPadding">
+                                       <div class="card">
+                                          <div class="cardImageOuter">
+                                             <div class="cardImage">
+                                                <img src="media/index/powerapps-billing.svg" alt="" />
+                                             </div>
+                                          </div>
+                                          <div class="cardText">
+                                             <h3>Licensing</h3>
+                                             <p>Understand various licensing options for PowerApps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -164,7 +164,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Find and run apps</h3>
+                                    <h3 style="font-size: 1.15rem">Find and run apps</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-browser">In a web browser</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client">On mobile device (Canvas app)</a></p>
@@ -200,7 +200,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Canvas apps</h3>
+                                    <h3 style="font-size: 1.15rem">Canvas apps</h3>
                                     <hr/>
                                     <ul>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/getting-started">What are canvas apps?</a></p>
@@ -228,7 +228,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Model-driven apps</h3>
+                                    <h3 style="font-size: 1.15rem">Model-driven apps</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/model-driven-app-overview">What are model-driven apps?</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/build-first-model-driven-app">Create an app</a></p>
@@ -256,7 +256,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">CDS for Apps</h3>
+                                    <h3 style="font-size: 1.15rem">CDS for Apps</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">What is CDS for Apps?</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
@@ -293,7 +293,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Environment and security</h3>
+                                    <h3 style="font-size: 1.15rem">Environment and security</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/environments-administration">Administer environments</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/database-security">Configure environment security</a></p>
@@ -313,7 +313,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Data integration and DSR</h3>
+                                    <h3 style="font-size: 1.15rem">Data integration and DSR</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/data-integrator">Integrate data into CDS for Apps</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-gdpr-dsr-guide">Respond to Data Subject Rights (DSR) requests</a></p>
@@ -332,7 +332,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Licensing and purchase</h3>
+                                    <h3 style="font-size: 1.15rem">Licensing and purchase</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
@@ -351,7 +351,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Power platform admin center</h3>
+                                    <h3 style="font-size: 1.15rem">Power platform admin center</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/admin-guide">Administer Power platform</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/get-help-support">Get Help + Support</a></p>
@@ -385,7 +385,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Get started</h3>
+                                    <h3 style="font-size: 1.15rem">Get started</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Developer overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/overview">Model-driven apps: Developer overview</a></p>
@@ -406,7 +406,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Extend canvas apps</h3>
+                                    <h3 style="font-size: 1.15rem">Extend canvas apps</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/register-custom-api">Custom connectors</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/embed-apps-dev">Integrate into websites and other services</a></p>
@@ -427,7 +427,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Extend model-driven apps</h3>
+                                    <h3 style="font-size: 1.15rem">Extend model-driven apps</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-entity-forms">Customize entity forms</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-entity-views">Customize entity views</a></p>
@@ -451,7 +451,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Work with CDS for Apps data</h3>
+                                    <h3 style="font-size: 1.15rem">Work with CDS for Apps data</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/webapi/overview">Use Web API</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/org-service/overview">Use Organization service</a></p>
@@ -473,7 +473,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Work with CDS for Apps metadata</h3>
+                                    <h3 style="font-size: 1.15rem">Work with CDS for Apps metadata</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/metadata-services">Get started with metadata</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/browse-your-metadata">Browse your environment metadata</a></p>
@@ -495,7 +495,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Apply business logic</h3>
+                                    <h3 style="font-size: 1.15rem">Apply business logic</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins (CDS for Apps)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions (CDS for Apps)</a></p>
@@ -515,7 +515,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Integrate data with CDS for Apps</h3>
+                                    <h3 style="font-size: 1.15rem">Integrate data with CDS for Apps</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/virtual-entities/get-started-ve">Virtual entities</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/azure-integration">Azure integration</a></p>
@@ -538,7 +538,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Package and distribute apps/extensions</h3>
+                                    <h3 style="font-size: 1.15rem">Package and distribute apps/extensions</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/introduction-solutions">Using solutions</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager tool</a></p>
@@ -559,7 +559,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Create client applications for CDS for Apps</h3>
+                                    <h3 style="font-size: 1.15rem">Create client applications for CDS for Apps</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Authentication</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/discovery-service">Discover user organizations</a></p>
@@ -579,11 +579,11 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.25rem">Reference</h3>
+                                    <h3 style="font-size: 1.15rem">Reference</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/reference/about-entity-reference">Entity Reference</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9">Web API Reference</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/en-us/dotnet/api/?view=dynamics-general-ce-9">Organization service Reference</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk?view=dynamics-general-ce-9">Organization service Reference</a></p>
                                  </div>
                               </div>
                            </div>
