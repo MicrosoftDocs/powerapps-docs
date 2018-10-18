@@ -28,5 +28,5 @@ Canvas apps give you a lot of control over the user experience of the app. There
 
 Since canvas app can essentially be anything, there isn’t much help documentation on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or PowerApps admin.
 
-There is serval ways to run apps. More information: [Find and run apps](https://docs.microsoft.com/en-us/powerapps/user/More).
+There is serval ways to run apps. More information: [Find and run apps](https://docs.microsoft.com/en-us/powerapps/user/).
   
