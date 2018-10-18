@@ -21,10 +21,10 @@ search.app:
 # Use Microsoft Flow to automate processes
 
 Microsoft Flow lets you create automated processes between your favorite apps and services. From within your app, you can run a Flow on one or more records. 
-Also, you can open Microsoft Flow from your app to view, edit, or create new flows.
+Also, you can open Microsoft Flow from your app to view, edit, or create new flows.  For information: [Get started with Microsoft Flow]
 
 ## Manage your flows 
-Connect with Microsoft Flow from your app to manage your flows. For information: [Get started with Microsoft Flow](https://docs.microsoft.com/en-us/flow/getting-started).
+Connect with Microsoft Flow from your app to manage your flows.(https://docs.microsoft.com/en-us/flow/getting-started).
   
 > [!NOTE]
 >  To manage and run Microsoft Flow from your app, Microsoft Flow must be enabled in System Settings for you organization. More information:  [Flows in your organization](https://docs.microsoft.com/en-us/flow/organization-q-and-a). 
