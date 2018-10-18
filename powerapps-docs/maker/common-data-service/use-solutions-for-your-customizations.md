@@ -27,7 +27,7 @@ search.app:
 # Use the Common Data Services Default Solution  
 
 > [!NOTE]
->  Projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in the Dynamics platform. When using this functionality in PowerApps, you’ll see it described as a ‘project'. When using this functionality in Dynamics, you'll see it described as a 'solution'. 
+>  Projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in Dynamics 365 for Customer Engagement. When using this functionality in PowerApps, you’ll see it described as a ‘project'. When using this functionality in Dynamics 365 for Customer Engagement, you'll see it described as a 'solution'. 
   
  All PowerApps environments include the following projects.
 -	Common Data Services Default Solution. This is a base project that is available for makers to use by default to for their customizations in an environment.

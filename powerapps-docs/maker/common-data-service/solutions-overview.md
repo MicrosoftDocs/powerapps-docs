@@ -27,7 +27,7 @@ search.app:
 <a name="BKMK_Solutions"></a>   
 # Projects overview  
 
- Projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in the Dynamics platform. A project can contain one or more apps as well as other components such as entities, option sets, etc. In PowerApps, projects are leveraged to transport apps and components from one organization to another or to apply a set of customizations to existing apps. Since projects are built on the solution system, you can also get projects from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
+ Projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in Dynamics 365 for Customer Engagement. A project can contain one or more apps as well as other components such as entities, option sets, etc. In PowerApps, projects are leveraged to transport apps and components from one organization to another or to apply a set of customizations to existing apps. Since projects are built on the solution system, you can also get projects from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
   
 More information: [Whitepaper: Patterns and Principles for Solution Builders](http://go.microsoft.com/fwlink/p/?LinkID=533946)  
   
