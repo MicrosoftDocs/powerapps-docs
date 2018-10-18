@@ -16,7 +16,7 @@ search.app:
 ---
 # Link a canvas app to a project
 
-Link an app to a project if you want to deploy the app, for example, in a different environment from the one in which it was created. Projects can contain not only apps but also other components, such as entities and option sets. By linking apps and other customized components to a project and then importing the project, you can quickly customize an environment in a variety of ways.
+Link an app to a project if you want to deploy the app, for example, in a different environment from the one in which it was created. Projects can contain not only apps but also customized entities, option sets, and other components. You can quickly customize an environment in a variety of ways if you link apps and other customized components to a project and then import the project into that environment.
 
 Projects are built on the solution system of the Dynamics 365 platform. For more information, see [Projects overview](../common-data-service/solutions-overview.md).
 
