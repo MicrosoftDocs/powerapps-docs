@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Supported Customizations for Common Data Service for Apps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Read how you can customize Common Data Service for Apps by using tools that are available in the PowerApps portal or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -22,18 +22,18 @@ You can customize Common Data Service for Apps by using tools that are available
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to CDS for Apps. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
-Topics covered in technical articles published on Microsoft sites such as doc.microsoft.com, msdn.microsoft.com or technet.microsoft.com are supported, but might not be upgradable.
+Topics covered in technical articles published on Microsoft sites such as docs.microsoft.com, msdn.microsoft.com or technet.microsoft.com are supported, but might not be upgradable.
 
 
 ## Customizations using PowerApps portal
 
-There are a variety of tools included with CDS for apps that you can use to customize it. Customizations made using the PowerApps portal tools and web application are fully supported and fully upgradeable.
+There are a variety of tools included with CDS for Apps that you can use to customize it. Customizations made using the PowerApps portal tools and web application are fully supported and fully upgradeable.
 
 The following customization methods can be used to produce fully supported customizations:
 
 - Customization in the PowerApps portal or solution explorer. For more information, see [What is Common Data Service for Apps?](../../maker/common-data-service/data-platform-intro.md)
 
-- Settings in the web application. For more information, see [Administer Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/admin/admin-guide).
+- Settings in the web application. For more information, see [Administer PowerApps](../../administrator/admin-guide.md).
 
 - Reporting Services. For more information, see [Reporting and Analytics Guide for Dynamics 365 Customer Engagement](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
 

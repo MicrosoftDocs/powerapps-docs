@@ -28,7 +28,7 @@ There are many aspects to how developers can contribute to creating apps that us
 
 ## Working with model-driven apps
 
-Model-driven apps are built on CDS for apps. A model-driven app can only connect to a CDS for Apps environment and all the data that defines a model-driven app is stored within CDS for Apps.
+Model-driven apps are built on CDS for Apps. A model-driven app can only connect to a CDS for Apps environment and all the data that defines a model-driven app is stored within CDS for Apps.
 
 Model-driven apps share the method of distributing customizations and extensions used by CDS for Apps: Solutions. You can learn more about solutions in [Introduction to solutions](introduction-solutions.md)
 
@@ -93,4 +93,4 @@ When you create extensions that apply business logic on the server you will not 
 
 ## Content for on-premises deployments
 
-CDS for Apps is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing (IFD) deployments. For information related to these options, see the [Software Development Kit for Microsoft Dynamics 365 (online) and Dynamics 365 (on-premises)](https://msdn.microsoft.com/library/hh547453.aspx)
+CDS for Apps is not available for on-premise deployments at this time. Content in this guide does not include information about options that are only available for on-premises or internet facing deployments(IFD). For information related to these options, see the [Software Development Kit for Microsoft Dynamics 365 (online) and Dynamics 365 (on-premises)](https://msdn.microsoft.com/library/hh547453.aspx).

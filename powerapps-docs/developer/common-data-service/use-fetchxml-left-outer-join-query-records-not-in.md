@@ -77,7 +77,7 @@ WHERE ab.RegardingObjectId is null
 ```  
   
 ### See also  
- [Build Queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)   
+ [Build Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml)   
  [Sample: Use Aggregation in FetchXML](org-service/samples/use-aggregation-fetchxml.md)   
  [Use FetchXML to Construct a Query](use-fetchxml-construct-query.md)   
  [Sample: Validate and Execute a Saved Query](org-service/samples/validate-execute-saved-query.md)
