@@ -19,7 +19,7 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customize-commands-ribbon -->
 
-Dynamics 365 Common Data Service for Apps displays commands in different ways depending on the entity and the client. In most places in the web application you will see a *command bar* instead of a ribbon. Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
+ Common Data Service for Apps displays commands in different ways depending on the entity and the client. In most places in the web application you will see a *command bar* instead of a ribbon. Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
   
  The command bar provides better performance. The ribbon is still displayed in the web application for certain entity forms and it is still used for list views in Dynamics 365 for Outlook.  
   
