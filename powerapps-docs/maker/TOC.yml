@@ -5,17 +5,17 @@
     href: ../user/index.md
     items:
     - name: In a browser
-    href: ../user/run-app-browser.md
+      href: ../user/run-app-browser.md
     - name: On a phone (canvas)
-    href: ../user/run-app-client.md
+      href: ../user/run-app-client.md
     - name: On a phone (model-driven)
-    href: ../user/run-app-client-model-driven.md
+      href: ../user/run-app-client-model-driven.md
     - name: On a SharePoint Online page
-    href: ../user/powerapps-web-part.md
+      href: ../user/powerapps-web-part.md
     - name: In Microsoft Teams
-    href: ../user/open-app-embedded-in-teams.md
+      href: ../user/open-app-embedded-in-teams.md
     - name: From AppSource
-    href: ../user/app-source.md      
+      href: ../user/app-source.md      
   - name: Navigation and basics in a model-driven app
     href: ../user/basic-navigation-model-driven-app.md
     items:
