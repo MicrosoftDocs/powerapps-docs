@@ -22,7 +22,7 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
   
 <a name="BKMK_limitations"></a>   
 ## Limitations of script web resources  
- Like all web resources, JavaScript web resources use the Model-driven Apps security context. Only licensed users who have the necessary privileges can access them.  
+ Like all web resources, JavaScript web resources use the Model-driven apps security context. Only licensed users who have the necessary privileges can access them.  
   
 > [!NOTE]
 >  References included in code between web resources aren’t tracked as solution dependencies.  
