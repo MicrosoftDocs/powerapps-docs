@@ -36,7 +36,7 @@ Or add additional topics
 
 # Introduction to solutions
 
-*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service for Apps. For example, the CDS for Apps for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
+*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service for Apps. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
 
 Every customization that you make to Common Data Service for Apps, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
 
@@ -156,7 +156,7 @@ Use the *Package Deployer* to create a custom installer for a package that can i
 - Custom code that can run before, while, or after the package is deployed.
 - HTML content specific to the package that can display at the beginning and end of the deployment process. This can be useful to provide a description of the solutions and files that are deployed in the package.
 
-More information:  [Create packages for the CDS for Apps Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer).
+More information:  [Create packages for the CDS for Apps Package Deployer](create-packages-package-deployer.md).
 
 ## Team development of solutions
 
