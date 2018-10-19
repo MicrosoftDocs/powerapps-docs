@@ -21,7 +21,7 @@ search.app:
 
 Model-driven apps use the Unifed Interface - this mean the basic nagiviation of any model-driven app is the same. 
 
-![Pin or unpin a record](media/nav.png "Pin or unpin a record")
+![Modeldriven app nav](media/nav.png "Modeldriven app nav")
 
 1. Sitemap is expanded and persists by default.
 2. The sub area in focus is highlighted to indicate where in the app the user is.
@@ -43,7 +43,8 @@ You probably work with the same records all the time. For example, you may acces
 1. To pin an item or record, from the **Site Map**, clic **Pinned**.
 2. Select the pin icon next to the item in the recent list, and it will be added to the pinned list.
 3. To unpin, select the unpin icon next to the item in the pinned list, and it will drop off from the list.
-  
-![Pin or unpin a record](media/pinnedrecords.png "Pin or unpin a record")
+
+
+![Pinned records](media/pinnedrecords.png "Pinned records")
 
 
