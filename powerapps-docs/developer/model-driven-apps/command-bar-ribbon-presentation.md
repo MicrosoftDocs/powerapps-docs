@@ -1,6 +1,6 @@
 ---
 title: "Command bar or ribbon presentation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Data defining commands in Dynamics 365 (online) Common Data Service for Apps can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Data defining commands in Common Data Service for Apps can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 08/01/2018
 ms.service:
@@ -19,7 +19,7 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/command-bar-ribbon-presentation -->
 
-Data defining commands in Dynamics 365 (online) Common Data Service for Apps can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
+Data defining commands in Common Data Service for Apps can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
   
 <a name="BKMK_DifferentPresentations"></a>   
 ## Different presentations of commands  
@@ -28,7 +28,7 @@ Data defining commands in Dynamics 365 (online) Common Data Service for Apps can
 ### Updated user experience  
  This is the presentation of the command bar throughout the application and for forms for entities that have the updated user experience.  
   
- ![Account command bar in Dynamics 365](media/customization-account-grid-command-bar.PNG "Account command bar in Dynamics 365")
+ ![Account command bar](media/customization-account-grid-command-bar.PNG "Account command bar in Dynamics 365")
   
  In this experience, only the first seven commands are displayed and any remaining commands are available in a flyout menu.  
   
@@ -36,7 +36,7 @@ Data defining commands in Dynamics 365 (online) Common Data Service for Apps can
   
  Subgrids have a limited number of controls. Only controls to allow adding records, deleting records, or opening a view of the grid are available. But these commands are still defined by ribbon data and can be customized.  
   
- ![Contact sub-grid in Dynamics 365](media/customization-contract-subgrid.PNG "Contact sub-grid in Dynamics 365")  
+ ![Contact sub-grid](media/customization-contract-subgrid.PNG "Contact sub-grid in Dynamics 365")  
   
  To perform more actions on the list of records displayed in a subgrid, select the option to open a view of the grid.  
   
@@ -45,7 +45,7 @@ Data defining commands in Dynamics 365 (online) Common Data Service for Apps can
 ### Classic user experience  
  This is the presentation using the ribbon. It is used for lists within the Outlook client and for the forms of entities that do not use the updated user experience.  
   
- ![Article ribbon in Dynamics 365](media/customization-article-ribbon.PNG "Article ribbon in Dynamics 365")  
+ ![Article ribbon](media/customization-article-ribbon.PNG "Article ribbon in Dynamics 365")  
   
  In this experience tabs are available and groups can define scaling so that all available commands in a tab are shown as the width of the screen changes.  
   
@@ -53,7 +53,7 @@ Data defining commands in Dynamics 365 (online) Common Data Service for Apps can
   
  Subgrid commands are shown in a List Tools contextual tab at the top of the page when the subgrid is selected.  
   
- ![Article Comments sub-grid ribbon in Dynamics 365](media/customization-article-comments-subgrid-ribbon.PNG "Article Comments sub-grid ribbon in Dynamics 365")  
+ ![Article Comments sub-grid ribbon](media/customization-article-comments-subgrid-ribbon.PNG "Article Comments sub-grid ribbon in Dynamics 365")  
   
 <a name="BKMK_CRMForTablets"></a>   
 ### Dynamics 365 for tablets  
@@ -98,6 +98,6 @@ Data defining commands in Dynamics 365 (online) Common Data Service for Apps can
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Ribbons Available in Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
+ [Ribbons Available](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
  [Export Ribbon Definitions](export-ribbon-definitions.md)   
- [Developers guide to customization for Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)
+ [Developers guide for customization](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)
