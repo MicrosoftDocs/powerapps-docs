@@ -19,7 +19,7 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/define-scaling-ribbon-elements -->
 
-For application ribbons and updated entity form ribbons there is no scaling. Scaling only applies to forms for entities that weren’t updated and list ribbons displayed using [!INCLUDE[pn_crm_2016_outlook](../../includes/pn-crm-2016-outlook.md)].  
+For application ribbons and updated entity form ribbons there is no scaling. Scaling only applies to forms for entities that weren’t updated and list ribbons displayed using Dynamics 365 for Outlook.  
   
  The goal of the Ribbon is to maintain visibility of relevant controls even when the horizontal size of the window changes. To achieve this, the UI definition allows you to control how controls in a group change size in response to changes in the size of the window. This is known as *scaling*.  
   
@@ -56,7 +56,7 @@ For application ribbons and updated entity form ribbons there is no scaling. Sca
  Associate your new group to that template. For each control in the group, use a `TemplateAlias` value from one of 
  the `<Section>` 
  or `<OverflowSection>` elements found in one of the `Layout` elements used by that `GroupTemplate`. 
- Each `<OverflowSection>` includes an `isv``TemplateAlias` that is not used by [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] Customer Engagement. This `TemplateAlias` is provided to allow ISVs to add controls to that group.  
+ Each `<OverflowSection>` includes an `isv``TemplateAlias` that is not used. This `TemplateAlias` is provided to allow ISVs to add controls to that group.  
   
 ### Control how scaling is applied  
  Each `Scale` element in the `Scaling` element for a particular tab represents one scale step. Each `Scale` is applied sequentially by the order in which the `Scale` element appears. When reducing the horizontal space available for the ribbon, each scale element is applied in order from top down. When increasing the horizontal space available, from the smallest space the bottom scale element is in effect. Each of the available `Scale` elements are applied in order from the bottom to the top until all the `MaxSize` elements are in effect.  
