@@ -1,6 +1,6 @@
 ---
 title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Organization-owned dashboards can be created by using the Dynamics 365 Common Data Service for Apps web services (SDK) or by customizing the entity form in Dynamics 365 Common Data Service for Apps by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Organization-owned dashboards can be created by using the Common Data Service for Apps web services (SDK) or by customizing the entity form in Common Data Service for Apps by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 08/01/2018
 ms.service:
@@ -19,7 +19,7 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/create-dashboard -->
 
-Organization-owned dashboards can be created by using the Dynamics 365 or by customizing the entity form in Dynamics 365 Common Data Service for Apps by editing the customizations.xml file.  
+Organization-owned dashboards can be created by using the Common Data Service for Apps or by customizing the entity form in Common Data Service for Apps by editing the customizations.xml file.  
   
 > [!NOTE]
 >  Some dashboards that are created by using the SDK or by customizing the entity form are not supported by the Dashboard Designer in the Web application. For more information, see [Limitations: Creating dashboards by using the SDK or through form customization](#Limitations) later in this topic.  
@@ -147,7 +147,7 @@ _dashboardId = _serviceProxy.Create(dashboard);
   
 #### Create a dashboard by customizing an entity form  
   
-1. Log on to Dynamics 365.  
+1. Log on to Common Data Service for Apps.  
   
 2. Export a solution. For information about doing so, see [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).  
   
@@ -174,13 +174,13 @@ _dashboardId = _serviceProxy.Create(dashboard);
   
 6. Save the customizations.xml file.  
   
-7. Import the .zip file as a solution in Dynamics 365. More information: [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).  
+7. Import the .zip file as a solution in CDS for Apps. More information: [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).  
   
 <a name="Limitations"></a>   
 
 ## Limitations: Creating dashboards by using the SDK or through form customization  
 
- Certain dashboards that are created or modified using the Dynamics 365 or through form customization are not supported by the dashboard designer in the Web application. Avoid the following while creating or modifying a dashboard using the SDK or through form customization.  
+ Certain dashboards that are created or modified using the CDS for Apps or through form customization are not supported by the dashboard designer in the Web application. Avoid the following while creating or modifying a dashboard using the SDK or through form customization.  
   
 ### General  
   
@@ -203,9 +203,9 @@ _dashboardId = _serviceProxy.Create(dashboard);
  **Resolution**: Make sure that you specify a value for the `<Url>` parameter while creating an IFRAME in the FormXML.  
   
 ### See also  
- [Dashboards for Microsoft Dynamics 365](analyze-data-with-dashboards.md)   
+ [Dashboards](analyze-data-with-dashboards.md)   
  [Using FormXML for Dashboards](understand-dashboards-dashboard-components-formxml.md)   
  [Actions on Dashboards](actions-dashboards.md)   
  [Sample dashboards](sample-dashboards.md)   
- [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard)   <!-- TODO relevant powerapps repo topic must be linked>
- [Customize Entity Forms in Microsoft Dynamics 365](customize-entity-forms.md)
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard)   <!-- TODO relevant powerapps repo topic must be linked-->
+ [Customize Entity Forms](customize-entity-forms.md)
