@@ -19,7 +19,7 @@ search.app:
 ---
 #  Basic navigation in a model-driven app
 
-Model-driven apps use the Unifed Interface - this mean the basic nagiviation of any model-driven app is the same. 
+Model-driven apps use the Unifed Interface - this means the basic nagiviation of any model-driven app is the same. 
 
 ![Modeldriven app nav](media/nav.png "Modeldriven app nav")
 
