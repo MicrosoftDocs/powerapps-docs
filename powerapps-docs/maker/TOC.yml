@@ -1,19 +1,72 @@
-- name: Find and run apps
-  href: ../user/index.md
+- name: Get Started
+  href: ../user/what-is-powerapps.md
   items:
-  - name: In a browser
+  - name: Find and run apps
+    href: ../user/index.md
+    items:
+    - name: In a browser
     href: ../user/run-app-browser.md
-  - name: On a phone (canvas)
+    - name: On a phone (canvas)
     href: ../user/run-app-client.md
-  - name: On a phone (model-driven)
+    - name: On a phone (model-driven)
     href: ../user/run-app-client-model-driven.md
-  - name: On a SharePoint Online page
+    - name: On a SharePoint Online page
     href: ../user/powerapps-web-part.md
-  - name: In Microsoft Teams
+    - name: In Microsoft Teams
     href: ../user/open-app-embedded-in-teams.md
-  - name: From AppSource
-    href: ../user/app-source.md
-- name: Create apps
+    - name: From AppSource
+    href: ../user/app-source.md      
+  - name: Navigation and basics in a model-driven app
+    href: ../user/basic-navigation-model-driven-app.md
+    items:
+    - name: View your profile 
+      href: ../user/view-your-user-profile.md
+    - name: Set personal options
+      href: ../user/set-personal-options.md
+    - name: Use a screen reader 
+      href: ../user/screen-reader.md
+    - name: Keyboard shortcuts 
+      href: ../user/keyboard-shortcuts.md
+  - name: Work with records in a model-driven app
+    href: ../user/basic-navigation-model-driven-app.md
+    items:
+    - name: create a record
+      href: ../user/create-a-record.md
+    - name: Add activities
+      href: ../user/add-activities.md
+    - name: Assign or share records
+      href: ../user/assign-or-share-records.md
+    - name: Deactivate accounts or contacts 
+      href: ../user/deactivate-activate-account-contact.md
+    - name: Track your progress with charts 
+      href: ../user/track-your-progress-with-charts.md
+  - name: Search records in a model-driven app
+    items:
+    - name: search for records
+      href: ../user/search-records.md
+    - name: Use advanced find
+      href: ../user/create-edit-or-save-advanced-find-search.md
+  - name: Import and export data in a model-driven app
+    items:
+    - name: Import data 
+      href: ../user/import-data.md
+    - name: Export data to Excel Online
+      href: ../user/export-to-excel-online.md
+    - name: Export data to Excel
+      href: ../user/export-data-excel.md
+    - name: Export to a dynamic worksheet 
+      href: ../user/export-excel-dynamic-worksheet.md
+    - name: Export to a static worksheet 
+      href: ../user/export-excel-static-worksheet.md
+    - name: Export to an Exel PivotTable 
+      href: ../user/export-excel-pivottable.md     
+  - name: Automate processes in a model-driven app
+    items:
+    - name: Work with business processes 
+      href: ../user/work-with-business-processes.md
+    - name: Use flows
+      href: ../user/use-flows.md  
+    - name: Create apps
   href: index.md
   items:
   - name: Try PowerApps for free
