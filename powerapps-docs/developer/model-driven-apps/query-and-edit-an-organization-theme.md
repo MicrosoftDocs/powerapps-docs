@@ -14,7 +14,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme -->
 
-You can define and apply visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application. You can create a custom theme for your application by making changes to the default colors and visual elements provided in the un-customized Model-driven Apps system. For example, you can create your personal product branding, add a company logo and provide entity-specific coloring. The theme colors are applied globally throughout the application, with the exception of some legacy areas.  
+You can define and apply visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application. You can create a custom theme for your application by making changes to the default colors and visual elements provided in the un-customized Model-driven apps system. For example, you can create your personal product branding, add a company logo and provide entity-specific coloring. The theme colors are applied globally throughout the application, with the exception of some legacy areas.  
   
 <!-- [!NOTE]
 > [!INCLUDE[cc_feature_included_with_2015_update_1_admins](../../includes/cc-feature-included-with-2015-update-1-admins.md)]  -->
@@ -53,7 +53,7 @@ OData-Version: 4.0
             "globallinkcolor": "#1160B7",  
             "processcontrolcolor": "#D24726",  
             "headercolor": "#1160B7",  
-            "logotooltip": "Model-driven Apps",  
+            "logotooltip": "Model-driven apps",  
             "hoverlinkeffect": "#D7EBF9",  
             "navbarshelfcolor": "#DFE2E8",  
             "navbarbackgroundcolor": "#002050",  
@@ -89,7 +89,7 @@ OData-Version: 4.0
 |ImportSequenceNumber|Integer|null|Sequence number of the import that created this record.|
 |IsDefaultTheme|Boolean|True|The default value for a custom theme is false.|
 |LogoId|String|null|The name of a web resource to use as a logo. Recommended dimensions are a height of 50 pixels and a maximum width of 400 pixels.|  
-|LogoToolTip|String|Model-driven Apps|The text that will be used as the tooltip and alt text for the logo.| 
+|LogoToolTip|String|Model-driven apps|The text that will be used as the tooltip and alt text for the logo.| 
 |MainColor|String|#3B79B7|The Unified Interface primary theme color to be used on main command bar, buttons and tabs.| 
 |Name|String|MDA Default Theme|The name of the Theme entity.|  
 |NavBarBackgroundColor|String|#002050|The primary navigation bar color.|  
