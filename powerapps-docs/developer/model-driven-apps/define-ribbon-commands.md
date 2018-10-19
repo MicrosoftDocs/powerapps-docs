@@ -33,7 +33,7 @@ A *Ribbon* command creates a reusable definition that can be referenced by ribbo
 - **Actions**: Specifies what code executes when a ribbon control is used.  
   
 > [!IMPORTANT]
->  All command definitions are downloaded to a user's computer so that they can be evaluated at run time. This means that a user without the privileges to see a particular control in the ribbon can use the browser **View Source** command, review the code, and determine that a control exists that isn’t displayed to them in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] Customer Engagement.  
+>  All command definitions are downloaded to a user's computer so that they can be evaluated at run time. This means that a user without the privileges to see a particular control in the ribbon can use the browser **View Source** command, review the code, and determine that a control exists that isn’t displayed to them.  
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
