@@ -133,6 +133,6 @@ To edit the ribbon, you must perform the following steps:
 4.  After you have corrected the error, complete the steps to import the Ribbon again.  
   
 ### See also  
- [Customize the Ribbon for Microsoft Dynamics 365](customize-commands-ribbon.md)   
+ [Customize the Ribbon](customize-commands-ribbon.md)   
  [Export Ribbon Definitions](export-ribbon-definitions.md)   
  [Use Localized Labels with Ribbons](use-localized-labels-ribbons.md)
