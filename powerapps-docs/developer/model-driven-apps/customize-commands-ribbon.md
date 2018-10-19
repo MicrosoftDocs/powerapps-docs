@@ -42,12 +42,9 @@ Dynamics 365 Common Data Service for Apps displays commands in different ways de
   
   
 ## See also  
- [Ribbon Core Schema](ribbon-core-schema.md)  
-  
- [Ribbon Types Schema](ribbon-types-schema.md)  
-  
- [Ribbon WSS Schema](ribbon-wss-schema.md) 
 
- [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md) 
-  
- [Apply business logic using client scripting in model-driven apps](client-scripting.md)
+ [Ribbon Core Schema](ribbon-core-schema.md)  
+ [Ribbon Types Schema](ribbon-types-schema.md)  
+ [Ribbon WSS Schema](ribbon-wss-schema.md)<br/> 
+ [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md)<br/> 
+ [Apply business logic using client scripting in Model-driven apps](client-scripting.md)
