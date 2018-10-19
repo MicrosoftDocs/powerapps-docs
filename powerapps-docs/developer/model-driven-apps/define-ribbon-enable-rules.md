@@ -43,9 +43,9 @@ When configuring Ribbon elements you can define specific rules to control when t
 
 |   Value   |                                                                               Presentation                                                                               |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Modern`  |                                       The command bar is presented using [!INCLUDE[pn_moca_full](../../includes/pn-moca-full.md)].                                       |
+| `Modern`  |                                       The command bar is presented using Dynamics 365 for tablets.                                       |
 | `Refresh` |                                                      The command bar is presented using the updated user interface.                                                      |
-| `Legacy`  | The ribbon is presented in forms for entities that were not updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
+| `Legacy`  | The ribbon is presented in forms for entities that were not updated or in a list view in Dynamics 365 for Outlook. |
 
 ### Crm Client Type Rule
 Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending on the type of client used. Type options are as follows:  
@@ -55,10 +55,10 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 -   `Outlook`  
 
 ### Crm Offline Access State Rule
- Uses the `<CrmOfflineAccessStateRule>` element. Use this criteria to enable a ribbon element based on whether [!INCLUDE[pn_crm_outlook_offline_access](../../includes/pn-crm-outlook-offline-access.md)] is currently offline.  
+ Uses the `<CrmOfflineAccessStateRule>` element. Use this criteria to enable a ribbon element based on whether Dynamics 365 for Microsoft Office Outlook with Offline Access is currently offline.  
 
 ### Crm Outlook Client Type Rule
- Uses the `<CrmOutlookClientTypeRule>` element. Use this rule if you want to only display a button for a specific type of [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. Type options are as follows:  
+ Uses the `<CrmOutlookClientTypeRule>` element. Use this rule if you want to only display a button for a specific type of Dynamics 365 for Outlook. Type options are as follows:  
 
 -   `CrmForOutlook`  
 
@@ -99,10 +99,10 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
  Uses the `<OrRule>` element. The `OrRule` lets you override the default AND comparison for multiple enable rule types. Use the `OrRule` element to define several possible valid combinations to check.
 
 ### Outlook Item Tracking Rule
- Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] Common Data Service for Apps.  
+ Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in Common Data Service for Apps.  
 
 ### Outlook Version Rule
- Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  
+ Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of Office Outlook as follows:  
 
 -   `2003`  
 
@@ -120,7 +120,7 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
  Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  
 
 ### Sku Rule
- Uses the `<SkuRule>` element. Use this kind of rule to enable a ribbon element for a specific SKU version of [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] as follows:  
+ Uses the `<SkuRule>` element. Use this kind of rule to enable a ribbon element for a specific SKU version of Dynamics 365 as follows:  
 
 -   `OnPremise`  
 
