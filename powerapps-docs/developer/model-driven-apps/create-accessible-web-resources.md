@@ -22,7 +22,7 @@ ms.reviewer:
 
 When you include web resources that provide user interface elements in your solution, make sure that you include requirements that let people with disabilities use your web resources.  
   
- The Dynamics 365 (online) application user interface elements follow standards and best practices that will allow for equivalent functionality for all users. People with disabilities may rely on the use of assistive technology (AT) such as screen readers or a variety of alternative input devices to interact with applications.  
+ The application user interface elements follow standards and best practices that will allow for equivalent functionality for all users. People with disabilities may rely on the use of assistive technology (AT) such as screen readers or a variety of alternative input devices to interact with applications.  
   
  This topic introduces general guidance and links to more resources that will help you design web resource user interface elements that are accessible to people with disabilities.  
   
@@ -50,7 +50,7 @@ When you include web resources that provide user interface elements in your solu
   
 <a name="BKMK_SilverlightWebResources"></a>   
 ## Accessible Silverlight web resources  
- Silverlight web resources are hosted in a Dynamics 365 (online) form or an HTML web resource and the UI is rendered by the Silverlight browser plug-in. Silverlight is a subset of the Windows Presentation Framework (WPF) and therefore programmatic access and AT are exposed by using UIA that resembles WPF windows applications. For more information, see [Silverlight Accessibility for Developers](https://docs.microsoft.com/en-us/previous-versions/windows/).  
+ Silverlight web resources are hosted in a form or an HTML web resource and the UI is rendered by the Silverlight browser plug-in. Silverlight is a subset of the Windows Presentation Framework (WPF) and therefore programmatic access and AT are exposed by using UIA that resembles WPF windows applications. For more information, see [Silverlight Accessibility for Developers](https://docs.microsoft.com/en-us/previous-versions/windows/).  
   
 <a name="BKMK_AccessiblityTestingTools"></a>   
 ## Accessibility testing tools  
@@ -88,5 +88,5 @@ When you include web resources that provide user interface elements in your solu
   
 ### See also  
  [Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
- [Silverlight (XAP) Web Resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)   <!--TODO No relevant topic in powerapps repo-->
- [Web Resources for Dynamics 365](web-resources.md)
+ [Silverlight (XAP) Web Resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)<br/>   <!--TODO No relevant topic in powerapps repo-->
+ [Web Resources](web-resources.md)
