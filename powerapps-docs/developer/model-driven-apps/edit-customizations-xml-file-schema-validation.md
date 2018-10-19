@@ -73,18 +73,11 @@ The customizations.xml file is included within the compressed .zip file exported
   
 ### See also
 
- [When to Edit the Customizations File for Dynamics 365 Common Data Service for Apps](when-edit-customization-file.md)   
-
- [Ribbon core schema](ribbon-core-schema.md)
-
- [Ribbon types schema](ribbon-types-schema.md)
-
- [Ribbon WSS schema](ribbon-wss-schema.md)
-
- [SiteMap schema](/dynamics365/customer-engagement/developer/customize-dev/sitemap-schema)   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
-
- [Form XML schema](form-xml-schema.md)     
-
- [ISV Configuration File Schema](/dynamics365/customer-engagement/developer/customize-dev/isv-configuration-file-schema)   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
-
- [Build Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml) <!-- TODO need to fix link relevant to the topic in powerapps repo-->
+[When to Edit the Customizations File for Common Data Service for Apps](when-edit-customization-file.md)<br/> 
+[Ribbon core schema](ribbon-core-schema.md)<br/>
+[Ribbon types schema](ribbon-types-schema.md)<br/>
+[Ribbon WSS schema](ribbon-wss-schema.md)<br/>
+[SiteMap schema](/dynamics365/customer-engagement/developer/customize-dev/sitemap-schema)<br/>   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
+[Form XML schema](form-xml-schema.md)     
+[ISV Configuration File Schema](/dynamics365/customer-engagement/developer/customize-dev/isv-configuration-file-schema)<br/>   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
+[Build Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml) <!-- TODO need to fix link relevant to the topic in powerapps repo-->
