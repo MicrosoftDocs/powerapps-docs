@@ -14,12 +14,9 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-import-files-web-resources -->
 
-When you develop a large number of files to use as Web resources you can save yourself the work of manually adding them through the application. Many Web resources can be developed and tested outside of Model-driven Apps and then imported.  
+When you develop a large number of files to use as Web resources you can save yourself the work of manually adding them through the application. Many Web resources can be developed and tested outside of Model-driven apps and then imported.  
   
  This sample provides a simplified example of this process. For a more complex sample that provides a WPF application you can use to import Web resources, see the [Sample: Web Resource Utility](sample-web-resource-utility.md).  
-    
- <!--[!INCLUDE[pn-crm-2015-and-online-full](../includes/pn-crm-2015-and-online-full.md)] -->
-<!-- [!INCLUDE[pn_dynamics_crm_online](../includes/pn-dynamics-crm-online.md)] -->
  
  Download the sample: [Import files as web resources](https://code.msdn.microsoft.com/Import-files-as-web-f84ad8dc). 
 
@@ -46,7 +43,7 @@ When you develop a large number of files to use as Web resources you can save yo
   
   > [!NOTE]
   > - Each of these names begin with an underscore character. The customization prefix of the solution publisher will be prepended to the name when the Web resource is created. Rather than hard-coding a specific customization prefix, this sample will detect the current customization prefix for a publisher record that may already exist in the organization.  
-  >   - Because each of these files was developed outside of Model-driven Apps and depend on relative paths to access each other, the names include backslash “/” characters to create a virtual folder structure so the relative links will continue to function within Model-driven Apps.  
+  >   - Because each of these files was developed outside of Model-driven apps and depend on relative paths to access each other, the names include backslash “/” characters to create a virtual folder structure so the relative links will continue to function within Model-driven apps.  
   
 - **type:** Specifies the type of Web Resource to create using the integer values found in [Web Resource Types](web-resources.md#BKMK_WebResourceTypes).
   
@@ -158,6 +155,6 @@ foreach (var webResource in webResources)
   It is not necessary to publish Web resources when they are created. It is necessary to publish them when they are updated.  
   
 ### See also  
- [Sample: Web Resource Utility](sample-web-resource-utility.md)
- [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)
+ [Sample: Web Resource Utility](sample-web-resource-utility.md)<br/>
+ [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br/>
  [Web Resources](web-resources.md)
