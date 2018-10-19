@@ -24,10 +24,10 @@ Model-driven apps use the Unifed Interface - this means the basic nagiviation of
 ![Modeldriven app nav](media/nav.png "Modeldriven app nav")
 
 1. Sitemap is expanded and persists by default.
-2. The sub area in focus is highlighted to indicate where in the app the user is.
-3. **Recent** and **Pinned** items are at top level for easy access. 
+2. The sub area that you are currently in is highlighted to indicate where in the app.
+3. **Recent** and **Pinned** items are at top for easy access. 
 4. Use the Area switcher to switch between apps.
-5. Command bar background color shows association with the area it effects.
+5. Command bar background color is associated with the area you are in.
 6. There are unique colors for icons on the command bar to show differentiation between commands.
   
 ### Get back to recent records, items, or view
@@ -38,7 +38,7 @@ You probably work with the same records all the time. For example, you may acces
   
 2. Under **Recent**, choose the record, item, or view you want to go back to. 
 
-### Pin or unpin records, items, or view
+#### Pin or unpin records, items, or view
 
 1. To pin an item or record, from the **Site Map**, clic **Pinned**.
 2. Select the pin icon next to the item in the recent list, and it will be added to the pinned list.
