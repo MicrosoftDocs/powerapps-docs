@@ -14,7 +14,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/image-web-resources -->
 
-Use image web resources to make images available for use in Mode-driven Apps.  
+Use image web resources to make images available for use in Model-driven apps.  
 
 There are 5 types of image web resources: 
 * PNG Format
@@ -24,7 +24,7 @@ There are 5 types of image web resources:
 * Vector Format (SVG)
 
 > [!NOTE]
-> Vector Format (SVG) web resources were added with the Model-driven Apps.
+> Vector Format (SVG) web resources were added with the Model-driven apps.
 
   
 <a name="BKMK_Capabilities"></a>   
