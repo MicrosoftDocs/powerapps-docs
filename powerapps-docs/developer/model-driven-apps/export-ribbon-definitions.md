@@ -22,7 +22,7 @@ To effectively define changes to the default RibbonXml, you must be able to refe
   
 <a name="BKMK_AccessDefaultRibbonData"></a>   
 ## Access the default ribbon data  
- The default ribbon definitions for Model-driven Apps can be downloaded from [Microsoft Downloads: ExportedRibbonXml.zip](http://download.microsoft.com/download/C/2/A/C2A79C47-DD2D-4938-A595-092CAFF32D6B/ExportedRibbonXml.zip). 
+ The default ribbon definitions for Model-driven apps can be downloaded from [Microsoft Downloads: ExportedRibbonXml.zip](http://download.microsoft.com/download/C/2/A/C2A79C47-DD2D-4938-A595-092CAFF32D6B/ExportedRibbonXml.zip). 
   
  The applicationRibbon.xml file contains the definition of the core application ribbons.  
   
@@ -201,6 +201,6 @@ foreach (System.String entityName in entitiesWithRibbons)
 }  
 ```  
 ### See also  
- [Customize the Ribbon for Microsoft Dynamics 365](customize-commands-ribbon.md)   
+ [Customize the Ribbon](customize-commands-ribbon.md)   
  [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)   
  [Export, Prepare to Edit, and Import the Ribbon](export-prepare-edit-import-ribbon.md)

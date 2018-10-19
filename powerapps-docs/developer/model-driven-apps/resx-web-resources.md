@@ -18,11 +18,6 @@ Use these web resources to manage localized strings in any user interface you de
 
 # Using RESX web resources
 
-<!-- 
-Much of this content also found in developer/clientapi/reference/Xrm-Utility/getResourceString.md
-If you change this, make sure that topic is in sync.
--->
-
 RESX web resources contain the keys and localized string values for a single language defined using the RESX XML format. RESX is a common format for defining localized resources for windows applications, so there is common tooling available to work with this type of file and localization vendors will be familiar with working with them. When the file is published as a web resource in CRM it will be converted to a JSON format which will be downloaded to the application when needed.
 
 When you create RESX web resources you must explicitly set the language value and include the locale identifier (LCID) for the appropriate language in the name of the web resource. For example, `new_/strings/MyAppResources.1033.resx` would contain resources for English language. See [Microsoft Locale ID Values](https://msdn.microsoft.com/library/ms912047(WinEmbedded.10).aspx) for a list of LCID values.

@@ -14,7 +14,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/pass-parameters-url-by-using-ribbon -->
 
-Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>` element. There are several ways to pass contextual Model-driven Apps information as query string parameters to a URL by using the ribbon.  
+Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>` element. There are several ways to pass contextual Model-driven apps information as query string parameters to a URL by using the ribbon.  
   
 -   Use a `<Url>` element. Within the `Url` element, use the **PassParams** attribute.  
   

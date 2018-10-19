@@ -40,9 +40,9 @@ When configuring ribbon elements, you can define specific rules to control when 
 
 |   Value   |                                                                               Presentation                                                                               |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Modern`  |                                       The command bar is presented using [!INCLUDE[pn_moca_full](../../includes/pn-moca-full.md)].                                       |
+| `Modern`  |                                       The command bar is presented using Dynamics 365 for tablets.                                       |
 | `Refresh` |                                                      The command bar is presented using the updated user interface.                                                      |
-| `Legacy`  | The ribbon is presented in forms for entities that were not updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
+| `Legacy`  | The ribbon is presented in forms for entities that were not updated or in a list view in Dynamics 365 for Outlook. |
 
  `<CrmClientTypeRule>`  
  Allows definition of rules depending on the type of client used. `Type` options are as follows:  
@@ -52,10 +52,10 @@ When configuring ribbon elements, you can define specific rules to control when 
 - Outlook  
 
   `<CrmOfflineAccessStateRule>`  
-  Use this criteria to display a ribbon element based on whether [!INCLUDE[pn_crm_outlook_offline_access](../../includes/pn-crm-outlook-offline-access.md)] is currently offline.  
+  Use this criteria to display a ribbon element based on whether Dynamics 365 for Microsoft Office Outlook with Offline Access is currently offline.  
 
   `<CrmOutlookClientTypeRule>`  
-  Use this rule if you want to display a button for the specific type of [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. `Type` options are as follows:  
+  Use this rule if you want to display a button for the specific type of Dynamics 365 for Outlook. `Type` options are as follows:  
 
 - CrmForOutlook  
 
@@ -157,7 +157,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 - Outlook  
 
   `<OutlookVersionRule>`  
-  Use this to display a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Short](../../includes/pn-ms-outlook-short.md)]. `Version` options are as follows:  
+  Use this to display a ribbon element for a specific version of Outlook. `Version` options are as follows:  
 
 - 2003  
 
@@ -178,7 +178,7 @@ When configuring ribbon elements, you can define specific rules to control when 
 - NoRelationship  
 
   `<SkuRule>`  
-  Use this kind of rule to display a ribbon element for a specific SKU version of [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] Common Data Service for Apps, as follows:  
+  Use this kind of rule to display a ribbon element for a specific SKU version of Common Data Service for Apps, as follows:  
 
 - OnPremise  
 

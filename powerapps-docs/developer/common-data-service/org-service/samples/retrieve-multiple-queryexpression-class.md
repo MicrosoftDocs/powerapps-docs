@@ -33,16 +33,10 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-1. The `WhoAmIRequest` method gets the current user details.
-1. The `ActivityParty` method creates the activity party for sending and recieving fax.
-1. The `Fax` method creates the fax required for the sample.
-
 
 ### Demonstrate
-1. Retreives all the fax id's that are created in [Setup](#setup).
-2. Creates a task and verifies whether the task has been created. 
-
+1. Creates multiple accounts with primary contacts.
+1. The `QueryExpression` class creates a query expression specifying the link entity alias and the columns of the link entity that you want to return.
 ### Clean up
 
-1. Displays an option to delete all the data created in the sample.
-2. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+1. No clean up is required.

@@ -26,5 +26,5 @@ These records can refer to each other using relative path names in their content
 Most commonly, you will use JavaScript web resources to add event handler functions to forms and commands.
 
 More information:
-- [Client scripting with model-driven apps](client-scripting.md)
+- [Client scripting with Model-driven apps](client-scripting.md)
 - [Web resources](/dynamics365/customer-engagement/developer/web-resources)

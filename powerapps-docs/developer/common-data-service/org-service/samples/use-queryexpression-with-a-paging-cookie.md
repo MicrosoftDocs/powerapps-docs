@@ -20,7 +20,6 @@ This sample shows how to use the paging cookie in a QueryExpression query to ret
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
-
 ## What this sample does
 
 The `IOrganizationService.RetreiveMultiple` method is intended to be used in a scenario where it retrieves a collection of records.
@@ -41,4 +40,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 1. Displays an option to delete all the data created in the sample.
-2. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+
+The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.

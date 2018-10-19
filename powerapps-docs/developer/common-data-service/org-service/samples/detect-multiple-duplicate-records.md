@@ -31,7 +31,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks the current version of the org.
+1. Checks for the current version of the org.
 1. The `CreateRequiredRecords` class creates some duplicate entity records for the sample.
 1. The `DuplicateRule` method creates a duplicate detection rule.
 1. The  `DuplicateRuleCondition` method creates a duplicate detection rule condition for detecting duplicate records.

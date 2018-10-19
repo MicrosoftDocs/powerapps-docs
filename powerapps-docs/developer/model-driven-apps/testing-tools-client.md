@@ -27,6 +27,6 @@ When a solution is developed with unit testing, developers report greater produc
 ### See also
 
 [Testing tools for server-side development](../common-data-service/testing-tools-server.md)<br />
-[Video:  Creating and running UI test for Microsoft Dynamics 365 CRM](https://youtu.be/ryWgK34Akt0)<br />
+[Video:  Creating and running UI test](https://youtu.be/ryWgK34Akt0)<br />
 [Blog post: Easy Repro: what is it?](http://www.itaintboring.com/dynamics-crm/easy-repro-what-is-it/)<br />
-[Video: Introduction to DevOps with Dynamics 365](https://youtu.be/AorM792M8nY)
+[Video: Introduction to DevOps](https://youtu.be/AorM792M8nY)

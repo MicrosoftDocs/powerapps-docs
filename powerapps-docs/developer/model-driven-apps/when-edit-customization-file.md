@@ -30,7 +30,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  For more information about editing the ribbon by editing the customization.xml manually, see [Customize the Ribbon](customize-commands-ribbon.md).  
   
  **Editing the SiteMap**  
- The SDK describes the process of editing the SiteMap by editing the customization.xml file directly. However, its recommended that you use the site map designer in Model-driven Apps to create or update site maps. More information: [Tutorial: Create a model-driven app site map for an app using the site map designer](../../maker/model-driven-apps/create-site-map-app.md)  
+ The SDK describes the process of editing the SiteMap by editing the customization.xml file directly. However, its recommended that you use the site map designer in Model-driven apps to create or update site maps. More information: [Tutorial: Create a Model-driven app site map for an app using the site map designer](../../maker/model-driven-apps/create-site-map-app.md)  
   
  You can also use one of the community-developed site map editors, such as the [XrmToolBox Site Map Editor](https://www.xrmtoolbox.com/plugins/MsCrmTools.SiteMapEditor/).   
   

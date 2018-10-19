@@ -14,7 +14,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/understand-dashboards-dashboard-components-formxml -->
 
-Dashboards are one of the different types of forms in Mode-driven Apps. You can use the `SystemForm.Type` or `UserForm.Type` attribute to determine whether the form is a dashboard. A form of dashboard type has the property value of ”0”.  
+Dashboards are one of the different types of forms in Model-driven apps. You can use the `SystemForm.Type` or `UserForm.Type` attribute to determine whether the form is a dashboard. A form of dashboard type has the property value of ”0”.  
 
  The definition of the form content and presentation is stored in the FormXML. More information: [Form XML Schema](form-xml-schema.md)  
 
@@ -29,21 +29,21 @@ Dashboards are one of the different types of forms in Mode-driven Apps. You can 
 <!--[!INCLUDE[cc_sdk_onpremises_note](../../includes/cc-sdk-onpremises-note.md)]-->
 
 ### Charts  
- An organization-owned dashboard can contain only organization-owned charts. However, a user-owned dashboard can contain user-owned and organization-owned charts. More information [Charts (Visualizations) for Model-driven Apps](view-data-with-visualizations-charts.md)  
+ An organization-owned dashboard can contain only organization-owned charts. However, a user-owned dashboard can contain user-owned and organization-owned charts. More information [Charts (Visualizations) for Model-driven apps](view-data-with-visualizations-charts.md)  
 
 ### Grids  
- Grids fetch data from queries (views) in Model-driven Apps. An organization-owned dashboard can contain only the grids that fetch data from saved queries. However, a user-owned dashboard can contain grids that fetch data from user and saved queries. More information: [SavedQuery Entity](../common-data-service/reference/entities/savedquery.md) 
+ Grids fetch data from queries (views) in Model-driven apps. An organization-owned dashboard can contain only the grids that fetch data from saved queries. However, a user-owned dashboard can contain grids that fetch data from user and saved queries. More information: [SavedQuery Entity](../common-data-service/reference/entities/savedquery.md) 
 
 ### IFRAMEs  
  When you add an IFRAME to an organization-owned dashboard, you can specify whether to restrict or allow cross-frame scripting. 
  To do so, you have to use the `<Security>` parameter in the IFRAME control in the FormXML. However, for user-owned dashboards, cross-frame scripting for IFRAMEs is restricted, and you can’t change it. If you attempt to create a user-owned dashboard that contains an IFRAME with cross-frame scripting enabled, an error message will be displayed.  
 
 ### Web resources  
- Only form-enabled web resources can be included in a dashboard. Although this restriction is applicable when you are adding a web resource using the Dashboard designer in the web application, there is no such restriction applied when adding a web resource to a dashboard using the SDK. More information: [Web resources for model-driven apps](web-resources.md)
+ Only form-enabled web resources can be included in a dashboard. Although this restriction is applicable when you are adding a web resource using the Dashboard designer in the web application, there is no such restriction applied when adding a web resource to a dashboard using the SDK. More information: [Web resources for Model-driven apps](web-resources.md)
 
 <a name="DashboardComponentsandFormXML"></a>   
 ## Dashboard components and FormXML elements  
- The dashboard components are displayed in Model-driven Apps based on the values specified in the FormXML. The following image shows an example of a dashboard. Each dashboard can include multiple tabs. Tabs are a vertical stack separating the body of the dashboard, and can be expanded or collapsed. A tab can contain multiple sections. Sections enable for grouping and layout of dashboard components. 
+ The dashboard components are displayed in Model-driven apps based on the values specified in the FormXML. The following image shows an example of a dashboard. Each dashboard can include multiple tabs. Tabs are a vertical stack separating the body of the dashboard, and can be expanded or collapsed. A tab can contain multiple sections. Sections enable for grouping and layout of dashboard components. 
 
  <!-- TODO: image not found ![Dashboard components layout](../media/crm-v5s-dashboards-components.png "Dashboard components layout")   -->
 
@@ -79,7 +79,7 @@ Dashboards are one of the different types of forms in Mode-driven Apps. You can 
 
 1. Open a Windows PowerShell command window.  
 
-2. Add the Model-driven Apps WindowsPowerShell snap-in:  
+2. Add the Model-driven apps WindowsPowerShell snap-in:  
 
    ```powershell  
    Add-PSSnapin Microsoft.Crm.PowerShell  

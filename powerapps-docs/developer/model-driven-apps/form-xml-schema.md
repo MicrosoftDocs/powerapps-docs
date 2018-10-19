@@ -14,7 +14,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/form-xml-schema -->
 
-The following is the schema definition for form customizations for Model-driven Apps. For more information, see [Customize Entity Forms](customize-entity-forms.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
+The following is the schema definition for form customizations for Model-driven apps. For more information, see [Customize Entity Forms](customize-entity-forms.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
   
 ## Schema  
   

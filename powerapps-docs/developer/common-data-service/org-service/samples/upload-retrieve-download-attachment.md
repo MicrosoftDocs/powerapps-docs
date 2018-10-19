@@ -40,4 +40,5 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Clean up
 
 1. Displays an option to delete all the data created in the sample.
-2. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+
+The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.

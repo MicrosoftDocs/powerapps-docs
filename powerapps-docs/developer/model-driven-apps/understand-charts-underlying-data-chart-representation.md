@@ -16,7 +16,7 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the *category* axis and the y axis is called the *series* axis. The category axis can display numeric as well as non-numeric values whereas the series axis only displays numeric values.  
   
- Charts in Mode-driven Apps can be further classified into the following:  
+ Charts in Model-driven apps can be further classified into the following:  
   
 - **Single-series charts**: Charts that display data with a series (y) value mapped to a category (x) value.  
   
@@ -25,14 +25,14 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 > [!NOTE]
 >  Multi-category charts can be created through the web application or by modifying the XML strings described here.  
   
- While authoring a chart in Model-driven Apps using the SDK, you need to consider the following two important aspects:  
+ While authoring a chart in Model-driven apps using the SDK, you need to consider the following two important aspects:  
   
 - **Underlying data for the chart**: Specified using the *data description* XML string.  
   
 - **Data representation (appearance)**: Specified using the *presentation description* XML string.  
   
 > [!NOTE]
-> Microsoft Chart Controls lets you create various types of charts such as column, bar, area, line, pie, funnel, bubble, and radar. The chart designer in Model-driven Apps lets you create only certain types of charts. However, using the SDK, you can create most of the chart types that are supported by Microsoft Chart Controls.  
+> Microsoft Chart Controls lets you create various types of charts such as column, bar, area, line, pie, funnel, bubble, and radar. The chart designer in Model-driven apps lets you create only certain types of charts. However, using the SDK, you can create most of the chart types that are supported by Microsoft Chart Controls.  
   
 ## Use the data description XML string to specify chart data  
  The data description XML string defines the data that will displayed on the chart. The contents of the XML string are validated against the visualization data description schema. For more information about the schema, see [Visualization Data Description Schema](visualization-data-description-schema.md).  

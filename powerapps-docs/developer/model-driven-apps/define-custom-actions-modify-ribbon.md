@@ -19,7 +19,7 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/define-custom-actions-modify-ribbon -->
 
-The default, an application command bar or ribbon is defined by [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] Common Data Service for Apps metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
+The default, an application command bar or ribbon is defined by Common Data Service for Apps metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
   
 ## Types of custom actions  
  There are two types of custom actions for ribbons:  
@@ -55,5 +55,5 @@ The default, an application command bar or ribbon is defined by [!INCLUDE[pn_dyn
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Pass Microsoft Dynamics 365 data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions)   <!-- TODO need to update the relevant PowerApps repo link-->
+ [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions)<br/>   <!-- TODO need to update the relevant PowerApps repo link-->
  [Define Scaling for Ribbon Elements](define-scaling-ribbon-elements.md)
