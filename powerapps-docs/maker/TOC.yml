@@ -28,7 +28,6 @@
     - name: Keyboard shortcuts 
       href: ../user/keyboard-shortcuts.md
   - name: Work with records in a model-driven app
-    href: ../user/basic-navigation-model-driven-app.md
     items:
     - name: create a record
       href: ../user/create-a-record.md
