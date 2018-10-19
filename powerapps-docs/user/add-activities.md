@@ -1,5 +1,5 @@
 ---
-title: "Add an appointment, email, phone call, notes or task activity in a Model-driven appp| MicrosoftDocs"
+title: "Add an appointment, email, phone call, notes or task activity in a Model-driven app| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
