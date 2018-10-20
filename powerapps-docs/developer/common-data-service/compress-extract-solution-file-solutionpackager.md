@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # SolutionPackager tool
 
-SolutionPackager is a tool that can reversibly decompose a Common Data Service for Apps compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system. The following sections show you how to run the tool and how to use the tool with managed and unmanaged solutions.  
+SolutionPackager is a tool that can reversibly decompose a Common Data Service(CDS) for Apps compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system. The following sections show you how to run the tool and how to use the tool with managed and unmanaged solutions.  
   
 <a name="bkm_where"></a>   
 
@@ -71,10 +71,12 @@ SolutionPackager is a tool that can reversibly decompose a Common Data Service f
 
  The following provides detailed information on folder mapping.  
   
- Xml Format  
+ **Xml Format**
+
  `<Folder map="folderA" to="folderB" />`  
   
- Description  
+ **Description**
+
  File paths that match “folderA” will be switched to “folderB”.  
   
 - The hierarchy of subfolders under each must exactly match.  
@@ -83,7 +85,8 @@ SolutionPackager is a tool that can reversibly decompose a Common Data Service f
   
 - No file names may be specified.  
   
-  Examples  
+  **Examples**
+
   ```xml  
   <Folder map="folderA" to="folderB" />  
   <Folder map="folderA\folderB" to="..\..\folderC\" />  
@@ -96,10 +99,12 @@ SolutionPackager is a tool that can reversibly decompose a Common Data Service f
 
  The following provides detailed information on file-to-file mapping.  
   
- Xml Format  
+ **Xml Format**
+
  `<FileToFile map="path\filename.ext" to="path\filename.ext" />`  
   
- Description  
+ **Description**
+
  Any file matching the `map` parameter will be read from the name and path specified in the `to` parameter.  
   
  For the `map` parameter:  
@@ -120,7 +125,8 @@ SolutionPackager is a tool that can reversibly decompose a Common Data Service f
   
 - The folder wildcard is supported.  
   
-  Examples  
+  **Examples**
+
   ```xml  
   <FileToFile map="assembly.dll" to="c:\path\folder\assembly.dll" />  
   <FileToFile map="PluginAssemblies\**\this.dll" to="..\..\Plugins\**\that.dll" />  
@@ -133,10 +139,12 @@ SolutionPackager is a tool that can reversibly decompose a Common Data Service f
 
  The following provides detailed information on file-to-path mapping.  
   
- Xml Format  
+ **Xml Format**
+
  `<FileToPath map="path\filename.ext" to="path" />`  
   
- Description  
+ **Description**  
+ 
  Any file matching the `map` parameter is read from the path specified in the `to` parameter.  
   
  For the `map` parameter:  
@@ -155,7 +163,8 @@ SolutionPackager is a tool that can reversibly decompose a Common Data Service f
   
 - A file name must not be specified.  
   
-  Examples  
+  **Examples**
+
   ```xml  
   <FileToPath map="assembly.dll" to="c:\path\folder" />  
   <FileToPath map="PluginAssemblies\**\this.dll" to="..\..\Plugins\bin\**" />  
@@ -164,6 +173,7 @@ SolutionPackager is a tool that can reversibly decompose a Common Data Service f
   ```  
   
 <a name="Example_mapping"></a>   
+
 ### Example mapping  
  The following XML code sample shows a complete mapping file that enables the SolutionPackager tool to read any web resource and the two default generated assemblies from a Developer Toolkit project named CRMDevTookitSample.  
   
@@ -185,10 +195,10 @@ SolutionPackager is a tool that can reversibly decompose a Common Data Service f
 
  A CDS for Apps compressed solution (.zip) file can be exported in one of two types as shown here.  
   
- Managed solution  
+ **Managed solution**  
  A completed solution ready to be imported into an organization. Once imported, components can’t be added or removed, although they can optionally allow further customization. This is recommended when development of the solution is complete.  
   
- Unmanaged solution  
+ **Unmanaged solution**  
  An open solution with no restrictions on what can be added, removed, or modified. This is recommended during development of a solution.  
   
  The format of a compressed solution file will be different based on its type, either managed or unmanaged. The SolutionPackager can process compressed solution files of either type. However, the tool can’t convert one type to another. The only way to convert solution files to a different type, for example from unmanaged to managed, is by importing the unmanaged solution .zip file into a CDS for Apps server and then exporting the solution as a managed solution.  
