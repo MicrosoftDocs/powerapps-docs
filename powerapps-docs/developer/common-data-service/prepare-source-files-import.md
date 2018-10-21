@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Prepare source files for import
 
-Before you can import data into Common Data Service for Apps, you must create the source data files.  
+Before you can import data into Common Data Service(CDS) for Apps, you must create the source data files.  
   
 The data source files that you use in an import must be formatted as comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files. The use of source files enables the transfer of data from database systems that use different formats into CDS for Apps.  
   

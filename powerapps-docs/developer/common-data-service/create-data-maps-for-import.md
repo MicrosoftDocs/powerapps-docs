@@ -65,7 +65,7 @@ To import data into Common Data Service for Apps, you must provide the appropria
   If you do not provide mapping for an annotation (note) entity, the import job generates a default mapping for the note.  
   
 > [!NOTE]
-> The maximum size of files that can be uploaded is determined by the **Organization.MaxUploadFileSize** property. This property is set in the **Email** tab of the **System Settings** in the Dynamics 365 application. This setting limits the size of files that can be attached to email messages, notes, and web resources. The default setting is 5 MB. However, an attachment size cannot exceed the maximum HTTP request size (the default is 16MB). For the change to take effect, reset Internet Information Services. To do this, click **Start**, click **Run**, type `iisreset`, and then click **OK**.  
+> The maximum size of files that can be uploaded is determined by the **Organization.MaxUploadFileSize** property. This property is set in the **Email** tab of the **System Settings** in the CDS for Apps application. This setting limits the size of files that can be attached to email messages, notes, and web resources. The default setting is 5 MB. However, an attachment size cannot exceed the maximum HTTP request size (the default is 16MB). For the change to take effect, reset Internet Information Services. To do this, click **Start**, click **Run**, type `iisreset`, and then click **OK**.  
   
 <a name="BKMK_ImportExport"></a>   
 ## Import and export data maps  
