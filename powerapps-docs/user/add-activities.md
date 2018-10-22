@@ -32,11 +32,11 @@ Use **Activities** in a Model-driven app, to keep track of your all your communi
  
 The fastest way to add an activity is to use the shortcut on the nav bar and then link it to a record. For example, you can create a phone call activity and then link it to a contact in the system using the **Regarding** field.
 
-1. On the nav bar, click the **plus sign**![Create record button](media/create-record-button.png "Create record button"), and then click **Activities**. 
+1. On the nav bar, click the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then click **Activities**. 
 
  ![Shortcut to add an Activities in PowerApps](media/QuickCreate.png "Shortcut to add an Activities in PowerApps")  
  
-2. Choose the type of activity you want too add.
+2. Choose the type of activity you want to add.
 
 3. Fill in the required information. Use the **Regarding** field to associate the activity with a record.
 
@@ -45,7 +45,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 ## Add a phone call  
   
-1.  Open the record that you want to add the activity to. For exampole, contact record.
+1.  Open the record that you want to add the activity to. For example, contact record.
   
 2.  In the **Timeline** section, click  **plus sign** > **Phone Call**.  
 
@@ -63,7 +63,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 ## Add a task  
   
-1. Open the record that you want to add the activity to. For exampole, contact record.
+1. Open the record that you want to add the activity to. For example, contact record.
   
 2. In the **Timeline** section, click  **plus sign** > **Task**.
   
@@ -74,13 +74,13 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 ## Add an email  
  To add an email activity to a record, you must first save the record you are adding the activity to.  
   
-1. Open the record that you want to add the activity to. For exampole, contact record.
+1. Open the record that you want to add the activity to. For example, contact record.
   
 2. In the **Timeline** section, click  **plus sign** > **E-mail**. 
 
 3. Fill in the subject of the email and use the space provide to write the email.
   
-4. To add an attachment to the email, save the email. Then in the **Attachments** sectoion, click **+** to add an attachement.  
+4. To add an attachment to the email, save the email. Then in the **Attachments** section, click **+** to add an attachment.  
   
 5. To use a template for the email body, on the command bar, click **Insert Template**, and then select the template.   
   
@@ -89,7 +89,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 ## Add an appointment  
  To add an appointment activity to a record, you must first save the record you are adding the activity to.  
   
-1. Open the record that you want to add the activity to. For exampole, contact record.
+1. Open the record that you want to add the activity to. For example, contact record.
   
 2. In the **Timeline** section, click  **plus sign** > **Appointment**.  
   
@@ -100,9 +100,9 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 ## Add notes  
  You can also easily add notes in the activities area.
   
-1. Open the record that you want to add the activity to. For exampole, contact record.
+1. Open the record that you want to add the activity to. For example, contact record.
   
-2. In the **Timeline** section start typing your notes. Use **Add an attachement** to add any attachements.
+2. In the **Timeline** section start typing your notes. Use **Add an attachment** to add any attachments.
 
 3. When you're done filling in the form, click **Save** to save the note.
   
