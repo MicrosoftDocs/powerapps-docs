@@ -20,10 +20,10 @@ search.app:
 ---
 # Import data
 
-Whether your data is stored in a spreadsheet, on your phone, or in an email program here’s how to import the data in to PowesApps. For example, you may want to import your customer contact list from an Excel spreadsheet into PowerApps so you can keep track of all your customer information in one place.
+Whether your data is stored in a spreadsheet, on your phone, or in an email program here’s how to import the data in to PowerApps. For example, you may want to import your customer contact list from an Excel spreadsheet into PowerApps, so you can keep track of all your customer information in one place.
   
 ## Step 1: Get your import file ready  
-First, you export your data into a Excel file. These file formats are supported:
+First, you export your data into an Excel file. These file formats are supported:
  - Excel Workbook (.xlsx)
  - Comma-separated values (.csv)
   
@@ -73,7 +73,7 @@ To find an app, search your phone’s online store.
   
 ## Step 2: Import the file 
   
-1. On the commbar bar, click **Import from Excel** or click **Import from CSV**.
+1. On the command bar, click **Import from Excel** or click **Import from CSV**.
 
 ![Main menu in PowerApps](media/import.png "Main menu in PowerAppss")
   
