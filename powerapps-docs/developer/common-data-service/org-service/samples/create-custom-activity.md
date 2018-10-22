@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Create a custom activity
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-create-custom-activity -->
-
 This sample demonstrates how to create a custom activity using [CreateEntityRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.messages.createentityrequest?view=dynamics-general-ce-9) and [CreateAttributeRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.messages.createattributerequest?view=dynamics-general-ce-9).  
 
 ## How to run this sample

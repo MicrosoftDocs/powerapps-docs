@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Create a connection
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-create-connection-early-bound -->
-
 This sample shows how to create a connection between an account and a contact entity that have matching connection roles.  
   
 ## How to run this sample
