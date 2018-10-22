@@ -19,7 +19,7 @@ search.app:
 ---
 # Set personal options
 
-Chagne your display settings in PowerApps to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to PowerApps. You can also personalize many other options such as language, currency, and time zone.  
+Change your display settings in PowerApps to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to PowerApps. You can also personalize many other options such as language, currency, and time zone.  
     
 ## To set personal options  
   
@@ -51,7 +51,7 @@ Chagne your display settings in PowerApps to suit your preferences. For example,
 |               **Set the default country/region code**               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                Enable country/region code prefixing                 |                                                                                                                                                                                                                                                            Select this check box to enable the default calling code for your region.                                                                                                                                                                                                                                                             |
 |                     Country/Region Code Prefix                      |                                                                                                                                                                                                                                         Enter the value of your region’s calling code in the text box. For example, enter **+1** for the United States.                                                                                                                                                                                                                                          |
-|                     View your user information                      |                                                                                                                                                Select this link to view details about you. These details are displayed to your entire organization and include your contact information and security role. For more infomation, [View your user profile](view-your-user-profile.md)                                                                                                                                                 |
+|                     View your user information                      |                                                                                                                                                Select this link to view details about you. These details are displayed to your entire organization and include your contact information and security role. For more information, [View your user profile](view-your-user-profile.md)                                                                                                                                                 |
   
 ## Synchronization tab options  
   
@@ -68,8 +68,8 @@ Chagne your display settings in PowerApps to suit your preferences. For example,
 |Options|Description|  
 |-------------|-----------------|  
 |**Default view**||  
-|Default Calendar|Select the deault view for your calendar.|   
-|Start Time|Select your deault work hours.|
+|Default Calendar|Select the default view for your calendar.|   
+|Start Time|Select your default work hours.|
 ## Formats tab options  
   
 |Options|Description|  
