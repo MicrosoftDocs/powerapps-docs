@@ -19,7 +19,7 @@ search.app:
 ---
 #  Basic navigation in a model-driven app
 
-Model-driven apps use the Unifed Interface - this means the basic nagiviation of any model-driven app is the same. 
+Model-driven apps use the Unified Interface - this means the basic navigation  of any model-driven app is the same. 
 
 ![Modeldriven app nav](media/nav.png "Modeldriven app nav")
 
@@ -40,7 +40,7 @@ You probably work with the same records all the time. For example, you may acces
 
 #### Pin or unpin records, items, or view
 
-1. To pin an item or record, from the **Site Map**, clic **Pinned**.
+1. To pin an item or record, from the **Site Map**, click **Pinned**.
 2. Select the pin icon next to the item in the recent list, and it will be added to the pinned list.
 3. To unpin, select the unpin icon next to the item in the pinned list, and it will drop off from the list.
 
