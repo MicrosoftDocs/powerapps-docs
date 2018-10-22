@@ -36,11 +36,11 @@ Normally Categorized Search is the default search option. However, if Relevance 
 
 ## Switch between Relevance and Categorized search
 
-If your oranization has turned on both search options (Relevance and Categorized search) then you can switch between the two.
+If your organization has turned on both search options (Relevance and Categorized search) then you can switch between the two.
 
 1. To switch between search types, on the nav bar tap the **Search** button.
 
-2. On the left, select the dropdown menu to switch between **Relevance Searchand** or. **Categorized Search**.
+2. On the left, select the dropdown menu to switch between **Relevance Search** or **Categorized Search**.
 
 ## Start a search  
   
