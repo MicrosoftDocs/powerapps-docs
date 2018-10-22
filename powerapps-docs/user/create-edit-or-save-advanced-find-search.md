@@ -21,7 +21,7 @@ search.app:
 
 Find the records you want in PowerApps by using the Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives.  
   
-1. On the command bar, click the to **Advanced Find** button.
+1. On the command bar, click the **Advanced Find** button.
   
 2. Specify what to search for.  
   
