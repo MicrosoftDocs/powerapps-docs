@@ -21,9 +21,9 @@ search.app:
 
 If you would like another person in your organization to handle a customer record, you can assign the record to that person. You can also assign a record to a team, or to yourself.  
 
-Use the **Share** option, if you want to keep owership of the record but let someone else work on it with you. 
+Use the **Share** option, if you want to keep ownership of the record but let someone else work on it with you. 
 
-You can assign and share **Contact** records but you can only share **Account** records.
+You can assign and share **Contact** records, but you can only share **Account** records.
   
 1. From main menu on the left go to **Accounts** or **Contacts**. 
 
@@ -34,7 +34,7 @@ You can assign and share **Contact** records but you can only share **Account** 
 3. In the command bar, click the **Assign**.
 
 > [!NOTE]
-> If you want to keep owership of the record but let someone else work with them click **Share** instead. Then use the handy tooltips to guide you through the **Share** option. Remeber you can only share **Account** records, there is no assign option.
+> If you want to keep ownership of the record but let someone else work with them click **Share** instead. Then use the handy tooltips to guide you through the **Share** option. Remember you can only share **Account** records, there is no assign option.
   
 4. In the **Assign Customer** dialog box, in the **Assign to** area choose **Me** or **User or Team**.
   
