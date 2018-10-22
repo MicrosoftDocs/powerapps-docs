@@ -15,7 +15,6 @@ author: "shmcarth" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
 ---
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget -->
 
 # Download tools from NuGet 
 
@@ -95,13 +94,12 @@ To get the latest version of these tools, repeat these steps.
 
 ## See Also
 
-<!-- TODO:
 [Developer tools](developer-tools.md)<br />
 [Visual Studio and the .NET Framework](org-service/visual-studio-dot-net-framework.md)<br />
 [Create early bound entity classes](org-service/create-early-bound-entity-classes-code-generation-tool.md)<br />
 [Create extensions for the code generation tool](org-service/extend-code-generation-tool.md)<br />
 [Browse the metadata for your organization](browse-your-metadata.md)<br />
-[Analyze plug-in performance](analyze-plugin-performance.md)<br />
+[Analyze plug-in performance](/dynamics365/customer-engagement/developer/analyze-plugin-performance)<br />
 [Solution tools for team development](solution-tools-team-development.md)<br />
-[Deploy packages using Dynamics Dynamics 365 Package Deployer and Windows PowerShell](../admin/deploy-packages-using-package-deployer-windows-powershell.md)<br />
-[Walkthrough: Register a plug-in using the plug-in registration tool](walkthrough-register-plugin-using-plugin-registration-tool.md)<br /> -->
+[Deploy packages using Dynamics Dynamics 365 Package Deployer and Windows PowerShell](/dynamics365/customer-engagement/admin/deploy-packages-using-package-deployer-windows-powershell)<br />
+[Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)<br />

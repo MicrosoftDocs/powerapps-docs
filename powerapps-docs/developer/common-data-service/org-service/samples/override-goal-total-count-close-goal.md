@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Override goal total count and close the goal
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-override-goal-total-count-close-goal -->
-
 This sample shows how to override the goal total count and close the goal.
 
 This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Office 365**. 

@@ -22,7 +22,7 @@ A *subject* categorizes entity records, such as articles and sales literature. B
   
 - Sales literature  
   
-  The content organization of the knowledge base is displayed in the subject tree. The subject tree provides organizational consistency across entities. It makes the system easier for customer service, sales, and marketing to use. Frequently, the products for an organization determine the subject tree. However, you can use subject entity records to create nodes at the root level that are not shared.  
+The content organization of the knowledge base is displayed in the subject tree. The subject tree provides organizational consistency across entities. It makes the system easier for customer service, sales, and marketing to use. Frequently, the products for an organization determine the subject tree. However, you can use subject entity records to create nodes at the root level that are not shared.  
   
 ### See also  
  [Subject Entity](reference/entities/subject.md) 

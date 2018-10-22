@@ -22,25 +22,13 @@ search.app:
   - D365CE
 ---
 
-<!-- TODO: 
-This topic wasn't migrated it was written for the initial PA release
-This content was the 'bare minimum' conceptual information to introduce solutions.
-
-Work in any missing content from original topic(s)
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-solutions 
-
-Or add additional topics
-
--->
-
-
 # Introduction to solutions
 
-*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service for Apps. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
+*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service(CDS) for Apps. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
 
-Every customization that you make to Common Data Service for Apps, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
+Every customization that you make to CDS for Apps, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different CDS for Apps environment.
 
-If you intend to transport customizations or extensions between different Common Data Service for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
+If you intend to transport customizations or extensions between different CDS for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
 
 ## Managed and unmanaged solutions
 
