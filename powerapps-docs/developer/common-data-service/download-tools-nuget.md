@@ -96,7 +96,7 @@ To get the latest version of these tools, repeat these steps.
 
 [Developer tools](developer-tools.md)<br />
 [Visual Studio and the .NET Framework](org-service/visual-studio-dot-net-framework.md)<br />
-[Create early bound entity classes](org-service/create-early-bound-entity-classes-code-generation-tool.md)<br />
+[Create early bound entity classes](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
 [Create extensions for the code generation tool](org-service/extend-code-generation-tool.md)<br />
 [Browse the metadata for your organization](browse-your-metadata.md)<br />
 [Analyze plug-in performance](/dynamics365/customer-engagement/developer/analyze-plugin-performance)<br />
