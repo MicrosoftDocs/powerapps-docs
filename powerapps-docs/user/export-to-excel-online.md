@@ -20,7 +20,7 @@ search.app:
 ---
 # Export your data to Excel Online 
 
-You can quickly to a ad-hoc analysis of your data that is in PowerApps by exporting the data from your app to Microsoft Excel Online.
+You can quickly to an ad-hoc analysis of your data that is in PowerApps by exporting the data from your app to Microsoft Excel Online.
   
  When you make changes to your data in Microsoft Excel Online, you can save the updated information in PowerApps. Remember to keep the existing format of the Excel cells to prevent problems during import. Adding additional information to the spreadsheet, such as graphs, charts, or colors, will not be saved.  
   
@@ -37,7 +37,7 @@ You can quickly to a ad-hoc analysis of your data that is in PowerApps by export
 > [!NOTE]
 >  Updated data in PowerApps won’t immediately be reflected in Excel Online if the same view was opened in the last two minutes in Excel Online. After that timeframe, any updated data should show in Excel Online.
   
-To open a list of records in PowerApp, on the command bar click **Export to Excel** menu and then click **Open in Excel Online**.  
+To open a list of records in PowerApps, on the command bar click **Export to Excel** menu and then click **Open in Excel Online**.  
   
  ![Export to Excel Online](media/exportexcelonline.png "Export to Excel Online")  
 
@@ -51,8 +51,7 @@ To open a list of records in PowerApp, on the command bar click **Export to Exce
    > 
    > - The file import might fail if you made a lot of changes. If you need to make lots of changes to your data and import it back to PowerApps, it’s recommended that you export the worksheet in Excel instead.  
    > 
-   > - By design, you can’t do a **File** > **Save As** in Excel Online. If you do, you’ll get a **Can’t Save Workbook** error message.  
-  
+   > - By design, you can’t do a **File** > **Save As** in Excel Online. If you do, you’ll get a **Can’t Save Workbook** error message.   
 2. On the **Data Submitted for Import** dialog box, click **Close**.  
   
 
