@@ -21,16 +21,16 @@ search.app:
 
 When you want to present information about the data in your app to an individual who doesn’t have access to PowerApps, or you have data that doesn’t change often, consider exporting your app data to a Office Excel static worksheet.
 
-You can export up to 100,000 records at a time. By default, PowerApps lists up to 50 records per page. Choose the <strong>Page</strong arrows at the bottom of the list to view any additional pages.  
+You can export up to 100,000 records at a time. By default, PowerApps lists up to 50 records per page. Choose the **Page** arrows at the bottom of the list to view any additional pages.  
   
 ## Export data to an Excel static worksheet  
- You may have the option to export data to an Excel static worksheet in all record types however, in some cases the format may be legacy, or the data may not be filtered by what you see in Powerapps.  
+ You may have the option to export data to an Excel static worksheet in all record types however, in some cases the format may be legacy, or the data may not be filtered by what you see in PowerApps.  
   
 1. Open a list of records in your app, click the arrow to the right of **Export to Excel**, and then choose **Static worksheet (Page only)**.  
   
 2. By default, an exported worksheet includes the fields that are displayed in the list, using the same field order, sorting, and field widths. To make changes to the columns in an Advanced Find View, choose **Edit Columns**. 
   
-3. Choose **Save** and then save the . xlsm file. Make note of the location where you saved the file.  
+3. Choose **Save** and then save the .xlsm file. Make note of the location where you saved the file.  
   
    > [!NOTE]
    >  If you’re going to edit the data file later, it’s recommended that you save the file before you open it. Otherwise, you may get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space**.  
@@ -49,11 +49,11 @@ You can export up to 100,000 records at a time. By default, PowerApps lists up t
   
 ## Tips  
   
-- You can email a static exported worksheet to anyone, or store it in a shared file. Anyone who opens the file will see all the data in the file.
+- You can email a static exported worksheet to anyone or store it in a shared file. Anyone who opens the file will see all the data in the file.
   
-- You can’t change the columns for a system view, such as **All Active Accounts**. You must either customize the view, which requires the System Administrator or System Customizer security role, or use Advanced Find to create your own view based on the current view.  
+- You can’t change the columns for a system view, such as **All Active Accounts**. You must either customize the view, which requires the System Administrator or System Customizer security role or use Advanced Find to create your own view based on the current view.  
     
-- In Powerapps, money values are exported to Excel as numbers. After you have completed the export, to format the data as currency, see the Excel Help topic titled “Display numbers as currency".
+- In PowerApps, money values are exported to Excel as numbers. After you have completed the export, to format the data as currency, see the Excel Help topic titled “Display numbers as currency".
   
 - The data and time values that you see in the app show up as Date only when you export the file to Excel but the cell actually shows both the date and time.  
   
