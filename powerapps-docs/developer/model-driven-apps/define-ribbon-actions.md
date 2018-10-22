@@ -36,7 +36,7 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
 [!INCLUDE[ribbon_element_BoolParameter](../../includes/ribbon-element-boolparameter.md)]
   
  `<CrmParameter>`  
- [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] More information: [Pass Microsoft Dynamics 365 data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo>
+ [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] More information: [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo>
   
  `<DecimalParameter>`  
  [!INCLUDE[ribbon_element_DecimalParameter](../../includes/ribbon-element-decimalparameter.md)]
@@ -54,4 +54,4 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Define Ribbon Display Rules](define-ribbon-display-rules.md)   
- [Pass Microsoft Dynamics 365 data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo>
+ [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo-->

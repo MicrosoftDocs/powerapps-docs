@@ -19,17 +19,17 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-manage-custom-business-apps-using-code -->
 
-In addition to creating a model-driven app using the PowerApps app designer, you can programmatically create and manage model-driven apps. 
+In addition to creating a Model-driven app using the PowerApps app designer, you can programmatically create and manage Model-driven apps. 
 
 > [!IMPORTANT]
-> You don't have to write code to build model-driven apps if you don't need to! The app designer provides a much simpler and intuitive experience for building model-driven apps without having to write code by providing a tile-based information structure and simplified interface. Check it out here: [Design model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)  
+> You don't have to write code to build Model-driven apps if you don't need to! The app designer provides a much simpler and intuitive experience for building Model-driven apps without having to write code by providing a tile-based information structure and simplified interface. Check it out here: [Design Model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)  
   
-Creating a model-driven app involves the following steps:
+Creating a Model-driven app involves the following steps:
 1. Create an [AppModule Entity](../common-data-service/reference/entities/appmodule.md) instance to define your app and its properties.
 2. Add or remove components to your app such as entity, sitemap, and other components for your custom app using the <xref:Microsoft.Dynamics.CRM.AddAppComponents> and <xref:Microsoft.Dynamics.CRM.RemoveAppComponents> actions.
 3. Check your app for any required components thats missing by using the <xref:Microsoft.Dynamics.CRM.ValidateApp> function.
 4. Publish your app.
-5. Associate appropriate security roles to your model-driven app to provide access to users.
+5. Associate appropriate security roles to your Model-driven app to provide access to users.
 
 
 ## Create your model-driven app and define its properties
@@ -72,9 +72,9 @@ OData-EntityId: [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-8
 
 ## Add or remove components from your model-driven app
 
-You can add or remove components in an app such as sitemap, entity, dashboard, business process flows, views, and forms that you want to be included in your model-driven app. For detailed information about components that can be added to a model-driven app, see [Add or edit app components in the app designer](../../maker/model-driven-apps/add-edit-app-components.md).
+You can add or remove components in an app such as sitemap, entity, dashboard, business process flows, views, and forms that you want to be included in your Model-driven app. For detailed information about components that can be added to a Model-driven app, see [Add or edit app components in the app designer](../../maker/model-driven-apps/add-edit-app-components.md).
 
-Use the <xref:Microsoft.Dynamics.CRM.AddAppComponents> action or the <xref:Microsoft.Crm.Sdk.Messages.AddAppComponentsRequest> message to add components to your model-driven app. The action requires you to specify the following:
+Use the <xref:Microsoft.Dynamics.CRM.AddAppComponents> action or the <xref:Microsoft.Crm.Sdk.Messages.AddAppComponentsRequest> message to add components to your Model-driven app. The action requires you to specify the following:
 - **AppId**: ID of the app where you want to add components
 - **Components** A collection of components to be added. You need to specify the ID and the entity type of the component you want to add. For a list of entity types in CDS for Apps Web API, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
 
@@ -126,9 +126,9 @@ Accept: application/json
 
 ## Validate your model-driven app
 
-Validating an app involves checking for any dependencies for the components you have added in your model-driven app to ensure that your app works fine. This is the same as clicking **Validate** in the app designer. More information: [Validate your app](../../maker/model-driven-apps/validate-app.md)
+Validating an app involves checking for any dependencies for the components you have added in your Model-driven app to ensure that your app works fine. This is the same as clicking **Validate** in the app designer. More information: [Validate your app](../../maker/model-driven-apps/validate-app.md)
 
-Use the <xref:Microsoft.Dynamics.CRM.ValidateApp> function or the <xref:Microsoft.Crm.Sdk.Messages.ValidateAppRequest> message to validate your app. The following Web API request shows how to validate your model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
+Use the <xref:Microsoft.Dynamics.CRM.ValidateApp> function or the <xref:Microsoft.Crm.Sdk.Messages.ValidateAppRequest> message to validate your app. The following Web API request shows how to validate your Model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
 
 `GET [Organization URI]/api/data/v9.0/ValidateApp(AppModuleId=dd621d4a-d898-e711-80e7-00155db763be)`
 
@@ -189,9 +189,9 @@ OData-Version: 4.0
 
 ## Publish your model-driven app
 
-After you have added required components to your model-driven app and validated it, you must publish it to make it available to users.
+After you have added required components to your Model-driven app and validated it, you must publish it to make it available to users.
 
-Use the <xref:Microsoft.Dynamics.CRM.PublishXml> action or the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> messageto publish your model-driven app. The following request shows how to publish your model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
+Use the <xref:Microsoft.Dynamics.CRM.PublishXml> action or the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> messageto publish your Model-driven app. The following request shows how to publish your Model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
 
 ```http
 POST [Organization URI]/api/data/v9.0/PublishXml HTTP/1.1
@@ -207,9 +207,9 @@ Accept: application/json
 
 ## Manage access to model-driven app using security roles
 
-To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your model-driven apps. Users assigned to the associated security roles and can see and use your model-driven apps in CDS for Apps. 
+To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your Model-driven apps. Users assigned to the associated security roles and can see and use your Model-driven apps in CDS for Apps. 
 
-Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../common-data-service/reference/entities/appmodule.md) entity to associate a model-driven app with a security role. The following request shows how to associate a model-driven app with a security role:
+Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../common-data-service/reference/entities/appmodule.md) entity to associate a Model-driven app with a security role. The following request shows how to associate a Model-driven app with a security role:
 
 ```http
 POST [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)appmoduleroles_association/$ref HTTP/1.1
@@ -223,7 +223,7 @@ Accept: application/json
 }
 ```
 
-To disassociate a security role from a model-driven app, you use the DELETE request with the same navigation property. For example:
+To disassociate a security role from a Model-driven app, you use the DELETE request with the same navigation property. For example:
 
 `DELETE	[Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)/appmoduleroles_association/$ref?$id=[Organization URI]/api/data/v9.0/roles(<roleId)
 `
@@ -243,30 +243,30 @@ To retrieve unpublished apps, use the <xref:Microsoft.Dynamics.CRM.RetrieveUnpub
 `GET [Organization URI]/api/data/v9.0/appmodules/Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple()?$select=name,clienttype`
 
 ### Retrieve components in a published model-driven app
-To retrieve app components for a model-driven app, use the <xref:Microsoft.Dynamics.CRM.RetrieveAppComponents> function or the <xref:Microsoft.Crm.Sdk.Messages.RetrieveAppComponentsRequest> message. For example:
+To retrieve app components for a Model-driven app, use the <xref:Microsoft.Dynamics.CRM.RetrieveAppComponents> function or the <xref:Microsoft.Crm.Sdk.Messages.RetrieveAppComponentsRequest> message. For example:
 
 `GET [Organization URI]/api/data/v9.0/RetrieveAppComponents(AppModuleId=dd621d4a-d898-e711-80e7-00155db763be)`
 
 ### Retrieve security roles associated with published model-driven app
 
-To retrieve the security roles associated with your model-driven app, use the `$expand` system query option with the **appmoduleroles_association** navigation property. For example, here is the request to retrieve all the security roles associated to a model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
+To retrieve the security roles associated with your Model-driven app, use the `$expand` system query option with the **appmoduleroles_association** navigation property. For example, here is the request to retrieve all the security roles associated to a Model-driven app with ID: dd621d4a-d898-e711-80e7-00155db763be:
 
 `GET [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)?$expand=appmoduleroles_association&$select=name,appmoduleroles_association`
 
 ### Delete model-driven apps
 
-Use the DELETE request to delete a model-driven app. For example:
+Use the DELETE request to delete a Model-driven app. For example:
 
 `DELETE [Organization URI]/api/data/v9.0/appmodules(dd621d4a-d898-e711-80e7-00155db763be)`
 
 ## Client API support for model-driven apps
 
-You can use the following client APIs to work with model-driven apps:
+You can use the following client APIs to work with Model-driven apps:
 
 - [getCurrentAppName](clientapi/reference/xrm-utility/getglobalcontext/getcurrentappname.md)
 - [getCurrentAppProperties](clientapi/reference/xrm-utility/getglobalcontext/getCurrentAppProperties.md)
 - [getCurrentAppUrl](clientapi/reference/xrm-utility/getglobalcontext/getCurrentAppUrl.md) 
   
 ### See also  
-[Design model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
+[Design Model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
  

@@ -19,13 +19,13 @@ ms.reviewer:
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards -->
 
-Data visualization and analytics in [!INCLUDE[pn_dynamics_crm_online](../../includes/pn-dynamics-crm-online.md)] Common Data Service for Apps enable you to graphically view and analyze the data for your business, and help you to derive quick insights to make important business decisions. You can configure dashboards in such a way that enables you to view data from multiple areas of [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters.  
+Data visualization and analytics in Model-driven Apps enable you to graphically view and analyze the data for your business, and help you to derive quick insights to make important business decisions. You can configure dashboards in such a way that enables you to view data from multiple areas such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters.  
   
- The following elements constitute the visualization and analytics abilities in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)]:  
+ The following elements constitute the visualization and analytics abilities:  
   
-- **Visualization**. Visualizations enable you to present your data in the form of charts. Charts enable you to view the aggregate or non-aggregate summary of grid data in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)]. The charts are integrated with the grid, and display data in context with the grids. The charts update automatically to reflect the filtering done on the data in the grids. Similarly, when you perform a drill-down operation on the chart, the data in the corresponding grid updates accordingly. You can also use a web resource instead of charts in visualization.  
+- **Visualization**. Visualizations enable you to present your data in the form of charts. Charts enable you to view the aggregate or non-aggregate summary of grid data in Model-driven Apps. The charts are integrated with the grid, and display data in context with the grids. The charts update automatically to reflect the filtering done on the data in the grids. Similarly, when you perform a drill-down operation on the chart, the data in the corresponding grid updates accordingly. You can also use a web resource instead of charts in visualization.  
   
-- **Dashboard**. Dashboards act as a business intelligence tool in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] by providing a snapshot of your data in various forms. You can use a dashboard to simultaneously present data from up to six charts, grids, IFrames, or web resources.  
+- **Dashboard**. Dashboards act as a business intelligence tool in Model-driven Apps by providing a snapshot of your data in various forms. You can use a dashboard to simultaneously present data from up to six charts, grids, IFrames, or web resources.  
   
 ## In This Section  
  [View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)  
@@ -39,7 +39,7 @@ Data visualization and analytics in [!INCLUDE[pn_dynamics_crm_online](../../incl
   
  [Customize entity forms](customize-entity-forms.md)  
   
- [Customize Entity Views in Dynamics 365 Customer Engagement](customize-entity-views.md)  
+ [Customize Entity Views](customize-entity-views.md)  
   
  [Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)  <!-- TODO Need to update relevant powerapps repo link-->
   
@@ -53,8 +53,6 @@ Data visualization and analytics in [!INCLUDE[pn_dynamics_crm_online](../../incl
   
  [When to edit the customizations file](when-edit-customization-file.md)  
   
- [Customize Entity Views in Dynamics 365 Customer Engagement](customize-entity-views.md) 
+ [Extend Client](/dynamics365/customer-engagement/developer/extend-client)  <!-- TODO Need to update relevant powerapps repo link-->
   
- [Extend Microsoft Dynamics 365](/dynamics365/customer-engagement/developer/extend-client)  <!-- TODO Need to update relevant powerapps repo link-->
-  
- [Web Resources for Microsoft Dynamics 365](web-resources.md)
+ [Web Resources](web-resources.md)

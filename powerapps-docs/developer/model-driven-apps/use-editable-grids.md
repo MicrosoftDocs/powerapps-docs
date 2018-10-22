@@ -23,17 +23,17 @@ Editable grid is a custom control that provides rich inline editing capabilities
 ## Enable editable grids  
  You can enable editable grids at the entity level to use in the main grid, or at the form level to replace read-only subgrids (associated grids) with an editable grid.  
   
- You can enable the editable grid control for an entity using the customization tool in Model-driven Apps (**Settings** > **Customizations**  > **Customize the System** > **Entities** > *[Entity_Name]* > **Controls** tab.  
+ You can enable the editable grid control for an entity using the customization tool in Model-driven apps (**Settings** > **Customizations**  > **Customize the System** > **Entities** > *[Entity_Name]* > **Controls** tab.  
   
  To enable editable grid for a grid in a form, open the form editor, double-click the read-only grid that you want to replace with the editable grid, and then add/enable editable grid in the **Controls** tab.  
   
  You can revert to the non-editable grid at any time for main grid and associated grids, if required. Also, at runtime, users can toggle between editable grids and read-only grids.  
   
- More information: [Make Model-driven Apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md)  
+ More information: [Make Model-driven apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md)  
   
 <a name="FormScripting"></a>   
 ## Form scripting support  
- The editable grids support client-side events and methods that can be used to write custom client extensions according to your business need. More information: [Grids and subgrids in model-driven apps (Client API reference)](clientapi/reference/grids.md)
+ The editable grids support client-side events and methods that can be used to write custom client extensions according to your business need. More information: [Grids and subgrids in Model-driven apps (Client API reference)](clientapi/reference/grids.md)
   
 <a name="EntitiesSupported"></a>   
 ## Entities and views supported by editable grid  
@@ -49,7 +49,7 @@ Editable grid is a custom control that provides rich inline editing capabilities
   
   On the mobile client, an entity will support editable grid if the entity can be displayed in the mobile client's site map.  
   
-  For information about the entities that support editable grids, see **Supported out-of-the-box entities** section in [Make Model-driven Apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md) 
+  For information about the entities that support editable grids, see **Supported out-of-the-box entities** section in [Make Model-driven apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md) 
    
   Editable grids do not support roll up associated views (**Rollup type** = `Related`).  
   
@@ -276,5 +276,5 @@ namespace Microsoft.Crm.Sdk.Samples
 ```  
   
 ### See also  
- [Grids and subgrids in Model-driven Apps (Client API reference)](clientapi/reference/grids.md)   
- [Make Model-driven Apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md)
+ [Grids and subgrids in Model-driven apps (Client API reference)](clientapi/reference/grids.md)   
+ [Make Model-driven apps grids (lists) editable using the Editable Grid custom control](../../maker/model-driven-apps/make-grids-lists-editable-custom-control.md)

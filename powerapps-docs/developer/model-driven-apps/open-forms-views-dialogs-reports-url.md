@@ -52,7 +52,7 @@ http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={
 >   
 >  Displaying an entity form within an IFrame embedded in another entity form is not supported.  
 
- You will typically use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) method to retrieve the organization root Url for Model-driven Apps.  
+ You will typically use the [getClientUrl](clientapi/reference/Xrm-Utility/getGlobalContext/getClientUrl.md) method to retrieve the organization root Url for Model-driven apps.  
 
 <a name="BKMK_QueryStringParametersForMainForm"></a>   
 ### Query String Parameters for the Main.aspx Page  
@@ -80,7 +80,7 @@ http://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid={
 
 <a name="BKMK_CopyViewURL"></a>   
 ### Copy the URL for a View  
- Many views in MDA let a user copy the URL for a particular view or send an email with the URL for a particular view embedded in the message. This feature makes communication between users easier, and exposes a way for you to gain access to a URL for a view that users can include in another application, such as a SharePoint site.  
+ Many views in Model-driven apps let a user copy the URL for a particular view or send an email with the URL for a particular view embedded in the message. This feature makes communication between users easier, and exposes a way for you to gain access to a URL for a view that users can include in another application, such as a SharePoint site.  
 
 > [!NOTE]
 >  Do not use this URL to include the view in application navigation using the site map. For more information, see [Display a View in the Application Navigation using the Site Map](open-forms-views-dialogs-reports-url.md#BKMK_DisplayViewInApplicationUsingSiteMap).  
@@ -115,7 +115,7 @@ Url=“/_root/homepage.aspx?etn=<entity logical name >&amp;viewid=%7b<GUID value
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the entity.  
 
 > [!NOTE]
->  If you specify the view using the `/_root/homepage.aspx` page, the view selector will still be shown. If the user changes the view, MDA remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
+>  If you specify the view using the `/_root/homepage.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
 
 <a name="BKMK_OpenADialogProcess"></a>   
 ## Opening a Dialog Process by using a URL  
@@ -171,7 +171,7 @@ function openDialogProcess(dialogId, entityName, objectId)
  Two possible values for this parameter are `run` or `filter`. When `run` is used, the report will be displayed using the default filters. When `filter` is used, the report will display a filter that the user can edit before choosing the **Run Report** button to view the report.  
 
  **helpID**  
- This parameter is optional. For reports that are included with MDA the value in this parameter allows the **Help** button to display appropriate content about this report when **Help on This Page** is chosen. The value should correspond to the report `FileName` attribute value.  
+ This parameter is optional. For reports that are included with Model-driven apps the value in this parameter allows the **Help** button to display appropriate content about this report when **Help on This Page** is chosen. The value should correspond to the report `FileName` attribute value.  
 
  **id**  
  This parameter is the report `ReportId` attribute value.  
@@ -210,7 +210,7 @@ function getReportURL(action,fileName,id) {
  [Configure a form to accept custom querystring parameters](configure-form-accept-custom-querystring-parameters.md)    
  [Customize the Ribbon](customize-commands-ribbon.md)<br/>
  [Client scripting using JavaScript](client-scripting.md)<br/>
- [Web Resources](web-resources.md) 
- [Extend the client](/dynamics365/customer-engagement/developer/extend-client) 
- [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)  
+ [Web Resources](web-resources.md)<br/> 
+ [Extend the client](/dynamics365/customer-engagement/developer/extend-client)<br/> 
+ [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)<br/> 
  [Start Dialog by using a URL](/dynamics365/customer-engagement/developer/actions-dialogs#StartDialog)

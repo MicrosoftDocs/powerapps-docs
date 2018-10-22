@@ -32,10 +32,10 @@ Use Data (XML) Web resources to save and access data.
  All XML files must use the .xml file name extension. Files that use XML data but do not use the .xml file name extension cannot be uploaded as Web resources unless the file name extension is changed.  
   
 ### See also  
- [Web Resources for Dynamics 365](web-resources.md)   
+ [Web Resources](web-resources.md)   
  [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
  [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   
  [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
  [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)   
- [Using Silverlight (XAP) Web Resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)   <!-- TODO need to update the relevant link from the powerapps repo>
- [Using Stylesheet (XSL) Web Resources](/dynamics365/customer-engagement/developer/stylesheet-xsl-web-resources) <!-- TODO need to update the relevant link from the powerapps repo>
+ [Using Silverlight (XAP) Web Resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)<br/>   <!-- TODO need to update the relevant link from the powerapps repo-->
+ [Using Stylesheet (XSL) Web Resources](/dynamics365/customer-engagement/developer/stylesheet-xsl-web-resources) <!-- TODO need to update the relevant link from the powerapps repo-->

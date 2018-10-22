@@ -14,12 +14,12 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365 -->
 
-This topic describes where ribbons are defined and modified in Model-driven Apps.
+This topic describes where ribbons are defined and modified in Model-driven apps.
 
 <a name="ribbon_defs"></a>   
 ## Ribbon definitions  
- Model-driven Apps contains default `<RibbonDiffXml>` definitions for all ribbons in the application. You can export and view the current XML defining the ribbon for your organization, but you cannot update the XML directly. You customize the ribbon by defining how you want it to be changed. The change definitions that you specify are applied at runtime when the ribbon is displayed in the application. 
- All of your changes will be in the `<CustomAction>` or `<HideCustomAction>` elements. These elements are applied over the default ribbon definitions provided by Model-driven Apps.  
+ Model-driven apps contains default `<RibbonDiffXml>` definitions for all ribbons in the application. You can export and view the current XML defining the ribbon for your organization, but you cannot update the XML directly. You customize the ribbon by defining how you want it to be changed. The change definitions that you specify are applied at runtime when the ribbon is displayed in the application. 
+ All of your changes will be in the `<CustomAction>` or `<HideCustomAction>` elements. These elements are applied over the default ribbon definitions provided by Model-driven apps.  
 
  When you write your change definitions, you will frequently need to reference the definitions of the default ribbons. For example, if you want to hide a specific ribbon element, you will need to know the unique Id of that element. If you want to position a new ribbon element within or next to an existing ribbon element, you will need to know the Id values for those elements, as well as the sequence order that will control the relative position of the elements.  
 
