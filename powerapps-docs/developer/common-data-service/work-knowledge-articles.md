@@ -17,11 +17,6 @@ ms.reviewer:
 
 # Work with knowledge articles
 
-
-<!-- 
-No owner
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/work-knowledge-articles -->
-
 The new knowledge articles in Dynamics 365 (online) enable you to create rich knowledge articles along with versioning and translation support. When you create and publish a knowledge article, it become available to users in your Dynamics 365 instance so that they can use information in the articles to effectively service the customers. Use the `KnowledgeArticle` entity to store and manage knowledge natively in Dynamics 365.  
   
  This topic provides information about working with the new native Dynamics 365 knowledge management capabilities.  

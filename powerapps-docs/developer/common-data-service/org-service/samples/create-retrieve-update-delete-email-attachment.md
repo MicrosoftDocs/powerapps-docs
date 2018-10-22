@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Create, retrieve, update, and delete an email attachment
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-create-retrieve-update-delete-email-attachment -->
-
 This sample shows how to create, retrieve, update, and delete email attachments using the following methods:
 
 - [IOrganizationService.Create](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9)

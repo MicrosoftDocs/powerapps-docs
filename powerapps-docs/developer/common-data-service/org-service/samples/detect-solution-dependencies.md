@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Detect solution dependencies
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-detect-solution-dependencies -->
-
 This sample shows how to detect dependencies before you delete a solution component.
 
 ## How to run this sample
