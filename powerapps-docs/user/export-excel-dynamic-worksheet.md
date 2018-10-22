@@ -19,7 +19,7 @@ search.app:
 ---
 # Export to an Excel dynamic worksheet
 
-Export your app data to a Office Excel worksheet so users can have the latest information. Imagine the CEO of your company getting the critical information they need without having to navigate Powerapps but instead, merely opening the Excel link on their desktop. You can export up to 100,000 records at a time.    
+Export your app data to an Office Excel worksheet so users can have the latest information. Imagine the CEO of your company getting the critical information they need without having to navigate PowerApps, but instead merely opening the Excel link on their desktop. You can export up to 100,000 records at a time.    
   
 ## Export data to an Excel dynamic worksheet  
  You can’t export data to a dynamic worksheet in Excel for all record types. If you don’t see the option, it’s not available for that record.  
@@ -47,7 +47,7 @@ Export your app data to a Office Excel worksheet so users can have the latest in
   
 6. If you see the security warning **External Data Connections have been disabled**, click **Enable Content**.  
   
-7. To refresh data in the file, on the **Data** tab, click **Refresh from Powerapps**.  
+7. To refresh data in the file, on the **Data** tab, click **Refresh from PowerApps**.  
   
    > [!NOTE]
    >  If you have a phone numbers that starts with **+** or **–**, for example +1-123-456-7890, when you refresh the dynamic worksheet the phone number field will not display the number correctly.   
@@ -59,7 +59,7 @@ Export your app data to a Office Excel worksheet so users can have the latest in
   
 - Some system views, such as Accounts: No Campaign Activities in Last 3 Months, can be exported only to a static Excel worksheet.  
   
-- In Powerapps, money values are exported to Excel as numbers. After you have completed the export, to format the data as currency, see the Excel Help topic titled “Display numbers as currency".  
+- In PowerApps, money values are exported to Excel as numbers. After you have completed the export, to format the data as currency, see the Excel Help topic titled “Display numbers as currency".  
 - The data and time values that you see in the app show up as Date only when you export the file to Excel but the cell actually shows both the date and time.  
   
 - If you’re going to make changes and import the data file back in to the app, remember that secured, calculated, and composite fields (e.g. Full Name) are read-only and can’t be imported in to the app. You’ll be able to edit these fields in Excel but when you import the data back in to the app these fields will not be updated. If you want to update these fields such as a contact’s name then it’s recommend that you use that view to export your data, update them in Excel, and import them back to the app for changes.  
