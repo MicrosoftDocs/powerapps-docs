@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Export to an Exel PivotTable
+# Export to an Excel PivotTable
 
 
 You can export app data to a Office Excel PivotTable to see patterns and trends in data. An Excel PivotTable is a great way to summarize, analyze, explore, and present your app data. You can export up to 100,000 records at a time.  
@@ -56,7 +56,7 @@ You can export app data to a Office Excel PivotTable to see patterns and trends 
   
 ## Tips  
   
-- In PowerApps, money values are exported to Excel as numbers. After you have completed the export, to format the data as currency, see the Excel help opic titled “Display numbers as currency".
+- In PowerApps, money values are exported to Excel as numbers. After you have completed the export, to format the data as currency, see the Excel help topic titled “Display numbers as currency".
   
 - The data and time values that you see in the app show up as Date only when you export the file to Excel but the cell actually shows both the date and time.  
   
