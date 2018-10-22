@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Access the Discovery service
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-access-discovery-service -->
-
 # Work with Discovery Service 
 This sample code shows how to use the discovery service with SDK assemblies.
 

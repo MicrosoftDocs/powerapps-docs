@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Link custom attributes between series and instances
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-link-custom-attributes-between-series-instances -->
-
 This sample shows how to link a custom attribute that is created for a recurring appointment series (`RecurringAppointmentMaster`) with a custom attribute that is created for the appointment instances (`Appointment`).
 
 ## What this sample does

@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Query connection roles by entity type code
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-query-connection-roles-entity-type-code-early-bound -->
-
 This sample shows how to use a query to find a connection role for an account entity by specifying an entity type code.
 
 ## How to run this sample

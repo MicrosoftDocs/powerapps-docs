@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Order results using entity attributes with LINQ
 
-In Common Data Service for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
+In Common Data Service(CDS) for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
   
 ## Using a Lookup Value to Order By  
 

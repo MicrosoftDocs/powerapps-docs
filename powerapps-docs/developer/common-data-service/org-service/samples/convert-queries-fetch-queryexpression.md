@@ -12,11 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Convert queries between Fetch and QueryExpression
 
-<!-- needs supporting conceptual content 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-convert-queries-fetch-queryexpression
-
--->
-
 This sample shows how to convert queries between FetchXML and Query Expression.
 
 ## How to run this sample
