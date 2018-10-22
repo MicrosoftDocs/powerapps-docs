@@ -21,7 +21,7 @@ search.app:
 # Use a screen reader 
 
 
-Screen readers make app in Model-driven Powerapps accessible to people who have low or no vision or may need some extra support for a temporary scenario, such as eye fatigue. Commonly used screen readers such as Narrator, JAWS, and NVDA are supported. 
+Screen readers make app in Model-driven PowerApps accessible to people who have low or no vision or may need some extra support for a temporary scenario, such as eye fatigue. Commonly used screen readers such as Narrator, JAWS, and NVDA are supported. 
 
 - [Learn more about working with Microsoft Narrator](https://support.microsoft.com/help/22798)
 - [Learn more about working with JAWS](http://www.freedomscientific.com/Products/Blindness/JawsDocumentation)
@@ -41,7 +41,7 @@ You can use scan mode to quickly navigate apps using the arrow keys and common k
 ### Find your way around the app
 
 #### Navigation bar
-When you open a an app, a vertical bar with subarea icons is displayed at the left side of the application. You can either use the **Tab** key to move through these icons until you hear the name of the subarea you want, such as “Accounts,” or you can use the site map control. For example, press the **Tab** key until you hear “Accounts” and then press **Enter** to open the Accounts view.
+When you open an app, a vertical bar with subarea icons is displayed at the left side of the application. You can either use the **Tab** key to move through these icons until you hear the name of the subarea you want, such as “Accounts,” or you can use the site map control. For example, press the **Tab** key until you hear “Accounts” and then press **Enter** to open the Accounts view.
 
 #### Grids
 Screen readers navigate grids more reliably and consistently, and announce row and column headings, as well as the position within the grid. When you first open a grid, the default tab stop is the view selector. 
@@ -78,7 +78,7 @@ You can navigate a business process flow, such as the one found at the top of th
 
 #### Dialog boxes
 
-When a dialog box opens, Navigator announces the title. For dialog boxes with input fields, the **Close** button has the default focus, allowing you to close the dialog box by pressing the **Enter** key. For dialog boxess that require user action, the focus is on the primary action button, such as **Delete** or **OK**.
+When a dialog box opens, Navigator announces the title. For dialog boxes with input fields, the **Close** button has the default focus, allowing you to close the dialog box by pressing the **Enter** key. For dialog boxes that require user action, the focus is on the primary action button, such as **Delete** or **OK**.
 
 You can navigate through the controls by using the **Tab** key. The cursor will loop through each element in the dialog box, and you can press the **Esc** key to close it.
 
