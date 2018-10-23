@@ -20,10 +20,9 @@ Create an app from within a solution if you want to deploy the app, for example,
 
 Solutions are built on the same platform as Dynamics 365 for Customer Engagement. For more information, see [Solutions overview](../common-data-service/solutions-overview.md).
 
-## Prerequisites
+## Prerequisite
 
-- You can create an app from within a solution only in an environment that contains a CDS for Apps database.
-- You can link an existing app to a solution only if the app was created from within a solution.
+To follow the steps in this topic, you must switch tos an environment that contains a Common Data Services for Apps database.
 
 ## Create a solution
 
@@ -81,6 +80,8 @@ You can create a blank canvas app from within a solution. You can't automaticall
     Your new app appears in the list of components for that solution. If you save any changes to your app, they will be reflected in the version that's in the solution.
 
 ## Link an existing canvas app to a solution
+
+If you want to link an app to a solution, they must be in the same environment, and the app must have been created from within a solution.
 
 1. [Sign in](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps.
 
