@@ -22,7 +22,7 @@ Solutions are built on the same platform as Dynamics 365 for Customer Engagement
 
 ## Prerequisite
 
-To follow the steps in this topic, you must switch tos an environment that contains a Common Data Services for Apps database.
+To follow the steps in this topic, you must switch to an environment that contains a Common Data Services for Apps database.
 
 ## Create a solution
 
@@ -105,5 +105,5 @@ If you want to link an app to a solution, they must be in the same environment, 
 
 ## Next steps
 
-- Create or link more apps and [other components](../common-data-service/use-solution-explorer.md#create-component-in-a-solution), such as entities, flows, and dashboards, to your solution.
+- Create or link more apps and [other components](../common-data-service/use-solution-explorer.md), such as entities, flows, and dashboards, to your solution.
 - [Export your solution](../common-data-service/import-update-export-solutions.md#export-solutions) so that you can deploy it to another environment, on AppSource, and so forth.
