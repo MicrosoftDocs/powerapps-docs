@@ -70,7 +70,7 @@ To get started, follow these steps:
 
 PowerApps will build you an app that you can customize.
 
-Start with a simple custom list that contains just a couple of fields of different types for your first app. This will let you build a solid foundation without being overwhelmed. Don't worry; you'll be a pro in no time and ready to tackle those complex apps. For help walking through this first app, check out this [documentation](generate-app-from-sharepoint-list-interface.md) or this community [video](https://youtu.be/BnYe_7fpZRM). The examples below will show common InfoPath tasks and how to do them in PowerApps. Each of these builds on a simple SharePoint list app.
+Start with a simple custom list that contains just a couple of fields of different types for your first app. This will let you build a solid foundation without being overwhelmed. Don't worry; you'll be a pro in no time and ready to tackle those complex apps. For help walking through this first app, check out this [documentation](app-from-sharepoint.md#generate-an-app-from-within-sharePoint-online) or this community [video](https://youtu.be/BnYe_7fpZRM). The examples below will show common InfoPath tasks and how to do them in PowerApps. Each of these builds on a simple SharePoint list app.
 
 ## How do you do that with PowerApps?
 
