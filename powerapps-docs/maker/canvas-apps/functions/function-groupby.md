@@ -62,7 +62,7 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 2. Set the **[OnSelect](../controls/properties-core.md)** property of the **Original** button to this formula:
    
     **ClearCollect(CityPopulations, {City:"London", Country:"United Kingdom", Population:8615000}, {City:"Berlin", Country:"Germany", Population:3562000}, {City:"Madrid", Country:"Spain", Population:3165000}, {City:"Rome", Country:"Italy", Population:2874000}, {City:"Paris", Country:"France", Population:2273000}, {City:"Hamburg", Country:"Germany", Population:1760000}, {City:"Barcelona", Country:"Spain", Population:1602000}, {City:"Munich", Country:"Germany", Population:1494000}, {City:"Milan", Country:"Italy", Population:1344000})**
-3. Press F5, select the **Original** button, and then press Esc.
+3. While holding down the Alt key, select the **Original** button.
    
     You just created a [collection](../working-with-data-sources.md#collections), named **CityPopulations**, that contains this data:
    
@@ -76,7 +76,7 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 2. Set the **[OnSelect](../controls/properties-core.md)** property of this button to this formula:
    
     **ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )**
-3. Press F5, select the **Group** button, and then press Esc.
+3. While holding down the Alt key, select the **Group** button.
    
     You just created a collection, named **CitiesByCountry**, in which the records of the previous collection are grouped by the **Country** column.
    
@@ -93,7 +93,7 @@ A table is a value in PowerApps, just like a string or a number. You can specify
 2. Set the **[OnSelect](../controls/properties-core.md)** property of this button to this formula:
    
     **ClearCollect( CitiesByCountryFiltered, Filter( CitiesByCountry, "e" in Country ) )**
-3. Press F5, select the button that you added, and then press Esc.
+3. While holding down the Alt key, select the button that you added.
    
     You just created a third collection, named **CitiesByCountryFiltered**, that includes only those countries that have an "e" in their names (that is, not Spain or Italy).
    
@@ -120,8 +120,13 @@ Something else we can do with a grouped table is to aggregate the results.  In t
     ![](media/function-groupby/cities-sum.png)
    
     **[AddColumns](function-table-shaping.md)** starts with the base **CitiesByCountry** collection and adds a new column **Sum of City Populations**.  This column's values are calculated row-by-row, based on the formula **Sum( Cities, Population )**.  **AddColumns** provides the value of the **Cities** column (a table) for each row, and **[Sum](function-aggregates.md)** adds up the **Population** for each row of this sub table.
-3. Now that we have the sum that we want, we can use **[DropColumns](function-table-shaping.md)** to remove the sub tables.  Modify the **[OnSelect](../controls/properties-core.md)** property to use this formula:
-   
+
+  Now that we have the sum that we want, we can use **[DropColumns](function-table-shaping.md)** to remove the sub tables.
+  
+3. Add another button, and set its **[Text](../controls/properties-core.md)** property so that the button shows **"SumOnly"**.
+  
+4. Set the **[OnSelect](../controls/properties-core.md)** property of the **"SumOnly"** button to this formula:
+
     **ClearCollect( CityPopulationsSumOnly, DropColumns( CityPopulationsSum, "Cities" ) )**
    
     Which results in:
