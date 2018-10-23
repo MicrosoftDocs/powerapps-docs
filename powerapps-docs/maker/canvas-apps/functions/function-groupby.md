@@ -121,10 +121,9 @@ Something else we can do with a grouped table is to aggregate the results.  In t
    
     **[AddColumns](function-table-shaping.md)** starts with the base **CitiesByCountry** collection and adds a new column **Sum of City Populations**.  This column's values are calculated row-by-row, based on the formula **Sum( Cities, Population )**.  **AddColumns** provides the value of the **Cities** column (a table) for each row, and **[Sum](function-aggregates.md)** adds up the **Population** for each row of this sub table.
 
-  Now that we have the sum that we want, we can use **[DropColumns](function-table-shaping.md)** to remove the sub tables.
+    Now that we have the sum that we want, we can use **[DropColumns](function-table-shaping.md)** to remove the sub tables.
   
 3. Add another button, and set its **[Text](../controls/properties-core.md)** property so that the button shows **"SumOnly"**.
-  
 4. Set the **[OnSelect](../controls/properties-core.md)** property of the **"SumOnly"** button to this formula:
 
     **ClearCollect( CityPopulationsSumOnly, DropColumns( CityPopulationsSum, "Cities" ) )**
@@ -133,5 +132,5 @@ Something else we can do with a grouped table is to aggregate the results.  In t
    
     ![](media/function-groupby/cities-sum-drop-cities.png)
    
-    Note that we did not need to ungroup this table.
+    Note that we didn't need to ungroup this table.
 
