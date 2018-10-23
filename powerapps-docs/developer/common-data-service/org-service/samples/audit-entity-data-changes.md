@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Audit entity data changes
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-audit-entity-data-changes -->
-
 This sample shows how to enable and disable auditing on an entity and its attributes, retrieve the data change history of the audited entity, and delete the audit records.
 
 ## How to run this sample

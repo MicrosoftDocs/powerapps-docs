@@ -28,25 +28,25 @@ Common Data Service for Apps is a multicurrency system, in which each record can
   
 - Define product pricelists for each currency.  
   
-  To use multiple currencies, the base currency must be defined for an organization during server installation and organization setup. After the base currency is set for an organization, it cannot be changed. This value is stored in the `Organization.BaseCurrencyID` attribute.  
+To use multiple currencies, the base currency must be defined for an organization during server installation and organization setup. After the base currency is set for an organization, it cannot be changed. This value is stored in the `Organization.BaseCurrencyID` attribute.  
   
-  Transaction currencies are defined as a part of the system settings. An unlimited number of transaction currencies can be defined. Transaction currencies are related to the base currency with the definition of a currency exchange rate.  
+Transaction currencies are defined as a part of the system settings. An unlimited number of transaction currencies can be defined. Transaction currencies are related to the base currency with the definition of a currency exchange rate.  
   
-  After the definition of base and transaction currencies, pricelists must be defined. An organization can have multiple pricelists, which are also typically defined for a target geographical market in the local currency.  
+After the definition of base and transaction currencies, pricelists must be defined. An organization can have multiple pricelists, which are also typically defined for a target geographical market in the local currency.  
   
-  All entities that are involved in financial transactions support transaction currency. The currency is typically inherited from the account, opportunity, and so on, but can be changed as needed.  
+All entities that are involved in financial transactions support transaction currency. The currency is typically inherited from the account, opportunity, and so on, but can be changed as needed.  
   
-  You can specify the decimal precision for the transaction currency by using the `TransactionCurrency.CurrencyPrecision` attribute. To specify the source of the precision for the attributes of type Money, use the <xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata.PrecisionSource> attribute.  
+You can specify the decimal precision for the transaction currency by using the `TransactionCurrency.CurrencyPrecision` attribute. To specify the source of the precision for the attributes of type Money, use the <xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata.PrecisionSource> attribute.  
   
-  All money properties in a record share the same transaction currency, for example, see the `Account.CreditLimit` attribute. For each money attribute in an entity, Common Data Service for Apps automatically creates a corresponding read-only, system calculated, money attribute that is called the "base". This is a money attribute that stores the value of the corresponding attribute in a base currency equivalent, for example, see the `Account.CreditLimit_Base` attribute.  
+All money properties in a record share the same transaction currency, for example, see the `Account.CreditLimit` attribute. For each money attribute in an entity, Common Data Service for Apps automatically creates a corresponding read-only, system calculated, money attribute that is called the "base". This is a money attribute that stores the value of the corresponding attribute in a base currency equivalent, for example, see the `Account.CreditLimit_Base` attribute.  
   
-  The following formula is used to calculate the base value:  
+The following formula is used to calculate the base value:  
   
 ```csharp  
 creditlimit_base = creditlimit / exchangerate  
 ```  
   
- The following are the entities for which the transaction currency can be defined.  
+The following are the entities for which the transaction currency can be defined.  
   
 -   Account  
   

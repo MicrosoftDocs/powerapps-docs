@@ -34,7 +34,7 @@ The following is required to build and run the Common Data Service for Apps Web 
   
 -   An Internet connection to download and update the referenced NuGet packages.  
   
--   Access to  Common Data Service for Apps Online or on-premises (or later). For all Common Data Service for Apps installation types, a user account with privileges to perform CRUD operations is required.  
+-   Access to  Common Data Service for Apps with privileges to perform CRUD operations.  
   
 <!-- TODO:
 -   In order to run samples against CDS for Apps, you must register your application with Azure Active Directory to obtain a client ID and redirect URL. For more information, see [Walkthrough: Register a Common Data Service for Apps app with Azure Active Directory](../walkthrough-register-app-azure-active-directory.md).   -->
@@ -67,7 +67,7 @@ The source code for each sample is available on [MSDN Code Gallery](https://code
 
 Most of the samples have a similar structure and contain common methods and resources, typically to provide the basic infrastructure for a Web API C# program.  
   
-Many of these common elements are also present when creating a new solution that will access the Common Data Service for Apps Web API. For more information, see [Start a Web API project in Visual Studio (C#)](start-web-api-project-visual-studio-csharp.md).  
+Many of these common elements are also present when creating a new solution that will access the CDS for Apps Web API. For more information, see [Start a Web API project in Visual Studio (C#)](start-web-api-project-visual-studio-csharp.md).  
   
 ### Utilized libraries and frameworks
  
@@ -75,7 +75,7 @@ This C# implementation depends upon the following helper code for HTTP communica
   
 -   The standard .NET Framework HTTP messaging classes that are contained in the  [System.Net.Http namespace](/dotnet/api/system.net.http), particularly [HttpClient](/dotnet/api/system.net.http.httpclient), [HttpRequestMessage](/dotnet/api/system.net.http.httprequestmessage), and [HttpResponseMessage](/dotnet/api/system.net.http.httpresponsemessage), are used for HTTP messaging.  
   
--   The Common Data Service for Apps Web API Helper Library is used to read the application configuration file, authenticate with the Common Data Service for Apps server, and assist in operation error handling.  For more information, see [Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md).  
+-   The Common Data Service for Apps Web API Helper Library is used to read the application configuration file, authenticate with the CDS for Apps server, and assist in operation error handling.  For more information, see [Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md).  
   
 -   The Newtonsoft [Json.NET](http://www.newtonsoft.com/json) library supports the JSON data format.  
   

@@ -12,10 +12,10 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Detect duplicate data using the Organization service
 
-The Organization service allows you to detect duplicate records to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
+The Common Data Service(CDS) for Apps Organization service allows you to detect duplicate records to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md). 
 
 > [!NOTE]
-> Make sure there are appropriate duplicate detection rules in place. Common Data Service (CDS) for Apps includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule entities](../duplicaterule-entities.md)
+> Make sure there are appropriate duplicate detection rules in place. CDS for Apps includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, see [Duplicate rule entities](../duplicaterule-entities.md)
 
 
 ## Use RetrieveDuplicatesRequest message to detect duplicates before you create or update record

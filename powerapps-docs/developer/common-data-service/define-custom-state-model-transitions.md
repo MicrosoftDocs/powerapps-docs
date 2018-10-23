@@ -62,19 +62,19 @@ To view the entity metadata for your organization, install the Metadata Browser 
 > [!NOTE]
 >  When this data is retrieved in unmanaged code from the web service, for example when using JavaScript, it will be escaped and appear like the following example.  
   
-```  
-&lt;allowedtransitions xmlns="http://schemas.microsoft.com/crm/2009/WebServices"&gt;  
-&lt;allowedtransition sourcestatusid="1" tostatusid="6" /&gt;  
-&lt;allowedtransition sourcestatusid="1" tostatusid="1000" /&gt;  
-&lt;allowedtransition sourcestatusid="1" tostatusid="2000" /&gt;  
-&lt;allowedtransition sourcestatusid="1" tostatusid="5" /&gt;  
-&lt;/allowedtransitions&gt;  
+```xml  
+<allowedtransitions xmlns="http://schemas.microsoft.com/crm/2009/WebServices">  
+<allowedtransition sourcestatusid="1" tostatusid="6">  
+<allowedtransition sourcestatusid="1" tostatusid="1000">  
+<allowedtransition sourcestatusid="1" tostatusid="2000">  
+<allowedtransition sourcestatusid="1" tostatusid="5">  
+</allowedtransitions>  
 ```  
   
  When this data is present and the Entity `EnforceStateTransitions` property is `true`, any incident instance can only be changed to one of the allowed `statuscode` values. You can use<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> to set the `statuscode`<xref:Microsoft.Xrm.Sdk.OptionSetValue> to any of the allowed values that don’t represent a change in state. To change the state, use <xref:Microsoft.Crm.Sdk.Messages.SetStateRequest> setting the allowed <xref:Microsoft.Crm.Sdk.Messages.SetStateRequest.State> and <xref:Microsoft.Crm.Sdk.Messages.SetStateRequest.Status> property values or the <xref:Microsoft.Crm.Sdk.Messages.CloseIncidentRequest> setting <xref:Microsoft.Crm.Sdk.Messages.CloseIncidentRequest.Status> property to one of the values allowed for the current `statuscode` value. Attempting to set an invalid value throws an error.  
   
 ### See also  
- [Sample: Retrieve Valid Status Transitions](/dynamics365/customer-engagement/developer/sample-retrieve-valid-status-transitions)   
+ [Sample: Retrieve Valid Status Transitions](org-service/samples/retrieve-valid-status-transitions.md)   
  [Record state and status](/dynamics365/customer-engagement/developer/introduction-entities#bkmk_RecordStateandStatus)   
  [Retrieve and Detect Changes to Metadata](/dynamics365/customer-engagement/developer/retrieve-detect-changes-metadata)   
  [Define status reason transitions](http://go.microsoft.com/fwlink/p/?LinkId=393657)

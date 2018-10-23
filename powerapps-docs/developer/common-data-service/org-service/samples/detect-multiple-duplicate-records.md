@@ -12,9 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Detect multiple duplicate records
 
-<!-- Need higher level conceptual topic 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-detect-multiple-duplicate-records
--->
 This sample shows how to detect and log multiple duplicate records for a specified entity type.
 
 ## How to run this sample

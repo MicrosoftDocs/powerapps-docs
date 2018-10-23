@@ -22,7 +22,7 @@ ms.reviewer:
 This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Dynamics 365 Common Data Service for Apps messages posted to the Azure Service Bus.  
   
 > [!NOTE]
->  This walkthrough applies to any Dynamics 365 deployment when using SAS authorization for  Dynamics 365-Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/).  
+>  This walkthrough applies to any Common Data Service for Apps deployment when using SAS authorization for  Dynamics 365-Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/).  
 >   
 > You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Download tools from NuGet](download-tools-NuGet.md).
   

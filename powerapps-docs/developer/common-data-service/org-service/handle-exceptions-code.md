@@ -20,7 +20,7 @@ There are a number of exceptions that can be returned from a Common Data Service
 
  The following code is used in most CDS for Apps Web Services samples. It highlights the common faults and exceptions that your application design should handle.  
   
-```
+```csharp
 catch (FaultException<Microsoft.Xrm.Sdk.OrganizationServiceFault> ex)
 {
     Console.WriteLine("The application terminated with an error.");

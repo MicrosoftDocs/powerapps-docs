@@ -41,7 +41,7 @@ For information about using Organization service to apply optimistic concurrency
   
      When a row version is provided and the **IfVersionMatches** behavior is indicated, if the existing record’s version does not match the row version provided in the request, a fault is returned.  
   
-- **ConcurrencyVersionNotProvided** (code= -2147088253  
+- **ConcurrencyVersionNotProvided** (code= -2147088253)  
   
      When the **IfVersionMatches** behavior is indicated, and no value for row version is provided, a fault is returned.  
   

@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Bulk delete exported records
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-bulk-delete-exported-records -->
-
 This sample shows how to perform a bulk deletion of records that were previously exported from Common Data Service for Apps by using the **Export to Excel** option.
 
 ## How to run this sample

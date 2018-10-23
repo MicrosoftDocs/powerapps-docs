@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Import data using complex data map
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-import-data-complex-data-map -->
-
 This sample shows how to create new records by using data import. The sample uses a complex data map.
 
 >[!NOTE]

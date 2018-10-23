@@ -12,11 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Export and import a data map
 
-<!-- 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-export-import-data-map 
-
--->
-
 This sample shows how to create an import map (data map) in Common Data Service for Apps, export it as an XML formatted data, import modified mappings, and create a new import map CDS for Apps based on the imported mappings.
 
 ## How to run this sample

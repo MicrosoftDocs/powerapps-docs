@@ -35,7 +35,7 @@ Entity records that include image data provide a unique experience within the ap
   
  The URL is composed this way:  
   
-```  
+```http  
 {0}/image/download.aspx?entity={1}&attribute={2}&id={3}&timestamp={4}
 ```  
   

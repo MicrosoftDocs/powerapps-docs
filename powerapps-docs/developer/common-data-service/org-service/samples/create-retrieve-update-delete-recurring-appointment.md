@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Create, retrieve, update, and delete a recurring appointment
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-create-retrieve-update-delete-recurring-appointment -->
-
 This sample shows how to create, retrieve, update, and delete a recurring appointment series. This sample uses the following common methods:
 
 - [IOrganizationService.Create](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9)

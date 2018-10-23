@@ -104,6 +104,7 @@ The SolutionPackager tool can be used with any source control system. After a so
    4.  Submit these changes to source control.  
   
 <a name="modify_sol"></a>   
+
 ## Modify a solution  
  The following procedure identifies the typical steps used when modifying an existing solution.  
   

@@ -63,7 +63,7 @@ The [EntityMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) clas
 > It is important to keep in mind that while each entity lists those relationships which apply to it, each relationship is shared by both entities. The relationships exist *between* the entities. While One-To-Many relationships exist, *Many-to-One* relationships are simply a view of a One-To-Many relationship from the referencing entity.
 
 ### One-to-many relationships
-In order to represent that there are no actual *Many-to-One* relationships with a minimum of confusion, the details of each relationship are only documented once. Each one-to-Many relationship is listed with the referenced entity and includes selected relationship details and a link to the corresponding *Many-to-One* relationship. Each *Many-to-One* relationship listed includes only a link to the corresponding One-to-Many relationship.
+In order to represent that there are no actual *Many-to-One* relationships with a minimum of confusion, the details of each relationship are only documented once. Each One-to-Many relationship is listed with the referenced entity and includes selected relationship details and a link to the corresponding *Many-to-One* relationship. Each *Many-to-One* relationship listed includes only a link to the corresponding One-to-Many relationship.
 
 For each one-to-many relationship the following properties are included:
 
