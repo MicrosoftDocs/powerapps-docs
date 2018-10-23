@@ -240,4 +240,4 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 - Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
 - [Share the app](share-app.md) so that other people can run it.
 - Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
-- [Link this app to a project](add-app-project.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
+- [Link this app to a project](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
