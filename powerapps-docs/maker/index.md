@@ -28,7 +28,7 @@ Canvas apps give you the flexibility to arrange the user experience and interfac
 
 You can start to build your app from Microsoft tools where your data lives, such as:
 
-- [From a SharePoint list](canvas-apps/app-from-sharepoint#generate-an-app-from-within-sharepoint-online.md)
+- [From a SharePoint list](canvas-apps/app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online.md)
 - [From a Power BI dashboard](canvas-apps/embed-powerapps-powerbi.md)
 
 Creating a canvas app is easy; with PowerApps, you can find or create your app in several ways:
