@@ -16,7 +16,7 @@ PowerApps is a suite of apps, services, connectors and data platform that provid
 
 Apps built using PowerApps provide rich business logic and workflow capabilities to transform your manual business processes to digital, automated processes. Further, apps built using PowerApps have a responsive design, and can run seamlessly in browser or on mobile devices (phone or tablet). PowerApps "democratizes" the custom business app building experience by enabling users to build feature-rich, custom business apps without writing code.
 
-PowerApps also provides an extensible platform that lets pro developers programmatically access data and metadata, interact with data, create custom connectors, apply business logic, and integrate with external data.
+PowerApps also provides an extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data.
 
 ## PowerApps for app makers/creators
 
@@ -32,13 +32,13 @@ To create an app, you start with [web.powerapps.com](https://web.powerapps.com).
 
 You can run apps that you created, or that someone else created and shared with you, in browser or on mobile devices (phone or tablet). More information: [Find and run apps](user/index.md)
 
-## PowerApps for admin
+## PowerApps for admins
 
 PowerApps admins can use:
 
 - **PowerApps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies. More information: [Administer PowerApps](administrator/admin-guide.md)
 
-- **Power platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environemnets, get real-time, self-help recommendations and get support for Dynamics 365 Customer Engagement, PowerApps, and Microsoft Flow, and view CDS for Apps analytics. More information: [Administer Power platform](https://docs.microsoft.com/power-platform/admin/admin-guide)
+- **Power platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environemnets, get real-time, self-help recommendations and support for Dynamics 365 Customer Engagement, PowerApps, and Microsoft Flow, and view CDS for Apps analytics. More information: [Administer Power platform](https://docs.microsoft.com/power-platform/admin/admin-guide)
 
 ## PowerApps for developers
 

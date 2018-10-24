@@ -10,6 +10,8 @@ author: "JimDaly" #TODO: NoOwner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
+<!--
+
 # Create goal hierarchy, goals, and targets
 
 In preparation for goal management, you should specify a metric for a goal (amount or count), create a goal hierarchy, and set the targets. All goals in the hierarchy must be based on the same goal metric. A metric defines the type of the goal, and the rollup fields specify other important settings for the goal. For more information, see [Use Goal Metric and Rollup Fields to Define a Goal](define-goal-metric-rollup-fields.md).  
@@ -88,3 +90,5 @@ In preparation for goal management, you should specify a metric for a goal (amou
 ### See also  
  [Goal Management Entities](goal-management-entities.md)   
  [Define Goal Metric and Rollup Fields](define-goal-metric-rollup-fields.md)
+
+ -->

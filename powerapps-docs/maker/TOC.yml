@@ -752,6 +752,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
+    - name: Use themes to apply organization branding
+      href: ./model-driven-apps/create-themes-organization-branding.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
@@ -941,8 +943,6 @@
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
-  - name: Create a theme
-    href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md
   - name: Translate customized entity and field text
     href: ./common-data-service/export-customized-entity-field-text-translation.md
   - name: Import translated entity and field text into an app

@@ -186,8 +186,6 @@
     items:
     - name: Types of calendars
       href: types-calendars.md
-  - name: Knowledge management entities
-    href: knowledge-management-entities.md
   - name: Queue entities
     href: queue-entities.md
   - name: Subject entity
@@ -200,19 +198,6 @@
     href: use-category-entity.md
   - name: Feedback entity
     href: use-feedback-entity-manage-feedback-ratings-records.md
-  - name: Work with knowledge articles
-    href: work-knowledge-articles.md
-  - name: Goal management entities
-    href: goal-management-entities.md
-    items:
-    - name: Create goal hierarchy, goals, and targets
-      href: create-goal-hierarchy-goals-targets.md
-    - name: Define goal metric and rollup fields
-      href: define-goal-metric-rollup-fields.md
-    - name: Add complex goal criteria
-      href: add-complex-goal-criteria.md
-    - name: Roll up goal totals
-      href: roll-up-goal-totals.md
   - name: Security entities
   # See notes within this topic
     href: security-model.md 
