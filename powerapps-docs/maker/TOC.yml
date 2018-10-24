@@ -943,8 +943,6 @@
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
-  - name: Create a theme
-    href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md
   - name: Translate customized entity and field text
     href: ./common-data-service/export-customized-entity-field-text-translation.md
   - name: Import translated entity and field text into an app
