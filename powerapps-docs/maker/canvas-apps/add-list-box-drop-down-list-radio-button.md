@@ -22,7 +22,7 @@ Show a single column of data (for example, from a multi-column table) in a canva
 - Add a drop-down list to take up less space on a screen.
 - Add a set of radio buttons for a particular design effect.
 
-This topic focuses on drop-down lists and radio buttons, but the same principles apply to all three list controls.
+This topic focuses on lists boxes and radio buttons, but the same principles apply to drop-down lists.
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
