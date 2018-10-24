@@ -10,6 +10,8 @@ author: "JimDaly" #TODO: NoOwner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
+
+<!--
 # Define goal metric and rollup fields
 
 To specify the goal metric type, participating entities, and whether you track actuals, custom or in-progress data, use the goal metric entity (`Metric`) and the rollup field (`RollupField`) entity. The goal metric and the rollup fields have a parental relationship in which all operations on the parent record are propagated to the child records. For more information about parental relationship and cascading rules, see [Entity Relationship Behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior).  
@@ -58,3 +60,5 @@ To specify the goal metric type, participating entities, and whether you track a
 ### See also  
  [Goal Management Entities](goal-management-entities.md)   
  [Add Complex Goal Criteria](add-complex-goal-criteria.md)
+
+-->

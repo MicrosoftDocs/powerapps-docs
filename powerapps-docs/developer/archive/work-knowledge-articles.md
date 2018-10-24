@@ -15,6 +15,7 @@ manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
+<!--
 # Work with knowledge articles
 
 The new knowledge articles in Common Data Service for Apps enable you to create rich knowledge articles along with versioning and translation support. When you create and publish a knowledge article, it become available to users in your CDS for Apps instance so that they can use information in the articles to effectively service the customers. Use the `KnowledgeArticle` entity to store and manage knowledge natively in CDS for Apps.  
@@ -212,3 +213,4 @@ _serviceProxy.Associate(Account.EntityLogicalName, accountId, newRelationship, r
  [KnowledgeBaseRecord Entity](reference/entities/knowledgebaserecord.md)   
  [LanguageLocale Entity](reference/entities/languagelocale.md)   
  [KbArticle Entity](reference/entities/kbarticle.md)
+-->
