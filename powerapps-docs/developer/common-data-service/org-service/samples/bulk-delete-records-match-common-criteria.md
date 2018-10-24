@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-bulk-delete-records-match-common-criteria -->
 
-This sample shows how to delete records, in bulk, that match common criteria.
+This sample shows how to delete records, in bulk, that match common criteria. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/BulkDeleteMatchCriteria).
 
 ## How to run this sample
 
