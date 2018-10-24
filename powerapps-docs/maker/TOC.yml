@@ -752,6 +752,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
+    - name: Use themes to apply organization branding
+      href: create-themes-organization-branding.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
