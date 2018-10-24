@@ -50,7 +50,7 @@ The **ColorFade** function returns a brighter or darker version of a color.  The
 | Color enumeration | ColorValue with Hex Code | RGBA | Color Swatch |
 | --- | --- | --- | --- |
 | **Color.AliceBlue** |**ColorValue( "#f0f8ff" )** |**RGBA( 240, 248, 255, 1 )** |![aliceblue](./media/function-colors/color-aliceblue.png) |
-| **Color.AntiqueWhite** |**ColorValue( "#faebd7" )** |**RGBA( 7, "250, 235,215, 1 )** |![antiquewhite](./media/function-colors/color-antiquewhite.png) |
+| **Color.AntiqueWhite** |**ColorValue( "#faebd7" )** |**RGBA( 250, 235, 215, 1 )** |![antiquewhite](./media/function-colors/color-antiquewhite.png) |
 | **Color.Aqua** |**ColorValue( "#00ffff" )** |**RGBA( 0, 255, 255, 1 )** |![aqua](./media/function-colors/color-aqua.png) |
 | **Color.Aquamarine** |**ColorValue( "#7fffd4" )** |**RGBA( 127, 255, 212, 1 )** |![aquamarine](./media/function-colors/color-aquamarine.png) |
 | **Color.Azure** |**ColorValue( "#f0ffff" )** |**RGBA( 240, 255, 255, 1 )** |![azure](./media/function-colors/color-azure.png) |

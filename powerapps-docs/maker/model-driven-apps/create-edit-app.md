@@ -2,7 +2,7 @@
 title: "Create or edit a model-driven app using the app designer in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
-ms.date: 05/23/2018
+ms.date: 10/15/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -38,7 +38,7 @@ Verify the following prerequisites before you start creating an app:
 <a name="createApp"></a>   
 ## Create an app  
 
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select **Start from blank** option for model-driven app.  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select the **Start from blank** option for a model-driven app.  
 
     ![Model-driven start from blank](media/start-from-blank-model-driven.png)
 
