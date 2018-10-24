@@ -533,6 +533,8 @@
             href: ./canvas-apps/functions/function-datetime-parts.md
           - name: Year
             href: ./canvas-apps/functions/function-datetime-parts.md
+      - name: Create an app in a solution
+        href: ./canvas-apps/add-app-solution.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
