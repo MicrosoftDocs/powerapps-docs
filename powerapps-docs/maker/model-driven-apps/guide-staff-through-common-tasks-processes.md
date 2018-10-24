@@ -27,7 +27,7 @@ search.app:
 
 Defining and enforcing consistent business processes is one of the main reasons people use model-driven apps. Consistent processes help make sure people using a model-driven app can focus on their work and not on remembering to perform a set of manual steps. 
 
-## Business rules in PowerApps
+## Business rules
 
 Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. The *scope* of a business rule defines where the business rule will run:
 
@@ -57,3 +57,6 @@ Microsoft Flow includes several types of processes, each designed for a differen
 
 -   Workflows and actions. Dynamics 365 customer engagement customizers may be familar with the classic CDS for Apps processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/flow/actions)
   
+## Next step
+
+[Create business rules to apply logic in a model-driven app form](create-business-rules-recommendations-apply-logic-form.md)
