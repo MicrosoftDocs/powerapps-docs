@@ -26,9 +26,8 @@ search.app:
 
  When you create or edit a view you can configure the sort order for either ascending or descending.   
   
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
+1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-    ![Model-driven design mode](media/model-driven-switch.png)
 
 2.  Expand **Data**, select **Entities**, and then select the entity that you want, such as **Accounts**.   
 3.  Select the **Views** tab, and if shown, select **Remove filter**, and then open the view you want, such as **Active Accounts**.

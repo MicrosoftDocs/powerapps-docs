@@ -2,7 +2,7 @@
 title: "Create or edit a model-driven app using the app designer in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
-ms.date: 05/23/2018
+ms.date: 10/15/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -38,14 +38,14 @@ Verify the following prerequisites before you start creating an app:
 <a name="createApp"></a>   
 ## Create an app  
 
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select the **Start from blank** option for a model-driven app.  
 
-    ![Model-driven design mode](media/model-driven-switch.png)
+    ![Model-driven start from blank](media/start-from-blank-model-driven.png)
 
     > [!IMPORTANT]
     > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. Select **Apps**, and then select **Create an app**.
+2. Select **Make this app**.
 
 3. On the **Create a New App** page, enter the following details: 
 
@@ -96,12 +96,12 @@ Verify the following prerequisites before you start creating an app:
 <a name="editApp"></a>   
 ## Edit an app  
   
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
+1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 > [!IMPORTANT]
 > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. On the left navigation pane select **Apps**, select an app, and then on the toolbar select **Edit**.   
+2. On the left navigation pane select **Apps**, select a model-driven app, and then on the toolbar select **Edit**.   
 
 3. In the app designer add or edit components to the app, as required. More information: [Add or edit app components](add-edit-app-components.md)  
  

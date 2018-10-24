@@ -2,7 +2,7 @@
 title: "Tutorial to add or edit model-driven app components with PowerApps | MicrosoftDocs"
 description: "Use the PowerApps app designer to add or edit components"
 keywords: ""
-ms.date: 03/30/2018
+ms.date: 10/15/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -53,7 +53,7 @@ The app designer refers to existing metadata in the default solution. You can us
 ## Open an app
 1. Sign in to [PowerApps](https://web.powerapps.com/). 
 
-2. Select **Model-driven** > **Apps** and then select an existing app or select **Create an app**. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
+2. Select an existing model-driven app or select **Start from blank**. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
 
 ## Add an artifact (entity, dashboard, or business process flow)  
  When you add a dashboard or business process flow to an app, the entities they use are automatically added to the app. When you add an entity, the tiles for its assets are automatically added. There are two ways you can add artifacts to the designer canvas: by using the **Add** button  ![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the command bar or by using the tiles on the **Components** tab.  

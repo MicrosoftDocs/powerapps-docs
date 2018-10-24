@@ -22,24 +22,24 @@ The Excel file must be in a cloud-storage account, such as OneDrive, Google Driv
 
 If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
 
-## Prerequisites ##
+## Prerequisites
+
 To follow this topic exactly, download the [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) file in Excel, and save it in your [cloud storage account](connections/cloud-storage-blob-connections.md).
 
 > [!IMPORTANT]
 > You can use your own Excel file, but the data must be formatted as a table. For more information, see [Format a table](how-to-excel-tips.md). 
 
 ## Generate the app
+
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![PowerApps home page](./media/get-started-create-from-data/sign-in.png)
+1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 
-1. Under **Make apps like these**, hover over **Start from data**, and then select **Make this app**.
-
-	![Option to create an app](./media/get-started-create-from-data/make-this-app.png)
+    ![Option to create an app](./media/get-started-create-from-data/start-from-data.png)
 
 1. Under **Start with your data**, click or tap **Phone layout** on the tile for your cloud-storage account.
 
-	![Option to create an app](./media/get-started-create-from-data/odfb-tile.png)
+    ![Option to create an app](./media/get-started-create-from-data/odfb-tile.png)
 
 1. If prompted, click or tap **Connect**, and provide your credentials for that account.
 
@@ -47,16 +47,17 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 
 1. Under **Choose a table**, click or tap **FlooringEstimates**, and then click or tap **Connect**.
 
-	![Option to create an app](./media/get-started-create-from-data/choose-table.png)
+    ![Option to create an app](./media/get-started-create-from-data/choose-table.png)
 
 ## Run the app
+
 1. Open Preview by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
 
-	![Open Preview](./media/get-started-create-from-data/open-preview.png)
+    ![Open Preview](./media/get-started-create-from-data/open-preview.png)
 
 1. Toggle the sort order by clicking or tapping the sort icon near the upper-right corner.
 
-	![Sort icon](./media/get-started-create-from-data/sort-icon.png)
+    ![Sort icon](./media/get-started-create-from-data/sort-icon.png)
 
 1. Filter the list by typing or pasting one or more characters in the search box.
 
@@ -69,6 +70,7 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 1. Click or tap the next arrow for the record that you added, and then click or tap the trash icon to delete that record.
 
 ## Next steps
+
 Customize the default browse screen to better suit your needs. For example, you can sort and filter the list by product name, not category.
 
 > [!div class="nextstepaction"]
