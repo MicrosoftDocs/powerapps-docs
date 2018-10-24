@@ -10,6 +10,8 @@ author: "JimDaly" #TODO: NoOwner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
+<!--
+
 # Goal management entities
 
 The *goal management* in Common Data Service for Apps lets you set sales, marketing, and other business goals for your organization and measure the results against the targets. The goal management will help you motivate your work force, identify successful programs, do better planning, and grow your business.  
@@ -48,3 +50,5 @@ The *goal management* in Common Data Service for Apps lets you set sales, market
  [GoalRollupQuery Entity](reference/entities/goalrollupquery.md)<br />
  [Model your business data with Dynamics 365](/dynamics365/customer-engagement/developer/model-business-data)<br />
  [Product Catalog Entities](/dynamics365/customer-engagement/developer/product-catalog-entities)<br />
+
+ -->
