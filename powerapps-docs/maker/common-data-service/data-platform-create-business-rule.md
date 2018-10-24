@@ -17,8 +17,8 @@ search.app:
 
 # Create a business rule for an entity
 
-You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins.  Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. 
-  
+You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
+
 By combining conditions and actions, you can do any of the following with business rules:  
   
 * Set field values  

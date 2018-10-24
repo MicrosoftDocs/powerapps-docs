@@ -25,7 +25,9 @@ search.app:
 ---
 # Apply business logic with Common Data Service for Apps
 
-Dynamics 365 customer engagement customizers may be familar with the classic Common Data Service for Apps processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/flow/actions)
+Dynamics 365 Customer Engagement customizers may be familar with the classic Common Data Service (CDS) for Apps processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/flow/actions)
+
+You can also define business rules for an entity to apply it for all entity forms and at the server level. More information: [Create a business rule for an entity](data-platform-create-business-rule.md)
   
-## See also  
-[Tutorial: Create business rules and recommendations to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+> [!NOTE]
+> To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
