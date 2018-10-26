@@ -37,26 +37,7 @@ ms.custom:
                                           </div>
                                           <div class="cardText">
                                              <h3>What is PowerApps?</h3>
-                                             <p>Get started on docs with an overview about PowerApps.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="https://docs.microsoft.com/en-us/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path">
-                                 <div class="cardSize">
-                                    <div class="cardPadding">
-                                       <div class="card">
-                                          <div class="cardImageOuter">
-                                             <div class="cardImage">
-                                                <img src="media/index/powerapps-learning.svg" alt="" />
-                                             </div>
-                                          </div>
-                                          <div class="cardText">
-                                             <h3>Learn PowerApps</h3>
-                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn PowerApps. It's free!</p>
+                                             <p>Get started on documentation with an overview about PowerApps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -76,6 +57,25 @@ ms.custom:
                                           <div class="cardText">
                                              <h3>Release Notes</h3>
                                              <p>Learn about PowerApps features releasing from October 2018 through March 2019.</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://docs.microsoft.com/en-us/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path">
+                                 <div class="cardSize">
+                                    <div class="cardPadding">
+                                       <div class="card">
+                                          <div class="cardImageOuter">
+                                             <div class="cardImage">
+                                                <img src="media/index/powerapps-learning.svg" alt="" />
+                                             </div>
+                                          </div>
+                                          <div class="cardText">
+                                             <h3>Learn PowerApps</h3>
+                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn PowerApps. It's free!</p>
                                           </div>
                                        </div>
                                     </div>
@@ -178,7 +178,7 @@ ms.custom:
                         </div>
                      </li>
                   </ul>
-               </li>               
+               </li>
                <li>
                   <a href="#maker"><strong>I'm an app maker</strong></a>
                   <ul id="maker"
