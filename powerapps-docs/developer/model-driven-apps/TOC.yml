@@ -14,9 +14,6 @@
       href: use-iframe-and-web-resource-controls-on-a-form.md
   - name: Customize entity views
     href: customize-entity-views.md
-    items:
-    - name: UserQuery (saved view) entity
-      href: userquery-saved-view-entity.md
   - name: Open forms, views, dialogs, and reports with a URL
     href: open-forms-views-dialogs-reports-url.md
     items:
