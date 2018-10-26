@@ -13,7 +13,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Sample: Use duplicate detection when creating and updating records
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-use-duplicate-detection-when-creating-and-updating-records -->
-This sample shows how to invoke duplicate detection for creating and updating entity records.
+This sample shows how to invoke duplicate detection for creating and updating entity records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseDuplicatedetectionforCRUD).
 
 ## How to run this sample
 
