@@ -1,5 +1,5 @@
 ---
-title: "Apply custom business logic with business rules and flows | MicrosoftDocs"
+title: "Apply custom business logic with business rules and flows in model-driven apps | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
 ms.custom: ""
 ms.date: 08/02/2018
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Apply custom business logic with business rules and flows
+# Apply custom business logic with business rules and flows in model-driven apps
 
 Defining and enforcing consistent business processes is one of the main reasons people use model-driven apps. Consistent processes help make sure people using a model-driven app can focus on their work and not on remembering to perform a set of manual steps. 
 
@@ -41,7 +41,7 @@ Business rules provide a simple interface to implement and maintain fast-changin
 For more information about defining business rules for a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](create-business-rules-recommendations-apply-logic-form.md)
 
 > [!NOTE]
-> To define a business rule for an entity so that it applies to all forms and server, see [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+> To define a business rule for an entity so that it applies at the server level to both *canvas apps* and *model-driven apps*, see [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule).
 
 ## Flows  
   
@@ -60,3 +60,7 @@ Microsoft Flow includes several types of processes, each designed for a differen
 ## Next step
 
 [Create business rules to apply logic in a model-driven app form](create-business-rules-recommendations-apply-logic-form.md)
+
+### See also
+
+[Apply business logic with Common Data Service for Apps](../common-data-service/cds-processes.md)
