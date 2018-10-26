@@ -22,7 +22,7 @@ search.app:
 
 # Apply business logic using code
 
-Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic using business processes and flows](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)
+Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic in CDS for Apps](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)
 
 When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.
 
