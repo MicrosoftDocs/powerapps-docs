@@ -20,7 +20,7 @@ search.app:
 You can create business rules and recommendations to apply logic and validations without writing code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules.
 
 > [!IMPORTANT]
-> Business rules defined for an entity apply to both *canvas apps* and *model-driven apps* if the entity is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/>
+> Business rules defined for an entity apply to both *canvas apps* and *model-driven apps* if the entity is used in the app. Not all business rule actions are available on canvas apps at this time. More information: [Differences between canvas and model-driven apps](#differences-between-canvas-and-model-driven-apps)<br/><br/>
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
 
 By combining conditions and actions, you can do any of the following with business rules:  
