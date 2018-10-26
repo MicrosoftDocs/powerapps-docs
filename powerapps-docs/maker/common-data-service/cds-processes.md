@@ -34,4 +34,4 @@ Dynamics 365 Customer Engagement customizers may also be familar with the classi
 
 ## See also
 
-[Apply custom business logic model-driven app](../model-driven-apps/guide-staff-through-common-tasks-processes.md)
+[Apply business logic in model-driven apps](../model-driven-apps/guide-staff-through-common-tasks-processes.md)
