@@ -19,7 +19,7 @@ ms.reviewer:
 
 Entity views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Entity views are `SavedQuery` records that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
   
- An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [UserQuery (Saved View) Entity](userquery-saved-view-entity.md) 
+ An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../common-data-service/saved-queries.md) 
   
  You can also use the customization tool to customize views. More information: [Create and edit views](../../maker/model-driven-apps/create-edit-views.md)
   

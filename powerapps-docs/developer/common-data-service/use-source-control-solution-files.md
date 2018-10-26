@@ -131,6 +131,5 @@ The SolutionPackager tool can be used with any source control system. After a so
    Steps 2 and 3 must be done before further customizations occur in the development organization. Within step 5, step b must be completed before step c.  
   
 ### See also  
- [Solution Tools for Team Development](solution-tools-team-development.md)   
- [Solution Component File Reference (SolutionPackager)](solution-component-file-reference-solutionpackager.md)   
+ [Solution Component File Reference (SolutionPackager)](solution-component-file-reference-solutionpackager.md)<br/>  
  [Use the SolutionPackager Tool to Compress and Extract a Solution File](compress-extract-solution-file-solutionpackager.md)
