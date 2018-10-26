@@ -16,6 +16,10 @@ You can extend the options available within the designer for workflows used in C
 
 You can use these custom extensions within the designer used for workflows, custom actions, and dialogs.
 
+> [!IMPORTANT]
+> Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic using business processes and flows](../../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)<br/>
+> Use workflow extensions when a declarative process doesn’t meet your requirement.
+
 ## When to create a workflow extension
 
 If you don’t find the functionality you require using the default process activities, you can add custom activities so that they are available in the editor used to compose workflow, dialog, and action processes.

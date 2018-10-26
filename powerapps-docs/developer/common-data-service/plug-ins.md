@@ -14,6 +14,10 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 A plug-in is a .NET assembly that you can upload to the Common Data Service for Apps. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform.
 
+> [!IMPORTANT]
+> Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic using business processes and flows](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md)<br/>
+> Use plug-ins when a declarative process doesn’t meet your requirement.
+
 The classes in the assembly that can be registered to a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface. This interface exposes a single method: <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*>. When an event occurs that has a class registered to it, contextual data is passed to the `Execute` method. Within the `Execute` method you can:
 
 - Cancel the event and display an error to the user
