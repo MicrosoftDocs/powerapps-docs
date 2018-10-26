@@ -15,7 +15,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 <!-- This could be greatly simplified IMHO 
 https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-use-fetchxml-paging-cookie
 -->
-This sample shows how to use the paging cookie in a FetchXML query to retrieve successive pages of query results. It uses the [IOrganizationService. RetrieveMultiple](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method.
+This sample shows how to use the paging cookie in a FetchXML query to retrieve successive pages of query results. It uses the [IOrganizationService. RetrieveMultiple](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.retrievemultiple?view=dynamics-general-ce-9) method. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/UseFetchXMLWithPaging).
 
 ## How to run this sample
 

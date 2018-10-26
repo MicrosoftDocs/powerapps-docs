@@ -14,6 +14,8 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 This sample shows how to execute multiple organization message requests by using a single web service method call, passing [ExecuteMultipleRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.messages.executemultiplerequest?view=dynamics-general-ce-9) as a parameter. Reducing the number of message requests that must be transmitted over the network results in increased message processing performance.
 
+You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExecutemultipleRequests).
+
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]

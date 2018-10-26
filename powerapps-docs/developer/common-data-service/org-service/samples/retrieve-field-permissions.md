@@ -14,9 +14,9 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-retrieve-field-permissions -->
 
-This sample shows how to retrieve secured fields for a user according to the steps outlined in [Field security entities](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/field-security-entities).
+This sample shows how to retrieve secured fields for a user according to the steps outlined in [Field security entities](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/field-security-entities). You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveFieldPermission).
 
-This sample requires additional users that are not in your system. Create the required users manually in **Office 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
+This sample requires additional users that are not in your system. Create the required users manually in **Office 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. Replace `yourorg` with the organization name.
 
 **First Name**: Samantha <br/>
 **Last Name**: Smith<br/>

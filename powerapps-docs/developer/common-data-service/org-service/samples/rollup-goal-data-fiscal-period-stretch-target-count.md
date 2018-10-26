@@ -14,9 +14,9 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-rollup-goal-data-fiscal-period-stretch-target-count -->
 
-This sample shows how to roll up goal data for a fiscal period against stretch target count, representing a number of completed phone calls.
+This sample shows how to roll up goal data for a fiscal period against stretch target count, representing a number of completed phone calls. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/GoalDataForFiscalYear).
 
-This sample requires additional users that are not in your system. Create the three required users **as is** shown below manually in **Office 365**. 
+This sample requires additional users that are not in your system. Create the three required users **as is** shown below manually in **Office 365**. Replace `yourorg` with the organization name.
 
 **First Name**: Nancy<br/>
 **Last Name**: Anderson<br/>

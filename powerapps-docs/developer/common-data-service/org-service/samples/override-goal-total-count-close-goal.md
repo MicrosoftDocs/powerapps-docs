@@ -12,9 +12,9 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Override goal total count and close the goal
 
-This sample shows how to override the goal total count and close the goal.
+This sample shows how to override the goal total count and close the goal. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/OverrideGoalTotal).
 
-This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Office 365**. 
+This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Office 365**. Replace `yourorg` with the `OrgName` of your organization.
 
 **First Name**: Samantha<br/>
 **Last Name**: Smith<br/>
