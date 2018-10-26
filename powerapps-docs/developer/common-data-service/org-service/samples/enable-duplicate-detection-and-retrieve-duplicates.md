@@ -14,7 +14,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-enable-duplicate-detection-and-retrieve-duplicates -->
 
-This sample shows how to enable duplicate detection and retrieve duplicate records.
+This sample shows how to enable duplicate detection and retrieve duplicate records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/EnableDuplicateDetection).
 
 ## How to run this sample
 

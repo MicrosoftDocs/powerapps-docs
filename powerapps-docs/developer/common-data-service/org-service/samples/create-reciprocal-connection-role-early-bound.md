@@ -14,7 +14,8 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-create-reciprocal-connection-role-early-bound -->
 
-This sample shows how to create the reciprocal connection roles. It creates a connection role for an account and a connection role for a contact, and then makes them reciprocal by associating them with each other.
+This sample shows how to create the reciprocal connection roles. It creates a connection role for an account and a connection role for a contact, and then makes them reciprocal by associating them with each other. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ReciprocalConnection
+).
 
 ## How to run this sample
 

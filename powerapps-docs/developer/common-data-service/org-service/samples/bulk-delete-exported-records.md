@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Bulk delete exported records
 
-This sample shows how to perform a bulk deletion of records that were previously exported from Common Data Service for Apps by using the **Export to Excel** option.
+This sample shows how to perform a bulk deletion of records that were previously exported from Common Data Service for Apps by using the **Export to Excel** option. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/BulkDeleteExported).
 
 ## How to run this sample
 
