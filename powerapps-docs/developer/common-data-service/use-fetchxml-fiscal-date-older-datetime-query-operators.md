@@ -102,7 +102,7 @@ A FetchXML query in Common Data Service for Apps can use special fiscal date val
 ## Using “older than” clauses for date and time values  
  The following example shows a FetchXML that finds incidents that are older than 30 minutes.  
   
-```  
+```xml  
 <fetch>  
   <entity name="incident">  
     <attribute name="title" />  
@@ -155,6 +155,6 @@ A FetchXML query in Common Data Service for Apps can use special fiscal date val
 ```
 
 ### See also  
- [Create Queries to Retrieve Data](/dynamics365/customer-engagement/developer/retrieve-data-queries-sdk-assemblies)   
- [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/build-queries-fetchxml)   
+ [Create Queries to Retrieve Data](/dynamics365/customer-engagement/developer/org-service/retrieve-data-queries-sdk-assemblies)   
+ [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml)   
  [Use a left outer join in FetchXML to query for records "not in"](/dynamics365/customer-engagement/developer/use-left-outer-join-fetchxml-query-records-not-in)

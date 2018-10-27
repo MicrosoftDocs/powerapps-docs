@@ -41,7 +41,7 @@ You delete managed and unmanaged solutions in the same way, but the resulting ac
 ## Access the solutions list with a URL  
  If you need to navigate directly to the solutions list you can use the following URL:  
   
-```
+```http
 <organization root url>/tools/Solution/home_solution.aspx?etn=solution  
 ```  
   

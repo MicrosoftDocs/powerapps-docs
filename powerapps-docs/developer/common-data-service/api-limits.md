@@ -139,7 +139,7 @@ public class Retry
 
 ### See also
 
-[Use the Dynamics 365 Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)<br />
-[Use the Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)<br />
+[Use CDS for Apps Web API](webapi/overview.md)<br />
+[Use CDS for Apps Organization Service](org-service/overview.md)<br />
 [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)<br />
 [Use ExecuteMultiple to improve performance for bulk data load](org-service/execute-multiple-requests.md)

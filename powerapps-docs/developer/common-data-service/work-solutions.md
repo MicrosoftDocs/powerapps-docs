@@ -17,8 +17,6 @@ ms.reviewer:
 
 # Work with solutions
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/work-solutions -->
-
 This topic presents specific programming tasks included in [Sample: Work With Solutions](org-service/samples/work-solutions.md) and [Sample: Detect Solution Dependencies](org-service/samples/detect-solution-dependencies.md).  
   
 <a name="BKMK_CreatePublisher"></a>

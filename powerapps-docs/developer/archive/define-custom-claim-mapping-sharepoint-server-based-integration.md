@@ -10,6 +10,9 @@ author: "JimDaly" #TODO: NoOwner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
+<!--
+
+
 # Define custom claim mapping for SharePoint server-based integration
 
 For server-based integration with SharePoint, CDS for Apps uses claims to authenticate and authorize Common Data Service for Apps users to access the documents stored in SharePoint. For more information about claims-based authentication, see [Claims-based identity in SharePoint 2013](https://msdn.microsoft.com/library/office/ee535242.aspx).  
@@ -55,3 +58,5 @@ _serviceProxy.Create(customMapping);
 ### See Also
  [UserMapping Entity](reference/entities/usermapping.md)   
  [Integrate Microsoft Dynamics 365 with SharePoint](integrate-sharepoint.md)
+
+ -->

@@ -12,11 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Retrieve valid status transitions
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-retrieve-valid-status-transitions
-Re-write to use custom entity rather than Incident
- -->
- 
- This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the entity.
+ This sample shows how to retrieve valid state transitions regardless of whether custom state transitions have been defined for the entity. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveValidTransitions).
  
  ## How to run this sample
 

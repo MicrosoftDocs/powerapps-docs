@@ -12,8 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Detect solution dependencies
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-detect-solution-dependencies -->
-
 This sample shows how to detect dependencies before you delete a solution component.
 
 ## How to run this sample
@@ -22,7 +20,7 @@ This sample shows how to detect dependencies before you delete a solution compon
 
 ## What this sample does
 
-The `RetrieveDependentComponentsRequest`, `RetrieveDependenciesForDeleteRequest` messages are intended to be used in a scenario where it contains data to detect solution dependencies.
+The `RetrieveDependentComponentsRequest`, `RetrieveDependenciesForDeleteRequest` messages are intended to be used in a scenario where it contains data to detect solution dependencies. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SolutionDependencies).
 
 ## How this sample works
 

@@ -50,9 +50,3 @@ Improve your products and services by enabling users to provide feedback and rat
   
 - Entity record that the feedback is associated with  
   
-## In This Section  
- [Feedback Entity](reference/entities/feedback.md)  
-  
-### See also  
- [Work with knowledge articles in CDS for Apps](work-knowledge-articles.md)   
- [Service entities](/dynamics365/customer-engagement/developer/service-entities)

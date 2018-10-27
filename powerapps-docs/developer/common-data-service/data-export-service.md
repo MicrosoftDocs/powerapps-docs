@@ -52,9 +52,9 @@ GRANT ALTER, REFERENCES, INSERT, DELETE, UPDATE, SELECT, EXECUTE ON SCHEMA::dbo 
   
 ```  
   
- For online solutions and services, Azure provides a [Key Vault](https://azure.microsoft.com/en-us/services/key-vault/) service to safeguard cryptographic keys, passwords, and other secrets.  To use Azure Key Vault, this customer-owned service must be configured so that permission is granted to "Dynamics 365 Data Export Service", which is used to safely store the SQL Azure connection string. To perform this configuration with a PowerShell script, see [How to set up Azure Key Vault](https://technet.microsoft.com/library/mt744592.aspx). Alternately, this service can be managed through its REST API; see [Key Vault management](https://msdn.microsoft.com/library/azure/mt620024.aspx).  
+For online solutions and services, Azure provides a [Key Vault](https://azure.microsoft.com/en-us/services/key-vault/) service to safeguard cryptographic keys, passwords, and other secrets.  To use Azure Key Vault, this customer-owned service must be configured so that permission is granted to "Dynamics 365 Data Export Service", which is used to safely store the SQL Azure connection string. To perform this configuration with a PowerShell script, see [How to set up Azure Key Vault](https://technet.microsoft.com/library/mt744592.aspx). Alternately, this service can be managed through its REST API; see [Key Vault management](https://msdn.microsoft.com/library/azure/mt620024.aspx).  
   
- It is also advised that you add the domain https://discovery.crmreplication.azure.net/ to the trusted sites list in your browser and to enable pop-ups for this site.  
+It is also advised that you add the domain https://discovery.crmreplication.azure.net/ to the trusted sites list in your browser and to enable pop-ups for this site.  
   
 ## Programming for the Data Export Service  
  The Data Export Service exposes a REST-based API that is divided into two groups: a set of `Metadata` operations for exploring CDS for Apps organizational structure, relationships, and connection information; and a set of `Profiles` operations    for configuring and managing each data replication.  This API is fully defined and documented at the following [Swagger](http://swagger.io/) URLs:  
@@ -95,7 +95,7 @@ GRANT ALTER, REFERENCES, INSERT, DELETE, UPDATE, SELECT, EXECUTE ON SCHEMA::dbo 
 |profiles/{id}/failures|[GET](https://discovery.crmreplication.azure.net/swagger/ui/index#/Profiles/Profiles_GetProfileFailuresInfoById)|Get the connection string to a blob that contains failure details for a given profile|  
   
 ### Gain Access  
- Because only CDS for Apps System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/en-us/services/active-directory/)) [security tokens](https://azure.microsoft.com/en-us/documentation/articles/active-directory-token-and-claims/). The following code snippet demonstrates generating such a token for a web application by using the administrator's name and password.   You must replace the `AppId`, `crmAdminUser` and `crmAdminPassword` with values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.  
+Because only CDS for Apps System Administrators are authorized to perform data export operations, these APIs enforce caller authorization through the use of Azure Active Directory ([AAD](https://azure.microsoft.com/en-us/services/active-directory/)) [security tokens](https://azure.microsoft.com/en-us/documentation/articles/active-directory-token-and-claims/). The following code snippet demonstrates generating such a token for a web application by using the administrator's name and password.   You must replace the `AppId`, `crmAdminUser` and `crmAdminPassword` with values appropriate to your service. This approach can be used for development and testing, but more secure means should be used for production, such as the use of Azure Key Vault.  
   
 ```csharp  
   
@@ -114,7 +114,7 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
   
 ```  
   
- For instructions on how to obtain a `AppId` see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-protocols-oauth-code/). For more information about Azure user security, see [Authentication Scenarios for Azure AD](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-scenarios/).  
+For instructions on how to obtain a `AppId` see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-protocols-oauth-code/). For more information about Azure user security, see [Authentication Scenarios for Azure AD](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-scenarios/).  
   
 ### Error handling and failure processing  
  Once a profile is correctly configured, the synchronization process is typically highly reliable. However, if a record fails to synchronize, the following failure processing is applied:  
@@ -127,14 +127,14 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
   
 4. The next record is processed.  
   
-   Because the record is marked as processed, no future attempt is made to synchronize the record until its value or schema changes. (Note that writing identical values back into an entity instance also marks it as modified.)  
+Because the record is marked as processed, no future attempt is made to synchronize the record until its value or schema changes. (Note that writing identical values back into an entity instance also marks it as modified.)  
   
-   The entries in the error log are write-only. Future successes or failures during synchronization of the same record do not result in the alteration of past entries for this record. For example, a failure entry will remain in the error log even after the record has been successfully synchronized during some later synchronization cycle.  
+The entries in the error log are write-only. Future successes or failures during synchronization of the same record do not result in the alteration of past entries for this record. For example, a failure entry will remain in the error log even after the record has been successfully synchronized during some later synchronization cycle.  
   
 > [!CAUTION]
 >  This error processing logic is subject to change in future releases of this service.  
   
- These failure entries can be retrieved through the [Get the failure details for a given Profile](https://discovery.crmreplication.azure.net/swagger/ui/index) request. The response returns a URI to an Azure blob that contains the failure information.  Each line has the following comma-separated fields (newlines added for clarity):  
+These failure entries can be retrieved through the [Get the failure details for a given Profile](https://discovery.crmreplication.azure.net/swagger/ui/index) request. The response returns a URI to an Azure blob that contains the failure information.  Each line has the following comma-separated fields (newlines added for clarity):  
   
 ```  
   
@@ -146,7 +146,7 @@ FailureReason: <description>
   
 ```  
   
- For example:  
+For example:  
   
 ```  
   

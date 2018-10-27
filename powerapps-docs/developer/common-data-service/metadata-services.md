@@ -11,12 +11,6 @@ ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 
-<!-- An overview topic describing when to use metadata 
-Overlaps content from
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/metadata-data-models
-Was Mike Carter
--->
-
 # Work with metadata using code
 
 Both the Web API and the organization service include capabilities to perform CRUD operations on the entity schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read metadata.
@@ -32,5 +26,5 @@ Developing a good working understanding of the metadata in the system can help y
 More information: [Browse the metadata for your organization](browse-your-metadata.md)
 
 For more information about working with metadata programmatically. see:
-- [Use the Web API with metadata](webapi/use-web-api-metadata.md)
-- [Use the Organization service with CDS for Apps metadata](org-service/work-with-metadata.md)
+- [Use Web API with CDS for Apps metadata](webapi/use-web-api-metadata.md)
+- [Use Organization service with CDS for Apps metadata](org-service/work-with-metadata.md)

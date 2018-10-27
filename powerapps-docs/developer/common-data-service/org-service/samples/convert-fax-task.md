@@ -15,7 +15,8 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-convert-fax-task -->
 
 
-This sample shows how to convert a **Fax** to **Task**. 
+This sample shows how to convert a **Fax** to **Task**, and is available [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ConvertFaxToTask).
+
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]

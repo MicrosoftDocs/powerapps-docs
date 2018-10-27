@@ -61,7 +61,7 @@ You can create new entities and fill them with data using Power Query. More info
 
 ### Use metadata services
 
-The web services exposed in Common Data Service include capabilities to create, read, write, and delete entity metadata. These services are most frequently used to read the metadata because that data can inform your code at runtime about how the environment has been customized. More information: [Metadata services](metadata-services.md)
+The web services exposed in CDS for Apps include capabilities to create, read, write, and delete entity metadata. These services are most frequently used to read the metadata because that data can inform your code at runtime about how the environment has been customized. More information: [Metadata services](metadata-services.md)
 
 ## Entity metadata
 

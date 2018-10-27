@@ -21,7 +21,7 @@ Solutions are made of solution components. You’ll use the **Solutions** area i
 <a name="bkmk_SolutionComponents"></a>   
 
 ## All solution components  
- The complete list of available solutions component types is located in the system `componenttype` global option set. The supported range of values for this property is available by including the file SampleCode\CS\HelperCode\OptionSets.cs or SampleCode\VB\HelperCode\OptionSets.vb in your project. However, many of the solution component types listed there are for internal use only and the list doesn’t provide information about the relationships between solution components.  
+ The complete list of available solutions component types is located in the system `componenttype` global option set. The supported range of values for this property is available by including the file `OptionSets.cs` or `OptionSets.vb` in your project. However, many of the solution component types listed there are for internal use only and the list doesn’t provide information about the relationships between solution components.  
   
 <a name="BKMK_SolutionComponentDependencies"></a>   
 

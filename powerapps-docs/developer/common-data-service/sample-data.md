@@ -21,7 +21,7 @@ You can install and uninstall sample data programmatically for an organization u
 
 ## Using the Web API
 
-Install sample data using the <xref href="Microsoft.Dynamics.CRM.InstallSampleData?text=InstallSampleData Action" />
+Install sample data using the <xref href="Microsoft.Dynamics.CRM.InstallSampleData?text=InstallSampleData Action" />.
 
 ### Request
 
@@ -39,7 +39,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
 
-Uninstall sample data using the <xref href="Microsoft.Dynamics.CRM.UninstallSampleData?text=UninstallSampleData Action" />
+Uninstall sample data using the <xref href="Microsoft.Dynamics.CRM.UninstallSampleData?text=UninstallSampleData Action" />.
 
 ### Request
 

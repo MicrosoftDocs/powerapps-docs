@@ -36,11 +36,11 @@ The `EntityMetadata` `ManyToOneRelationships` collection contains [OneToManyRela
 > [!NOTE]
 > Although related entities are sometimes called *child entities*, don't confuse these with [Child entities](entity-metadata.md#child-entities), which refers to how security is applied to related entities.
 
-More information: [Create relationships between entities](../../maker/common-data-service/data-platform-entity-lookup.md)
+More information: [Create relationships between entities](../../maker/common-data-service/data-platform-entity-lookup.md).
 
 ## Cascade configuration
 
-When a one-to-many entity relationship exists, there are cascading behaviors that can be configured to preserve data integrity and automate business processes. More information: [Configure entity relationship cascading behavior](configure-entity-relationship-cascading-behavior.md)
+When a one-to-many entity relationship exists, there are cascading behaviors that can be configured to preserve data integrity and automate business processes. More information: [Configure entity relationship cascading behavior](configure-entity-relationship-cascading-behavior.md).
 
 ## Create a hierarchy of entities
 
@@ -50,7 +50,7 @@ With model-driven apps, this enables an experience that enables you to view and 
 
 For developers, this enables new types of queries based on the hierarchy using the `Under` and `Not Under` operators.
 
-More information: [Common Data Service for Apps Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data)
+More information: [Common Data Service for Apps Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data).
 
 ### See also
 

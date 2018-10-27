@@ -10,6 +10,7 @@ author: "JimDaly" #TODO: NoOwner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
+<!--
 # Roll up goal totals
 
 To roll up data in the goal hierarchy, use the <xref:Microsoft.Crm.Sdk.Messages.RecalculateRequest> message. It recalculates the goal rollup field values, such as `Goal.ActualMoney` or `Goal.ActualInteger`, for all goals in the hierarchy. A rollup for each goal is performed in the context of the goal manager. This means that only the records that a manager of a goal has Read access to participate in the rollup. The system automatically switches the manager’s context for each goal during rollup, as every goal may have a different goal manager.  
@@ -40,3 +41,5 @@ To roll up data in the goal hierarchy, use the <xref:Microsoft.Crm.Sdk.Messages.
  [Sample: Roll Up Goal Data for a Custom Period Against the Target Revenue](org-service/samples/rollup-goal-data-custom-period-target-revenue.md)   
  [Sample: Roll Up Goal Data for a Fiscal Period Against the Stretch Target Count](org-service/samples/rollup-goal-data-fiscal-period-stretch-target-count.md)   
  [Goal Entity](reference/entities/goal.md)
+
+ -->

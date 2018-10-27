@@ -26,6 +26,8 @@ This sample shows how to how to perform the following actions with solutions:
 - Install or upgrade a solution.
 - Delete a solution.
 
+You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkwithSolutions).
+
 ## How to run this sample
 
 [!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
