@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Tutorial: Create workflow extension
 
-This tutorial will show you the process to extend the workflow designer to add custom activities and logic using a workflow assembly, sometimes known as a workflow activity. The extensions you create this way can be used withing a workflow, a custom action, or a dialog.
+This tutorial will show you the process to extend the workflow designer to add custom activities and logic using a workflow assembly, sometimes known as a workflow activity. The extensions you create this way can be used within a workflow, a custom action, or a dialog.
 
 This tutorial uses a very simple example to focus on the requirements and process to:
 
@@ -37,7 +37,7 @@ This tutorial uses a very simple example to focus on the requirements and proces
 
 ## Goal
 
-The example below will create a simple custom workflow activity that may be used in a workflow, dialog, or action process. [Configure workflow stages and steps](/flow/configure-workflow-steps)
+The example below will create a simple custom workflow activity that may be used in a workflow, dialog, or action process. More information: [Configure workflow stages and steps](/flow/configure-workflow-steps)
 
 This custom workflow activity will match the following requirements:
 
