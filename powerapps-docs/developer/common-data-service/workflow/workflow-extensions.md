@@ -238,24 +238,26 @@ The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](
 To reference parameters defined for your class you will use the [Argument.Get](/dotnet/api/system.activities.argument.get?view=netframework-4.5.2) or [Argument.Set(ActivityContext, Object)](/dotnet/api/system.activities.argument.set?view=netframework-4.5.2) methods they provide which require the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) instance that is passed to the `Execute` method. The following example shows accessing the value of an input parameter and setting the value of an output parameter.
 
 ```csharp
+using Microsoft.Xrm.Sdk.Workflow;
+using System.Activities;
+
 namespace SampleWorkflowActivity
 {
-    public class IncrementByTen : CodeActivity
+  public class IncrementByTen : CodeActivity
+  {
+    [RequiredArgument]
+    [Input("Decimal input")]
+    public InArgument<decimal> DecInput { get; set; }
+
+    [Output("Decimal output")]
+    public OutArgument<decimal> DecOutput { get; set; }
+
+    protected override void Execute(CodeActivityContext context)
     {
-        [RequiredArgument]
-        [Input("Integer input")]
-        public InArgument<int> IntInput { get; set; }
-
-        [Output("Integer output")]
-        public OutArgument<int> IntOutput { get; set; }
-
-        protected override void Execute(CodeActivityContext context)
-        {
-            int input = IntInput.Get(context);
-            IntOutput.Set(context, input + 10);
-        }
+      decimal input = DecInput.Get(context);
+      DecOutput.Set(context, input + 10);
     }
-
+  }
 }
 ```
 
