@@ -2,7 +2,7 @@
 title: "Workflow Extensions (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can extend the options available within the designer for workflows. These extensions are added by adding an assembly that contains a class the extends the CodeActivity class. These extensions are commonly called workflow assemblies or workflow activities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/28/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -310,7 +310,9 @@ For custom workflow activites you must specify the following properties to contr
 
 ## Debug Workflow Activities
 
-With custom workflow activities deployed to CDS for apps you must depend on using the tracing service to write information to an entity. Use this information to confirm the values and logic within your workflow activity.
+With custom workflow activities deployed to CDS for apps you can capture profiles to replay for local debugging and use the tracing service to write information to an entity. 
+
+The following example shows using the tracing service to write the following message: `Add your message.`
 
 ```csharp
 protected override void Execute(CodeActivityContext context)
@@ -323,10 +325,9 @@ tracingService.Trace("{0} {1} {2}.","Add","your","message");
 
 ...
 ```
-> [!NOTE]
-> The capability used to replay and debug plug-ins using plug-in profiler cannot be used with custom workflow activities.
 
 More information:
+ - [Debug Workflow Activities](debug-workflow-activites.md)
  - [Use Tracing](../debug-plug-in.md#use-tracing)
  - [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
 
