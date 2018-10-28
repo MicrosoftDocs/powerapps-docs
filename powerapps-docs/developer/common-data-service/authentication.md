@@ -38,7 +38,7 @@ More information: [Use OAuth with Common Data Service for apps](authenticate-oau
 
 Office 365 authentication requires using the .NET Framework SDK assemblies with the SOAP web services only.
 
-Using Office 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password.
+Using Office 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password for a valid user.
 
 More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md)
 
