@@ -2,7 +2,7 @@
 title: "Use OAuth with Common Data Service for apps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to authenticate using OAuth with Common Data Service for Apps" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/30/2018
+ms.date: 10/27/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -104,6 +104,8 @@ If you are not using Xrm.Tooling you may use the ADAL .NET v2 or v3 client libra
 The point of using the ADAL libraries is to get a token that you can include with your requests. 
 This only requires a few lines of code, and just a few more lines to configure an HttpClient to execute a request.
 
+### Simple example
+
 The following is the minimum amount of code needed to execute a single Web Api request, but it is not the recommended approach:
 
 ```csharp
@@ -149,6 +151,8 @@ class SampleProgram
 ```
 
 This simple approach does not represent a good pattern to follow because the `AccessToken` will expire in about an hour. ADAL libraries will cache the token for you and will refresh it each time the `AcquireToken` method is called.
+
+### Example demonstrating a DelegatingHandler
 
 The recommended approach is to implement a class derived from <xref:System.Net.Http.DelegatingHandler> which will be passed to the constructor of the <xref:System.Net.Http.HttpClient>. This handler will allow you to override the <xref:System.Net.Http.HttpClient>.<xref:System.Net.Http.HttpClient.SendAsync*> method so that ADAL will call the `AcquireToken` method with each request sent by the http client.
 
@@ -264,7 +268,119 @@ Even though this example uses <xref:System.Net.Http.HttpClient>.<xref:System.Net
 
 ## Connect as an app
 
-<!-- TODO provide some examples -->
+Some apps you will create are not intended to be run interactively by a user. For example, you may want to make a web client application that can perform operations on CDS for Apps data, or a console application that performs a scheduled task of some kind. 
+
+While you could achieve these scenarios using credentials for an ordinary user, that user account would need to use a paid license. This isn't the recommended approach.
+
+In these cases you can create a special application user which is bound to an Azure Active Directory registered application and use either a key secret configured for the app or upload a [X.509](https://www.itu.int/rec/T-REC-X.509/en) certificate. Another benefit of this approach is that it doesn't consume a paid license.
+
+### Requirements to connect as an app
+
+To connect as an app you will need:
+ - A registered app
+ - A CDS for Apps user bound to the registered app
+ - Connect using either the application secret or a certificate thumbprint
+
+#### Register your app
+
+When registering an app you follow many of the same steps described in [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md), with the following exceptions:
+
+ - You do not need to grant the **Access Dynamics 365 as organization users** permission.
+ 
+    This application will be bound to a specific user account.
+
+ - You must configure a secret for the app registration OR upload a public key certificate.
+
+While registering the app, select the **Keys** section on the **Settings** page.
+
+To add a certificate:
+1. Select **Upload Public Key**.
+2. Select the file you'd like to upload. It must be one of the following file types: .cer, .pem, .crt.
+
+To add a password:
+
+1. Add a description for your key.
+2. Select a duration.
+3. Select **Save**. 
+
+  The right-most column will contain the key value, after you save the configuration changes. Be sure to copy the key for use in your client application code, as it is not accessible once you leave this page.
+
+#### CDS for Apps user account bound to the registered app
+
+The first thing you must do is create a custom security role that will define what access and privileges this account will have within the CDS for apps organization. More information: [Create or configure a custom security role](../../administrator/database-security.md#create-or-configure-a-custom-security-role)
+
+After you have created the custom security role, you must create the user account which will use it.
+
+<!-- Almost exactly the same intructions below can be found in powerapps-docs\developer\common-data-service\use-multi-tenant-server-server-authentication.md -->
+
+#### Manually create a CDS for Apps application user  
+
+ The procedure to create this user is different from creating a licensed user. Use the following steps:  
+  
+1. Navigate to **Settings** > **Security** > **Users**  
+  
+2. In the view drop-down, select **Application Users**.  
+  
+3. Click **New**. Then verify that you are using the **Application user** form.  
+  
+    If you do not see the **Application ID**, **Application ID URI** and **Azure AD Object ID** fields in the form, you must select the **Application User** form from the list:  
+  
+   ![Select Application User Form](media/select-application-user-form.PNG "Select Application User Form")  
+  
+4. Add the appropriate values to the fields:  
+  
+   |Field|Value|  
+   |-----------|-----------|
+   |**User Name**| A name for the user|
+   |**Application ID**|The Application ID value for the application registered with Azure AD.|  
+   |**Full Name**|The name of your application.|  
+   |**Primary Email**|The email address for the user.|  
+  
+    The **Application ID URI** and **Azure AD Object ID** fields are locked and you cannot set values for these fields.  
+  
+    When you create this user the values for these fields will be retrieved from Azure AD based on the **Application ID** value when you save the user.  
+  
+5. Associate the application user with the custom security role you created.
+
+#### Connect using the application secret
+
+If you are connecting using an secret configured for the application, you will use the <xref:Microsoft.IdentityModel.Clients.ActiveDirectory.ClientCredential> class passing in the `clientId` and `clientSecret` rather than a <xref:Microsoft.IdentityModel.Clients.ActiveDirectory.UserCredential> with `userName` and `password` parameters.
+```csharp
+string serviceUrl = "https://yourorg.crm.dynamics.com";
+string clientId = "<your app id>";
+string secret = "<your app secret>";
+
+AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/common", false);
+ClientCredential credential = new ClientCredential(clientId, secret);
+
+AuthenticationResult result = authContext.AcquireToken(serviceUrl, credential);
+
+string accessToken = result.AccessToken;
+```
+#### Connect using a certificate thumbprint
+
+If you are connecting using a certificate and using the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> you can use code like the following:
+
+```csharp
+string CertThumbPrintId = "DC6C689022C905EA5F812B51F1574ED10F256FF6";
+string AppID = "545ce4df-95a6-4115-ac2f-e8e5546e79af";
+string InstanceUri = "https://yourorg.crm.dynamics.com";
+
+string ConnectionStr = $@"AuthType=Certificate;
+                        SkipDiscovery=true;url={InstanceUri};
+                        thumbprint={CertThumbPrintId};
+                        ClientId={AppID};
+                        RequireNewInstance=true";
+using (CrmServiceClient svc = new CrmServiceClient(ConnectionStr))
+{
+    if (svc.IsReady)
+    {
+    //your code goes here
+    }
+
+}
+```
+
 
 ### See also
 

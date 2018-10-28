@@ -1,8 +1,8 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use Multi-Tenant Server-to-server authentication (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Describes how to configure an application user for server-to-server authentication with Common Data Service for Apps." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/27/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -14,9 +14,9 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 This is the most common scenario and the one which is used for apps distributed using Microsoft AppSource, but you can also use multi-tenant without listing your application with Microsoft AppSource.  
   
- Each CDS for Apps organization is associated with an Azure Active Directory tenant. Your web application or service is registered with its own Azure AD tenant.  
+Each CDS for Apps organization is associated with an Azure Active Directory tenant. Your web application or service is registered with its own Azure AD tenant.  
   
- In this scenario any CDS for Apps tenant can potentially use your multi-tenant application after they grant consent for the application to access data.  
+In this scenario any CDS for Apps tenant can potentially use your multi-tenant application after they grant consent for the application to access data.  
   
 <a name="bkmk_Requirements"></a>   
 
