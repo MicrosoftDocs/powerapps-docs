@@ -2,7 +2,7 @@
 title: "Debug Workflow Activities (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/19/2018
+ms.date: 10/28/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
