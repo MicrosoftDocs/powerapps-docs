@@ -279,6 +279,7 @@ In these cases you can create a special application user which is bound to an Az
 To connect as an app you will need:
  - A registered app
  - A CDS for Apps user bound to the registered app
+ - Connect using either the application secret or a certificate thumbprint
 
 #### Register your app
 
@@ -286,7 +287,7 @@ When registering an app you follow many of the same steps described in [Walkthro
 
  - You do not need to grant the **Access Dynamics 365 as organization users** permission.
  
-  This application will be bound to a specific user account.
+    This application will be bound to a specific user account.
 
  - You must configure a secret for the app registration OR upload a public key certificate.
 
@@ -346,7 +347,7 @@ After you have created the custom security role, you must create the user accoun
 If you are connecting using an secret configured for the application, you will use the <xref:Microsoft.IdentityModel.Clients.ActiveDirectory.ClientCredential> class passing in the `clientId` and `clientSecret` rather than a <xref:Microsoft.IdentityModel.Clients.ActiveDirectory.UserCredential> with `userName` and `password` parameters.
 ```csharp
 string serviceUrl = "https://yourorg.crm.dynamics.com";
-string clientId = "<youre app id";
+string clientId = "<your app id>";
 string secret = "<your app secret>";
 
 AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/common", false);
