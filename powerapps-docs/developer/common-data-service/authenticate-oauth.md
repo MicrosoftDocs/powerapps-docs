@@ -366,7 +366,11 @@ string CertThumbPrintId = "DC6C689022C905EA5F812B51F1574ED10F256FF6";
 string AppID = "545ce4df-95a6-4115-ac2f-e8e5546e79af";
 string InstanceUri = "https://yourorg.crm.dynamics.com";
 
-string ConnectionStr = $"AuthType=Certificate;SkipDiscovery=true;url={InstanceUri};thumbprint={CertThumbPrintId};ClientId={AppID};RequireNewInstance=true";
+string ConnectionStr = $@"AuthType=Certificate;
+                        SkipDiscovery=true;url={InstanceUri};
+                        thumbprint={CertThumbPrintId};
+                        ClientId={AppID};
+                        RequireNewInstance=true";
 using (CrmServiceClient svc = new CrmServiceClient(ConnectionStr))
 {
     if (svc.IsReady)
