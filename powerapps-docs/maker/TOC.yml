@@ -533,6 +533,8 @@
             href: ./canvas-apps/functions/function-datetime-parts.md
           - name: Year
             href: ./canvas-apps/functions/function-datetime-parts.md
+      - name: Create an app in a solution
+        href: ./canvas-apps/add-app-solution.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
@@ -910,10 +912,10 @@
     items: 
       - name: Create a business rule for an entity 
         href: ./common-data-service/data-platform-create-business-rule.md
-  - name: Work with solutions
+  - name: Work with projects
     href: ./common-data-service/solutions-overview.md
     items:
-    - name: Use solution explorer 
+    - name: Use projects 
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution
       href: ./common-data-service/use-solutions-for-your-customizations.md   
