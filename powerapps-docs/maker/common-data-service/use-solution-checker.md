@@ -25,6 +25,9 @@ The solution checker analyzes these solution components.
 - CDS for Apps web resources (HTML and JavaScript)
 - CDS for Apps configurations, such as SDK message steps 
 
+> [!NOTE]
+> Solution checker works with unmanaged solutions. 
+
 ## Install the solution checker
 The solution checker solution can be installed from [Microsoft AppSource](https://appsource.microsoft.com/). It's compatible with PowerApps apps built with CDS for Apps and Dynamics 365 for Customer Engagement, version 9.0 or later versions.
 
@@ -68,7 +71,7 @@ When you install the solution checker in your environment, the **Solution check*
 
 
 ## Reviewing the solution checker report
-When a check is completed, the analysis report will be available for download in CSV format. The report contains several columns that assist you in identifying the impact, type, and location of issues in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
+When a check is completed, the analysis report will be available for download from your web browser. The report is in CSV format and contains several columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
 
 |Report field |Description  |Applies to component   |
