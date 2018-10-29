@@ -31,9 +31,9 @@ Only the **[Label](controls/control-text-box.md)** control can be configured as 
 * **Polite**: Dynamic changes are announced when the screen reader has finished speaking. Used for non-critical notifications that do not require immediate attention.
 * **Assertive**: Dynamic changes are immediately announced, interrupting any current utterances by the screen reader. Use this for critical notifications that require immediate attention.
 
-Screen readers will announce the entire text content of a live region when it changes, not just the changed portion. If **[Text](properties-core.md)** is set to the empty string **""**, then nothing will be announced.
+Screen readers will announce the entire text content of a live region when it changes, not just the changed portion. If **[Text](controls/properties-core.md)** is set to the empty string **""**, then nothing will be announced.
 
-To repeat a message, clear text contents by setting **[Text](properties-core.md)** to the empty string **""**, then set it to the message again.
+To repeat a message, clear text contents by setting **[Text](controls/properties-core.md)** to the empty string **""**, then set it to the message again.
 
 ## Best practices
 * Always set **[Visible](controls/properties-core.md)** to true. Some screen readers do not detect live regions if they disappear and appear again.
