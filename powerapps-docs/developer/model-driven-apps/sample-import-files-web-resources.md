@@ -18,7 +18,7 @@ When you develop a large number of files to use as Web resources you can save yo
   
  This sample provides a simplified example of this process. For a more complex sample that provides a WPF application you can use to import Web resources, see the [Sample: Web Resource Utility](sample-web-resource-utility.md).  
  
- Download the sample: [Import files as web resources](https://code.msdn.microsoft.com/Import-files-as-web-f84ad8dc). 
+ Download the sample: [Import files as web resources](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportWebResources). 
 
 ## Prerequisites
 [!INCLUDE[sdk-prerequisite](../../includes/sdk-prerequisite.md)]
