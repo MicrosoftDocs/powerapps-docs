@@ -50,7 +50,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
     > [!NOTE]
     > You can't share an app with a distribution group in your organization or with a user or group outside your organization.
 
-1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Coauthor** check box.
+1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
 
 1. If your app connects to data for which users need access permissions, specify them.
 
@@ -64,24 +64,24 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. At the bottom of the share panel, select **Share**.
 
-    Everyone with whom you shared the app can run it in PowerApps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Coauthors can edit and share the app in [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+    Everyone with whom you shared the app can run it in PowerApps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     If you sent an email invitation, everyone with whom you shared the app can run it by clicking or tapping a link in the invitation.
 
     - If a user clicks or taps the link on a mobile device, the app opens in PowerApps Mobile.
     - If a user clicks or taps the link on a desktop computer, the app opens in a browser. 
 
-    Coauthors who receive an invitation get another link that opens the app for editing in PowerApps Studio.
+    Co-owners who receive an invitation get another link that opens the app for editing in PowerApps Studio.
 
 You can change permissions for a user or a security group by clicking or tapping their name and then performing either of these steps:
 
-- To allow coauthors to run the app but no longer to edit or share it, clear the **Coauthor** check box.
+- To allow co-owners to run the app but no longer to edit or share it, clear the **Co-owner** check box.
 - To stop sharing the app with that user or group, click or tap the Remove (x) icon.
 
 ## Security-group considerations
 
 - If you share an app with a security group, existing members of that group and anyone who joins it will have the permission that you specify for that group. Anyone who leaves the group loses that permission unless they belong to a different group that has access or you give them permission as an individual.
-- Every member of a security group has the same permission for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A the **Can use** permission, but you can also give User B, who belongs to that group, **Can edit** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A the **Can edit** permission and User B **Can use** permission, that user can still edit the app.
+- Every member of a security group has the same permission for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app, but you can also give User B, who belongs to that group, **Co-owner** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A **Co-owner** permission and User B permission to run the app, that user can still edit the app.
 
 ## Manage entity permissions
 
