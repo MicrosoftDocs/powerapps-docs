@@ -2,6 +2,8 @@
   href: ../apply-business-logic-with-code.md
 - name: Workflow extensions
   href: workflow-extensions.md
+- name: Debug workflow activities
+  href: debug-workflow-activites.md
 - name: "Tutorial: Create workflow extension"
   href: tutorial-create-workflow-extension.md
 - name: "Sample: Create a custom workflow activity"

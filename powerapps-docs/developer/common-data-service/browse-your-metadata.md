@@ -85,7 +85,4 @@ You can perform the following actions for a single entity:
 
  [Developer Tools for CDS for Apps](developer-tools.md)<br />
  [Customize Entity Metadata](customize-entity-metadata.md)<br />
- [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)<br />
- [Create Early Bound Entity Classes with the Code Generation Tool (CrmSvcUtil.exe)](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
  [Analyze Plug-in Performance](/dynamics365/customer-engagement/developer/analyze-plugin-performance)<br />
- [Solution Tools for Team Development](solution-tools-team-development.md)<br />

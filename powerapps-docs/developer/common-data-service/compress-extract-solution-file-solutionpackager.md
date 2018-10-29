@@ -252,7 +252,6 @@ If you use Visual Studio 2012 to edit resource files created by the solution pac
    This allows the solution packager to read and import the resource file. This problem has only been observed when using the Visual Studio Resource editor.  
   
 ### See also  
- [Solution Tools for Team Development](solution-tools-team-development.md)   
- [Use Source Control with Solution Files](use-source-control-solution-files.md)   
- [Solution Component File Reference](solution-component-file-reference-solutionpackager.md)   
+ [Use Source Control with Solution Files](use-source-control-solution-files.md)<br/>   
+ [Solution Component File Reference](solution-component-file-reference-solutionpackager.md)<br/>   
  [Introduction to Solutions](introduction-solutions.md)

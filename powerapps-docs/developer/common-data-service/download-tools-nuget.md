@@ -99,7 +99,5 @@ To get the latest version of these tools, repeat these steps.
 [Create early bound entity classes](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)<br />
 [Create extensions for the code generation tool](org-service/extend-code-generation-tool.md)<br />
 [Browse the metadata for your organization](browse-your-metadata.md)<br />
-[Analyze plug-in performance](/dynamics365/customer-engagement/developer/analyze-plugin-performance)<br />
-[Solution tools for team development](solution-tools-team-development.md)<br />
 [Deploy packages using Dynamics Dynamics 365 Package Deployer and Windows PowerShell](/dynamics365/customer-engagement/admin/deploy-packages-using-package-deployer-windows-powershell)<br />
-[Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)<br />
+[Register a plug-in](register-plug-in.md)<br />

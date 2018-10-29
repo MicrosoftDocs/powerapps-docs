@@ -14,32 +14,18 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 
 Saved queries are business entities that define the parameters and criteria of a Common Data Service (CDS) for Apps environment search. Saved queries support cross-entity searches. There are two entities available for queries against the Common Data Service (CDS) for Apps environment.  
   
-- A *user query*, called a saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. 
+- A *user query*, called a saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [UserQuery entity](reference/entities/userquery.md) 
 
-- A *saved query*, called a view in the application, is owned by an organization making it visible to all users in the organization. Saved queries (views) are used for both views defined for an entity and for filters and templates for Dynamics 365 for Outlook.  
+- A *saved query*, called a view in the application, is owned by an organization making it visible to all users in the organization. Saved queries (views) are used for both views defined for an entity and for filters and templates for Dynamics 365 for Outlook. More information: [SavedQuery entity](reference/entities/savedquery.md) 
   
  A query in the form of a FetchXML statement is constructed and then assigned to the `UserQuery.FetchXml` attribute. This query can be executed by using the <xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdUserQueryRequest> message.  
   
- You can see the user query (saved view) in the Advanced Find section of the PowerApps application and also in the **View** drop-down list for an entity.  You can export the value of the `UserQuery.FetchXml` attribute by using the **Download Fetch XML** button in the **Advanced Find** dialog box.  
+ You can see the user query in the **Advanced Find** section of the model-driven app and also in the **View** drop-down list for an entity.  You can export the value of the `UserQuery.FetchXml` attribute by using the **Download Fetch XML** button in the **Advanced Find** dialog box.  
   
+## Use Web API to execute saved queries
 
+To know about executing user query and saved query using Web API, see [Retrieve and execute predefined queries](webapi/retrieve-and-execute-predefined-queries.md)
 
-<!-- 
+## Use Organization service to execute saved queries
 
-Need PM owner for query questions
-
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/userquery-saved-view-entity 
-
-This topic needs to be adapted to describe the concept of saved queries, both user-queries and systemviews
-
-It should cover using these messages 
-
-ExecuteByIdUserQuery 
-ExecuteByIdSavedQuery
-
-or is an entity-operations- topic enough?
-
-And support the Web API content here:
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/retrieve-and-execute-predefined-queries
-
--->
+You can use the <xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdUserQueryRequest> and <xref:Microsoft.Crm.Sdk.Messages.ExecuteByIdSavedQueryRequest> messages to execute user query and saved query respectively.

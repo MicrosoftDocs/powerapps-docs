@@ -17,11 +17,9 @@ ms.reviewer:
 
 # Customize entity views
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customize-entity-views -->
-
 Entity views are special saved queries that retrieve data by using a specific filter. They also contain information about how the data in the view should be displayed in the application. Entity views are `SavedQuery` records that you can create programmatically. You can also define them as XML, and import them with an unmanaged solution.  
   
- An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [UserQuery (Saved View) Entity](userquery-saved-view-entity.md) 
+ An Entity view is different from a `UserQuery`. A user query, called a Saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [Saved queries](../common-data-service/saved-queries.md) 
   
  You can also use the customization tool to customize views. More information: [Create and edit views](../../maker/model-driven-apps/create-edit-views.md)
   
@@ -39,12 +37,8 @@ Entity views are special saved queries that retrieve data by using a specific fi
 |**Quick Find**|4|- **Occurrence**: 1<br />- **Actions**: Update only.<br />- **Comments**: This view defines the columns that will be searched when a user searches for records by using the search field in a list view.|  
 |**Lookup**|64|- **Occurrence**: 1<br />- **Actions**: Update only.<br />- **Comments**: This is the default view that will be used to look up a record when no other view has been configured for the lookup field.|  
   
-<a name="BKMK_ViewTasks"></a>   
-## View tasks  
- Because views are SavedQuery records, you can create, update, retrieve, delete and deactivate them. In addition you can edit filter criteria or configure sorting, edit columns or set a view as a default view.
-  
 <a name="BKMK_CreateViews"></a>   
-### Create views  
+## Create views  
  To create a public view, specify the following properties:
   
 - `SavedQuery.Name`: A unique identifier for the saved query.
@@ -114,15 +108,15 @@ Entity views are special saved queries that retrieve data by using a specific fi
   ```  
   
 <a name="BKMK_UpdateViews"></a>   
-### Update views  
+## Update views  
  If the `SavedQuery.IsCustomizable` managed property allows the view to be updated, you can use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method or the <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> message to update the view.  
   
 <a name="BKMK_DeleteViews"></a>   
-### Delete views  
+## Delete views  
  You should only delete saved queries that you have created. A solution component or part of the application may depend on a specific saved query. If there are queries you do not want to appear in the application, you should deactivate them.  
   
 <a name="BKMK_RetrieveViews"></a>   
-### Retrieve views  
+## Retrieve views  
  Use a <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> to retrieve saved query records.  
   
  The following sample retrieves all the public views for the opportunity entity:  
@@ -166,7 +160,7 @@ Entity views are special saved queries that retrieve data by using a specific fi
 ```
   
 <a name="BKMK_DeactivateViews"></a>   
-### Deactivate views  
+## Deactivate views  
  If you do not want a public view to appear in the application, you can deactivate it. You cannot deactivate a public view that is set as the default view. The following sample deactivates the **Closed Opportunities in Current Fiscal Year** view for the Opportunity entity:  
   
  ```csharp
@@ -220,19 +214,19 @@ _serviceProxy.Execute(ssreq);
  ```  
   
 <a name="BKMK_EditFilterOrSorting"></a>   
-### Edit filter criteria or configure sorting  
+## Edit filter criteria or configure sorting  
  To edit the filter or edit how the data is sorted, you must set the `SavedQuery.FetchXml` attribute. For more information, see [Use FetchXML to query data](/powerapps/developer/common-data-service/use-fetchxml-construct-query).  
   
 > [!TIP]
 >  If you are not familiar with FetchXML the following messages can be used to convert between QueryExpression and FetchXML:<xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> and <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest>.  
   
 <a name="BKMK_EditColumns"></a>   
-### Edit columns  
+## Edit columns  
  The columns that you want to display in views can be taken from the entity or related entities. 
  For more information about how to specify the columns to display, see the `layoutxml` element in the [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md).  
   
 <a name="BKMK_CustomIcons"></a>   
-### Add custom icons with tooltip for a column  
+## Add custom icons with tooltip for a column  
  You can add custom icon with tooltip text to display in a column depending on the column value; you can also specify localized tooltip text. This can be done by adding the custom icons as image web resources in your instance and then using a JavaScript web resource to add JavaScript code for a column to display the icons depending on the column value.  
   
 > [!NOTE]
@@ -326,6 +320,6 @@ function displayIconTooltip(rowData, userLCID) {
  ![Custom icons displayed for a column in a view](media/customiconsinviews.png "Custom icons displayed for a column in a view")  
   
 <a name="BKMK_SetAsDefault"></a>   
-### Set as default  
+## Set as default  
  Only one active public view can be set as the default view. To make a view the default view, set the `IsDefault` property to true.  
   

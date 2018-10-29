@@ -37,26 +37,7 @@ ms.custom:
                                           </div>
                                           <div class="cardText">
                                              <h3>What is PowerApps?</h3>
-                                             <p>Get started on docs with an overview about PowerApps.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="https://docs.microsoft.com/en-us/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path">
-                                 <div class="cardSize">
-                                    <div class="cardPadding">
-                                       <div class="card">
-                                          <div class="cardImageOuter">
-                                             <div class="cardImage">
-                                                <img src="media/index/powerapps-learning.svg" alt="" />
-                                             </div>
-                                          </div>
-                                          <div class="cardText">
-                                             <h3>Learn PowerApps</h3>
-                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn PowerApps. It's free!</p>
+                                             <p>Get started on documentation with an overview about PowerApps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -76,6 +57,25 @@ ms.custom:
                                           <div class="cardText">
                                              <h3>Release Notes</h3>
                                              <p>Learn about PowerApps features releasing from October 2018 through March 2019.</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://docs.microsoft.com/en-us/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path">
+                                 <div class="cardSize">
+                                    <div class="cardPadding">
+                                       <div class="card">
+                                          <div class="cardImageOuter">
+                                             <div class="cardImage">
+                                                <img src="media/index/powerapps-learning.svg" alt="" />
+                                             </div>
+                                          </div>
+                                          <div class="cardText">
+                                             <h3>Learn PowerApps</h3>
+                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn PowerApps. It's free!</p>
                                           </div>
                                        </div>
                                     </div>
@@ -178,14 +178,14 @@ ms.custom:
                         </div>
                      </li>
                   </ul>
-               </li>               
+               </li>
                <li>
                   <a href="#maker"><strong>I'm an app maker</strong></a>
                   <ul id="maker"
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. Makers can create two types of apps in PowerApps: <strong>Canvas app</strong> that is based on data in Common Data Service (CDS) for Apps or other data sources; <strong>Model-driven app</strong> that is based on data in CDS for Apps. <br/><br/><strong>CDS for Apps</strong> lets you securely store and manage data used by business applications. More information: <a href="/powerapps/maker">Create apps</a>.</p>
+                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. You can create two types of apps in PowerApps: <strong>Canvas app</strong> and <strong>Model-driven app</strong>. <strong>CDS for Apps</strong> is the data platform that lets you securely store and manage data used by business apps. More information: <a href="/powerapps/maker">Create apps</a>.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -209,6 +209,7 @@ ms.custom:
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Customize a sample app</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/customize-list-form">Customize a SharePoint form</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/connections-list">Connectors</a></p>
+                                       <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-create-business-rule">Apply business logic</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/reference-properties">Controls reference</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/formula-reference">Formula reference</a></p>
                                        <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/share-app">Share an app</a></p>
@@ -234,7 +235,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/build-first-model-driven-app">Create an app</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/model-driven-app-components">Understand app components</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-design-forms">Create and design app forms</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form">Define business rules for a form</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes">Apply business logic</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-views">Create and manage app views</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-system-chart">Use charts</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-dashboards">Use dashboards</a></p>
@@ -263,7 +264,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-create-business-rule">Define business rules for an entity</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/cds-processes">Apply business logic</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Build Power BI reports from CDS for Apps data</a></p>
                                  </div>
