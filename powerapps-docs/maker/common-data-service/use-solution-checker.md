@@ -41,10 +41,10 @@ When you install the solution checker these solution specific components are cre
 - User principle: A user is created automatically that allows the solution checker to authenticate with your CDS for Apps environment. The user is required to export the solution for analysis, and the subsequent storing of the analysis results to the solution checker entities in your environment. The solution checker user is an application user and does not consume a license.
 
 ## Run the solution checker
-After you install the solution checker in your environment, a **Solution checker** menu item is available when you select a solution in the **Solutions** area of PowerApps. 
+After you install the solution checker in your environment, a **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of PowerApps. 
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. In the left pane select **Solutions**, 
+2. In the left pane select **Solutions**. 
 3. Next to the unmanaged solution that you want to anayze, select **...**, and then select **Solution checker**. 
     - If the **Solution checker** menu option is not available after you select a solution, it means the solution checker has not been installed. To verify, make sure that the **Solution Checker** solution is in the **Solutions** list. 
 4.	Select **Run**. Note the following.
