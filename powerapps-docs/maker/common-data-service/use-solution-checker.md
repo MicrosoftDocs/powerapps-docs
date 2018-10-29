@@ -37,23 +37,21 @@ When you install the solution checker these solution specific components are cre
    - Analysis Component
    - Analysis Job
    - Analysis Result
-- System job: A system job is created so admins can remove solution analysis data from the environment. The jobs contain a configuration value, currently set to 60 days, which can be overridden by an administrator. 
-   - Analysis results cleanup job  
+- System job: A system job is created so admins can remove solution analysis data from the environment. The job contains a configuration value, currently set to remove the solution analysis data after 60 days, which an administrator can override. 
 - User principle: A user is created automatically that allows the solution checker to authenticate with your CDS for Apps environment. The user is required to export the solution for analysis, and the subsequent storing of the analysis results to the solution checker entities in your environment. The solution checker user is an application user and does not consume a license.
 
-
 ## Run the solution checker
-After you have installed the solution checker in your environment, the solution checker menu will be made available in the **Solutions** area of PowerApps. 
+After you have installed the solution checker in your environment, the solution checker menu is available in the **Solutions** area of PowerApps. 
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. Select **Solutions**, and then select the unmanaged solution that you want to analyze.
-3. Select the **Solution checker** menu option. 
-    If the **Solution checker** menu option is not available after you select a solution, it means the solution checker has not been installed. To verify, view the solutions in the **Solutions** list. 
+2. In the left pane select **Solutions**, 
+3. Next to the unmanaged solution that you want to anayze, select **...**, and then select **Solution checker**. 
+    - If the **Solution checker** menu option is not available after you select a solution, it means the solution checker has not been installed. To verify, make sure that the **Solution Checker** solution is in the **Solutions** list. 
 4.	Select **Run**. Note the following.
     - The solution checker can take a few minutes to complete the analysis. 
     - During this time you will notice a **Running…** state in the **Solution check** column of the **Solution** list. 
     - You receive an email notification and a notification in the **Notifications** area of the PowerApps site when the check is completed.  
-7.	View the report when the check is completed.
+7.	[View the report](#reviewing-the-solution-checker-report) when the check is completed.
 
 
 ## Solution checker states
