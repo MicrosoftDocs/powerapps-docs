@@ -91,7 +91,7 @@ Common Data Service for Apps includes a web application tool called Import Data 
   Parsing, transforming, and uploading of data is done by the asynchronous jobs that run in the background.  
   
 > [!NOTE]
->  By default, all custom entities are enabled for import. To determine if a business entity is enabled for import, see the entity metadata for the specific entity. If an entity is enabled for import, the entity metadata property `IsImportable` is set to `true`. The value of this property can’t be changed for the out-of-the-box business entities. [!INCLUDE[metadata_browser](../includes/metadata-browser.md)]  
+>  By default, all custom entities are enabled for import. To determine if a business entity is enabled for import, see the entity metadata for the specific entity. If an entity is enabled for import, the entity metadata property `IsImportable` is set to `true`. The value of this property can’t be changed for the out-of-the-box business entities. <!--[!INCLUDE[metadata_browser](../includes/metadata-browser.md)]-->  
 
 
 ### See Also
