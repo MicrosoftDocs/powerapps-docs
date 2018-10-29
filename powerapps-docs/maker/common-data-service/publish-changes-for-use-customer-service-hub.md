@@ -2,7 +2,7 @@
 title: "Publish changes in PowerApps | MicrosoftDocs"
 description: "Learn how to publish changes made to an app"
 ms.custom: ""
-ms.date: 10/17/2018
+ms.date: 10/29/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -30,9 +30,9 @@ search.app:
  
 ## Publish your customizations
 
-1.  Select **Projects** from the left navigation.
+1.  Select **Solutions** from the left navigation.
 
-2.  Select the project that you want to publish to open it.
+2.  Select the solution that you want to publish to open it.
 
 3.  From the list of commands, select **Publish all customizations**.  
 
