@@ -18,7 +18,7 @@ This sample shows how to retrieve aggregate record data using FetchXML.
 
 ## What this sample does
 
-The `FetchXML` class is intended to be used in a scenario where it contains a query that is expressed as a set of attribute and value pairs.
+The `FetchXML` query is intended to be used in a scenario where it creates queries to get the data.
 
 ## How this sample works
 
