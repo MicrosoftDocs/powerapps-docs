@@ -45,7 +45,7 @@ After you install the solution checker in your environment, a **Solution checker
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. In the left pane select **Solutions**. 
-3. Next to the unmanaged solution that you want to anayze, select **...**, and then select **Solution checker**. 
+3. Next to the unmanaged solution that you want to anayze, select **...**, point to **Solution checker**, and then select **Run**. 
     - If the **Solution checker** menu option is not available after you select a solution, it means the solution checker has not been installed. To verify, make sure that the **Solution Checker** solution is in the **Solutions** list. 
 4.	Select **Run**. Note the following.
     - The solution checker can take a few minutes to complete the analysis. 
@@ -68,9 +68,12 @@ When you install the solution checker in your environment, the **Solution check*
 |Checked by Publisher     |  This is a third party managed solution. Currently, solution analysis is not available for these solutions.        |
 
 
-## Reviewing the solution checker report
-When a check is completed, the analysis report will be available for download from your web browser. The report is in CSV format and contains several columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
+## Review the solution checker report
+When a solution check is completed, the analysis report becomes available for download from your web browser. The report is in CSV format and contains several columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
+1. In the left pane select **Solutions**.
+2. Next to the unmanaged solution that you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download last results**.  
+3. The solution checker zip file is downloaded to the folder specified with your web browser.
 
 |Report field |Description  |Applies to component   |
 |---------|---------|---------|
