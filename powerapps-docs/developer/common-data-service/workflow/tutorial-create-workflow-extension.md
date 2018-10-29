@@ -30,10 +30,7 @@ This tutorial uses a very simple example to focus on the requirements and proces
 - You must have Windows Workflow Foundation included as an individual component with Visual Studio 2017.  More information: [Visual Studio requirements](workflow-extensions.md#visual-studio-requirements)
 - A Common Data Service for Apps instance and administrator privileges
 - Understanding of how to configure workflows. More information: [Classic Common Data Service (CDS) for Apps workflows](/flow/workflow-processes)
-- A model-driven app that allows you to edit accounts and invoke on-demand workflows.
-
-    > [!IMPORTANT]
-    > At the time of this writing, **Unified Interface** model-driven apps do not provide the ability to invoke on-demand workflows. The model-driven app must use the **Web** client.
+- A model-driven app that allows you to edit accounts.
 
 ## Goal
 
@@ -41,7 +38,7 @@ The example below will create a simple custom workflow activity that may be used
 
 This custom workflow activity will match the following requirements:
 
-1. Accept an integer input parameter
+1. Accept an decimal input parameter
 1. Output a value equal to the input parameter plus 10.
 
 In a workflow for the **Account** entity it may be used in the following manner to increment the **Credit limit** value using two steps:
@@ -51,18 +48,15 @@ In a workflow for the **Account** entity it may be used in the following manner 
 Step 1 uses the **Sample: Increment by 10** custom workflow activity to accept the **Account Credit Limit** value and increment it by 10.
 Step 2 uses the **Update Record** action to update the **Account Credit Limit** value with the incremented value.
 
-> [!NOTE]
->  It would be easy to build a workflow activity explicitly to update an attribute passed as the input parameter in a single step. By using an output parameter this design allows for the possibility that this incremented value could be used for another purpose without changing the value used for the input parameter.
-
 ### Step 1: Get incremented Account Credit Limit
 
 When the first step is added, the custom workflow activity will be available in a **Sample** group and have the name **Increment by 10**.
 
 ![The increment by 10 step](media/tutorial-create-workflow-activity-increment-by-10-step.png)
 
-When configuring the first step by clicking the **Set Properties** button, the **Integer input** property will be required and accept only a whole number (integer) value, such as the **Credit Limit** attribute of the **Account** entity.
+When configuring the first step by clicking the **Set Properties** button, the **Decimal input** property will be required and accept only a decimal value, such as the **Credit Limit** attribute of the **Account** entity.
 
-![Setting integer input](media/tutorial-create-workflow-activity-step1.png)
+![Setting decimal input](media/tutorial-create-workflow-activity-step1.png)
 
 ### Step 2: Set new Account Credit Limit
 
@@ -72,7 +66,7 @@ In the second step, an **Update Record** action will assign the output of the **
 
 ## Create a Visual Studio Activity Library project
 
-This project will create a simple workflow assembly that will increment an integer value by 10.
+This project will create a simple workflow assembly that will increment an decimal value by 10.
 
 1. Start Visual Studio.
 1. On the **File** menu, click **New**, and then click **Project**.
@@ -152,11 +146,11 @@ This project will create a simple workflow assembly that will increment an integ
     public class IncrementByTen : CodeActivity
     {
         [RequiredArgument]
-        [Input("Integer input")]
-        public InArgument<int> IntInput { get; set; }
+        [Input("Decimal input")]
+        public InArgument<decimal> DecInput { get; set; }
 
-        [Output("Integer output")]
-        public OutArgument<int> IntOutput { get; set; }
+        [Output("Decimal output")]
+        public OutArgument<decimal> DecOutput { get; set; }
 
         protected override void Execute(CodeActivityContext context)
         {
@@ -175,8 +169,8 @@ Add the logic within the Execute method to apply the logic to increment the inpu
 ```csharp
     protected override void Execute(CodeActivityContext context)
     {
-        int input = IntInput.Get(context);
-        IntOutput.Set(context, input+10);
+      decimal input = DecInput.Get(context);
+      DecOutput.Set(context, input + 10);
     }
 ```
 
@@ -263,14 +257,13 @@ You can test your new workflow activity by creating a process that will use it. 
 
     |Field|Value|
     |--|--|
-    |As an on-demand process|selected|
     |Scope|Organization|
-    |Start when: Record is created|deselected|
+    |Start when: Record fields change|selected, and `name` field specified in the dialog.|
 
     ![configuration of a test workflow](media/tutorial-create-workflow-activity-configuration-test-workflow.png)
 
     > [!NOTE]
-    > This creates an on-demand workflow that can be applied by anyone in the organization.
+    > Setting Scope to Organization creates an on-demand workflow that can be applied by anyone in the organization.
 
 1. Add the following **Step**:
 
@@ -280,9 +273,9 @@ You can test your new workflow activity by creating a process that will use it. 
     > As mentioned earlier, the custom values you set in [Register your assembly](#register-your-assembly) will not be applied in the designer until after the workflow activity is imported as part of a managed solution.
 
 1. Set the Step **Description** to **Get incremented Account Credit Limit** and click **Set properties**.
-1. Set the value of the **Integer input** property to the Credit Limit of the account with a default value of 0.
+1. Set the value of the **Decimal input** property to the Credit Limit of the account with a default value of 0.
 
-    ![Set the integer input property](media/tutorial-create-workflow-activity-configure-first-step.png)
+    ![Set the decimal input property](media/tutorial-create-workflow-activity-configure-first-step.png)
 
 1. Click **Save and Close**.
 1. Add an **Update Record** step:
@@ -308,19 +301,9 @@ You can test your new workflow activity by creating a process that will use it. 
 
 1. Navigate to a model-driven app and view a list of acccounts.
 1. Select an account.
-1. In the command bar, select the elipsis (**...**) and choose **Run Workflow.**
-
-    ![foo](media/tutorial-create-workflow-activity-run-workflow.png)
-
-1. In the **Lookup Record** dialog, select the **Test of SampleWorkflowActivity.IncrementByTen** workflow you created and click **Add**.
-
-    ![select the test workflow](media/tutorial-create-workflow-select-test-workflow.png)
-
-1. In the **Confirm Application of Workflow** dialog, click **OK**.
-
-    ![confirm application of workflow](media/tutorial-create-workflow-activity-confirm-dialog.png)
-
-1. Open the account you applied the workflow to and verify that the **Credit Limit** value has increased by 10.
+1. Edit the **Account Name** field value.
+1. Save the account record.
+1. Verify that the account you edited has **Credit Limit** value has increased by 10.
 
     ![verify account credit limit incremented](media/tutorial-create-workflow-verify-credit-limit.png)
 

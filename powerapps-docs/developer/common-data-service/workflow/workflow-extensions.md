@@ -2,7 +2,7 @@
 title: "Workflow Extensions (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can extend the options available within the designer for workflows. These extensions are added by adding an assembly that contains a class the extends the CodeActivity class. These extensions are commonly called workflow assemblies or workflow activities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/28/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -238,24 +238,26 @@ The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](
 To reference parameters defined for your class you will use the [Argument.Get](/dotnet/api/system.activities.argument.get?view=netframework-4.5.2) or [Argument.Set(ActivityContext, Object)](/dotnet/api/system.activities.argument.set?view=netframework-4.5.2) methods they provide which require the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) instance that is passed to the `Execute` method. The following example shows accessing the value of an input parameter and setting the value of an output parameter.
 
 ```csharp
+using Microsoft.Xrm.Sdk.Workflow;
+using System.Activities;
+
 namespace SampleWorkflowActivity
 {
-    public class IncrementByTen : CodeActivity
+  public class IncrementByTen : CodeActivity
+  {
+    [RequiredArgument]
+    [Input("Decimal input")]
+    public InArgument<decimal> DecInput { get; set; }
+
+    [Output("Decimal output")]
+    public OutArgument<decimal> DecOutput { get; set; }
+
+    protected override void Execute(CodeActivityContext context)
     {
-        [RequiredArgument]
-        [Input("Integer input")]
-        public InArgument<int> IntInput { get; set; }
-
-        [Output("Integer output")]
-        public OutArgument<int> IntOutput { get; set; }
-
-        protected override void Execute(CodeActivityContext context)
-        {
-            int input = IntInput.Get(context);
-            IntOutput.Set(context, input + 10);
-        }
+      decimal input = DecInput.Get(context);
+      DecOutput.Set(context, input + 10);
     }
-
+  }
 }
 ```
 
@@ -310,7 +312,9 @@ For custom workflow activites you must specify the following properties to contr
 
 ## Debug Workflow Activities
 
-With custom workflow activities deployed to CDS for apps you must depend on using the tracing service to write information to an entity. Use this information to confirm the values and logic within your workflow activity.
+With custom workflow activities deployed to CDS for apps you can capture profiles to replay for local debugging and use the tracing service to write information to an entity. 
+
+The following example shows using the tracing service to write the following message: `Add your message.`
 
 ```csharp
 protected override void Execute(CodeActivityContext context)
@@ -323,10 +327,9 @@ tracingService.Trace("{0} {1} {2}.","Add","your","message");
 
 ...
 ```
-> [!NOTE]
-> The capability used to replay and debug plug-ins using plug-in profiler cannot be used with custom workflow activities.
 
 More information:
+ - [Debug Workflow Activities](debug-workflow-activites.md)
  - [Use Tracing](../debug-plug-in.md#use-tracing)
  - [View trace logs](../tutorial-write-plug-in.md#view-trace-logs)
 
