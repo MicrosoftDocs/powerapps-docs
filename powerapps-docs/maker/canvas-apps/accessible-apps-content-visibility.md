@@ -13,7 +13,7 @@ search.app:
   - PowerApps
 ---
 # Show or hide content from assistive technologies for canvas apps in PowerApps
-Typically, content should be accessible to all users. However, in a minority of cases, it might be useful to show content to sighted users only or to screen reader users only. For example, descriptions of chart trends that can be discerned visually should be hidden from sighted users. Yet another example is when an icon is described by an adjacent visible label. The icon can be hidden from screen reader users because having another description on the icon would be unnecessarily verbose.
+Typically, content should be accessible to all users. However, in a minority of cases, it might be useful to show content to sighted users only or to screen reader users only. For example, descriptions of chart trends that are obvious visually should be hidden from sighted users. Yet another example is when an icon is described by an adjacent visible label. The icon can be hidden from screen reader users because having another description on the icon would be unnecessarily verbose.
 
 ## Hide content for all users
 * Set **[Visible](controls/properties-core.md)** to false.
