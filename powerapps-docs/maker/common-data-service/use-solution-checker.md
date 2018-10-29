@@ -72,8 +72,10 @@ When you install the solution checker in your environment, the **Solution check*
 When a solution check is completed, the analysis report becomes available for download from your web browser. The report is in CSV format and contains several columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
 1. In the left pane select **Solutions**.
-2. Next to the unmanaged solution that you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download last results**.  
-3. The solution checker zip file is downloaded to the folder specified with your web browser.
+2. Next to the unmanaged solution where you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download last results**.  
+3. The solution checker zip file is downloaded to the folder specified by your web browser.
+
+Here is a summary of each column in the report.
 
 |Report field |Description  |Applies to component   |
 |---------|---------|---------|
