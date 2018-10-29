@@ -30,7 +30,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 **Selected** – The selected item.
 
 ## Additional properties
-**[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe what the list of items are.
+**[AccessibleLabel](properties-accessibility.md)** – Label of the gallery as a whole, for screen readers. Should describe what the list of items are.
 
 **AllItems** – All items in a gallery, including additional control values that are a part of the gallery's template.
 
@@ -46,9 +46,13 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
+**ItemAccessibleLabel** – Label of each gallery item, for screen readers. Should describe what each item is.
+
 **Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
 **NavigationStep** – How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
+
+**Selectable** – Whether gallery items can be selected. When set to **true**, clicking anywhere in an item with mouse or touch input selects it. In addition, the gallery will appear as a selectable list to screen readers. When set to false, clicking on a gallery item will not select it. The gallery will appear as a regular list to screen readers.
 
 **ShowNavigation** – Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.
 
@@ -103,6 +107,10 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
     > [!NOTE]
   > Screen readers will annnouce when items in the gallery change. The **AccessibleLabel** is also mentioned. This gives context to the announcement and is even more important when there are multiple galleries on the same screen.
+
+* When a gallery item contains multiple controls, use **ItemAccessibleLabel** to provide a summary of the gallery item's contents.
+
+* **Selectable** should be set appropriately, depending on whether users are meant to select a gallery item.
 
 ### Keyboard support
 * Consider setting **ShowScrollbar** to **true**. On most touch screen devices, the scrollbar will not show until scrolling begins.
