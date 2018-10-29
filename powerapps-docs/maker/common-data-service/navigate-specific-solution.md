@@ -1,8 +1,8 @@
 ---
-title: "Navigate to a specific project with PowerApps | MicrosoftDocs"
-description: "Learn how to locate and open a specific project in your environment"
+title: "Navigate to a specific solution with PowerApps | MicrosoftDocs"
+description: "Learn how to locate and open a specific solution in your environment"
 ms.custom: ""
-ms.date: 06/18/2018
+ms.date: 10/29/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -24,17 +24,17 @@ search.app:
   - D365CE
 ---
 
-# Navigate to a specific project
+# Navigate to a specific solution
 
-If your organization already has a specific project you should work in, this is how you can find it. To create a new project, see [Create your own project](create-solution.md).  
+If your organization already has a specific solution you should work in, this is how you can find it. To create a new solution, see [Create your own solution](create-solution.md).  
   
-## Open a project  
+## Open a solution  
   
-1. Click on **Projects** from the left navigation to see a list of projects in your environment.
+1. Click on **Solutions** from the left navigation to see a list of solutions in your environment.
   
-2. Double-click the project that you want to work in to open it.  
+2. Double-click the solution that you want to work in to open it.  
   
- When you’re in the project, you’ll see its components. More information: [Add Components](solutions-overview.md)  
+ When you’re in the solution, you’ll see its components. More information: [Add Components](solutions-overview.md)  
 
  ## Next steps
 [Monitor and manage workflow processes](/flow/monitor-manage-processes)
