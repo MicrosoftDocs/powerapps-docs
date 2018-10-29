@@ -43,6 +43,55 @@ https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/importm
 Or should the core general content simply include both?
 
 -->
+If you want to import data into Common Data Service for Apps, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into CDS for Apps. You can import data into standard and customized attributes of most business and custom entities. You can also include related data, such as notes and attachments.  
+  
+Common Data Service for Apps includes a web application tool called Import Data Wizard. You use this tool to import data records from one or more comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files.  
+  
+ For more information about the Import Data Wizard, see CDS for Apps Help.  
+  
+ The Common Data Service for Apps web services provide the following additional capabilities that aren’t available in the Import Data Wizard:  
+  
+- Create data maps that include complex transformation mapping, such as concatenation, split, and replace.  
+  
+- Define custom transformation mapping.  
+  
+- View source data that is stored inside the temporary parse tables.  
+  
+- Access error logs to build custom error reporting tools with improved error logging views.  
+  
+- Run data import by using command-line scripts.  
+  
+- Add `LookupMap`XML tags in the data map to indicate that the data lookup will be initiated and performed on a source file that is used in the import.  
+  
+- Add custom `OwnerMetadata`XML tags in the data map to match the user records in the source file with the records of the user (system user) in CDS for Apps.  
+  
+- Use optional validation checks.  
+  
+  > [!NOTE]
+  >  Validation isn’t optional in the Import Data Wizard.  
+  
+  To implement data import, you typically do the following:  
+  
+- Create a comma-separated values (CSV), XML Spreadsheet 2003 (XMLSS), or text source file.  
+  
+- Create a data map or use an existing data map.  
+  
+- Associate an import file with a data map.  
+  
+- Upload the content from a source file to the associated import file.  
+  
+- Parse the import file.  
+  
+- Transform the parsed data.  
+  
+- Upload the transformed data into the target CDS for Apps server.  
+  
+  You can import data from one source file or several source files. A source file can contain data for one entity type or multiple entity types.  
+  
+  Parsing, transforming, and uploading of data is done by the asynchronous jobs that run in the background.  
+  
+> [!NOTE]
+>  By default, all custom entities are enabled for import. To determine if a business entity is enabled for import, see the entity metadata for the specific entity. If an entity is enabled for import, the entity metadata property `IsImportable` is set to `true`. The value of this property can’t be changed for the out-of-the-box business entities. [!INCLUDE[metadata_browser](../includes/metadata-browser.md)]  
 
 
 ### See Also
