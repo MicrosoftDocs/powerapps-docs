@@ -1,8 +1,8 @@
 ---
-title: "Import, update, and export projects | MicrosoftDocs"
-description: "Learn how to import, update, and export a project in PowerApps"
+title: "Import, update, and export solutions | MicrosoftDocs"
+description: "Learn how to import, update, and export a solution in PowerApps"
 ms.custom: ""
-ms.date: 10/17/2018
+ms.date: 10/29/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -23,55 +23,58 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import, update, and export projects 
+# Import, update, and export solutions 
 
- Projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in the Dynamics platform. You can import projects manually using the steps below. Only import projects that you've obtained from a trusted source. Customizations might include code that can send data to external sources. You can import the project called **Default Solution** only to the organization from which you exported it, but not into a different organization.  
+ You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources. You can import the solution called **Default Solution** only to the organization from which you exported it, but not into a different organization.  
   
-1.  Click on **Projects** from the left navigation.  
+1.  Click on **Solutions** from the left navigation.  
   
-2.  In the projects list menu, choose **Import**.  
+2.  In the solutions list menu, choose **Import**.  
+
+> [!div class="mx-imgBorder"]  
+> ![Import solution](media/solution-import.PNG "Import solution") 
   
-3.  In the **Import Solution** dialog, **Select Solution Package** step browse to the compressed (.zip or .cab) file that contains the project you want to import. 
+3.  In the **Import Solution** dialog, **Select Solution Package** step browse to the compressed (.zip or .cab) file that contains the solution you want to import. 
   
 4.  Choose **Next**.  
   
-5.  You can view information about the project before you choose **Import**.  
+5.  You can view information about the solution before you choose **Import**.  
   
 6.  You may need to wait a few moments while the import completes. If it is successful, you can view the results and choose **Close**.  
   
  If you have imported any changes that require publishing, you must publish customizations before they will be available. 
   
- If the import isn’t successful, you will see a report showing any errors or warnings that were captured. You can choose **Download Log File** to capture details about what caused the import to fail. The most common cause for an import to fail is that the project did not contain some required components.  
+ If the import isn’t successful, you will see a report showing any errors or warnings that were captured. You can choose **Download Log File** to capture details about what caused the import to fail. The most common cause for an import to fail is that the solution did not contain some required components.  
   
  When you download the log file, you will find an XML file that you can open using Office Excel and view the contents.  
   
 > [!NOTE]
->  You can’t edit an active routing rule set. Therefore, if you’re importing a project that includes an active routing rule set into an organization where the rule already exists with the same ID, the import will fail. More information: [Create rules to automatically route cases](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  
+>  You can’t edit an active routing rule set. Therefore, if you’re importing a solution that includes an active routing rule set into an organization where the rule already exists with the same ID, the import will fail. More information: [Create rules to automatically route cases](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  
   
 <a name="BKMK_UpdateSolutions"></a>   
 
-## Update projects  
- There are times when you may wish to install an update to an existing managed project. The procedure is similar to installing a new managed project, except you will get some different options. If you are updating a project you got from someone else, you should get guidance from the project publisher about which options you should choose.  
+## Update solutions  
+ There are times when you may wish to install an update to an existing managed solution. The procedure is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
   
-1.  Click on **Projects** from the left navigation.
+1.  Click on **Solutions** from the left navigation.
   
-2.  In the project list menu choose **Import**.  
+2.  In the solutions list menu choose **Import**.  
   
-3.  In the **Import Solution** dialog, **Select Solution Package** step browse to the compressed (.zip or .cab) file that contains the project you want to update.
+3.  In the **Import Solution** dialog, **Select Solution Package** step browse to the compressed (.zip or .cab) file that contains the solution you want to update.
 
 4.  Choose **Next**.  
   
-5.  You can view information about the project before you choose **Next**. This page will display a yellow bar saying **This solution package contains an update for a solution that is already installed**.  
+5.  You can view information about the solution before you choose **Next**. This page will display a yellow bar saying **This solution package contains an update for a solution that is already installed**.  
   
 6.  You will have the following options:  
   
     - **Maintain customizations (recommended)**  
   
-         Selecting this option will maintain any unmanaged customizations performed on components but also implies that some of the updates included in this project will not take effect.  
+         Selecting this option will maintain any unmanaged customizations performed on components but also implies that some of the updates included in this solution will not take effect.  
   
     - **Overwrite Customizations**  
   
-         Selecting this option overwrites any unmanaged customizations previously performed on components included in this project. All updates included in this project will take effect.  
+         Selecting this option overwrites any unmanaged customizations previously performed on components included in this solution. All updates included in this solution will take effect.  
   
      Choose the appropriate option and then choose **Next**.  
   
@@ -79,25 +82,25 @@ search.app:
   
  If you have imported any changes that require publishing, you must publish customizations before they will be available. 
   
- Project publishers may ask you to export your existing unmanaged customizations, update their managed project using the option to overwrite customizations, and then re-import your unmanaged customizations. This will help ensure that the changes they are expecting are applied while preserving your customizations.  
+ Solution publishers may ask you to export your existing unmanaged customizations, update their managed solution using the option to overwrite customizations, and then re-import your unmanaged customizations. This will help ensure that the changes they are expecting are applied while preserving your customizations.  
   
 <a name="BKMK_ExportSolutions"></a>   
 
-## Export projects  
- We recommend that you export your unmanaged customizations periodically so that you have a backup in case anything happens. You cannot export managed projects. As mentioned above, projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in the Dynamics platform. You can either export projects from PowerApps or you can export using the classic experience. 
+## Export solutions  
+ We recommend that you export your unmanaged customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions. You can either export solutions from PowerApps or you can export using the classic experience. 
  
 ### Export from PowerApps
   
-1.  Click on **Projects** from the left navigation.   
+1.  Click on **Solutions** from the left navigation.   
   
-2.  In the list select the project you want to export and choose **Export**, then select the package type **As unmanaged** or **As managed**. This will start your export and once finished, you can download the exported file.
+2.  In the list, select the solution you want to export and choose **Export**, then select the package type **As unmanaged** or **As managed**. This will start your export and once finished, you can download the exported file.
+
+> [!div class="mx-imgBorder"]  
+> ![Export solution](media/solution-export.PNG "Export solution") 
 
 ### Export from classic experience
 
-1.  Select on **Projects** from the left navigation and then select **Switch to classic** 
-
-> [!NOTE]
-> Since projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in the Dynamics platform, you will see a list of solutions once you switch to the classic experience.  
+1.  Select on **Solutions** from the left navigation and then select **Switch to classic**  
   
 2.  In the list select the solution you want to export and choose **Export**  
   
@@ -119,8 +122,8 @@ search.app:
 
 <a name="BKMK_SettingsOptionsOnSolutionExport"></a>  
  
-## Settings options for project export  
- If you export the project from PowerApps, please disregard this section. The following table shows the options available when you export a project built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) from the classic experience:  
+## Settings options for solution export  
+ If you export the solution from PowerApps, please disregard this section. The following table shows the options available when you export a solution from the classic experience:  
   
 |Group|Setting|Description|  
 |-----------|-------------|-----------------|  
