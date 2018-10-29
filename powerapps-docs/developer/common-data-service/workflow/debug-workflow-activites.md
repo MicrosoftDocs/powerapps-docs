@@ -28,7 +28,7 @@ From the PRT you can install the Plug-in profiler solution by clicking the **Ins
 
 This solution add the capability to capture the context that is passed to your workflow activity and enables replay that you can use to debug the logic in your code locally using Visual Studio.
 
-When the **Plug-in profiler** is installed for your CDS for Apps instance, you will see it at the bottom of the list of **Registered Plugins & Custom Workflow Activities**.
+When the **Plug-in profiler** is installed for your CDS for Apps instance, you will see it in the PRT at the bottom of the list of **Registered Plugins & Custom Workflow Activities**.
 
 ![Plug-in Profiler in the Plug-in Registration Tool](media/Plug-in-Profiler.png)
 
@@ -139,7 +139,7 @@ This will delete the copy of the workflow that was made.
 1. Click **Attach** to attach your Visual Studio debugger to the PRT application that will run the process replay.
 1. In the PRT **Replay Plug-in Execution** dialog, click the **Start Execution** button.
 
-You should now be able to step through your code and debug your workflow activity using Visual studio.
+You should now be able to step through your code and debug your workflow activity using Visual Studio.
 
 
 
