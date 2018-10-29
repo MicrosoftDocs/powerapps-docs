@@ -13,7 +13,7 @@ search.app:
   - PowerApps
 ---
 # Show or hide content from assistive technologies for canvas apps in PowerApps
-Typically, content should be accessible to all users. However, in a minority of cases, it might be useful to show content to sighted users only or to screen reader users only. For example, descriptions of chart trends that can be easily inferred visually should be shown to screen reader users only. Yet another example is when an icon is described by an adjacent visible label. The icon can be hidden from screen reader users because having another description on the icon would be unnecessarily verbose.
+Typically, content should be accessible to all users. However, in a minority of cases, it might be useful to show content to sighted users only or to screen reader users only. For example, descriptions of chart trends that can be discerned visually should be hidden from sighted users. Yet another example is when an icon is described by an adjacent visible label. The icon can be hidden from screen reader users because having another description on the icon would be unnecessarily verbose.
 
 ## Hide content for all users
 * Set **[Visible](controls/properties-core.md)** to false.
@@ -24,10 +24,10 @@ Use any of the following techniques
 * Set **[Width](controls/properties-size-location.md)** and **[Height](controls/properties-size-location.md)** to 1.
 * Set **[X](controls/properties-size-location.md)** and/or **[Y](controls/properties-size-location.md)** such that the control is outside the screen.
 * Set **[Color](controls/properties-color-border.md)** and related properties to transparent.
-* Position a rectangle **[Shape](controls/control-shapes-icons.md)** above the content. Set a **[Fill](controls/properties-color-border.md)** with the same color as the background color of the screen.
+* Position a rectangle **[Shape](controls/control-shapes-icons.md)** above the content. Set **[Fill](controls/properties-color-border.md)** to the same color as the background color of the screen.
 
 > [!NOTE]
-> Interactive controls, like Buttons, that are hidden with one of the techniques above are still keyboard accessible. Set **[TabIndex](controls/properties-accessibility.md)** to -1 if you want to prevent the control from being reached by the TAB key.
+> Interactive controls like **[Buttons](controls/control-button.md)** that are hidden with one of the techniques above are still keyboard accessible. Set **[TabIndex](controls/properties-accessibility.md)** to -1 if you want to prevent the control from being reached by the TAB key.
 
 ## Hide content for screen reader users and show it to sighted users
 * For **[Image](controls/control-image.md)**, **[Icon](controls/control-shapes-icons.md)**, and **[Shape](controls/control-shapes-icons.md)** controls, set **[AccessibleLabel](controls/properties-accessibility.md)** to the empty string "".

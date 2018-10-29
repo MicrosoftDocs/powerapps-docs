@@ -24,6 +24,7 @@ Configuration of properties that aid alternative ways of interacting with contro
 * When set to **Off**, changes are not announced to screen readers.
 * When set to **Polite**, dynamic changes are announced when the screen reader has finished speaking.
 * When set to **Assertive**, dynamic changes are immediately announced, interrupting any current utterances of the screen reader.
+
 Learn how to [announce dynamic changes with live regions](../accessible-apps-live-regions.md).
 
 **TabIndex** –  Keyboard navigation order in relation to other controls.

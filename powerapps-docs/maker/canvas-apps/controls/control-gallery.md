@@ -52,7 +52,7 @@ Predefined Gallery templates for showing images, text as well as a gallery with 
 
 **NavigationStep** – How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
 
-**Selectable** – Whether gallery items can be selected. When set to **true**, clicking anywhere in an item with mouse or touch input selects it. In addition, the gallery will appear as a selectable list to screen readers. When set to false, clicking on a gallery item will not select it. The gallery will appear as a regular list to screen readers.
+**Selectable** – Whether gallery items can be selected. When set to **true**, clicking anywhere in an item with mouse or touch input selects it. In addition, the gallery will appear as a selectable list to screen readers. When set to **false**, clicking on a gallery item will not select it. The gallery will appear as a regular list to screen readers.
 
 **ShowNavigation** – Whether an arrow appears at each end of a gallery so that a user can scroll through the items in the gallery by clicking or tapping an arrow.
 
