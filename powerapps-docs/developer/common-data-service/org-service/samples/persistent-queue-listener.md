@@ -1,6 +1,6 @@
 ---
-title: "Sample: <Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Persistent queue listener (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to write a Azure Service Bus listener application for a persistent queue endpoint contract." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -13,3 +13,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 # Sample: Persistent queue listener
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-persistent-queue-listener -->
+
+This sample shows how to write a Azure Service Bus listener application for a persistent queue endpoint contract. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PersistentQueueListener).
+
+The listener waits for a message to be posted to the service bus and to be available in the endpoint queue. When a message is available in the queue, the listener reads the message, prints the execution context contained in the message to the console, and deletes the message from the queue.
