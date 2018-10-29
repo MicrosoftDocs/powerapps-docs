@@ -1,8 +1,8 @@
 ---
-title: "Use the default project to customize with PowerApps | MicrosoftDocs"
-description: "Learn how to customize the default project"
+title: "Use the default solution to customize with PowerApps | MicrosoftDocs"
+description: "Learn how to customize the default solution"
 ms.custom: ""
-ms.date: 10/17/2018
+ms.date: 10/29/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -25,25 +25,22 @@ search.app:
 ---
 
 # Use the Common Data Services Default Solution  
-
-> [!NOTE]
->  Projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in Dynamics 365 for Customer Engagement. When using this functionality in PowerApps, you’ll see it described as a ‘project'. When using this functionality in Dynamics 365 for Customer Engagement, you'll see it described as a 'solution'. 
   
- All PowerApps environments include the following projects.
--	Common Data Services Default Solution. This is a base project that is available for makers to use by default to for their customizations in an environment.
--	Default Solution. This is a special project that contains all customizations from all projects in an environment. 
--	Base Custom Controls Core. This project includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. 
+ All PowerApps environments include the following solutions.
+-	**Common Data Services Default Solution** - This is a base solution that is available for makers to use by default for their customizations in an environment.
+-	**Default Solution** - This is a special solution that contains all customizations from all solutions in an environment. 
+-	**Base Custom Controls Core** - This solution includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. 
 
-Notice that if you have installed or imported other applications or projects, additional projects may be available in the projects list. 
+Notice that if you have installed or imported other applications or solutions, additional solutions may be available in the solutions list. 
 
-By default,  when you build or customize a model-driven app, you work with the project called Common Data Services Default Solution. You can open the Common Data Services Default Solution to view and edit the components that are contained in it. To do this, follow these steps.
+By default,  when you build or customize a model-driven app, you work with the solution called Common Data Services Default Solution. You can open the Common Data Services Default Solution to view and edit the components that are contained in it. To do this, follow these steps.
  
-1.  On the left navigation pane select **Projects**.
+1.  On the left navigation pane select **Solutions**.
 
-2.  In the list of projects, select **Common Data Services Default Solution**.
+2.  In the list of solutions, select **Common Data Services Default Solution**.
   
 > [!TIP]
->  If you plan to distribute the applications your make, consider changing the publisher customization prefix. More information: [Project publisher prefix](change-solution-publisher-prefix.md).  
+>  If you plan to distribute the applications your make, consider changing the publisher customization prefix. More information: [Solution publisher prefix](change-solution-publisher-prefix.md).  
   
 <a name="BKMK_PrivacyNotice"></a>   
 
