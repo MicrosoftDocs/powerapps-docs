@@ -2,7 +2,7 @@
 title: "Walkthrough: Configure Microsoft Azure (SAS) for integration (Common Data Service for Apps) | Microsoft Docs"
 description: "The walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Common Data Service for Apps messages posted to the Azure Service Bus."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/29/2018
 ms.service:
   - "powerapps"
 ms.custom:
