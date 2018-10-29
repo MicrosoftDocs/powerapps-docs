@@ -20,6 +20,12 @@ Configuration of properties that aid alternative ways of interacting with contro
 ### Properties
 **AccessibleLabel** – Label for screen readers. An empty value for Image, Icon and Shape controls will make the controls invisible to the screen reader and treated as decorations.
 
+**Live** – How changes to content should be announced to screen readers. Only available in **[Label](control-text-box.md)** control.
+* When set to **Off**, changes are not announced to screen readers.
+* When set to **Polite**, dynamic changes are announced when the screen reader has finished speaking.
+* When set to **Assertive**, dynamic changes are immediately announced, interrupting any current utterances of the screen reader.
+Learn how to [announce dynamic changes with live regions](../accessible-apps-live-regions.md).
+
 **TabIndex** –  Keyboard navigation order in relation to other controls.
 
 Default value of zero specifies default tab order, based on control's XY coordinate.  Setting a value higher than zero will move the control's tab order ahead of all controls with the default values.  A control with TabIndex value of 2 will precede one with TabIndex of 3 or higher when tabbed.

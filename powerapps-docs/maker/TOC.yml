@@ -542,6 +542,10 @@
             href: ./canvas-apps/accessibility-checker.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
+          - name: Show or hide content from assistive technologies
+            href: ./canvas-apps/accessible-apps-content-visibility.md
+          - name: Announce dynamic changes with live regions
+            href: ./canvas-apps/accessible-apps-live-regions.md
       - name: Experimental and preview features
         href: ./canvas-apps/working-with-experimental.md
   - name: Save and publish an app
