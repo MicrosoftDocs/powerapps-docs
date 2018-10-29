@@ -17,7 +17,7 @@ search.app:
 
 # Use solution checker to validate your apps in PowerApps
 
-Solution checker is a Microsoft solution that helps app makers follow best practices when customizing and extending solutions that use the Common Data Service (CDS) for Apps platform. Using best practice rulesets for solution development, solution checker analyzes a solutions’ components within an environment, and generates a report of potential issues or violations. 
+Solution checker is a Microsoft solution that helps app makers follow best practices when customizing and extending solutions that use the Common Data Service (CDS) for Apps platform. Using best practice rulesets for solution development, solution checker analyzes a solutions’ components within an environment and generates a report of potential issues or violations. 
 
 The solution checker analyzes these solution components. 
 - CDS for Apps plug-ins
@@ -36,11 +36,11 @@ When you install the solution checker these solution specific components are cre
    - Analysis Result
 - System job: A system job is created so admins can remove solution analysis data from the environment. The jobs contain a configuration value, currently set to 60 days, which can be overridden by an administrator. 
    - Analysis results cleanup job  
-- User Principle: A user is created automatically that allows the solution checker to authenticate with your CDS for Apps environment. The user is required to export the solution for analysis, and the subsequent storing of the analysis results to the solution checker entities in your environment. The solution checker user is an application user and does not consume a license.
+- User principle: A user is created automatically that allows the solution checker to authenticate with your CDS for Apps environment. The user is required to export the solution for analysis, and the subsequent storing of the analysis results to the solution checker entities in your environment. The solution checker user is an application user and does not consume a license.
 
 
 ## Run the solution checker
-After you have installed the solution checker in your environment, the solution checker menu will be made available in the **Solutions** area in the PowerApps portal. 
+After you have installed the solution checker in your environment, the solution checker menu will be made available in the **Solutions** area of PowerApps. 
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. Select **Solutions**, and then select the unmanaged solution that you want to analyze.
@@ -90,52 +90,51 @@ When a check is completed, the analysis report will be available for download in
 
 ## Best practice rules used by solution checker
 
-|Column1  |Column2  |
+|Solution component  |Rule description |
 |---------|---------|
-|Row1     |         |
-|Row2     |         |
-|Row3     |         |
-|Row4     |         |
-|Row5     |         |
-|Row6     |         |
-|Row7     |         |
-|Row8     |         |
-|Row9     |         |
-|Row10     |         |
-|Row11     |         |
-|Row12     |         |
-|Row13     |         |
-|Row14     |         |
-|Row15     |         |
-|Row16     |         |
-|Row17     |         |
-|Row18     |         |
-|Row19     |         |
-|Row20     |         |
-|Row21     |         |
-|Row22     |         |
-|Row23     |         |
-|Row24     |         |
-|Row25     |         |
-|Row26     |         |
-|Row27     |         |
-|Row28     |         |
-|Row29     |         |
-|Row30     |         |
-|Row31     |         |
-|Row32     |         |
-|Row33     |         |
-|Row34     |         |
-|Row35     |         |
-|Row36     |         |
-|Row37     |         |
-|Row38     |         |
-|Row39     |         |
-|Row40     |         |
-|Row41     |         |
-|Row42     |         |
-|Row43     |         |
-|Row44     |         |
+|Plug-in or workflow activity     | Avoid selecting all columns via Dynamics 365 for Customer Engagement query APIs.        |
+|Plug-in or workflow activity     | Improve Microsoft Dynamics 365 for Customer Engagement service channel allocation performance.       |
+|Plug-in or workflow activity     | Set KeepAlive to false when interacting with external hosts in a Dynamics 365 for Customer Engagement plug-in.        |
+|Plug-in or workflow activity     | Avoid retrieving unpublished Dynamics 365 for Customer Engagement metadata.        |
+|Plug-in or workflow activity     | Avoid using batch request types in Dynamics 365 Customer Engagement plug-ins and workflow activities.       |
+|Plug-in or workflow activity     | Use InvalidPluginExecutionException in Dynamics 365 for Customer Engagement plug-ins and workflow activities.        |
+|Plug-in or workflow activity     | Use ITracingService in Dynamics 365 for Customer Engagement plug-ins.        |
+|Plug-in or workflow activity     | Don't implement Microsoft Dynamics CRM 4.0 plug-ins.        |
+|Plug-in or workflow activity     | Don't implement Microsoft Dynamics CRM 4.0 workflow activities.        |
+|Plug-in or workflow activity     | Don't reference Microsoft Dynamics CRM 4.0 SDK assemblies.        |
+|Plug-in or workflow activity     | Don't target .NET CLR version 2.0.50727.        |
+|Plug-in or workflow activity     | Don't use Microsoft Dynamics CRM 2011 deprecated messages.       |
+|Plug-in or workflow activity     | Don't use specialized update operation requests in Dynamics 365 for Customer Engagement.       |
+|SDK message step     | Configuration issue. Avoid duplicate Dynamics 365 for Customer Engagement plug-in registrations.        |
+|SDK message step     | Configuration issue. Correct or remove invalid Dynamics 365 for Customer Engagement form event registrations.        |
+|SDK message step     | Configuration issue. Include filtering attributes with Dynamics 365 for Customer Engagement plugin registrations.       |
+|SDK message step     | Configuration issue. Use caution with Dynamics 365 for Customer Engagement plug-ins registered for Retrieve and RetrieveMultiple messages.     |
+|SDK message step     | Configuration issue. Remove inactive configurations in Dynamics 365 for Customer Engagement.        |
+|SDK message step     | Configuration issue. Correct or remove orphaned Dynamics 365 for Customer Engagement form event registrations.        |
+|SDK message step     | Don't use Microsoft Dynamics CRM 4.0 plug-in registration stage.        |
+|Web Resources     | JavaScript issue. Don't directly access the HTML Document Object Model (DOM) of Dynamics 365 for Customer Engagement application pages and entity forms.       |
+|Web Resources     | JavaScript issue. Don't directly handle HTML Document Object Model (DOM) events for Dynamics 365 Customer Engagement application pages and entity forms.      |
+|Web Resources     | JavaScript issue. Don't use unpublished object model members or components of Dynamics 365 for Customer Engagement        |
+|Web Resources     | JavaScript issue. Avoid using modal dialogs.        |
+|Web Resources     | JavaScript issue. Don't assume that the parent window is the Dynamics 365 for Customer Engagement form.       |
+|Web Resources     | JavaScript issue. Don't target the Microsoft Dynamics CRM 2011 OData 2.0 endpoint.      |
+|Web Resources     | JavaScript issue. Don't target the Microsoft Dynamics CRM 2011 SOAP services.     |
+|Web Resources     | JavaScript issue. Don't target the Microsoft Dynamics CRM 4.0 web services        |
+|Web Resources     | JavaScript issue. Don't use Internet Explorer legacy APIs or browser plug-ins.        |
+|Web Resources     | JavaScript issue. Don't use the deprecated Microsoft Dynamics CRM 2011 object model.       |
+|Web Resources     | JavaScript issue. Don't use the deprecated Microsoft Dynamics CRM 4.0 object model.        |
+|Web Resources     | HTML issue. Dynamics 365 for Customer Engagement web resource URL is invalid.      |
+|Web Resources     | JavaScript issue. Do not use absolute Dynamics 365 for Customer Engagement endpoint URLs.        |
+|Web Resources     | JavaScript issue. Dynamics 365 for Customer Engagement web resource URL is invalid.        |
+|Web Resources     | JavaScript issue. Prefer Xrm.Utility dialogs in Dynamics 365 for Customer Engagement form and ribbon commands.       |
+|Web Resources     | Interact with HTTP and HTTPS resources asynchronously.        |
+|Web Resources     | Avoid using window.top.        |
+|Web Resources     | Use client contexts.        |
+|Web Resources     | Use dialog API parameters.       |
+|Web Resources     | Use organization settings.        |
+|Web Resources     | Use the grid APIs.        |
+|Web Resources     | Replace Xrm.Utility.isActivityType method with new Xrm.Utility.getEntityMetadata, and do not use in ribbon rules.        |
+|Web Resources     | Silverlight web resource usage is deprecated.        |
 
 
 ## See also
