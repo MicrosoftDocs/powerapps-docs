@@ -1,8 +1,8 @@
 ---
-title: "Walkthrough: Configure Microsoft Azure (SAS) for integration with Dynamics 365 (Common Data Service for Apps) | Microsoft Docs"
-description: "The walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Dynamics 365 Customer Engagement messages posted to the Azure Service Bus."
+title: "Walkthrough: Configure Microsoft Azure (SAS) for integration (Common Data Service for Apps) | Microsoft Docs"
+description: "The walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Common Data Service for Apps messages posted to the Azure Service Bus."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/29/2018
 ms.service:
   - "powerapps"
 ms.custom:
@@ -15,14 +15,14 @@ manager: ryjones # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 ---
 
-# Tutorial: Configure Azure (SAS) for integration with Customer Engagement
+# Tutorial: Configure Azure (SAS) for integration with Common Data Service for Apps
 
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-configure-azure-sas-integration -->
 
-This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the Dynamics 365 Common Data Service for Apps messages posted to the Azure Service Bus.  
+This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the CDS for Apps messages posted to the Azure Service Bus.  
   
 > [!NOTE]
->  This walkthrough applies to any Common Data Service for Apps deployment when using SAS authorization for  Dynamics 365-Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/).  
+>  This walkthrough applies to any Common Data Service for Apps deployment when using SAS authorization for Azure messaging. For more information about Azure Service Bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/).  
 >   
 > You must use the Plug-in Registration Tool. To download the plug-in registration tool, see [Download tools from NuGet](download-tools-NuGet.md).
   
@@ -41,12 +41,13 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
   
  Refer to the [Create a Service Bus namespace using the Azure portal](/azure/service-bus-messaging/service-bus-create-namespace-portal) for instructions on how to create a Service Bus namespace and messaging entity.  
   
-## Create a service endpoint  
- A [ServiceEndpoint Entity ](reference/entities/serviceendpoint.md) contains configuration data that is required for external messaging with a Azure Service Bus solution endpoint. By using the Plug-in Registration Tool, you can easily create a service endpoint entity in a Dynamics 365 organization and configure  the service bus endpoint issuer, scope, and rules. D:\GitHub\power-apps\powerapps-docs-pr\powerapps-docs\developer\common-data-service\reference\entities\serviceendpoint.md
+## Create a service endpoint
+
+A [ServiceEndpoint Entity ](reference/entities/serviceendpoint.md) contains configuration data that is required for external messaging with a Azure Service Bus solution endpoint. By using the Plug-in Registration Tool, you can easily create a service endpoint entity in a CDS for Apps organization and configure  the service bus endpoint issuer, scope, and rules. D:\GitHub\power-apps\powerapps-docs-pr\powerapps-docs\developer\common-data-service\reference\entities\serviceendpoint.md
   
 ### Register a Service Endpoint  
   
-1.  Run the Plug-in Registration Tool and log into your target Dynamics 365 organization.  
+1.  Run the Plug-in Registration Tool and log into your target CDS for Apps organization.  
   
 2.  Select **Register > Register New Service Endpoint**.  
   
@@ -70,6 +71,5 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
   
 ### See also
 
-[Azure integration for Dynamics 365](azure-integration.md)
-
+[Azure Integration](azure-integration.md)<br />
 [Azure Service Bus](/azure/service-bus-messaging/service-bus-fundamentals-hybrid-solutions.md)
