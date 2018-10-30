@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # LINQ query examples using OrganizationServiceContext with Common Data Service for Apps
 
-This topic contains many samples of LINQ queries. For the full sample, see [Sample: Complex LINQ Queries](sample-complex-linq-queries.md).  
+This topic contains many code samples of LINQ queries.  
   
 <a name="SimpleWhereClause"></a>   
 ## Simple Where clause  
