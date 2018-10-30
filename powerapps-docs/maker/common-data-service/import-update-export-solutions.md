@@ -29,12 +29,12 @@ search.app:
   
 1.  Select **Solutions** from the left navigation.  
   
-2.  In the solutions list menu, choose **Import**.  
+2.  In the solutions list menu, select **Import**.  
 
 > [!div class="mx-imgBorder"]  
 > ![Import solution](media/solution-import.PNG "Import solution") 
   
-3.  In the **Import Solution** dialog, **Select Solution Package** step select **Choose file** and browse to the compressed (.zip or .cab) file that contains the solution you want to import. 
+3.  In the **Import Solution** dialog **Select Solution Package** step, select **Choose file** and browse to the compressed (.zip or .cab) file that contains the solution you want to import. 
   
 4.  Select **Next**.  
   
@@ -60,7 +60,7 @@ search.app:
   
 2.  In the solutions list menu select **Import**.  
   
-3.  In the **Import Solution** dialog, **Select Solution Package** step select **Choose file** and browse to the compressed (.zip or .cab) file that contains the solution you want to update.
+3.  In the **Import Solution** dialog **Select Solution Package** step, select **Choose file** and browse to the compressed (.zip or .cab) file that contains the solution you want to update.
 
 4.  Select **Next**.  
   
@@ -80,7 +80,7 @@ search.app:
   
 7.  You may need to wait a few moments while the import completes. View the results and then select **Close**.  
   
- If you have imported any changes that require publishing, you must publish customizations before they will be available. 
+ If you have imported any changes that require publishing, you must publish customizations before they are available. 
   
  Solution publishers may ask you to export your existing unmanaged customizations, update their managed solution using the option to overwrite customizations, and then re-import your unmanaged customizations. This will help ensure that the changes they are expecting are applied while preserving your customizations.  
   
@@ -100,7 +100,7 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Export solution](media/solution-export.PNG "Export solution") 
 
-### Export from classic experience
+### Export from the classic experience
 
 1.  Select **Solutions** from the left navigation and then select **Switch to classic**. 
   
@@ -116,7 +116,7 @@ search.app:
   
 6.  In the **Package Type** step, you must choose whether to export the solution as an **Unmanaged** or **Managed** solution.  
   
-7.  The next step allows you to choose a target solution for a specific Dynamics 365 version. This option is typically used by ISVs who may want to export a solution that is compliant with a previous version. Unless you intend to import this solution into an environment that is not upgraded to the same version as the environment version you are using, accept the default.   
+7.  The next step allows you to choose a target solution for a specific Dynamics 365 for Customer Engagement version. This option is typically used by ISVs who may want to export a solution that is compliant with a previous version. Unless you intend to import this solution into an environment that is not upgraded to the same version as the environment version you are using, accept the default.   
   
 8.  Select **Export** to download the solution file.  
   
@@ -137,7 +137,7 @@ search.app:
 |Order Prefix|Prefix to use for all orders throughout the app.|  
 |Unique String Length|Number of characters appended to invoice, quote, and order numbers.|  
 |Calendar|Calendar Type|Calendar type for the system. Set to Gregorian US by default|  
-|Date Format Code|Information about how the date is displayed throughout Dynamics 365.|  
+|Date Format Code|Information about how the date is displayed throughout Dynamics 365 for Customer Engagement|  
 |Date Separator|Character used to separate the month, the day, and the year in dates throughout the app.|  
 |Max Appointment Duration|Maximum number of days an appointment can last.|  
 |Show Week Number|Information that specifies whether to display the week number in calendar displays throughout the app.|  
