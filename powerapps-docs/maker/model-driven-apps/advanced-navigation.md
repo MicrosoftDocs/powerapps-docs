@@ -35,7 +35,7 @@ The solutions area is where you can view, edit, create, import, export, and dele
 2.	On the left navigation pane select **Solutions**. 
 
 ## Solution explorer
-Use solution explorer to perform app making and customization tasks that can’t be completed from PowerApps home page.
+Use solution explorer to perform app making and customization tasks that can’t be completed from the PowerApps home page.
 
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.	On the left navigation pane select **Solutions**.  
