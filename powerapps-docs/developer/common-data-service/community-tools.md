@@ -28,7 +28,3 @@ The following is a selected list of community tools distributed via the XrmToolB
 
 > [!NOTE]
 > Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
-
-### See also 
-
-[Community Tools for  Organization service](org-service/community-tools.md)

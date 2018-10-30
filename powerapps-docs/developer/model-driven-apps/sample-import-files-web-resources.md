@@ -12,11 +12,9 @@ manager: "shilpas" # MSFT alias of manager or PM counterpart
 ---
 # Sample: Import files as web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-import-files-web-resources -->
-
 When you develop a large number of files to use as Web resources you can save yourself the work of manually adding them through the application. Many Web resources can be developed and tested outside of Model-driven apps and then imported.  
   
- This sample provides a simplified example of this process. For a more complex sample that provides a WPF application you can use to import Web resources, see the [Sample: Web Resource Utility](sample-web-resource-utility.md).  
+ This sample provides a simplified example of this process.  
  
  Download the sample: [Import files as web resources](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportWebResources). 
 
@@ -155,6 +153,5 @@ foreach (var webResource in webResources)
   It is not necessary to publish Web resources when they are created. It is necessary to publish them when they are updated.  
   
 ### See also  
- [Sample: Web Resource Utility](sample-web-resource-utility.md)<br/>
  [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br/>
  [Web Resources](web-resources.md)

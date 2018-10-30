@@ -152,6 +152,5 @@ https://MyOrganization.crm.dynamics.com/WebResources/new_/test/test.htm
  [Style Sheet (CSS) Web Resources](css-web-resources.md)<br />
  [WebResource Entity Reference](../common-data-service/reference/entities/webresource.md)<br />
  [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
- [Sample: Web Resource Utility](sample-web-resource-utility.md)<br />
  [Sample: Importing Files as Web Resources](sample-import-files-web-resources.md)<br />
  [Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)

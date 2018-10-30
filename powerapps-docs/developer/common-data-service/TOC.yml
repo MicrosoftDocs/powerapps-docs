@@ -199,7 +199,6 @@
   - name: Feedback entity
     href: use-feedback-entity-manage-feedback-ratings-records.md
   - name: Security entities
-  # See notes within this topic
     href: security-model.md 
     items:
     - name: User and team entities
@@ -282,7 +281,6 @@
     - name: Create solutions that support multiple languages
       href: create-solutions-support-multiple-languages.md
     - name: How to manage solutions
-      href: how-manage-solutions.md
       items:
       - name: Create, export, or import an unmanaged solution
         href: create-export-import-unmanaged-solution.md
@@ -334,12 +332,6 @@
       href: authenticate-dot-net-framework.md
     - name: Use OAuth
       href: authenticate-oauth.md
-    # - name: Integration with Office 365
-    #   href: online-integration-office-365.md
-    # - name: Connect with Microsoft Office 365
-    #   href: connect-microsoft-office-365.md
-    # - name: Connect using OAuth
-    #   href: connect-web-services-using-oauth.md
   - name: "Tutorial: Register an app with Azure Active Directory"
     href: walkthrough-register-app-azure-active-directory.md      
   - name: Build web applications using Server-to-Server (S2S) authentication
@@ -404,5 +396,3 @@
     href: solution-component-file-reference-solutionpackager.md
   - name: FetchXML schema
     href: fetchxml-schema.md
-
-  
