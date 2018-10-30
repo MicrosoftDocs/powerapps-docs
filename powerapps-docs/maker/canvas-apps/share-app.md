@@ -37,7 +37,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. Select the app that you want to share by clicking or tapping its icon.
 
-    ![Select an apps](./media/share-app/select-app.png)
+    ![Select an app](./media/share-app/select-app.png)
 
 1. In the banner, select **Share**.
 
@@ -45,12 +45,17 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. Specify by name or alias the users or security groups in Azure Active Directory with which you want to share the app.
 
-    You can also share the app with your entire organization so that they can run the app, but they won't be able to modify or share it.
+    To allow your entire organization to run the app (but not modify or share it), specify **Everyone** in the sharing panel.
 
     > [!NOTE]
     > You can't share an app with a distribution group in your organization or with a user or group outside your organization.
 
+    ![Specify users and co-owners](./media/share-app/share-everyone.png)
+
 1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
+
+> [!NOTE]
+> Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
 
 1. If your app connects to data for which users need access permissions, specify them.
 
@@ -69,7 +74,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
     If you sent an email invitation, everyone with whom you shared the app can run it by clicking or tapping a link in the invitation.
 
     - If a user clicks or taps the link on a mobile device, the app opens in PowerApps Mobile.
-    - If a user clicks or taps the link on a desktop computer, the app opens in a browser. 
+    - If a user clicks or taps the link on a desktop computer, the app opens in a browser.
 
     Co-owners who receive an invitation get another link that opens the app for editing in PowerApps Studio.
 
@@ -89,19 +94,16 @@ You can change permissions for a user or a security group by clicking or tapping
 
 If you create an app based on Common Data Service (CDS) for Apps, you must also ensure that the users who will run it have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and/or deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to use your apps. You can then assign that role or roles to users as appropriate.
 
+> [!NOTE]
+> As of this writing, you must assign security roles to individual users, not to security groups.
+
 #### Prerequisite
 
 To perform the next two procedures, you must have **System administrator** permissions for a CDS for Apps database.
 
 #### Create a security role
 
-1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and make sure that you're in the same environment as the app that you want to share.
-
-1. In the upper-right corner, select the gear icon, and then select **Advanced customizations**.
-
-    ![Open the Advanced customizations pane](media/share-app/advanced-customizations.png)
-
-1. Select the **Security roles** link.
+1. In the sharing panel, select **Set permissions** under **Data permissions**, and then select the **Security Roles** link.
 
     ![Open security roles](media/share-app/security-roles.png)
 
@@ -111,7 +113,7 @@ To perform the next two procedures, you must have **System administrator** permi
 
 1. Select one or more tabs to find the entity or entities that your app uses, and then select the permissions that you want to grant the security role.
 
-    For example, this graphic shows that a security role can create, read, write, and delete records in the Account entity, which appears on the **Core records** tab.
+    For example, this graphic shows that the **Core records** tab contains the **Accounts** entity, and users to which this security role has been assigned can create, read, write, and delete records in that entity.
 
     ![Specify permissions](media/share-app/grant-access.png)
 
@@ -119,7 +121,7 @@ To perform the next two procedures, you must have **System administrator** permi
 
 #### Assign a user to a role
 
-1. Open the **Advanced customizations** pane as the previous procedure describes, and then select the **Users** link.
+1. In the sharing panel, select **Set permissions** under **Data permissions**, and then select the **Users** link.
 
     ![Users link](media/share-app/open-users.png)
 
@@ -131,10 +133,10 @@ To perform the next two procedures, you must have **System administrator** permi
 
 1. In the top banner, select **Manage roles**.
 
-1. In the dialog box that appears, select the check boxes for **Common Data Service User** and the role users need for your app, and then select **OK.**
+1. In the dialog box that appears, select the check boxes for **Common Data Service User** and the role that the user needs for your app, and then select **OK.**
 
     ![Assign a user to a role](media/share-app/assign-users.png)
 
 ### Common Data Service (previous version)
 
-When you share an app that's based on an older version of the Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment admin.
+When you share an app that's based on an older version of the Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
