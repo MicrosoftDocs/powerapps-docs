@@ -6,7 +6,7 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ""
-ms.date: 05/21/2018
+ms.date: 10/30/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -28,26 +28,23 @@ search.app:
 
 This topic describes how to access advanced customization and administration areas that are available within a PowerApps environment.
 
-## Solution explorer
-Use solution explorer to perform app making and customization tasks that can’t be completed from the PowerApps model-driven home page.
-
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2.	Select ![Settings icon](media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
-3.	Under **Customize**, select **Open solution explorer**. 
-
-    > [!div class="mx-imgBorder"] 
-    > ![Solution explorer link](media/advanced-customization-menu.png)
-
 ## Solutions
-
 The solutions area is where you can view, edit, create, import, export, and delete managed and unmanaged solutions. 
 
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	On the left navigation pane select **Solutions**. 
 
-## My Apps
+## Solution explorer
+Use solution explorer to perform app making and customization tasks that can’t be completed from PowerApps home page.
 
-Like the PowerApps model-driven area, the My Apps page lists all model-driven apps in your environment. In addition to launching an app, from My Apps you can also assign security roles to it. 
+1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+2.	On the left navigation pane select **Solutions**.  
+3.	Select **Switch to classic** on the toolbar to open solution explorer. 
+
+    Notice that the **Switch to classic** command isn't available when you select a solution in the list.
+
+## My Apps
+Similar to the **Apps** area of PowerApps, the My Apps page lists all model-driven and canvas apps that you have privileges to in your environment. In addition to launching an app, from My Apps you can also assign security roles to it. 
 
 To get to My Apps:
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
@@ -59,8 +56,7 @@ To get to My Apps:
 4. Then follow these steps: [Add security roles to the app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app#add-security-roles-to-the-app)
  
 ## Settings
-
-Use the settings area to manage solutions, configure environment settings, activate or deactivate processes, and more. 
+Use the settings area to configure environment settings, activate or deactivate processes, and more. 
 
 First, see if the setting you need is in the ![Settings icon](media/powerapps-gear.png)  > **Advanced customizations** menu.
 
@@ -71,6 +67,6 @@ To find settings not availabe from **Advanced customizations**:
     > [!div class="mx-imgBorder"] 
     > ![Open environment](media/open-environment.png)
 
-## Next steps
-
+## See also
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)
+[Create or edit apps in PowerApps Studio for web](../canvas-apps/create-app-browser.md)
