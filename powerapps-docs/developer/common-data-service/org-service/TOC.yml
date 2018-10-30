@@ -116,7 +116,3 @@
     href: web-service-error-codes.md 
 - name: Samples
   href: samples/toc.yml
-- name: Resources
-  items:
-  - name: Community Tools
-    href: community-tools.md

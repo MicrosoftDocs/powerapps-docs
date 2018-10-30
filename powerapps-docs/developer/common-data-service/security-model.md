@@ -1,6 +1,6 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Security Model (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "PowerApps provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
@@ -12,23 +12,24 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Security Model
 
-<!-- Since much of the security information is being moved to the admin guide, this should be just the key parts that developers need to understand
+PowerApps provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration. The goals of the model are as follows:
+- Provide users with the access only to the appropriate levels of information that is required to do their jobs.
+- Categorize users by role and restrict access based on those roles.
+- Support data sharing so that users and teams can be granted access to records that they do not own for a specified collaborative effort.
+- Prevent a user's access to records the user does not own or share.
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/security-dev/security-model 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/security-dev/how-role-based-security-control-access-entities
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/security-dev/use-record-based-security-control-access-records
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/security-dev/use-field-security-control-access-field-values
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/security-dev/hierarchical-security-control-access-entities
+**Role-based security** focuses on grouping a set of privileges together that describe the responsibilities (or tasks that can be performed) for a user. PowerApps includes a set of predefined security roles. Each aggregates a set of user rights to make user security management easier. Also, each application deployment can define its own roles to meet the needs of different users. Security roles are associated with a [business unit](businessunit-entity.md).
 
-For developers, the story is that their queries run in the context of a user.
-The queries will only return records that the user is entitled to read.
-Users will only be able to perform operations based on the user's privileges.
- - They can either check whether the user can perform the operation first, commonly by using a ribbon command to enable or disable
-     - We should highlight the use of RetrievePrincipalAccessRequest to determine what actions that a user can perform
-     - Or use RetrieveUserPrivilegesRequest to check what privileges the user has
-         - See https://www.crmanswers.net/2014/09/check-if-user-has-specific-privilege.html
- - Or they can catch an error after it occurs
- - They can also use methods to Grant, Modify, and Revoke access.
- - They need to understand that fields may be secured and what to expect.
+**Record-based security** focuses on access rights to specific records.
 
--->
+**Field-level security** restricts access to specific high business impact fields in an entity only to specified users or teams.
+Combine role-based security, record-level security, and field-level security to define the overall security rights that users have within your custom Dynamics 365 application.
+
+As a developer, you should know that your queries run in the context of a user, and will only return records that the user is entitled to read.
+Further, yoo will only be able to perform operations based on the privileges assigned to your user account through the security roles.
+
+For detailed information about the security concepts, see [Security concepts](/dynamics365/customer-engagement/admin/security-concepts)
+
+### See also
+
+[BusinessUnit entity](businessunit-entity.md)
