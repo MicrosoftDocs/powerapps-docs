@@ -92,10 +92,10 @@ You can change permissions for a user or a security group by clicking or tapping
 
 ### Common Data Service for Apps
 
-If you create an app based on Common Data Service (CDS) for Apps, you must also ensure that the users who will run it have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and/or deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to use your apps. You can then assign that role or roles to users as appropriate.
+If you create an app based on CDS for Apps, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
 
 > [!NOTE]
-> As of this writing, you must assign security roles to individual users, not to security groups.
+> As of this writing, you can assign security roles to individual users but not to security groups.
 
 #### Prerequisite
 
