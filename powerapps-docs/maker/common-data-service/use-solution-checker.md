@@ -75,7 +75,7 @@ When a solution check is completed, the analysis report becomes available for do
 2. Next to the unmanaged solution where you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download last results**.  
 3. The solution checker zip file is downloaded to the folder specified by your web browser.
 
-Here is a summary of each column in the report.
+Here's a summary of each column in the report.
 
 |Report field |Description  |Applies to component   |
 |---------|---------|---------|
