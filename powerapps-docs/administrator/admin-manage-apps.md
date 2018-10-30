@@ -5,7 +5,7 @@ author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 10/24/2018
 ms.author: jimholtz
 search.audienceType: 
   - admin
@@ -44,7 +44,6 @@ Admins can do the following from the PowerApps Admin center:
 4. Do any of the following:
 
     * Click or tap the trash can icon to delete the app.
-    * Change the owner of the app.
     * View data connections, flows, and other details associated with the app.
     * Click or tap **Share** to view or modify the users with whom the app is shared.
 
