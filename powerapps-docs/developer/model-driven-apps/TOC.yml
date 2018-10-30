@@ -834,12 +834,8 @@
     href: sample-export-ribbon-definitions.md
   - name: Pass multiple values to a  web resource through the data parameter
     href: sample-pass-multiple-values-web-resource-through-data-parameter.md
-  - name: Create and manage web resources
-    items: 
-    - name: Import files as web resources
-      href: sample-import-files-web-resources.md
-    - name: Web resource utility
-      href: sample-web-resource-utility.md
+  - name: Import files as web resources
+    href: sample-import-files-web-resources.md
   - name: Sample charts
     href: sample-charts.md
   - name: Sample dashboards
