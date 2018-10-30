@@ -29,7 +29,7 @@ search.app:
  All PowerApps environments include the following solutions.
 -	**Common Data Services Default Solution** - This is a base solution that is available for makers to use by default for their customizations in an environment.
 -	**Default Solution** - This is a special solution that contains all customizations from all solutions in an environment. 
--	**Base Custom Controls Core** - This solution includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. 
+<!-- **Base Custom Controls Core** - This solution includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. -->
 
 Notice that if you have installed or imported other applications or solutions, additional solutions may be available in the solutions list. 
 
