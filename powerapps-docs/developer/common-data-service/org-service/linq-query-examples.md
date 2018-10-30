@@ -776,59 +776,237 @@ using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
 ## Retrieve related entity columns for 1 to N relationships  
  The following sample shows how to retrieve columns from related account and contact records.  
   
- [!code-csharp[query#linqexamples44](../../snippets/csharp/CRMV8/query/cs/linqexamples44.cs#linqexamples44)]  
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+     var query_retrieve1 = from c in svcContext.ContactSet
+                       join a in svcContext.AccountSet
+                       on c.ContactId equals a.PrimaryContactId.Id
+                       where c.ContactId != _contactId1
+                       select new { Contact = c, Account = a };
+     foreach (var c in query_retrieve1)
+    {
+          System.Console.WriteLine("Acct: " + c.Account.Name +
+           "\t\t" + "Contact: " + c.Contact.FullName);
+     }
+}
+```  
   
 <a name="BKMK_UsingValueToRetrieveTheValueOfAnAttribute"></a>   
 ## Use .value to retrieve the value of an attribute  
  The following sample shows usage of Value to access the value of an attribute.  
   
- [!code-csharp[query#linqexamples45](../../snippets/csharp/CRMV8/query/cs/linqexamples45.cs#linqexamples45)]  
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+
+     var query_value = from c in svcContext.ContactSet
+                   where c.ContactId != _contactId2
+                   select new
+                   {
+                    ContactId = c.ContactId != null ?
+                     c.ContactId.Value : Guid.Empty,
+                    NumberOfChildren = c.NumberOfChildren != null ?
+                     c.NumberOfChildren.Value : default(int),
+                    CreditOnHold = c.CreditOnHold != null ?
+                     c.CreditOnHold.Value : default(bool),
+                    Anniversary = c.Anniversary != null ?
+                     c.Anniversary.Value : default(DateTime)
+                   };
+
+     foreach (var c in query_value)
+     {
+      System.Console.WriteLine(c.ContactId + " " + c.NumberOfChildren + 
+           " " + c.CreditOnHold + " " + c.Anniversary);
+     }
+}
+```  
   
 <a name="BKMK_MultipleProjectionsNewDataTypeCastingToDifferentTypes"></a>   
 ## Multiple projections, new data type casting to different types  
  The following sample shows multiple projections and how to cast values to a different type.  
   
- [!code-csharp[query#linqexamples46](../../snippets/csharp/CRMV8/query/cs/linqexamples46.cs#linqexamples46)]  
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+     var query_projections = from c in svcContext.ContactSet
+                         where c.ContactId == _contactId1
+                         && c.NumberOfChildren != null && 
+                         c.Anniversary.Value != null
+                         select new
+                         {
+                          Contact = new Contact { 
+                           LastName = c.LastName, 
+                           NumberOfChildren = c.NumberOfChildren 
+                          },
+                          NumberOfChildren = (double)c.NumberOfChildren,
+                          Anniversary = c.Anniversary.Value.AddYears(1),
+                         };
+     foreach (var c in query_projections)
+     {
+          System.Console.WriteLine(c.Contact.LastName + " " + 
+               c.NumberOfChildren + " " + c.Anniversary);
+     }
+}
+```  
   
 <a name="BKMK_UsingTheGetAttributeValueMethod"></a>   
 ## Use the GetAttributeValue method  
  The following sample shows how to use the <xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue``1(System.String)> method.  
   
- [!code-csharp[query#linqexamples47](../../snippets/csharp/CRMV8/query/cs/linqexamples47.cs#linqexamples47)]  
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+    var query_getattrib = from c in svcContext.ContactSet
+                       where c.GetAttributeValue<Guid>("contactid") != _contactId1
+                       select new
+                       {
+                        ContactId = c.GetAttributeValue<Guid?>("contactid"),
+                        NumberOfChildren = c.GetAttributeValue<int?>("numberofchildren"),
+                        CreditOnHold = c.GetAttributeValue<bool?>("creditonhold"),
+                        Anniversary = c.GetAttributeValue<DateTime?>("anniversary"),
+                       };
+
+    foreach (var c in query_getattrib)
+    {
+        System.Console.WriteLine(c.ContactId + " " + c.NumberOfChildren + 
+            " " + c.CreditOnHold + " " + c.Anniversary);
+    }
+}
+```  
   
 <a name="mathoperators"></a>   
 ## Use Math methods  
  The following sample shows how to use various [Math](https://msdn.microsoft.com/library/system.math.aspx) methods.  
   
- [!code-csharp[query#linqexamples48](../../snippets/csharp/CRMV8/query/cs/linqexamples48.cs#linqexamples48)]  
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+    var query_math = from c in svcContext.ContactSet
+                  where c.ContactId != _contactId2
+                  && c.Address1_Latitude != null && 
+                  c.Address1_Longitude != null
+                  select new
+                  {
+                   Round = Math.Round(c.Address1_Latitude.Value),
+                   Floor = Math.Floor(c.Address1_Latitude.Value),
+                   Ceiling = Math.Ceiling(c.Address1_Latitude.Value),
+                   Abs = Math.Abs(c.Address1_Latitude.Value),
+                  };
+    foreach (var c in query_math)
+    {
+        System.Console.WriteLine(c.Round + " " + c.Floor + 
+            " " + c.Ceiling + " " + c.Abs);
+    }
+}
+```  
   
 <a name="BKMK_UsingMultipleSelectAndWhereClauses"></a>   
 ## Use Multiple Select and Where clauses  
  The following sample shows multiple select and where clauses using a method-based query syntax.  
   
- [!code-csharp[query#linqexamples49](../../snippets/csharp/CRMV8/query/cs/linqexamples49.cs#linqexamples49)]  
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+    var query_multiselect = svcContext.IncidentSet
+                        .Where(i => i.IncidentId != _incidentId1)
+                        .Select(i => i.incident_customer_accounts)
+                        .Where(a => a.AccountId != _accountId2)
+                        .Select(a => a.account_primary_contact)
+                        .OrderBy(c => c.FirstName)
+                        .Select(c => c.ContactId);
+    foreach (var c in query_multiselect)
+    {
+        System.Console.WriteLine(c.GetValueOrDefault());
+    }
+}
+```  
   
 <a name="BKMK_UsingSelectMany"></a>   
 ## Use SelectMany  
  The following sample shows how to use the [SelectMany Method](https://msdn.microsoft.com/library/system.linq.enumerable.selectmany.aspx).  
   
- [!code-csharp[query#linqexamples50](../../snippets/csharp/CRMV8/query/cs/linqexamples50.cs#linqexamples50)]  
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+    var query_selectmany = svcContext.ContactSet
+                        .Where(c => c.ContactId != _contactId2)
+                        .SelectMany(c => c.account_primary_contact)
+                        .OrderBy(a => a.Name);
+    foreach (var c in query_selectmany)
+    {
+        System.Console.WriteLine(c.AccountId + " " + c.Name);    
+    }
+}
+```
   
 <a name="BKMK_UsingStringOperations"></a>   
 ## Use string operations  
  The following sample shows how to use various String methods.  
   
- [!code-csharp[query#linqexamples51](../../snippets/csharp/CRMV8/query/cs/linqexamples51.cs#linqexamples51)] 
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+    var query_string = from c in svcContext.ContactSet
+                    where c.ContactId == _contactId2
+                    select new
+                    {
+                     IndexOf = c.FirstName.IndexOf("contact"),
+                     Insert = c.FirstName.Insert(1, "Insert"),
+                     Remove = c.FirstName.Remove(1, 1),
+                     Substring = c.FirstName.Substring(1, 1),
+                     ToUpper = c.FirstName.ToUpper(),
+                     ToLower = c.FirstName.ToLower(),
+                     TrimStart = c.FirstName.TrimStart(),
+                     TrimEnd = c.FirstName.TrimEnd(),
+                    };
+
+    foreach (var c in query_string)
+    {
+        System.Console.WriteLine(c.IndexOf + "\n" + c.Insert + "\n" + 
+            c.Remove + "\n" + c.Substring + "\n"
+            + c.ToUpper + "\n" + c.ToLower + 
+            "\n" + c.TrimStart + " " + c.TrimEnd);
+    }
+}
+```
   
 <a name="BKMK_UsingTwoWhereClauses"></a>   
 ## Use two Where clauses  
  The following sample shows how to use two Where clauses.  
   
- [!code-csharp[query#linqexamples52](../../snippets/csharp/CRMV8/query/cs/linqexamples52.cs#linqexamples52)] 
+```csharp
+using (ServiceContext svcContext = new ServiceContext(_serviceProxy))
+{
+    var query_twowhere = from a in svcContext.AccountSet
+                      join c in svcContext.ContactSet 
+                      on a.PrimaryContactId.Id equals c.ContactId
+                      where c.LastName == "Smith" && c.CreditOnHold != null
+                      where a.Name == "Contoso Ltd"
+                      orderby a.Name
+                      select a;
+    foreach (var c in query_twowhere)
+    {
+         System.Console.WriteLine(c.AccountId + " " + c.Name);
+    }
+}
+``` 
   
 <a name="BKMK_UseLoadProperty"></a>   
 ## Use LoadProperty to retrieve related records  
  The following sample shows how to [Relationship)]<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.LoadProperty(Microsoft.Xrm.Sdk.Entity,Microsoft.Xrm.Sdk.Relationship)> to access related records.  
   
- [!code-csharp[query#UseLinqQuery5](../../snippets/csharp/CRMV8/query/cs/uselinqquery5.cs#uselinqquery5)]  
+```csharp
+Contact benAndrews = svcContext.ContactSet.Where(c => c.FullName == "Ben Andrews").FirstOrDefault();
+if (benAndrews != null)
+{
+     //benAndrews.Contact_Tasks is null until LoadProperty is used.
+     svcContext.LoadProperty(benAndrews, "Contact_Tasks");
+     Task benAndrewsFirstTask = benAndrews.Contact_Tasks.FirstOrDefault();
+     if (benAndrewsFirstTask != null)
+     {
+          Console.WriteLine("Ben Andrews first task with Subject: '{0}' retrieved.", benAndrewsFirstTask.Subject);
+     }
+}
+```
   
