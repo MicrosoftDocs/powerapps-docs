@@ -60,7 +60,7 @@ Use the settings area to configure environment settings, activate or deactivate 
 
 First, see if the setting you need is in the ![Settings icon](media/powerapps-gear.png)  > **Advanced customizations** menu.
 
-To find settings not availabe from **Advanced customizations**:  
+To find settings not available from **Advanced customizations**:  
 1.	Access your environment from the Dynamics 365 Administration Center. For environments located in North America go to [https://port.crm.dynamics.com/G/instances/InstancePicker.aspx](https://port.crm.dynamics.com/G/instances/InstancePicker.aspx). For other locations, see Direct sign in to the Dynamics 365 Administration Center.
 2.	Select the environment you want, and then select **Open**.
 
