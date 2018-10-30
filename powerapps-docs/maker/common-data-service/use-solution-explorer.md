@@ -25,15 +25,13 @@ search.app:
 ---
 # Use solution in PowerApps
 
- Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then click into a solution to view all of its components. 
+ Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
 
 > [!div class="mx-imgBorder"]  
 > ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
   
-> [!NOTE]
->  Use your mouse and keyboard when working with customization tools in a solution. This part of the application isn’t optimized for touch.  
  
- You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can click **Load the next 100 items** to see more. 
+ You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
 > [!div class="mx-imgBorder"]  
 > ![Load more components](media/load-more.PNG "Load more components")  
@@ -63,14 +61,14 @@ search.app:
 > ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
  
  ## Create component in a solution
- With solutions that are unmanaged or the default one, you can use the **New** command to create different types of component. This will take you to different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
+ With solutions that are unmanaged or the default one, you can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
  
 > [!div class="mx-imgBorder"]  
 > ![Create new component in a solution](media/solution-new-component.PNG "Create new component in a solution")  
  
- ## Add existing component to a solution
+ ## Add an existing component to a solution
  
- With solutions that are unmanaged and not the default one, you can use the **Add Existing** command to bring in components that aren’t already in the solution.  
+ With solutions that are unmanaged and not the default one, you can use the **Add existing** command to bring in components that aren’t already in the solution.  
  
 > [!div class="mx-imgBorder"]  
 > ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
@@ -80,10 +78,10 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Managed solution](media/managed-solution.PNG "Managed solution")  
 
- Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot: 
+ Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
  
 > [!NOTE]
->  When you add an existing entity to a solution, currently, we automatically add all the components that are part of the entity to your solution as well. If this is not what you prefer, please use the command **Switch to classic** to navigate to the legacy experience. We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. 
+>  Currently, when you add an existing entity to a solution the system automatically adds all the components that are part of the entity to your solution. If this is not what you prefer, use the command **Switch to classic** to navigate to the legacy experience and add only those components that you want. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
   
 > [!div class="mx-imgBorder"]  
 > ![Demo solution showing expanded account entity](media/solution-entity-account.PNG "Demo solution showing expanded account entity")  
