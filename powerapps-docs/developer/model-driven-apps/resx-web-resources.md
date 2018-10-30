@@ -43,4 +43,3 @@ The appropriate string value will be determined by the individual user’s langu
 [WebResource entity messages and methods](/dynamics365/customer-engagement/developer/webresource-entity-messages-methods)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
 [Sample: Import files as web resources](sample-import-files-web-resources.md)<br />
-[Sample: Web resource utility](sample-web-resource-utility.md)<br />
