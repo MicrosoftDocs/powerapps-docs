@@ -30,11 +30,9 @@ If your organization already has a specific solution you should work in, this is
   
 ## Open a solution  
   
-1. Click on **Solutions** from the left navigation to see a list of solutions in your environment.
+1. Select **Solutions** from the left navigation to see a list of solutions in your environment.
   
-2. Double-click the solution that you want to work in to open it.  
-  
- When you’re in the solution, you’ll see its components. More information: [Add Components](solutions-overview.md)  
+2. Select the solution that you want to work in or view all the components contained within it. More information: [Add Components](solutions-overview.md)  
 
  ## Next steps
 [Monitor and manage workflow processes](/flow/monitor-manage-processes)
