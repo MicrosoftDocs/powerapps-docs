@@ -44,7 +44,7 @@ Use solution explorer to perform app making and customization tasks that can’t
     Notice that the **Switch to classic** command isn't available when you select a solution in the list.
 
 ## My Apps
-Similar to the **Apps** area of PowerApps, the My Apps page lists all model-driven and canvas apps that you have privileges to in your environment. In addition to launching an app, from My Apps you can also assign security roles to it. 
+The My Apps page lists all model-driven apps that you have privileges to in your environment. In addition to launching a model-driven app, from My Apps you can also assign security roles to it. 
 
 To get to My Apps:
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
