@@ -47,15 +47,15 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     To allow your entire organization to run the app (but not modify or share it), specify **Everyone** in the sharing panel.
 
+    ![Specify users and co-owners](./media/share-app/share-everyone.png)
+
     > [!NOTE]
     > You can't share an app with a distribution group in your organization or with a user or group outside your organization.
 
-    ![Specify users and co-owners](./media/share-app/share-everyone.png)
-
 1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
 
-> [!NOTE]
-> Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
+    > [!NOTE]
+    > Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
 
 1. If your app connects to data for which users need access permissions, specify them.
 
