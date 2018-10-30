@@ -1,5 +1,5 @@
 ---
-title: "Use solution in PowerApps | MicrosoftDocs"
+title: "Use solutions in PowerApps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
 ms.date: 10/29/2018
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use solution in PowerApps
+# Use solutions in PowerApps
 
  Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
 
@@ -60,7 +60,7 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
  
- ## Create component in a solution
+ ## Create components in a solution
  With solutions that are unmanaged or the default one, you can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
  
 > [!div class="mx-imgBorder"]  
