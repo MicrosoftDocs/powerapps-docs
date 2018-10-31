@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Develop offline-capable canvas apps with PowerApps
+# Develop offline-capable canvas apps
 
 One of the most common scenarios you face as a mobile-app developer is enabling your users to be productive when there is limited connectivity or no connectivity at all. PowerApps has a set of features and behaviors that help you to develop offline-capable canvas apps. You can:
 

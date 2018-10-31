@@ -1,6 +1,6 @@
 ---
-title: Links to content about custom connectors | Microsoft Docs
-description: Links to content for creating, using, sharing, and certifying custom connectors in PowerApps.
+title: Links to content about custom connectors for canvas apps | Microsoft Docs
+description: Links to content for creating, using, sharing, and certifying custom connectors for canvas apps in PowerApps.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Custom connectors in PowerApps
+# Custom connectors for canvas apps
 
 Without writing any code, you can build workflows and canvas apps with [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow](https://flow.microsoft.com), and [PowerApps](https://powerapps.microsoft.com). To help you integrate your data and business processes, these services offer [180+ connectors](https://docs.microsoft.com/connectors/) - for Microsoft services and products, as well as other services, such as GitHub, Salesforce, and Twitter.
 
