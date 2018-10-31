@@ -157,17 +157,15 @@ The following procedure provides the steps to enable the security roles for the 
   
 ### Configure a multi-stream interactive dashboard using the 4-column layout  
  
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+  
+2.  Select **Data** > **Entities** > select the entity you want. 
 
-2.	Select **Model-driven** (lower left).  
+3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.  
   
-3.  Select **Data** > **Entities** > select the entity you want. 
-
-4.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.  
+4.  Choose the layout, either 2, 3, or 4 column width.  
   
-5.  Choose the layout, either 2, 3, or 4 column width.  
-  
-6.  When the dashboard form opens, fill in the filtering information at the top of form, as shown here.  
+5.  When the dashboard form opens, fill in the filtering information at the top of form, as shown here.  
  
  > [!div class="mx-imgBorder"] 
  > ![Add visual filters](../model-driven-apps/media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
@@ -220,7 +218,7 @@ The following procedure provides the steps to enable the security roles for the 
   
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).   
   
-2. Select **Model-driven** (lower left), **Data** > **Entities** > select the entity you want. Select the **Dashboards** tab.  
+2. Select **Data** > **Entities** > select the entity you want. Select the **Dashboards** tab.  
   
      -OR-  
    
@@ -241,15 +239,13 @@ The following procedure provides the steps to enable the security roles for the 
   
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2.	Select **Model-driven** (lower left).  
-  
-3.  Select **Data** > **Entities** > select the entity you want. 
+2.  Select **Data** > **Entities** > select the entity you want. 
 
-4.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.  
+3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**.  
   
-5.  Choose the layout, either 2, 3, or 4 column width.    
+4.  Choose the layout, either 2, 3, or 4 column width.    
   
-6.  When the dashboard form opens, the **Filter Entity** is preset to the entity for which you are creating the dashboard. The **Entity View** drop-down list contains the available views for the entity. Select the view and fill in the rest of the required information on the page.  
+5.  When the dashboard form opens, the **Filter Entity** is preset to the entity for which you are creating the dashboard. The **Entity View** drop-down list contains the available views for the entity. Select the view and fill in the rest of the required information on the page.  
   
  The rest of the setup is very similar to the home page multi-stream dashboard setup described in the previous section.  
   
