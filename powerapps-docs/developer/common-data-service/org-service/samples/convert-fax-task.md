@@ -41,7 +41,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Retreives all the fax id's that are created in [Setup](#setup).
+1. Retrieves all the fax id's that are created in [Setup](#setup).
 2. Creates a task and verifies whether the task has been created. 
 
 ### Clean up
