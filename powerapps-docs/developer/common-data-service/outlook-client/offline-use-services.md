@@ -2,7 +2,7 @@
 title: "Offline use of the Dynamics 365 services (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how various Dynamics 365 services can be used offline. There are several messages that are supported offline. You can also determine whether a IOrganizationService message works offline by checking the SdkMessage.Availability attribute for the desired message" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

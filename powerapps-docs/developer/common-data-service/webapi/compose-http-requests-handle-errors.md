@@ -2,7 +2,7 @@
 title: "Compose HTTP requests and handle errors (Common Data Service for Apps)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

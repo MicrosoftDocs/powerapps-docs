@@ -2,7 +2,7 @@
 title: "Register a webhook (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic will describe how to register a webhook using the plug-in registration tool" 
 ms.custom: ""
-ms.date: 09/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

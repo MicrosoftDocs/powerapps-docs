@@ -2,7 +2,7 @@
 title: "Page large result sets with QueryExpression (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "In Dynamics 365 (online) Customer Engagement, you can use the paging cookie feature to make paging in an application faster for large datasets. The feature is available in both FetchXML and QueryExpression queries" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

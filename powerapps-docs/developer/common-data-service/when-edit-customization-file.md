@@ -2,7 +2,7 @@
 title: "When to edit the customizations file (Common Data Service for Apps) | Microsoft Docs"
 description: "The customizations.xml file that is exported as part of an unmanaged solution can be edited to perform specific customization tasks. After editing the file you can compress the modified file together with the other files exported in the unmanaged solution. You apply the changes by importing that modified unmanaged solution."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:

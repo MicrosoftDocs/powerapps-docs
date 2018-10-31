@@ -2,7 +2,7 @@
 title: "Export, prepare to edit, and import the ribbon(model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about exporting the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that can represent a large amount of data. We recommend that you use an existing unmanaged solution or create a new solution." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

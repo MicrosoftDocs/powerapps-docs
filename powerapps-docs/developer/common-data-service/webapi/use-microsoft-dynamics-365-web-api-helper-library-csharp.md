@@ -2,7 +2,7 @@
 title: "Use the Common Data Service for Apps Web API Helper Library (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "Common Data Service for Apps Web API Helper Library assists in performing common tasks, such as application configuration, authentication against a Common Data Service for Apps service, and HTTP response error handling"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

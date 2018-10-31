@@ -2,7 +2,7 @@
 title: "Use the Common Data Service for Apps Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "The Common Data Service for Apps Web API implements OData v4 and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

@@ -1,6 +1,6 @@
 ---
 title: "htmlAttributeEncode| MicrosoftDocs"
-ms.date: 05/09/2018
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

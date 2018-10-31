@@ -2,7 +2,7 @@
 title: "Retrieve an entity using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read how to form a GET request using the Common Data Service for Apps Web API to retrieve data for an entity specified as the resource with a unique identifier"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

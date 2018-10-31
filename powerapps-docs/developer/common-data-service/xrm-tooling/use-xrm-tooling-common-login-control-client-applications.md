@@ -2,7 +2,7 @@
 title: "Use the XRM tooling common login control in your client applications (Common Data Service for Apps)| Microsoft Docs"
 description: "The CDS for Apps SDK provides you with a template for Visual Studio that enables you to use the common login control in your client applications. The code for CDS for Apps authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for CDS for Apps"
 ms.custom: ""
-ms.date: 06/16/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

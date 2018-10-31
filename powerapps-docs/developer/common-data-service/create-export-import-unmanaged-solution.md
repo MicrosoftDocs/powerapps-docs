@@ -2,7 +2,7 @@
 title: "Create, export, or import an unmanaged solution (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "An unmanaged solution is useful as a way to group a set of unmanaged customizations into a set that can be transported between organizations" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

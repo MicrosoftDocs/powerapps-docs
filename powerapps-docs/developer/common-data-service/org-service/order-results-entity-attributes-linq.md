@@ -2,7 +2,7 @@
 title: "Order results using entity attributes with LINQ (Common Data Service for Apps) | Microsoft Docs" 
 description: "Read how you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query"
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

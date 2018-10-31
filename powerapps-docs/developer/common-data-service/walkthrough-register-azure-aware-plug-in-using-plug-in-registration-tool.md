@@ -2,7 +2,7 @@
 title: "Walkthrough: Register an Azure-aware plug-in using the Plug-in Registration Tool (Common Data Service for Apps) | Microsoft Docs"
 description: "The walkthrough demonstrates how to register a service endpoint step using the Plug-in Registration Tool. "
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:

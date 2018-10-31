@@ -1,7 +1,7 @@
 ---
 title: "Composite attributes in model-driven apps in model-driven apps| MicrosoftDocs"
 description: "Learn about the attribute addOnchange method to set a function to be called when the attribute value is changed." 
-ms.date: 11/10/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

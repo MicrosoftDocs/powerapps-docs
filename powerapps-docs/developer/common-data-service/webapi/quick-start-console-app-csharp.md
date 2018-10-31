@@ -2,7 +2,7 @@
 title: "Quick Start: Web API sample (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "This sample demonstrates how to authenticate with a Common Data Service for Apps Server and then call a basic Web API operation, the WhoAmI Function"
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

@@ -2,7 +2,7 @@
 title: "Web API  Data operations Samples (Client-side JavaScript) (Common Data Service for Apps)| Microsoft Docs"
 description: "This topic provides a description of various Web API samples that are implemented using Client-side JavaScript"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

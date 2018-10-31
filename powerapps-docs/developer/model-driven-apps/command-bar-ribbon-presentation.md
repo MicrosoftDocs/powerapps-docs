@@ -2,7 +2,7 @@
 title: "Command bar or ribbon presentation (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Data defining commands in Common Data Service for Apps can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:

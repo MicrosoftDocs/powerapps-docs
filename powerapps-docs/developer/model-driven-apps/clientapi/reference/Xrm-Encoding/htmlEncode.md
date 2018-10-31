@@ -1,7 +1,7 @@
 ---
 title: "htmlEncode| MicrosoftDocs"
 description: "The Client API method converts a string to an HTML-encoded string."
-ms.date: 05/09/2018
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

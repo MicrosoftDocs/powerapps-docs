@@ -2,7 +2,7 @@
 title: "Visual Studio and the .NET Framework (Common Data Service for Apps) | Microsoft Docs" 
 description: "Learn about managed code development tools and requirements."
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

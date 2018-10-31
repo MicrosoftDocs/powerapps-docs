@@ -2,7 +2,7 @@
 title: "Start a Common Data Service for Apps Web API project in Visual Studio (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service for Apps Web API"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

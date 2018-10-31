@@ -2,7 +2,7 @@
 title: "Create accessible web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "The topic introduces general guidance and links to more resources that will help you design web resource user interface elements that are accessible to people with disabilities." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:

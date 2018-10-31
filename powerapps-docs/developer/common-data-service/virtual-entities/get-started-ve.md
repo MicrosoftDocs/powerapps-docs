@@ -1,7 +1,7 @@
 ---
 title: "Get started with virtual entities (Common Data Service for Apps) | Microsoft Docs"
 description: "Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service for Apps, without replication of data and often without custom coding."
-ms.date: 06/17/2018
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "get-started-article"
 applies_to: 

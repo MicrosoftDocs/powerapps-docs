@@ -2,7 +2,7 @@
 title: "Connect with Microsoft Office 365 and Common Data Service for Apps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The Microsoft Office 365 portal provides a single sign-on experience for Office 365 customers where they can sign in once and access any Office 365 application, including Dynamics 365 (online)" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

@@ -2,7 +2,7 @@
 title: "Sample: Quick start for XRM Tooling API (Common Data Service for Apps)| Microsoft Docs"
 description: ""
 ms.custom: ""
-ms.date: 06/16/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

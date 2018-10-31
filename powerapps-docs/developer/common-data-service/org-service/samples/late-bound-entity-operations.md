@@ -2,7 +2,7 @@
 title: "Sample: Create, retrieve, update, and delete (late bound) (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound Entity class." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "samples"

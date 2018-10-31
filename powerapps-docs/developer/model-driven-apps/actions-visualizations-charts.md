@@ -2,7 +2,7 @@
 title: "Actions on visualizations (charts) (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Using the Common Data Service for Apps web services, you can perform the following actions on the visualization entities." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:

@@ -2,7 +2,7 @@
 title: "Get started with the Common Data Service for Apps Web API (client-side JavaScript) | Microsoft Docs"
 description: "JavaScript can be used in HTML web resources, form scripts or ribbon commands to perform operations on Common Data Service for Appsdata using Web API"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

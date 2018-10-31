@@ -2,7 +2,7 @@
 title: "Use XRM tooling to retrieve data (Common Data Service for Apps)| Microsoft Docs"
 description: "Use CrmServiceClient class to retrieve data from CDS for Apps"
 ms.custom: ""
-ms.date: 06/16/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

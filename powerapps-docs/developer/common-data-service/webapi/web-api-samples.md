@@ -2,7 +2,7 @@
 title: "Web API Data operations Samples (Common Data Service for Apps) | Microsoft Docs"
 description: "The Common Data Service for Apps SDK provides a matrix of samples demonstrating how to use the Web API in a number of different ways. Find here the C# and JavaScript implementations of Basic Operations, Query Data, Conditional Operations and Functions and Actions sample"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

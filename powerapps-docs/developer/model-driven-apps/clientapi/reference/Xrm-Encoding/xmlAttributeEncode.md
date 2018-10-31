@@ -1,7 +1,7 @@
 ---
 title: "xmlAttributeEncode| MicrosoftDocs"
 description: "The Client API method Encodes the specified string so that it can be used in an XML attribute."
-ms.date: 09/15/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

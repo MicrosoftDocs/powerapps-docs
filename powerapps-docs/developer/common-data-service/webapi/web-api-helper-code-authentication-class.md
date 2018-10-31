@@ -2,7 +2,7 @@
 title: "Web API Helper code: Authentication class (Common Data Service for Apps)| Microsoft Docs"
 description: "Authentication class assists in establishing a validated connection to a Common Data Service for AppsWeb service"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

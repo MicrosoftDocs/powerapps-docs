@@ -1,6 +1,6 @@
 ---
 title: "setCurrentView (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 11/10/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

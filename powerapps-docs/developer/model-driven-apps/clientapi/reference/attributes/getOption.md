@@ -1,6 +1,6 @@
 ---
 title: "getOption (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

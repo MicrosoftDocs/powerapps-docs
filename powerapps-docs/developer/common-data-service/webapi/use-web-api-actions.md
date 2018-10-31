@@ -2,7 +2,7 @@
 title: "Use Web API actions (Common Data Service for Apps)| Microsoft Docs"
 descriptions: "Actions are reusable operations that can be performed using the Web API. These are used with a POST request to modify data on CDS for Apps"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

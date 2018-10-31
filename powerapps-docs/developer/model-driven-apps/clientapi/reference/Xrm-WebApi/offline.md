@@ -1,6 +1,6 @@
 ---
 title: "Xrm.WebApi.offline (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 12/18/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

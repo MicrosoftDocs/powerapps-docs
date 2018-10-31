@@ -2,7 +2,7 @@
 title: "Retrieve metadata by name or MetadataId (Common Data Service for Apps) | Microsoft Docs"
 description: "Common Data Service for Apps uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

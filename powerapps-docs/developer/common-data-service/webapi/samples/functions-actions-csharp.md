@@ -2,7 +2,7 @@
 title: "Web API Functions and Actions Sample (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service for Apps Web API and C#"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

@@ -2,7 +2,7 @@
 title: "Page large result sets with LINQ (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can page the results of a large .NET Language-Integrated Query (LINQ) query by using the Take and Skip operators" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

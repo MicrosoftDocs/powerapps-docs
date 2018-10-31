@@ -2,7 +2,7 @@
 title: "Build queries with LINQ (.NET language-integrated query) (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how to use .NET Language-Integrated Query (LINQ) to write queries in Common Data Service for Apps" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 07/24/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

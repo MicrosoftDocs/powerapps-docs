@@ -1,7 +1,7 @@
 ---
 title: "Client API Reference for model-driven apps | MicrosoftDocs"
 description: "The topic provides client API reference for model-driven apps."
-ms.date: 10/31/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "conceptual"
 applies_to: 

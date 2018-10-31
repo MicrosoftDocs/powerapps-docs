@@ -2,7 +2,7 @@
 title: "Import Data (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "If you want to import data into Common Data Service for Apps, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into CDS for Apps" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

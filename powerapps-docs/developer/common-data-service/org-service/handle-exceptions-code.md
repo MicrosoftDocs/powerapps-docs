@@ -2,7 +2,7 @@
 title: "Handle exceptions in your code (Common Data Service for Apps) | Microsoft Docs"
 description: "This article discusses the exceptions that are returned from a Dynamics 365 Customer Engagement web service method call. The sample in this article highlights the common faults and exceptions that your application design should handle."
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

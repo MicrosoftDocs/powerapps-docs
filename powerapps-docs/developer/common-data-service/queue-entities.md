@@ -2,7 +2,7 @@
 title: "Queue entities (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Queues in PowerApps are instrumental in organizing, prioritizing, and monitoring the progress of your work." 
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

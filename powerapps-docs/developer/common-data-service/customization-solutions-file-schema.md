@@ -2,7 +2,7 @@
 title: "Customization solutions file schema (Common Data Service for Apps) | Microsoft Docs"
 description: "The following is the schema definition for an solution customization file from Common Data Service for Apps."
 ms.custom: ""
-ms.date: 06/21/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

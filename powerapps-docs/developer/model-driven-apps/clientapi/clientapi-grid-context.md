@@ -1,6 +1,6 @@
 ---
 title: "Client API grid context in model-driven apps| MicrosoftDocs"
-ms.date: 01/19/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "conceptual"
 applies_to: 

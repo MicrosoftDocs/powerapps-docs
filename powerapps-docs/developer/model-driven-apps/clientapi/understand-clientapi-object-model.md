@@ -1,6 +1,6 @@
 ---
 title: "Understand the Client API object model in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "conceptual"
 applies_to: 

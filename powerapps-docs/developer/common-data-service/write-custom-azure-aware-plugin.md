@@ -2,7 +2,7 @@
 title: "Write a custom Azure-aware plug-in (Common Data Service for Apps) | Microsoft Docs"
 description: "The sample shows how plug-in code can be added to obtain the Azure service provider and initiate posting the execution context to the service bus by calling IExecutionContext)."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:

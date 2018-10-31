@@ -1,6 +1,6 @@
 ---
 title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-driven apps| MicrosoftDocs"
-ms.date: 06/05/2018
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "conceptual"
 applies_to: 

@@ -2,7 +2,7 @@
 title: "Download tools from NuGet (Common Data Service for Apps) | Microsoft Docs"
 description: "Download the Plugin Registration, Package Deployment, and other core tools from Nuget."
 ms.custom: ""
-ms.date: 06/16/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

@@ -2,7 +2,7 @@
 title: "Authenticate to Common Data Service for Apps with the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Learn about the different ways to manage authentication when using the Web API"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

@@ -2,7 +2,7 @@
 title: "Work with solutions (Common Data Service for Apps) | Microsoft Docs"
 description: ""
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:

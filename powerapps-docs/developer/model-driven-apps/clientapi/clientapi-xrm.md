@@ -1,7 +1,7 @@
 ---
 title: "Client API Xrm object for model-driven apps | MicrosoftDocs"
 description: "The topic provides client API reference for model-driven apps."
-ms.date: 12/05/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "conceptual"
 applies_to: 

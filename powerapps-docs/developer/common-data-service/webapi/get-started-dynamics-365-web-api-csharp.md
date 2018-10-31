@@ -2,7 +2,7 @@
 title: "Get started with Common Data Service for Apps Web API (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "Learn how to access the Common Data Service for Apps Web API using the Microsoft Visual C# programming language"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

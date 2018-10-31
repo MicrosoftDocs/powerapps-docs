@@ -2,7 +2,7 @@
 title: "Execute messages in a single database transaction (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can execute two or more organization service requests in a single database transaction using the ExecuteTransactionRequest message request." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

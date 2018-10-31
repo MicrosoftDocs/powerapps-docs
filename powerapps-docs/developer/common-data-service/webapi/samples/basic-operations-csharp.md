@@ -2,7 +2,7 @@
 title: "Web API Basic Operations Sample (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service for Apps entity instances, using the Common Data Service for Apps Web API"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

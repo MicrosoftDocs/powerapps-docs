@@ -2,7 +2,7 @@
 title: "Generate early-bound classes for the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "CrmSvcUtil.exe is a command-line code generation tool for use with Common Data Service for Apps. This tool generates early-bound .NET Framework  classes that represent the entity data model used by CDS for Apps." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

@@ -2,7 +2,7 @@
 title: "Web service error codes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic lists the error codes you might encounter when you debug your code. These error codes are also available in the Dynamics 365 SDK package" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

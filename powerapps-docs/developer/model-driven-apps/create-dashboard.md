@@ -2,7 +2,7 @@
 title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Organization-owned dashboards can be created by using the Common Data Service for Apps web services (SDK) or by customizing the entity form in Common Data Service for Apps by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:

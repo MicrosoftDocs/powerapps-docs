@@ -2,7 +2,7 @@
 title: "Azure Integration (Common Data Service for Apps) | Microsoft Docs"
 description: "<Description>" 
 ms.custom: ""
-ms.date: 08/01/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

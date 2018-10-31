@@ -2,7 +2,7 @@
 title: "Detect duplicate data using the the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Common Data Service for Apps Web API"
 ms.custom: ""
-ms.date: 06/15/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

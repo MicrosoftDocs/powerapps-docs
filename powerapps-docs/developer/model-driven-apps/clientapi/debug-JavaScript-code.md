@@ -1,6 +1,6 @@
 ---
 title: "Debug your JavaScript code for model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2017
+ms.date: 10/31/2018
 ms.service: "crm-online"
 ms.topic: "conceptual"
 applies_to: 
