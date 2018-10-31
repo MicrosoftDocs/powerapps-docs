@@ -9,6 +9,11 @@ ms.assetid: b58e6173-e3cd-4a3b-b39a-334c295503ec
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # GetGlobalContext function and ClientGlobalContext.js.aspx (Client API reference)
 

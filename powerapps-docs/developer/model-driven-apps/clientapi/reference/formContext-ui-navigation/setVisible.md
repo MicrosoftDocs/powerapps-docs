@@ -8,6 +8,11 @@ ms.assetid: b2b9774a-8634-4323-9df8-0739cbbc6c2f
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setVisible (Client API reference)
 

@@ -8,6 +8,11 @@ ms.assetid: 29cb3685-21aa-42fc-8e84-0074dcc69197
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # openUrl (Client API reference)
 

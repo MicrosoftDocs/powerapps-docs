@@ -10,6 +10,11 @@ author: "mayadumesh"
 ms.author: "jdaly"
 ms.reviewer: "kvivek"
 manager: "ryjones"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Work with metadata using code

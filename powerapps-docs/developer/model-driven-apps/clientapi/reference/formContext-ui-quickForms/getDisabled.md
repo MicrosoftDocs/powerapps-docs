@@ -8,6 +8,11 @@ ms.assetid: dda61eb8-68ea-494a-9756-a8b149428229
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getDisabled (Client API reference)
 

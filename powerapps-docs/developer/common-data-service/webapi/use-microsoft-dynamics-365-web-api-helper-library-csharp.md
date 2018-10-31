@@ -14,6 +14,11 @@ ms.assetid: ba9d94fe-d189-4873-aef5-0010f3ccecba
 caps.latest.revision: 7
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use the Common Data Service for Apps Web API Helper Library (C#)
 

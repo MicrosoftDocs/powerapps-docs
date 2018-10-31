@@ -17,6 +17,11 @@ caps.latest.revision: 19
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly"
 manager: "ryjones"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customization-solutions-file-schema -->
 

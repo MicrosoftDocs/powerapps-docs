@@ -15,6 +15,11 @@ caps.latest.revision: 33
 author: "MattB-msft"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Build Windows client applications using the XRM tools
 

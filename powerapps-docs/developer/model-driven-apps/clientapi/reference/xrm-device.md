@@ -8,6 +8,11 @@ ms.assetid: d065fdce-d9de-4d05-a5b9-863e197b4f4d
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Xrm.Device (Client API reference)
 

@@ -8,6 +8,11 @@ ms.assetid: a1fc8535-7cb8-4c6b-a571-2a09cc968a04
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getParent (Client API reference)
 

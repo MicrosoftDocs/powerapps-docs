@@ -15,6 +15,11 @@ caps.latest.revision: 17
 author: "MattB-msft"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use messages with the ExecuteCrmOrganizationRequest method
 

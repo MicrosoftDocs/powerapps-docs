@@ -8,6 +8,11 @@ ms.assetid: 2451c4ac-527c-4487-8f52-bde1690c5bde
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # removePreSearch (Client API reference)
 

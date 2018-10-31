@@ -14,6 +14,11 @@ ms.assetid: oauth-cross-origin-resource-sharing-connect-single-page-application
 caps.latest.revision: 11
 author: "paulliew" # GitHub ID
 ms.author: "jdaly"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 <!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/oauth-cross-origin-resource-sharing-connect-single-page-application 
 

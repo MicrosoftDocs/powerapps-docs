@@ -8,6 +8,11 @@ ms.assetid: 1f9169ce-cba3-4bb6-af20-f86140139cfe
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getTotalResultCount (Client API reference)
 

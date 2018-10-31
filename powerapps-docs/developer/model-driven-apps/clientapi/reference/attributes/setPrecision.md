@@ -8,6 +8,11 @@ ms.assetid: 580aebec-c1d1-4e4a-8c20-ced859569fb2
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setPrecision (Client API reference)
 

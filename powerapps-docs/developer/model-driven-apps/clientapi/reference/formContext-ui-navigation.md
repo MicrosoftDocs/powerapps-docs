@@ -9,6 +9,11 @@ ms.assetid: 661d084d-744b-44b0-be82-abde6f6e7e90
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # formContext.ui.navigation item (Client API reference)
 

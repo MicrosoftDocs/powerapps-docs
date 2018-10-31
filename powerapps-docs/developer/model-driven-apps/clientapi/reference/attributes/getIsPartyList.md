@@ -8,6 +8,11 @@ ms.assetid: 487d0923-9675-4308-b88e-fdbf91853a98
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getIsPartyList (Client API reference)
 

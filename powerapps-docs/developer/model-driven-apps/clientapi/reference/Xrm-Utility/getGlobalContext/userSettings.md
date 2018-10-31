@@ -8,6 +8,11 @@ ms.assetid: 44296667-f1cd-49be-a300-7259bc3b41e0
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getGlobalContext.userSettings (Client API reference)
 

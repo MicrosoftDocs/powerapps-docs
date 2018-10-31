@@ -8,6 +8,11 @@ ms.assetid: 77999c82-3d6a-4db9-af9c-7322491768d9
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setShowTime (Client API reference)
 

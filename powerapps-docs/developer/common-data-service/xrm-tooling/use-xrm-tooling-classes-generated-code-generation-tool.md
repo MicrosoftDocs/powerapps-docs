@@ -15,6 +15,11 @@ caps.latest.revision: 19
 author: "MattB-msft"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use XRM tooling with classes generated using the code-generation tool
 

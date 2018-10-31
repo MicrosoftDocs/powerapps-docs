@@ -8,6 +8,11 @@ ms.assetid: c398dbca-0ead-487a-8a92-35b1f2953bf6
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # removeOnPostSearch (Client API reference)
 

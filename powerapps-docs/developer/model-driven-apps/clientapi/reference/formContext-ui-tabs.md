@@ -9,6 +9,11 @@ ms.assetid: 1888a882-7dfc-41a8-9bb4-d693d6046666
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # formContext.ui.tabs (Client API reference)
 

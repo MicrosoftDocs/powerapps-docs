@@ -8,6 +8,11 @@ ms.assetid: 5f75ecae-a946-47a0-b748-96525b556f31
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getIsDirty (Client API reference)
 

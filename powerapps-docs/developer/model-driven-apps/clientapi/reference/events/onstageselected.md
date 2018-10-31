@@ -8,6 +8,11 @@ ms.assetid: 1ef0f11c-6188-4492-ae61-260a402223b8
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # OnStageSelected Event (Client API reference)
 

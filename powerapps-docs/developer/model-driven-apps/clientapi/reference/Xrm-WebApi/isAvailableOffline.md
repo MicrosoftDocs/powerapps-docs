@@ -8,6 +8,11 @@ ms.assetid: ea9eacc0-2e31-49f4-a329-dcdf430a5a7e
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # isAvailableOffline (Client API reference)
 

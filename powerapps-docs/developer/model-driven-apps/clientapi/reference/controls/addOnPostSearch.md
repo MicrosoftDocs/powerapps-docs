@@ -8,6 +8,11 @@ ms.assetid: 9d000628-5dbe-45bd-9c47-e19187ffdae7
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # addOnPostSearch (Client API reference)
 

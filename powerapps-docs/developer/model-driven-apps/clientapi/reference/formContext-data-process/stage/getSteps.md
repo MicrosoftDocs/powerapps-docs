@@ -8,6 +8,11 @@ ms.assetid: 3409e9eb-0e7a-4022-b5a6-d27be2d2e225
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getSteps (Client API reference)
 

@@ -8,6 +8,11 @@ ms.assetid: e19af732-01e8-4853-b81c-40d79192cea2
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getViewPortHeight (Client API reference)
 

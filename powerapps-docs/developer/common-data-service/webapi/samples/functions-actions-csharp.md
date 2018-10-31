@@ -14,6 +14,11 @@ ms.assetid: b14a8bff-bf05-412c-89f6-ba7b503dcb51
 caps.latest.revision: 13
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Web API Functions and Actions Sample (C#)
 
