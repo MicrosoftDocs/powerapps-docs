@@ -15,6 +15,11 @@ caps.latest.revision: 20
 author: "MattB-msft"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Sample: Quick start for XRM Tooling API
 

@@ -15,6 +15,11 @@ caps.latest.revision: 19
 author: "JimDaly"
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Sample: Calculate a credit score with a custom workflow activity
 

@@ -8,6 +8,11 @@ ms.assetid: 6a2497fe-08ad-4953-b3ff-44c72bc25082
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # openFile (Client API reference)
 

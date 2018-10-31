@@ -10,6 +10,11 @@ ms.assetid:
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Client API Reference for model-driven apps
 

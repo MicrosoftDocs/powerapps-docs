@@ -8,6 +8,11 @@ ms.assetid: c1239eca-2148-4bcc-bb7d-aae1da1ab6b5
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Xrm.Navigation (Client API reference)
 

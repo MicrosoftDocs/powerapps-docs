@@ -8,6 +8,11 @@ ms.assetid: 848c277b-bd44-4388-852a-0f59a3a15538
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Xrm.WebApi.offline (Client API reference)
 

@@ -15,6 +15,11 @@ caps.latest.revision: 18
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Query metadata using the Web API
 

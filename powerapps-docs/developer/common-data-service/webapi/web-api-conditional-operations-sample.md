@@ -14,6 +14,11 @@ ms.assetid: f2e5d22b-93fe-43b7-af15-3e281f3b3084
 caps.latest.revision: 13
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Web API Conditional Operations Sample
 

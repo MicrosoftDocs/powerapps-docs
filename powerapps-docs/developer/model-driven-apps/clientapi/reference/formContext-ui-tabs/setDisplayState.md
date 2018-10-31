@@ -8,6 +8,11 @@ ms.assetid: 13731ab8-e850-49d4-94c0-eae6135745c7
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setDisplayState (Client API reference)
 

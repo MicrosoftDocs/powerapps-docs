@@ -15,6 +15,11 @@ caps.latest.revision: 14
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Start a Common Data Service for Apps Web API project in Visual Studio (C#)
 

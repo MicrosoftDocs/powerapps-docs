@@ -8,6 +8,11 @@ ms.assetid: 9dae86bf-5c5a-4115-a959-8037d8c7462e
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getStatus (Client API reference)
 

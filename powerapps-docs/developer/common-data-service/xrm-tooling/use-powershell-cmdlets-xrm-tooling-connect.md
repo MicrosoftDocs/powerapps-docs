@@ -15,6 +15,11 @@ caps.latest.revision: 27
 author: "MattB-msft"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use PowerShell cmdlets for XRM tooling to connect to CDS for Apps
 

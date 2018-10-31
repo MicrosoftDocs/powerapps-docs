@@ -15,6 +15,11 @@ caps.latest.revision: 17
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Update and delete entities using the Web API
 

@@ -15,6 +15,11 @@ caps.latest.revision: 11
 author: "SushantSikka"
 ms.author: "susikka"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Detect duplicate data using the Web API

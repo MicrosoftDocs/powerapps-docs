@@ -8,6 +8,11 @@ ms.assetid: 6833e4ea-70fc-4ee0-8aab-68cc55e21444
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # reflow (Client API reference)
 

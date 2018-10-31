@@ -8,6 +8,11 @@ ms.assetid: 215c89c3-da03-4f18-b840-df72a5b377e8
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # fireOnChange (Client API reference)
 

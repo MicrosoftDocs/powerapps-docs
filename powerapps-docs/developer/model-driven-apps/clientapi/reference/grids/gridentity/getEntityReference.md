@@ -8,6 +8,11 @@ ms.assetid: b8e23eee-f20f-4db9-9cc6-7fa5dd7ce2bb
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getEntityReference (Client API reference)
 

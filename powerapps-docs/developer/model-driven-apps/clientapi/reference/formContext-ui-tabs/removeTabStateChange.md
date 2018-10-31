@@ -8,6 +8,11 @@ ms.assetid: 31641078-8751-4201-9850-f4cac36a353f
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # removeTabStateChange (Client API reference)
 

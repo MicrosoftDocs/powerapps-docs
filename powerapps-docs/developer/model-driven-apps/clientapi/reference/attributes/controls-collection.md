@@ -9,6 +9,11 @@ ms.assetid: d5f3c0c5-b267-42a8-82e8-8c4a1cda3752
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Controls collection (Client API reference)
 

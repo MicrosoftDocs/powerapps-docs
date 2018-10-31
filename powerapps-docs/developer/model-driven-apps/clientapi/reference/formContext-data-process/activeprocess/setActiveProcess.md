@@ -8,6 +8,11 @@ ms.assetid: 0d4c2d8a-a2fb-4cdd-9153-041646068992
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setActiveProcess (Client API reference)
 

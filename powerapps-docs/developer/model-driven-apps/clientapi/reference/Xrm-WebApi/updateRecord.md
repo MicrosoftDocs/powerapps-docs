@@ -8,6 +8,11 @@ ms.assetid: f5d4c8a9-4188-472a-83bf-b986dd135754
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # updateRecord (Client API reference)
 

@@ -15,6 +15,11 @@ caps.latest.revision: 8
 author: "MattB-msft"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Configure tracing for XRM tooling
 

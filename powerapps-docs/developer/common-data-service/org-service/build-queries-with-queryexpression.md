@@ -9,6 +9,11 @@ ms.topic: "article"
 author: "brandonsimons" 
 ms.author: "jdaly" 
 manager: "ryjones" 
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Build queries with QueryExpression
 

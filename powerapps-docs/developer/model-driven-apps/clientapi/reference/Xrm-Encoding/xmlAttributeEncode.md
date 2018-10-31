@@ -9,6 +9,11 @@ ms.assetid: 909443cd-12b5-4a73-9904-8ae623d22c81
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # xmlAttributeEncode (Client API reference)
 

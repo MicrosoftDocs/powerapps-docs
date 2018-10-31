@@ -8,6 +8,11 @@ ms.assetid: 9c82028d-cbc9-4d40-9987-6ce1ea01fde2
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # openConfirmDialog (Client API reference)
 

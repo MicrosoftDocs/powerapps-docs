@@ -8,6 +8,11 @@ ms.assetid: 702a13c1-f4ae-4de2-9e8b-95360ad9240c
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getSharedVariable (Client API reference)
 

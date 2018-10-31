@@ -15,6 +15,11 @@ caps.latest.revision: 21
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Retrieve an entity using the Web API

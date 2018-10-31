@@ -9,6 +9,11 @@ ms.assetid: e362dfb2-cb64-49f5-b3d4-d77e813325ca
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # formContext.ui.sections (Client API reference)
 

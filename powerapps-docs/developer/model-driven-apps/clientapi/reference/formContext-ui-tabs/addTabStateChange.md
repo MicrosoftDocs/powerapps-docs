@@ -8,6 +8,11 @@ ms.assetid: 51b0dbf3-28bd-4eea-9ee9-50b322e9af9b
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # addTabStateChange (Client API reference)
 

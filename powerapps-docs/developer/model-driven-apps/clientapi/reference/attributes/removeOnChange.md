@@ -8,6 +8,11 @@ ms.assetid: c4a29df2-e2b4-4bc5-a4a7-9780feb59466
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # removeOnChange (Client API reference)
 

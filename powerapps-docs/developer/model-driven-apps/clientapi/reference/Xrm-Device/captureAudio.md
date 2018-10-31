@@ -8,6 +8,11 @@ ms.assetid: fa39d18e-4b82-423a-84a0-e54450b7964e
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # captureAudio (Client API reference)
 

@@ -8,6 +8,11 @@ ms.assetid: 73dfc13c-a18c-42fc-b511-a37896c2f893
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Walkthrough: Write your first client script
 
