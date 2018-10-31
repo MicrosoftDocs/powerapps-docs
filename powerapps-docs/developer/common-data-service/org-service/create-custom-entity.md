@@ -12,7 +12,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Create custom entity
 
-This topic shows how to create a custom user-owned entity called **Bank Account** and add four different types of attributes to it.  
+This topic shows how to programmatically create a custom user-owned entity called **Bank Account** and add four different types of attributes to it.  
   
 You can also create organization-owned custom entities. More information: [Entity ownership](/dynamics365/customer-engagement/developer/introduction-entities#entity-ownership)  
   
@@ -27,7 +27,7 @@ You can also create organization-owned custom entities. More information: [Entit
   
  The `_customEntityName` value is “new_bankaccount”.  
   
-```
+```csharp
 CreateEntityRequest createrequest = new CreateEntityRequest
 {
 
@@ -65,7 +65,7 @@ Console.WriteLine("The bank account entity has been created.");
 
 The following sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.StringAttributeMetadata> attribute to the `Bank Account` entity.  
   
-```
+```csharp
 CreateAttributeRequest createBankNameAttributeRequest = new CreateAttributeRequest
 {
  EntityName = _customEntityName,
@@ -89,7 +89,7 @@ _serviceProxy.Execute(createBankNameAttributeRequest);
 
  The following sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.MoneyAttributeMetadata> attribute to the `Bank Account` entity.  
   
-```
+```csharp
 CreateAttributeRequest createBalanceAttributeRequest = new CreateAttributeRequest
 {
  EntityName = _customEntityName,
@@ -114,7 +114,7 @@ _serviceProxy.Execute(createBalanceAttributeRequest);
 
 The following sample adds a <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> attribute to the `Bank Account` entity.  
   
-```
+```csharp
 CreateAttributeRequest createCheckedDateRequest = new CreateAttributeRequest
 {
  EntityName = _customEntityName,
@@ -139,7 +139,7 @@ Console.WriteLine("An date attribute has been added to the bank account entity."
  
  The following sample uses <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest> to create a one-to-many relationship with the `Contact` entity so that a <xref:Microsoft.Xrm.Sdk.Metadata.LookupAttributeMetadata> attribute is added to the `Bank Account` entity.  
   
-```
+```csharp
 CreateOneToManyRequest req = new CreateOneToManyRequest()
 {
     Lookup = new LookupAttributeMetadata()
