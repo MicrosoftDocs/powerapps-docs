@@ -92,7 +92,7 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
   
 <a name="bkmk_establising"></a>  
  
-## Establish a contract between [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] and an Azure solution  
+## Establish a contract between CDS for Apps and an Azure solution  
  For each solution endpoint, you configure a contract that defines the handling of these remote execution context “messages” on the service bus and the security that should be used on that endpoint. Service bus messages are received at an endpoint using one of the supported contracts listed here.  
   
  **Queue**  
@@ -120,7 +120,7 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
   
  Identifying the kind of security a contract uses is part of the contract’s configuration. A contract can use Transport security, which uses Transport Layer Security (TLS) or Secure Sockets Layer (SSL) (https).  
   
- Claims authentication is used for secure access to the service bus. The claim used to authenticate to the service bus is generated in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] and signed by the AppFabricIssuer certificate specified in the CDS for Apps configuration database.  
+ Claims authentication is used for secure access to the service bus. The claim used to authenticate to the service bus is generated in CDS for Apps and signed by the AppFabricIssuer certificate specified in the CDS for Apps configuration database.  
   
 <a name="bkmk_management"></a>
 
