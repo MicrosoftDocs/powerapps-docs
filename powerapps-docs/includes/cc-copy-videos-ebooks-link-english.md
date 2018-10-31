@@ -1,0 +1,1 @@
+The videos and eBooks might be in English only. Also, if you click the links, you may be redirected to a U.S. website whose content is in English.

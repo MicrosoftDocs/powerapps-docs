@@ -1,0 +1,1 @@
+Gets a boolean value indicating whether all of the form data is valid. This includes the main entity and any unbound attributes.

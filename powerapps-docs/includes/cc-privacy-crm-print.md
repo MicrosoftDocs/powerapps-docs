@@ -1,0 +1,3 @@
+When Dynamics 365 (online) users print Dynamics 365 data, they are effectively “exporting” that data from the security boundary provided by Dynamics 365 (online) to a less secure environment, in this case, to a piece of paper.  
+  
+ An administrator has full control (at the user security role or entity level) over the data that can be extracted. However, after the data has been extracted it is no longer protected by the security boundary provided by Dynamics 365 (online) and is instead controlled directly by the customer.

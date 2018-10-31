@@ -33,7 +33,7 @@ Virtual entities are made up of three main components, a *data provider*, a *dat
   
 CDS for Apps includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
   
-Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)
+Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual entities](../../developer/common-data-service/virtual-entities/get-started-ve.md)
   
  ![Virtual entity diagram](media/virtual-entity-diagram.png "Virtual entity diagram")  
   
