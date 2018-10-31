@@ -4,8 +4,8 @@ description: Learn how solutions are used to create model apps.
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
-manager: faisalmo
+author: "shmcarth" # GitHub ID
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/19/2018
+ms.date: 10/31/2018
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -21,13 +21,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Introduction to solutions
 
-*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service for Apps. For example, the Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
+*Solutions* are how customizers and developers author, package, and maintain units of software that extend Common Data Service(CDS) for Apps. For example, Dynamics 365 for Sales, Marketing, Customer Service apps are composed of solutions. Customizers and developers distribute solutions so that organizations can use Common Data Service for Apps to install and uninstall the business functionality defined by the solution.
 
-Every customization that you make to Common Data Service for Apps, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different Common Data Service for Apps environment.
+Every customization that you make to CDS for Apps, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different CDS for Apps environment.
 
-If you intend to transport customizations or extensions between different Common Data Service for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
+If you intend to transport customizations or extensions between different CDS for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
 
 ## Managed and unmanaged solutions
 
@@ -62,24 +63,24 @@ When any schema changes are included as part of a solution, the solution publish
 
 Your choice of solution publisher is important in case you want to publish an update to a solution you have shipped. An update can only be applied to a managed solution with the same publisher as the original managed solution. 
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Maintain managed solutions > Create managed solution updates](/dynamics365/customer-engagement/developer/maintain-managed-solutions#create-managed-solution-updates)
+More information: [Maintain managed solutions > Create managed solution updates](/dynamics365/customer-engagement/developer/maintain-managed-solutions#create-managed-solution-updates)
 
 ## Create a solution publisher and solution 
 
-To create a  solution publisher and a solution you need to navigate to the Dynamics 365 Customization area.
+To create a  solution publisher and a solution you need to navigate to the CDS for Apps Customization area.
 
 From [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 
 1. Select the *Waffle* icon at the top left corner
 2. In the fly out, select **All apps**.
-3. Look for the **Dynamics 365 - custom app**.
+3. Look for the **CDS for Apps - custom app**.
  You may want to click the ellipses (...) and choose **Pin this app** so it will be easier to navigate to next time.
-4. Click the **Dynamics 365 - custom app** app and select it.
+4. Click the **CDS for Apps - custom app** app and select it.
 5. Navigate to **Settings** > **Customization** > **Customizations**.
 
 From [home.dynamics.com](http://home.dynamics.com/)
 
-1. Look for the **Dynamics 365 - custom** tile and click it.
+1. Look for the **CDS for Apps - custom** tile and click it.
 2. Navigate to **Settings** > **Customization** > **Customizations**.
 
 ### Create a solution publisher
@@ -117,13 +118,13 @@ The following diagram introduces how managed solutions and unmanaged customizati
 
 In this example, default behavior defined in the system solution is overridden or appended by managed solutions. Any unmanaged customizations can then override or append customizations that are then visible in the application.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Introduction to solutions > Unmanaged and managed solutions](/dynamics365/customer-engagement/developer/introduction-solutions#managed-and-unmanaged-solutions)
+More information: [Introduction to solutions > Unmanaged and managed solutions](/dynamics365/customer-engagement/developer/introduction-solutions#managed-and-unmanaged-solutions)
 
 ## Managed properties
 
 When you distribute a managed solution, anyone who installs your solution can include their own unmanaged customizations to it. Those unmanaged customizations can then be added to a solution that they distributed as a managed solution that depends on your solution. But what if you don’t want people to do this? As the publisher of the managed solution you can use managed properties to disable specific customizations for the components of your managed solution.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Use managed properties](/dynamics365/customer-engagement/developer/use-managed-properties)
+More information: [Use managed properties](use-managed-properties.md)
 
 ## Modular solutions
 
@@ -143,15 +144,15 @@ Use the *Package Deployer* to create a custom installer for a package that can i
 - Custom code that can run before, while, or after the package is deployed.
 - HTML content specific to the package that can display at the beginning and end of the deployment process. This can be useful to provide a description of the solutions and files that are deployed in the package.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer).
+More information: [Create packages for the CDS for Apps Package Deployer](package-deployer/create-packages-package-deployer.md).
 
 ## Team development of solutions
 
 A solution file is a single binary file that does not lend itself to source code control or team development. There is no way for multiple developers to work on the custom components in the solution.
 
-The *SolutionPackager* tool resolves the problem of source code control and team development of solution files. The tool identifies individual components in the compressed solution file and extracts them out to individual files. The tool can also re-create a solution file by packing the files that had been previously extracted. This enables multiple people to work independently on a single solution and extract their changes into a common location. Because each component in the solution file is broken into multiple files, it becomes possible to merge customizations without overwriting prior changes. A secondary use of the SolutionPackager tool is that it can be invoked from an automated build process to generate a compressed solution file from previously extracted component files without needing an active Dynamics 365 instance.
+The *SolutionPackager* tool resolves the problem of source code control and team development of solution files. The tool identifies individual components in the compressed solution file and extracts them out to individual files. The tool can also re-create a solution file by packing the files that had been previously extracted. This enables multiple people to work independently on a single solution and extract their changes into a common location. Because each component in the solution file is broken into multiple files, it becomes possible to merge customizations without overwriting prior changes. A secondary use of the SolutionPackager tool is that it can be invoked from an automated build process to generate a compressed solution file from previously extracted component files without needing an active CDS for Apps instance.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide: Solution tools for team development](/dynamics365/customer-engagement/developer/solution-tools-team-development)
+More information: [Solution tools for team development](/dynamics365/customer-engagement/developer/solution-tools-team-development)
 
 ### See also
 

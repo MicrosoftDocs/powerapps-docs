@@ -1,0 +1,1 @@
+Removes a function from the form [OnLoad](../../events/form-onload.md) event.

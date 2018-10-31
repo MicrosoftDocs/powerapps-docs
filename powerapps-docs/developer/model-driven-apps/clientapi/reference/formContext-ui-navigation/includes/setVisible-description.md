@@ -1,0 +1,1 @@
+Sets a value that indicates whether the item is visible.
