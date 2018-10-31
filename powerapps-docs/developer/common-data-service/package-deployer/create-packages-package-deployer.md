@@ -1,5 +1,5 @@
 ---
-title: "Create packages for the  Dynamics 365 Package Deployer (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create packages for the Package Deployer (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Create packages that administrators can deploy on Common Data Service for Apps instances." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 08/01/2018
@@ -10,7 +10,7 @@ author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
-# Create packages for the  Dynamics 365 Package Deployer
+# Create packages for the Package Deployer
 
 Package Deployer lets administrators deploy packages on Common Data Service for Apps instances. A *package* can consist of any or all of the following:  
 
