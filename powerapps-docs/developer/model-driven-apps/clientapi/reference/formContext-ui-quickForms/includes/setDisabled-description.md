@@ -1,0 +1,1 @@
+Sets the state of the control to either enabled or disabled.

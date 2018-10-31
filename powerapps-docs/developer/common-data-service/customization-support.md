@@ -1,7 +1,7 @@
 ---
 title: "Common Data Service for Apps app building practices | MicrosoftDocs"
 ms.custom: ""
-ms.date: 06/18/2018
+ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

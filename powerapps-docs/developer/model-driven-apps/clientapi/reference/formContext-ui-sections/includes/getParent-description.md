@@ -1,0 +1,1 @@
+Returns the tab containing the section.
