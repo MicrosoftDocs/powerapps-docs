@@ -1,14 +1,14 @@
 ---
-title: "Azure Integration (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Azure Integration (Common Data Service for Apps) | Microsoft Docs"
+description: "<Description>" 
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: "brandonsimons"
+ms.author: "jdaly" 
+manager: "ryjones"
 ---
 # Azure Integration
 
@@ -40,8 +40,7 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
 > - If the size of the payload exceeds 192Kb after the  additional data is removed, an error occurs and the message is not sent.
   
  For more information about the technologies described earlier, see:
- - [Understand the data context passed to a plug-in](understand-data-context-passed-plugin.md)
- - [Event execution pipeline.](event-execution-pipeline.md)
+ - [Event execution pipeline](event-framework.md#event-execution-pipeline)
  - [Write a listener application for a Microsoft Azure solution](write-listener-application-azure-solution.md).  
   
  ### Plug-ins  
@@ -51,10 +50,10 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
   
  You can also write your own custom plug-in that is “Azure-aware”. The custom plug-in executes in partial trust mode in the sandbox. A custom plug-in can initiate posting of the data context to the service bus through the service endpoint notification service. Adding code to invoke this service makes the plug-in “Azure-aware”. 
  
- For more information about plug-ins in general, see [Writing a Plug-in](write-plugin.md). For more information about Azure-aware plug-ins, see [Write a Custom Azure-aware Plug-in](write-custom-azure-aware-plugin.md).  
+ For more information about plug-ins in general, see [Writing a Plug-in](write-plug-in.md). For more information about Azure-aware plug-ins, see [Write a Custom Azure-aware Plug-in](write-custom-azure-aware-plugin.md).  
   
  ### Custom Workflow Activities  
- Similarly to plug-ins, custom workflow activities can be written to initiate posting the current request message data context to the Azure Service Bus by using the service endpoint notification service.  
+ Similarly to plug-ins, custom workflow activities can be written to initiate posting the current request message data context to the Azure Service Bus by using the service endpoint notification service. More information: [Workflow extensions](workflow/workflow-extensions.md) 
   
  ### Asynchronous Service  
  Once notified by the service endpoint notification service, the asynchronous service handles posting the  data context of the request message currently being processed by the event execution pipeline to the Azure Service Bus. Each post is performed by a system job of the asynchronous service. A user can view the status of each system job by using the **System Jobs** view of the PowerApps web application.  
@@ -75,23 +74,21 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
   
 <a name="bkmk_describing"></a>  
  
-## A CDS for Apps-to-service bus scenario  
+## CDS for Apps to service bus scenario  
 
  Let us now identify a scenario that implements the previously mentioned connection components. As a prerequisite, SAS has been configured to recognize CDS for Apps as the supported issuer and the Azure Service Bus solution configured with rules to allow CDS for Apps to post to the endpoint where the listener is.  
   
  The following diagram shows the physical elements that make up the scenario.  
   
- ![Dynamics 365 to Service Bus scenario](media/crm-v5s-az.png "Dynamics 365 to Service Bus scenario")  
+ ![Dynamics 365 to Service Bus scenario](media/crm-v5s-az.png "CDS for Apps to Service Bus scenario")  
   
  The sequence of events as identified in this diagram are as follows:  
   
 1. A listener application is registered on a Azure Service Bus solution endpoint, and begins actively listening for the CDS for Apps remote execution context on the service bus.  
 
-<!--
+2. A user performs some operation in CDS for Apps that triggers execution of the registered OOB plug-in or a custom Azure-aware plug-in. The plug-in initiates a post, through an asynchronous service system job, of the current request data context to the service bus.  
   
-2. A user performs some operation in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] that triggers execution of the registered OOB plug-in or a custom [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)]-aware plug-in. The plug-in initiates a post, through an asynchronous service system job, of the current request data context to the service bus.  
-  
-3. The claims posted by [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] are authenticated. The service bus then relays the remote execution context to the listener. The listener processes the context information and performs some business-related task with that information. The service bus notifies the asynchronous service of a successful post and sets the related system job to a completed status.  
+3. The claims posted by CDS for Apps are authenticated. The service bus then relays the remote execution context to the listener. The listener processes the context information and performs some business-related task with that information. The service bus notifies the asynchronous service of a successful post and sets the related system job to a completed status.  
   
 <a name="bkmk_establising"></a>  
  
@@ -101,10 +98,10 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
  **Queue**  
  A queue contract provides a message queue in the cloud. With a queue contract, a listener doesn’t have to be actively listening for messages on the endpoint. For queues, there is a destructive read and a non-destructive read. A destructive read reads an available message from the queue and the message is removed. A non-destructive read doesn’t remove a message from the queue.  
   
- The type of queue supported by [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] is called a persistent queue. Persistent queues have a long but finite message availability duration that can be specified in code.  
+ The type of queue supported by CDS for Apps is called a persistent queue. Persistent queues have a long but finite message availability duration that can be specified in code.  
   
  **One-way**  
- A one-way contract requires an active listener. If there is no active listener on an endpoint, the post to the service bus fails. [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] will retry the post in exponentially larger and larger time spans until the asynchronous system job that is posting the request is eventually aborted and its status is set to “Failed.”  
+ A one-way contract requires an active listener. If there is no active listener on an endpoint, the post to the service bus fails. CDS for Apps will retry the post in exponentially larger and larger time spans until the asynchronous system job that is posting the request is eventually aborted and its status is set to “Failed.”  
   
  **Two-way**  
  A two-way contract is similar to a one-way contract except that a string value can be returned from the listener to the plug-in or custom workflow activity that initiated the post.  
@@ -116,19 +113,17 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
  Similar to a queue except that one or more listeners can subscribe to receive messages from the topic.  
   
  **Event Hub**  
- This contract type applies to [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)] Event Hub solutions.  
+ This contract type applies to Azure Event Hub solutions.  
   
 > [!IMPORTANT]
->  To use these contracts, you must write your listener applications using the [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)][SDK](http://www.windowsazure.com/develop/downloads/) v1.7 or later.  
+>  To use these contracts, you must write your listener applications using the [Azure SDK](http://www.windowsazure.com/develop/downloads/) v1.7 or later.  
   
  Identifying the kind of security a contract uses is part of the contract’s configuration. A contract can use Transport security, which uses Transport Layer Security (TLS) or Secure Sockets Layer (SSL) (https).  
   
- Claims authentication is used for secure access to the service bus. The claim used to authenticate to the service bus is generated in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] and signed by the AppFabricIssuer certificate specified in the [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] configuration database.  
+ Claims authentication is used for secure access to the service bus. The claim used to authenticate to the service bus is generated in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] and signed by the AppFabricIssuer certificate specified in the CDS for Apps configuration database.  
   
-<a name="bkmk_management"></a>   
+<a name="bkmk_management"></a>
 
-## Manage of run-time errors  
+## Manage run-time errors  
 
- If an error occurred after a post was attempted to the service bus, check the status of the related system job in the [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] web application for more information on the error. If the service bus is down or a listener/endpoint isn’t available, the current message being processed in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] will not be posted to the bus. The asynchronous service will continue to try to post the message in an exponential pattern where it will try to post frequently at first and then at longer and longer intervals. For an internal [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] error, message posts are not attempted. For an external service bus or network error, the related system job will be in a “Wait” state.  
-  
--->
+ If an error occurred after a post was attempted to the service bus, check the status of the related system job in the web application for more information on the error. If the service bus is down or a listener/endpoint isn’t available, the current message being processed in CDS for Apps will not be posted to the bus. The asynchronous service will continue to try to post the message in an exponential pattern where it will try to post frequently at first and then at longer and longer intervals. For an internal CDS for Apps error, message posts are not attempted. For an external service bus or network error, the related system job will be in a “Wait” state.
