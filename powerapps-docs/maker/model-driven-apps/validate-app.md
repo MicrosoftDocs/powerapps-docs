@@ -66,7 +66,7 @@ When you validate the app, the app designer canvas shows you details about the a
 
 Publish an app to make it available to users.  
   
- After you've added components, validated, and saved the app,  on the command bar, select **Publish**. You can also publish the app from the app tile on the [My Apps](advanced-navigation.md#my-apps) page. In the **Apps Being Edited** view, in the lower right corner of the app tile you want to publish, select the **More options** button (**...**), and then select **Publish**.  
+ After you've added components, validated, and saved the app,  on the command bar, select **Publish**. You can also publish the app from the app tile on the [My Apps](advanced-navigation.md#apps) page. In the **Apps Being Edited** view, in the lower right corner of the app tile you want to publish, select the **More options** button (**...**), and then select **Publish**.  
   
  The app status changes to Published. You can see this in the top-right corner of the app designer. The app moves from the **Apps Being Edited** view to the **Published Apps** view, and the published date is shown on the app tile.  
   

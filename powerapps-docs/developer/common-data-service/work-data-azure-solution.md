@@ -24,7 +24,6 @@ An internal plug-in named ServiceBusPlugin is provided with Dynamics 365 (online
  You can also write a custom workflow activity that can post the execution context to the service bus and include this activity in your workflows. Sample code for a custom Azure-aware workflow activity is provided in the topic [Sample: Azure Aware Custom Workflow Activity](/dynamics365/customer-engagement/developer/sample-azure-aware-custom-workflow-activity) 
   
 ### See also  
-[Writing a Plug-in](write-plug-in.md)   
-[Event Execution Pipeline](event-framework.md)   
-[Azure Extensions for Dynamics 365](azure-integration.md) 
-[ServiceEndPoint Entity](reference/entities/serviceendpoint.md)
+[Writing a Plug-in](write-plug-in.md)<br/>   
+[Event Execution Pipeline](event-framework.md#event-execution-pipeline)<br/>   
+[ServiceEndPoint Entity](reference/entities/serviceendpoint.md)<br/>

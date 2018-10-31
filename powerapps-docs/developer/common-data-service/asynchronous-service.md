@@ -12,18 +12,6 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 ---
 # Asynchronous service
 
-<!-- This whole section should be revised:
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/asynchronous-service
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/asynchronous-service-architecture
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/asyncoperation-system-job-entity
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/asynchronous-operation-states
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/dependency-execution-order-asynchronous-operations
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/recurrence-pattern-asynchronous-job-execution
-
-
-See notes:
-https://microsoft-my.sharepoint.com/:w:/p/jdaly/EQE4dWXvHZFNodFxAqo3UUUBjRI9s6GbmTxk1TkAXKDgqQ?e=ubgmuA -->
-
 The asynchronous service executes long-running operations independent of the main Common Data Service for Apps core operation. This results in improved overall system performance and improved scalability. The asynchronous service features a managed first-in, first-out (FIFO) queue for the execution of asynchronous registered plug-ins, workflows, and operations such as bulk mail, bulk import, and campaign activity propagation. These operations are registered with the asynchronous service and executed periodically when the service processes its queue.
 
 

@@ -11,7 +11,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 09/17/2018
+ms.date: 10/31/2018
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -41,3 +41,7 @@ If you are new to the Common Data Service for Apps applications, the topics in t
 
 [Understand Model-driven apps components](/powerapps/maker/model-driven-apps/model-driven-app-components)<br/>
 [Create your first Model-driven app](/powerapps/maker/model-driven-apps/build-first-model-driven-app)
+
+### See also
+
+[PowerApps for developers](/powerapps/#pivot=home&panel=developer)
