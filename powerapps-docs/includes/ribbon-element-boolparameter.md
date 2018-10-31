@@ -1,0 +1,1 @@
+Specifies a value with a Boolean data type that may be passed as a parameter.

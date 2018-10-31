@@ -1,0 +1,1 @@
+To enable Engagement and Analytics scenarios, in some cases Microsoft Social Engagement connects to the third-party services Twitter and Facebook for the retrieval of Social Content. When establishing these connections, certain data, such as your IP address, may be shared with those services.

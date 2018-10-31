@@ -1,0 +1,1 @@
+Provides methods to use Web API to create and manage records and execute Web API actions and functions in model-driven apps when connected to the model-driven apps server (online mode). 

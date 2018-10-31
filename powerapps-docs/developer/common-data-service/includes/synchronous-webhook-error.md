@@ -1,0 +1,1 @@
+When you choose to use a synchronous execution mode any failure will be reported back to the user of the application with an **Endpoint unavailable** error dialog informing the user that the webhook service endpoint may be configured incorrectly or is not available. The dialog will allow you to download a log file to get details on any errors.
