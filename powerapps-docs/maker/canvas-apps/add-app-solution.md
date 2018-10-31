@@ -106,4 +106,4 @@ If you want to link an app to a solution, they must be in the same environment, 
 ## Next steps
 
 - Create or link more apps and [other components](../common-data-service/use-solution-explorer.md), such as entities, flows, and dashboards, to your solution.
-- [Export your solution](../common-data-service/import-update-export-solutions.md#export-solutions) so that you can deploy it to another environment, on AppSource, and so forth.
+- [Export your solution](../common-data-service/import-update-export-solutions.md) so that you can deploy it to another environment, on AppSource, and so forth.

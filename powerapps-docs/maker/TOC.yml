@@ -917,10 +917,10 @@
     items: 
       - name: Create a business rule for an entity 
         href: ./common-data-service/data-platform-create-business-rule.md
-  - name: Work with projects
+  - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
     items:
-    - name: Use projects 
+    - name: Use solutions 
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution
       href: ./common-data-service/use-solutions-for-your-customizations.md   
@@ -928,6 +928,8 @@
       href: ./common-data-service/import-update-export-solutions.md 
     - name: Navigate to a specific solution
       href: ./common-data-service/navigate-specific-solution.md
+    - name: Create a solution
+      href: ./common-data-service/create-solution.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix

@@ -1,8 +1,8 @@
 ---
-title: "Use project in PowerApps | MicrosoftDocs"
-description: "Learn how to use project to create or customize apps"
+title: "Use solutions in PowerApps | MicrosoftDocs"
+description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
-ms.date: 06/18/2018
+ms.date: 10/29/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -23,72 +23,70 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use project in PowerApps
+# Use solutions in PowerApps
 
-> [!NOTE]
-> Projects are built on the [solution system](https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-solutions) in Dynamics 365 for Customer Engagement. When using this functionality in PowerApps, you’ll see it described as a ‘project'. When using this functionality in Dynamics 365 for Customer Engagement, you'll see it described as a 'solution'. 
-
- Within PowerApps, you can view a list of projects by selecting **Projects** in the left navigation. You can then click into a project to view all of its components. 
+ Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
 
 > [!div class="mx-imgBorder"]  
-> ![Demo project with all components](media/project-all-items-list.PNG "Demo project with all components")  
+> ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
   
-> [!NOTE]
->  Use your mouse and keyboard when working with customization tools in a project. This part of the application isn’t optimized for touch.  
  
- You can browse through all the components in a project by scrolling through the items. If there are more then 100 items in the list you can click **Load the next 100 items** to see more. 
+ You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
 > [!div class="mx-imgBorder"]  
 > ![Load more components](media/load-more.PNG "Load more components")  
  
- ## Search and filter in a project
+ ## Search and filter in a solution
  
  You can also search for a specific component by its name. 
  
 > [!div class="mx-imgBorder"]  
-> ![Search component](media/project-search-box.PNG "Search component")  
+> ![Search component](media/solution-search-box.PNG "Search component")  
  
  Or filter all items in the list by the component type.
   
 > [!div class="mx-imgBorder"]  
-> ![Filter component by type](media/project-filter.PNG "Filter component by type")  
+> ![Filter component by type](media/solution-filter.PNG "Filter component by type")  
  
  ## Contextual commands
  
- As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the project is the default or a managed one. 
+ As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
 > ![Component specific commands](media/component-commands.PNG "Component specific commands")  
  
- When you don't select any component, the command bar will show actions applied to the project itself. 
+ When you don't select any component, the command bar will show actions applied to the solution itself. 
  
 > [!div class="mx-imgBorder"]  
-> ![Project specific commands](media/project-commands.PNG "Project specific commands")  
+> ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
  
- ## Create component in a project
- With projects that are unmanaged or the default one, you can use the **New** command to create different types of component. This will take you to different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the project. 
- 
-> [!div class="mx-imgBorder"]  
-> ![Create new component in a project](media/project-new-component.PNG "Create new component in a project")  
- 
- ## Add existing component to a project
- 
- With projects that are unmanaged and not the default one, you can use the **Add Existing** command to bring in components that aren’t already in the project.  
+ ## Create components in a solution
+ With solutions that are unmanaged or the default one, you can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
  
 > [!div class="mx-imgBorder"]  
-> ![Add existing component to a project](media/project-add-existing-component.PNG "Add existing component to a project")  
+> ![Create new component in a solution](media/solution-new-component.PNG "Create new component in a solution")  
+ 
+ ## Add an existing component to a solution
+ 
+ With solutions that are unmanaged and not the default one, you can use the **Add existing** command to bring in components that aren’t already in the solution.  
+ 
+> [!div class="mx-imgBorder"]  
+> ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
   
- With projects that are managed, there will be no commands available and you’ll see the message as shown below. You’ll need to locate the component in the project named **Default Solution** and try to edit it there or add it to another unmanaged project that you’ve created. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
+ With solutions that are managed, there will be no commands available and you’ll see the message as shown below. You’ll need to locate the component in the solution named **Default Solution** and try to edit it there or add it to another unmanaged solution that you’ve created. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
 
 > [!div class="mx-imgBorder"]  
-> ![Managed project](media/managed-project.PNG "Managed project")  
+> ![Managed solution](media/managed-solution.PNG "Managed solution")  
 
- Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current project that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot:  
+ Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
+ 
+> [!NOTE]
+>  Currently, when you add an existing entity to a solution the system automatically adds all the components that are part of the entity to your solution. If this is not what you prefer, use the command **Switch to classic** to navigate to the legacy experience and add only those components that you want. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
   
 > [!div class="mx-imgBorder"]  
-> ![Demo Project showing expanded account entity](media/project-entity-account.PNG "Demo Project showing expanded account entity")  
+> ![Demo solution showing expanded account entity](media/solution-entity-account.PNG "Demo solution showing expanded account entity")  
   
- For details about customizing the individual components in a project, see the following topics:  
+ For details about customizing the individual components in a solution, see the following topics:  
   
 -   For entity, entity relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
   
