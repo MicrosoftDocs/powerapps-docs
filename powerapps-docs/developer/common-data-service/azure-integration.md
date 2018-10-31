@@ -87,7 +87,7 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
   
 1. A listener application is registered on a Azure Service Bus solution endpoint, and begins actively listening for the CDS for Apps remote execution context on the service bus.  
 
-<!-->
+<!--
   
 2. A user performs some operation in [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] that triggers execution of the registered OOB plug-in or a custom [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)]-aware plug-in. The plug-in initiates a post, through an asynchronous service system job, of the current request data context to the service bus.  
   
