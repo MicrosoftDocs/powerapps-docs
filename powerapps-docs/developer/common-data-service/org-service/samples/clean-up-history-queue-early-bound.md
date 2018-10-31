@@ -32,7 +32,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the current version of the org.
 2. Creates a queue instance and set its property values.
-3. Creates a phone call activity instance and also queueitems instance and intializes its properties.
+3. Creates a phone call activity instance and also queueitems instance and initializes its properties.
 4. Marks the phone call as completed. 
 
 ### Demonstrate

@@ -23,7 +23,7 @@ This sample shows how to upload, retrieve, and download an attachment for an ann
 
 ## What this sample does
 
-The `IOrganizationService` methods is intended to be used in a scenario where it provides progrommatic access to the metadata and data for an organization.
+The `IOrganizationService` methods is intended to be used in a scenario where it provides programmatic access to the metadata and data for an organization.
 
 ## How this sample works
 

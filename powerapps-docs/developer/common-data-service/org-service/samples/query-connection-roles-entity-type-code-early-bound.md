@@ -32,7 +32,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Defines some anonymous types to define the range of possible conection property values.
+1. Defines some anonymous types to define the range of possible connection property values.
 2. The `ConnectionRole` creates a connection role.
 3. The `QueryExpression` queries all the connection roles.
 4. The `ConnectionRoleObjectTypeCode` creates a connection role object type code record for account entity. 

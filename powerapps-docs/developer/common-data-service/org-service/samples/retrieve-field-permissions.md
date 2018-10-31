@@ -29,7 +29,7 @@ This sample requires additional users that are not in your system. Create the re
 
 ## What this sample does
 
-The `FieldPermission` class is intended to be used in a scenario where it contains the data that defines the possible field permisson types.
+The `FieldPermission` class is intended to be used in a scenario where it contains the data that defines the possible field permission types.
 
 ## How this sample works
 
@@ -39,7 +39,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the current version of the org.
 1. Gets the user information that you have created manually in **Office 365**.
-1. The `QueryExpresion` method retrieves the security role needed to assign to the user.
+1. The `QueryExpression` method retrieves the security role needed to assign to the user.
 1. The `Team` method instantiate a team entity record and set its property values.
 
 ### Demonstrate
