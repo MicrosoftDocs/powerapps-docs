@@ -321,10 +321,6 @@
 - name: Create client applications
   href: connect-cds.md
   items:
-  # - name: Authentication
-  #   items:
-    # - name: Authenticate Office 365 users
-    #   href: authenticate-office-365-users-cds-web-services.md
   - name: Authenticate
     href: authentication.md
     items:
@@ -376,20 +372,16 @@
     href: reference/entities/toc.yml
   - name: Web API Reference
     href: /dynamics365/customer-engagement/web-api/about
-  - name: Organization Service 9.0
+  - name: Organization Service
     href: /dotnet/api/?view=dynamics-general-ce-9
-  - name: XRM Tooling 9.0
+  - name: XRM Tooling
     href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
-  - name: Virtual Entity 9.0
+  - name: Virtual Entity
     href: /dotnet/api/?view=dynamics-virtualentity-ce-9
-  - name: Workflow 9.0
+  - name: Workflow
     href: /dotnet/api/?view=dynamics-workflow-ce-9 
-  - name: Package Deployer 9.0
+  - name: Package Deployer
     href: /dotnet/api/?view=dynamics-deployer-ce-9
-  - name: Outlook Client 9.0
-    href: /dotnet/api/?view=dynamics-outlookclient-ce-9
-  - name: Online Management API Reference
-    href: /rest/api/admin.services.crm.dynamics.com
   - name: Customization solutions file schema
     href: customization-solutions-file-schema.md
   - name: Solution component file reference (SolutionPackager) 
