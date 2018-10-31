@@ -31,3 +31,7 @@ PowerApps offers users, businesses, independent software vendors (ISVs), and sys
 
 > [!div class="nextstepaction"]
 > [Get started](get-started-CDS-developers.md)
+
+### See also
+
+[PowerApps for developers](/powerapps/#pivot=home&panel=developer)
