@@ -1,8 +1,8 @@
 ---
-title: "Walkthrough: Register a Dynamics 365 app with Azure Active Directory (Common Data Service for Apps) | Microsoft Docs"
-description: "This walkthrough describes how to register an application with Azure Active Directory so that it can connect to the Dynamics 365 Common Data Service for Apps Online instance, authenticate using OAuth, and access the web services."
+title: "Walkthrough: Register an app with Azure Active Directory (Common Data Service for Apps) | Microsoft Docs"
+description: "This walkthrough describes how to register an application with Azure Active Directory so that it can connect to the Common Data Service for Apps environment, authenticate using OAuth, and access the web services."
 keywords: ""
-ms.date: 09/30/2018
+ms.date: 10/31/2018
 ms.service:
   - "powerapps"
 ms.custom:
@@ -12,39 +12,26 @@ ms.assetid: 86c4a8a8-7401-6d75-7979-3b04b506eb0c
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.reviewer: "kvivek"
 ---
 
 # Walkthrough: Register an app with Azure Active Directory
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory -->
-
-This walkthrough describes how to register an application with Azure Active Directory, which enables a user with Dynamics 365 (online) user account to connect to their Dynamics 365 Online Common Data Service for Apps instance from external client applications using OAuth authentication.
-
-> [!NOTE]
-> The Dynamics 365 (online), version 9.0 release is not available for on-premises deployments.
-
-App registration in Azure Active Directory is typically done by ISVs who want to develop external client applications to read and write data in CDS for Apps. Registering an app in Azure Active Directory provides you with **Application ID** and **Redirect URI** values that ISVs can use in their client application's authentication code. When end users use the ISV's application for the *first time* to connect to their CDS for Apps instance by providing their CDS for Apps credentials, a consent form is presented to the end user. After consenting to use their CDS for Apps account with the ISV's application, end users can connect to CDS for Apps instance from external application. The consent form is not displayed again to other users after the first user who has already consented to use the ISV's app. Apps registered in Azure Active Directory are multi-tenant, which implies that other CDS for Apps users from other tenant can connect to their instance using the ISV's app. 
-
-App registration can also be done by an application developer or individual user who is building a client application to connect to and read/write data in CDS for Apps. Use the **Application ID** and **Redirect URI** values from your registered app in your client application's authentication code to be able to connect to CDS for Apps instance from your client application, and perform the required operations. Note that if the app is registered in the same tenant as your CDS for Apps instance, you won't be presented with a consent form when connecting from your client application to your CDS for Apps instance.
+This walkthrough describes how to register an application with Azure Active Directory, which enables a user with PowerApps user account to connect to their Common Data Service (CDS) for Apps environment from external client applications using OAuth authentication.
 
 > [!IMPORTANT]
-> You can also use Server-to-Server (S2S) authentication to connect to Dynamics 365 CDS for Apps instance using an application user. More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
+> PowerApps also provides you with Server-to-Server (S2S) authentication option to connect to CDS for Apps environment from external applications and services using the special application user account. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the data of their subscribers. More information:. More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
+
+
+App registration in Azure Active Directory is typically done by ISVs who want to develop external client applications to read and write data in CDS for Apps. Registering an app in Azure Active Directory provides you with **Application ID** and **Redirect URI** values that ISVs can use in their client application's authentication code. When end users use the ISV's application for the *first time* to connect to their CDS for Apps environment by providing their CDS for Apps credentials, a consent form is presented to the end user. After consenting to use their CDS for Apps account with the ISV's application, end users can connect to CDS for Apps environment from external application. The consent form is not displayed again to other users after the first user who has already consented to use the ISV's app. Apps registered in Azure Active Directory are multi-tenant, which implies that other CDS for Apps users from other tenant can connect to their environment using the ISV's app. 
+
+App registration can also be done by an application developer or individual user who is building a client application to connect to and read/write data in CDS for Apps. Use the **Application ID** and **Redirect URI** values from your registered app in your client application's authentication code to be able to connect to CDS for Apps environment from your client application, and perform the required operations. Note that if the app is registered in the same tenant as your CDS for Apps environment, you won't be presented with a consent form when connecting from your client application to your CDS for Apps environment.
 
 ## Prerequisites  
-<!--- **For an on-premises or Internet-facing deployment (IFD)**:  
-  
-    -   The server must be configured to use claims authentication and have OAuth authentication enabled.  
-  
-    -   A Microsoft Azure subscription for application registration. A trial account will also work.  
-  
-- **For a Dynamics 365 (online) deployment**:-->  
-  
--   The user who is registering the application must have a Dynamics 365 (online) user account with System Administrator security role and the global administrator role for the Office 365 subscription.  
+-   The user who is registering the application must have a user account with System Administrator security role and the global administrator role for the Office 365 subscription.  
   
 -   An Azure subscription for application registration. A trial account will also work.  
   
- <!--For either deployment type, you must know the redirect URL for your application. Instructions for finding that URL are provided in the section named [Obtain the redirect URI](walkthrough-register-app-active-directory.md#bkmk_redirect).-->  
     
 
 ## Create an application registration 
