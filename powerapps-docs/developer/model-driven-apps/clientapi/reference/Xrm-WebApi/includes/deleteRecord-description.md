@@ -1,0 +1,1 @@
+Deletes an entity record.

@@ -1,0 +1,1 @@
+Gets information about the relationship used to filter the subgrid.
