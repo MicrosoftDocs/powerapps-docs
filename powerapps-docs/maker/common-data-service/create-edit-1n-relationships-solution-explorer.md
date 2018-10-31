@@ -2,7 +2,7 @@
 title: "Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer | MicrosoftDocs"
 description: "Learn how to create one-to-many or many-to-one entity relationships using PowerApps solution explorer"
 ms.custom: ""
-ms.date: 05/27/2018
+ms.date: 10/28/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -159,7 +159,7 @@ These are the actions that can trigger certain behaviors:
 |**Assign**|What should happen when the primary entity record is assigned to someone else?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Reparent**|What should happen when the lookup value of a related entity in a parental relationship is changed?<br />More information: [Parental entity relationships](#parental-entity-relationships)|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Share**|What should happen when the primary entity record is shared?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
-|**Delete**|What should happend when the primary entity record is deleted?|Cascade All<br />Remove Link<br />Restrict|
+|**Delete**|What should happen when the primary entity record is deleted?|Cascade All<br />Remove Link<br />Restrict|
 |**Unshare**|What should happen when a primary entity record is unshared?|Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 |**Merge**|What should happen when a primary entity record is merged?|Cascade All<br />Cascade None|
 |**Rollup View**|What is the desired behavior of the rollup view associated with this relationship? |Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
