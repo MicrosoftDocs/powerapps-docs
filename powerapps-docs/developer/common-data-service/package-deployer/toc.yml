@@ -1,2 +1,2 @@
-- name: Create packages for the Dynamics 365 Package Deployer
+- name: Create packages for Package Deployer
   href: create-packages-package-deployer.md
