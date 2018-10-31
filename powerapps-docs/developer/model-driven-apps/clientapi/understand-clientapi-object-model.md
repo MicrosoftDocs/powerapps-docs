@@ -9,6 +9,11 @@ ms.assetid: 3335aec5-6b48-4ef6-8d49-2833b177f318
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Understand the Client API object model
 

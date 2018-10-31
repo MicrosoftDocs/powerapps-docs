@@ -9,6 +9,11 @@ ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # formContext.ui.formSelector (Client API reference)
 

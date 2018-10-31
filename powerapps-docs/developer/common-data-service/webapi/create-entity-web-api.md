@@ -15,6 +15,11 @@ caps.latest.revision: 51
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Create an entity using the Web API

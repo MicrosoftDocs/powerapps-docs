@@ -9,6 +9,11 @@ ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Pass data from a page as a parameter to Ribbon Actions
 

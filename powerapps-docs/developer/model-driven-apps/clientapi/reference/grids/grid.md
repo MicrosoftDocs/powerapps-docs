@@ -8,6 +8,11 @@ ms.assetid: 02fef0b4-b895-4277-b604-3f525c29dca3
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Grid (Client API reference)
 

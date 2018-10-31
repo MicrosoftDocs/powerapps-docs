@@ -15,6 +15,11 @@ caps.latest.revision: 8
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Authenticate to Common Data Service for Apps with the Web API
 

@@ -14,6 +14,11 @@ ms.assetid: 8deb0bc5-6f4a-4ca7-a3a2-75c06dc7f967
 caps.latest.revision: 11
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Web API Helper code: CrmHttpResponseException class
 

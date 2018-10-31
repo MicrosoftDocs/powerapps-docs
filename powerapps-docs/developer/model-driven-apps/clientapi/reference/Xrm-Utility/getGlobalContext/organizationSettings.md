@@ -8,6 +8,11 @@ ms.assetid: badf4f82-cb47-4864-aa43-bb777d04de4d
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getGlobalContext.organizationSettings (Client API reference)
 

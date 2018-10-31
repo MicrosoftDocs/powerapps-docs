@@ -15,6 +15,11 @@ caps.latest.revision: 13
 author: "MattB-msft"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use XRM tooling to execute actions in CDS for Apps
 

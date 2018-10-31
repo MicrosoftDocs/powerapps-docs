@@ -8,6 +8,11 @@ ms.assetid: 5ba037da-59f3-4e10-80f8-4e46d5410f81
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getAttribute (Client API reference)
 

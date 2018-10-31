@@ -9,6 +9,11 @@ ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Authenticate Office 365 users with Common Data Service for Apps web services
 

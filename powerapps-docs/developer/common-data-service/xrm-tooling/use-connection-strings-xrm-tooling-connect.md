@@ -15,6 +15,11 @@ caps.latest.revision: 21
 author: "MattB-msft"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Use connection strings in XRM tooling to connect to Common Data Service for Apps
 

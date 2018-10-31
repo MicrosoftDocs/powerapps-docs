@@ -8,6 +8,11 @@ ms.assetid: dbd43d7b-c9b0-4ca5-943d-dd813d3bb049
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # refreshRibbon (Client API reference)
 

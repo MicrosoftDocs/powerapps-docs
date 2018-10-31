@@ -14,6 +14,11 @@ ms.assetid: a7b5931c-3142-4616-a331-1e07b4d8845d
 caps.latest.revision: 11
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Web API Helper code: Authentication class
 

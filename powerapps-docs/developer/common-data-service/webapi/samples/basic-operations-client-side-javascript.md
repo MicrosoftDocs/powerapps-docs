@@ -15,6 +15,11 @@ caps.latest.revision: 27
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Web API Basic Operations Sample (Client-side JavaScript)
 

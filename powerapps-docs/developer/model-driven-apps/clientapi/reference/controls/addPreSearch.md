@@ -8,6 +8,11 @@ ms.assetid: d69a432a-1d74-4782-bedd-f9f30d3d7d9c
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # addPreSearch (Client API reference)
 

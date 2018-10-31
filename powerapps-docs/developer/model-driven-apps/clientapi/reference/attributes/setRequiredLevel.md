@@ -8,6 +8,11 @@ ms.assetid: 67a96fc4-4d65-4858-90da-f41eeba0365a
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setRequiredLevel (Client API reference)
 

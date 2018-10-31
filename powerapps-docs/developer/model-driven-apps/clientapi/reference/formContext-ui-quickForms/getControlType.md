@@ -8,6 +8,11 @@ ms.assetid: 72d6c761-bcc7-4de6-b73f-5f2833297825
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getControlType (Client API reference)
 

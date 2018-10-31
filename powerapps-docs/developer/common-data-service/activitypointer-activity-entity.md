@@ -9,6 +9,11 @@ ms.topic: "article"
 author: "mayadumesh" 
 ms.author: "jdaly" 
 manager: "ryjones" 
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # ActivityPointer (activity) entity
 

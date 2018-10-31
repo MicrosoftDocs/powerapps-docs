@@ -8,6 +8,11 @@ ms.assetid: 855767c5-c48f-47a2-8f99-52423221d974
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # isOnPremise (Client API reference)
 

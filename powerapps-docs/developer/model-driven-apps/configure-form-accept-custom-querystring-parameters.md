@@ -13,6 +13,11 @@ author: JimDaly # GitHub ID
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Configure a form to accept custom querystring parameters

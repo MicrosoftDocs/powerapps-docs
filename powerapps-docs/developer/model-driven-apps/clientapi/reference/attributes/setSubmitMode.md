@@ -8,6 +8,11 @@ ms.assetid: d0728377-4365-4571-97af-9b99b2a39b65
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setSubmitMode (Client API reference)
 

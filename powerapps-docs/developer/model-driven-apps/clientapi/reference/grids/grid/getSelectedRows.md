@@ -8,6 +8,11 @@ ms.assetid: 49f39f0f-33ef-41d1-9ab3-14966ae075b5
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getSelectedRows (Client API reference)
 

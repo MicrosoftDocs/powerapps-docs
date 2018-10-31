@@ -15,6 +15,11 @@ caps.latest.revision: 15
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Create and update entity relationships using the Web API
 

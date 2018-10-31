@@ -8,6 +8,11 @@ ms.assetid: 40044355-6d7d-4636-808c-e88c0f366edb
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # removeOnStageSelected (Client API reference)
 

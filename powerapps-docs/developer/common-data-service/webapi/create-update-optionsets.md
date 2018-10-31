@@ -14,6 +14,11 @@ caps.latest.revision: 15
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "ryjones"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Create and update option sets using the Web API

@@ -8,6 +8,11 @@ ms.assetid: 8139c622-e4d9-478f-9510-414d140e5556
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # GridRowData (Client API reference)
 

@@ -8,6 +8,11 @@ ms.assetid: 5bc5295b-0232-4d1b-8583-f20417571c1f
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Xrm.Panel
 

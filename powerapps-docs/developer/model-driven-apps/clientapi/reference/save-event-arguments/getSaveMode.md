@@ -8,6 +8,11 @@ ms.assetid: 03e970ee-7ed3-4df2-9670-222d76a479fd
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getSaveMode (Client API reference)
 

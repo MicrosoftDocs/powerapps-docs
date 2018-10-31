@@ -8,6 +8,11 @@ ms.assetid: ac9a8c97-ad4d-4ed8-8eb0-51b2693253dc
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getSelectedStage (Client API reference)
 
