@@ -15,7 +15,7 @@ manager: "ryjones" # MSFT alias of manager or PM counterpart
 This sample shows how to create new records by using data import. The sample uses a complex data map.
 
 >[!NOTE]
-> The source data for this sample is contained in the folowing file `ImportComplexDataMap\import accounts.csv`
+> The source data for this sample is contained in the following file `ImportComplexDataMap\import accounts.csv`
 
 ## How to run this sample
 
@@ -30,9 +30,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 1. Checks the current version of the org.
 1. The `ImportMap` method creates an import map.
 1. The `ColumnMapping` method creates a column mapping for a `text` type field.
-1. The `EntityReference` method relates the colum mapping with the data map.
+1. The `EntityReference` method relates the column mapping with the data map.
 1. The `LookUpMapping` method creates a lookup mapping to the parent account.
-1. The `ImportFile` method creates a inport file.
+1. The `ImportFile` method creates a import file.
 1. The `GetHeaderColumnsImportFileRequest` method retrieves the header columns used in the import file.
 1. The `ParseImportRequest` method parses the import file. 
 1. The `RetrievedParsedDataImportFileRequest` method retrieves the data from the parse table.
