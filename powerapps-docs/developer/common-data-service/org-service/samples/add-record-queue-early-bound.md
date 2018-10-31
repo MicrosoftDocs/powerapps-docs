@@ -36,15 +36,16 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. The `Queue` method creates source and destination queues and store their returned GUIDs in vatiable.
+2. The `Queue` method creates source and destination queues and store their returned GUIDs in variable.
 3. Creates a Letter entity.
-4. The `AddToQueueRequest` method adds an entiy record into a queue, in this sample it associates the letter with first queue.
+4. The `AddToQueueRequest` method adds an entity record into a queue, in this sample it associates the letter with first queue.
 5. Retrieves the user created manually in **Office 365** for assigning the queue items to the user's queue.
 
 ### Demonstrate
 
 1. The `RetrieveUserQueueRequest` message retrieves the known private queues for the user.
 2. The `AddToQueueRequest` message adds the record from a source queue to destination queue.
+
 ### Clean up
 
 1. Display an option to delete the sample data that is created in [Setup](#setup).
