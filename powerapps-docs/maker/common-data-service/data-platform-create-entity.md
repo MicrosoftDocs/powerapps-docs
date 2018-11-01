@@ -41,8 +41,8 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?u
     * **Plural display name** - This field is autopopulated when you enter a display name, but you can change it if needed. The plural display name is the name of the entity in the Common Data Service WebAPI and is used when interacting with this entity from PowerApps or Flow.
     * **Name** - This field is also autopopulated when you enter a display name. The prefix was set up when the environment was created and ensures that the entities you create can be exported and imported into other environments without conflicting with other entity names. You can change this prefix by updating the prefix on your Publisher for the Common Data Service Default Solution. To keep existing apps from breaking, you cannot change the name after saving the entity.
 
-     > [!NOTE]
-     > In order for the entity name to work with [Dynamics 365 for Customer Service embedded knowledge search](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum entity name length including the publisher prefix can’t exceed 24 characters.
+       > [!NOTE]
+       > In order for the entity name to work with [Dynamics 365 for Customer Service embedded knowledge search](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum entity name length including the publisher prefix can’t exceed 24 characters.
      
     ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New entity panel")
 
