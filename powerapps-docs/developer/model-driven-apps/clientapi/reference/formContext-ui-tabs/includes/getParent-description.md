@@ -1,0 +1,1 @@
+Returns the [formContext.ui](../../formContext-ui.md) object containing the tab.

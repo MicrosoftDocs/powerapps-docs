@@ -1,0 +1,1 @@
+Sets the label of the tab.
