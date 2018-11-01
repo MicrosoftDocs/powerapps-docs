@@ -16,7 +16,6 @@ ms.custom:
       <h1>PowerApps Documentation</h1>
       <ul class="pivots">
          <li>
-            <a href="#home"></a>
             <ul id="home">
                <li>
                   <a href="#getstarted"><strong>Get started</strong></a>
