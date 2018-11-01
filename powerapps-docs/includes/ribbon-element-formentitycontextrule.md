@@ -1,0 +1,1 @@
+Specifies a rule that can detect whether a form ribbon is displayed in the context of a specific entity.

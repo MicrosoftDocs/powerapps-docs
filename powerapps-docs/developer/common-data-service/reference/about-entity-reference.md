@@ -1,11 +1,11 @@
 ---
-title: "About Entity Reference (Common Data Service for Apps)| MicrosoftDocs"
+title: "About Entity Reference (Common Data Service for Apps)| Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific entities, the default attributes attributes of each entity and the relationships between entities."
 services: ''
 suite: powerapps
 documentationcenter: na
 author: JimDaly
-manager: faisalmo
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: reference
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/12/2018
+ms.date: 10/31/2018
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -35,7 +35,7 @@ Use this reference to understand the available operations that can be performed 
 > - The entity supports some kind of direct data modification operation.
 >    - This excludes entities which you can't work with directly. 
 >
-> To see all entity metadata information for your environment, see [Dynamics 365 Developers Guide : Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata).
+> To see all entity metadata information for your environment, see [CDS for Apps Developers Guide : Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata).
 
 
 ## Entity Properties
@@ -63,7 +63,7 @@ The [EntityMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata) clas
 > It is important to keep in mind that while each entity lists those relationships which apply to it, each relationship is shared by both entities. The relationships exist *between* the entities. While One-To-Many relationships exist, *Many-to-One* relationships are simply a view of a One-To-Many relationship from the referencing entity.
 
 ### One-to-many relationships
-In order to represent that there are no actual *Many-to-One* relationships with a minimum of confusion, the details of each relationship are only documented once. Each one-to-Many relationship is listed with the referenced entity and includes selected relationship details and a link to the corresponding *Many-to-One* relationship. Each *Many-to-One* relationship listed includes only a link to the corresponding One-to-Many relationship.
+In order to represent that there are no actual *Many-to-One* relationships with a minimum of confusion, the details of each relationship are only documented once. Each One-to-Many relationship is listed with the referenced entity and includes selected relationship details and a link to the corresponding *Many-to-One* relationship. Each *Many-to-One* relationship listed includes only a link to the corresponding One-to-Many relationship.
 
 For each one-to-many relationship the following properties are included:
 
@@ -73,7 +73,7 @@ For each one-to-many relationship the following properties are included:
 |`ReferencingAttribute`|The logical name of the attribute in the related entity that contains a reference to primary key of the primary entity.|
 |`IsHierarchical`|Whether the relationship represents a self-referential hierarchical relationship|
 |`IsCustomizable`|Whether the properties of the relationship can be changed.|
-|`ReferencedEntityNavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information:[Dynamics 365 Customer Engagement Developer Guide Navigation properties](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#navigation-properties)|
+|`ReferencedEntityNavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information:[Common Data Service for Apps Developer Guide Navigation properties](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#navigation-properties)|
 |`AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the related entity data can be accessed in the UI from the primary entity.|
 |`CascadeConfiguration`|Data that describes which operations performed on the parent entity will cascade down to related entities.<br />More information: [Cascade configuration](../entity-relationship-metadata.md#cascade-configuration)|
 
@@ -88,7 +88,7 @@ For each many-to-many relationship the following properties are included:
 |`IntersectEntityName`|The logical name of the intersect entity that supports this many-to-many relationship|
 |`Entity1LogicalName`|The logical name for the first entity in the relationship.|
 |`Entity1IntersectAttribute`|The logical name of the intersect entity attribute that includes a reference to the primary key of the first entity.|
-|`Entity1NavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information: [Dynamics 365 Customer Engagement Developer Guide Navigation properties](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#navigation-properties)|
+|`Entity1NavigationPropertyName`|The name of the Web API collection-valued navigation property for this relationship.<br />More information: [Common Data Service for Apps Developer Guide Navigation properties](/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#navigation-properties)|
 |`Entity1AssociatedMenuConfiguration`|Data used by model-driven apps to control whether and how the first entity data can be accessed in the UI from the second entity.|
 |`Entity2LogicalName`|The logical name for the second entity in the relationship.|
 |`Entity2IntersectAttribute`|The logical name of the intersect entity attribute that includes a reference to the primary key of the second entity.|

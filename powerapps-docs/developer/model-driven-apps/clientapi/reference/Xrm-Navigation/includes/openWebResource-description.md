@@ -1,0 +1,1 @@
+Opens an HTML web resource.

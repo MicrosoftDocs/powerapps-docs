@@ -1,0 +1,1 @@
+Gets the URL of the current grid control.
