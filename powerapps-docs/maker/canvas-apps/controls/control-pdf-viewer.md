@@ -21,17 +21,17 @@ An experimental control that shows the content of a PDF file.
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Limitations
-1. Note that due to the security architecture of PowerApps, PDF Viewer only supports HTTPS links and not HTTP.  
+1. The security architecture of PowerApps requires the PDF Viewer to support only HTTPS links, not HTTP.  
 
-2. The Document property must link directly to the PDF file. Server redirects or HTML views of the document are not supported.
+2. The **Document** property must link directly to the PDF file. Server redirects or HTML views of the document aren't supported.
 
 3. The server that hosts the document must not require authentication.
 
-4. If the PDF document resides on a server with restrictive CORS settings, you may not be able to view it within your app.  To resolve this issue, the server that hosts PDF documents needs to permit cross origin requests (CORS) coming from powerapps.com.
+4. You may not be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
 
-In case the document cannot be opened in PowerApps, the option to open the document in an external browser is presented to the end user.  This option is also available in the control menu for all external documents.
+App users can work around these limitations by opening PDF documents in an external browser, as prompted if the control can't open a document. This option is also available in the control menu for all external documents.
 
-If the above limitations restrict you from displaying a PDF document in an app, the recommended approach is to include the PDF file as a media resource in the app.  This will ensure the file can always be displayed in the PDF Viewer control.
+App makers can work around these limitations by including PDF documents as media resources in the app. That way, the PDF Viewer control can always show the document.
 
 ## Key properties
 **Document** – The URL, enclosed in double-quotation marks, of a PDF file.
