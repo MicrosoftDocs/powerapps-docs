@@ -51,12 +51,9 @@ For more information about working with methods and events available for grids a
 
 ## Related topics
 
-[Client API form context](clientapi-form-context.md)
-
-[Client API execution context](clientapi-execution-context.md)
-
-[Understand the Client API object model](understand-clientapi-object-model.md)
-
+[Client API form context](clientapi-form-context.md)<br/>
+[Client API execution context](clientapi-execution-context.md)<br/>
+[Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Grids and subgrids](reference/grids.md)
 
  
