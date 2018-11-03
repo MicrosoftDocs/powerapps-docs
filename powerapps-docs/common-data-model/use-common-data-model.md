@@ -48,7 +48,7 @@ By using CDS for Apps, you can jumpstart apps using the CDM with business logic,
 
 Whatever your intent, the CDM puts your data into a common format so that you can use, share, and analyze it more easily.
 
-**Resources for CDS for Apps**
+### Resources for CDS for Apps
 
 - [What is CDS for Apps?](../maker/common-data-service/data-platform-intro.md)
 - [Add data to an entity in CDS for Apps by using Power Query](../maker/common-data-service/data-platform-cds-newentity-pq.md)
@@ -56,3 +56,27 @@ Whatever your intent, the CDM puts your data into a common format so that you ca
 - [Build a model-driven app](../maker/model-driven-apps/model-driven-app-overview.md)
 - [Build a canvas app](../maker/canvas-apps/getting-started.md)
 - [Create a flow that uses CDS for Apps](https://docs.microsoft.com/flow/common-data-model-intro)
+
+## Power BI
+
+You can use the dataflows feature of Power BI to ingest data into the CDM from Dynamics 365, Salesforce, Azure SQL Database, Excel, SharePoint, or another source. You create and manage dataflows in app workspaces by using the Power BI service, and the data itself is stored as entities in the CDM in Azure Data Lake Storage Gen2.
+
+> [!NOTE]
+> The dataflows functionality is in preview, and is subject to change and updates prior to general availability.
+
+Similar to how spreadsheets handle recalculations for all affected formulas, dataflows manage changes for an entity or data element on your behalf, automating updates, and alleviating what used to be tedious and time consuming logic checks for even a basic data refresh. With dataflows and a few clicks, analysts and report creators can handle tasks that once required data scientists to oversee (and many hours or days to complete).
+
+Organizations can incorporate dataflows in these ways, among others, to suit their needs:
+
+- Customize standard entities and create their own.
+- Create dataflows programmatically with custom definition files (model.json).
+- Leverage powerful Azure products such as Azure Machine Learning, Azure Databricks, and Azure Data Factory.
+- Add CSV data from Azure Blob Storage.
+- Enjoy more storage, more frequent refreshes, incremental refresh, and computed and linked entities with Power BI Premium.
+
+### Resources for Power BI
+
+- [Self-service data prep in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-overview)
+- [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
+- [Connect to data created by Power BI dataflows in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-connect-dataflows)
+- [Developer resources for Power BI dataflows](https://docs.microsoft.com/power-bi/service-dataflows-developer-resources)
