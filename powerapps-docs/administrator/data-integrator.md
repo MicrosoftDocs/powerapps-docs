@@ -68,7 +68,7 @@ Before you can create a data integration project, you must provision a connectio
 
 **To create a connection**
 
-1. Go to [PowerApps Admin center](https://admin.powerapps.com).
+1. Go to [PowerApps](https://web.powerapps.com).
 
 2. Under Data, select **Connections** and then select **New connection**.
 
