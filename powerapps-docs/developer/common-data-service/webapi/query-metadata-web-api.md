@@ -311,7 +311,7 @@ Additional options removed for brevity
 
 ## Querying relationship metadata
 
-You can retrieve relationship metadata in the context of a given entity much in the same way that you can query attributes. The `ManyToManyRelationships`, `ManyToOneRelationships`, and `OneToManyRelationships` collection-valued navigation properties can be queried just like the `Attributes` collection-valued navigation property. [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Querying EntityMetadata Attributes](query-metadata-web-api.md#bkmk_queryAttributes)  
+You can retrieve relationship metadata in the context of a given entity much in the same way that you can query attributes. The `ManyToManyRelationships`, `ManyToOneRelationships`, and `OneToManyRelationships` collection-valued navigation properties can be queried just like the `Attributes` collection-valued navigation property. More information:  [Querying EntityMetadata Attributes](query-metadata-web-api.md#bkmk_queryAttributes)  
 
 However, entity relationships can also be queried using the `RelationshipDefinitions` entity set. You can use a query like the following to get the `SchemaName` property for every relationship.
 
@@ -341,7 +341,7 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/On
 
 ## Querying Global OptionSets
 
-You can use the `GlobalOptionSetDefinitions` entity set path to retrieve information about global option sets, but this path does not support the use of the `$filter` system query option. So, unless you know the `MetadataId` for a specific global option set, you can only retrieve all of them. You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types). [!INCLUDE[proc_more_information](../../includes/proc-more-information.md)] [Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
+You can use the `GlobalOptionSetDefinitions` entity set path to retrieve information about global option sets, but this path does not support the use of the `$filter` system query option. So, unless you know the `MetadataId` for a specific global option set, you can only retrieve all of them. You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types). More information:  [Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
 
 ### See also
 
