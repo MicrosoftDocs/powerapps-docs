@@ -2,7 +2,7 @@
 title: "Use the Web API with metadata (Common Data Service for Apps) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/04/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -46,22 +46,22 @@ These entities have some substantial differences from the entities that store bu
   
 ## In This Section 
 
-[Query Metadata using the Web API](query-metadata-web-api.md)  
- You can use the Web API to query metadata in a manner similar to what can be done using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> and the objects in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace using the organization service.  
-  
-[Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)  
- Your applications can adapt to configuration changes by querying the metadata. When you know one of the key properties of a metadata item, you can retrieve metadata definitions using the Web API.  
-  
-[Create and update model entities using the Web API](create-update-entity-definitions-using-web-api.md)  
- You can create and update entities and attributes using the Web API to achieve the same results you get with the organization service <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>, <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>, and <xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest>.  
-  
-[Create and update entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)  
- You can check whether entities are eligible to participate in a relationship with other entities and then create or update those relationships using the Web API.  
-  
+[Query Metadata using the Web API](query-metadata-web-api.md)<br />
+You can use the Web API to query metadata using a RESTful query style.  
+
+[Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
+Your applications can adapt to configuration changes by querying the metadata. When you know one of the key properties of a metadata item, you can retrieve metadata definitions using the Web API.  
+
+[Create and update entity definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br />
+You can create and update entities and attributes using the Web API to achieve the same results you get with the organization service <xref:Microsoft.Xrm.Sdk.Messages.CreateEntityRequest>, <xref:Microsoft.Xrm.Sdk.Messages.UpdateEntityRequest>, <xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest>, and <xref:Microsoft.Xrm.Sdk.Messages.UpdateAttributeRequest>.  
+
+[Create and update entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)<br />
+You can check whether entities are eligible to participate in a relationship with other entities and then create or update those relationships using the Web API.  
+
 ### See also
 
-<!-- TODO:
-[Metadata and data models](../metadata-data-models.md)<br />
-[Browse the Metadata for Your Organization](../browse-your-metadata.md)<br />
-[Use the Organization service with Common Data Service for Apps metadata](../org-service/use-organization-service-metadata.md)<br />
-[Use the Common Data Service for Apps Web API](overview.md) -->
+
+<!-- TODO [Metadata and data models](../metadata-data-models.md)<br /> -->
+[Browse the metadata for your environment](../browse-your-metadata.md)<br />
+<!--  TODO [Use the Organization service with Common Data Service for Apps metadata](../org-service/use-organization-service-metadata.md)<br /> -->
+[Use the Common Data Service for Apps Web API](overview.md)
