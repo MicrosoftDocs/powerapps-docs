@@ -10,6 +10,11 @@ ms.assetid:
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Client API Reference for model-driven apps
 
@@ -29,8 +34,6 @@ The topics under this section are organized as follows:
 
 ### Related topics
 
-[Apply business logic using client scripting in model-driven apps](../client-scripting.md)
-
-[Understand the Client API object model](understand-clientapi-object-model.md)
-
+[Apply business logic using client scripting in model-driven apps](../client-scripting.md)<br/>
+[Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Model-driven apps Developer Overview](../overview.md)

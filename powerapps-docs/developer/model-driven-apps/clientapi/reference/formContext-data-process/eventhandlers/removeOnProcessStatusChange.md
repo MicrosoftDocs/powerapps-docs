@@ -8,6 +8,11 @@ ms.assetid: 5e41f59e-ddb3-4d47-b45b-454aa9e04439
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # removeOnProcessStatusChange (Client API reference)
 

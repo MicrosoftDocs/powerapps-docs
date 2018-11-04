@@ -8,6 +8,11 @@ ms.assetid: 489d9ea0-6858-4e7c-86bd-4084fd94b044
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getLabel (Client API reference)
 

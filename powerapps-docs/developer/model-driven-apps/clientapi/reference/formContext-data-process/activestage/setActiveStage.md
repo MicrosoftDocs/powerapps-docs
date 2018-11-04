@@ -8,6 +8,11 @@ ms.assetid: 9c40a770-f4cb-4230-8893-0527f8472825
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setActiveStage (Client API reference)
 

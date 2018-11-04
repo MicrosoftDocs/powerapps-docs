@@ -8,6 +8,11 @@ ms.assetid: 56fb62e6-d357-4096-bf4c-f4c1b543d633
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getInitialValue (Client API reference)
 

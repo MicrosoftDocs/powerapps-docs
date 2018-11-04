@@ -8,6 +8,11 @@ ms.assetid: 2849a9e1-b2fb-464c-8fc7-90b0df027c86
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getCategory (Client API reference)
 

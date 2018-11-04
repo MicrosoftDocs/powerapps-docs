@@ -8,6 +8,11 @@ ms.assetid: 9fb38429-55ef-45ce-a3a3-e649e1be89d0
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Events in forms and grids in model-driven apps
 
@@ -48,9 +53,7 @@ Use the [setSharedVariable](reference/executioncontext/setSharedVariable.md) and
 
 ### Related topics
 
-[Understand the Client API object model](understand-clientapi-object-model.md)
-
-[Client API execution context](clientapi-execution-context.md)
-
-[Events (Client API reference)](reference/events.md)
+[Understand the Client API object model](understand-clientapi-object-model.md)<br/>
+[Client API execution context](clientapi-execution-context.md)<br/>
+[Events (Client API reference)](reference/events.md)<br/>
 

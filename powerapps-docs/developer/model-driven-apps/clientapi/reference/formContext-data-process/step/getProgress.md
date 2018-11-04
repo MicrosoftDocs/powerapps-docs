@@ -8,6 +8,11 @@ ms.assetid: 56502c8b-af23-40d1-ad97-e780bb757d6d
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # getProgress (Client API reference)
 

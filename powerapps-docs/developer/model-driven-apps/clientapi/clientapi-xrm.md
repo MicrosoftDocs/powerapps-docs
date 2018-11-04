@@ -10,6 +10,11 @@ ms.assetid: 15272ad9-25d7-499e-9361-a65f789daf20
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Client API Xrm object
@@ -46,6 +51,5 @@ To access the global context information in a standalone HTML Web resource, you 
 
 ### Related topics
 
-[Understand the Client API object model](understand-clientapi-object-model.md)
-
+[Understand the Client API object model](understand-clientapi-object-model.md)<br/>
 [Deprecated client APIs](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated)

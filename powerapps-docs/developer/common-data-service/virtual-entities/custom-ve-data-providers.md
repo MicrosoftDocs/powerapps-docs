@@ -10,6 +10,11 @@ ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d22
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Custom virtual entity data providers

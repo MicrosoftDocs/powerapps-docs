@@ -8,6 +8,11 @@ ms.assetid: 2bf30298-f52b-4ab7-8833-4838f0d87e12
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # addOnProcessStatusChange (Client API reference)
 

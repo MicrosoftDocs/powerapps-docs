@@ -8,6 +8,11 @@ ms.assetid: fb13c0a1-0e00-4592-8e58-3c2412141fbd
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Form data OnLoad Event (Client API reference)
 

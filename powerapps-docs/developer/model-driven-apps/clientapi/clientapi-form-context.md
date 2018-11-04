@@ -9,6 +9,11 @@ ms.assetid: 0cf94e8d-801a-451f-98c3-130e912f963b
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # Client API form context
 
@@ -104,10 +109,8 @@ reference)](reference/collections.md).
   
 ### Related topics
 
-[getFormContext method](reference/executioncontext/getFormContext.md)
-
-[getGlobalContext method](reference/xrm-utility/getGlobalContext.md)
-
+[getFormContext method](reference/executioncontext/getFormContext.md)<br/>
+[getGlobalContext method](reference/xrm-utility/getGlobalContext.md)<br/>
 [Execution context methods](reference/execution-context.md) 
 
  

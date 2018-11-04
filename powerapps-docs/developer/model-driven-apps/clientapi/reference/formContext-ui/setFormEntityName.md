@@ -8,6 +8,11 @@ ms.assetid: ed0704e3-a6e8-4003-b092-8d1b60ce7306
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # setFormEntityName (Client API reference)
 

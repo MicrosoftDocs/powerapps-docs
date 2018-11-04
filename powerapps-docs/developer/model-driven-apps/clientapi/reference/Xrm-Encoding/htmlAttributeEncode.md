@@ -8,6 +8,11 @@ ms.assetid: 6f0b4d9b-d167-4481-970e-024411c0bef3
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # htmlAttributeEncode (Client API reference)
 

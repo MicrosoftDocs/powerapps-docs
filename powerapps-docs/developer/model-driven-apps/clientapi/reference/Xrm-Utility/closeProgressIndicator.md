@@ -8,6 +8,11 @@ ms.assetid: 9897040d-ebe9-4e3f-8507-786d8b708add
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # closeProgressIndicator (Client API reference)
 

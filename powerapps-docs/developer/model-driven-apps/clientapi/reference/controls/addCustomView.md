@@ -8,6 +8,11 @@ ms.assetid: 482b8cd4-e643-48ea-8a54-d8601271ec81
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # addCustomView (Client API reference)
 

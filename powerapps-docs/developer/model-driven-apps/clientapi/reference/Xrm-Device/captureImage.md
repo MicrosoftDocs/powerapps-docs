@@ -8,6 +8,11 @@ ms.assetid: 1b24e8b2-20af-4e75-8c00-1aa393c07aef
 author: "KumarVivek"
 ms.author: "kvivek"
 manager: "amyla"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 # captureImage (Client API reference)
 
