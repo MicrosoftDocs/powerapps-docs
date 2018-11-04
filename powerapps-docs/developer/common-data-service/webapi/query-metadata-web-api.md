@@ -2,7 +2,7 @@
 title: "Query metadata using the Web API (Common Data Service for Apps) | Microsoft Docs"
 description: "The capability to query system metadata is available using the Web API as well as using the organization service by using RetrieveMetadataChangesRequest"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/04/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -23,8 +23,11 @@ search.app:
 ---
 # Query metadata using the Web API
 
-Because Common Data Service for Apps is a metadata-driven application, developers may need to query the system metadata at run-time to adapt to how an organization has been configured. This capability is available using the Web API as well as using the organization service by using the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> and the classes of the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace. The Web API allows for querying metadata but does not provide the ability to detect changes to metadata from a point in time.
-  
+Because Common Data Service for Apps is a metadata-driven application, developers may need to query the system metadata at run-time to adapt to how an organization has been configured. This capability uses a RESTful query style.
+
+> [!NOTE]
+> You can also construct a query using an object-based style using the <xref href="Microsoft.Dynamics.CRM.EntityQueryExpression?text=EntityQueryExpression ComplexType" /> with the <xref href="Microsoft.Dynamics.CRM.RetrieveMetadataChanges?text=RetrieveMetadataChanges Function" />. This function allows for capturing changes to metadata between two periods of time as well as returning a limited set of metadata defined by a query you specify.
+
 <a name="bkmk_QueryingEntityMetadata"></a>
 
 ## Querying the EntityMetadata entity type
@@ -85,7 +88,7 @@ There are no limits on the number of metadata entities that will be returned in 
 
 ## Use enum types in $filter operations
 
-When you need to filter metadata entities based on the value of a property that uses an enumeration, you must include the namespace of the enumeration before the string value. Enum types are used as property values only in metadata entities and complex types. For example, if you need to filter entities based on the OwnershipType property, which uses the <xref href="Microsoft.Dynamics.CRM.OwnershipTypes?text=OwnershipTypes EnumType" />, you can use the following `$filter` to return only those entities that are UserOwned.
+When you need to filter metadata entities based on the value of a property that uses an enumeration, you must include the namespace of the enumeration before the string value. Enum types are used as property values only in metadata entities and complex types. For example, if you need to filter entities based on the `OwnershipType` property, which uses the <xref href="Microsoft.Dynamics.CRM.OwnershipTypes?text=OwnershipTypes EnumType" />, you can use the following `$filter` to return only those entities that are UserOwned.
 
 ```http
 GET [Organization URI]/api/data/v9.0/EntityDefinitions?$select=LogicalName&$filter=OwnershipType eq Microsoft.Dynamics.CRM.OwnershipTypes'UserOwned'  
@@ -96,7 +99,7 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions?$select=LogicalName&$filt
 ## Use complex types in $filter operations
 
 When you need to filter metadata entities based on the value of a property that uses a complex type, you must include the path to the underlying primitive type. Complex types are used as property values only in metadata entities. For example, if you need to filter entities based on the CanCreateAttributes property, which uses the <xref href="Microsoft.Dynamics.CRM.BooleanManagedProperty?text=BooleanManagedProperty ComplexType" />, you can use the following `$filter` to return only those entities that have a `Value` of `true`.
-  
+
 ```http
 GET [Organization URI]/api/data/v9.0/EntityDefinitions?$select=LogicalName&$filter=CanCreateAttributes/Value eq true  
 ```
@@ -107,7 +110,7 @@ This pattern works with <xref href="Microsoft.Dynamics.CRM.BooleanManagedPropert
 
 ## Querying EntityMetadata attributes
 
-You can query entity attributes in the context of an entity by expanding the Attributes collection-valued navigation property but this will only include the common properties available in the <xref href="Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType" /> which all attributes share. For example the following query will return the LogicalName of the entity and all the expanded Attributes which have an AttributeType value equal to the <xref href="Microsoft.Dynamics.CRM.AttributeTypeCode?text=AttributeTypeCode EnumType" /> value of Picklist.
+You can query entity attributes in the context of an entity by expanding the `Attributes` collection-valued navigation property but this will only include the common properties available in the <xref href="Microsoft.Dynamics.CRM.AttributeMetadata?text=AttributeMetadata EntityType" /> which all attributes share. For example the following query will return the `LogicalName` of the entity and all the expanded Attributes which have an `AttributeType` value equal to the <xref href="Microsoft.Dynamics.CRM.AttributeTypeCode?text=AttributeTypeCode EnumType" /> value of `Picklist`.
 
 <a name="bkmk_queryAttributesexample"></a>
 
@@ -115,9 +118,9 @@ You can query entity attributes in the context of an entity by expanding the Att
 GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')?$select=LogicalName&$expand=Attributes($select=LogicalName;$filter=AttributeType eq Microsoft.Dynamics.CRM.AttributeTypeCode'Picklist')  
 ```
 
-But you can’t include the OptionSet or GlobalOptionSet collection-valued navigation properties that <xref href="Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType" /> attributes have within the `$select` filter of this query.  
+But you can’t include the `OptionSet` or `GlobalOptionSet` collection-valued navigation properties that <xref href="Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType" /> attributes have within the `$select` filter of this query.  
 
-In order to retrieve the properties of a specific type of attribute you must cast the Attributes collection-valued navigation property to the type you want. The following query will return only the PicklistAttributeMetadata attributes and will include the LogicalName as well as expanding the OptionSet and GlobalOptionSet collection-valued navigation properties  
+In order to retrieve the properties of a specific type of attribute you must cast the `Attributes` collection-valued navigation property to the type you want. The following query will return only the <xref href="Microsoft.Dynamics.CRM.PicklistAttributeMetadata?text=PicklistAttributeMetadata EntityType" /> attributes and will include the `LogicalName` as well as expanding the `OptionSet` and `GlobalOptionSet` collection-valued navigation properties  
 
 ```http
 GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet,GlobalOptionSet  
@@ -126,8 +129,8 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/At
 > [!NOTE]
 > Despite the fact that the `OptionSet` and `GlobalOptionSet` collection-valued navigation properties are defined within <xref href="Microsoft.Dynamics.CRM.EnumAttributeMetadata?text=EnumAttributeMetadata EntityType" />, you cannot cast the attributes to this type. This means that if you want to filter on other types which also inherit these properties (see [Entity types that inherit from EnumAttributeMetadata](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types) ), you must perform separate queries to filter for each type.
 
-Another example of this is accessing the Precision property available in <xref href="Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType" /> and <xref href="Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType" /> attributes. To access this property you must cast the attributes collection either as `MoneyAttributeMetadata` or `DecimalAttributeMetadata`. An example showing casting to `MoneyAttributeMetadata` is shown here.
-  
+Another example of this is accessing the `Precision` property available in <xref href="Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType" /> and <xref href="Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType" /> attributes. To access this property you must cast the attributes collection either as <xref href="Microsoft.Dynamics.CRM.MoneyAttributeMetadata?text=MoneyAttributeMetadata EntityType" /> or <xref href="Microsoft.Dynamics.CRM.DecimalAttributeMetadata?text=DecimalAttributeMetadata EntityType" />. An example showing casting to `MoneyAttributeMetadata` is shown here.
+
 ```http
 GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes/Microsoft.Dynamics.CRM.MoneyAttributeMetadata?$select=LogicalName,Precision
 ```
@@ -250,7 +253,6 @@ Additional options removed for brevity
   "HasChanged": null  
  }  
 }  
-  
 ```
 
 If you don’t require any properties of the attribute and only want the values of a collection-valued navigation property such as OptionsSet, you can include that in the URL and limit the properties with a `$select` system query option for a somewhat more efficient query. In the following example only the Options property of the OptionSet are included.  
@@ -269,7 +271,7 @@ OData-Version: 4.0
 HTTP/1.1 200 OK  
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
-  
+
 {  
  "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#EntityDefinitions('account')/Attributes(5967e7cc-afbb-4c10-bf7e-e7ef430c52be)/Microsoft.Dynamics.CRM.PicklistAttributeMetadata/OptionSet(Options)/$entity",  
  "Options": [{  
@@ -309,15 +311,15 @@ Additional options removed for brevity
 
 ## Querying relationship metadata
 
-You can retrieve relationship metadata in the context of a given entity much in the same way that you can query attributes. The ManyToManyRelationships, ManyToOneRelationships, and OneToManyRelationships collection-valued navigation properties can be queried just like the Attributes collection-valued navigation property. More information:[Querying EntityMetadata Attributes](query-metadata-web-api.md#bkmk_queryAttributes)  
+You can retrieve relationship metadata in the context of a given entity much in the same way that you can query attributes. The `ManyToManyRelationships`, `ManyToOneRelationships`, and `OneToManyRelationships` collection-valued navigation properties can be queried just like the `Attributes` collection-valued navigation property. More information:  [Querying EntityMetadata Attributes](query-metadata-web-api.md#bkmk_queryAttributes)  
 
-However, entity relationships can also be queried using the RelationshipDefinitions entity set. You can use a query like the following to get the SchemaName property for every relationship.
+However, entity relationships can also be queried using the `RelationshipDefinitions` entity set. You can use a query like the following to get the `SchemaName` property for every relationship.
 
 ```http
 GET [Organization URI]/api/data/v9.0/RelationshipDefinitions?$select=SchemaName  
 ```
 
-The properties available when querying this entity set are limited to those in the <xref href="Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType" />. To access properties from the entity types that inherit from RelationshipMetadataBase you need to include a cast in the query like the following one to return only <xref href="Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType" />.  
+The properties available when querying this entity set are limited to those in the <xref href="Microsoft.Dynamics.CRM.RelationshipMetadataBase?text=RelationshipMetadataBase EntityType" />. To access properties from the entity types that inherit from `RelationshipMetadataBase` you need to include a cast in the query like the following one to return only <xref href="Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?text=OneToManyRelationshipMetadata EntityType" />.  
 
 ```http
 GET [Organization URI]/api/data/v9.0/RelationshipDefinitions/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?$select=SchemaName  
@@ -339,7 +341,7 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='account')/On
 
 ## Querying Global OptionSets
 
-You can use the `GlobalOptionSetDefinitions` entity set path to retrieve information about global option sets, but this path does not support the use of the `$filter` system query option. So, unless you know the `MetadataId` for a specific global option set, you can only retrieve all of them. You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types). More information:[Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
+You can use the `GlobalOptionSetDefinitions` entity set path to retrieve information about global option sets, but this path does not support the use of the `$filter` system query option. So, unless you know the `MetadataId` for a specific global option set, you can only retrieve all of them. You can also access the definition of a global option set from within the `GlobalOptionSet` single-valued navigation property for any attribute that uses it. This is available for all the [EnumAttributeMetadata EntityType Derived Types](/dynamics365/customer-engagement/web-api/enumattributemetadata?view=dynamics-ce-odata-9#Derived_Types). More information:  [Retrieving attributes](query-metadata-web-api.md#bkmk_retrieveAttributes)  
 
 ### See also
 
