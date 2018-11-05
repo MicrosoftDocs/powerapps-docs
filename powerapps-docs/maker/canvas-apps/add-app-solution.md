@@ -103,6 +103,10 @@ If you want to link an app to a solution, they must be in the same environment, 
 
     ![Add button](./media/add-app-solution/add-button.png)
 
+## Known limitations
+
+Please refer to this [section](../common-data-service/use-solution-explorer.md#known-limitations) for a complete list of known limitations for canvas app in solution. 
+
 ## Next steps
 
 - Create or link more apps and [other components](../common-data-service/use-solution-explorer.md), such as entities, flows, and dashboards, to your solution.
