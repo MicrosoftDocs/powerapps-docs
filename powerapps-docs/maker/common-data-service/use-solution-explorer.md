@@ -26,6 +26,9 @@ search.app:
 # Use solutions in PowerApps
 
  Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
+ 
+> [!NOTE]
+>  Solution's capabilities described in this article is available only in environments with Common Data Service for Apps with instance version equals or greater than 9.1.0.267. For instances with earlier version, selecting a solution will open it in classic experience. 
 
 > [!div class="mx-imgBorder"]  
 > ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
@@ -35,7 +38,7 @@ search.app:
  
 > [!div class="mx-imgBorder"]  
 > ![Load more components](media/load-more.PNG "Load more components")  
- 
+
  ## Search and filter in a solution
  
  You can also search for a specific component by its name. 
@@ -81,10 +84,14 @@ search.app:
  Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
  
 > [!NOTE]
->  Currently, when you add an existing entity to a solution the system automatically adds all the components that are part of the entity to your solution. If this is not what you prefer, use the command **Switch to classic** to navigate to the legacy experience and add only those components that you want. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
+>  Currently, when you add an existing entity to a solution the system automatically adds all the components that are part of the entity to your solution. If this is not what you prefer, use the command **Switch to classic** to navigate to the classic experience and add only those components that you want. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
   
 > [!div class="mx-imgBorder"]  
 > ![Demo solution showing expanded account entity](media/solution-entity-account.PNG "Demo solution showing expanded account entity")  
+
+## Classic solution explorer
+
+In PowerApps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in PowerApps. If you are a Dynamics 365 for Customer Engagement user, you use the classic solution explorer to work with solutions.  
   
  For details about customizing the individual components in a solution, see the following topics:  
   
