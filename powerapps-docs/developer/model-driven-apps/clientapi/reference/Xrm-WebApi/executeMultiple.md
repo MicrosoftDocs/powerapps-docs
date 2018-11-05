@@ -1,27 +1,24 @@
 ---
-title: "executeMultiple (Client API reference) in model-driven apps| MicrosoftDocs"
+title: "Xrm.WebApi.online.executeMultiple (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: "powerapps"
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# executeMultiple (Client API reference)
-
-
+# Xrm.WebApi.online.executeMultiple (Client API reference)
 
 [!INCLUDE[./includes/executeMultiple-description.md](./includes/executeMultiple-description.md)]
 
 > [!NOTE]
-> This method isn't supported for [Unified Interface](/dynamics365/get-started/whats-new/customer-engagement/new-in-version-9#unified-interface-framework-for-new-apps). Also, this method is supported only for the online mode, which implies that you must use the [Xrm.WebApi.online](online.md) object to execute the method. Otherwise, it will fail. 
+> This method is supported only for the online mode ([Xrm.WebApi.online](online.md)). 
 
 If you want to execute multiple requests in a transaction, you must pass in a change set as a parameter to this method. [Change sets](../../../../common-data-service/webapi/execute-batch-operations-using-web-api.md#change-sets) represent a collection of operations that are executed in a transaction. You can also pass in individual requests and change sets together as parameters to this method.
 

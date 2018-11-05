@@ -42,8 +42,7 @@ At the root of the Client API object model are the following contexts and the Xr
 
 ### Related topics
 
-[Client API global context](clientapi-xrm.md#client-api-global-context)
-
+[Client API global context](clientapi-xrm.md#client-api-global-context)<br/>
 [Client API reference](reference.md)
 
 

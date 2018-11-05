@@ -53,9 +53,7 @@ Use the [setSharedVariable](reference/executioncontext/setSharedVariable.md) and
 
 ### Related topics
 
-[Understand the Client API object model](understand-clientapi-object-model.md)
-
-[Client API execution context](clientapi-execution-context.md)
-
-[Events (Client API reference)](reference/events.md)
+[Understand the Client API object model](understand-clientapi-object-model.md)<br/>
+[Client API execution context](clientapi-execution-context.md)<br/>
+[Events (Client API reference)](reference/events.md)<br/>
 
