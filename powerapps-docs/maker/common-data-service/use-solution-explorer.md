@@ -92,7 +92,22 @@ search.app:
 ## Classic solution explorer
 
 In PowerApps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in PowerApps. If you are a Dynamics 365 for Customer Engagement user, you use the classic solution explorer to work with solutions.  
-  
+
+## Known limitations
+
+- Deleting or removing a managed solution will not delete the canvas app from the PowerApps.
+- Custom connectors are not available in a solution.
+- Canvas apps will need to be opened after solution's import to update the connections.
+- After adding an existing SDK assembly, it will not show in the solution. 
+- If canvas apps are packed in a managed solution, they will still be editable by admins in the new environment.
+- Dependencies are not available for canvas apps
+- Deleting a managed solution will not rollback to a different canvas app's version 
+-	Canvas app access (CRUD and security) is managed entirely in PowerApps and not Common Data Service database
+-	CDS APIs to call canvas apps are blocked and will not return anything 
+-	Canvas app created in a solution cannot be shared as co-owner to an AAD Security Group yet
+-	Canvas apps will not display in the classic solution explorer 
+-	Existing canvas apps are not solution aware 
+
  For details about customizing the individual components in a solution, see the following topics:  
   
 -   For entity, entity relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
