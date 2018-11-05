@@ -28,7 +28,7 @@ search.app:
  Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
  
 > [!NOTE]
->  Solution's capabilities described in this article is available only in environments with Common Data Service for Apps with instance version equals or greater than 9.1.0.267. For instances with earlier version, selecting a solution will open it in classic experience. 
+>  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[PowerApps admin center](https://admin.powerapps.com/)> Environments > select your environment > Details tab. For instances with earlier version, selecting a solution will open it in classic experience. 
 
 > [!div class="mx-imgBorder"]  
 > ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
