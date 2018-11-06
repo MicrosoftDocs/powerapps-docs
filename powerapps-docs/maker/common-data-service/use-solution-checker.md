@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 10/26/2018
+ms.date: 11/06/2018
 ms.author: matp
 search.audienceType: 
   - maker
@@ -47,7 +47,10 @@ After you install the solution checker in your environment, a **Solution checker
 2. In the left pane select **Solutions**. 
 3. Next to the unmanaged solution that you want to anayze, select **...**, point to **Solution checker**, and then select **Run**. 
     - If the **Solution checker** menu option is not available after you select a solution, it means the solution checker has not been installed. To verify, make sure that the **Solution Checker** solution is in the **Solutions** list. 
-4.	Select **Run**. Note the following.
+
+     ![Run solution checker command](media/run-solution-checker.png)
+
+4.	The status pane located in the upper right of the **Solutions** page displays **Solution checker running**. Note the following.
     - The solution checker can take a few minutes to complete the analysis. 
     - During this time you will notice a **Running…** state in the **Solution check** column of the **Solution** list. 
     - You receive an email notification and a notification in the **Notifications** area of the PowerApps site when the check is completed.  
