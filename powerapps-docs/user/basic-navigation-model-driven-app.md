@@ -27,8 +27,7 @@ Model-driven apps use the Unified Interface - this means the basic navigation  o
 2. The sub area that you are currently in is highlighted to indicate where in the app.
 3. **Recent** and **Pinned** items are at top for easy access. 
 4. Use the Area switcher to switch between apps.
-5. Command bar background color is associated with the area you are in.
-6. There are unique colors for icons on the command bar to show differentiation between commands.
+5. There are unique colors for icons on the command bar to show differentiation between commands.
   
 ### Get back to recent records, items, or view
 
