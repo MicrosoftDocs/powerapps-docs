@@ -46,7 +46,7 @@ After you install the solution checker in your environment, a **Solution checker
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. In the left pane select **Solutions**. 
 3. Next to the unmanaged solution that you want to anayze, select **...**, point to **Solution checker**, and then select **Run**. 
-    - If the **Solution checker** menu option is not available after you select a solution, it means the solution checker has not been installed. To verify, make sure that the **Solution Checker** solution is in the **Solutions** list. 
+    - If the **Solution checker** menu option is not available after you select a solution, it could mean the solution checker has not been installed. To verify, make sure that the **Solution Checker** solution is in the **Solutions** list. 
 
      ![Run solution checker command](media/run-solution-checker.png)
 
