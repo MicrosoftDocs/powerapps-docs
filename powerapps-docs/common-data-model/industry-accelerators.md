@@ -17,7 +17,7 @@ The [Industry Accelerators](https://community.dynamics.com/365/b/dynamics365isvs
 -	EDU (Higher Ed / K-12)
 -	Retail
 -	Financial Services (Credit Union, Banking, Wealth Management)
--	Not for Profit
+-	Nonprofit
 -	Health
 -	And others
 
