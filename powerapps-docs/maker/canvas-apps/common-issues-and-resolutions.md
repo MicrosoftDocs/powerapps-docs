@@ -20,6 +20,11 @@ This article lists some common issues that you might encounter while using Power
 
 ## Added after February 2018
 
+
+1. **Scrolling in Flexible height gallery** (Nov. 6, 2018)
+
+    Touch scrolling of some devices may run into limitations, requiring the user to lift their finger from the screen and start scrolling again.  To work around this issue turn off the **Improved app rendering** option under File - App settings - Advanced settings - Preview features.
+
 1. **Multiple media controls in PowerApps Mobile** (Aug. 2, 2018)
 
     PowerApps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
