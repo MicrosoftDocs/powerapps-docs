@@ -2,7 +2,7 @@
 title: "Import, update, and export solutions | MicrosoftDocs"
 description: "Learn how to import, update, and export a solution in PowerApps"
 ms.custom: ""
-ms.date: 10/29/2018
+ms.date: 11/06/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -31,8 +31,8 @@ search.app:
   
 2.  In the solutions list menu, select **Import**.  
 
-> [!div class="mx-imgBorder"]  
-> ![Import solution](media/solution-import.PNG "Import solution") 
+    > [!div class="mx-imgBorder"]  
+    > ![Import solution](media/solution-import.png "Import solution") 
   
 3.  In the **Import Solution** dialog **Select Solution Package** step, select **Choose file** and browse to the compressed (.zip or .cab) file that contains the solution you want to import. 
   
