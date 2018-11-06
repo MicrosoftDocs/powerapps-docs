@@ -22,6 +22,9 @@ A **Gallery** control can show multiple records from a data source, and each rec
 
 Predefined Gallery templates for showing images, text as well as a gallery with variable height items are available.
 
+## Limitations
+When the end user scrolls the **Flexible height gallery** before all items are loaded, the item currently viewed may be pushed down and out of view when the data loading is finished. To avoid this issue use a standard Gallery instead of the flexible height variant.
+
 ## Key properties
 **[Default](properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.
 
