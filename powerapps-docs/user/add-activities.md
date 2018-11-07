@@ -106,6 +106,6 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
 
 3. When you're done filling in the form, click **Add Note** to save the note.
 
-You can also add a note using the **+** in the upper section of the **TIMELINE** area.
+You can also add a note using the **plus sign** in the upper section of the **TIMELINE** area.
   
   
