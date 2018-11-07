@@ -102,10 +102,15 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 1. Open the record that you want to add the activity to. For example, contact record.
   
-2. In the **Timeline** section start typing your notes. Use **Add an attachment** to add any attachments.
+2. In the **Timeline** section start typing your notes. Use **Add an attachment** to add any attachments to the note.
 
 3. When you're done filling in the form, click **Add Note** to save the note.
 
-You can also add a note using the **plus sign** in the upper section of the **TIMELINE** area.
+![Add a note](media/addnote.png "Add a note")
+
+Once the note has been added, you can delete or edit the note. You can also add a note using the **plus sign** in the upper section of the **TIMELINE** area.
+
+
+![Update a note](media/addnote2.png "Update a note")
   
   
