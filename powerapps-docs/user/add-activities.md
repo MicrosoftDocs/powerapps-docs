@@ -19,7 +19,7 @@ search.app:
 ---
 # Add an appointment, email, phone call, notes or task activity to the Timeline 
 
-Add **Activities** in the Timeline area, to keep track of your all your communication with a customer or contact. For example, you can take notes, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer.
+Add **Activities** in the **TIMELINE** area, to keep track of your all your communication with a customer or contact. For example, you can take notes, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer.
 
 - Activities that you add from within a record appear in the **TIMELINE** area of the record. 
 - If the **Regarding** field of an activity is set, the activity appears in the record it is associated with. 
