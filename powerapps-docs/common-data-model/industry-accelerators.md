@@ -34,7 +34,7 @@ The [Dynamics 365 Health Accelerator](https://appsource.microsoft.com/product/dy
 The initial release of the Health Accelerator (announced in July 2018 at Ignite) provides:
 -	extending the CDM to include concepts for health, including entity definitions and relationships
 -	out-of-the-box Customer Engagement forms such as **Patient**, **Practitioner**, and **Related person**, which can be leveraged or enhanced
--	an out-of-the-box app to provide a sample of what's possible on the unified client interface
+-	an out-of-the-box app to provide a sample of what's possible on the Unified Interface
 -	support for building canvas and model-driven apps in PowerApps
 -	support to extend the model (new entities, forms, and relationships) to meet your business needs
 -	support for analytics
