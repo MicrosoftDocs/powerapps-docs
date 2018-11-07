@@ -49,5 +49,7 @@ You probably work with the same records all the time. For example, you may acces
 1. From the **Site Map**, click **Pinned** to expand the list of pinned items.
 2. Select the unpin icon next to the item, and it will drop off from the list.  
 
-![Unpin a record](media/unpinnedrecords.png "Unpin a records)
+![Unpin records](media/unpinnedrecords.png "UNpin records")
+
+
 
