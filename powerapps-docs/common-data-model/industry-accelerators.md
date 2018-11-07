@@ -1,6 +1,6 @@
 ---
 title: Industry Accelerators in the Common Data Model | Microsoft Docs
-description: As foundational components within the Microsoft Power platform and Dynamics 365, Industry Accelerators enable ISVs and other solution providers to quickly build industry vertical solutions.
+description: As foundational components within the Microsoft Power platform and Dynamics 365, the Industry Accelerators enable ISVs and other solution providers to quickly build industry vertical solutions.
 author: TheresaPalmer
 ms.service: powerapps
 ms.topic: article
@@ -10,7 +10,7 @@ ms.author: tpalmer
 
 # Industry Accelerators
 
-The Common Data Model (CDM) originated from Microsoft Dynamics, as you can see from the current and growing set of entities around Sales, Service, Marketing, and other products. However, the benefit of a common schema generally applies to apps in a variety of industries. Microsoft is working closely with a set of prioritized industries to make the CDM more relevant to them, through Industry Accelerators. 
+The Common Data Model (CDM) originated from Microsoft Dynamics, as you can see from the current and growing set of entities around Sales, Service, Marketing, and other areas. However, the benefit of a common schema generally applies to apps in a variety of industries. Microsoft is working closely with a set of prioritized industries to make the CDM more relevant to them, through Industry Accelerators.
 
 [Industry Accelerators](https://community.dynamics.com/365/b/dynamics365isvsuccess/archive/2018/08/01/dynamics-365-brings-industry-focus-through-the-microsoft-power-platform-and-solution-accelerators) are foundational components within the Microsoft Power platform and Dynamics 365 that enable ISVs and other solution providers to quickly build industry vertical solutions. The accelerators extend the CDM to include new entities to support a data schema for concepts within specific industries. Microsoft is focused on delivering accelerators for these industries and others:
 -	Automotive (Manufacturing)
@@ -21,7 +21,7 @@ The Common Data Model (CDM) originated from Microsoft Dynamics, as you can see f
 -	Health
 
 ## ISV opportunity view
-The Microsoft Power platform combines with Industry Accelerators to create a unique opportunity for ISVs to provide solutions for different scenarios and levels of build out. This graphic shows the opportunities for ISVs who build on top of the platform and the accelerators. 
+The Microsoft Power platform combines with Industry Accelerators to create a unique opportunity for ISVs to provide solutions for different scenarios and levels of development. This graphic shows the opportunities for ISVs who build on top of the platform and the accelerators. 
 
 ![ISV Opportunity View](media/isv-layered-opportunity.png)
 
@@ -29,12 +29,12 @@ As you move up the stack, ISVs have multiple opportunities to deliver industry-f
 
 ## The Dynamics 365 Health Accelerator
 
-The [Dynamics 365 Health Accelerator](https://appsource.microsoft.com/product/dynamics-365/msemr.healthcarecommondatamodel?tab=Overview) is the first accelerator and is based on the FHIR HL7 3.0 specification. The Health Accelerator is a collaborative effort that includes the Dynamics 365 CDS, ISV Success, the CDM, Connector and Analytic teams, the Microsoft Health Vertical, Marketing, OCP and industry ISVs, SIs, and partners.
+The [Dynamics 365 Health Accelerator](https://appsource.microsoft.com/product/dynamics-365/msemr.healthcarecommondatamodel?tab=Overview) is the first accelerator and is based on the FHIR HL7 3.0 specification. The Health Accelerator is a collaborative effort that includes a variety of teams within Microsoft, focused on both the platform and partners, as well as industry ISVs, SIs, and partners.
 
 The initial release of the Health Accelerator (announced in July 2018 at Ignite) provides:
 -	extending the CDM to include concepts for health, including entity definitions and relationships
 -	out-of-the-box Customer Engagement forms such as **Patient**, **Practitioner**, and **Related person**, which can be leveraged or enhanced
--	an out-of-the-box UCI app to provide a sample of what is possible
+-	an out-of-the-box app to provide a sample of what's possible on the unified client interface
 -	support for building canvas and model-driven apps in PowerApps
 -	support to extend the model (new entities, forms, and relationships) to meet your business needs
 -	support for analytics
