@@ -1,14 +1,14 @@
 ---
 title: Change screen size and orientation of a canvas app | Microsoft Docs
 description: Step-by-step instructions for changing settings such as the screen size and the orientation of a canvas app in PowerApps
-author: lonu
+author: evanchaki_msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/16/2016
-ms.author: lonu
+ms.date: 11/07/2018
+ms.author: evchaki
 search.audienceType: 
   - maker
 search.app: 
