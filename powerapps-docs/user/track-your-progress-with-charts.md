@@ -25,10 +25,33 @@ Dashboards take a collection of app data and provide insights to show key perfor
 ![Dashboard](media/Dashboard.png "Dashboard") 
 
 -  To see a different dashboard layout, click the down arrow next to the name of the dashboard, and then select the layout you want.
--  To create a new dashboard, click **Create a Dynamics 365 Dashboard**.
+-  To choose a default dashboard, display the dashboard you want, and then click **Set as Default** at the top of the screen.
 
 ![Add or change dashboard](media/add_dashboard.png "Add or change dashboard") 
 
+## Create a new dashboard
+
+1. To create a new dashboard, click **Create a Dynamics 365 Dashboard**. 
+
+   ![Add a new Dashboard](media/new_dashboard.png "Add a new dashboard")
+   
+2. Choose a dashboard layout and click **Create**.  
+
+ ![Create a Dashboard](media/create_dashboard.png "Create a dashboard")
+ 
+3. Type in a name for the dashbaord. 
+4. Add what you want to each area of your dashboard. For example, let's add a chart. 
+
+ ![Add a chart](media/add_chart.png "Add a chart")
+ 
+ 5. Select the **Record Type** for the chart.
+ 6. Select a **View** that the data in the chart will display.
+ 7. Choose the chart and then click **Add**.
+ 8. Continue adding compontents to the dashboard and when are done click **Save**. 
+ 
+ The dashboard that you created will appear in the drop-down of available dashboards.
+
+## Use charts 
 
 Charts provide you a quick view of how you’re tracking to your goals. They’re also interactive, so you can click or tap an area of a chart to get more info.
 
