@@ -1,5 +1,5 @@
 ---
-title: "Track your progress with charts in PowerApps| MicrosoftDocs"
+title: "Track your progress with dashboards and charts in PowerApps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -18,9 +18,14 @@ search.app:
   - D365CE
   - D365CE
 ---
-# Track your progress with charts
+# Track your progress with dashboards and charts
 
-Charts in PowerApps, give you a quick view of how you’re tracking to your goals. They’re interactive, so you can tap an area of a chart to get more info.
+Dashboards take a collection of app data and provide insights to show key performance indicators (KPI) and other important data in easy-to-read interactive charts and graphs. Dashboards are available for all record types.
+
+![Dashboard](media/Dashboard.png "Dashboard") 
+
+
+Charts provide you a quick view of how you’re tracking to your goals. They’re also interactive, so you can click or tap an area of a chart to get more info.
 
 -   Hover your mouse over the chart to see a tooltip that provides quick info about that area of the chart.
 
