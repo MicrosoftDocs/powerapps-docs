@@ -2,7 +2,7 @@
 title: "Compose HTTP requests and handle errors (Common Data Service for Apps)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/05/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -33,14 +33,16 @@ To access the Web API you must compose a URL using the parts in the following ta
 
 |Part|Description|
 |--|--|
-|Protocol|The appropriate protocol, either `https://` or `http://`.|
-|Base URL|<div>This is the URL you normally use to open the web application.<ul><li>For Common Data Service for Apps (online): use <code class="x-hidden-focus">&lt;tenant name&gt;.crm.dynamics.com</code>.</li><li>For Internet-facing deployment (IFD): Use the appropriate URL for your instance. This will be: <code class="x-hidden-focus">&lt;organization name&gt;.&lt;domain name&gt;</code>.</li><li>For Common Data Service for Apps (on-premises): use <code class="x-hidden-focus">&lt;server name&gt;/&lt;organization name&gt;</code>.</li></ul></div>|
+|Protocol| `https://`|
+|Environment Name|The unique name that applies to your environment. If your company name is *Contoso*, then it may be `contoso`.|
+|Region|Your environment will usually be available in a data center that is close to you geographically.<br />North America: `crm`<br />South America: `crm2`<br />Canada: `crm3`<br />Europe, Middle East and Africa (EMEA): `crm4`<br />Asia Pacific Area (APAC): `crm5`<br />Oceania: `crm6`<br />Japan: `crm7`<br />India: `crm8`<br />North America 2: `crm9`<br />United Kingdom: `crm11`<br />More values will be added over time as new data center regions are opened.|
+|Base URL|`dynamics.com.`|
 |Web API path|The path to the web API is `/api/data/`.|
-|Version|	The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is <code class="x-hidden-focus">v9.0</code>.|
+|Version|	The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.0`.|
 |Resource|The name of the entity, function, or action you want to use.|
 
 
-The URL you will use will be composed with these parts: Protocol + Base URL + Web API path + Version + Resource.
+The URL you will use will be composed with these parts: Protocol + Environment Name + Region + Base URL + Web API path + Version + Resource.
 
 <a name="version_compatiblity"></a>
 
