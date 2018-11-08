@@ -29,7 +29,7 @@ Customize a canvas app by changing its screen size and orientation.
 
 2. In the **Orientation** list, click or tap **Portrait** or **Landscape**.
 
-3. (Tablet apps only) Under **Aspect ratio**, click or tap the ratio that matches the target device for this app.
+3. (Tablet apps only) Under **Aspect ratio**, click or tap the ratio that matches the target device for this app.  You can also choose **Custom** to set your own size. The width must be between 50 - 3840 and the height must be between 50 - 2160.
 
     ![Change the aspect ratio of a tablet app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
 
@@ -40,6 +40,8 @@ Customize a canvas app by changing its screen size and orientation.
 5. Under **Lock orientation**, specify either **On** or **Off**.
 
     If you lock the app's orientation, the app will retain the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app will display incorrectly and may show unwanted results. If you unlock the app's orientation, it will adjust to the screen orientation of the device on which it's running.
+
+    The orientation can also be modified by enabling the feature in Advanced settings called Enable app embedding user experience.  This will top left align the app when it is embedded.  It will also change the background color of the hosting canvas to white.
 
 6. Select **Apply** to save your changes.
 
