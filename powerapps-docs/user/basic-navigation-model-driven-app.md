@@ -1,5 +1,5 @@
 ---
-title: "Enhanced user experience with Unified Interface for Model-driven apps | MicrosoftDocs"
+title: "Enhanced user experience with the Unified Interface for Model-driven apps | MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-#  Enhanced user experience with Unified Interface for Model-driven apps 
+#  Enhanced user experience with the Unified Interface for Model-driven apps 
 
 The new Unified Interface for Model-driven PowerApps provides a consistent and accessible user experience across devices - whether on a desktop, laptop, tablet, or phone. The apps scales by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have the more information can be displayed.
 
