@@ -32,7 +32,7 @@ Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?u
 
     ![List of entities and their details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
-2. in the command bar, cick or tap **New entity**.
+2. in the command bar, click or tap **New entity**.
 
     Before you create an entity, check out the [entity reference](../../developer/common-data-service/reference/about-entity-reference.md) for a description of available standard entities. These entities cover typical scenarios. If one of these entities meets your requirements as is or after minor changes, you can save time by starting with that entity. 
 
