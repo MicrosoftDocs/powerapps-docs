@@ -1,0 +1,1 @@
+Specifies a rule that detects the type of presentation being used.

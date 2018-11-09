@@ -4,8 +4,8 @@ description: Learn about the entity relationship metadata used in Common Data Se
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
-manager: faisalmo
+author: "mayadumesh" # GitHub ID
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/12/2018
+ms.date: 10/31/2018
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -36,19 +36,11 @@ The `EntityMetadata` `ManyToOneRelationships` collection contains [OneToManyRela
 > [!NOTE]
 > Although related entities are sometimes called *child entities*, don't confuse these with [Child entities](entity-metadata.md#child-entities), which refers to how security is applied to related entities.
 
-More information:
-- [Dynamics 365 Customer Engagement Customization Guide: Create and edit relationships between entities](/dynamics365/customer-engagement/customize/create-edit-entity-relationships)
-- [Dynamics 365 Customer Engagement Developer Guide: Customize entity relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+More information: [Create relationships between entities](../../maker/common-data-service/data-platform-entity-lookup.md).
 
 ## Cascade configuration
 
-When a one-to-many entity relationship exists, there are cascading behaviors that can be configured to preserve data integrity and automate business processes.
-
-More information:
-
-- [Dynamics 365 Customer Engagement Customization Guide: Create 1:N (one-to-many) or N:1 (many-to-one) relationships > Relationship behavior](/dynamics365/customer-engagement/customize/create-and-edit-1n-relationships#relationship-behavior)
-- [Dynamics 365 Customer Engagement Developer Guide: Entity relationship behavior](/dynamics365/customer-engagement/developer/entity-relationship-behavior)
-
+When a one-to-many entity relationship exists, there are cascading behaviors that can be configured to preserve data integrity and automate business processes. More information: [Configure entity relationship cascading behavior](configure-entity-relationship-cascading-behavior.md).
 
 ## Create a hierarchy of entities
 
@@ -58,7 +50,7 @@ With model-driven apps, this enables an experience that enables you to view and 
 
 For developers, this enables new types of queries based on the hierarchy using the `Under` and `Not Under` operators.
 
-More information: [Dynamics 365 Customer Engagement Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data)
+More information: [Common Data Service for Apps Developer Guide : Query and visualize hierarchically related data](/dynamics365/customer-engagement/customize/query-visualize-hierarchical-data).
 
 ### See also
 

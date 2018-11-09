@@ -1,0 +1,1 @@
+Returns the name of the stage.

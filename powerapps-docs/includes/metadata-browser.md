@@ -1,0 +1,1 @@
+To view the entity metadata for your organization, install the Metadata Browser solution described in [Browse the metadata for your organization](../developer/browse-your-metadata.md). You can also browse the reference documentation for entities in the [Entity Reference](../developer/about-entity-reference.md).

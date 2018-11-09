@@ -1,0 +1,1 @@
+Refreshes the data displayed in a quick view control.

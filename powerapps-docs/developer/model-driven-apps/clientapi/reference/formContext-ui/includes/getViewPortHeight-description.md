@@ -1,0 +1,1 @@
+Gets the height of the viewport in pixels.

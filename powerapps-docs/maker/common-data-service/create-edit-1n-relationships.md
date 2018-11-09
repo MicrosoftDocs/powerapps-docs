@@ -43,7 +43,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 > - Create a new Lookup field for the related entity. <br />More information: [Create and edit fields](create-edit-fields.md)
 > - Import a solution that contains the definition of the entity relationship. <br />More information: [Import, update, and export solutions](import-update-export-solutions.md)
 > - Use Power Query to create new entities and fill them with data. <br />More information: [Add data to an entity in Common Data Service for Apps by using Power Query](data-platform-cds-newentity-pq.md).
-> - A developer can use [web services](../../developer/common-data-service/use-web-services.md#metadata-services) to write a program to create and update entity relationships. <br />More information: [Customize entity relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+> - A developer can use [Metadata services](../../developer/common-data-service/metadata-services.md) to write a program to create and update entity relationships. <br />More information: [Customize entity relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Information in this topic will help you choose which designer you can use. 
 

@@ -1,0 +1,1 @@
+Adds a function to be called on the form [OnLoad](../../events/form-onload.md) event.
