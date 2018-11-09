@@ -35,35 +35,8 @@ The menu options let you swiftly navigate the different apps in the system. It p
 3. **Recent** and **Pinned** items are at top for easy access. 
 4. Use the Area switcher to switch between Apps.
 5. There are unique colors for icons on the command bar to show differentiation between commands.
-  
-### Get back to recent records, items, or view
-You probably work with the same records all the time. For example, you may access the same contact or account on a regular basis. Or you may work with the same lists (views) of data over and over. You can quickly get back to recently used records or views from the Site Map. You can also pin records and views to make them easier to find. 
-  
-1. From the **Site Map**, click **Recent**.
-  
-2. Under **Recent**, choose the record, item, or view you want to go back to. 
 
-#### Pin records, items, or view
-
-1. From the **Site Map**, click **Recent** to expand the list of recently accessed items.
-2. Select the pin icon next to the item in the recent list, and it will be added to the pinned list.
-
-![Pinned records](media/pinnedrecords.png "Pinned records")
-
-#### Unpin records, items, or view
-
-1. From the **Site Map**, click **Pinned** to expand the list of pinned items.
-2. Select the unpin icon next to the item, and it will drop off from the list.  
-
-![Unpin records](media/unpinnedrecords.png "Unpin records")
-
-#### Record set navigation 
-Navigate through multiple records with pre-set views and queries. The record-focused navigation improves productivity by allowing users to jump from record to record in the list and easily navigate back without losing their working list.
-
-![Record set navigation](media/recordset.png "Record set navigation")
-
-#### Reference panel
-The reference panel is a great way to get work done without clicking away from the screen you’re on. You can look up other things, like knowledge base articles, within the context of the record you’re viewing. 
+For more information, [Basic navigation in a Model-driven app](navigation.md).
 
 ## Dashboards and charts
 You can access all the system and user dashboards from within your Unified Interface apps. The interactive dashboards are now available for all record types with richer interactive dashboard capabilities. For more information, [Track your progress with dashboards and charts](track-your-progress-with-dashboard-and-charts.md).
