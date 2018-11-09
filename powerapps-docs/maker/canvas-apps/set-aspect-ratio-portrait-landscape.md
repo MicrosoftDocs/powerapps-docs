@@ -32,7 +32,7 @@ Customize a canvas app by changing its screen size and orientation.
 3. (Tablet apps only) Under **Aspect ratio**, perform either of these steps:
 
     - Select the ratio that matches the target device for this app.
-    - Select **Custom** to set your own size. and then specify a width between 50 - 3840 and a height between 50 - 2160.
+    - Select **Custom** to set your own size, and then specify a width between 50 - 3840 and a height between 50 - 2160.
 
     ![Change the aspect ratio of a tablet app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
 
