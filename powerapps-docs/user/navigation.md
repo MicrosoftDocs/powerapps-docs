@@ -37,6 +37,12 @@ You can access the installed Unified Interface and web apps from multiple interf
 
 ![Unified Interface apps on My Apps page](media/home2.png "Unified Interface apps on My Apps page")
 
+## Accessing Unified Interface apps on phone and tablets
+
+Unified interface apps are the only apps supported on phones and tablets for Dynamics 365, version 9.0. When a user logs into the above org, they will only see the Unified Interface apps on their apps landing page.
+
+[Unified Interface apps on mobile](media/home3.png "Unified Interface apps on mobile")
+
 ## Navigation
 
 1. Sitemap is expanded and persists by default.
