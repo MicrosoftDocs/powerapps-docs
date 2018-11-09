@@ -78,3 +78,6 @@ You probably work with the same records all the time. For example, you may acces
 Navigate through multiple records with pre-set views and queries. The record-focused navigation improves productivity by allowing users to jump from record to record in the list and easily navigate back without losing their working list.
 
 ![Record set navigation](media/recordset.png "Record set navigation")
+
+#### Reference panel
+The reference panel is a great way to get work done without clicking away from the screen you’re on. You can look up other things, like knowledge base articles, within the context of the record you’re viewing. 
