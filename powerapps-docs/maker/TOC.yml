@@ -535,6 +535,8 @@
             href: ./canvas-apps/functions/function-datetime-parts.md
           - name: Year
             href: ./canvas-apps/functions/function-datetime-parts.md
+      - name: Create an app in a solution
+        href: ./canvas-apps/add-app-solution.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
@@ -918,7 +920,7 @@
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
     items:
-    - name: Use solution explorer 
+    - name: Use solutions 
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution
       href: ./common-data-service/use-solutions-for-your-customizations.md   
@@ -926,6 +928,8 @@
       href: ./common-data-service/import-update-export-solutions.md 
     - name: Navigate to a specific solution
       href: ./common-data-service/navigate-specific-solution.md
+    - name: Create a solution
+      href: ./common-data-service/create-solution.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix
@@ -955,6 +959,8 @@
   items:
   - name: How to use the Common Data Model
     href: ../common-data-model/use-common-data-model.md
+  - name: Industry accelerators
+    href: ../common-data-model/industry-accelerators.md
 - name: Learn from others
   items:
   - name: Webinars

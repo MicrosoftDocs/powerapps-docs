@@ -64,7 +64,7 @@ When the export is completed, you can find a file named something like `CrmTrans
 
 You can send this file to a linguistic expert, translation agency, or localization firm.
 
-If you have the knowlege to translate the text, or if you just want to see the format, you can extract the zip file that you exported you will see that it contains two XML files. 
+If you have the knowledge to translate the text, or if you just want to see the format, you can extract the zip file that you exported you will see that it contains two XML files. 
  - `[Content_Types].xml`
  - `CrmTranslations.xml`
 

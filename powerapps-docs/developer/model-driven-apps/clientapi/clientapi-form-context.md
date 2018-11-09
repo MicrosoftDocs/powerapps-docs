@@ -109,10 +109,8 @@ reference)](reference/collections.md).
   
 ### Related topics
 
-[getFormContext method](reference/executioncontext/getFormContext.md)
-
-[getGlobalContext method](reference/xrm-utility/getGlobalContext.md)
-
+[getFormContext method](reference/executioncontext/getFormContext.md)<br/>
+[getGlobalContext method](reference/xrm-utility/getGlobalContext.md)<br/>
 [Execution context methods](reference/execution-context.md) 
 
  

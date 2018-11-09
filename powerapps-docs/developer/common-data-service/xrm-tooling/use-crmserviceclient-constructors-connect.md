@@ -158,8 +158,8 @@ CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential(
 
 [Use connection strings in XRM tooling to connect to CDS for Apps](use-connection-strings-xrm-tooling-connect.md)<br />
 [Use XRM Tooling Windows PowerShell Cmdlets to connect to CDS for Apps](use-powershell-cmdlets-xrm-tooling-connect.md)<br />
-[Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)<br />
-<!-- TODO:
-[Sample: Quick Start for CDS for Apps](../sample-quick-start.md)<br /> -->
+[Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)
 <xref:Microsoft.Xrm.Tooling.Connector.AuthenticationType><br />
 [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)
+<!-- TODO:[Sample: Quick Start for CDS for Apps](../sample-quick-start.md)-->
+
