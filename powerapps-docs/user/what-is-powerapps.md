@@ -1,5 +1,5 @@
 ---
-title: "Model-driven and Canvas Apps in Microsoft PowerApps| MicrosoftDocs"
+title: "What’s the difference between a Model-driven app and Canvas app in Microsoft PowerApps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -18,7 +18,7 @@ search.app:
   - D365CE
   - D365CE
 ---
-# Model-driven and Canvas Apps in Microsoft PowerApps
+# What’s the difference between a Model-driven app and Canvas app?
 
 No need to manually work on a task to get your work done. With PowerApps you can create and use a model-driven app or canvas app to get your work done quickly. Once an app is created, an app maker can share the app with your organization. 
 
