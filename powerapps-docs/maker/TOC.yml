@@ -1,9 +1,9 @@
 - name: PowerApps Basics Guide
   items: 
- - name: Differance between apps
- - href: ../user/what-is-powerapps.md
- - name: Uniifed Interface
- - href: ../user/unified-interface.md
+  - name: Differance between apps
+    href: ../user/what-is-powerapps.md
+  - name: Uniifed Interface
+    href: ../user/unified-interface.md
   - name: Find and run apps
     href: ../user/index.md
     items:
