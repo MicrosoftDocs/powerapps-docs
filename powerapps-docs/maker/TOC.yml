@@ -34,7 +34,7 @@
     items:
     - name: create a record
       href: ../user/create-a-record.md
-    - name: Add activities
+    - name: Add activities to the timeline
       href: ../user/add-activities.md
     - name: Assign or share records
       href: ../user/assign-or-share-records.md
