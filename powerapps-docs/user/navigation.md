@@ -17,11 +17,27 @@ search.app:
   - PowerApps
   - D365CE
 ---
-#  Basic navigation a Model-driven app 
+#  Basic navigation in a Model-driven app 
 
-The menu options let you swiftly navigate the different apps in the system. It provides quick access to recently viewed records and pinned favorites. 
+Use the nav bar to get to your work area, create a new record, search, or do other tasks in a Model-driven app.
 
-![Modeldriven app nav](media/nav.png "Modeldriven app nav")
+## Accessing Unified Interface apps on browsers
+
+You can access the installed Unified Interface and web apps from multiple interfaces. On browsers you can see all the apps both Unified Interface and web:
+
+1. In [https://home.dynamics.com](https://home.dynamics.com)
+
+![Dynamics 365 Home Page](media/home.png "Dynamics 365 Home Page")
+
+2. In app navigatoin
+
+![In app navigation](media/home1.png "In app navigation")
+
+3. In My Apps page under Settings
+
+![Unified Interface apps on My Apps page](media/home2.png "Unified Interface apps on My Apps page")
+
+## Navigation
 
 1. Sitemap is expanded and persists by default.
 2. The sub area that you are currently in is highlighted to indicate where in the app.
