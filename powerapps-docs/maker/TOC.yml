@@ -40,8 +40,8 @@
       href: ../user/assign-or-share-records.md
     - name: Deactivate accounts or contacts 
       href: ../user/deactivate-activate-account-contact.md
-    - name: Track your progress with charts 
-      href: ../user/track-your-progress-with-charts.md
+    - name: Track your progress with dashboards and charts 
+      href: ../user/track-your-progress-with-dashboard-and-charts.md
   - name: Search records in a model-driven app
     items:
     - name: search for records
