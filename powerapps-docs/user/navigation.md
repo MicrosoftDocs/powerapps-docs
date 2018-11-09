@@ -58,21 +58,21 @@ You probably work with the same records all the time. For example, you may acces
   
 2. Under **Recent**, choose the record, item, or view you want to go back to. 
 
-#### Pin records, items, or view
+### Pin records, items, or view
 
 1. From the **Site Map**, click **Recent** to expand the list of recently accessed items.
 2. Select the pin icon next to the item in the recent list, and it will be added to the pinned list.
 
 ![Pinned records](media/pinnedrecords.png "Pinned records")
 
-#### Unpin records, items, or view
+### Unpin records, items, or view
 
 1. From the **Site Map**, click **Pinned** to expand the list of pinned items.
 2. Select the unpin icon next to the item, and it will drop off from the list.  
 
 ![Unpin records](media/unpinnedrecords.png "Unpin records")
 
-#### Record set navigation 
+### Record set navigation 
 Navigate through multiple records with pre-set views and queries. The record-focused navigation improves productivity by allowing users to jump from record to record in the list and easily navigate back without losing their working list.
 
 ![Record set navigation](media/recordset.png "Record set navigation")
