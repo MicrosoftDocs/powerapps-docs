@@ -61,37 +61,3 @@ For information about known limitations, see [Common issues and resolutions](com
 1. Add [comments to formulas](https://powerapps.microsoft.com/blog/comment-your-powerapps-code/) (blog) in canvas apps.
 1. [PowerShell cmdlets for administrators](https://docs.microsoft.com/powerapps/administrator/powerapps-powershell).
 1. [Rich-text editor control](controls/control-richtexteditor.md) (experimental) - allows end users to format text inside a WYSIWYG editing area of a canvas app.
-
-## May 21
-
-1. Allow app users to import and export data from Excel or CSV files stored locally by using the **Get Data from Excel file** and **Export Data** features now available for upgraded Common Data Service (CDS) for Apps environments. 
-1. Allow app users to [open entities in Excel](../common-data-service/data-platform-excel-addin.md) to create, update, and delete data stored within CDS for Apps by using the Excel add-in for PowerApps. 
-1. [Create and publish Power BI reports](../common-data-service/data-platform-powerbi-connector.md) by using Power BI Desktop connected to CDS for Apps.
-
-## April 23
-
-* Download [attachments](controls/control-attachments.md) in Internet Explorer within SharePoint custom list forms.
-
-## April 9
-
-* Cut (Ctrl+X), copy (Ctrl+C), and paste (Ctrl+V) controls&mdash;including the controls' styles, formulas, and properties&mdash;across apps in a web browser.
-
-## March 21
-
-1. Create [model-driven apps](../model-driven-apps/model-driven-app-overview.md), which start with your data model and build up from the shape of your core business data and processes in Common Data Service for Apps to model forms, views, and other components. Model-driven apps automatically generate great UI that is responsive across devices.
-2. [Create a database](../../administrator/create-database.md) on the latest version of CDS for Apps in an environment.
-3. CDS for Apps now includes:
-
-    * **Additional data types** support more complex entity definitions and provide richer experiences. (Applies to canvas and model-driven apps.)\
-
-    * [Create and customize entities](../common-data-service/data-platform-create-entity.md) in CDS for Apps right from the PowerApps site. The **refreshed experience** includes improved performance, a more user-friendly UI, and helpful features such as in-line creation of option sets. (Applies to canvas and model-driven apps.)
-    * Create **server-side business rules** for validating data entered into CDS for Apps. (Applies to canvas and model-driven apps.)
-    * Create **calculated and rollup fields** in CDS for Apps entities directly from the PowerApps site. (Applies to canvas and model-driven apps.)  
-    * Developers can use the CDS for Apps **Software Development Kit** (SDK) to create code-based customizations for CDS for Apps.
-    * Advanced users can access data stored in CDS for Apps through a new **OData Web API**.
-    * [Import data](../common-data-service/data-platform-cds-newentity-pq.md) into CDS for Apps with **Power Query**. Use Power Query on the web to directly import data to CDS for Apps from multiple sources
-
-## March 5
-
-1. Add (and delete) [attachments](controls/control-attachments.md) to SharePoint lists.
-2. Open external [PDF](controls/control-pdf-viewer.md) files in a web browser. (Experimental feature)
