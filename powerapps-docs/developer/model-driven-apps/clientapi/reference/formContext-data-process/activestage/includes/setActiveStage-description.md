@@ -1,0 +1,1 @@
+Sets a completed stage as the active stage. 

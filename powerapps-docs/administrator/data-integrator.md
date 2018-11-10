@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 09/19/2018
+ms.date: 11/07/2018
 ms.author: sabinn
 search.audienceType: 
   - admin
@@ -68,7 +68,7 @@ Before you can create a data integration project, you must provision a connectio
 
 **To create a connection**
 
-1. Go to [PowerApps Admin center](https://admin.powerapps.com).
+1. Go to [PowerApps](https://web.powerapps.com).
 
 2. Under Data, select **Connections** and then select **New connection**.
 
@@ -83,6 +83,9 @@ Before you can create a data integration project, you must provision a connectio
 
     > [!div class="mx-imgBorder"] 
     > ![Connection list](media/data-integrator/CreateConnection1780.png "Connection list")
+
+> [!NOTE]
+> Please make sure that the account you specify for each connection has access to entities for the corresponding applications. Additionally, the account for each connection can be in a different tenant. 
 
 ### How to create a connection set
 
@@ -164,8 +167,6 @@ Projects enable the flow of data between systems. A project contains mappings fo
 
 ### Execution history
 
-<!--note from editor: Do you think most people reading this will know what "upsert" means?-->
-
 Execution history shows the history of all project executions with project name, timestamp of when the project was executed, and status of execution along with the number of upserts and/or errors.
 
 -   Example of project execution history.
@@ -223,6 +224,12 @@ Also note that under Notifications, you can opt in for email-based alert notific
 
 > [!div class="mx-imgBorder"] 
 > ![Email notification](media/data-integrator/EmailNotification780.png "Email notification")
+
+> [!NOTE]
+> - Currently, we support scheduling 50 integration projects at any given time per paid tenant. However you can create more projects and run them interactively.
+For trial tenants, we have an additional limitation that a scheduled project would only run for first 50 executions.
+> - While we support scheduling projects to run every minute, please bear in mind that this may put a lot of stress on your apps and in turn impact overall performance. We highly encourage users to test project executions under true load conditions and optimize for performance with less frequent refreshes.
+In production environments, we do not recommend running more than 5 projects per minute per tenant.
 
 ## Customizing projects, templates, and mappings 
 

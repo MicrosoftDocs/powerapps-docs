@@ -1,0 +1,1 @@
+Saves the record synchronously with the options to close the form or open a new form after the save is completed.

@@ -1,0 +1,1 @@
+To display a Silverlight web resource outside an entity form or chart, create an HTML web resource to be the host page for the Silverlight web resource. Then use the **$webresource:**  directive to open the HTML web resource.

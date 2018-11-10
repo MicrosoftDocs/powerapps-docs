@@ -32,7 +32,7 @@ If you create any new solution components in the process of editing the form, fo
 
 1. Sign in to [PowerApps](https://web.powerapps.com/). 
 
-2. Select **Model-driven** > **Data** > **Entities** > and then select the entity you want, such as the account entity. 
+2. Select **Data** > **Entities** > and then select the entity you want, such as the account entity. 
 
 3. Select the **Forms** tab and then open the form you want, such as the **Account** main form.
 

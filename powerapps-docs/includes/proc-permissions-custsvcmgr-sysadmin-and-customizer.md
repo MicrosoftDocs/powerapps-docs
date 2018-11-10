@@ -1,0 +1,1 @@
+Make sure that you have the Customer Service Manager, System Administrator, or System Customizer security role or equivalent permissions.

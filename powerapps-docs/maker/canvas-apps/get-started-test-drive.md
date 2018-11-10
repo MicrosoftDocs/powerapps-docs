@@ -26,9 +26,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 
 1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![PowerApps home page](./media/get-started-test-drive/sign-in.png)
-
-1. Under **Make apps like these**, hover over **Start from data**, and then click or tap **Make this app**.
+1. Under **Make your own app**, hover over **Start from data**, and then click or tap **Make this app**.
 
     ![Make this app tile](./media/get-started-test-drive/make-this-app.png)
 
