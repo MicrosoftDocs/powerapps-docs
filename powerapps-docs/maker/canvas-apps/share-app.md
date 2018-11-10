@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 07/11/2018
+ms.date: 11/10/2018
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -45,7 +45,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. Specify by name or alias the users or security groups in Azure Active Directory with which you want to share the app.
 
-    To allow your entire organization to run the app (but not modify or share it), specify **Everyone** in the sharing panel.
+    To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
 
     ![Specify users and co-owners](./media/share-app/share-everyone.png)
 
@@ -54,6 +54,8 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
 
+    You can't grant **Co-owner** permission to a security group if you [created the app from within a solution](add-app-solution.md).
+    
     > [!NOTE]
     > Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
 
