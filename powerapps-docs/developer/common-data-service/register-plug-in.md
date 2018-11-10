@@ -234,7 +234,7 @@ In CDS for Apps, only the following messages support entity images:
 
 There are two types of entity images: **Pre Image** and **Post Image**. When you configure them, these images will be available within the execution context as <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties respectively. As the names suggest, these snapshots represent what the entity looks like before the operation and after the operation. When you configure an entity image, you will define an *entity alias* value that will be the key value you will use to access a specific entity image from the `PreEntityImages` or `PostEntityImages` properties.
 
-#### Availabilty of images
+#### Availability of images
 
 When you configure an entity image it is important that you recognize that the type of entity images available depend on the stage of the registered step and the type of operation. For example:
 
