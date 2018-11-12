@@ -959,6 +959,8 @@
   items:
   - name: How to use the Common Data Model
     href: ../common-data-model/use-common-data-model.md
+  - name: Industry accelerators
+    href: ../common-data-model/industry-accelerators.md
 - name: Learn from others
   items:
   - name: Webinars
