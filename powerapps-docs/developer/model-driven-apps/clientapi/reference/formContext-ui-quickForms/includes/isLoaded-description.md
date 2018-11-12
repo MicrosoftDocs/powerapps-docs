@@ -1,0 +1,1 @@
+Returns whether the data binding for the constituent controls in a quick view control is complete.

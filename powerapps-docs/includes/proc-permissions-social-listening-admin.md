@@ -1,0 +1,1 @@
+You need to be a Social Engagement Administrator to perform this task.

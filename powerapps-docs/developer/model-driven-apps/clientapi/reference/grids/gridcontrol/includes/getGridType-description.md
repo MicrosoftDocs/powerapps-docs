@@ -1,0 +1,1 @@
+Gets the grid type (grid or subgrid).

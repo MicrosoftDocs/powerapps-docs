@@ -1,0 +1,1 @@
+Returns an object with a **getValue** method which will return the integer value of the business process flow category.
