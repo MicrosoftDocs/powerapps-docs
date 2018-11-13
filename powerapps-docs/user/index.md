@@ -30,9 +30,9 @@ Model-driven apps use the Unified Interface which provides a responsive and acce
 
 This section provides information about Unified Interface, how to find and run apps from various places, navigating around in model-driven apps, and more.
 
-[Unified Interface for Model-driven apps](unified-interface.md)
-[Run apps](run-app-browser.md)
-[Basic navigation in a Model-driven app](navigation.md)
+- [Unified Interface for Model-driven apps](unified-interface.md)
+- [Run apps](run-app-browser.md)
+- [Basic navigation in a Model-driven app](navigation.md)
 
 
 ## What's required to run apps?
