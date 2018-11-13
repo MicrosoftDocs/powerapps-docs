@@ -19,15 +19,21 @@ search.app:
 ---
 
 # How do I find and run apps?
-App makers can create customized task- and role-based *canvas* apps that work the way you do, whether you're a mobile worker in the field or a doctor in a busy hospital. Canvas app makers can customize almost every aspect of a canvas app and can connect to multiple data sources to help users complete focused tasks.
 
-App makers can also create *model-driven* apps that are generated from your organization's data. Model-driven apps are complex, responsive apps that help users focus on their work and not on remembering to perform a set of manual steps. Model-driven app makers determine what data an app needs and how it will relate to other data, define the business process that the app will follow, and then add and configure components that enforce that process. Unlike canvas apps, which are highly customizable, the layout of model-driven apps is largely determined by the components that the maker adds to the app.
+No need to manually work on a task to get your work done. With PowerApps you can create and use a model-driven app or canvas app to get your work done quickly. Once an app is created, an app maker can share the app with your organization. 
 
-When app makers are done creating apps, they can instantly publish them to iOS, Android, Windows, and the web, and then share them with others in their organization.
+Canvas apps give you a lot of control over the user experience of the app. There are templates an app maker can use to make a canvas app, but an app maker can configure the app anyway they like. Just like the name of the app “canvas”, it’s a blank canvas - so you can create an app to the fit the needs of users in your organization.
 
-As an app user, you can run apps that you created&mdash;or that someone else created and shared with you&mdash;on a phone or tablet or in a web browser. You can find apps on the [Dynamics 365 Home page](https://home.dynamics.com/) and in the PowerApps or Dynamics 365 app on your mobile device. You can even find and run apps from Microsoft Team channels, SharePoint, and AppSource. If someone creates an app and sends a link to you in email, you can run the app by clicking or tapping the link in the email.
+Since canvas app can essentially be anything, there isn’t much help documentation on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or PowerApps admin.
+
+Model-driven apps use the Unified Interface which provides a responsive and accessible design. You can run the app on a web browser or popular mobile devices.  The app has multiple components including dashboards, forms, views, charts, and business processes which together help make the app easy to use.  Model-driven apps are built and modeled on the Dynamics 365 framework, so the user experience is similar to Microsoft Dynamics 365.
 
 This section provides information about Unified Interface, how to find and run apps from various places, navigating around in model-driven apps, and more.
+
+[Unified Interface for Model-driven apps](unified-interface.md)
+[Run apps](run-app-browser.md)
+[Basic navigation in a Model-driven app](navigation.md)
+
 
 ## What's required to run apps?
 * Ensure that you're using a [supported device platform and browser](../maker/canvas-apps/limits-and-config.md).
