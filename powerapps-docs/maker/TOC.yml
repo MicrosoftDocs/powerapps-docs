@@ -5,13 +5,12 @@
     href: signup-for-powerapps.md
   - name: Sign up for Community Plan
     href: dev-community-plan.md
-- name: Run apps
-  href: ../user/what-is-powerapps.md
+- name: Find and run apps
+  href: ../user/index.md
   items: 
   - name: Unified Interface
     href: ../user/unified-interface.md
-  - name: Find and run apps
-    href: ../user/index.md
+  - name: Run apps...
     items:
     - name: In a browser
       href: ../user/run-app-browser.md
