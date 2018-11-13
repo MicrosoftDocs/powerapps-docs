@@ -32,7 +32,7 @@ This section provides information about how to find and run apps from various pl
 
 - [Run apps](run-app-browser.md)
 - [Unified Interface for Model-driven apps](unified-interface.md)
-- [Basic navigation in a Model-driven app](navigation.md)
+- [Basic navigation in Model-driven apps](navigation.md)
 
 
 ## What's required to run apps?
