@@ -236,6 +236,8 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 1. Close Preview mode by pressing Esc (or by selecting the close icon in the upper-right corner).
 
 ## Next steps
-* Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
-* [Share the app](share-app.md) so that other people can run it.
-* Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
+
+- Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
+- [Share the app](share-app.md) so that other people can run it.
+- Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
+- [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.

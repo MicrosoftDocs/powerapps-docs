@@ -1,0 +1,1 @@
+Converts a string to an XML-encoded string.

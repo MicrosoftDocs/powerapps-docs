@@ -1,0 +1,1 @@
+This feature was introduced in CRM Online 2016 Update 1 and CRM 2016 Service Pack 1 (on-premises).

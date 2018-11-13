@@ -20,7 +20,10 @@ A control that contains other controls and shows a set of data.
 ## Description
 A **Gallery** control can show multiple records from a data source, and each record can contain multiple types of data. For example, a **Gallery** control can show multiple contacts with each item showing contact information that includes a name, an address, and a phone number for each contact. Each data field appears in a separate control within the **Gallery** control, and you can configure those controls in its template. The template appears as the first item inside the gallery, on the left edge of a **Gallery** control in horizontal/landscape orientation and at the top of a **Gallery** control in vertical/portrait orientation. Any changes that you make in the template are reflected throughout the **Gallery** control.
 
-Predefined Gallery templates for showing images, text as well as a gallery with variable height items are available.
+Predefined templates for showing images and text in a gallery are available, as well as a gallery for variable-height items.
+
+## Limitations
+If a user scrolls the **Flexible height** gallery control before all items are loaded, the item that's currently in view may be pushed down and out of view when the data loading is finished. To avoid this issue, use a standard **Gallery** control instead of the **Flexible height** variant.
 
 ## Key properties
 **[Default](properties-core.md)** – The item or record from the data source to be selected in the gallery when the app starts up.

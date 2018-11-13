@@ -1,0 +1,1 @@
+Removes an event handler from the [OnStageSelected](../../../events/onstageselected.md) event.

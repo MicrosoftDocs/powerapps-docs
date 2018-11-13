@@ -2,7 +2,7 @@
 title: "Create a solution | MicrosoftDocs"
 description: "Learn how to create a solution"
 ms.custom: ""
-ms.date: 06/18/2018
+ms.date: 10/30/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -29,9 +29,9 @@ Because the default solution contains all the solutions components, it may be ea
   
  For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
   
-1.  Navigate to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Solutions**. 
+1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
   
-2.  Choose **New** and complete the required fields for the solution  
+2.  Select **New solution** and then complete the required fields for the solution.
   
     |Field|Description|  
     |-----------|-----------------|  
@@ -40,7 +40,7 @@ Because the default solution contains all the solutions components, it may be ea
     |**Publisher**|You can select the default publisher or create a new publisher. Unless you plan to distribute your solution, you should just use the default publisher for your organization.|  
     |**Version**|Enter a number for the version of your solution. This is only important if you export your solution. The version number will be included in the file name when you export the solution.|  
   
-3.  Choose **Save**.  
+3.  Select **Save**.  
   
  After you save the solution, you may wish to add information to fields that aren’t required. These steps are optional. Use the **Description** field to describe the solution and choose an HTML web resource as a **Configuration Page** for the solution. The configuration page is typically used by ISVs who distribute solutions. When this is set, a new **Configuration** node appears below the **Information** node to display this web resource. Developers will use this page to include instructions or controls to allow you to set configuration data or launch their solution.  
   
@@ -61,3 +61,6 @@ Because the default solution contains all the solutions components, it may be ea
 
 > [!IMPORTANT]
 >  If you plan to include appointments in solutions, we strongly recommend that you don’t include only appointments and only recurring appointments in separate solutions. If you install and uninstall separate solutions with different appointment types, you’ll encounter a SQL Server error and you’ll have to re-create the appointments. 
+
+## See also
+ [Use solutions](use-solution-explorer.md)

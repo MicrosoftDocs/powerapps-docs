@@ -1,3 +1,10 @@
+- name: "Get started: What is PowerApps?"
+  href: ../powerapps-overview.md
+  items:
+  - name: Sign up for 30-day trial version
+    href: signup-for-powerapps.md
+  - name: Sign up for Community Plan
+    href: dev-community-plan.md
 - name: Find and run apps
   href: ../user/index.md
   items:
@@ -16,20 +23,15 @@
 - name: Create apps
   href: index.md
   items:
-  - name: Try PowerApps for free
-    items:
-    - name: 30-day trial version
-      href: signup-for-powerapps.md
-    - name: PowerApps Community Plan
-      href: dev-community-plan.md
   - name: Sign in to PowerApps
     href: ./canvas-apps/intro-maker-portal.md
-    items:
   - name: "What's new"
     href: ./canvas-apps/release-notes.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
+  - name: "System requirements, limits, and configuration"
+    href: ./canvas-apps/limits-and-config.md
   - name: Explore sample apps
     href: ./canvas-apps/open-and-run-a-sample-app.md
     items:
@@ -533,6 +535,8 @@
             href: ./canvas-apps/functions/function-datetime-parts.md
           - name: Year
             href: ./canvas-apps/functions/function-datetime-parts.md
+      - name: Create an app in a solution
+        href: ./canvas-apps/add-app-solution.md
       - name: Build a global app
         href: ./canvas-apps/global-apps.md
       - name: Make an app accessible
@@ -754,6 +758,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
+    - name: Use themes to apply organization branding
+      href: ./model-driven-apps/create-themes-organization-branding.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
@@ -782,7 +788,8 @@
   - name: Accessibility in PowerApps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: For developers
-    href: ../developer/model-driven-apps/TOC.yml
+    href: ../developer/model-driven-apps/overview.md
+    # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 - name: Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
@@ -917,7 +924,7 @@
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
     items:
-    - name: Use solution explorer 
+    - name: Use solutions 
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution
       href: ./common-data-service/use-solutions-for-your-customizations.md   
@@ -925,6 +932,8 @@
       href: ./common-data-service/import-update-export-solutions.md 
     - name: Navigate to a specific solution
       href: ./common-data-service/navigate-specific-solution.md
+    - name: Create a solution
+      href: ./common-data-service/create-solution.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix
@@ -942,19 +951,20 @@
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
-  - name: Create a theme
-    href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md
   - name: Translate customized entity and field text
     href: ./common-data-service/export-customized-entity-field-text-translation.md
   - name: Import translated entity and field text into an app
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: For developers
-    href: ../developer/common-data-service/TOC.yml
+    href: ../developer/common-data-service/overview.md
+    # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
 - name: Common Data Model
   href: ../common-data-model/overview.md
   items:
   - name: How to use the Common Data Model
     href: ../common-data-model/use-common-data-model.md
+  - name: Industry accelerators
+    href: ../common-data-model/industry-accelerators.md
 - name: Learn from others
   items:
   - name: Webinars
@@ -965,8 +975,6 @@
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
 - name: Troubleshoot
   items:
-  - name: System requirements, limits, and configuration
-    href: ./canvas-apps/limits-and-config.md
   - name: Performance tips for canvas apps
     href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions

@@ -26,7 +26,10 @@ search.app:
 ---
 # Tutorial: Create business rules and recommendations to apply logic in a model-driven app form
 
-This tutorial shows you how to create business rules and recommendations to apply form logic without writing JavaScript code or creating plug-ins.  Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to Main and Quick Create forms, and they work in PowerApps apps, Dynamics 365 customer engagement web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).  
+This tutorial shows you how to create business rules and recommendations to apply form logic in a model-driven app without writing JavaScript code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to Main and Quick Create forms, and they work in model-driven apps, Dynamics 365 customer engagement web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).
+
+> [!NOTE]
+> To define a business rule for an entity so that it applies to all forms and server, see [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule).
   
  By combining conditions and actions, you can do any of the following with business rules:  
   

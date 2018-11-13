@@ -1,0 +1,1 @@
+Refreshes the ribbon rules for the grid control.

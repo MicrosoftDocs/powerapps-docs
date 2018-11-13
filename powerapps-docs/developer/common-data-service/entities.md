@@ -4,8 +4,8 @@ description: Learn about the entities available in Common Data Service for Apps.
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
-manager: faisalmo
+author: "mayadumesh" # GitHub ID
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/19/2018
+ms.date: 10/31/2018
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -21,6 +21,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
+<!-- 
+Was Mike Carter
+This topic was not migrated it was written for PowerApps 
+
+Overlap with content in https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-entities
+
+-->
+
 # Common Data Service for Apps entities
 
 Providing storage for data is the most important function of Common Data Service for Apps. Common Data Service includes a base set of entities that provide structure for data used by business applications. 
@@ -53,9 +61,7 @@ You can create new entities and fill them with data using Power Query. More info
 
 ### Use metadata services
 
-The web services exposed in Common Data Service include capabilities to create, read, write, and delete entity metadata. These services are most frequently used to read the metadata because that data can inform your code at runtime about how the environment has been customized.
-
-More information: [Metadata Services](use-web-services.md#metadata-services)
+The web services exposed in CDS for Apps include capabilities to create, read, write, and delete entity metadata. These services are most frequently used to read the metadata because that data can inform your code at runtime about how the environment has been customized. More information: [Metadata services](metadata-services.md)
 
 ## Entity metadata
 
@@ -76,7 +82,7 @@ The Entity metadata includes the following information:
 |Keys|By default, each entity has a single GUID (globally unique identifier) attribute and the `Keys` property is an empty collection. You can add alternate keys to an entity. More information: [Entity Keys](entity-metadata.md#entity-keys)|
 
 > [!TIP]
-> Developing an understanding of the entity metadata in the system can help you understand how Common Data Service works. Many of the properties also control what entities in model-driven apps can do. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the Metadata Browser which will allow you to view all the hidden entities and metadata properties that are found in the system. More information: [Dynamics 365 Customer Engagement Developer Guide: Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
+> Developing an understanding of the entity metadata in the system can help you understand how Common Data Service works. Many of the properties also control what entities in model-driven apps can do. The designers available to edit metadata cannot show all the details found in the metadata. You can install a model-driven app called the Metadata Browser which will allow you to view all the hidden entities and metadata properties that are found in the system. More information: [Browse the metadata for your organization](/dynamics365/customer-engagement/developer/browse-your-metadata)
 
 ### See also
 

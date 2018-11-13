@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 08/02/2018
+ms.date: 11/09/2018
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -19,6 +19,10 @@ search.app:
 This article lists some common issues that you might encounter while using PowerApps. Where applicable, workarounds are provided.
 
 ## Added after February 2018
+
+1. **Scrolling in flexible-height galleries** (Nov. 9, 2018)
+
+    On some devices, users might run into a limitation when they scroll with their fingers. Users can resolve the limitation by lifting their fingers from the screen and starting to scroll again.
 
 1. **Drawing with mouse or touch input is not smooth in PowerApps for Windows** (Sep. 24, 2018)
 

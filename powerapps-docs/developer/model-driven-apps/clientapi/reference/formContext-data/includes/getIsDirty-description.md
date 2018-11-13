@@ -1,0 +1,1 @@
+Gets a boolean value indicating whether the form data has been modified.

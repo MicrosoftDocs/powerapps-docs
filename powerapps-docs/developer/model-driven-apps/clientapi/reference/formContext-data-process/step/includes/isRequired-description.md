@@ -1,0 +1,1 @@
+Returns a boolean value indicating whether the step is required in the business process flow.
