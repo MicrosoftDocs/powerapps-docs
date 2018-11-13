@@ -65,7 +65,7 @@ This list of data sources and delegable functions and predicates will be updated
 | TrimEnds |No |No |Yes |No |No |
 | Len |No |No |Yes |No |No |
 | +, - |No |No |Yes |No |No |
-| <, <=, =, <>, >, >= |Yes |Yes (only =) |Yes |Yes |Yes |
+| <, <=, =, <>, >, >= |Yes |Yes |Yes |Yes |Yes |
 | And (&&), Or (&#124;&#124;), Not (!) |Yes<sup>2</sup> |Yes (except Not(!)) |Yes |Yes |Yes |
 | in |No |No |Yes |No |Yes |
 | StartsWith |No |Yes |No |No |No |
