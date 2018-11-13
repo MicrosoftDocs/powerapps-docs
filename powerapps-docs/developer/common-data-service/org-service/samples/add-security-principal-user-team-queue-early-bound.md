@@ -21,7 +21,7 @@ This sample showcases how to give a user or a team access to a queue. The [AddPr
 
 ## How to run this sample
 
-[!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)
+[!include[cc-how-to-run-samples](../../includes/cc-how-to-run-samples.md)]
 
 ## What this sample does
 
