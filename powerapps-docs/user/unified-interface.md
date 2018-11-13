@@ -19,7 +19,7 @@ search.app:
 ---
 #  Enhanced user experience with the Unified Interface for Model-driven apps 
 
-The new Unified Interface for Model-driven PowerApps provides a consistent and accessible user experience across devices - whether on a desktop, laptop, tablet, or phone. The apps scales by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have the more information can be displayed.
+The Unified Interface for Model-driven PowerApps provides a consistent and accessible user experience across devices - whether on a desktop, laptop, tablet, or phone. The apps scales by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have the more information can be displayed.
 
 ![Unified Interface adapts to screen](media/Reflow.png "Unified Interface adapts to screen")
 
