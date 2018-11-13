@@ -28,10 +28,10 @@ Since canvas app can essentially be anything, there isn’t much help documentat
 
 Model-driven apps use the Unified Interface which provides a responsive and accessible design. You can run the app on a web browser or popular mobile devices.  The app has multiple components including dashboards, forms, views, charts, and business processes which together help make the app easy to use.  Model-driven apps are built and modeled on the Dynamics 365 framework, so the user experience is similar to Microsoft Dynamics 365.
 
-This section provides information about Unified Interface, how to find and run apps from various places, navigating around in model-driven apps, and more.
+This section provides information about how to find and run apps from various places, Unified Interface, and navigating around in model-driven apps, and more.
 
-- [Unified Interface for Model-driven apps](unified-interface.md)
 - [Run apps](run-app-browser.md)
+- [Unified Interface for Model-driven apps](unified-interface.md)
 - [Basic navigation in a Model-driven app](navigation.md)
 
 
