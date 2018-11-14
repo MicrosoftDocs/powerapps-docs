@@ -962,7 +962,7 @@
         },
         {
         "source_path": "powerapps-docs/getting-started.md",
-        "redirect_url": "/powerapps",
+        "redirect_url": "/powerapps/index",
         "redirect_document_id": true
         },
         {
