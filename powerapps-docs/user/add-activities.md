@@ -53,7 +53,12 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, select  **plus sign** > **Phone Call**.  
+2. In the **Timeline** section, select  **plus sign** ![Create record button](media/create-record-button.png "Create record button") > **Phone Call**.  
+
+
+
+<!--from editor: The follow image uses the name Jim Glynn - is that from an approved fictitious names list? The image also shows Manjinder Kaur, which we should not use. Please change the image or blur the non-approved names. Here is a link to an approved names list: https://microsoft.sharepoint-df.com/teams/Dynamics365CustomerEngagementEditingResources/_layouts/15/WopiFrame.aspx?sourcedoc={0ea74ded-c03c-452d-a0de-6c89d54f7107}&action=edit&wd=target%28Style%20Guidelines.one%7C19ceab96-642a-49ba-8020-8958ea8cdb93%2FFictitious%20Names%7C0e4ac149-4669-4c0e-b262-f10ff3158758%2F%29 -->
+
 
    > [!div class="mx-imgBorder"]
    > ![Add a phone activity in PowerApps](media/addphonecall.png "Add a phone activity in PowerApps")
@@ -72,7 +77,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, select  **plus sign** > **Task**.
+2. In the **Timeline** section, select  **plus sign** ![Create record button](media/create-record-button.png "Create record button") > **Task**.
   
 3. The **Owner** field is set to the current user by default. If you want to reassign the task, select the lookup icon, and then select another user or team.  
   
@@ -84,7 +89,7 @@ To add an email activity to a record, you must first save the record you are add
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, select  **plus sign** > **E-mail**. 
+2. In the **Timeline** section, select  **plus sign** ![Create record button](media/create-record-button.png "Create record button") > **E-mail**. 
 
 3. Fill in the subject of the email and use the space provided to write the email.
   
@@ -100,7 +105,7 @@ To add an appointment activity to a record, you must first save the record you a
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, select  **plus sign** > **Appointment**.  
+2. In the **Timeline** section, select  **plus sign** ![Create record button](media/create-record-button.png "Create record button") > **Appointment**.  
   
 3. Use the tooltips to fill in the required information.
   
@@ -119,7 +124,13 @@ You can also easily add notes in the activities area.
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-Once the note has been added, you can delete or edit the note. You can also add a note using the **plus sign** in the upper section of the **TIMELINE** area.
+Once the note has been added, you can delete or edit the note. You can also add a note using the **plus sign** ![Create record button](media/create-record-button.png "Create record button") in the upper section of the **Timeline** area.
+
+
+<!--from editor: This image also uses the name Manjinder Kaur. Please fix this.-->
+
+
+
 
 > [!div class="mx-imgBorder"]
 > ![Update a note](media/addnote2.png "Update a note")
