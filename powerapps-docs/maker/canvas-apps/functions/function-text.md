@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/25/2016
+ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Text function in PowerApps
-Formats a number or a date/time value for display as a string of text.
+Converts any value and formats numbers and date/time values as a string of text.
 
 ## Description
 The **Text** function formats a number or a date/time value based on one of these types of arguments:
@@ -24,6 +24,8 @@ The **Text** function formats a number or a date/time value based on one of thes
 * A custom format, a string of text that comprises placeholders that describe how to format the number or the date/time value. Placeholders define how many digits to show, whether grouping separators should be used, and how to display the name of a month. PowerApps supports a subset of the placeholders that Microsoft Excel does.
 
 See [working with dates and times](../show-text-dates-times.md) for more information.
+
+The **Text** function can also convert any data type to a text representation using a default format.  Use this to pass non-text values to text based functions such as [**Len**](function-len.md), [**Right**](function-left-mid-right.md), [**IsMatch**](function-ismatch.md), etc.
 
 ### <a name="predefined-datetime-formats"></a> Predefined date/time formats
 
@@ -130,17 +132,21 @@ Appearing in the result of **Text** are translated strings for month, weekday, a
 By default, **Text** uses the language of the user running the app.  The **Language** function returns the language tag for the current user.  You can override this default by supplying a language tag for the optional third argument to **Text**.
 
 ## Syntax
-**Text**( *Number*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
+**Text**( *NumberOrDateTime*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
 
-* *Number* - Required. The number or the date/time value to format.
+* *NumberOrDateTime* - Required. The number or the date/time value to format.
 * *DateTimeFormat* - Required.  A member of the **DateTimeFormat** enumeration.
 * *ResultLanguageTag* - Optional.  The language tag to use for the result text.  By default, the language of the current user is used.
 
-**Text**( *Number*, *CustomFormat* [, *ResultLanguageTag* ] )
+**Text**( *NumberOrDateTime*, *CustomFormat* [, *ResultLanguageTag* ] )
 
 * *Number* - Required. The number or the date/time value to format.
 * *CustomFormat* - Required. One or more placeholders enclosed in double quotation marks.
 * *ResultLanguageTag* - Optional.  The language tag to use for the result text.  By default, the language of the current user is used.
+
+**Text**( *AnyValue* )
+
+* *AnyValue* - Required. Value to converted to a text representation.  A default format is used.
 
 ## Examples
 The user running these formulas is located in the United States and has selected English as their language.  The **Language** function is returning "en-US".
@@ -177,3 +183,12 @@ The user running these formulas is located in the United States and has selected
 | **Text( Date(2016,1,31), "dddd mmmm d" )** |Returns the weekday, month, and day of the month in the language of the current user. Because none of the placeholders are language dependent, there is no need for a format text language tag. |"Saturday January 31" |
 | **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Returns the weekday, month, and day of the month in the "es-ES" language. |"domingo enero 31" |
 
+### Converting values to text
+
+| Formula | Description | Result |
+| --- | --- | --- |
+| **Text(&nbsp;1234567.89&nbsp;)** | Converts from a number to a string.  There not be any thousands separators or control over the number of digits before or after the decimal place; for more control supply number placeholders as the second argument. | "1234567.89" |
+| **Text(&nbsp;DateTimeValue(&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Converts a DateTime value to a string of text.  To control the conversion, provide either a member of the DateTimeFormat enumeration or a custom format string. | "1/4/2003 12:00 AM" |
+| **Text(&nbsp;true&nbsp;)** | Converts a Boolean value to a string. | "true" |
+| **Text(&nbsp;GUID()&nbsp;)** | Converts a generated GUID value to a string.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
+| **Left(&nbsp;Text(&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Returns the first four characters of a generated GUID. | "2d9c" | 

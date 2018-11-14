@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 06/05/2018
+ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -316,7 +316,7 @@ Other elements include:
 
 **[Tan](functions/function-trig.md)** - Returns the tangent of an angle specified in radians.
 
-**[Text](functions/function-text.md)** – Formats a number as a string for display.
+**[Text](functions/function-text.md)** – Converts any value and formats numbers and date/time values as a string of text..
 
 **[ThisItem](functions/operators.md#thisitem-operator)** – When in a gallery or form, returns the data for the current item from the container.
 
