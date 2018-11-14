@@ -1,0 +1,9 @@
+- name: Scalable customization design
+  href: overview.md
+  items: 
+  - name: Database transactions
+    href: database-transactions.md
+  - name: Concurrency issues
+    href: concurrency-issues.md
+  - name: Transaction design patterns
+    href: transaction-design-patterns.md
