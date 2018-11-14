@@ -2,7 +2,7 @@
 title: "Publish changes in PowerApps | MicrosoftDocs"
 description: "Learn how to publish changes made to an app"
 ms.custom: ""
-ms.date: 06/20/2018
+ms.date: 10/29/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -30,7 +30,13 @@ search.app:
  
 ## Publish your customizations
 
-- In the [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer), select **Publish All Customizations**.  
+1.  Select **Solutions** from the left navigation.
+
+2.  Select the solution that you want to publish to open it.
+
+3.  From the list of commands, select **Publish all customizations**.  
+
+![Publish all customizations](media/publish-all-customizations.PNG "Publish all customizations")  
   
 > [!IMPORTANT]
 >  Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.  

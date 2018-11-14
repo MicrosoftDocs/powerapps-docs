@@ -1,0 +1,1 @@
+Retrieves a collection of entity records.

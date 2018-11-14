@@ -1,5 +1,5 @@
 ---
-title: "Apply business logic with Common Data Service for Apps | MicrosoftDocs"
+title: "Apply business logic in Common Data Service for Apps | MicrosoftDocs"
 description: "Learn about the different types of business logic you can use in your app"
 ms.custom: ""
 ms.date: 08/06/2018
@@ -23,9 +23,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Apply business logic with Common Data Service for Apps
+# Apply business logic in Common Data Service for Apps
 
-Dynamics 365 customer engagement customizers may be familar with the classic Common Data Service for Apps processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/flow/actions)
-  
-## See also  
-[Tutorial: Create business rules and recommendations to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+Define *business rules* for an entity that apply to all the entity forms and at the server level. Business rules defined for an entity apply to both *canvas apps* and *model-driven apps* if the entity is used in the app. More information: [Create a business rule for an entity](data-platform-create-business-rule.md)
+
+> [!NOTE]
+> To define a business rule that applies to a form in a model-driven app, see [Create business rules for a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+
+You can also use the classic Common Data Service (CDS) for Apps processes, which are workflows and actions. More information: [Microsoft Flow: Use Workflow processes](/flow/workflow-processes) and [Microsoft Flow: Actions overview](/flow/actions).
+
+## See also
+
+[Apply business logic in model-driven apps](../model-driven-apps/guide-staff-through-common-tasks-processes.md)

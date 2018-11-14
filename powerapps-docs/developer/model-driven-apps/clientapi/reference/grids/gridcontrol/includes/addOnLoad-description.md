@@ -1,0 +1,1 @@
+Adds event handlers to the [Subgrid OnLoad event](../../../events/subgrid-onload.md) event.

@@ -1,5 +1,5 @@
 ---
-title: Integrate PowerApps into websites and other services | Microsoft Docs
+title: Integrate canvas apps into websites and other services | Microsoft Docs
 description: Embed canvas apps in websites and other services.
 author: mgblythe
 manager: kvivek
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Integrate PowerApps into websites and other services
+# Integrate canvas apps into websites and other services
 The apps you build are often most useful when they're available right where people are doing their work. PowerApps enables you to embed canvas apps in an iframe so that you can integrate those apps into websites and other services, such as Power BI or SharePoint.
 
 In this topic, we'll show you how to set parameters for app embedding; then we'll embed our Asset Ordering app in a website.
@@ -26,7 +26,7 @@ Keep the following restrictions in mind:
 * Only PowerApps users in the same tenant can access the embedded app.
 * To access PowerApps using Internet Explorer 11, you must turn off Compatibility View.
 
-You can also integrate PowerApps into SharePoint Online (without using an iframe). For more information, see [Generate an app from within SharePoint using PowerApps](../canvas-apps/generate-app-from-sharepoint-list-interface.md).
+You can also integrate PowerApps into SharePoint Online (without using an iframe). For more information, see [Generate an app from within SharePoint using PowerApps](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online).
 
 ## Set URI parameters for your app
 If you have an app you want to embed, the first step is to set parameters for the Uniform Resource Identifier (URI), so that the iframe knows where to find the app. The URI is in the following form:

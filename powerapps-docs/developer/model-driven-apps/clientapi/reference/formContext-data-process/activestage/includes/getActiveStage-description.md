@@ -1,0 +1,1 @@
+Returns a **Stage** object representing the active stage.

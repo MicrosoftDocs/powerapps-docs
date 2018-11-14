@@ -1,0 +1,1 @@
+Returns a boolean value indicating whether the process is rendered.

@@ -1,0 +1,1 @@
+Execute a single action, function, or CRUD operation.
