@@ -1529,7 +1529,7 @@ For more information, see [Solutions overview](../../maker/common-data-service/s
 						<xs:element name="ReportVisibilities" minOccurs="0" maxOccurs="1">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="ReportVisbility" minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="ReportVisibility" minOccurs="0" maxOccurs="unbounded">
 										<xs:simpleType>
 											<xs:restriction base="xs:integer">
 												<xs:enumeration value="1" />
