@@ -31,10 +31,7 @@ If you don't specify an argument, this function creates a new GUID.
 To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
 
 > [!NOTE]
-> There is currently a known bug that allows GUID values to be compared directly to strings.  Do not take a dependency on this behavior because it will change soon and produce an error.  To compare a string to a GUID value, first transform the string into a GUID value with the GUID function and then compare the GUID values.  This normalizes both values for a clean comparison.  If you don't do this, the GUID value will be converted to a string automatically, and the comparison will depend on the formatting of the string and the case of any alpha characters in the string.
-
-> [!NOTE]
-> There is currently no way to read or write a GUID value to a database.  Support for Common Data Service and SQL Server is on our roadmap. 
+> There is currently a known bug that prevents GUID values from being coerced to text in function and operator contexts.  It will coerce as a property of a control, such as the **Label** control.  This will be fixed in the product shortly.  In the meantime use the [**Text** function](function-text.md) to convert explicitly, for example **Text( GUID() )**.  
 
 ## Volatile functions
 **GUID** is a volatile function when used without an argument. Each time the function is evaluated, it returns a different value.  
@@ -51,7 +48,6 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **GUID*
 
 ## Syntax
 **GUID**( [ *GUIDString* ] )
-
 
 * *GUIDString* – Optional.  A text string that contains the hexadecimal representation of a GUID. If no string is supplied, a new GUID is created.
 
