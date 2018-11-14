@@ -20,19 +20,19 @@ search.app:
 
 # How do I find and run apps?
 
-No need to manually work on a task to get your work done. With PowerApps you can create and use a model-driven app or canvas app to get your work done quickly. Once an app is created, an app maker can share the app with your organization. 
+No need to manually work on a task to get your work done. With PowerApps, you can create and use a model-driven app or canvas app to get your work done quickly. Once you create an app, an app maker can share the app with your organization. 
 
-Canvas apps give you a lot of control over the user experience of the app. There are templates an app maker can use to [create a canvas app](../maker/index.md), but an app maker can configure the app anyway they like. Just like the name of the app “canvas”, it’s a blank canvas - so you can create an app to the fit the needs of users in your organization.
+Canvas apps give you a lot of control over the user experience of the app. An app maker can use templates to [create a canvas app](../maker/index.md), or they can configure the app any way they like. A canvas app, like its name, is a blank canvas, so you can create an app to fit the needs of users in your organization.
 
-Since canvas app can essentially be anything, there isn’t much help documentation on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or PowerApps admin.
+Because canvas apps can essentially be anything, there isn’t much help documentation on how to use an app once it’s created. If you need help using a canvas app, contact your app maker or PowerApps admin.
 
-Model-driven apps use the [Unified Interface](unified-interface.md) which provides a responsive and accessible design. You can run the app on a web browser or popular mobile devices.  The app has multiple components including dashboards, forms, views, charts, and business processes which together help make the app easy to use.  Model-driven apps are built and modeled on the Dynamics 365 framework, so the user experience is similar to Microsoft Dynamics 365.
+Model-driven apps use the [Unified Interface](unified-interface.md), which provides a responsive and accessible design. You can run the app on a web browser or on popular mobile devices.  The app has multiple components including dashboards, forms, views, charts, and business processes that together help make the app easy to use.  Model-driven apps are built and modeled on the Microsoft Dynamics 365 framework, so the user experience is similar to Dynamics 365.
 
-This section provides information about how to find and run apps from various places, Unified Interface, and navigating around in model-driven apps, and more.
+This section provides information about how to find and run apps from various places, Unified Interface, navigating around in model-driven apps, and more.
 
 - [Run apps](run-app-browser.md)
-- [Unified Interface for Model-driven apps](unified-interface.md)
-- [Basic navigation in Model-driven apps](navigation.md)
+- [Unified Interface for model-driven apps](unified-interface.md)
+- [Basic navigation in model-driven apps](navigation.md)
 
 
 ## What's required to run apps?
