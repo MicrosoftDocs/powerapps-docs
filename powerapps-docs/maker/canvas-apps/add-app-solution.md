@@ -54,7 +54,7 @@ You can skip this procedure if you already have a solution in which you want to 
 
     A name (with no spaces) will be generated automatically based on the display name that you specify, but you can customize the generated name if you want. You can specify the default publisher for your environment and **1.0** for the version if you don't have specific needs in those areas.
 
-1. Near the upper-left corner, select **Save and close**.
+1. Near the upper-left corner, select **Save and Close**.
 
     > [!div class="mx-imgBorder"]
     > ![Save a new solution](./media/add-app-solution/save-new-solution.png "Save a new solution")
