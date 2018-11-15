@@ -316,7 +316,7 @@ Other elements include:
 
 **[Tan](functions/function-trig.md)** - Returns the tangent of an angle specified in radians.
 
-**[Text](functions/function-text.md)** – Converts any value and formats numbers and date/time values as a string of text.
+**[Text](functions/function-text.md)** – Converts any value and formats numbers and date/time values as strings of text.
 
 **[ThisItem](functions/operators.md#thisitem-operator)** – When in a gallery or form, returns the data for the current item from the container.
 
