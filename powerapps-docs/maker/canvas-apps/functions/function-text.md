@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Text function in PowerApps
-Converts any value and formats numbers and date/time values as a string of text.
+Converts any value and formats numbers and date/time values as strings of text.
 
 ## Description
 The **Text** function formats a number or a date/time value based on one of these types of arguments:
@@ -25,7 +25,7 @@ The **Text** function formats a number or a date/time value based on one of thes
 
 See [working with dates and times](../show-text-dates-times.md) for more information.
 
-The **Text** function can also convert any data type to a text representation using a default format.  Use this to pass non-text values to text based functions such as [**Len**](function-len.md), [**Right**](function-left-mid-right.md), [**IsMatch**](function-ismatch.md), etc.
+The **Text** function can also convert any data type to a text representation using a default format. Use this to pass non-text values to text-based functions such as [**Len**](function-len.md), [**Right**](function-left-mid-right.md), and [**IsMatch**](function-ismatch.md).
 
 ### <a name="predefined-datetime-formats"></a> Predefined date/time formats
 
@@ -146,7 +146,7 @@ By default, **Text** uses the language of the user running the app.  The **Langu
 
 **Text**( *AnyValue* )
 
-* *AnyValue* - Required. Value to converted to a text representation.  A default format is used.
+* *AnyValue* - Required. Value to convert to a text representation. A default format is used.
 
 ## Examples
 The user running these formulas is located in the United States and has selected English as their language.  The **Language** function is returning "en-US".
@@ -187,8 +187,8 @@ The user running these formulas is located in the United States and has selected
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Text(&nbsp;1234567.89&nbsp;)** | Converts from a number to a string.  There not be any thousands separators or control over the number of digits before or after the decimal place; for more control supply number placeholders as the second argument. | "1234567.89" |
-| **Text(&nbsp;DateTimeValue(&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Converts a DateTime value to a string of text.  To control the conversion, provide either a member of the DateTimeFormat enumeration or a custom format string. | "1/4/2003 12:00 AM" |
+| **Text(&nbsp;1234567.89&nbsp;)** | Converts a number to a string. There not be any thousands separators or control over the number of digits before or after the decimal place; for more control, supply number placeholders as the second argument. | "1234567.89" |
+| **Text(&nbsp;DateTimeValue(&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Converts a date-time value to a string of text. To control the conversion, provide either a member of the DateTimeFormat enumeration or a custom-format string. | "1/4/2003 12:00 AM" |
 | **Text(&nbsp;true&nbsp;)** | Converts a Boolean value to a string. | "true" |
 | **Text(&nbsp;GUID()&nbsp;)** | Converts a generated GUID value to a string.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
 | **Left(&nbsp;Text(&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Returns the first four characters of a generated GUID. | "2d9c" | 
