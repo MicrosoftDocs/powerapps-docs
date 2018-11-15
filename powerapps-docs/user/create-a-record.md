@@ -29,7 +29,7 @@ The **Create a new record** command makes it fast and easy to enter almost any t
 3.  If you want to continue adding information, select **View Record**. To create another, select **Save & Create New*.  
   
 > [!NOTE]
-> The ![Required Field button](media/required-field-button.png "Required Field button") next to the field on the screen means the field is required.  
+> An asterisk ![Required Field button](media/required-field-button.png "Required Field button") next to the field on the screen means the field is required.  
 >   
-> The ![Recommended Field button](media/recommended-field-button.png "Recommended Field button") next to the field on the screen means your organization recommends that you fill in the field.  
+> A plus sign ![Recommended Field button](media/recommended-field-button.png "Recommended Field button") next to the field on the screen means your organization recommends that you fill in the field.  
     
