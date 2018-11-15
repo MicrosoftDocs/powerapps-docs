@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # Text function in PowerApps
-Converts any value and formats numbers and date/time values as strings of text.
+Converts any value and formats a number or date/time value to a string of text.
 
 ## Description
 The **Text** function formats a number or a date/time value based on one of these types of arguments:
@@ -187,8 +187,8 @@ The user running these formulas is located in the United States and has selected
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Text(&nbsp;1234567.89&nbsp;)** | Converts a number to a string. There not be any thousands separators or control over the number of digits before or after the decimal place; for more control, supply number placeholders as the second argument. | "1234567.89" |
-| **Text(&nbsp;DateTimeValue(&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Converts a date-time value to a string of text. To control the conversion, provide either a member of the DateTimeFormat enumeration or a custom-format string. | "1/4/2003 12:00 AM" |
+| **Text(&nbsp;1234567.89&nbsp;)** | Converts a number to a string. There are not any thousands separators or control over the number of digits before or after the decimal separator; for more control, supply number placeholders as the second argument. | "1234567.89" |
+| **Text(&nbsp;DateTimeValue(&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Converts a date/time value to a string of text. To control the conversion, provide either a member of the DateTimeFormat enumeration or a custom-format string. | "1/4/2003 12:00 AM" |
 | **Text(&nbsp;true&nbsp;)** | Converts a Boolean value to a string. | "true" |
 | **Text(&nbsp;GUID()&nbsp;)** | Converts a generated GUID value to a string.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
 | **Left(&nbsp;Text(&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Returns the first four characters of a generated GUID. | "2d9c" | 
