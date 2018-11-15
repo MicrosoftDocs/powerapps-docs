@@ -20,11 +20,11 @@ search.app:
 ---
 # Export data to Excel
 
-Do you need to analyze your data from PowerApps and convert that data into actionable items that help you drive more sales? Now you can do this when you export your data to Excel or Excel Online to do a quick data analysis. Also, analyzing large datasets is not a problem because you can export up to 100,000 rows of data.
+Do you need to analyze your data from PowerApps and convert that data into actionable items that help you drive more sales? Now you can do this when you export your data to Excel or Excel Online. Also, analyzing large datasets is not a problem because you can export up to 100,000 rows of data.
   
 You can choose to export static worksheets or dynamic worksheets, which you can import back into PowerApps. If you need more advanced functions, you can export a dynamic PivotTable, which makes it very easy to organize and summarize data.  
   
-Export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in PowerApps. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from PowerApps to Excel, some cell format might change. The following table summarizes how you’ll see the data in PowerApps and how the cell format changes when you export the data to Excel.  
+You can export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in PowerApps. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from PowerApps to Excel, some cell formats might change. The following table summarizes how you’ll see the data in PowerApps and how the cell format changes when you export the data to Excel.  
   
 ## Cell format when data is exported from PowerApps
   
