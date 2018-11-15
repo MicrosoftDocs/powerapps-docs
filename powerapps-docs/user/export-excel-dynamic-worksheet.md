@@ -41,7 +41,7 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
    >    1. Open Excel and go to **File** > **Options** > **Trust Center** **Settings Center Settings** > **Protected View**.  
    >    2. In **Protected View**, clear all three items.  
    >    3. Select **OK** > **OK**.  
-   > 
+   >    </br> 
    >    We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
   
 5. Open Excel and then open the .xlsx file you saved in the previous step.  
