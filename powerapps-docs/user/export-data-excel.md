@@ -26,7 +26,7 @@ You can choose to export static worksheets or dynamic worksheets, which you can 
   
 Export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in PowerApps. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from PowerApps to Excel, some cell format might change. The following table summarizes how you’ll see the data in PowerApps and how the cell format changes when you export the data to Excel.  
   
-**Cell format when data is exported from PowerApps**
+## Cell format when data is exported from PowerApps
   
 | Data format in PowerApps |                                            Cell format in Excel                                             |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ Export data to a standard Excel file that you can use on any device such as your
 |                       Calculated and Roll-up fields                        | Editable in Excel but can’t be imported back to PowerApps |
 |                               Secured fields                               | Editable in Excel but can’t be imported back to PowerApps |
   
-**See which type of export works best for you**  
+## See which type of export works best for you  
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
