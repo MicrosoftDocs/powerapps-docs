@@ -105,7 +105,7 @@ If you want to link an app to a solution, they must be in the same environment, 
 
 ## Known limitations
 
-Please refer to this [section](../common-data-service/use-solution-explorer.md#known-limitations) for a complete list of known limitations for canvas app in solution. 
+For information about known limitations, see [Use solutions in PowerApps](../common-data-service/use-solution-explorer.md#known-limitations). 
 
 ## Next steps
 
