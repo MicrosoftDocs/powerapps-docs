@@ -26,7 +26,7 @@ You can choose to export static worksheets or dynamic worksheets, which you can 
   
 Export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in PowerApps. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from PowerApps to Excel, some cell format might change. The following table summarizes how you’ll see the data in PowerApps and how the cell format changes when you export the data to Excel.  
   
-## Cell format when data is exported from PowerApps
+**Cell format when data is exported from PowerApps**
   
 | Data format in PowerApps |                                            Cell format in Excel                                             |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ Export data to a standard Excel file that you can use on any device such as your
 |                       Calculated and Roll-up fields                        | Editable in Excel but can’t be imported back to PowerApps |
 |                               Secured fields                               | Editable in Excel but can’t be imported back to PowerApps |
   
-## See which type of export works best for you  
+**See which type of export works best for you**  
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -49,22 +49,22 @@ Export data to a standard Excel file that you can use on any device such as your
 
 
 
-- When you export data in Excel (.xlsx format) and then add or modify columns, you can’t import the data back into Dynamics 365. This is not supported for the .xlsx file format.  
+When you export data in Excel (.xlsx format) and then add or modify columns, you can’t import the data back into Dynamics 365. This is not supported for the .xlsx file format.  
   
-- If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: 
+If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: 
  
-  `The file is corrupt and cannot be opened.`  
+`The file is corrupt and cannot be opened.`  
   
-   The error message occurs due to a setting in Excel. To fix the issue, do this:  
+The error message occurs due to a setting in Excel. To fix the issue, do this:  
   
-   1. Open Excel 2010.  
+1. Open Excel 2010.  
   
-   2. Go to **File** > **Options**.  
+2. Go to **File** > **Options**.  
   
-   3. Go to **Trust Center** > **Trust Center settings**.  
+3. Go to **Trust Center** > **Trust Center settings**.  
   
-   4. Select **Protected view** and then clear the check boxes for the first two options.  
+4. Select **Protected view** and then clear the check boxes for the first two options.  
   
-   5. Select **OK** and then close the **Options** dialog box.  
+5. Select **OK** and then close the **Options** dialog box.  
   
 
