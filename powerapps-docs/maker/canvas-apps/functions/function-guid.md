@@ -31,7 +31,7 @@ If you don't specify an argument, this function creates a new GUID.
 To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
 
 > [!NOTE]
-> Currently GUID values are blocked from being directly coerced to text in function and operator contexts. You can coerce a GUID value to a text property of a control, for example with the Text property of the **Label** control. For now, use the [**Text** function](function-text.md) to convert values explicitly, as in this example:<br>
+> GUID values are currently blocked from being directly coerced to text values in function and operator contexts. You can directly coerce a GUID value to a text property of a control.  For now, use the [**Text** function](function-text.md) to convert values explicitly, as in this example:<br>
 > **Text( GUID() )**
 
 ## Volatile functions
