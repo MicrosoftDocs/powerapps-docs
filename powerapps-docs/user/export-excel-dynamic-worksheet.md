@@ -52,7 +52,7 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
   
    > [!NOTE]
    > If you have a phone number that starts with **+** or **–** (for example +1-123-456-7890), when you refresh the dynamic worksheet, the phone number field will not display the number correctly.   
-   
+   >
    > To avoid the issue, use a space or parentheses **()**, like this: +1 123-456-7890 or +1 (123)-456-7890.  
   
 ## Tips  
