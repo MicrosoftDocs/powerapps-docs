@@ -1,12 +1,12 @@
 ---
-title: "Export to an Excel dynamic worksheet in Powerapps| MicrosoftDocs"
+title: "Export to an Excel dynamic worksheet in Model-driven Powerapps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/17/2018
+ms.date: 11/16/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -19,7 +19,7 @@ search.app:
 ---
 # Export to an Excel dynamic worksheet
 
-Export your app data to an Office Excel worksheet so users can have the latest information. Imagine the CEO of your company getting the critical information they need without having to navigate PowerApps, but instead merely opening the Excel link on their desktop. You can export up to 100,000 records at a time.    
+Export your app data to an Office Excel worksheet so users can have the latest information. Imagine the CEO of your company getting the critical information they need without having to navigate in an app, but instead merely opening the Excel link on their desktop. You can export up to 100,000 records at a time.    
   
 ## Export data to an Excel dynamic worksheet  
 
