@@ -56,10 +56,10 @@ The option to export data to an Excel PivotTable isn’t available in all record
   
 ## Tips  
   
-- In PowerApps, money values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
+- In PowerApps, currency values are exported to Excel as numbers. After you complete the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
-- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite fields (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these fields in Excel but when you import the data back into the app, these fields won’t be updated. If you want to update these fields, such as a contact’s name, it’s recommend that you use that view to export your data, update them in Excel, and import them back to the app for changes.  
+- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite fields (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these fields in Excel, but when you import the data back into the app, these fields won’t be updated. If you want to update these fields, such as a contact’s name, it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes.  
   
  
