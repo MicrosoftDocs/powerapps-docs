@@ -1,5 +1,5 @@
 ---
-title: "Export to an Excel dynamic worksheet in Model-driven Powerapps| MicrosoftDocs"
+title: "Export to an Excel dynamic worksheet in model-driven Powerapps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
