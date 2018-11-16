@@ -30,7 +30,7 @@ You may have the option to export data to an Excel static worksheet in all recor
   
 2. By default, an exported worksheet includes the fields that are displayed in the list, using the same field order, sorting, and field widths. To make changes to the columns in an Advanced Find View, choose **Edit Columns**. 
   
-3. Choose **Save** and then save the .xlsm file. Make note of the location where you saved the file.  
+3. Choose **Save** and then save the .xlsx file. Make note of the location where you saved the file.  
   
    > [!NOTE]
    > If you’re going to edit the data file later, it’s recommended that you save the file before you open it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
@@ -42,9 +42,6 @@ You may have the option to export data to an Excel static worksheet in all recor
    > 3.  Select **OK** > **OK**.  
    > 
    > We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
-
-
-<!--note from editor: Is .xlsx correct? Above, the file was .xlsm.-->
 
 
 4. Open Excel and then open the .xlsx file you saved in the previous step.  
