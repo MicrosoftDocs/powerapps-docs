@@ -1,12 +1,12 @@
 ---
-title: "Import data in PowerApps| MicrosoftDocs"
+title: "Import data in model-driven apps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/10/2018
+ms.date: 11/16/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -20,7 +20,7 @@ search.app:
 ---
 # Import data
 
-Whether your data is stored in a spreadsheet, on your phone, or in an email program here’s how to import the data in to PowerApps. For example, you may want to import your customer contact list from an Excel spreadsheet into PowerApps, so you can keep track of all your customer information in one place.
+Whether your data is stored in a spreadsheet, on your phone, or in an email program here’s how to import the data to your app. For example, you may want to import your customer contact list from an Excel spreadsheet into the app, so you can keep track of all your customer information in one place.
   
 ## Step 1: Get your import file ready  
 First, you export your data into an Excel file. These file formats are supported:
