@@ -1,5 +1,5 @@
 ---
-title: "Basic navigation in a Model-driven app | MicrosoftDocs"
+title: "Basic navigation in a model-driven app | MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -17,9 +17,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-#  Basic navigation in a Model-driven app 
+#  Basic navigation in a model-driven app 
 
-Use the nav bar to get to your work area, create a new record, search, or do other tasks in a Model-driven app.
+Use the nav bar to get to your work area, create a new record, search, or do other tasks in an app.
 
 ## Accessing Unified Interface apps on browsers
 
