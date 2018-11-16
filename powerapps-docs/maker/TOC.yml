@@ -37,7 +37,7 @@
       href: ../user/keyboard-shortcuts.md
   - name: Work with records in a model-driven app
     items:
-    - name: create a record
+    - name: Create a record
       href: ../user/create-a-record.md
     - name: Add activities to the timeline
       href: ../user/add-activities.md
@@ -49,7 +49,7 @@
       href: ../user/track-your-progress-with-dashboard-and-charts.md
   - name: Search records in a model-driven app
     items:
-    - name: search for records
+    - name: Search for records
       href: ../user/search-records.md
     - name: Use advanced find
       href: ../user/create-edit-or-save-advanced-find-search.md
