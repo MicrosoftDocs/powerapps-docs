@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/09/2018
+ms.date: 10/19/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -33,8 +33,6 @@ Find the records you want in PowerApps by using the Advanced Find search option.
   
        At the bottom of the **Select** list, the **Related** section shows related record types. For example, most record types have a related Notes record type. To select fields from a related record type, select field and a new **Select** link appears.  
 
-
-<!--In the previous sentence, should it be "select a field"? Or should field be in bold?-->
 
 
 3. Specify the columns to include in the search results.  
