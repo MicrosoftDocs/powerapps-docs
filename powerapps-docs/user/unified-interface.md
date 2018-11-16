@@ -1,12 +1,12 @@
 ---
-title: "Enhanced user experience with the Unified Interface for Model-driven apps | MicrosoftDocs"
+title: "Enhanced user experience with the Unified Interface for model-driven apps | MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/7/2018
+ms.date: 11/16/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -19,7 +19,7 @@ search.app:
 ---
 #  Enhanced user experience with the Unified Interface for Model-driven apps 
 
-The Unified Interface for Model-driven PowerApps provides a consistent and accessible user experience across devices - whether on a desktop, laptop, tablet, or phone. The apps scales by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have the more information can be displayed.
+The Unified Interface for model-driven apps provides a consistent and accessible user experience across devices - whether on a desktop, laptop, tablet, or phone. The apps scales by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have the more information can be displayed.
 
 ![Unified Interface adapts to screen](media/Reflow.png "Unified Interface adapts to screen")
 
@@ -33,7 +33,7 @@ The menu options let you swiftly navigate the different apps in the system. It p
 1. Sitemap is expanded and persists by default.
 2. The sub area that you are currently in is highlighted to indicate where in the app.
 3. **Recent** and **Pinned** items are at top for easy access. 
-4. Use the Area switcher to switch between Apps.
+4. Use the Area switcher to switch between apps.
 5. There are unique colors for icons on the command bar to show differentiation between commands.
 
 For more information, [Basic navigation in a Model-driven app](navigation.md).
