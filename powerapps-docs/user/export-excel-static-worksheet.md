@@ -1,12 +1,12 @@
 ---
-title: "Export to an Excel static worksheet in Powerapps| MicrosoftDocs"
+title: "Export to an Excel static worksheet in a model-driven app | MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/17/2018
+ms.date: 11/16/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -21,10 +21,10 @@ search.app:
 
 When you want to present information about the data in your app to an individual who doesn’t have access to PowerApps, or you have data that doesn’t change often, consider exporting your app data to an Office Excel static worksheet.
 
-You can export up to 100,000 records at a time. By default, PowerApps lists up to 50 records per page. Choose the **Page** arrows at the bottom of the list to view any additional pages.  
+You can export up to 100,000 records at a time. By default, a model-driven app lists up to 50 records per page. Choose the **Page** arrows at the bottom of the list to view any additional pages.  
   
 ## Export data to an Excel static worksheet  
-You may have the option to export data to an Excel static worksheet in all record types. However, in some cases the format might be legacy, or the data might not be filtered by what you see in PowerApps.  
+You may have the option to export data to an Excel static worksheet in all record types. However, in some cases the format might be legacy, or the data might not be filtered by what you see in the app.  
   
 1. Open a list of records in your app, select the arrow to the right of **Export to Excel**, and then choose **Static worksheet (Page only)**.  
   
@@ -54,7 +54,7 @@ You may have the option to export data to an Excel static worksheet in all recor
   
 - You can’t change the columns for a system view, such as **All Active Accounts**. You must either customize the view, which requires the System Administrator or System Customizer security role, or use Advanced Find to create your own view based on the current view.  
     
-- In PowerApps, currency values are exported to Excel as numbers. Ater you have completed the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
+- In model-driven apps, currency values are exported to Excel as numbers. Ater you have completed the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
