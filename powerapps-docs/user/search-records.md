@@ -1,12 +1,12 @@
 ---
-title: "Search for records in PowerApps| MicrosoftDocs"
+title: "Search for records in model-driven apps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/09/2018
+ms.date: 11/16/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -18,9 +18,9 @@ search.app:
   - D365CE
 ---
 
-# Search for records in PowerApps
+# Search for records in an app
 
-You can search for records across multiple entities by using Relevance Search or Categorized Search in PowerApps. Relevance Search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. Categorized Search returns search results grouped by entity types, such as accounts, contacts or leads.
+You can search for records across multiple entities by using Relevance Search or Categorized Search in model-driven apps. Relevance Search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. Categorized Search returns search results grouped by entity types, such as accounts, contacts or leads.
 
 Normally Categorized Search is the default search option. However, if Relevance Search is enabled your organization then it becomes the default search experience.   
   
