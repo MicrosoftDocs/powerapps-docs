@@ -22,13 +22,13 @@ search.app:
 
 Do you need to analyze your data from and convert that data into actionable items that help you drive more sales? Now you can do this when you export your data to Excel or Excel Online. Also, analyzing large datasets is not a problem because you can export up to 100,000 rows of data.
   
-You can choose to export static worksheets or dynamic worksheets, which you can import back into PowerApps. If you need more advanced functions, you can export a dynamic PivotTable, which makes it very easy to organize and summarize data.  
+You can choose to export static worksheets or dynamic worksheets, which you can import back in to the app. If you need more advanced functions, you can export a dynamic PivotTable, which makes it very easy to organize and summarize data.  
   
-You can export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in PowerApps. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from PowerApps to Excel, some cell formats might change. The following table summarizes how you’ll see the data in PowerApps and how the cell format changes when you export the data to Excel.  
+You can export data to a standard Excel file that you can use on any device such as your phone, tablet, or desktop computer. The data is exported in the same format that you see in the app. Text will remain text, numbers will remain numbers, and dates will remain dates. However, when you export data from the app to Excel, some cell formats might change. The following table summarizes how you’ll see the data in apps and how the cell format changes when you export the data to Excel.  
   
-## Cell format when data is exported from PowerApps
+## Cell format when data is exported from model-driven apps
   
-| Data format in PowerApps |                                            Cell format in Excel                                             |
+| Data format in model-driven apps |                                            Cell format in Excel                                             |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |            Text, Ticker Symbol, Phone, Options set, and Look Up            |                                                       Shows as Text and option set becomes drop-down list                                                       |
 |                                 Email, URL                                 |                                                                        Shows as General                                                                         |
@@ -42,10 +42,10 @@ You can export data to a standard Excel file that you can use on any device such
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-|   Do an *ad-hoc* or *what if* analysis without modifying PowerApps data. Or, quick bulk edit to multiple records.   | [Export to Excel Online ](export-to-excel-online.md) |
+|   Do an *ad-hoc* or *what if* analysis without modifying app data. Or, quick bulk edit to multiple records.   | [Export to Excel Online ](export-to-excel-online.md) |
 |                                                                   Get a snapshot of the data at the current data and time or you want to share it with others.                                                                    |           [Export to an Excel static worksheet](export-excel-static-worksheet.md)           |
-| Get the most up-to-date information and be able to refresh it in Excel and match what you see in PowerApps at any time. |          [Export to an Excel dynamic worksheet](export-excel-dynamic-worksheet.md)          |
-|                                                                      View PowerApps data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](export-excel-pivottable.md)                 |
+| Get the most up-to-date information and be able to refresh it in Excel and match what you see in the app at any time. |          [Export to an Excel dynamic worksheet](export-excel-dynamic-worksheet.md)          |
+|                                                                      View app data in a pivot table.                                                                      |                 [Export to an Excel PivotTable](export-excel-pivottable.md)                 |
 
 
 
