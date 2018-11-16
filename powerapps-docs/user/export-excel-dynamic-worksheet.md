@@ -61,10 +61,10 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
   
 - Some system views, such as Accounts: No Campaign Activities in Last 3 Months, can be exported only to a static Excel worksheet.  
   
-- In PowerApps, money values are exported to Excel as numbers. To format the data as currency after you have completed the export, see the Excel Help topic titled “Display numbers as currency."
+- In PowerApps, currency values are exported to Excel as numbers. To format the data as currency after you have completed the export, see the Excel Help topic titled “Display numbers as currency."
 
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
-- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite fields (for example, Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these fields in Excel but when you import the data back into the app, these fields will not be updated. If you want to update these fields, such as a contact’s name, then it’s recommend that you use that view to export your data, update them in Excel, and import them back to the app for changes.  
+- If you’re going to make changes and import the data file back into the app, remember that secured, calculated, and composite fields (such as Full Name) are read-only and can’t be imported into the app. You’ll be able to edit these fields in Excel, but when you import the data back into the app, these fields will not be updated. If you want to update these fields, such as a contact’s name, then it’s recommended that you use that view to export your data, update it in Excel, and import it back to the app for changes.  
  
 
