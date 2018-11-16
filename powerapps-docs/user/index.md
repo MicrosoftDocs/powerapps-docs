@@ -5,8 +5,8 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: overview
-ms.date: 07/09/2018
-ms.author: matp
+ms.date: 11/16/2018
+ms.author: mduelae
 manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
