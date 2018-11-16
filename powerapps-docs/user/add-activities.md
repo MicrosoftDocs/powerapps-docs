@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/07/2018
+ms.date: 10/17/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -18,10 +18,6 @@ search.app:
   - D365CE
 ---
 # Add an appointment, email, phone call, note, or task activity to the timeline 
-
-
-<!--from editor: In this file, "timeline" is sometimes all caps and sometimes title cap (Timeline). The images show it both ways, adjacent to each other. I think we should use it only one way in text and because all caps seems like shouting, I recommend just the title cap.-->
-
 
 Add **Activities** in the **Timeline** area to keep track of all your communications with a customer or contact. For example, you can take notes, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer.
 
