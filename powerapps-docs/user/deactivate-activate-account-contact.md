@@ -1,12 +1,12 @@
 ---
-title: "Deactivate or activate an account or contact in a Model-driven appp| MicrosoftDocs"
+title: "Deactivate or activate an account or contact in a Model-driven app| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/04/2018
+ms.date: 11/16/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
