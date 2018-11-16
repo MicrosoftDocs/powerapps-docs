@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/16/2018
+ms.date: 10/19/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -19,10 +19,6 @@ search.app:
   - D365CE
 ---
 # Export your data to Excel Online 
-
-
-<!--A word was wrong or missing from the first sentence. I changed "to" to "do" - is that correct?-->
-
 
 You can quickly do an ad-hoc analysis of your data that is in PowerApps by exporting the data from your app to Excel Online.
   
