@@ -216,6 +216,10 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     ![Trash icon](./media/get-started-create-from-blank/trash-icon.png)
 
+1. Set the **Visible** property for the trash icon to this formula:<br>**EditForm1.Mode = FormMode.Edit**
+
+    This icon will be visible only when using the change screen with its form in **Edit** mode. When it is in **New** mode, the trash icon will be hidden.
+
 1. Set the **OnSelect** property for the trash icon to this formula:<br>**Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)**
 
     When the user selects this icon, the selected record is deleted from the data source, and the view screen opens.
