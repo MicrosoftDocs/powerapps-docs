@@ -1,5 +1,5 @@
 ---
-title: "Create, edit, or save an Advanced Find search in PowerApps| MicrosoftDocs"
+title: "Create, edit, or save an Advanced Find search in Model-driven PowerApps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -19,7 +19,7 @@ search.app:
 ---
 # Create, edit, or save an Advanced Find search
 
-Find the records you want in PowerApps by using the Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives.  
+Find the records you want in apps by using the Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives.  
   
 1. On the command bar, click the **Advanced Find** button.
   
