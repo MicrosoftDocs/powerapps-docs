@@ -18,10 +18,6 @@ search.app:
 
 Create an app from within a solution if, for example, you want to deploy the app to a different environment. Solutions can contain not only apps but also customized entities, option sets, and other components. You can quickly customize an environment in a variety of ways by creating apps and other components from within a solution, exporting the solution, and then importing it into another environment.
 
-
-<!--note from editor: Isn't it Dynamics 365 Customer Engagement, without the "for"?-->
-
-
 Solutions are built on the same platform as Dynamics 365 for Customer Engagement. For more information, see [Solutions overview](../common-data-service/solutions-overview.md).
 
 ## Prerequisite
