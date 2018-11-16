@@ -19,14 +19,14 @@ search.app:
 ---
 # Export to an Excel static worksheet
 
-When you want to present information about the data in your app to an individual who doesn’t have access to PowerApps, or you have data that doesn’t change often, consider exporting your app data to an Office Excel static worksheet.
+When you want to present information about the data in your app to an individual who doesn’t have access to the app, or you have data that doesn’t change often, consider exporting the app data to an Office Excel static worksheet.
 
 You can export up to 100,000 records at a time. By default, a model-driven app lists up to 50 records per page. Choose the **Page** arrows at the bottom of the list to view any additional pages.  
   
 ## Export data to an Excel static worksheet  
 You may have the option to export data to an Excel static worksheet in all record types. However, in some cases the format might be legacy, or the data might not be filtered by what you see in the app.  
   
-1. Open a list of records in your app, select the arrow to the right of **Export to Excel**, and then choose **Static worksheet (Page only)**.  
+1. Open a list of records in the app, select the arrow to the right of **Export to Excel**, and then choose **Static worksheet (Page only)**.  
   
 2. By default, an exported worksheet includes the fields that are displayed in the list, using the same field order, sorting, and field widths. To make changes to the columns in an Advanced Find View, choose **Edit Columns**. 
   
