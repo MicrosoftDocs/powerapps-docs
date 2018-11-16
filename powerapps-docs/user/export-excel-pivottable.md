@@ -23,7 +23,7 @@ search.app:
 You can export app data to an Office Excel PivotTable to see patterns and trends in data. An Excel PivotTable is a great way to summarize, analyze, explore, and present your app data. You can export up to 100,000 records at a time.  
   
 
-## Export to an Excel PivotTable  
+## Export data to an Excel PivotTable  
 The option to export data to an Excel PivotTable isn’t available in all record types. If you don’t see the option, it’s not available for that record.  
   
 1. Open a list of records in your app, select the arrow to the right of **Export to Excel**, and then select **Dynamic PivotTable**.  
