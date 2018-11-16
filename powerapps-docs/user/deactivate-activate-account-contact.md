@@ -20,19 +20,20 @@ search.app:
 ---
 # Deactivate or activate an account or contact
 
-In a Model-driven app, you can deactivate an account or contact rather than deleting it. This ensures the integrity of the audit trail associated with that record.  
+In a model-driven app, you can deactivate an account or contact rather than deleting it. This ensures the integrity of the audit trail associated with that record.  
   
- A deactivated account or contact becomes inactive, which means that it cannot be edited or used in establishing new relationships with other records. However, all relationships created with the deactivated item are still available.  
+A deactivated account or contact becomes inactive, which means it cannot be edited or used in establishing new relationships with other records. However, all relationships created with the deactivated item are still available.  
   
- Later if you need to reactivate a deactivated account it's easy to do so.   
+If later you need to reactivate a deactivated account, it's easy to do so.   
   
 ## Deactivate an account or contact 
   
 1.  From the menu on the left, go to **Accounts** or **Contacts**.  
   
-2.  Select the active account or contact that you want to deactivate, on the command bar click **Deactivate**, and then confirm the deactivation.
+2.  Select the active account or contact that you want to deactivate, on the command bar select **Deactivate**, and then confirm the deactivation.
 
- ![Deactivate an account in PowerApps](media/DeactiveAccounts.png "Deactivate an account in PowerAppss")
+    > [!div class="mx-imgBorder"]
+    > ![Deactivate an account in PowerApps](media/DeactiveAccounts.png "Deactivate an account in PowerApps")
 
 
 ## Activate an account or contact  
@@ -45,9 +46,10 @@ In a Model-driven app, you can deactivate an account or contact rather than dele
   
 4.  Select the inactive accounts or contacts you want to activate.
 
-5.  Click **Activate**, and then confirm the activation.  
+5.  Select **Activate**, and then confirm the activation.  
 
- ![Activate an account in PowerApps](media/ActiveAccounts.png "Activate an account in PowerApps")  
+    > [!div class="mx-imgBorder"]
+    > ![Activate an account in PowerApps](media/ActiveAccounts.png "Activate an account in PowerApps")  
 
 
 

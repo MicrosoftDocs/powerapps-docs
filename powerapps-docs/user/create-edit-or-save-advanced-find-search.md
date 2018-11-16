@@ -27,29 +27,33 @@ Find the records you want in PowerApps by using the Advanced Find search option.
   
    1.  In the **Look for** list, select a record type.  
   
-   2.  Click **Select** to define search criteria: field (for example, Account Name or City), the query relational operator (Part of an expression (for example "is equal to" or "contains") that defines how a specified attribute should be compared with a value.), and the values to locate (for example, "Seattle" or "Email").  
+   2.  Click **Select** to define search criteria: field (for example, Account Name or City), the query relational operator (part of an expression such as "is equal to" or "contains" that defines how a specified attribute should be compared with a value.), and the values to locate (for example, "Seattle" or "Email").  
   
-        You can select fields from the current record type, or from related records. For example, an account might have many related contact records.  
+       You can select fields from the current record type, or from related records. For example, an account might have many related contact records.  
   
-        At the bottom of the **Select** list, the **Related** section shows related record types. For example, most record types have a related Notes record type. To select fields from a related record type, select field, and a new **Select** link appears.  
-  
+       At the bottom of the **Select** list, the **Related** section shows related record types. For example, most record types have a related Notes record type. To select fields from a related record type, select field and a new **Select** link appears.  
+
+
+<!--In the previous sentence, should it be "select a field"? Or should field be in bold?-->
+
+
 3. Specify the columns to include in the search results.  
   
-   1.  Click **Edit Columns**, and then click **Add Columns**.  
+   1.  Select **Edit Columns**, and then select **Add Columns**.  
   
    2.  Select the record type that includes the columns you want to add.  
   
-   3.  Select the columns you want to add, and then click **OK**.  
+   3.  Select the columns you want to add, and then select **OK**.  
   
 4. Specify the sort order.  
   
-   1.  Click **Edit Columns**.  
+   1.  Select **Edit Columns**.  
   
-   2.  Click **Configure Sorting**.  
+   2.  Select **Configure Sorting**.  
   
-   3.  Specify the column to sort on, specify the sort order, and then click **OK**.  
+   3.  Specify the column to sort on, specify the sort order, and then select **OK**.  
   
-   4.  Click **OK**.  
+   4.  Select **OK**.  
   
-5. Click **Results**.  
+5. Select **Results**.  
   
