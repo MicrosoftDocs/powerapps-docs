@@ -25,10 +25,10 @@ Use the navigation bar to get to your work area, create a new record, search, or
 
 You can access the installed Unified Interface and web apps from multiple interfaces. On browsers you can see all the apps, both Unified Interface and web:
 
-1. In [https://home.dynamics.com](https://home.dynamics.com).
+1. In [Dynamics home](https://home.dynamics.com).
 
    > [!div class="mx-imgBorder"]
-   > ![Dynamics 365 Home Page](media/home.png "Dynamics 365 Home Page")
+   > ![Dynamics 365 home page](media/home.png "Dynamics 365 home page")
 
 2. In app navigation.
 
