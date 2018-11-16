@@ -1,12 +1,12 @@
 ---
-title: "Use Microsoft Flow to automate processes in PowerApps| MicrosoftDocs"
+title: "Use Microsoft Flow to automate processes in model-driven apps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/18/2018
+ms.date: 11/16/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
