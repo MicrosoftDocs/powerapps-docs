@@ -20,9 +20,9 @@ search.app:
 ---
 # Export your data to Excel Online 
 
-You can quickly do an ad-hoc analysis of your data that is in your app by exporting the data from your app to Excel Online.
+You can quickly do an ad-hoc analysis of your data that is in your app by exporting the data from the app to Excel Online.
   
-When you make changes to your data in Excel Online, you can save the updated information in your app. Remember to keep the existing format of the Excel cells to prevent problems during import. Any information added to the spreadsheet, such as graphs, charts, or colors, will not be saved.  
+When you make changes to your data in Excel Online, you can save the updated information in the app. Remember to keep the existing format of the Excel cells to prevent problems during import. Any information added to the spreadsheet, such as graphs, charts, or colors, will not be saved.  
   
 ## Prerequisites  
   
@@ -43,7 +43,7 @@ To open a list of records in an app, on the command bar select the **Export to E
 > ![Export to Excel Online](media/exportexcelonline.png "Export to Excel Online")  
 
   
-## Save your data and import it back to your app  
+## Save your data and import it back to the app  
   
 1. Once you are done making any changes, select **Save**.  
   
