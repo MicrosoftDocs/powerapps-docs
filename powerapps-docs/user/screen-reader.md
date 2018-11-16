@@ -25,6 +25,10 @@ Screen readers make model-driven apps accessible to people who have low or no vi
 
 - [Learn more about working with Microsoft Narrator](https://support.microsoft.com/help/22798)
 - [Learn more about working with JAWS](http://www.freedomscientific.com/Products/Blindness/JawsDocumentation)
+
+
+<!--This doesn't seem to be a good link. Maybe this one: https://www.nvaccess.org/get-help/ -->
+
 - [Learn more about working with NVDA](https://www.nvaccess.org/help/)
 
 
