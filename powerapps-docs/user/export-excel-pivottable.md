@@ -1,5 +1,5 @@
 ---
-title: "Export to an Excel PivotTable in Model-driven PowerApp| MicrosoftDocs"
+title: "Export to an Excel PivotTable in model-driven PowerApp| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
