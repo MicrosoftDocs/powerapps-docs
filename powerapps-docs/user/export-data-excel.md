@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/16/2018
+ms.date: 11/16/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -20,7 +20,7 @@ search.app:
 ---
 # Export data to Excel
 
-Do you need to analyze your data from PowerApps and convert that data into actionable items that help you drive more sales? Now you can do this when you export your data to Excel or Excel Online. Also, analyzing large datasets is not a problem because you can export up to 100,000 rows of data.
+Do you need to analyze your data from and convert that data into actionable items that help you drive more sales? Now you can do this when you export your data to Excel or Excel Online. Also, analyzing large datasets is not a problem because you can export up to 100,000 rows of data.
   
 You can choose to export static worksheets or dynamic worksheets, which you can import back into PowerApps. If you need more advanced functions, you can export a dynamic PivotTable, which makes it very easy to organize and summarize data.  
   
