@@ -43,7 +43,7 @@ The option to export data to an Excel PivotTable isn’t available in all record
    > 2. Select **Trust Center Settings** and then select **Protected View**.  
    > 3. Under **Protected View**, clear the check boxes for all three items.  
    > 4. Select **OK** > **OK**.  
-   > </br>
+   > 
    > We still strongly recommend that you save and then open the data file rather than disabling protected view, which might put your computer at risk.  
   
 4. Open Excel and then open the .xlsx file you saved in the previous step.  
