@@ -69,6 +69,10 @@ You can also use the Tab key to quickly navigate to interactive elements on the 
 #### Dashboards/charts
 You can navigate through the dashboard charts using the Tab key and Caps lock + arrow keys. Press the **Tab** key to quickly go to the interactive elements and use Caps lock + an arrow key for navigation of non-interactive elements, such as headings, landmarks, and items.
 
+
+
+<!-- The following is an accessibility page, but I expected it to be a Windows 10 Update page. Maybe expectations of what the link is for need to be clearer. -->
+
 > [!NOTE]
 > You must have the latest [Windows 10](http://www.microsoft.com/enable/products/windows10/default.aspx) Update installed to have all of the accessibility features available for charts.
 
