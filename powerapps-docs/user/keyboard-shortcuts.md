@@ -27,6 +27,9 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 ## Form shortcuts
 
+<!--does the N/A mean not available? If so, why include them? -->
+
+
 |Task  | Unified Interface |
 |---------|---------|
 |Complete the command for the active option or button|  Enter|
@@ -51,7 +54,11 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 |Move to the previous option, option group, or field| Shift+Tab |
 |Move between options in an open list, or between options in a group of options|Arrow keys|
 |Go to the Command Bar| N/A |
-|Go to the landmark section of a page| Ctrl+[ |
+|Go to the landmark section of a page| Ctrl+\[ |
+
+
+<!--Is the one above supposed to include just one straight bracket? (I added the backslash to keep the bracket from causing GitHub format issues. It won't show up.)--> 
+
 
 ## Editable grids (views)
 If your administrator has enabled editable grids (views), you can edit data directly in a grid (view). The following table lists the keyboard shortcuts:
@@ -59,7 +66,7 @@ If your administrator has enabled editable grids (views), you can edit data dire
 |Task  | Unified Interface|
 |---------|---------|
 |When the focus is on a column header, sort by column | Enter key |
-|when the focus is on a column header, open filter dialog | Spacebar|
+|When the focus is on a column header, open filter dialog | Spacebar|
 |When the focus is on the cells, move to the next field |  Right arrow (→) key  | 
 |When the focus is on the cells, move to the previous field   |  Left arrow (←) key|
 |When the focus is on the column header, move to the next column header |  Tab  | 
@@ -68,8 +75,8 @@ If your administrator has enabled editable grids (views), you can edit data dire
 |Move to the cell below|  Down arrow (↓) key **Or** Enter, when cell is not in edit mode |
 |Go to edit mode for Text, Number, and Simple fields when the focus is on a field  |  Type the value directly to overwrite the existing value **Or** Spacebar to continue modifying the existing value **Or** F2 to select the existing value  |
 |Go to edit mode for Date and Time fields| Type the value directly **Or** F4 or Alt+↓ to display the date/time picker |
-|Go to edit mode for drop-down (Lookup, Option Set) fields|Spacebar to drop down the list|
-|Go to edit mode for Two Options fields| Spacebar to switch between the two options **Or** F4 **Or** Alt+↓ to drop down the list|
+|Go to edit mode for drop-down (Lookup, Option Set) fields|Spacebar to open the list|
+|Go to edit mode for Two Options fields| Spacebar to switch between the two options **Or** F4 **Or** Alt+↓ to open the list|
 |Move between entries in an open drop-down list| Up/Down (↑/↓) Arrow keys|
 |Select an option in an open drop-down list|  Enter|
 |Close an open drop-down list|Esc|
@@ -147,7 +154,7 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 |Move back from the **See More** button to the tags in a Tag chart | Shift+Tab |
 |Filter the dashboard when the focus is on a data point in an interactive dashboard | Enter **Or** Spacebar |
 
-### Date Time control shortcuts
+### Date-Time control shortcuts
 
 |Task             |Unified Interface  |
 |---------|---------|
@@ -176,6 +183,7 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 
 ## Navigating submenus
 If you use a screen reader, follow these steps to access any of the submenus that are displayed when you hover the mouse over a navigation link.
+
 1. Navigate between the menu options using standard link navigation.
 2. Activate the link by selecting Enter or the space key as you usually would. A list of submenus will be displayed.
 3. To access these submenu options, use the assistive technology (AT) shortcut key to navigate to the next button. For example, if you use the NVDA screen reader, you would use the “b” shortcut key (NVDA+b). To navigate through all the options, select the key repeatedly.
@@ -185,12 +193,12 @@ If you use a screen reader, follow these steps to access any of the submenus tha
 
 ## Navigating through stages of a process
 If you’re in a record—for example, a lead—this section shows you the keyboard shortcuts to navigate through the different stages in the sales process to qualify the lead, and how to make selections in those stages. For example, if you want to move easily from the Qualify stage through to the Close stage, try these keyboard actions:
-- After you select a stage, get to the fields by selecting the Down arrow.
+- After you select a stage, get to the fields by selecting the Down (↓) arrow.
 - If a stage is collapsed, select Enter to expand it.
 
-> [!NOTE]
-> The process name is an icon at the bottom of the page, not the top.
+  > [!NOTE]
+  > The process name is an icon at the bottom of the page, not the top.
 
-- **Keyboard shortcuts in Windows**: If you are using the Windows operating system, select the following link and choose the version number from the drop-down. You can view all the shortcuts that are applicable to a Windows environment. See [Windows keyboard shortcuts](https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts). 
-- **Keyboard shortcuts in Mac**: If you are using Mac operating system, select the following link to view all the shortcuts that are applicable to a Mac environment. See [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236).
+- **Keyboard shortcuts in Windows**: If you are using the Windows operating system, select the following link and choose the version number from the drop-down list. You can view all the shortcuts that are applicable to a Windows environment. See [Windows keyboard shortcuts](https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts). 
+- **Keyboard shortcuts in Mac**: If you are using a Mac operating system, select the following link to view all the shortcuts that are applicable to a Mac environment. See [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236).
 

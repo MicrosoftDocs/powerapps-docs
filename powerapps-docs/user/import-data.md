@@ -20,31 +20,31 @@ search.app:
 ---
 # Import data
 
-Whether your data is stored in a spreadsheet, on your phone, or in an email program here’s how to import the data to your app. For example, you may want to import your customer contact list from an Excel spreadsheet into the app, so you can keep track of all your customer information in one place.
+Whether your data is stored in a spreadsheet, on your phone, or in an email program, here’s how to import the data to your app. For example, you might want to import your customer contact list from an Excel spreadsheet into the app so you can keep track of all your customer information in one place.
   
 ## Step 1: Get your import file ready  
-First, you export your data into an Excel file. These file formats are supported:
- - Excel Workbook (.xlsx)
+First, export your data into an Excel file. These file formats are supported:
+ - Excel workbook (.xlsx)
  - Comma-separated values (.csv)
   
 The maximum file size allowed for .zip files is 32 MB. For the other file formats, the maximum file size allowed is 8 MB.  
   
 ### Export data from an email program  
   
-1.  Export your data into a comma separated values file (.csv).  
+1.  Export your data into a comma-separated values file (.csv).  
   
      To find specific steps to export contacts from your email program, open the program’s Help, and search for “export.” Look for topics that include “exporting contacts” or “exporting your address book” or “export wizard” in the title.  
   
-2.  Save the file in a location where you can find it easily later.  
+2.  Save the file in a location where you can easily find it later.  
   
 ### Export data from a spreadsheet  
   
 1.  Open the spreadsheet.  
   
-2.  If necessary, edit any column name in the spreadsheet to match exactly with the corresponding name shown here.  
+2.  If necessary, edit any column name in the spreadsheet to exactly match the corresponding name shown here.  
   
     > [!WARNING]
-    >  If the spreadsheet doesn’t include all the column names listed, that’s okay. However, if a column name does exist, it must match exactly with the corresponding name in the list or the import won’t work. Spaces are required. Note that the word “Email” doesn’t contain a hyphen.  
+    > If the spreadsheet doesn’t include all the column names listed, that’s OK. However, if a column name does exist, it must match exactly with the corresponding name in the list or the import won’t work. Spaces are required. Note that the word “Email” doesn’t contain a hyphen.  
 
     |**Column Name in Spreadsheet (spelling must match exactly)**|
     |---------|
@@ -73,19 +73,21 @@ To find an app, search your phone’s online store.
   
 ## Step 2: Import the file 
   
-1. On the command bar, click **Import from Excel** or click **Import from CSV**.
+1. On the command bar, select **Import from Excel** or **Import from CSV**.
 
-![Main menu in PowerApps](media/import.png "Main menu in PowerAppss")
+   > [!div class="mx-imgBorder"]
+   > ![Main menu in PowerApps](media/import.png "Main menu in PowerApps")
   
-2. Browse to the folder where you saved the file that contains the export of your contacts. Select the file, and then click **Open** and then click **Next**.  
+2. Browse to the folder where you saved the file that contains the export of your contacts. Select the file, select **Open**, and then select **Next**.  
   
    > [!TIP]
-   >  You can import only one file at a time. To bring in more files, run the wizard again later.
+   > You can import only one file at a time. To bring in more files, run the wizard again later.
    
-3. Review the file name and verify that the field and data delimiters are correct using the **Review Mapping** option. If everything looks good, click **Finish Import**.  
+3. Review the file name and verify that the field and data delimiters are correct using the **Review Mapping** option. If everything looks good, select **Finish Import**.  
  
-## Step 3: Check that the import is successfully  
- After the wizard finishes, check your data for (example, list of contacts) to make sure they imported correctly.  
+## Step 3: Check that the import is successful
+
+After the wizard finishes, check your data (for example, list of contacts) to make sure they imported correctly.  
   
 1. From the main menu, go to **Contacts**.
   
