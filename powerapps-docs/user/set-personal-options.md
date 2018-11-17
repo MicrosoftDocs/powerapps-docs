@@ -20,10 +20,6 @@ search.app:
 # Set personal options
 
 
-<!--please review this to make sure the tables are as you want them to look. https://review.docs.microsoft.com/en-us/powerapps/user/set-personal-options?branch=edit_nov16_1313774 -->
-
-
-
 Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone.  
     
 ## To set personal options  
@@ -38,9 +34,6 @@ Change your display settings in an app to suit your preferences. For example, yo
 
 
 
-<!--There is nothing in the Time Zone note in this table. -->
-
-
 ## General tab options
   
 |                               Options                               |                                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                                            |
@@ -53,7 +46,7 @@ Change your display settings in an app to suit your preferences. For example, yo
 |            **Select the default mode in Advanced Find**             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                         Advanced Find Mode                          |                                                                                                                                  By default, every time you open the **Advanced Find Mode** dialog box, the query details are hidden. To see the query details every time, select **Detailed**.                                                                                                                                  |
 |                  **Set the time zone you are in**                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                              Time Zone                              |                                                                                                                                             Select the time zone that you want to display for your region. **Note:**                                                                                                                                         |
+|                              Time Zone                              |                                                                                                                                             Select the time zone that you want to display for your region.                                                                                                                                          |
 |                    **Select a default currency**                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                              Currency                               |                                                                                                                                            Choose the default currency value to use in financial transactions. Select the **Lookup** button to search for a currency.                                                                                                                                          |
 |                 **Support high-contrast settings**                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
