@@ -27,9 +27,7 @@ Screen readers make model-driven apps accessible to people who have low or no vi
 - [Learn more about working with JAWS](http://www.freedomscientific.com/Products/Blindness/JawsDocumentation)
 
 
-<!--This doesn't seem to be a good link. Maybe this one: https://www.nvaccess.org/get-help/ -->
-
-- [Learn more about working with NVDA](https://www.nvaccess.org/help/)
+- [Learn more about working with NVDA](https://www.nvaccess.org/get-help/)
 
 
 ## Basic tasks using a screen reader 
@@ -70,9 +68,6 @@ You can also use the Tab key to quickly navigate to interactive elements on the 
 You can navigate through the dashboard charts using the Tab key and Caps lock + arrow keys. Press the **Tab** key to quickly go to the interactive elements and use Caps lock + an arrow key for navigation of non-interactive elements, such as headings, landmarks, and items.
 
 
-
-<!-- The following is an accessibility page, but I expected it to be a Windows 10 Update page. Maybe expectations of what the link is for need to be clearer. -->
-
 > [!NOTE]
 > You must have the latest [Windows 10](http://www.microsoft.com/enable/products/windows10/default.aspx) Update installed to have all of the accessibility features available for charts.
 
@@ -86,11 +81,7 @@ You can navigate a business process flow, such as the one found at the top of th
 
 #### Dialog boxes
 
-
-<!--Is Navigator correct, or should it be Narrator?-->
-
-
-When a dialog box opens, Navigator announces the title. For dialog boxes with input fields, the **Close** button has the default focus, allowing you to close the dialog box by pressing **Enter**. For dialog boxes that require user action, the focus is on the primary action button, such as **Delete** or **OK**.
+When a dialog box opens, Narrator announces the title. For dialog boxes with input fields, the **Close** button has the default focus, allowing you to close the dialog box by pressing **Enter**. For dialog boxes that require user action, the focus is on the primary action button, such as **Delete** or **OK**.
 
 You can navigate through the controls by using the **Tab** key. The cursor will loop through each element in the dialog box, and you can press **Esc** to close it.
 
