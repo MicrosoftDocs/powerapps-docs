@@ -25,7 +25,7 @@
     items:
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Navigations and basics
+    - name: Navigation and basics
       href: ../user/navigation.md
       items:
       - name: View your profile 
