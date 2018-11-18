@@ -62,7 +62,8 @@ If an app requires a connection to a data source or permission to use the device
 To close an app, sign out of the Dynamics 365 Home page, or open another app.
 
 ## Next steps
-In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to run a canvas app on a mobile device, continue to the next topic.
+In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to:
+- run a canvas app on a mobile device, see [Run a canvas app on a mobile device](run-app-client.md)
+- run a model-driven app on a mobile device, see [Run a model-driven app on a mobile device](run-app-client-model-driven.md)
+- use a model-driven app, see [Use model-driven apps](use-model-driven-apps.md)
 
-> [!div class="nextstepaction"]
-> [Run a canvas app on a mobile device](run-app-client.md)
