@@ -97,8 +97,8 @@ search.app:
 
 3.  Select the package type **As unmanaged** or **As managed**. This will start your export, which can take several minutes to complete. Once finished, the export .zip file is available in the download folder specified by your web browser.
 
-> [!div class="mx-imgBorder"]  
-> ![Export solution](media/solution-export.png "Export solution") 
+    > [!div class="mx-imgBorder"]  
+    > ![Export solution](media/solution-export.png "Export solution") 
 
 ### Export from the classic experience
 
