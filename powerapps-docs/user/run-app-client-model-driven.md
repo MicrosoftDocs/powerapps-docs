@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/09/2018
+ms.date: 11/16/2018
 ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
@@ -40,7 +40,6 @@ Go to the [Dynamics 365 home page](https://home.dynamics.com) or enter the app U
 
 
 ## Next steps
-In this topic, you learned how to run a model-driven app on a mobile device. You can also run canvas apps on a mobile device.
-
-> [!div class="nextstepaction"]
-> [Run a canvas app on a mobile device](run-app-client.md)
+In this topic, you learned how to run a model-driven app on a mobile device. For information about:
+- using a model-driven app, see [Use model-driven apps](use-model-driven-apps.md)
+- running a canvas-app on a mobile device, see [Run a canvas app on a mobile device](run-app-client.md)
