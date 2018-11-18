@@ -189,7 +189,7 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Use model-driven apps</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/unified-interface">Unified Interface for model-driven apps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/unified-interface">Unified Interface</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/navigation">Navigation and basics</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/create-a-record">Create a record</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/search-records">Search records</a></p>
