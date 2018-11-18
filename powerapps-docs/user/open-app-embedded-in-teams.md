@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/18/2018
+ms.date: 11/16/2018
 ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
