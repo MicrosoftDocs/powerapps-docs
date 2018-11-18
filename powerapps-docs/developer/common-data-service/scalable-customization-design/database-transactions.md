@@ -1,17 +1,36 @@
-# Database transactions
+---
+title: "Scalable Customization Design: Database Transactions (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "The second in a series of topics. " # 115-145 characters including spaces. This abstract displays in the search result.
+ms.custom: ""
+ms.date: 11/18/2018
+ms.reviewer: ""
+ms.service: "powerapps"
+ms.topic: "article"
+author: "rogergilchrist" # GitHub ID
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
+manager: "ryjones" # MSFT alias of manager or PM counterpart
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+---
 
-One of the most fundamental concepts behind many of the challenges faced here is that of the database transaction. In CDS for Apps, the database is at the heart of almost all requests to the system and the place data consistency is primarily enforced.
+# Scalable Customization Design: Database transactions
 
-- No CDS for Apps activities , either core platform or implementation, work completely in isolation.
-- All CDS for Apps activities interact with the same database resources, either at a data level or an infrastructure level such as processor, memory, or IO usage.
+> [!NOTE]
+> This is the second in a series of topics about scalable customization design. To start at the begining, see [Scalable Customization Design in Common Data Service for Apps](overview.md)
+
+One of the most fundamental concepts behind many of the challenges faced here is that of the database transaction. In Common Data Service for Apps (CDS for Apps) the database is at the heart of almost all requests to the system and the place data consistency is primarily enforced.
+
+- No CDS for Apps data operations, either internal or part of code customizations, work completely in isolation.
+- All CDS for Apps data operations interact with the same database resources, either at a data level or an infrastructure level such as processor, memory, or I/O usage.
 - To protect against conflicting changes, each request takes locks on resources to be viewed or changed.
-- Those locks are taken within a transaction and not released until the transaction is committed or aborted
+- Those locks are taken within a transaction and not released until the transaction is committed or aborted.
 
 ## Transaction and locking awareness
 
 A common reason that problems can occur in this area is the lack of awareness of how customizations can affect transactions.
-
-### Locking and transactions
 
 Although the details of how this is done is beyond the scope of this document, the most simple element to consider is that as CDS for Apps interacts with data in its database, SQL Server determines the appropriate locks to be taken by transactions on that data such as:
 - When retrieving a particular record, SQL Server takes a read lock on that record.
@@ -32,7 +51,7 @@ It should be noted that transactions are only held within the lifetime of a part
 Locks aren’t held at a user session level or while information is being shown in the user interface. As soon as the platform has completed the request, it releases the database connection, the related transaction, and any locks it has taken. 
 
 
-### Blocking
+## Blocking
 
 While the kind of blocking in the previous example can be inconvenient in and of itself, this can also lead to more serious consequences when you consider that CDS for Apps is a platform that can process hundreds of concurrent actions. While holding a lock on an individual account record may have reasonably limited implications, what happens when a resource  is more heavily contested?
 
@@ -42,7 +61,7 @@ While the first request to grab the auto number resource lock can easily be comp
 
 ![blocking example](media/blocking.png)
 
-### Lock release
+## Lock release
 
 There are two primary reasons why a lock isn’t released but is held until the transaction is completed:
 
@@ -54,7 +73,7 @@ As will be shown later, this also includes related customizations that work with
 
 ![lock release](media/lock-release.png)
 
-### Intermittent errors: timing
+## Intermittent errors: timing
 
 Intermittent behavior is an obvious symptom of blocking from concurrent activity. In particular, if repeating exactly the same action later succeeds when earlier it failed, there is a very strong likelihood that the error or slowness was caused by something else occurring at the same time.
 
@@ -70,7 +89,7 @@ As mentioned earlier, a transaction is only held during the lifetime of a reques
 
 The job of the platform is to maintain consistency throughout the platform transaction pipeline and where appropriate allow customizations to participate in that same transaction.
 
-### How Model-driven Apps UI utilizes transactions
+## How Model-driven Apps UI utilizes transactions
 
 Before understanding how customizations interact with the platform, it is useful to understand how the core user interface (UI) uses requests to the platform, and how it affects transaction use.
 
@@ -81,29 +100,29 @@ Before understanding how customizations interact with the platform, it is useful
 |Update|&bull; Performs an update request through the platform<br />&bull; More likely to have conflicts, as an update lock will block anything else updating or reading that record. Also blocks anything taking a broad read lock on that table<br />&bull; Often also triggers other activities|
 |View (RetrieveMultiple)|&bull; Would think this would block lots of other activity<br />&bull; But deliberately passes nolock hints to queries<br />&bull; So typically does not lock other activities<br />&bull; Although poor query optimization can affect DB resource usage and possibly hit timeouts|
 
-### Event pipeline: platform step
+## Event pipeline: platform step
 
 When an event pipeline is initiated, a SQL transaction is created to include the platform step. This ensures that all database activity performed by the platform is acted on consistently. The transaction is created at the start of the event pipeline and either committed or aborted when the processing is completed, depending on whether it was successful. 
 
 ![event pipeline platform step](media/event-pipeline-platform-step.png)
 
-### Customization requests
+## Customization requests
 
 It’s also possible to participate in the platform initiated transaction within customizations. Each type of customization participates in transactions in a different way. The following sections will describe each in turn. 
 
-#### Sync plug-ins (pre or post operation: in transaction context)
+### Sync plug-ins (pre or post operation: in transaction context)
 
 When plug-ins are registered for an event, they can be registered against a pre-operation or post-operation stage that is within the transaction. Any SDK requests from the plug-in will be performed within the transaction. This means the lifetime of the transaction, and any locks taken, will be extended.
 
 ![Sync plug-ins (pre or post operation: in transaction context)](media/sync-plug-ins-pre-or-post-operation-in-transaction-context.png)
 
-#### Sync plug-ins (pre and post operation: in transaction context)
+### Sync plug-ins (pre and post operation: in transaction context)
 
 Plug-ins can be registered against both the pre and post operation stages. In this case the transaction can extend even further because it will extend from the start of the pre-operation plug-in until the post-operation plug-in completes.
 
 ![Sync plug-ins (pre and post operation: in transaction context)](media/sync-plug-ins-pre-and-post-operation-in-transaction-context.png)
 
-#### Sync plug-ins (pre-validation: outside transaction context)
+### Sync plug-ins (pre-validation: outside transaction context)
 
 A plug-in can also be registered to act outside of the platform transaction by being registered on the pre-validation stage.
 
@@ -114,7 +133,7 @@ A plug-in can also be registered to act outside of the platform transaction by b
 
 This scenario only applies when the pre-validation is called as the first stage of a pipeline event . Even though the plug-in is registered on the pre-validation stage, it is possible it will participate in a transaction as the next section describes. It can’t be assumed that a pre-validation plug-in doesn’t participate in a transaction, although it is possible to check from the execution context if this is the case.
 
-#### Sync plug-ins (pre-validation: in transaction context)
+### Sync plug-ins (pre-validation: in transaction context)
 
 The related scenario occurs when a pre-validation plug-in is registered but the related pipeline event is triggered by an SDK request from within an existing transaction. 
 
@@ -126,7 +145,7 @@ In that case, the pre-validation plug-in will discover that a transaction alread
 
 As previously mentioned,  the plug-in can check the execution context for the `IsInTransaction` property, which will indicate if this plug-in is performing within a transaction or not.
 
-#### Async plug-ins
+### Async plug-ins
 
 A plug-in can also be registered to act asynchronously. In this case, the plug-in also acts outside of the platform transaction.
 
@@ -136,7 +155,7 @@ A plug-in can also be registered to act asynchronously. In this case, the plug-i
 ![foo](media/async-plug-ins.png)
 
 
-#### Plug-in transaction use summary
+### Plug-in transaction use summary
 
 To summarize:
 
@@ -151,13 +170,13 @@ To summarize:
 |Post-Event|Post-operation|Participates in existing transaction|Participates in existing transaction|
 |Async|N/A|No transaction is created.|Does not participate in transaction; each request uses independent transaction to the database|N/A|
 
-#### Synchronous workflows
+### Synchronous workflows
 
 From the perspective of transactions, synchronous workflows act as pre/post operation plug-ins. They therefore act within the platform pipeline transaction and can have the same effect on the length of the overall transaction.
 
 ![Synchronous workflows](media/synchronous-workflows.png)
 
-#### Asynchronous workflows
+### Asynchronous workflows
 
 Asynchronous workflows are triggered outside of the platform transaction.
 
@@ -168,7 +187,7 @@ The following diagram shows the asynchronous workflow acting outside of the plat
 
 ![Asynchronous workflows](media/asynchronous-workflows.png)
 
-#### Custom workflow activity
+### Custom workflow activity
 
 Custom workflow activities act within the parent workflow context.
 
@@ -179,7 +198,7 @@ The following diagram shows custom activities first acting within a synchronous 
 
 ![Custom workflow activity](media/custom-workflow-activity.png)
 
-#### Custom actions
+### Custom actions
 
 Custom actions can create their own transactions. This is a key feature. A custom action can create a separate transaction outside of the platform step depending on whether it is configured to Enable Rollback.
 
@@ -191,7 +210,7 @@ Custom actions can create their own transactions. This is a key feature. A custo
 
 ![custom actions](media/custom-actions.png)
 
-#### Web service requests
+### Web service requests
 
 When requests are made externally through web services, a pipeline is created and transaction handling within the pipeline occurs as previously discussed, but a transaction is not maintained once the response is returned. Since how long it will be until the next request is an unknown, the platform does not allow locking of resources which would block other activities.
 
@@ -203,5 +222,13 @@ There are two special messages where multiple actions can be passed to the CDS f
 |--|--|
 |ExecuteMultiple|This allows multiple independent actions to be passed within the same web service request. Each of these requests is performed independently within the platform so there is no transaction context held between requests.|
 |ExecuteTransaction|This allows multiple actions to be processed within the same database transaction, in a similar way to multiple SDK requests made from within a synchronous plug-in.<br /> <br />This ability would also have implications similar to multiple SDK requests; that is, if each action takes a long time (such as by making expensive queries or triggering a long chain of related synchronous plug-ins or workflows) this could lead to blocking issues in the broader platform.|
+
+## Summary
+
+TODO
+
+## Next steps
+
+TODO
 
 

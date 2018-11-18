@@ -1,5 +1,5 @@
 ---
-title: "Scalable Customization Design in Common Data Service for Apps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Scalable Customization Design: Overview (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The first in a series of topics. This topic introduces symptoms that can appear when code customizations are not optimized and the constraints that code customizations must operate within to avoid them. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 11/18/2018
@@ -93,6 +93,6 @@ The best approach is to understand and appreciate the purpose of the constraints
 
 To understand how the platform constraints are applied it is necessary to understand database transactions.
 
-[Database transactions](database-transactions.md)
+[Scalable Customization Design: Database transactions](database-transactions.md)
 
 
