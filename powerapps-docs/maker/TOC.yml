@@ -21,10 +21,10 @@
   - name: From AppSource
     href: ../user/app-source.md
   - name: 'Use model-driven apps'
-    href: use-model-driven-apps.md
+    href: ../user/use-model-driven-apps.md
     items:
     - name: Unified Interface
-      href: unified-interface.md
+      href: ../user/unified-interface.md
     - name: Navigations and basics
       href: ../user/navigation.md
       items:
