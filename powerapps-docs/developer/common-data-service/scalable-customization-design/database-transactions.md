@@ -112,17 +112,17 @@ When an event pipeline is initiated, a SQL transaction is created to include the
 
 It’s also possible to participate in the platform initiated transaction within customizations. Each type of customization participates in transactions in a different way. The following sections will describe each in turn. 
     
-    - [Sync plug-ins (pre or post operation: in transaction context)](#sync-plug-ins-pre-or-post-operation-in-transaction-context)
-    - [Sync plug-ins (pre and post operation: in transaction context)](#sync-plug-ins-pre-and-post-operation-in-transaction-context)
-    - [Sync plug-ins (pre-validation: outside transaction context)](#sync-plug-ins-pre-validation-outside-transaction-context)
-    - [Sync plug-ins (pre-validation: in transaction context)](#sync-plug-ins-pre-validation-in-transaction-context)
-    - [Async plug-ins](#async-plug-ins)
-    - [Plug-in transaction use summary](#plug-in-transaction-use-summary)
-    - [Synchronous workflows](#synchronous-workflows)
-    - [Asynchronous workflows](#asynchronous-workflows)
-    - [Custom workflow activity](#custom-workflow-activity)
-    - [Custom actions](#custom-actions)
-    - [Web service requests](#web-service-requests)
+- [Sync plug-ins (pre or post operation: in transaction context)](#sync-plug-ins-pre-or-post-operation-in-transaction-context)
+- [Sync plug-ins (pre and post operation: in transaction context)](#sync-plug-ins-pre-and-post-operation-in-transaction-context)
+- [Sync plug-ins (pre-validation: outside transaction context)](#sync-plug-ins-pre-validation-outside-transaction-context)
+- [Sync plug-ins (pre-validation: in transaction context)](#sync-plug-ins-pre-validation-in-transaction-context)
+- [Async plug-ins](#async-plug-ins)
+- [Plug-in transaction use summary](#plug-in-transaction-use-summary)
+- [Synchronous workflows](#synchronous-workflows)
+- [Asynchronous workflows](#asynchronous-workflows)
+- [Custom workflow activity](#custom-workflow-activity)
+- [Custom actions](#custom-actions)
+- [Web service requests](#web-service-requests)
 
 ### Sync plug-ins (pre or post operation: in transaction context)
 
