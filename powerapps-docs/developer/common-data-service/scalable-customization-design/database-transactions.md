@@ -114,8 +114,8 @@ It’s also possible to participate in the platform initiated transaction within
     
 - [Sync plug-ins (pre or post operation: in transaction context)](#sync-plug-ins-pre-or-post-operation-in-transaction-context)
 - [Sync plug-ins (pre and post operation: in transaction context)](#sync-plug-ins-pre-and-post-operation-in-transaction-context)
-- [Sync plug-ins (pre-validation: outside transaction context)](#sync-plug-ins-pre-validation-outside-transaction-context)
-- [Sync plug-ins (pre-validation: in transaction context)](#sync-plug-ins-pre-validation-in-transaction-context)
+- [Sync plug-ins (PreValidation: outside transaction context)](#sync-plug-ins-prevalidation-outside-transaction-context)
+- [Sync plug-ins (PreValidation: in transaction context)](#sync-plug-ins-prevalidation-in-transaction-context)
 - [Async plug-ins](#async-plug-ins)
 - [Plug-in transaction use summary](#plug-in-transaction-use-summary)
 - [Synchronous workflows](#synchronous-workflows)
@@ -126,36 +126,36 @@ It’s also possible to participate in the platform initiated transaction within
 
 ### Sync plug-ins (pre or post operation: in transaction context)
 
-When plug-ins are registered for an event, they can be registered against a pre-operation or post-operation stage that is within the transaction. Any message requests from the plug-in will be performed within the transaction. This means the lifetime of the transaction, and any locks taken, will be extended.
+When plug-ins are registered for an event, they can be registered against a PreOperation or PostOperation stage that is within the transaction. Any message requests from the plug-in will be performed within the transaction. This means the lifetime of the transaction, and any locks taken, will be extended.
 
 ![Sync plug-ins (pre or post operation: in transaction context)](media/sync-plug-ins-pre-or-post-operation-in-transaction-context.png)
 
 ### Sync plug-ins (pre and post operation: in transaction context)
 
-Plug-ins can be registered against both the pre and post operation stages. In this case the transaction can extend even further because it will extend from the start of the pre-operation plug-in until the post-operation plug-in completes.
+Plug-ins can be registered against both the pre and post operation stages. In this case the transaction can extend even further because it will extend from the start of the PreOperation plug-in until the PostOperation plug-in completes.
 
 ![Sync plug-ins (pre and post operation: in transaction context)](media/sync-plug-ins-pre-and-post-operation-in-transaction-context.png)
 
-### Sync plug-ins (pre-validation: outside transaction context)
+### Sync plug-ins (PreValidation: outside transaction context)
 
-A plug-in can also be registered to act outside of the platform transaction by being registered on the pre-validation stage.
+A plug-in can also be registered to act outside of the platform transaction by being registered on the PreValidation stage.
 
 > [!NOTE]
 > It does NOT create its own transaction. As a result, each message request within the plug-in is acted upon independently within the database.
 
-![Sync plug-ins (pre-validation: outside transaction context)](media/sync-plug-ins-pre-validation-outside-transaction-context.png)
+![Sync plug-ins (PreValidation: outside transaction context)](media/sync-plug-ins-pre-validation-outside-transaction-context.png)
 
-This scenario only applies when the pre-validation is called as the first stage of a pipeline event . Even though the plug-in is registered on the pre-validation stage, it is possible it will participate in a transaction as the next section describes. It can’t be assumed that a pre-validation plug-in doesn’t participate in a transaction, although it is possible to check from the execution context if this is the case.
+This scenario only applies when the PreValidation is called as the first stage of a pipeline event . Even though the plug-in is registered on the PreValidation stage, it is possible it will participate in a transaction as the next section describes. It can’t be assumed that a PreValidation plug-in doesn’t participate in a transaction, although it is possible to check from the execution context if this is the case.
 
-### Sync plug-ins (pre-validation: in transaction context)
+### Sync plug-ins (PreValidation: in transaction context)
 
-The related scenario occurs when a pre-validation plug-in is registered but the related pipeline event is triggered by message request from within an existing transaction. 
+The related scenario occurs when a PreValidation plug-in is registered but the related pipeline event is triggered by message request from within an existing transaction. 
 
-As the following diagram shows, creating an account can cause a pre-validation plug-in to perform initially outside of a transaction when the initial create is performed. If, as part of the post plug-in, a message request is made to create a related child account because that second event pipeline is initiated from within the parent pipeline, it will participate in the same transaction. 
+As the following diagram shows, creating an account can cause a PreValidation plug-in to perform initially outside of a transaction when the initial create is performed. If, as part of the post plug-in, a message request is made to create a related child account because that second event pipeline is initiated from within the parent pipeline, it will participate in the same transaction. 
 
-In that case, the pre-validation plug-in will discover that a transaction already exists and so will participate in that transaction even though it’s registered on the pre-validation stage. 
+In that case, the PreValidation plug-in will discover that a transaction already exists and so will participate in that transaction even though it’s registered on the PreValidation stage. 
 
-![Sync plug-ins (pre-validation: in transaction context)](media/sync-plug-ins-pre-validation-in-transaction-context.png)
+![Sync plug-ins (PreValidation: in transaction context)](media/sync-plug-ins-pre-validation-in-transaction-context.png)
 
 As previously mentioned,  the plug-in can check the execution context for the `IsInTransaction` property, which will indicate if this plug-in is performing within a transaction or not.
 
@@ -175,14 +175,14 @@ To summarize:
 
 - Synchronous plug-ins typically participate in transactions.
 - Async plug-ins never participate in a platform transaction; each request is performed independently.
-- Pre-validation plug-ins don’t create a transaction but participate if one already exists.
+- PreValidation plug-ins don’t create a transaction but participate if one already exists.
 
 |Event|Stage name|Transaction does not yet exist|Transaction already exists|
 |--|--|--|--|
-|Pre-Event|Pre-validation|No transaction is created.|Does not participate in transaction; each request uses independent transaction to the database|Participates in existing transaction|
-|Pre-Event|Pre-operation|Participates in existing transaction|Participates in existing transaction|
-|Post-Event|Post-operation|Participates in existing transaction|Participates in existing transaction|
-|Async|N/A|No transaction is created.|Does not participate in transaction; each request uses independent transaction to the database|N/A|
+|Pre-Event|PreValidation|No transaction is created. Does not participate in transaction; each request uses independent transaction to the database|Participates in existing transaction|
+|Pre-Event|PreOperation|Participates in existing transaction|Participates in existing transaction|
+|Post-Event|PostOperation|Participates in existing transaction|Participates in existing transaction|
+|Async|N/A|No transaction is created. Does not participate in transaction; each request uses independent transaction to the database|N/A|
 
 ### Synchronous workflows
 
