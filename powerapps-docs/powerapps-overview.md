@@ -6,13 +6,13 @@ manager: annbee
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/17/2018
+ms.date: 11/12/2018
 ms.author: kvivek
 ms.reviewer:
 ---
 # What is PowerApps?
 
-PowerApps is a suite of apps, services, connectors and data platform that provides a rapid application development environment to build custom apps for your business needs. Using PowerApps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform (**Common Data Service for Apps**) *or* to various online and on-premises data sources (SharePoint, Excel, Office 365, Dynamics 365, SQL Server, and so on). 
+PowerApps is a suite of apps, services, connectors and data platform that provides a rapid application development environment to build custom apps for your business needs. Using PowerApps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform (**Common Data Service for Apps**) *or* in various online and on-premises data sources (SharePoint, Excel, Office 365, Dynamics 365, SQL Server, and so on). 
 
 Apps built using PowerApps provide rich business logic and workflow capabilities to transform your manual business processes to digital, automated processes. Further, apps built using PowerApps have a responsive design, and can run seamlessly in browser or on mobile devices (phone or tablet). PowerApps "democratizes" the custom business app building experience by enabling users to build feature-rich, custom business apps without writing code.
 
@@ -42,7 +42,7 @@ PowerApps admins can use:
 
 ## PowerApps for developers
 
-Developers are app makers who can write code to extend business app creation and customization. Developers can use code to create data and metadata, apply server-side logic using Azure functions, plug-ins, and workflow extensions, apply client-side logic using JavaScript, integrate with external data using virtual entities and webhooks, build custom connetors, and embed apps into your website experiences to create integrated solutions. More information: [PowerApps for developers](/powerapps/#pivot=home&panel=developer)
+Developers are app makers who can write code to extend business app creation and customization. Developers can use code to create data and metadata, apply server-side logic using Azure functions, plug-ins, and workflow extensions, apply client-side logic using JavaScript, integrate with external data using virtual entities and webhooks, build custom connectors, and embed apps into your website experiences to create integrated solutions. More information: [PowerApps for developers](/powerapps/#pivot=home&panel=developer)
 
 ## PowerApps and Dynamics 365
 

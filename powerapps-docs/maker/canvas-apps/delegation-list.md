@@ -65,9 +65,10 @@ This list of data sources and delegable functions and predicates will be updated
 | TrimEnds |No |No |Yes |No |No |
 | Len |No |No |Yes |No |No |
 | +, - |No |No |Yes |No |No |
-| <, <=, =, <>, >, >= |Yes |Yes (only =) |Yes |Yes |Yes |
-| And (&&), Or (&#124;&#124;), Not (!) |Yes<sup>2</sup> |Yes (except Not(!)) |Yes |Yes |Yes |
+| <, <=, =, <>, >, >= |Yes |Yes<sup>2</sup> |Yes |Yes |Yes |
+| And (&&), Or (&#124;&#124;), Not (!) |Yes<sup>3</sup> |Yes (except Not(!)) |Yes |Yes |Yes |
 | in |No |No |Yes |No |Yes |
 | StartsWith |No |Yes |No |No |No |
 
-<sup>2</sup>For operators only. And/Or/Not function not delegated.
+<sup>2</sup>For numeric columns, all operators can be delegated. For ID columns, only the '=' can be delegated. Date columns can't be delegated.<br/>
+<sup>3</sup>For operators only. And/Or/Not function not delegated.
