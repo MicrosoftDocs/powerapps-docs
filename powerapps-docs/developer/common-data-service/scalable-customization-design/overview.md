@@ -1,10 +1,27 @@
+---
+title: "Scalable Customization Design in Common Data Service for Apps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "The first in a series of topics. This topic introduces symptoms that can appear when code customizations are not optimized and the constraints that code customizations must operate within to avoid them. " # 115-145 characters including spaces. This abstract displays in the search result.
+ms.custom: ""
+ms.date: 11/18/2018
+ms.reviewer: ""
+ms.service: "powerapps"
+ms.topic: "article"
+author: "rogergilchrist" # GitHub ID
+ms.author: "jdaly" # MSFT alias of Microsoft employees only
+manager: "ryjones" # MSFT alias of manager or PM counterpart
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+---
 # Scalable Customization Design in Common Data Service for Apps
 
 Common Data Service for Apps (CDS for Apps) is designed to protect itself and its users from long running activities that could affect both the response times for the user making a request and the stability and responsiveness of the system for other users.
 
 A challenge faced by some customers implementing CDS for Apps solutions are errors thrown by the platform or the underlying Microsoft SQL Server database when these protective measures take effect. This is often interpreted as the platform not being able to scale or incorrectly terminating or throttling requests to the system.
 
-This content is based on experiences investigating and addressing the true underlying causes of the majority of these types of challenges. It describes how the platform protects itself from the impact of these requests imposed on the system, as well as explains why this behavior is most often the result of custom implementations not understanding the impact on blocking and transaction usage within the platform.
+This content is based on experiences investigating and addressing the true underlying causes of the majority of these types of challenges. These topics describe how the platform protects itself from the impact of these requests imposed on the system and explains why this behavior is most often the result of custom implementations not understanding the impact on blocking and transaction usage within the platform.
 
 This content also describes how optimizing a custom implementation to avoid these types of behaviors will not only avoid platform errors, but also enable better performance and end user experiences as a result. It provides good design practices and identifies common errors to avoid.
 
@@ -14,27 +31,27 @@ Investigating and addressing the challenges in this area typically starts when c
 
 In reality, while the errors could be avoided in the short term by relaxing some of the platform constraints, these constraints are there for good reasons and are designed to prevent an excessively long running action from affecting other users or system performance. While the constraints could be relaxed to avoid the errors, users would still be experiencing slow response times and this would be affecting other users’ experience of the system as well.
 
-Therefore, it’s preferable to look at the root causes of why these constraints are being triggered and causing errors, and then optimize the custom implementation to avoid them. This will provide a more consistent and more responsive system for the users. 
+Therefore, it’s preferable to look at the root causes of why these constraints are being triggered and causing errors, and then optimize the code customizations to avoid them. This will provide a more consistent and more responsive system for the users. 
 
-### Common symptoms
+## Common symptoms
 
 These types of problems typically exhibit a combination of common symptoms as shown in the following table.
 
 |Symptom|Description|
 |--|--|
-|Slow requests|Users see slow response times for the system in particular areas, for example, certain forms and queries|
-|Generic SQL errors|Certain actions respond with a platform error reporting a Generic SQL Error. <br />This often translates at a platform layer to a SQL timeout.|
-|Deadlocks|Platform errors reporting that a deadlock has occurred, which has forced the action to be terminated and rolled back.|
-|Limited throughput|Particularly in batch load scenarios, this often exhibits in really slow throughput being achieved, much slower than should be possible.|
-|Intermittent errors / slow performance|An important indicator of these behaviors is where the same action can be very fast or incredibly slow, and retrying it works much more quickly or avoids an error|
+|**Slow requests**|Users see slow response times for the system in particular areas, for example, certain forms and queries|
+|**Generic SQL errors**|Certain actions respond with a platform error reporting a Generic SQL Error. <br />This often translates at a platform layer to a SQL timeout.|
+|**Deadlocks**|Platform errors reporting that a deadlock has occurred, which has forced the action to be terminated and rolled back.|
+|**Limited throughput**|Particularly in batch load scenarios, this often exhibits in really slow throughput being achieved, much slower than should be possible.|
+|**Intermittent errors / slow performance**|An important indicator of these behaviors is where the same action can be very fast or incredibly slow, and retrying it works much more quickly or avoids an error|
 
 In reality a combination of these symptoms can and often would be reported together when these challenges are faced. It’s not always the case that these symptoms are an indicator of problems with the design. Other issues, such as disk I/O limitations in the database or a product bug, can cause similar symptoms. But the most common cause of these kinds of symptoms, and therefore one worth checking for, relates directly to the design of the custom implementation and how it affects the system. 
 
-> *Why should we worry….doesn’t CDS for apps just take care of this…..*
+> *Why should we worry? Doesn’t CDS for apps just take care of this…?*
 
-It does as far as it can…..but it uses locking and transactions to protect the system against conflicts when required.
+It does as far as it can… But it uses locking and transactions to protect the system against conflicts when required.
 
-We also provide tools  for you to make choices about your particular scenario and to decide where it is important to control access to data. But those choices can be made incorrectly, and it is possible to introduce unintended consequences in custom code. 
+We also provide options for you to make choices about your particular scenario and to decide where it is important to control access to data. But those choices can be made incorrectly, and it is possible to introduce unintended consequences in custom code. 
 These problems typically have an impact on the user experience through slower response times so understanding the implications of certain actions can lead to more consistent and better results for users.
 
 ## Understanding causes
@@ -52,7 +69,7 @@ While this behavior can be frustrating since it can block specific requests from
 
 When the platform is used as intended and an implementation is optimized, it’s very rare that there is a scenario where these constraints would be encountered. Running into the constraint is almost always an indication of behaviors that will be tying up resources excessively in the system. This means other requests either from the same user or other users can’t be processed. So while it may be possible to loosen the constraint on the request being blocked, what that actually means is that the resources it is consuming are tied up for even longer causing bigger impacts on other users.
 
-At the heart of these constraints is the idea that the CDS for Apps platform is a transactional, multi-user application where quick response to user demand is the priority. It’s not intended to be a platform for long running or batch processing. It is possible to drive a series of short requests to CDS for Apps but CDS for Apps isn’t designed to handle batch processing. Equally, where there are activities running large iterative processing, CDS for Apps isn’t designed to handle that iterative processing.
+At the heart of these constraints is the idea that the CDS for Apps platform is designed to support a transactional, multi-user application where quick response to user demand is the priority. It’s not intended to be a platform for long running or batch processing. It is possible to drive a series of short requests to CDS for Apps but CDS for Apps isn’t designed to handle batch processing. Equally, where there are activities running large iterative processing, CDS for Apps isn’t designed to handle that iterative processing.
 
 In those scenarios, a separate service can be used to host the long running process, driving shorter transactional requests to CDS for Apps itself. For example, hosting BizTalk or Microsoft SQL Server Integration Services (SSIS) elsewhere and then driving individual create or update requests to CDS for Apps is a much better pattern than using a plug-in to loop through thousands of records being created in CDS for Apps.
 
@@ -60,9 +77,22 @@ It is worth being aware of and understanding the platform constraints that do ex
 
 |Constraint|Description|
 |--|--|
-|Plug-in timeouts|&bull; Plug-ins will time out after 2 minutes <br />&bull; Long running actions shouldn't be performed in plug-ins. Protects the platform and the sandbox service and ultimately the user from poor user experience|
-|SQL timeouts|&bull; Requests to SQL Server time out at 30 seconds to protect against long running requests<br />&bull; Provides protection within a particular organization and its private database<br />&bull; Also provides protection at a database server level against excessive use of shared resources such as processors/memory|
-|Workflow limits|&bull; Operates under a Fair Usage policy<br />&bull; No specific hard limits, but balance resource across organizations<br />&bull; Where demand is low, an organization can take full advantage of available capacity, but where demand is high, resources and throughput is shared|
-|Maximum concurrent connections|&bull; There is a platform default setting of  a maximum connection pool limit of 100 connections from the  Web Server connection pool in IIS to the database. CDS for Apps does not change this value<br />&bull; If you hit this, it is an indication of an error in the system; look at why so many connections are blocking<br />&bull; With multiple web servers, each with 100 concurrent connections to the database of typical &lt; 10ms, this suggests a throughput of &gt; 10k db requests for each web server. This should not be required and would hit other challenges well before that|
-|ExecuteMultiple|&bull; ExecuteMultiple is designed to assist with collections of messages  being sent  to CDS for Apps from an external source<br />&bull; The processing of large groups of these requests can tie up vital resources in CDS for Apps at the expense of more response critical requests by users, therefore this is limited to 2 concurrent ExecuteMultiple requests per organization<br />&bull; The actual limit experienced by a customer will  first depend on the number of web servers that are available, but also on how requests are distributed across  the web servers by the load balancer. While  it may be possible to achieve higher than 2, it is safer to design for 2 if you are not in control of  the infrastructure , such as  in the online environment|
+|**Plug-in timeouts**|&bull; Plug-ins will time out after 2 minutes <br />&bull; Don't preform long running operations in plug-ins. Protects the platform and the sandbox service and ultimately the user from poor user experience|
+|**SQL timeouts**|&bull; Requests to SQL Server time out at 30 seconds<br />&bull; Protects against long running requests<br />&bull; Provides protection within a particular organization and its private database<br />&bull; Also provides protection at a database server level against excessive use of shared resources such as processors/memory|
+|**Workflow limits**|&bull; Operates under a Fair Usage policy<br />&bull; No specific hard limits, but balance resource across organizations<br />&bull; Where demand is low an organization can take full advantage of available capacity. Where demand is high, resources and throughput are shared.|
+|**Maximum concurrent connections**|&bull; There is a platform default setting of  a maximum connection pool limit of 100 connections from the  Web Server connection pool in IIS to the database. CDS for Apps does not change this value<br />&bull; If you hit this, it is an indication of an error in the system; look at why so many connections are blocking<br />&bull; With multiple web servers, each with 100 concurrent connections to the database of typical &lt; 10ms, this suggests a throughput of &gt; 10k database requests for each web server. This should not be required and would hit other challenges well before that|
+|**ExecuteMultiple**|&bull; The `ExecuteMultiple` message is designed to assist with collections of operations being sent to CDS for Apps from an external source<br />&bull; The processing of large groups of these requests can tie up vital resources in CDS for Apps at the expense of more response critical requests by users, therefore this is limited to 2 concurrent `ExecuteMultiple` requests per organization|
+
+## Summary
+
+This topic introduced how the CDS for Apps platform is designed to support a transactional, multi-user application where quick response to user demand is the priority. To ensure the that this primary mission is successful, certain constraints are applied to protect against long running operations. When custom code attempts to perform long running operations these constraints will be encountered and some common symptoms will appear.
+
+The best approach is to understand and appreciate the purpose of the constraints and design scalable code customizations that do not interfere with the primary purpose of the platform.
+
+## Next steps
+
+To understand how the platform constraints are applied it is necessary to understand database transactions.
+
+[Database transactions](database-transactions.md)
+
 
