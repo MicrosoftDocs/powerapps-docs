@@ -1,5 +1,5 @@
 ---
-title: Code Element | Microsoft Docs
+title: HTML Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -13,19 +13,19 @@ ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
-ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
+ms.assetid: dcb8e71d-9a2f-4789-9a84-34673ccfd5c1
 ---
 
-# code element
+# html element
 
-[!INCLUDE [code-description](includes/code-description.md)]
+[!INCLUDE [html-description](includes/html-description.md)]
 
 ## Attributes
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where files are located|`string`|yes|
-|`order`|The order in which webresource must load|Positive integer|yes|
+|`path`|Place where HTML files are located|`string`|yes|
+|`order`|The order in which HTML files must load|`Positive integer`|no|
 
 ## Parent Elements
 
@@ -35,6 +35,6 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 ### Related topics
 
-[PowerApps Control Framework Manifest Schema Reference](index.md)<br/>
-[PowerApps Control Framework API Reference](../reference/index.md)<br/>
+[PowerApps Control Framework Manifest Schema Reference](index.md)<br />
+[PowerApps Control Framework API Reference](../reference/index.md)<br />
 [PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)

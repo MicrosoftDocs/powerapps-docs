@@ -1,0 +1,34 @@
+- name: Manifest Schema Reference
+  href: index.md
+  items: 
+  - name: code
+    href: code.md
+  - name: control
+    href: control.md
+  - name: data-set
+    href: data-set.md
+  - name: html
+    href: html.md
+  - name: img
+    href: img.md
+  - name: library
+    href: library.md
+  - name: manifest
+    href: manifest.md
+  - name: packaged_library
+    href: packaged_library.md
+  - name: property-set
+    href: property-set.md
+  - name: property
+    href: property.md
+  - name: resources
+    href: resources.md
+  - name: resx
+    href: resx.md
+  - name: type-group
+    href: type-group.md
+  - name: type
+    href: type.md
+  - name: types
+    href: types.md
+                                                                                                                                                                                                    
