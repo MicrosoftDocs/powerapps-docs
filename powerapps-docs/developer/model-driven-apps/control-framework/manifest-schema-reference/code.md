@@ -32,7 +32,7 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 |Element|Description|
 |--|--|
-|[resources](resources.md)|<1--[!INCLUDE [resources-description](includes/resources-description.md)]-->|
+|[resources](resources.md)|<!--[!INCLUDE [resources-description](includes/resources-description.md)]-->|
 
 
 ### Related topics
