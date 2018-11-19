@@ -237,6 +237,11 @@ There are two special messages where multiple actions can be passed to the CDS f
 |`ExecuteMultiple`|This allows multiple independent actions to be passed within the same web service request. Each of these requests is performed independently within the platform so there is no transaction context held between requests.|
 |`ExecuteTransaction`|This allows multiple actions to be processed within the same database transaction, in a similar way to multiple message requests made from within a synchronous plug-in.<br /> <br />This ability would also have implications similar to multiple message requests; that is, if each action takes a long time (such as by making expensive queries or triggering a long chain of related synchronous plug-ins or workflows) this could lead to blocking issues in the broader platform.|
 
+#### Web API (OData) Requests in plug-ins
+
+Do not use Web API (OData) requests within a plug-in to the same organization as the plug-in. Always use the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods. This allows for the transaction context to be passed so that the operation can participate in the pipeline transaction.
+    
+
 ## Summary
 
 This topic continued the issues introduced in [Scalable Customization Design in Common Data Service for Apps](overview.md) to describe how database transactions are applied and the effect they have on different types of customizations. 

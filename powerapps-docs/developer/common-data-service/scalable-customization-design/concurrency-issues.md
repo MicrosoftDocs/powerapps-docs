@@ -158,7 +158,7 @@ It is common that when investigating SQL timeout errors, users are also reportin
 
 ## Summary
 
-This topic continued the discussion of database transactions from [Scalable Customization Design: Database transactions](database-transactions.md) TODO
+This topic continued the discussion of database transactions from [Scalable Customization Design: Database transactions](database-transactions.md). This topic introduced the effect that concurrant activity may have on the system which can amplify the impact of design choices or allow independently developed business processes to introduce unexpected side-effects. 
 
 ## Next steps
 
