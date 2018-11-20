@@ -55,7 +55,7 @@ manager:
 
 </td>
 </tr>
-<tr>
+<tr> 
 <td>
 
 <h2> FAQ </h2>
