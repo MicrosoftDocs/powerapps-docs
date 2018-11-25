@@ -34,17 +34,17 @@ It's not recommended to have more than three Power BI tiles loaded at the same t
 
 ## Passing parameters
 
-A single parameter can be passed from the app into the Power BI tile to filter the results shown in the visual.  Note that only string values and equals operator are supported.
+You can filter the results that appear in a Power BI tile by passing a single parameter from the app, but only string values and the equals operator are supported.
 
-To pass a single filter value, modify the **TileURL** property which looks like:
+To pass a single filter value, modify the **TileURL** property, which looks like:
 
 ```"https://msit.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>" ```
 
-and append the following filter syntax:
+and append this filter syntax:
 
 ```&$filter=<My table name>/<My column name> eq "<Value>" ```
 
-Filtering may not work if table name or column name have spaces.  The parameter will filter a value in the dataset of the report where the tile originates from.
+Filtering may not work if the table name or the column name contains spaces. The parameter will filter a value in the dataset of the report where the tile originates.
 
 ## Key properties
 
