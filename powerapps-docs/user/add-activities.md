@@ -139,9 +139,9 @@ Once the note has been added, you can delete or edit the note. You can also add 
   
 ## Refresh the Timeline 
 
-There maybe times when you will want to refresh the timeline wall to ensure you have the most up to date information displayed.  
+You can refresh the timeline wall to see the the most up to date information.
 
-To quickly refresh the pane, in the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") and then select **Refresh Timeline**.
+In the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") and then select **Refresh Timeline**.
 
 > [!div class="mx-imgBorder"]
 > ![Refresh the Timeline ](media/refresh.png "Refresh the Timeline")
