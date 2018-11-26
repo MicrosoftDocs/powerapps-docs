@@ -141,7 +141,7 @@ Once the note has been added, you can delete or edit the note. You can also add 
 
 There maybe times when you will want to refresh the timeline wall to ensure you have the most up to date information displayed.  
 
-To quickly refresh the pane, in the **Timeline** wall, select **…** in the upper right and then select **Refresh Timeline**.
+To quickly refresh the pane, in the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") and then select **Refresh Timeline**.
 
 > [!div class="mx-imgBorder"]
 > ![Refresh the Timeline ](media/refresh.png "Refresh the Timeline")
@@ -151,7 +151,7 @@ To quickly refresh the pane, in the **Timeline** wall, select **…** in the upp
 
 Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane.
 
-1. In the **Timeline** wall, select **…** in the upper right and then select **Open Filter Pane**.
+1. In the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") then select **Open Filter Pane**.
 
 > [!div class="mx-imgBorder"]
 > ![Filter pane in the Timeline ](media/filterpane.png "Filter pane in the Timeline")
