@@ -166,7 +166,7 @@ Manage activities directly from the timeline wall including assigning an activit
 
 
 > [!div class="mx-imgBorder"]
-> ![Manage Activities.png](media/ManageActivities.png.png "ManageActivities.png")
+> ![Manage Activities.png](media/ManageActivities.png "ManageActivities.png")
 
 
 
