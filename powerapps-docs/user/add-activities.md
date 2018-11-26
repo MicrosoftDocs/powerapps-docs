@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 11/26/2018
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -19,12 +19,12 @@ search.app:
 ---
 # Add an appointment, email, phone call, note, or task activity to the timeline 
 
-Add **Activities** in the **Timeline** area to keep track of all your communications with a customer or contact. For example, you can take notes, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer.
+Add **Activities** in the **Timeline** wall to keep track of all your communications with a customer or contact. For example, you can take notes, add posts, add a task, send email, add phone call details, or set up appointments. The system automatically timestamps every activity and shows who created it. You and other people on your team can scroll through the activities to see the history as you work with a customer. 
 
-- Activities that you add from within a record appear in the **Timeline** area of the record. 
+- Activities that you add from within a record appear in the **Timeline** wall of the record. 
 - If the **Regarding** field of an activity is set, the activity appears in the record it is associated with. 
 - You can also choose the filter pane to filter the activities by record type and date. 
-- When a new activity is created, you will get a **What you missed** notification in the **Timeline** area.
+- When a new activity is created, you will get a **What you missed** notification in the **Timeline** wall.
 
   > [!div class="mx-imgBorder"]
   > ![Timeline view of activities in PowerApps](media/TimelineViewOfActivity.png "Timeline view of activities in PowerApps")  
@@ -49,11 +49,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, select  **plus sign** > **Phone Call**.  
-
-
-
-<!--from editor: The follow image uses the name Jim Glynn - is that from an approved fictitious names list? The image also shows Manjinder Kaur, which we should not use. Please change the image or blur the non-approved names. Here is a link to an approved names list: https://microsoft.sharepoint-df.com/teams/Dynamics365CustomerEngagementEditingResources/_layouts/15/WopiFrame.aspx?sourcedoc={0ea74ded-c03c-452d-a0de-6c89d54f7107}&action=edit&wd=target%28Style%20Guidelines.one%7C19ceab96-642a-49ba-8020-8958ea8cdb93%2FFictitious%20Names%7C0e4ac149-4669-4c0e-b262-f10ff3158758%2F%29 -->
+2. In the **Timeline** wall, select  **plus sign** > **Phone Call**. 
 
 
    > [!div class="mx-imgBorder"]
@@ -73,7 +69,7 @@ The fastest way to add an activity is to use the shortcut on the nav bar and the
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, select  **plus sign** > **Task**.
+2. In the **Timeline** wall, select  **plus sign** > **Task**.
   
 3. The **Owner** field is set to the current user by default. If you want to reassign the task, select the lookup icon, and then select another user or team.  
   
@@ -85,7 +81,7 @@ To add an email activity to a record, you must first save the record you are add
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, select  **plus sign** > **E-mail**. 
+2. In the **Timeline** wall, select  **plus sign** > **E-mail**. 
 
 3. Fill in the subject of the email and use the space provided to write the email.
   
@@ -101,7 +97,7 @@ To add an appointment activity to a record, you must first save the record you a
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, select  **plus sign** > **Appointment**.  
+2. In the **Timeline** wall, select  **plus sign** > **Appointment**.  
   
 3. Use the tooltips to fill in the required information.
   
@@ -113,22 +109,64 @@ You can also easily add notes in the activities area.
   
 1. Open the record that you want to add the activity to. For example, a contact record.
   
-2. In the **Timeline** section, start entering your notes. Use **Add an attachment** to add any attachments to the note.
+2. In the **Timeline** wall, start entering your notes. Use **Add an attachment** to add any attachments to the note.
 
 3. When you're done filling in the form, select **Add Note** to save the note.
 
    > [!div class="mx-imgBorder"]
    > ![Add a note](media/addnote.png "Add a note")
 
-Once the note has been added, you can delete or edit the note. You can also add a note using the **plus sign** in the upper section of the **Timeline** area.
-
-
-<!--from editor: This image also uses the name Manjinder Kaur. Please fix this.-->
-
-
+Once the note has been added, you can delete or edit the note. You can also add a note using the **plus sign** in the upper section of the **Timeline** wall.
 
 
 > [!div class="mx-imgBorder"]
 > ![Update a note](media/addnote2.png "Update a note")
+
+## Add a post 
+
+1. Open the record that you want to add a post to. For example, a contact record.
+
+2. In the **Timeline** wall, select  **plus sign** > **Post**. 
+
+3. Enter your post in the text field 
+
+4. When you're done filling in the form, select **Add** to save the post.
+
+> [!div class="mx-imgBorder"]
+> ![Update a post](media/post.png "Add a post")
   
+  Once you save the post, it will appear at the top of the timeline wall.
   
+## Refresh the Timeline 
+
+You can refresh the timeline wall to see the the most up to date information.
+
+In the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") and then select **Refresh Timeline**.
+
+> [!div class="mx-imgBorder"]
+> ![Refresh the Timeline ](media/refresh.png "Refresh the Timeline")
+
+
+## Use the filter pane
+
+Quickly filter activities, notes or posts in the timeline wall by record type or activity type and date using the filter pane.
+
+1. In the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") then select **Open Filter Pane**.
+
+> [!div class="mx-imgBorder"]
+> ![Filter pane in the Timeline ](media/filterpane.png "Filter pane in the Timeline")
+
+2. Once you're done viewing the filtered information, to clear the filter, select **Clear all filters** funnel icon. This will reset the filter show all the information in the timeline wall.
+
+> [!div class="mx-imgBorder"]
+> ![Reset the filter](media/resetfilter.png "Reset the filter")
+
+## Manage Activities
+Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.
+
+
+> [!div class="mx-imgBorder"]
+> ![Manage Activities.png](media/ManageActivities.png "ManageActivities.png")
+
+
+
