@@ -128,7 +128,7 @@ Once the note has been added, you can delete or edit the note. You can also add 
 
 2. In the **Timeline** wall, select  **plus sign** > **Post**. 
 
-3. In the text field enter your post.
+3. Enter your post in the text field 
 
 4. When you're done filling in the form, select **Add** to save the post.
 
