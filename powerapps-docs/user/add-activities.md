@@ -156,7 +156,7 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
 > [!div class="mx-imgBorder"]
 > ![Filter pane in the Timeline ](media/filterpane.png "Filter pane in the Timeline")
 
-2. Once you're done viewing the filtered information, to clear the filter select **Clear all filters** funnel icon. This will reset the timeline wall to show all information.
+2. Once you're done viewing the filtered information, to clear the filter, select **Clear all filters** funnel icon. This will reset the filter show all the information in the timeline wall.
 
 > [!div class="mx-imgBorder"]
 > ![Reset the filter](media/resetfilter.png "Reset the filter")
