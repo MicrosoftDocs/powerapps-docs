@@ -112,36 +112,36 @@ Here's a summary of each column in the report.
 ## Best practice rules used by PowerApps checker
 
 
-|Solution component  |Rule name  |Rule Description  |
+|Solution component  |Rule name  |Rule description  |
 |---------|---------|---------|
 |Plug-in or workflow activity   | [il-specify-column](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-specify-column&client=PAChecker&source=featuredocs)  | Avoid selecting all columns via Dynamics 365 for Customer Engagement query APIs.     |
 |Plug-in or workflow activity   | [meta-remove-dup-reg](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-dup-reg&client=PAChecker&source=featuredocs)     | Avoid duplicate Dynamics 365 for Customer Engagement plug-in registrations.     |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Plug-in or workflow activity   |         |         |
-|Row13     |         |         |
-|Row14     |         |         |
-|Row15     |         |         |
-|Row16     |         |         |
-|Row17     |         |         |
-|Row18     |         |         |
-|Row19     |         |         |
-|Row20     |         |         |
-|Row21     |         |         |
-|Row22     |         |         |
-|Row23     |         |         |
-|Row24     |         |         |
-|Row25     |         |         |
-|Row26     |         |         |
-|Row27     |         |         |
-|Row28     |         |         |
+|Plug-in or workflow activity   | [il-turn-off-keepalive](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-turn-off-keepalive&client=PAChecker&source=featuredocs)   | Set KeepAlive to false when interacting with external hosts in a Dynamics 365 for Customer Engagement plug-in.     |
+|Plug-in or workflow activity   | [il-avoid-unpub-metadata](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-unpub-metadata&client=PAChecker&source=featuredocs)   | Avoid retrieving unpublished Dynamics 365 for Customer Engagement metadata.     |
+|Plug-in or workflow activity   | [il-avoid-batch-plugin](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-batch-plugin&client=PAChecker&source=featuredocs)   | Avoid using batch request types in Dynamics 365 Customer Engagement plug-ins and workflow activities.    |
+|Plug-in or workflow activity   | [meta-avoid-reg-no-attribute](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-no-attribute&client=PAChecker&source=featuredocs)  | Include filtering attributes with Dynamics 365 for Customer Engagement plugin registrations.    |
+|Plug-in or workflow activity   | [meta-avoid-reg-retrieve](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-reg-retrieve&client=PAChecker&source=featuredocs)  | Use caution with Dynamics 365 for Customer Engagement plug-ins registered for Retrieve and RetrieveMultiple messages.    |
+|Plug-in or workflow activity   | [meta-remove-inactive](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-inactive&client=PAChecker&source=featuredocs)    | Remove inactive configurations in Dynamics 365 for Customer Engagement.    |
+|Plug-in or workflow activity   | [Avoid using window.top](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-window-top&client=PAChecker&source=featuredocs)   | Avoid using window.top.    |
+|Plug-in or workflow activity   | [il-meta-avoid-crm2011-depr-message](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm2011-depr-message&client=PAChecker&source=featuredocs)  | Don't use Microsoft Dynamics CRM 2011 deprecated messages.     |
+|Plug-in or workflow activity   | [meta-avoid-crm4-event](http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-avoid-crm4-event&client=PAChecker&source=featuredocs) | Don't use Microsoft Dynamics CRM 4.0 plugin registration stage.    |
+|Plug-in or workflow activity   | [il-avoid-specialized-update-ops](http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-specialized-update-ops&client=PAChecker&source=featuredocs)  | Don't use specialized update operation requests in Dynamics 365 for Customer Engagement.        |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
+|Web Resources  |         |         |
 
 
 
