@@ -70,7 +70,10 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[LineHeight](properties-text.md)** – The distance between, for example, lines of text or items in a list.
 
-**Live** – How the screen reader announces changes to the label's text.  Values can be **Off**, **Assertive**, and **Polite**. This property is useful for announcing dynamic changes in the app's UI in an accessible way.
+**[Live](properties-accessibility.md)** – How changes to the label's text should be announced to screen readers.
+* When set to **Off**, changes are not announced to screen readers.
+* When set to **Polite**, dynamic changes are announced when the screen reader has finished speaking.
+* When set to **Assertive**, dynamic changes are immediately announced, interrupting any current utterances of the screen reader.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
 
@@ -154,6 +157,7 @@ There must be adequate color contrast between:
 
 ### Screen reader support
 * **[Text](properties-core.md)** must be present.
+* **[Live](properties-accessibility.md)** should be set to **Polite** or **Assertive** if text changes should be announced to screen readers.
 
     > [!NOTE]
   > Screen readers will treat **Label**s as buttons when **[TabIndex](properties-accessibility.md)** is zero or greater.
