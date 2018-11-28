@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 11/20/2018
+ms.date: 11/28/2018
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -35,7 +35,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     ![Show list of apps](./media/share-app/file-apps.png)
 
-1. Select the app that you want to share by clicking or tapping its icon.
+1. Select the app that you want to share by selecting its icon.
 
     ![Select an app](./media/share-app/select-app.png)
 
@@ -75,15 +75,15 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     If you sent an email invitation, everyone with whom you shared the app can run it by selecting a link in the invitation.
 
-    - If a user clicks or taps the link on a mobile device, the app opens in PowerApps Mobile.
+    - If a user selects the link on a mobile device, the app opens in PowerApps Mobile.
     - If a user selects the link on a desktop computer, the app opens in a browser.
 
     Co-owners who receive an invitation get another link that opens the app for editing in PowerApps Studio.
 
 You can change permissions for a user or a security group by selecting their name and then performing either of these steps:
 
-- To allow co-owners to run the app but no longer to edit or share it, clear the **Co-owner** check box.
-- To stop sharing the app with that user or group, click or tap the Remove (x) icon.
+- To allow co-owners to run the app but no longer edit or share it, clear the **Co-owner** check box.
+- To stop sharing the app with that user or group, select the Remove (x) icon.
 
 ## Security-group considerations
 
@@ -94,7 +94,7 @@ You can change permissions for a user or a security group by selecting their nam
 
 ### Common Data Service for Apps
 
-If you create an app based on Common Data Service for Apps, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
+If you create an app based on CDS for Apps, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
 
 > [!NOTE]
 > As of this writing, you can assign security roles to individual users but not to security groups.
@@ -141,4 +141,4 @@ To perform the next two procedures, you must have **System administrator** permi
 
 ### Common Data Service (previous version)
 
-When you share an app that's based on an older version of the Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
+When you share an app that's based on an older version of CDS, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
