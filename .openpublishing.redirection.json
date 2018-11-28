@@ -1,6 +1,21 @@
 {
     "redirections": [
         {
+        "source_path": "powerapps-docs/common-data-model/overview.md",    
+        "redirect_url": "https://docs.microsoft.com/common-data-model/",
+        "redirect_document_id": true
+        },
+	{
+	"source_path": "powerapps-docs/common-data-model/use-common-data-model.md",    
+	"redirect_url": "https://docs.microsoft.com/common-data-model/use",
+	"redirect_document_id": true
+	},
+	{
+	"source_path": "powerapps-docs/common-data-model/industry-accelerators.md",    
+	"redirect_url": "https://docs.microsoft.com/common-data-model/industry-accelerators",
+	"redirect_document_id": true
+	},
+        {
         "source_path": "powerapps-docs/guided-learning/create-app-sharepoint.md",
         "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
         "redirect_document_id": true
@@ -962,7 +977,7 @@
         },
         {
         "source_path": "powerapps-docs/getting-started.md",
-        "redirect_url": "/powerapps/maker/canvas-apps/getting-started",
+        "redirect_url": "/powerapps/index",
         "redirect_document_id": true
         },
         {

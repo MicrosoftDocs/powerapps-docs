@@ -21,7 +21,7 @@ search.app:
 > **Announcing the release notes**
 >
 > Wondering about upcoming and recently released capabilities in PowerApps?
->[View the release notes](https://docs.microsoft.com/business-applications-release-notes/april18/powerapps/overview). We've captured all the details, end to end, top to bottom, which you can use for planning.
+>[View the release notes](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/). We've captured all the details, end to end, top to bottom, which you can use for planning.
 
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
