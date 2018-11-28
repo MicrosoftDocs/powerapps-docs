@@ -20,10 +20,14 @@ This article lists some common issues that you might encounter while using Power
 
 ## Added after February 2018
 
-1. **Scrolling in flexible-height galleries** (Nov. 9, 2018)
+1. **Scrolling in flexible-height galleries** (Nov. 27, 2018)
 
-    On some devices, users might run into a limitation when they scroll with their fingers. Users can resolve the limitation by lifting their fingers from the screen and starting to scroll again.
-    
+    If you run into a limitation when you scroll with your finger, lift it and start to scroll again.
+
+1. **Drawing with mouse or touch input is not smooth in PowerApps for Windows** (Sep. 24, 2018)
+
+    The pen control only has partial support for drawing using mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
+
 1. **Multiple media controls in PowerApps Mobile** (Aug. 2, 2018)
 
     PowerApps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
