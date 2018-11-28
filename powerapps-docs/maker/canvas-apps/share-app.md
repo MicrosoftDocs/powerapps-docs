@@ -101,7 +101,7 @@ If you create an app based on CDS for Apps, you must also ensure that the users 
 
 #### Prerequisite
 
-To perform the next two procedures, you must have **System administrator** permissions for a Common Data Service for Apps database.
+To perform the next two procedures, you must have **System administrator** permissions for a CDS for Apps database.
 
 #### Create a security role
 
