@@ -32,6 +32,20 @@ When you share an app that contains Power BI content, you must share not only th
 
 It's not recommended to have more than three Power BI tiles loaded at the same time within an app. You can control tile loading and unloading by setting the **LoadPowerBIContent** property.
 
+## Pass a parameter
+
+By passing a single parameter from the app, you can filter the results that appear in a Power BI tile. However, only string values and the equals operator are supported, and the filter might not work if the table name or the column name contains spaces.
+
+To pass a single filter value, modify the value of the **TileURL** property, which follows this syntax:
+
+```"https://msit.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>" ```
+
+To that value, append this syntax:
+
+```&$filter=<TableName>/<ColumnName> eq "<Value>" ```
+
+The parameter will filter a value in the dataset of the report where the tile originates.
+
 ## Key properties
 
 **Workspace** – The Power BI workspace where the tile comes from.
