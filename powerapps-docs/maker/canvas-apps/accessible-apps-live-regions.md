@@ -1,7 +1,7 @@
 ---
-title: Announce dynamic changes with live regions | Microsoft Docs
+title: Announce dynamic changes with live regions in canvas apps | Microsoft Docs
 description: How to use live regions to notify screen readers of dynamic changes in canvas apps
-author: tahoon
+author: tahoon-ms
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
@@ -12,33 +12,42 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Announce dynamic changes with live regions for canvas apps in PowerApps
-Dynamic changes pose challenges to the visually-impaired. When using a screen reader to access the app, they will be focused on one part of the app. If a change happens elsewhere, they will not be aware of it.
 
-Live regions can solve this problem. These are regions in an app that are tracked by screen readers. When content changes in these regions, screen readers will announce them.
+# Announce dynamic changes with live regions for canvas apps
+
+Dynamic changes pose challenges to the visually-impaired. Users who access an app through a screen reader are focused on one part of the app. If a change happens elsewhere, those users won't be aware of it.
+
+You can solve this problem by adding live regions, which screen readers track. If content changes in a live region, a screen reader will announce that change.
 
 The underlying mechanism for live regions are [aria-live regions](https://www.w3.org/TR/wai-aria-1.1/#dfn-live-region), so the same guidelines apply.
 
 ## Example uses of live regions
-* Notify users about validation errors in a form.
-* Notify users when an action triggered by a button is successful. For example, if selecting a button adds an item to a collection, a live region could show the message "Item added".
-* Notify users when a new tab is selected.
-* Periodically notify users when a background timer refreshes a news feed.
+
+You can use live regions to notify users when events such as these occur:
+
+* A validation error occurs in a form.
+* An action triggered by a button is successful. For example, a user might select a button to add an item to a collection, and a live region could show the message "Item added".
+* The user selected a different tab.
+* A background timer refreshes a news feed.
 
 ## Create and configure a live region
-Only the **[Label](controls/control-text-box.md)** control can be configured as a live region. Its **Live** property determines what type of live region it is.
-* **Off**: Not a live region. Changes are not announced to screen readers.
-* **Polite**: Dynamic changes are announced when the screen reader has finished speaking. Used for non-critical notifications that do not require immediate attention.
-* **Assertive**: Dynamic changes are immediately announced, interrupting any current utterances by the screen reader. Use this for critical notifications that require immediate attention.
 
-Screen readers will announce the entire text content of a live region when it changes, not just the changed portion. If **[Text](controls/properties-core.md)** is set to the empty string **""**, then nothing will be announced.
+You can configure only a **[Label](controls/control-text-box.md)** control as a live region. Its **Live** property determines what type of live region it is.
 
-To repeat a message, clear text contents by setting **[Text](controls/properties-core.md)** to the empty string **""**, then set it to the message again.
+* **Off**: Not a live region. Screen readers don't announce changes.
+* **Polite**: Screen readers announce changes after finishing speaking. Use this value for non-critical notifications that don't require immediate attention.
+* **Assertive**: Screen readers interrupt themselves to announce changes immediately. Use this for critical notifications that require immediate attention.
+
+If the text content of a live region changes, screen readers will announce the entire text content, not just the changed portion. If the value of the **[Text](controls/properties-core.md)** property is set to the empty string **""**, the screen reader doesn't announce anything.
+
+To repeat a message, clear text contents by setting the value of the **[Text](controls/properties-core.md)** property to the empty string **""** and then set the value to the message again.
 
 ## Best practices
-* Always set **[Visible](controls/properties-core.md)** to true. Some screen readers do not detect live regions if they disappear and appear again.
-* Avoid changing the value of **[Live](controls/properties-accessibility.md)**. Some screen readers do not detect when a non-live region becomes live and vice-versa.
-* Position the live region in a logical position in the app, even if it is not visible visually. Ensure that its contents are sensible in context with the elements before and after it. Live regions are accessible anytime through regular navigation with a screen reader, not just when changes happen.
+
+* Always set **[Visible](controls/properties-core.md)** to true. Some screen readers don't detect live regions that disappear and reappear.
+* Avoid changing the value of **[Live](controls/properties-accessibility.md)**. Some screen readers don't detect when a non-live region becomes live and vice-versa.
+* Position the live region in a logical position in the app, even if it isn't visible. Ensure that its contents are sensible in context with the elements before and after it. Users can access a live region anytime through regular navigation with a screen reader, not just when changes happen.
 
 ## Next steps
-Learn how to [show content to screen readers only](accessible-apps-content-visibility.md) if the live region should be hidden from sighted users.
+
+Learn how to [show content only to screen readers](accessible-apps-content-visibility.md) if the live region should be hidden from sighted users.

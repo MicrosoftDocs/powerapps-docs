@@ -1,6 +1,6 @@
 ---
-title: Accessibility properties | Microsoft Docs
-description: Reference information about properties such as TabIndex, Tooltip
+title: Accessibility properties for canvas apps | Microsoft Docs
+description: Reference information about properties such as TabIndex and Tooltip
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -14,16 +14,19 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Accessibility properties in PowerApps
+# Accessibility properties for canvas apps
+
 Configuration of properties that aid alternative ways of interacting with controls suitable for users with disabilities.
 
-### Properties
+## Properties
+
 **AccessibleLabel** – Label for screen readers. An empty value for Image, Icon and Shape controls will make the controls invisible to the screen reader and treated as decorations.
 
-**Live** – How changes to content should be announced to screen readers. Only available in **[Label](control-text-box.md)** control.
-* When set to **Off**, changes are not announced to screen readers.
-* When set to **Polite**, dynamic changes are announced when the screen reader has finished speaking.
-* When set to **Assertive**, dynamic changes are immediately announced, interrupting any current utterances of the screen reader.
+**Live** – How screen readers should announce changes to content. Available only in the **[Label](control-text-box.md)** control.
+
+* When set to **Off**, the screen reader doesn't announce changes.
+* When set to **Polite**, the screen reader finishes speaking before announcing any changes that occurred while the screen reader was speaking.
+* When set to **Assertive**, the screen reader interrupts itself to announce any changes that occurred while the screen reader was speaking.
 
 Learn how to [announce dynamic changes with live regions](../accessible-apps-live-regions.md).
 
