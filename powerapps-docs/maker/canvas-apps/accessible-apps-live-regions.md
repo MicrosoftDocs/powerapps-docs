@@ -12,6 +12,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
+
 # Announce dynamic changes with live regions for canvas apps
 
 Dynamic changes pose challenges to the visually-impaired. Users who access an app through a screen reader are focused on one part of the app. If a change happens elsewhere, those users won't be aware of it.

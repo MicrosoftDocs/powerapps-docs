@@ -1012,13 +1012,6 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
-- name: Common Data Model
-  href: ../common-data-model/overview.md
-  items:
-  - name: How to use the Common Data Model
-    href: ../common-data-model/use-common-data-model.md
-  - name: Industry accelerators
-    href: ../common-data-model/industry-accelerators.md
 - name: Learn from others
   items:
   - name: Webinars

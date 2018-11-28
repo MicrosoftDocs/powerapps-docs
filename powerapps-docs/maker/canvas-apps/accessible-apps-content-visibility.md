@@ -12,6 +12,7 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
+
 # Show or hide content from assistive technologies for canvas apps
 
 In most cases, all users should be able to access all content, but you might occasionally want to show content only to sighted users or only to screen-reader users. For example, you might want only screen-reader users to access descriptions of chart trends that are obvious to sighted users. You might also want to hide an icon from screen-reader users if an adjacent label describes it. Another description on the icon would be unnecessarily verbose.

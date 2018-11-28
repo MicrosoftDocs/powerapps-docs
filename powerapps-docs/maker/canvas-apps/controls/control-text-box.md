@@ -172,7 +172,7 @@ There must be adequate color contrast between:
 * **[Text](properties-core.md)** must be present.
 * **[Live](properties-accessibility.md)** should be set to **Polite** or **Assertive** if a screen reader should announce changes to the value of the **Text** property.
 
-    > [!NOTE]
+  > [!NOTE]
   > Screen readers will treat **Label**s as buttons when **[TabIndex](properties-accessibility.md)** is zero or greater.
 
 ### Low vision support

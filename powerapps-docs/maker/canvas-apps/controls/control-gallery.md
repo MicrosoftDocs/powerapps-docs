@@ -127,6 +127,10 @@ If clicking anywhere in a gallery item is meant to select it, there must be adeq
 
 * Set the value of **Selectable** to **true** if you want users to select a gallery item. Otherwise, set that value to **false**.
 
+* When a gallery item contains multiple controls, use **ItemAccessibleLabel** to provide a summary of the gallery item's contents.
+
+* **Selectable** should be set appropriately, depending on whether users are meant to select a gallery item.
+
 ### Keyboard support
 
 * Consider setting **ShowScrollbar** to **true**. On most touch screen devices, the scrollbar will not show until scrolling begins.
