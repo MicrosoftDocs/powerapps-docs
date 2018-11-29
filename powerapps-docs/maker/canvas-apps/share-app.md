@@ -61,7 +61,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. If your app connects to data for which users need access permissions, specify them.
 
-    For example, your app might connect to an entity in a Common Data Service (CDS) for Apps database. When you share such an app, the sharing panel prompts you to manage security for that entity.
+    For example, your app might connect to an entity in a CDS for Apps database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
     ![Set permissions](./media/share-app/set-permissions.png)
 
@@ -141,4 +141,4 @@ To perform the next two procedures, you must have **System administrator** permi
 
 ### Common Data Service (previous version)
 
-When you share an app that's based on an older version of CDS, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
+When you share an app that's based on an older version of Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
