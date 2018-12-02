@@ -185,7 +185,7 @@ The user types **Hello world** into **TextInput1**.
 | **Match( "PT2H1M39S",<br>"PT(?&lt;hours&gt;\d+H)?<br>(?&lt;minutes&gt;\d+M)?<br>(?&lt;seconds&gt;\d+S)?" )** | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} 
 | **Match( Language(),<br>"(?&lt;language&gt;\w{2})<br>(?:-(?&lt;script&gt;\w{4}))?<br>(?:-(?&lt;region&gt;\w{2}))?" )** | Extracts the language, script, and region portions of the language tag returned by the **[Language](function-language.md)** function.  Results shown here are when run in the United States, see the [**Language** function documentation](function-language.md) for more examples.  The **(?:** operator is used to group characters without creating an additional sub-match. | {<br>language: "en",<br>script: "", <br>region: "US",<br>FullMatch: "en-US", <br>SubMatches: [ "en", "", "US" ], <br>StartMatch: 1<br>} |
 
-For the following examples, insert a button control on the screen with **OnSelect** property equal to:
+For the following examples, insert a [Button](../controls/control-button.md) control on the screen and set the **OnSelect** property to:
 
 - **Set( pangram, "The quick brown fox jumps over the lazy dog." )** 
  
@@ -201,7 +201,7 @@ and press the button.
 
 To see the results of **MatchAll** in a gallery:
 
-1. Create a new screen and insert a Gallery control.
+1. Create a new screen and insert a **[Gallery](../controls/control-gallery.md)** control.
 
 2. Set the Gallery's **Items** property to **MatchAll( pangram, "\w+" )**.  You could also use **MatchAll( pangram, MultipleLetters )**.
 
