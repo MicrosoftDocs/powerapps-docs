@@ -59,15 +59,12 @@ If you pass a single string, the return value is the modified string.  If you pa
 |---------|-------------|--------|
 | **Replace( "abcdefghijk", 6, 5, "*" )** | Replaces five characters in "abcdefghijk" with a single "*" character, starting with the sixth character ("f"). | "abcde*k" |
 | **Replace( "2019", 3, 2, "20" )** | Replaces the last two digits of "2019" with "20". | "2020" |
-| **Replace(<br>"Quarter&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;2,&nbsp;2011",<br>"Quarter&nbsp;4,&nbsp;2019" ],<br>9,  1, "3" )** | Replaces the ninth character in each of the records in the single column table with "3". | [&nbsp;"Quarter&nbsp;3,&nbsp;2018",<br>"Quarter&nbsp;3,&nbsp;2011",<br>"Quarter&nbsp;3,&nbsp;2019"&nbsp;] |
 | **Replace( "123456", 1, 3, "_" )** | Replaces the first three characters of "123456" with a single "_" character. | "_456" | 
-
-| Formula | Description | Result |
-|---------|-------------|--------|
 | **Substitute( "Sales Data", "Sales", "Cost"** | Substitutes the string "Cost" for "Sales". | "Cost Data" | 
 | **Substitute( "Quarter 1, 2018", "1", "2", 1 )** | Substitutes only the first instance of "1" with "2". |  "Quarter 2, 2018" |
 | **Substitute( "Quarter 1, 2011", "1", "2", 3 )** | Substitutes only the third instance of "1" with "2". | "Quarter 1, 2012" |
 | **Substitute( "Quarter 1, 2011", "1", "2" )** | Substitutes all instances of "1" with "2". | "Quarter 2, 2022" |
+| **Replace(<br>"Quarter&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;2,&nbsp;2011",<br>"Quarter&nbsp;4,&nbsp;2019" ],<br>9,  1, "3" )** | Replaces the ninth character in each of the records in the single column table with "3". | [&nbsp;"Quarter&nbsp;3,&nbsp;2018",<br>"Quarter&nbsp;3,&nbsp;2011",<br>"Quarter&nbsp;3,&nbsp;2019"&nbsp;] |
 | **Substitute( <br>[&nbsp;"Qtr&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;1,&nbsp;2011",<br>"Q1,&nbsp;2019"&nbsp;],<br>"1", "3", 1 )** | Substitutes only the first instance of "1" in each of the records in the single column table with "3". | [&nbsp;"Qtr&nbsp;3,&nbsp;2018",<br>"Quarter&nbsp;3,&nbsp;2011",<br>"Q3,&nbsp;2019"&nbsp;] |
   
  
