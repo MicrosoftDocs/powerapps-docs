@@ -150,7 +150,7 @@ The user types **Hello world** into **TextInput1**.
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| <code>IsMatch( TextInput1.Text, "Hello world" )</code> |Tests whether the user's input matches, exactly, the string "Hello world" |**true** |
+| **IsMatch( TextInput1.Text, "Hello world" )** |Tests whether the user's input matches, exactly, the string "Hello world" |**true** |
 | **IsMatch( TextInput1.Text, "Good bye" )** |Tests whether the user's input matches, exactly, the string "Good bye" |**false** |
 | **IsMatch( TextInput1.Text, "hello", Contains )** |Tests whether the user's input contains  the word "hello" (case sensitive). |**false** |
 | **IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )** |Tests whether the user's input contains the word "hello" (case insensitive). |**true** |
@@ -180,7 +180,7 @@ The user types **Hello world** into **TextInput1**.
 
 | Formula | Description | Result |
 |--------|------------|-----------|
-| <code>Match( "Bob Jones &lt;bob.jones@contoso.com&gt;",<br>"&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"</code> | Extracts only the email portion of the contact information.  | {<br>email:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com&gt;",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
+| <code>Match( "Bob Jones <bob.jones@contoso.com>",<br>"&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"</code> | Extracts only the email portion of the contact information.  | {<br>email:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com&gt;",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
 | <code>Match( "Bob Jones &lt;InvalidEmailAddress&gt;",<br>"&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"</code> | Extracts only the email portion of the contact information.  As no legal address is found (there is no @ sign) the function returns *blank* | *blank* |  
 | <code>Match( Language(),<br>"(?&lt;language&gt;\w{2})<br>(?:-(?&lt;script&gt;\w{4}))?<br>(?:-(?&lt;region&gt;\w{2}))?" )</code> | Extracts the language, script, and region portions of the language tag returned by the **[Language](function-language.md)** function.  Results shown here are when run in the United States, see the [**Language** function documentation](function-language.md) for more examples.  The **(?:** operator is used to group characters without creating an additional sub-match. | {<br>language: "en",<br>script: "", <br>region: "US",<br>FullMatch: "en-US", <br>SubMatches: [ "en", "", "US" ], <br>StartMatch: 1<br>} 
 | <code>Match( "PT2H1M39S",<br>"PT(?:(?&lt;hours&gt;\d+)H)?<br>(?:(?&lt;minutes&gt;\d+)M)?<br>(?:(?&lt;seconds&gt;\d+)S)?" )</code> | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
@@ -208,7 +208,7 @@ and press the button.
 | <code>MatchAll( pangram, "the" )</code> | Find all matches of "the" in the text string **pangram**.  As the test is case sensitive, only the second instance of "the" is found. The SubMatches column is empty since there were no sub-matches defined.  | ![](media/function-ismatch/pangram-the-one.png) |
 | <code>MatchAll( pangram, "the", IgnoreCase )</code> | Find all matches of "the" in the text string **pangram**.  In this case the test is case insensitive resulting in both instances of the word being found. The SubMatches column is empty since there were no sub-matches defined.  | ![](media/function-ismatch/pangram-the-two.png) |
 | <code>MatchAll( pangram, "\b\wo\w\b" )</code> | Finds all three letter words with an "o" in the middle. Note that "brown" is excluded because it fails to match "\b" (word boundary) as it is not a three letter word.  | ![](media/function-ismatch/pangram-fox-dog.png) |
-| <code>Match( pangram, "\b\wo\w\b\s\*<br>(?&lt;between&gt;\w.+\w)\s\*\b\wo\w\b" )</code> | Matches all the characters between "fox" and "dog". | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
+| <code>Match( pangram,<br>"\b\wo\w\b\s\*<br>(?<between>w.+\w)<br>\s\*\b\wo\w\b" )</code> | Matches all the characters between "fox" and "dog". | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
 
 To see the results of **MatchAll** in a gallery:
 
