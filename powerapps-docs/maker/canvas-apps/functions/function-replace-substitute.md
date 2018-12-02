@@ -59,8 +59,8 @@ If you pass a single string, the return value is the modified string.  If you pa
 |---------|-------------|--------|
 | **Replace( "abcdefghijk", 6, 5, "*" )** | Replaces five characters in "abcdefghijk" with a single "*" character, starting with the sixth character ("f"). | "abcde*k" |
 | **Replace( "2019", 3, 2, "20" )** | Replaces the last two digits of "2019" with "20". | "2020" |
-| **Replace( "123456", 1, 3, "@" )** | Replaces the first three characters of 123456 with a single "@" character. | "@456" |
-| **Replace(<br>"Quarter&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;2,&nbsp;2011",<br>"Quarter&nbsp;4,&nbsp;2019" ],<br>9,  1, "3" )** | Replaces the ninth character in each of the records in the single column table with "3". | [&nbsp;"Quarter&nbsp;3,&nbsp;2018",<br>"Quarter&nbsp;3,&nbsp;2011",<br>"Quarter&nbsp;3,&nbsp;2019"&nbsp;] | 
+| **Replace(<br>"Quarter&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;2,&nbsp;2011",<br>"Quarter&nbsp;4,&nbsp;2019" ],<br>9,  1, "3" )** | Replaces the ninth character in each of the records in the single column table with "3". | [&nbsp;"Quarter&nbsp;3,&nbsp;2018",<br>"Quarter&nbsp;3,&nbsp;2011",<br>"Quarter&nbsp;3,&nbsp;2019"&nbsp;] |
+| **Replace( "123456", 1, 3, "_" )** | Replaces the first three characters of "123456" with a single "_" character. | "_456" | 
 
 | Formula | Description | Result |
 |---------|-------------|--------|
