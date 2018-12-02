@@ -28,10 +28,10 @@ Use **Match** to extract the first text string that matches a pattern and **Matc
 
 | Column | Type | Description |
 |----|----|----|
-| **FullMatch** | Text | The text that was matched. |
-| **StartMatch** | Number | The starting position of the match within the input string.  The first character of the string returns 1. | 
-| **SubMatches** | Single column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order they appear in the regular expression. Use the [**ForAll**](function-forall.md) function or **[Last](function-first-last.md)( [FirstN](function-first-last.md)( **...** ) )** functions to work with an individual sub-match. If there are no sub-matches defined in the regular expression this table will still be present but will be empty. |
 | *named sub&#8209;match(es)* | Text | Each named sub-match will have its own column. Named sub-matches are created with **(?&lt;*name*&gt;**...**)** in the regular expression.  If a named sub-match has the same name as one of the above columns then the sub-match will take precedence and a warning will be generated; rename the sub-match to avoid this warning. |
+| **FullMatch** | Text | All of the text string that was matched. |
+| **StartMatch** | Number | The starting position of the match within the input text string.  The first character of the string returns 1. | 
+| **SubMatches** | Single column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order they appear in the regular expression. Generally, named sub-matches are easier to work with and are encouraged.  Use the [**ForAll**](function-forall.md) function or **[Last](function-first-last.md)( [FirstN](function-first-last.md)( **...** ) )** functions to work with an individual sub-match.  If there are no sub-matches defined in the regular expression this table will still be present but will be empty. |
 
 These functions support [**MatchOptions**](match-options).  By default: 
 - These functions perform a case-sensitive match.  Use **IgnoreCase** to perform case-insensitive matches.    
@@ -53,7 +53,7 @@ Combine these elements by using the [string concatenation operator **&**](operat
 ### Ordinary characters
 The simplest pattern is a sequence of ordinary characters to be matched exactly.
 
-For example, the string "Hello" matches the pattern **"Hello"** exactly. No more and no less. The string "hello!" doesn't match the pattern because of the exclamation point on the end and the case is wrong for the letter "h". (See [MatchOptions](#match-options) for ways to modify this behavior.)
+For example, when used with the **IsMatch** function, the string "Hello" matches the pattern **"Hello"** exactly. No more and no less. The string "hello!" doesn't match the pattern because of the exclamation point on the end and the case is wrong for the letter "h". (See [MatchOptions](#match-options) for ways to modify this behavior.)
 
 In the pattern language, certain characters are reserved for special purposes. To use these characters, either prefix the character with a **\\** (backslash) to indicate that the character should be taken literally or use one of the predefined patterns described below. This table lists the special characters:
 
@@ -90,10 +90,10 @@ Predefined patterns provide a simple way to match one of a set of characters, or
 | **MultipleNonSpaces** |Matches one or more characters that don't add whitespace (space, tab, newline). |**\\S+** |
 | **MultipleSpaces** |Matches one or more characters that add whitespace (space, tab, newline). |**\\s+** |
 | **NonSpace** |Matches a single character that doesn't add whitespace. |**\\S** |
-| **OptionalDigits** |Matches zero, one, or more digits. |**\\d** |
-| **OptionalLetters** |Matches zero, one, or more letters. |**\\p{L}** |
-| **OptionalNonSpaces** |Matches zero, one, or more characters that don't add whitespace. |**\\S** |
-| **OptionalSpaces** |Matches zero, one, or more characters that add whitespace. |**\\s** |
+| **OptionalDigits** |Matches zero, one, or more digits. |**\\d\*** |
+| **OptionalLetters** |Matches zero, one, or more letters. |**\\p{L}\*** |
+| **OptionalNonSpaces** |Matches zero, one, or more characters that don't add whitespace. |**\\S\*** |
+| **OptionalSpaces** |Matches zero, one, or more characters that add whitespace. |**\\s\*** |
 | **Period** |Matches a period or dot ("."). |**\\.** |
 | **RightParen** |Matches a right parenthesis ")". |**\\)** |
 | **Space** |Matches a character that adds whitespace. |**\\s** |
@@ -182,8 +182,19 @@ The user types **Hello world** into **TextInput1**.
 |--------|------------|-----------|
 | **Match( "Bob Jones &lt;bob.jones@contoso.com&gt;",<br>"&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  | {<br>email:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com&gt;",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
 | **Match( "Bob Jones &lt;InvalidEmailAddress&gt;",<br>"&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  As no legal address is found (there is no @ sign) the function returns *blank* | *blank* |  
-| **Match( "PT2H1M39S",<br>"PT(?&lt;hours&gt;\d+H)?<br>(?&lt;minutes&gt;\d+M)?<br>(?&lt;seconds&gt;\d+S)?" )** | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} 
-| **Match( Language(),<br>"(?&lt;language&gt;\w{2})<br>(?:-(?&lt;script&gt;\w{4}))?<br>(?:-(?&lt;region&gt;\w{2}))?" )** | Extracts the language, script, and region portions of the language tag returned by the **[Language](function-language.md)** function.  Results shown here are when run in the United States, see the [**Language** function documentation](function-language.md) for more examples.  The **(?:** operator is used to group characters without creating an additional sub-match. | {<br>language: "en",<br>script: "", <br>region: "US",<br>FullMatch: "en-US", <br>SubMatches: [ "en", "", "US" ], <br>StartMatch: 1<br>} |
+| **Match( Language(),<br>"(?&lt;language&gt;\w{2})<br>(?:-(?&lt;script&gt;\w{4}))?<br>(?:-(?&lt;region&gt;\w{2}))?" )** | Extracts the language, script, and region portions of the language tag returned by the **[Language](function-language.md)** function.  Results shown here are when run in the United States, see the [**Language** function documentation](function-language.md) for more examples.  The **(?:** operator is used to group characters without creating an additional sub-match. | {<br>language: "en",<br>script: "", <br>region: "US",<br>FullMatch: "en-US", <br>SubMatches: [ "en", "", "US" ], <br>StartMatch: 1<br>} 
+| **Match( "PT2H1M39S",<br>"PT(?:(?&lt;hours&gt;\d+)H)?<br>(?:(?&lt;minutes&gt;\d+)M)?<br>(?:(?&lt;seconds&gt;\d+)S)?" )** | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
+
+Let's drill into that last example.  If we wanted to convert this string to a Date/Time value using the **[Time](function-date-time.md)** function we need to pass in the named sub-matches individually.  To do this we can use the **[ForAll](function-forall.md)** function operating on the first record returned from **MatchAll**:
+
+```
+First( 
+	ForAll( 
+		MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ), 
+		Time( Value( hours ), Value( minutes ), Value( seconds ) )
+	)
+).Value
+```
 
 For the following examples, insert a [Button](../controls/control-button.md) control on the screen and set the **OnSelect** property to:
 
