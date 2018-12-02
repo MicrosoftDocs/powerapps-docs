@@ -24,19 +24,22 @@ Use **IsMatch** to validate what a user has typed in a **[Text input](../control
 
 Use **Match** to extract the portion of a text string that matches a pattern; **MatchAll** to extract all portions that match.  Sub-matches can also be extracted to parse complex strings into a set of result values with one function call.   
 
-**Match** returns a record of information for the first match found while **MatchAll** returns a table of records for every match found.  This record contains predefined columns and named sub-matches.  The predefined columns are:
+**Match** returns a record of information for the first match found and **MatchAll** returns a table of records for every match found.  This record contains the following columns:
 
 | Column | Type | Description |
 |----|----|----|
 | **FullMatch** | Text | The text that was matched. |
 | **StartMatch** | Number | The starting position of the match within the input string.  The first character of the string returns 1. | 
 | **SubMatches** | Single column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order they appear in the regular expression. Use the [**ForAll**](function-forall.md) function or **[Last](function-first-last.md)( [FirstN](function-first-last.md)( **...** ) )** functions to work with an individual sub-match. |
+| *named sub-match(es)* | Text | Each named sub-match will have its own column. Named sub-matches are created with **(?&lt;*name*&gt;**...**)** in the regular expression.  If a named sub-match has the same name as one of the above columns then the sub-match will take precedence and a warning will be generated; rename the sub-match to avoid this warning. |
 
-Named sub-matches are created with **(?&lt;*name*&gt;**...**)** in the regular expression.  For each named sub-match, the column **name** will be provided in the result of **Match** and **MatchAll**.  If a named sub-match has the same name as a predefined column then the sub-match will take precedence and a warning will be generated.  Rename the sub-match to a different name to remove this warning. 
-
-By default, these functions perform a case-sensitive match.  By default, **IsMatch** will match the entire text string while **Match** and **MatchAll** will search for a match anywhere in the text string. You can modify this behavior by specifying one or more [**MatchOptions**](#match-options).
+These functions support [**MatchOptions**](match-options).  By default: 
+- These functions perform a case-sensitive match.  Use **IgnoreCase** to perform case-insensitive matches.    
+- **IsMatch** will match the entire text string (**Complete** MatchOption) while **Match** and **MatchAll** will search for a match anywhere in the text string (**Contains** MatchOption). 
 
 **IsMatch** returns *true* if the text string matches the pattern or *false* if it doesn't.  **Match** returns *blank* if no match is found that can be tested with the **IsBlank** function.  **MatchAll** returns an empty table if no match is found that can be tests with the **IsEmpty** function.
+
+If you are using **MatchAll** to split a text string, consider using the **[Split](function-split.md)** function instead which is simpler to use and faster.
 
 ## Patterns
 The key to using these functions is in describing the pattern to match. You describe the pattern in a text string as a combination of:
@@ -107,9 +110,7 @@ Regular expressions have different dialects, and PowerApps uses a variant of the
 In the **Match** enum table above, each enum expands into a regular expression, and the text string in the "Regular Expression" column defines that expression.
 
 ## Match options
-You can modify the behavior of **IsMatch** by specifying one or more options, which you can combine by using the string concatenation operator (**&amp;**).  
-
-By default, **IsMatch** tests for a complete match of the entire text string while **Match** and **MatchAll** look for a match anywhere in the text string.
+You can modify the behavior of these functions by specifying one or more options, which you can combine by using the string concatenation operator (**&amp;**).  
 
 | MatchOptions Enum | Description | Impact on regular expression |
 | --- | --- | --- |
@@ -117,8 +118,10 @@ By default, **IsMatch** tests for a complete match of the entire text string whi
 | **Complete** |Default for **IsMatch**.  The pattern must match the entire text, from beginning to end. |Adds a **^** to the start and **$** to the end of the regular expression. |
 | **Contains** |Default for **Match** and **IsMatch**.  The pattern must appear somewhere in the text but doesn't need to begin or end it. |Doesn't modify the regular expression. |
 | **EndsWith** |The pattern must match the end of the text. |Adds a **$** to the end of the regular expression. |
-| **IgnoreCase** |Treats the matching of letters in a case-insensitive manner. By default, matching is case sensitive. |Doesn't modify the regular expression. |
-| **Multiline** |Matches across multiple lines. |Doesn't modify the regular expression. |
+| **IgnoreCase** |Treats the matching of letters in a case-insensitive manner. By default, matching is case sensitive. |Doesn't modify the regular expression. This is the equivalent of the standard regular expression "i" modifier.  |
+| **Multiline** |Matches across multiple lines. |Doesn't modify the regular expression. This is the equivalent of the standard regular expression "m" modifier. |
+
+Using **MatchAll** is the equivalent of using the standard regular expression "g" modifier with **Match**.
 
 ## Syntax
 **IsMatch**( *Text*, *Pattern* [, *Options* ] )
@@ -177,16 +180,36 @@ The user types **Hello world** into **TextInput1**.
 
 | Formula | Description | Result |
 |--------|------------|-----------|
-| **Match( "Bob Jones &lt;bob.jones@contoso.com&gt;", "&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  | {<br>email: "bob.jones@contoso.com",<br>FullMatch: "&lt;bob.jones@contoso.com&gt;",<br>SubMatches: [ "bob.jones@contoso.com" ],<br>StartMatch: 11<br>}  
+| **Match( "Bob Jones &lt;bob.jones@contoso.com&gt;", "&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  | {<br>email:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com&gt;",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
 | **Match( "Bob Jones &lt;InvalidEmailAddress&gt;", "&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  As no legal address is found (there is no @ sign) the function returns *blank* | *blank* |  
 | **Match( "PT2H1M39S", "PT(?&lt;hours&gt;\d+H)?<br>(?&lt;minutes&gt;\d+M)?<br>(?&lt;seconds&gt;\d+S)?" )** | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
 
-For the following examples, insert a button control on the screen with **OnSelect** property equal to **Set( pangram, "The quick brown fox jumps over the lazy dog." )** and press the button.
+For the following examples, insert a button control on the screen with **OnSelect** property equal to:
+
+- **Set( pangram, "The quick brown fox jumps over the lazy dog." )** 
+ 
+and press the button.
 
 | Formula | Description | Result |
 |---------|-------------|--------|
-| **Match( pangram, "THE", IgnoreCase )** | Find all matches of "THE" in the text string **pangram**.  There are two possible matches, but only the first will be returned as we are using **Match** and not **MatchAll**. The SubMatches column is empty since there were no sub-matches defined.  | {<br>FullMatch: "The",<br>SubMatches: [],<br>StartMatch: 32<br>} |
-| **MatchAll( pangram, "the" )** | Find all matches of "the" in the text string **pangram**.  As the test is case sensitive, only the second instance of "the" is found. The SubMatches column is empty since there were no sub-matches defined.  | [ { FullMatch: "the", SubMatches: [], StartMatch: 32 } ] |
-| **MatchAll( pangram, "the", IgnoreCase )** | Find all matches of "the" in the text string **pangram**.  In this case the test is case insensitive resulting in both instances of the word being found. The SubMatches column is empty since there were no sub-matches defined.  | [ { Match: "The", SubMatches: [], StartMatch: 1 },<br>{ FullMatch: "the", SubMatches: [], StartMatch: 32 } ] |
-| **MatchAll( pangram, "\b\wo\w\b" )** | Finds all three letter words with an "o" in the middle. Note that "brown" is excluded because it fails to match "\b" (word boundary) as it is not a three letter word.  | [ { Match: "fox", SubMatches: [], StartMatch: 17 },<br>{ Match: "dog", SubMatches: [], StartMatch: 41 } ] |
-| **Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )** | Matches all the characters between "fox" and "dog". | {<br>between: "jumps over the lazy",<br>FullMatch: "fox jumps over the lazy dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
+| **Match( pangram, "THE", IgnoreCase )** | Find all matches of "THE" in the text string **pangram**.  There are two possible matches, but only the first will be returned as we are using **Match** and not **MatchAll**. The SubMatches column is empty since there were no sub-matches defined.  | {<br>FullMatch: "The",<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
+| **MatchAll( pangram, "the" )** | Find all matches of "the" in the text string **pangram**.  As the test is case sensitive, only the second instance of "the" is found. The SubMatches column is empty since there were no sub-matches defined.  | ![](media/function-ismatch/pangram-the-one.png) |
+| **MatchAll( pangram, "the", IgnoreCase )** | Find all matches of "the" in the text string **pangram**.  In this case the test is case insensitive resulting in both instances of the word being found. The SubMatches column is empty since there were no sub-matches defined.  | ![](media/function-ismatch/pangram-the-two.png) |
+| **MatchAll( pangram, "\b\wo\w\b" )** | Finds all three letter words with an "o" in the middle. Note that "brown" is excluded because it fails to match "\b" (word boundary) as it is not a three letter word.  | ![](media/function-ismatch/pangram-fox-dog.png) |
+| **Match( pangram, "\b\wo\w\b\s\*(?&lt;between&gt;\w.+\w)\s\*\b\wo\w\b" )** | Matches all the characters between "fox" and "dog". | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
+
+To see the results of **MatchAll** in a gallery:
+
+1. Create a new screen and insert a Gallery control.
+
+2. Set the Gallery's **Items** property to **MatchAll( pangram, "(?&lt;word&gt;\w+)" )**
+
+	![](media/function-ismatch/pangram-gallery1.png)
+
+3. Insert a Label control.
+
+4. Set the Label control's **Text** property to **ThisItem.word**.  This column matches the named sub-match defined in the regular expression.
+ 
+5. Your gallery will be filled with each word in our example text.
+
+	![](media/function-ismatch/pangram-gallery2.png)
