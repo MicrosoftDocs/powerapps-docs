@@ -61,12 +61,12 @@ If you pass a single string, the return value is the modified string.  If you pa
 | **Replace(&nbsp;"2019",&nbsp;3,&nbsp;2,&nbsp;"20"&nbsp;)** | Replaces the last two characters of "2019" with "20". | "2020" |
 | **Replace(&nbsp;"123456",&nbsp;1,&nbsp;3,&nbsp;"_"&nbsp;)** | Replaces the first three characters of "123456" with a single "_" character. | "_456" | 
 | **Substitute(&nbsp;"Sales&nbsp;Data",&nbsp;"Sales",&nbsp;"Cost"&nbsp;)** | Substitutes the string "Cost" for "Sales". | "Cost Data" | 
-| **Substitute( "Quarter&nbsp;1,&nbsp;2018", "1", "2", 1 )** | Substitutes only the first instance of "1" with "2". |  "Quarter 2, 2018" |
-| **Substitute( "Quarter&nbsp;1,&nbsp;2011", "1", "2", 3 )** | Substitutes only the third instance of "1" with "2". | "Quarter 1, 2012" |
-| **Substitute( "Quarter&nbsp;1,&nbsp;2011", "1", "2" )** | Substitutes all instances of "1" with "2". | "Quarter 2, 2022" |
+| **Substitute( "Quarter&nbsp;1,&nbsp;2018", "1", "2", 1 )** | Substitutes only the first instance of "1" with "2" since the fourth *InstanceNumber* argument is provided with a 1. |  "Quarter 2, 2018" |
+| **Substitute( "Quarter&nbsp;1,&nbsp;2011", "1", "2", 3 )** | Substitutes only the third instance of "1" with "2" since the fourth *InstanceNumber* argument is provided with a 3. | "Quarter 1, 2012" |
+| **Substitute( "Quarter&nbsp;1,&nbsp;2011", "1", "2" )** | Substitutes all instances of "1" with "2" since the fourth *InstanceNumber* argument is not provided. | "Quarter 2, 2022" |
 | **Replace(<br>[&nbsp;"Quarter&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;2,&nbsp;2011",<br>"Quarter&nbsp;4,&nbsp;2019" ],<br>9,  1, "3" )** | Replaces the ninth character in each of the records of the single column table with "3". | [&nbsp;"Quarter&nbsp;3,&nbsp;2018",<br>"Quarter&nbsp;3,&nbsp;2011",<br>"Quarter&nbsp;3,&nbsp;2019"&nbsp;] |
-| **Substitute( <br>[&nbsp;"Qtr&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;1,&nbsp;2011",<br>"Q1,&nbsp;2019"&nbsp;],<br>"1", "3", 1 )** | Substitutes only the first instance of "1" in each of the records of the single column table with "3". | [&nbsp;"Qtr&nbsp;3,&nbsp;2018",<br>"Quarter&nbsp;3,&nbsp;2011",<br>"Q3,&nbsp;2019"&nbsp;] |
-  
+| **Substitute( <br>[&nbsp;"Qtr&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;1,&nbsp;2011",<br>"Q1,&nbsp;2019"&nbsp;],<br>"1", "3", 1 )** | Since the fourth *InstanceNumber* argument is provided with a value of 1, substitutes only the first instance of "1" in each of the records of the single column table with "3". | [&nbsp;"Qtr&nbsp;3,&nbsp;2018",<br>"Quarter&nbsp;3,&nbsp;2011",<br>"Q3,&nbsp;2019"&nbsp;] |
+| **Substitute( <br>[&nbsp;"Qtr&nbsp;1,&nbsp;2018",<br>"Quarter&nbsp;1,&nbsp;2011",<br>"Q1,&nbsp;2019"&nbsp;],<br>"1", "3" )** | Since the fourth *InstanceNumber* argument is not provided, substitutes all instances of "1" in each of the records of the single column table with "3". | [&nbsp;"Qtr&nbsp;3,&nbsp;2038",<br>"Quarter&nbsp;3,&nbsp;2033",<br>"Q3,&nbsp;2039"&nbsp;] |  
  
 
 
