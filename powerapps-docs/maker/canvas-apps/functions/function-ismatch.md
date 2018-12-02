@@ -78,25 +78,25 @@ Predefined patterns provide a simple way to match one of a set of characters, or
 
 | Match Enum | Description | Regular Expression |
 | --- | --- | --- |
-| **Any** |Matches any character. |**.** |
-| **Comma** |Matches a comma. |**,** |
-| **Digit** |Matches a single digit ("0" through "9"). |**\\d** |
-| **Email** |Matches an email address that contains an "at" symbol ("\@") and a domain name that contains a dot (".") |**.+\@.+\\.[^\\.]{2,}** |
-| **Hyphen** |Matches a hyphen. |**\\-** |
-| **LeftParen** |Matches a left parenthesis "(". |**\\(** |
-| **Letter** |Matches a letter. |**\\p{L}** |
-| **MultipleDigits** |Matches one or more digitis. |**\\d+** |
-| **MultipleLetters** |Matches one or more letters. |**\\p{L}+** |
-| **MultipleNonSpaces** |Matches one or more characters that don't add whitespace (space, tab, newline). |**\\S+** |
-| **MultipleSpaces** |Matches one or more characters that add whitespace (space, tab, newline). |**\\s+** |
-| **NonSpace** |Matches a single character that doesn't add whitespace. |**\\S** |
-| **OptionalDigits** |Matches zero, one, or more digits. |**\\d\*** |
-| **OptionalLetters** |Matches zero, one, or more letters. |**\\p{L}\*** |
-| **OptionalNonSpaces** |Matches zero, one, or more characters that don't add whitespace. |**\\S\*** |
-| **OptionalSpaces** |Matches zero, one, or more characters that add whitespace. |**\\s\*** |
-| **Period** |Matches a period or dot ("."). |**\\.** |
-| **RightParen** |Matches a right parenthesis ")". |**\\)** |
-| **Space** |Matches a character that adds whitespace. |**\\s** |
+| **Any** |Matches any character. |<code>.</code> |
+| **Comma** |Matches a comma. |<code>,</code> |
+| **Digit** |Matches a single digit ("0" through "9"). |<code>\d</code> |
+| **Email** |Matches an email address that contains an "at" symbol ("\@") and a domain name that contains a dot (".") |<code>.+\@.+\\.[^\\.]{2,}</code> |
+| **Hyphen** |Matches a hyphen. |<code>\-</code> |
+| **LeftParen** |Matches a left parenthesis "(". |<code>\(</code> |
+| **Letter** |Matches a letter. |<code>\p{L}</code> |
+| **MultipleDigits** |Matches one or more digitis. |<code>\d+</code> |
+| **MultipleLetters** |Matches one or more letters. |<code>\p{L}+</code> |
+| **MultipleNonSpaces** |Matches one or more characters that don't add whitespace (space, tab, newline). |<code>\S+</code> |
+| **MultipleSpaces** |Matches one or more characters that add whitespace (space, tab, newline). |<code>\s+</code> |
+| **NonSpace** |Matches a single character that doesn't add whitespace. |<code>\S</code> |
+| **OptionalDigits** |Matches zero, one, or more digits. |<code>\d*</code> |
+| **OptionalLetters** |Matches zero, one, or more letters. |<code>\p{L}*</code> |
+| **OptionalNonSpaces** |Matches zero, one, or more characters that don't add whitespace. |<code>\S*</code> |
+| **OptionalSpaces** |Matches zero, one, or more characters that add whitespace. |<code>\s*</code> |
+| **Period** |Matches a period or dot ("."). |<code>\.</code> |
+| **RightParen** |Matches a right parenthesis ")". |<code>\)</code> |
+| **Space** |Matches a character that adds whitespace. |<code>\s</code> |
 
 For example, the pattern **"A" & MultipleDigits** will match the letter "A" followed by one or more digits.  
 
@@ -127,19 +127,19 @@ Using **MatchAll** is equivalent to using the standard regular expression "g" mo
 **IsMatch**( *Text*, *Pattern* [, *Options* ] )
 
 * *Text* – Required.  The text string to test.
-* *Pattern* – Required.  The pattern to test, as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.
+* *Pattern* – Required.  The pattern to test, as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.  *Pattern* must be a constant formula without variable, data source, or any other dynamic reference that changes as the app executes.
 * *Options* – Optional.  A text string combination of **MatchOptions** enum values.  By default, **MatchOptions.Complete** is used.
 
 **Match**( *Text*, *Pattern* [, *Options* ] )
 
 * *Text* – Required.  The text string to test.
-* *Pattern* – Required.  The pattern to test, as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.
+* *Pattern* – Required.  The pattern to test, as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.  *Pattern* must be a constant formula without variable, data source, or any other dynamic reference that changes as the app executes.
 * *Options* – Optional.  A text string combination of **MatchOptions** enum values.  By default, **MatchOptions.Contains** is used.
 
 **MatchAll**( *Text*, *Pattern* [, *Options* ] )
 
 * *Text* – Required.  The text string to test.
-* *Pattern* – Required.  The pattern to test, as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.
+* *Pattern* – Required.  The pattern to test, as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.  *Pattern* must be a constant formula without variable, data source, or any other dynamic reference that changes as the app executes.
 * *Options* – Optional.  A text string combination of **MatchOptions** enum values.  By default, **MatchOptions.Contains** is used.
 
 ## IsMatch Examples
@@ -150,7 +150,7 @@ The user types **Hello world** into **TextInput1**.
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **IsMatch( TextInput1.Text, "Hello world" )** |Tests whether the user's input matches, exactly, the string "Hello world" |**true** |
+| <code>IsMatch( TextInput1.Text, "Hello world" )</code> |Tests whether the user's input matches, exactly, the string "Hello world" |**true** |
 | **IsMatch( TextInput1.Text, "Good bye" )** |Tests whether the user's input matches, exactly, the string "Good bye" |**false** |
 | **IsMatch( TextInput1.Text, "hello", Contains )** |Tests whether the user's input contains  the word "hello" (case sensitive). |**false** |
 | **IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )** |Tests whether the user's input contains the word "hello" (case insensitive). |**true** |
@@ -183,7 +183,7 @@ The user types **Hello world** into **TextInput1**.
 | **Match( "Bob Jones &lt;bob.jones@contoso.com&gt;",<br>"&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  | {<br>email:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com&gt;",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
 | **Match( "Bob Jones &lt;InvalidEmailAddress&gt;",<br>"&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  As no legal address is found (there is no @ sign) the function returns *blank* | *blank* |  
 | **Match( Language(),<br>"(?&lt;language&gt;\w{2})<br>(?:-(?&lt;script&gt;\w{4}))?<br>(?:-(?&lt;region&gt;\w{2}))?" )** | Extracts the language, script, and region portions of the language tag returned by the **[Language](function-language.md)** function.  Results shown here are when run in the United States, see the [**Language** function documentation](function-language.md) for more examples.  The **(?:** operator is used to group characters without creating an additional sub-match. | {<br>language: "en",<br>script: "", <br>region: "US",<br>FullMatch: "en-US", <br>SubMatches: [ "en", "", "US" ], <br>StartMatch: 1<br>} 
-| **Match( "PT2H1M39S",<br>"PT(?:(?&lt;hours&gt;\d+)H)?<br>(?:(?&lt;minutes&gt;\d+)M)?<br>(?:(?&lt;seconds&gt;\d+)S)?" )** | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
+| <code>Match( "PT2H1M39S",<br>"PT(?:(?&lt;hours&gt;\d+)H)?<br>(?:(?&lt;minutes&gt;\d+)M)?<br>(?:(?&lt;seconds&gt;\d+)S)?" )</code> | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
 
 Let's drill into that last example.  If we wanted to convert this string to a Date/Time value using the **[Time](function-date-time.md)** function we need to pass in the named sub-matches individually.  To do this we can use the **[ForAll](function-forall.md)** function operating on the first record returned from **MatchAll**:
 
