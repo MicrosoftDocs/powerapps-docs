@@ -22,24 +22,24 @@ The **IsMatch** function tests whether a text string matches a pattern that can 
 
 Use **IsMatch** to validate what a user has typed in a **[Text input](../controls/control-text-input.md)** control. For example, you can confirm whether the user has entered a valid email address before the result is saved to your data source. If the entry doesn't match your criteria, add other controls that prompt the user to correct the entry.
 
-Use **Match** to extract the portion of a text string that matches a pattern; **MatchAll** to extract all portions that match.  Sub-matches can also be extracted to parse complex strings into a set of result values with one function call.   
+Use **Match** to extract the first text string that matches a pattern and **MatchAll** to extract all text strings that match.  Sub-matches can also be extracted to parse complex strings.   
 
-**Match** returns a record of information for the first match found and **MatchAll** returns a table of records for every match found.  This record contains the following columns:
+**Match** returns a record of information for the first match found and **MatchAll** returns a table of records for every match found.  This record contains:
 
 | Column | Type | Description |
 |----|----|----|
 | **FullMatch** | Text | The text that was matched. |
 | **StartMatch** | Number | The starting position of the match within the input string.  The first character of the string returns 1. | 
 | **SubMatches** | Single column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order they appear in the regular expression. Use the [**ForAll**](function-forall.md) function or **[Last](function-first-last.md)( [FirstN](function-first-last.md)( **...** ) )** functions to work with an individual sub-match. |
-| *named sub-match(es)* | Text | Each named sub-match will have its own column. Named sub-matches are created with **(?&lt;*name*&gt;**...**)** in the regular expression.  If a named sub-match has the same name as one of the above columns then the sub-match will take precedence and a warning will be generated; rename the sub-match to avoid this warning. |
+| *named sub&#8209;match(es)* | Text | Each named sub-match will have its own column. Named sub-matches are created with **(?&lt;*name*&gt;**...**)** in the regular expression.  If a named sub-match has the same name as one of the above columns then the sub-match will take precedence and a warning will be generated; rename the sub-match to avoid this warning. |
 
 These functions support [**MatchOptions**](match-options).  By default: 
 - These functions perform a case-sensitive match.  Use **IgnoreCase** to perform case-insensitive matches.    
 - **IsMatch** will match the entire text string (**Complete** MatchOption) while **Match** and **MatchAll** will search for a match anywhere in the text string (**Contains** MatchOption). 
 
-**IsMatch** returns *true* if the text string matches the pattern or *false* if it doesn't.  **Match** returns *blank* if no match is found that can be tested with the **IsBlank** function.  **MatchAll** returns an empty table if no match is found that can be tests with the **IsEmpty** function.
+**IsMatch** returns *true* if the text string matches the pattern or *false* if it doesn't.  **Match** returns *blank* if no match is found that can be tested with the [**IsBlank**](function-isblank-isempty.md) function.  **MatchAll** returns an empty table if no match is found that can be tests with the [**IsEmpty**](function-isblank-isempty.md) function.
 
-If you are using **MatchAll** to split a text string, consider using the **[Split](function-split.md)** function instead which is simpler to use and faster.
+If you are using **MatchAll** to split a text string, consider using the **[Split](function-split.md)** function which is simpler to use and faster.
 
 ## Patterns
 The key to using these functions is in describing the pattern to match. You describe the pattern in a text string as a combination of:
@@ -55,7 +55,7 @@ The simplest pattern is a sequence of ordinary characters to be matched exactly.
 
 For example, the string "Hello" matches the pattern **"Hello"** exactly. No more and no less. The string "hello!" doesn't match the pattern because of the exclamation point on the end and the case is wrong for the letter "h". (See [MatchOptions](#match-options) for ways to modify this behavior.)
 
-In the pattern language, certain characters are reserved for special purposes. To use these characters, either prefix the character with a **\\** (backslash) to indicate that the character should be taken literally or use one of the predefined patterns. This table lists the special characters:
+In the pattern language, certain characters are reserved for special purposes. To use these characters, either prefix the character with a **\\** (backslash) to indicate that the character should be taken literally or use one of the predefined patterns described below. This table lists the special characters:
 
 | Special character | Description |
 | --- | --- |
@@ -101,11 +101,11 @@ Predefined patterns provide a simple way to match one of a set of characters, or
 For example, the pattern **"A" & MultipleDigits** will match the letter "A" followed by one or more digits.  
 
 ### Regular expressions
-The pattern used by **IsMatch** is a *regular expression*. The ordinary characters and predefined patterns that are described above help build regular expressions.  
+The pattern used by these functions is a *regular expression*. The ordinary characters and predefined patterns that are described above help build regular expressions.  
 
 Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. This article can't describe all aspects of regular expressions, but a wealth of information and tutorials are published on the web to aid you.  
 
-Regular expressions have different dialects, and PowerApps uses a variant of the JavaScript dialect. For more information, see [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx).  One key addition are named sub-matches expressed with **(?&lt;*name*&gt;** ... **)**. 
+Regular expressions come in different dialects and PowerApps uses a variant of the JavaScript dialect. For more information, see [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx).  One key addition are named sub-matches (sometimes called named capture groups in other languages) expressed with **(?&lt;*name*&gt;** ... **)**. 
 
 In the **Match** enum table above, each enum expands into a regular expression, and the text string in the "Regular Expression" column defines that expression.
 
@@ -121,7 +121,7 @@ You can modify the behavior of these functions by specifying one or more options
 | **IgnoreCase** |Treats the matching of letters in a case-insensitive manner. By default, matching is case sensitive. |Doesn't modify the regular expression. This is the equivalent of the standard regular expression "i" modifier.  |
 | **Multiline** |Matches across multiple lines. |Doesn't modify the regular expression. This is the equivalent of the standard regular expression "m" modifier. |
 
-Using **MatchAll** is the equivalent of using the standard regular expression "g" modifier with **Match**.
+Using **MatchAll** is equivalent to using the standard regular expression "g" modifier.
 
 ## Syntax
 **IsMatch**( *Text*, *Pattern* [, *Options* ] )
@@ -182,7 +182,8 @@ The user types **Hello world** into **TextInput1**.
 |--------|------------|-----------|
 | **Match( "Bob Jones &lt;bob.jones@contoso.com&gt;", "&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  | {<br>email:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com&gt;",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
 | **Match( "Bob Jones &lt;InvalidEmailAddress&gt;", "&lt;(?&lt;email&gt;" & Match.Email & ")&gt;"** | Extracts only the email portion of the contact information.  As no legal address is found (there is no @ sign) the function returns *blank* | *blank* |  
-| **Match( "PT2H1M39S", "PT(?&lt;hours&gt;\d+H)?<br>(?&lt;minutes&gt;\d+M)?<br>(?&lt;seconds&gt;\d+S)?" )** | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
+| **Match( "PT2H1M39S", "PT(?&lt;hours&gt;\d+H)?<br>(?&lt;minutes&gt;\d+M)?<br>(?&lt;seconds&gt;\d+S)?" )** | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} 
+| **Match( Language(), "(?&lt;language&gt;\w{2})(?:-(?&lt;script&gt;\w{4}))?(?:-(?&lt;region&gt;\w{2}))?" )** | Extracts the language, script, and region portions of the language tag returned by the **[Language](function-language.md)** function.  Results shown here are when run in the United States, see the [**Language** function documentation](function-language.md) for more examples.  The **(?:** operator is used to group characters without creating an additional sub-match. | {<br>language: "en",<br>script: "", <br>region: "US",<br>FullMatch: "en-US", <br>SubMatches: [ "en", "", "US" ], <br>StartMatch: 1<br>} |
 
 For the following examples, insert a button control on the screen with **OnSelect** property equal to:
 
@@ -202,14 +203,18 @@ To see the results of **MatchAll** in a gallery:
 
 1. Create a new screen and insert a Gallery control.
 
-2. Set the Gallery's **Items** property to **MatchAll( pangram, "(?&lt;word&gt;\w+)" )**
+2. Set the Gallery's **Items** property to **MatchAll( pangram, "\w+" )**.  You could also use **MatchAll( pangram, MultipleLetters )**.
 
 	![](media/function-ismatch/pangram-gallery1.png)
 
+	**TODO: image needs update**
+
 3. Insert a Label control.
 
-4. Set the Label control's **Text** property to **ThisItem.word**.  This column matches the named sub-match defined in the regular expression.
+4. Set the Label control's **Text** property to **ThisItem.FullMatch**.
  
 5. Your gallery will be filled with each word in our example text.
 
 	![](media/function-ismatch/pangram-gallery2.png)
+
+	**TODO: image needs update**
