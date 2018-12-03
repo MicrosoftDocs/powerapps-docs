@@ -42,7 +42,7 @@ The PowerApps checker becomes available in the Solutions area of PowerApps after
 3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You must allow popups if your browser blocks the page from opening. 
 5. Select **Free Trial** on the AppSource page. 
 6. If you agree, accept the terms and conditions and select the environment to install the PowerApps checker solution. 
-7.	When the install is completed, refresh the **Solution** list on the PowerApps site to verify that the the PowerApps checker is available.  
+7.	When the install is completed, refresh the **Solution** list on the PowerApps site to verify that the PowerApps checker is available.  
 8. To check a solution, [Run the PowerApps checker](#run-the-powerapps-checker).
 
 
