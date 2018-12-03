@@ -35,7 +35,16 @@ PowerApps checker works with unmanaged solutions that can be exported from an en
 
 
 ## Install the PowerApps checker
-The PowerApps checker becomes available in the Solutions area of PowerApps after you install the solution from [Microsoft AppSource](https://appsource.microsoft.com/). It's compatible with PowerApps apps built with CDS for Apps and Dynamics 365 for Customer Engagement, version 9.0 or later versions.
+The PowerApps checker becomes available in the Solutions area of PowerApps after you install the solution. Notice that you can't find it by browsing or searching on Microsoft AppSource. You must install it by following these steps.  
+
+1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select the Common Data Service environment where you want to enable the Solution checker. 
+2. On the left navigation pane, select **Solutions**.
+3. On the toolbar, select **Solution checker** and then select **Install** – this opens the Microsoft AppSource page. You must allow popups if your browser blocks the page from opening. 
+5. Select **Free Trial** on the AppSource page. 
+6. If you agree, accept the terms and conditions and select the environment to install the PowerApps checker solution. 
+7.	When the install is completed, refresh the **Solution** list on the PowerApps site to verify that the the PowerApps checker is available.  
+8. To check a solution, [Run the PowerApps checker](#run-the-powerapps-checker).
+
 
 ### Components created with the PowerApps checker
 When you install the PowerApps checker these solution specific components are created. 
