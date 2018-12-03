@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 07/11/2018
+ms.date: 11/28/2018
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -35,51 +35,69 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     ![Show list of apps](./media/share-app/file-apps.png)
 
-1. Select the ellipsis (...) for the app that you want to share, and then select **Share**.
+1. Select the app that you want to share by selecting its icon.
 
-    ![Open share screen](./media/share-app/ellipsis-share.png)
+    ![Select an app](./media/share-app/select-app.png)
 
-1. Specify with which users or security groups in Azure Active Directory you want to share the app.
+1. In the banner, select **Share**.
+
+    ![Open share screen](./media/share-app/banner-share.png)
+
+1. Specify by name or alias the users or security groups in Azure Active Directory with which you want to share the app.
+
+    To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
+
+    ![Specify users and co-owners](./media/share-app/share-everyone.png)
 
     > [!NOTE]
-    > You can't share apps with a distribution group in your organization or with any users or groups outside your organization.
+    > You can't share an app with a distribution group in your organization or with a user or group outside your organization.
 
-    ![Specify users](./media/share-app/share-list.png)
+1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
 
-    You can also share the app with your entire organization so that they can run the app, but they won't be able to modify or share it.
+    You can't grant **Co-owner** permission to a security group if you [created the app from within a solution](add-app-solution.md).
+    
+    > [!NOTE]
+    > Regardless of permissions, no two people can edit an app at the same time. If one person opens the app for editing, other people can run it but not edit it.
 
-1. (optional) To help users find your app, select the check box for sending them an email invitation.
+1. If your app connects to data for which users need access permissions, specify them.
 
-    The invitation contains a link that users can select to run the app.
+    For example, your app might connect to an entity in a CDS for Apps database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
-    - If a user selects the link on a desktop computer, the app opens in [Dynamics 365](http://home.dynamics.com).
-    - If the user selects the link on a mobile device, the app opens in PowerApps Mobile.
+    ![Set permissions](./media/share-app/set-permissions.png)
 
-    If you grant users permission to modify the app, the message also contains a separate link to open the app for editing in PowerApps Studio.
+    For more information about managing security for an entity, see [Manage entity permissions](share-app.md#manage-entity-permissions) later in this topic.
 
-    Regardless of whether you send an invitation, users can run the app from AppSource on [Dynamics 365](http://home.dynamics.com). Users who have **Can edit** permission can also edit the app from within [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. If you want to help people find your app, select the **Send an email invitation to new users** check box.
 
-1. Specify the permission for each user or security group, and then select **Save**.
+1. At the bottom of the share panel, select **Share**.
 
-    - **Can use**: Users can run the app but not share it.
-    - **Can edit**: Users can run the app, modify it, and share the customized version to other users.
+    Everyone with whom you shared the app can run it in PowerApps Mobile on a mobile device or in AppSource on [Dynamics 365](https://home.dynamics.com) in a browser. Co-owners can edit and share the app in [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-        ![Specify permissions](./media/share-app/edit-use.png)
+    If you sent an email invitation, everyone with whom you shared the app can run it by selecting a link in the invitation.
 
-    To change permissions for a user or a security group, select the down arrow next to the permission that the user or group already has, and then specify a different permission.
+    - If a user selects the link on a mobile device, the app opens in PowerApps Mobile.
+    - If a user selects the link on a desktop computer, the app opens in a browser.
 
-    To remove all permissions for a user or a group, select the **x** icon for that user or group.
+    Co-owners who receive an invitation get another link that opens the app for editing in PowerApps Studio.
+
+You can change permissions for a user or a security group by selecting their name and then performing either of these steps:
+
+- To allow co-owners to run the app but no longer edit or share it, clear the **Co-owner** check box.
+- To stop sharing the app with that user or group, select the Remove (x) icon.
 
 ## Security-group considerations
 
 - If you share an app with a security group, existing members of that group and anyone who joins it will have the permission that you specify for that group. Anyone who leaves the group loses that permission unless they belong to a different group that has access or you give them permission as an individual.
-- Every member of a security group has the same permission for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A the **Can use** permission, but you can also give User B, who belongs to that group, **Can edit** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A the **Can edit** permission and User B **Can use** permission, that user can still edit the app.
+- Every member of a security group has the same permission for an app as the overall group does. However, you can specify greater permissions for one or more members of that group to allow them greater access. For example, you can give Security Group A permission to run an app, but you can also give User B, who belongs to that group, **Co-owner** permission. Every member of the security group can run the app, but only User B can edit it. If you give Security Group A **Co-owner** permission and User B permission to run the app, that user can still edit the app.
 
 ## Manage entity permissions
 
 ### Common Data Service for Apps
 
-If you create an app based on Common Data Service (CDS) for Apps, you must also ensure that the users who will run it have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and/or deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to use your apps. You can then assign that role or roles to users as appropriate. 
+If you create an app based on CDS for Apps, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
+
+> [!NOTE]
+> As of this writing, you can assign security roles to individual users but not to security groups.
 
 #### Prerequisite
 
@@ -87,13 +105,7 @@ To perform the next two procedures, you must have **System administrator** permi
 
 #### Create a security role
 
-1. [Sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and make sure that you're in the same environment as the app that you want to share.
-
-1. In the upper-right corner, select the gear icon, and then select **Advanced customizations**.
-
-    ![Open the Advanced customizations pane](media/share-app/advanced-customizations.png)
-
-1. Select the **Security roles** link.
+1. In the sharing panel, select **Set permissions** under **Data permissions**, and then select the **Security Roles** link.
 
     ![Open security roles](media/share-app/security-roles.png)
 
@@ -103,7 +115,7 @@ To perform the next two procedures, you must have **System administrator** permi
 
 1. Select one or more tabs to find the entity or entities that your app uses, and then select the permissions that you want to grant the security role.
 
-    For example, this graphic shows that a security role can create, read, write, and delete records in the Account entity, which appears on the **Core records** tab.
+    For example, this graphic shows that the **Core records** tab contains the **Accounts** entity, and users to which this security role has been assigned can create, read, write, and delete records in that entity.
 
     ![Specify permissions](media/share-app/grant-access.png)
 
@@ -111,7 +123,7 @@ To perform the next two procedures, you must have **System administrator** permi
 
 #### Assign a user to a role
 
-1. Open the **Advanced customizations** pane as the previous procedure describes, and then select the **Users** link.
+1. In the sharing panel, select **Set permissions** under **Data permissions**, and then select the **Users** link.
 
     ![Users link](media/share-app/open-users.png)
 
@@ -123,10 +135,10 @@ To perform the next two procedures, you must have **System administrator** permi
 
 1. In the top banner, select **Manage roles**.
 
-1. In the dialog box that appears, select the check boxes for **Common Data Service User** and the role users need for your app, and then select **OK.**
+1. In the dialog box that appears, select the check boxes for **Common Data Service User** and the role that the user needs for your app, and then select **OK.**
 
     ![Assign a user to a role](media/share-app/assign-users.png)
 
 ### Common Data Service (previous version)
 
-When you share an app that's based on an older version of the Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment admin.
+When you share an app that's based on an older version of Common Data Service, you must share the runtime permission to the service separately. If you don’t have permission to do this, see your environment administrator.
