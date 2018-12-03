@@ -1,11 +1,16 @@
 {
     "redirections": [
         {
-        "source_path": "powerapps-docs/common-data-model/overview.md",    
-        "redirect_url": "https://docs.microsoft.com/common-data-model/",
-        "redirect_document_id": true
+        "source_path": "powerapps/developer/common-data-service/export-solution-specific-version.md",    
+        "redirect_url": "https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-export-import-unmanaged-solution",
+        "redirect_document_id": false
         },
-	{
+        {
+            "source_path": "powerapps-docs/common-data-model/overview.md",    
+            "redirect_url": "https://docs.microsoft.com/common-data-model/",
+            "redirect_document_id": true
+            },
+        {
 	"source_path": "powerapps-docs/common-data-model/use-common-data-model.md",    
 	"redirect_url": "https://docs.microsoft.com/common-data-model/use",
 	"redirect_document_id": true
