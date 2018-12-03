@@ -123,7 +123,7 @@ namespace Microsoft.Crm.Sdk.Samples
 
             //Check to see if this birthday occurred on a leap year
             bool leapYearAdjust = false;
-            if (nextBirthday.Month == 2 &amp;&amp; nextBirthday.Day == 29)
+            if (nextBirthday.Month == 2 && nextBirthday.Day == 29)
             {
                 //Sanity check, was that year a leap year
                 if (DateTime.IsLeapYear(nextBirthday.Year))
@@ -146,7 +146,7 @@ namespace Microsoft.Crm.Sdk.Samples
             nextBirthday = nextBirthday.AddYears(DateTime.Now.Year - nextBirthday.Year);
 
             //Check to see if the date was adjusted
-            if (leapYearAdjust &amp;&amp; DateTime.IsLeapYear(nextBirthday.Year))
+            if (leapYearAdjust && DateTime.IsLeapYear(nextBirthday.Year))
             {
                 nextBirthday = nextBirthday.AddDays(-1);
             }
@@ -272,7 +272,7 @@ namespace Microsoft.Crm.Sdk.Samples
 
             //Check to see if the credit score should be saved to the entity
             //If the value of the property has not been set or it is set to true
-            if (null != this.UpdateEntity &amp;&amp; this.UpdateEntity.Get(executionContext))
+            if (null != this.UpdateEntity && this.UpdateEntity.Get(executionContext))
             {
                 //Create the entity
                 Entity updateEntity = new Entity(loanApplication.LogicalName);
