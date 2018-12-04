@@ -2,7 +2,7 @@
 title: "Sample: Calculate a credit score with a custom workflow activity (Common Data Service for Apps) | Microsoft Docs"
 description: "The sample demonstrates workflow activity calculates the credit score based on the Social Security Number (SSN) and name."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 12/03/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -55,6 +55,18 @@ The following sample workflow activity calculates the credit score based on the 
 ## Example  
 
 ```csharp
+using System;
+using System.Activities;
+using System.Collections;
+using System.Reflection;
+
+using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Messages;
+using Microsoft.Xrm.Sdk.Query;
+using Microsoft.Xrm.Sdk.Workflow;
+
+namespace Microsoft.Crm.Sdk.Samples
+{
 /// <summary>
 /// Calculates the credit score based on the SSN and name. 
 /// </summary>
@@ -181,6 +193,8 @@ public sealed partial class RetrieveCreditScore : CodeActivity
     [Output("Credit Score")]
     [AttributeTarget(CustomEntity, "new_creditscore")]
     public OutArgument<int> CreditScore { get; set; }
+    
+  }
 }
 ```
   
