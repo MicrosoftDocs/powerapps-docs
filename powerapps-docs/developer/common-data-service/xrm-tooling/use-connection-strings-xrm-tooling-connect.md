@@ -72,9 +72,9 @@ CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionSt
 |RedirectUri or ReplyUrl|Specifies the redirect URI of the application you registered in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |TokenCacheStorePath|Specifies the full path to the location where the user token cache should be stored. The running process should have access to the specified path. It is the processes responsibility to set and configure this path.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |LoginPrompt|Specifies whether the user is prompted for credentials if the credentials are not supplied. Valid values are:<br /><br /> -   `Always`: Always prompts the user to specify credentials.<br />-   `Auto`: Allows the user to select in the login control interface whether to display the prompt or not.<br />-   `Never`: Does not prompt the user to specify credentials. If using a connection method does not have a user interface, you should use this value.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
-|CertStoreName|Specifies the name of the location on the machine where certificate with thumbprint passed is located. This parameter is applicable only when the authentication type is specified as `Certificate`.|
-|CertThumbPrint| Specifies the thumbprint of the certificate to use. This parameter is applicable only when the authentication type is specified as `Certificate`.|
-|SkipDiscovery|If the parameter is set to true, the Service Uri should be used directly.| 
+|StoreName or CertificateStoreName|Specifies the store name where the certificate identified by thumbprint can be found. When set, Thumbprint is required.|
+|Thumbprint or CertThumbprint| Specifies the thumbprint of the certificate to be utilized during an S2S connection. When set, AppID is required and UserID and Password values are ignored.|
+|SkipDiscovery|Specifies whether to call instance discovery to determin the connection uri for a given instance. As of Nuget release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.0.2.7, default = true. Older versions default to false. <br/> Note: If set to true, it is important that the user provide the correct and accurate URI for the target instance.| 
   
 <a name="Examples"></a>
 
