@@ -68,20 +68,22 @@ After you install the PowerApps checker in your environment, a **Solution checke
 
    ![Run solution checker command](media/solution-checker-run.png)
 
-4.	The status pane located in the upper right of the **Solutions** page displays **Solution checker running**. 
+4.	The status pane located on the upper right of the **Solutions** page displays **Solution checker running**. 
 
     ![Solution checker status](media/solution-checker-status.png)
    
-  Note the following.
-    - The solution checker can take a few minutes to complete the analysis. 
-    - During this time you will notice a **Running…** state in the **Solution check** column of the **Solution** list. 
-    - You receive an email notification and a notification in the **Notifications** area of the PowerApps site when the check is completed.  
+     Note the following:
+       - The solution checker can take a few minutes to complete the analysis. 
+    
+       - During this time you will notice a **Running…** state in the **Solution check** column of the **Solution** list. 
+    
+       - You receive an email notification and a notification in the **Notifications** area of the PowerApps site when the check is completed.  
 
 5.	[View the report](#reviewing-the-solution-checker-report) when the check is completed.
 
 ## Cancel a check
 
-After you submit a solutions check in your environment, the check can be cancelled through the status pane in the upper right area of the **Solutions** page. 
+After you submit a solutions check in your environment, the check can be cancelled through the status pane on the upper right area of the **Solutions** page. 
 
 When you cancel a check, the solution check stops running and the solution check status returns to the previous state. 
 
@@ -103,7 +105,7 @@ When you install the solution checker in your environment, the **Solution check*
 When a solution check is completed, the analysis report becomes available for download from your web browser. The report is in CSV format and contains several columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
 1. In the left pane select **Solutions**.
-2. Next to the unmanaged solution where you want to download the PowerApps checker report, select **...**, point to **Solution checker**, and then select **Download last results**.  
+2. Next to the unmanaged solution where you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download last results**.  
 3. The solution checker zip file is downloaded to the folder specified by your web browser.
 
 Here's a summary of each column in the report.
