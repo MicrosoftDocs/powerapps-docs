@@ -54,4 +54,44 @@ In case of a Warning or Error, you can further drill down by clicking through th
 We highly encourage our customers and partners to subscribe to email-based notifications, wherein you receive email alerts on project executions that either completed with warnings or errors. For each project, under Scheduling tab, you will be able to select email-based notifications and provide multiple email addresses (including group addresses), separated by commas.
 
 > [!div class="mx-imgBorder"] 
-> ![](media/DashboardDrill-down3.png "Project execution history warning")
+> ![](media/RemoteMonitoring.png "Remote monitoring warning")
+
+Any time a project completes with a warning or is in the error state, you get an email notification indicating the project execution status with a drill-through link to the specific failure.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/RemoteMonitoring-EmailNotification.png "Remote monitoring email notification")
+
+Clicking on the link takes you directly to your project execution status which you can further drill through for specific errors.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/RemoteMonitoring-EmailNotification-clickthrough.png "Remote monitoring email notification drill down")
+
+## Project execution status
+
+When a data integration project is executed (manually or scheduled), it creates a detailed log with project name, a time stamp showing the last update along with project status.
+
+Each project execution is marked with one of the three status - Completed, Warning or Error
+
+1. **Completed**
+   If all records were upserted successfully, project status is marked as Completed. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![](media/ProjectStatus_Complete.png "Project status complete")
+
+2. **Warning**
+
+   If some records were upserted (upsert or update insert is a logic to either update the record, if it already exists, or to insert new record) successfully while some failed or errored out, project is marked with a Warning status.
+
+   > [!div class="mx-imgBorder"] 
+   > ![](media/ProjectStatus_Warning.png "Project status complete")
+
+
+
+
+
+
+
+
+
+
+
