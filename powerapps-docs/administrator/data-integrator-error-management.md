@@ -39,19 +39,19 @@ You will now be able to further drill through individual errors.
 > [!div class="mx-imgBorder"] 
 > ![](media/DashboardDrill-down2.png "Dashboard drill down")
 
-You can also view project execution details by clicking on the individual projects on the project list page and view the historical executions and status under Execution history tab.
+You can also view project execution details by clicking on the individual projects on the project list page and view the historical executions and status under **Execution history** tab.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/ProjectExecutionhistory.png "Project execution history")
 
-In case of a Warning or Error, you can further drill down by clicking through the executions under Execution history tab.
+In case of a Warning or Error, you can further drill down by clicking through the executions under the **Execution history** tab.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/DashboardDrill-down3.png "Project execution history warning")
 
 ## Project monitoring
 
-We highly encourage our customers and partners to subscribe to email-based notifications, wherein you receive email alerts on project executions that either completed with warnings or errors. For each project, under Scheduling tab, you will be able to select email-based notifications and provide multiple email addresses (including group addresses), separated by commas.
+We highly encourage our customers and partners to subscribe to email-based notifications, wherein you receive email alerts on project executions that either completed with warnings or errors. For each project, under the **Scheduling** tab, you will be able to select email-based notifications and provide multiple email addresses (including group addresses), separated by commas.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/RemoteMonitoring.png "Remote monitoring warning")
@@ -108,31 +108,31 @@ If you are unable to see your connections or your environments in the drop-down 
 > [!div class="mx-imgBorder"] 
 > ![](media/ConnectionSet1.png "Connection set")
 
-- Connection - Ensure you have created your connections under Data/Connections on [https://web.powerapps.com ](https://web.powerapps.com) and that they are in the *Connected* state. If you see a *Fix Connection* notification, you want to double check the credentials used for the account and use the *Switch account* option from the ellipsis to re-authenticate.
+- **Connection**: ensure you have created your connections under Data/Connections on [https://web.powerapps.com ](https://web.powerapps.com) and that they are in the **Connected** state. If you see a *Fix Connection* notification, you want to double check the credentials used for the account and use the **Switch account** option from the ellipsis to re-authenticate.
 
   > [!div class="mx-imgBorder"] 
   > ![](media/ConnectionsIssue.png "Connections issue")
 
-- Environment - If you don’t see your environments in the drop down, you want to ensure that the account you used to create the connections has the appropriate access to the entity. A good way to test this is by creating a *flow* (using Microsoft Flow). 
+- **Environment**: if you don’t see your environments in the drop down, you want to ensure that the account you used to create the connections has the appropriate access to the entity. A good way to test this is by creating a *flow* (using Microsoft Flow). 
 
-  Here is an example of creating a simple flow to test your connection to Dynamics 365 Finance and Operations.
+  Here is an example of creating a simple flow to test your connection to Dynamics 365 for Finance and Operations.
 
-  - Create a new flow (choose **Create from blank**) under Business logic/Flow from [https://web.powerapps.com](https://web.powerapps.com)
+  - Create a new flow (choose **Create from blank**) under **Business logic/Flow** from [https://web.powerapps.com](https://web.powerapps.com).
 
     > [!div class="mx-imgBorder"] 
     > ![](media/ConnectionstestFlow1.png "Connections new flow")
 
-  - Select a **Recurrence** trigger and under **New Step** search and select Dynamics 365 for Finance and Operations connector.
+  - Select a **Recurrence** trigger and under **New Step** search and select **Dynamics 365 for Finance and Operations connector**.
 
     > [!div class="mx-imgBorder"] 
     > ![](media/ConnectionstestFlow2.png "Connections recurrence trigger")
 
-  - Select **Create record** as an action and in the drop down, ensure that you are logged in with the appropriate account – This is the same account you would use to create your Connection for your data integration projects.
+  - Select **Create record** as an action and in the drop down, ensure that you are logged in with the appropriate account. This is the same account you would use to create your connection for your data integration projects.
 
     > [!div class="mx-imgBorder"] 
     > ![](media/ConnectionstestFlow3.png "Connections create record")
 
-  - Clicking on the drop down under **Instance** should show all the Dynamics 365 Finance and Operations environments – This is a good step to verify your account (from previous step) has access to the environments. 
+  - Clicking on the drop down under **Instance** should show all the Dynamics 365 Finance and Operations environments. This is a good step to verify your account (from previous step) has access to the environments. 
 
     > [!div class="mx-imgBorder"] 
     > ![](media/ConnectionstestFlow4.png "Connections instances")
@@ -142,7 +142,7 @@ If you are unable to see your connections or your environments in the drop-down 
     > [!div class="mx-imgBorder"] 
     > ![](media/ConnectionstestFlow5.png "Connections confirm access to entities")
 
-- Organizations – This is where you would specify the LE (Legal Entity ex: USMF) for Dyanmics 365 for Finance and Operations, the BU (Business Unit) for Dynamics 365 for Sales or the CDS organization name. If you miss this step, you will get a message with the valid names corresponding to your application that you then need to plug-in under Organizations.
+- **Organizations**: this is where you would specify the LE (Legal Entity ex: USMF) for Dynamics 365 for Finance and Operations, the BU (Business Unit) for Dynamics 365 for Sales or the Common Data Service for Apps organization name. If you miss this step, you will get a message with the valid names corresponding to your application that you then need to plug-in under Organizations.
 
 ### Project validation errors 
 
@@ -163,7 +163,7 @@ Further drilling into the project execution history indicates a duplicate field 
 > [!div class="mx-imgBorder"] 
 > ![](media/ProjectValidationErrors2.png "Duplicate field issue")
 
-When you inspect the mapping, you can identify duplicates. In this case, source field *fax* is incorrectly mapped to ADDRESSCITY.
+When you inspect the mapping, you can identify duplicates. In this case, source field **fax** is incorrectly mapped to ADDRESSCITY.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/ProjectValidationErrors3.png "Incorrect mapping")
@@ -175,7 +175,7 @@ Once you fix the mapping, error should go away, and you should be able to execut
 
 ### Project executions issues 
 
-If you are notified of a project execution that completed with warning or is in error state, the first step is to drill into the execution history. From the project list page, click the individual project and review the latest execution under Execution history tab and click through to the specific error.
+If you are notified of a project execution that completed with warning or is in error state, the first step is to drill into the execution history. From the project list page, click the individual project and review the latest execution under the **Execution history** tab and click through to the specific error.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/Tshoot-WarningError1.png "Troubleshooting error")
