@@ -988,6 +988,8 @@
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution
       href: ./common-data-service/create-solution.md
+    - name: Use solution checker
+      href: ./common-data-service/use-powerapps-checker.md      
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix
