@@ -100,7 +100,7 @@ You can also manually retry an execution by selecting *Re-run execution* via the
 
 Here are some quick tips that will help you troubleshoot some of the common scenarios - 
 
-## Connection or Environment issues 
+## Connection or environment issues 
 
 If you are unable to see your connections or your environments in the drop-down while trying to create a Connection set, here are some of the things you can do to troubleshoot the issue.
 
@@ -116,23 +116,78 @@ If you are unable to see your connections or your environments in the drop-down 
 
   Here is an example of creating a simple flow to test your connection to Dynamics 365 Finance and Operations.
 
-  - Create a new flow (choose ‘Create from blank’) under Business logic/Flow from [https://web.powerapps.com](https://web.powerapps.com)
+  - Create a new flow (choose **Create from blank**) under Business logic/Flow from [https://web.powerapps.com](https://web.powerapps.com)
 
     > [!div class="mx-imgBorder"] 
     > ![](media/ConnectionstestFlow1.png "Connections new flow")
 
-  - Select a *Recurrence* trigger and under *New Step* search and select Dynamics 365 for Finance and Operations connector.
+  - Select a **Recurrence** trigger and under **New Step** search and select Dynamics 365 for Finance and Operations connector.
 
     > [!div class="mx-imgBorder"] 
     > ![](media/ConnectionstestFlow2.png "Connections recurrence trigger")
 
-  - Select *Create record* as an action and in the drop down, ensure that you are logged in with the appropriate account – This is the same account you would use to create your Connection for your data integration projects.
+  - Select **Create record** as an action and in the drop down, ensure that you are logged in with the appropriate account – This is the same account you would use to create your Connection for your data integration projects.
 
     > [!div class="mx-imgBorder"] 
     > ![](media/ConnectionstestFlow3.png "Connections create record")
 
+  - Clicking on the drop down under **Instance** should show all the Dynamics 365 Finance and Operations environments – This is a good step to verify your account (from previous step) has access to the environments. 
 
+    > [!div class="mx-imgBorder"] 
+    > ![](media/ConnectionstestFlow4.png "Connections instances")
 
+  - Additionally, once you have picked your environment, you confirm that you have access to all the entities under it.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/ConnectionstestFlow5.png "Connections confirm access to entities")
+
+- Organizations – This is where you would specify the LE (Legal Entity ex: USMF) for Dyanmics 365 for Finance and Operations, the BU (Business Unit) for Dynamics 365 for Sales or the CDS organization name. If you miss this step, you will get a message with the valid names corresponding to your application that you then need to plug-in under Organizations.
+
+## Project validation errors 
+
+A data integration project is first validated before it is executed. Some of the top reasons for validation errors include:
+
+- Incorrect company/Business unit selected during project creation 
+- Missing mandatory columns 
+- Incomplete or duplicate mapping 
+- Field type mismatch
+
+Here is an example of how the error manifests in case of duplicate mapping. The orange banner indicates mapping issues.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/ProjectValidationErrors1.png "Mapping issues")
+
+Further drilling into the project execution history indicates a duplicate field issue.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/ProjectValidationErrors2.png "Duplicate field issue")
+
+When you inspect the mapping, you can identify duplicates. In this case, source field *fax* is incorrectly mapped to ADDRESSCITY.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/ProjectValidationErrors3.png "Incorrect mapping")
+
+Once you fix the mapping, error should go away, and you should be able to execute the project successfully.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/ProjectValidationErrors4.png "Mapping fixed")
+
+## Project executions issues 
+
+If you are notified of a project execution that completed with warning or is in error state, the first step is to drill into the execution history. From the project list page, click the individual project and review the latest execution under Execution history tab and click through to the specific error.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/Tshoot-WarningError1.png "Troubleshooting error")
+
+If this is an integration project where Dynamics 365 for Finance and Operations is the source, go to the Data Management workspace in Dynamics 365 F&O and filter projects based on your data integration project name or specifically choose type of import or export job.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/Tshoot-WarningError2.png "Data Management workspace")
+
+Additionally, you can open the job history of the project and drill through the job id of the project based on the timestamp of your execution and also inspect the execution log, view historical runs and view the staging data.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/Tshoot-WarningError3.png "Project job history")
 
 
 
