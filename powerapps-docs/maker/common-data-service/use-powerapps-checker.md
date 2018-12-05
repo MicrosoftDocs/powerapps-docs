@@ -102,7 +102,7 @@ When you install the solution checker in your environment, the **Solution check*
 
 
 ## Review the solution checker report
-When a solution check is completed, the analysis report becomes available for download from your web browser. The report is in CSV format and contains several columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
+When a solution check is completed, the analysis report becomes available for download from your web browser. The report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 
 1. In the left pane select **Solutions**.
 2. Next to the unmanaged solution where you want to download the solution checker report, select **...**, point to **Solution checker**, and then select **Download last results**.  
