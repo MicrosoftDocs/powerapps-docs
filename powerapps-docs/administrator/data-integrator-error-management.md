@@ -70,9 +70,10 @@ Clicking on the link takes you directly to your project execution status which y
 
 When a data integration project is executed (manually or scheduled), it creates a detailed log with project name, a time stamp showing the last update along with project status.
 
-Each project execution is marked with one of the three status - Completed, Warning or Error
+Each project execution is marked with one of the three status - Completed, Warning or Error.
 
 1. **Completed**
+   
    If all records were upserted successfully, project status is marked as **Completed**. 
 
    > [!div class="mx-imgBorder"] 
@@ -92,15 +93,15 @@ Each project execution is marked with one of the three status - Completed, Warni
    > [!div class="mx-imgBorder"] 
    > ![](media/ProjectStatus_Error.png "Project status error")
 
-   If the project execution is in *Error* state, then it will automatically retry execution at the next scheduled run.
+   If the project execution is in **Error** state, then it will automatically retry execution at the next scheduled run.
 
-You can also manually retry an execution by selecting *Re-run execution* via the ellipsis on the *Execution history* page.
+You can also manually retry an execution by selecting **Re-run execution** via the ellipsis on the **Execution history** page.
 
 ## Quick tips on troubleshooting common scenarios 
 
-Here are some quick tips that will help you troubleshoot some of the common scenarios - 
+Here are some quick tips that will help you troubleshoot some of the common scenarios.
 
-## Connection or environment issues 
+### Connection or environment issues 
 
 If you are unable to see your connections or your environments in the drop-down while trying to create a Connection set, here are some of the things you can do to troubleshoot the issue.
 
@@ -143,7 +144,7 @@ If you are unable to see your connections or your environments in the drop-down 
 
 - Organizations – This is where you would specify the LE (Legal Entity ex: USMF) for Dyanmics 365 for Finance and Operations, the BU (Business Unit) for Dynamics 365 for Sales or the CDS organization name. If you miss this step, you will get a message with the valid names corresponding to your application that you then need to plug-in under Organizations.
 
-## Project validation errors 
+### Project validation errors 
 
 A data integration project is first validated before it is executed. Some of the top reasons for validation errors include:
 
@@ -172,7 +173,7 @@ Once you fix the mapping, error should go away, and you should be able to execut
 > [!div class="mx-imgBorder"] 
 > ![](media/ProjectValidationErrors4.png "Mapping fixed")
 
-## Project executions issues 
+### Project executions issues 
 
 If you are notified of a project execution that completed with warning or is in error state, the first step is to drill into the execution history. From the project list page, click the individual project and review the latest execution under Execution history tab and click through to the specific error.
 
