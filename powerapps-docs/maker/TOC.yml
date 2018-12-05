@@ -151,6 +151,23 @@
         items:
           - name: Add a screen
             href: ./canvas-apps/add-screen-context-variables.md
+            items:
+              - name: Calendar-screen overview
+                href: ./canvas-apps/screen-templates/calendar-screen-overview.md
+              - name: Calendar-screen reference
+                href: ./canvas-apps/screen-templates/calendar-screen-reference.md
+              - name: Email-screen overview
+                href: ./canvas-apps/screen-templates/email-screen-overview.md
+              - name: Email-screen reference
+                href: ./canvas-apps/screen-templates/email-screen-reference.md
+              - name: Meeting-screen overview
+                href: ./canvas-apps/screen-templates/meeting-screen-overview.md
+              - name: Meeting-screen reference
+                href: ./canvas-apps/screen-templates/meeting-screen-reference.md
+              - name: People-screen overview
+                href: ./canvas-apps/screen-templates/people-screen-overview.md
+              - name: People-screen reference
+                href: ./canvas-apps/screen-templates/people-screen-reference.md
           - name: Show a table of items
             href: ./canvas-apps/add-gallery.md
           - name: Show items of different heights
