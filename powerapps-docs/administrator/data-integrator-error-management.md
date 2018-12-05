@@ -14,7 +14,7 @@ search.app:
   - PowerApps
   - Powerplatform
 ---
-# Integrate data into Common Data Service for Apps
+# Data Integrator error management and troubleshooting
 
 The Data Integrator is a point-to-point integration service used to integrate data from multiple sources-for example, Dynamics 365 for Finance and Operations, Dynamics 365 for Sales and Salesforce, SQL (Preview)-into Common Data Service for Apps. It also supports integrating data into Dynamics 365 for Finance and Operations, Dynamics 365 for Sales. The Integrate data into Common Data service for Apps document provides detailed step-by-step instructions to help you set-up data integration projects for process based integration scenarios like Prospect to Cash, Field Service and Project Service integrations. It also supports integrating data into Dynamics 365 for Finance and Operations, Dynamics 365 for Sales. The [Integrate data into Common Data service for Apps](data-integrator.md) document provides detailed step-by-step instructions to help you set-up data integration projects for process based integration scenarios like Prospect to Cash, Field Service and Project Service integrations. 
 
