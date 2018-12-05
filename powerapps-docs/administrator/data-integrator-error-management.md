@@ -73,21 +73,63 @@ When a data integration project is executed (manually or scheduled), it creates 
 Each project execution is marked with one of the three status - Completed, Warning or Error
 
 1. **Completed**
-   If all records were upserted successfully, project status is marked as Completed. 
+   If all records were upserted successfully, project status is marked as **Completed**. 
 
    > [!div class="mx-imgBorder"] 
    > ![](media/ProjectStatus_Complete.png "Project status complete")
 
 2. **Warning**
 
-   If some records were upserted (upsert or update insert is a logic to either update the record, if it already exists, or to insert new record) successfully while some failed or errored out, project is marked with a Warning status.
+   If some records were upserted (upsert or update insert is a logic to either update the record, if it already exists, or to insert new record) successfully while some failed or errored out, project is marked with a **Warning** status.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/ProjectStatus_Warning.png "Project status complete")
+   > ![](media/ProjectStatus_Warning.png "Project status warning")
 
+3. **Error**
 
+   If none of the records were successful and/or errored out. There were no upserts or inserts in destination, project is marked with an **Error** status.
 
+   > [!div class="mx-imgBorder"] 
+   > ![](media/ProjectStatus_Error.png "Project status error")
 
+   If the project execution is in *Error* state, then it will automatically retry execution at the next scheduled run.
+
+You can also manually retry an execution by selecting *Re-run execution* via the ellipsis on the *Execution history* page.
+
+## Quick tips on troubleshooting common scenarios 
+
+Here are some quick tips that will help you troubleshoot some of the common scenarios - 
+
+## Connection or Environment issues 
+
+If you are unable to see your connections or your environments in the drop-down while trying to create a Connection set, here are some of the things you can do to troubleshoot the issue.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/ConnectionSet1.png "Connection set")
+
+- Connection - Ensure you have created your connections under Data/Connections on [https://web.powerapps.com ](https://web.powerapps.com) and that they are in the *Connected* state. If you see a *Fix Connection* notification, you want to double check the credentials used for the account and use the *Switch account* option from the ellipsis to re-authenticate.
+
+  > [!div class="mx-imgBorder"] 
+  > ![](media/ConnectionsIssue.png "Connections issue")
+
+- Environment - If you don’t see your environments in the drop down, you want to ensure that the account you used to create the connections has the appropriate access to the entity. A good way to test this is by creating a *flow* (using Microsoft Flow). 
+
+  Here is an example of creating a simple flow to test your connection to Dynamics 365 Finance and Operations.
+
+  - Create a new flow (choose ‘Create from blank’) under Business logic/Flow from [https://web.powerapps.com](https://web.powerapps.com)
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/ConnectionstestFlow1.png "Connections new flow")
+
+  - Select a *Recurrence* trigger and under *New Step* search and select Dynamics 365 for Finance and Operations connector.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/ConnectionstestFlow2.png "Connections recurrence trigger")
+
+  - Select *Create record* as an action and in the drop down, ensure that you are logged in with the appropriate account – This is the same account you would use to create your Connection for your data integration projects.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/ConnectionstestFlow3.png "Connections create record")
 
 
 
