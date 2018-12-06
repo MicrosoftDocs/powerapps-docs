@@ -16,7 +16,7 @@ search.app:
 ---
 # Data Integrator error management and troubleshooting
 
-The Data Integrator is a point-to-point integration service used to integrate data from multiple sources--for example, Dynamics 365 for Finance and Operations, Dynamics 365 for Sales, and Salesforce, SQL (Preview)--into Common Data Service for Apps (CDS for Apps). It also supports integrating data into Dynamics 365 for Finance and Operations and Dynamics 365 for Sales. The [Integrate data into Common Data service for Apps](data-integrator.md) document provides detailed step-by-step instructions to help you set up projects for process-based integration scenarios like Prospect to Cash, Field Service, and Project Service integrations. 
+The Data Integrator is a point-to-point integration service used to integrate data from multiple sources--for example, Dynamics 365 for Finance and Operations, Dynamics 365 for Sales, and Salesforce, SQL (Preview)--into Common Data Service for Apps (CDS for Apps). It also supports integrating data into Dynamics 365 for Finance and Operations and Dynamics 365 for Sales. The [Integrate data into Common Data Service for Apps](data-integrator.md) document provides detailed step-by-step instructions to help you set up projects for process-based integration scenarios like Prospect to Cash, Field Service, and Project Service integrations. 
 
 While we are constantly evolving and driving fixes into the platform based on customer feedback, we understand there is a need to provide guidance when you run into issues. The focus of this document is to walk you through error management and troubleshooting some of these issues.
 
@@ -110,8 +110,8 @@ If you are unable to see your connections or environments in the drop-down while
 
 * **Connection**: Ensure you have created your connections under Data/Connections on [https://web.powerapps.com ](https://web.powerapps.com) and that they are in the **Connected** state. If you see a *Fix Connection* notification, you should double-check the credentials used for the account, and use the **Switch account** option from the ellipsis to reauthenticate.
 
-  > [!div class="mx-imgBorder"] 
-  > ![](media/ConnectionsIssue.png "Connections issue")
+   > [!div class="mx-imgBorder"] 
+   > ![](media/ConnectionsIssue.png "Connections issue")
 
 * **Environment**: If you don’t see your environments in the drop-down, ensure that the account you used to create the connections has the appropriate access to the entity. A good way to test this is by creating a *flow* (using Microsoft Flow). 
 
@@ -119,28 +119,28 @@ If you are unable to see your connections or environments in the drop-down while
 
   1. Create a new flow (choose **Create from blank**) under **Business logic/Flow** from [https://web.powerapps.com](https://web.powerapps.com).
 
-    > [!div class="mx-imgBorder"] 
-    > ![](media/ConnectionstestFlow1.png "Connections new flow")
+      > [!div class="mx-imgBorder"] 
+      > ![](media/ConnectionstestFlow1.png "Connections new flow")
 
   2. Select a **Recurrence** trigger. Under **New Step**, search for and select **Dynamics 365 for Finance and Operations connector**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![](media/ConnectionstestFlow2.png "Connections recurrence trigger")
+      > [!div class="mx-imgBorder"] 
+      > ![](media/ConnectionstestFlow2.png "Connections recurrence trigger")
 
   3.  Select **Create record** as an action, and in the drop-down, ensure that you are logged in with the appropriate account. This is the same account you would use to create your connection for your data integration projects.
 
-    > [!div class="mx-imgBorder"] 
-    > ![](media/ConnectionstestFlow3.png "Connections create record")
+      > [!div class="mx-imgBorder"] 
+      > ![](media/ConnectionstestFlow3.png "Connections create record")
 
   4. Selecting the drop-down under **Instance** should show all the Dynamics 365 Finance and Operations environments. This is a good step to verify that your account (from the previous step) has access to the environments. 
 
-    > [!div class="mx-imgBorder"] 
-    > ![](media/ConnectionstestFlow4.png "Connections instances")
+      > [!div class="mx-imgBorder"] 
+      > ![](media/ConnectionstestFlow4.png "Connections instances")
 
   5. Additionally, once you have picked your environment, confirm that you have access to all the entities under it.
 
-    > [!div class="mx-imgBorder"] 
-    > ![](media/ConnectionstestFlow5.png "Connections confirm access to entities")
+      > [!div class="mx-imgBorder"] 
+      > ![](media/ConnectionstestFlow5.png "Connections confirm access to entities")
 
 * **Organizations**: This is where you would specify the LE (Legal Entity; for example, USMF) for Dynamics 365 for Finance and Operations, the BU (Business Unit) for Dynamics 365 for Sales, or the CDS for Apps organization name. If you miss this step, you will get a message that contains the valid names corresponding to your application that you then need to plug in under Organizations.
 
@@ -173,7 +173,7 @@ Once you fix the mapping, the error should go away, and you should be able to ex
 > [!div class="mx-imgBorder"] 
 > ![](media/ProjectValidationErrors4.png "Mapping fixed")
 
-### Project executions issues 
+### Project execution issues 
 
 If you are notified of a project execution that completed with a warning or is in an error state, the first step is to drill into the execution history. From the project list page, select the individual project and review the latest execution on the **Execution history** tab and click through to the specific error.
 
