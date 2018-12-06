@@ -69,7 +69,7 @@ A form can be set as the default form through the form order configuration or wh
 2. On the toolbar select **Form Order** > **Main Form Set**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/media/form-order-toolbar.png "Form Order toolbar command")
+   > ![](media/form-order-toolbar.png "Form Order toolbar command")
    
 3. The form order is displayed. Select the form and use the up and down arrows to move the form within the form order. The form at the top of the list is the default form. 
 
