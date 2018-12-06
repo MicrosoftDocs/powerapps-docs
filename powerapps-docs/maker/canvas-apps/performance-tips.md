@@ -60,9 +60,9 @@ You can confirm this behavior in the Developer Tools for your browser:
 You can enclose the same formula in the **Concurrent** function to reduce the overall time that the operation needs:
 
 	Concurrent(	
-		ClearCollect( Product, '[SalesLT].[Product]' );
-		ClearCollect( Customer, '[SalesLT].[Customer]' );
-		ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
+		ClearCollect( Product, '[SalesLT].[Product]' ),
+		ClearCollect( Customer, '[SalesLT].[Customer]' ),
+		ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
 		ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
 		
 With this change, the app fetches the tables in parallel: 
