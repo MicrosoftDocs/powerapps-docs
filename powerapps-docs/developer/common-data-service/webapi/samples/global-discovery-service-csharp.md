@@ -50,7 +50,7 @@ The sample depends on the `GetInstances` method and the `Instance` class below:
     {
 
       string GlobalDiscoUrl = "https://globaldisco.crm.dynamics.com/";
-      AuthenticationContext authContext = new AuthenticationContext("https://login.windows.net/common", false);
+      AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com", false);
 
       UserCredential cred = new UserCredential(username, password);
       AuthenticationResult authResult = authContext.AcquireToken(GlobalDiscoUrl, clientId, cred);
