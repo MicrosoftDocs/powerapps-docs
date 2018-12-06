@@ -136,13 +136,13 @@ A business rule may not execute because the field referenced in the business rul
 3.	In the form designer, open the business rule. 
 4.	In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
 
-   > [!div class="mx-imgBorder"] 
-   > ![](media/business-rule-field.png "Field referenced in business rule exists in entity")
+     > [!div class="mx-imgBorder"] 
+     > ![](media/business-rule-field.png "Field referenced in business rule exists in entity")
 
  5.	Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 
-   > [!div class="mx-imgBorder"] 
-   > ![](media/account-name-on-form.png "Account name field on form")
+     > [!div class="mx-imgBorder"] 
+     > ![](media/account-name-on-form.png "Account name field on form")
 
 ## Next steps  
  [Create custom business logic through processes](guide-staff-through-common-tasks-processes.md)   
