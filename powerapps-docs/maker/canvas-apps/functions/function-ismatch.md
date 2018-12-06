@@ -187,7 +187,18 @@ The user types **Hello world** into **TextInput1**.
 
 Let's drill into that last example.  If we wanted to convert this string to a Date/Time value using the **[Time](function-date-time.md)** function we need to pass in the named sub-matches individually.  To do this we can use the **[ForAll](function-forall.md)** function operating on the first record returned from **MatchAll**:
 
+``` powerapps-dot
+First( 
+	ForAll( 
+		MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ), 
+		Time( Value( hours ), Value( minutes ), Value( seconds ) )
+	)
+).Value
 ```
+
+TODO: Remove second instance, only here for colorization testing
+
+``` powerapps-comma
 First( 
 	ForAll( 
 		MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ), 
