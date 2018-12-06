@@ -1,7 +1,7 @@
 ---
 title: "Create and design model-driven app forms | MicrosoftDocs"
 ms.custom: ""
-ms.date: 06/26/2018
+ms.date: 12/06/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -52,6 +52,36 @@ There are still a number of entities, referred to here as classic entities, that
 |Saved View|Service|Service Activity|SharePoint Site|Site|  
 |Territory|Unit|Unit Group|||  
   
+## Form display FAQ
+
+### Why is my form not visible in the form selector drop down in my app?
+A form may not be available because it hasn’t been added to the app.
+1. Open the app in app designer.
+2. In the **Entity View** area select **Forms** next to the entity.
+3. On the **Components** tab verify the main forms that are included for the app. Verify that the form you want to display is checked. If not, select it, save, and then publish the app.
+
+   > [!div class="mx-imgBorder"] 
+   > ![](media/forms-included-in-app.png "Forms included with app")
+   
+### Why isn't my form displayed as the default form in the app?
+A form can be set as the default form through the form order configuration or when a user sets the default form as a personalization setting.
+1. Open solution explorer. Expand the entity that has the forms your want to order, and then select **Forms**.
+2. On the toolbar select **Form Order** > **Main Form Set**. 
+
+   ![Form Order toolbar command](media/form-order-toolbar.png)
+
+3. The form order is displayed. Select the form and use the up and down arrows to move the form within the form order. The form at the top of the list is the default form. 
+
+   ![Form order dialog](media/form-order-dialog.png)
+
+4. Select **OK** to save the form order changes.
+5. On the form designer toolbar, select **Publish** to make the form order available in apps.
+ 
+#### Form order user personalization setting
+Notice that, when an app user changes the form selection in the form selector drop down of an app, that form becomes the default form for the user. This personalization overrides the default form specified for the entity in the app.
+
+   ![User setting to change default form](media/change-form-user-setting.png)
+
 ### Related topics  
     
 [Assign form order](assign-form-order.md) <br />
