@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 12/05/2018
+ms.date: 12/06/2018
 ms.author: sabinn
 search.audienceType: 
   - admin
