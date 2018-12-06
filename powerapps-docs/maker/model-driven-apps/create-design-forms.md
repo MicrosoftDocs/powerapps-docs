@@ -68,20 +68,23 @@ A form can be set as the default form through the form order configuration or wh
 1. Open solution explorer. Expand the entity that has the forms your want to order, and then select **Forms**.
 2. On the toolbar select **Form Order** > **Main Form Set**. 
 
-   ![Form Order toolbar command](media/form-order-toolbar.png)
-
+   > [!div class="mx-imgBorder"] 
+   > ![](media/media/form-order-toolbar.png "Form Order toolbar command")
+   
 3. The form order is displayed. Select the form and use the up and down arrows to move the form within the form order. The form at the top of the list is the default form. 
 
-   ![Form order dialog](media/form-order-dialog.png)
-
+   > [!div class="mx-imgBorder"] 
+   > ![](media/form-order-dialog.png "Form order dialog")
+   
 4. Select **OK** to save the form order changes.
 5. On the form designer toolbar, select **Publish** to make the form order available in apps.
  
 #### Form order user personalization setting
 Notice that, when an app user changes the form selection in the form selector drop down of an app, that form becomes the default form for the user. This personalization overrides the default form specified for the entity in the app.
 
-   ![User setting to change default form](media/change-form-user-setting.png)
-
+   > [!div class="mx-imgBorder"] 
+   > ![](media/change-form-user-setting.png "User setting to change default form")
+   
 ### Related topics  
     
 [Assign form order](assign-form-order.md) <br />
