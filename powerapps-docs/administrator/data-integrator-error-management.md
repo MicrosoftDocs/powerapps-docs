@@ -115,7 +115,7 @@ If you are unable to see your connections or environments in the drop-down while
 
 * **Environment**: If you don’t see your environments in the drop-down, ensure that the account you used to create the connections has the appropriate access to the entity. A good way to test this is by creating a *flow* (using Microsoft Flow). 
 
-  Here is an example of creating a simple flow to test your connection to Dynamics 365 for Finance and Operations.
+  Here is an example of creating a simple flow to test your connection to Dynamics 365 for Finance and Operations:
 
   1. Create a new flow (choose **Create from blank**) under **Business logic/Flow** from [https://web.powerapps.com](https://web.powerapps.com).
 
