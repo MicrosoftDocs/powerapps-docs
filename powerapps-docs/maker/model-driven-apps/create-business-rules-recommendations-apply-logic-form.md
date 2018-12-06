@@ -131,14 +131,19 @@ This tutorial shows you how to create business rules and recommendations to appl
 
 ## Is your business rule not firing for a form?
 A business rule may not execute because the field referenced in the business rule isn’t included with the form. 
-1.	Open solution explorer. Expand the entity that you want and then select Forms. 
-2.	Open the form that you want and then on the form designer ribbon select Business Rules. 
+1.	Open solution explorer. Expand the entity that you want and then select **Forms**. 
+2.	Open the form that you want and then on the form designer ribbon select **Business Rules**. 
 3.	In the form designer, open the business rule. 
 4.	In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
 
    > [!div class="mx-imgBorder"] 
    > ![](media/business-rule-field.png "Field referenced in business rule exists in entity")
-  
+
+ 5.	Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
+
+   > [!div class="mx-imgBorder"] 
+   > ![](media/account-name-on-form.png "Account name field on form")
+
 ## Next steps  
  [Create custom business logic through processes](guide-staff-through-common-tasks-processes.md)   
  [Create a business process flow](/flow/create-business-process-flow)   
