@@ -56,7 +56,7 @@ We highly encourage our customers and partners to subscribe to email-based notif
 > [!div class="mx-imgBorder"] 
 > ![](media/RemoteMonitoring.png "Remote monitoring warning")
 
-Any time a project completes with a warning or is in the error state, you get an email notification indicating the project execution status with a drill-through link to the specific failure.
+Any time a project completes with a warning or is in the error state, you get an email notification indicating the project execution status with a drillthrough link to the specific failure.
 
 > [!div class="mx-imgBorder"] 
 > ![](media/RemoteMonitoring-EmailNotification.png "Remote monitoring email notification")
@@ -127,7 +127,7 @@ If you are unable to see your connections or environments in the drop-down while
       > [!div class="mx-imgBorder"] 
       > ![](media/ConnectionstestFlow2.png "Connections recurrence trigger")
 
-  3.  Select **Create record** as an action. In the drop-down, ensure that you are logged in with the appropriate account. This is the same account you would use to create a connection for your data integration projects.
+  3.  Select **Create record** as an action. In the drop-down, ensure that you are logged in with the appropriate account. This is the same account you use to create a connection for your data integration projects.
 
       > [!div class="mx-imgBorder"] 
       > ![](media/ConnectionstestFlow3.png "Connections create record")
@@ -142,7 +142,7 @@ If you are unable to see your connections or environments in the drop-down while
       > [!div class="mx-imgBorder"] 
       > ![](media/ConnectionstestFlow5.png "Connections confirm access to entities")
 
-* **Organizations**: This is where you would specify the Legal Entity (LE) (for example, USMF) for Dynamics 365 for Finance and Operations, the BU (Business Unit) for Dynamics 365 for Sales, or the CDS for Apps organization name. If you miss this step, you get a message that contains valid names corresponding to your application that you then need to plug in under Organizations.
+* **Organizations**: This is where you would specify the Legal Entity (LE) (for example, USMF) for Dynamics 365 for Finance and Operations, the Business Unit (BU) for Dynamics 365 for Sales, or the CDS for Apps organization name. If you miss this step, you get a message that contains valid names corresponding to your application that you then need to plug in under Organizations.
 
 ### Project validation errors 
 
