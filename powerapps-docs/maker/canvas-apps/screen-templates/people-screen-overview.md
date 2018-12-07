@@ -21,8 +21,6 @@ In a canvas app, add a people screen that lets users search for people within th
 
 You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), a user's [calendar](calendar-screen-overview.md), and [availability](meeting-screen-overview.md) of people whom you want to invite to a meeting.
 
-PowerApps gives you several screens as starting points to build on. The people screen connects to the app user's Office 365 data, allowing them to search and view user profiles for people inside their organization, as well as add them to a collection.
-
 This overview teaches you:
 > [!div class="checklist"]
 > * The high level functionality of the people screen
@@ -45,7 +43,7 @@ To add a people screen from the template:
 
 1. On the **Home** tab of the ribbon, select **New screen** > **People**.
 
-  By default, the screen resembles this graphic:
+    By default, the screen resembles this graphic:
 
     ![Initial people screen state](media/people-screen/people-screen-empty.png)
 

@@ -33,7 +33,7 @@ To add a people screen from the template:
 
 1. On the **Home** tab of the ribbon, select **New screen** > **People**.
 
-  By default, the screen resembles this graphic:
+    By default, the screen resembles this graphic:
 
     ![Initial people screen state](media/people-screen/people-screen-empty.png)
 
