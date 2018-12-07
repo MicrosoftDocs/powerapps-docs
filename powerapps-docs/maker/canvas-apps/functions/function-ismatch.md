@@ -33,7 +33,7 @@ Use **Match** to extract the first text string that matches a pattern and **Matc
 | **StartMatch** | Number | The starting position of the match within the input text string.  The first character of the string returns 1. | 
 | **SubMatches** | Single column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order they appear in the regular expression. Generally, named sub-matches are easier to work with and are encouraged.  Use the [**ForAll**](function-forall.md) function or **[Last](function-first-last.md)( [FirstN](function-first-last.md)( **...** ) )** functions to work with an individual sub-match.  If there are no sub-matches defined in the regular expression this table will still be present but will be empty. |
 
-These functions support [**MatchOptions**](match-options).  By default: 
+These functions support [**MatchOptions**](#match-options).  By default: 
 - These functions perform a case-sensitive match.  Use **IgnoreCase** to perform case-insensitive matches.    
 - **IsMatch** will match the entire text string (**Complete** MatchOption) while **Match** and **MatchAll** will search for a match anywhere in the text string (**Contains** MatchOption). 
 
