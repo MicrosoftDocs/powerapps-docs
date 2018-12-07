@@ -44,7 +44,7 @@ search.app:
  You can also search for a specific component by its name. 
  
 > [!div class="mx-imgBorder"]  
-> ![Search component](media/solution-search-box2.png "Search component")  
+> ![Search component](media/solution-search-box.png "Search component")  
  
  Or filter all items in the list by the component type.
   
@@ -56,7 +56,7 @@ search.app:
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
-> ![Component specific commands](media/component-commands2.png "Component specific commands")  
+> ![Component specific commands](media/component-commands.png "Component specific commands")  
  
  When you don't select any component, the command bar will show actions applied to the solution itself. 
  
@@ -87,7 +87,7 @@ search.app:
 >  Currently, when you add an existing entity to a solution the system automatically adds all the components that are part of the entity to your solution. If this is not what you prefer, use the command **Switch to classic** to navigate to the classic experience and add only those components that you want. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
   
 > [!div class="mx-imgBorder"]  
-> ![Demo solution showing expanded account entity](media/solution-entity-account2.png "Demo solution showing expanded account entity")  
+> ![Demo solution showing expanded account entity](media/solution-entity-account.png "Demo solution showing expanded account entity")  
 
 ## Classic solution explorer
 
