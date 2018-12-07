@@ -151,6 +151,23 @@
         items:
           - name: Add a screen
             href: ./canvas-apps/add-screen-context-variables.md
+            items:
+              - name: Calendar-screen overview
+                href: ./canvas-apps/screen-templates/calendar-screen-overview.md
+              - name: Calendar-screen reference
+                href: ./canvas-apps/screen-templates/calendar-screen-reference.md
+              - name: Email-screen overview
+                href: ./canvas-apps/screen-templates/email-screen-overview.md
+              - name: Email-screen reference
+                href: ./canvas-apps/screen-templates/email-screen-reference.md
+              - name: Meeting-screen overview
+                href: ./canvas-apps/screen-templates/meeting-screen-overview.md
+              - name: Meeting-screen reference
+                href: ./canvas-apps/screen-templates/meeting-screen-reference.md
+              - name: People-screen overview
+                href: ./canvas-apps/screen-templates/people-screen-overview.md
+              - name: People-screen reference
+                href: ./canvas-apps/screen-templates/people-screen-reference.md
           - name: Show a table of items
             href: ./canvas-apps/add-gallery.md
           - name: Show items of different heights
@@ -600,6 +617,10 @@
             href: ./canvas-apps/accessibility-checker.md
           - name: Use color for accessibility
             href: ./canvas-apps/accessible-apps-color.md
+          - name: Show or hide content from assistive technologies
+            href: ./canvas-apps/accessible-apps-content-visibility.md
+          - name: Announce dynamic changes with live regions
+            href: ./canvas-apps/accessible-apps-live-regions.md
       - name: Experimental and preview features
         href: ./canvas-apps/working-with-experimental.md
   - name: Save and publish an app
@@ -984,6 +1005,8 @@
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution
       href: ./common-data-service/create-solution.md
+    - name: Use solution checker
+      href: ./common-data-service/use-powerapps-checker.md      
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix
@@ -1008,13 +1031,6 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
-- name: Common Data Model
-  href: ../common-data-model/overview.md
-  items:
-  - name: How to use the Common Data Model
-    href: ../common-data-model/use-common-data-model.md
-  - name: Industry accelerators
-    href: ../common-data-model/industry-accelerators.md
 - name: Learn from others
   items:
   - name: Webinars

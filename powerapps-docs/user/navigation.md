@@ -62,3 +62,7 @@ The reference panel is a great way to get work done without moving away from the
 
 > [!div class="mx-imgBorder"]
 > ![Reference panel](media/reference-panel.png "Reference panel")
+
+ Watch this video to learn more about the Reference Panel:
+
+<div class="embeddedvideo"><iframe src="https://www.microsoft.com/en-us/videoplayer/embed/d8224c3f-6e20-4b8e-9d0d-b0f5602c7708" frameborder="0" allowfullscreen=""></iframe></div>

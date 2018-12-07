@@ -1,6 +1,32 @@
 {
     "redirections": [
         {
+        "source_path": "powerapps-docs/developer/common-data-service/xrm-tooling/use-xrm-tooling-classes-generated-code-generation-tool.md",    
+        "redirect_url": "https://docs.microsoft.com/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "powerapps/developer/common-data-service/export-solution-specific-version.md",    
+        "redirect_url": "https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-export-import-unmanaged-solution",
+        "redirect_document_id": false
+
+        },
+        {
+            "source_path": "powerapps-docs/common-data-model/overview.md",    
+            "redirect_url": "https://docs.microsoft.com/common-data-model/",
+            "redirect_document_id": true
+            },
+        {
+	"source_path": "powerapps-docs/common-data-model/use-common-data-model.md",    
+	"redirect_url": "https://docs.microsoft.com/common-data-model/use",
+	"redirect_document_id": true
+	},
+	{
+	"source_path": "powerapps-docs/common-data-model/industry-accelerators.md",    
+	"redirect_url": "https://docs.microsoft.com/common-data-model/industry-accelerators",
+	"redirect_document_id": true
+	},
+        {
         "source_path": "powerapps-docs/guided-learning/create-app-sharepoint.md",
         "redirect_url": "https://docs.microsoft.com/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path",
         "redirect_document_id": true

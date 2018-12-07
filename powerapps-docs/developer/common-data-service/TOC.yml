@@ -288,8 +288,6 @@
         href: uninstall-delete-solution.md
       - name: Work with solutions
         href: work-solutions.md
-      - name: Export a solution for a specific version
-        href: export-solution-specific-version.md
       - name: Create, install, and update a managed solution
         href: create-install-update-managed-solution.md
       - name: Create patches to simplify solution updates

@@ -22,7 +22,7 @@ If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.
 
 ## Prerequisites
 
-To follow this quickstart, you must [switch to an environment](working-with-environments.md) in which a database in CDS for Apps has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
+To follow this quickstart, you must be assigned to the [Environment Maker](../../administrator/database-security.md#predefined-security-roles) security role, and you must [switch to an environment](working-with-environments.md) in which a database in CDS for Apps has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](../../administrator/environments-administration.md#create-an-environment) that meets this requirement.
 
 ## Generate an app
 
