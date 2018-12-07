@@ -16,7 +16,7 @@ search.app:
 ---
 # Data Integrator error management and troubleshooting
 
-The Data Integrator is a point-to-point integration service used to integrate data from multiple sources--for example, Dynamics 365 for Finance and Operations, Dynamics 365 for Sales, and Salesforce, SQL (Preview)--into Common Data Service for Apps (CDS for Apps). It also supports integrating data into Dynamics 365 for Finance and Operations and Dynamics 365 for Sales. The [Integrate data into Common Data Service for Apps](data-integrator.md) topic provides detailed step-by-step instructions to help you set up projects for process-based integration scenarios like Prospect to Cash, Field Service, and Project Service integrations. 
+The Data Integrator is a point-to-point integration service used to integrate data from multiple sources--for example, Dynamics 365 for Finance and Operations, Dynamics 365 for Sales, Salesforce, and Microsoft SQL (Preview)--into Common Data Service for Apps (CDS for Apps). It also supports integrating data into Dynamics 365 for Finance and Operations and Dynamics 365 for Sales. The [Integrate data into Common Data Service for Apps](data-integrator.md) topic provides detailed step-by-step instructions to help you set up projects for process-based integration scenarios like Prospect to Cash, Field Service, and Project Service integrations. 
 
 While we are constantly evolving and driving fixes into the platform based on customer feedback, we understand there is a need to provide guidance when you run into issues. This topic walks you through error management and troubleshooting some of these issues.
 
@@ -95,7 +95,7 @@ Each project execution is marked with the status Completed, Warning, or Error:
 
    If the project execution is in the **Error** state, then it will automatically retry execution at the next scheduled run.
 
-You can also manually retry an execution by selecting **Re-run execution** via the ellipsis on the **Execution history** page.
+You can also manually retry an execution by selecting **Re-run execution** via the ellipsis (...) on the **Execution history** page.
 
 ## Quick tips on troubleshooting common scenarios 
 
@@ -108,7 +108,7 @@ If you are unable to see your connections or environments in the drop-down while
 > [!div class="mx-imgBorder"] 
 > ![](media/ConnectionSet1.png "Connection set")
 
-* **Connection**: Ensure you have created your connections under Data/Connections on [https://web.powerapps.com ](https://web.powerapps.com) and that they are in the **Connected** state. If you see a **Fix Connection** notification, you should double-check the credentials used for the account, and use the **Switch account** option from the ellipsis to reauthenticate.
+* **Connection**: Ensure you have created your connections under Data/Connections on [https://web.powerapps.com ](https://web.powerapps.com) and that they are in the **Connected** state. If you see a **Fix Connection** notification, you should double-check the credentials used for the account, and use the **Switch account** option from the ellipsis (...) to reauthenticate.
 
    > [!div class="mx-imgBorder"] 
    > ![](media/ConnectionsIssue.png "Connections issue")
@@ -142,7 +142,7 @@ If you are unable to see your connections or environments in the drop-down while
       > [!div class="mx-imgBorder"] 
       > ![](media/ConnectionstestFlow5.png "Connections confirm access to entities")
 
-* **Organizations**: This is where you would specify the Legal Entity (LE) (for example, USMF) for Dynamics 365 for Finance and Operations, the Business Unit (BU) for Dynamics 365 for Sales, or the CDS for Apps organization name. If you miss this step, you get a message that contains valid names corresponding to your application that you then need to plug in under Organizations.
+* **Organizations**: This is where you would specify the legal entity (for example, USMF) for Dynamics 365 for Finance and Operations, the business unit for Dynamics 365 for Sales, or the CDS for Apps organization name. If you miss this step, you get a message that contains valid names corresponding to your application that you then need to plug in under Organizations.
 
 ### Project validation errors 
 
