@@ -104,7 +104,7 @@ To delete system-generated logs, do the following:
 
 ## Determining Tenant Type
 To determine whether or not you are a user of a managed or unmanaged tenant, perform the following actions:
-1. Open the following URL in a browser, making sure to replace your email address in the URL:[ https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1](https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1).
+1. Open the following URL in a browser, making sure to replace your email address in the URL:[https://login.microsoftonline.com/common/userrealm/name@contoso.com?api-version=2.1](https://login.microsoftonline.com/common/userrealm/name@contoso.com?api-version=2.1).
 
 2. If you are a member of an **unmanaged tenant** then you will see an `"IsViral": true` in the response.
   ```
