@@ -29,6 +29,8 @@
     items:
     - name: Integrate data into CDS for Apps
       href: data-integrator.md
+    - name: Data Integrator Error management and troubleshooting
+      href: data-integrator-error-management.md
     - name: Responding to DSR requests
       items:
       - name: System-generated logs
