@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 06/05/2017
+ms.date: 12/07/2018
 ms.author: stepsic
 search.audienceType: 
   - maker
