@@ -49,4 +49,4 @@ The steps to embed a canvas app in your model-driven form vary based on the data
 ## See also
 [What are canvas apps in PowerApps?](../canvas-apps/getting-started.md) <br />
 [Add and configure a canvas-app control in PowerApps](../canvas-apps/add-configure-controls.md) <br />
-[Overview of canvas-app connectors for PowerApps](../canvas-apps/connections-list.md)
+[Overview of canvas-app connectors for PowerApps](../canvas-apps/connections-list.md) 
