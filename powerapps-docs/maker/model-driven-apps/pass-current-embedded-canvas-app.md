@@ -39,18 +39,18 @@ Imagine that you want to add an embedded canvas app on an account main form and 
       > Always use a required field that is guaranteed to have a value. If your field does not have a value, your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 4.	With the field selected, on the **Home** tab on the ribbon, in the **Edit** group, select **Change Properties**.
 5.	On the **Field Properties** dialog, select the **Controls** tab.
-6.	On the **Controls** tab, select **Add Control**.
+6.	On the **Controls** tab, select **Add Control...**.
 7.	On the **Add Control** dialog, in the list of available controls, select **Canvas app** and then select **Add**.
 8.	In the **Field Properties** dialog, in the list of controls select **Canvas app** and then select the **Web** option.
 9.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
      - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to entity that contains the field you added in an earlier step.
-       - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
-       - The **App ID** property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
-       - Notice that, any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
+     - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
+     - The **App ID** property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
+     - Notice that, any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
 10.	Select **Customize** to create or edit the canvas app. This opens PowerApps Studio in a new tab.
 	   > [!NOTE]
-       > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker. 
-11.	In PowerApps Studio notice that there is a special ModelDrivenFormIntegration control in the Tree view on the left. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
+       > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again.
+11.	In PowerApps Studio notice that there is a special **ModelDrivenFormIntegration** control in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app.
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
       > [!NOTE]
       > ModelDrivenFormIntegration.Data is a list of records. In this example it has only one record. To directly reference the record you can use the First function. For example, *First(ModelDrivenFormIntegration.Data).Name*.
@@ -60,11 +60,11 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 16.	Select the **File** tab on the ribbon, and then select **App settings**.
 17.	On the **Advanced settings** tab, in the **Experimental features** section, set **Enable app embedding user experience** to **On**.
 18.	Select **Save**. 
-19.	Select the **Cloud** tab. Provide a unique name for the app and then select **Save** located on the bottom right corner. Note the following: 
-    - Saving an app for the first time automatically publishes the app.
-	  - On a subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
+19.	Select the **The cloud** tab. Provide a unique name for the app and then select **Save** located on the bottom right corner. Note the following: 
+     - Saving an app for the first time automatically publishes the app.
+	   - On a subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
 20.	On the menu select **Back** and then select the browser tab that has the form editor open. Observe that the App ID property of the canvas app control now has a value automatically filled in. Note the following: 
-    - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in Step 9 above.
+    - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in the previous step.
     - 	The form editor "listens" for the **App ID** to be send to it.
     - 	The **App ID** is sent to the form editor when the app is saved.
 21.	On the **Field Properties** dialog, select the **Display** tab.

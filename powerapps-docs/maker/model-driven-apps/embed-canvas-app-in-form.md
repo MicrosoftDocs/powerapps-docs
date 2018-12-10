@@ -1,5 +1,5 @@
 ---
-title: "Embed a canvas app in a model-driven form | MicrosoftDocs"
+title: "Embed a canvas app to a model-driven form | MicrosoftDocs"
 ms.custom: ""
 ms.date: 12/10/2018
 ms.reviewer: ""
@@ -24,7 +24,7 @@ search.app:
   - D365CE
 ---
 
-# Embed a canvas app in a model-driven form
+# Embed a canvas app to a model-driven form
 
 Canvas apps enable makers to easily design and create custom layouts using the low-code, WYSIWYG canvas app designer. Canvas apps also enable makers to connect and display data from over 200 data sources on their forms.
 
