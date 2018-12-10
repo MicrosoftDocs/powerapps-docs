@@ -11,7 +11,6 @@ applies_to:
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
-ms.assetid: 00e62904-2ce9-4730-a113-02b1fedbf22e
 author: "Mattp123"
 ms.author: "matp"
 manager: "kvivek"
@@ -27,7 +26,11 @@ search.app:
 # Pass the current record as data context with an embedded canvas app
 Follow these steps to add an embedded canvas app and pass the current (main form) record as a data context to the embedded canvas app.
 
-Imagine that you will add an embedded canvas app on an account main form and want to pass the current account record to the embedded canvas app. To do this, follow these steps: 
+> [!NOTE]
+> This feature is currently in preview. <br />
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] 
+
+Imagine that you want to add an embedded canvas app on an account main form and pass the current account record to the embedded canvas app. To do this, follow these steps: 
 
 1.	Open the form editor for a main form of an entity, such as the account entity.
 2.	Select the section on the form where you want the embedded canvas app to appear.
@@ -69,9 +72,10 @@ Imagine that you will add an embedded canvas app on an account main form and wan
     - 	If you already have a canvas app embedded on this form you will see a message that reads “Only one canvas app can be enabled on a form.”. For now you will need disable your current embedded canvas app (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP). You can enable your current embedded canvas app (LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)   after you have disabled any other canvas apps that exist on your form.
 23.	On the **Home** tab, select **Save**, and then select **Publish**.
 
-When users open a model-driven app that includes the form you modified they see the embedded canvas app on the form. Changing the record displayed in the main form changes the data context that is passed to the form and the embedded app refreshes to show the relevant data.
+When users open a model-driven app that includes the form you modified they see the embedded canvas app on the form. Changing the record displayed on the main form changes the data context that is passed to the form and the embedded app refreshes to show the relevant data.
 
-The steps above showed you how to get started with embedding a canvas app in model-driven form. You can further customize the embedded canvas app to connect and bring in data from a variety of data sources. Use the Filter, Search and LookUp functions and the context passed in from the host model-driven form to filter or find specific records in those data sources. Use the powerful WYSIWYG canvas app editor to easily design the interface to match your requirements.
+This topic showed you how to get started with embedding a canvas app in a model-driven form. You can further customize the embedded canvas app to connect and bring in data from a variety of data sources. Use the Filter, Search and LookUp functions and the context passed in from the host model-driven form to filter or find specific records in those data sources. Use the WYSIWYG canvas app editor to easily design the interface to match your requirements.
 
 ## See also
-[Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md)
+[Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
+[Pass a list of related records as data context with an embedded canvas app](pass-related-embedded-canvas-app.md)

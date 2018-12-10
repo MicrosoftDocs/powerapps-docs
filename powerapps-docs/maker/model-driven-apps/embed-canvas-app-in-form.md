@@ -40,7 +40,7 @@ Canvas apps are embedded in model-driven forms similar to how any other custom c
 
 The steps to embed a canvas app in your model-driven form vary based on the data context that you want the host model-driven form to provide to the embedded canvas app.
 -	Pass the current record as data context. More information: [Pass the current record as data context with an embedded canvas app](pass-current-embedded-canvas-app.md)
--	Pass a list of records related to the current record as data context. More information:  (LINK TO ARTICLE #3)
+-	Pass a list of records related to the current record as data context. More information: [Pass a list of related records as data context with an embedded canvas app](pass-related-embedded-canvas-app.md) 
 
 <!-- After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users (LINK TO ARTICLE #4).  -->
 
