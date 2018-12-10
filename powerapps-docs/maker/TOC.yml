@@ -779,11 +779,11 @@
             href: ./model-driven-apps/manage-auto-save.md
       - name: Embed a canvas app on a form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
-        item: 
+        items: 
         - name: "Pass the current record with an embedded canvas app"
           href: ./model-driven-apps/pass-current-embedded-canvas-app.md
         - name: "Pass related records with an embedded canvas app"
-          href:  /model-driven-apps/pass-related-embedded-canvas-app.md 
+          href:  ./model-driven-apps/pass-related-embedded-canvas-app.md 
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items: 
