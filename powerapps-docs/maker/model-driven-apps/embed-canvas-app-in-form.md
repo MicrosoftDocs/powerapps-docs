@@ -39,12 +39,12 @@ With embedded canvas apps, makers can bring the power of canvas apps to their mo
 Canvas apps are embedded in model-driven forms similar to how any other custom control is added. The embedded canvas apps also include rich data integration capabilities that brings in contextual data from the host model-driven form to the embedded canvas app.
 
 The steps to embed a canvas app in your model-driven form vary based on the data context that you want the host model-driven form to provide to the embedded canvas app.
--	Pass the current record as data context. More information: (LINK TO ARTICLE #2)
+-	Pass the current record as data context. More information: [Pass the current record as data context with an embedded canvas app](pass-current-embedded-canvas-app.md)
 -	Pass a list of records related to the current record as data context. More information:  (LINK TO ARTICLE #3)
 
-After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users (LINK TO ARTICLE #4).
+<!-- After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users (LINK TO ARTICLE #4).  -->
 
-For things to keep in mind when working with embedded canvas apps and to help troubleshoot any issues you might encounter, see (LINK TO ARTICLE #5).
+<!-- For things to keep in mind when working with embedded canvas apps and to help troubleshoot any issues you might encounter, see (LINK TO ARTICLE #5). -->
 
 ## See also
 [What are canvas apps in PowerApps?](../canvas-apps/getting-started.md) <br />
