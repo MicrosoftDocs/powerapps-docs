@@ -25,7 +25,7 @@ search.app:
 
 # Pass a list of related records as data context with an embedded canvas app
 
-Follow these steps to add an embedded canvas app (LINK TO ARTICLE #1) and pass a list of records related to the current (main form) record as a data context to the embedded canvas app.
+Follow these steps to add an embedded canvas app and pass a list of records related to the current (main form) record as a data context to the embedded canvas app.
 
 > [!NOTE]
 > This feature is currently in preview. <br />
@@ -33,7 +33,7 @@ Follow these steps to add an embedded canvas app (LINK TO ARTICLE #1) and pass a
 
 Imagine that you want to add an embedded canvas app on an account main form and pass a list of contacts related to the current account record to the embedded canvas app. To do this, follow these steps:
 
-1.	Open the form editor for a main form of an entity, such as the account entity.
+1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity.
 2.	Select the section on the form where you want the embedded canvas app to appear.
 3.	With the section selected, on the **Insert** tab, in the **Control** group, select **Sub-Grid**.
 4.	In the **Set Properties** dialog: 
@@ -57,7 +57,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 9.	Select the **Gallery1** control and observe that its **Items** property is set to **ModelDrivenFormIntegration.Data**.
 10.	In the property pane on the right, next to **Fields**, select **Edit**.
 11.	In the data pane, change the field mapped to the **Title1** control to **FullName** or another field that has data.
-12.	Observe that the gallery is displaying the data being passed to it from the host model-driven form via the **ModelDrivenFormIntegration** control, and close the data pane.
+12.	Observe that the gallery is displaying the data being passed to it from the host model-driven form via the **ModelDrivenFormIntegration** control, and then close the data pane.
 13.	Select the **File** tab, and select **App settings**.
 14.	On the **Advanced settings** tab, in the **Experimental features** section, select **On** next to **Enable app embedding user experience**, and the select Save.
 15. Select the **Cloud** tab, provide a unique name for the app, and then select **Save** (bottom right). Note the following: 

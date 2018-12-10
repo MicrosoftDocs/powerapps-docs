@@ -32,7 +32,7 @@ Follow these steps to add an embedded canvas app and pass the current (main form
 
 Imagine that you want to add an embedded canvas app on an account main form and pass the current account record to the embedded canvas app. To do this, follow these steps: 
 
-1.	Open the form editor for a main form of an entity, such as the account entity.
+1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity. 
 2.	Select the section on the form where you want the embedded canvas app to appear.
 3.	Using the field explorer pane, add a required field such as **Account Name**.
       > [!IMPORTANT]
@@ -43,10 +43,10 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 7.	On the **Add Control** dialog, in the list of available controls, select **Canvas app** and then select **Add**.
 8.	In the **Field Properties** dialog, in the list of controls select **Canvas app** and then select the **Web** option.
 9.	In the section below the controls list, the list of properties available to the canvas app control are displayed.
-     - The Entity name property specifies the entity that will provide the data to your embedded canvas app. It will be set to entity that contains the field you added in step 1 above.
+     - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to entity that contains the field you added in an earlier step.
        - Notice that, even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
-       - The App ID property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
-       - Notice that, any change to this property’s value can break the link from the model-driven form to the embedded canvas app.
+       - The **App ID** property specifies the ID of the embedded canvas app. It will be automatically generated and filled-in for you when the canvas app is created.
+       - Notice that, any change to the **App ID** value breaks the link from the model-driven form to the embedded canvas app.
 10.	Select **Customize** to create or edit the canvas app. This opens PowerApps Studio in a new tab.
 	   > [!NOTE]
        > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker. 
@@ -60,16 +60,16 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 16.	Select the **File** tab on the ribbon, and then select **App settings**.
 17.	On the **Advanced settings** tab, in the **Experimental features** section, set **Enable app embedding user experience** to **On**.
 18.	Select **Save**. 
-19.	Select the **Cloud** tab. Provide a unique name for the app and then select **Save** located on the bottom right corner.
+19.	Select the **Cloud** tab. Provide a unique name for the app and then select **Save** located on the bottom right corner. Note the following: 
     - Saving an app for the first time automatically publishes the app.
-	- On a subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
-20.	On the menu select **Back** and then select the browser tab that has the form editor open. Observe that the App ID property of the canvas app control now has a value automatically filled in. 
+	  - On a subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
+20.	On the menu select **Back** and then select the browser tab that has the form editor open. Observe that the App ID property of the canvas app control now has a value automatically filled in. Note the following: 
     - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in Step 9 above.
-    - 	The form editor has been listening for the App ID to be sent to it.
-    - 	The App ID was sent to it when the app was saved.
+    - 	The form editor "listens" for the **App ID** to be send to it.
+    - 	The **App ID** is sent to the form editor when the app is saved.
 21.	On the **Field Properties** dialog, select the **Display** tab.
 22.	Uncheck **Display label** on the form and then select **OK**.
-    - 	If you already have a canvas app embedded on this form you will see a message that reads “Only one canvas app can be enabled on a form.”. For now you will need disable your current embedded canvas app (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP). You can enable your current embedded canvas app (LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)   after you have disabled any other canvas apps that exist on your form.
+    - 	If you already have a canvas app embedded on this form a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first disable the current one. <!-- (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP) --> Then, enable the new embedded canvas app. <!--(LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)  -->
 23.	On the **Home** tab, select **Save**, and then select **Publish**.
 
 When users open a model-driven app that includes the form you modified they see the embedded canvas app on the form. Changing the record displayed on the main form changes the data context that is passed to the form and the embedded app refreshes to show the relevant data.
