@@ -1,7 +1,7 @@
 ---
 title: "Pass a list of related records as data context with an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/06/2018
+ms.date: 12/10/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -44,7 +44,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
    5. In the **Field Properties** dialog, in the list of controls select **Canvas app** and then select the **Web** option.
    6.	In the section below the controls list, see the list of properties corresponding to the Canvas app control and note the following:
     	- The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that you selected earlier.
-        - Even though this property appears editable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
+        - Even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
         - The **View name** property specifies the view of the entity that will be used to filter the data provided to your embedded canvas app. It will be set to the **Default View** you selected earlier.
         - The data (fields and values) sent to the embedded canvas app at runtime are determined by this view. Only use fields in your canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view display as empty values at runtime.
         - The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of top few records that you have access to. At runtime, the filter criteria for the view are applied as expected users only see relevant data.
@@ -69,9 +69,8 @@ Imagine that you want to add an embedded canvas app on an account main form and 
      - 	The form editor has been listening for the App ID to be sent to it.
      - 	The App ID was sent to it when the app was saved.
 18.	In the **Field Properties** dialog, select the **Display** tab, clear **Display label on the form**, and then select **OK**.
-     - If you already have a canvas app embedded on this form you will see a message that reads “Only one canvas app can be enabled on a form.”. For now you will need disable your current embedded canvas app (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP). You can enable your current embedded canvas app (LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)   after you have disabled any other canvas apps that exist on your form.
-19.	On the **Home** tab, select **Save**.
-20.	On the **Home** tab, select **Publish**.
+     - If you already have a canvas app embedded on this form you will see a message that reads "Only one canvas app can be enabled on a form." For now you will need disable your current embedded canvas app.<!-- (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP)--> You can enable your current embedded canvas app after you have disabled any other canvas apps that exist on your form. <!-- (LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)   -->
+19.	On the **Home** tab select **Save**, and then select **Publish**.
 
 When you now open a model-driven app (Unified Interface only) that includes the form you have modified you see the embedded canvas app on the form. Changing the record displayed on the main form changes the data context that is passed to the form and the embedded app refreshes to show the relevant data.
 

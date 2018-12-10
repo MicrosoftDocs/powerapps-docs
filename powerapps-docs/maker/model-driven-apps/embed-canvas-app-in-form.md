@@ -1,7 +1,7 @@
 ---
 title: "Embed a canvas app in a model-driven form | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/06/2018
+ms.date: 12/10/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
