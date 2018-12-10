@@ -77,5 +77,5 @@ When you now open a model-driven app (Unified Interface only) that includes the 
 This topic showed you how to get started with the embedding a canvas app in a model-driven form. You can further customize the embedded canvas app to connect and bring in data from a variety of data sources. Use the Filter, Search and LookUp functions and the context passed in from the host model-driven form to filter or find specific records in those data sources. Use the WYSIWYG canvas app editor to easily design the interface to match your requirements.
 
 ## See also
-[Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br/ >
+[Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
 [Pass the current record as data context with an embedded canvas app](pass-current-embedded-canvas-app.md)
