@@ -7,8 +7,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 06/05/2017
-ms.author: sharik
+ms.date: 12/07/2018
+ms.author: stepsic
 search.audienceType: 
   - maker
 search.app: 
@@ -25,78 +25,74 @@ You can use Microsoft Flow to create logic that performs one or more tasks when 
 
 ## Create a flow
 
-1. Sign in to [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Flows** in the left navigation bar.
+1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. On the **My Flows** page, select **Create from blank**.
+1. In the left navigation bar, select **Business logic**, and then select **Flows**.
+
+1. In the upper-left corner of the **My Flows** page, select **New**, and then select **Create from blank**.
 
     ![Option to create a flow without using a template](./media/using-logic-flows/create-from-blank.png)
 
-    **PowerApps** is added as the default trigger.
+1. Near the bottom of the page that appears, select **Search hundreds of connections and triggers**.
 
-    ![PowerApps as the trigger that initiates the flow](./media/using-logic-flows/set-trigger.png)
+1. In the search box, type **PowerApps**, and then select the **PowerApps** icon.
 
-3. Select **New step**, and then select **Add an action**.
+    ![Create a PowerApps trigger](./media/using-logic-flows/set-trigger.png)
+    
+1. On the next page, select the PowerApps icon again, and then select **New step**.
 
-    ![Option to add an action](./media/using-logic-flows/add-action.png)
+1. In the box that says **Search connectors and actions**, specify an action for your flow, as in this example:
 
-4. In the box that says **Search all services and actions**, specify an action for your flow, as in this example:
-
-   1. Type **SharePoint** in the box, and then select **SharePoint - Create item** in the list under **Actions**.
+   1. Type **SharePoint** in the box, and then select **Create item** in the list under **Actions**.
 
        ![Option to create a SharePoint item](./media/using-logic-flows/create-sharepoint-item.png)
 
-   2. If prompted, provide credentials to connect to SharePoint.
+   1. If prompted, provide credentials to connect to SharePoint.
 
-   3. In the **Site Address** box, type or paste the URL of a SharePoint Online site that contains a list.
+   1. In the **Site Address** box, type or paste the URL of a SharePoint Online site that contains a list.
 
        > [!NOTE]
-      > Specify the URL for the site not including the list.
+       > Don't append the name of the list to the URL.
 
-   4. In the **List Name** box, select the list that you want to use.
+   1. In the **List Name** box, specify the list that you want to use.
+   
+       ![Specify list](./media/using-logic-flows/list-fields.png)
 
-   5. Click or tap the **Title** box, and then select **Add dynamic content**.
+   1. Select the input box for a field in your list (such as **Title**), select **See more** in the dynamic-content pane, and then select **Ask in PowerApps**. 
 
        ![Add Ask in PowerApps parameter to Title field](./media/using-logic-flows/ask-in-powerapps.png)
 
-   6. In the list of parameters, select **Ask in PowerApps**.
+1. (optional) Specify one or more additional steps, such as sending approval mail to an address that you specify or creating a related entry in another data source.
 
-       ![Add parameter](./media/using-logic-flows/add-parameter.png)
-
-5. (optional) Specify one or more additional actions, such as sending approval mail to an address that you specify or creating a related entry in another data source.
-
-6. Near the top of the screen, type or paste a name for your flow, and then select **Create flow**.
-
-    ![Name and save your flow](./media/using-logic-flows/name-flow.png)
+1. Near the upper-left corner, type or paste a name for your flow, and then select **Save** near the upper-right corner.
 
 ## Add a flow to an app
-1. In PowerApps, select **New** in the **File** menu.
+1. In the left navigation bar, select **Create**.
 
-2. On the **Blank app** tile, select **Phone layout**.
+1. Hover over the **Canvas app from blank** tile, and then select **Make this app**.
 
-3. Add a **[Text input](controls/control-text-input.md)** control, and name it **RecordTitle**.
+1. Add a **[Text input](controls/control-text-input.md)** control, and name it **RecordTitle**.
 
-4. Add a **[Button](controls/control-button.md)** control, and move it under **RecordTitle**.
+1. Add a **[Button](controls/control-button.md)** control, and move it under **RecordTitle**.
 
-5. With the **[Button](controls/control-button.md)** control selected, select **Flows** on the **Action** tab.
+1. With the **[Button](controls/control-button.md)** control selected, select **Flows** on the **Action** tab.
 
     ![Flows option on the Action tab](./media/using-logic-flows/action-tab.png)
 
-6. In the pane that appears, select the flow that you created in the previous procedure.
+1. In the pane that appears, select the flow that you created in the previous procedure.
 
     > [!NOTE]
    > If the flow that you created isn't available, confirm whether PowerApps is set to the environment in which you created the flow.
 
     ![Add a flow from the customization pane](./media/using-logic-flows/add-flow-from-pane.png)
 
-7. In the formula bar, type or paste **RecordTitle.Text)** at the end of the formula that's been automatically added.
+1. In the formula bar, type or paste **RecordTitle.Text)** at the end of the formula that's been automatically added.
 
     ![OnSelect property that includes the flow](./media/using-logic-flows/onselect-with-flow.png)
 
 ## Test the flow
-1. Open Preview by pressing F5 (or by selecting the arrow near the upper-right corner).
+1. Double-click the **Text input** control, and type or paste some text into it.
 
-    ![OnSelect property that includes the flow](./media/using-logic-flows/open-preview.png)
+1. While holding down the Alt key, select the **[Button](controls/control-button.md)** control.
 
-2. Type or paste text in **RecordTitle**, and then click or tap the **[Button](controls/control-button.md)** control.
-
-    A SharePoint item is created in the list you specified with the text you specified as the title. If the list was open when the flow ran, you might need to refresh your browser window to show the changes.
+    A SharePoint item is created in the list that you specified with the text that you specified as the title. If the list was open when the flow ran, you might need to refresh your browser window to show the changes.
