@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/21/2018
+ms.date: 12/11/2018
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -21,7 +21,7 @@ search.app:
 > **Announcing the release notes**
 >
 > Wondering about upcoming and recently released capabilities in PowerApps?
->[View the release notes](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/). We've captured all the details, end to end, top to bottom, which you can use for planning.
+>[View the release notes](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/). We've captured all the details, end to end, top to bottom, which you can use for planning. You can also review [each weekly release](https://aka.ms/PAWeeklyReleaseNotes) with the features and enhancements that it contains.
 
 For information about known limitations, see [Common issues and resolutions](common-issues-and-resolutions.md).
 
