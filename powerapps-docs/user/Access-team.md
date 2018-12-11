@@ -31,12 +31,12 @@ Note, before you can share records using Access Team. Your admin will need to se
 3. In the **Access Team Members** section, select **More Commands** (**…**) > **Add User**.
 
   > [!div class="mx-imgBorder"]
-  > ![Add user to Access Team](media/AcccessTeam2.png "Add user to Access Team")
+  > ![Add user to Access Team](media/AccessTeam2.png "Add user to Access Team")
 
  4. In the search box type in the user name to find the user and then select **Add**.
   
   > [!div class="mx-imgBorder"]
-  > ![Find user](media/AcccessTeam3.png "Find user")  
+  > ![Find user](media/AccessTeam3.png "Find user")  
   
  
 *Remove a user from Access Teams*
@@ -47,6 +47,6 @@ Note, before you can share records using Access Team. Your admin will need to se
 2.	Under Access Team Members sub-grid, select Remove user.
 
   > [!div class="mx-imgBorder"]
-  > ![Remove user from Access Team](media/AcccessTeam4.png "Remove user from Access Team")  
+  > ![Remove user from Access Team](media/AccessTeam4.png "Remove user from Access Team")  
   
   
