@@ -34,7 +34,8 @@ Canvas apps enable makers to easily design and create custom layouts using the l
 
 With embedded canvas apps, makers can bring the power of canvas apps to their model-driven forms. Using embedded canvas apps, you can easily create rich visual areas on a form and display data from a variety of sources right next to data from the Common Data Service.
 
-   ![Embedded canvas app in a model-driven app form](media/embed-canvas-app-in-form.png)
+   > [!div class="mx-imgBorder"] 
+   > ![](media/embed-canvas-app-in-form.png "Embedded canvas app in a model-driven app form")
 
 Canvas apps are embedded in model-driven forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app.
 
