@@ -53,11 +53,3 @@ For information about known limitations, see [Common issues and resolutions](com
 
 1. [Import and export data from Common Data Services for Apps, and open that data in Excel](https://powerapps.microsoft.com/blog/cds-for-apps-excel-importexport/) (blog).
 1. [**Notify** function](functions/function-showerror.md) shows banner messages in canvas apps.
-
-## June 4
-
-1. [Embed an app as a SharePoint webpart](https://powerapps.microsoft.com/blog/embedding-powerapps-in-office-and-beyond/) (blog).
-1. [Specify a custom size for a tablet canvas app](https://powerapps.microsoft.com/blog/embedding-powerapps-in-office-and-beyond/) (blog).
-1. Add [comments to formulas](https://powerapps.microsoft.com/blog/comment-your-powerapps-code/) (blog) in canvas apps.
-1. [PowerShell cmdlets for administrators](https://docs.microsoft.com/powerapps/administrator/powerapps-powershell).
-1. [Rich-text editor control](controls/control-richtexteditor.md) (experimental) - allows end users to format text inside a WYSIWYG editing area of a canvas app.
