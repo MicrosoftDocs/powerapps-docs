@@ -52,24 +52,25 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 10.	Select the **Customize** button to create or edit the canvas app. This opens PowerApps Studio in a new browser tab.
 	 > [!IMPORTANT]
      > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
-11.	In PowerApps Studio notice that there is a **ModelDrivenFormIntegration** control located in the the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app. 
-12.	Select the **Gallery1** control and observe that its **Items** property is set to **ModelDrivenFormIntegration.Data**.
+11.	In PowerApps Studio notice that there is a **ModelDrivenFormIntegration** control located in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app. 
+12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
 13.	In the property pane on the right, next to **Fields**, select **Edit**.
 14.	In the data pane, change the field mapped to the **Title1** control to **FullName** or another field that has data.
-15.	Observe that the gallery is displaying the data being passed to it from the host model-driven form via the **ModelDrivenFormIntegration** control, and then close the data pane.
+15.	Observe that the gallery displays the data being passed to it from the host model-driven form via the **ModelDrivenFormIntegration** control. Close the data pane.
 16.	Select the **File** tab, and select **App settings**.
-17.	On the **Advanced settings** tab, in the **Experimental features** section, select **On** next to **Enable app embedding user experience**, and the select Save.
-18. Select the **The cloud** tab, provide a unique name for the app, and then select **Save** (bottom right). Note the following: 
+17.	On the **Advanced settings** tab, in the **Experimental features** section, set **Enable app embedding user experience** to **On**.
+18. Select **Save**. 
+19. Select the **The cloud** tab, provide a unique name for the app, and then select **Save** located on the lower right. Note the following: 
     -  Saving an app for the first time automatically publishes the app. 
 	  -  On subsequent saves you must select **Publish** and then **Publish this version** to make your changes available.
-19.	Select **Back**, and then select the browser tab that has the form editor open. 
-20.	Observe that the **App ID** property of the **Canvas app** control now has a value automatically filled in. Note the following: 
+20.	Select **Back**, and then select the browser tab that has the form editor open. 
+21.	Observe that the **App ID** property of the **Canvas app** control now has a value automatically filled in. Note the following: 
      - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in an earlier step.
      - 	The form editor has been listening for the App ID to be sent to it.
      - 	The App ID was sent to it when the app was saved.
-21.	In the **Field Properties** dialog, select the **Display** tab, clear **Display label on the form**, and then select **OK**.
+22.	In the **Field Properties** dialog, select the **Display** tab, clear **Display label on the form**, and then select **OK**.
      - If you already have a canvas app embedded on this form a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first disable the current one. <!-- (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP)--> Then, enable the new embedded canvas app. <!-- (LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)   -->
-22.	On the **Home** tab select **Save**, and then select **Publish**.
+23.	On the **Home** tab, select **Save**, and then select **Publish**.
 
 When users open a model-driven app (Unified Interface only) that includes the form you have modified they see the embedded canvas app on the form. Changing the record displayed on the main form changes the data context that is passed to the form and the embedded app refreshes to show the relevant data.
 
