@@ -41,14 +41,14 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 6. Select the **Controls** tab, and then select **Add Control…**
 7. In the **Add Control** dialog, in the list of available controls, select **Canvas app** and then select **Add**.
 8. In the **Field Properties** dialog, in the list of controls select **Canvas app** and then select the **Web** option.
-9.	In the section below the controls list, see the list of properties corresponding to the Canvas app control and note the following:
-      - 	The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that you selected earlier.
-          -  Even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
-      -  The **View name** property specifies the view of the entity that will be used to filter the data provided to your embedded canvas app. It will be set to the **Default View** you selected earlier.
-          -  The data (fields and values) sent to the embedded canvas app at runtime are determined by this view. Only use fields in your canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view display as empty values at runtime.
-          -  The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of top few records that you have access to. At runtime, the filter criteria for the view are applied as expected users only see relevant data.
-      -  The **App ID** property specifies the ID of the embedded canvas app. It is automatically generated and filled-in for you when the canvas app is created.
-          - 	Notice that any change to the App ID value breaks the link from the model-driven form to the embedded canvas app.
+9. In the section below the controls list, see the list of properties corresponding to the Canvas app control and note the following:
+     - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that you selected earlier.
+         -  Even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
+     -  The **View name** property specifies the view of the entity that will be used to filter the data provided to your embedded canvas app. It will be set to the **Default View** you selected earlier.
+         -  The data (fields and values) sent to the embedded canvas app at runtime are determined by this view. Only use fields in your canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view display as empty values at runtime.
+         -  The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of top few records that you have access to. At runtime, the filter criteria for the view are applied as expected users only see relevant data.
+     -  The **App ID** property specifies the ID of the embedded canvas app. It is automatically generated and filled-in for you when the canvas app is created.
+         - 	Notice that any change to the App ID value breaks the link from the model-driven form to the embedded canvas app.
 10.	Select the **Customize** button to create or edit the canvas app. This opens PowerApps Studio in a new browser tab.
 	 > [!IMPORTANT]
      > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
