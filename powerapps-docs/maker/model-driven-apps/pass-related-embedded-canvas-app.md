@@ -43,13 +43,13 @@ Imagine that you want to add an embedded canvas app on an account main form and 
    4. In the **Add Control** dialog, in the list of available controls, select **Canvas app** and then select **Add**.
    5. In the **Field Properties** dialog, in the list of controls select **Canvas app** and then select the **Web** option.
    6.	In the section below the controls list, see the list of properties corresponding to the Canvas app control and note the following:
-    	-  The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that you selected earlier.
-        -  Even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
-      -  The **View name** property specifies the view of the entity that will be used to filter the data provided to your embedded canvas app. It will be set to the **Default View** you selected earlier.
-        -  The data (fields and values) sent to the embedded canvas app at runtime are determined by this view. Only use fields in your canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view display as empty values at runtime.
-        -  The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of top few records that you have access to. At runtime, the filter criteria for the view are applied as expected users only see relevant data.
-      -  The **App ID** property specifies the ID of the embedded canvas app. It is automatically generated and filled-in for you when the canvas app is created.
-    	  -  Notice that any change to the App ID value breaks the link from the model-driven form to the embedded canvas app.
+    - 	The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that you selected earlier.
+       - Even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
+    - The **View name** property specifies the view of the entity that will be used to filter the data provided to your embedded canvas app. It will be set to the **Default View** you selected earlier.
+       - The data (fields and values) sent to the embedded canvas app at runtime are determined by this view. Only use fields in your canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view display as empty values at runtime.
+       - The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of top few records that you have access to. At runtime, the filter criteria for the view are applied as expected users only see relevant data.
+    - The **App ID** property specifies the ID of the embedded canvas app. It is automatically generated and filled-in for you when the canvas app is created.
+       - 	Notice that any change to the App ID value breaks the link from the model-driven form to the embedded canvas app.
 7.	Select the **Customize** button to create or edit the canvas app. This opens PowerApps Studio in a new browser tab.
 	 > [!IMPORTANT]
      > If opening PowerApps Studio is blocked due to a web browser pop-up blocker you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
@@ -60,7 +60,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 12.	Observe that the gallery is displaying the data being passed to it from the host model-driven form via the **ModelDrivenFormIntegration** control, and then close the data pane.
 13.	Select the **File** tab, and select **App settings**.
 14.	On the **Advanced settings** tab, in the **Experimental features** section, select **On** next to **Enable app embedding user experience**, and the select Save.
-15. Select the **The cloud** tab, provide a unique name for the app, and then select **Save** (bottom right). Note the following: 
+1. Select the **The cloud** tab, provide a unique name for the app, and then select **Save** (bottom right). Note the following: 
     - Saving an app for the first time automatically publishes the app. 
 	  - On subsequent saves you must select **Publish** and then **Publish this version** to make your changes available.
 16.	Select **Back**, and then select the browser tab that has the form editor open. 
