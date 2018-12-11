@@ -24,8 +24,8 @@ Access Team grant access to records via sharing records. Access Team members hav
 > [!NOTE]
 > Before you can share records using Access Team, your admin will need to set-up an Access Team template. For more information, see [About team templates](https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/admins-customizers-dynamics-365/mt812239(v%3dcrm.8)). 
 
-1. To give a user permission to access a record such as an account record, from the site map, select **Accounts**.
-2. Open an account record that you want to provide another user access to.
+1. To give a user permission to access a record, from the site map, select the record type. For example, **Accounts**.
+2. From the list of records, open the record that you want to provide another user access to.
 
   > [!div class="mx-imgBorder"]
   > ![My active accounts](media/AccessTeam1.png "My active accounts")
