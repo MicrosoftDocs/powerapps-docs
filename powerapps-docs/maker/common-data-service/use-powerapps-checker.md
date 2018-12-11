@@ -90,7 +90,7 @@ After you install the PowerApps checker in your environment, a **Solution checke
     
     - You'll receive an email notification and a notification in the **Notifications** area of the PowerApps site when the check is completed.  
 
-5.	[View the report](#reviewing-the-solution-checker-report) when the check is completed.
+5.	[View the report](#review-the-solution-checker-report) when the check is completed.
 
 ## Cancel a check
 
