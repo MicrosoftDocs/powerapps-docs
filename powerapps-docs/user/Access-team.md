@@ -20,9 +20,11 @@ search.app:
 # Share records using Access Team
 
 Access Team grant access to records via sharing records. Access Team members have privileges defined by their individual security roles and by roles from the teams in which they are members. 
-Note, before you can share records using Access Team. Your admin will need to set-up an Access Team template. For more information, see [About team templates](https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/admins-customizers-dynamics-365/mt812239(v%3dcrm.8)). 
 
-1. To give a use permission to access a record such as an account record. From the site map, select **Accounts**.
+> [!NOTE]
+> Before you can share records using Access Team, your admin will need to set-up an Access Team template. For more information, see [About team templates](https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/admins-customizers-dynamics-365/mt812239(v%3dcrm.8)). 
+
+1. To give a use permission to access a record such as an account record, from the site map, select **Accounts**.
 2. Open an account record that you want to provide another user access to.
 
   > [!div class="mx-imgBorder"]
@@ -39,12 +41,12 @@ Note, before you can share records using Access Team. Your admin will need to se
   > ![Find user](media/AccessTeam3.png "Find user")  
   
  
-*Remove a user from Access Teams*
+## Remove a user from Access Teams
 
  You can easily remove a user’s access to a record just as easily add you added them.
  
 1.	Open the record that you want to remove the user from.
-2.	Under Access Team Members sub-grid, select Remove user.
+2.	Under **Access Team Members** sub-grid, select **Remove user**.
 
   > [!div class="mx-imgBorder"]
   > ![Remove user from Access Team](media/AccessTeam4.png "Remove user from Access Team")  
