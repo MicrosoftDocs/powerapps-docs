@@ -29,7 +29,7 @@ After you add an embedded canvas app to a model-driven form you'll need to take 
 -	Ensure that users have appropriate permissions for any Common Data Service entities that your app uses. More information: [Manage entity permissions](../canvas-apps/share-app.md#manage-entity-permissions)
 -	Ensure that users have appropriate permission for any other data sources that your app uses, such as SharePoint or OneDrive. The steps to share depend on the type of data you are sharing and are outside the security scope of PowerApps.
 
-Embedded canvas apps are solution aware. By default, they're created in the same solution as the host model-driven form. To move the app from one environment to another you can export and import embedded canvas apps as a part of a solution just like any other component.
+Embedded canvas apps are solution aware. By default, they're created in the same solution as the host model-driven form. To move the app from one environment to another you export and import embedded canvas apps as a part of a solution&mdash;just like any other component.
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md)
