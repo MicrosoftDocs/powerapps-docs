@@ -19,7 +19,7 @@ search.app:
 ---
 # Share records using Access Team
 
-Access Team grant access to records via sharing records. Access Team members have privileges defined by their individual security roles and by roles from the teams in which they are members. 
+Access Team grant access to records via sharing records. Access Team members have privileges defined by their individual security roles and by roles from the teams they are members of. 
 
 > [!NOTE]
 > Before you can share records using Access Team, your admin will need to set-up an Access Team template. For more information, see [About team templates](https://docs.microsoft.com/en-us/previous-versions/dynamicscrm-2016/admins-customizers-dynamics-365/mt812239(v%3dcrm.8)). 
