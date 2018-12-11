@@ -23,9 +23,9 @@ search.app:
   - D365CE
 ---
 
-# Pass a list of related records as data context with an embedded canvas app
+# Pass a list of related records as data context to an embedded canvas app
 
-Follow these steps to add an embedded canvas app and pass a list of records related to the current (main form) record as a data context to the embedded canvas app.
+This topic explains how to add an embedded canvas app and pass a list of records related to the current (main form) record as a data context to the embedded canvas app.
 
 > [!NOTE]
 > This feature is currently in preview. <br />
@@ -78,4 +78,4 @@ This topic showed you how to get started with the embedding a canvas app in a mo
 
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
-[Pass the current record as data context with an embedded canvas app](pass-current-embedded-canvas-app.md)
+[Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md)

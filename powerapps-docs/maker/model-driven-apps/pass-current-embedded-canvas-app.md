@@ -23,8 +23,8 @@ search.app:
   - D365CE
 ---
 
-# Pass the current record as data context with an embedded canvas app
-Follow these steps to add an embedded canvas app and pass the current (main form) record as a data context to the embedded canvas app.
+# Pass the current record as data context to an embedded canvas app
+This topic explains how to add an embedded canvas app and pass the current (main form) record as a data context to the embedded canvas app.
 
 > [!NOTE]
 > This feature is currently in preview. <br />
@@ -61,10 +61,10 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 17.	On the **Advanced settings** tab, in the **Experimental features** section, set **Enable app embedding user experience** to **On**.
 18.	Select **Save**. 
 19.	Select the **The cloud** tab. Provide a unique name for the app and then select **Save** located on the bottom right corner. Note the following: 
-     - Saving an app for the first time automatically publishes the app.
-	   - On a subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
+    - Saving an app for the first time automatically publishes the app.
+	  - On a subsequent saves, select **Publish** and then select **Publish this version** to make your changes available.
 20.	On the menu select **Back** and then select the browser tab that has the form editor open. Observe that the App ID property of the canvas app control now has a value automatically filled in. Note the following: 
-    - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in the previous step.
+    - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in an earlier step.
     - 	The form editor "listens" for the **App ID** to be send to it.
     - 	The **App ID** is sent to the form editor when the app is saved.
 21.	On the **Field Properties** dialog, select the **Display** tab.
@@ -78,4 +78,4 @@ This topic showed you how to get started with embedding a canvas app in a model-
 
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
-[Pass a list of related records as data context with an embedded canvas app](pass-related-embedded-canvas-app.md)
+[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md)
