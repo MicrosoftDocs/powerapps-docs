@@ -155,7 +155,7 @@
             href: ./canvas-apps/add-screen-context-variables.md
             items:
               - name: Configure Office 365 screens
-                items
+                items:
                   - name: Calendar-screen overview
                     href: ./canvas-apps/screen-templates/calendar-screen-overview.md
                   - name: Calendar-screen reference
