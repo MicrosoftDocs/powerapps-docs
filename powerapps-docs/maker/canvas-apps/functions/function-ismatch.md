@@ -199,16 +199,6 @@ First(
 ).Value
 ```
 
-``` powerapps-dot
-With( Match( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
-	  Time( Value( hours ), Value( minutes ), Value( seconds ) )
-```
-
-``` powerapps-dot
-With( { radius: Value(TextInput1.Text), height: Value(TextInput2.Text) }, 
-	  Pi() * radius*radius * height )
-```
-
 For the following examples, insert a [Button](../controls/control-button.md) control on the screen and set the **OnSelect** property to:
 
 - **Set( pangram, "The quick brown fox jumps over the lazy dog." )** 
