@@ -177,8 +177,8 @@ The user running these formulas is located in the United States and has selected
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Text( 1234567.89, "$ #,###" )** |Interprets **,** as a grouping separator placed every three characters and **$** as the currency symbol. Because no decimals should appear, the value is rounded up to the next higher whole number. |"$ 1,234,568" |
-| **Text( 1234567.89, "[$-es-ES]&euro; #.###,##", "es-ES" )** |Interprets **,** as a decimal separator and **.** as a grouping separator. The result language tag has been set to "es-ES", which will result in **,** (comma) being used as the decimal separator and **&euro;** as the currency symbol. |"&euro; 1.234.567,89" |
+| **Text( 1234567.89, "$ #,###" )** |Interprets **$** as the currency symbol and **,** as a grouping separator placed every three characters. No decimals should appear, so the value is rounded up to the next higher whole number. |"$ 1,234,568" |
+| **Text( 1234567.89, "[$-es-ES]&euro; #.###,##", "es-ES" )** | With the result language tag set to "es-ES", interprets **&euro;** as the currency symbol, **.** as a grouping separator, and  **,** as a decimal separator. |"&euro; 1.234.567,89" |
 | **Text( Date(2016,1,31), "dddd mmmm d" )** |Returns the weekday, month, and day of the month in the language of the current user. Because none of the placeholders are language dependent, there is no need for a format text language tag. |"Saturday January 31" |
 | **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Returns the weekday, month, and day of the month in the "es-ES" language. |"domingo enero 31" |
 
