@@ -105,7 +105,10 @@ The pattern used by these functions is a [*regular expression*](https://en.wikip
 
 Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. This article can't describe all aspects of regular expressions, but a wealth of information and tutorials are published on the web to aid you.  
 
-Regular expressions come in different dialects and PowerApps uses a variant of the JavaScript dialect. See [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax.  One key addition is named sub-matches (sometimes called named capture groups) expressed with **(?&lt;*name*&gt;** ... **)**. 
+Regular expressions come in different dialects and PowerApps uses a variant of the JavaScript dialect. See [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax.  Named sub-matches are supported, (sometimes called named capture groups in other languages):
+
+- Named sub-matches: <code>(?&lt;*name*&gt;** ... **)</code> 
+- Named backreferences: <code>\k<*name*></code>
 
 In the **Match** enum table above, each enum expands into a regular expression, and the text string in the "Regular Expression" column defines that expression.
 
@@ -229,8 +232,6 @@ To see the results of **MatchAll** in a gallery:
 
 	![](media/function-ismatch/pangram-gallery1.png)
 
-	**TODO: image needs update**
-
 3. Insert a Label control.
 
 4. Set the Label control's **Text** property to **ThisItem.FullMatch**.
@@ -238,5 +239,3 @@ To see the results of **MatchAll** in a gallery:
 5. Your gallery will be filled with each word in our example text.
 
 	![](media/function-ismatch/pangram-gallery2.png)
-
-	**TODO: image needs update**
