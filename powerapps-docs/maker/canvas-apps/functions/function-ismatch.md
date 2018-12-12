@@ -107,7 +107,7 @@ Regular expressions are very powerful, available in many programming languages, 
 
 Regular expressions come in different dialects and PowerApps uses a variant of the JavaScript dialect. See [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax.  Named sub-matches are supported, (sometimes called named capture groups in other languages):
 
-- Named sub-matches: <code>(?&lt;*name*&gt;** ... **)</code> 
+- Named sub-matches: <code>(?&lt;*name*&gt; ...)</code> 
 - Named backreferences: <code>\k<*name*></code>
 
 In the **Match** enum table above, each enum expands into a regular expression, and the text string in the "Regular Expression" column defines that expression.
@@ -199,15 +199,14 @@ First(
 ).Value
 ```
 
-TODO: Remove second instance, only here for colorization testing
+``` powerapps-dot
+With( Match( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+	  Time( Value( hours ), Value( minutes ), Value( seconds ) )
+```
 
-``` powerapps-comma
-First( 
-	ForAll( 
-		MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ), 
-		Time( Value( hours ), Value( minutes ), Value( seconds ) )
-	)
-).Value
+``` powerapps-dot
+With( { radius: Value(TextInput1.Text), height: Value(TextInput2.Text) }, 
+	  Pi() * radius*radius * height )
 ```
 
 For the following examples, insert a [Button](../controls/control-button.md) control on the screen and set the **OnSelect** property to:
