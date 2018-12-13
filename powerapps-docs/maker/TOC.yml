@@ -44,6 +44,8 @@
         href: ../user/add-activities.md
       - name: Assign or share records
         href: ../user/assign-or-share-records.md
+      - name: Share records using Access Team
+        href: ../user/Access-team.md
       - name: Deactivate accounts or contacts 
         href: ../user/deactivate-activate-account-contact.md
       - name: Track your progress with dashboards and charts 
@@ -152,22 +154,26 @@
           - name: Add a screen
             href: ./canvas-apps/add-screen-context-variables.md
             items:
-              - name: Calendar-screen overview
-                href: ./canvas-apps/screen-templates/calendar-screen-overview.md
-              - name: Calendar-screen reference
-                href: ./canvas-apps/screen-templates/calendar-screen-reference.md
-              - name: Email-screen overview
-                href: ./canvas-apps/screen-templates/email-screen-overview.md
-              - name: Email-screen reference
-                href: ./canvas-apps/screen-templates/email-screen-reference.md
-              - name: Meeting-screen overview
-                href: ./canvas-apps/screen-templates/meeting-screen-overview.md
-              - name: Meeting-screen reference
-                href: ./canvas-apps/screen-templates/meeting-screen-reference.md
-              - name: People-screen overview
-                href: ./canvas-apps/screen-templates/people-screen-overview.md
-              - name: People-screen reference
-                href: ./canvas-apps/screen-templates/people-screen-reference.md
+              - name: Configure Office 365 screens
+                items:
+                  - name: Calendar-screen overview
+                    href: ./canvas-apps/screen-templates/calendar-screen-overview.md
+                  - name: Calendar-screen reference
+                    href: ./canvas-apps/screen-templates/calendar-screen-reference.md
+                  - name: Email-screen overview
+                    href: ./canvas-apps/screen-templates/email-screen-overview.md
+                  - name: Email-screen reference
+                    href: ./canvas-apps/screen-templates/email-screen-reference.md
+                  - name: Meeting-screen overview
+                    href: ./canvas-apps/screen-templates/meeting-screen-overview.md
+                  - name: Meeting-screen reference
+                    href: ./canvas-apps/screen-templates/meeting-screen-reference.md
+                  - name: People-screen overview
+                    href: ./canvas-apps/screen-templates/people-screen-overview.md
+                  - name: People-screen reference
+                    href: ./canvas-apps/screen-templates/people-screen-reference.md
+              - name: Add a scrolling screen
+                href: ./canvas-apps/add-scrolling-screen.md
           - name: Show a table of items
             href: ./canvas-apps/add-gallery.md
           - name: Show items of different heights
@@ -189,8 +195,6 @@
             href: ./canvas-apps/add-images-pictures-audio-video.md
           - name: Scan a barcode
             href: ./canvas-apps/scan-barcode.md
-          - name: Add a scrolling screen
-            href: ./canvas-apps/add-scrolling-screen.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Control reference
@@ -777,6 +781,13 @@
             href: ./model-driven-apps/configure-event-handlers-legacy.md   
           - name: How to disable auto-save in a form
             href: ./model-driven-apps/manage-auto-save.md
+      - name: Embed a canvas app on a form
+        href: ./model-driven-apps/embed-canvas-app-in-form.md
+        items: 
+        - name: "Pass the current record to an embedded canvas app"
+          href: ./model-driven-apps/pass-current-embedded-canvas-app.md
+        - name: "Pass related records to an embedded canvas app"
+          href:  ./model-driven-apps/pass-related-embedded-canvas-app.md 
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items: 
