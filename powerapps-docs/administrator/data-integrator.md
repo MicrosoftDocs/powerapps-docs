@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 10/15/2018
+ms.date: 11/07/2018
 ms.author: sabinn
 search.audienceType: 
   - admin
@@ -68,7 +68,7 @@ Before you can create a data integration project, you must provision a connectio
 
 **To create a connection**
 
-1. Go to [PowerApps Admin center](https://admin.powerapps.com).
+1. Go to [PowerApps](https://web.powerapps.com).
 
 2. Under Data, select **Connections** and then select **New connection**.
 
@@ -108,7 +108,7 @@ Connection sets are a collection of two connections, environments for the connec
 
 6. Repeat the steps by choosing your next connection (think of these as source and destination in no specific order).
 
-7. Specify the organization to Business Unit mapping (if you are integrating between Finance and Operations and Sales systems).
+7. Specify the organization to business unit mapping (if you are integrating between Finance and Operations and Sales systems).
   
     > [!NOTE]
     > You can specify multiple mappings for each connection set.
@@ -151,7 +151,7 @@ Projects enable the flow of data between systems. A project contains mappings fo
     > [!div class="mx-imgBorder"] 
     > ![Create a new connection set](media/data-integrator/CreateNewProjectSelectConnectionSet780.png "Create a new connection set")
 
-8. Select **Next** and then choose the legal entity to Business Unit mappings.
+8. Select **Next** and then choose the legal entity to business unit mappings.
 
     > [!div class="mx-imgBorder"] 
     > ![Create new legal entity mapping](media/data-integrator/CreateNewProjectLegalEntityMapping780.png "Create new legal entity mapping")

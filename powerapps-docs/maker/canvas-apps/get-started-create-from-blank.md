@@ -216,6 +216,10 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     ![Trash icon](./media/get-started-create-from-blank/trash-icon.png)
 
+1. Set the **Visible** property for the trash icon to this formula:<br>**EditForm1.Mode = FormMode.Edit**
+
+    This icon will appear only when the form is in **Edit** mode, not in **New** mode.
+
 1. Set the **OnSelect** property for the trash icon to this formula:<br>**Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)**
 
     When the user selects this icon, the selected record is deleted from the data source, and the view screen opens.
@@ -236,6 +240,8 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 1. Close Preview mode by pressing Esc (or by selecting the close icon in the upper-right corner).
 
 ## Next steps
-* Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
-* [Share the app](share-app.md) so that other people can run it.
-* Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
+
+- Press Ctrl-S to save your app in the cloud so that you can run it from other devices.
+- [Share the app](share-app.md) so that other people can run it.
+- Learn more about [functions](working-with-formulas.md) such as **Patch**, which you can use to manage data without creating a standard form.
+- [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.

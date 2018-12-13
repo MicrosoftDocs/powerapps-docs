@@ -470,7 +470,7 @@ Sdk.startSample = function () {
 Sdk.deleteEntities = function () {  
  return new Promise(function (resolve, reject) {  
   
-  entitiesToDelete.unshift(opportunityUri) // Adding to the begining so it will get deleted before the parent account.  
+  entitiesToDelete.unshift(opportunityUri) // Adding to the beginning so it will get deleted before the parent account.  
   // Re-open the created opportunity so it can be deleted.  
   Sdk.request("PATCH", opportunityUri, { statecode: 0, statuscode: 2 })  
   .then(function () {  

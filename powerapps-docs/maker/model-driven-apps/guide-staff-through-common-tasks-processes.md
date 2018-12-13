@@ -55,7 +55,7 @@ Microsoft Flow includes several types of processes, each designed for a differen
   
 -   Business process flows.  Ensure that people enter data consistently and follow the same steps every time they work in an app by creating a business process flow. More information: [Business process flows overview](/flow/business-process-flows-overview)
 
--   Workflows and actions. Dynamics 365 customer engagement customizers may be familar with the classic CDS for Apps processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/flow/actions)
+-   Workflows and actions. Dynamics 365 customer engagement customizers may be familiar with the classic CDS for Apps processes, which are workflows and actions. More information: [Use Workflow processes](/flow/workflow-processes) and [Actions overview](/flow/actions)
   
 ## Next step
 

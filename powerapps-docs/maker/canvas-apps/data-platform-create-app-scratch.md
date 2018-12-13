@@ -24,6 +24,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 - Before you create an app from scratch, familiarize yourself with PowerApps basics by [generating an app](data-platform-create-app.md) and then customizing that app's [gallery](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and [cards](customize-card.md).
 - [Switch to an environment](working-with-environments.md) in which a database has been created with sample data. If you have an appropriate license, you can [create an environment](../../administrator/create-environment.md) to meet this need.
+- To create an app, you must be assigned to the [Environment Maker](../../administrator/database-security.md#predefined-security-roles) security role.
 
 ## Open a blank app
 
@@ -154,4 +155,5 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 ## Next steps
 
-[Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.
+- [Link this app to a solution](add-app-solution.md) so that you can, for example, deploy it to a different environment or publish it on AppSource.
+- [Open one or more sample apps](open-and-run-a-sample-app.md), and explore different types of apps that you can create.

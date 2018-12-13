@@ -2,7 +2,7 @@
 title: "Navigate to a specific solution with PowerApps | MicrosoftDocs"
 description: "Learn how to locate and open a specific solution in your environment"
 ms.custom: ""
-ms.date: 06/18/2018
+ms.date: 10/29/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -28,13 +28,11 @@ search.app:
 
 If your organization already has a specific solution you should work in, this is how you can find it. To create a new solution, see [Create your own solution](create-solution.md).  
   
-## Open an unmanaged solution  
+## Open a solution  
   
-1. Go to **[Settings](../model-driven-apps/advanced-navigation.md#settings)** > **Solutions**.  
+1. Select **Solutions** from the left navigation to see a list of solutions in your environment.
   
-2. Double-click the unmanaged solution that you want to work in to open it.  
-  
- When you’re in the solution, you’ll see solution components. More information: [Add Solution Components](solutions-overview.md)  
+2. Select the solution that you want to work in or view all the components contained within it. More information: [Add Components](solutions-overview.md)  
 
  ## Next steps
 [Monitor and manage workflow processes](/flow/monitor-manage-processes)
