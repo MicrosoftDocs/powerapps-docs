@@ -9,9 +9,9 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/17/2016
 ms.author: gregli
-search.audienceType: 
+search.audienceType:
   - maker
-search.app: 
+search.app:
   - PowerApps
 ---
 # Controls and properties in PowerApps
@@ -24,7 +24,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Audio](controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
-**[Barcode scanner (experimental)](controls/control-barcodescanner.md)** – Scan a barcode by using a device that has a camera.
+**[Barcode scanner](control-new-barcode-scanner)** – Scans barcodes, QR codes, and data matrix codes with an Android or iOS device.
 
 **[Button](controls/control-button.md)** – Interact with the app by clicking or tapping.
 
@@ -99,6 +99,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Toggle](controls/control-toggle.md)** – Drag a handle to specify **true** or **false**.
 
 **[Video](controls/control-audio-video.md)** – Play a video clip from a local file, a data source, or YouTube.
+
+**[Web Barcode scanner (experimental)](controls/control-barcodescanner.md)** – The legacy barcode scanning control that is obsolete, but may be useful when scanning codes in a web browser.  
 
 ## Common properties by category
 **[Color and border](controls/properties-color-border.md)** – Configure the color and border of a control that can change as a user interacts with it.
