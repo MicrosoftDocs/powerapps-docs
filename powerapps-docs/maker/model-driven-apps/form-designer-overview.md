@@ -23,6 +23,8 @@ search.app:
   - D365CE
 ---
 # Overview of the model-driven form designer
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 The new model-driven form designer provides a modern, WYSIWYG authoring experience when you work with model-driven forms. It includes several improvements not available in the classic model-driven form designer. 
 
 > [!NOTE]
