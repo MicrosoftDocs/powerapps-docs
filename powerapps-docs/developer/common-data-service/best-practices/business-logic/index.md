@@ -42,7 +42,7 @@ This list below contains all of the guidance and best practices regarding the pl
 - [Use ITracingService in Plug-ins](use-itracingservice-plugins.md)
   - Debugging and/or troubleshooting plug-in issues or behaviors are complicated without rich and insightful logging or tracing.
 
-#See Also
+# See Also
 [Apply business logic using code](../../apply-business-logic-with-code.md)<br />
 [Use plug-ins to extend business processes](../../plug-ins.md)<br />
 [Workflow extensions](../../workflow/workflow-extensions.md)<br />
