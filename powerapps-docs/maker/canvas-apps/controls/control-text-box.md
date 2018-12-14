@@ -98,6 +98,8 @@ A label shows data that you specify as a literal string of text, which appears e
 
 **[PressedFill](properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
+**Role** - The semantic role of the label text, such as Heading 1. Doesn't change the style of the label but makes the output semantically correct for interpretation by screen readers.
+
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
 
 **[Strikethrough](properties-text.md)** – Whether a line appears through the text that appears on a control.
