@@ -31,12 +31,12 @@ The new model-driven form designer provides a modern, WYSIWYG authoring experien
 > This feature is currently in preview. <br />
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-The designer shows a realtime WYSIWYG preview (Unified Interface only) while authoring. Changes to the form are instantly reflected in the preview enabling makers to see exactly how the form will appear to end-users when published. 
+The designer shows a realtime WYSIWYG preview (Unified Interface only) while authoring. Changes to the form are instantly reflected in the preview enabling app makers to see exactly how the form will appear to users when published. 
 
-Other common tasks, such as setting properties, are simpler and faster with an always available property pane. Also, save and publish are a single action that improves maker productivity.
+Completing common tasks, such as setting properties, are simpler and faster with an always available property pane. Also, save and publish are a single action that improves maker productivity.
 
 The form designer interface has the following areas: 
-- Command bar – Displays available actions such as save, publish, undo and redo. 
+- Command bar – Displays available actions such as save, publish, undo, and redo. 
 - Panes - Displays panes with specific functions such as a fields pane that you use to add fields to a form. 
 - Form preview – Displays a realtime preview of the form as it will appear to end-users when published. 
 - Property pane – Displays properties of the selected element and also allows makers to make changes.
