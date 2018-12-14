@@ -760,7 +760,7 @@
       - name: executeMultiple
         href: clientapi/reference/xrm-webapi/executeMultiple.md
   - name: Best practices
-    href: best-practices/index.md
+    href: best-practices/business-logic/index.md
 - name: Customize commands and ribbon
   href: customize-commands-ribbon.md
   items:
