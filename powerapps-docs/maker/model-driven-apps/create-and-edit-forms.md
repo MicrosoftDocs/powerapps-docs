@@ -126,7 +126,7 @@ You can expand or collapse nodes in the tree view to see or hide the elements wi
 
 ### Open the tree view 
 1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)  
-2. In the left pane, select **Tree view**.
+2. In the left pane, select **Tree View**.
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md) <br />
