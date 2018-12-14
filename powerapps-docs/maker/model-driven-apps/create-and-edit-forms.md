@@ -120,7 +120,9 @@ The tree view pane displays a visual hierarchy of the controls and fields on the
 
 You can also use the tree view to select fields and controls present on the form. The tree view is helpful when you want to select elements that are hidden and therefore not visible on the form preview. 
 
-You can expand or collapse nodes in the tree view to see/hide a node’s child elements. Selecting an element in the tree view highlights it in the form preview and updates the property pane to show the properties of the selected element. 
+You can expand or collapse nodes in the tree view to see or hide the elements within a node. When you select an element in the tree view it becomes highlighted in the form preview and the property pane displays the properties for the element. 
+
+   ![Tree view](media/tree-view.png)
 
 ### Open the tree view 
 1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)  
