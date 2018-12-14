@@ -28,6 +28,9 @@ search.app:
 
 Use the new form designer to create and design forms for model-driven apps.
 
+> [!IMPORTANT]
+> The new model-driven form designer currently only supports creating and editing main forms. More information: [form types](types-forms.md)
+
 ## Create a form 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. On the left navigation pane, expand **Data**, and then select **Entities**. 
