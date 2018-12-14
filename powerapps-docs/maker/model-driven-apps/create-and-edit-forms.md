@@ -62,7 +62,7 @@ To add field or remove fields from a form, use the fields pane. The fields pane 
 
 ### Remove a field
 1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)
-2. In the form preview, select the field that you want to remove from the form. 
+2. On the form preview, select the field that you want to remove from the form. 
 3. Select **Delete**. <br />
 4. Select **Save**. 
 
@@ -75,7 +75,7 @@ To add or remove a tab or a section on form, use the layouts pane.
 
 ### Add a tab
 1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form) 
-2. In the form preview, select another existing tab or the form. 
+2. On the form preview, select another existing tab or the form. 
     - When you select an existing tab, the new tab will be added to the right of the existing tab. 
     - When you select the form, the new tab will be added as the right-most tab on the form. 
 3. Select **Add control** or in the left pane, select **Layouts**.  
@@ -115,7 +115,16 @@ To add or remove a tab or a section on form, use the layouts pane.
     >    - You can't delete a section that is locked. 
     >    - You can't delete a section that has required or locked fields. 
  
+## Use the tree view 
+The tree view pane displays a visual hierarchy of the controls and fields on the form. The icons in the tree view help you quickly identify the type of field or control. 
 
+You can also use the tree view to select fields and controls present on the form. The tree view is helpful when you want to select elements that are hidden and therefore not visible on the form preview. 
+
+You can expand or collapse nodes in the tree view to see/hide a node’s child elements. Selecting an element in the tree view highlights it in the form preview and updates the property pane to show the properties of the selected element. 
+
+### Open the tree view 
+1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)  
+2. In the left pane, select **Tree view**.
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md) <br />
