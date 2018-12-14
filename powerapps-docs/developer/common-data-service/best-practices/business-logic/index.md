@@ -21,6 +21,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
+# Best practices and guidance regarding plug-in and workflow development for the Common Data Service for Apps
 
 This list below contains all of the guidance and best practices regarding the plug-in and workflow development within the Common Data Service for Apps.
 - [Avoid usage of batch request types in plug-ins and workflow activities](avoid-batch-requests-plugin.md)<br />
