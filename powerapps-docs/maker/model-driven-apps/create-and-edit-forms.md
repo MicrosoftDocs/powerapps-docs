@@ -115,6 +115,8 @@ To add or remove a tab or a section on form, use the layouts pane.
     >    - You can't delete a section that is locked. 
     >    - You can't delete a section that has required or locked fields. 
  
+
+
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md) <br />
 [Create and edit fields](../common-data-service/create-edit-field-portal.md)
