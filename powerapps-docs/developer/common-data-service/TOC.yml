@@ -58,6 +58,8 @@
     href: optimistic-concurrency.md
   - name: Impersonate another user
     href: impersonate-another-user.md
+  - name: Best Practices
+    href: work-with-data/index.md
 - name: Apply business logic using code
   href: apply-business-logic-with-code.md
   items:
@@ -87,6 +89,8 @@
         href: tutorial-update-plug-in.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
+  - name: Best Practices
+    href: best-practices/business-logic/index.md
 - name: Integrate data using code
   items:
   - name: Import Data
@@ -261,6 +265,8 @@
       href: describe-relationship-entities-connection-roles.md
   - name: Customize labels to support multiple languages
     href: customize-labels-support-multiple-languages.md
+  - name: Best Practices
+    href: best-practices/business-logic/index.md
 - name: Package and distribute extensions using solutions
   items:
   - name: Introduction to solutions
@@ -362,8 +368,6 @@
     href: community-tools.md
   - name: Testing tools
     href: testing-tools-server.md
-  - name: API Limits
-    href: api-limits.md
 - name: Reference
   items:
   - name: Entity reference
