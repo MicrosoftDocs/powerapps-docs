@@ -1,7 +1,8 @@
-- name: Best oractices and guidance for model-driven apps
+- name: Best practices and guidance for model-driven apps
   href: index.md
   - name: Business Logic
     href: business-logic/index.md
+    items:
       - name: Avoid using window.top
         href: business-logic/avoid-window-top.md
       - name: Interact with HTTP and HTTPS resources asynchronously

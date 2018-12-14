@@ -2,6 +2,7 @@
   href: index.md
   - name: Business Logic
     href: business-logic/index.md
+    items:
       - name: Avoid usage of batch request types in plug-ins and workflow activities
         href: business-logic/avoid-batch-requests-plugin.md
       - name: Develop IPlugin implementations as stateless
@@ -18,10 +19,12 @@
         href: business-logic/set-keepalive-false-interacting-external-hosts-plugin.md
   - name: Work with data
     href: work-with-data/index.md
+    items:
       - name: API Limits
         href: ../api-limits.md
   - name: Work with metadata
     href: work-with-metadata/index.md
+    items:
       - name: Retrieve published metadata
         href: work-with-metadata/retrieve-published-metadata.md
       - name: Retrieve specific columns for an entity via query APIs
