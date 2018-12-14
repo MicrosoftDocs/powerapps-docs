@@ -24,7 +24,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Audio](controls/control-audio-video.md)** – Play an audio clip or the audio portion of a video clip.
 
-**[Barcode scanner](control-new-barcode-scanner)** – Scans barcodes, QR codes, and data matrix codes with an Android or iOS device.
+**[Barcode scanner](controls/control-new-barcode-scanner.md)** – Scans barcodes, QR codes, and data matrix codes with an Android or iOS device.
 
 **[Button](controls/control-button.md)** – Interact with the app by clicking or tapping.
 
