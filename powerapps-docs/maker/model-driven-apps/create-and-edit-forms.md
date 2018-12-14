@@ -111,7 +111,7 @@ To add or remove a tab or a section on form, use the layouts pane.
 3. Select **Save**. 
     > [!NOTE]
     >     - If you delete a section by mistake, select **Undo** to revert the delete action. 
-    >    - A tab needs to have at least one section in each column. >      - You can't delete a section if it is the only one in the tab column. 
+    >    - A tab needs to have at least one section in each column.  >     - You can't delete a section if it is the only one in the tab column. 
     >    - You can't delete a section that is locked. 
     >    - You can't delete a section that has required or locked fields. 
  
