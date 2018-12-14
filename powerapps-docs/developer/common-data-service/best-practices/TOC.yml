@@ -1,5 +1,6 @@
 - name: Best Practices and Guidance for the Common Data Service for Apps
   href: index.md
+  items: 
   - name: Business Logic
     href: business-logic/index.md
     items:

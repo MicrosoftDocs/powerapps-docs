@@ -1,5 +1,6 @@
 - name: Best practices and guidance for model-driven apps
   href: index.md
+  items: 
   - name: Business Logic
     href: business-logic/index.md
     items:
