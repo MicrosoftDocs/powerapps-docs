@@ -66,9 +66,9 @@ To add field or remove fields from a form, use the fields pane. The fields pane 
 3. Select **Delete**. <br />
 4. Select **Save**. 
 
-> [!NOTE]
->   -  If you remove a field by mistake, select **Undo** to revert the action. 
->   -  You can't remove a field that is required or locked. 
+    > [!NOTE]
+    >   -  If you remove a field by mistake, select **Undo** to revert the action. 
+    >   -  You can't remove a field that is required or locked. 
 
 ## Add and remove tabs and sections 
 To add or remove a tab or a section on form, use the layouts pane. 
