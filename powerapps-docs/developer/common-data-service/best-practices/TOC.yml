@@ -1,7 +1,7 @@
 - name: Best practices and guidance for the Common Data Service for Apps
   href: index.md
   items: 
-  - name: Business Logic
+  - name: Apply business logic using code
     href: business-logic/index.md
     items:
       - name: Avoid usage of batch request types in plug-ins and workflow activities
@@ -18,12 +18,12 @@
         href: business-logic/optimize-assembly-development.md
       - name: Set KeepAlive to false when interacting with external hosts in a plug-in
         href: business-logic/set-keepalive-false-interacting-external-hosts-plugin.md
-  - name: Work with data
+  - name: Work with data using code
     href: work-with-data/index.md
     items:
       - name: API Limits
         href: ../api-limits.md
-  - name: Work with metadata
+  - name: Work with metadata using code
     href: work-with-metadata/index.md
     items:
       - name: Retrieve published metadata
