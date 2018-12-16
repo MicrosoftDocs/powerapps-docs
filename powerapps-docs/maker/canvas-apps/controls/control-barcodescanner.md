@@ -1,5 +1,5 @@
 ---
-title: 'Barcode scanner control: reference | Microsoft Docs'
+title: 'Web Barcode scanner control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the barcode scanner control
 author: fikaradz
 manager: kvivek
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.reviewer: anneta
-search.audienceType: 
+search.audienceType:
   - maker
-search.app: 
+search.app:
   - PowerApps
 ---
-# Barcode scanner control (experimental) in PowerApps
-An experimental control with which the user can take photos by using the barcode scanner on the device.
+# Web Barcode scanner control (experimental) in PowerApps
+The legacy barcode scanning control that is obsolete, but may be useful when scanning codes in a web browser.  
 
 ## Description
-If you add this control, the user can update a data source with one or more photos from wherever the app is running.
+The control shows the camera feed in the app, allowing users to scan barcodes on all devices.  The control is obsolete due to poor performance and is replaced by the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control.
 
 ## Key properties
 **barcode scanner** – On a device that has more than one barcode scanner, the numeric ID of the barcode scanner that the app uses.
