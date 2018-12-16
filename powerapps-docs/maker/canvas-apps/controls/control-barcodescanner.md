@@ -1,6 +1,6 @@
 ---
-title: 'Web Barcode scanner control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the barcode scanner control
+title: 'Web barcode-scanner control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the barcode-scanner control
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -14,16 +14,20 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Web Barcode scanner control (experimental) in PowerApps
-The legacy barcode scanning control that is obsolete, but may be useful when scanning codes in a web browser.  
+# Web barcode-scanner control (experimental) in PowerApps
+
+The legacy barcode-scanning control, which is obsolete but might be useful for scanning codes in a web browser.
 
 ## Description
-The control shows the camera feed in the app, allowing users to scan barcodes on all devices.  The control is obsolete due to poor performance and is replaced by the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control.
+
+The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete due to poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
 
 ## Key properties
+
 **barcode scanner** – On a device that has more than one barcode scanner, the numeric ID of the barcode scanner that the app uses.
 
 ## Additional properties
+
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
@@ -55,24 +59,32 @@ The control shows the camera feed in the app, allowing users to scan barcodes on
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Related functions
+
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## Example
+
 ### Add photos to an Image gallery control
+
 1. Add a **barcode scanner** control, name it **Mybarcode scanner**
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. Add a **Label** control and set its output to the Barcode's **Text**.  
-3. Scan a barcode of the type set under BarcodeType property.
-4. The label is going to display the scanned barcode.
 
+1. Add a **Label** control, and set its output to the barcode scanner's **Text** property.
+
+1. Scan a barcode of the type set under **BarcodeType** property.
+
+    The label displays the scanned barcode.
 
 ## Accessibility guidelines
+
 ### Video alternatives
+
 * Consider adding a **[Label](control-text-box.md)** with its **[Text](properties-core.md)** set to the barcode scanner's **Text**. Since the barcode scanner does not display the identified barcode value, doing the above makes the scanner accessible to everyone, not just those with visual disabilities.
 
 ### Screen reader support
+
 * **[AccessibleLabel](properties-accessibility.md)** must be present.
 
     > [!NOTE]
-  > Screen readers will annnouce when a new barcode has been found. The value will not be announced. As long as the barcode is in view, screen readers will remind every 5 seconds that the same barcode is still being identified.
+  > Screen readers will announce when a new barcode has been found. The value won't be announced. As long as the barcode is in view, screen readers will remind the user every five seconds that the same barcode is still being identified.

@@ -1,6 +1,6 @@
 ---
-title: 'Barcode scanner control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the barcode scanner control
+title: 'Barcode-scanner control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the barcode-scanner control
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -14,20 +14,33 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Barcode scanner control in PowerApps
-Scans barcodes, QR codes, and data matrix codes with an Android or iOS device.  Not supported in a web browser.
+# Barcode-scanner control for canvas apps
+
+Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device. Not supported in a web browser.
 
 ## Description
-The control opens a native scanner on Android and iOS devices. The scanner will automatically detect  a barcode, QR code or a data matrix code when in view.  The control does not support scanning in a web browser.
 
-In addition to QR codes and data matrix codes, the following barcodes types are supported: UPC A, UPC E, EAN 8, EAN 13, CODE 39, CODE 128, ITF, PDF 417.
+The control opens a native scanner on an Android or iOS device. The scanner automatically detects a barcode, a QR code, or a data-matrix code when in view. The control doesn't support scanning in a web browser.
+
+The control supports QR codes, data-matrix codes, and these types of barcodes:
+
+- UPC A
+- UPC E
+- EAN 8
+- EAN 13
+- CODE 39
+- CODE 128
+- ITF
+- PDF 417
 
 ## Key properties
-**Value** – Output property containing the text value of the last code that was scanned.
 
-**Text** - Text shown inside the button that activates the scanner.
+**Value** – Output property that contains the text value of the code that was scanned most recently.
+
+**Text** - Text that appears on the button that activates the scanner.
 
 ## Additional properties
+
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
@@ -42,7 +55,7 @@ In addition to QR codes and data matrix codes, the following barcodes types are 
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**Type** - The type of code that was detected in the last successful scan.
+**Type** - The type of code that was detected in the scan that succeeded most recently.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 
