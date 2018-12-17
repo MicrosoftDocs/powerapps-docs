@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/11/2018
+ms.date: 12/17/2018
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -25,19 +25,22 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 
 ## Prerequisites
 
-On a SharePoint site, create a list, and then add these columns:
+1. On a SharePoint site, create a list.
 
-- **ProductName** (single line of text)
-- **Details** (yes/no)
-- **Price** (currency)
-- **Availability** (date without time)
-- **Color** (choice)
+1. Rename the **Title** column to **ProductName** (no space).
+
+1. Add these columns:
+
+    - **Details** (yes/no)
+    - **Price** (currency)
+    - **Availability** (date without time)
+    - **Color** (choice)
 
 ## Open the form in PowerApps
 
 1. Open the list that you created, and then select **New** in the command bar.
 
-    The form opens and shows the fields that you added, plus **Title** and **Attachments**.
+    The form opens and shows the fields that this topic specifies, plus **Attachments**.
 
 1. Near the top of the form, select **Customize**.
 
@@ -45,19 +48,25 @@ On a SharePoint site, create a list, and then add these columns:
 
 1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
 
-## Hide extra fields
+## Hide an extra field
 
 In the center of your screen, PowerApps shows your form, but it contains fields that you don't need.
 
-- In the **Data** pane, clear the check boxes for the **Title** and **Attachments** fields.
+- In the **Data** pane, clear the check box for the **Attachments** field.
 
-    Those fields disappear from the form, leaving only the fields that you added.
+    That field disappears from the form, leaving only the fields that you want.
 
     ![Field list](./media/customize-list-form/field-list.png)
 
 ## Set conditional formatting
 
 You can configure the **Price**, **Availability**, and **Colors** fields to appear only if **Details** is set to yes.
+
+1. In the left navigation bar, expand **Details_DataCard1**, and note the numeral that appears at the end of **DataCardValue**.
+
+    In this example, the numeral is 2.
+
+    ![Data-card value for Details column](./media/customize-list-form/data-card-value.png)
 
 1. Select the **Price** card by clicking or tapping it.
 
@@ -67,9 +76,9 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     ![Select the Visible property](./media/customize-list-form/select-property.png)
 
-1. In the formula bar, type or paste this formula:
+1. In the formula bar, type or paste this formula and then, if necessary, replace the numeral with the one that you noted in step 1:
 
-    **If(DataCardValue3.Value = true, true)**
+    **If(DataCardValue2.Value = true, true)**
 
     ![Set the value of the Visible property](./media/customize-list-form/build-formula.png)
 
