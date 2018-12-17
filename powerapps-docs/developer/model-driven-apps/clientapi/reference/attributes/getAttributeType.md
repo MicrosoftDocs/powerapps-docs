@@ -14,7 +14,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# getAttribute (Client API reference)
+# getAttributeType (Client API reference)
 
 
 
