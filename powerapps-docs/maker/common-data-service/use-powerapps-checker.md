@@ -29,10 +29,6 @@ Solution checker works with unmanaged solutions that can be exported from an env
 - The system default solutions (Default Solution and Common Data Services Default Solution).
 - Solutions that contain JavaScript using ECMAScript 6 (2015) or later versions. When JavaScript using one of these versions is detected, a JS001 syntax issue for the web resource is reported.
 
-> [!NOTE]
-> This feature is currently in preview and available only in the North America region. 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 
 ## Enable the solution checker
 The solution checker becomes available in the Solutions area of PowerApps after you install the PowerApps checker solution. Notice that you can't find it by browsing or searching on Microsoft AppSource. You must install it by following these steps.  
@@ -162,5 +158,4 @@ Here's a summary of each column in the report.
 
 
 ## See also
-[Understand experimental and preview features in PowerApps](../canvas-apps/working-with-experimental.md) <br/>
 [Guidance and best practices for building PowerApps solutions](https://docs.microsoft.com/dynamics365/customer-engagement/guidance/)
