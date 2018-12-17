@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/11/2018
+ms.date: 12/17/2018
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -64,6 +64,10 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. In the left navigation bar, expand **Details_DataCard1**, and note the numeral that appears at the end of **DataCardValue**.
 
+    In this example, the numeral is 2.
+
+    ![Data-card value for Details column](./media/customize-list-form/data-card-value.png)
+
 1. Select the **Price** card by clicking or tapping it.
 
     ![Select the Availability card](./media/customize-list-form/select-card.png)
@@ -74,7 +78,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. In the formula bar, type or paste this formula and then, if necessary, replace the numeral with the one that you noted in step 1:
 
-    **If(DataCardValue3.Value = true, true)**
+    **If(DataCardValue2.Value = true, true)**
 
     ![Set the value of the Visible property](./media/customize-list-form/build-formula.png)
 
