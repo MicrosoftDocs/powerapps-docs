@@ -158,5 +158,4 @@ Here's a summary of each column in the report.
 
 
 ## See also
-[Understand experimental and preview features in PowerApps](../canvas-apps/working-with-experimental.md) <br/>
 [Guidance and best practices for building PowerApps solutions](https://docs.microsoft.com/dynamics365/customer-engagement/guidance/)
