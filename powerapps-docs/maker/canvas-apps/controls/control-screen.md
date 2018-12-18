@@ -8,7 +8,7 @@ ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
-ms.author: emcoope-msft
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
