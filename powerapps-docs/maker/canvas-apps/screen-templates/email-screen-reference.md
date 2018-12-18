@@ -1,14 +1,14 @@
 ---
 title: Email screen template reference | Microsoft Docs
 description: Understand, at a low level, how the email screen template works in PowerApps
-author: caburk
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/19/2018
-ms.author: caburk
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
