@@ -106,3 +106,13 @@ Use data sources and formulas that can be delegated to keep your apps performing
 
 ## Republish apps regularly
 [Republish your apps](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blog post) to get performance improvements and additional features from the PowerApps platform.
+
+## Avoid repeating the same formula in multiple places
+If multiple properties execute the same formula, especially if it is complex, consider setting it once, and then reference the output of the first property in subsequent ones.  For example, instead of controls A, B, C, D and E having the same complex formula on DisplayMode, set A.DisplayMode to the complex formula, then set B.DisplayMode = A.DisplayMode, and so on for C, D, and E.
+
+## Enable DelayOutput on all TextInput controls
+If you have multiple formulas or rules that reference the value of a Text input control, set the **DelayedOutput** property of the Text input to true.	This will only update the output Text property of a Text input control once, after keystrokes entered in quick succession have ceased, resulting in the formulas or rules being executed fewer amount of times and hence improving performance.
+
+## Avoid using Form.Updates in rules and formulas
+Referencing a user input value in a rule or a formula via **Form.Updates** variable is an expensive operation since it iterates over all the form’s data cards and creates a new record each time.  It is more efficient to reference the value directly from the Data card or the control value.
+
