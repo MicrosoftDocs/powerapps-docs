@@ -39,4 +39,5 @@ Embedded canvas apps are also solution aware. By default embedded canvas apps ar
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
 [Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
-[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md)
+[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
