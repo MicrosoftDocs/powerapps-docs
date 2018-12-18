@@ -29,7 +29,7 @@ This topic explains how to share an embedded canvas app that you have already cr
 After you have created and added an embedded canvas app to a model-driven form you will need to take steps to ensure that all users that have access to the model-driven form also have access to the canvas app and the data that it uses. To do this, follow these steps:
 -	[Share your embedded canvas app with Everyone in your organization or a security group or specific users.](../canvas-apps/share-app.md#share-an-app)
 -	[Ensure that users have appropriate permissions for any Common Data Service entities that your embedded canvas app uses.](../canvas-apps/share-app.md#manage-entity-permissions)
--	Ensure that users have appropriate permission for data on any cloud services that your embedded canvas app uses, such as SharePoint or OneDrive. The steps to share vary, are specific to each cloud service and beyond the scope of PowerApps.
+-	Ensure that users have appropriate permission for data on any cloud services that your embedded canvas app uses, such as SharePoint or OneDrive. The steps to share are specific to each cloud service and beyond the scope of PowerApps.
 
 Embedded canvas apps are also solution aware. By default embedded canvas apps are created in the same solution as the host model-driven form. To move the embedded canvas app from one environment to another export and import embedded canvas apps as a part of a solution just like any other component.
 
