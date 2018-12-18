@@ -69,7 +69,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
      - 	The form editor has been listening for the App ID to be sent to it.
      - 	The App ID was sent to it when the app was saved.
 22.	In the **Set Properties** dialog, select the **Display** tab, clear **Display label on the form**, and then select **OK**.
-     - If you already have a canvas app embedded on this form a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first disable the current one. <!-- (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP)--> Then, enable the new embedded canvas app. <!-- (LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)   -->
+     - If you already have a canvas app embedded on this form a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
 23.	On the **Home** tab, select **Save**, and then select **Publish**.
 
 After you have added an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
