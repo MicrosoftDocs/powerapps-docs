@@ -81,4 +81,5 @@ This topic showed you how to get started with embedding a canvas app in a model-
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
 [Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
-[Share an embedded canvas app](share-embedded-canvas-app.md)
+[Share an embedded canvas app](share-embedded-canvas-app.md) <br />
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
