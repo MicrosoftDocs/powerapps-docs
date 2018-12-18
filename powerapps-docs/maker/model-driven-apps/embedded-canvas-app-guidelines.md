@@ -38,11 +38,11 @@ This topic provides guidelines on working with embedded canvas apps as well as h
      - Similarly opening an embedded canvas app for editing or playing outside of the context of a model-driven form is not supported.
 
 > [!NOTE]
-> Currently you may be able to open an embedded canvas app for editing and/or playing outside of the model-driven form but this will be disabled in a future release.
+> Currently you may be able to open an embedded canvas app for editing and/or playing outside of the model-driven form, but this will be disabled in a future release.
 
 -	When using a Sub-Grid control to add an embedded canvas app to a model-driven form
      - The data (fields and values) sent to the embedded canvas app at runtime is determined by the View. Only use fields in your embedded canvas app that are included in the View or add them to the View if needed. Any fields that are not included in the View will show empty values at runtime. 
-     - The filter criteria for a View are not used at authoring time. Therefore the data that you see when authoring embedded canvas apps is not filtered, it is simple a list of top few records that you have access to. At runtime the filter criteria for the View will be applied as expected and you will only see relevant data.
+     - The filter criteria for a View are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simple a list of top few records that you have access to. At runtime, the filter criteria for the View will be applied as expected and you will only see relevant data.
 -	When using a field control to add an embedded canvas app to a model-driven form always use a required field that is guaranteed to have a value. If your field does not have a value your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 -	Publishing a model-driven form does not automatically publish embedded canvas apps.
      - Embedded canvas apps need to be published independent of the host model-driven form. 
@@ -52,7 +52,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 -	Embedded canvas apps are not displayed when creating a new record since they need a record context to be passed to them.
      - Currently when creating a new record an embedded canvas app on a form is not displayed even after the record is saved. We are aware of this issue and will address it in a future release.
 -	The ModelDrivenFormIntegration.Data object is read-only. 
-     - To write back data you have to use the Common Data Service connector. 
+     - To write back data you must use the Common Data Service connector. 
      - If you are writing back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. We are investigating ways to improve this experience.
 -	The ModelDrivenFormIntegration.Data object is a list of records. 
      - Even the current record is passed to the embedded canvas app via ModelDrivenFormIntegration.Data as a list that contains a single record.
@@ -61,7 +61,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
      - Support for Display form control is in-progress and will be included in some future release.
 -	Manually changing the App ID in the Canvas app control properties is to be avoided as much as possible.
      - The App ID of the Canvas app is automatically generated and filled in for you. 
-     - If for some reason you do need to manually edit it you need to ensure that any App ID you use corresponds to an embedded canvas app and not just a standalone canvas app.
+     - If for some reason you do need to manually edit it, you need to ensure that any App ID you use corresponds to an embedded canvas app and not just a standalone canvas app.
      - The embedded canvas app must also be created with the same data context that your model-driven form is going to send.
      - After you have updated the App ID click on the Customize button to establish the connection to the new app.
 - When viewing a model-driven form with an embedded canvas app, if you see an error message that reads "Sorry we didn't find that app." check to see that the embedded canvas app is in the same solution as the model-driven form and has been shared with the user.
