@@ -64,7 +64,8 @@ This topic provides guidelines on working with embedded canvas apps as well as h
      - If for some reason you do need to manually edit it, you need to ensure that any App ID you use corresponds to an embedded canvas app and not just a standalone canvas app.
      - The embedded canvas app must also be created with the same data context that your model-driven form is going to send.
      - After you have updated the App ID click on the Customize button to establish the connection to the new app.
-- When viewing a model-driven form with an embedded canvas app, if you see an error message that reads "Sorry we didn't find that app." check to see that the embedded canvas app is in the same solution as the model-driven form and has been shared with the user.
+- When viewing a model-driven form with an embedded canvas app, if you see an error message that reads "Sorry we didn't find that app." check to see that the embedded canvas app is in the same solution as the model-driven form.
+- When viewing a model-driven form with an embedded canvas app, if you see an error message that reads "It looks like you don’t have access to this app. Ask its owner to share it with you." check to see that the author has shared the embedded canvas app with you.
 
 ## Enable an embedded canvas app
 1. Select the Field or Sub-Grid control that is customized to display as an embedded canvas app.
