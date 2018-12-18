@@ -1,7 +1,7 @@
 ---
 title: "Pass a list of related records as data context with an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/10/2018
+ms.date: 12/17/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
