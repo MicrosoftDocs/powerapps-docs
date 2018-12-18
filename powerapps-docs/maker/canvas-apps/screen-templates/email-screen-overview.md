@@ -1,7 +1,7 @@
 ---
 title: Email-screen template | Microsoft Docs
 description: Understand how the email screen template works in PowerApps, and extend the screen for your own use cases
-author: emcoope
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
