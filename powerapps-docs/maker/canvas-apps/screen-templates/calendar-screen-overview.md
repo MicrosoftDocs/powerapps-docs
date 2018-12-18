@@ -1,14 +1,14 @@
 ---
 title: Calendar-screen template | Microsoft Docs
 description: Understand how the calendar-screen template for canvas apps works, modify the screen, and extend it as part of an app
-author: caburk
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/14/2018
-ms.author: caburk
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
