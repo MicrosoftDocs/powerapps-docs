@@ -1,14 +1,14 @@
 ---
 title: Meeting-screen template | Microsoft Docs
 description: Understand how the meeting screen template works in PowerApps, and extend the screen for your own use cases
-author: caburk
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/22/2018
-ms.author: caburk
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
