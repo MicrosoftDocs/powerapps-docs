@@ -25,7 +25,12 @@ search.app:
 # Best practices and guidance while working with metadata for the Common Data Service for Apps
 
 This list below contains all of the guidance and best practices regarding interacting and working with metadata within the Common Data Service for Apps.
-- [Retrieve published metadata](retrieve-published-metadata.md)<br />
-  - Retrieving unpublished metadata not only will add overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor does not expect.
-- [Retrieve specific columns for an entity via query APIs](retrieve-specific-columns-entity-via-query-apis.md)<br />
-  - Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns.
+
+
+|Best Practice  |Description  |
+|---------|---------|
+|[Retrieve published metadata](retrieve-published-metadata.md)     |Retrieving unpublished metadata not only will add overhead to processing the request itself, performing more slowly, it could also return metadata that the requestor does not expect.         |
+|[Retrieve specific columns for an entity via query APIs](retrieve-specific-columns-entity-via-query-apis.md)     |Queries submitted to retrieve data should include specific columns in the ColumnSet instance associated to the query rather than All Columns.         |
+
+# See Also
+[Work with metadata using code](../../metadata-services.md)<br />

@@ -25,5 +25,10 @@ search.app:
 # Best practices and guidance around working with data for the Common Data Service for Apps
 
 This list below contains all of the best practices and guidance around integrating data using code with the Common Data Service for Apps.
-- [API Limits (Common Data Service for Apps)](../../api-limits.md)<br />
-  - Understand the limits for API requests.
+
+|Best Practice  |Description  |
+|---------|---------|
+|[API Limits (Common Data Service for Apps)](../../api-limits.md)     |Understand the limits for API requests.         |
+
+# See Also
+[Work with data using code in Common Data Service for Apps (PowerApps)](../../work-with-data-cds.md)<br />
