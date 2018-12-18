@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/22/2018
-ms.author: emcoope-msft
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
