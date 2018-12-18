@@ -45,9 +45,13 @@ The steps to embed a canvas app in your model-driven form vary based on the data
 
 After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
-<!-- For things to keep in mind when working with embedded canvas apps and to help troubleshoot any issues you might encounter, see (LINK TO ARTICLE #5). -->
+For guidelines on working with embedded canvas apps as well as helpful tips to troubleshoot any issues you might encounter, please refer to: [Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md).
 
 ## See also
 [What are canvas apps in PowerApps?](../canvas-apps/getting-started.md) <br />
 [Add and configure a canvas-app control in PowerApps](../canvas-apps/add-configure-controls.md) <br />
 [Overview of canvas-app connectors for PowerApps](../canvas-apps/connections-list.md) 
+[Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
+[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
+[Share an embedded canvas app](share-embedded-canvas-app.md) <br />
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
