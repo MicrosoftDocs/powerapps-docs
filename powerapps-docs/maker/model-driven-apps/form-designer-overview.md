@@ -41,7 +41,7 @@ The form designer interface has the following areas:
 - Form preview – Displays a realtime preview of the form as it will appear to end-users when published. 
 - Property pane – Displays properties of the selected element and also allows makers to make changes.
 
-   ![Form designer layout](media/form-designer-png.PNG)
+   ![Form designer layout](media/form-designer.png)
 
 ## See also
 [Create and edit forms using the model-driven form designer](create-and-edit-forms.md)
