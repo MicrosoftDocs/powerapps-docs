@@ -2,7 +2,7 @@
 title: "Choose and configure columns in model-driven app views in PowerApps | MicrosoftDocs"
 description: "Learn how to select and configure views for your app"
 keywords: ""
-ms.date: 06/11/2018
+ms.date: 11/27/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -26,11 +26,11 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Choose and configure columns in model-driven app views
+# Choose and configure columns in model-driven app views
 
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 
- Along with the filter criteria, the columns visible in a PowerApps view are very important to the value provided by the view. In this tutorial, you create or edit views by performing the following tasks:  
+ Along with the filter criteria, the columns visible in a PowerApps view are very important to the value provided by the view. In this topic, you create or edit views by performing the following tasks:  
 
 -   [Open the view editor](choose-and-configure-columns.md#open-the-view-editor)  
    
@@ -41,10 +41,14 @@ search.app:
 -   [Change column width](choose-and-configure-columns.md#BKMK_ChangeColumnWidth)  
   
 -   [Move a column](choose-and-configure-columns.md#BKMK_MoveAColumns)  
-  
--   [Enable or disable presence for a column](choose-and-configure-columns.md#BKMK_EnableOrDisablePresence)  
-  
--   [Add find columns](choose-and-configure-columns.md#BKMK_AddFindColumns)  
+    
+  > [!IMPORTANT]
+  > The latest version of the view designer is currently in preview. Some features like enabling or disabling presence for a column and adding a find column are not yet supported. To accomplish these tasks, [open the view in the classic view designer](/dynamics365/customer-engagement/customize/create-and-edit-views#open-the-classic-view-designer).
+  >  -   [Enable or disable presence for a column](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_EnableOrDisablePresence)  
+  >
+  >  -   [Add find columns](choose-and-configure-columns.md#BKMK_AddFindColumns)  
+
+
 
 ### Open the view editor
 
@@ -61,27 +65,20 @@ search.app:
 ### Add columns  
  You can include columns from the current entity or any of the related entities that have a 1:N entity relationship with the current entity.  
   
- For example, perhaps you want to display the owner of a user-owned entity in a column. You can choose the **Owner** field of the current entity to display the name of the owner. This will appear as a link to open the **User** record for the person who is the owner. In this case, you also have the option to [Enable or disable presence for a column](choose-and-configure-columns.md#BKMK_EnableOrDisablePresence).  
+ For example, perhaps you want to display the owner of a user-owned entity in a column. You can choose the **Owner** field of the current entity to display the name of the owner. This will appear as a link to open the **User** record for the person who is the owner.  
   
  If you want to display the phone number for the owner of the record, you must select **Owning User (User)** from the **Record type** drop-down and then select the **Main Phone** field.  
   
 #### Add columns to views  
   
-1.  While creating and editing views, select **Add Columns**. 
+1.  While creating and editing views, ensure that the **Fields** panel is open. If it is not, select **Add fields** on the toolbar. 
 
     > [!div class="mx-imgBorder"] 
-    > ![View editor add columns](media/view-editor.png)
+    > ![View editor add columns](media/fields-drawer-view-designer.png)
 
-    The **Add Columns** dialog box appears.
+2.  Select the fields you want to add to the view designer. This adds the field as a column on the right-hand of the view.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Add columns](media/add-columns.png)
-  
-2.  Select the **Record type** if you want to include fields from related entities.  
-  
-3.  You can select multiple fields, even from related entities.  
-  
-4.  When you have selected the fields you want, select **OK** to close the **Add Columns** dialog box.  
+3.  Select the **Related** tab to see related entities and their corresponding fields.
   
  As you add columns, you will increase the width of the view. If the width of the view exceeds the space available to show it in the page, horizontal scrollbars will allow people to scroll and see the hidden columns.  
   
@@ -94,69 +91,26 @@ search.app:
 <a name="BKMK_RemoveColumns"></a>   
 ### Remove columns  
   
-1.  While creating and editing views, choose the column you want to remove.  
+1.  Select the header of the column you want to remove.  
   
-2.  In the **Common Tasks** area, select **Remove**.  
-  
-3.  In the confirmation message, select **OK**.  
+2.  In the dropdown, select **Remove**.  
   
 <a name="BKMK_ChangeColumnWidth"></a>   
 ### Change column width  
   
-1.  While creating and editing views, choose the column you want to change.  
+1.  Hover over the area between columns in the view.  
   
-2.  In the **Common Tasks** area, select **Change Properties**.  
+2.  A line appears and your cursor becomes a double sided arrow.  
   
-3.  In the **Change Column Properties** dialog box, choose an option to set the column width, and then select **OK**.  
+3.  Drag the column to the appropriate width.  
   
 <a name="BKMK_MoveAColumns"></a>   
 ### Move a column  
   
-1.  While creating and editing views, choose the column you want to move.  
+Click and drag the column header to the correct position.
   
-2.  In the **Common Tasks** area, use the arrows to move the column left or right.  
+> [!TIP]
+>   You can also select the header of the column you want to move and from the dropdown select **Move Right** or **Move Left**.  
   
-<a name="BKMK_EnableOrDisablePresence"></a>   
-### Enable or disable presence for a column  
- When the following conditions are true, people can see a Skype for Business online presence control in lists that shows if the person is available and allows people to interact with them by instant messaging:  
-  
--   People use Edge or Internet Explorer.  
-  
--   People have Skype for Business installed.  
-  
--   People have Microsoft ActiveX enabled in Internet Explorer.  
-  
--   Your organization has enabled presence for the system in the system settings.  
-  
- The presence control and the setting to enable it are available only for columns that display primary fields for email-enabled entities (users, contacts, opportunities, leads, or custom entities).  
-  
-#### Enable or disable Skype for Business presence for a column  
-  
-1.  While creating and editing views, choose the column you want to change.  
-  
-2.  In the **Common Tasks** area, select **Change Properties**.  
-  
-3.  In the **Change Column Properties** dialog box, select or deselect **Enable presence for this column**, and then select **OK**.  
-  
-<a name="BKMK_AddFindColumns"></a>   
-### Add find columns  
- Find columns are the columns searched by the application when people use the **search for records** text box displayed for lists or whenever there is the ability to search for records for an entity in the application, such as when people are searching for a record for a lookup field.  
-  
-1.  Open a **Quick Find** view. For information on quick find views, see [Types of views](create-edit-views.md#types-of-views).  
-  
-2.  Select **Add Find Columns** to open the dialog box.  
-  
-3.  Select the fields that contain the data that you want to search for.  
-  
-4.  Select **OK** to close the **Add Find Columns** dialog box.  
-
-## Community tools
-
-**View Layout Replicator** and **View Designer** are tools provided by the XrmToolbox community developed for Dynamics 365 customer engagement. See the [Developer tools](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for community developed tools.
-
-> [!NOTE]
-> The community tools are not a product of Microsoft Dynamics and does not extend support to the community tools. 
-> If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com). 
-
 ## Next steps
 [Create or edit views](create-edit-views.md)
