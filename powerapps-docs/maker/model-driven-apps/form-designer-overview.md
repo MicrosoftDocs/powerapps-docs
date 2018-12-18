@@ -29,7 +29,8 @@ The new model-driven form designer provides a modern, WYSIWYG authoring experien
 
 > [!NOTE]
 > This feature is currently in preview. <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] <br /><br />
+> This feature is currently available in all regions, except US and Europe. It will be available in US and Europe early January 2019. If you want to try the feature right away, you can create an environment in regions where it is currently available such as Australia, Canada, India or Japan.
 
 The designer shows a realtime WYSIWYG preview (Unified Interface only) while authoring. Changes to the form are instantly reflected in the preview enabling app makers to see exactly how the form will appear to users when published. 
 
