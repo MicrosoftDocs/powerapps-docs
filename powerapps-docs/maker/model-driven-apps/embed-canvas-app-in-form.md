@@ -50,7 +50,7 @@ For guidelines on working with embedded canvas apps as well as helpful tips to t
 ## See also
 [What are canvas apps in PowerApps?](../canvas-apps/getting-started.md) <br />
 [Add and configure a canvas-app control in PowerApps](../canvas-apps/add-configure-controls.md) <br />
-[Overview of canvas-app connectors for PowerApps](../canvas-apps/connections-list.md) 
+[Overview of canvas-app connectors for PowerApps](../canvas-apps/connections-list.md) <br />
 [Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
 [Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
 [Share an embedded canvas app](share-embedded-canvas-app.md) <br />
