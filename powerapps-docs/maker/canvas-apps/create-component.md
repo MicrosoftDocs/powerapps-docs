@@ -94,7 +94,7 @@ In this example, you'll create a menu component that resembles this graphic:
 
 1. Set the component's **Items** property to this formula:
 
-    ```
+    ```powerapps-dot
     Table({Item:"SampleText"})
     ```
 
