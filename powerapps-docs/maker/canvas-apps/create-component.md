@@ -63,19 +63,17 @@ This walkthrough further explains these concepts.
 
 In this example, you'll create a menu component that resembles this graphic:
 
-![Final gallery](./media/create-component/final.png)
+![Final gallery](./media/create-component/menu-instance.png)
 
-1. Create a blank app for tablets.
+1. In PowerApps Studio, create a blank app.
 
 1. In the left navigation bar, open the list of components, and then select **New component**.
 
     ![List of components](./media/create-component/component-list.png)
 
-1. Hover over the new component, and then select the ellipsis (...).
+1. While hovering over the new component, select the ellipsis (...), select **Rename**, and then type or paste **MenuComponent**.
 
-1. In the menu that appears, select **Rename**, and then type or paste **MenuComponent**.
-
-1. In the right-hand pane, select **New custom property**.
+1. In the right-hand pane, set the component's width to **150** and its height to **250**, and then select **New custom property**.
 
     ![New property](./media/create-component/new-property.png)
 
@@ -107,7 +105,9 @@ In this example, you'll create a menu component that resembles this graphic:
 
     ![Formula](./media/create-component/set-component-items.png)
 
-1. In the component, insert a blank vertical **Gallery** control, and set its **Items** property to this expression:
+1. In the component, insert a blank vertical **Gallery** control.
+
+1. Set its **TemplateSize** property to **50** and its **Items** property to this expression:
 
     ```powerapps-dot
     MenuComponent.Items
@@ -115,13 +115,11 @@ In this example, you'll create a menu component that resembles this graphic:
 
     This way, the **Items** property of the **Gallery** control reads and depends on the **Items** input property of the component. Make sure that the **Gallery** field selection is correct.
 
-1. In the template of the **Gallery** control, add a **Label** control, and then adjust these design properties:
+1. In the template of the **Gallery** control, add a **Label** control, and set its **Y** property to **0**.
 
-    - Set the **Y** property of the **Label** control and the **Gallery** control to **0**.
-    - Set the **Width** property of the **Gallery** control to **150**, and set its **Height** property to **250**.
-    - Set the **BorderStyle** property of the **Gallery** control to **Solid**, and set its **BorderThickness** property to **1**.
+1.  Set the **BorderThickness** property of the **Gallery** control to **1**.
 
-    ![Default screen](./media/create-component/add-label.png)
+    ![Add label and set border of gallery](./media/create-component/add-label.png)
 
 Next, you'll add the component to a screen and specify a table of strings for the component to show.
 
