@@ -102,7 +102,7 @@ In this example, you'll create a menu component that resembles this graphic:
 
 1. In the component, insert a blank vertical **Gallery** control, and set its **Items** property to this expression:
 
-    ```
+    ```powerapps-dot
     MenuComponent.Items
     ```
 
@@ -124,7 +124,7 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
 1. Set the **Items** property of **MenuComponent_1** to this formula:
 
-    ```
+    ```powerapps-dot
     Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
     ```
 
@@ -146,7 +146,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 1. On the **Advanced** tab, set the value of the **Selected** property to this expression, adjusting the numeral in the gallery name if necessary:
 
-    ```
+    ```powerapps-dot
     Gallery1.Selected.Item
     ```
 
@@ -154,7 +154,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 1. On the app screen, add a label, and set its **Text** property to this expression, adjusting the numeral in the component name if necessary:
 
-    ```
+    ```powerapps-dot
     MenuComponent_1.Selected
     ```
 
