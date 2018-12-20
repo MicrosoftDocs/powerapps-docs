@@ -58,7 +58,9 @@ The following examples use the **Squares** [data source](../working-with-data-so
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then click or tap the button:
 
-* **ClearCollect( Squares, [ "1", "4", "9" ] )**
+```powerapps-dot
+ClearCollect( Squares, [ "1", "4", "9" ] )
+```
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -121,6 +123,7 @@ We can perform this task in a couple of different ways, all of which produce the
 Don't make that copy!  We can use the following formula anywhere we need:
 
 ```powerapps-dot
+// Table shaping on demand, no need for a copy of the result
 ShowColumns( 
 	AddColumns( 
 		Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
@@ -166,6 +169,9 @@ ClearCollect( NewOrder,
 		"Product", "Quantity To Order"
 	)
 )
+```
+
+```powerapps-dot
 ClearCollect( NewOrder, 
 	ForAll( Products, 
 		If( 'Quantity Requested' > 'Quantity Available', 
