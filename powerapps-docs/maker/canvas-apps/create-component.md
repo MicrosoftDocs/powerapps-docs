@@ -28,7 +28,7 @@ In a preview region, open the **App Settings** screen, and then enable the featu
 
 You can create a component from the **Components** menu on the **Insert** tab or, as the next graphic shows, the list in the left navigation bar. This list shows components that are defined in the app, sorted by creation time.
 
-![Component list view](./media/component/list-view.png)
+![Component list view](./media/create-component/list-view.png)
 
 If you open the **Components** menu and then select **New component**, PowerApps opens the same empty canvas where you can add controls as part of the component definition. The **Components** menu also shows the same list of existing components, and you can select one to insert an instance of that component, just as you insert a control.
 
@@ -46,7 +46,7 @@ You can create and update variables in a component by using the **Set** function
 
 If you export a component, you create a local file that you can import to a different app. If the app contains a modified version of the same component, you're prompted to decide whether to replace the modified version or cancel the import. As of this writing, you can't save components to the cloud or share them within an environment.
 
-![Import and export](./media/component/import.png)
+![Import and export](./media/create-component/import.png)
 
 ## Custom properties
 
@@ -66,7 +66,7 @@ In this example, you'll create a menu component that resembles this graphic:
 
 1. In the left navigation bar, open the list of components, and then select **New component**.
 
-    ![List of components](./media/component/component-list.png)
+    ![List of components](./media/create-component/component-list.png)
 
 1. Hover over the new component, and then select the ellipsis (...).
 
@@ -74,11 +74,11 @@ In this example, you'll create a menu component that resembles this graphic:
 
 1. In the right-hand pane, select **New custom property**.
 
-    ![New property](./media/component/new-property.png)
+    ![New property](./media/create-component/new-property.png)
 
 1. In the **Display name**, **Property name**, and **Description** boxes, type or paste **Items**.
 
-    ![Display name, property name, description boxes](./media/component/property-names.png)
+    ![Display name, property name, description boxes](./media/create-component/property-names.png)
 
     When you specify a **Property name**, don't include spaces because you'll refer to the component by this name when you write a formula (for example, **ComponentName.PropertyName**).
 
@@ -86,7 +86,7 @@ In this example, you'll create a menu component that resembles this graphic:
 
 1. In the **Data type** list, select **Table**, and then select **Create**.
 
-    ![Data type of the property](./media/component/property-data-type.png)
+    ![Data type of the property](./media/create-component/property-data-type.png)
 
     The **Items** property is set to a default value based on the data type that you specified, but you can set it to a value that suits your needs. If you specified a data type of **Table** or **Record** for the **Items** property, you may want to change the property's value to match the data schema that you want to input to the component. In this case, you'll change it to a list of strings.
 
@@ -98,7 +98,7 @@ In this example, you'll create a menu component that resembles this graphic:
     Table({Item:"SampleText"})
     ```
 
-    ![Formula](./media/component/set-component-items.png)
+    ![Formula](./media/create-component/set-component-items.png)
 
 1. In the component, insert a blank vertical **Gallery** control, and set its **Items** property to this expression:
 
@@ -110,7 +110,7 @@ In this example, you'll create a menu component that resembles this graphic:
 
 1. Insert a **Label** control inside the gallery.
 
-    ![Gallery](./media/component/add-label.png)
+    ![Gallery](./media/create-component/add-label.png)
 
 Next, you'll add the component to a screen and specify a table of strings for the component to show.
 
@@ -118,7 +118,7 @@ Next, you'll add the component to a screen and specify a table of strings for th
 
 1. On the **Insert** tab, open the **Components** menu, and then select **MenuComponent**.
 
-    ![Insert](./media/component/insert.png)
+    ![Insert](./media/create-component/insert.png)
 
     The new component is named **MenuComponent_1** by default.
 
@@ -128,11 +128,11 @@ Next, you'll add the component to a screen and specify a table of strings for th
     Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
     ```
 
-    ![Table input](./media/component/table-input.png)
+    ![Table input](./media/create-component/table-input.png)
 
 1. (optional) In the list of components, set the **Label** control's **Y** property to **0** and the **Gallery** control's **TemplateSize** property to **50**. On the screen, set the **Gallery** control's **Width** property to **150** and its **Height** property to **250**.
 
-    ![Final gallery](./media/component/final.png)
+    ![Final gallery](./media/create-component/final.png)
 
 So far, you've created a component and added it to an app. Next, you'll create an output property that reflects the item that the user selects in the menu.
 
@@ -150,7 +150,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
     Gallery1.Selected.Item
     ```
 
-    ![Advanced pane](./media/component/advance.png)
+    ![Advanced pane](./media/create-component/advance.png)
 
 1. On the app screen, add a label, and set its **Text** property to this expression, adjusting the numeral in the component name if necessary:
 
