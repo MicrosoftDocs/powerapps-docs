@@ -695,7 +695,7 @@
     - name: Let customers test drive your apps
       href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Components (Experimental feature)
-      href: ./canvas-apps/component.md
+      href: ./canvas-apps/create-component.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
