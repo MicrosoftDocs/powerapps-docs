@@ -180,11 +180,12 @@ ClearCollect( NewOrder,
 #### Collect within ForAll
 Finally, we can perform the **Collect** directly within the **ForAll**:
 
-```powerappd-dot
+```powerapps-dot
 Clear( ProductsToOrder ); 
 ForAll( Products, 
 	If( 'Quantity Requested' > 'Quantity Available', 
-		Collect( NewOrder,  { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } )
+		Collect( NewOrder,  
+			{ Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } )
 	)
 )
 ```

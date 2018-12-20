@@ -211,7 +211,9 @@ For example, take a table of **Products**:
 
 To determine if any of any of these products had more requested than is available:
 
-**Filter( Products, 'Quantity Requested' > 'Quantity Available' )**
+```powerapps-dot
+Filter( Products, 'Quantity Requested' > 'Quantity Available' )
+```
 
 The first argument to **Filter** is the table of records to operate on, and the second argument is a formula.  **Filter** creates a record scope for evaluating this formula in which the fields of each record are available, in this case **Product**, **Quantity Requested**, and **Quantity Available**.  The result of the comparison determines if each record should be included in the result of the function:
 
@@ -219,7 +221,12 @@ The first argument to **Filter** is the table of records to operate on, and the 
 
 Adding to this example, we can calculate how much of each product to order:
 
-**AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' )**
+```powerapps-dot
+AddColumns( 
+	Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+	"Quantity To Order", 'Quantity Requested' - 'Quantity Available'
+)
+```
 
 Here we are adding a calculated column to the result.  **AddColumns** has its own record scope that it uses to calculate the difference between what has been requested and what is available.
 
@@ -227,7 +234,15 @@ Here we are adding a calculated column to the result.  **AddColumns** has its ow
 
 Finally, we can reduce the result table to just the columns that we desire:
 
-**ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
+```powerapps-dot
+ShowColumns( 
+	AddColumns( 
+		Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+		"Quantity To Order", 'Quantity Requested' - 'Quantity Available'
+	), 
+	"Product", "Quantity To Order"
+)
+```
 
 ![](media/working-with-tables/toorderonly.png)
 
@@ -257,7 +272,15 @@ In addition, define a context variable named **Value** with this formula: **Upda
 
 Let's put it all together.  In this context, the following formula:
 
-* **Ungroup( ForAll( X, ForAll( Y, Y[@Value] & Text( X[@Value] ) & [@Value] ) ), "Value" )**
+```powerapps-dot
+Ungroup( 
+	ForAll( 
+		X, 
+		ForAll( Y, Y[@Value] & Text( X[@Value] ) & [@Value] ) 
+	), 
+	"Value" 
+)
+```
 
 produces this table:
 
@@ -269,7 +292,15 @@ The innermost **ForAll** function defines another record scope for **Y**.  Since
 
 Since **Y** is the innermost record scope, accessing fields of this table do not require disambiguation, allowing us to use this formula with the same result:
 
-* **Ungroup( ForAll( X, ForAll( Y, Value & Text( X[@Value] ) & [@Value] ) ), "Value" )**
+```powerapps-dot
+Ungroup( 
+	ForAll( 
+		X, 
+		ForAll( Y, Value & Text( X[@Value] ) & [@Value] ) 
+	), 
+	"Value" 
+)
+```
 
 All the **ForAll** record scopes override the global scope.  The **Value** context variable we defined is not available by name without the disambiguation operator.   To access this value we must use **[@Value]**.
 
@@ -279,15 +310,21 @@ All the **ForAll** record scopes override the global scope.  The **Value** conte
 ### Records
 You express records by using curly braces that contain named field values.  For example, you can express the first record in the table at the start of this topic by using this formula:
 
-**{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }**
+```powerapps-dot
+{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }
+```
 
 You can also embed formulas within other formulas, as this example shows:
 
-**{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }**
+```powerapps-dot
+{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }
+```
 
 You can nest records by nesting curly braces, as this example shows:
 
-**{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }**
+```powerapps-dot
+{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }
+```
 
 Enclose each column name that contains a special character, such as a space or a colon, in single quotes.  To use a single quote within a column name, double it.
 
@@ -296,11 +333,24 @@ Note that the value in the **Price** column doesn't include a currency symbol, s
 ### Tables
 You can create a table by using the **[Table](functions/function-table.md)** function and a set of records. You can express the table at the start of this topic by using this formula:
 
-**Table( { Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Name: "Water", Price: 4.95, 'Quantity on Hand': 10, 'Quantity on Order': 0 } )**
+```powerapps-dot
+Table( 
+	{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },
+	{ Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },
+	{ Name: "Water", Price: 4.95, 'Quantity on Hand': 10, 'Quantity on Order': 0 } 
+)
+```
 
 You can also nest tables:
 
-**Table( { Name: "Chocolate",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) } )**
+```powerapps-dot
+Table( 
+	{ Name: "Chocolate", 
+	  'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },
+	                             { Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) 
+	}
+)
+```
 
 ### Value tables
 You can create single-column tables by specifying values in square brackets. The resulting table has a single column, named **Value**.
