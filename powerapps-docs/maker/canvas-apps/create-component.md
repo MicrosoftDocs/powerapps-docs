@@ -61,7 +61,7 @@ This walkthrough further explains these concepts.
 
 ## Create an example component
 
-In this example, you'll create a menu component that resembles this graphic:
+In this example, you'll create a menu component that resembles this graphic and in which you can change the text and use in multiple screens, apps, or both:
 
 ![Final gallery](./media/create-component/menu-instance.png)
 
@@ -105,9 +105,7 @@ In this example, you'll create a menu component that resembles this graphic:
 
     ![Formula](./media/create-component/set-component-items.png)
 
-1. In the component, insert a blank vertical **Gallery** control.
-
-1. Set its **TemplateSize** property to **50** and its **Items** property to this expression:
+1. In the component, insert a blank vertical **Gallery** control, and set its **Items** property to this expression:
 
     ```powerapps-dot
     MenuComponent.Items
@@ -115,9 +113,9 @@ In this example, you'll create a menu component that resembles this graphic:
 
     This way, the **Items** property of the **Gallery** control reads and depends on the **Items** input property of the component. Make sure that the **Gallery** field selection is correct.
 
-1. In the template of the **Gallery** control, add a **Label** control, and set its **Y** property to **0**.
+1. Set the **Gallery** control's **BorderThickness** property to **1**  and its **TemplateSize** property to **50**.
 
-1.  Set the **BorderThickness** property of the **Gallery** control to **1**.
+1. In the template of the **Gallery** control, add a **Label** control.
 
     ![Add label and set border of gallery](./media/create-component/add-label.png)
 
@@ -139,13 +137,13 @@ Next, you'll add the component to a screen and specify a table of strings for th
     Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
     ```
 
-    The instance of the component on the default screen resembles the next graphic. However, you can customize the text and other properties of other instances.
+    This instance resembles this graphic, but you can customize the text and other properties of each instance.
 
     ![Final gallery](./media/create-component/menu-instance.png)
 
 So far, you've created a component and added it to an app. Next, you'll create an output property that reflects the item that the user selects in the menu.
 
-1. In the list of components, select **MenuComponent**.
+1. Open the list of components, and then select **MenuComponent**.
 
 1. In the right-hand pane, select the **Properties** tab, and then select **New custom property**.
 
@@ -171,7 +169,7 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 1. While holding down the Alt key, select each item in the menu.
 
-    The **Label** reflects the item that you selected most recently.
+    The **Label** control reflects the menu item that you selected most recently.
 
 ## Known limitations
 
