@@ -1,6 +1,6 @@
 ---
 title: PowerApps for United States Government customers - Overview
-description: For U.S. Government customers, learn about the features and limitations for the PowerApps US Government service
+description: For US Government customers, learn about the features and limitations for the PowerApps US Government service
 author: evchaki
 manager: kvivek
 ms.service: powerapps
@@ -18,7 +18,7 @@ search.app:
 LocalizationGroup: Get started
 ---
 # PowerApps for US Government customers
-The **PowerApps** has a version available for United States Government customers as part of the **Office 365 US Government Community** subscriptions. The **PowerApps** version discussed in this article is specifically designed for US Government customers, and is separate and different from the commercial version of **PowerApps**.
+**PowerApps** has a version available for United States Government customers as part of the **Office 365 US Government Community** subscriptions. The **PowerApps** version described in this article is specifically designed for US Government customers, and is separate and different from the commercial version of **PowerApps**.
 
 The following sections describe the *features* available to the US Government version of **PowerApps**, clarifies some of the *limitations*, lists Frequently Asked Questions (**FAQ**) and answers (including how to sign up), and provides links for more information.
 
@@ -30,7 +30,7 @@ The following features are available to **PowerApps US Government** customers:
 
 ## Connectivity between Government and Public Azure Cloud services 
 
-Azure is distributed among multiple clouds. Be default, tenants are allowed to open firewall rules to a  cloud-specific instance, but cross-cloud networking is different and requires opening specific firewall rules to communicate between services. If you are a PowerApps customer and you have existing SQL instances in the public cloud which you need to access, you must open specific firewall rules in SQL to the Azure Government Cloud IP space, for the following datacenters:
+Azure is distributed among multiple clouds. By default, tenants are allowed to open firewall rules to a cloud-specific instance, but cross-cloud networking is different and requires opening specific firewall rules to communicate between services. If you are a PowerApps customer and you have existing SQL instances in the public cloud that you need to access, you must open specific firewall rules in SQL to the Azure Government Cloud IP space, for the following datacenters:
 
 * USGov Iowa
 * USGov Virginia
@@ -41,14 +41,14 @@ In the public cloud the IP spaces are available, but for the government cloud, y
 
 
 ## Limitations of PowerApps US Government
-Some of the features that are available in the commercial version of **PowerApps** are *not* available in **PowerApps** for US Government customers. The PowerApps team is actively working on making these features available to US Government customers, and will update this article when these features become available.
+Some of the features available in the commercial version of **PowerApps** are *not* available in **PowerApps** for US Government customers. The PowerApps team is actively working on making these features available to US Government customers, and will update this article when these features become available.
 
-* **Embed in SharePoint Online** - it is not possible to embed PowerApps content in SharePoint Online.
+* **Embed in SharePoint Online** - It is not possible to embed PowerApps content in SharePoint Online.
  
-To resolve issues, please contact your account representative.
+To resolve issues, contact your account representative.
 
-## Frequently Asked Questions (FAQ) for the US Government version of the PowerApps
-The following questions (and answers) are provided to help you quickly get information you need.
+## Frequently Asked Questions (FAQ) for the US Government version of PowerApps
+The following questions and answers are provided to help you quickly get information you need.
 
 **Question:** Is the URL for connecting to **PowerApps** for US Government different than the commercial **PowerApps** URL?
 
@@ -61,7 +61,7 @@ The following questions (and answers) are provided to help you quickly get infor
 
 
 ## Next steps
-There are all sorts of things you can do with PowerApps. For more information and learning, including an article that shows you how to sign up for the service, check out the following resources:
+To learn more about what you can do with PowerApps, including an article that shows you how to sign up for the service, see the following resources:
 
 * [Guided Learning for PowerApps](/learn/browse/?products=bizapps-power-apps)
 * [Get started with the PowerApps](/powerapps/#pivot=home&panel=getstarted)
