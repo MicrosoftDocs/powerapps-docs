@@ -18,9 +18,9 @@ search.app:
 LocalizationGroup: Get started
 ---
 # PowerApps for US Government customers
-The **PowerApps service** has a version available for United States Government customers as part of the **Office 365 US Government Community** subscriptions. The **PowerApps service** version discussed in this article is specifically designed for US Government customers, and is separate and different from the commercial version of the **PowerApps service**.
+The **PowerApps** has a version available for United States Government customers as part of the **Office 365 US Government Community** subscriptions. The **PowerApps** version discussed in this article is specifically designed for US Government customers, and is separate and different from the commercial version of **PowerApps**.
 
-The following sections describe the *features* available to the US Government version of the **PowerApps service**, clarifies some of the *limitations*, lists Frequently Asked Questions (**FAQ**) and answers (including how to sign up), and provides links for more information.
+The following sections describe the *features* available to the US Government version of **PowerApps**, clarifies some of the *limitations*, lists Frequently Asked Questions (**FAQ**) and answers (including how to sign up), and provides links for more information.
 
 ## Features of PowerApps US Government
 The following features are available to **PowerApps US Government** customers:
@@ -47,7 +47,7 @@ Some of the features that are available in the commercial version of the **Power
  
 To resolve issues, please contact your account representative.
 
-## Frequently Asked Questions (FAQ) for the US Government version of the Power BI service
+## Frequently Asked Questions (FAQ) for the US Government version of the PowerApps
 The following questions (and answers) are provided to help you quickly get information you need about the service.
 
 **Question:** Is the URL for connecting to **PowerApps** for US Government different than the commercial **PowerApps** URL?
