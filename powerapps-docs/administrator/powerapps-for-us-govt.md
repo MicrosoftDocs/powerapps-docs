@@ -41,14 +41,14 @@ In the public cloud the IP spaces are available, but for the government cloud, y
 
 
 ## Limitations of PowerApps US Government
-Some of the features that are available in the commercial version of the **PowerApps service** are *not* available in the **PowerApps service** for US Government customers. The PowerApps team is actively working on making these features available to US Government customers, and will update this article when these features become available.
+Some of the features that are available in the commercial version of **PowerApps** are *not* available in **PowerApps** for US Government customers. The PowerApps team is actively working on making these features available to US Government customers, and will update this article when these features become available.
 
 * **Embed in SharePoint Online** - it is not possible to embed PowerApps content in SharePoint Online.
  
 To resolve issues, please contact your account representative.
 
 ## Frequently Asked Questions (FAQ) for the US Government version of the PowerApps
-The following questions (and answers) are provided to help you quickly get information you need about the service.
+The following questions (and answers) are provided to help you quickly get information you need.
 
 **Question:** Is the URL for connecting to **PowerApps** for US Government different than the commercial **PowerApps** URL?
 
