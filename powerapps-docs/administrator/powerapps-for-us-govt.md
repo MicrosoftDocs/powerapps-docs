@@ -56,7 +56,7 @@ The following questions (and answers) are provided to help you quickly get infor
 
 | Commercial version URL | US Government version URL |
 | --- | --- |
-| [https://web.powerapps.com](https://web.powerapps.com) |[https://gov.create.powerapps.us](https://gov.create.powerapps.us) |
+| [https://web.powerapps.com](https://web.powerapps.com) |[https://gov.web.powerapps.us](https://gov.web.powerapps.us) |
 
 
 
