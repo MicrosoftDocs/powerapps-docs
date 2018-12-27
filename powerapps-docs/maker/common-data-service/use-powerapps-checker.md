@@ -122,10 +122,7 @@ Here's a summary of each column in the report.
 |Issue     |   The title of the issue identified in the solution.      | All        |
 |Category     | The categorization of the issue identified, such as **Performance**, **Usage**, or **Supportability**.      |  All     |
 |Severity     | Represents the potential impact of the issue identified. Available impact types are **High**, **Medium**, **Low**, and **Informational**.         |  All       |
-
-<!--from editor: change following to "resolution or actions"?-->
-
-|Guidance     |  Link to article detailing the issue, impact, and recommended resolution. actions.       |  All       |
+|Guidance     |  Link to article detailing the issue, impact, and recommended action.       |  All       |
 |Component     |  The solution component where the issue was identified.        |   All      |
 |Location     |  The location and/or source file of the component where the issue that was identified occurred, such as the assembly or JavaScript file name.        |  All       |
 |Line  #     |  The line number reference of the issue in the impacted web resource component.       |  Web resources       |
