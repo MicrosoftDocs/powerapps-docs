@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/22/2018
+ms.date: 12/29/2018
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -17,15 +17,15 @@ search.app:
 
 # Overview of the email-screen template in PowerApps
 
-In a canvas app, add an email screen that lets users send an email from their Office 365 Outlook account. Users can search for recipients in their org and add external email addresses too. You can add image attachment support, change the user data that appears in the search gallery and make other customizations.
+In a canvas app, add an email screen that lets users send an email from their Office 365 Outlook account. Users can search for recipients in their org and add external email addresses, too. You can add image-attachment support, change the user data that appears in the search gallery, and make other customizations.
 
-You can also add other template-based screens that show different data from Office 365, such as a user's [calendar](calendar-screen-overview.md), [people](people-screen-overview.md) in an organization, and [availability](meeting-screen-overview.md) of people whom you want to invite to a meeting.
+You can also add other template-based screens that show different data from Office 365, such as a user's [calendar](calendar-screen-overview.md), [people](people-screen-overview.md) in an organization, and [availability](meeting-screen-overview.md) of the people users might want to invite to a meeting.
 
 This overview teaches you:
 > [!div class="checklist"]
-> * The default functionality of the email screen
-> * How to modify the screen
-> * How to integrate the screen into apps
+> * How to use the default email screen.
+> * How to modify it.
+> * How to integrate it into an app.
 
 For a deeper dive into this screen's default functionality, see the [email-screen reference](email-screen-reference.md).
 
@@ -43,7 +43,7 @@ To add an email screen from the template:
 
 1. On the **Home** tab of the ribbon, select **New screen** > **Email**.
 
-    By default, the screen resembles this graphic:
+    By default, the screen looks similar to this:
 
     ![Email screen](media/email-screen/email-screen-full.png)
 
@@ -51,7 +51,7 @@ A few helpful notes:
 
 * To search for users in your org, start typing their name in the text input box below "To".
 * When searching for people, only the top 15 results will be returned.
-* To add email addresses for email recipients outside your org, type out the full, valid email address and click the '+' icon that appears to the right of it.
+* To add email addresses for email recipients outside your org, type out the full, valid email address, and select the '+' icon that appears to the right of it.
 * You must add at least one person as a recipient and provide a subject to send an email.
 * After you send the email, the contents of the subject line and message body, as well as the recipient list will all be erased.
 
@@ -59,7 +59,7 @@ A few helpful notes:
 
 You can modify the default functionality of this screen in a few common ways:
 
-* [Add image attachment support](email-screen-overview.md#add-image-attachment-support)
+* [Add image-attachment support](email-screen-overview.md#add-image-attachment-support)
 * [Show different data for people](email-screen-overview.md#show-different-data-for-people)
 
 If you want to modify the screen further, use the [email-screen reference](./email-screen-reference.md) as a guide.
@@ -67,18 +67,18 @@ If you want to modify the screen further, use the [email-screen reference](./ema
 > [!IMPORTANT]
 > The following steps assume that you've added only one email screen to the app. If you've added more than one, control names (such as **iconMail1**) will end with a different number, and you'll need to adjust the formulas accordingly.
 
-### Add image attachment support
+### Add image-attachment support
 
-This will allow you to send a single image with your email as an attachment.
+This allows users to send a single image with their email as an attachment.
 
-1. Under the Media tab in the ribbon, insert the 'Add picture' control and set its 'Y' property to `TextEmailMessage1.Y + TextEmailMessage1.Height + 20`
-1. With the **AddMediaWithImage** control inserted, set its height to be less than 210
-1. In the control tree view, select the **AddMediaWithImage** control > ... > Reorder > Send to back
-    * This will prevent the control from sitting in front of the **PeopleBrowseGallery** control.
-1. Change the 'Height' property of the **EmailPeopleGallery** to `Min((EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2) * RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)`. 
+1. Under the Media tab in the ribbon, insert the 'Add picture' control and set its **Y** property to `TextEmailMessage1.Y + TextEmailMessage1.Height + 20`.
+1. Once you have inserted the **AddMediaWithImage** control, set its height to be less than 210.
+1. In the control tree view, select **AddMediaWithImage** > **...** > **Reorder** > **Send to back**.
+   This prevents the control from sitting in front of the **PeopleBrowseGallery** control.
+1. Change the **Height** property of **EmailPeopleGallery** to `Min((EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2) * RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)`. 
 1. Change the 'ShowScrollbar' of the **EmailPeopleGallery** to `EmailPeopleGallery1.Height >= 304`.
     * This will prevent the max height from pushing the **AddMediaWithImage** control off the page
-1. Change the 'OnSelect' property of the **iconMail** control to:
+1. Change the **OnSelect** property of the **iconMail** control to:
 
     ```
     Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));
@@ -119,7 +119,7 @@ The email screen is a powerful bundle of controls in its own right, but it usual
 
 ### Linking to the calendar screen
 
-Follow the steps outlined in the [Calendar screen doc](./calendar-screen-overview.md#show-event-attendees) regarding **Showing event attendees**, but in the final step, set the **Navigate** function to navigate to the email screen. The **MyPeople** collection will be populated by the work done in that section, and you can send an email to the people who are attending the selected event.
+Follow the steps outlined in the "Show event attendees" section of [Calendar screen overview](./calendar-screen-overview.md#show-event-attendees) regarding, but in the final step, set the **Navigate** function to navigate to the email screen. The **MyPeople** collection will be populated by the work done in that section, and you can send an email to the people who are attending the selected event.
 
 > [!Note]
 > Sending this email will send a separate email from the actual event in your Outlook.
