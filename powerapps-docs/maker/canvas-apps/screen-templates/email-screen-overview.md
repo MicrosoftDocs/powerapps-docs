@@ -71,13 +71,13 @@ If you want to modify the screen further, use the [email-screen reference](./ema
 
 This allows users to send a single image with their email as an attachment.
 
-1. Under the Media tab in the ribbon, insert the 'Add picture' control and set its **Y** property to `TextEmailMessage1.Y + TextEmailMessage1.Height + 20`.
+1. Under the Media tab in the ribbon, insert the **Add picture** control, and set its **Y** property to `TextEmailMessage1.Y + TextEmailMessage1.Height + 20`.
 1. Once you have inserted the **AddMediaWithImage** control, set its height to be less than 210.
 1. In the control tree view, select **AddMediaWithImage** > **...** > **Reorder** > **Send to back**.
    This prevents the control from sitting in front of the **PeopleBrowseGallery** control.
 1. Change the **Height** property of **EmailPeopleGallery** to `Min((EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2) * RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)`. 
-1. Change the 'ShowScrollbar' of the **EmailPeopleGallery** to `EmailPeopleGallery1.Height >= 304`.
-    * This will prevent the max height from pushing the **AddMediaWithImage** control off the page
+1. Change the **ShowScrollbar** property of **EmailPeopleGallery** to `EmailPeopleGallery1.Height >= 304`.
+    This prevents the max height from pushing the **AddMediaWithImage** control off the page.
 1. Change the **OnSelect** property of the **iconMail** control to:
 
     ```
@@ -92,34 +92,32 @@ This allows users to send a single image with their email as an attachment.
     Reset(AddMediaButton1);
     Clear(MyPeople)
     ```
-    * This checks if there's an uploaded image. If not, then it uses the same `Office365.SendEmail` operation as before. If there is, the image is added as an attachment in the Attachments table.
+    * This checks for an uploaded image. If there is none, then it uses the same `Office365.SendEmail` operation as before. If there is an image, it is added as an attachment in the Attachments table.
     * After sending the email, an additional Reset operation is performed on **AddMediaButton** to remove the uploaded image.
 > [!Note]
 > To add more than one attachment to an email, add additional records to the Attachments table.
 
 ### Show different data for people
 
-This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what is displayed in the **PeopleBrowseGallery** control. Adding or changing fields in the gallery is simple.
+This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what is displayed in the **PeopleBrowseGallery** control. Adding or changing fields in the gallery is simple:
 
-1. In the **PeopleBrowseGallery**, select a label to modify (or add one and keep it selected).
+1. In the **PeopleBrowseGallery** control, select a label to modify (or add one and keep it selected).
 
 1. With its **Text** property selected, in the formula bar, replace the contents with `ThisItem.`
 
-    Intellisense shows a list of fields that you can select.
+    IntelliSense shows a list of fields that you can select.
 
 1. Select the field that you want.
 
-    The **Text** property should update to `ThisItem.{FieldSelection}`.
+    The **Text** property updates to `ThisItem.{FieldSelection}`.
 
 ## Integrate the screen into an app
 
-The email screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including:
-
-* [Linking to the calendar screen](email-screen-overview.md#linking-to-the-calendar-screen)
+The email screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including [linking to the calendar screen](email-screen-overview.md#linking-to-the-calendar-screen).
 
 ### Linking to the calendar screen
 
-Follow the steps outlined in the "Show event attendees" section of [Calendar screen overview](./calendar-screen-overview.md#show-event-attendees) regarding, but in the final step, set the **Navigate** function to navigate to the email screen. The **MyPeople** collection will be populated by the work done in that section, and you can send an email to the people who are attending the selected event.
+Follow the steps outlined in the "Show event attendees" section of [Calendar screen overview](./calendar-screen-overview.md#show-event-attendees), but in the final step, set the **Navigate** function to navigate to the email screen. After you complete these steps, the **MyPeople** collection is populated, which allows users to send email to the people who are attending the selected event.
 
 > [!Note]
 > Sending this email will send a separate email from the actual event in your Outlook.
@@ -127,5 +125,5 @@ Follow the steps outlined in the "Show event attendees" section of [Calendar scr
 ## Next steps
 
 * [View the reference documentation for this screen](./email-screen-reference.md)
-* [Learn more about the Office365 Users connector in PowerApps](../connections/connection-office365-users.md)
+* [Learn more about the Office 365 Users connector in PowerApps](../connections/connection-office365-users.md)
 * [See all available connections in PowerApps](../connections-list.md)
