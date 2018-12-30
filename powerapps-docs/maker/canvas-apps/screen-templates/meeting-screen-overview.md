@@ -48,7 +48,7 @@ To add a meeting screen from the template:
 A few helpful notes:
 
 * The meeting screen allows an app user to create a meeting in Outlook.
-  * Users can search for and add attendees and, optionally, add a meeting room to the meeting.
+  Users can search for and add attendees and, optionally, add a meeting room to the meeting.
 * To search for users in your org, start typing their name in the text input box below "Attendees".
 * When searching for people, only the top 15 results are returned.
 * To add email addresses for attendees outside your org, type out the full, valid email address and click the '+' icon that appears to the right of the email address.
@@ -62,5 +62,5 @@ A few helpful notes:
 ## Next steps
 
 * [View the reference documentation for this screen](./meeting-screen-reference.md).
-* [Learn more about the Office 365 Outlook connector](/connections/connection-office365-outlook.md)
-* [Learn more about the Office 365 Users connector](/connections/connection-office365-users.md)
+* [Learn more about the Office 365 Outlook connector](/connections/connection-office365-outlook.md).
+* [Learn more about the Office 365 Users connector](/connections/connection-office365-users.md).
