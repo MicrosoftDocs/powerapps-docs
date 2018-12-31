@@ -28,22 +28,16 @@ The following features are available to **PowerApps US Government** customers:
 * Create and run Canvas Apps
 * Create data connections
 
-## Connectivity between Government and Public Azure Cloud services 
-
-Azure is distributed among multiple clouds. By default, tenants are allowed to open firewall rules to a cloud-specific instance, but cross-cloud networking is different and requires opening specific firewall rules to communicate between services. If you are a PowerApps customer and you have existing SQL instances in the public cloud that you need to access, you must open specific firewall rules in SQL to the Azure Government Cloud IP space, for the following datacenters:
-
-* USGov Iowa
-* USGov Virginia
-* USGov Texas
-* USGov Arizona
-
-In the public cloud the IP spaces are available, but for the government cloud, you must open an Azure Support ticket to request the IP ranges for the above listed datacenters. 
-
 
 ## Limitations of PowerApps US Government
 Some of the features available in the commercial version of **PowerApps** are *not* available in **PowerApps** for US Government customers. The PowerApps team is actively working on making these features available to US Government customers, and will update this article when these features become available.
 
-* **Embed in SharePoint Online** - It is not possible to embed PowerApps content in SharePoint Online.
+* **Embed in SharePoint Online** - It is not possible to embed PowerApps content in SharePoint Online
+* **PowerApps Templates** – templates are not available for users
+* **Data Integration** – the data integration feature is not available
+* **Data Gateways** – the data gateway feature is not available
+* **Connectors** – not all commercial connectors are available for US Government customers
+
  
 To resolve issues, contact your account representative.
 
