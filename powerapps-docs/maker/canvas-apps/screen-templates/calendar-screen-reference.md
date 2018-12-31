@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/19/2018
+ms.date: 12/31/2018
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -33,7 +33,7 @@ To add a calendar screen from the template:
 
 1. On the **Home** tab of the ribbon, select **New screen** > **Calendar**.
 
-    By default, the screen resembles this graphic:
+    By default, the screen looks similar to this:
 
     ![Calendar screen](media/calendar-screen/calendar-initial.png)
 
@@ -41,7 +41,8 @@ To add a calendar screen from the template:
 
     ![Calendar screen after loading is complete](./media/calendar-screen/calendar-screen.png)
 
-This topic explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of significant controls are set. Those controls are presented in this order:
+## Calendar-screen controls
+This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 - [Calendar dropdown (dropdownCalendarSelection)](#calendar-drop-down)
 - [Calendar icon (iconCalendar)](#calendar-icon)
@@ -50,7 +51,7 @@ This topic explains the expressions or formulas to which various properties (suc
 - [Calendar gallery (MonthDayGallery) (+ child controls)](#month-day-gallery)
 - [Events gallery (CalendarEventsGallery)](#calendar-events-gallery)
 
-## Calendar dropdown
+### Calendar dropdown
 
 ![dropdownCalendarSelection control](media/calendar-screen/calendar-dropdown.png)
 
@@ -66,7 +67,7 @@ This topic explains the expressions or formulas to which various properties (suc
 - Property: **OnSelect**<br>
     Value: An **If** function, which appears in the next code block, and several additional functions, which appear in the code block after that.
 
-   This part of the formula runs only the first time that the user selects an option in the dropdown after opening the app.
+   This part of the formula runs only the first time that the user selects an option in the drop-down list after opening the app.
 
     ```
     If(IsBlank(_userDomain),
@@ -79,15 +80,15 @@ This topic explains the expressions or formulas to which various properties (suc
     );
     ```
 
-    This code defines these variables:
+    This code defines the following variables:
     
   - **_userDomain**: The app user's company domain, as reflected in the user's email address.
   - **_dateSelected**: Today's date (by default). The calendar gallery highlights this date, and the event gallery shows the events that are scheduled for that date.
   - **_firstDayOfMonth**: The first day of the current month. Because (Today + (1 - Today)) = Today - Today + 1 = 1, this **DateAdd** function always returns the first day of the month.
-  - **_firstDayInView**: The first day that the calendar gallery can show. This value isn't the same of the first day of the month unless the month starts on a Sunday, and you don't want to show an entire week of the previous month. Thus, the first day in view will be _firstDayOfMonth - Weekday(_firstDayOfMonth) + 1.
+  - **_firstDayInView**: The first day that the calendar gallery can show. This value isn't the same as the first day of the month unless the month starts on a Sunday, and you don't want to show an entire week of the previous month. Thus, the first day in view will be _firstDayOfMonth - Weekday(_firstDayOfMonth) + 1.
   - **_lastDayOfMonth**: The last day of the current month, which is the same as the first day of next month minus 1 day.
 
-    The functions after the **If** function run whenever the user selects an option in this dropdown (not just the first time after the user opens the app).
+    The functions after the **If** function run whenever the user selects an option in this drop-down list (not just the first time the user opens the app).
 
     ```
     Set(_calendarVisible, false);
@@ -102,15 +103,15 @@ This topic explains the expressions or formulas to which various properties (suc
 
     This code defines these variables and one collection:
 
-    - **_calendarVisible** Set to false so that the calendar doesn't appear while the new selection is loaded.
-    - **_showLoading** Set to true so that loading indicators appear while the new selection is being loaded.
-    - **_myCalendar** Set to the current value of the dropdown so that events from the correct calendar are retrieved.
-    - **_minDate** Set to the equivalent date as _firstDayInView. This variable determines what events have already been retrieved from Outlook and cached in the app.
-    - **_maxDate** Set to the last viewable day in the calendar. This formula is just _firstDayInView + 40. The calendar displays a maximum of 41 days, so this variable always reflects the last viewable day and determines what events have already been retrieved from Outlook and cached in the app.
+    - **_calendarVisible** Set to `false` so that the calendar doesn't appear while the new selection is loaded.
+    - **_showLoading** Set to `true` so that loading indicators appear while the new selection is being loaded.
+    - **_myCalendar** Set to the current value of the drop-down so that events from the correct calendar are retrieved.
+    - **_minDate** Set to the equivalent date as `_firstDayInView`. This variable determines what events have already been retrieved from Outlook and cached in the app.
+    - **_maxDate** Set to the last viewable day in the calendar. This formula is just `_firstDayInView + 40`. The calendar displays a maximum of 41 days, so this variable always reflects the last viewable day and determines what events have already been retrieved from Outlook and cached in the app.
     - **MyCalendarEvents** Set to a collection of the user's events from the selected calendar, ranging from **_minDate** to **_maxDate**.
-    - **_showLoading** Set to false, and set **_calendarVisible** to true after everything else has been loaded.
+    - **_showLoading** Set to `false`; **_calendarVisible** set to `true` after everything else has been loaded.
 
-## Calendar icon
+### Calendar icon
 
 ![iconCalendar control](media/calendar-screen/calendar-today-icon.png)
 
@@ -124,7 +125,7 @@ This topic explains the expressions or formulas to which various properties (suc
     Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days))
     ```
 
-    This code resets all date variables that are necessary for displaying the proper calendar view:
+    The code just shown resets all date variables that are necessary for displaying the proper calendar view:
 
     - **_dateSelected** is reset to today.
     - **_firstDayOfMonth** is reset to the first day of today's month.
@@ -133,7 +134,7 @@ This topic explains the expressions or formulas to which various properties (suc
 
     The [**Calendar dropdown**](#calendar-dropdown) section of this topic explains these variables in more detail.
 
-## Previous-month chevron
+### Previous-month chevron
 
 ![iconPrevMonth control](media/calendar-screen/calendar-back.png)
 
@@ -151,7 +152,7 @@ This topic explains the expressions or formulas to which various properties (suc
     > [!Note]
     > Definitions for **_firstDayOfMonth**, **_firstDayInView**, and **_lastDayOfMonth** are nearly identical to those in the [Calendar dropdown](#calendar-dropdown) section of this topic.
 
-    The first three lines of this code run whenever the user selects the icon, and they set the variables that are necessary to display the proper calendar view. The remaining code runs only if the user hasn't previously selected this month for the selected calendar.
+    The first three lines of the code just shown run whenever the user selects the icon, and they set the variables that are necessary to display the proper calendar view. The remaining code runs only if the user hasn't previously selected this month for the selected calendar.
 
     In that case, **_minDate** is the first day that appears when the previous month displays. Before the user selects the icon, **_minDate** has a minimum possible value of the 23rd of the current month. (When March 1 falls on a Saturday, **_firstDayInView** for March is Feb. 23.) Thus, if a user hasn't selected this month yet, **_minDate** is greater than the new **_firstDayOfMonth**, and the **If** function returns true. The code in it runs, and a collection and a variable are updated:
 
@@ -159,7 +160,7 @@ This topic explains the expressions or formulas to which various properties (suc
 
     - **_minDate** is set to the current **_firstDayInView** because this is the first date for which events have been retrieved. If a user returns to this date by selecting this icon, the **If** function returns false, and the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
 
-## Next-month chevron
+### Next-month chevron
 
 ![iconNextMonth control](media/calendar-screen/calendar-forward.png)
 
@@ -186,7 +187,7 @@ This topic explains the expressions or formulas to which various properties (suc
 
     - **_maxDate** is set to **_firstDayInView** + 40 days because this is the last day for which events have been retrieved. If a user returns to this date by selecting this icon, the **If** function returns false and the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
 
-## Calendar gallery
+### Calendar gallery
 
 ![MonthDayGallery control](media/calendar-screen/calendar-month-gall.png)
 
@@ -200,7 +201,7 @@ This topic explains the expressions or formulas to which various properties (suc
 
   This value reflects a seven-day week.
 
-### Title control in the calendar gallery
+#### Title control in the calendar gallery
 
 ![MonthDayGallery Title control](media/calendar-screen/calendar-month-text.png)
 
@@ -231,7 +232,7 @@ This topic explains the expressions or formulas to which various properties (suc
     - This statement is checking whether the date value is outside of the currently selected month. If it is, then the Fill is a partially opaque gray.
 
     > [!Note]
-    > You can check the validity of this last comparison for yourself by inserting a **Label** control into the gallery and setting its **Text** property to this value:<br>`Abs(Title.Text - ThisItem.Value)`
+    > You can check the validity of this last comparison for yourself by inserting a **Label** control into the gallery and setting its **Text** property to this value:<br>`Abs(Title.Text - ThisItem.Value)`.
 
 - Property: **Visible**<br>
     Value:
@@ -242,7 +243,7 @@ This topic explains the expressions or formulas to which various properties (suc
     _lastDayOfMonth)
     ```
 
-    The statement checks whether the cell is in a row where no days of the currently selected month occur.  Recall that subtracting the weekday value of any day from that its date value and adding 1 will always return the first item in the row that day lives in. So this statement checks if the first day in the row this item is in is larger than the last day of the viewable month. If it is, then it shouldn't be visible because the entire row contains days of the proceeding month.
+    The statement checks whether the cell is in a row where no days of the currently selected month occur. Recall that subtracting the weekday value of any day from its date value and adding 1 always returns the first item in the row that day lives in. So this statement checks whether the first day in the row this item is in is larger than the last day of the viewable month. If it is, then it shouldn't be visible because the entire row contains days of the proceeding month.
 
 - Property: **OnSelect**<br>
     Value: A **Set** function that sets the _dateSelected variable to the date of the selected cell.
@@ -253,12 +254,12 @@ This topic explains the expressions or formulas to which various properties (suc
         DateAdd(_firstDayInView, ThisItem.Value, Days)
     ```
 
-### Circle control in the calendar gallery
+#### Circle control in the calendar gallery
 
 ![MonthDayGallery Circle control](media/calendar-screen/calendar-month-event.png)
 
 - Property: **Visible**<br>
-    Value: A formula that determines whether any events are scheduled for the selected date and the subcircle and the title are visible.
+    Value: A formula that determines whether any events are scheduled for the selected date and whether the **Subcircle** and **Title** controls are visible.
 
     ```
     CountRows
@@ -267,9 +268,9 @@ This topic explains the expressions or formulas to which various properties (suc
         !Subcircle.Visible && Title.Visible`
     ```
 
-    This control is visible if the `Start` field for any event is equivalent to the date of that cell, the Title control is visible, and the Subcircle control isn't visible. In other words, this control is visible when at least one event occurs on this day and it isn't selected. If it is selected, the events for that day are displayed in the **CalendarEventsGallery** control.
+    The **Circle** control is visible if the `Start` field for any event is equivalent to the date of that cell, the **Title** control is visible, and the **Subcircle** control isn't visible. In other words, this control is visible when at least one event occurs on this day, and it isn't selected. If it is selected, the events for that day are displayed in the **CalendarEventsGallery** control.
 
-### Subcircle control in the calendar gallery
+#### Subcircle control in the calendar gallery
 
 ![MonthDayGallery Subcircle control](media/calendar-screen/calendar-month-selected.png)
 
@@ -281,9 +282,9 @@ This topic explains the expressions or formulas to which various properties (suc
     _dateSelected, Title.Visible)
     ```
 
-  - This control is visible when _dateSelected is equivalent to the date of the cell AND the Title control is visible. In other words, this control appears when the cell is the currently selected date.
+  - The **Subcircle** control is visible when `_dateSelected` is equivalent to the date of the cell, and the **Title** control is visible. In other words, this control appears when the cell is the currently selected date.
 
-## Events gallery
+### Events gallery
 
 ![CalendarEventsGallery control](media/calendar-screen/calendar-events-gall.png)
 
@@ -298,7 +299,7 @@ This topic explains the expressions or formulas to which various properties (suc
         "Start")
     ```
 
-   From the discussions about **MyCalendarEvents** above, this collection contains all the events between **_minDate** and **_maxDate**. In order to display the events for only the date selected, a `Filter` is applied on **MyCalendarEvents** to display the events whose `Start` date is equivalent to **_dateSelected**. The items are then sorted by their `Start` to put them in sequential order.
+   The **MyCalendarEvents** collection contains all the events between **_minDate** and **_maxDate**. In order to display the events for only the date selected, a filter is applied on **MyCalendarEvents** to display the events whose `Start` date is equivalent to `_dateSelected`. The items are then sorted by their `Start` date to put them in sequential order.
 
 ## Next steps
 
