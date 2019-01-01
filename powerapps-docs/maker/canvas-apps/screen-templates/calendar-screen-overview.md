@@ -189,14 +189,14 @@ The calendar screen is a powerful bundle of controls in its own right, but it us
 
 If users select an event by clicking or tapping it in **CalendarEventsGallery**, you can open another screen that shows more information about that event.
 
-> [!Note]
+> [!NOTE]
 > This procedure shows event details in a gallery with dynamic content, but you can achieve similar results by taking other approaches. For example, you can get more design control by using a series of labels instead.
 
 1. Add a blank screen, named **EventDetailsScreen**, that contains a blank flexible-height gallery and a button that navigates back to the calendar screen.
 
 1. In the flexible-height gallery, add a **Label** control and an **HTML text** control, and set the **AutoHeight** property of both to true.
 
-    > [!Note]
+    > [!NOTE]
     > PowerApps retrieves the message body of each event as HTML text, so you'll want to show that content in an **HTML text** control.
 
 1. Set the **Y** property of the **HTMLText** control to this expression:
@@ -296,7 +296,7 @@ This list discusses what each **ClearCollect** operation does:
     ```
     To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
 
-    > [!Note]
+    > [!NOTE]
     > You can achieve the same result with only one **ClearCollect** function:
     
     ```
