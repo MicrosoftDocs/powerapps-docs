@@ -84,7 +84,7 @@ This topic highlights some significant controls and explains the expressions or 
     
   - **_userDomain**: The app user's company domain, as reflected in the user's email address.
   - **_dateSelected**: Today's date (by default). The calendar gallery highlights this date, and the event gallery shows the events that are scheduled for that date.
-  - **_firstDayOfMonth**: The first day of the current month. Because (Today + (1 - Today)) = Today - Today + 1 = 1, this **DateAdd** function always returns the first day of the month.
+  - **_firstDayOfMonth**: The first day of the current month. Because `(Today + (1 - Today)) = Today - Today + 1 = 1`, this **DateAdd** function always returns the first day of the month.
   - **_firstDayInView**: The first day that the calendar gallery can show. This value isn't the same as the first day of the month unless the month starts on a Sunday. To prevent showing an entire week of the previous month, the value of **_firstDayInView** is `_firstDayOfMonth - Weekday(_firstDayOfMonth) + 1`.
   - **_lastDayOfMonth**: The last day of the current month, which is the same as the first day of next month, minus one day.
 
@@ -103,13 +103,13 @@ This topic highlights some significant controls and explains the expressions or 
 
     The preceding code defines these variables and one collection:
 
-    - **_calendarVisible**: Set to `false` so that the calendar doesn't appear while the new selection is loaded.
-    - **_showLoading**: Set to `true` so that loading indicators appear while the new selection is being loaded.
+    - **_calendarVisible**: Set to **false** so that the calendar doesn't appear while the new selection is loaded.
+    - **_showLoading**: Set to **true** so that loading indicators appear while the new selection is being loaded.
     - **_myCalendar**: Set to the current value of the **calendar drop-down** control so that events from the correct calendar are retrieved.
-    - **_minDate**: Set to the equivalent date as `_firstDayInView`. This variable determines what events have already been retrieved from Outlook and cached in the app.
+    - **_minDate**: Set to the equivalent date as **_firstDayInView**. This variable determines what events have already been retrieved from Outlook and cached in the app.
     - **_maxDate**: Set to the last viewable day in the calendar. The formula is `_firstDayInView + 40`. The calendar displays a maximum of 41 days, so the **_maxdate** variable always reflects the last viewable day, and determines what events have already been retrieved from Outlook and cached in the app.
     - **MyCalendarEvents**: Set to a collection of the user's events from the selected calendar, ranging from **_minDate** to **_maxDate**.
-    - **_showLoading** Set to `false`; **_calendarVisible** set to `true` after everything else has been loaded.
+    - **_showLoading** Set to **false**; **_calendarVisible** set to **true** after everything else has been loaded.
 
 ### Calendar icon
 
@@ -229,7 +229,7 @@ This topic highlights some significant controls and explains the expressions or 
   1. If this cell is today AND this cell is equivalent to **_dateSelected**, then don't provide a fill value.
   1. If this cell is only equal to today, then provide the **ColorFade** fill.
   1. The last comparison isn't as clear. It's a comparison between the actual text value in the cell and the value of the cell item (the number on display, and the item number). 
-  To better understand this, consider September 2018, a month that starts on a Saturday and ends on a Sunday. In this case, the calendar displays the 26th through 31st of August and the 1st of September in the first row. For this `Abs(Title.Text - ThisItem.Value) = 26` until September 1st. Then `Abs(Title.Text - ThisItem.Value) = 5`. It will stay at 5 until the last row in the calendar, which displays September 30th and October 1st through 6th. In that `Abs(Title.Text - ThisItem.Value)` will still be 5 for September 30th, but will be 35 for the October dates.
+  To better understand this, consider September 2018, a month that starts on a Saturday and ends on a Sunday. In this case, the calendar displays the 26th through 31st of August and the 1st of September in the first row, and `Abs(Title.Text - ThisItem.Value) = 26` until September 1st. Then `Abs(Title.Text - ThisItem.Value) = 5`. It will stay at 5 until the last row in the calendar, which displays September 30th and October 1st through 6th. In that `Abs(Title.Text - ThisItem.Value)` will still be 5 for September 30th, but will be 35 for the October dates.
   This is the pattern: For days displayed from the previous month, `Abs(Title.Text - ThisItem.Value)` will always equal the `Title.Text` value of the first day on display. For days being displayed in the next month, `Abs(Title.Text - ThisItem.Value)` will always equal the **MonthDayGallery** item value of the first cell of that month (in this case, October 1st) minus 1. And, most importantly, for days displayed in the currently selected month, `Abs(Title.Text - ThisItem.Value)` will also always equal the value of the first item of that month minus 1 and will never exceed 5, as the previous example shows. So it is perfectly valid to write the formula as `Abs(Title.Text - ThisItem.Value) > 5`.
     - This statement checks whether the date value is outside of the currently selected month. If it is, then **Fill** is a partially opaque gray.
 
@@ -284,7 +284,7 @@ This topic highlights some significant controls and explains the expressions or 
     _dateSelected, Title.Visible)
     ```
 
-  - The **Subcircle** control is visible when `_dateSelected` is equivalent to the date of the cell, and the **Title** control is visible. In other words, this control appears when the cell is the currently selected date.
+  The **Subcircle** control is visible when **_dateSelected** is equivalent to the date of the cell, and the **Title** control is visible. In other words, this control appears when the cell is the currently selected date.
 
 ### Events gallery
 
@@ -301,7 +301,7 @@ This topic highlights some significant controls and explains the expressions or 
         "Start")
     ```
 
-   The **MyCalendarEvents** collection contains all the events between **_minDate** and **_maxDate**. In order to display the events for only the date selected, a filter is applied on **MyCalendarEvents** to display the events that have a `Start` date equivalent to `_dateSelected`. The items are then sorted by their `Start` dates to put them in sequential order.
+   The **MyCalendarEvents** collection contains all the events between **_minDate** and **_maxDate**. In order to display the events for only the date selected, a filter is applied on **MyCalendarEvents** to display the events that have a start date equivalent to **_dateSelected**. The items are then sorted by their start dates to put them in sequential order.
 
 ## Next steps
 
