@@ -65,7 +65,7 @@ This topic highlights some significant controls and explains the expressions or 
     When the user selects an option in the list, the function in the control's **OnSelect** property runs.
 
 - Property: **OnSelect**<br>
-    Value: An **If** function, which appears in the next code block, and several additional functions, which appear in the code block after that.
+    Value: An **If** function, which appears in the following code block, and several additional functions, which appear in the code block after that.
 
    This part of the formula runs only the first time that the user selects an option in the drop-down list after opening the app:
 
@@ -88,7 +88,7 @@ This topic highlights some significant controls and explains the expressions or 
   - **_firstDayInView**: The first day that the calendar gallery can show. This value isn't the same as the first day of the month unless the month starts on a Sunday. To prevent showing an entire week of the previous month, the value of **_firstDayInView** is `_firstDayOfMonth - Weekday(_firstDayOfMonth) + 1`.
   - **_lastDayOfMonth**: The last day of the current month, which is the same as the first day of next month, minus one day.
 
-   The functions after the **If** function run whenever the user selects an option in this drop-down list (not just the first time the user opens the app).
+   The functions after the **If** function run whenever the user selects an option in the calendar drop-down list (not just the first time the user opens the app):
 
     ```
     Set(_calendarVisible, false);
@@ -107,16 +107,16 @@ This topic highlights some significant controls and explains the expressions or 
     - **_showLoading**: Set to **true** so that loading indicators appear while the new selection is being loaded.
     - **_myCalendar**: Set to the current value of the **calendar drop-down** control so that events from the correct calendar are retrieved.
     - **_minDate**: Set to the equivalent date as **_firstDayInView**. This variable determines what events have already been retrieved from Outlook and cached in the app.
-    - **_maxDate**: Set to the last viewable day in the calendar. The formula is `_firstDayInView + 40`. The calendar displays a maximum of 41 days, so the **_maxdate** variable always reflects the last viewable day, and determines what events have already been retrieved from Outlook and cached in the app.
+    - **_maxDate**: Set to the last viewable day in the calendar. The formula is `_firstDayInView + 40`. The calendar displays a maximum of 41 days, so the **_maxDate** variable always reflects the last viewable day, and determines what events have already been retrieved from Outlook and cached in the app.
     - **MyCalendarEvents**: Set to a collection of the user's events from the selected calendar, ranging from **_minDate** to **_maxDate**.
-    - **_showLoading** Set to **false**; **_calendarVisible** set to **true** after everything else has been loaded.
+    - **_showLoading**: Set to **false**; **_calendarVisible** is set to **true** after everything else has been loaded.
 
 ### Calendar icon
 
 ![iconCalendar control](media/calendar-screen/calendar-today-icon.png)
 
 - Property: **OnSelect**<br>
-    Value: Four **Set** functions that reset the calendar gallery to today's date.
+    Value: Four **Set** functions that reset the calendar gallery to today's date:
 
     ```
     Set(_dateSelected, Today());
@@ -154,7 +154,7 @@ This topic highlights some significant controls and explains the expressions or 
 
     The first three lines of the preceding code run whenever the user selects the icon. The code sets the variables that are necessary to display the proper calendar view. The remaining code runs only if the user hasn't previously selected this month for the selected calendar.
 
-    If this is the case, **_minDate** is the first day that appears when the previous month displays. Before the user selects the icon, **_minDate** has a minimum possible value of the 23rd of the current month. (When March 1 falls on a Saturday, **_firstDayInView** for March is Feb. 23.) Thus, if a user hasn't selected this month yet, **_minDate** is greater than the new **_firstDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
+    If this is the case, **_minDate** is the first day that appears when the previous month displays. Before the user selects the icon, **_minDate** has a minimum possible value of the 23rd of the current month. (When March 1 falls on a Saturday, **_firstDayInView** for March is February 23.) That means that if a user hasn't selected this month yet, **_minDate** is greater than the new **_firstDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
 
     - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365.GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between the **_firstDayInView** date and **_minDate** - 1. Because **MyCalendarEvents** already contains events on the **_minDate** date, 1 is subtracted from that date for the max in this new date range.
 
@@ -181,7 +181,7 @@ This topic highlights some significant controls and explains the expressions or 
 
     The first three lines of the preceding code, which run when the user selects the icon, set the variables that are necessary to display the proper calendar view. The remaining code runs only if the user hasn't previously selected this month for the selected calendar.
 
-    In that case, **_maxDate** is the last day that appears when the previous month displays. Before the user selects the next-month chevron, **_maxDate** has a maximum possible value of the 13th of the next month. (When February 1 falls on a non-leap year Sunday, **_maxDate** is March 13, which is **_firstDayInView** + 40 days.) Thus, if a user hasn't selected this month yet, **_maxDate** is greater than the new **_lastDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
+    In that case, **_maxDate** is the last day that appears when the previous month displays. Before the user selects the next-month chevron, **_maxDate** has a maximum possible value of the 13th of the next month. (When February 1 falls on a non-leap year Sunday, **_maxDate** is March 13, which is **_firstDayInView** + 40 days.) That means that if a user hasn't selected this month yet, **_maxDate** is greater than the new **_lastDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
 
     - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365.GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between **_maxDate** + 1 day and **_firstDayInView** + 40 days. Because **MyCalendarEvents** already contains events on the **_minDate** date, 1 is added to that date for the min in this new date range. **_firstDayInView** + 40 is the formula for **_maxDate**, so the second date in the range is just the new **_maxDate**.
 
@@ -211,7 +211,7 @@ This topic highlights some significant controls and explains the expressions or 
     Recall that **_firstDayInView** is defined as (**_firstDayOfMonth** - its weekday value) + 1. This tells you that **_firstDayInView** is always a Sunday, and **_firstDayOfMonth** is always in the first row of **MonthDayGallery**. Because of these two facts, **_firstDayInView** is always in the very first cell of **MonthDayGallery**. **ThisItem.Value** is the number for that cell in the **MonthDayGallery** item property. So, taking **_firstDayInView** as a starting point, each cell displays the increment of **_firstDayInView** + its respective cell value.
 
 - Property: **Fill**<br>
-    Value: One **If** function.
+    Value: One **If** function:
 
     ```
   If(
@@ -228,9 +228,12 @@ This topic highlights some significant controls and explains the expressions or 
   As discussed in the description of the **Text** property, `DateAdd(_firstDayInView, ThisItem.Value)` represents the day in the visible cell. Taking this into account, the preceding code performs these comparisons: 
   1. If this cell is today AND this cell is equivalent to **_dateSelected**, then don't provide a fill value.
   1. If this cell is only equal to today, then provide the **ColorFade** fill.
-  1. The last comparison isn't as clear. It's a comparison between the actual text value in the cell and the value of the cell item (the number on display, and the item number). 
-  To better understand this, consider September 2018, a month that starts on a Saturday and ends on a Sunday. In this case, the calendar displays the 26th through 31st of August and the 1st of September in the first row, and `Abs(Title.Text - ThisItem.Value) = 26` until September 1st. Then `Abs(Title.Text - ThisItem.Value) = 5`. It will stay at 5 until the last row in the calendar, which displays September 30th and October 1st through 6th. In that `Abs(Title.Text - ThisItem.Value)` will still be 5 for September 30th, but will be 35 for the October dates.
-  This is the pattern: For days displayed from the previous month, `Abs(Title.Text - ThisItem.Value)` will always equal the `Title.Text` value of the first day on display. For days being displayed in the next month, `Abs(Title.Text - ThisItem.Value)` will always equal the **MonthDayGallery** item value of the first cell of that month (in this case, October 1st) minus 1. And, most importantly, for days displayed in the currently selected month, `Abs(Title.Text - ThisItem.Value)` will also always equal the value of the first item of that month minus 1 and will never exceed 5, as the previous example shows. So it is perfectly valid to write the formula as `Abs(Title.Text - ThisItem.Value) > 5`.
+  1. The last comparison isn't as clear. It's a comparison between the actual text value in the cell and the value of the cell item (the number on display, and the item number).<br>
+  
+      To better understand this, consider September 2018, a month that starts on a Saturday and ends on a Sunday. In this case, the calendar displays the 26th through 31st of August and the 1st of September in the first row, and `Abs(Title.Text - ThisItem.Value) = 26` until September 1st. Then `Abs(Title.Text - ThisItem.Value) = 5`. It will stay at 5 until the last row in the calendar, which displays September 30th and October 1st through 6th. In that `Abs(Title.Text - ThisItem.Value)` will still be 5 for September 30th, but will be 35 for the October dates.<br>
+   
+      This is the pattern: For days displayed from the previous month, `Abs(Title.Text - ThisItem.Value)` will always equal the `Title.Text` value of the first day on display. For days being displayed in the next month, `Abs(Title.Text - ThisItem.Value)` will always equal the **MonthDayGallery** item value of the first cell of that month (in this case, October 1st) minus 1. And, most importantly, for days displayed in the currently selected month, `Abs(Title.Text - ThisItem.Value)` will also always equal the value of the first item of that month minus 1 and will never exceed 5, as the previous example shows. So it is perfectly valid to write the formula as `Abs(Title.Text - ThisItem.Value) > 5`.
+    
     - This statement checks whether the date value is outside of the currently selected month. If it is, then **Fill** is a partially opaque gray.
 
     > [!NOTE]
@@ -248,7 +251,7 @@ This topic highlights some significant controls and explains the expressions or 
     The preceding statement checks whether the cell is in a row where no days of the currently selected month occur. Recall that subtracting the weekday value of any day from its date value and adding 1 always returns the first item in the row that day lives in. So this statement checks whether the first day in the row this item is in is larger than the last day of the viewable month. If it is, then it shouldn't be visible because the entire row contains days of the following month.
 
 - Property: **OnSelect**<br>
-    Value: A **Set** function that sets the **_dateSelected** variable to the date of the selected cell.
+    Value: A **Set** function that sets the **_dateSelected** variable to the date of the selected cell:
 
     ```
     Set
@@ -261,7 +264,7 @@ This topic highlights some significant controls and explains the expressions or 
 ![MonthDayGallery Circle control](media/calendar-screen/calendar-month-event.png)
 
 - Property: **Visible**<br>
-    Value: A formula that determines whether any events are scheduled for the selected date and whether the **Subcircle** and **Title** controls are visible.
+    Value: A formula that determines whether any events are scheduled for the selected date and whether the **Subcircle** and **Title** controls are visible:
 
     ```
     CountRows
@@ -270,7 +273,7 @@ This topic highlights some significant controls and explains the expressions or 
         !Subcircle.Visible && Title.Visible`
     ```
 
-    The **Circle** control is visible if the **Start** field for any event is equivalent to the date of that cell, the **Title** control is visible, and the **Subcircle** control isn't visible. In other words, this control is visible when at least one event occurs on this day, and it isn't selected. If it is selected, the events for that day are displayed in the **CalendarEventsGallery** control.
+    The **Circle** control is visible if the **Start** field for any event is equivalent to the date of that cell, if the **Title** control is visible, and if the **Subcircle** control isn't visible. In other words, this control is visible when at least one event occurs on this day, and it isn't selected. If it is selected, the events for that day are displayed in the **CalendarEventsGallery** control.
 
 #### Subcircle control in the calendar gallery
 
@@ -291,7 +294,7 @@ This topic highlights some significant controls and explains the expressions or 
 ![CalendarEventsGallery control](media/calendar-screen/calendar-events-gall.png)
 
 - Property: **Items**<br>
-    Value: A formula that sorts and filters the events gallery.
+    Value: A formula that sorts and filters the events gallery:
 
     ```
     SortByColumns
