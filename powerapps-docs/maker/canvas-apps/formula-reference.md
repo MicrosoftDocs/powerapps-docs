@@ -202,6 +202,10 @@ Other elements include:
 **[Lower](functions/function-lower-upper-proper.md)** – Converts letters in a string of text to all lowercase.
 
 ## M
+**[Match](functions/function-ismatch.md)** – Extracts a substring based on a pattern.  Regular expressions can be used.
+
+**[MatchAll](functions/function-ismatch.md)** – Extracts multiple substrings based on a pattern.  Regular expressions can be used.
+
 **[Max](functions/function-aggregates.md)** – Maximum value of a table expression or a set of arguments.
 
 **[Mid](functions/function-left-mid-right.md)** – Returns the middle portion of a string.
