@@ -4,7 +4,7 @@ title: Microsoft PowerApps Documentation | Microsoft Docs
 description: Microsoft PowerApps Documentation
 searchScope:
   - "PowerApps"
-featureFlags:
+featureFlags: 
 - clicktale
 ms.service: powerapps
 ms.custom:
@@ -362,7 +362,7 @@ ms.custom:
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
-<!--                                   <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/powerapps-for-us-govt">PowerApps for US Government</a></p> -->
+<!--                                   <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-for-us-govt">PowerApps for US Government</a></p> -->
                                  </div>
                               </div>
                            </div>
