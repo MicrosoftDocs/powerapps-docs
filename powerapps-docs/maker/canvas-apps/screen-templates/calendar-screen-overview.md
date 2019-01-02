@@ -19,7 +19,7 @@ search.app:
 
 In a canvas app, add a calendar screen that shows users upcoming events from their Office 365 Outlook accounts. Users can select a date from a calendar and scroll through a list of that day's events. You can change which details appear in the list, add a second screen that shows more details about each event, show a list of attendees for each event, and make other customizations.
 
-You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), [people](people-screen-overview.md) in an organization, and [availability](meeting-screen-overview.md) of people whom you want to invite to a meeting.
+You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), [people](people-screen-overview.md) in an organization, and [availability](meeting-screen-overview.md) of people users might want to invite to a meeting.
 
 This overview teaches you:
 > [!div class="checklist"]
@@ -64,7 +64,7 @@ You can modify the default functionality of this screen in a few common ways:
 
 * [Specify the calendar](calendar-screen-overview.md#specify-the-calendar).
 * [Show different details about an event](calendar-screen-overview.md#show-different-details-about-an-event).
-* [Hide nonblocking events](calendar-screen-overview.md#hide-non-blocking-events).
+* [Hide nonblocking events](calendar-screen-overview.md#hide-nonblocking-events).
 
 If you want to modify the screen further, use the [calendar-screen reference](./calendar-screen-reference.md) as a guide.
 
@@ -180,24 +180,24 @@ In many offices, team members send meeting requests to notify each other when th
 
 ## Integrate the screen into an app
 
-The calendar screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including:
+The calendar screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including adding these options:
 
 * [View event details](calendar-screen-overview.md#view-event-details).
 * [Show event attendees](calendar-screen-overview.md#show-event-attendees).
 
 ### View event details
 
-If users select an event by clicking or tapping it in **CalendarEventsGallery**, you can open another screen that shows more information about that event.
+If users select an event in **CalendarEventsGallery**, you can open another screen that shows more information about that event.
 
 > [!NOTE]
 > This procedure shows event details in a gallery with dynamic content, but you can achieve similar results by taking other approaches. For example, you can get more design control by using a series of labels instead.
 
 1. Add a blank screen, named **EventDetailsScreen**, that contains a blank flexible-height gallery and a button that navigates back to the calendar screen.
 
-1. In the flexible-height gallery, add a **Label** control and an **HTML text** control, and set the **AutoHeight** property of both to true.
+1. In the flexible-height gallery, add a **Label** control and an **HTML text** control, and set the **AutoHeight** property of both to **true**.
 
     > [!NOTE]
-    > PowerApps retrieves the message body of each event as HTML text, so you'll want to show that content in an **HTML text** control.
+    > PowerApps retrieves the message body of each event as HTML text, so you need to show that content in an **HTML text** control.
 
 1. Set the **Y** property of the **HTMLText** control to this expression:
 
@@ -217,7 +217,7 @@ If users select an event by clicking or tapping it in **CalendarEventsGallery**,
     )
     ```
 
-    This formula creates a gallery of dynamic data that's set to the field values of **_selectedCalendarEvent**, which is set every time the user selects an event in the **CalendarEventsGallery** control. You can extend this gallery to include more fields by adding more labels to it, but this set provides a good basis.
+    This formula creates a gallery of dynamic data that's set to the field values of **_selectedCalendarEvent**, which is set every time the user selects an event in the **CalendarEventsGallery** control. You can extend this gallery to include more fields by adding more labels to it, but this set provides a good starting point.
 
 1. With the gallery items in place, set the **Text** property of the **Label** control to `ThisItem.Title`, and the **HtmlText** property of the **HtmlText** control to `ThisItem.Value`.
 
@@ -276,7 +276,7 @@ This list discusses what each **ClearCollect** operation does:
             Upper(_userDomain) = Upper(Right(Result, Len(Result) - Find("@", Result)))
         ));
     ```
-    This formula roughly determines whether an attendee is in your organization. The definition of **_userDomain** is simply the domain URL in the email address of the person who's running the app. This line creates an additional true/false column, named **InOrg**, in the **AttendeeEmailsTemp** collection. This column contains true if **userDomain** is equivalent to the domain URL of the email address in that particular row of **AttendeeEmailsTemp**.
+    This formula roughly determines whether an attendee is in your organization. The definition of **_userDomain** is simply the domain URL in the email address of the person who's running the app. This line creates an additional true/false column, named **InOrg**, in the **AttendeeEmailsTemp** collection. This column contains **true** if **userDomain** is equivalent to the domain URL of the email address in that particular row of **AttendeeEmailsTemp**.
 
     This approach isn't always accurate, but it gets pretty close. For example, certain attendees in your org might have an email address like Jane@OnContoso.com, whereas **_userDomain** is Contoso.com. The app user and Jane might work at the same company but have slight variations in their email addresses. For cases such as these, you might want to use this formula:
 
