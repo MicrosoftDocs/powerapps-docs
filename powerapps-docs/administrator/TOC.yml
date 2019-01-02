@@ -15,8 +15,8 @@
       href: signup-question-and-answer.md
     - name: Purchase PowerApps
       href: signup-for-powerapps-admin.md
-    - name: PowerApps for US Government
-      href: powerapps-for-us-govt.md
+#    - name: PowerApps for US Government
+#      href: powerapps-for-us-govt.md
   - name: Manage PowerApps
     items:
     - name: View apps in your environments
