@@ -89,7 +89,7 @@ If you already know which calendar your users should view, you can simplify the 
     ```
 
     > [!NOTE]
-    > This formula is slightly edited from the default value of the **OnSelect** property of the drop-down list for selecting a calendar. For more information about that control, see its section in the [calendar-screen reference](./calendar-screen-reference.md#calendar-dropdown).
+    > This formula is slightly edited from the default value of the **OnSelect** property of the drop-down list for selecting a calendar. For more information about that control, see its section in the [calendar-screen reference](./calendar-screen-reference.md#calendar-drop-down).
 
 1. Replace `{YourCalendarNameHere}`, including the curly braces, with the name of the calendar that you want to show (for example, **Calendar**).
 
@@ -126,7 +126,7 @@ If you already know which calendar your users should view, you can simplify the 
 
 ### Show different details about an event
 
-By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](https://docs.microsoft.comconnectors/office365/#calendareventclientreceive) supports.
+By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](https://docs.microsoft.com/connectors/office365/#calendareventclientreceive) supports.
 
 1. In **CalendarEventsGallery**, set the **Text** property of a new or an existing label to `ThisItem` followed by a period.
 
