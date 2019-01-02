@@ -4,7 +4,7 @@ title: Microsoft PowerApps Documentation | Microsoft Docs
 description: Microsoft PowerApps Documentation
 searchScope:
   - "PowerApps"
-featureFlags:
+featureFlags: 
 - clicktale
 ms.service: powerapps
 ms.custom:
