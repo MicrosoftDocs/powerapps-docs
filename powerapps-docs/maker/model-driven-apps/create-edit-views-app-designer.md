@@ -1,8 +1,8 @@
 ---
-title: "Create and edit public or system model-driven app views by using the app designer with PowerApps | MicrosoftDocs"
+title: "Create and edit public or system model-driven app views with PowerApps | MicrosoftDocs"
 description: "Learn now to create or edit views by using the app designer"
 keywords: ""
-ms.date: 05/24/2018
+ms.date: 11/27/2018
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -26,9 +26,9 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Create and edit public or system model-driven app views by using the app designer
+# Create and edit public or system model-driven app views
 
-In this tutorial you perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.
+In this topic you perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.
 
 In PowerApps, views define how records for a specific entity are  displayed. A view defines the following:
 -  The columns (attributes) to display
@@ -55,40 +55,33 @@ As an app maker, you can create and edit public views by using PowerApps.
 
 3. On the toolbar, select **Add view**. 
 
-4. On the **View Properties** dialog box, enter a name and, optionaly, a description, and then select **OK**. 
+4. On the **Create a view** dialog box, enter a name and, optionally, a description, and then select **Create**. 
     
-5. In the view designer, select **Add Columns** to add additional columns you want to display in the view. More information: [Add a column to your view](#add-a-column-to-your-view)
-6. Select **Edit Filter Criteria** to change filtering in the following ways: 
-    -  To apply filtering criteria to refine the data that is displayed in the view. More information: [Define filter criteria](#define-filter-criteria). 
-    - To group the filters by using **AND** or **OR** options and further refine the data that is displayed in the view. More information: [Group multiple filters](#group-multiple-filters)
-7. Select **Configure Sorting** to change the order of the data by configuring the primary and secondary sort order for columns. More information: [Set the primary and secondary column sort order](#set-primary-and-secondary-sort-order-for-columns)
-8. (Optional) Configure column width: 
-  
-    a. Select a column. The **Properties** tab opens.
-    
-    b. Configure **Set Width** with the column width you want.
-    
-    > [!NOTE]
-    > The column width value ranges from 25 pixels through 300 pixels.
-9. (Optional) Reorder columns by dragging a column to the position you want to move it to. 
+5. In the view designer, select the plus button to add additional columns you want to display in the view. More information: [Add a column to your view](#add-a-column-to-your-view)
 
-    You will see a visual indicator when you hold the column over a position it can be moved to.
+   ![Add column](../common-data-service/media/add-column-to-view.png)
 
-    ![Reorder Column](media/ViewAppDesigner_ReorderColumn.png "Reorder columns in a view")
+6. In the view designer, you can perform the follow tasks: 
+   - To change the column filtering select the header of the column you want to filter and then in the dropdown select **Filter by**.
+   - To change the column sorting select the header of the column you want to filter and then select **Sort A-Z** or **Sort Z-A**.
+   - Configure column width by clicking and dragging the column to the desired position.
+   - Reorder columns by dragging a column to the position you want to move it to. 
 
     > [!NOTE]
-    > You can also change column order by using keyboard shortcut keys. Cut the column by selecting Ctrl + X, select a column, and then paste by selecting Ctrl + V. The column will be moved to the right of the selected column.
-10. (Optional) Attach an icon or a file to a column to differentiate it from other columns during run time. More information: [Define a web resource](#define-a-web-resource)
-11. **Save and Close** the view. 
-12. Choose **Publish** to make the view available for other users in your organization. 
+    > You can also change column order by clicking on the column header and selecting **Move Right** or **Move Left**.
+
+10. Select **Publish** to save the view and make it available for other users in your organization. 
    
 
-## Open and add a view in the app designer
+## Work with views in app designer
+The following sections describe how to create and edit views in app designer.
+
+### Open and add a view in the app designer
 
 The following steps explain how to open and add a view in the app designer.
-1. In solution explorer select **Apps**, and then select the app you want to edit to open it in app designer. 
+1. In PowerApps select **Apps** from the left navigation pane, select **...** next to the app you want, and then select **Edit**. 
 
-2. In the **Entity View** section, select **Views**.
+2. In the app designer **Entity View** section, select **Views**.
 
     In this example, we have selected **Views** from the **Account** entity.
 
@@ -102,20 +95,21 @@ The following steps explain how to open and add a view in the app designer.
 More information about the app designer: [Design custom business apps by using the app designer](design-custom-business-apps-using-app-designer.md)
 
 
-## Add a column to your view
+### Add a column to your view in app designer
 Views display records in a table that contains rows and columns. Each row is a record, and the fields you display from the record are determined by the columns you add to the view.
 
-1. In app designer, on the **Components** tab, select the **Column Attributes** list for either the **Primary Entity** or **Related Entity**.
+1. In app designer, select the entity view that you want and then on the right pane next to the view that you want select edit (pencil button).  
+2. On the **Components** tab, select the **Column Attributes** list for either the **Primary Entity** or **Related Entity**.
 
     ![Add a column](media/ViewAppDesigner_AddColumn.png "Add a column to view") 
 
-2. From the list, select the attribute you want  and drag it to the column heading. You can also add the attribute by double-clicking it.
-3. Repeat step 2 until you’ve added all the attributes you want to display in your view .
+3. From the list, select the attribute you want and drag it to the column heading. You can also add the attribute by double-clicking it.
+4. Repeat step 3 until you’ve added all the attributes you want to display in your view.
 
 As you add attributes, you can drag them to any position among existing column headings. You can also move columns around after you add them to your view.
 
 
-## Define filter criteria
+### Define filter criteria in app designer
 You can set filter criteria so that only a subset of the records is displayed in a view. When a user opens the view, only the records that meet the defined filter criteria are displayed. You can select fields from both the primary and related entities to filter on.
 1. In the app designer, expand the **Filter Criteria** section.
    
@@ -139,7 +133,7 @@ You can filter data based on the attributes of related entities in addition to t
 
 More information: [Create and edit relationships between entities](../common-data-service/create-edit-entity-relationships.md)
 
-## Group multiple filters
+#### Group multiple filters in app designer
 You can add multiple filters to your view if you want to filter records by using more than one field. 
 
 1. Select the filters that you want to group.
@@ -150,7 +144,7 @@ When you select **Group And**, only records that meet both criteria are displaye
 
 To remove the filter from a group, select the group, and then select **Ungroup**. 
 
-## Set primary and secondary sort order for columns
+### Set primary and secondary sort order for columns in app designer
 When a view is opened, the records it displays are sorted in the order you set when you created the view.   By default, records will be sorted according to the first column in a view when no sort order is selected. You can choose to sort on a single column, or you can choose two columns—one primary and one secondary—to sort by. When the view is opened, the records will first be sorted by the column you want to use for primary sort order, and then by the column you want to use for secondary sort order. 
 
 > [!NOTE]
@@ -163,7 +157,7 @@ When a view is opened, the records it displays are sorted in the order you set w
 
 If you remove the column you chose for the primary sort order, the column you chose for the secondary sort order becomes the primary.
 
-## Define a web resource
+### Define a web resource in app designer
 Specify a web resource of script type, to associate with a column in your view. These scripts help to display icons for columns.
 
 1. Select the column you want to add a web resource to.
@@ -171,7 +165,7 @@ Specify a web resource of script type, to associate with a column in your view. 
 3. In the **Web Resource** drop-down list, select the web resource you want to use.
 4. In the **Function Name** box, enter a function name.
 
-## Edit a public or system view
+### Edit a public or system view in app designer
 You can change the way a public or system view is displayed by adding, configuring, or removing columns.
 1. In the **Views** list for an entity, select the **Show list of references** down arrow ![Drop Down](media/DownArrow.png "Drop down arrow").
     ![Edit View](media/ViewAppDesigner_EditView.png "Edit a public or system view")
