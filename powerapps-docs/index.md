@@ -362,6 +362,7 @@ ms.custom:
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/powerapps-for-us-govt">PowerApps for US Government</a></p>
                                  </div>
                               </div>
                            </div>
