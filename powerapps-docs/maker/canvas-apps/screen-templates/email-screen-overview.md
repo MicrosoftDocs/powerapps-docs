@@ -1,6 +1,6 @@
 ---
 title: Email-screen template | Microsoft Docs
-description: Understand how the email screen template works in PowerApps, and extend the screen for your own use cases
+description: Understand how the email screen template for canvas apps works, and extend the screen for your own use cases
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Overview of the email-screen template in PowerApps
+# Overview of the email-screen template for canvas apps
 
 In a canvas app, add an email screen that lets users send an email from their Office 365 Outlook account. Users can search for recipients in their org and add external email addresses, too. You can add image-attachment support, change the user data that appears in the search gallery, and make other customizations.
 
@@ -92,9 +92,9 @@ This allows users to send a single image with their email as an attachment.
     Reset(AddMediaButton1);
     Clear(MyPeople)
     ```
-    * This checks for an uploaded image. If there is none, then it uses the same `Office365.SendEmail` operation as before. If there is an image, it is added as an attachment in the Attachments table.
-    * After sending the email, an additional Reset operation is performed on **AddMediaButton** to remove the uploaded image.
-> [!Note]
+    This formula checks for an uploaded image. If there is none, then it uses the same `Office365.SendEmail` operation as before. If there is an image, it is added as an attachment in the Attachments table.
+    After sending the email, an additional Reset operation is performed on **AddMediaButton** to remove the uploaded image.
+> [!NOTE]
 > To add more than one attachment to an email, add additional records to the Attachments table.
 
 ### Show different data for people
@@ -119,7 +119,7 @@ The email screen is a powerful bundle of controls in its own right, but it usual
 
 Follow the steps outlined in the "Show event attendees" section of [Calendar screen overview](./calendar-screen-overview.md#show-event-attendees), but in the final step, set the **Navigate** function to navigate to the email screen. After you complete these steps, the **MyPeople** collection is populated, which allows users to send email to the people who are attending the selected event.
 
-> [!Note]
+> [!NOTE]
 > Sending this email will send a separate email from the actual event in your Outlook.
 
 ## Next steps
