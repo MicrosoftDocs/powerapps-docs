@@ -79,15 +79,15 @@ This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/en-u
 
 The people screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including [using your cached list of people](people-screen-overview.md#using-your-cached-list-of-people).
 
-### Using your cached list of people
+### Use your cached list of people
 
-The people screen caches your people selections in the **MyPeople** collection. Should your business scenario call for a person lookup, you will need to know how to use this collection. Here, you'll walk through how to connect this screen to a rudimentary email screen and send emails to users in the **MyPeople** collection. In doing so, you'll also gain insight into how the [email-screen](./email-screen-overview.md) works.
+The people screen caches your people selections in the **MyPeople** collection. Should your business scenario call for a person lookup, you will need to know how to use this collection. Here, you'll walk through how to connect this screen to a rudimentary email screen and send emails to users in the **MyPeople** collection. You'll also gain insight into how the [email-screen](./email-screen-overview.md) works.
 
 1. Add the Office 365 Outlook data source to your app: On the ribbon select **View** > **Data sources** > **Add data source**, and look for the Office 365 Outlook connector. You might have to select **New connection** to find it.
 1. After inserting the people screen, insert a new blank screen. Within that screen, add a **Back arrow** icon, two text-input boxes, and a **Send** icon.
 1. Rename the screen to **EmailScreen**, the **Back icon** to **BackIcon**, one text input box to **SubjectLine**, the other to **MessageBody**, and the **Send** icon to **SendIcon**.
 1. Set the **OnSelect** property of **BackIcon** to `Back()`.
-1. Set the **OnSelect** property of **SendIcon** to `Office365.SendEmail(Concat(MyPeople, UserPrincipalName & ";"), SubjectLine.Text, MessageBody.Text)`.
+1. Set the **OnSelect** property of **SendIcon** to `Office365.SendEmail(Concat(MyPeople, UserPrincipalName & ";"), SubjectLine.Text, MessageBody.Text)`
     * Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";")` as the list of recipients. This takes the **MyPeople** collection, and for every row in that collection combines all of their **UserPrincipalName** (email address) fields together into a single string with semicolons separating them. This is no different than writing out a string of email addresses separated by semicolons in the "To" line of your favorite email client.
     * You're passing `SubjectLine.Text` as the subject of the message, and `MessageBody.Text` as the body of the message.
 1. On the people screen, in the upper-right corner, insert the **Mail** icon.
