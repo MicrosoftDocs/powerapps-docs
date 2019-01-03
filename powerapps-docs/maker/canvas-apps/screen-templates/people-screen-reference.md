@@ -37,7 +37,7 @@ To add a people screen from the template:
 
     ![Initial people screen state](media/people-screen/people-screen-empty.png)
 
-1. To start searching for users, select the text input box at the top and start typing a coworker's name. The search results appear below below the text box:
+1. To start searching for users, select the text input box at the top of the screen and start typing a coworker's name. The search results appear below the text box:
 
     ![people screen search state](media/people-screen/people-browse-gall-full.png)
 
@@ -68,8 +68,9 @@ A couple other controls interact or have a dependency on the text search box:
     Value: Logic to look up users when the user starts typing:
     `If(!IsBlank(Trim(TextSearchBox.Text)), 'Office365Users'.SearchUser({searchTerm: Trim(TextSearchBox.Text), top: 15}))`
 
-  The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search. **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid.
-  The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function because you only need to call the operation when the search box contains user-entered text. This improves performance.
+The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search. **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid.
+
+The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function because you only need to call the operation when the search box contains user-entered text. This improves performance.
 
 ### UserBrowseGallery Title control
 
@@ -89,11 +90,11 @@ A couple other controls interact or have a dependency on the text search box:
         If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem))
     )
     ```
-    Selecting this control does three things concurrently:
+Selecting this control does three things concurrently:
 
-      * Sets the **_selectedUser** variable to the item selected.
-      * Resets the search term in **TextSearchBox**.
-      * Adds the selected item to the **MyPeople** collection, a collection of all the people the app user has selected.
+   * Sets the **_selectedUser** variable to the item selected.
+   * Resets the search term in **TextSearchBox**.
+   * Adds the selected item to the **MyPeople** collection, a collection of all the people the app user has selected.
 
 ### UserBrowseGallery ProfileImage control
 
@@ -103,10 +104,10 @@ A couple other controls interact or have a dependency on the text search box:
     Value: Logic to retrieve a user's profile photo:
     `If(!IsBlank(ThisItem.Id) && 'Office365Users'.UserPhotoMetadata(ThisItem.Id).HasPhoto, 'Office365Users'.UserPhoto(ThisItem.Id))`
 
-  The image control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
+The image control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
   
-    * Whether the ID field is empty or not empty. This prevents the image control from attempting to retrieve a user photo before the gallery has been populated with search results.
-    * Whether the user has a photo (with the [Office365Users.UserPhotoMetadata](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo-metadata) operation). This prevents the `Office365Users.UserPhoto` lookup from returning an exception if the user doesn't have a profile picture.
+   * Whether the ID field is empty or not empty. This prevents the image control from attempting to retrieve a user photo before the gallery has been populated with search results.
+   * Whether the user has a photo (with the [Office365Users.UserPhotoMetadata](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo-metadata) operation). This prevents the `Office365Users.UserPhoto` lookup from returning an exception if the user doesn't have a profile picture.
 
 Note that if an image isn't retrieved, the image control is blank, and the **iconUser** control is visible instead.
 
@@ -117,7 +118,7 @@ Note that if an image isn't retrieved, the image control is blank, and the **ico
 * Property: **Items**<br>
     Value: `MyPeople`
 
-  This is the collection of people initialized or added to by selecting the **UserBrowseGallery Title** control.
+This is the collection of people initialized or added to by selecting the **UserBrowseGallery Title** control.
 
 ### PeopleAddedGallery Title control
 
@@ -126,7 +127,7 @@ Note that if an image isn't retrieved, the image control is blank, and the **ico
 * Property: **OnSelect**<br>
     Value: `Set(_selectedUser, ThisItem)`
 
-  Sets the **_selectedUser** variable to the item selected in **EmailPeopleGallery**.
+Sets the **_selectedUser** variable to the item selected in **EmailPeopleGallery**.
 
 ### PeopleAddedGallery iconRemove control
 
@@ -135,7 +136,7 @@ Note that if an image isn't retrieved, the image control is blank, and the **ico
 * Property: **OnSelect**<br>
     Value: `Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))`
 
-  Looks up the record in the **MyPeople** collection, where **UserPrincipalName** matches the **UserPrincipalName** of the selected item, and then removes that record from the collection.
+Looks up the record in the **MyPeople** collection, where **UserPrincipalName** matches the **UserPrincipalName** of the selected item, and then removes that record from the collection.
 
 ## Next steps
 
