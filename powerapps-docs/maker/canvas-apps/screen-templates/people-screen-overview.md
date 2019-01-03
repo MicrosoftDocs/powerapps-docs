@@ -1,6 +1,6 @@
 ---
 title: People-screen template | Microsoft Docs
-description: Understand how the people screen template works in PowerApps, and extend the screen for your own use cases
+description: Understand how the people-screen template for canvas apps works and how to extend the screen for your own use cases
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,11 +15,11 @@ search.app:
   - PowerApps
 ---
 
-# Overview of the people screen template for canvas apps
+# Overview of the people-screen template for canvas apps
 
 In a canvas app, add a people screen that lets users search for people within their organization. Users can search for, select, and add people to a collection. You can change which types of data appear in the search result gallery, use your people selections to send an email, and make other customizations.
 
-You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), a user's [calendar](calendar-screen-overview.md), and [availability](meeting-screen-overview.md) of people whom you want to invite to a meeting.
+You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), a user's [calendar](calendar-screen-overview.md), and [availability](meeting-screen-overview.md) of people users might want to invite to a meeting.
 
 This overview teaches you:
 > [!div class="checklist"]
@@ -47,23 +47,17 @@ To add a people screen from the template:
 
     ![Initial people screen state](media/people-screen/people-screen-empty.png)
 
-1. To start searching for users, select the text input box at the top and start typing a coworker's name. The search results will appear below:
+1. To start searching for users, select the text input box at the top and start typing a coworker's name. The search results appear below the text input box:
 
     ![people screen search state](media/people-screen/people-browse-gall-full.png)
 
-1. When you select individuals from the search results, they are added to the **MyPeople** collection, and the search bar input value is reset, revealing the collection of people you've selected:
+1. When you select individuals from the search results, they are added to the **MyPeople** collection. The search bar input value is reset, revealing the collection of people you've selected:
 
     ![people screen collection results](media/people-screen/people-people-gall-full.png)
 
-A few helpful notes:
-
-* The people screen allows an app user to search for, view, and add people from their org to an app-level collection.
-
 ## Modify the screen
 
-You can modify the default functionality of this screen in a few common ways:
-
-* [Show different data for people](people-screen-overview.md#show-different-data-for-people)
+You can modify the default functionality of this screen by [showing different data for people](people-screen-overview.md#show-different-data-for-people).
 
 If you want to modify the screen further, use the [people-screen reference](./people-screen-reference.md) as a guide.
 
@@ -87,19 +81,19 @@ The people screen is a powerful bundle of controls in its own right, but it usua
 
 ### Using your cached list of people
 
-The people screen caches your person selections in the **MyPeople** collection. Should your business scenario call for a person lookup, you will have to know how to use this collection. Here, you'll walk through how to connect this screen to a rudimentary email screen, and send emails to users in the **MyPeople** collection. In doing so, you'll also gain insight into how the [email-screen](./email-screen-overview.md) works.
+The people screen caches your people selections in the **MyPeople** collection. Should your business scenario call for a person lookup, you will need to know how to use this collection. Here, you'll walk through how to connect this screen to a rudimentary email screen and send emails to users in the **MyPeople** collection. In doing so, you'll also gain insight into how the [email-screen](./email-screen-overview.md) works.
 
 1. Add the Office 365 Outlook data source to your app: On the ribbon select **View** > **Data sources** > **Add data source**, and look for the Office 365 Outlook connector. You might have to select **New connection** to find it.
 1. After inserting the people screen, insert a new blank screen. Within that screen, add a **Back arrow** icon, two text-input boxes, and a **Send** icon.
 1. Rename the screen to **EmailScreen**, the **Back icon** to **BackIcon**, one text input box to **SubjectLine**, the other to **MessageBody**, and the **Send** icon to **SendIcon**.
 1. Set the **OnSelect** property of **BackIcon** to `Back()`.
 1. Set the **OnSelect** property of **SendIcon** to `Office365.SendEmail(Concat(MyPeople, UserPrincipalName & ";"), SubjectLine.Text, MessageBody.Text)`.
-    * Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";")` as the list of recipients. This takes the **MyPeople** collection, and for every row in that collection combines all of their **UserPrincipalName** (email address) fields together into a single string with semicolons separating them. This is no different than writing out a string of email addresses separated by semicolons in the "to" line of your favorite email client.
+    * Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";")` as the list of recipients. This takes the **MyPeople** collection, and for every row in that collection combines all of their **UserPrincipalName** (email address) fields together into a single string with semicolons separating them. This is no different than writing out a string of email addresses separated by semicolons in the "To" line of your favorite email client.
     * You're passing `SubjectLine.Text` as the subject of the message, and `MessageBody.Text` as the body of the message.
 1. On the people screen, in the upper-right corner, insert the **Mail** icon.
    Change the icon color to whatever suits you.
 1. Set the **OnSelect** property of the **Send** icon to `Navigate(EmailScreen, None)`.
-1. You now have a two-screen app that allows you to select users, and then compose and send an email message to them. Feel free to test it out, but be careful, because the app sends emails to whomever you add to the **MyPeople** collection.
+1. You now have a two-screen app that allows you to select users, and then compose and send an email message to them. Feel free to test it out, but be careful, because the app sends emails to everyone you add to the **MyPeople** collection.
 
 ## Next steps
 
