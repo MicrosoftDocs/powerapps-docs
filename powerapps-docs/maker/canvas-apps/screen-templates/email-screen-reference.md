@@ -189,9 +189,7 @@ Selecting this control does three things concurrently:
   1. The first line of code takes the **Mail** field from all the rows in the **MyPeople** collection, concatenates them into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
 
   1. It then uses the [Office365.SendEmail](https://docs.microsoft.com/en-us/connectors/office365/#sendemail) operation to send the email to the recipients.
-
-    The operation has three required parameters--**To**, **Subject**, and **Body**--and one optional parameter--**Importance**. In the preceding code, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and **Normal**, respectively.
-    
+    The operation has three required parameters, **To**, **Subject**, and **Body**, and one optional parameter--**Importance**. In the preceding code, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and **Normal**, respectively.
   1. Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
 
 * Property: **DisplayMode**<br>
