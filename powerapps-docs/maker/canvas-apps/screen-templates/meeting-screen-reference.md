@@ -1,6 +1,6 @@
 ---
-title: Meeting screen template reference | Microsoft Docs
-description: Understand, at a low level, how the meeting screen template works in PowerApps
+title: Reference for the meeting-screen template for canvas apps | Microsoft Docs
+description: Understand details of how the meeting-screen template for canvas apps works in PowerApps
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -38,7 +38,7 @@ To add a meeting screen from the template:
 
   ![Meeting screen, both tabs](media/meeting-screen/meeting-screen-full-both.png)
 
-This topic explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of significant controls are set. Those controls are presented in this order:
+This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 * [Invite tab (LblInviteTab)](#invite-tab)
 * [Schedule tab (LblScheduleTab)](#schedule-tab)
