@@ -1,6 +1,6 @@
 ---
-title: Email screen template reference | Microsoft Docs
-description: Understand, at a low level, how the email screen template works in PowerApps
+title: Reference for the calendar-screen template for canvas apps | Microsoft Docs
+description: Understand details of how the email-screen template for canvas apps works in PowerApps
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -72,9 +72,9 @@ The **Add icon** control allows app users to add people who don't exist inside t
   ```
   Line by line, the preceding code block says that the **Add icon** control will be visible only if:
 
-    1. **TextSearchBox** contains text.
-    1. The text in **TextSearchBox** is a valid email address.
-    1. The text in **TextSearchBox** doesn't already exist in the **MyPeople** collection.
+    * **TextSearchBox** contains text.
+    * The text in **TextSearchBox** is a valid email address.
+    * The text in **TextSearchBox** doesn't already exist in the **MyPeople** collection.
 
 * Property: **OnSelect**<br>
     Value: Selecting this adds the valid email address to the **MyPeople** collection. This collection is used by the screen as the recipient list:
@@ -110,7 +110,7 @@ The **Add icon** control allows app users to add people who don't exist inside t
   Displays the person's display name from their Office 365 profile.
 
 * Property: **OnSelect**<br>
-    Value: Code to add the user to an app-level collection, and then select the user.
+    Value: Code to add the user to an app-level collection, and then select the user:
 
     ```
     Concurrent(
@@ -119,11 +119,11 @@ The **Add icon** control allows app users to add people who don't exist inside t
         If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem))
     )
     ```
-    Selecting this control does three things concurrently:
+Selecting this control does three things concurrently:
 
-    * Sets the **_selectedUser** variable to the item selected.
-    * Resets the search term in **TextSearchBox**.
-    * Adds the selected item to the **MyPeople** collection, a collection of all the selected users that the email screen uses as a set of recipients.
+   * Sets the **_selectedUser** variable to the item selected.
+   * Resets the search term in **TextSearchBox**.
+   * Adds the selected item to the **MyPeople** collection, a collection of all the selected users that the email screen uses as a set of recipients.
 
 ## Email people gallery
 
@@ -185,17 +185,19 @@ The **Add icon** control allows app users to add people who don't exist inside t
   Clear(MyPeople)
   ```
 
-  Sending an email message requires a semicolon-separated string of email addresses. The first line in the preceding code takes the **Mail** field from all the rows in the **MyPeople** collection and concatenates them into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
+  Sending an email message requires a semicolon-separated string of email addresses. In the preceding code:
+  1. The first line of code takes the **Mail** field from all the rows in the **MyPeople** collection, concatenates them into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
 
-  It then uses the [Office365.SendEmail](https://docs.microsoft.com/en-us/connectors/office365/#sendemail) operation to send the email to the recipients.
+  1. It then uses the [Office365.SendEmail](https://docs.microsoft.com/en-us/connectors/office365/#sendemail) operation to send the email to the recipients.
 
-  The operation has three required parameters--**To**, **Subject**, and **Body**--and one optional parameter--**Importance**. In the preceding code, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and **Normal**, respectively.
-  * Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
+    The operation has three required parameters--**To**, **Subject**, and **Body**--and one optional parameter--**Importance**. In the preceding code, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and **Normal**, respectively.
+    
+  1. Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
 
 * Property: **DisplayMode**<br>
     Value: `If(Len(Trim(TextEmailSubject.Text)) > 0 && !IsEmpty(MyPeople), DisplayMode.Edit, DisplayMode.Disabled)`
   
-  To send an email, the email subject line must have text, and the recipient (**MyPeople**) collection must not be empty.
+  For an email to be sent, the email subject line must have text, and the recipient (**MyPeople**) collection must not be empty.
 
 ## Next steps
 
