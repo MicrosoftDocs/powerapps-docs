@@ -60,5 +60,5 @@ A few helpful notes:
 ## Next steps
 
 * [View the reference documentation for this screen](./meeting-screen-reference.md).
-* [Learn more about the Office 365 Outlook connector](/connections/connection-office365-outlook.md).
-* [Learn more about the Office 365 Users connector](/connections/connection-office365-users.md).
+* [Learn more about the Office 365 Outlook connector](../connections/connection-office365-outlook.md).
+* [Learn more about the Office 365 Users connector](../connections/connection-office365-users.md).
