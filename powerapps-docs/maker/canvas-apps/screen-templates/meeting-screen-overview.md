@@ -1,6 +1,6 @@
 ---
 title: Meeting-screen template | Microsoft Docs
-description: Understand how the meeting screen template works in PowerApps, and extend the screen for your own use cases
+description: Understand how the meeting-screen template for canvas apps works, and extend the screen for your own use cases
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
@@ -21,9 +21,7 @@ In a canvas app, add a meeting screen that lets users create and send a meeting 
 
 You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), [people](people-screen-overview.md) in an organization, and a user's [calendar](calendar-screen-overview.md).
 
-This overview teaches you:
-> [!div class="checklist"]
-> * The high level functionality of the screen
+This overview teaches you about the high-level functionality of the screen.
 
 For a deeper dive into this screen's default functionality, see the [meeting-screen reference](meeting-screen-reference.md).
 
@@ -51,10 +49,10 @@ A few helpful notes:
   Users can search for and add attendees and, optionally, add a meeting room to the meeting.
 * To search for users in your org, start typing their name in the text input box below "Attendees".
 * When searching for people, only the top 15 results are returned.
-* To add email addresses for attendees outside your org, type out the full, valid email address and click the '+' icon that appears to the right of the email address.
+* To add email addresses for attendees outside your org, type out the full, valid email address, and select the '+' icon that appears to the right of the email address.
 * You must add at least one person as an attendee, provide a subject, and select a meeting time in the **Schedule** tab to create the meeting.
-* After you send the meeting, all of the selection contents will be cleared.
-* The OnSelect statement of the send icon (upper right corner) contains this line: `Set(_myCalendarName, LookUp('Office365'.CalendarGetTables().value, DisplayName = "Calendar").Name);`
+* After you send the meeting, all of the selection contents are cleared.
+* The **OnSelect** statement of the **Send** icon (upper-right corner) contains this line: `Set(_myCalendarName, LookUp('Office365'.CalendarGetTables().value, DisplayName = "Calendar").Name);`
   * "Calendar" is the default display name for most office user's calendars. However, this might not be the case in your org. If it's not, you can change "Calendar" to the appropriate term for your org.
 * You get an error if you try to schedule a meeting that occurs in the past.
 * You get an error if you add more than 20 people to a meeting.
