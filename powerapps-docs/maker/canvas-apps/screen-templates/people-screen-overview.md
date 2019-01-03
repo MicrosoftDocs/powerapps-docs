@@ -77,7 +77,7 @@ This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/en-u
 
 ## Integrate the screen into an app
 
-The people screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including [using your cached list of people](people-screen-overview.md#using-your-cached-list-of-people).
+The people screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including [using your cached list of people](people-screen-overview.md#use-your-cached-list-of-people).
 
 ### Use your cached list of people
 
