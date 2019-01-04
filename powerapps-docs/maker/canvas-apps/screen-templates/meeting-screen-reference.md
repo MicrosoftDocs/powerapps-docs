@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/26/2018
+ms.date: 01/03/2019
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -414,7 +414,7 @@ This control allows users to add people who don't exist inside their org to the 
       1. The **AvailableRooms** collection is created. This is simply the **RoomTimeSuggestions** collection of attendee availabilities with two additional columns added to it: "Address" and "Name". "Address" is the email address of the room, and "Name" is the name of the room.
       1. Then, the **AvailableRoomsOptimal** collection is created. This is just the **AvailableRooms** collection with the "Availability" and "Attendee" columns removed. Doing this matches the schemas of **AvailableRoomsOptimal** and **AllRooms**. This allows you to use both collections in the **Items** property of the **RoomBrowseGallery**.
       1. **_roomListSelected** is set to **false**.
-  1. The loading state, **_loadingRooms** is set to **false** once everything else has finished executing.
+  1. The loading state, **_loadingRooms**, is set to **false** once everything else has finished executing.
 
 ## Room browse gallery
 
@@ -509,7 +509,8 @@ This control allows users to add people who don't exist inside their org to the 
 
   The icon is selectable only if the meeting subject is filled out, there are greater than 0 attendees for the meeting, and a meeting time has been selected. Otherwise it is disabled.
 
-* Property: **OnSelect**
+* Property: **OnSelect**<br>
+
     Value: Code to send the meeting invite to your selected attendees and clear all the input fields:
 
   ```
