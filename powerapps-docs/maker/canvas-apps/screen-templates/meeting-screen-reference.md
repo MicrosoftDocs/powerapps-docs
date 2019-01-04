@@ -16,7 +16,7 @@ search.app:
 ---
 
 
-# Reference information about the email-screen template for canvas apps
+# Reference information about the meeting-screen template for canvas apps
 
 For canvas apps in PowerApps, understand how each significant control in the meeting-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [meeting-screen overview](meeting-screen-overview.md).
 
@@ -137,13 +137,13 @@ This control allows users to add people who don't exist inside their org to the 
   ```
 
   Selecting this control adds the valid email address (visible only if a valid email address is typed into **TextSearchBox**) to the **MyPeople** collection (this collection is the attendee list) and then refreshes the available meeting times with the new user entry.
-
+<!--lines 152-157: not sure how to incorporate these; having trouble parsing-->
   At a low level, this code block:
   1. Collects the email address into the **MyPeople** collection, collecting the email address into the **DisplayName**, **UserPrincipalName**, and **Mail** fields.
   1. Resets the contents of the **TextSearchBox** control.
   1. Sets the **_showMeetingTimes** variable to **false**. This variable controls the visibility of **FindMeetingTimesGallery**, which displays open times for the selected attendees to meet.
   1. Sets the **_loadMeetingTimes** context variable to **true**. This variable sets a loading state, which toggles the visibility of loading state controls like **_LblTimesEmptyState** to indicate to the user that their data is being loaded.
-  * Sets **_selectedMeetingTime** to **Blank()**. **_selectedMeetingTime** is the selected record from the **FindMeetingTimesGallery** control. It is blanked here because the addition of another attendee might mean that the previous definition of **_selectedMeetingTime** is not be available for that attendee.
+  1. Sets **_selectedMeetingTime** to **Blank()**. **_selectedMeetingTime** is the selected record from the **FindMeetingTimesGallery** control. It is blanked here because the addition of another attendee might mean that the previous definition of **_selectedMeetingTime** is not be available for that attendee.
   1. Sets **_selectedRoom** to **Blank()**. **_selectedRoom** is the selected room record from **RoomBrowseGallery**. The room availabilities are determined from the value of **_selectedMeetingTime**. With that value blanked, the **_selectedRoom** value is no longer valid, so it must be blanked.
   1. Sets **_roomListSelected** to **false**. This line may not be applicable to everyone. In Office, you can group your rooms by different "room lists." If you have room lists, this screen accounts for that, allowing you to first select a room list before selecting a room from within that list. The value of **_roomListSelected** is what determines whether a user (in a tenant with room lists only) will be viewing rooms within a room list or the set of room lists. It's set to **false** to force users to reselect a new room list.
   1. Uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation to determine and collect the available meeting times for the attendees.
@@ -209,9 +209,9 @@ This control allows users to add people who don't exist inside their org to the 
 
     Selecting this control is very similar to selecting the **AddIcon** control, the only difference being the `Set(_selectedUser, ThisItem)` statement and the execution order of the operations. As such, this discussion will not be as deep. For a fuller explanation, read through the [AddIcon control section](#AddIcon-control).
 
-<!--What is the -->
-
-    Selecting this control resets **TextSearchBox**. Then, if the selection is not in the **MyPeople** collection, the control sets the **_loadMeetingTimes** state to **true** and the **_showMeetingTimes** state to **false**, blanks the **_selectedMeetingTime** and **_selectedRoom** variables, and refreshes the **MeetingTimes** collection with the new addition to the **MyPeople** collection. It then sets the **_loadMeetingTimes** state to **false**, and sets **_showMeetingTimes** to **true**. If the selection is already in the **MyPeople** collection, it resets only the contents of **TextSearchBox**.
+    Selecting this control resets **TextSearchBox**. Then, if the selection is not in the **MyPeople** collection, the control:
+    1. Sets the **_loadMeetingTimes** state to **true** and the **_showMeetingTimes** state to **false**, blanks the **_selectedMeetingTime** and **_selectedRoom** variables, and refreshes the **MeetingTimes** collection with the new addition to the **MyPeople** collection. 
+    1. Sets the **_loadMeetingTimes** state to **false**, and sets **_showMeetingTimes** to **true**. If the selection is already in the **MyPeople** collection, it resets only the contents of **TextSearchBox**.
 
 ## Meeting people gallery
 
@@ -233,7 +233,7 @@ This control allows users to add people who don't exist inside their org to the 
   ```
 <!--Clarify what the "it" is in "It takes 76 as the ....."-->
   
-  The height of this gallery adjusts to the number of items in the gallery, to a maximum height of 350. It takes 76 as the height of a single row of **MeetingPeopleGallery**, then multiplies it by the number of rows. Since `WrapCount = 2`, the number of true rows is `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
+   The height of this gallery adjusts to the number of items in the gallery, to a maximum height of 350. It takes 76 as the height of a single row of **MeetingPeopleGallery**, then multiplies it by the number of rows. Since `WrapCount = 2`, the number of true rows is `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
 
 * Property: **ShowScrollbar**<br>
     Value: `MeetingPeopleGallery.Height >= 350`
@@ -278,7 +278,10 @@ This control allows users to add people who don't exist inside their org to the 
 
   After the first line of the preceding code, selecting this control is almost identical to selecting the **AddIcon** control. As such, this discussion will not be as deep. For a fuller explanation, read through the [AddIcon control section](#AddIcon-control).
 
-  In the first line of code, the selected item is removed from the **MyPeople** collection. The code resets **TextSearchBox**, and then removes the selection from the **MyPeople** collection. It sets the **_loadMeetingTimes** state to **true** and the **_showMeetingTimes** state to **false**, blanks the **_selectedMeetingTime** and **_selectedRoom** variables, and refreshes the **MeetingTimes** collection with the new addition to the **MyPeople** collection. It then sets the **_loadMeetingTimes** state to **false**, and sets **_showMeetingTimes** to **true**.
+  In the first line of code, the selected item is removed from the **MyPeople** collection. The code then:
+  1. Resets **TextSearchBox**, and then removes the selection from the **MyPeople** collection. 
+  1. Sets the **_loadMeetingTimes** state to **true** and the **_showMeetingTimes** state to **false**, blanks the **_selectedMeetingTime** and **_selectedRoom** variables, and refreshes the **MeetingTimes** collection with the new addition to the **MyPeople** collection. 
+  1. Sets the **_loadMeetingTimes** state to **false**, and sets **_showMeetingTimes** to **true**.
 
 ## Meeting date picker
 
@@ -317,9 +320,11 @@ This control allows users to add people who don't exist inside their org to the 
 
   At a high level, selecting this control refreshes the available meeting times. It is valuable because if a user changes the date, the available meeting times need to update to reflect the attendees availabilities for that day.
 
- With the exception of the initial **Collect** statement, this is identical to the **OnSelect** functionality of the **AddIcon** control. As such, this discussion will not be as deep. For a fuller explanation, read through the [AddIcon control section](#AddIcon-control).
+  With the exception of the initial **Collect** statement, this is identical to the **OnSelect** functionality of the **AddIcon** control. As such, this discussion will not be as deep. For a fuller explanation, read through the [AddIcon control section](#AddIcon-control).
 
-  Selecting this control resets **TextSearchBox**. It sets the **_loadMeetingTimes** state to **true** and the **_showMeetingTimes** state to **false**, blanks the **_selectedMeetingTime** and **_selectedRoom** variables, and refreshes the **MeetingTimes** collection with the new date selection. It then sets the **_loadMeetingTimes** state to **false**, and sets **_showMeetingTimes** to **true**.
+  Selecting this control resets **TextSearchBox**. It then: 
+  1. Sets the **_loadMeetingTimes** state to **true** and the **_showMeetingTimes** state to **false**, blanks the **_selectedMeetingTime** and **_selectedRoom** variables, and refreshes the **MeetingTimes** collection with the new date selection. 
+  1. Sets the **_loadMeetingTimes** state to **false**, and sets **_showMeetingTimes** to **true**.
 
 ## Meeting duration drop-down
 
@@ -367,10 +372,10 @@ This control allows users to add people who don't exist inside their org to the 
   ```
 
   The retrieved value of **StartTime** is in UTC format. To [convert from UTC to local time](../functions/function-dateadd-datediff.md#converting-from-utc), the **DateAdd** function is applied.
-  * The [Text function](../functions/function-text.md#datetime) takes a date/time as its first argument, and formats it based on its second argument. You pass it the local time conversion of **ThisItem.StartTime**, and display it as **DateTimeFormat.ShortTime**.
+  The [Text function](../functions/function-text.md#datetime) takes a date/time as its first argument, and formats it based on its second argument. You pass it the local time conversion of **ThisItem.StartTime**, and display it as **DateTimeFormat.ShortTime**.
 
 * Property: **OnSelect**<br>
-    Value:  Several **Collect** statements to gather meeting rooms and their suggested availabilities, as well as several variable toggles:
+    Value: Several **Collect** statements to gather meeting rooms and their suggested availabilities, as well as several variable toggles:
 
   ```
   Set(_selectedMeetingTime, ThisItem);
@@ -395,25 +400,25 @@ This control allows users to add people who don't exist inside their org to the 
   At a high level, this code block gathers available rooms, for users who don't have rooms lists, based on the selected date/time for the meeting. Otherwise, it simply retrieves the rooms lists.
 
   At a low level this code block:
-  * Sets **_selectedMeetingTime** to the selected item. This will be used to find what rooms are available during that time
-  * Sets the loading state variable **_loadingRooms** to true, turning the loading state on.
-  * If the **RoomsLists** collection is empty, it retrieves the user's tenant's rooms lists and stores them in the **RoomsLists** collection.
-  * If the user has 0 or 1 room list:
-    * The **noRoomLists** variable is set to true, this variable is used to determine the items displayed in the **RoomBrowseGallery** control.
-    * The `Office365.GetRooms()` operation is used to retrieve the first 100 rooms in their tenant. These are stored in the **AllRooms** collection.
-    * The **_allRoomsConcat** variable is set to a semicolon separated string of the first 20 email addresses of the rooms in the **AllRooms** collection. This is because the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) is limited to searching for the available times of 20 person objects in a single operation.
-    * The **RoomTimeSuggestions** collection uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) to retrieve the availabilities of the first twenty rooms in the **AllRooms** collection based on the time values from the **_selectedMeetingTime** variable. Note that the `& "Z"` is to properly format the DateTime value.
-    * The **AvailableRooms** collection is created. This is simply the **RoomTimeSuggestions** collection of attendee availabilities with 2 additional columns added to it: "Address" and "Name". "Address" is the email address of the room and "Name" is the name of the room.
-    * Then, the **AvailableRoomsOptimal** collection is created. This is just the **AvailableRooms** collection with the "Availability" and "Attendee" columns removed. Doing this matches the schemas of **AvailableRoomsOptimal** and **AllRooms**. This allows you to use both collections in the **Items** property of the **RoomBrowseGallery**.
-    * _roomListSelected is set to false.
-  * The loading state, **_loadingRooms** is set to false once everything else has finished executing.
+  1. Sets **_selectedMeetingTime** to the selected item. This will be used to find what rooms are available during that time.
+  1. Sets the loading state variable **_loadingRooms** to **true**, turning the loading state on.
+  1. If the **RoomsLists** collection is empty, it retrieves the user's tenant's rooms lists and stores them in the **RoomsLists** collection.
+  1. If the user has 0 or 1 room list:
+    1. The **noRoomLists** variable is set to **true**, and this variable is used to determine the items displayed in the **RoomBrowseGallery** control.
+    1. The `Office365.GetRooms()` operation is used to retrieve the first 100 rooms in their tenant. These are stored in the **AllRooms** collection.
+    1. The **_allRoomsConcat** variable is set to a semicolon-separated string of the first 20 email addresses of the rooms in the **AllRooms** collection. This is because the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) is limited to searching for the available times of 20 person objects in a single operation.
+    1. The **RoomTimeSuggestions** collection uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) to retrieve the availabilities of the first 20 rooms in the **AllRooms** collection, based on the time values from the **_selectedMeetingTime** variable. Note that the `& "Z"` is used to properly format the **DateTime** value.
+    1. The **AvailableRooms** collection is created. This is simply the **RoomTimeSuggestions** collection of attendee availabilities with two additional columns added to it: "Address" and "Name". "Address" is the email address of the room, and "Name" is the name of the room.
+    1. Then, the **AvailableRoomsOptimal** collection is created. This is just the **AvailableRooms** collection with the "Availability" and "Attendee" columns removed. Doing this matches the schemas of **AvailableRoomsOptimal** and **AllRooms**. This allows you to use both collections in the **Items** property of the **RoomBrowseGallery**.
+    1. **_roomListSelected** is set to **false**.
+  1. The loading state, **_loadingRooms** is set to **false** once everything else has finished executing.
 
 ## Room browse gallery
 
    ![RoomBrowseGallery control](media/meeting-screen/meeting-rooms-gall.png)
 
 * Property: **Items**<br>
-    Value: Logically set to two internal collections of identical schema, depending on whether the user has selected a room list or has rooms lists in their tenant.
+    Value: Logically set to two internal collections of identical schema, depending on whether the user has selected a room list or has rooms lists in their tenant:
 
   ```
   Search(
@@ -421,7 +426,7 @@ This control allows users to add people who don't exist inside their org to the 
       Trim(TextMeetingLocation1.Text), "Name", "Address")
   ```
 
-  This gallery will display the **AvailableRoomsOptimal** collection if **_roomListSelected** or **_noRoomLists** is true. Otherwise it will display the **RoomsLists** collection. This can be done because the schema of these collections are identical.
+  This gallery displays the **AvailableRoomsOptimal** collection if **_roomListSelected** or **_noRoomLists** is **true**. Otherwise, it displays the **RoomsLists** collection. This can be done because the schema of these collections are identical.
 
 * Property: **Visible**<br>
     Value: `_showDetails && !IsBlank(_selectedMeetingTime) && !_loadingRooms`
@@ -455,17 +460,17 @@ This control allows users to add people who don't exist inside their org to the 
   UpdateContext({_loadingRooms: false})
   ```
 
-  The actions that occur when this control is selected depend upon whether a user is currently viewing a set of room lists or a set of rooms. If it's the former, then selecting this control retrieves the rooms that are available at the selected time for the selected room list. If it's the latter, selecting this control sets the **_selectedRoom** variable to the selected item. The preceding statement is very similar to the **Select** statement for [**FindMeetingTimesGallery Title**](#findMeetingTimesGallery-title).
+  The actions that occur when this control is selected depend on whether a user is currently viewing a set of room lists or a set of rooms. If it's the former, then selecting this control retrieves the rooms that are available at the selected time from the selected room list. If it's the latter, selecting this control sets the **_selectedRoom** variable to the selected item. The preceding statement is very similar to the **Select** statement for [**FindMeetingTimesGallery Title**](#findMeetingTimesGallery-title).
 
   At a low level, the preceding code block:
   1. Turns the loading state for the rooms on by setting **_loadingRooms** to **true**.
   1. Checks to see if a room list has been selected, and if the tenant has room lists. If so:
     1. Sets **_roomListSelected** to **true** and sets **_selectedRoomList** to the selected item.
     1. The **_allRoomsConcat** variable is set to a semicolon-separated string of the first 20 email addresses of the rooms in the **AllRooms** collection. This is because the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation is limited to searching for the available times of 20 person objects in a single operation.
-    1. The **RoomTimeSuggestions** collection uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation to retrieve the availabilities of the first 20 rooms in the **AllRooms** collection, based on the time values from the **_selectedMeetingTime** variable. Note that the `& "Z"` is used to properly format the **DateTime** value.
+    1. The **RoomTimeSuggestions** collection uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation to retrieve the availabilities of the first 20 rooms in the **AllRooms** collection, based on the time values from the **_selectedMeetingTime** variable. Note that `& "Z"` is used to properly format the **DateTime** value.
     1. The **AvailableRooms** collection is created. This is simply the **RoomTimeSuggestions** collection of attendee availabilities with two additional columns added to it: "Address" and "Name". "Address" is the email address of the room, and "Name" is the name of the room.
     1. Then, the **AvailableRoomsOptimal** collection is created. This is just the **AvailableRooms** collection with the "Availability" and "Attendee" columns removed. Doing this matches the schemas of **AvailableRoomsOptimal** and **AllRooms**. This allows you to use both collections in the **Items** property of **RoomBrowseGallery**.
-    1. _roomListSelected is set to **false**.
+    1. **_roomListSelected** is set to **false**.
   1. The loading state, **_loadingRooms**, is set to **false** once everything else has finished executing.
 
 ## Back chevron
@@ -501,7 +506,7 @@ This control allows users to add people who don't exist inside their org to the 
   The icon is selectable only if the meeting subject is filled out, there are greater than 0 attendees for the meeting, and a meeting time has been selected. Otherwise it is disabled.
 
 * Property: **OnSelect**
-    Value: Code to send the meeting invite out to your selected attendees and clear all the input fields.
+    Value: Code to send the meeting invite to your selected attendees and clear all the input fields:
 
   ```
   Set(_myCalendarName, LookUp('Office365'.CalendarGetTables().value, DisplayName = "Calendar").Name);
