@@ -146,13 +146,13 @@ This control allows users to add people who don't exist inside their org to the 
   1. Sets **_selectedMeetingTime** to **Blank()**. **_selectedMeetingTime** is the selected record from the **FindMeetingTimesGallery** control. It is blanked here because the addition of another attendee might mean that the previous definition of **_selectedMeetingTime** is not be available for that attendee.
   1. Sets **_selectedRoom** to **Blank()**. **_selectedRoom** is the selected room record from **RoomBrowseGallery**. The room availabilities are determined from the value of **_selectedMeetingTime**. With that value blanked, the **_selectedRoom** value is no longer valid, so it must be blanked.
   1. Sets **_roomListSelected** to **false**. This line may not be applicable to everyone. In Office, you can group your rooms by different "room lists." If you have room lists, this screen accounts for that, allowing you to first select a room list before selecting a room from within that list. The value of **_roomListSelected** is what determines whether a user (in a tenant with room lists only) will be viewing rooms within a room list or the set of room lists. It's set to **false** to force users to reselect a new room list.
-  1. Uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation to determine and collect the available meeting times for the attendees.
-      * It passes the **UserPrincipalName** of each selected user into the *RequiredAttendees* parameter,
-      * The **MeetingDurationSelect**.Selected.Minutes into the *MeetingDuration* parameter,
-      * MeetingDateSelect.SelectedDate + 8 hours into the *Start* parameter. 8 hours is added because by default, the full date/time for the calendar control is 12:00 AM of the selected date. Presumably, you want to retrieve availabilities within normal working hours. A normal work start time would be 8:00 AM.
+  1. Uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation to determine and collect the available meeting times for the attendees. This operation passes:
+      * The **UserPrincipalName** of each selected user into the *RequiredAttendees* parameter.
+      * **MeetingDurationSelect**.Selected.Minutes into the *MeetingDuration* parameter.
+      * MeetingDateSelect.SelectedDate + 8 hours into the *Start* parameter. Eight hours is added because, by default, the full date/time for the calendar control is 12:00 AM of the selected date. You probably want to retrieve availabilities within normal working hours. A normal work start time would be 8:00 AM.
       * **MeetingDateSelect**.SelectedDate + 17 hours into the *End* parameter. 17 hours is added because 12:00 AM + 17 = 5:00 PM. A normal work end time would be 5:00 PM.
-      * 15 into the *MaxCandidates* parameter. This means the operation returns only the top 15 available times for the selected date. This makes sense because there are only sixteen 30-minute chunks in an 8-hour work day, and a 30-minute meeting is the minimum one can set in this screen.
-      * 1 into the *MinimumAttendeePercentage* parameter. Essentially, unless no attendees are available, the meeting time is retrieved.
+      * *15* into the *MaxCandidates* parameter. This means the operation returns only the top 15 available times for the selected date. This makes sense because there are only sixteen 30-minute chunks in an 8-hour work day, and a 30-minute meeting is the minimum one can set in this screen.
+      * *1* into the *MinimumAttendeePercentage* parameter. Essentially, unless no attendees are available, the meeting time is retrieved.
       * **false** into the *IsOrganizerOptional* parameter. The app user is not an optional attendee for this meeting.
       * "Work" into the *ActivityDomain* parameter. This means the times retrieved are only those within a normal working time period.
   1. The **ClearCollect** function also adds two columns: "StartTime" and "EndTime". This simplifies the data returned. 
@@ -246,8 +246,10 @@ This control allows users to add people who don't exist inside their org to the 
    ![MeetingPeopleGallery Title control](media/meeting-screen/meeting-people-gall-title.png)
 
 * Property: **OnSelect**<br>
+    
     Value: `Set(_selectedUser, ThisItem)`
-    Sets the **_selectedUser** variable to the item selected in the **MeetingPeopleGallery**.
+    
+    Sets the **_selectedUser** variable to the item selected in **MeetingPeopleGallery**.
 
 ### Meeting people gallery iconRemove
 
@@ -401,17 +403,17 @@ This control allows users to add people who don't exist inside their org to the 
   At a high level, this code block gathers available rooms, for users who don't have rooms lists, based on the selected date/time for the meeting. Otherwise, it simply retrieves the rooms lists.
 
   At a low level this code block:
-  1. Sets **_selectedMeetingTime** to the selected item. This will be used to find what rooms are available during that time.
+  1. Sets **_selectedMeetingTime** to the selected item. This is used to find what rooms are available during that time.
   1. Sets the loading state variable **_loadingRooms** to **true**, turning the loading state on.
   1. If the **RoomsLists** collection is empty, it retrieves the user's tenant's rooms lists and stores them in the **RoomsLists** collection.
-  1. If the user has 0 or 1 room list:
-    1. The **noRoomLists** variable is set to **true**, and this variable is used to determine the items displayed in the **RoomBrowseGallery** control.
-    1. The `Office365.GetRooms()` operation is used to retrieve the first 100 rooms in their tenant. These are stored in the **AllRooms** collection.
-    1. The **_allRoomsConcat** variable is set to a semicolon-separated string of the first 20 email addresses of the rooms in the **AllRooms** collection. This is because the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) is limited to searching for the available times of 20 person objects in a single operation.
-    1. The **RoomTimeSuggestions** collection uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) to retrieve the availabilities of the first 20 rooms in the **AllRooms** collection, based on the time values from the **_selectedMeetingTime** variable. Note that the `& "Z"` is used to properly format the **DateTime** value.
-    1. The **AvailableRooms** collection is created. This is simply the **RoomTimeSuggestions** collection of attendee availabilities with two additional columns added to it: "Address" and "Name". "Address" is the email address of the room, and "Name" is the name of the room.
-    1. Then, the **AvailableRoomsOptimal** collection is created. This is just the **AvailableRooms** collection with the "Availability" and "Attendee" columns removed. Doing this matches the schemas of **AvailableRoomsOptimal** and **AllRooms**. This allows you to use both collections in the **Items** property of the **RoomBrowseGallery**.
-    1. **_roomListSelected** is set to **false**.
+  1. If the user has no room list or 1 room list:
+      1. The **noRoomLists** variable is set to **true**, and this variable is used to determine the items displayed in the **RoomBrowseGallery** control.
+      1. The `Office365.GetRooms()` operation is used to retrieve the first 100 rooms in their tenant. These are stored in the **AllRooms** collection.
+      1. The **_allRoomsConcat** variable is set to a semicolon-separated string of the first 20 email addresses of the rooms in the **AllRooms** collection. This is because the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) is limited to searching for the available times of 20 person objects in a single operation.
+      1. The **RoomTimeSuggestions** collection uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) to retrieve the availabilities of the first 20 rooms in the **AllRooms** collection, based on the time values from the **_selectedMeetingTime** variable. Note that the `& "Z"` is used to properly format the **DateTime** value.
+      1. The **AvailableRooms** collection is created. This is simply the **RoomTimeSuggestions** collection of attendee availabilities with two additional columns added to it: "Address" and "Name". "Address" is the email address of the room, and "Name" is the name of the room.
+      1. Then, the **AvailableRoomsOptimal** collection is created. This is just the **AvailableRooms** collection with the "Availability" and "Attendee" columns removed. Doing this matches the schemas of **AvailableRoomsOptimal** and **AllRooms**. This allows you to use both collections in the **Items** property of the **RoomBrowseGallery**.
+      1. **_roomListSelected** is set to **false**.
   1. The loading state, **_loadingRooms** is set to **false** once everything else has finished executing.
 
 ## Room browse gallery
@@ -466,12 +468,12 @@ This control allows users to add people who don't exist inside their org to the 
   At a low level, the preceding code block:
   1. Turns the loading state for the rooms on by setting **_loadingRooms** to **true**.
   1. Checks to see if a room list has been selected, and if the tenant has room lists. If so:
-    1. Sets **_roomListSelected** to **true** and sets **_selectedRoomList** to the selected item.
-    1. The **_allRoomsConcat** variable is set to a semicolon-separated string of the first 20 email addresses of the rooms in the **AllRooms** collection. This is because the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation is limited to searching for the available times of 20 person objects in a single operation.
-    1. The **RoomTimeSuggestions** collection uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation to retrieve the availabilities of the first 20 rooms in the **AllRooms** collection, based on the time values from the **_selectedMeetingTime** variable. Note that `& "Z"` is used to properly format the **DateTime** value.
-    1. The **AvailableRooms** collection is created. This is simply the **RoomTimeSuggestions** collection of attendee availabilities with two additional columns added to it: "Address" and "Name". "Address" is the email address of the room, and "Name" is the name of the room.
-    1. Then, the **AvailableRoomsOptimal** collection is created. This is just the **AvailableRooms** collection with the "Availability" and "Attendee" columns removed. Doing this matches the schemas of **AvailableRoomsOptimal** and **AllRooms**. This allows you to use both collections in the **Items** property of **RoomBrowseGallery**.
-    1. **_roomListSelected** is set to **false**.
+      1. Sets **_roomListSelected** to **true** and sets **_selectedRoomList** to the selected item.
+      1. The **_allRoomsConcat** variable is set to a semicolon-separated string of the first 20 email addresses of the rooms in the **AllRooms** collection. This is because the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation is limited to searching for the available times of 20 person objects in a single operation.
+      1. The **RoomTimeSuggestions** collection uses the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) operation to retrieve the availabilities of the first 20 rooms in the **AllRooms** collection, based on the time values from the **_selectedMeetingTime** variable. Note that `& "Z"` is used to properly format the **DateTime** value.
+      1. The **AvailableRooms** collection is created. This is simply the **RoomTimeSuggestions** collection of attendee availabilities with two additional columns added to it: "Address" and "Name". "Address" is the email address of the room, and "Name" is the name of the room.
+      1. Then, the **AvailableRoomsOptimal** collection is created. This is just the **AvailableRooms** collection with the "Availability" and "Attendee" columns removed. Doing this matches the schemas of **AvailableRoomsOptimal** and **AllRooms**. This allows you to use both collections in the **Items** property of **RoomBrowseGallery**.
+      1. **_roomListSelected** is set to **false**.
   1. The loading state, **_loadingRooms**, is set to **false** once everything else has finished executing.
 
 ## Back chevron
@@ -493,6 +495,7 @@ This control allows users to add people who don't exist inside their org to the 
    ![IconSendItem control](media/meeting-screen/meeting-send-icon.png)
 
 * Property: **DisplayMode**<br>
+    
     Value: Logic to force user to input certain meeting details before the icon becomes editable:
 
   ```
