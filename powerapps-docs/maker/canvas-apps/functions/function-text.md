@@ -178,7 +178,7 @@ Unless otherwise specified, the user running these formulas is located in the Un
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Text(1234567.89, "[$-fr-FR]&euro;# ###,##", "fr-FR")** | Shows **&euro;** as the currency symbol, a space as a grouping separator, and the comma as a decimal separator. |"&euro;1 234 567,89" |
-| **Text(1234567,89; "&euro;# ###,##")** | If the source data follows the French custom of using a comma as the decimal separator, you can get the same the result as above if you change your locale to French and separate the arguments with a semi-colon instead of a comma. |"&euro;1 234 567,89" |
+| **Text(1234567,89; "[$-fr-FR]&euro;# ###,##")** | If the source data follows the French custom of using a comma as the decimal separator, you must change your locale to French and separate the arguments with a semi-colon instead of a comma to get the same result as above. |"&euro;1 234 567,89" |
 | **Text( Date(2016,1,31), "dddd mmmm d" )** |Returns the weekday, month, and day of the month in the language of the current user. Because none of the placeholders are language dependent, there is no need for a format text language tag. |"Saturday January 31" |
 | **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Returns the weekday, month, and day of the month in the "es-ES" language. |"domingo enero 31" |
 
