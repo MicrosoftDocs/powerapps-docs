@@ -23,7 +23,7 @@ This topic provides resources where you can learn about the new features that ha
 
 ## Weekly releases
 
-For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft PowerApps](/business-applications-release-notes/powerplatform/released-versions/powerapps)
+For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft PowerApps](https://docs.microsoft.com/business-applications-release-notes/powerplatform/released-versions/powerapps)
 
 To know more about how to browse information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/en-us/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
 
@@ -32,7 +32,7 @@ To know more about how to browse information in the weekly release notes, read t
 
 ## Release notes
 
-For information about new features releasing over the next few months that you can use for planning, see [October 2018 release notes](/business-applications-release-notes/October18/powerapps/planned-features)
+For information about new features releasing over the next few months that you can use for planning, see [October 2018 release notes](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/planned-features)
 
 ## Known limitations
 
