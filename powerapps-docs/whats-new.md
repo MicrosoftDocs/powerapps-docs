@@ -11,25 +11,28 @@ ms.date: 01/04/2019
 ms.author: anneta
 search.audienceType: 
   - maker
+  - admin
+  - user
+  - developer
 search.app: 
   - PowerApps
 ---
 # What's new in PowerApps
 
-This topic provides information about the new features that have recently released in the past and will be released in the coming months.
+This topic provides resources where you can learn about the new features that have recently released, new features that will be releasing over the next few months, and known limitations.
 
 ## Weekly releases
 
 For information about the new features, fixes, and improvements released in the past few weeks, see [Released versions for Microsoft PowerApps](/business-applications-release-notes/powerplatform/released-versions/powerapps)
 
-To know more about how to browse through information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/en-us/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
+To know more about how to browse information in the weekly release notes, read this [blog post](https://powerapps.microsoft.com/en-us/blog/stay-tuned-with-the-latest-features-and-fixes-through-powerapps-weekly-release-notes/).
 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality may not appear immediately.
 
-## Release Notes
+## Release notes
 
-The release notes provide information about features releasing in the coming months that you can use for planning: [October 2018 release notes](/business-applications-release-notes/October18/powerapps/planned-features)
+For information about new features releasing over the next few months that you can use for planning, see [October 2018 release notes](/business-applications-release-notes/October18/powerapps/planned-features)
 
 ## Known limitations
 
