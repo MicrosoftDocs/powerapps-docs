@@ -21,11 +21,11 @@ This section describes design patterns to avoid or minimize and their implicatio
 
 ## Don’t avoid locking
 
-Locking is a very important component of SQL Server and Dynamics CRM, and is essential to healthy operation and consistency of the system. For this reason it is important to understand its implications on design, particularly at scale.
+Locking is a very important component of SQL Server and CDS for Apps, and is essential to healthy operation and consistency of the system. For this reason it is important to understand its implications on design, particularly at scale.
 
 ## Transaction usage: Nolock hint
 
-One capability of the Dynamics CRM platform that is heavily used by views is the ability to specify that a query can be performed with a nolock hint, telling the database that no lock is needed for this query. 
+One capability of the CDS for Apps platform that is heavily used by views is the ability to specify that a query can be performed with a nolock hint, telling the database that no lock is needed for this query. 
 
 Views use this approach because there is no direct link between the act of launching the view and subsequent actions. A number of other activities could happen either by that user or others in between and it is not practical or beneficial to lock the entire table of data the view shows waiting until the user has moved on. 
 
@@ -56,13 +56,13 @@ A simple and common example is when updating or interacting with groups of users
 
 Because both requests start together, Transaction A is able to get a lock on User X and Transaction B is able to get a lock on User Y, but as soon as each of them try to get a lock on the other user they block and then deadlock. 
 
-![TODO](media/order-of-locks-example-1.png)
+![Problem example: transaction deadlock](media/order-of-locks-example-1.png)
 
 Simply by ordering the resources you access in a consistent way you can prevent many deadlock situations. The ordering mechanism is often not important as long as it is consistent and can be done as efficiently as possible. For example, ordering users by name or even by GUID can at least ensure a level of consistency that avoids deadlocks.
 
 In a scenario using this approach, Transaction A would get User X, but Transaction B would also try now to get User X rather than User Y first. While that means Transaction B blocks until Transaction A completes, this scenario avoids the deadlock and is completed successfully.
 
-![TODO](media/order-of-locks-example-2.png)
+![Avoiding deadlock by ordering resources in a consistent way](media/order-of-locks-example-2.png)
 
 In more complex and efficient scenarios, it may be that you lock least commonly referenced users first and more frequently referenced users last, which leads to the next design pattern.
 
@@ -74,7 +74,7 @@ When you have heavily contested resources, a good design is to not include the i
 
 With this approach, although there will still be some blocking on this resource, it reduces the amount of time that resource is locked, and therefore decreases the likelihood and time in which other requests are blocked while waiting for the resource. 
 
-![TODO](media/hold-contentious-locks-for-shortest-period.png)
+![Hold contentious locks for shortest period](media/hold-contentious-locks-for-shortest-period.png)
 
 ## Reduce length of transactions
 
@@ -82,13 +82,13 @@ In a similar way, a lock only becomes a blocking issue if two processes need acc
 
 In the following example, the same locks are taken but other processing within the transaction means that the overall length of the transaction is extended, leading to overlapping requests for the same resources. This means that blocking occurs and each request is slower overall.
 
-![TODO](media/reduce-length-of-transactions.png)
+![Problem example: blocking because length of transaction too long](media/reduce-length-of-transactions.png)
 
 By shortening the overall length of the transaction, the first transaction completes and releases its locks before the second request even starts, meaning there is no blocking and both transactions complete efficiently. 
 
 Other activities within a request that extend the life of a transaction can increase the chance of blocking, particularly when there are multiple overlapping requests, and can lead to a significantly slower system. 
 
-![TODO](media/reduce-length-of-transactions-1.png)
+![Less blocking because length of transaction reduced](media/reduce-length-of-transactions-1.png)
 
 There are a number of ways that the transaction length can be reduced.
 
@@ -108,11 +108,11 @@ Review each query you make to determine whether:
 
 In the following example, the retrieval of related cases isn’t optimized and adds to the overall transaction length, introducing blocking between threads.
 
-![TODO](media/optimize-requests-1.png)
+![Retrieval of related cases not optimized](media/optimize-requests-1.png)
 
 By optimizing the query, there’s less time spent performing it, and the chance of collision is lower, thereby reducing blocking.
 
-![TODO](media/optimize-requests-2.png)
+![Retrieval of related cases optimized](media/optimize-requests-2.png)
 
 Making sure that the database server can process your query as efficiently as possible can significantly decrease the overall time of your transactions and reduce the potential for blocking.
 
@@ -128,7 +128,7 @@ Considering whether some activities need to be synchronous or asynchronous can m
 
 As the following example shows, simply by moving some actions out to an asynchronous process, which means the actions are performed outside of the platform transaction, can mean that the length of the transaction is shorter and the potential for concurrent processing increases.
 
-![TODO](media/reduce-chain-of-events.png)
+![Moving some actions out to an asynchronous process shortens the transaction](media/reduce-chain-of-events.png)
 
 ## Avoid multiple updates to the same record
 
@@ -136,9 +136,9 @@ When designing multiple layers of functional activity, while it is good practice
  
 In the case handling scenario, first updating a case with a default owner based on the customer it is raised against and then later having a separate process to automatically send communications to that customer and update the last contact date against the case is a perfectly logical thing to do functionally. 
 
-The challenge, however, is that this means there are multiple requests to Dynamics CRM to update the same record, which has a number of implications:
+The challenge, however, is that this means there are multiple requests to CDS for Apps to update the same record, which has a number of implications:
 
-- Each request is a separate platform update, adding overall load to the Dynamics CRM server and adding time to the overall transaction length, increasing the chance of blocking.
+- Each request is a separate platform update, adding overall load to the CDS for Apps server and adding time to the overall transaction length, increasing the chance of blocking.
 - It also means that the case record will be locked from the first action taken on that case, meaning that the lock is held throughout the rest of the transaction. If the case is accessed by multiple parallel processes, that could cause blocking of other activities. 
 
 Consolidating updates to the same record to a single update step, and later in the transaction, can have a significant benefit to overall scalability, particularly if the record is heavily contested or accessed by multiple people quickly after creation, for example, as with a case.
@@ -147,19 +147,19 @@ Deciding whether to consolidate updates to the same record to a single process w
 
 ## Only update things you need to
 
-While it is important not to reduce the benefit of a Dynamics CRM system by excluding activities that would be beneficial, often requests are made to include customizations that add little business value but drive real technical complexity.
+While it is important not to reduce the benefit of a CDS for Apps system by excluding activities that would be beneficial, often requests are made to include customizations that add little business value but drive real technical complexity.
  
-If every time we create a task we also update the user record with the number of tasks they currently have allocated, that could introduce a secondary level of blocking as the user record would also now be heavily contended. It would add another resource that each request may need to block and wait for, despite not necessarily being critical to the action. In that example, consider carefully whether storing the count of tasks against the user is important or if the count can be calculated on demand or stored elsewhere such as using hierarchy and rollup field capabilities in Dynamics CRM natively. 
+If every time we create a task we also update the user record with the number of tasks they currently have allocated, that could introduce a secondary level of blocking as the user record would also now be heavily contended. It would add another resource that each request may need to block and wait for, despite not necessarily being critical to the action. In that example, consider carefully whether storing the count of tasks against the user is important or if the count can be calculated on demand or stored elsewhere such as using hierarchy and rollup field capabilities in CDS for Apps natively. 
 
-![TODO](media/only-update-things-you-need-to.png)
+![Problem example showing unecessary updates](media/only-update-things-you-need-to.png)
 
 As will be shown later, updating system user records can have negative consequences from a scalability perspective. 
 
-## Multiple triggers on same event
+## Multiple customizations triggered on same event
 
 Triggering multiple actions on the same event can result in a greater chance of collision as by the nature of the requests those actions are likely to interact with the same related objects or parent object.
 
-![TODO](media/multiple-triggers-on-same-event.png)
+![Multiple customizations triggered on same event](media/multiple-triggers-on-same-event.png)
 
 This is a pattern that should be carefully considered or avoided as it is very easy to overlook conflicts, particularly when different people implement the different processes.
 
@@ -174,14 +174,14 @@ Often a compromise between different behaviors may need to be considered so this
 |Pre Validation|Sync|Plug-in|Short term validation of input values|Long running actions.<br /><br />When creating related items that should be rolled back if later steps fail.|
 |Pre Operation|Sync|Workflow/Plug-in|Short term validation of input values.<br /><br />When creating related items that should be rolled back as part of platform step failure.|Long running actions.<br /><br />When creating an item and the resulting GUID will need to be stored against the item the platform step will create/update.|
 |Post Operation |Sync|Workflow/ Plug-in|Short running actions that naturally follow the platform step and need to be rolled back if later steps fail, for example, creation of a task for the owner of a newly created account.<br /><br />Creation of related items that need the GUID of the created item and that should roll back the platform step in the event of failure|Long running actions.<br /><br />Where failure should not affect the completion of the platform pipeline step.|
-|Not in event pipeline|Async|Workflow/ Plug-in|Medium length actions that would impact on the user experience.<br /><br />Actions that cannot be rolled back anyway in the event of failure.<br /><br />Actions that should not force the rollback of the platform step in the event of failure.|Very long running actions.<br /><br />These shouldn’t be managed in Dynamics CRM.<br /><br />Very low cost actions. The overhead of generating async behavior for very low cost actions may be prohibitive; where possible do these synchronously and avoid the overhead of async processing.|
+|Not in event pipeline|Async|Workflow/ Plug-in|Medium length actions that would impact on the user experience.<br /><br />Actions that cannot be rolled back anyway in the event of failure.<br /><br />Actions that should not force the rollback of the platform step in the event of failure.|Very long running actions.<br /><br />These shouldn’t be managed in CDS for Apps.<br /><br />Very low cost actions. The overhead of generating async behavior for very low cost actions may be prohibitive; where possible do these synchronously and avoid the overhead of async processing.|
 |N/A<br />Takes context of where it is called from||Custom Actions|Combinations of actions launched from an external source, for example, from a web resource|When always triggered in response to a platform event, use plug-in/workflow in those cases.|
 
 ## Plug-ins/workflows aren’t batch processing mechanisms
 
-Long running or volume actions aren’t intended to be run from plug-ins or workflows. Dynamics CRM isn’t intended to be a compute platform and especially isn’t intended as the controller to drive big groups of unrelated updates.
+Long running or volume actions aren’t intended to be run from plug-ins or workflows. CDS for Apps isn’t intended to be a compute platform and especially isn’t intended as the controller to drive big groups of unrelated updates.
 
-If you have a need to do that, offload and run from a separate service, such as Azure worker role in Dynamics CRM Online or a Windows Service for on-premises deployments. 
+If you have a need to do that, offload and run from a separate service, such as Azure worker role in CDS for Apps Online or a Windows Service for on-premises deployments. 
 
 ## Setting up security
 
@@ -212,7 +212,7 @@ A very common escalation area is scalability of setting up security. This is a c
 
 ## Diagram related actions
 
-An activity that is very beneficial as a preventative measure, as well as a tool for diagnosing blocking problems, is to diagram related actions triggered in the Dynamics CRM platform. When doing this it helps to highlight both intentional and unintentional dependencies and triggers in the system. If you aren’t able to do this for your solution, you might not have a clear picture of what your implementation actually does. Creating such a diagram can expose unintended consequences and is good practice at any time in an implementation. 
+An activity that is very beneficial as a preventative measure, as well as a tool for diagnosing blocking problems, is to diagram related actions triggered in the CDS for Apps platform. When doing this it helps to highlight both intentional and unintentional dependencies and triggers in the system. If you aren’t able to do this for your solution, you might not have a clear picture of what your implementation actually does. Creating such a diagram can expose unintended consequences and is good practice at any time in an implementation. 
 
 The following example highlights how initially two processes work perfectly well together but in ongoing maintenance the addition of a new step to create a task can create an unintended loop. Using this documentation technique can highlight this at the design stage and avoid this affecting the system.
 
