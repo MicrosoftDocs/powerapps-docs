@@ -2,7 +2,7 @@
 title: "Scalable Customization Design: Concurrency issues (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The third in a series of topics. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/18/2018
+ms.date: 1/6/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"

@@ -87,6 +87,8 @@
         href: tutorial-update-plug-in.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
+  - name: Scalable customization design
+    href: scalable-customization-design/overview.md
 - name: Integrate data using code
   items:
   - name: Import Data

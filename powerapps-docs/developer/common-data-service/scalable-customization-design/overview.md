@@ -2,7 +2,7 @@
 title: "Scalable Customization Design: Overview (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The first in a series of topics. This topic introduces symptoms that can appear when code customizations are not optimized and the constraints that code customizations must operate within to avoid them. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 11/18/2018
+ms.date: 1/6/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -17,9 +17,13 @@ search.app:
 ---
 # Scalable Customization Design in Common Data Service for Apps
 
+> [!NOTE]
+> This is the first in a series of topics about scalable customization design. While this content has been divided into separate topics, it presents a wholistic view of concepts, issues, and strategies surrounding the design of scalable customizations. Each topic builds upon concepts established in preceding topics.
+> You can [download these topics as a single PDF document](/powerapps/opbuildpdf/developer/common-data-service/scalable-customization-design/TOC.pdf?branch=live) if you want to read it offline.
+
 Common Data Service for Apps (CDS for Apps) is designed to protect itself and its users from long running activities that could affect both the response times for the user making a request and the stability and responsiveness of the system for other users.
 
-A challenge faced by some customers implementing CDS for Apps solutions are errors thrown by the platform or the underlying Microsoft SQL Server database when these protective measures take effect. This is often interpreted as the platform not being able to scale or incorrectly terminating or throttling requests to the system.
+A challenge faced by some people implementing CDS for Apps solutions are errors thrown by the platform or the underlying Microsoft SQL Server database when these protective measures take effect. This is often interpreted as the platform not being able to scale or incorrectly terminating or throttling requests to the system.
 
 This content is based on experiences investigating and addressing the true underlying causes of the majority of these types of challenges. These topics describe how the platform protects itself from the impact of these requests imposed on the system and explains why this behavior is most often the result of custom implementations not understanding the impact on blocking and transaction usage within the platform.
 
@@ -33,7 +37,7 @@ In reality, while the errors could be avoided in the short term by relaxing some
 
 Therefore, it’s preferable to look at the root causes of why these constraints are being triggered and causing errors, and then optimize the code customizations to avoid them. This will provide a more consistent and more responsive system for the users. 
 
-## Common symptoms
+### Common symptoms
 
 These types of problems typically exhibit a combination of common symptoms as shown in the following table.
 
@@ -82,12 +86,6 @@ It is worth being aware of and understanding the platform constraints that do ex
 |**Workflow limits**|&bull; Operates under a Fair Usage policy<br />&bull; No specific hard limits, but balance resource across organizations<br />&bull; Where demand is low an organization can take full advantage of available capacity. Where demand is high, resources and throughput are shared.|
 |**Maximum concurrent connections**|&bull; There is a platform default setting of  a maximum connection pool limit of 100 connections from the  Web Server connection pool in IIS to the database. CDS for Apps does not change this value<br />&bull; If you hit this, it is an indication of an error in the system; look at why so many connections are blocking<br />&bull; With multiple web servers, each with 100 concurrent connections to the database of typical &lt; 10ms, this suggests a throughput of &gt; 10k database requests for each web server. This should not be required and would hit other challenges well before that|
 |**ExecuteMultiple**|&bull; The `ExecuteMultiple` message is designed to assist with collections of operations being sent to CDS for Apps from an external source<br />&bull; The processing of large groups of these requests can tie up vital resources in CDS for Apps at the expense of more response critical requests by users, therefore this is limited to 2 concurrent `ExecuteMultiple` requests per organization|
-
-## Summary
-
-This topic introduced how the CDS for Apps platform is designed to support a transactional, multi-user application where quick response to user demand is the priority. To ensure the that this primary mission is successful, certain constraints are applied to protect against long running operations. When custom code attempts to perform long running operations these constraints will be encountered and some common symptoms will appear.
-
-The best approach is to understand and appreciate the purpose of the constraints and design scalable code customizations that do not interfere with the primary purpose of the platform.
 
 ## Next steps
 
