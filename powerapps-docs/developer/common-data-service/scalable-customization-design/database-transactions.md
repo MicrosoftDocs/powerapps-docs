@@ -55,7 +55,7 @@ Locks aren’t held at a user session level or while information is being shown 
 
 While the kind of blocking in the previous example can be inconvenient in and of itself, this can also lead to more serious consequences when you consider that CDS for Apps is a platform that can process hundreds of concurrent actions. While holding a lock on an individual account record may have reasonably limited implications, what happens when a resource  is more heavily contested?
 
-For example, when each account is given a unique reference number it may lead to a single resource that is tracking the used reference numbers being blocked by every account creation process. Let's call this an *auto-number* scenario. If a lot of accounts are generated in parallel, overlapping requests will all need to access that auto-numbering resource and will block it until they complete their action. The longer each account creation process takes, and the more concurrent requests there are, the more blocking occurs.
+For example, when each account is given a unique reference number it may lead to a single resource that is tracking the used reference numbers being blocked by every account creation process. As described in the [Auto-numbering example](auto-numbering-example.md), if a lot of accounts are generated in parallel, overlapping requests will all need to access that auto-numbering resource and will block it until they complete their action. The longer each account creation process takes, and the more concurrent requests there are, the more blocking occurs.
 
 While the first request to grab the auto-number resource lock can easily be completed, the second request will need to wait for the first to complete before it can check what the next unique reference number is. The third request will have to wait for both the first and second requests to complete. The more requests there are, the longer blocking will occur. If there are enough requests, and each request takes long enough, this can push the later requests to the point that they time out, even though individually they may complete correctly.
 
@@ -240,14 +240,9 @@ There are two special messages where multiple actions can be passed to the CDS f
 #### Web API (OData) Requests in plug-ins
 
 Do not use Web API (OData) requests within a plug-in to the same organization as the plug-in. Always use the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods. This allows for the transaction context to be passed so that the operation can participate in the pipeline transaction.
-    
-
-## Summary
-
-This topic continued the issues introduced in [Scalable Customization Design in Common Data Service for Apps](overview.md) to describe how database transactions are applied and the effect they have on different types of customizations. 
 
 ## Next steps
 
-[Scalable Customization Design: Concurrency issues](concurrency-issues.md)
+In addition to database transactions, it is important to appreciate the impact of multiple concurrent data operations can have on the system. More information: [Scalable Customization Design: Concurrency issues](concurrency-issues.md)
 
 

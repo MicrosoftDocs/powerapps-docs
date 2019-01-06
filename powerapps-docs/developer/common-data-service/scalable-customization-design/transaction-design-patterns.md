@@ -187,8 +187,6 @@ If you have a need to do that, offload and run from a separate service, such as 
 
 A very common escalation area is scalability of setting up security. This is a costly operation, so when done in volume can always cause challenges if not understood and carefully considered. 
 
-<!-- Should this be a table? -->
-
 ### Team setup
 
 - Always add users in the same order: avoid deadlocks
@@ -218,26 +216,21 @@ An activity that is very beneficial as a preventative measure, as well as a tool
 
 The following example highlights how initially two processes work perfectly well together but in ongoing maintenance the addition of a new step to create a task can create an unintended loop. Using this documentation technique can highlight this at the design stage and avoid this affecting the system.
 
-![TODO](media/diagram-related-actions.png)
+![Diagram related actions](media/diagram-related-actions.png)
 
-<!-- NOTE: excluding content on isolation modes and transaction diagnosis as this is for on-premises -->
+<!-- NOTE: excluding content on isolation modes and transaction diagnosis as it is for on-premises only. -->
 
 ## Review system captured statistics
 
 There are a number of ways to determine what is happening if the problem occurs outside of the database layer. The first is analysis of plug-in performance. The [PluginTypeStatistic Entity](../reference/entities/plugintypestatistic.md) can be queried to give an indication of how often the plug-in is running, and statistics on how long it typically takes to run.
 
-<!-- I assume he is referring to the PluginTraceLog here? -->
-When certain errors are occurring, using the server trace files to understand where related problems may be occurring in the platform can also be useful.
+When certain errors are occurring, using the server trace files to understand where related problems may be occurring in the platform can also be useful. More information: [Use Tracing](../debug-plug-in.md#use-tracing)
 
 ## Summary
 
-<!-- 
+The content in [Scalable Customization Design in Common Data Service for Apps](overview.md) and the subsequent topics [Database transactions](database-transactions.md), [Concurrency issues](concurrency-issues.md), and this one have describe the following concepts with examples and strategies that will help you understand how to design and implement scalable customizations for CDS for Apps.
 
-TODO: Seems this is a summary of the whole whitepaper 
-
-A bit inconsistent to just end with this diagram/table
-
--->
+Some key things to remember include the following: 
 
 ### Locks/ transactions
 
