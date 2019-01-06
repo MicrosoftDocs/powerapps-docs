@@ -89,8 +89,6 @@ It is worth being aware of and understanding the platform constraints that do ex
 
 ## Next steps
 
-To understand how the platform constraints are applied it is necessary to understand database transactions.
-
-[Scalable Customization Design: Database transactions](database-transactions.md)
+To understand how the platform constraints are applied it is necessary to understand database transactions. More information: [Scalable Customization Design: Database transactions](database-transactions.md)
 
 

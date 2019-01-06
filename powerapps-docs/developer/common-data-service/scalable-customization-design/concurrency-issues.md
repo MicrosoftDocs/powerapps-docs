@@ -42,7 +42,7 @@ If you initiate multiple asynchronous activities from the same event on the same
 
 When a triggering event occurs, such as the creation of an account, asynchronous logic in CDS for Apps may create entries in the [AsyncOperation (System Job) Entity](../reference/entities/asyncoperation.md) for each process or action to be taken. The Async Service monitors this table, picks up waiting requests in batches, and then processes them. Because the workflows are triggered at the same time, they are highly likely to be picked up in the same batch and processed at the same time. 
 
-## Why it’s important to understand transactions: Auto-numbering example
+## Why it’s important to understand transactions
 
 The [Auto-numbering example](auto-numbering-example.md) provides a scenario that illustrates how database transactions and concurrency issues need to be considered when designing scalable customizations.
 
