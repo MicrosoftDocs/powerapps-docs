@@ -181,7 +181,7 @@ Often a compromise between different behaviors may need to be considered so this
 
 Long running or volume actions aren’t intended to be run from plug-ins or workflows. CDS for Apps isn’t intended to be a compute platform and especially isn’t intended as the controller to drive big groups of unrelated updates.
 
-If you have a need to do that, offload and run from a separate service, such as Azure worker role in CDS for Apps Online or a Windows Service for on-premises deployments. 
+If you have a need to do that, offload and run from a separate service, such as an Azure worker role. 
 
 ## Setting up security
 
@@ -218,7 +218,7 @@ The following example highlights how initially two processes work perfectly well
 
 ![Diagram related actions](media/diagram-related-actions.png)
 
-<!-- NOTE: excluding content on isolation modes and transaction diagnosis as it is for on-premises only. -->
+<!-- NOTE: Excluding content on isolation modes and transaction diagnosis as it is for on-premises only. -->
 
 ## Review system captured statistics
 
@@ -228,7 +228,7 @@ When certain errors are occurring, using the server trace files to understand wh
 
 ## Summary
 
-The content in [Scalable Customization Design in Common Data Service for Apps](overview.md) and the subsequent topics [Database transactions](database-transactions.md), [Concurrency issues](concurrency-issues.md), and this one have describe the following concepts with examples and strategies that will help you understand how to design and implement scalable customizations for CDS for Apps.
+The content in [Scalable Customization Design in Common Data Service for Apps](overview.md) and the subsequent topics [Database transactions](database-transactions.md), [Concurrency issues](concurrency-issues.md), and this one have described the following concepts with examples and strategies that will help you understand how to design and implement scalable customizations for CDS for Apps.
 
 Some key things to remember include the following: 
 
