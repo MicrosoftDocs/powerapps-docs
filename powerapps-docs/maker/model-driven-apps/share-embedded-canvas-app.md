@@ -1,7 +1,7 @@
 ---
 title: "Share an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/17/2018
+ms.date: 01/07/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -24,6 +24,8 @@ search.app:
 ---
 
 # Share an embedded canvas app
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This topic explains how to share an embedded canvas app that you have already created.
 
 After you have created and added an embedded canvas app to a model-driven form you will need to take steps to ensure that all users that have access to the model-driven form also have access to the canvas app and the data that it uses. Please refer to the following guidelines:
