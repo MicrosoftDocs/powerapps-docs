@@ -728,6 +728,11 @@
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items: 
+        - name: Use the new form designer
+          href: ./model-driven-apps/form-designer-overview.md
+          items:
+          - name: "Create or edit forms"
+            href: ./model-driven-apps/create-and-edit-forms.md
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:

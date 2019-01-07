@@ -44,12 +44,3 @@ For information about known limitations, see [Common issues and resolutions](com
 
 1. Identify mistakes and [accessibility issues](accessibility-checker.md) in canvas apps with [AppChecker](https://powerapps.microsoft.com/blog/new-app-checker-helps-you-fix-errors-and-make-accessible-apps/) (blog).
 2. Start canvas apps faster with the [**Concurrent** function](functions/function-concurrent.md).
-
-## June 18
-
-* [Select, edit, move, and test controls more easily](https://powerapps.microsoft.com/blog/say-goodbye-to-miss-clicks-on-the-canvas/) (blog) in canvas apps.
-
-## June 11
-
-1. [Import and export data from Common Data Services for Apps, and open that data in Excel](https://powerapps.microsoft.com/blog/cds-for-apps-excel-importexport/) (blog).
-1. [**Notify** function](functions/function-showerror.md) shows banner messages in canvas apps.

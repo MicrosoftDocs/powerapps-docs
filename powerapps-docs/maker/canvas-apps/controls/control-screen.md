@@ -1,14 +1,14 @@
 ---
 title: 'Screen control: reference | Microsoft Docs'
 description: Information, including properties and examples, about a Screen control
-author: fikaradz
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
