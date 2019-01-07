@@ -1,0 +1,106 @@
+- name: "PowerApps Control Framework"
+  href: powerapps-control-framework.md
+  items:
+  - name: Overview
+    href: powerapps-control-framework-overview.md
+  - name: How-to
+    items:
+    - name: How to create custom controls
+      href: create-controls-using-pcf.md
+    - name: Control implementation library
+      href: control-implementation-library.md
+    - name: How to Debug custom controls
+      href: debugging-custom-controls.md
+    - name: How to Import custom controls
+      href: 
+    - name: How to Configure custom controls
+      href: 
+  - name: Limitations of PowerApps Control Framework
+    href: limitations.md
+  - name: Reference
+    items:
+    - name: PowerApps Control Framework 
+      href: reference/index.md
+      items: 
+      - name: Client
+        href: reference/client.md
+      - name: Column
+        href: reference/column.md
+      - name: ConditionExpression
+        href: reference/conditionrxpression.md
+      - name: Context
+        href: reference/context.md
+      - name: Control
+        href: reference/control.md
+      - name: DataSet
+        href: reference/dataset.md
+      - name: DateFormattingInfo
+        href: reference/dateformattinginfo.md
+      - name: Entity
+        href: reference/entity.md
+      - name: EntityReference
+        href: reference/entityreference.md
+      - name: Factory
+        href: reference/factory.md
+      - name: Linking
+        href: reference/linking.md
+      - name: Formatting
+        href: reference/formatting.md
+      - name: Mode
+        href: reference/mode.md
+      - name: Navigation
+        href: reference/navigation.md
+      - name: NumberFormattingInfo
+        href: reference/numberformattinginfo.md
+      - name: Paging
+        href: reference/paging.md
+      - name: Popup
+        href: reference/popup.md
+      - name: PopupService
+        href: reference/popupservice.md
+      - name: Resources
+        href: reference/resources.md
+      - name: SortStatus
+        href: reference/sortstatus.md
+      - name: UserSettings
+        href: reference/usersettings.md
+      - name: Utility
+        href: reference/utility.md
+      - name: webApi
+        href: reference/webapi.md
+    - name: Manifest Schema 
+      href: manifest-schema-reference/index.md
+      items:
+      - name: code
+        href: manifest-schema-reference/code.md
+      - name: control
+        href: manifest-schema-reference/control.md
+      - name: css
+        href: manifest-schema-reference/css.md
+      - name: data-set
+        href: manifest-schema-reference/data-set.md
+      - name: html
+        href: manifest-schema-reference/html.md
+      - name: img
+        href: manifest-schema-reference/img.md
+      - name: library
+        href: manifest-schema-reference/library.md
+      - name: manifest
+        href: manifest-schema-reference/manifest.md
+      - name: packaged_library
+        href: manifest-schema-reference/packaged_library.md
+      - name: property
+        href: manifest-schema-reference/property.md
+      - name: property-set
+        href: manifest-schema-reference/property-set.md
+      - name: resources
+        href: manifest-schema-reference/resources.md
+      - name: resx
+        href: manifest-schema-reference/resx.md
+      - name: type
+        href: manifest-schema-reference/type.md
+      - name: type-group
+        href: manifest-schema-reference/type-group.md
+      - name: types
+        href: manifest-schema-reference/types.md
+        
