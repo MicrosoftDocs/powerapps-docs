@@ -45,18 +45,18 @@ ms.custom:
                               </a>
                            </li>
                            <li>
-                              <a href="https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/">
+                              <a href="whats-new.md">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
                                           <div class="cardImageOuter">
                                              <div class="cardImage">
-                                                <img src="media/index/release-notes.jpg" alt="" />
+                                                <img src="media/index/powerapps-whats-new.svg" alt="" />
                                              </div>
                                           </div>
                                           <div class="cardText">
-                                             <h3>Release Notes</h3>
-                                             <p>Learn about PowerApps features releasing from October 2018 through March 2019.</p>
+                                             <h3>What's new</h3>
+                                             <p>Learn about new features released in the past few weeks, and releasing in the coming months.</p>
                                           </div>
                                        </div>
                                     </div>
