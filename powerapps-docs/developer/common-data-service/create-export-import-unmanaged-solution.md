@@ -83,7 +83,7 @@ In addition to being a prerequisite to creating a managed solution, an unmanaged
 
   When you export a solution by using the web application, in the **Export System Settings (Advanced)** step, you can select which system settings to include in your solution. These options are available to developers by using the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> via the members available in the request. See the remarks for the request for details about which settings are included.  
 
-  You can pick a target version when you export a solution. You can export a solution that is compliant with earlier versions. More information: [Export a solution for a specific Dynamics 365 version](export-solution-specific-version.md).  
+  <!--You can pick a target version when you export a solution. You can export a solution that is compliant with earlier versions. More information: [Export a solution for a specific Dynamics 365 version](export-solution-specific-version.md).-->  
 
 <a name="BKMK_ImportUnmanagedSolution"></a>   
 ## Import an unmanaged solution  

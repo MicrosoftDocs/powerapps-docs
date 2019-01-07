@@ -24,9 +24,12 @@ These functions shape a table by adjusting its columns:
 * Add a calculated column to a table (for example, a **Total Price** column that shows the results of multiplying **Quantity** by **Unit Price**).
 * Rename a column to something more meaningful, for display to users or for use in formulas.
 
-A table is a value in PowerApps, just like a string or a number.  You can specify a table as an argument in a formula, and functions can return a table as a result. The functions that this topic describes don't modify a table. Instead they take a table as an argument and return a new table with a transform applied.  See [working with tables](../working-with-tables.md) for more details.  
+A table is a value in PowerApps, just like a string or a number.  You can specify a table as an argument in a formula, and functions can return a table as a result.
 
-You can't modify the columns of a [data source](../working-with-data-sources.md) by using these functions. You must modify the data at its source. You can add columns to a [collection](../working-with-data-sources.md#collections) with the **[Collect](function-clear-collect-clearcollect.md)** function.  See [working with data sources](../working-with-data-sources.md) for more details.  
+> [!NOTE]
+> The functions that this topic describes don't modify the original table. Instead, they take that table as an argument and return a new table with a transform applied. See [working with tables](../working-with-tables.md) for more details.  
+
+You can't modify the columns of a [data source](../working-with-data-sources.md) by using these functions. You must modify the data at its source. You can add columns to a [collection](../working-with-data-sources.md#collections) with the **[Collect](function-clear-collect-clearcollect.md)** function. See [working with data sources](../working-with-data-sources.md) for more details.  
 
 ## Description
 The **AddColumns** function adds a column to a table, and a formula defines the values in that column. Existing columns remain unmodified.

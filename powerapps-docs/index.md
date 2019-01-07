@@ -4,7 +4,7 @@ title: Microsoft PowerApps Documentation | Microsoft Docs
 description: Microsoft PowerApps Documentation
 searchScope:
   - "PowerApps"
-featureFlags:
+featureFlags: 
 - clicktale
 ms.service: powerapps
 ms.custom:
@@ -170,8 +170,32 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client">On mobile device (Canvas app)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/run-app-client-model-driven">On mobile device (Model-driven app)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/powerapps-web-part">On SharePoint (Canvas app)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/open-app-embedded-in-teams">In Microsoft Teams</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/open-app-embedded-in-teams">In Microsoft Teams (Canvas app)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/app-source">From AppSource</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_model-driven-apps.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.15rem">Use model-driven apps</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/unified-interface">Unified Interface</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/navigation">Navigation and basics</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/create-a-record">Create a record</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/search-records">Search records</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/import-data">Import data from Excel</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/export-to-excel-online">Export data to Excel</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/user/use-flows">Use Flow to automate processes</a></p>
                                  </div>
                               </div>
                            </div>
@@ -338,6 +362,7 @@ ms.custom:
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
+<!--                                   <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-for-us-govt">PowerApps for US Government</a></p> -->
                                  </div>
                               </div>
                            </div>

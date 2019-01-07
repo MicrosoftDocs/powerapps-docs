@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/18/2018
-ms.author: matp
+ms.date: 11/16/2018
+ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
