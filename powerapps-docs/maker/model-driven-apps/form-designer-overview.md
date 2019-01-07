@@ -1,7 +1,7 @@
 ---
 title: "Overview of the model-driven form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/27/2018
+ms.date: 01/07/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -35,7 +35,7 @@ The new model-driven form designer provides a modern WYSIWYG authoring experienc
 The designer shows a real-time WYSIWYG preview (Unified Interface only) while you author a form. Changes to the form are instantly reflected in the preview, enabling you to see exactly how the form will appear to users when published. 
 
 Completing common tasks, such as setting properties, is simpler and faster with an always-available property pane. Also, 
-**Save** and **Publish** are single actions, which improves your productivity.
+**Save** and **Publish** are a single action, which streamlines the tasks.
 
 The form designer interface has the following areas: 
 - Command bar – Displays available actions such as **Save**, **Publish**, **Undo**, and **Redo**. 

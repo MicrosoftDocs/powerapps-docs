@@ -1,7 +1,7 @@
 ---
 title: "Create and edit forms using the model-driven form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/27/2018
+ms.date: 01/07/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -41,7 +41,7 @@ Use the new form designer to create and design forms for model-driven apps.
 
 ## Edit a form 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2. On the left navigation pane, expand, select **Data**, and then select **Entities**. 
+2. On the left navigation pane, expand **Data**, and then select **Entities**. 
 3. Select an entity, such as the account entity, and then select the **Forms** tab.
 4. Select the form that you want to edit, and then select **Edit form (preview)**.  
    Alternatively, select **...** next to the form you want, and then select **Edit form (preview)**. 
