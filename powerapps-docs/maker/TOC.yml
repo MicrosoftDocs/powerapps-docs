@@ -5,6 +5,8 @@
     href: signup-for-powerapps.md
   - name: Sign up for Community Plan
     href: dev-community-plan.md
+  - name: "What's new"
+    href: ../whats-new.md
 - name: Find and run apps
   href: ../user/index.md
   items: 
@@ -81,8 +83,6 @@
   items:
   - name: Sign in to PowerApps
     href: ./canvas-apps/intro-maker-portal.md
-  - name: "What's new"
-    href: ./canvas-apps/release-notes.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
