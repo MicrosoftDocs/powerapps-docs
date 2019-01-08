@@ -31,7 +31,6 @@ Canvas apps enable makers to easily design and create custom layouts using the l
 > [!NOTE]
 > This feature is currently in preview. <br />
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] <br /><br />
-> This feature is currently available in all regions, except the US and Europe. It should be available in the US and Europe early January 2019. If you want to try the feature right away, you can create an environment in regions where it is currently available such as Australia, Canada, India, or Japan.
 
 With embedded canvas apps, makers can bring the power of canvas apps to their model-driven forms. Using embedded canvas apps, you can easily create rich visual areas on a form and display data from a variety of sources right next to data from the Common Data Service.
 
