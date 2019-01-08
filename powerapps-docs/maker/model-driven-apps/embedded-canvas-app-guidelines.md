@@ -29,13 +29,12 @@ search.app:
 This topic provides guidelines on working with embedded canvas apps as well as helpful tips to troubleshoot any issues you might encounter.
 
 -	Embedded canvas apps are only supported with Unified Interface model-driven apps.
--	Embedded canvas apps are currently supported only on the web.
 -	You can only enable one embedded canvas app per form. 
      - You can have multiple embedded canvas apps added to the form but can only enable one at a time.
      - If you try to enable more than one embedded canvas app on a model-driven form you will get a message that reads “Only one canvas app can be enabled on a form.”.
      - Steps to enable or disable an embedded canvas app are provided later in this article.
 -	Embedded canvas apps can only be created, edited and played via the host model-driven form.
-     - You cannot create an embedded canvas app directly outside of the context of a model-driven form.
+     - You can't create an embedded canvas app directly outside of the context of a model-driven form.
      - Similarly opening an embedded canvas app for editing or playing outside of the context of a model-driven form is not supported.
 
 > [!NOTE]
@@ -75,6 +74,14 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 2. In the **Field Properties** (or **Set Properties** for sub-grid) dialog, select the **Controls** tab.
 3. In the list of controls select the default control and then select the **Web** option.
 4. Select **OK**.
+
+## Known issues and limitations with embedded canvas apps
+- The canvas app custom control is only supported for use with the **Web** client type. Currently, the **Phone** and **Tablet** client types aren't supported. More information: [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
+- When you create a new record, an embedded canvas app on a form is not displayed even after the record is saved. 
+-    The ModelDrivenFormIntegration.Data object currently does not work with the Display form and Edit form controls.
+
+
+
 
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
