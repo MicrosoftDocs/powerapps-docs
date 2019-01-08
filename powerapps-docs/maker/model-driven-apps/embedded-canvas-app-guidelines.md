@@ -37,8 +37,8 @@ This topic provides guidelines on working with embedded canvas apps as well as h
      - You can't create an embedded canvas app directly outside of the context of a model-driven form.
      - Similarly opening an embedded canvas app for editing or playing outside of the context of a model-driven form is not supported.
 
-   > [!NOTE]
-   > Although you may be able to open an embedded canvas app outside of a model-driven app, this is not supported.
+     > [!NOTE]
+     > Although you may be able to open an embedded canvas app outside of a model-driven app, this is not supported.
 
 -	Note the following when you use a sub-grid control to add an embedded canvas app to a model-driven form.
      - The data (fields and values) sent to the embedded canvas app at runtime are determined by the view. Only use fields in your embedded canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view will show empty values at runtime. 
