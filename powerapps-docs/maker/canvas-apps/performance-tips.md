@@ -116,3 +116,5 @@ If you have multiple formulas or rules that reference the value of a **Text inpu
 ## Avoid using Form.Updates in rules and formulas
 If you reference a user-input value in a rule or a formula by using a **Form.Updates** variable, it iterates over all the form’s data cards and creates a record each time. To make your app more efficient, reference the value directly from the data card or the control value.
 
+## Next steps
+Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
