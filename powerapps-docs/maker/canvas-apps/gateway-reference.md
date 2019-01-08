@@ -119,7 +119,7 @@ Here is a listing of the fully qualified domain names used by the gateway.
 | *.servicebus.windows.net |443, 9350-9354 |Listeners on Service Bus Relay over TCP (requires 443 for Access Control token acquisition) |
 | *.frontend.clouddatahub.net |443 |HTTPS |
 | *.core.windows.net |443 |HTTPS |
-| login.microsoftonline.com |443 |HTTPS |
+| *login.microsoftonline.com |443 |HTTPS |
 | *.msftncsi.com |443 |Used to test internet connectivity if the gateway is unreachable by the Power BI service. |
 
 **Sign-in account**

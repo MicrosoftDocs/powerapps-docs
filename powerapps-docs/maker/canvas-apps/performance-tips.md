@@ -60,9 +60,9 @@ You can confirm this behavior in the Developer Tools for your browser:
 You can enclose the same formula in the **Concurrent** function to reduce the overall time that the operation needs:
 
 	Concurrent(	
-		ClearCollect( Product, '[SalesLT].[Product]' );
-		ClearCollect( Customer, '[SalesLT].[Customer]' );
-		ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
+		ClearCollect( Product, '[SalesLT].[Product]' ),
+		ClearCollect( Customer, '[SalesLT].[Customer]' ),
+		ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
 		ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
 		
 With this change, the app fetches the tables in parallel: 
@@ -106,3 +106,15 @@ Use data sources and formulas that can be delegated to keep your apps performing
 
 ## Republish apps regularly
 [Republish your apps](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blog post) to get performance improvements and additional features from the PowerApps platform.
+
+## Avoid repeating the same formula in multiple places
+If multiple properties run the same formula (especially if it's complex), consider setting it once and then referencing the output of the first property in subsequent ones. For example, don't set the **DisplayMode** property of controls A, B, C, D and E to the same complex formula. Instead, set A's **DisplayMode** property to the complex formula, set B's **DisplayMode** property to the result of A's **DisplayMode** property, and so on for C, D, and E.
+
+## Enable DelayOutput on all Text input controls
+If you have multiple formulas or rules that reference the value of a **Text input** control, set the **DelayedOutput** property of that control to true. The **Text** property of that control will be updated only after keystrokes entered in quick succession have ceased. The formulas or rules won't run as many times, and app performance will improve.
+
+## Avoid using Form.Updates in rules and formulas
+If you reference a user-input value in a rule or a formula by using a **Form.Updates** variable, it iterates over all the form’s data cards and creates a record each time. To make your app more efficient, reference the value directly from the data card or the control value.
+
+## Next steps
+Review the [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.

@@ -149,7 +149,7 @@ By default, **Text** uses the language of the user running the app.  The **Langu
 * *AnyValue* - Required. Value to convert to a text representation. A default format is used.
 
 ## Examples
-The user running these formulas is located in the United States and has selected English as their language.  The **Language** function is returning "en-US".
+Unless otherwise specified, the user running these formulas is located in the United States and has selected English as their language.  The **Language** function is returning "en-US".
 
 ### Number
 
@@ -177,9 +177,8 @@ The user running these formulas is located in the United States and has selected
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Text( 1234567.89, "[$-en-US]$ #,###" )** |Interprets **,** as a grouping separator placed every three characters and **$** as the currency symbol. As no decimals are to be displayed, the value is rounded up to the next higher whole number. The **[$-en-US]** is optional in this case, as this is the default. |"$ 1,234,568" |
-| **Text( 1234567.89, "[$-es-ES]&euro; #,###" )** |Interprets **,** as a decimal separator and **&euro;** as the currency symbol.  Because the **[$-fr-FR]** only determines how the format string is interpreted, the result will use the characters from the default "en-US" lanugage tag: **.** (period) for decimal separator and **$** for currency symbol. |"$ 1234567.89" |
-| **Text( 1234567.89, "[$-es-ES]&euro; #,###", "es-ES" )** |Interprets **,** as a decimal separator.  The result language tag has been set to "fr-FR" which will result in **,** (comma) being used as the decimal separator and **&euro;** as the currency symbol. |"&euro; 1234567,89" |
+| **Text(1234567.89, "[$-fr-FR]&euro;# ###,##", "fr-FR")** | Shows **&euro;** as the currency symbol, a space as a grouping separator, and the comma as a decimal separator. |"&euro;1 234 567,89" |
+| **Text(1234567,89; "[$-fr-FR]&euro;# ###,##")** | If the source data follows the French custom of using a comma as the decimal separator, you must change your locale to French and separate the arguments with a semi-colon instead of a comma to get the same result as above. |"&euro;1 234 567,89" |
 | **Text( Date(2016,1,31), "dddd mmmm d" )** |Returns the weekday, month, and day of the month in the language of the current user. Because none of the placeholders are language dependent, there is no need for a format text language tag. |"Saturday January 31" |
 | **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Returns the weekday, month, and day of the month in the "es-ES" language. |"domingo enero 31" |
 

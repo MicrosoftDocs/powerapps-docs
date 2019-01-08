@@ -2,7 +2,7 @@
 title: "Image attributes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about image attributes that include image data witht in the application, and supporting attributes, Retrieving image data, and Uploading image data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 11/26/2018
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -19,7 +19,7 @@ search.app:
 
 Entity records that include image data provide a unique experience within the application. As a developer you need to understand how you work with image data.  
   
- Only certain system entities and custom entities support images. For information about which system entities support images, see [Entity images](/dynamics365/customer-engagement/developer/introduction-entities.md#BKMK_EntityImages).  
+ Only certain system entities and custom entities support images. For information about which system entities support images, see [Entity images](/dynamics365/customer-engagement/developer/introduction-entities.md#entity-images).  
   
 <a name="BKMK_SupportingAttributes"></a>   
 ## Supporting attributes  
