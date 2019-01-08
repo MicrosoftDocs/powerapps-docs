@@ -304,7 +304,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Admins can use the PowerApps and Power platform admin centers to secure data, manage environments, and monitor usage.</p>
+                           <p>Admins can use the PowerApps and Power Platform Admin centers to secure data, manage environments, and monitor usage.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -378,9 +378,9 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Power platform admin center</h3>
+                                    <h3 style="font-size: 1.15rem">Power Platform Admin center</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/admin-guide">Administer Power platform</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/admin-guide">Administer Power Platform</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/get-help-support">Get Help + Support</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/analytics-common-data-service">CDS for Apps analytics</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/manage-environments">Manage environments</a></p>
