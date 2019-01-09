@@ -41,7 +41,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. <a name="out-of-memory"></a>**Browser running out of memory** (July 23, 2018)
 
-    If you run out of memory while using PowerApps, please consider downloading a 64-bit version of Chrome, Edge, or Internet Explorer.
+    If you run out of memory while using PowerApps, please consider downloading a 64-bit version of Chrome, Microsoft Edge, or Internet Explorer.
 
 1. **Launching a website from an embedded app** (May 10, 2018)
 
