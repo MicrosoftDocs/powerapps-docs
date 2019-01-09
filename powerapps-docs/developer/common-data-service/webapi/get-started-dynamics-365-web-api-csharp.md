@@ -2,7 +2,7 @@
 title: "Get started with Common Data Service for Apps Web API (C#) (Common Data Service for Apps)| Microsoft Docs"
 description: "Learn how to access the Common Data Service for Apps Web API using the Microsoft Visual C# programming language"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 1/09/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -14,7 +14,7 @@ ms.assetid: 8105ff3d-4c8e-4f86-bbb9-e37bdb4c272e
 caps.latest.revision: 14
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,9 +30,7 @@ After completing this guide, you will have learned enough to explore the many ot
 ## In this section
 
 [Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md)<br />
-[Start a Web API project in Visual Studio (C#)](start-web-api-project-visual-studio-csharp.md)<br />
-[Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)
-  
+
 ### See also
   
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
