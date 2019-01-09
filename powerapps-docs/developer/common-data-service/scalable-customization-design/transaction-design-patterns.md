@@ -17,6 +17,9 @@ search.app:
 ---
 # Scalable Customization Design: Transaction design patterns
 
+> [!NOTE]
+> This is the fourth in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
+
 This section describes design patterns to avoid or minimize and their implications. Each design pattern needs to be considered in the context of the business problem being solved and can be useful as options to investigate.
 
 ## Don’t avoid locking

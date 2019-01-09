@@ -19,7 +19,7 @@ search.app:
 # Scalable Customization Design: Database transactions
 
 > [!NOTE]
-> This is the second in a series of topics about scalable customization design. To start at the begining, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
+> This is the second in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
 
 One of the most fundamental concepts behind many of the challenges faced here is that of the database transaction. In Common Data Service for Apps (CDS for Apps) the database is at the heart of almost all requests to the system and the place data consistency is primarily enforced.
 

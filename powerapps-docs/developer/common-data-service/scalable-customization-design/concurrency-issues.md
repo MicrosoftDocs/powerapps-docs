@@ -19,7 +19,7 @@ search.app:
 # Scalable Customization Design: Concurrency issues
 
 > [!NOTE]
-> This is the third in a series of topics about scalable customization design. To start at the begining, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
+> This is the third in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
 > The previous topic [Scalable Customization Design: Database transactions](database-transactions.md) described how database transactions are applied and the effect they have on different types of customizations.
 
 When you have concurrent requests, the chance of collisions on locks becomes higher. The longer the transactions take, the longer the locks are held. The chances are even higher of collision and the overall impact would be greater on end users. 

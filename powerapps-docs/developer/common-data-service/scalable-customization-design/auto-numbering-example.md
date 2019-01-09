@@ -18,7 +18,7 @@ search.app:
 # Scalable Customization Design: Auto-numbering example
 
 > [!NOTE]
-> This example supports a series of topics about scalable customization design. To start at the begining, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
+> This example supports a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
 
 One scenario that illustrates the common misunderstanding of how transactions are handled within CDS for Apps is implementing an automatic numbering scheme.
 
