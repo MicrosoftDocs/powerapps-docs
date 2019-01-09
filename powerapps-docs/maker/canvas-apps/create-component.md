@@ -23,7 +23,7 @@ Components are useful in building larger apps that have similar control patterns
 
 ## Prerequisite
 
-In a preview region, open the **App Settings** screen, and then enable the feature. For more information, see [Preview program](../../administrator/preview-environments.md). The feature isn't supported in classic canvas.
+In a preview region, open the **App Settings** screen, enable the feature, and ensure that **Improved app rendering** is also enabled. For more information, see [Preview program](../../administrator/preview-environments.md).
 
 ## Component canvas
 
@@ -105,13 +105,15 @@ In this example, you'll create a menu component that resembles this graphic and 
 
     ![Formula](./media/create-component/set-component-items.png)
 
-1. In the component, insert a blank vertical **Gallery** control, and set its **Items** property to this expression:
+1. In the component, insert a blank vertical **Gallery** control.
+
+1. Make sure that the property list shows the **Items** property (as it does by default), and then set the value of that property to this expression:
 
     ```powerapps-dot
     MenuComponent.Items
     ```
 
-    This way, the **Items** property of the **Gallery** control reads and depends on the **Items** input property of the component. Make sure that the **Gallery** field selection is correct.
+    This way, the **Items** property of the **Gallery** control reads and depends on the **Items** input property of the component.
 
 1. Set the **Gallery** control's **BorderThickness** property to **1**  and its **TemplateSize** property to **50**.
 
