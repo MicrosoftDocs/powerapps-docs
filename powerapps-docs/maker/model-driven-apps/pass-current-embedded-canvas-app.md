@@ -1,7 +1,7 @@
 ---
 title: "Pass the current record as data context with an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/10/2018
+ms.date: 12/17/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -69,8 +69,10 @@ Imagine that you want to add an embedded canvas app on an account main form and 
     - 	The **App ID** is sent to the form editor when the app is saved.
 21.	On the **Field Properties** dialog, select the **Display** tab.
 22.	Clear **Display label** on the form and then select **OK**.
-    - 	If you already have a canvas app embedded on this form a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first disable the current one. <!-- (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP) --> Then, enable the new embedded canvas app. <!--(LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)  -->
+    - 	If you already have a canvas app embedded on this form a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
 23.	On the **Home** tab, select **Save**, and then select **Publish**.
+
+After you have added an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
 When users open a model-driven app (Unified Interface only) that includes the form you have modified they see the embedded canvas app on the form. Changing the record displayed on the main form changes the data context that is passed to the form and the embedded app refreshes to show the relevant data.
 
@@ -78,4 +80,6 @@ This topic showed you how to get started with embedding a canvas app in a model-
 
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
-[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md)
+[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
+[Share an embedded canvas app](share-embedded-canvas-app.md) <br />
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)

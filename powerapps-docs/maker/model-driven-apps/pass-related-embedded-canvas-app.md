@@ -1,7 +1,7 @@
 ---
 title: "Pass a list of related records as data context with an embedded canvas app | MicrosoftDocs"
 ms.custom: ""
-ms.date: 12/10/2018
+ms.date: 12/17/2018
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -40,7 +40,7 @@ Imagine that you want to add an embedded canvas app on an account main form and 
 5.  In the **Data Source** section, select an **Entity** and **Default View** that corresponds to the list of records that you want to pass as data context to the embedded canvas app.
 6. Select the **Controls** tab, and then select **Add Control…**
 7. In the **Add Control** dialog, in the list of available controls, select **Canvas app** and then select **Add**.
-8. In the **Field Properties** dialog, in the list of controls select **Canvas app** and then select the **Web** option.
+8. In the **Set Properties** dialog, in the list of controls select **Canvas app** and then select the **Web** option.
 9. In the section below the controls list, see the list of properties corresponding to the Canvas app control and note the following:
      - The **Entity name** property specifies the entity that will provide the data to your embedded canvas app. It will be set to the entity that you selected earlier.
          -  Even though this property appears changeable, changing it has no effect on the embedded canvas app. It is meant to only serve as a reference for you.
@@ -68,9 +68,11 @@ Imagine that you want to add an embedded canvas app on an account main form and 
      - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in an earlier step.
      - 	The form editor has been listening for the App ID to be sent to it.
      - 	The App ID was sent to it when the app was saved.
-22.	In the **Field Properties** dialog, select the **Display** tab, clear **Display label on the form**, and then select **OK**.
-     - If you already have a canvas app embedded on this form a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first disable the current one. <!-- (LINK TO ARTICLE #5 – ANCHOR-DISABLE-APP)--> Then, enable the new embedded canvas app. <!-- (LINK TO ARTICLE #5 – ANCHOR-ENABLE-APP)   -->
+22.	In the **Set Properties** dialog, select the **Display** tab, clear **Display label on the form**, and then select **OK**.
+     - If you already have a canvas app embedded on this form a message is displayed that “Only one canvas app can be enabled on a form.” To add the new canvas app you must first [disable the current embedded canvas app](embedded-canvas-app-guidelines.md#disable-an-embedded-canvas-app). Then, [enable the new embedded canvas app](embedded-canvas-app-guidelines.md#enable-an-embedded-canvas-app).
 23.	On the **Home** tab, select **Save**, and then select **Publish**.
+
+After you have added an embedded canvas app to your model-driven form, share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
 When users open a model-driven app (Unified Interface only) that includes the form you have modified they see the embedded canvas app on the form. Changing the record displayed on the main form changes the data context that is passed to the form and the embedded app refreshes to show the relevant data.
 
@@ -78,4 +80,6 @@ This topic showed you how to get started with the embedding a canvas app in a mo
 
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
-[Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md)
+[Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
+[Share an embedded canvas app](share-embedded-canvas-app.md) <br />
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
