@@ -41,7 +41,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
      > Although you may be able to open an embedded canvas app outside of a model-driven app, this is not supported.
 
 -	Note the following when you use a sub-grid control to add an embedded canvas app to a model-driven form.
-     - The data (fields and values) sent to the embedded canvas app at runtime are determined by the view. Only use fields in your embedded canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view will show empty values at runtime. 
+     - The data (fields and values) sent to the embedded canvas app at runtime are determined by the view that is specified as the **Default View** in the **Data Source** section of the sub-grid control’s properties. Only use fields in your embedded canvas app that are included in the view or add them to the view if needed. Any fields that are not included in the view will show empty values at runtime. 
      - The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of the top few records that you have access to. At runtime, the filter criteria for the view are applied as expected and only relevant data is displayed.
 -	When using a field control to add an embedded canvas app to a model-driven form always use a required field that is guaranteed to have a value. If your field does not have a value your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 -	Publishing a model-driven form does not also publish the embedded canvas app.
