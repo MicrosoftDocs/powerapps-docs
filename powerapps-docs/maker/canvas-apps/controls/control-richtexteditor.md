@@ -40,7 +40,7 @@ The current version of the control is experimental due to the following temporar
 
 - The control is primarily targeted for use in browsers on large screens.  Using the control on a mobile phone can be a frustrating experience.
 
-- Known issues in the authoring  experience when using the Windows studio or Edge browser.  Current recommendation is to use web studio in Chrome.
+- Known issues in the authoring  experience when using the Windows studio or Microsoft Edge browser.  Current recommendation is to use web studio in Chrome.
 
 
 ## Key properties

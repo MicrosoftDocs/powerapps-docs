@@ -38,7 +38,7 @@ For keyboard navigation (with or without the screen reader) ensure that a logica
 ## Screen reader support
 The following software combinations are the supported recommendations for consuming PowerApps with a screen reader:
 
-- **Windows**: Edge / Narrator
+- **Windows**: Microsoft Edge / Narrator
 - **macOS**: Safari / VoiceOver
 - **Android**: PowerApps app / Talkback
 - **iOS**: PowerApps app / VoiceOver
