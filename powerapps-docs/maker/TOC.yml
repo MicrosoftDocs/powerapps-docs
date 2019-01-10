@@ -694,6 +694,8 @@
       href: ./canvas-apps/offline-apps.md
     - name: Let customers test drive your apps
       href: ./canvas-apps/dev-appsource-test-drive.md
+    - name: Create a component
+      href: ./canvas-apps/create-component.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
