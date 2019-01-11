@@ -1,6 +1,6 @@
 ---
 title: "getText (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 1/10/2019
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -33,6 +33,9 @@ optionset, multiselectoptionset
 **Type**: String. 
 
 **Description**: The **text** value of the selected option.
+
+> [!NOTE]
+> When no option is selected, it will return null.
 
 ### Related topics
 [getInitialValue (Client API reference)](getInitialValue.md)
