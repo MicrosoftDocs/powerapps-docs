@@ -5,6 +5,8 @@
     href: signup-for-powerapps.md
   - name: Sign up for Community Plan
     href: dev-community-plan.md
+  - name: "What's new"
+    href: ../whats-new.md
 - name: Find and run apps
   href: ../user/index.md
   items: 
@@ -81,8 +83,6 @@
   items:
   - name: Sign in to PowerApps
     href: ./canvas-apps/intro-maker-portal.md
-  - name: "What's new"
-    href: ./canvas-apps/release-notes.md
 - name: Canvas apps
   href: ./canvas-apps/getting-started.md
   items:
@@ -694,6 +694,8 @@
       href: ./canvas-apps/offline-apps.md
     - name: Let customers test drive your apps
       href: ./canvas-apps/dev-appsource-test-drive.md
+    - name: Create a component
+      href: ./canvas-apps/create-component.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
@@ -728,6 +730,11 @@
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items: 
+        - name: Use the new form designer
+          href: ./model-driven-apps/form-designer-overview.md
+          items:
+          - name: "Create or edit forms"
+            href: ./model-driven-apps/create-and-edit-forms.md
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:
@@ -788,6 +795,10 @@
           href: ./model-driven-apps/pass-current-embedded-canvas-app.md
         - name: "Pass related records to an embedded canvas app"
           href:  ./model-driven-apps/pass-related-embedded-canvas-app.md 
+        - name: "Share an embedded canvas app"
+          href:  ./model-driven-apps/share-embedded-canvas-app.md 
+        - name: "Embedded canvas app guidelines"
+          href:  ./model-driven-apps/embedded-canvas-app-guidelines.md 
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items: 

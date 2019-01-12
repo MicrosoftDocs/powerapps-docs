@@ -1,6 +1,6 @@
 ---
-title: "getAttribute (Client API reference)| MicrosoftDocs"
-ms.date: 10/31/2018
+title: "getAttributeType (Client API reference)| MicrosoftDocs"
+ms.date: 12/17/2018
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -14,7 +14,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# getAttribute (Client API reference)
+# getAttributeType (Client API reference)
 
 
 

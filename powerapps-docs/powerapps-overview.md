@@ -2,13 +2,13 @@
 title: What is PowerApps | Microsoft Docs
 description: Provides an overview of PowerApps and talks about how end users, app makers, admin, and pro developers can use PowerApps.
 author: KumarVivek
-manager: annbee
+manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/12/2018
+ms.date: 12/21/2018
 ms.author: kvivek
-ms.reviewer:
+ms.reviewer: kvivek
 ---
 # What is PowerApps?
 
@@ -38,7 +38,7 @@ PowerApps admins can use:
 
 - **PowerApps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies. More information: [Administer PowerApps](administrator/admin-guide.md)
 
-- **Power platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environemnets, get real-time, self-help recommendations and support for Dynamics 365 Customer Engagement, PowerApps, and Microsoft Flow, and view CDS for Apps analytics. More information: [Administer Power platform](https://docs.microsoft.com/power-platform/admin/admin-guide)
+- **Power Platform Admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for Dynamics 365 for Customer Engagement apps, PowerApps, and Microsoft Flow, and view CDS for Apps analytics. More information: [Administer Power Platform](https://docs.microsoft.com/power-platform/admin/admin-guide)
 
 ## PowerApps for developers
 
