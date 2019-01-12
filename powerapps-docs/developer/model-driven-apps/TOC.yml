@@ -828,6 +828,8 @@
     href: edit-customizations-xml-file-schema-validation.md
   - name: Publish customizations
     href: publish-customizations.md
+- name: Best practices
+  href: best-practices/index.md
 - name: Samples
   items:
   - name: Export ribbon definitions

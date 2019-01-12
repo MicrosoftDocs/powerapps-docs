@@ -349,6 +349,8 @@
     href: xrm-tooling/
   - name: Discover user organizations
     href: discovery-service.md
+- name: Best practices
+  href: best-practices/index.md
 - name: Samples
   items:
   - name: Web API
