@@ -30,7 +30,7 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 ## Key properties
 **[Items](properties-core.md)** – The source of data from which selections can be made.
 
-**DefaultItems** – The initial selected item(s) before the user interacts with the control.
+**DefaultSelectedItems** – The initial selected item(s) before the user interacts with the control.
 
 **SelectedItems** – List of selected items resulting from user interaction.
 
@@ -48,8 +48,6 @@ To use **Combo box** as a people picker, choose the **Person** template from the
 **[BorderStyle](properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
-
-**[Default](properties-core.md)** – The initial selection before it is changed by the user in single-select mode.
 
 **DisplayFields** – List of fields shown for each item returned by the search.  Easiest to configure via the Data pane in the Properties option tab.
 
