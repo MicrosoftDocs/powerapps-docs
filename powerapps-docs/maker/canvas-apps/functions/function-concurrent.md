@@ -115,11 +115,11 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 	);
 	Collect( 
 		Results,
-    	{
+		{ 
 			Input: TextInput1.Text,
-    		French: FRTrans, FrenchTime: FRTransTime-StartTime, 
-    		German: DETrans, GermanTime: DETransTime-StartTime, 
-    		FrenchFaster: FRTransTime < DETransTime
+			French: FRTrans, FrenchTime: FRTransTime-StartTime, 
+			German: DETrans, GermanTime: DETransTime-StartTime, 
+			FrenchFaster: FRTransTime < DETransTime
     	}
 	)
 	```

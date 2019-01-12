@@ -84,7 +84,12 @@ If you already know which calendar your users should view, you can simplify the 
     Set(_myCalendar, LookUp(Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}"));
     Set(_minDate, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
     Set(_maxDate, DateAdd(DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days), 40, Days));
-    ClearCollect(MyCalendarEvents, Office365.GetEventsCalendarViewV2(_myCalendar.Name, Text(_minDate, UTC), Text(_maxDate, UTC)).value);
+    ClearCollect(MyCalendarEvents, 
+		Office365.GetEventsCalendarViewV2(_myCalendar.Name, 
+			Text(_minDate, UTC), 
+			Text(_maxDate, UTC) 
+		).value
+	);
     Set(_calendarVisible, true)
     ```
 
@@ -146,12 +151,8 @@ In many offices, team members send meeting requests to notify each other when th
     SortByColumns(
         Filter(
             MyCalendarEvents,
-            Text(
-                Start,
-                DateTimeFormat.ShortDate
-            ) = Text(
-                _dateSelected,
-                DateTimeFormat.ShortDate
+            Text(Start, DateTimeFormat.ShortDate) = 
+				Text(_dateSelected, DateTimeFormat.ShortDate
             ),
             ShowAs <> "Free"
         ),
@@ -167,11 +168,7 @@ In many offices, team members send meeting requests to notify each other when th
     CountRows(
         Filter(
             MyCalendarEvents,
-            DateValue(Text(Start)) = DateAdd(
-                _firstDayInView,
-                ThisItem.Value,
-                Days
-            ),
+            DateValue(Text(Start)) = DateAdd(_firstDayInView, ThisItem.Value, Days),
             ShowAs <> "Free"
         )
     ) > 0 && !Subcircle1.Visible && Title2.Visible

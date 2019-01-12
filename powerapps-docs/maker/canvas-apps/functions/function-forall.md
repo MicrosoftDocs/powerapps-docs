@@ -191,7 +191,8 @@ Clear( ProductsToOrder );
 ForAll( Products, 
 	If( 'Quantity Requested' > 'Quantity Available', 
 		Collect( NewOrder,  
-			{ Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } )
+			{ Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } 
+		)
 	)
 )
 ```
