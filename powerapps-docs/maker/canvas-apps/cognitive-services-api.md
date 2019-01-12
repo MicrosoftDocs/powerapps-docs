@@ -127,21 +127,27 @@ With that background, let's add the formula for the **OnSelect** property of the
 
 ```powerapps-dot
 If(chkLanguage.Value=true,
-
-        ClearCollect(languageCollect, TextAnalytics.DetectLanguage({numberOfLanguagesToDetect:1, text:tiTextToAnalyze.Text}).detectedLanguages.name)
-
+	ClearCollect(languageCollect, 
+		TextAnalytics.DetectLanguage(
+			{numberOfLanguagesToDetect:1, text:tiTextToAnalyze.Text}
+		).detectedLanguages.name
+	)
 );
 
 If(chkPhrases.Value=true,
-
-        ClearCollect(phrasesCollect, TextAnalytics.KeyPhrases({language:"en", text:tiTextToAnalyze.Text}).keyPhrases)
-
+	ClearCollect(phrasesCollect, 
+		TextAnalytics.KeyPhrases(
+			{language:"en", text:tiTextToAnalyze.Text}
+		).keyPhrases
+	)
 );
 
 If(chkSentiment.Value=true,
-
-        ClearCollect(sentimentCollect, TextAnalytics.DetectSentiment({language:"en", text:tiTextToAnalyze.Text}).score)
-
+	ClearCollect(sentimentCollect, 
+		TextAnalytics.DetectSentiment(
+			{language:"en", text:tiTextToAnalyze.Text}
+		).score
+	)
 )
 ```
 

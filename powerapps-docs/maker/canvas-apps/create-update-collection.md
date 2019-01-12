@@ -66,6 +66,7 @@ Now, let's bind the Destinations collection to a listbox:
 2. On the **Insert** tab, select **Controls**, and then select **ListBox**:  
    ![][22]  
 3. Move the listbox so you can easily see it. Set its **[Items](controls/properties-core.md)** property to the following expression:  
+
    ```Destinations.Value```  <br/>
    
     When you do this, the listbox is automatically populated with the items you previously entered in the Destinations collection:  
@@ -87,6 +88,7 @@ The following steps show you how to create a collection within your app using th
     > [!NOTE]
    > You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
 6. On the **Insert** tab, select **Button**. Set its **[OnSelect](controls/properties-core.md)** property to the following function:  
+
    ```Collect(Destinations, {Cities:City.Text, States:States.Text})```  
    
     It should look like the following:  
@@ -153,13 +155,25 @@ There are a few sections in this walk-through. When complete, you'll know how to
    ![][20]
 3. Set the **[OnSelect](controls/properties-core.md)** property of the **Add** button to the following expression:  
    
-    ```Collect(OrderList, {Name:PriceGallery.Selected.Name, Qty:OrderQty.Value, Cost:OrderQty.Value*LookUp(PriceList, PriceGallery.Selected.Name in Name, Price)});SaveData(OrderList, "orderfile")```  
+    ```powerapps-dot
+	Collect(OrderList, 
+		{ 
+		  Name:PriceGallery.Selected.Name, 
+		  Qty:OrderQty.Value, 
+		  Cost:OrderQty.Value*LookUp(PriceList, PriceGallery.Selected.Name in Name, Price)
+		}
+	);
+	SaveData(OrderList, "orderfile")
+	```  
    
     > [!NOTE]
    > When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
 4. Select the **Screen** tab and set the **[OnVisible](controls/control-screen.md)** property to the following expression:  
    
-    ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```
+    ```powerapps-dot
+	If( IsEmpty(PriceList), LoadData(PriceList, "pricefile") );
+	If( IsEmpty(OrderList), LoadData(OrderList, "orderfile") )
+	```
 
 Now, see what you created:
 

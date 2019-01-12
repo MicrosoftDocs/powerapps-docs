@@ -73,14 +73,14 @@ At a high level, the app does the following:
 Select the **OnVisible** property for **Screen1** in the app, and copy in the following formula:
 
 ```powerapps-dot
-If(Connection.Connected,
-    ClearCollect(LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100}));
-    	UpdateContext({statusText: "Online data"}),
+If( Connection.Connected,
+    ClearCollect( LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100} ));
+    	UpdateContext( {statusText: "Online data"} ),
     LoadData(LocalTweets, "Tweets", true);
-	    UpdateContext({statusText: "Local data"})
+	    UpdateContext( {statusText: "Local data"} )
 );
-LoadData(LocalTweetsToPost, "LocalTweets", true);
-SaveData(LocalTweets, "Tweets")
+LoadData( LocalTweetsToPost, "LocalTweets", true );
+SaveData( LocalTweets, "Tweets" )
 ```
 
 ![Formula to load tweets](./media/offline-apps/load-tweets.png)
@@ -106,9 +106,7 @@ This formula checks if the device is online:
 ### Step 5: Add a connection status label
 Insert a new **Label** control, and set its **Text** property to the following formula:
 
-```powerapps-dot
-If (Connection.Connected, "Connected", "Offline")
-```
+```If( Connection.Connected, "Connected", "Offline")```
 
 This formula checks if the device is online. If it is, the text of the label is "Connected", otherwise it's "Offline".
 
@@ -123,13 +121,13 @@ This formula checks if the device is online. If it is, the text of the label is 
 2. Set the **OnSelect** property to the following formula:
 
     ```powerapps-dot
-    If (Connection.Connected,
-        Twitter.Tweet("", {tweetText: NewTweetTextInput.Text}),
-        Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-	        SaveData(LocalTweetsToPost, "LocalTweetsToPost")
+    If( Connection.Connected,
+        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
+        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
+	        SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
     );
-    UpdateContext({resetNewTweet: true});
-    UpdateContext({resetNewTweet: false})
+    UpdateContext( {resetNewTweet: true} );
+    UpdateContext( {resetNewTweet: false} )
     ```  
 
 This formula checks if the device is online:
@@ -149,12 +147,12 @@ Add a new **Timer** control:
 * Set the **OnTimerEnd** to the following formula:
 
     ```powerapps-dot
-    If(Connection.Connected,
-        ForAll(LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}));
-        Clear(LocalTweetsToPost);
-        Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-        SaveData(LocalTweetsToPost, "LocalTweetsToPost");
-        UpdateContext({statusText: "Online data"})
+    If( Connection.Connected,
+        ForAll( LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}) );
+        Clear( LocalTweetsToPost);
+        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
+        SaveData( LocalTweetsToPost, "LocalTweetsToPost" );
+        UpdateContext( {statusText: "Online data"} )
     )
     ```
 

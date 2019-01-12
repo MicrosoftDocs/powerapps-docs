@@ -113,8 +113,7 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
     	Set(DETrans, MicrosoftTranslator.Translate(TextInput1.Text,"de")); 
 			Set(DETransTime, Value(Now()) )
 	);
-	Collect( 
-		Results,
+	Collect( Results,
 		{ 
 			Input: TextInput1.Text,
 			French: FRTrans, FrenchTime: FRTransTime-StartTime, 
