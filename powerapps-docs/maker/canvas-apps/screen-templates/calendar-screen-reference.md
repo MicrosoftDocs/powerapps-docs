@@ -142,10 +142,17 @@ This topic explains the expressions or formulas to which various properties (suc
     ```powerapps-dot
     Set(_firstDayOfMonth, DateAdd(_firstDayOfMonth, -1, Months));
     Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-    Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));
+    Set(_lastDayOfMonth, 
+		DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));
     If(_minDate > _firstDayOfMonth,
-     Collect(MyCalendarEvents, 'Office365'.GetEventsCalendarViewV2(_myCalendar.Name, Text(_firstDayInView, UTC), Text(DateAdd(_minDate, -1, Days), UTC)).value);
-     Set(_minDate, _firstDayInView))
+    	Collect(MyCalendarEvents, 
+			'Office365'.GetEventsCalendarViewV2(_myCalendar.Name, 
+				Text(_firstDayInView, UTC), 
+				Text(DateAdd(_minDate, -1, Days), UTC)
+			).value
+		);
+    	Set(_minDate, _firstDayInView)
+	)
     ```
 
     > [!Note]

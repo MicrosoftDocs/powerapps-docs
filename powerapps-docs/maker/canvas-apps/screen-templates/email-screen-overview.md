@@ -75,7 +75,13 @@ This will allow you to send a single image with your email as an attachment.
 1. With the **AddMediaWithImage** control inserted, set its height to be less than 210
 1. In the control tree view, select the **AddMediaWithImage** control > ... > Reorder > Send to back
     * This will prevent the control from sitting in front of the **PeopleBrowseGallery** control.
-1. Change the 'Height' property of the **EmailPeopleGallery** to `Min((EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2) * RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)`. 
+1. Change the 'Height' property of the **EmailPeopleGallery** to 
+
+	```powerapps-dot
+	Min((EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2) * 
+	RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)`
+	```
+ 
 1. Change the 'ShowScrollbar' of the **EmailPeopleGallery** to `EmailPeopleGallery1.Height >= 304`.
     * This will prevent the max height from pushing the **AddMediaWithImage** control off the page
 1. Change the 'OnSelect' property of the **iconMail** control to:

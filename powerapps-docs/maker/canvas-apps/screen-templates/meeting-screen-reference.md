@@ -116,8 +116,11 @@ This control allows users to add people who don't exist inside their org to the 
     Value: A collect statement to add the user to the attendee list, another to refresh available meeting times, and several variable toggles.
 
 	```powerapps-dot
-    Collect(MyPeople,
-        {DisplayName: TextSearchBox.Text, UserPrincipalName: TextSearchBox.Text, Mail: TextSearchBox.Text});
+    Collect( MyPeople,
+        { DisplayName: TextSearchBox.Text, 
+		  UserPrincipalName: TextSearchBox.Text, 
+		  Mail: TextSearchBox.Text}
+	);
     Concurrent(
         Reset(TextSearchBox),
         Set(_showMeetingTimes, false),
@@ -125,14 +128,25 @@ This control allows users to add people who don't exist inside their org to the 
         Set(_selectedMeetingTime, Blank()),
         Set(_selectedRoom, Blank()),
         Set(_roomListSelected, false),
-        ClearCollect(MeetingTimes, AddColumns('Office365'.FindMeetingTimes(
-        	{RequiredAttendees:Concat(MyPeople, UserPrincipalName & ";"), MeetingDuration:MeetingDurationSelect.Selected.Minutes,
-        	Start:Text(DateAdd(MeetingDateSelect.SelectedDate, 8, Hours), UTC), End:Text(DateAdd(MeetingDateSelect.SelectedDate, 17, Hours), UTC),
-        	MaxCandidates:15, MinimumAttendeePercentage:1, IsOrganizerOptional: false, ActivityDomain: "Work"}).MeetingTimeSuggestions,
-        "StartTime", MeetingTimeSlot.Start.DateTime, "EndTime", MeetingTimeSlot.End.DateTime))
-    );
-    UpdateContext({_loadingMeetingTimes: false});
-    Set(_showMeetingTimes, true)
+        ClearCollect(MeetingTimes, 
+			AddColumns(
+				'Office365'.FindMeetingTimes(
+        			{ RequiredAttendees: Concat(MyPeople, UserPrincipalName & ";")
+					  MeetingDuration: MeetingDurationSelect.Selected.Minutes,
+					  Start: Text(DateAdd(MeetingDateSelect.SelectedDate, 8, Hours), UTC),
+					  End: Text(DateAdd(MeetingDateSelect.SelectedDate, 17, Hours), UTC),
+					  MaxCandidates: 15, 
+					  MinimumAttendeePercentage:1, 
+					  IsOrganizerOptional: false, 
+					  ActivityDomain: "Work"}
+				).MeetingTimeSuggestions,
+        		"StartTime", MeetingTimeSlot.Start.DateTime, 
+				"EndTime", MeetingTimeSlot.End.DateTime
+			)
+		)
+	);
+	UpdateContext({_loadingMeetingTimes: false});
+	Set(_showMeetingTimes, true)
 	```
 
   Selecting this adds the valid email address (it will only be visible if a valid email address is typed into **TextSearchBox**) to the **MyPeople** collection (this collection is the attendee list) and then refreshes the available meeting times with the new user entry.
@@ -165,7 +179,7 @@ This control allows users to add people who don't exist inside their org to the 
     Value: `If(!IsBlank(Trim(TextSearchBox.Text)), 'Office365Users'.SearchUser({searchTerm: Trim(TextSearchBox.Text), top: 15}))`
 
   * The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation.
-    * The operation takes the text in `Trim(**TextSearchBox**)` as its search term and returns the top 15 results based on that search.
+    * The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
   * **TextSearchBox** is wrapped in a Trim() function because a user search on spaces is invalid.
   * The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function because retrieving search results before a user has searched is a performance waste.
 
@@ -194,11 +208,21 @@ This control allows users to add people who don't exist inside their org to the 
             	Set(_selectedRoom, Blank()),
             	Set(_roomListSelected, false),
             
-            	ClearCollect(MeetingTimes, AddColumns('Office365'.FindMeetingTimes(
-            		{RequiredAttendees:Concat(MyPeople, UserPrincipalName & ";"), MeetingDuration:MeetingDurationSelect.Selected.Minutes,
-            		Start:Text(DateAdd(MeetingDateSelect.SelectedDate, 8, Hours), UTC), End:Text(DateAdd(MeetingDateSelect.SelectedDate, 17, Hours), UTC),
-            		MaxCandidates:15, MinimumAttendeePercentage:1, IsOrganizerOptional: false, ActivityDomain: "Work"}).MeetingTimeSuggestions,
-            	"StartTime", MeetingTimeSlot.Start.DateTime, "EndTime", MeetingTimeSlot.End.DateTime))
+            	ClearCollect(MeetingTimes, 
+					AddColumns(
+						'Office365'.FindMeetingTimes(
+            				{RequiredAttendees:Concat(MyPeople, UserPrincipalName & ";"),
+							MeetingDuration:MeetingDurationSelect.Selected.Minutes,
+            				Start:Text(DateAdd(MeetingDateSelect.SelectedDate, 8, Hours), UTC),
+							End:Text(DateAdd(MeetingDateSelect.SelectedDate, 17, Hours), UTC),
+            				MaxCandidates:15, 
+							MinimumAttendeePercentage:1, 
+							IsOrganizerOptional: false, 
+							ActivityDomain: "Work"}).MeetingTimeSuggestions,
+            			"StartTime", MeetingTimeSlot.Start.DateTime, 
+						"EndTime", MeetingTimeSlot.End.DateTime
+					)
+				)
         	);
             UpdateContext({_loadingMeetingTimes: false});
             Set(_showMeetingTimes, true)
@@ -224,12 +248,11 @@ This control allows users to add people who don't exist inside their org to the 
 * Property: **Height**<br>
     Value: Logic to allow the gallery to grow to a max height of 350.
 
-  ```powerapps-dot
-  Min(
-      76 * RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0),
+	```powerapps-dot
+	Min( 76 * RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0),
       350
     )
-  ```
+	```
 
   * The height of this gallery adjusts to the number of items in the gallery to a maximum height of 350.
   * It takes 76 as the height of a single row of the MeetingPeopleGallery, then multiplies it by the number of rows. Since WrapCount = 2, the number of true rows is `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
@@ -263,11 +286,21 @@ This control allows users to add people who don't exist inside their org to the 
         Set(_selectedMeetingTime, Blank()),
         Set(_selectedRoom, Blank()),
         Set(_roomListSelected, false),
-        ClearCollect(MeetingTimes, AddColumns('Office365'.FindMeetingTimes(
-        	{RequiredAttendees:Concat(MyPeople, UserPrincipalName & ";"), MeetingDuration:MeetingDurationSelect.Selected.Minutes,
-        	Start:Text(DateAdd(MeetingDateSelect.SelectedDate, 8, Hours), UTC), End:Text(DateAdd(MeetingDateSelect.SelectedDate, 17, Hours), UTC),
-        	MaxCandidates:15, MinimumAttendeePercentage:1, IsOrganizerOptional: false, ActivityDomain: "Work"}).MeetingTimeSuggestions,
-        "StartTime", MeetingTimeSlot.Start.DateTime, "EndTime", MeetingTimeSlot.End.DateTime))
+        ClearCollect(MeetingTimes, 
+			AddColumns(
+				'Office365'.FindMeetingTimes(
+        			{RequiredAttendees:Concat(MyPeople, UserPrincipalName & ";"), 
+					MeetingDuration:MeetingDurationSelect.Selected.Minutes,
+        			Start:Text(DateAdd(MeetingDateSelect.SelectedDate, 8, Hours), UTC), 
+					End:Text(DateAdd(MeetingDateSelect.SelectedDate, 17, Hours), UTC),
+        			MaxCandidates:15, 
+					MinimumAttendeePercentage:1, 
+					IsOrganizerOptional: false, 
+					ActivityDomain: "Work"}).MeetingTimeSuggestions,
+        		"StartTime", MeetingTimeSlot.Start.DateTime, 
+				"EndTime", MeetingTimeSlot.End.DateTime
+			)
+		)
     );
     UpdateContext({_loadingMeetingTimes: false});
     Set(_showMeetingTimes, true)
@@ -297,21 +330,31 @@ This control allows users to add people who don't exist inside their org to the 
     Value: A collect statement to refresh available meeting times, and several variable toggles.
   
 	```powerapps-dot
-  	Concurrent(
-    Reset(TextSearchBox),
-    Set(_showMeetingTimes, false),
-    UpdateContext({_loadingMeetingTimes: true}),
-    Set(_selectedMeetingTime, Blank()),
-    Set(_selectedRoom, Blank()),
-    Set(_roomListSelected, false),
-    ClearCollect(MeetingTimes, AddColumns('Office365'.FindMeetingTimes(
-    	{RequiredAttendees:Concat(MyPeople, UserPrincipalName & ";"), MeetingDuration:MeetingDurationSelect.Selected.Minutes,
-    	Start:Text(DateAdd(MeetingDateSelect.SelectedDate, 8, Hours), UTC), End:Text(DateAdd(MeetingDateSelect.SelectedDate, 17, Hours), UTC),
-    	MaxCandidates:15, MinimumAttendeePercentage:1, IsOrganizerOptional: false, ActivityDomain: "Work"}).MeetingTimeSuggestions,
-    "StartTime", MeetingTimeSlot.Start.DateTime, "EndTime", MeetingTimeSlot.End.DateTime))
-  );
-  UpdateContext({_loadingMeetingTimes: false});
-  Set(_showMeetingTimes, true)
+	Concurrent(
+    	Reset(TextSearchBox),
+	    Set(_showMeetingTimes, false),
+	    UpdateContext({_loadingMeetingTimes: true}),
+	    Set(_selectedMeetingTime, Blank()),
+	    Set(_selectedRoom, Blank()),
+	    Set(_roomListSelected, false),
+    	ClearCollect(MeetingTimes, 
+			AddColumns(
+				'Office365'.FindMeetingTimes(
+    				{RequiredAttendees:Concat(MyPeople, UserPrincipalName & ";"), 
+					MeetingDuration:MeetingDurationSelect.Selected.Minutes,
+    				Start:Text(DateAdd(MeetingDateSelect.SelectedDate, 8, Hours), UTC), 
+					End:Text(DateAdd(MeetingDateSelect.SelectedDate, 17, Hours), UTC),
+    				MaxCandidates:15, 
+					MinimumAttendeePercentage:1, 
+					IsOrganizerOptional: false, 
+					ActivityDomain: "Work"}).MeetingTimeSuggestions,
+    			"StartTime", MeetingTimeSlot.Start.DateTime, 
+				"EndTime", MeetingTimeSlot.End.DateTime
+			)
+		)
+	);
+	UpdateContext({_loadingMeetingTimes: false});
+	Set(_showMeetingTimes, true)
 	```
 
   At a high level, selecting this control refreshes the available meeting times. It is valuable because if a user changes the date, the available meeting times will need to update to reflect the attendees availabilities for that day.
@@ -372,23 +415,38 @@ This control allows users to add people who don't exist inside their org to the 
     Value:  Several collect statements to gather meeting rooms, and their suggested availabilities, as well as several variable toggles.
 
 	```powerapps-dot
-  Set(_selectedMeetingTime, ThisItem);
-  UpdateContext({_loadingRooms: true});
+	Set(_selectedMeetingTime, ThisItem);
+	UpdateContext({_loadingRooms: true});
   
-  If(IsEmpty(RoomsLists),
-   ClearCollect(RoomsLists, 'Office365'.GetRoomLists().value));
-  If(CountRows(RoomsLists) <= 1,
-   Set(_noRoomLists, true);
-   ClearCollect(AllRooms, 'Office365'.GetRooms().value);
-   Set(_allRoomsConcat, Concat(FirstN(AllRooms, 20), Address & ";"));
-   ClearCollect(RoomTimeSuggestions, 'Office365'.FindMeetingTimes({RequiredAttendees: _allRoomsConcat, MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-     Start: _selectedMeetingTime.StartTime & "Z", End: _selectedMeetingTime.EndTime & "Z", MinimumAttendeePercentage: "1",
-     IsOrganizerOptional: "false", ActivityDomain: "Unrestricted"}).MeetingTimeSuggestions);
-   ClearCollect(AvailableRooms, AddColumns(AddColumns(Filter(First(RoomTimeSuggestions).AttendeeAvailability,
-     Availability="Free"), "Address", Attendee.EmailAddress.Address), "Name", LookUp(AllRooms, Address = Attendee.EmailAddress.Address).Name));
-   ClearCollect(AvailableRoomsOptimal, DropColumns(DropColumns(AvailableRooms, "Availability"), "Attendee")),
-   Set(_roomListSelected, false));
-  UpdateContext({_loadingRooms: false})
+	If(IsEmpty(RoomsLists),
+		ClearCollect(RoomsLists, 'Office365'.GetRoomLists().value));
+	If(CountRows(RoomsLists) <= 1,
+		Set(_noRoomLists, true);
+		ClearCollect(AllRooms, 'Office365'.GetRooms().value);
+		Set(_allRoomsConcat, Concat(FirstN(AllRooms, 20), Address & ";"));
+		ClearCollect(RoomTimeSuggestions, 
+			'Office365'.FindMeetingTimes(
+				{RequiredAttendees: _allRoomsConcat, 
+				MeetingDuration: MeetingDurationSelect.Selected.Minutes,
+ 				Start: _selectedMeetingTime.StartTime & "Z", 
+				End: _selectedMeetingTime.EndTime & "Z", 
+				MinimumAttendeePercentage: "1",
+				IsOrganizerOptional: "false", 
+				ActivityDomain: "Unrestricted"}
+			).MeetingTimeSuggestions);
+		ClearCollect(AvailableRooms, 
+			AddColumns(
+				AddColumns(
+					Filter(First(RoomTimeSuggestions).AttendeeAvailability, Availability="Free"), 
+					"Address", Attendee.EmailAddress.Address), 
+				"Name", LookUp(AllRooms, Address = Attendee.EmailAddress.Address).Name)
+			);
+		ClearCollect(AvailableRoomsOptimal, 
+			DropColumns(
+				DropColumns(AvailableRooms, "Availability"), "Attendee")
+			),
+		Set(_roomListSelected, false));
+	UpdateContext({_loadingRooms: false})
 	```
 
   At a high level, for users that don't have rooms lists, this code block gathers available rooms based on the selected date/time for the meeting. Otherwise it simply retrieves the rooms lists.
