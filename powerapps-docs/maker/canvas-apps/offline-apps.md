@@ -72,7 +72,7 @@ At a high level, the app does the following:
 ### Step 3: Load tweets into a LocalTweets collection on app startup
 Select the **OnVisible** property for **Screen1** in the app, and copy in the following formula:
 
-```
+```powerapps-dot
 If(Connection.Connected,
 
     ClearCollect(LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100}));
@@ -115,7 +115,7 @@ This formula checks if the device is online:
 ### Step 5: Add a connection status label
 Insert a new **Label** control, and set its **Text** property to the following formula:
 
-```
+```powerapps-dot
 If (Connection.Connected, "Connected", "Offline")
 ```
 
@@ -131,7 +131,7 @@ This formula checks if the device is online. If it is, the text of the label is 
 1. Add a **Button** control, and set the **Text** property to "Tweet".
 2. Set the **OnSelect** property to the following formula:
 
-    ```
+    ```powerapps-dot
     If (Connection.Connected,
 
         Twitter.Tweet("", {tweetText: NewTweetTextInput.Text}),
@@ -163,7 +163,7 @@ Add a new **Timer** control:
 
 * Set the **OnTimerEnd** to the following formula:
 
-    ```
+    ```powerapps-dot
     If(Connection.Connected,
 
         ForAll(LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}));
