@@ -89,7 +89,8 @@ A couple other controls interact or have a dependency on this one:
         Set(_selectedUser, ThisItem),
         Reset(TextSearchBox),
         If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), 
-			Collect(MyPeople, ThisItem))
+			Collect(MyPeople, ThisItem)
+		)
     )
     ```
     * Selecting this control does 3 things concurrently:

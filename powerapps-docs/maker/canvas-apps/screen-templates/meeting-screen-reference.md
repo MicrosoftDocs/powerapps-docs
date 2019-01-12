@@ -140,7 +140,7 @@ This control allows users to add people who don't exist inside their org to the 
 					  IsOrganizerOptional: false, 
 					  ActivityDomain: "Work"}
 				).MeetingTimeSuggestions,
-        		"StartTime", MeetingTimeSlot.Start.DateTime, 
+				"StartTime", MeetingTimeSlot.Start.DateTime, 
 				"EndTime", MeetingTimeSlot.End.DateTime
 			)
 		)
@@ -218,8 +218,9 @@ This control allows users to add people who don't exist inside their org to the 
             				MaxCandidates:15, 
 							MinimumAttendeePercentage:1, 
 							IsOrganizerOptional: false, 
-							ActivityDomain: "Work"}).MeetingTimeSuggestions,
-            			"StartTime", MeetingTimeSlot.Start.DateTime, 
+							ActivityDomain: "Work"}
+						).MeetingTimeSuggestions,
+						"StartTime", MeetingTimeSlot.Start.DateTime, 
 						"EndTime", MeetingTimeSlot.End.DateTime
 					)
 				)
@@ -296,8 +297,9 @@ This control allows users to add people who don't exist inside their org to the 
         			MaxCandidates:15, 
 					MinimumAttendeePercentage:1, 
 					IsOrganizerOptional: false, 
-					ActivityDomain: "Work"}).MeetingTimeSuggestions,
-        		"StartTime", MeetingTimeSlot.Start.DateTime, 
+					ActivityDomain: "Work"}
+				).MeetingTimeSuggestions,
+				"StartTime", MeetingTimeSlot.Start.DateTime, 
 				"EndTime", MeetingTimeSlot.End.DateTime
 			)
 		)
@@ -347,8 +349,9 @@ This control allows users to add people who don't exist inside their org to the 
     				MaxCandidates:15, 
 					MinimumAttendeePercentage:1, 
 					IsOrganizerOptional: false, 
-					ActivityDomain: "Work"}).MeetingTimeSuggestions,
-    			"StartTime", MeetingTimeSlot.Start.DateTime, 
+					ActivityDomain: "Work"}
+				).MeetingTimeSuggestions,
+				"StartTime", MeetingTimeSlot.Start.DateTime, 
 				"EndTime", MeetingTimeSlot.End.DateTime
 			)
 		)
