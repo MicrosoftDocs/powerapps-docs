@@ -36,7 +36,7 @@ Use the **Collect** function to create a collection and add items to it.
 
 1. On the **Insert** tab, select **Button** to add a button control to your designer. From the drop-down list, the **[OnSelect](controls/properties-core.md)** property is listed. Set it to the following function:  
    
-    ```Collect(Destinations, Destination!Text)```
+    ```Collect(Destinations, Destination.Text)```
    
     It should look like the following:
 
@@ -66,7 +66,7 @@ Now, let's bind the Destinations collection to a listbox:
 2. On the **Insert** tab, select **Controls**, and then select **ListBox**:  
    ![][22]  
 3. Move the listbox so you can easily see it. Set its **[Items](controls/properties-core.md)** property to the following expression:  
-   ```Destinations!Value```  <br/>
+   ```Destinations.Value```  <br/>
    
     When you do this, the listbox is automatically populated with the items you previously entered in the Destinations collection:  
    ![][4]  
@@ -87,7 +87,7 @@ The following steps show you how to create a collection within your app using th
     > [!NOTE]
    > You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
 6. On the **Insert** tab, select **Button**. Set its **[OnSelect](controls/properties-core.md)** property to the following function:  
-   ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
+   ```Collect(Destinations, {Cities:City.Text, States:States.Text})```  
    
     It should look like the following:  
     ![][11]  
@@ -95,7 +95,7 @@ The following steps show you how to create a collection within your app using th
     > [!NOTE]
    > You can use this same function to add additional columns to this collection. For example, you can add another text-input control for Country to add a Countries column:
    
-    `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
+    `Collect(Destinations, {Cities:City.Text, States:States.Text}, {Countries:Country.Text})`
 7. Rename the button control **AddCityStateButton**, and set its **[Text](controls/properties-core.md)** property to **Add City and State**:  
    ![][12]  
 
@@ -119,7 +119,7 @@ There are a few sections in this walk-through. When complete, you'll know how to
    ![][14]  
 4. On the **Action** tab, select **OnSelect**. Enter the following function:  
    
-    ```Collect(PriceList, Import1!Data)```  
+    ```Collect(PriceList, Import1.Data)```  
 5. Preview your app. Select the **Import Data** button, select the PriceList.zip file, and select **Open**.
 6. Close the Preview window.
 7. Select the **File** tab, and select **Collections**. The PriceList items you imported are listed:  
@@ -139,9 +139,9 @@ There are a few sections in this walk-through. When complete, you'll know how to
    
    | Label | Set Text property to |
    | --- | --- |
-   | Label1 |``ThisItem!Name`` |
-   | Label2 |``Text(ThisItem!Price, "$#")`` |
-   | Label3 |``ThisItem!Maker`` |
+   | Label1 |``ThisItem.Name`` |
+   | Label2 |``Text(ThisItem.Price, "$#")`` |
+   | Label3 |``ThisItem.Maker`` |
    
     When you do this, the labels are automatically updated with the name, price, and maker values within the PriceList collection.
 8. Resize the labels and the gallery to remove any extra spaces. Your screen look similar to the following:  
@@ -153,7 +153,7 @@ There are a few sections in this walk-through. When complete, you'll know how to
    ![][20]
 3. Set the **[OnSelect](controls/properties-core.md)** property of the **Add** button to the following expression:  
    
-    ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
+    ```Collect(OrderList, {Name:PriceGallery.Selected.Name, Qty:OrderQty.Value, Cost:OrderQty.Value*LookUp(PriceList, PriceGallery.Selected.Name in Name, Price)});SaveData(OrderList, "orderfile")```  
    
     > [!NOTE]
    > When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
