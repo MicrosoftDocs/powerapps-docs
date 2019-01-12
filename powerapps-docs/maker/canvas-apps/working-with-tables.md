@@ -240,7 +240,8 @@ ShowColumns(
 		Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
 		"Quantity To Order", 'Quantity Requested' - 'Quantity Available'
 	), 
-	"Product", "Quantity To Order"
+	"Product", 
+	"Quantity To Order"
 )
 ```
 
@@ -274,9 +275,10 @@ Let's put it all together.  In this context, the following formula:
 
 ```powerapps-dot
 Ungroup( 
-	ForAll( 
-		X, 
-		ForAll( Y, Y[@Value] & Text( X[@Value] ) & [@Value] ) 
+	ForAll( X, 
+		ForAll( Y, 
+			Y[@Value] & Text( X[@Value] ) & [@Value] 
+		) 
 	), 
 	"Value" 
 )
@@ -294,9 +296,10 @@ Since **Y** is the innermost record scope, accessing fields of this table do not
 
 ```powerapps-dot
 Ungroup( 
-	ForAll( 
-		X, 
-		ForAll( Y, Value & Text( X[@Value] ) & [@Value] ) 
+	ForAll( X, 
+		ForAll( Y, 
+			Value & Text( X[@Value] ) & [@Value] 
+		) 
 	), 
 	"Value" 
 )
