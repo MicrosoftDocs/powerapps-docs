@@ -65,9 +65,9 @@ The purpose of this control is to allow app users to add people who don't exist 
     Value: Logic to show the control only when a user types out a full and valid email address into the search box.
 
 	```powerapps-dot
-  	!IsBlank(TextSearchBox.Text) &&
-  	IsMatch(TextSearchBox.Text, Match.Email) &&
-  	Not(Trim(TextSearchBox.Text) in MyPeople.UserPrincipalName)
+	!IsBlank( TextSearchBox.Text ) &&
+	IsMatch( TextSearchBox.Text, Match.Email ) &&
+	Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
   	```
 
 * Line by line this code block says that the **AddIcon** control will only be visible if:
@@ -81,11 +81,13 @@ The purpose of this control is to allow app users to add people who don't exist 
 
 	```powerapps-dot
 	Collect( MyPeople,
-        { DisplayName: TextSearchBox.Text, 
-		  UserPrincipalName: TextSearchBox.Text, 
-		  Mail: TextSearchBox.Text}
+        { 
+			DisplayName: TextSearchBox.Text, 
+			UserPrincipalName: TextSearchBox.Text, 
+			Mail: TextSearchBox.Text
+		}
 	);
-    Reset(TextSearchBox)
+    Reset( TextSearchBox )
 	```
   
   * This code block adds a row to the **MyPeople** collection and populates three fields with the text in **TextSearchBox**. These 3 fields are DisplayName, UserPrincipalName, and Mail. It then resets the contents of **TextSearchBox**
@@ -122,9 +124,11 @@ The purpose of this control is to allow app users to add people who don't exist 
 
     ```powerapps-dot
     Concurrent(
-        Set(_selectedUser, ThisItem),
-        Reset(TextSearchBox),
-        If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem))
+        Set( _selectedUser, ThisItem ),
+        Reset( TextSearchBox ),
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), 
+			Collect( MyPeople, ThisItem )
+		)
     )
     ```
     Selecting this control does 3 things concurrently:
@@ -146,9 +150,9 @@ The purpose of this control is to allow app users to add people who don't exist 
     Value: Logic to set the height based on the number of items currently in the gallery.
 
 	```powerapps-dot
-  	Min( (EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
-          RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0),
-    	304
+	Min( (EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
+			RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0),
+		304
     )
 	```
 
@@ -184,11 +188,15 @@ The purpose of this control is to allow app users to add people who don't exist 
     Value: Logic to send the user's email.
 
 	```powerapps-dot
-	Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));
-	'Office365'.SendEmail(_emailRecipientString, TextEmailSubject.Text, 	TextEmailMessage.Text, {Importance:"Normal"});
-	Reset(TextEmailSubject);
-	Reset(TextEmailMessage);
-	Clear(MyPeople)
+	Set( _emailRecipientString, Concat(MyPeople, Mail & ";") );
+	'Office365'.SendEmail( _emailRecipientString, 
+		TextEmailSubject.Text, 	
+		TextEmailMessage.Text, 
+		{Importance:"Normal"}
+	);
+	Reset( TextEmailSubject );
+	Reset( TextEmailMessage );
+	Clear( MyPeople )
 	```
 
   * Sending an email requires a semicolon separated string of email addresses. The first line takes the 'Mail' field from all the rows in the **MyPeople** collection and concatenates them down into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.

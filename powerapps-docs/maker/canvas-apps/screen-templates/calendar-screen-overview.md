@@ -241,17 +241,23 @@ The `Office365.GetEventsCalendarViewV2` operation retrieves a variety of fields 
     ClearCollect(AttendeeEmailsTemp,
         Filter(
             Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"),
-			!IsBlank(Result)));
+			!IsBlank(Result)
+		)
+	);
     ClearCollect(AttendeeEmails,
         AddColumns(AttendeeEmailsTemp, "InOrg",
             Upper(_userDomain) = Upper(Right(Result, Len(Result) - Find("@", Result)))
-        ));
+        )
+	);
     ClearCollect(MyPeople,
         ForAll(AttendeeEmails, If(InOrg, Office365Users.UserProfile(Result))));
     Collect(MyPeople,
         ForAll(AttendeeEmails,
-            If(!InOrg, {DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result})
-        ))
+            If(!InOrg, 
+				{DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result}
+			)
+        )
+	)
     ```
 
 These bullets discuss what each **ClearCollect** operation does:
@@ -271,7 +277,8 @@ These bullets discuss what each **ClearCollect** operation does:
 - ClearCollect(AttendeeEmails)
     ```powerapps-dot
     ClearCollect(AttendeeEmails,
-        AddColumns(AttendeeEmailsTemp, "InOrg",
+        AddColumns(AttendeeEmailsTemp, 
+			"InOrg",
             Upper(_userDomain) = Upper(Right(Result, Len(Result) - Find("@", Result)))
         )
 	);
@@ -288,11 +295,24 @@ These bullets discuss what each **ClearCollect** operation does:
 
     ```powerapps-dot
     ClearCollect(MyPeople,
-        ForAll(AttendeeEmails, If(InOrg, Office365Users.UserProfile(Result))));
+        ForAll(AttendeeEmails, 
+			If(InOrg, 
+				Office365Users.UserProfile(Result)
+			)
+		)
+	);
     Collect(MyPeople,
         ForAll(AttendeeEmails,
-            If(!InOrg, {DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result})
-        ));
+            If( !InOrg, 
+				{ 
+					DisplayName: Result, 
+					Id: "", 
+					JobTitle: "", 
+					UserPrincipalName: Result
+				}
+			)
+        )
+	);
     ```
     To retrieve Office 365 profiles, you must us the  [Office365Users.UserProfile](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
 
@@ -304,12 +324,26 @@ These bullets discuss what each **ClearCollect** operation does:
 		ForAll(
 			AddColumns(
 				Filter(
-					Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"), !IsBlank(Result)), 
-					"InOrg", _userDomain = Right(Result, Len(Result) - Find("@", Result))
+					Split(
+						ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, 
+						";"
+					), 
+					!IsBlank(Result)
 				), 
-				If( InOrg, 
-					Office365Users.UserProfile(Result), 
-					{DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result, Department: "", OfficeLocation: "", TelephoneNumber: ""})
+				"InOrg", _userDomain = Right(Result, Len(Result) - Find("@", Result))
+			), 
+			If( InOrg, 
+				Office365Users.UserProfile(Result), 
+				{ 
+					DisplayName: Result, 
+					Id: "", 
+					JobTitle: "", 
+					UserPrincipalName: Result, 
+					Department: "", 
+					OfficeLocation: "", 
+					TelephoneNumber: ""
+				}
+			)
 		)
 	)
     ```

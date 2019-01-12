@@ -71,7 +71,10 @@ If you want to modify the screen further, use the [email-screen reference](./ema
 
 This will allow you to send a single image with your email as an attachment.
 
-1. Under the Media tab in the ribbon, insert the 'Add picture' control and set its 'Y' property to `TextEmailMessage1.Y + TextEmailMessage1.Height + 20`
+1. Under the Media tab in the ribbon, insert the 'Add picture' control and set its 'Y' property to 
+
+	`TextEmailMessage1.Y + TextEmailMessage1.Height + 20`
+
 1. With the **AddMediaWithImage** control inserted, set its height to be less than 210
 1. In the control tree view, select the **AddMediaWithImage** control > ... > Reorder > Send to back
     * This will prevent the control from sitting in front of the **PeopleBrowseGallery** control.
@@ -79,7 +82,7 @@ This will allow you to send a single image with your email as an attachment.
 
 	```powerapps-dot
 	Min((EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2) * 
-	RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)`
+	RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)
 	```
  
 1. Change the 'ShowScrollbar' of the **EmailPeopleGallery** to `EmailPeopleGallery1.Height >= 304`.
@@ -87,16 +90,31 @@ This will allow you to send a single image with your email as an attachment.
 1. Change the 'OnSelect' property of the **iconMail** control to:
 
     ```powerapps-dot
-    Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));
-    If(IsBlank(UploadedImage1),
-        'Office365'.SendEmail(_emailRecipientString, TextEmailSubject1.Text, TextEmailMessage1.Text, {Importance:"Normal"}),
-        'Office365'.SendEmail(_emailRecipientString, TextEmailSubject1.Text, TextEmailMessage1.Text, {Importance:"Normal",
-            Attachments:Table({Name: "Image.jpg", ContentBytes: UploadedImage1.Image})})
+    Set( _emailRecipientString, Concat(MyPeople, Mail & ";") );
+    If( IsBlank( UploadedImage1 ),
+        'Office365'.SendEmail( _emailRecipientString, 
+			TextEmailSubject1.Text, 
+			TextEmailMessage1.Text, 
+			{ Importance: "Normal" }
+		),
+        'Office365'.SendEmail( _emailRecipientString, 
+			TextEmailSubject1.Text, 
+			TextEmailMessage1.Text, 
+			{
+				Importance: "Normal",
+            	Attachments: Table(
+					{
+						Name: "Image.jpg", 
+						ContentBytes: UploadedImage1.Image
+					}
+				)
+			}
+		)
     );
-    Reset(TextEmailSubject1);
-    Reset(TextEmailMessage1);
-    Reset(AddMediaButton1);
-    Clear(MyPeople)
+    Reset( TextEmailSubject1 );
+    Reset( TextEmailMessage1 );
+    Reset( AddMediaButton1 );
+    Clear( MyPeople )
     ```
     * This checks if there's an uploaded image. If not, then it uses the same `Office365.SendEmail` operation as before. If there is, the image is added as an attachment in the Attachments table.
     * After sending the email, an additional Reset operation is performed on **AddMediaButton** to remove the uploaded image.

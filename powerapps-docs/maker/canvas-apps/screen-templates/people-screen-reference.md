@@ -66,7 +66,16 @@ A couple other controls interact or have a dependency on this one:
 
 * Property: **Items**<br>
     Value: Logic to lookup users when the user starts typing.
-    `If(!IsBlank(Trim(TextSearchBox.Text)), 'Office365Users'.SearchUser({searchTerm: Trim(TextSearchBox.Text), top: 15}))`
+    ```powerapps-dot
+	If(!IsBlank(Trim(TextSearchBox.Text)), 
+		'Office365Users'.SearchUser(
+			{
+				searchTerm: Trim(TextSearchBox.Text), 
+				top: 15
+			}
+		)
+	)
+	```
 
   * The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation.
   * The operation takes the text in Trim(**TextSearchBox**) as its search term and returns the top 15 results based on that search.
