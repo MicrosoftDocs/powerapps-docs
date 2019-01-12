@@ -84,7 +84,7 @@ A couple other controls interact or have a dependency on this one:
 * Property: **OnSelect**<br>
     Value: Code to add the user to an app level collection, and select the user.
 
-    ```
+    ```powerapps-dot
     Concurrent(
         Set(_selectedUser, ThisItem),
         Reset(TextSearchBox),

@@ -64,12 +64,13 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **Visible**<br>
     Value: Logic to show the control only when a user types out a full and valid email address into the search box.
 
-  ```
-    !IsBlank(TextSearchBox.Text) &&
-    IsMatch(TextSearchBox.Text, Match.Email) &&
-    Not(Trim(TextSearchBox.Text) in MyPeople.UserPrincipalName)
-  ```
-  * Line by line this code block says that the **AddIcon** control will only be visible if:
+	```powerapps-dot
+  	!IsBlank(TextSearchBox.Text) &&
+  	IsMatch(TextSearchBox.Text, Match.Email) &&
+  	Not(Trim(TextSearchBox.Text) in MyPeople.UserPrincipalName)
+  	```
+
+* Line by line this code block says that the **AddIcon** control will only be visible if:
 
     1. The text in **TextSearchBox** contains something
     1. The text in **TextSearchBox** is a valid email address
@@ -78,11 +79,11 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **OnSelect**<br>
     Value: Selecting this adds the valid email address to the **MyPeople** collection. This collection is used by the screen as the recipient list.
 
-  ```
-    Collect(MyPeople,
+	```powerapps-dot
+	Collect(MyPeople,
         {DisplayName: TextSearchBox.Text, UserPrincipalName: TextSearchBox.Text, Mail: TextSearchBox.Text});
     Reset(TextSearchBox)
-  ```
+	```
   
   * This code block adds a row to the **MyPeople** collection and populates three fields with the text in **TextSearchBox**. These 3 fields are DisplayName, UserPrincipalName, and Mail. It then resets the contents of **TextSearchBox**
 

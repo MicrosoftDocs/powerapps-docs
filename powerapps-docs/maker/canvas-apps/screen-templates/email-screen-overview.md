@@ -80,7 +80,7 @@ This will allow you to send a single image with your email as an attachment.
     * This will prevent the max height from pushing the **AddMediaWithImage** control off the page
 1. Change the 'OnSelect' property of the **iconMail** control to:
 
-    ```
+    ```powerapps-dot
     Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));
     If(IsBlank(UploadedImage1),
         'Office365'.SendEmail(_emailRecipientString, TextEmailSubject1.Text, TextEmailMessage1.Text, {Importance:"Normal"}),

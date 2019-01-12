@@ -74,7 +74,7 @@ If you already know which calendar your users should view, you can simplify the 
 
 1. Set the **[OnStart](../controls/control-screen.md)** property of the default screen in the app to this formula:
 
-    ```
+    ```powerapps-dot
     Set(_userDomain, Right(User().Email, Len(User().Email) - Find("@", User().Email)));
     Set(_dateSelected, Today());
     Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));
@@ -142,7 +142,7 @@ In many offices, team members send meeting requests to notify each other when th
 
 1. Set the **Items** property of **CalendarEventsGallery** to this formula:
 
-    ```
+    ```powerapps-dot
     SortByColumns(
         Filter(
             MyCalendarEvents,
@@ -163,7 +163,7 @@ In many offices, team members send meeting requests to notify each other when th
 
 1. In the calendar, set the **Visible** property of the **Circle** control to this formula:
 
-    ```
+    ```powerapps-dot
     CountRows(
         Filter(
             MyCalendarEvents,
@@ -209,7 +209,7 @@ If users select an event by clicking or tapping it in **CalendarEventsGallery**,
 
 1. Set the **Items** property of the flexible-height gallery to this formula:
 
-    ```
+    ```powerapps-dot
     Table(
         {Title: "Subject", Value: _selectedCalendarEvent.Subject},
         {Title: "Time", Value: _selectedCalendarEvent.Start & " - " & _selectedCalendarEvent.End},
@@ -223,7 +223,7 @@ If users select an event by clicking or tapping it in **CalendarEventsGallery**,
 
 1. In **CalendarEventsGallery**, set the **OnSelect** property of the **Title** control to this formula:
 
-    ```
+    ```powerapps-dot
     Set(_selectedCalendarEvent, ThisItem);
     Navigate(EventDetailsScreen, None)
     ```
@@ -239,12 +239,12 @@ The `Office365.GetEventsCalendarViewV2` operation retrieves a variety of fields 
 
 1. To retrieve the Office 365 profiles of the meeting attendees, set the **OnSelect** property of the **Title** control in the **CalendarEventsGallery** to this formula:
 
-    ```
+    ```powerapps-dot
     Set(_selectedCalendarEvent, ThisItem);
     ClearCollect(AttendeeEmailsTemp,
         Filter(
             Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"),
-        !IsBlank(Result)));
+			!IsBlank(Result)));
     ClearCollect(AttendeeEmails,
         AddColumns(AttendeeEmailsTemp, "InOrg",
             Upper(_userDomain) = Upper(Right(Result, Len(Result) - Find("@", Result)))
@@ -260,21 +260,24 @@ The `Office365.GetEventsCalendarViewV2` operation retrieves a variety of fields 
 These bullets discuss what each **ClearCollect** operation does:
 
 - ClearCollect(AttendeeEmailsTemp)
-    ```
+    ```powerapps-dot
     ClearCollect(AttendeeEmailsTemp,
         Filter(
-            Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"),
-        !IsBlank(Result)));
+            Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"), 
+			!IsBlank(Result)
+		)
+	);
     ```
 
     This formula concatenates the required and optional attendees into a single string and then splits that string into individual addresses at each semicolon. The formula then filters out blank values from that set and adds the other values into a collection named **AttendeeEmailsTemp**.
 
 - ClearCollect(AttendeeEmails)
-    ```
+    ```powerapps-dot
     ClearCollect(AttendeeEmails,
         AddColumns(AttendeeEmailsTemp, "InOrg",
             Upper(_userDomain) = Upper(Right(Result, Len(Result) - Find("@", Result)))
-        ));
+        )
+	);
     ```
     This formula roughly determines whether an attendee is in your organization. The definition of **_userDomain** is simply the domain URL in the email address of the person who's running the app. This line creates an additional true/false column, named **InOrg**, in the **AttendeeEmailsTemp** collection. This column contains true if **userDomain** is equivalent to the domain URL of the email address in that particular row of **AttendeeEmailsTemp**.
 
@@ -286,7 +289,7 @@ These bullets discuss what each **ClearCollect** operation does:
 
 - ClearCollect(MyPeople)
 
-    ```
+    ```powerapps-dot
     ClearCollect(MyPeople,
         ForAll(AttendeeEmails, If(InOrg, Office365Users.UserProfile(Result))));
     Collect(MyPeople,
@@ -299,8 +302,19 @@ These bullets discuss what each **ClearCollect** operation does:
     > [!Note]
     > You can achieve the same result with only one **ClearCollect** function:
     
-    ```
-    ClearCollect(MyPeople, ForAll(AddColumns(Filter(Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"), !IsBlank(Result)), "InOrg", _userDomain = Right(Result, Len(Result) - Find("@", Result))), If(InOrg, Office365Users.UserProfile(Result), {DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result, Department: "", OfficeLocation: "", TelephoneNumber: ""})))
+    ```powerapps-dot
+    ClearCollect(MyPeople, 
+		ForAll(
+			AddColumns(
+				Filter(
+					Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"), !IsBlank(Result)), 
+					"InOrg", _userDomain = Right(Result, Len(Result) - Find("@", Result))
+				), 
+				If( InOrg, 
+					Office365Users.UserProfile(Result), 
+					{DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result, Department: "", OfficeLocation: "", TelephoneNumber: ""})
+		)
+	)
     ```
 
 To finish this exercise:

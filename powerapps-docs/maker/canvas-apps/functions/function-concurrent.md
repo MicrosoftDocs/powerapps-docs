@@ -108,8 +108,10 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 	```powerapps-dot
 	Set( StartTime, Value(Now()) );
 	Concurrent(
-    	Set(FRTrans, MicrosoftTranslator.Translate(TextInput1.Text,"fr")); Set(FRTransTime, Value(Now()) ),
-    	Set(DETrans, MicrosoftTranslator.Translate(TextInput1.Text,"de")); Set(DETransTime, Value(Now()) )
+    	Set(FRTrans, MicrosoftTranslator.Translate(TextInput1.Text,"fr")); 
+			Set(FRTransTime, Value(Now()) ),
+    	Set(DETrans, MicrosoftTranslator.Translate(TextInput1.Text,"de")); 
+			Set(DETransTime, Value(Now()) )
 	);
 	Collect( 
 		Results,
