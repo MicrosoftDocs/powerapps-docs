@@ -529,7 +529,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins (CDS for Apps)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions (CDS for Apps)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Client scripting (Model-driven apps)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices/business-logic">Best practices: Plug-in and workflow extensions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices/business-logic">Best practices: Plug-ins and workflow extensions</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/best-practices/business-logic">Best practices: Client scripting</a></p>
                                  </div>
                               </div>
