@@ -158,9 +158,9 @@ There are a few sections in this walk-through. When complete, you'll know how to
     ```powerapps-dot
 	Collect(OrderList, 
 		{ 
-		  Name:PriceGallery.Selected.Name, 
-		  Qty:OrderQty.Value, 
-		  Cost:OrderQty.Value*LookUp(PriceList, PriceGallery.Selected.Name in Name, Price)
+		  Name: PriceGallery.Selected.Name, 
+		  Qty: OrderQty.Value, 
+		  Cost: OrderQty.Value * LookUp(PriceList, PriceGallery.Selected.Name in Name, Price)
 		}
 	);
 	SaveData(OrderList, "orderfile")

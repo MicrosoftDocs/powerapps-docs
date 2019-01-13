@@ -94,14 +94,14 @@ A couple other controls interact or have a dependency on this one:
     Value: Code to add the user to an app level collection, and select the user.
 
     ```powerapps-dot
-    Concurrent(
-        Set(_selectedUser, ThisItem),
-        Reset(TextSearchBox),
-        If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), 
-			Collect(MyPeople, ThisItem)
+	Concurrent(
+		Set( _selectedUser, ThisItem ),
+		Reset(TextSearchBox),
+		If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+			Collect( MyPeople, ThisItem )
 		)
-    )
-    ```
+	)
+	```
     * Selecting this control does 3 things concurrently:
 
       1. Sets the **_selectedUser** variable to the item selected.
@@ -114,7 +114,13 @@ A couple other controls interact or have a dependency on this one:
 
 * Property: **Image**<br>
     Value: Logic to retrieve a user's profile photo.
-    `If(!IsBlank(ThisItem.Id) && 'Office365Users'.UserPhotoMetadata(ThisItem.Id).HasPhoto, 'Office365Users'.UserPhoto(ThisItem.Id))`
+
+	```powerapps-dot
+	If( !IsBlank( ThisItem.Id ) && 
+			'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto,
+		'Office365Users'.UserPhoto(ThisItem.Id)
+	)
+	```
 
     * The image control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
   

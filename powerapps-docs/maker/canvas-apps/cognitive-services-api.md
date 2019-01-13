@@ -129,7 +129,10 @@ With that background, let's add the formula for the **OnSelect** property of the
 If(chkLanguage.Value=true,
 	ClearCollect(languageCollect, 
 		TextAnalytics.DetectLanguage(
-			{numberOfLanguagesToDetect:1, text:tiTextToAnalyze.Text}
+			{
+				numberOfLanguagesToDetect: 1, 
+				text: tiTextToAnalyze.Text
+			}
 		).detectedLanguages.name
 	)
 );
@@ -137,7 +140,10 @@ If(chkLanguage.Value=true,
 If(chkPhrases.Value=true,
 	ClearCollect(phrasesCollect, 
 		TextAnalytics.KeyPhrases(
-			{language:"en", text:tiTextToAnalyze.Text}
+			{
+				language: "en", 
+				text: tiTextToAnalyze.Text
+			}
 		).keyPhrases
 	)
 );
@@ -145,7 +151,10 @@ If(chkPhrases.Value=true,
 If(chkSentiment.Value=true,
 	ClearCollect(sentimentCollect, 
 		TextAnalytics.DetectSentiment(
-			{language:"en", text:tiTextToAnalyze.Text}
+			{
+				language: "en", 
+				text: tiTextToAnalyze.Text
+			}
 		).score
 	)
 )

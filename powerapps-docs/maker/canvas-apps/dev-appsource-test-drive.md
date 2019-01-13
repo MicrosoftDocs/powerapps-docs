@@ -98,7 +98,7 @@ UpdateIf( SiteInspectorCollect,
 **To delete a row from a collection**, use [RemoveIf( DataSource, Condition [, ...] )](../canvas-apps/functions/function-remove-removeif.md):
 
 ```powerapps-dot
-RemoveIf( SiteInspectorCollect, ID=record.ID )
+RemoveIf( SiteInspectorCollect, ID = record.ID )
 ```
 
 > [!NOTE]

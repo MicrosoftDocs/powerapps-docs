@@ -491,7 +491,7 @@ This control allows users to add people who don't exist inside their org to the 
   This gallery will display the **AvailableRoomsOptimal** collection if **_roomListSelected** or **_noRoomLists** is true. Otherwise it will display the **RoomsLists** collection. This can be done because the schema of these collections are identical.
 
 * Property: **Visible**<br>
-    Value: `_showDetails && !IsBlank(_selectedMeetingTime) && !_loadingRooms`
+    Value: ```_showDetails && !IsBlank(_selectedMeetingTime) && !_loadingRooms```
 
     The gallery is only visible if the three statements above evaluate to true.
 
@@ -503,23 +503,45 @@ This control allows users to add people who don't exist inside their org to the 
     Value: A set of logically bound `Collect` and `Set` statements which are may or may not be triggered depending on if the user is viewing room lists or rooms.
 
 	```powerapps-dot
-  UpdateContext({_loadingRooms: true});
-  If(!_roomListSelected && !noRoomLists,
-
-   Set(_roomListSelected, true);
-   Set(_selectedRoomList, ThisItem.Name);
-   ClearCollect(AllRooms, 'Office365'.GetRoomsInRoomList(ThisItem.Address).value);
-   Set(_allRoomsConcat, Concat(FirstN(AllRooms, 20), Address & ";"));
-   ClearCollect(RoomTimeSuggestions, 'Office365'.FindMeetingTimes({RequiredAttendees: _allRoomsConcat, MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-     Start: _selectedMeetingTime.StartTime & "Z", End: _selectedMeetingTime.EndTime & "Z", MinimumAttendeePercentage: "1",
-     IsOrganizerOptional: "false", ActivityDomain: "Unrestricted"}).MeetingTimeSuggestions);
-   ClearCollect(AvailableRooms, AddColumns(AddColumns(Filter(First(RoomTimeSuggestions).AttendeeAvailability, Availability = "Free"),
-     "Address", Attendee.EmailAddress.Address), "Name", LookUp(AllRooms, Address = Attendee.EmailAddress.Address).Name));
-   ClearCollect(AvailableRoomsOptimal, DropColumns(DropColumns(AvailableRooms, "Availability"), "Attendee")),
-
-   Set(_selectedRoom, ThisItem)
-  );
-  UpdateContext({_loadingRooms: false})
+	UpdateContext( {_loadingRooms: true} );
+	If( !_roomListSelected && !noRoomLists,
+		Set( _roomListSelected, true );
+		Set( _selectedRoomList, ThisItem.Name );
+		ClearCollect( AllRooms, 'Office365'.GetRoomsInRoomList(ThisItem.Address).value );
+		Set( _allRoomsConcat, Concat(FirstN(AllRooms, 20), Address & ";") );
+		ClearCollect( RoomTimeSuggestions, 
+			'Office365'.FindMeetingTimes(
+				{
+					RequiredAttendees: _allRoomsConcat, 
+					MeetingDuration: MeetingDurationSelect.Selected.Minutes,
+     				Start: _selectedMeetingTime.StartTime & "Z", 
+					End: _selectedMeetingTime.EndTime & "Z", 
+					MinimumAttendeePercentage: "1",
+					IsOrganizerOptional: "false", 
+					ActivityDomain: "Unrestricted"
+				}
+			).MeetingTimeSuggestions
+		);
+		ClearCollect( AvailableRooms, 
+			AddColumns(
+				AddColumns(
+					Filter(
+						First( RoomTimeSuggestions ).AttendeeAvailability, 
+						Availability = "Free"
+					),
+     				"Address", Attendee.EmailAddress.Address ), 
+				"Name", LookUp( AllRooms, Address = Attendee.EmailAddress.Address ).Name
+			)
+		);
+		ClearCollect( AvailableRoomsOptimal, 
+			DropColumns(
+				DropColumns( AvailableRooms, "Availability" )
+			), 
+			"Attendee" )
+		),
+		Set(_selectedRoom, ThisItem)
+	);
+	UpdateContext( {_loadingRooms: false} )
 	```
 
   The actions that occur when selecting this are dependent upon if a user is currently viewing a set of room lists or a set of rooms. If it's the former, then selecting this will retrieve the rooms that are available in the selected time for the selected room list. If it's the latter, selecting this will set the **_selectedRoom** variable to the selected item. This statement is very similar to the select statement for [**FindMeetingTimesGallery Title**](#findMeetingTimesGallery-title).

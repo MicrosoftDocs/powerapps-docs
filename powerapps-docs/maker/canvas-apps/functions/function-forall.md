@@ -58,9 +58,7 @@ The following examples use the **Squares** [data source](../working-with-data-so
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then click or tap the button:
 
-```powerapps-dot
-ClearCollect( Squares, [ "1", "4", "9" ] )
-```
+`ClearCollect( Squares, [ "1", "4", "9" ] )`
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -74,9 +72,7 @@ The following examples use the **Expressions** [data source](../working-with-dat
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then click or tap the button:
 
-```powerapps-dot
-ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )
-```
+`ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )`
 
 This example also uses a [Microsoft Translator](../connections/connection-microsoft-translator.md) connection.  To add this connection to your app, see the topic about how to [manage connections](../add-manage-connections.md).
 

@@ -85,7 +85,10 @@ This will allow you to send a single image with your email as an attachment.
 	RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)
 	```
  
-1. Change the 'ShowScrollbar' of the **EmailPeopleGallery** to `EmailPeopleGallery1.Height >= 304`.
+1. Change the 'ShowScrollbar' of the **EmailPeopleGallery** to
+ 
+	```EmailPeopleGallery1.Height >= 304```
+	
     * This will prevent the max height from pushing the **AddMediaWithImage** control off the page
 1. Change the 'OnSelect' property of the **iconMail** control to:
 

@@ -93,8 +93,16 @@ This topic explains the expressions or formulas to which various properties (suc
     Set(_calendarVisible, false);
     UpdateContext({_showLoading: true});
     Set(_myCalendar, dropdownCalendarSelection2.Selected);
-    Set(_minDate, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-    Set(_maxDate, DateAdd(DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days), 40, Days));
+    Set(_minDate, 
+		DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days)
+	);
+    Set(_maxDate, 
+		DateAdd(
+			DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days), 
+			40, 
+			Days
+		)
+	);
     ClearCollect(MyCalendarEvents, 
 		'Office365'.GetEventsCalendarViewV2(_myCalendar.Name, 
 			Text(_minDate, UTC), 
@@ -253,7 +261,11 @@ This topic explains the expressions or formulas to which various properties (suc
     Value:
 
     ```powerapps-dot
-    !(DateAdd(_firstDayInView,ThisItem.Value,Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,Days)) + 1 > _lastDayOfMonth)
+    !(
+		DateAdd(_firstDayInView,ThisItem.Value,Days) - 
+			Weekday(DateAdd(_firstDayInView,ThisItem.Value,Days)) + 1 
+		> _lastDayOfMonth
+	)
     ```
 
     The statement checks whether the cell is in a row where no days of the currently selected month occur.  Recall that subtracting the weekday value of any day from that its date value and adding 1 will always return the first item in the row that day lives in. So this statement checks if the first day in the row this item is in is larger than the last day of the viewable month. If it is, then it shouldn't be visible because the entire row contains days of the proceeding month.
@@ -277,7 +289,7 @@ This topic explains the expressions or formulas to which various properties (suc
 		Filter(MyCalendarEvents, 
 				DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value,Days)
 		)
-	) > 0 && !Subcircle.Visible && Title.Visible`
+	) > 0 && !Subcircle.Visible && Title.Visible
     ```
 
     This control is visible if the `Start` field for any event is equivalent to the date of that cell, the Title control is visible, and the Subcircle control isn't visible. In other words, this control is visible when at least one event occurs on this day and it isn't selected. If it is selected, the events for that day are displayed in the **CalendarEventsGallery** control.
@@ -290,7 +302,7 @@ This topic explains the expressions or formulas to which various properties (suc
     Value:
 
     ```powerapps-dot
-    And( DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title.Visible )
+    DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected && Title.Visible
     ```
 
   - This control is visible when _dateSelected is equivalent to the date of the cell AND the Title control is visible. In other words, this control appears when the cell is the currently selected date.
@@ -307,7 +319,7 @@ This topic explains the expressions or formulas to which various properties (suc
 		Filter(MyCalendarEvents,
         	Text(Start, DateTimeFormat.ShortDate) = Text(_dateSelected, DateTimeFormat.ShortDate)
 		),
-    	"Start"
+		"Start"
 	)
     ```
 
