@@ -65,7 +65,7 @@ A couple other controls interact or have a dependency on this one:
 ![UserBrowseGallery control](media/people-screen/people-browse-gall.png)
 
 * Property: **Items**<br>
-    Value: Logic to lookup users when the user starts typing.
+	Value: Logic to lookup users when the user starts typing.
 	```powerapps-dot
 	If( !IsBlank( Trim( TextSearchBox.Text ) ), 
 		'Office365Users'.SearchUser(
@@ -93,7 +93,7 @@ A couple other controls interact or have a dependency on this one:
 * Property: **OnSelect**<br>
     Value: Code to add the user to an app level collection, and select the user.
 
-    ```powerapps-dot
+	```powerapps-dot
 	Concurrent(
 		Set( _selectedUser, ThisItem ),
 		Reset( TextSearchBox ),
@@ -102,6 +102,7 @@ A couple other controls interact or have a dependency on this one:
 		)
 	)
 	```
+
     * Selecting this control does 3 things concurrently:
 
       1. Sets the **_selectedUser** variable to the item selected.

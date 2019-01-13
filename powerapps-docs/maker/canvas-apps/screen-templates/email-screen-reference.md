@@ -68,7 +68,7 @@ The purpose of this control is to allow app users to add people who don't exist 
 	!IsBlank( TextSearchBox.Text ) &&
 		IsMatch( TextSearchBox.Text, Match.Email ) &&
 		Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
-  	```
+	```
 
 * Line by line this code block says that the **AddIcon** control will only be visible if:
 
@@ -122,7 +122,7 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **OnSelect**
     Value: Code to add the user to an app level collection, and select the user.
 
-    ```powerapps-dot
+	```powerapps-dot
 	Concurrent(
 		Set( _selectedUser, ThisItem ),
 		Reset( TextSearchBox ),
@@ -130,7 +130,7 @@ The purpose of this control is to allow app users to add people who don't exist 
 			Collect( MyPeople, ThisItem )
 		)
 	)
-    ```
+	```
     Selecting this control does 3 things concurrently:
 
     1. Sets the **_selectedUser** variable to the item selected

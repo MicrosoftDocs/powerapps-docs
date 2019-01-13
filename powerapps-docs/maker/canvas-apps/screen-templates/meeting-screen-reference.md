@@ -204,7 +204,7 @@ This control allows users to add people who don't exist inside their org to the 
 * Property: **OnSelect**<br>
     Value: A collect statement to add the user to the attendee list, another to refresh available meeting times, and several variable toggles.
 
-    ```powerapps-dot
+	```powerapps-dot
 	Concurrent(
 		Reset( TextSearchBox ),
 		Set( _selectedUser, ThisItem ),
@@ -239,7 +239,7 @@ This control allows users to add people who don't exist inside their org to the 
 			Set( _showMeetingTimes, true )
 		)
 	)
-    ```
+	```
 
     At a high level, selecting this control adds the person to the **MyPeople** collection (the app's storage of the attendee list), and refreshes the available meeting times based on the new user addition.
 

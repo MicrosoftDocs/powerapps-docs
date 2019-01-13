@@ -163,7 +163,8 @@ In many offices, team members send meeting requests to notify each other when th
 	SortByColumns(
 	    Filter(
 	        MyCalendarEvents,
-	        Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate ),
+	        Text( Start, DateTimeFormat.ShortDate ) = 
+				Text( _dateSelected, DateTimeFormat.ShortDate ),
 	        ShowAs <> "Free"
 	    ),
 	    "Start"

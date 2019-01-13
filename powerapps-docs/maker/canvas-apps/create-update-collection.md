@@ -89,7 +89,7 @@ The following steps show you how to create a collection within your app using th
    > You can replace 'Text Input' with something like 'City' or 'State', which was done in the image.  
 6. On the **Insert** tab, select **Button**. Set its **[OnSelect](controls/properties-core.md)** property to the following function:  
 
-   ```Collect(Destinations, {Cities:City.Text, States:States.Text})```  
+   ```Collect( Destinations, { Cities:City.Text, States:States.Text } )```  
    
     It should look like the following:  
     ![][11]  
@@ -97,7 +97,7 @@ The following steps show you how to create a collection within your app using th
     > [!NOTE]
    > You can use this same function to add additional columns to this collection. For example, you can add another text-input control for Country to add a Countries column:
    
-    `Collect(Destinations, {Cities:City.Text, States:States.Text}, {Countries:Country.Text})`
+    `Collect( Destinations, { Cities:City.Text, States:States.Text }, { Countries: Country.Text } )`
 7. Rename the button control **AddCityStateButton**, and set its **[Text](controls/properties-core.md)** property to **Add City and State**:  
    ![][12]  
 
@@ -121,7 +121,7 @@ There are a few sections in this walk-through. When complete, you'll know how to
    ![][14]  
 4. On the **Action** tab, select **OnSelect**. Enter the following function:  
    
-    ```Collect(PriceList, Import1.Data)```  
+    ```Collect( PriceList, Import1.Data )```  
 5. Preview your app. Select the **Import Data** button, select the PriceList.zip file, and select **Open**.
 6. Close the Preview window.
 7. Select the **File** tab, and select **Collections**. The PriceList items you imported are listed:  
@@ -171,8 +171,8 @@ There are a few sections in this walk-through. When complete, you'll know how to
 4. Select the **Screen** tab and set the **[OnVisible](controls/control-screen.md)** property to the following expression:  
    
     ```powerapps-dot
-	If( IsEmpty(PriceList), LoadData(PriceList, "pricefile") );
-	If( IsEmpty(OrderList), LoadData(OrderList, "orderfile") )
+	If( IsEmpty( PriceList ), LoadData( PriceList, "pricefile" ) );
+	If( IsEmpty( OrderList ), LoadData( OrderList, "orderfile" ) )
 	```
 
 Now, see what you created:
@@ -190,9 +190,9 @@ Now, see what you created:
 
 > [!TIP]
 > To remove all items from the order list, add a button, set its **[Text](controls/properties-core.md)** property to **Clear**, and set its **[OnSelect](controls/properties-core.md)** property to the following expression:  
-> ```Clear(OrderList);SaveData(OrderList, "orderfile")```  
+> ```Clear( OrderList );SaveData( OrderList, "orderfile" )```  
 > To remove one item at a time, show the **OrderList** collection in a gallery, and then set the **[OnSelect](controls/properties-core.md)** property of a label in that gallery to the following expression:  
-> ```Remove(OrderList, ThisItem);SaveData(OrderList, "orderfile")```
+> ```Remove( OrderList, ThisItem );SaveData( OrderList, "orderfile" )```
 > 
 > 
 
