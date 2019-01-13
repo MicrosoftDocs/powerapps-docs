@@ -81,13 +81,13 @@ The purpose of this control is to allow app users to add people who don't exist 
 
 	```powerapps-dot
 	Collect( MyPeople,
-        { 
+		{ 
 			DisplayName: TextSearchBox.Text, 
 			UserPrincipalName: TextSearchBox.Text, 
 			Mail: TextSearchBox.Text
 		}
 	);
-    Reset( TextSearchBox )
+	Reset( TextSearchBox )
 	```
   
   * This code block adds a row to the **MyPeople** collection and populates three fields with the text in **TextSearchBox**. These 3 fields are DisplayName, UserPrincipalName, and Mail. It then resets the contents of **TextSearchBox**
@@ -123,13 +123,13 @@ The purpose of this control is to allow app users to add people who don't exist 
     Value: Code to add the user to an app level collection, and select the user.
 
     ```powerapps-dot
-    Concurrent(
-        Set( _selectedUser, ThisItem ),
-        Reset( TextSearchBox ),
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+	Concurrent(
+		Set( _selectedUser, ThisItem ),
+		Reset( TextSearchBox ),
+		If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
 			Collect( MyPeople, ThisItem )
 		)
-    )
+	)
     ```
     Selecting this control does 3 things concurrently:
 
@@ -154,7 +154,7 @@ The purpose of this control is to allow app users to add people who don't exist 
 		( EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
 			RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0 ),
 		304
-    )
+	)
 	```
 
   * The height of this gallery adjusts to the number of items in the gallery to a maximum height of 304.

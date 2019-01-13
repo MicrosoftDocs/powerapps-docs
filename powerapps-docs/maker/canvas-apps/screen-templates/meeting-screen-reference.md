@@ -72,12 +72,12 @@ This topic explains the expressions or formulas to which various properties (suc
    ![LblInviteTab control](media/meeting-screen/meeting-schedule-text.png)
 
 * Property: **Color**<br>
-    Value: `If (!_showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
+    Value: `If( !_showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
 
     **_showDetails** is a variable used to determine whether the **LblInviteTab** control or the **LblScheduleTab** control is selected. If it's true, **LblScheduleTab** is selected, if false, **LblInviteTab** is. Thus, if **_showDetails** is true (this tab *is* selected), the tab color will match the fill value of **RectQuickActionBar**. Otherwise, it will match the color value of **LblRecipientCount**.
 
 * Property: **OnSelect**<br>
-    Value: Set( _showDetails, true ).
+    Value: `Set( _showDetails, true )`
 
     Sets the **_showDetails** variable to true which means the contents of the Schedule tab are visible, and the contents of the Invite tab are hidden.
 
@@ -101,9 +101,9 @@ This control allows users to add people who don't exist inside their org to the 
     Value: 3 logical checks which all must evaluate to true for the control to be visible.
 
 	```powerapps-dot
-    !IsBlank( TextSearchBox.Text ) &&
-    	IsMatch( TextSearchBox.Text, Match.Email ) &&
-    	Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
+	!IsBlank( TextSearchBox.Text ) &&
+		IsMatch( TextSearchBox.Text, Match.Email ) &&
+		Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
 	```
 
   Line by line this code block says that the **AddIcon** control will only be visible if:
@@ -117,23 +117,23 @@ This control allows users to add people who don't exist inside their org to the 
 
 	```powerapps-dot
 	Collect( MyPeople,
-        { 
+		{ 
 			DisplayName: TextSearchBox.Text, 
 			UserPrincipalName: TextSearchBox.Text, 
 			Mail: TextSearchBox.Text
 		}
 	);
-    Concurrent(
-        Reset( TextSearchBox ),
-        Set( _showMeetingTimes, false ),
-        UpdateContext( { _loadMeetingTimes: true } ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false ),
-        ClearCollect( MeetingTimes, 
+	Concurrent(
+		Reset( TextSearchBox ),
+		Set( _showMeetingTimes, false ),
+		UpdateContext( { _loadMeetingTimes: true } ),
+		Set( _selectedMeetingTime, Blank() ),
+		Set( _selectedRoom, Blank() ),
+		Set( _roomListSelected, false ),
+		ClearCollect( MeetingTimes, 
 			AddColumns(
 				'Office365'.FindMeetingTimes(
-        			{ 
+					{ 
 						RequiredAttendees: Concat(MyPeople, UserPrincipalName & ";")
 						MeetingDuration: MeetingDurationSelect.Selected.Minutes,
 						Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ),
@@ -205,21 +205,21 @@ This control allows users to add people who don't exist inside their org to the 
     Value: A collect statement to add the user to the attendee list, another to refresh available meeting times, and several variable toggles.
 
     ```powerapps-dot
-    Concurrent(
-        Reset( TextSearchBox ),
-        Set( _selectedUser, ThisItem ),
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
-        	Collect( MyPeople, ThisItem ); 
-        	Concurrent(
-            	Set( _showMeetingTimes, false ),
-            	UpdateContext( { _loadMeetingTimes: true } ),
-            	Set( _selectedMeetingTime, Blank() ),
-            	Set( _selectedRoom, Blank() ),
-            	Set( _roomListSelected, false ),
-            	ClearCollect( MeetingTimes, 
-					AddColumns(
+	Concurrent(
+		Reset( TextSearchBox ),
+		Set( _selectedUser, ThisItem ),
+		If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+			Collect( MyPeople, ThisItem ); 
+			Concurrent(
+				Set( _showMeetingTimes, false ),
+				UpdateContext( { _loadMeetingTimes: true } ),
+				Set( _selectedMeetingTime, Blank() ),
+				Set( _selectedRoom, Blank() ),
+				Set( _roomListSelected, false ),
+				ClearCollect( MeetingTimes, 
+				AddColumns(
 						'Office365'.FindMeetingTimes(
-            				{
+							{
 								RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ),
 								MeetingDuration: MeetingDurationSelect.Selected.Minutes,
             					Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ),
@@ -234,11 +234,11 @@ This control allows users to add people who don't exist inside their org to the 
 						"EndTime", MeetingTimeSlot.End.DateTime
 					)
 				)
-        	);
-            UpdateContext( { _loadingMeetingTimes: false } );
-            Set( _showMeetingTimes, true )
-        )
-    )
+			);
+			UpdateContext( { _loadingMeetingTimes: false } );
+			Set( _showMeetingTimes, true )
+		)
+	)
     ```
 
     At a high level, selecting this control adds the person to the **MyPeople** collection (the app's storage of the attendee list), and refreshes the available meeting times based on the new user addition.
@@ -263,7 +263,7 @@ This control allows users to add people who don't exist inside their org to the 
 	Min( 
 		76 * RoundUp( CountRows( MeetingPeopleGallery.AllItems ) / 2, 0 ),
 		350
-    )
+	)
 	```
 
   * The height of this gallery adjusts to the number of items in the gallery to a maximum height of 350.
@@ -290,18 +290,18 @@ This control allows users to add people who don't exist inside their org to the 
     Value: A remove statement to remove the user from the attendee list, a collect statement to refresh available meeting times, and several variable toggles.
 
 	```powerapps-dot
-    Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) );
-    Concurrent(
-        Reset( TextSearchBox ),
-        Set( _showMeetingTimes, false ),
-        UpdateContext( { _loadMeetingTimes: true } ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false ),
-        ClearCollect( MeetingTimes, 
+	Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) );
+	Concurrent(
+		Reset( TextSearchBox ),
+		Set( _showMeetingTimes, false ),
+		UpdateContext( { _loadMeetingTimes: true } ),
+		Set( _selectedMeetingTime, Blank() ),
+		Set( _selectedRoom, Blank() ),
+		Set( _roomListSelected, false ),
+		ClearCollect( MeetingTimes, 
 			AddColumns(
 				'Office365'.FindMeetingTimes(
-        			{
+					{
 						RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ), 
 						MeetingDuration: MeetingDurationSelect.Selected.Minutes,
         				Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ), 
@@ -316,9 +316,9 @@ This control allows users to add people who don't exist inside their org to the 
 				"EndTime", MeetingTimeSlot.End.DateTime
 			)
 		)
-    );
-    UpdateContext( { _loadingMeetingTimes: false } );
-    Set( _showMeetingTimes, true )
+	);
+	UpdateContext( { _loadingMeetingTimes: false } );
+	Set( _showMeetingTimes, true )
 	```
 
   At a high level, selecting this control removes the person from the attendee list, and refreshes the available meeting times based on the removal of this person.
@@ -346,16 +346,16 @@ This control allows users to add people who don't exist inside their org to the 
   
 	```powerapps-dot
 	Concurrent(
-    	Reset( TextSearchBox ),
-	    Set( _showMeetingTimes, false ),
-	    UpdateContext( { _loadingMeetingTimes: true } ),
-	    Set( _selectedMeetingTime, Blank() ),
-	    Set( _selectedRoom, Blank() ),
-	    Set( _roomListSelected, false ),
-    	ClearCollect( MeetingTimes, 
+		Reset( TextSearchBox ),
+		Set( _showMeetingTimes, false ),
+		UpdateContext( { _loadingMeetingTimes: true } ),
+		Set( _selectedMeetingTime, Blank() ),
+		Set( _selectedRoom, Blank() ),
+		Set( _roomListSelected, false ),
+		ClearCollect( MeetingTimes, 
 			AddColumns(
 				'Office365'.FindMeetingTimes(
-    				{
+					{
 						RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ), 
 						MeetingDuration: MeetingDurationSelect.Selected.Minutes,
 						Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ), 
@@ -436,7 +436,6 @@ This control allows users to add people who don't exist inside their org to the 
 	```powerapps-dot
 	Set( _selectedMeetingTime, ThisItem );
 	UpdateContext( { _loadingRooms: true } );
-  
 	If( IsEmpty( RoomsLists ),
 		ClearCollect( RoomsLists, 'Office365'.GetRoomLists().value) );
 	If( CountRows( RoomsLists ) <= 1,
@@ -537,7 +536,7 @@ This control allows users to add people who don't exist inside their org to the 
 				{
 					RequiredAttendees: _allRoomsConcat, 
 					MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-     				Start: _selectedMeetingTime.StartTime & "Z", 
+	 				Start: _selectedMeetingTime.StartTime & "Z", 
 					End: _selectedMeetingTime.EndTime & "Z", 
 					MinimumAttendeePercentage: "1",
 					IsOrganizerOptional: "false", 
@@ -552,7 +551,7 @@ This control allows users to add people who don't exist inside their org to the 
 						First( RoomTimeSuggestions ).AttendeeAvailability, 
 						Availability = "Free"
 					),
-     				"Address", Attendee.EmailAddress.Address ), 
+	 				"Address", Attendee.EmailAddress.Address ), 
 				"Name", LookUp( AllRooms, Address = Attendee.EmailAddress.Address ).Name
 			)
 		);
@@ -631,14 +630,14 @@ This control allows users to add people who don't exist inside their org to the 
 		)
 	);
 	Concurrent(
-    	Reset( TextMeetingLocation1 ),
-    	Reset( TextMeetingSubject1 ),
-    	Reset( TextMeetingMessage1 ),
-    	Clear( MyPeople ),
-    	Set( _selectedMeetingTime, Blank() ),
-    	Set( _selectedRoomList, Blank() ),
-    	Set( _selectedRoom, Blank() ),
-    	Set( _roomListSelected, false )
+		Reset( TextMeetingLocation1 ),
+		Reset( TextMeetingSubject1 ),
+		Reset( TextMeetingMessage1 ),
+		Clear( MyPeople ),
+		Set( _selectedMeetingTime, Blank() ),
+		Set( _selectedRoomList, Blank() ),
+		Set( _selectedRoom, Blank() ),
+		Set( _roomListSelected, false )
 	)
 	```
   

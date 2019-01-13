@@ -66,10 +66,10 @@ A couple other controls interact or have a dependency on this one:
 
 * Property: **Items**<br>
     Value: Logic to lookup users when the user starts typing.
-    ```powerapps-dot
+	```powerapps-dot
 	If( !IsBlank( Trim( TextSearchBox.Text ) ), 
 		'Office365Users'.SearchUser(
-			{
+		{
 				searchTerm: Trim( TextSearchBox.Text ), 
 				top: 15
 			}

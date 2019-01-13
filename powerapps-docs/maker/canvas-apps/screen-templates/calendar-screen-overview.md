@@ -75,34 +75,34 @@ If you already know which calendar your users should view, you can simplify the 
 1. Set the **[OnStart](../controls/control-screen.md)** property of the default screen in the app to this formula:
 
     ```powerapps-dot
-    Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
-    Set( _dateSelected, Today() );
-    Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );
-    Set( _firstDayInView, 
+	Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
+	Set( _dateSelected, Today() );
+	Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );
+	Set( _firstDayInView, 
 		DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth) - 2 + 1 ), Days )
 	);
-    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    Set( _calendarVisible, false );
-    Set( _myCalendar, 
+	Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+	Set( _calendarVisible, false );
+	Set( _myCalendar, 
 		LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
 	);
-    Set( _minDate, 
+	Set( _minDate, 
 		DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
 	);
-    Set(_maxDate, 
+	Set( _maxDate, 
 		DateAdd(
 			DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days ),
 			40, 
 			Days
 		)
 	);
-    ClearCollect( MyCalendarEvents, 
+	ClearCollect( MyCalendarEvents, 
 		Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
 			Text( _minDate, UTC ), 
 			Text( _maxDate, UTC ) 
 		).value
 	);
-    Set( _calendarVisible, true )
+	Set( _calendarVisible, true )
     ```
 
     > [!NOTE]
@@ -160,15 +160,14 @@ In many offices, team members send meeting requests to notify each other when th
 1. Set the **Items** property of **CalendarEventsGallery** to this formula:
 
     ```powerapps-dot
-    SortByColumns(
-        Filter(
-            MyCalendarEvents,
-            Text( Start, DateTimeFormat.ShortDate ) = 
-				Text( _dateSelected, DateTimeFormat.ShortDate ),
-            ShowAs <> "Free"
-        ),
-        "Start"
-    )
+	SortByColumns(
+	    Filter(
+	        MyCalendarEvents,
+	        Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate ),
+	        ShowAs <> "Free"
+	    ),
+	    "Start"
+	)
     ```
 
     In this formula, the **Filter** function hides not only those events that are scheduled for a date other than the one selected but also events for which the availability is set to **Free**.
@@ -253,19 +252,20 @@ The `Office365.GetEventsCalendarViewV2` operation retrieves a variety of fields 
     ```powerapps-dot
 	Set( _selectedCalendarEvent, ThisItem );
 	ClearCollect( AttendeeEmailsTemp,
-        Filter(
-            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ),
+		Filter(
+			Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ),
 			!IsBlank( Result )
 		)
 	);
-    ClearCollect( AttendeeEmails,
-        AddColumns( AttendeeEmailsTemp, 
+	ClearCollect( AttendeeEmails,
+		AddColumns( AttendeeEmailsTemp, 
 			"InOrg",
-            Upper( _userDomain ) = Upper( Right( Result, Len( Result ) - Find( "@", Result ) ) )
-        )
+			Upper( _userDomain ) = Upper( Right( Result, Len( Result ) - Find( "@", Result ) ) )
+		)
 	);
 	ClearCollect( MyPeople,
-		ForAll( AttendeeEmails, If( InOrg, Office365Users.UserProfile( Result ) ) ) );
+		ForAll( AttendeeEmails, If( InOrg, Office365Users.UserProfile( Result ) ) ) 
+	);
 	Collect( MyPeople,
 		ForAll( AttendeeEmails,
 			If( !InOrg, 

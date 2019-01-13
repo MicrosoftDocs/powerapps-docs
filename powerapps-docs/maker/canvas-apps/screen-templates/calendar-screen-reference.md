@@ -74,7 +74,7 @@ This topic explains the expressions or formulas to which various properties (suc
         Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
         Set( _dateSelected, Today() );
         Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );  
-        Set( _firstDayInView, DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 1 ), Days ) );
+        Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 1), Days ) );
         Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) )  
     );
     ```
@@ -94,11 +94,11 @@ This topic explains the expressions or formulas to which various properties (suc
     UpdateContext( {_showLoading: true} );
     Set( _myCalendar, dropdownCalendarSelection2.Selected );
     Set( _minDate, 
-		DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth ) - 2 + 1 ), Days )
+		DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
 	);
     Set(_maxDate, 
 		DateAdd(
-			DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth ) - 2 + 1 ), Days ), 
+			DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ), 
 			40, 
 			Days
 		)
@@ -133,7 +133,7 @@ This topic explains the expressions or formulas to which various properties (suc
     ```powerapps-dot
     Set( _dateSelected, Today() );
     Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days) );
-    Set( _firstDayInView, DateAdd(_firstDayOfMonth, -( Weekday( _firstDayOfMonth ) - 2 + 1 ), Days));
+    Set( _firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days));
     Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) )
     ```
 
@@ -153,17 +153,17 @@ This topic explains the expressions or formulas to which various properties (suc
 - Property: **OnSelect**<br>Value: Four **Set** functions and an **If** function that show the previous month in the calendar gallery.
 
     ```powerapps-dot
-    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, -1, Months ) );
-    Set( _firstDayInView, DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth ) - 2 + 1 ), Days ) );
-    Set( _lastDayOfMonth, DateAdd(DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    If( _minDate > _firstDayOfMonth,
-    	Collect( MyCalendarEvents, 
+	Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, -1, Months ) );
+	Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
+	Set( _lastDayOfMonth, DateAdd(DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+	If( _minDate > _firstDayOfMonth,
+		Collect( MyCalendarEvents, 
 			'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
 				Text( _firstDayInView, UTC ), 
 				Text( DateAdd( _minDate, -1, Days ), UTC )
 			).value
 		);
-    	Set( _minDate, _firstDayInView )
+		Set( _minDate, _firstDayInView )
 	)
     ```
 
@@ -186,17 +186,18 @@ This topic explains the expressions or formulas to which various properties (suc
     Value: Four **Set** functions and an **If** function that show the next month in the calendar gallery.
 
     ```powerapps-dot
-    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, 1, Months ) );
-    Set( _firstDayInView, DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth ) - 2 + 1 ), Days ) );
-    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    If( _maxDate < _lastDayOfMonth,
-    Collect( MyCalendarEvents, 
-		'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-			Text( DateAdd( _maxDate, 1, Days ), UTC ), 
-			DateAdd( _firstDayInView, 40, Days )
-		).value
-	);
-    Set( _maxDate, DateAdd( _firstDayInView, 40, Days) ) )
+	Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, 1, Months ) );
+	Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
+	Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+	If( _maxDate < _lastDayOfMonth,
+		Collect( MyCalendarEvents, 
+			'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
+				Text( DateAdd( _maxDate, 1, Days ), UTC ), 
+				DateAdd( _firstDayInView, 40, Days )
+			).value
+		);
+		Set( _maxDate, DateAdd( _firstDayInView, 40, Days) ) 
+	)
     ```
 
     > [!Note]
@@ -240,11 +241,11 @@ This topic explains the expressions or formulas to which various properties (suc
 	If( DateAdd( _firstDayInView, ThisItem.Value ) = Today() && 
 				DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected, 
 			RGBA( 0, 0, 0, 0 ),
-    	DateAdd( _firstDayInView, ThisItem.Value) = Today(), 
+		DateAdd( _firstDayInView, ThisItem.Value) = Today(), 
 			ColorFade( Subcircle.Fill, 0.67 ),
 		Abs( Title.Text - ThisItem.Value) > 10,
 			RGBA( 200, 200, 200, 0.3 ),
-    	RGBA( 0, 0, 0, 0 )
+		RGBA( 0, 0, 0, 0 )
 	)
     ```
 
@@ -261,7 +262,7 @@ This topic explains the expressions or formulas to which various properties (suc
     Value:
 
     ```powerapps-dot
-    !(
+	!(
 		DateAdd( _firstDayInView, ThisItem.Value, Days ) - 
 			Weekday( DateAdd( _firstDayInView, ThisItem.Value,Days ) ) + 1 
 		> _lastDayOfMonth
@@ -274,7 +275,7 @@ This topic explains the expressions or formulas to which various properties (suc
     Value: A **Set** function that sets the _dateSelected variable to the date of the selected cell.
 
     ```powerapps-dot
-    Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
+	Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
     ```
 
 ### Circle control in the calendar gallery
@@ -285,7 +286,7 @@ This topic explains the expressions or formulas to which various properties (suc
     Value: A formula that determines whether any events are scheduled for the selected date and the subcircle and the title are visible.
 
     ```powerapps-dot
-    CountRows(
+	CountRows(
 		Filter( MyCalendarEvents, 
 				DateValue( Text( Start ) )  = DateAdd( _firstDayInView, ThisItem.Value, Days )
 		)
@@ -302,7 +303,7 @@ This topic explains the expressions or formulas to which various properties (suc
     Value:
 
     ```powerapps-dot
-    DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected && Title.Visible
+	DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected && Title.Visible
     ```
 
   - This control is visible when _dateSelected is equivalent to the date of the cell AND the Title control is visible. In other words, this control appears when the cell is the currently selected date.
@@ -315,9 +316,9 @@ This topic explains the expressions or formulas to which various properties (suc
     Value: A formula that sorts and filters the events gallery.
 
     ```powerapps-dot
-    SortByColumns(
+	SortByColumns(
 		Filter( MyCalendarEvents,
-        	Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
+			Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
 		),
 		"Start"
 	)
