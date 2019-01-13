@@ -101,10 +101,10 @@ To create this data source as a collection, set the **OnSelect** property of a *
 ```powerapps-dot
 ClearCollect( Products, 
 	Table( 
-		{ Product: "Widget", 'Quantity Requested': 6, 'Quantity Available': 3 }, 
-		{ Product: "Gadget", 'Quantity Requested': 10, 'Quantity Available': 20 },
-		{ Product: "Gizmo", 'Quantity Requested': 4, 'Quantity Available': 11 },
-		{ Product: "Apparatus", 'Quantity Requested': 7, 'Quantity Available': 6 } 
+		{ Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 }, 
+		{ Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
+		{ Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
+		{ Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 } 
 	)
 )
 ```
@@ -125,7 +125,8 @@ ShowColumns(
 		Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
 		"Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
 	), 
-	"Product", "Quantity To Order"
+	"Product", 
+	"Quantity To Order"
 )
 ```
 
@@ -141,7 +142,10 @@ Another approach is to use the **ForAll** function to replace the table-shaping 
 ```powerapps-dot
 ForAll( Products, 
 	If( 'Quantity Requested' > 'Quantity Available', 
-		{ Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } 
+		{ 
+			Product: Product, 
+			'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+		} 
 	) 
 )
 ```
@@ -162,7 +166,8 @@ ClearCollect( NewOrder,
 			Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
 			"Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
 		), 
-		"Product", "Quantity To Order"
+		"Product", 
+		"Quantity To Order"
 	)
 )
 ```
@@ -171,7 +176,10 @@ ClearCollect( NewOrder,
 ClearCollect( NewOrder, 
 	ForAll( Products, 
 		If( 'Quantity Requested' > 'Quantity Available', 
-			{ Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } 
+			{ 
+				Product: Product, 
+				'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+			} 
 		) 
 	)
 )
@@ -187,7 +195,10 @@ Clear( ProductsToOrder );
 ForAll( Products, 
 	If( 'Quantity Requested' > 'Quantity Available', 
 		Collect( NewOrder,  
-			{ Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } 
+			{ 
+				Product: Product, 
+				'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+			} 
 		)
 	)
 )

@@ -106,18 +106,18 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 3. Add a **Button** control, and set its **OnSelect** property to this formula:
 
 	```powerapps-dot
-	Set( StartTime, Value(Now()) );
+	Set( StartTime, Value( Now() ) );
 	Concurrent(
-    	Set(FRTrans, MicrosoftTranslator.Translate(TextInput1.Text,"fr")); 
-			Set(FRTransTime, Value(Now()) ),
-    	Set(DETrans, MicrosoftTranslator.Translate(TextInput1.Text,"de")); 
-			Set(DETransTime, Value(Now()) )
+    	Set( FRTrans, MicrosoftTranslator.Translate( TextInput1.Text, "fr" ) ); 
+			Set( FRTransTime, Value( Now() ) ),
+    	Set( DETrans, MicrosoftTranslator.Translate( TextInput1.Text, "de" ) ); 
+			Set( DETransTime, Value( Now() ) )
 	);
 	Collect( Results,
 		{ 
 			Input: TextInput1.Text,
-			French: FRTrans, FrenchTime: FRTransTime-StartTime, 
-			German: DETrans, GermanTime: DETransTime-StartTime, 
+			French: FRTrans, FrenchTime: FRTransTime - StartTime, 
+			German: DETrans, GermanTime: DETransTime - StartTime, 
 			FrenchFaster: FRTransTime < DETransTime
     	}
 	)

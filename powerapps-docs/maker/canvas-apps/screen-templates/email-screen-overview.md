@@ -81,8 +81,11 @@ This will allow you to send a single image with your email as an attachment.
 1. Change the 'Height' property of the **EmailPeopleGallery** to 
 
 	```powerapps-dot
-	Min((EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2) * 
-	RoundUp(CountRows(EmailPeopleGallery1.AllItems) / 2, 0), 304)
+	Min( 
+		( EmailPeopleGallery1.TemplateHeight + EmailPeopleGallery1.TemplatePadding * 2 ) *
+			RoundUp( CountRows( EmailPeopleGallery1.AllItems ) / 2, 0 ), 
+		304
+	)
 	```
  
 1. Change the 'ShowScrollbar' of the **EmailPeopleGallery** to

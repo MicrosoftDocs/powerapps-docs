@@ -126,8 +126,8 @@ OK, you have a nice-looking app, but it doesn't do anything yet. You'll fix that
 With that background, let's add the formula for the **OnSelect** property of the button. This is where all the magic happens.
 
 ```powerapps-dot
-If(chkLanguage.Value=true,
-	ClearCollect(languageCollect, 
+If( chkLanguage.Value = true,
+	ClearCollect( languageCollect, 
 		TextAnalytics.DetectLanguage(
 			{
 				numberOfLanguagesToDetect: 1, 
@@ -137,8 +137,8 @@ If(chkLanguage.Value=true,
 	)
 );
 
-If(chkPhrases.Value=true,
-	ClearCollect(phrasesCollect, 
+If( chkPhrases.Value = true,
+	ClearCollect( phrasesCollect, 
 		TextAnalytics.KeyPhrases(
 			{
 				language: "en", 
@@ -148,8 +148,8 @@ If(chkPhrases.Value=true,
 	)
 );
 
-If(chkSentiment.Value=true,
-	ClearCollect(sentimentCollect, 
+If( chkSentiment.Value = true,
+	ClearCollect( sentimentCollect, 
 		TextAnalytics.DetectSentiment(
 			{
 				language: "en", 

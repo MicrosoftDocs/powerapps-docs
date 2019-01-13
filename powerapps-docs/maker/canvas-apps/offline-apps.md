@@ -74,7 +74,7 @@ Select the **OnVisible** property for **Screen1** in the app, and copy in the fo
 
 ```powerapps-dot
 If( Connection.Connected,
-    ClearCollect( LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100} ));
+    ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
     	UpdateContext( {statusText: "Online data"} ),
     LoadData(LocalTweets, "Tweets", true);
 	    UpdateContext( {statusText: "Local data"} )
@@ -106,7 +106,7 @@ This formula checks if the device is online:
 ### Step 5: Add a connection status label
 Insert a new **Label** control, and set its **Text** property to the following formula:
 
-```If( Connection.Connected, "Connected", "Offline")```
+```If( Connection.Connected, "Connected", "Offline" )```
 
 This formula checks if the device is online. If it is, the text of the label is "Connected", otherwise it's "Offline".
 
@@ -148,7 +148,7 @@ Add a new **Timer** control:
 
     ```powerapps-dot
     If( Connection.Connected,
-        ForAll( LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}) );
+        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
         Clear( LocalTweetsToPost);
         Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
         SaveData( LocalTweetsToPost, "LocalTweetsToPost" );

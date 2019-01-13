@@ -67,10 +67,10 @@ A couple other controls interact or have a dependency on this one:
 * Property: **Items**<br>
     Value: Logic to lookup users when the user starts typing.
     ```powerapps-dot
-	If(!IsBlank(Trim(TextSearchBox.Text)), 
+	If( !IsBlank( Trim( TextSearchBox.Text ) ), 
 		'Office365Users'.SearchUser(
 			{
-				searchTerm: Trim(TextSearchBox.Text), 
+				searchTerm: Trim( TextSearchBox.Text ), 
 				top: 15
 			}
 		)
@@ -96,7 +96,7 @@ A couple other controls interact or have a dependency on this one:
     ```powerapps-dot
 	Concurrent(
 		Set( _selectedUser, ThisItem ),
-		Reset(TextSearchBox),
+		Reset( TextSearchBox ),
 		If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
 			Collect( MyPeople, ThisItem )
 		)
@@ -118,7 +118,7 @@ A couple other controls interact or have a dependency on this one:
 	```powerapps-dot
 	If( !IsBlank( ThisItem.Id ) && 
 			'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto,
-		'Office365Users'.UserPhoto(ThisItem.Id)
+		'Office365Users'.UserPhoto( ThisItem.Id )
 	)
 	```
 
@@ -145,7 +145,7 @@ Note that if an image isn't retrieved, the image control is blank, and the **ico
 ![PeopleAddedGallery Title control](media/people-screen/people-people-gall-title.png)
 
 * Property: **OnSelect**<br>
-    Value: `Set(_selectedUser, ThisItem)`
+    Value: `Set( _selectedUser, ThisItem )`
 
   * Sets the **_selectedUser** variable to the item selected in the **EmailPeopleGallery**.
 
@@ -154,7 +154,7 @@ Note that if an image isn't retrieved, the image control is blank, and the **ico
 ![PeopleAddedGallery iconRemove control](media/people-screen/people-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
-    Value: `Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))`
+    Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
   * Looks up the record in the **MyPeople** collection where the UserPrincipalName matches the UserPrincipalName of the selected item, and removes that record from the collection.
 

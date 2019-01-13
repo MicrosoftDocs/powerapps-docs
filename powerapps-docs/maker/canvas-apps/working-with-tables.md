@@ -67,11 +67,11 @@ Any table that's stored in a data source or a collection has a name, which you u
 
 As in the following example, you can express a table in a formula by using the **[Table](functions/function-table.md)** function with a set of records, which you express in curly braces:
 
-**Table( { Value: "Strawberry" }, { Value: "Vanilla" } )**
+`Table( { Value: "Strawberry" }, { Value: "Vanilla" } )`
 
 You can also define a single-column table with square brackets.  An equivalent way to write the above:
 
-**[ "Strawberry", "Vanilla" ]**
+`[ "Strawberry", "Vanilla" ]`
 
 ## Table formulas
 In Excel and PowerApps, you use formulas to manipulate numbers and strings of text in similar ways:
@@ -96,15 +96,17 @@ Let's walk through some simple examples.
     > [!NOTE]
     > Some controls have been rearranged and enlarged for illustration purposes.
 
-2. Instead of setting the **[Items](controls/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:<br>
-    **Sort(CustomGallerySample, SampleHeading, Descending)**
+2. Instead of setting the **[Items](controls/properties-core.md)** property to the name of a table, set it to a formula that includes the name of the table as an argument, as in this example:
+
+    `Sort(CustomGallerySample, SampleHeading, Descending)`
 
     This formula incorporates the **[Sort](functions/function-sort.md)** function, which takes the name of a table as its first argument and the name of a column in that table as its second argument. The function also supports an optional third argument, which stipulates that you want to sort the data in descending order.
 
     ![](media/working-with-tables/gallery-items-sort.png)
 
-3. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:<br>
-   **FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)**
+3. Set the **[Items](controls/properties-core.md)** property to a formula that takes the formula from the previous step as an argument and returns a table, as in this example:
+
+	`FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)`
 
     In this formula, you use the **[FirstN](functions/function-first-last.md)** function to show a particular number of records in a table. You use the **[Sort](functions/function-sort.md)** function as the first argument to **[FirstN](functions/function-first-last.md)** and a number (in this case, **2**) as the second argument, which specifies how many records to show.
    
@@ -313,21 +315,15 @@ All the **ForAll** record scopes override the global scope.  The **Value** conte
 ### Records
 You express records by using curly braces that contain named field values.  For example, you can express the first record in the table at the start of this topic by using this formula:
 
-```powerapps-dot
-{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }
-```
+`{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }`
 
 You can also embed formulas within other formulas, as this example shows:
 
-```powerapps-dot
-{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }
-```
+`{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }`
 
 You can nest records by nesting curly braces, as this example shows:
 
-```powerapps-dot
-{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }
-```
+`{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }`
 
 Enclose each column name that contains a special character, such as a space or a colon, in single quotes.  To use a single quote within a column name, double it.
 
@@ -358,7 +354,7 @@ Table(
 ### Value tables
 You can create single-column tables by specifying values in square brackets. The resulting table has a single column, named **Value**.
 
-For example, **[ 1, 2, 3, 4 ]** is equivalent to **Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )** and returns this table:
+For example, `[ 1, 2, 3, 4 ]` is equivalent to `Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )` and returns this table:
 
 ![](media/working-with-tables/inline-table.png)
 

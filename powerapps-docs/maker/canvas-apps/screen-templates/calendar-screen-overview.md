@@ -75,29 +75,34 @@ If you already know which calendar your users should view, you can simplify the 
 1. Set the **[OnStart](../controls/control-screen.md)** property of the default screen in the app to this formula:
 
     ```powerapps-dot
-    Set(_userDomain, Right(User().Email, Len(User().Email) - Find("@", User().Email)));
-    Set(_dateSelected, Today());
-    Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));
-    Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
-    Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));
-    Set(_calendarVisible, false);
-    Set(_myCalendar, LookUp(Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}"));
-    Set(_minDate, 
-		DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days)
+    Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
+    Set( _dateSelected, Today() );
+    Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );
+    Set( _firstDayInView, 
+		DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth) - 2 + 1 ), Days )
+	);
+    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+    Set( _calendarVisible, false );
+    Set( _myCalendar, 
+		LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
+	);
+    Set( _minDate, 
+		DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
 	);
     Set(_maxDate, 
 		DateAdd(
-			DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days),
+			DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days ),
 			40, 
-			Days)
+			Days
+		)
 	);
-    ClearCollect(MyCalendarEvents, 
-		Office365.GetEventsCalendarViewV2(_myCalendar.Name, 
-			Text(_minDate, UTC), 
-			Text(_maxDate, UTC) 
+    ClearCollect( MyCalendarEvents, 
+		Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
+			Text( _minDate, UTC ), 
+			Text( _maxDate, UTC ) 
 		).value
 	);
-    Set(_calendarVisible, true)
+    Set( _calendarVisible, true )
     ```
 
     > [!NOTE]
@@ -158,9 +163,8 @@ In many offices, team members send meeting requests to notify each other when th
     SortByColumns(
         Filter(
             MyCalendarEvents,
-            Text(Start, DateTimeFormat.ShortDate) = 
-				Text(_dateSelected, DateTimeFormat.ShortDate
-            ),
+            Text( Start, DateTimeFormat.ShortDate ) = 
+				Text( _dateSelected, DateTimeFormat.ShortDate ),
             ShowAs <> "Free"
         ),
         "Start"
@@ -175,7 +179,7 @@ In many offices, team members send meeting requests to notify each other when th
     CountRows(
         Filter(
             MyCalendarEvents,
-            DateValue(Text(Start)) = DateAdd(_firstDayInView, ThisItem.Value, Days),
+            DateValue( Text(Start) ) = DateAdd( _firstDayInView, ThisItem.Value, Days ),
             ShowAs <> "Free"
         )
     ) > 0 && !Subcircle1.Visible && Title2.Visible
@@ -215,9 +219,12 @@ If users select an event by clicking or tapping it in **CalendarEventsGallery**,
 
     ```powerapps-dot
     Table(
-        {Title: "Subject", Value: _selectedCalendarEvent.Subject},
-        {Title: "Time", Value: _selectedCalendarEvent.Start & " - " & _selectedCalendarEvent.End},
-        {Title: "Body", Value: _selectedCalendarEvent.Body}
+        { Title: "Subject", Value: _selectedCalendarEvent.Subject },
+        { 
+			Title: "Time", 
+			Value: _selectedCalendarEvent.Start & " - " & _selectedCalendarEvent.End 
+		},
+        { Title: "Body", Value: _selectedCalendarEvent.Body }
     )
     ```
 
@@ -228,8 +235,8 @@ If users select an event by clicking or tapping it in **CalendarEventsGallery**,
 1. In **CalendarEventsGallery**, set the **OnSelect** property of the **Title** control to this formula:
 
     ```powerapps-dot
-    Set(_selectedCalendarEvent, ThisItem);
-    Navigate(EventDetailsScreen, None)
+    Set( _selectedCalendarEvent, ThisItem );
+    Navigate( EventDetailsScreen, None )
     ```
 
     > [!Note]
@@ -244,26 +251,27 @@ The `Office365.GetEventsCalendarViewV2` operation retrieves a variety of fields 
 1. To retrieve the Office 365 profiles of the meeting attendees, set the **OnSelect** property of the **Title** control in the **CalendarEventsGallery** to this formula:
 
     ```powerapps-dot
-    Set(_selectedCalendarEvent, ThisItem);
-    ClearCollect(AttendeeEmailsTemp,
+	Set( _selectedCalendarEvent, ThisItem );
+	ClearCollect( AttendeeEmailsTemp,
         Filter(
-            Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"),
-			!IsBlank(Result)
+            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ),
+			!IsBlank( Result )
 		)
 	);
-    ClearCollect(AttendeeEmails,
-        AddColumns(AttendeeEmailsTemp, "InOrg",
-            Upper(_userDomain) = Upper(Right(Result, Len(Result) - Find("@", Result)))
+    ClearCollect( AttendeeEmails,
+        AddColumns( AttendeeEmailsTemp, 
+			"InOrg",
+            Upper( _userDomain ) = Upper( Right( Result, Len( Result ) - Find( "@", Result ) ) )
         )
 	);
-    ClearCollect(MyPeople,
-        ForAll(AttendeeEmails, If(InOrg, Office365Users.UserProfile(Result))));
-    Collect(MyPeople,
-        ForAll(AttendeeEmails,
-            If(!InOrg, 
-				{DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result}
+	ClearCollect( MyPeople,
+		ForAll( AttendeeEmails, If( InOrg, Office365Users.UserProfile( Result ) ) ) );
+	Collect( MyPeople,
+		ForAll( AttendeeEmails,
+			If( !InOrg, 
+				{ DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result }
 			)
-        )
+		)
 	)
     ```
 
@@ -271,10 +279,10 @@ These bullets discuss what each **ClearCollect** operation does:
 
 - ClearCollect(AttendeeEmailsTemp)
     ```powerapps-dot
-    ClearCollect(AttendeeEmailsTemp,
+    ClearCollect( AttendeeEmailsTemp,
         Filter(
-            Split(ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";"), 
-			!IsBlank(Result)
+            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ), 
+			!IsBlank( Result)
 		)
 	);
     ```
@@ -283,10 +291,10 @@ These bullets discuss what each **ClearCollect** operation does:
 
 - ClearCollect(AttendeeEmails)
     ```powerapps-dot
-    ClearCollect(AttendeeEmails,
-        AddColumns(AttendeeEmailsTemp, 
+    ClearCollect( AttendeeEmails,
+        AddColumns( AttendeeEmailsTemp, 
 			"InOrg",
-            Upper(_userDomain) = Upper(Right(Result, Len(Result) - Find("@", Result)))
+            Upper( _userDomain ) = Upper( Right( Result, Len(Result) - Find("@", Result) ) )
         )
 	);
     ```
@@ -301,15 +309,15 @@ These bullets discuss what each **ClearCollect** operation does:
 - ClearCollect(MyPeople)
 
     ```powerapps-dot
-    ClearCollect(MyPeople,
-        ForAll(AttendeeEmails, 
-			If(InOrg, 
-				Office365Users.UserProfile(Result)
+    ClearCollect( MyPeople,
+        ForAll( AttendeeEmails, 
+			If( InOrg, 
+				Office365Users.UserProfile( Result )
 			)
 		)
 	);
-    Collect(MyPeople,
-        ForAll(AttendeeEmails,
+    Collect( MyPeople,
+        ForAll( AttendeeEmails,
             If( !InOrg, 
 				{ 
 					DisplayName: Result, 
@@ -327,7 +335,7 @@ These bullets discuss what each **ClearCollect** operation does:
     > You can achieve the same result with only one **ClearCollect** function:
     
     ```powerapps-dot
-    ClearCollect(MyPeople, 
+    ClearCollect( MyPeople, 
 		ForAll(
 			AddColumns(
 				Filter(
@@ -335,12 +343,12 @@ These bullets discuss what each **ClearCollect** operation does:
 						ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, 
 						";"
 					), 
-					!IsBlank(Result)
+					!IsBlank( Result )
 				), 
-				"InOrg", _userDomain = Right(Result, Len(Result) - Find("@", Result))
+				"InOrg", _userDomain = Right( Result, Len( Result ) - Find( "@", Result ) )
 			), 
 			If( InOrg, 
-				Office365Users.UserProfile(Result), 
+				Office365Users.UserProfile( Result ), 
 				{ 
 					DisplayName: Result, 
 					Id: "", 
