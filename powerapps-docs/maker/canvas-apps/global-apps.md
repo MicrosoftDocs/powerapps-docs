@@ -70,15 +70,15 @@ The change in the PowerApps list separator is consistent with that happens to th
 * Fields in a [record](working-with-tables.md#elements-of-a-table).
 * Records in a [Value table](working-with-tables.md#inline-syntax).
 
-For example, consider the following formula expressed in a language and region that uses dot as the decimal separator, such as Japan or the United Kingdom:
+For example, consider the following formula expressed in a language and region that uses "**.**" (dot) as the decimal separator, such as Japan or the United Kingdom:
 
 ![PowerApps formula If open paren slider1 dot value greater than 12 dot 59 comma notify open paren "Valid!" comma success close paren semi-colon Navigate open paren "NextScreen" comma None close paren comma notify open paren "Invalid, try again" comma error close paren close paren](media/global-apps/operators-dot.png)
 
-Now view this same formula in a language and region where "," is used for the decimal separator, such as France or Spain:
+Now view this same formula in a language and region where "**,**" (comma) is used for the decimal separator, such as France or Spain:
 
 ![PowerApps formula If open paren slider1 dot value greater than 12 comma 59 semi-colon notify open paren "Valid!" semi-colon success close paren double semi-colon Navigate open paren "NextScreen" semi-colon None close paren semi-colon notify open paren "Invalid, try again" semi-colon error close paren close paren](media/global-apps/operators-comma.png)
 
-The highlight shows the operators that change between the two versions.  Note that the property selection operator **.** in **Slider1.Value** is always the same, no matter what the decimal separator is.
+The highlight shows the operators that change between the two versions.  Note that the property selection operator "**.**" (dot) in **Slider1.Value** is always the same, no matter what the decimal separator is.
 
 Internally the formula does not change, all that changes is how it is displayed and edited by the author.  Two different authors using two different languages can view and edit the same formula, with each seeing the appropriate separators and operators for their language.
 
