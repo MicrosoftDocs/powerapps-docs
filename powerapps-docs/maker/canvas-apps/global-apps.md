@@ -72,11 +72,25 @@ The change in the PowerApps list separator is consistent with that happens to th
 
 For example, consider the following formula in "en-US":
 
-**If( Slider1.Value > 12.59, UpdateContext( { Validation: true, MovingOn: 1 } ); Navigate( "NextScreen", "" ), UpdateContext( { Validation: false } ) )**
+<noloc>
+```powerapps-dot
+If( Slider1.Value > 12.59, 
+	UpdateContext( { Validation: true, MovingOn: 1 } ); Navigate( "NextScreen", "" ), 
+	UpdateContext( { Validation: false } )
+)
+```
+</noloc>
 
 In a language where "," is used for the decimal separator, this will appear in the authoring experience as:
 
-**If( Slider1.Value > 12,59; UpdateContext( { Validation: true; MovingOn: 1 } );; Navigate( "NextScreen", "" ); UpdateContext( { Validation: false } ) )**
+<noloc>
+```powerapps-comma
+If( Slider1.Value > 12,59; 
+	UpdateContext( { Validation: true; MovingOn: 1 } );; Navigate( "NextScreen"; "" ); 
+	UpdateContext( { Validation: false } ) 
+)
+```
+</noloc>
 
 Note that the property selection operator **.** in **Slider1.Value** is always the same, no matter what the decimal separator is.
 
