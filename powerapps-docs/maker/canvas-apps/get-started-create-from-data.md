@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/18/2018
+ms.date: 01/14/2019
 ms.author: anneta
 search.audienceType: 
   - maker
