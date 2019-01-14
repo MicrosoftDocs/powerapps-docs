@@ -55,11 +55,11 @@ A few helpful notes:
 * You must add at least one person as an attendee, provide a subject, and select a meeting time in the 'Schedule' tab to create the meeting.
 * After you send the meeting, all of the selection contents will be cleared.
 * The OnSelect statement of the send icon (upper right corner) contains this formula: 
-	```powerapps-dot
-	Set( _myCalendarName, 
-		LookUp( 'Office365'.CalendarGetTables().value, DisplayName = "Calendar" ).Name 
-	);
-	```
+    ```powerapps-dot
+    Set( _myCalendarName, 
+        LookUp( 'Office365'.CalendarGetTables().value, DisplayName = "Calendar" ).Name 
+    );
+    ```
   * "Calendar" is the default display name for most office user's calendars. However this may not be the case in your org. If it's not, you can change "Calendar" to the appropriate term for your org.
 * You will get an error if you try to schedule a meeting that occurs in the past.
 * You will get an error if you add more than twenty people to a meeting.

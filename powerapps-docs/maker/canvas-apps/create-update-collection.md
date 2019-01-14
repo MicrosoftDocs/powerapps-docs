@@ -156,24 +156,24 @@ There are a few sections in this walk-through. When complete, you'll know how to
 3. Set the **[OnSelect](controls/properties-core.md)** property of the **Add** button to the following expression:  
    
     ```powerapps-dot
-	Collect(OrderList, 
-		{ 
-		  Name: PriceGallery.Selected.Name, 
-		  Qty: OrderQty.Value, 
-		  Cost: OrderQty.Value * LookUp(PriceList, PriceGallery.Selected.Name in Name, Price)
-		}
-	);
-	SaveData(OrderList, "orderfile")
-	```  
+    Collect(OrderList, 
+        { 
+            Name: PriceGallery.Selected.Name, 
+            Qty: OrderQty.Value, 
+            Cost: OrderQty.Value * LookUp(PriceList, PriceGallery.Selected.Name in Name, Price)
+        }
+    );
+    SaveData(OrderList, "orderfile")
+    ```  
    
     > [!NOTE]
    > When you select this button later in this procedure, you'll create and save a collection named **OrderList**. The collection will contain the name of a product that you enter in the gallery, a quantity that you choose with the slider, and the total cost calculated by multiplying the quantity by the price of the product.
 4. Select the **Screen** tab and set the **[OnVisible](controls/control-screen.md)** property to the following expression:  
    
     ```powerapps-dot
-	If( IsEmpty( PriceList ), LoadData( PriceList, "pricefile" ) );
-	If( IsEmpty( OrderList ), LoadData( OrderList, "orderfile" ) )
-	```
+    If( IsEmpty( PriceList ), LoadData( PriceList, "pricefile" ) );
+    If( IsEmpty( OrderList ), LoadData( OrderList, "orderfile" ) )
+    ```
 
 Now, see what you created:
 

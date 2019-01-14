@@ -64,11 +64,11 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **Visible**<br>
     Value: Logic to show the control only when a user types out a full and valid email address into the search box.
 
-	```powerapps-dot
-	!IsBlank( TextSearchBox.Text ) &&
-		IsMatch( TextSearchBox.Text, Match.Email ) &&
-		Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
-	```
+    ```powerapps-dot
+    !IsBlank( TextSearchBox.Text ) &&
+        IsMatch( TextSearchBox.Text, Match.Email ) &&
+        Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
+    ```
 
 * Line by line this code block says that the **AddIcon** control will only be visible if:
 
@@ -79,16 +79,16 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **OnSelect**<br>
     Value: Selecting this adds the valid email address to the **MyPeople** collection. This collection is used by the screen as the recipient list.
 
-	```powerapps-dot
-	Collect( MyPeople,
-		{ 
-			DisplayName: TextSearchBox.Text, 
-			UserPrincipalName: TextSearchBox.Text, 
-			Mail: TextSearchBox.Text
-		}
-	);
-	Reset( TextSearchBox )
-	```
+    ```powerapps-dot
+    Collect( MyPeople,
+        { 
+            DisplayName: TextSearchBox.Text, 
+            UserPrincipalName: TextSearchBox.Text, 
+            Mail: TextSearchBox.Text
+        }
+    );
+    Reset( TextSearchBox )
+    ```
   
   * This code block adds a row to the **MyPeople** collection and populates three fields with the text in **TextSearchBox**. These 3 fields are DisplayName, UserPrincipalName, and Mail. It then resets the contents of **TextSearchBox**
 
@@ -99,11 +99,11 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **Items**
     Value: The top 15 search results of the search text from the **TextSearchBox** control.
     
-	```powerapps-dot
-	If( !IsBlank( Trim(TextSearchBox.Text ) ), 
-		'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ), top: 15} )
-	)
-	```
+    ```powerapps-dot
+    If( !IsBlank( Trim(TextSearchBox.Text ) ), 
+        'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ), top: 15} )
+    )
+    ```
 
   * The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation.
     * The operation takes the text in Trim(**TextSearchBox**) as its search term and returns the top 15 results based on that search.
@@ -122,15 +122,15 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **OnSelect**
     Value: Code to add the user to an app level collection, and select the user.
 
-	```powerapps-dot
-	Concurrent(
-		Set( _selectedUser, ThisItem ),
-		Reset( TextSearchBox ),
-		If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
-			Collect( MyPeople, ThisItem )
-		)
-	)
-	```
+    ```powerapps-dot
+    Concurrent(
+        Set( _selectedUser, ThisItem ),
+        Reset( TextSearchBox ),
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+            Collect( MyPeople, ThisItem )
+        )
+    )
+    ```
     Selecting this control does 3 things concurrently:
 
     1. Sets the **_selectedUser** variable to the item selected
@@ -149,13 +149,13 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **Height**<br>
     Value: Logic to set the height based on the number of items currently in the gallery.
 
-	```powerapps-dot
-	Min( 
-		( EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
-			RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0 ),
-		304
-	)
-	```
+    ```powerapps-dot
+    Min( 
+        ( EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
+            RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0 ),
+        304
+    )
+    ```
 
   * The height of this gallery adjusts to the number of items in the gallery to a maximum height of 304.
   * It takes TemplateHeight + TemplatePadding * 2 as the total height of a single row of the EmailPeopleGallery, then multiplies it by the number of rows. Since WrapCount = 2, the number of true rows is RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0).
@@ -188,17 +188,17 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **OnSelect**<br>
     Value: Logic to send the user's email.
 
-	```powerapps-dot
-	Set( _emailRecipientString, Concat( MyPeople, Mail & ";" ) );
-	'Office365'.SendEmail( _emailRecipientString, 
-		TextEmailSubject.Text, 	
-		TextEmailMessage.Text, 
-		{ Importance:"Normal" }
-	);
-	Reset( TextEmailSubject );
-	Reset( TextEmailMessage );
-	Clear( MyPeople )
-	```
+    ```powerapps-dot
+    Set( _emailRecipientString, Concat( MyPeople, Mail & ";" ) );
+    'Office365'.SendEmail( _emailRecipientString, 
+        TextEmailSubject.Text, 	
+        TextEmailMessage.Text, 
+        { Importance:"Normal" }
+    );
+    Reset( TextEmailSubject );
+    Reset( TextEmailMessage );
+    Clear( MyPeople )
+    ```
 
   * Sending an email requires a semicolon separated string of email addresses. The first line takes the 'Mail' field from all the rows in the **MyPeople** collection and concatenates them down into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
   * It then uses the [Office365.SendEmail](https://docs.microsoft.com/en-us/connectors/office365/#sendemail) operation to send the email to the recipients.
