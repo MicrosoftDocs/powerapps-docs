@@ -104,9 +104,10 @@ JObject contact1 = JObject.Parse(@"{firstname: 'Peter', lastname: 'Cambel', "
   
 ```csharp  
   
-HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "contacts");  
-request.Content = new StringContent(contact1.ToString(), Encoding.UTF8, "application/json");  
-HttpResponseMessage response = await httpClient.SendAsync(request1);  
+HttpRequestMessage createrequest1 = new HttpRequestMessage(HttpMethod.Post, client.BaseAddress + "contacts");
+createrequest1.Content = new StringContent(contact1.ToString());
+createrequest1.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+HttpResponseMessage createResponse1 = client.SendAsync(createrequest1, HttpCompletionOption.ResponseHeadersRead).Result; 
   
 ```  
   
@@ -115,9 +116,24 @@ HttpResponseMessage response = await httpClient.SendAsync(request1);
 ```csharp  
   
 //contact2Uri contains a reference to an existing CRM contact instance.  
-string queryOptions = "?$select=fullname,annualincome,jobtitle,description";  
-HttpResponseMessage response = await httpClient.GetAsync(contact2Uri + queryOptions);  
-JObject contact2 = JsonConvert.DeserializeObject<JObject>(await response.Content.ReadAsStringAsync());  
+string queryOptions = "?$select=fullname,annualincome,jobtitle,description";
+HttpResponseMessage retrieveResponse1 = client.GetAsync(contact1Uri + queryOptions, HttpCompletionOption.ResponseHeadersRead).Result;
+if (retrieveResponse1.IsSuccessStatusCode) //200
+   {
+     retrievedcontact1 = JObject.Parse(retrieveResponse1.Content.ReadAsStringAsync().Result);
+     Console.WriteLine("Contact '{0}' retrieved: \n\tAnnual income: {1}" + "\n\tJob title: {2} \n\tDescription: {3}.",
+
+// Can use either indexer or GetValue method (or a mix of two)
+retrievedcontact1.GetValue("fullname"),
+retrievedcontact1["annualincome"],
+retrievedcontact1["jobtitle"],
+retrievedcontact1["description"]);   //description is initialized empty.
+    }
+else
+{
+Console.WriteLine("Failed to retrieve contact for reason: {0}",retrieveResponse1.ReasonPhrase);
+throw new Exception(string.Format("Failed to retrieve contact for reason: {0}", retrieveResponse1.Content));
+ } 
 
 ```
   
@@ -125,7 +141,7 @@ JObject contact2 = JsonConvert.DeserializeObject<JObject>(await response.Content
 
 In general, the samples take a straightforward approach to processing HTTP responses. If the request succeeds, information about the operation is typically output to the console. If the response also carries a JSON payload or useful headers, this information is only processed upon success. And lastly, if a Common Data Service for Apps entity was created, the `entityUris` collection is updated with the URI of that resource. The [DeleteRequiredRecords](#bkmk_deleteRequiredRecords) method uses this collection to optionally delete data created by the sample from your Common Data Service for Apps server.  
   
-If the request failed, the program outputs a contextual message about the operation that failed, and then it throws a custom exception of type `CrmHttpResponseException`. The exception-handler outputs more information about the exception and then control passes to a `finally` block that includes cleanup logic, again including a call to `DeleteRequiredRecords`. The following code demonstrates this error-handling approach on a POST request to create a record.  
+If the request failed, the program outputs a contextual message about the operation that failed, and then it throws a custom exception of type `Exception`. The exception-handler outputs more information about the exception and then control passes to a `finally` block that includes cleanup logic, again including a call to `DeleteRequiredRecords`. The following code demonstrates this error-handling approach on a POST request to create a record.  
   
 ```csharp
   

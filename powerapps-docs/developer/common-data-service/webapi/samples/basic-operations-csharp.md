@@ -35,9 +35,9 @@ Prerequisites for all Common Data Service for Apps Web API C# samples are detail
   
 <a name="bkmk_runSample"></a>
   
-## Run this sample
+## How to run this sample
 
-First go to [Web API Basic Operations Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23), clone or download the zip file, and extract its contents into a local folder. This folder should contain the following files:  
+Goo to [Web API Basic Operations Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23), clone or download the samples repository, and extract its contents into a local folder. This folder contains the following files:  
   
 |File|Purpose/Description|  
 |----------|--------------------------|  
@@ -49,17 +49,16 @@ First go to [Web API Basic Operations Sample (C#)](https://github.com/Microsoft/
   
  Next, use the following procedure to run this sample.  
   
-1. Locate and double-click on the solution file, BasicOperations.sln, to load the solution into Visual Studio. Build the **BasicOperations** solution.  This should automatically download and install all the required NuGet packages that are either missing or need to be updated.  
-  
-2. Edit the application configuration file, App.config, to specify connection information for your Common Data Service for Apps server.  
-  
-3. Run the **BasicOperations** project from within Visual Studio.  All sample solutions are configured to run in debug mode by default.  
-  
+1. Locate and double-click on the solution file, BasicOperations.sln, to load the solution into Visual Studio. Build the BasicOperations solution. This should automatically download and install all the required NuGet packages that are either missing or need to be updated.
+2. Edit the application configuration file, App.config, to specify connection information for your Common Data Service for Apps server.
+3. Run the BasicOperations project from within Visual Studio. All sample solutions are configured to run in debug mode by default.
+
+ 
 <a name="bkmk_codeListing"></a>
    
 ## Code listing
- 
-The most current source for this file is found in sample download package.  
+
+ Click [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23) to download the full sample.
   
  `SampleProgram.cs`  
   

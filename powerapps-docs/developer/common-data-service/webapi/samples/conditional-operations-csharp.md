@@ -35,11 +35,9 @@ Prerequisites for all CDS for Apps Web API C# samples are detailed in the [Prere
   
 <a name="bkmk_RunSample"></a>
  
-## Run this sample
+## How to run this sample
 
-To run this sample:  
-  
-1. Go to [Web API Conditional Operations Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23) and clone or download the Web API Conditional Operations Sample (CS).zip file, and extract the contents of the file to a folder on your computer. The extracted folder should contain the following files:  
+Go to [Web API Conditional Operations Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23) and clone or download the samples repository, and extract the contents of the file to a folder on your computer. The extracted folder should contain the following files:
   
     |File|Description|  
     |----------|-----------------|  
@@ -49,13 +47,13 @@ To run this sample:
     |SampleMethod.cs|Contains all the methods that support the source code in the sample.|
     |ConditionalOperations.sln<br /> ConditionalOperations.csproj<br /> Packages.config<br /> AssemblyInfo.cs|The standard Visual Studio solution, project, NuGet package, and assembly information files for this sample.|  
   
-2. Double-click the ConditionalOperations.sln file to open the solution  in Visual Studio.  
+1. Double-click the ConditionalOperations.sln file to open the solution  in Visual Studio.  
   
-3. Build the solution (**Build** > **Build Solution**). This should automatically download and update all the required NuGet packages.  
+1. Build the solution (**Build** > **Build Solution**). This should automatically download and update all the required NuGet packages.  
   
-4. Edit the App.Config file in your solution to specify your CDS for Apps server instance against which you want this sample to run.  
+1. Edit the App.Config file in your solution to specify your CDS for Apps server instance against which you want this sample to run.  
   
-5. Run the project.  All sample projects are configured to run in debug mode by default.  
+1. Run the project.  All sample projects are configured to run in debug mode by default.  
   
      The sample code output will be displayed in a console window.  
   
