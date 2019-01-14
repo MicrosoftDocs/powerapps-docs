@@ -68,8 +68,6 @@
     href: clientapi/walkthrough-write-your-first-client-script.md
   - name: Debug your JavaScript code for model-driven apps
     href: clientapi/debug-JavaScript-code.md
-  - name: 'Best practices: client scripting in model-driven apps'
-    href: clientapi/client-scripting-best-practices.md
   - name: Client API Reference
     href: clientapi/reference.md
     items:
@@ -761,6 +759,8 @@
         href: clientapi/reference/xrm-webapi/execute.md
       - name: executeMultiple
         href: clientapi/reference/xrm-webapi/executeMultiple.md
+  - name: Best practices
+    href: best-practices/business-logic/index.md
 - name: Customize commands and ribbon
   href: customize-commands-ribbon.md
   items:
@@ -828,6 +828,8 @@
     href: edit-customizations-xml-file-schema-validation.md
   - name: Publish customizations
     href: publish-customizations.md
+- name: Best practices
+  href: best-practices/index.md
 - name: Samples
   items:
   - name: Export ribbon definitions
