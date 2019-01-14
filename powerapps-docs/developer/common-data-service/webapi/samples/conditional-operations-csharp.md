@@ -38,14 +38,14 @@ Prerequisites for all CDS for Apps Web API C# samples are detailed in the [Prere
 ## How to run this sample
 
 Go to [Web API Conditional Operations Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23) and clone or download the samples repository, and extract the contents of the file to a folder on your computer. The extracted folder should contain the following files:
-  
-    |File|Description|  
-    |----------|-----------------|  
-    |SampleProgram.cs|Contains the source code for this sample.|  
-    |App.config|The application configuration file, which contains placeholder CDS for Apps server connection information.|  
-    |SampleHelper.cs|Contains the helper code to assist in performing common tasks, such as configuration, authentication and `HTTP` response error handling.|
-    |SampleMethod.cs|Contains all the methods that support the source code in the sample.|
-    |ConditionalOperations.sln<br /> ConditionalOperations.csproj<br /> Packages.config<br /> AssemblyInfo.cs|The standard Visual Studio solution, project, NuGet package, and assembly information files for this sample.|  
+
+|File|Description|  
+|----------|-----------------|  
+|SampleProgram.cs|Contains the source code for this sample.|  
+|App.config|The application configuration file, which contains placeholder CDS for Apps server connection information.|  
+|SampleHelper.cs|Contains the helper code to assist in performing common tasks, such as configuration, authentication and `HTTP` response error handling.|
+|SampleMethod.cs|Contains all the methods that support the source code in the sample.|
+|ConditionalOperations.sln<br /> ConditionalOperations.csproj<br /> Packages.config<br /> AssemblyInfo.cs|The standard Visual Studio solution, project, NuGet package, and assembly information files for this sample.|  
   
 1. Double-click the ConditionalOperations.sln file to open the solution  in Visual Studio.  
   

@@ -37,7 +37,7 @@ Prerequisites for all Common Data Service for Apps Web API C# samples are detail
   
 ## How to run this sample
 
-Goo to [Web API Basic Operations Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23), clone or download the samples repository, and extract its contents into a local folder. This folder contains the following files:  
+Go to [Web API Basic Operations Sample (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23), clone or download the samples repository, and extract its contents into a local folder. This folder contains the following files:  
   
 |File|Purpose/Description|  
 |----------|--------------------------|  
