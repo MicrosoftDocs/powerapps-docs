@@ -35,13 +35,13 @@ Canvas apps enable makers to easily design and create custom layouts using the l
 With embedded canvas apps, makers can bring the power of canvas apps to their model-driven forms. Using embedded canvas apps, you can easily create rich visual areas on a form and display data from a variety of sources right next to data from the Common Data Service.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/embed-canvas-app-in-form.png "Embedded canvas app in a model-driven app form")
+   > ![Embedded canvas app in a model-driven app form](media/embed-canvas-app-in-form.png "Embedded canvas app in a model-driven app form")
 
 Canvas apps are embedded in model-driven forms in the same way other custom controls are added. An embedded canvas app includes rich data integration capabilities that bring in contextual data from the host model-driven form to the embedded canvas app.
 
 The steps to embed a canvas app in your model-driven form vary based on the data context that you want the host model-driven form to provide to the embedded canvas app.
--	Pass the current record as data context. More information: [Pass the current record as data context with an embedded canvas app](pass-current-embedded-canvas-app.md)
--	Pass a list of records related to the current record as data context. More information: [Pass a list of related records as data context with an embedded canvas app](pass-related-embedded-canvas-app.md) 
+-	Pass the current record as data context. More information: [Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md)
+-	Pass a list of records related to the current record as data context. More information: [Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) 
 
 After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
