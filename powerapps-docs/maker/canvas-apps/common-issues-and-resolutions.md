@@ -20,7 +20,7 @@ This article lists some common issues that you might encounter while using Power
 
 ## Added after February 2018
 
-1. Camera issue on Android mobile devices (Jan. 1, 2019)
+1. **Camera issue on Android mobile devices** (Jan. 1, 2019)
 
     If the camera control stops working on an Android device, republish your app, and reopen it on the device. The camera control was updated in response to a change in the Android operating system, and your app will benefit from the update when you republish.
 
