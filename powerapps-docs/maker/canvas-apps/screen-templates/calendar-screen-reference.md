@@ -94,21 +94,21 @@ This topic explains the expressions or formulas to which various properties (suc
     UpdateContext( {_showLoading: true} );
     Set( _myCalendar, dropdownCalendarSelection2.Selected );
     Set( _minDate, 
-		DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
-	);
+        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
+    );
     Set(_maxDate, 
-		DateAdd(
-			DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ), 
-			40, 
-			Days
-		)
-	);
+        DateAdd(
+            DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ), 
+            40, 
+            Days
+        )
+    );
     ClearCollect( MyCalendarEvents, 
-		'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-			Text( _minDate, UTC ), 
-			Text( _maxDate, UTC )
-		).value
-	);
+        'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
+            Text( _minDate, UTC ), 
+            Text( _maxDate, UTC )
+        ).value
+    );
     UpdateContext( {_showLoading: false} );
     Set( _calendarVisible, true )
     ```
@@ -152,20 +152,20 @@ This topic explains the expressions or formulas to which various properties (suc
 
 - Property: **OnSelect**<br>Value: Four **Set** functions and an **If** function that show the previous month in the calendar gallery.
 
-	```powerapps-dot
-	Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, -1, Months ) );
-	Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
-	Set( _lastDayOfMonth, DateAdd(DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-	If( _minDate > _firstDayOfMonth,
-		Collect( MyCalendarEvents, 
-			'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-				Text( _firstDayInView, UTC ), 
-				Text( DateAdd( _minDate, -1, Days ), UTC )
-			).value
-		);
-		Set( _minDate, _firstDayInView )
-	)
-	```
+    ```powerapps-dot
+    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, -1, Months ) );
+    Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
+    Set( _lastDayOfMonth, DateAdd(DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+    If( _minDate > _firstDayOfMonth,
+        Collect( MyCalendarEvents, 
+            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
+                Text( _firstDayInView, UTC ), 
+                Text( DateAdd( _minDate, -1, Days ), UTC )
+            ).value
+        );
+        Set( _minDate, _firstDayInView )
+    )
+    ```
 
     > [!Note]
     > Definitions for **_firstDayOfMonth**, **_firstDayInView**, and **_lastDayOfMonth** are nearly identical to those in the [Calendar dropdown](#calendar-dropdown) section of this topic.
@@ -185,20 +185,20 @@ This topic explains the expressions or formulas to which various properties (suc
 - Property: **OnSelect**<br>
     Value: Four **Set** functions and an **If** function that show the next month in the calendar gallery.
 
-	```powerapps-dot
-	Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, 1, Months ) );
-	Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
-	Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-	If( _maxDate < _lastDayOfMonth,
-		Collect( MyCalendarEvents, 
-			'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-				Text( DateAdd( _maxDate, 1, Days ), UTC ), 
-				DateAdd( _firstDayInView, 40, Days )
-			).value
-		);
-		Set( _maxDate, DateAdd( _firstDayInView, 40, Days) ) 
-	)
-	```
+    ```powerapps-dot
+    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, 1, Months ) );
+    Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
+    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+    If( _maxDate < _lastDayOfMonth,
+        Collect( MyCalendarEvents, 
+            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
+                Text( DateAdd( _maxDate, 1, Days ), UTC ), 
+                DateAdd( _firstDayInView, 40, Days )
+            ).value
+        );
+        Set( _maxDate, DateAdd( _firstDayInView, 40, Days) )    
+    )
+    ```
 
     > [!Note]
     > Definitions for **_firstDayOfMonth**, **_firstDayInView**, and **_lastDayOfMonth** are nearly identical to those in the [Calendar dropdown](#calendar-dropdown) section of this topic.
@@ -239,17 +239,17 @@ This topic explains the expressions or formulas to which various properties (suc
 - Property: **Fill**<br>
     Value: One **If** function.
 
-	```powerapps-dot
-	If( DateAdd( _firstDayInView, ThisItem.Value ) = Today() && 
-				DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected, 
-			RGBA( 0, 0, 0, 0 ),
-		DateAdd( _firstDayInView, ThisItem.Value) = Today(), 
-			ColorFade( Subcircle.Fill, 0.67 ),
-		Abs( Title.Text - ThisItem.Value) > 10,
-			RGBA( 200, 200, 200, 0.3 ),
-		RGBA( 0, 0, 0, 0 )
-	)
-	```
+    ```powerapps-dot
+    If( DateAdd( _firstDayInView, ThisItem.Value ) = Today() && 
+                DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected, 
+            RGBA( 0, 0, 0, 0 ),
+        DateAdd( _firstDayInView, ThisItem.Value) = Today(), 
+            ColorFade( Subcircle.Fill, 0.67 ),
+        Abs( Title.Text - ThisItem.Value) > 10,
+            RGBA( 200, 200, 200, 0.3 ),
+        RGBA( 0, 0, 0, 0 )
+    )
+    ```
 
   - From the above description of the **Text** property, `DateAdd(_firstDayInView, ThisItem.Value)` represents the day in the visible cell. With this knowledge, the first comparison says that if this cell is today AND this cell is equivalent to **_dateSelected** then don't provide a fill value.
   - The second comparison says that if this cell is only equal to today, then provide the ColorFade fill.
@@ -263,22 +263,22 @@ This topic explains the expressions or formulas to which various properties (suc
 - Property: **Visible**<br>
     Value:
 
-	```powerapps-dot
-	!(
-		DateAdd( _firstDayInView, ThisItem.Value, Days ) - 
-			Weekday( DateAdd( _firstDayInView, ThisItem.Value,Days ) ) + 1 
-		> _lastDayOfMonth
-	)
-	```
+    ```powerapps-dot
+    !(
+        DateAdd( _firstDayInView, ThisItem.Value, Days ) - 
+            Weekday( DateAdd( _firstDayInView, ThisItem.Value,Days ) ) + 1 
+        > _lastDayOfMonth
+    )
+    ```
 
     The statement checks whether the cell is in a row where no days of the currently selected month occur.  Recall that subtracting the weekday value of any day from that its date value and adding 1 will always return the first item in the row that day lives in. So this statement checks if the first day in the row this item is in is larger than the last day of the viewable month. If it is, then it shouldn't be visible because the entire row contains days of the proceeding month.
 
 - Property: **OnSelect**<br>
     Value: A **Set** function that sets the _dateSelected variable to the date of the selected cell.
 
-	```powerapps-dot
-	Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
-	```
+    ```powerapps-dot
+    Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
+    ```
 
 ### Circle control in the calendar gallery
 
@@ -287,13 +287,13 @@ This topic explains the expressions or formulas to which various properties (suc
 - Property: **Visible**<br>
     Value: A formula that determines whether any events are scheduled for the selected date and the subcircle and the title are visible.
 
-	```powerapps-dot
-	CountRows(
-		Filter( MyCalendarEvents, 
-				DateValue( Text( Start ) )  = DateAdd( _firstDayInView, ThisItem.Value, Days )
-		)
-	) > 0 && !Subcircle.Visible && Title.Visible
-	```
+    ```powerapps-dot
+    CountRows(
+        Filter( MyCalendarEvents, 
+            DateValue( Text( Start ) ) = DateAdd( _firstDayInView, ThisItem.Value, Days )
+        )
+    ) > 0 && !Subcircle.Visible && Title.Visible
+    ```
 
     This control is visible if the `Start` field for any event is equivalent to the date of that cell, the Title control is visible, and the Subcircle control isn't visible. In other words, this control is visible when at least one event occurs on this day and it isn't selected. If it is selected, the events for that day are displayed in the **CalendarEventsGallery** control.
 
@@ -304,9 +304,9 @@ This topic explains the expressions or formulas to which various properties (suc
 - Property: **Visible**<br>
     Value:
 
-	```powerapps-dot
-	DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected && Title.Visible
-	```
+    ```powerapps-dot
+    DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected && Title.Visible
+    ```
 
   - This control is visible when _dateSelected is equivalent to the date of the cell AND the Title control is visible. In other words, this control appears when the cell is the currently selected date.
 
@@ -317,14 +317,14 @@ This topic explains the expressions or formulas to which various properties (suc
 - Property: **Items**<br>
     Value: A formula that sorts and filters the events gallery.
 
-	```powerapps-dot
-	SortByColumns(
-		Filter( MyCalendarEvents,
-			Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
-		),
-		"Start"
-	)
-	```
+    ```powerapps-dot
+    SortByColumns(
+        Filter( MyCalendarEvents,
+            Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
+        ),
+        "Start"
+    )
+    ```
 
    From the discussions about **MyCalendarEvents** above, this collection contains all the events between **_minDate** and **_maxDate**. In order to display the events for only the date selected, a `Filter` is applied on **MyCalendarEvents** to display the events whose `Start` date is equivalent to **_dateSelected**. The items are then sorted by their `Start` to put them in sequential order.
 

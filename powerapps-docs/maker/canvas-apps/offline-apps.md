@@ -75,9 +75,9 @@ Select the **OnVisible** property for **Screen1** in the app, and copy in the fo
 ```powerapps-dot
 If( Connection.Connected,
     ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
-    	UpdateContext( {statusText: "Online data"} ),
+        UpdateContext( {statusText: "Online data"} ),
     LoadData(LocalTweets, "Tweets", true);
-	    UpdateContext( {statusText: "Local data"} )
+        UpdateContext( {statusText: "Local data"} )
 );
 LoadData( LocalTweetsToPost, "LocalTweets", true );
 SaveData( LocalTweets, "Tweets" )
@@ -124,7 +124,7 @@ This formula checks if the device is online. If it is, the text of the label is 
     If( Connection.Connected,
         Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
         Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-	        SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
+            SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
     );
     UpdateContext( {resetNewTweet: true} );
     UpdateContext( {resetNewTweet: false} )

@@ -75,34 +75,34 @@ If you already know which calendar your users should view, you can simplify the 
 1. Set the **[OnStart](../controls/control-screen.md)** property of the default screen in the app to this formula:
 
     ```powerapps-dot
-	Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
-	Set( _dateSelected, Today() );
-	Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );
-	Set( _firstDayInView, 
-		DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth) - 2 + 1 ), Days )
-	);
-	Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-	Set( _calendarVisible, false );
-	Set( _myCalendar, 
-		LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
-	);
-	Set( _minDate, 
-		DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
-	);
-	Set( _maxDate, 
-		DateAdd(
-			DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days ),
-			40, 
-			Days
-		)
-	);
-	ClearCollect( MyCalendarEvents, 
-		Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
-			Text( _minDate, UTC ), 
-			Text( _maxDate, UTC ) 
-		).value
-	);
-	Set( _calendarVisible, true )
+    Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
+    Set( _dateSelected, Today() );
+    Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );
+    Set( _firstDayInView, 
+        DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth) - 2 + 1 ), Days )
+    );
+    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+    Set( _calendarVisible, false );
+    Set( _myCalendar, 
+        LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
+    );
+    Set( _minDate, 
+        DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
+    );
+    Set( _maxDate, 
+        DateAdd(
+            DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days ),
+            40, 
+            Days 
+        )
+    );
+    ClearCollect( MyCalendarEvents, 
+        Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
+            Text( _minDate, UTC ), 
+            Text( _maxDate, UTC ) 
+        ).value
+    );
+    Set( _calendarVisible, true )
     ```
 
     > [!NOTE]
@@ -160,15 +160,15 @@ In many offices, team members send meeting requests to notify each other when th
 1. Set the **Items** property of **CalendarEventsGallery** to this formula:
 
     ```powerapps-dot
-	SortByColumns(
-	    Filter(
-	        MyCalendarEvents,
-	        Text( Start, DateTimeFormat.ShortDate ) = 
-				Text( _dateSelected, DateTimeFormat.ShortDate ),
-	        ShowAs <> "Free"
-	    ),
-	    "Start"
-	)
+    SortByColumns(
+        Filter(
+            MyCalendarEvents,
+            Text( Start, DateTimeFormat.ShortDate ) = 
+                Text( _dateSelected, DateTimeFormat.ShortDate ),
+            ShowAs <> "Free"
+        ),
+        "Start"
+    )
     ```
 
     In this formula, the **Filter** function hides not only those events that are scheduled for a date other than the one selected but also events for which the availability is set to **Free**.
@@ -221,9 +221,9 @@ If users select an event by clicking or tapping it in **CalendarEventsGallery**,
     Table(
         { Title: "Subject", Value: _selectedCalendarEvent.Subject },
         { 
-			Title: "Time", 
-			Value: _selectedCalendarEvent.Start & " - " & _selectedCalendarEvent.End 
-		},
+            Title: "Time", 
+            Value: _selectedCalendarEvent.Start & " - " & _selectedCalendarEvent.End 
+        },
         { Title: "Body", Value: _selectedCalendarEvent.Body }
     )
     ```
@@ -251,29 +251,29 @@ The `Office365.GetEventsCalendarViewV2` operation retrieves a variety of fields 
 1. To retrieve the Office 365 profiles of the meeting attendees, set the **OnSelect** property of the **Title** control in the **CalendarEventsGallery** to this formula:
 
     ```powerapps-dot
-	Set( _selectedCalendarEvent, ThisItem );
-	ClearCollect( AttendeeEmailsTemp,
-		Filter(
-			Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ),
-			!IsBlank( Result )
-		)
-	);
-	ClearCollect( AttendeeEmails,
-		AddColumns( AttendeeEmailsTemp, 
-			"InOrg",
-			Upper( _userDomain ) = Upper( Right( Result, Len( Result ) - Find( "@", Result ) ) )
-		)
-	);
-	ClearCollect( MyPeople,
-		ForAll( AttendeeEmails, If( InOrg, Office365Users.UserProfile( Result ) ) ) 
-	);
-	Collect( MyPeople,
-		ForAll( AttendeeEmails,
-			If( !InOrg, 
-				{ DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result }
-			)
-		)
-	)
+    Set( _selectedCalendarEvent, ThisItem );
+    ClearCollect( AttendeeEmailsTemp,
+        Filter(
+            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ),
+            !IsBlank( Result )
+        )
+    );
+    ClearCollect( AttendeeEmails,
+        AddColumns( AttendeeEmailsTemp, 
+            "InOrg",
+            Upper( _userDomain ) = Upper( Right( Result, Len( Result ) - Find( "@", Result ) ) )
+        )
+    );
+    ClearCollect( MyPeople,
+        ForAll( AttendeeEmails, If( InOrg, Office365Users.UserProfile( Result ) ) ) 
+    );
+    Collect( MyPeople,
+        ForAll( AttendeeEmails,
+            If( !InOrg, 
+                { DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result }
+            )
+        )
+    )
     ```
 
 These bullets discuss what each **ClearCollect** operation does:
@@ -283,9 +283,9 @@ These bullets discuss what each **ClearCollect** operation does:
     ClearCollect( AttendeeEmailsTemp,
         Filter(
             Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ), 
-			!IsBlank( Result)
-		)
-	);
+            !IsBlank( Result)
+        )
+    );
     ```
 
     This formula concatenates the required and optional attendees into a single string and then splits that string into individual addresses at each semicolon. The formula then filters out blank values from that set and adds the other values into a collection named **AttendeeEmailsTemp**.
@@ -294,10 +294,10 @@ These bullets discuss what each **ClearCollect** operation does:
     ```powerapps-dot
     ClearCollect( AttendeeEmails,
         AddColumns( AttendeeEmailsTemp, 
-			"InOrg",
+            "InOrg",
             Upper( _userDomain ) = Upper( Right( Result, Len(Result) - Find("@", Result) ) )
         )
-	);
+    );
     ```
     This formula roughly determines whether an attendee is in your organization. The definition of **_userDomain** is simply the domain URL in the email address of the person who's running the app. This line creates an additional true/false column, named **InOrg**, in the **AttendeeEmailsTemp** collection. This column contains true if **userDomain** is equivalent to the domain URL of the email address in that particular row of **AttendeeEmailsTemp**.
 
@@ -312,23 +312,23 @@ These bullets discuss what each **ClearCollect** operation does:
     ```powerapps-dot
     ClearCollect( MyPeople,
         ForAll( AttendeeEmails, 
-			If( InOrg, 
-				Office365Users.UserProfile( Result )
-			)
-		)
-	);
+            If( InOrg, 
+                Office365Users.UserProfile( Result )
+            )
+        )
+    );
     Collect( MyPeople,
         ForAll( AttendeeEmails,
             If( !InOrg, 
-				{ 
-					DisplayName: Result, 
-					Id: "", 
-					JobTitle: "", 
-					UserPrincipalName: Result
-				}
-			)
+                { 
+                    DisplayName: Result, 
+                    Id: "", 
+                    JobTitle: "", 
+                    UserPrincipalName: Result
+                }
+            )
         )
-	);
+    );
     ```
     To retrieve Office 365 profiles, you must us the  [Office365Users.UserProfile](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
 
@@ -337,31 +337,31 @@ These bullets discuss what each **ClearCollect** operation does:
     
     ```powerapps-dot
     ClearCollect( MyPeople, 
-		ForAll(
-			AddColumns(
-				Filter(
-					Split(
-						ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, 
-						";"
-					), 
-					!IsBlank( Result )
-				), 
-				"InOrg", _userDomain = Right( Result, Len( Result ) - Find( "@", Result ) )
-			), 
-			If( InOrg, 
-				Office365Users.UserProfile( Result ), 
-				{ 
-					DisplayName: Result, 
-					Id: "", 
-					JobTitle: "", 
-					UserPrincipalName: Result, 
-					Department: "", 
-					OfficeLocation: "", 
-					TelephoneNumber: ""
-				}
-			)
-		)
-	)
+        ForAll(
+            AddColumns(
+                Filter(
+                    Split(
+                        ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, 
+                        ";"
+                    ), 
+                    !IsBlank( Result )
+                ), 
+                "InOrg", _userDomain = Right( Result, Len( Result ) - Find( "@", Result ) )
+            ), 
+            If( InOrg, 
+                Office365Users.UserProfile( Result ), 
+                { 
+                    DisplayName: Result, 
+                    Id: "", 
+                    JobTitle: "", 
+                    UserPrincipalName: Result, 
+                    Department: "", 
+                    OfficeLocation: "", 
+                    TelephoneNumber: ""
+                }
+            )
+        )
+    )
     ```
 
 To finish this exercise:

@@ -100,12 +100,12 @@ To create this data source as a collection, set the **OnSelect** property of a *
 
 ```powerapps-dot
 ClearCollect( Products, 
-	Table( 
-		{ Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 }, 
-		{ Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
-		{ Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
-		{ Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 } 
-	)
+    Table( 
+        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 }, 
+        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
+        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
+        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 } 
+    )
 )
 ```
 
@@ -121,12 +121,12 @@ Don't make that copy!  We can use the following formula anywhere we need:
 ```powerapps-dot
 // Table shaping on demand, no need for a copy of the result
 ShowColumns( 
-	AddColumns( 
-		Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-		"Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
-	), 
-	"Product", 
-	"Quantity To Order"
+    AddColumns( 
+        Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+        "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
+    ), 
+    "Product", 
+    "Quantity To Order"
 )
 ```
 
@@ -141,12 +141,12 @@ Another approach is to use the **ForAll** function to replace the table-shaping 
 
 ```powerapps-dot
 ForAll( Products, 
-	If( 'Quantity Requested' > 'Quantity Available', 
-		{ 
-			Product: Product, 
-			'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
-		} 
-	) 
+    If( 'Quantity Requested' > 'Quantity Available', 
+        { 
+            Product: Product, 
+            'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+        } 
+    ) 
 )
 ```
 
@@ -161,27 +161,27 @@ We use the same table shaping as the previous two examples, but we capture the r
 
 ```powerapps-dot
 ClearCollect( NewOrder, 
-	ShowColumns( 
-		AddColumns( 
-			Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-			"Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
-		), 
-		"Product", 
-		"Quantity To Order"
-	)
+    ShowColumns( 
+        AddColumns( 
+            Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+            "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
+        ), 
+        "Product", 
+        "Quantity To Order"
+    )
 )
 ```
 
 ```powerapps-dot
 ClearCollect( NewOrder, 
-	ForAll( Products, 
-		If( 'Quantity Requested' > 'Quantity Available', 
-			{ 
-				Product: Product, 
-				'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
-			} 
-		) 
-	)
+    ForAll( Products, 
+        If( 'Quantity Requested' > 'Quantity Available', 
+            { 
+                Product: Product, 
+                'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+            } 
+        } 
+    )
 )
 ```
 
@@ -193,14 +193,14 @@ Finally, we can perform the **Collect** directly within the **ForAll**:
 ```powerapps-dot
 Clear( ProductsToOrder ); 
 ForAll( Products, 
-	If( 'Quantity Requested' > 'Quantity Available', 
-		Collect( NewOrder,  
-			{ 
-				Product: Product, 
-				'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
-			} 
-		)
-	)
+    If( 'Quantity Requested' > 'Quantity Available', 
+        Collect( NewOrder,  
+            { 
+                Product: Product, 
+                'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+            } 
+        )
+    )
 )
 ```
 
