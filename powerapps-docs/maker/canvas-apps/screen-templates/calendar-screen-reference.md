@@ -189,7 +189,8 @@ This topic explains the expressions or formulas to which various properties (suc
 
     ```powerapps-dot
     Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, 1, Months ) );
-    Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
+    Set( _firstDayInView, 
+        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
     Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
     If( _maxDate < _lastDayOfMonth,
         Collect( MyCalendarEvents, 
@@ -320,12 +321,12 @@ This topic explains the expressions or formulas to which various properties (suc
     Value: A formula that sorts and filters the events gallery.
 
     ```powerapps-dot
-SortByColumns(
-    Filter( MyCalendarEvents,
-        Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
-    ),
-    "Start"
-)
+    SortByColumns(
+        Filter( MyCalendarEvents,
+            Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
+        ),
+        "Start"
+    )
     ```
 
    From the discussions about **MyCalendarEvents** above, this collection contains all the events between **_minDate** and **_maxDate**. In order to display the events for only the date selected, a `Filter` is applied on **MyCalendarEvents** to display the events whose `Start` date is equivalent to **_dateSelected**. The items are then sorted by their `Start` to put them in sequential order.

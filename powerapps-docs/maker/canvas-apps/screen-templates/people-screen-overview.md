@@ -104,7 +104,7 @@ The people screen caches your person selections in the **MyPeople** collection. 
 		MessageBody.Text 
 	)
 	```
-    * Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";") as the list of recipients. This takes the MyPeople collection, and for every row in that collection combines all of their UserPrincipalName (email address) fields together into a single string with semicolons separating them. This is no different than writing out a string of email addresses separated by semicolons in the "to" line of your favorite email client.
+    * Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";")` as the list of recipients. This takes the MyPeople collection, and for every row in that collection combines all of their UserPrincipalName (email address) fields together into a single string with semicolons separating them. This is no different than writing out a string of email addresses separated by semicolons in the "to" line of your favorite email client.
     * You're passing SubjectLine.Text as the subject of the message, and MessageBody.Text as the body of the message.
 1. On the people screen, in the top right corner, insert the mail icon.
     * Change the icon color to whatever suits you.

@@ -243,7 +243,7 @@ This control allows users to add people who don't exist inside their org to the 
 
     At a high level, selecting this control adds the person to the **MyPeople** collection (the app's storage of the attendee list), and refreshes the available meeting times based on the new user addition.
 
-    Selecting this control is very similar to selecting the **AddIcon** control, the only difference being the `Set(_selectedUser, ThisItem) statement and the execution ordering of the operations. As such, this discussion will not be as deep. For a fuller explanation, read through the [AddIcon control section](#AddIcon-control).
+    Selecting this control is very similar to selecting the **AddIcon** control, the only difference being the `Set(_selectedUser, ThisItem)` statement and the execution ordering of the operations. As such, this discussion will not be as deep. For a fuller explanation, read through the [AddIcon control section](#AddIcon-control).
 
     Selecting this control resets **TextSearchBox**. Then if the selection is not in the **MyPeople** collection it sets the **_loadMeetingTimes** state to true and the **_showMeetingTimes** state to false, blanks the **_selectedMeetingTime** and **_selectedRoom** variables, and refreshes the MeetingTimes collection with the new addition to the **MyPeople** collection. It then sets the **_loadMeetingTimes** state to false, and sets **_showMeetingTimes** to true. If the selection is already in the **MyPeople** collection it only resets the contents of **TextSearchBox**.
 
