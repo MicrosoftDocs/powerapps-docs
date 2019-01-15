@@ -120,7 +120,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 
 1. Add a **Drop down** control, and then set its **[Items](properties-core.md)** property to this expression:
 
-    ```["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]```
+    `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
 
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
 
@@ -133,13 +133,13 @@ The principles in this procedure apply to any [data source that provides tables]
 
 1. Add a **Drop down** control, and set its **[Items](properties-core.md)** property to this formula:
 
-    ```Distinct(Accounts, address1_city)```
+    `Distinct(Accounts, address1_city)`
 
     This formula shows all the cities in the **Accounts** entity. If more than one record has the same city, the **[Distinct](../functions/function-distinct.md)** function hides the duplication in your drop-down control.
 
 1. (optional) Rename your **Drop down** control to **Cities**, add a vertical **Gallery** control, and set the gallery's **[Items](properties-core.md)** property to this formula:
 
-    ```Filter(Accounts, address1_city = Cities.Selected.Value)```
+    `Filter(Accounts, address1_city = Cities.Selected.Value)`
 
     This **[Filter](../functions/function-filter-lookup.md)** function shows only those records in the **Accounts** entity for which the city matches the selected value in the **Cities** control.
 

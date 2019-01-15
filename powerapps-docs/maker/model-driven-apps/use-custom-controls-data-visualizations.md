@@ -23,9 +23,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Tutorial: Use custom controls for model-driven app data visualizations
+# Use custom controls for model-driven app data visualizations
 
-In this tutorial you learn how to configure a custom control for a field. 
+In this topic you learn how to configure a custom control for a field. 
 
 Custom controls let you transform app user interface components, such as a field or view that traditionally contain text, into visualizations. Custom controls can be configured on fields, forms, dashboards, views, and grids. 
 For example, a slider control can be configured on a number field.
