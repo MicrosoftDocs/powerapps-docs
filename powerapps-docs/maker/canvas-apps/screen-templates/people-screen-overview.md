@@ -92,11 +92,12 @@ The people screen is a powerful bundle of controls in its own right, but it usua
 The people screen caches your person selections in the **MyPeople** collection. Should your business scenario call for a person lookup, you will have to know how to use this collection. Here, you'll walk through how to connect this screen to a rudimentary email screen, and send emails to users in the **MyPeople** collection. In doing so, you'll also gain insight into how the [email-screen](./email-screen-overview.md) works.
 
 1. Add the Office 365 Outlook data source to your app: On the ribbon select **View** > **Data sources** > **Add data source** and look for the Office 365 Outlook connector
-    * You may have to select **New connection** to find it
+    * You may have to select **New connection** to find it.
 1. After inserting the people screen, insert a new blank screen. Within the screen, add a back arrow icon, two text input boxes, and a send icon.
 1. Rename the screen to **EmailScreen**, the back icon to **BackIcon**, one text input box to **SubjectLine**, the other to **MessageBody**, and the send icon to **SendIcon**.
-1. Set the OnSelect property of the **BackIcon** to `Back()`
-1. Set the OnSelect property of the **SendIcon** to: 
+1. Set the **OnSelect** property of the **BackIcon** to `Back()`.
+1. Set the **OnSelect** property of the **SendIcon** to this formula:
+
     ```powerapps-dot
     Office365.SendEmail( 
         Concat( MyPeople, UserPrincipalName & ";" ), 
@@ -104,7 +105,8 @@ The people screen caches your person selections in the **MyPeople** collection. 
         MessageBody.Text 
     )
     ```
-    * Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";")` as the list of recipients. This takes the MyPeople collection, and for every row in that collection combines all of their UserPrincipalName (email address) fields together into a single string with semicolons separating them. This is no different than writing out a string of email addresses separated by semicolons in the "to" line of your favorite email client.
+    
+    * Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";")` as the list of recipients. This takes the **MyPeople** collection, and, for every row in that collection, combines all of their UserPrincipalName (email address) fields together into a single string with semicolons separating them. This is no different than writing out a string of email addresses separated by semicolons in the "to" line of your favorite email client.
     * You're passing SubjectLine.Text as the subject of the message, and MessageBody.Text as the body of the message.
 1. On the people screen, in the top right corner, insert the mail icon.
     * Change the icon color to whatever suits you.
