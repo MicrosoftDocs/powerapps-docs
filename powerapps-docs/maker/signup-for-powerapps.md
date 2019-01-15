@@ -1,5 +1,5 @@
 ---
-title: Use PowerApps for free for 30 days | Microsoft Docs
+title: Explore PowerApps for free for 30 days | Microsoft Docs
 description: Sign up for a free license that includes all PowerApps capabilities and expires after 30 days.
 author: AFTOwen
 manager: kvivek
@@ -11,7 +11,7 @@ ms.date: 01/15/2019
 ms.author: anneta
 ms.reviewer:
 ---
-# Use PowerApps for free for 30 days
+# Explore PowerApps for free for 30 days
 
 You can explore all PowerApps capabilities for free by signing up for a PowerApps Plan 2 license that expires after 30 days. If you don't have any license for PowerApps, the trial plan provides temporary access to these and other features:
 
