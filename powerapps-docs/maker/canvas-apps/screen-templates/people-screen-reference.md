@@ -65,7 +65,7 @@ A couple other controls interact or have a dependency on this one:
 ![UserBrowseGallery control](media/people-screen/people-browse-gall.png)
 
 * Property: **Items**<br>
-	Value: Logic to lookup users when the user starts typing.
+	Value: Logic to look up users when the user starts typing.
     ```powerapps-dot
     If( !IsBlank( Trim( TextSearchBox.Text ) ), 
         'Office365Users'.SearchUser(
