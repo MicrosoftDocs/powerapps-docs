@@ -95,21 +95,21 @@ To hide the card instead of making it read-only, insert a similar function in th
 
 You can also play with, for example, showing an approval button only if the user's email address matches the approver's email address. (Hint: Use **User().Email** to access the current user's email address.) So you could store the approver's email address in **YourDataCard** and then set the button's **Visible** property to this formula:
 
-```If(YourDataCard.Text = User().Email, true, false)```
+```If( YourDataCard.Text = User().Email, true, false )```
 
 **Conditional formatting**  
 In a similar manner as above where you hid the field, you can also provide visual feedback to users. Maybe you want to highlight text in red if the entered value falls out of the acceptable range or change an upload button's text and color after the user uploads a file. You can do both by using a function, such as **If**, in properties such as **Color** or **Visible**.
 
 For example, you could use the **If** function paired with the [IsMatch](functions/function-ismatch.md) function to change the text color of the email field to red if the user doesn't enter a properly formatted email in the input box. You would do this by setting the **Color** value of **TextInput1** (where the user types in an email address) to this formula:
 
-```If(IsMatch(TextInput1.Text, Email), Black, Red)```
+```If( IsMatch(TextInput1.Text, Email), Black, Red )```
 
 **IsMatch** supports a plethora of predefined patterns, such as Email, or you can create your own. For more information about conditional formatting, check out this [community video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Conditional-Formatting-and-Popups/m-p/84962).
 
 **Implementing role-based security**  
 The first function to consider is [DataSourceInfo](functions/function-datasourceinfo.md). What information you get back from the data source will vary, but often you can use this formula to confirm whether the user has access to edit the data (replace *YourDataSource* with the name of your data source):
 
-```DataSourceInfo(YourDataSource, DataSourceInfo.EditPermission)```
+```DataSourceInfo( YourDataSource, DataSourceInfo.EditPermission )```
 
 With this, you can show a form or button only if the user has access to edit. Check out the [DataSourceInfo](functions/function-datasourceinfo.md) documentation for the full list of information for which you can query in the function.
 
@@ -132,7 +132,7 @@ If you still need a variable (there are many cases that you do), this will help 
 
 - Global variables are what you most commonly think of first. Use the [Set](functions/function-set.md) function to specify a value for a global variable and make it available throughout your app:
 
-    ```Set(YourVariable, YourValue)```
+    ```Set( YourVariable, YourValue )```
 
     Then you can reference *YourVariable* by name throughout your app.
 
@@ -151,11 +151,11 @@ Cascading dropdowns are very useful because you can, for example, filter the cho
 
 In this example, you could add a dropdown named **ddSelectType** and set its **Items** property to this formula:
 
-```Distinct(Impacts, Title)```
+```Distinct( Impacts, Title )```
 
 The dropdown would show only show Cost, Program Impact, and Schedule. Then you could add a second dropdown and set its **Items** property to this formula:
 
-```Filter(Impacts,ddSelectType.Selected.Value in SCategory)```
+```Filter( Impacts, ddSelectType.Selected.Value in SCategory )```
 
 Just like that you have cascading dropdowns. For more information, check out this post from the PowerApps team [SharePoint: Cascading Dropdowns in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) or this [community video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Don't worry: you can do it just as easily without SharePoint.
 

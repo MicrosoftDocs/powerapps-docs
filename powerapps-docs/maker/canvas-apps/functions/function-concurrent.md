@@ -49,10 +49,12 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 2. Add a **[Button](../controls/control-button.md)** control, and set its **OnSelect** property to this formula:
 
-	**ClearCollect( Product, '[SalesLT].[Product]' );<br>
-	ClearCollect( Customer, '[SalesLT].[Customer]' );<br>
-	ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );<br> 
-	ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )**
+    ```powerapps-dot
+    ClearCollect( Product, '[SalesLT].[Product]' );
+    ClearCollect( Customer, '[SalesLT].[Customer]' );
+    ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ); 
+    ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+    ```
 
 3. In [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) or [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/), turn on developer tools to monitor network traffic while your app is running.
 
@@ -70,12 +72,14 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 1. Add a second **[Button](../controls/control-button.md)** control, and set its **OnSelect** property to this formula:
 
-	**Concurrent(<br> 
-	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Product, '[SalesLT].[Product]' ),<br> 
-	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Customer, '[SalesLT].[Customer]' ),<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )<br>
-	)**
+    ```powerapps-dot
+    Concurrent( 
+        ClearCollect( Product, '[SalesLT].[Product]' ), 
+        ClearCollect( Customer, '[SalesLT].[Customer]' ),
+        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
+        ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+    )
+    ```
 
 	Note that you added the same **ClearCollect** calls to the first button, but they're wrapped in a **Concurrent** function and separated by commas this time.
 
@@ -101,20 +105,23 @@ You can use **Concurrent** only in [behavior formulas](../working-with-formulas-
 
 3. Add a **Button** control, and set its **OnSelect** property to this formula:
 
-	**Set( StartTime, Value(Now()) );<br>
-	Concurrent(<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Set(FRTrans, MicrosoftTranslator.Translate(TextInput1.Text,"fr")); Set(FRTransTime, Value(Now()) ),<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Set(DETrans, MicrosoftTranslator.Translate(TextInput1.Text,"de")); Set(DETransTime, Value(Now()) )<br>
-	); <br>
-	Collect( <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Results, <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input: TextInput1.Text, <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;French: FRTrans, FrenchTime: FRTransTime-StartTime,<br> 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;German: DETrans, GermanTime: DETransTime-StartTime,<br> 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FrenchFaster: FRTransTime < DETransTime <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-	)**
+    ```powerapps-dot
+    Set( StartTime, Value( Now() ) );
+    Concurrent(
+        Set( FRTrans, MicrosoftTranslator.Translate( TextInput1.Text, "fr" ) ); 
+            Set( FRTransTime, Value( Now() ) ),
+        Set( DETrans, MicrosoftTranslator.Translate( TextInput1.Text, "de" ) ); 
+            Set( DETransTime, Value( Now() ) )
+    );
+    Collect( Results,
+        { 
+            Input: TextInput1.Text,
+            French: FRTrans, FrenchTime: FRTransTime - StartTime, 
+            German: DETrans, GermanTime: DETransTime - StartTime, 
+            FrenchFaster: FRTransTime < DETransTime
+        }
+    )
+    ```
 
 4. Add a [**Data table**](../controls/control-data-table.md) control, and set its **Items** property to **Results**.
 
