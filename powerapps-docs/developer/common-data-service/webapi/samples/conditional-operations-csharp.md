@@ -42,10 +42,10 @@ Go to [Web API Conditional Operations Sample (C#)](https://github.com/Microsoft/
 |File|Description|  
 |----------|-----------------|  
 |SampleProgram.cs|Contains the source code for this sample.|  
-|App.config|The application configuration file, which contains placeholder CDS for Apps server connection information.|  
-|SampleHelper.cs|Contains the helper code to assist in performing common tasks, such as configuration, authentication and `HTTP` response error handling.|
-|SampleMethod.cs|Contains all the methods that support the source code in the sample.|
-|ConditionalOperations.sln<br /> ConditionalOperations.csproj<br /> Packages.config<br /> AssemblyInfo.cs|The standard Visual Studio solution, project, NuGet package, and assembly information files for this sample.|  
+|App.config|The application configuration file, which contains placeholder CDS for Apps server connection information. This file is shared with all the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|  
+|SampleHelper.cs|Contains the helper code to assist in performing common tasks, such as configuration, authentication and `HTTP` response error handling. <br/> This file is shared with all the Web API samples in the repo. It contains helper methods to manage exceptions and the OAuth Token. See the Simple Web API sample for more information about the methods in this file.|
+|SampleMethod.cs|Contains all the methods that support the source code in the sample. Functions used in SampleProgram.cs can be defined in this file. |
+|ConditionalOperations.sln<br /> ConditionalOperations.csproj<br /> Packages.config<br /> AssemblyInfo.cs|The standard Visual Studio 2017 solution, project, NuGet package, and assembly information files for this sample.|  
   
 1. Double-click the ConditionalOperations.sln file to open the solution  in Visual Studio.  
   
@@ -103,8 +103,7 @@ namespace PowerApps.Samples
                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, client.BaseAddress + "accounts");
                request.Content = new StringContent(account.ToString(), Encoding.UTF8, "application/json");
 
-
-                HttpResponseMessage response = client.SendAsync(request, HttpCompletionOption.ResponseContentRead).Result;
+              HttpResponseMessage response = client.SendAsync(request, HttpCompletionOption.ResponseContentRead).Result;
 
                  if (response.IsSuccessStatusCode)
                   {
@@ -128,8 +127,9 @@ namespace PowerApps.Samples
                      Console.WriteLine(account.ToString(Newtonsoft.Json.Formatting.Indented));
                      initialAcctETagVal = account["@odata.etag"].ToString();
                    }
-                    
-             #region Conditional GET            
+
+             #region Conditional GET
+
              Console.WriteLine("\n--Conditional GET section started--");
              // Attempt to retrieve using conditional GET with current ETag value.
              request = new HttpRequestMessage(HttpMethod.Get, accountUri + queryOptions);
@@ -169,9 +169,9 @@ namespace PowerApps.Samples
                     Console.WriteLine("\nAccount telephone number updated.");
                   }
                  else
-                   {
-                     throw new Exception(string.Format("Failed to update the account telephone number", response.Content));
-                   }
+                  {
+                   throw new Exception(string.Format("Failed to update the account telephone number", response.Content));
+                  }
 
                  // Reattempt conditional GET with original ETag value.
                  request = new HttpRequestMessage(HttpMethod.Get, accountUri + queryOptions);
@@ -201,25 +201,27 @@ namespace PowerApps.Samples
 
                  // Attempt to delete original account (if matches original ETag value).
                  request = new HttpRequestMessage(HttpMethod.Delete, accountUri);
-                 request.Headers.Add("If-Match", initialAcctETagVal); // If you replace "initialAcctETagVal" with "updatedAcctETagVal", 
-                                                                         // delete will succeed.
+                 // If you replace "initialAcctETagVal" with "updatedAcctETagVal", 
+                 // delete will succeed.
+                 request.Headers.Add("If-Match", initialAcctETagVal); 
                  response = client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead).Result;
+                 // 412; Precondition failed error expected
 
-                 if (response.StatusCode == HttpStatusCode.PreconditionFailed) // 412; Precondition failed error expected
-                  {
-                    Console.WriteLine("Expected Error: The version of the existing record doesn't match the property provided.");
-                    Console.WriteLine("\tAccount not deleted using ETag '{0}', status code: '{1}'.",
-                    initialAcctETagVal, (int)response.StatusCode);
-                  }
-                  else if (response.IsSuccessStatusCode) // 200-299; not expected
+              if (response.StatusCode == HttpStatusCode.PreconditionFailed) 
+               {
+                Console.WriteLine("Expected Error: The version of the existing record doesn't match the property provided.");
+                Console.WriteLine("\tAccount not deleted using ETag '{0}', status code: '{1}'.",
+                initialAcctETagVal, (int)response.StatusCode);
+               }
+               else if (response.IsSuccessStatusCode) // 200-299; not expected
                     {
                       Console.WriteLine("Account deleted!");
                     }
 
-                  else
-                   {
-                     throw new Exception(string.Format("Failed to delete original ccount", response.Content));
-                   }
+               else
+                {
+                 throw new Exception(string.Format("Failed to delete original count",response.Content));
+                }
 
                  //Attempt to update account (if matches original ETag value).
                  JObject accountUpdate = new JObject();
@@ -231,21 +233,22 @@ namespace PowerApps.Samples
                  request.Headers.Add("If-Match", initialAcctETagVal);
                  response = client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead).Result;
 
-                 if (response.StatusCode == HttpStatusCode.PreconditionFailed) // 412; //Precondition failed error expected
-                  {
-                    Console.WriteLine("Expected Error: The version of the existing record doesn't match the property provided.");
-                    Console.WriteLine("\tAccount not updated using ETag '{0}', status code: '{1}'.",
-                    initialAcctETagVal, (int)response.StatusCode);
-                  }
-                  else if (response.StatusCode == HttpStatusCode.NoContent)  // 204; not expected
-                   {
-                     Console.WriteLine("Account updated using ETag: {0}, status code: '{1}'.",
-                     initialAcctETagVal, (int)response.StatusCode);
-                   }
-                   else
-                    {
-                      throw new Exception(string.Format("Failed to update account (if orgiginal ETag value matches)", response.Content));
-                    }
+             if (response.StatusCode == HttpStatusCode.PreconditionFailed) // 412;
+                    //Precondition failed error expected
+              {
+                Console.WriteLine("Expected Error: The version of the existing record doesn't match the property provided.");
+                Console.WriteLine("\tAccount not updated using ETag '{0}', status code: '{1}'.",
+                initialAcctETagVal, (int)response.StatusCode);
+               }
+             else if (response.StatusCode == HttpStatusCode.NoContent)  // 204; not expected
+               {
+                Console.WriteLine("Account updated using ETag: {0}, status code: '{1}'.",
+                initialAcctETagVal, (int)response.StatusCode);
+               }
+             else
+              {
+                throw new Exception(string.Format("Failed to update account (if original ETag value matches)", response.Content));
+              }
 
                   // Reattempt update if matches current ETag value.
                   accountUpdate["telephone1"] = "555-0003";
@@ -266,7 +269,7 @@ namespace PowerApps.Samples
                   }
                  else
                   {
-                    throw new Exception(string.Format("FAile to update if matches current ETag value", response.Content));
+                    throw new Exception(string.Format("Failed to update if matches current ETag value", response.Content));
                   }
 
                  // Retrieve and output current account state.
@@ -326,7 +329,9 @@ namespace PowerApps.Samples
                     (int)response.StatusCode);
                   }
                  else
-                  { throw new Exception(string.Format("Failed to perform operations", response.Content)); }
+                  {
+                   throw new Exception(string.Format("Failed to perform operations", response.Content));
+                  }
 
                 //Retrieve and output current account state.
                  account = GetCurrentRecord(client,accountUri, queryOptions);

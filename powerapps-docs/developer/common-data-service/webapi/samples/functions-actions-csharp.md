@@ -42,10 +42,10 @@ Go to [Web API Functions and Actions Sample (C#)](https://github.com/Microsoft/P
 |File|Purpose/Description|  
 |----------|--------------------------|  
 |SampleProgram.cs|Contains the primary source code for this sample.|  
-|App.config|The application configuration file, which contains placeholder Common Data Service for Apps server connection information.|  
-|SampleHelper.cs|Contains the helper code to assist in performing common tasks, such as configuration, authentication and `HTTP` response error handling.|
-|SampleMethod.cs|Contains all the methods that support the source code in the sample.|
-|FunctionsAndActions.sln <br />FunctionsAndActions.csproj <br />Packages.config <br />AssemblyInfo.cs|The standard Visual Studio 2015 solution, project, NuGet package configuration, and assembly information files for this sample.|  
+|App.config|The application configuration file, which contains placeholder Common Data Service for Apps server connection information. This file is shared with all the Web API samples in the repo. If you configure connection information for one sample, you can run the other samples with the same configuration.|  
+|SampleHelper.cs|Contains the helper code to assist in performing common tasks, such as configuration, authentication and `HTTP` response error handling.<br/> This file is shared with all the Web API samples in the repo. It contains helper methods to manage exceptions and the OAuth Token. See the Simple Web API sample for more information about the methods in this file.|
+|SampleMethod.cs|Contains all the methods that support the source code in the sample. Functions used in `SampleProgram.cs` can be defined in this file. |
+|FunctionsAndActions.sln <br />FunctionsAndActions.csproj <br />Packages.config <br />AssemblyInfo.cs|The standard Visual Studio 2017 solution, project, NuGet package configuration, and assembly information files for this sample.|  
 |WebAPIFunctionsandActions_1_0_0_0_managed.zip|A custom managed solution containing two custom actions called by this sample.|  
   
 Next, use the following procedure to run this sample.  
