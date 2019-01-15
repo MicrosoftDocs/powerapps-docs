@@ -71,14 +71,16 @@ If you want to modify the screen further, use the [email-screen reference](./ema
 
 This will allow you to send a single image with your email as an attachment.
 
-1. Under the Media tab in the ribbon, insert the 'Add picture' control and set its 'Y' property to 
+1. On the **Insert** tab, select **Media**, and then select **Add picture**.
+
+1. Set the new control's **Y** property to this expression:
 
     `TextEmailMessage1.Y + TextEmailMessage1.Height + 20`
 
-1. With the **AddMediaWithImage** control inserted, set its height to be less than 210
-1. In the control tree view, select the **AddMediaWithImage** control > ... > Reorder > Send to back
+1. With the **AddMediaWithImage** control inserted, set its height to be less than 210.
+1. In the control tree view, select the **AddMediaWithImage** control > ... > Reorder > Send to back.
     * This will prevent the control from sitting in front of the **PeopleBrowseGallery** control.
-1. Change the 'Height' property of the **EmailPeopleGallery** to 
+1. Change the **Height** property of the **EmailPeopleGallery** to this formula:
 
     ```powerapps-dot
     Min( 
@@ -88,12 +90,12 @@ This will allow you to send a single image with your email as an attachment.
     )
     ```
  
-1. Change the 'ShowScrollbar' of the **EmailPeopleGallery** to
+1. Set the **ShowScrollbar** property of the **EmailPeopleGallery** to this expression:
  
     ```EmailPeopleGallery1.Height >= 304```
 	
-    * This will prevent the max height from pushing the **AddMediaWithImage** control off the page
-1. Change the 'OnSelect' property of the **iconMail** control to:
+    * This will prevent the max height from pushing the **AddMediaWithImage** control off the page.
+1. Change the **OnSelect** property of the **iconMail** control to this formula:
 
     ```powerapps-dot
     Set( _emailRecipientString, Concat(MyPeople, Mail & ";") );
