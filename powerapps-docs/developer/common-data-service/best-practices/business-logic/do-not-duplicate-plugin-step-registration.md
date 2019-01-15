@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -56,7 +56,7 @@ Deleting and recreating a step in the source instance (test, dev, preprod) will 
 
 ![Duplicate Plug-in Step Registration](../media/duplicate-plugin-registration-step.png)
 
-Manually creating the `SDKMessageProcessingSteps` with a new GUID or updating the existing GUID within the `customizations.xml` file will result in a duplicate step being registered. These types of tasks are unsupported as outlined in [When to edit the customizations file](/dynamics365/customer-engagement/developer/customize-dev/when-edit-customization-file).
+Manually creating the `SDKMessageProcessingSteps` with a new GUID or updating the existing GUID within the `customizations.xml` file will result in a duplicate step being registered. These types of tasks are unsupported as outlined in [When to edit the customizations file](/powerapps/developer/model-driven-apps/when-edit-customization-file).
 
 <a name='additional'></a>
 
@@ -68,5 +68,5 @@ Duplicate plug-in step registration could cause SQL deadlocking when the events 
 
 ### See also
 
-[Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)<br />
+[Register a plug-in](../../register-plug-in.md)
 [Deadlocking](https://technet.microsoft.com/library/ms177433.aspx)<br />

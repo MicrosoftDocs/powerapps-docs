@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -51,6 +51,5 @@ Filtering attributes are a list of entity attributes that, when changed, cause t
 
 ### See also
 
-[Plug-in design](/dynamics365/customer-engagement/developer/write-plugin#plug-in-design)<br />
-[Walkthrough: Register a plug-in using the plug-in registration tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)
-[Disable auto-save](/dynamics365/customer-engagement/customize/manage-auto-save)
+[Register a plug-in](../../register-plug-in.md)
+[Disable auto-save in a model-driven app](/powerapps/maker/model-driven-apps/manage-auto-save)

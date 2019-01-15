@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -115,7 +115,7 @@ On the server side, the operations included in a batch request are executed sequ
 
 ### See also
 
-[Event execution pipeline](/dynamics365/customer-engagement/developer/event-execution-pipeline)<br/>
-[Run-time limitations](/dynamics365/customer-engagement/developer/org-service/use-executemultiple-improve-performance-bulk-data-load#run-time-limitations)<br/>
-[Use ExecuteMultiple to improve performance for bulk data load](/dynamics365/customer-engagement/developer/org-service/use-executemultiple-improve-performance-bulk-data-load)<br/>
-[Execute messages in a single database transaction](/dynamics365/customer-engagement/developer/org-service/use-messages-request-response-classes-execute-method#execute-messages-in-a-single-database-transaction)
+[Event Framework](../../event-framework.md)<br />
+[Run-time limitations](../../org-service/execute-multiple-requests.md#run-time-limitations)<br/>
+[Execute multiple requests using the Organization service](../../org-service/execute-multiple-requests.md)<br/>
+[Execute messages in a single database transaction](../../org-service/use-executetransaction.md)

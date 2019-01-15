@@ -18,6 +18,8 @@
         href: business-logic/optimize-assembly-development.md
       - name: Set KeepAlive to false when interacting with external hosts in a plug-in
         href: business-logic/set-keepalive-false-interacting-external-hosts-plugin.md
+      - name: Use InvalidPluginExecutionException in plug-ins and workflow activities
+        href: business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md
   - name: Work with data using code
     href: work-with-data/index.md
     items:

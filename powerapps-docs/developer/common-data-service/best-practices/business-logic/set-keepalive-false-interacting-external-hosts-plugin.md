@@ -289,7 +289,7 @@ This behavior is transparent to end users and traditional logging as the executi
 
 ### See also
 
-[Web Access for Isolated (sandboxed) Plug-ins](/dynamics365/customer-engagement/developer/write-plugin#write-a-plug-in-constructor)<br />
+[Sample: Web access from a sandboxed plug-in](../../org-service/samples/web-access-plugin.md)<br />
 [Plug-in isolation, trusts, and statistics](/dynamics365/customer-engagement/developer/plugin-isolation-trusts-statistics)<br />
 [Load Balancing (WCF)](https://msdn.microsoft.com/library/ms730128.aspx)<br />
 [HttpTransportBindingElement.KeepAliveEnabled Property](https://msdn.microsoft.com/library/system.servicemodel.channels.httptransportbindingelement.keepaliveenabled.aspx)<br />
