@@ -58,7 +58,7 @@ The following examples use the **Squares** [data source](../working-with-data-so
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then click or tap the button:
 
-* **ClearCollect( Squares, [ "1", "4", "9" ] )**
+`ClearCollect( Squares, [ "1", "4", "9" ] )`
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ The following examples use the **Expressions** [data source](../working-with-dat
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then click or tap the button:
 
-* **ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )**
+`ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )`
 
 This example also uses a [Microsoft Translator](../connections/connection-microsoft-translator.md) connection.  To add this connection to your app, see the topic about how to [manage connections](../add-manage-connections.md).
 
@@ -98,7 +98,16 @@ The following examples use the **Products** [data source](../working-with-data-s
 
 To create this data source as a collection, set the **OnSelect** property of a **Button** control to this formula, open Preview mode, and then click or tap the button:
 
-* **ClearCollect( Products, Table( { Product: "Widget", 'Quantity Requested': 6, 'Quantity Available': 3 }, { Product: "Gadget", 'Quantity Requested': 10, 'Quantity Available': 20 }, { Product: "Gizmo", 'Quantity Requested': 4, 'Quantity Available': 11 }, { Product: "Apparatus", 'Quantity Requested': 7, 'Quantity Available': 6 } ) )**
+```powerapps-dot
+ClearCollect( Products, 
+    Table( 
+        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 }, 
+        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
+        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
+        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 } 
+    )
+)
+```
 
 Our goal is to work with a derivative table that includes only the items where more has been requested than is available, and for which we need to place an order:
 
@@ -109,7 +118,17 @@ We can perform this task in a couple of different ways, all of which produce the
 #### Table shaping on demand
 Don't make that copy!  We can use the following formula anywhere we need:
 
-* **ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
+```powerapps-dot
+// Table shaping on demand, no need for a copy of the result
+ShowColumns( 
+    AddColumns( 
+        Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+        "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
+    ), 
+    "Product", 
+    "Quantity To Order"
+)
+```
 
 A [record scope](../working-with-tables.md#record-scope) is created by the **Filter** and **AddColumns** functions to perform the comparison and subtraction operations, respectively, with the **'Quantity Requested'** and **'Quantity Available'** fields of each record.
 
@@ -120,7 +139,16 @@ And because we didn't make a copy, there is no additional copy of the informatio
 #### ForAll on demand
 Another approach is to use the **ForAll** function to replace the table-shaping functions:
 
-* **ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) )**
+```powerapps-dot
+ForAll( Products, 
+    If( 'Quantity Requested' > 'Quantity Available', 
+        { 
+            Product: Product, 
+            'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+        } 
+    ) 
+)
+```
 
 This formula may be simpler for some people to read and write.
 
@@ -131,15 +159,50 @@ In some situations, a copy of data may be required.  You may need to move inform
 
 We use the same table shaping as the previous two examples, but we capture the result into a collection:
 
-* **ClearCollect( NewOrder, ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" ) )**
-* **ClearCollect( NewOrder, ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) ) )**
+```powerapps-dot
+ClearCollect( NewOrder, 
+    ShowColumns( 
+        AddColumns( 
+            Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+            "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
+        ), 
+        "Product", 
+        "Quantity To Order"
+    )
+)
+```
+
+```powerapps-dot
+ClearCollect( NewOrder, 
+    ForAll( Products, 
+        If( 'Quantity Requested' > 'Quantity Available', 
+            { 
+                Product: Product, 
+                'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+            } 
+        } 
+    )
+)
+```
 
 **ClearCollect** and **Collect** can't be delegated.  As a result the amount of data that can be moved in this manner is limited.
 
 #### Collect within ForAll
 Finally, we can perform the **Collect** directly within the **ForAll**:
 
-* **Clear( ProductsToOrder ); ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', Collect( NewOrder, { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) ) )**
+```powerapps-dot
+Clear( ProductsToOrder ); 
+ForAll( Products, 
+    If( 'Quantity Requested' > 'Quantity Available', 
+        Collect( NewOrder,  
+            { 
+                Product: Product, 
+                'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+            } 
+        )
+    )
+)
+```
 
 Again, the **ForAll** function can't be delegated at this time.  If our **Products** table is large, **ForAll** will look at the first set of records only and we may miss some products that need to be ordered.  But for tables that we know will remain small, this approach is fine.
 

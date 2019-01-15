@@ -65,8 +65,17 @@ A couple other controls interact or have a dependency on this one:
 ![UserBrowseGallery control](media/people-screen/people-browse-gall.png)
 
 * Property: **Items**<br>
-    Value: Logic to lookup users when the user starts typing.
-    `If(!IsBlank(Trim(TextSearchBox.Text)), 'Office365Users'.SearchUser({searchTerm: Trim(TextSearchBox.Text), top: 15}))`
+	Value: Logic to look up users when the user starts typing.
+    ```powerapps-dot
+    If( !IsBlank( Trim( TextSearchBox.Text ) ), 
+        'Office365Users'.SearchUser(
+            {
+                searchTerm: Trim( TextSearchBox.Text ), 
+                top: 15
+            }
+        )
+    )
+    ```
 
   * The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation.
   * The operation takes the text in Trim(**TextSearchBox**) as its search term and returns the top 15 results based on that search.
@@ -84,13 +93,16 @@ A couple other controls interact or have a dependency on this one:
 * Property: **OnSelect**<br>
     Value: Code to add the user to an app level collection, and select the user.
 
-    ```
+    ```powerapps-dot
     Concurrent(
-        Set(_selectedUser, ThisItem),
-        Reset(TextSearchBox),
-        If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem))
+        Set( _selectedUser, ThisItem ),
+        Reset( TextSearchBox ),
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+            Collect( MyPeople, ThisItem )
+        )
     )
     ```
+
     * Selecting this control does 3 things concurrently:
 
       1. Sets the **_selectedUser** variable to the item selected.
@@ -103,7 +115,13 @@ A couple other controls interact or have a dependency on this one:
 
 * Property: **Image**<br>
     Value: Logic to retrieve a user's profile photo.
-    `If(!IsBlank(ThisItem.Id) && 'Office365Users'.UserPhotoMetadata(ThisItem.Id).HasPhoto, 'Office365Users'.UserPhoto(ThisItem.Id))`
+
+    ```powerapps-dot
+    If( !IsBlank( ThisItem.Id ) && 
+            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto,
+        'Office365Users'.UserPhoto( ThisItem.Id )
+    )
+    ```
 
     * The image control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
   
@@ -128,7 +146,7 @@ Note that if an image isn't retrieved, the image control is blank, and the **ico
 ![PeopleAddedGallery Title control](media/people-screen/people-people-gall-title.png)
 
 * Property: **OnSelect**<br>
-    Value: `Set(_selectedUser, ThisItem)`
+    Value: `Set( _selectedUser, ThisItem )`
 
   * Sets the **_selectedUser** variable to the item selected in the **EmailPeopleGallery**.
 
@@ -137,7 +155,7 @@ Note that if an image isn't retrieved, the image control is blank, and the **ico
 ![PeopleAddedGallery iconRemove control](media/people-screen/people-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
-    Value: `Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))`
+    Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
   * Looks up the record in the **MyPeople** collection where the UserPrincipalName matches the UserPrincipalName of the selected item, and removes that record from the collection.
 

@@ -20,6 +20,10 @@ This article lists some common issues that you might encounter while using Power
 
 ## Added after February 2018
 
+1. **Camera issue on Android mobile devices** (Jan. 1, 2019)
+
+    If the camera control stops working on an Android device, republish your app, and reopen it on the device. The camera control was updated in response to a change in the Android operating system, and your app will benefit from the update when you republish.
+
 1. **Scrolling in flexible-height galleries** (Nov. 27, 2018)
 
     If you run into a limitation when you scroll with your finger, lift it and start to scroll again.
@@ -41,7 +45,7 @@ This article lists some common issues that you might encounter while using Power
 
 1. <a name="out-of-memory"></a>**Browser running out of memory** (July 23, 2018)
 
-    If you run out of memory while using PowerApps, please consider downloading a 64-bit version of Chrome, Edge, or Internet Explorer.
+    If you run out of memory while using PowerApps, please consider downloading a 64-bit version of Chrome, Microsoft Edge, or Internet Explorer.
 
 1. **Launching a website from an embedded app** (May 10, 2018)
 

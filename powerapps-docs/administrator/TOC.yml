@@ -61,6 +61,8 @@
       href: create-database.md
     - name: Preview environments
       href: preview-environments.md
+    - name: Trial environments
+      href: trial-environments.md
   - name: Configure environment security
     href: database-security.md
     items:
