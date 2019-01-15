@@ -96,7 +96,7 @@ The people screen caches your person selections in the **MyPeople** collection. 
 1. After inserting the people screen, insert a new blank screen. Within the screen, add a back arrow icon, two text input boxes, and a send icon.
 1. Rename the screen to **EmailScreen**, the back icon to **BackIcon**, one text input box to **SubjectLine**, the other to **MessageBody**, and the send icon to **SendIcon**.
 1. Set the OnSelect property of the **BackIcon** to `Back()`
-1. Set the OnSelect property of the **SendIcon** to 
+1. Set the OnSelect property of the **SendIcon** to: 
     ```powerapps-dot
     Office365.SendEmail( 
         Concat( MyPeople, UserPrincipalName & ";" ), 

@@ -213,9 +213,7 @@ For example, take a table of **Products**:
 
 To determine if any of any of these products had more requested than is available:
 
-```powerapps-dot
-Filter( Products, 'Quantity Requested' > 'Quantity Available' )
-```
+`Filter( Products, 'Quantity Requested' > 'Quantity Available' )`
 
 The first argument to **Filter** is the table of records to operate on, and the second argument is a formula.  **Filter** creates a record scope for evaluating this formula in which the fields of each record are available, in this case **Product**, **Quantity Requested**, and **Quantity Available**.  The result of the comparison determines if each record should be included in the result of the function:
 

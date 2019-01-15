@@ -63,7 +63,7 @@ This topic explains the expressions or formulas to which various properties (suc
     **_showDetails** is a variable used to determine whether the **LblInviteTab** control or the **LblScheduleTab** control is selected. If it's true, **LblScheduleTab** is selected, if false, **LblInviteTab** is. Thus, if **_showDetails** is true (this tab *isn't* selected), the tab color will match that of **LblRecipientCount**. Otherwise, it will match the fill value of **RectQuickActionBar**.
 
 * Property: **OnSelect**<br> 
-    Value: `Set( _showDetails, fals e)`
+    Value: `Set( _showDetails, false )`
 
     Sets the **_showDetails** variable to false which means the contents of the Invite tab are visible, and the contents of the Schedule tab are hidden.
 
@@ -627,7 +627,7 @@ This control allows users to add people who don't exist inside their org to the 
                 Importance: "Normal", 
                 ShowAs: "Busy", 
                 ResponseRequested: true
-        	}
+            }
         )
     );
     Concurrent(

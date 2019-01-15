@@ -73,12 +73,12 @@ You've seen how to read data directly and from a collection; now we'll show you 
 
 ```powerapps-dot
 Collect( SiteInspectorCollect,
-	{
-		ID: Value( Max( SiteInspectorCollect, ID ) + 1 ),
-    	Title: TitleText.Text,
-		SubTitle: SubTitleText.Text,
-		Description: DescriptionText.Text
-	}
+    {
+        ID: Value( Max( SiteInspectorCollect, ID ) + 1 ),
+        Title: TitleText.Text,
+        SubTitle: SubTitleText.Text,
+        Description: DescriptionText.Text
+    }
 )
 ```
 
@@ -86,12 +86,12 @@ Collect( SiteInspectorCollect,
 
 ```powerapps-dot
 UpdateIf( SiteInspectorCollect,
-	ID = record.ID,
-	{
-		Title: TitleEditText.Text,
-		SubTitle: SubTitleEditText.Text,
-		Description: DescriptionEditText.Text
-	}
+    ID = record.ID,
+    {
+        Title: TitleEditText.Text,
+        SubTitle: SubTitleEditText.Text,
+        Description: DescriptionEditText.Text
+    }
 )
 ```
 
