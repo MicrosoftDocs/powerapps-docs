@@ -24,15 +24,15 @@ In less complex situations, you can use the **Edit form** control to update reco
 ## Overview
 Use the **Patch** function to modify one or more records of a data source.  The values of specific [fields](../working-with-tables.md#elements-of-a-table) are modified without affecting other properties. For example, this formula changes the phone number for a customer named Contoso:
 
-**Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: “1-212-555-1234” } )**
+`Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: “1-212-555-1234” } )`
 
 Use **Patch** with the **[Defaults](function-defaults.md)** function to create records. Use this behavior to build a [single screen](../working-with-data-sources.md) for both creating and editing records. For example, this formula creates a record for a customer named Contoso:
 
-**Patch( Customers, Defaults( Customer ), { Name: “Contoso” } )**
+`Patch( Customers, Defaults( Customer ), { Name: “Contoso” } )`
 
 Even if you're not working with a data source, you can use **Patch** to merge two or more records. For example, this formula merges two records into one that identifies both the phone number and the location for Contoso:
 
-**Patch( { Name: "Contoso", Phone: “1-212-555-1234” }, { Name: "Contoso", Location: “Midtown”  } )**
+`Patch( { Name: "Contoso", Phone: “1-212-555-1234” }, { Name: "Contoso", Location: “Midtown”  } )`
 
 ## Description
 ### Modify or create a record in a data source
@@ -70,7 +70,7 @@ Specify two or more records that you want to merge. Records are processed in ord
 * *ChangeRecord(s)* – Required.  One or more records that contain properties to modify in the *BaseRecord*.  Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
 #### Modify or create a set of records in a data source
-**Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1*, [, *ChangeRecordTable2*, … ] )
+**Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1* [, *ChangeRecordTable2*, … ] )
 
 * *DataSource* – Required. The data source that contains the records that you want to modify or will contain the records that you want to create.
 * *BaseRecordTable* – Required. A table of records to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](function-defaults.md)** is used, a record is created.
