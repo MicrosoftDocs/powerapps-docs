@@ -15,13 +15,13 @@ ms.reviewer:
 
 You can explore all PowerApps capabilities for free by signing up for a PowerApps Plan 2 license that expires after 30 days. If you don't have any license for PowerApps, the trial plan provides temporary access to these and other features:
 
-- Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more)
-- Create and run canvas apps that connect to Common Data Service (CDS) for Apps and a wide range of more than 200 other data sources, including premium connectors and on-premises data
-- Create and run model-driven apps
-- Create automated workflows with Microsoft Flow
-- Create and manage environments and CDS for Apps databases
+- Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more).
+- Create and run canvas apps that connect to Common Data Service (CDS) for Apps and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
+- Create and run model-driven apps.
+- Create automated workflows with Microsoft Flow.
+- Create and manage environments and CDS for Apps databases.
 
-If you already have a PowerApps Plan 1 license or a license through Office 365, the trial license temporarily expands your access to PowerApps capabilities. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
+If you have a PowerApps Plan 1 license or a license through Office 365, you already have access to some of these features, but the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
 > If you're an administrator, see [Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](../administrator/signup-question-and-answer.md).
@@ -30,22 +30,22 @@ If you already have a PowerApps Plan 1 license or a license through Office 365, 
 
 To find out which license or licenses you already have, try to [sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
 
-- If you can't sign in, you don't have any PowerApps licenses. To use PowerApps, you'll need to [get a license from scratch](#get-a-license-from-scratch).
+- If you can't sign in, you don't have any PowerApps licenses, and you'll need to [start a trial](#get-a-license-from-scratch) if you want any access to PowerApps.
 
     > [!IMPORTANT]
     > You can't sign in by using a personal email address, such as one that ends in outlook.com, hotmail.com or gmail.com. For more information, see [What email address can I use?](#what-email-address-can-i-use) later in this topic.
 
-- If you can sign in, select the gear icon near the upper-right corner,and then select **Plans**.
+- If you can sign in, select the gear icon near the upper-right corner, and then select **Plans**.
 
     ![Gear icon](./media/signup-for-powerapps/gear-icon.png)
 
 ## Upgrade an existing license
 
-To start a free, 30-day trial of PowerApps Plan 2, [sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then try any feature than requires Plan 2. (For example, select the gear icon near the upper-right corner, select **Admin center**, and then select **New environment** near the upper-right corner.) Then follow the prompts to complete the sign-up process.
+To start a free, 30-day trial of PowerApps Plan 2 from an existing license, [sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then try any feature that requires Plan 2. (For example, select the gear icon near the upper-right corner, select **Admin center**, and then select **New environment** near the upper-right corner.) Then follow the prompts to complete the sign-up process.
 
 ## Get a license from scratch
 
-If you don't have a license for PowerApps, you can start a free, 30-day trial of PowerApps Plan 2 by following these steps:
+If you don't have any license for PowerApps, you can start a free, 30-day trial of PowerApps Plan 2 by following these steps:
 
 1. In the [PowerApps site](http://powerapps.microsoft.com), select **Sign up free**.
 
@@ -53,7 +53,7 @@ If you don't have a license for PowerApps, you can start a free, 30-day trial of
 
 1. Near the middle of the screen, select **Pricing**, and then select **Start free trial**.
 
-1. In the dialog box that appears, type or paste your work or school email address, and then click or tap **Submit**.
+1. In the dialog box that appears, type or paste your work or school email address, and then select **Submit**.
 
     > [!IMPORTANT]
     > For more information, see [What email address can I use?](#what-email-address-can-i-use) later in this topic.
@@ -87,8 +87,8 @@ After 30 days, you'll be prompted to request an extension of the trial or purcha
 
 If you don't extend the trial or purchase a plan, you can still use PowerApps if you have access to it through Office 365, Dynamics 365, or a PowerApps Plan 1 license. Any data in CDS for Apps will remain as it is, and any app or flow that used CDS for Apps will continue to run as it did.
 
-However, you won't be able to use that app or flow, and you might lose access to the features of PowerApps Plan 2. You'll also be prompted to extend the trial or purchase a plan if you try to modify a schema or entities in the CDS for Apps.
+However, you won't be able to use that app or flow, and you might lose access to the features of PowerApps Plan 2. For example, you'll be prompted to extend the trial or purchase a plan if you try to modify a schema or entities in CDS for Apps.
 
-## More questions?
+### More questions?
 
 Try the PowerApps [community](https://community.powerapps.com).
