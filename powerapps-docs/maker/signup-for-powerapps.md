@@ -13,7 +13,7 @@ ms.reviewer:
 ---
 # Use PowerApps for free for 30 days
 
-You can explore all PowerApps capabilities for free by signing up for a PowerApps Plan 2 license that expires after 30 days. If you don't have any license for PowerApps, the trial plan provides temporary access to these features:
+You can explore all PowerApps capabilities for free by signing up for a PowerApps Plan 2 license that expires after 30 days. If you don't have any license for PowerApps, the trial plan provides temporary access to these and other features:
 
 - Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more)
 - Create and run canvas apps that connect to Common Data Service (CDS) for Apps and a wide range of more than 200 other data sources, including premium connectors and on-premises data
@@ -21,7 +21,7 @@ You can explore all PowerApps capabilities for free by signing up for a PowerApp
 - Create automated workflows with Microsoft Flow
 - Create and manage environments and CDS for Apps databases
 
-If you already have a PowerApps Plan 1 license or a license through Office 365, the trial license expands your access to PowerApps capabilities. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
+If you already have a PowerApps Plan 1 license or a license through Office 365, the trial license temporarily expands your access to PowerApps capabilities. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
 > If you're an administrator, see [Purchase PowerApps for your organization](../administrator/signup-for-powerapps-admin.md) or [PowerApps in your organization Q&A](../administrator/signup-question-and-answer.md).
@@ -30,7 +30,7 @@ If you already have a PowerApps Plan 1 license or a license through Office 365, 
 
 To find out which license or licenses you already have, try to [sign in to PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) with your work or school credentials.
 
-- If you can't sign in, you don't have any PowerApps licenses, so you'll need to [get a license from scratch](#get-a-license-from-scratch) to use PowerApps.
+- If you can't sign in, you don't have any PowerApps licenses. To use PowerApps, you'll need to [get a license from scratch](#get-a-license-from-scratch).
 
     > [!IMPORTANT]
     > You can't sign in by using a personal email address, such as one that ends in outlook.com, hotmail.com or gmail.com. For more information, see [What email address can I use?](#what-email-address-can-i-use) later in this topic.
