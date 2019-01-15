@@ -49,7 +49,7 @@ Within an organization instance, API requests made by each of your licensed user
 |--|--|
 |A|At the end of five minutes, the total number of API requests for user 1 is 6K, user 2 is 3K, and user 3 is 10K.|
 |B|At 5+X minutes, X being a constant slice of time (say, a few seconds), which is the sliding interval constant, the platform measures the total for each of these users who are still active. According to the diagram above, this would be user 1 = 7K, user 2 is 6K and user 3 is 25K. All the cumulative numbers are still below the 60,000 limit, so no change in behavior is expected for these users.|
-|C|As time passes and reaches 5+2X, user 3 makes about 40K API requests, while user 1 and user 2 make 8K and 9K calls, respectively. This results in user 3 reaching 65K API requests within five minutes, which causes 5K (65K-60K=5K) of his requests to be denied.|
+|C|As time passes and reaches 5+2X, user 3 makes about 40K API requests, while user 1 and user 2 make 8K and 9K calls, respectively. This results in user 3 reaching 65K API requests within five minutes, which causes 5K (65K-60K=5K) of his or her requests to be denied.|
 
 > [!NOTE]
 > Requests that perform multiple API requests like <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> using the .NET SDK assemblies, or `$batch` using the Web API, count as a single request to calculate this limit. However, these API requests must follow the [Run-time limitations](org-service/execute-multiple-requests.md#limitations) for these types of operations.
