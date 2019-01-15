@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -70,4 +70,4 @@ The `Retrieve` and `RetrieveMultiple` messages are two of the most frequently pr
 ### See also
 
 [Performance Optimizations for Microsoft Dynamics CRM Online](https://mbs.microsoft.com/customersource/northamerica/CRM/learning/documentation/user-guides/PerformanceOptimizationsCRMOnlineSuccess)<br />
-[Virtual Entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)<br />
+[Create and edit virtual entities that contain data from an external data source](/powerapps/maker/common-data-service/create-edit-virtual-entities)<br />
