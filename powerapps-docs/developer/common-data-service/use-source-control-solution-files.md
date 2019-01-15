@@ -70,9 +70,9 @@ The SolutionPackager tool can be used with any source control system. After a so
   
 13. Developer A is ready first.  
   
-    1.  Before he submits to source control he must get latest sources to ensure no prior check-ins conflict with his changes.  
+    1.  Before she submits to source control she must get latest sources to ensure no prior check-ins conflict with her changes.  
   
-    2.  There are no conflicts so he is able to submit.  
+    2.  There are no conflicts so she is able to submit.  
   
 14. Developer B is ready next following developer A.  
   
