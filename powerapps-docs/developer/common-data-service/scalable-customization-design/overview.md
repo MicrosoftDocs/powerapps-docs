@@ -2,7 +2,7 @@
 title: "Scalable Customization Design: Overview (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The first in a series of topics. This topic introduces symptoms that can appear when code customizations are not optimized and the constraints that code customizations must operate within to avoid them. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 1/6/2019
+ms.date: 1/15/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -75,7 +75,7 @@ When the platform is used as intended and an implementation is optimized, it’s
 
 At the heart of these constraints is the idea that the CDS for Apps platform is designed to support a transactional, multi-user application where quick response to user demand is the priority. It’s not intended to be a platform for long running or batch processing. It is possible to drive a series of short requests to CDS for Apps but CDS for Apps isn’t designed to handle batch processing. Equally, where there are activities running large iterative processing, CDS for Apps isn’t designed to handle that iterative processing.
 
-In those scenarios, a separate service can be used to host the long running process, driving shorter transactional requests to CDS for Apps itself. For example, hosting BizTalk or Microsoft SQL Server Integration Services (SSIS) elsewhere and then driving individual create or update requests to CDS for Apps is a much better pattern than using a plug-in to loop through thousands of records being created in CDS for Apps.
+In those scenarios, a separate service can be used to host the long running process, driving shorter transactional requests to CDS for Apps itself. For example, using Flow or hosting Microsoft SQL Server Integration Services (SSIS) elsewhere and then driving individual create or update requests to CDS for Apps is a much better pattern than using a plug-in to loop through thousands of records being created in CDS for Apps.
 
 It is worth being aware of and understanding the platform constraints that do exist, so that you can allow for them in your application design. Also, if you do encounter these errors, you can understand why they are happening and what you can change to avoid them.
 

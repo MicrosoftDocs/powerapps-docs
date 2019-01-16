@@ -2,7 +2,7 @@
 title: "Scalable Customization Design: Database Transactions (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The second in a series of topics. This topic focuses on the impact of database transactions on scalable customization design" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 1/6/2019
+ms.date: 1/15/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
