@@ -9,6 +9,8 @@
     items:
     - name: 'Quick Start: Web API sample (C#)'
       href: quick-start-console-app-csharp.md
+    - name: Start a Web API project in Visual Studion (C#)
+      href: start-web-api-project-visual-studio-csharp.md
 - name: Client-side JavaScript
   href: get-started-web-api-client-side-javascript.md
 - name: Authenticate
