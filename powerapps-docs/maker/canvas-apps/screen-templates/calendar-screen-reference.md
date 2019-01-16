@@ -19,10 +19,6 @@ search.app:
 
 For canvas apps in PowerApps, understand how each significant control in the calendar-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [calendar-screen overview](calendar-screen-overview.md).
 
-## Prerequisite
-
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
-
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 - [Calendar drop-down (dropdownCalendarSelection)](#calendar-drop-down)
@@ -31,6 +27,10 @@ This topic highlights some significant controls and explains the expressions or 
 - [Next-month chevron (iconNextMonth)](#next-month-chevron)
 - [Calendar gallery (MonthDayGallery) (+ child controls)](#calendar-gallery)
 - [Events gallery (CalendarEventsGallery)](#events-gallery)
+
+## Prerequisite
+
+Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
 
 ## Calendar drop-down
 
