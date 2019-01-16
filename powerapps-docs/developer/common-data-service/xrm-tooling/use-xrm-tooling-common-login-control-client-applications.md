@@ -2,7 +2,7 @@
 title: "Use the XRM tooling common login control in your client applications (Common Data Service for Apps)| Microsoft Docs"
 description: "The CDS for Apps SDK provides you with a template for Visual Studio that enables you to use the common login control in your client applications. The code for CDS for Apps authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for CDS for Apps"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 1/16/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -25,24 +25,22 @@ search.app:
 
 There is a template for Visual Studio that enables you to use the common login control in your client applications. The code for CDS for Apps authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for CDS for Apps. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
   
- <!--TODO:
- ![XRM Tooling common login control](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")   -->
+ 
+ <!--![XRM Tooling common login control](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")-->
   
 <a name="Prereq"></a>
 
 ## Prerequisites
   
-- .NET Framework 4.5.2
-- Visual Studio 2012 or higher
-- Nuget Package Manager for your version of Visual Studio  
+- .NET Framework 4.6.2
+- Visual Studio 2017 (recommended)
 - Connected to Internet so that you can download/restore the required Nuget packages while using the project template.  
-- CRM SDK template templates for Visual Studio that contains the common login control template. You can get it by downloading the [Microsoft Dynamics CRM SDK Templates](http://go.microsoft.com/fwlink/p/?LinkId=400925) from Visual Studio gallery, and double-click the `CRMSDKTemplates.vsix` file to install the template in Visual Studio.  
   
 <a name="NewProjectUsingTemplate"></a>
    
 ## Create a WPF application using the common login control template
   
- Here is a quick way to create a Windows Presentation Foundation (WPF) application that leverages the common login control and the underlying code for authentication, credential storage and reuse, and default tracing or logging.  
+Here is a quick way to create a Windows Presentation Foundation (WPF) application that leverages the common login control and the underlying code for authentication, credential storage and reuse, and default tracing or logging.  
   
 1.  Start Visual Studio, and create a new project.  
 2.  In the **New Project** dialog box:  
@@ -51,8 +49,15 @@ There is a template for Visual Studio that enables you to use the common login c
     3.  Select **WPF Application for Dynamics 365**.  
     4.  Specify the name and location of the project, and click **OK**.  
   
- <!-- TODO:
- ![WPF Application for CDS for Apps template](../media/crm-sdk-v6-xrmtooling-newproject.png "WPF Application for CDS for Apps template")   -->
+ <!-- TODO:![WPF Application for CDS for Apps template](../media/crm-sdk-v6-xrmtooling-newproject.png "WPF Application for CDS for Apps template")-->   
+> [!NOTE]
+> **Known Issue with Visual Studio 2015**
+> 
+> When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 
+>
+> Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
+>
+> This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
   
 3.  To test the project:  
   
