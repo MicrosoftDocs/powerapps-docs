@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -56,5 +56,5 @@ As well as Entity components such as:
 
 ### See also
 
-[Create custom business logic through processes](/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)<br />
-[Events in forms and grids in Customer Engagement](/dynamics365/customer-engagement/developer/clientapi/events-forms-grids)<br />
+[Apply custom business logic with business rules and flows in model-driven apps](/powerapps/maker/model-driven-apps/guide-staff-through-common-tasks-processes)<br />
+[Events in forms and grids in model-driven apps](/powerapps/developer/model-driven-apps/clientapi/events-forms-grids)<br/>

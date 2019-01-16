@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -153,6 +153,6 @@ Retrieving unpublished metadata not only will add overhead to processing the req
 ### See also
 
 <xref:Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest>.<xref href="Microsoft.Xrm.Sdk.Messages.RetrieveEntityRequest.RetrieveAsIfPublished?text=RetrieveAsIfPublished Property" /><br />
-[Use the Organization service with Dynamics 365 metadata](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)<br />
-[Use the Web API with metadata](/dynamics365/customer-engagement/developer/webapi/use-web-api-metadata)<br />
-[Publish customizations](/dynamics365/customer-engagement/developer/customize-dev/publish-customizations#retrieving-unpublished-metadata)
+[Work with metadata using the Organization service](../../org-service/work-with-metadata.md)<br />
+[Use the Web API with metadata](../../webapi/use-web-api-metadata.md)<br />
+[Publish customizations](/powerapps/developer/model-driven-apps/publish-customizations#retrieving-unpublished-metadata)

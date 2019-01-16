@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -35,7 +35,6 @@ This list below contains all of the guidance and best practices regarding the pl
 |[Optimize custom assembly development](optimize-assembly-development.md)     |Consider merging separate plug-ins/custom workflow activities into a single custom assembly to improve performance and maintainability and move plug-ins/custom workflow activities into multiple custom assemblies if an assembly size is near the sandbox assembly size constraints.         |
 |[Set KeepAlive to false when interacting with external hosts in a plug-in](set-keepalive-false-interacting-external-hosts-plugin.md)     |KeepAlive property set to true in the HTTP request header or not explicitly defined as false can cause increased execution times of plug-ins.         |
 |[Use InvalidPluginExecutionException in plug-ins and workflow activities](use-invalidpluginexecutionexception-plugin-workflow-activities.md)     |Use InvalidPluginExecutionException when raising errors within the context of a plug-in or workflow activity.         |
-|[Use ITracingService in Plug-ins](use-itracingservice-plugins.md)     |Debugging and/or troubleshooting plug-in issues or behaviors are complicated without rich and insightful logging or tracing.         |
 
 # See Also
 [Apply business logic using code](../../apply-business-logic-with-code.md)<br />
