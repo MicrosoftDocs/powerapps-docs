@@ -20,24 +20,6 @@ search.app:
 
 For canvas apps in PowerApps, understand how each significant control in the meeting-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [meeting-screen overview](meeting-screen-overview.md).
 
-## Prerequisite
-
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
-
-## Default functionality
-
-To add a meeting screen from the template:
-
-1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then create an app or open an existing app in PowerApps Studio.
-
-    This topic shows a phone app, but the same concepts apply to a tablet app.
-
-1. On the **Home** tab of the ribbon, select **New screen** > **Meeting**.
-
-  When filled out, both tabs of the meeting screen will look similar to this:
-
-  ![Meeting screen, both tabs](media/meeting-screen/meeting-screen-full-both.png)
-
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 * [Invite tab (LblInviteTab)](#invite-tab)
@@ -52,6 +34,10 @@ This topic highlights some significant controls and explains the expressions or 
 * [Room browse gallery](#room-browse-gallery) (+ child controls)
 * [Back chevron (RoomsBackNav)](#back-chevron) (may not be visible if tenant doesn't have rooms lists)
 * [Send icon](#send-icon)
+
+## Prerequisite
+
+Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
 
 ## Invite tab
 
