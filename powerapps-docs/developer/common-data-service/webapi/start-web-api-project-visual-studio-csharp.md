@@ -34,6 +34,7 @@ This topic demonstrates how to create a new project in Visual Studio that builds
 - Visual Studio 2017 installed on your development computer. Any edition, including [Visual Studio Express](https://www.visualstudio.com/products/visual-studio-express-vs.aspx), should be sufficient to work with the Common Data Service for Apps Web API.
   
 - A NuGet client must be installed: either the command-line utility or the Visual Studio extension. For more information, see [Installing NuGet](https://docs.nuget.org/consume/installing-nuget).  
+-  Download the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) helper class. 
   
 <a name="bkmk_createProject"></a>
    
@@ -45,13 +46,13 @@ This topic demonstrates how to create a new project in Visual Studio that builds
 
 ### New Project  
   
-1. In Visual Studio, click **New Project**. The **New Project** dialog is displayed.
-1. In the left navigation pane under **Templates**, select **Visual C#**.  
-1. In the list of templates, select **Console Application**. (Alternately choose the project type suited to your solution.)  All of the Web API C# samples are console applications.  
+1. In Visual Studio 2017, click **New Project**. The **New Project** dialog is displayed.
+1. In the left navigation pane under **Installed**, select **Visual C#**.  
+1. In the list of templates, select **Console Application (.NET Framework)**. All of the Web API C# samples are console applications.  
   
   ![A new console app project dialog in CDS for Apps](../media/new-project.PNG "A new console app project dialog in CDS for Apps")  
   
-1. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name `StartWebAPI-CS` was used.) The initial solution files will be generated and the solution loaded into Visual Studio.
+1. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name `SimpleWebAPI-CS` was used.) The initial solution files will be generated and the solution loaded into Visual Studio.
   
 1. Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.6.2** or higher.
   
@@ -63,7 +64,7 @@ The following procedures explain how to add all required managed references and 
   
 #### Add the helper code
 
-The Web API samples (c#) use the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, Web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. More information, see [SampleHelper.cs file)](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
+The Web API samples (c#) use the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, Web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. More information, see [SampleHelper.cs file](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
   
 - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) – contains [Json.NET](http://www.newtonsoft.com/json), a popular, MIT-licensed JSON framework for .NET.  
   
@@ -99,64 +100,40 @@ The Web API samples (c#) use the `SampleHelper.cs` file which contains classes t
 #### Edit the application configuration file
 
 In **Solution Explorer**, open the **App.config** file for editing.  Add the following and then save the file.
-  
-    ```xml  
-  
-    <?xml version="1.0" encoding="utf-8"?>
 
+```xml  
+  
+<?xml version="1.0" encoding="utf-8"?>
 <configuration>
-
 <connectionStrings>
-
-<!--Online using Office 365-->
-
-<!-- <add name="Connect" connectionString="Url=https://yourorgname.crm.dynamics.com; Username=yourname@yourorg.onmicrosoft.com; Password=pasword; authtype=Office365; RequireNewInstance=True"/>-->
-
+  <!--Online using Office 365-->
+  <!-- <add name="Connect" connectionString="Url=https://yourorgname.crm.dynamics.com; Username=yourname@yourorg.onmicrosoft.com; Password=pasword; authtype=Office365; RequireNewInstance=True"/>-->
 </connectionStrings>
-
 <system.diagnostics>
-
 <trace autoflush="true" />
-
 <sources>
-
-  <source name="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" switchName="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" switchType="System.Diagnostics.SourceSwitch">
-
-	<listeners>
-
-	  <add name="console" type="System.Diagnostics.ConsoleTraceListener" />
-
+   <source name="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" switchName="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" switchType="System.Diagnostics.SourceSwitch">
+   <listeners>
+      <add name="console" type="System.Diagnostics.ConsoleTraceListener" />
 	  <add name="fileListener" />
-
-	</listeners>
-
-  </source>
-
-  <source name="Microsoft.Xrm.Tooling.CrmConnectControl" switchName="Microsoft.Xrm.Tooling.CrmConnectControl" switchType="System.Diagnostics.SourceSwitch">
-
-	<listeners>
-
-	  <add name="console" type="System.Diagnostics.ConsoleTraceListener" />
-
+   </listeners>
+</source>
+<source name="Microsoft.Xrm.Tooling.CrmConnectControl" switchName="Microsoft.Xrm.Tooling.CrmConnectControl" switchType="System.Diagnostics.SourceSwitch">
+   <listeners>
+      <add name="console" type="System.Diagnostics.ConsoleTraceListener" />
 	  <add name="fileListener" />
-
-	</listeners>
-
-  </source>
+   </listeners>
+</source>
 </sources>
 <switches>
  <add name="Microsoft.Xrm.Tooling.Connector.CrmServiceClient" value="Error" />
-
-  <add name="Microsoft.Xrm.Tooling.CrmConnectControl" value="Error" />
-
-  <add name="Microsoft.IdentityModel.Clients.ActiveDirectory" value="Error" />
+ <add name="Microsoft.Xrm.Tooling.CrmConnectControl" value="Error" />
+ <add name="Microsoft.IdentityModel.Clients.ActiveDirectory" value="Error" />
 </switches>
 <sharedListeners>
-
- <add name="fileListener" type="Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener, Microsoft.Xrm.Tooling.Connector" />
- <add name="fileListener" type="Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener, Microsoft.Xrm.Tooling.Connector" BaseFileName="PowerApps-Sample-Log" Location="LocalUserApplicationDirectory" MaxFileSize="52428800" />
+    <add name="fileListener" type="Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener, Microsoft.Xrm.Tooling.Connector" />
+	<add name="fileListener" type="Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener, Microsoft.Xrm.Tooling.Connector" BaseFileName="PowerApps-Sample-Log" Location="LocalUserApplicationDirectory" MaxFileSize="52428800" />
 </sharedListeners>
-
 </system.diagnostics>
 <startup>
 <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
@@ -164,37 +141,24 @@ In **Solution Explorer**, open the **App.config** file for editing.  Add the fol
 <runtime>
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
   <dependentAssembly>
-
-	<assemblyIdentity name="Microsoft.Xrm.Sdk" publicKeyToken="31bf3856ad364e35" culture="neutral" />
-
+    <assemblyIdentity name="Microsoft.Xrm.Sdk" publicKeyToken="31bf3856ad364e35" culture="neutral" />
 	<bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
-
   </dependentAssembly>
 <dependentAssembly>
-
-	<assemblyIdentity name="Microsoft.Xrm.Sdk.Workflow" publicKeyToken="31bf3856ad364e35" culture="neutral" />
-
+    <assemblyIdentity name="Microsoft.Xrm.Sdk.Workflow" publicKeyToken="31bf3856ad364e35" culture="neutral" />
 	<bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
 </dependentAssembly>
-
-  <dependentAssembly>
-
-	<assemblyIdentity name="Microsoft.Xrm.Tooling.Connector" publicKeyToken="31bf3856ad364e35" culture="neutral" />
-
-	<bindingRedirect oldVersion="0.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
-
-  </dependentAssembly>
-
-  <dependentAssembly>
-
-	<assemblyIdentity name="Microsoft.Crm.Sdk.Proxy" publicKeyToken="31bf3856ad364e35" culture="neutral" />
-
-	<bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
-
-  </dependentAssembly>
+    <dependentAssembly>
+	    <assemblyIdentity name="Microsoft.Xrm.Tooling.Connector" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+		<bindingRedirect oldVersion="0.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+    </dependentAssembly>
+<dependentAssembly>
+     <assemblyIdentity name="Microsoft.Crm.Sdk.Proxy" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+	 <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+</dependentAssembly>
 </assemblyBinding>
 </runtime>
-</configuration>
+</configuration
 
 ```  
   
@@ -202,7 +166,7 @@ In **Solution Explorer**, open the **App.config** file for editing.  Add the fol
 
 #### Add code to call the helper library
   
-1.  Add a new class file and name it as `SampleMethod`. Add the following helper methods to it.
+1. Add a new class file and name it as `SampleMethod`. Add the following helper methods to it.
 
 ```csharp
 using Newtonsoft.Json.Linq;
@@ -253,19 +217,19 @@ public class WhoAmIResponse
 
     {
 
-        public Guid BusinessUnitId { get; set; } 
+    public Guid BusinessUnitId { get; set; } 
 		public Guid UserId { get; set; }
 		public Guid OrganizationId { get; set; }
 
     }
+```
 
-1.  Now go to `Program.cs` file and in the `Main` method, add the following statements.  
+1. Now go to `Program.cs` file and in the `Main` method, add the following statements.  
   
-    ```csharp  
+```csharp  
   
-    static void Main(string[] args)
-
-   {
+static void Main(string[] args)
+  {
      try
 
       {
@@ -314,9 +278,9 @@ public class WhoAmIResponse
 
             }            
 }
-     ```  
+```  
   
- 1.  Save all the files in the solution.  
+ 1. Save all the files in the solution.  
   
 <a name="bkmk_nextSteps"></a>
 
@@ -325,7 +289,7 @@ public class WhoAmIResponse
  At this point the solution can be built without errors.  If you edit the application configuration file to supply values for your Common Data Service for Apps, the program should also successfully connect to that server.  The solution represents a skeletal frame that is ready to accept custom code, including calls to the Common Data Service for Apps Web API.  
   
 > [!TIP]
->  Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://msdn.microsoft.com/library/xkh1wxd8.aspx) instructions to create the template.  
+> Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://msdn.microsoft.com/library/xkh1wxd8.aspx) instructions to create the template.  
   
 ### See also
 
