@@ -271,7 +271,7 @@ The items of this gallery are populated by search results from the [Office365.Se
     ```
 
   
-   The height of this gallery adjusts to the number of items in the gallery, to a maximum height of 350. It takes 76 as the height of a single row of **MeetingPeopleGallery**, then multiplies it by the number of rows. The **WrapCount** property is set to 2, so the number of true rows is `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
+   The height of this gallery adjusts to the number of items in the gallery, to a maximum height of 350. The formula takes 76 as the height of a single row of **MeetingPeopleGallery**, then multiplies it by the number of rows. The **WrapCount** property is set to 2, so the number of true rows is `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
 
 * Property: **ShowScrollbar**<br>
     Value: `MeetingPeopleGallery.Height >= 350`
