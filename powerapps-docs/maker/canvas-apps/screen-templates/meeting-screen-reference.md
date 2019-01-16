@@ -271,7 +271,7 @@ The items of this gallery are populated by search results from the [Office365.Se
     ```
 
   
-   The height of this gallery adjusts to the number of items in the gallery, to a maximum height of 350. It takes 76 as the height of a single row of **MeetingPeopleGallery**, then multiplies it by the number of rows. Since `WrapCount = 2`, the number of true rows is `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
+   The height of this gallery adjusts to the number of items in the gallery, to a maximum height of 350. It takes 76 as the height of a single row of **MeetingPeopleGallery**, then multiplies it by the number of rows. The **WrapCount** property is set to 2, so the number of true rows is `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
 
 * Property: **ShowScrollbar**<br>
     Value: `MeetingPeopleGallery.Height >= 350`
@@ -384,9 +384,9 @@ The items of this gallery are populated by search results from the [Office365.Se
     Set( _showMeetingTimes, true )
     ```
 
-  At a high level, selecting this control refreshes the available meeting times. It is valuable because if a user changes the date, the available meeting times need to update to reflect the attendees availabilities for that day.
+  At a high level, selecting this control refreshes the available meeting times. It is valuable because if a user changes the date, the available meeting times need to update to reflect the attendees' availabilities for that day.
 
-  With the exception of the initial **Collect** statement, this is identical to the **OnSelect** functionality of the **AddIcon** control. As such, this discussion will not be as deep. For a fuller explanation, read through the [AddIcon control section](#add-icon).
+  With the exception of the initial **Collect** statement, this is identical to the **OnSelect** functionality of the **AddIcon** control. As such, this discussion will not be as deep. For a fuller explanation, read through the [AddIcon control](#add-icon) section.
 
   Selecting this control resets **TextSearchBox**. It then: 
   1. Sets the **_loadMeetingTimes** state to **true** and the **_showMeetingTimes** state to **false**, blanks the **_selectedMeetingTime** and **_selectedRoom** variables, and refreshes the **MeetingTimes** collection with the new date selection. 
@@ -489,13 +489,13 @@ The items of this gallery are populated by search results from the [Office365.Se
     UpdateContext( {_loadingRooms: false} )
     ```
 
-  At a high level, this code block gathers available rooms, for users who don't have rooms lists, based on the selected date/time for the meeting. Otherwise, it simply retrieves the rooms lists.
+  At a high level, this code block gathers available rooms for users who don't have rooms lists, based on the selected date/time for the meeting. Otherwise, it simply retrieves the rooms lists.
 
-  At a low level this code block:
+  At a low level, this code block:
   1. Sets **_selectedMeetingTime** to the selected item. This is used to find what rooms are available during that time.
   1. Sets the loading state variable **_loadingRooms** to **true**, turning the loading state on.
   1. If the **RoomsLists** collection is empty, it retrieves the user's tenant's rooms lists and stores them in the **RoomsLists** collection.
-  1. If the user has no room list or 1 room list:
+  1. If the user has no room list or one room list:
       1. The **noRoomLists** variable is set to **true**, and this variable is used to determine the items displayed in the **RoomBrowseGallery** control.
       1. The `Office365.GetRooms()` operation is used to retrieve the first 100 rooms in their tenant. These are stored in the **AllRooms** collection.
       1. The **_allRoomsConcat** variable is set to a semicolon-separated string of the first 20 email addresses of the rooms in the **AllRooms** collection. This is because the [Office365.FindMeetingTimes](https://docs.microsoft.com/en-us/connectors/office365/#find-meeting-times) is limited to searching for the available times of 20 person objects in a single operation.
@@ -618,7 +618,7 @@ The items of this gallery are populated by search results from the [Office365.Se
         DisplayMode.Edit, DisplayMode.Disabled
     )
     ```
-  The icon is selectable only if the meeting subject is filled out, there are greater than 0 attendees for the meeting, and a meeting time has been selected. Otherwise it is disabled.
+  The icon is selectable only if the meeting subject is filled out, there is at least one attendee for the meeting, and a meeting time has been selected. Otherwise, it's disabled.
 
 * Property: **OnSelect**<br>
 
