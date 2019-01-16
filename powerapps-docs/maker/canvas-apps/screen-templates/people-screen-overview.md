@@ -17,7 +17,7 @@ search.app:
 
 # Overview of the people-screen template for canvas apps
 
-In a canvas app, add a people screen that lets users search for people within their organization. Users can search for, select, and add people to a collection. You can change which types of data appear in the search result gallery, use your people selections to send an email, and make other customizations.
+In a canvas app, add a people screen that lets users search for people within their organizations. Users can search for, select, and add people to a collection. You can change which types of data appear in the search result gallery, use your people selections to send an email, and make other customizations.
 
 You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), a user's [calendar](calendar-screen-overview.md), and [availability](meeting-screen-overview.md) of people users might want to invite to a meeting.
 
@@ -63,7 +63,7 @@ If you want to modify the screen further, use the [people-screen reference](./pe
 
 ### Show different data for people
 
-This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what is displayed in the **UserBrowseGallery** control. Adding or changing fields in the gallery is a simple process:
+This screen uses the [Office365Users.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation to search for users in your org. It provides additional fields for each event beyond what appears in the **UserBrowseGallery** control. Adding or changing fields in the gallery is a simple process:
 
 1. In the **UserBrowseGallery**, select a label to modify (or add one and keep it selected).
 
@@ -83,17 +83,27 @@ The people screen is a powerful bundle of controls in its own right, but it usua
 
 The people screen caches your people selections in the **MyPeople** collection. Should your business scenario call for a person lookup, you will need to know how to use this collection. Here, you'll walk through how to connect this screen to a rudimentary email screen and send emails to users in the **MyPeople** collection. You'll also gain insight into how the [email-screen](./email-screen-overview.md) works.
 
-1. Add the Office 365 Outlook data source to your app: On the ribbon select **View** > **Data sources** > **Add data source**, and look for the Office 365 Outlook connector. You might have to select **New connection** to find it.
-1. After inserting the people screen, insert a new blank screen. Within that screen, add a **Back arrow** icon, two text-input boxes, and a **Send** icon.
-1. Rename the screen to **EmailScreen**, the **Back icon** to **BackIcon**, one text input box to **SubjectLine**, the other to **MessageBody**, and the **Send** icon to **SendIcon**.
+1. Add the Office 365 Outlook data source to your app by selecting the **View** tab, selecting **Data sources** > **Add data source**, and looking for the Office 365 Outlook connector. You might have to select **New connection** to find it.
+1. After inserting the people screen, insert a new blank screen. Within that screen, add a back-arrow icon, two text-input boxes, and a send icon.
+1. Rename the screen to **EmailScreen**, the back-arrow icon to **BackIcon**, one text-input box to **SubjectLine**, the other to **MessageBody**, and the send icon to **SendIcon**.
 1. Set the **OnSelect** property of **BackIcon** to `Back()`.
-1. Set the **OnSelect** property of **SendIcon** to `Office365.SendEmail(Concat(MyPeople, UserPrincipalName & ";"), SubjectLine.Text, MessageBody.Text)`
-    * Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";")` as the list of recipients. This takes the **MyPeople** collection, and for every row in that collection combines all of their **UserPrincipalName** (email address) fields together into a single string with semicolons separating them. This is no different than writing out a string of email addresses separated by semicolons in the "To" line of your favorite email client.
+1. Set the **OnSelect** property of **SendIcon** to this formula:
+
+    ```powerapps-dot
+    Office365.SendEmail( 
+        Concat( MyPeople, UserPrincipalName & ";" ), 
+        SubjectLine.Text, 
+        MessageBody.Text 
+    )
+    ```
+    
+    Here, you're using the Outlook connector to send an email. You pass it `Concat(MyPeople, UserPrincipalName & ";")` as the list of recipients. This takes the **MyPeople** collection, and for every row in that collection combines all of their **UserPrincipalName** (email address) fields together into a single string with semicolons separating them. This is no different from writing out a string of email addresses separated by semicolons in the "To" line of your favorite email client.
     * You're passing `SubjectLine.Text` as the subject of the message, and `MessageBody.Text` as the body of the message.
 1. On the people screen, in the upper-right corner, insert the **Mail** icon.
    Change the icon color to whatever suits you.
-1. Set the **OnSelect** property of the **Send** icon to `Navigate(EmailScreen, None)`.
-1. You now have a two-screen app that allows you to select users, and then compose and send an email message to them. Feel free to test it out, but be careful, because the app sends emails to everyone you add to the **MyPeople** collection.
+1. Set the **OnSelect** property of the **SendIcon** to `Navigate( EmailScreen, None )`.
+
+    You now have a two-screen app in which you can select users, compose an email message to them, and then send it. Feel free to test it out, but be careful, because the app sends emails to everyone you add to the **MyPeople** collection.
 
 ## Next steps
 

@@ -66,8 +66,18 @@ A couple other controls interact or have a dependency on the text search box:
 
 * Property: **Items**<br>
     Value: Logic to look up users when the user starts typing:
-    `If(!IsBlank(Trim(TextSearchBox.Text)), 'Office365Users'.SearchUser({searchTerm: Trim(TextSearchBox.Text), top: 15}))`
-
+    
+    ```powerapps-dot
+    If( !IsBlank( Trim( TextSearchBox.Text ) ), 
+        'Office365Users'.SearchUser(
+            {
+                searchTerm: Trim( TextSearchBox.Text ), 
+                top: 15
+            }
+        )
+    )
+    ```
+    
 The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search. **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid.
 
 The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function because you only need to call the operation when the search box contains user-entered text. This improves performance.
@@ -83,16 +93,18 @@ The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(Tex
 * Property: **OnSelect**<br>
     Value: Code to add the user to an app-level collection, and then select the user:
 
-    ```
+    ```powerapps-dot
     Concurrent(
-        Set(_selectedUser, ThisItem),
-        Reset(TextSearchBox),
-        If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem))
+        Set( _selectedUser, ThisItem ),
+        Reset( TextSearchBox ),
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+            Collect( MyPeople, ThisItem )
+        )
     )
     ```
 Selecting this control does three things concurrently:
 
-   * Sets the **_selectedUser** variable to the item selected.
+   * Sets the **\_selectedUser** variable to the item selected.
    * Resets the search term in **TextSearchBox**.
    * Adds the selected item to the **MyPeople** collection, a collection of all the people the app user has selected.
 
@@ -101,8 +113,14 @@ Selecting this control does three things concurrently:
 ![UserBrowseGallery ProfileImage control](media/people-screen/people-browse-gall-image.png)
 
 * Property: **Image**<br>
-    Value: Logic to retrieve a user's profile photo:
-    `If(!IsBlank(ThisItem.Id) && 'Office365Users'.UserPhotoMetadata(ThisItem.Id).HasPhoto, 'Office365Users'.UserPhoto(ThisItem.Id))`
+    Value: Logic to retrieve a user's profile photo.
+
+    ```powerapps-dot
+    If( !IsBlank( ThisItem.Id ) && 
+            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto,
+        'Office365Users'.UserPhoto( ThisItem.Id )
+    )
+    ```
 
 The image control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
   
@@ -125,7 +143,7 @@ This is the collection of people initialized or added to by selecting the **User
 ![PeopleAddedGallery Title control](media/people-screen/people-people-gall-title.png)
 
 * Property: **OnSelect**<br>
-    Value: `Set(_selectedUser, ThisItem)`
+    Value: `Set( _selectedUser, ThisItem )`
 
 Sets the **_selectedUser** variable to the item selected in **EmailPeopleGallery**.
 
@@ -134,7 +152,7 @@ Sets the **_selectedUser** variable to the item selected in **EmailPeopleGallery
 ![PeopleAddedGallery iconRemove control](media/people-screen/people-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
-    Value: `Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))`
+    Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
 Looks up the record in the **MyPeople** collection, where **UserPrincipalName** matches the **UserPrincipalName** of the selected item, and then removes that record from the collection.
 

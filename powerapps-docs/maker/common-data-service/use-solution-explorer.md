@@ -27,12 +27,11 @@ search.app:
 
  Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
  
-> [!NOTE]
->  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[PowerApps admin center](https://admin.powerapps.com/)> Environments > select your environment > Details tab. For instances with earlier version, selecting a solution will open it in classic experience. 
-
 > [!div class="mx-imgBorder"]  
 > ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
-  
+ 
+> [!NOTE]
+>  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[PowerApps admin center](https://admin.powerapps.com/)> **Environments** > select your environment > **Details** tab. For earlier version environments, selecting a solution opens it in the classic experience.  
  
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
@@ -95,18 +94,18 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 
 ## Known limitations
 
-- Deleting or removing a managed solution will not delete the canvas app from the PowerApps.
+- Deleting or removing a managed solution doesn't delete the canvas app in PowerApps.
 - Custom connectors are not available in a solution.
-- Canvas apps will need to be opened after solution's import to update the connections.
-- After adding an existing SDK assembly, it will not show in the solution. 
-- If canvas apps are packed in a managed solution, they will still be editable by admins in the new environment.
-- Dependencies are not available for canvas apps
-- Deleting a managed solution will not rollback to a different canvas app's version 
--	Canvas app access (CRUD and security) is managed entirely in PowerApps and not Common Data Service database
--	CDS APIs to call canvas apps are blocked and will not return anything 
--	Canvas app created in a solution cannot be shared as co-owner to an AAD Security Group yet
--	Canvas apps will not display in the classic solution explorer 
--	Existing canvas apps are not solution aware 
+- Canvas apps must be opened after a solution is imported to update the connections.
+- After adding an existing SDK assembly, it doesn't appear in the solution. 
+- If a canvas app is packaged in a managed solution, it can still be edited in the target environment.
+- Dependencies are not available for canvas apps.
+- Deleting a managed solution will not rollback to a different canvas app's version. 
+-	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service for Apps (CDS) database.
+-	CDS APIs to call canvas apps are blocked and don't return anything. 
+-	Canvas apps created in a solution can't be shared as co-owner to an AAD Security Group.
+-	Canvas apps won't display in the classic solution explorer.
+-	Existing canvas apps are not solution aware. 
 
  For details about customizing the individual components in a solution, see the following topics:  
   

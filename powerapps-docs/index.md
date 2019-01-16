@@ -4,7 +4,7 @@ title: Microsoft PowerApps Documentation | Microsoft Docs
 description: Microsoft PowerApps Documentation
 searchScope:
   - "PowerApps"
-featureFlags:
+featureFlags: 
 - clicktale
 ms.service: powerapps
 ms.custom:
@@ -45,18 +45,18 @@ ms.custom:
                               </a>
                            </li>
                            <li>
-                              <a href="https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/">
+                              <a href="whats-new.md">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
                                           <div class="cardImageOuter">
                                              <div class="cardImage">
-                                                <img src="media/index/release-notes.jpg" alt="" />
+                                                <img src="media/index/powerapps-whats-new.svg" alt="" />
                                              </div>
                                           </div>
                                           <div class="cardText">
-                                             <h3>Release Notes</h3>
-                                             <p>Learn about PowerApps features releasing from October 2018 through March 2019.</p>
+                                             <h3>What's new</h3>
+                                             <p>Learn about new features released in the past few weeks, and releasing in the coming months.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -304,7 +304,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Admins can use the PowerApps and Power platform admin centers to secure data, manage environments, and monitor usage.</p>
+                           <p>Admins can use the PowerApps and Power Platform Admin centers to secure data, manage environments, and monitor usage.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -362,6 +362,7 @@ ms.custom:
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/pricing-billing-skus">Licensing overview</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">License requirements for entities</a></p>
+<!--                                   <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-for-us-govt">PowerApps for US Government</a></p> -->
                                  </div>
                               </div>
                            </div>
@@ -377,9 +378,9 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Power platform admin center</h3>
+                                    <h3 style="font-size: 1.15rem">Power Platform Admin center</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/admin-guide">Administer Power platform</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/admin-guide">Administer Power Platform</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/get-help-support">Get Help + Support</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/analytics-common-data-service">CDS for Apps analytics</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/admin/manage-environments">Manage environments</a></p>
@@ -484,6 +485,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/use-fetchxml-construct-query">Query data using FetchXML</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/detect-duplicate-data-with-code">Detect duplicate data</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/optimistic-concurrency">Use optimistic concurrency</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices/work-with-data">Best practices</a></p>
                                  </div>
                               </div>
                            </div>
@@ -506,6 +508,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/entity-metadata">Entity metadata</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/entity-attribute-metadata">Attribute metadata</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/entity-relationship-metadata">Entity relationship metadata</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices/work-with-metadata">Best practices</a></p>
                                  </div>
                               </div>
                            </div>
@@ -526,6 +529,8 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Plug-ins (CDS for Apps)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Workflow extensions (CDS for Apps)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Client scripting (Model-driven apps)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices/business-logic">Best practices: Plug-ins and workflow extensions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/best-practices/business-logic">Best practices: Client scripting</a></p>
                                  </div>
                               </div>
                            </div>
@@ -590,6 +595,26 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Authentication</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/discovery-service">Discover user organizations</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools">Build Windows client applications using XRM tooling</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_best-practices.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.15rem">Best practices</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices">CDS for Apps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/best-practices">Model-driven apps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/performance-tips">Canvas apps</a></p>
                                  </div>
                               </div>
                            </div>

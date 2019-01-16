@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/18/2018
+ms.date: 01/14/2019
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -61,17 +61,49 @@ To follow this topic exactly, download the [Flooring Estimates](https://az787822
 
 1. Filter the list by typing or pasting one or more characters in the search box.
 
-1. Click or tap the plus icon to add a record, add whatever data you want, and then click or tap the checkmark icon to save your changes.
+    For example, type or paste **Honey** to show the only record for which that string appears in the product's name, category, or overview.
 
-1. Click or tap the next arrow for the record that you added, click or tap the pencil icon to edit the record, update one or more fields, and then click or tap the checkmark icon to save your changes.
+    ![Filter example](./media/get-started-create-from-data/filter-example.png)
 
-1. Click or tap the next arrow for the record that you added, click or tap the pencil icon to edit the record, update one or more fields, and then click or tap the cancel icon to discard your changes.
+1. Add a record:
 
-1. Click or tap the next arrow for the record that you added, and then click or tap the trash icon to delete that record.
+    1. Select the plus icon.
+
+        ![Plus icon](./media/get-started-create-from-data/plus-icon.png)
+
+    1. Add whatever data you want, and then select the checkmark icon to save your changes.
+
+        ![Save icon](./media/get-started-create-from-data/save-icon.png)
+
+1. Edit a record:
+
+    1. Select the arrow for the record that you want to edit.
+
+        ![Next arrow](./media/get-started-create-from-data/next-arrow.png)
+
+    1. Select the pencil icon.
+
+        ![Pencil icon](./media/get-started-create-from-data/pencil-icon.png)
+
+    1. Update one or more fields, and then select the checkmark icon to save your changes.
+
+        ![Save icon](./media/get-started-create-from-data/save-icon.png)
+
+        As an alternative, select the cancel icon to discard your changes.
+
+1. Delete a record:
+
+    1. Select the next arrow for the record that you want to delete.
+
+        ![Next arrow](./media/get-started-create-from-data/next-arrow.png)
+
+    1. Select the trash icon.
+
+        ![Trash icon](./media/get-started-create-from-data/trash-icon.png)
 
 ## Next steps
 
-Customize the default browse screen to better suit your needs. For example, you can sort and filter the list by product name, not category.
+Customize the default browse screen to better suit your needs. For example, you can sort and filter the list by product name only, not category or overview.
 
 > [!div class="nextstepaction"]
 > [Customize a default browse screen](customize-layout-sharepoint.md).

@@ -52,10 +52,14 @@ A few helpful notes:
 * To add email addresses for attendees outside your org, type out the full, valid email address, and select the '+' icon that appears to the right of the email address.
 * You must add at least one person as an attendee, provide a subject, and select a meeting time in the **Schedule** tab to create the meeting.
 * After you send the meeting, all of the selection contents are cleared.
-* The **OnSelect** statement of the **Send** icon (upper-right corner) contains this line: `Set(_myCalendarName, LookUp('Office365'.CalendarGetTables().value, DisplayName = "Calendar").Name);`
-  * "Calendar" is the default display name for most office user's calendars. However, this might not be the case in your org. If it's not, you can change "Calendar" to the appropriate term for your org.
-* You get an error if you try to schedule a meeting that occurs in the past.
-* You get an error if you add more than 20 people to a meeting.
+* The **OnSelect** statement of the Send icon (upper-right corner) contains this formula:
+    ```powerapps-dot
+    Set( _myCalendarName, 
+        LookUp( 'Office365'.CalendarGetTables().value, DisplayName = "Calendar" ).Name 
+    );
+    ```
+* "Calendar" is the default display name for most office user's calendars. However, this might not be the case in your org. If it's not, you can change "Calendar" to the appropriate term for your org.
+* You get an error if you try to schedule a meeting that occurs in the past or add more than 20 people to a meeting.
 
 ## Next steps
 

@@ -65,11 +65,11 @@ The **Add icon** control allows app users to add people who don't exist inside t
 * Property: **Visible**<br>
     Value: Logic to show the control only when a user types a valid email address into the search box:
 
-  ```
-    !IsBlank(TextSearchBox.Text) &&
-    IsMatch(TextSearchBox.Text, Match.Email) &&
-    Not(Trim(TextSearchBox.Text) in MyPeople.UserPrincipalName)
-  ```
+    ```powerapps-dot
+    !IsBlank( TextSearchBox.Text ) &&
+        IsMatch( TextSearchBox.Text, Match.Email ) &&
+        Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
+    ```
   Line by line, the preceding code block says that the **Add icon** control will be visible only if:
 
     * **TextSearchBox** contains text.
@@ -79,11 +79,16 @@ The **Add icon** control allows app users to add people who don't exist inside t
 * Property: **OnSelect**<br>
     Value: Selecting this adds the valid email address to the **MyPeople** collection. This collection is used by the screen as the recipient list:
 
-  ```
-    Collect(MyPeople,
-        {DisplayName: TextSearchBox.Text, UserPrincipalName: TextSearchBox.Text, Mail: TextSearchBox.Text});
-    Reset(TextSearchBox)
-  ```
+    ```powerapps-dot
+    Collect( MyPeople,
+        { 
+            DisplayName: TextSearchBox.Text, 
+            UserPrincipalName: TextSearchBox.Text, 
+            Mail: TextSearchBox.Text
+        }
+    );
+    Reset( TextSearchBox )
+    ```
   
   This code block adds a row to the **MyPeople** collection and populates three fields with the text in **TextSearchBox**. These three fields are **DisplayName**, **UserPrincipalName**, and **Mail**. It then resets the contents of **TextSearchBox**.
 
@@ -94,7 +99,11 @@ The **Add icon** control allows app users to add people who don't exist inside t
 * Property: **Items**<br>
     Value: The top 15 search results of the search text typed into the **TextSearchBox** control:
     
-    `If(!IsBlank(Trim(TextSearchBox.Text)), 'Office365Users'.SearchUser({searchTerm: Trim(TextSearchBox.Text), top: 15}))`
+    ```powerapps-dot
+    If( !IsBlank( Trim(TextSearchBox.Text ) ), 
+        'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ), top: 15} )
+    )
+    ```
 
   The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
   
@@ -112,11 +121,13 @@ The **Add icon** control allows app users to add people who don't exist inside t
 * Property: **OnSelect**<br>
     Value: Code to add the user to an app-level collection, and then select the user:
 
-    ```
+    ```powerapps-dot
     Concurrent(
-        Set(_selectedUser, ThisItem),
-        Reset(TextSearchBox),
-        If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem))
+        Set( _selectedUser, ThisItem ),
+        Reset( TextSearchBox ),
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+            Collect( MyPeople, ThisItem )
+        )
     )
     ```
 Selecting this control does three things concurrently:
@@ -137,13 +148,13 @@ Selecting this control does three things concurrently:
 * Property: **Height**<br>
     Value: Logic to set the height, based on the number of items currently in the gallery:
 
-  ```
-  Min(
-      (EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
-          RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0),
-      304
+    ```powerapps-dot
+    Min( 
+        ( EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
+            RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0 ),
+        304
     )
-  ```
+    ```
 
   The height of this gallery adjusts to the number of items in the gallery, with a maximum height of 304.
   
@@ -168,7 +179,7 @@ Selecting this control does three things concurrently:
    ![MonthDayGallery Title control](media/email-screen/email-people-gall-delete.png)
 
 * Property: **OnSelect**<br>
-    Value: `Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))`
+    Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
   Looks up the record in the **MyPeople** collection, where **UserPrincipalName** matches the **UserPrincipalName** of the selected item, and removes that record from the collection.
 
@@ -177,13 +188,17 @@ Selecting this control does three things concurrently:
 * Property: **OnSelect**<br>
     Value: Logic to send the user's email message:
 
-  ```
-  Set(_emailRecipientString, Concat(MyPeople, Mail & ";"));
-  'Office365'.SendEmail(_emailRecipientString, TextEmailSubject.Text, TextEmailMessage.Text, {Importance:"Normal"});
-  Reset(TextEmailSubject);
-  Reset(TextEmailMessage);
-  Clear(MyPeople)
-  ```
+    ```powerapps-dot
+    Set( _emailRecipientString, Concat( MyPeople, Mail & ";" ) );
+    'Office365'.SendEmail( _emailRecipientString, 
+        TextEmailSubject.Text, 	
+        TextEmailMessage.Text, 
+        { Importance:"Normal" }
+    );
+    Reset( TextEmailSubject );
+    Reset( TextEmailMessage );
+    Clear( MyPeople )
+    ```
 
   Sending an email message requires a semicolon-separated string of email addresses. In the preceding code:
   1. The first line of code takes the **Mail** field from all the rows in the **MyPeople** collection, concatenates them into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
@@ -193,8 +208,7 @@ Selecting this control does three things concurrently:
   1. Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
 
 * Property: **DisplayMode**<br>
-    Value: `If(Len(Trim(TextEmailSubject.Text)) > 0 && !IsEmpty(MyPeople), DisplayMode.Edit, DisplayMode.Disabled)`
-  
+    Value: `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ), DisplayMode.Edit, DisplayMode.Disabled )`
   For an email to be sent, the email subject line must have text, and the recipient (**MyPeople**) collection must not be empty.
 
 ## Next steps
