@@ -23,25 +23,6 @@ For canvas apps in PowerApps, understand how each significant control in the cal
 
 Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
 
-## Default functionality
-
-To add a calendar screen from the template:
-
-1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then create an app or open an existing app in PowerApps Studio.
-
-    This topic shows a phone app, but the same concepts apply to a tablet app.
-
-1. On the **Home** tab of the ribbon, select **New screen** > **Calendar**.
-
-    By default, the screen looks similar to this:
-
-    ![Calendar screen](media/calendar-screen/calendar-initial.png)
-
-1. To show data, select an option in the drop-down list near the top of the screen.
-
-    ![Calendar screen after loading is complete](./media/calendar-screen/calendar-screen.png)
-
-## Calendar-screen controls
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 - [Calendar drop-down (dropdownCalendarSelection)](#calendar-drop-down)
@@ -51,7 +32,7 @@ This topic highlights some significant controls and explains the expressions or 
 - [Calendar gallery (MonthDayGallery) (+ child controls)](#calendar-gallery)
 - [Events gallery (CalendarEventsGallery)](#events-gallery)
 
-### Calendar drop-down
+## Calendar drop-down
 
 ![dropdownCalendarSelection control](media/calendar-screen/calendar-dropdown.png)
 
@@ -124,7 +105,7 @@ This topic highlights some significant controls and explains the expressions or 
     - **MyCalendarEvents**: Set to a collection of the user's events from the selected calendar, ranging from **_minDate** to **_maxDate**.
     - **_showLoading**: Set to **false**; **_calendarVisible** is set to **true** after everything else has been loaded.
 
-### Calendar icon
+## Calendar icon
 
 ![iconCalendar control](media/calendar-screen/calendar-today-icon.png)
 
@@ -147,7 +128,7 @@ This topic highlights some significant controls and explains the expressions or 
 
     The [**Calendar drop-down**](#calendar-drop-down) section of this topic explains these variables in more detail.
 
-### Previous-month chevron
+## Previous-month chevron
 
 ![iconPrevMonth control](media/calendar-screen/calendar-back.png)
 
@@ -181,7 +162,7 @@ This topic highlights some significant controls and explains the expressions or 
 
     - **_minDate** is set to the current **_firstDayInView** because this is the first date for which events have been retrieved. If a user returns to this date by selecting the previous-month chevron, the **If** function returns **false**; the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
 
-### Next-month chevron
+## Next-month chevron
 
 ![iconNextMonth control](media/calendar-screen/calendar-forward.png)
 
@@ -215,7 +196,7 @@ This topic highlights some significant controls and explains the expressions or 
 
     - **_maxDate** is set to **_firstDayInView** + 40 days because this is the last day for which events have been retrieved. If a user returns to this date by selecting this icon, the **If** function returns **false**; the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
 
-### Calendar gallery
+## Calendar gallery
 
 ![MonthDayGallery control](media/calendar-screen/calendar-month-gall.png)
 
@@ -231,7 +212,7 @@ This topic highlights some significant controls and explains the expressions or 
 
   This value reflects a seven-day week.
 
-#### Title control in the calendar gallery
+### Title control in the calendar gallery
 
 ![MonthDayGallery Title control](media/calendar-screen/calendar-month-text.png)
 
@@ -289,7 +270,7 @@ This topic highlights some significant controls and explains the expressions or 
     Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
     ```
 
-#### Circle control in the calendar gallery
+### Circle control in the calendar gallery
 
 ![MonthDayGallery Circle control](media/calendar-screen/calendar-month-event.png)
 
@@ -306,7 +287,7 @@ This topic highlights some significant controls and explains the expressions or 
 
     The **Circle** control is visible if the **Start** field for any event is equivalent to the date of that cell, if the **Title** control is visible, and if the **Subcircle** control isn't visible. In other words, this control is visible when at least one event occurs on this day, and it isn't selected. If it is selected, the events for that day are displayed in the **CalendarEventsGallery** control.
 
-#### Subcircle control in the calendar gallery
+### Subcircle control in the calendar gallery
 
 ![MonthDayGallery Subcircle control](media/calendar-screen/calendar-month-selected.png)
 
@@ -319,7 +300,7 @@ This topic highlights some significant controls and explains the expressions or 
 
   The **Subcircle** control is visible when **_dateSelected** is equivalent to the date of the cell, and the **Title** control is visible. In other words, this control appears when the cell is the currently selected date.
 
-### Events gallery
+## Events gallery
 
 ![CalendarEventsGallery control](media/calendar-screen/calendar-events-gall.png)
 
