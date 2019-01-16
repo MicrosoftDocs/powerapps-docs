@@ -19,37 +19,15 @@ search.app:
 
 For canvas apps in PowerApps, understand how each significant control in the people-screen template contributes to the screen's overall default functionality. This deep dive presents behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [people-screen overview](people-screen-overview.md).
 
-## Prerequisite
-
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
-
-## Default functionality
-
-To add a people screen from the template:
-
-1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then create an app or open an existing app in PowerApps Studio.
-
-    This topic shows a phone app, but the same concepts apply to a tablet app.
-
-1. On the **Home** tab of the ribbon, select **New screen** > **People**.
-
-    By default, the screen looks similar to this:
-
-    ![Initial people screen state](media/people-screen/people-screen-empty.png)
-
-1. To start searching for users, select the text input box at the top of the screen and start typing a coworker's name. The search results appear below the text box:
-
-    ![people screen search state](media/people-screen/people-browse-gall-full.png)
-
-1. When you select individuals from the search results, they are added to the **MyPeople** collection, and the search bar input value is reset, revealing the collection of people you've selected:
-
-    ![people screen collection results](media/people-screen/people-people-gall-full.png)
-
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 * [Text search box](#text-search-box)
 * [User-browse gallery](#user-browse-gallery) (+ child controls)
 * [People added gallery](#people-added-gallery) (+ child controls)
+
+## Prerequisite
+
+Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
 
 ## Text search box
 
