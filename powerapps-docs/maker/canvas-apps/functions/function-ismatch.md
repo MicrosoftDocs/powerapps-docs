@@ -22,24 +22,24 @@ The **IsMatch** function tests whether a text string matches a pattern that can 
 
 Use **IsMatch** to validate what a user has typed in a **[Text input](../controls/control-text-input.md)** control. For example, you can confirm whether the user has entered a valid email address before the result is saved to your data source. If the entry doesn't match your criteria, add other controls that prompt the user to correct the entry.
 
-Use **Match** to extract the first text string that matches a pattern and **MatchAll** to extract all text strings that match.  Sub-matches can also be extracted to parse complex strings.   
+Use **Match** to extract the first text string that matches a pattern and **MatchAll** to extract all text strings that match. You can also extract sub-matches to parse complex strings.   
 
-**Match** returns a record of information for the first match found and **MatchAll** returns a table of records for every match found.  The record(s) contain:
+**Match** returns a record of information for the first match found, and **MatchAll** returns a table of records for every match found. The record or records contain:
 
 | Column | Type | Description |
 |----|----|----|
-| *named sub&#8209;match(es)* | Text | Each named sub-match will have its own column. Named sub-matches are created with **(?&lt;*name*&gt;**...**)** in the regular expression.  If a named sub-match has the same name as one of the above columns then the sub-match will take precedence and a warning will be generated; rename the sub-match to avoid this warning. |
+| *named sub&#8209;match or sub&#8209;matches)* | Text | Each named sub-match will have its own column. Named sub-matches are created with **(?&lt;*name*&gt;**...**)** in the regular expression.  If a named sub-match has the same name as one of the above columns, the sub-match takes precedence, and a warning is generated; rename the sub-match to avoid this warning. |
 | **FullMatch** | Text | All of the text string that was matched. |
-| **StartMatch** | Number | The starting position of the match within the input text string.  The first character of the string returns 1. | 
-| **SubMatches** | Single column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order they appear in the regular expression. Generally, named sub-matches are easier to work with and are encouraged.  Use the [**ForAll**](function-forall.md) function or [**Last**](function-first-last.md)( [**FirstN**](function-first-last.md)( **...** ) )** functions to work with an individual sub-match.  If there are no sub-matches defined in the regular expression this table will still be present but will be empty. |
+| **StartMatch** | Number | The starting position of the match within the input text string. The first character of the string returns 1. | 
+| **SubMatches** | Single-column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order in which they appear in the regular expression. Generally, named sub-matches are easier to work with and are encouraged. Use the [**ForAll**](function-forall.md) function or [**Last**](function-first-last.md)( [**FirstN**](function-first-last.md)( **...** ) )** functions to work with an individual sub-match. If no sub-matches are defined in the regular expression, this table will be present but empty. |
 
-These functions support [**MatchOptions**](#match-options).  By default: 
-- These functions perform a case-sensitive match.  Use **IgnoreCase** to perform case-insensitive matches.    
-- **IsMatch** will match the entire text string (**Complete** MatchOption) while **Match** and **MatchAll** will search for a match anywhere in the text string (**Contains** MatchOption).  Use **Complete**, **Contains**, **BeginsWith**, or **EndsWith** as appropriate for your scenario.
+These functions support [**MatchOptions**](#match-options). By default: 
+- These functions perform a case-sensitive match. Use **IgnoreCase** to perform case-insensitive matches.    
+- **IsMatch** matches the entire text string (**Complete** MatchOption), while **Match** and **MatchAll** search for a match anywhere in the text string (**Contains** MatchOption). Use **Complete**, **Contains**, **BeginsWith**, or **EndsWith** as appropriate for your scenario.
 
-**IsMatch** returns *true* if the text string matches the pattern or *false* if it doesn't.  **Match** returns *blank* if no match is found that can be tested with the [**IsBlank**](function-isblank-isempty.md) function.  **MatchAll** returns an empty table if no match is found that can be tested with the [**IsEmpty**](function-isblank-isempty.md) function.
+**IsMatch** returns *true* if the text string matches the pattern or *false* if it doesn't. **Match** returns *blank* if no match is found that can be tested with the [**IsBlank**](function-isblank-isempty.md) function. **MatchAll** returns an empty table if no match is found that can be tested with the [**IsEmpty**](function-isblank-isempty.md) function.
 
-If you are using **MatchAll** to split a text string, consider using the **[Split](function-split.md)** function which is simpler to use and faster.
+If you're using **MatchAll** to split a text string, consider using the **[Split](function-split.md)** function, which is simpler to use and faster.
 
 ## Patterns
 The key to using these functions is in describing the pattern to match. You describe the pattern in a text string as a combination of:
@@ -53,9 +53,9 @@ Combine these elements by using the [string concatenation operator **&**](operat
 ### Ordinary characters
 The simplest pattern is a sequence of ordinary characters to be matched exactly.
 
-For example, when used with the **IsMatch** function, the string "Hello" matches the pattern **"Hello"** exactly. No more and no less. The string "hello!" doesn't match the pattern because of the exclamation point on the end and the case is wrong for the letter "h". (See [MatchOptions](#match-options) for ways to modify this behavior.)
+For example, when used with the **IsMatch** function, the string "Hello" matches the pattern **"Hello"** exactly. No more and no less. The string "hello!" doesn't match the pattern because of the exclamation point on the end and because the case is wrong for the letter "h". (See [MatchOptions](#match-options) for ways to modify this behavior.)
 
-In the pattern language, certain characters are reserved for special purposes. To use these characters, either prefix the character with a **\\** (backslash) to indicate that the character should be taken literally or use one of the predefined patterns described below. This table lists the special characters:
+In the pattern language, certain characters are reserved for special purposes. To use these characters, either prefix the character with a **\\** (backslash) to indicate that the character should be taken literally, or use one of the predefined patterns described below. This table lists the special characters:
 
 | Special character | Description |
 | --- | --- |
@@ -68,13 +68,13 @@ In the pattern language, certain characters are reserved for special purposes. T
 | **{ }** |curly braces |
 | **^** |caret |
 | **$** |dollar sign |
-| **** |vertical bar or pipe |
+| **\|** |vertical bar or pipe |
 | **\\** |backslash |
 
 For example, you can match "Hello?" by using the pattern **"Hello\\?"** with a backslash before the question mark.
 
 ### Predefined patterns
-Predefined patterns provide a simple way to match one of a set of characters, or a sequence of multiple characters. Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
+Predefined patterns provide a simple way to match either one of a set of characters or a sequence of multiple characters. Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
 
 | Match Enum | Description | Regular Expression |
 | --- | --- | --- |
@@ -85,10 +85,10 @@ Predefined patterns provide a simple way to match one of a set of characters, or
 | **Hyphen** |Matches a hyphen. |`\-` |
 | **LeftParen** |Matches a left parenthesis "(". |`\(` |
 | **Letter** |Matches a letter. |`\p{L}` |
-| **MultipleDigits** |Matches one or more digitis. |`\d+` |
+| **MultipleDigits** |Matches one or more digits. |`\d+` |
 | **MultipleLetters** |Matches one or more letters. |`\p{L}+` |
-| **MultipleNonSpaces** |Matches one or more characters that don't add whitespace (space, tab, newline). |`\S+` |
-| **MultipleSpaces** |Matches one or more characters that add whitespace (space, tab, newline). |`\s+` |
+| **MultipleNonSpaces** |Matches one or more characters that don't add whitespace (not space, tab, or newline). |`\S+` |
+| **MultipleSpaces** |Matches one or more characters that add whitespace (space, tab, or newline). |`\s+` |
 | **NonSpace** |Matches a single character that doesn't add whitespace. |`\S` |
 | **OptionalDigits** |Matches zero, one, or more digits. |`\d*` |
 | **OptionalLetters** |Matches zero, one, or more letters. |`\p{L}*` |
@@ -101,30 +101,30 @@ Predefined patterns provide a simple way to match one of a set of characters, or
 For example, the pattern **"A" & MultipleDigits** will match the letter "A" followed by one or more digits.  
 
 ### Regular expressions
-The pattern used by these functions is a [*regular expression*](https://en.wikipedia.org/wiki/Regular_expression). The ordinary characters and predefined patterns that are described above help build regular expressions.  
+The pattern that these functions use is a [*regular expression*](https://en.wikipedia.org/wiki/Regular_expression). The ordinary characters and predefined patterns that are described above help build regular expressions.  
 
 Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. They can also often look like a random sequence of punctuation marks.  This article doesn't describe all aspects of regular expressions, but a wealth of information, tutorials, and tools are available on the web.  
 
-Regular expressions come in different dialects and PowerApps uses a variant of the JavaScript dialect. See [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax.  Named sub-matches are supported, (sometimes called named capture groups):
+Regular expressions come in different dialects, and PowerApps uses a variant of the JavaScript dialect. See [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
 
 - Named sub-matches: **(?&lt;*name*&gt; ...)**
 - Named backreferences: **\\k&lt;*name*&gt;**
 
-In the **Match** enum table above, each enum is shown next to its corresponding regular expression.
+In the **Match** enum table above, each enum appears next to its corresponding regular expression.
 
 ## Match options
 You can modify the behavior of these functions by specifying one or more options, which you can combine by using the string concatenation operator (**&amp;**).  
 
-| MatchOptions Enum | Description | Impact on regular expression |
+| MatchOptions enum | Description | Impact on regular expression |
 | --- | --- | --- |
 | **BeginsWith** |The pattern must match from the beginning of the text. |Adds a **^** to the start of the regular expression. |
-| **Complete** |Default for **IsMatch**.  The pattern must match the entire text, from beginning to end. |Adds a **^** to the start and **$** to the end of the regular expression. |
-| **Contains** |Default for **Match** and **IsMatch**.  The pattern must appear somewhere in the text but doesn't need to begin or end it. |Doesn't modify the regular expression. |
-| **EndsWith** |The pattern must match the end of the text. |Adds a **$** to the end of the regular expression. |
-| **IgnoreCase** |Treats the matching of letters in a case-insensitive manner. By default, matching is case sensitive. |Doesn't modify the regular expression. This is the equivalent of the standard regular expression "i" modifier.  |
-| **Multiline** |Matches across multiple lines. |Doesn't modify the regular expression. This is the equivalent of the standard regular expression "m" modifier. |
+| **Complete** |Default for **IsMatch**. The pattern must match the entire string of text, from beginning to end. |Adds a **^** to the start and **$** to the end of the regular expression. |
+| **Contains** |Default for **Match** and **IsMatch**. The pattern must appear somewhere in the text but doesn't need to begin or end it. |Doesn't modify the regular expression. |
+| **EndsWith** |The pattern must match the end of the string of text. |Adds a **$** to the end of the regular expression. |
+| **IgnoreCase** |Treats uppercase and lowercase letters as identical. By default, matching is case sensitive. |Doesn't modify the regular expression. This option is the equivalent of the standard "i" modifier for regular expressions.  |
+| **Multiline** |Matches across multiple lines. |Doesn't modify the regular expression. This option is the equivalent of the standard "m" modifier for regular expressions. |
 
-Using **MatchAll** is equivalent to using the standard regular expression "g" modifier.
+Using **MatchAll** is equivalent to using the standard "g" modifier for regular expressions.
 
 ## Syntax
 **IsMatch**( *Text*, *Pattern* [, *Options* ] )
