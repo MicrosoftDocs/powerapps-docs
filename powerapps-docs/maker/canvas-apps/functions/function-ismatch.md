@@ -35,7 +35,7 @@ Use **Match** to extract the first text string that matches a pattern and **Matc
 
 These functions support [**MatchOptions**](#match-options).  By default: 
 - These functions perform a case-sensitive match.  Use **IgnoreCase** to perform case-insensitive matches.    
-- **IsMatch** will match the entire text string (**Complete** MatchOption) while **Match** and **MatchAll** will search for a match anywhere in the text string (**Contains** MatchOption).
+- **IsMatch** will match the entire text string (**Complete** MatchOption) while **Match** and **MatchAll** will search for a match anywhere in the text string (**Contains** MatchOption).  Use **Complete**, **Contains**, **BeginsWith**, or **EndsWith** as appropriate for your scenario.
 
 **IsMatch** returns *true* if the text string matches the pattern or *false* if it doesn't.  **Match** returns *blank* if no match is found that can be tested with the [**IsBlank**](function-isblank-isempty.md) function.  **MatchAll** returns an empty table if no match is found that can be tested with the [**IsEmpty**](function-isblank-isempty.md) function.
 
@@ -103,14 +103,14 @@ For example, the pattern **"A" & MultipleDigits** will match the letter "A" foll
 ### Regular expressions
 The pattern used by these functions is a [*regular expression*](https://en.wikipedia.org/wiki/Regular_expression). The ordinary characters and predefined patterns that are described above help build regular expressions.  
 
-Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. This article doesn't describe all aspects of regular expressions, but a wealth of information and tutorials are published on the web to aid you.  
+Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. They can also often look like a random sequence of punctuation marks.  This article doesn't describe all aspects of regular expressions, but a wealth of information, tutorials, and tools are available on the web.  
 
-Regular expressions come in different dialects and PowerApps uses a variant of the JavaScript dialect. See [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax.  Named sub-matches are supported, (sometimes called named capture groups in other languages):
+Regular expressions come in different dialects and PowerApps uses a variant of the JavaScript dialect. See [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax.  Named sub-matches are supported, (sometimes called named capture groups):
 
 - Named sub-matches: **(?&lt;*name*&gt; ...)**
 - Named backreferences: **\\k&lt;*name*&gt;**
 
-In the **Match** enum table above, each enum expands into a regular expression, and the text string in the "Regular Expression" column defines that expression.
+In the **Match** enum table above, each enum is shown next to its corresponding regular expression.
 
 ## Match options
 You can modify the behavior of these functions by specifying one or more options, which you can combine by using the string concatenation operator (**&amp;**).  
@@ -201,7 +201,9 @@ First(
 
 For the following examples, insert a [Button](../controls/control-button.md) control on the screen and set the **OnSelect** property to:
 
-`Set( pangram, "The quick brown fox jumps over the lazy dog." )`
+``` powerapps-dot
+Set( pangram, "The quick brown fox jumps over the lazy dog." )
+```
  
 and press the button.
 
