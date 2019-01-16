@@ -464,6 +464,10 @@
             href: ./canvas-apps/functions/function-filter-lookup.md
           - name: Lower
             href: ./canvas-apps/functions/function-lower-upper-proper.md
+          - name: Match
+            href: ./canvas-apps/functions/function-ismatch.md
+          - name: MatchAll
+            href: ./canvas-apps/functions/function-ismatch.md
           - name: Max
             href: ./canvas-apps/functions/function-aggregates.md
           - name: Mid
