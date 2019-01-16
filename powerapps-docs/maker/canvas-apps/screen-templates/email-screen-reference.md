@@ -19,25 +19,6 @@ search.app:
 
 For canvas apps in PowerApps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
 
-## Prerequisite
-
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
-
-## Default functionality
-
-To add an email screen from the template:
-
-1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then create an app or open an existing app in PowerApps Studio.
-
-    This topic shows a phone app, but the same concepts apply to a tablet app.
-
-1. On the **Home** tab of the ribbon, select **New screen** > **Email**.
-
-    By default, the screen looks similar to this:
-
-    ![Email screen](media/email-screen/email-screen-full.png)
-
-
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 * [Text search box](#text-search-box)
@@ -45,6 +26,10 @@ This topic highlights some significant controls and explains the expressions or 
 * [People browse gallery](#people-browse-gallery)
 * [Email people gallery](#email-people-gallery) (+ child controls)
 * [Mail icon](#mail-icon)
+
+## Prerequisite
+
+Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
 
 ## Text search box
 
