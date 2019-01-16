@@ -75,7 +75,7 @@ OData-Version: 4.0
 
 ## Update with data returned
   
-To retrieve data from an entity you are updating you can compose your `PATCH` request so that data from the created record will be returned with a status of 200 (OK).  To get his result, you must use the `return=representation` preference in the request headers.  
+To retrieve data from an entity you are updating you can compose your `PATCH` request so that data from the created record will be returned with a status of 200 (OK).  To get this result, you must use the `return=representation` preference in the request headers.  
   
  To control which properties are returned, append the `$select` query option to the URL to the entity set.  The `$expand` query option will be ignored if used.  
   

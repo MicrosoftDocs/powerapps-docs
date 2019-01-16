@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -156,6 +156,5 @@ Unhandled exceptions of other types should only occur when unexpected errors are
 
 ### See also
 
-[Handle exceptions in plug-ins](/dynamics365/customer-engagement/developer/handle-exceptions-plugins)<br/>
-[How should you report exceptions in custom workflow activities?](/dynamics365/customer-engagement/developer/best-practices-sdk#how-to-report-exceptions-custom-workflow-activities)<br/>
-[Sample: Create a custom workflow activity](/dynamics365/customer-engagement/developer/workflow/sample-create-custom-workflow-activity)<br/>
+[Cancelling an operation](../../write-plug-in.md#cancelling-an-operation)<br/>
+[Debug Workflow Activities](../../workflow/workflow-extensions.md#debug-workflow-activities)<br/>
