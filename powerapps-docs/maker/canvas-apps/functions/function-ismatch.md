@@ -18,7 +18,7 @@ search.app:
 Tests for a match or extracts portions of a text string based on a pattern.
 
 ## Description
-The **IsMatch** function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a [regular expression](#regular-expressions).  The **Match** and **MatchAll** functions return what was matched including sub-matches.  
+The **IsMatch** function tests whether a text string matches a pattern that can comprise ordinary characters, predefined patterns, or a [regular expression](#regular-expressions).  The **Match** and **MatchAll** functions return what was matched, including sub-matches.  
 
 Use **IsMatch** to validate what a user has typed in a **[Text input](../controls/control-text-input.md)** control. For example, you can confirm whether the user has entered a valid email address before the result is saved to your data source. If the entry doesn't match your criteria, add other controls that prompt the user to correct the entry.
 
@@ -28,10 +28,10 @@ Use **Match** to extract the first text string that matches a pattern and **Matc
 
 | Column | Type | Description |
 |----|----|----|
-| *named sub&#8209;match or sub&#8209;matches)* | Text | Each named sub-match will have its own column. Named sub-matches are created with **(?&lt;*name*&gt;**...**)** in the regular expression.  If a named sub-match has the same name as one of the above columns, the sub-match takes precedence, and a warning is generated; rename the sub-match to avoid this warning. |
+| *named sub&#8209;match or sub&#8209;matches* | Text | Each named sub-match will have its own column. Create a named sub-match by using **(?&lt;*name*&gt;**...**)** in the regular expression. If a named sub-match has the same name as one of the above columns, the sub-match takes precedence, and a warning is generated. To avoid this warning, rename the sub-match. |
 | **FullMatch** | Text | All of the text string that was matched. |
 | **StartMatch** | Number | The starting position of the match within the input text string. The first character of the string returns 1. | 
-| **SubMatches** | Single-column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order in which they appear in the regular expression. Generally, named sub-matches are easier to work with and are encouraged. Use the [**ForAll**](function-forall.md) function or [**Last**](function-first-last.md)( [**FirstN**](function-first-last.md)( **...** ) )** functions to work with an individual sub-match. If no sub-matches are defined in the regular expression, this table will be present but empty. |
+| **SubMatches** | Single-column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order in which they appear in the regular expression. Generally, named sub-matches are easier to work with and are encouraged. Use the [**ForAll**](function-forall.md) function or [**Last**](function-first-last.md)( [**FirstN**](function-first-last.md)( **...** ) ) functions to work with an individual sub-match. If no sub-matches are defined in the regular expression, this table will be present but empty. |
 
 These functions support [**MatchOptions**](#match-options). By default: 
 - These functions perform a case-sensitive match. Use **IgnoreCase** to perform case-insensitive matches.    
@@ -46,7 +46,7 @@ The key to using these functions is in describing the pattern to match. You desc
 
 * Ordinary characters, such as  **"abc"** or **"123"**.
 * Predefined patterns, such as **Letter**, **MultipleDigits**, or **Email**. (The **Match** enum defines these patterns.)
-* Regular expressions codes, such as **"\d+\s+\d+"** or **"[a-z]+"**.
+* Regular-expression codes, such as **"\d+\s+\d+"** or **"[a-z]+"**.
 
 Combine these elements by using the [string concatenation operator **&**](operators.md). For example, **"abc" & Digit & "\s+"** is a valid pattern that matches the characters "a", "b", and "c", followed by a digit from 0 to 9, followed by at least one whitespace character.
 
@@ -55,7 +55,7 @@ The simplest pattern is a sequence of ordinary characters to be matched exactly.
 
 For example, when used with the **IsMatch** function, the string "Hello" matches the pattern **"Hello"** exactly. No more and no less. The string "hello!" doesn't match the pattern because of the exclamation point on the end and because the case is wrong for the letter "h". (See [MatchOptions](#match-options) for ways to modify this behavior.)
 
-In the pattern language, certain characters are reserved for special purposes. To use these characters, either prefix the character with a **\\** (backslash) to indicate that the character should be taken literally, or use one of the predefined patterns described below. This table lists the special characters:
+In the pattern language, certain characters are reserved for special purposes. To use these characters, either prefix the character with a **\\** (backslash) to indicate that the character should be taken literally, or use one of the predefined patterns described later in this topic. This table lists the special characters:
 
 | Special character | Description |
 | --- | --- |
@@ -63,7 +63,7 @@ In the pattern language, certain characters are reserved for special purposes. T
 | **?** |question mark |
 | **&#42;** |asterisk |
 | **\+** |plus |
-| **( )** |parenthesis |
+| **( )** |parentheses |
 | **[ ]** |square brackets |
 | **{ }** |curly braces |
 | **^** |caret |
@@ -76,7 +76,7 @@ For example, you can match "Hello?" by using the pattern **"Hello\\?"** with a b
 ### Predefined patterns
 Predefined patterns provide a simple way to match either one of a set of characters or a sequence of multiple characters. Use the [string concatenation operator **&**](operators.md) to combine your own text strings with members of the **Match** enum:
 
-| Match Enum | Description | Regular Expression |
+| Match enum | Description | Regular expression |
 | --- | --- | --- |
 | **Any** |Matches any character. |`.` |
 | **Comma** |Matches a comma. |`,` |
@@ -101,24 +101,24 @@ Predefined patterns provide a simple way to match either one of a set of charact
 For example, the pattern **"A" & MultipleDigits** will match the letter "A" followed by one or more digits.  
 
 ### Regular expressions
-The pattern that these functions use is a [*regular expression*](https://en.wikipedia.org/wiki/Regular_expression). The ordinary characters and predefined patterns that are described above help build regular expressions.  
+The pattern that these functions use is a [*regular expression*](https://en.wikipedia.org/wiki/Regular_expression). The ordinary characters and predefined patterns that are described earlier in this topic help build regular expressions.  
 
 Regular expressions are very powerful, available in many programming languages, and used for a wide variety of purposes. They can also often look like a random sequence of punctuation marks.  This article doesn't describe all aspects of regular expressions, but a wealth of information, tutorials, and tools are available on the web.  
 
-Regular expressions come in different dialects, and PowerApps uses a variant of the JavaScript dialect. See [regular expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
+Regular expressions come in different dialects, and PowerApps uses a variant of the JavaScript dialect. See [regular-expression syntax](http://msdn.microsoft.com/library/1400241x.aspx) for an introduction to the syntax. Named sub-matches (sometimes called named capture groups) are supported:
 
 - Named sub-matches: **(?&lt;*name*&gt; ...)**
 - Named backreferences: **\\k&lt;*name*&gt;**
 
-In the **Match** enum table above, each enum appears next to its corresponding regular expression.
+In the **Match** enum table earlier in this topic, each enum appears next to its corresponding regular expression.
 
 ## Match options
 You can modify the behavior of these functions by specifying one or more options, which you can combine by using the string concatenation operator (**&amp;**).  
 
-| MatchOptions enum | Description | Impact on regular expression |
+| MatchOptions enum | Description | Impact on a regular expression |
 | --- | --- | --- |
 | **BeginsWith** |The pattern must match from the beginning of the text. |Adds a **^** to the start of the regular expression. |
-| **Complete** |Default for **IsMatch**. The pattern must match the entire string of text, from beginning to end. |Adds a **^** to the start and **$** to the end of the regular expression. |
+| **Complete** |Default for **IsMatch**. The pattern must match the entire string of text, from beginning to end. |Adds a **^** to the start and a **$** to the end of the regular expression. |
 | **Contains** |Default for **Match** and **IsMatch**. The pattern must appear somewhere in the text but doesn't need to begin or end it. |Doesn't modify the regular expression. |
 | **EndsWith** |The pattern must match the end of the string of text. |Adds a **$** to the end of the regular expression. |
 | **IgnoreCase** |Treats uppercase and lowercase letters as identical. By default, matching is case sensitive. |Doesn't modify the regular expression. This option is the equivalent of the standard "i" modifier for regular expressions.  |
@@ -130,19 +130,19 @@ Using **MatchAll** is equivalent to using the standard "g" modifier for regular 
 **IsMatch**( *Text*, *Pattern* [, *Options* ] )
 
 * *Text* – Required. The text string to test.
-* *Pattern* – Required.  he pattern to test as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, any data sources, or any other dynamic references that change as the app runs.
+* *Pattern* – Required.  he pattern to test as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, data sources, or other dynamic references that change as the app runs.
 * *Options* – Optional. A text-string combination of **MatchOptions** enum values. By default, **MatchOptions.Complete** is used.
 
 **Match**( *Text*, *Pattern* [, *Options* ] )
 
 * *Text* – Required. The text string to match.
-* *Pattern* – Required. The pattern to match as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, any data sources, or any other dynamic references that change as the app runs.
+* *Pattern* – Required. The pattern to match as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, data sources, or other dynamic references that change as the app runs.
 * *Options* – Optional. A text-string combination of **MatchOptions** enum values. By default, **MatchOptions.Contains** is used.
 
 **MatchAll**( *Text*, *Pattern* [, *Options* ] )
 
 * *Text* – Required. The text string to match.
-* *Pattern* – Required. The pattern to match as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, any data sources, or any other dynamic references that change as the app runs.
+* *Pattern* – Required. The pattern to match as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, data sources, or other dynamic references that change as the app runs.
 * *Options* – Optional. A text-string combination of **MatchOptions** enum values. By default, **MatchOptions.Contains** is used.
 
 ## IsMatch Examples
@@ -153,8 +153,8 @@ The user types **Hello world** into **TextInput1**.
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **IsMatch( TextInput1.Text, "Hello world" )** |Tests whether the user's input matches, exactly, the string "Hello world" |**true** |
-| **IsMatch( TextInput1.Text, "Good bye" )** |Tests whether the user's input matches, exactly, the string "Good bye" |**false** |
+| **IsMatch( TextInput1.Text, "Hello world" )** |Tests whether the user's input matches, exactly, the string "Hello world". |**true** |
+| **IsMatch( TextInput1.Text, "Good bye" )** |Tests whether the user's input matches, exactly, the string "Good bye". |**false** |
 | **IsMatch( TextInput1.Text, "hello", Contains )** |Tests whether the user's input contains the word "hello" (case sensitive). |**false** |
 | **IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )** |Tests whether the user's input contains the word "hello" (case insensitive). |**true** |
 
@@ -199,7 +199,7 @@ First(
 ).Value
 ```
 
-For these examples, insert a [Button](../controls/control-button.md) control on the screen, set the button's **OnSelect** property to this formula, and then select the button:
+For these examples, add a [Button](../controls/control-button.md) control, set its **OnSelect** property to this formula, and then select the button:
 
 ``` powerapps-dot
 Set( pangram, "The quick brown fox jumps over the lazy dog." )
@@ -209,7 +209,7 @@ Set( pangram, "The quick brown fox jumps over the lazy dog." )
 |---------|-------------|--------|
 | `Match( pangram, "THE", IgnoreCase )` | Find all matches of "THE" in the text string **pangram**. The string contains two matches, but only the first is returned because you're using **Match** and not **MatchAll**. The SubMatches column is empty because no sub-matches were defined.  | {<br>FullMatch: "The",<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
 | `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string **pangram**. The test is case sensitive, so only the second instance of "the" is found. The SubMatches column is empty because no sub-matches were defined.  | ![](media/function-ismatch/pangram-the-one.png) |
-| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string **pangram**. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because tno sub-matches were defined.  | ![](media/function-ismatch/pangram-the-two.png) |
+| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string **pangram**. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because no sub-matches were defined.  | ![](media/function-ismatch/pangram-the-two.png) |
 | `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three-letter words with an "o" in the middle. Note that "brown" is excluded because it's not a three-letter word. So it fails to match "\b" (word boundary).  | ![](media/function-ismatch/pangram-fox-dog.png) |
 | `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Matches all the characters between "fox" and "dog". | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
 
