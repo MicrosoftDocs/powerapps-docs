@@ -129,25 +129,25 @@ Using **MatchAll** is equivalent to using the standard "g" modifier for regular 
 ## Syntax
 **IsMatch**( *Text*, *Pattern* [, *Options* ] )
 
-* *Text* – Required.  The text string to test.
-* *Pattern* – Required.  The pattern to test as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.  *Pattern* must be a constant formula without variable, data source, or any other dynamic reference that changes as the app executes.
-* *Options* – Optional.  A text string combination of **MatchOptions** enum values.  By default, **MatchOptions.Complete** is used.
+* *Text* – Required. The text string to test.
+* *Pattern* – Required.  he pattern to test as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, any data sources, or any other dynamic references that change as the app runs.
+* *Options* – Optional. A text-string combination of **MatchOptions** enum values. By default, **MatchOptions.Complete** is used.
 
 **Match**( *Text*, *Pattern* [, *Options* ] )
 
-* *Text* – Required.  The text string to match.
-* *Pattern* – Required.  The pattern to match as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.  *Pattern* must be a constant formula without variable, data source, or any other dynamic reference that changes as the app executes.
-* *Options* – Optional.  A text string combination of **MatchOptions** enum values.  By default, **MatchOptions.Contains** is used.
+* *Text* – Required. The text string to match.
+* *Pattern* – Required. The pattern to match as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, any data sources, or any other dynamic references that change as the app runs.
+* *Options* – Optional. A text-string combination of **MatchOptions** enum values. By default, **MatchOptions.Contains** is used.
 
 **MatchAll**( *Text*, *Pattern* [, *Options* ] )
 
-* *Text* – Required.  The text string to match.
-* *Pattern* – Required.  The pattern to match as a text string.  Concatenate predefined patterns that the **Match** enum defines or provide a regular expression.  *Pattern* must be a constant formula without variable, data source, or any other dynamic reference that changes as the app executes.
-* *Options* – Optional.  A text string combination of **MatchOptions** enum values.  By default, **MatchOptions.Contains** is used.
+* *Text* – Required. The text string to match.
+* *Pattern* – Required. The pattern to match as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, any data sources, or any other dynamic references that change as the app runs.
+* *Options* – Optional. A text-string combination of **MatchOptions** enum values. By default, **MatchOptions.Contains** is used.
 
 ## IsMatch Examples
 ### Ordinary characters
-Imagine that your app contains a **Text input** control named **TextInput1**.  The user enters values into this control to be stored in a database.   
+Imagine that your app contains a **Text input** control named **TextInput1**. The user enters values into this control to be stored in a database.   
 
 The user types **Hello world** into **TextInput1**.
 
@@ -155,40 +155,40 @@ The user types **Hello world** into **TextInput1**.
 | --- | --- | --- |
 | **IsMatch( TextInput1.Text, "Hello world" )** |Tests whether the user's input matches, exactly, the string "Hello world" |**true** |
 | **IsMatch( TextInput1.Text, "Good bye" )** |Tests whether the user's input matches, exactly, the string "Good bye" |**false** |
-| **IsMatch( TextInput1.Text, "hello", Contains )** |Tests whether the user's input contains  the word "hello" (case sensitive). |**false** |
+| **IsMatch( TextInput1.Text, "hello", Contains )** |Tests whether the user's input contains the word "hello" (case sensitive). |**false** |
 | **IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )** |Tests whether the user's input contains the word "hello" (case insensitive). |**true** |
 
 ### Predefined patterns
 
 |                                                            Formula                                                            |                                                                Description                                                                |  Result   |
 |-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit & Digit )** |                                              Matches a United States Social Security Number                                               | **true**  |
+| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit )** |                                              Matches a United States Social Security Number                                               | **true**  |
 |                                           **IsMatch( "joan@contoso.com", Email )**                                            |                                                         Matches an email address                                                          | **true**  |
 |                              **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )**                               |                                   Matches a sequence of digits, a period, and then zero or more digits.                                   | **true**  |
-|                                **IsMatch( "123", MultipleDigits & Period & OptionalDigits )**                                 | Matches a sequence of digits, a period, and then zero or more digits. A period doesn't appear in the text, so this pattern isn't matched. | **false** |
+|                                **IsMatch( "123", MultipleDigits & Period & OptionalDigits )**                                 | Matches a sequence of digits, a period, and then zero or more digits. A period doesn't appear in the text to match, so this pattern isn't matched. | **false** |
 
 ### Regular expressions
 
 |                                                                              Formula                                                                              |                                                                                                                                  Description                                                                                                                                   |  Result   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
 |                                                                    `IsMatch( "986", "\d+" )`                                                                   |                                                                                                                    Matches an integer greater than zero.                                                                                                                     | **true**  |
-|                                                               `IsMatch( "1.02", "\d+(\.\d\d)?" )`                                                              |                                        Matches a positive currency amount. If the input contains a decimal point, the input must also contain 2 numeric characters after the decimal point. For example, 3.00 is valid, but 3.1 isn't.                                         | **true**  |
-|                                                            `IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )`                                                             |                                                        Matches a positive or negative currency amount. If the input contains a decimal point, the input must also contain 2 numeric characters after the decimal point.                                                        | **true**  |
-|                                                         `IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )`                                                        | Matches a United States Social Security number.  Validates the format, type, and length of the supplied input field. The string to match must consist of 3 numeric characters followed by a dash, then 2 numeric characters followed by a dash, and then 4 numeric characters. | **true**  |
+|                                                               `IsMatch( "1.02", "\d+(\.\d\d)?" )`                                                              |                                        Matches a positive currency amount. If the input contains a decimal point, the input must also contain two numeric characters after the decimal point. For example, 3.00 is valid, but 3.1 isn't.                                         | **true**  |
+|                                                            `IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )`                                                             |                                                        Matches a positive or negative currency amount. If the input contains a decimal point, the input must also contain two numeric characters after the decimal point.                                                        | **true**  |
+|                                                         `IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )`                                                        | Matches a United States Social Security number. Validates the format, type, and length of the supplied input field. The string to match must consist of three numeric characters followed by a dash, then two numeric characters followed by a dash, and then four numeric characters. | **true**  |
 |                                                         `IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )`                                                         |                                                                                               Same as the previous example, but one of the hyphens is out of place in the input.                                                                                               | **false** |
-|                                         `IsMatch( "AStrongPasswordNot", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )`                                        |                                        Validates a strong password, which must contain 8, 9, or 10 characters, in addition to at least one digit and at least one alphabetic character. The string must not contain special characters.                                        | **false** |
+|                                         `IsMatch( "AStrongPasswordNot", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )`                                        |                                        Validates a strong password, which must contain eight, nine, or 10 characters, in addition to at least one digit and at least one alphabetic character. The string must not contain special characters.                                        | **false** |
 | `IsMatch( "<http://microsoft.com>", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]\*)?" )` |                                                                                                                     Validates an http, https, or ftp URL.                                                                                                                      | **true**  |
 
 ## Match and MatchAll Examples
 
 | Formula | Description | Result |
 |--------|------------|-----------|
-| `Match( "Bob Jones <bob.jones@contoso.com>", "<(?<email>" & Match.Email & ")>"` | Extracts only the email portion of the contact information.  | {<br>email:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com&gt;",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
-| `Match( "Bob Jones <InvalidEmailAddress>", "<(?<email>" & Match.Email & ")>"` | Extracts only the email portion of the contact information.  As no legal address is found (there is no @ sign) the function returns *blank* | *blank* |  
-| `Match( Language(), "(<language>\w{2})(?:-(?<script>\w{4}))?(?:-(?<region>\w{2}))?" )` | Extracts the language, script, and region portions of the language tag returned by the **[Language](function-language.md)** function.  Results shown here are when run in the United States, see the [**Language** function documentation](function-language.md) for more examples.  The **(?:** operator is used to group characters without creating an additional sub-match. | {<br>language: "en",<br>script: *blank*, <br>region: "US",<br>FullMatch: "en-US", <br>SubMatches: [ "en", "", "US" ], <br>StartMatch: 1<br>} 
-| `Match( "PT2H1M39S", "PT(?:(<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" )` | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. Note that although we have extracted numbers they are still in a text string, use the [**Value**](function-value.md) function to convert to a number before performing mathematical operations.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
+| `Match( "Bob Jones <bob.jones@contoso.com>", "<(?<email>" & Match.Email & ")>"` | Extracts only the email portion of the contact information.  | {<br>email:&nbsp;"bob.jones@contoso.com",<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com&#62;",<br>SubMatches:&nbsp;[&nbsp;"bob.jones@contoso.com"&nbsp;],<br>StartMatch: 11<br>}  
+| `Match( "Bob Jones <InvalidEmailAddress>", "<(?<email>" & Match.Email & ")>"` | Extracts only the email portion of the contact information. No legal address is found (there is no @ sign), so the function returns *blank*. | *blank* |  
+| `Match( Language(), "(<language>\w{2})(?:-(?<script>\w{4}))?(?:-(?<region>\w{2}))?" )` | Extracts the language, script, and region portions of the language tag that the **[Language](function-language.md)** function returns. These results reflect the United States; see the [**Language** function documentation](function-language.md) for more examples.  The **(?:** operator groups characters without creating another sub-match. | {<br>language: "en",<br>script: *blank*, <br>region: "US",<br>FullMatch: "en-US", <br>SubMatches: [ "en", "", "US" ], <br>StartMatch: 1<br>} 
+| `Match( "PT2H1M39S", "PT(?:(<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" )` | Extracts the hours, minutes, and seconds from an ISO 8601 duration value. The extracted numbers are still in a text string; use the [**Value**](function-value.md) function to convert it to a number before mathematical operations are performed on it.  | {<br> hours: "2",<br>minutes: "1",<br>seconds: "39",<br>FullMatch: "PT2H1M39S",<br>SubMatches:&nbsp;[&nbsp;"2",&nbsp;"1",&nbsp;"39"&nbsp;],<br>StartMatch: 1<br>} |
 
-Let's drill into that last example.  If we wanted to convert this string to a Date/Time value using the **[Time](function-date-time.md)** function we need to pass in the named sub-matches individually.  To do this we can use the **[ForAll](function-forall.md)** function operating on the first record returned from **MatchAll**:
+Let's drill into that last example. If you wanted to convert this string to a date/time value using the **[Time](function-date-time.md)** function, you must pass in the named sub-matches individually. To do this, you can use the **[ForAll](function-forall.md)** function operating on the first record that **MatchAll** returns:
 
 ``` powerapps-dot
 First( 
@@ -199,34 +199,32 @@ First(
 ).Value
 ```
 
-For the following examples, insert a [Button](../controls/control-button.md) control on the screen and set the **OnSelect** property to:
+For these examples, insert a [Button](../controls/control-button.md) control on the screen, set the button's **OnSelect** property to this formula, and then select the button:
 
 ``` powerapps-dot
 Set( pangram, "The quick brown fox jumps over the lazy dog." )
 ```
  
-and press the button.
-
 | Formula | Description | Result |
 |---------|-------------|--------|
-| `Match( pangram, "THE", IgnoreCase )` | Find all matches of "THE" in the text string **pangram**.  There are two possible matches, but only the first will be returned as we are using **Match** and not **MatchAll**. The SubMatches column is empty since there were no sub-matches defined.  | {<br>FullMatch: "The",<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
-| `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string **pangram**.  As the test is case sensitive, only the second instance of "the" is found. The SubMatches column is empty since there were no sub-matches defined.  | ![](media/function-ismatch/pangram-the-one.png) |
-| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string **pangram**.  In this case the test is case insensitive resulting in both instances of the word being found. The SubMatches column is empty since there were no sub-matches defined.  | ![](media/function-ismatch/pangram-the-two.png) |
-| `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three letter words with an "o" in the middle. Note that "brown" is excluded because it fails to match "\b" (word boundary) as it is not a three letter word.  | ![](media/function-ismatch/pangram-fox-dog.png) |
+| `Match( pangram, "THE", IgnoreCase )` | Find all matches of "THE" in the text string **pangram**. The string contains two matches, but only the first is returned because you're using **Match** and not **MatchAll**. The SubMatches column is empty because no sub-matches were defined.  | {<br>FullMatch: "The",<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
+| `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string **pangram**. The test is case sensitive, so only the second instance of "the" is found. The SubMatches column is empty because no sub-matches were defined.  | ![](media/function-ismatch/pangram-the-one.png) |
+| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string **pangram**. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because tno sub-matches were defined.  | ![](media/function-ismatch/pangram-the-two.png) |
+| `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three-letter words with an "o" in the middle. Note that "brown" is excluded because it's not a three-letter word. So it fails to match "\b" (word boundary).  | ![](media/function-ismatch/pangram-fox-dog.png) |
 | `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Matches all the characters between "fox" and "dog". | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
 
 To see the results of **MatchAll** in a gallery:
 
-1. Create a new screen and insert a **[Gallery](../controls/control-gallery.md)** control.
+1. In an empty screen, insert a blank vertical **[Gallery](../controls/control-gallery.md)** control.
 
-2. Set the Gallery's **Items** property to **MatchAll( pangram, "\w+" )**.  You could also use **MatchAll( pangram, MultipleLetters )**.
+2. Set the gallery's **Items** property to **MatchAll( pangram, "\w+" )** or **MatchAll( pangram, MultipleLetters )**.
 
 	![](media/function-ismatch/pangram-gallery1.png)
 
-3. Insert a Label control.
+3. Add a **[Label](../controls/control-text-box.md)** control to the gallery's template.
 
-4. Set the Label control's **Text** property to **ThisItem.FullMatch**.
+4. Set the label's **Text** property to **ThisItem.FullMatch**.
  
-5. Your gallery will be filled with each word in our example text.
+    The gallery is filled with each word in our example text.
 
 	![](media/function-ismatch/pangram-gallery2.png)
