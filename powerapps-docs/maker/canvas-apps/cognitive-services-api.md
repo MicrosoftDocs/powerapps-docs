@@ -41,11 +41,7 @@ The API is available as a free preview, and it is associated with an Azure subsc
 
 1. If you don't already have an Azure subscription, [sign up for a free subscription](https://azure.microsoft.com/free/).
 
-2. Sign in to your Azure account.
-
-3. Go to the [Create Cognitive Services blade](https://go.microsoft.com/fwlink/?LinkId=761108) in the Azure portal.
-
-4. Enter information for the Text Analytics API, like in the following image. Select the **F0** (free) pricing tier.
+2. In [this page](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics), enter information for the Text Analytics API, as this image shows. Select the **F0** (free) pricing tier.
    
     ![Create Text Analytics API](./media/cognitive-services-api/azure-create.png)
 
