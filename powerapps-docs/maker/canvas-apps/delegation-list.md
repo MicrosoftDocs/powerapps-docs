@@ -59,7 +59,7 @@ This list of data sources and delegable functions and predicates will be updated
 
 > [!NOTE]
 > Aggregate functions for CDS are only supported with the new version of the connector.  Depending on the version of PowerApps you are using, enable this connector with either this Preview switch:<br>
-> <style> img { max-width: none } </style> ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-preview-switch.png)<br>
+> ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-preview-switch.png)<br>
 > or this Experimental switch:<br>
 > ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-experimental-switch.png)<br>
 > Both switches are available in the File menu > App settings > Advanced settings.
