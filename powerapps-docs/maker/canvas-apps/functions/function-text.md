@@ -20,7 +20,7 @@ Converts any value and formats a number or date/time value to a string of text.
 ## Description
 The **Text** function formats a number or a date/time value based on one of these types of arguments:
 
-* A predefined date/time format, which you specify by using the **DateTimeFormat** enumeration. For dates and times, this approach is preferred as it automatically adjusts to each user's language and location.
+* A predefined date/time format, which you specify by using the **DateTimeFormat** enumeration. For dates and times, this approach is preferred as it automatically adjusts to each user's language and region.
 * A custom format, which comprises a string of placeholders that define, for example, whether numbers show a decimal separator and dates show the full name of the month, the month as an abbreviation, or the month as a number. PowerApps supports a subset of the placeholders that Microsoft Excel does. In this string, the language placeholder specifies the language in which to interpret the other placeholders. If the custom format includes a period, for example, the language-format placeholder specifies whether the period is a decimal separator (ja-JP) or a thousands separator (es-ES).
 
 See [working with dates and times](../show-text-dates-times.md) for more information.
@@ -49,8 +49,8 @@ The **Text** function can also convert any data type to a text representation us
 | --- | --- |
 | **0** (*zero*) |Displays insignificant zeros if a number has fewer digits than there are zeros in the format. For example, use the format **#.00** if you want to display **8.9** as **8.90**. |
 | **#** |Follows the same rules as the **0** (zero). However, **Text** doesn't return extra zeros when the number has fewer digits on either side of the decimal than there are # symbols in the format. For example, **8.9** is displayed if the custom format is **#.##** and the number to format is **8.9**. |
-| **.** (*period*) |Displays the decimal point in a number.  Depends on the language of the custom format, see [global apps](#global-apps) for more details. |
-| **,** (*comma*) |Displays the grouping separator in a number, often used for thousands. **Text** separates groups by commas if the format contains a comma that's enclosed by number signs (**#**) or by zeros.  Depends on the language of the custom format, see [global apps](#global-apps) for more details. |
+| **.** (*period*) |Displays the decimal point in a number. Depends on the language of the custom format; see [global apps](#global-apps) for more details. |
+| **,** (*comma*) |Displays the grouping separator in a number, often used for thousands. **Text** separates groups by commas if the format contains a comma that's enclosed by number signs (**#**) or by zeros. Depends on the language of the custom format; see [global apps](#global-apps) for more details. |
 
 If a number has more digits to the right of the decimal point than there are placeholders in the format, the number rounds to as many decimal places as there are placeholders. If there are more digits to the left of the decimal point than there are placeholders, the extra digits are displayed. If the format contains only number signs (#) to the left of the decimal point, numbers less than 1 start with a decimal point (for example, **.47**).
 
@@ -70,8 +70,8 @@ If a number has more digits to the right of the decimal point than there are pla
 |                                                                                                   **yyyy**                                                                                                   |                                                                                      Displays the year as a four-digit number.                                                                                      |
 |                                                                                                    **h**                                                                                                     |                                                                                Displays the hour as a number without a leading zero.                                                                                |
 |   **hh** | Displays the hour as a number with a leading zero when appropriate. If the format contains **AM** or **PM**, the hour is shown based on the 12-hour clock. Otherwise, the hour is shown based on the 24-hour clock. | 
-|  **m**   |   Displays the minute as a number without a leading zero.<br>The **m** or the **mm** code must appear immediately after the **h** or **hh** code or immediately before the **ss** code; otherwise, **Text** returns the month instead of minutes.  |    
-| **mm**   | Displays the minute as a number with a leading zero when appropriate. <br> The **m** or the **mm** placeholder must appear immediately after the **h** or **hh** placeholder or immediately before the **ss** placeholder. Otherwise, **Text** returns the month  instead of minutes. |                                                                                                                   
+|  **m**   |   Displays the minute as a number without a leading zero.<br><br>This placeholder must appear immediately after the **h** or **hh** code or immediately before the **ss** code; otherwise, **Text** returns the month instead of minutes.  |    
+| **mm**   | Displays the minute as a number with a leading zero when appropriate.<br><br>This placeholder must appear immediately after the **h** or **hh** placeholder or immediately before the **ss** placeholder. Otherwise, **Text** returns the month instead of minutes. |                                                                                                                   
 | **s**   |  Displays the second as a number without a leading zero.  |
 | **ss**  | Displays the second as a number with a leading zero when appropriate.                                                                        |
 |                                                                                                    **f**                                                                                                     |                                                                                         Displays the fractions of seconds.                                                                                          |
@@ -103,44 +103,44 @@ You can include any of these characters in your format string.  They will appear
 ## Global apps
 The **Text** function is globally aware. For a wide array of languages, it knows how to properly write out dates, times, currencies, and numbers. To do its job, it needs two pieces of information:
 
-* **The language of the custom format:** For makers, how should a custom format be interpreted? The separator characters (**.** and **,**) have different meanings in different languages. If you specify a custom format, you start it with the language placeholder. Even easier, you can use one of the [predefined date/time formats](#predefined-datetime-formats), which are language agnostic.
-* **The language of the result:** For users, in what language should the function result appear? Names of months and weekdays must be in the appropriate language for the user of the app, which you can specify by adding a third argument (optional) to the **Text** function. 
+* **The language of the custom format:** For makers, how should a custom format be interpreted? The separator characters (**.** and **,**) have different meanings in different languages. If you specify a custom format, you can include a language placeholder or take the default value, which reflects the language to which your device is set. Even easier, you can use one of the [predefined date/time formats](#predefined-datetime-formats), which are language agnostic.
+* **The language of the result:** For users, in what language should the function result appear? Names of months and weekdays must be in the appropriate language for the user of the app, which you can specify by adding a third, optional argument to the **Text** function. 
 
-For both, the language is provided with a [language tag](function-language.md#language-tags). To see the list of supported languages type **Text( 1234, "", )** in the formula bar or the **Advanced** tab of the right-hand pane, and then scroll through the list of locales suggested for the third argument.
+For both, you specify the language by using a [language tag](function-language.md#language-tags). To see the list of supported languages, type **Text( 1234, "", )** in the formula bar or the **Advanced** tab of the right-hand pane, and then scroll through the list of locales suggested for the third argument.
 
 ### Language placeholder
 To specify the language of the custom format, use:
 
 | Placeholder | Description |
 | --- | --- |
-| **[$-*LanguageTag*]** |*LanguageTag* is a language tag as returned from the **Language** function. It specify just the language (such as **[$-en]** for English), or it can also specify the region (such as **[$-en-GB]** to further specify Great Britain). |
+| **[$-*LanguageTag*]** |*LanguageTag* is a language tag as returned from the **Language** function. It can specify just the language (such as **[$-en]** for English), or it can also specify the region (such as **[$-en-GB]** to further specify Great Britain). |
 
 The language placeholder can appear anywhere in the custom format but only once.
 
-While writing a formula, if you don't provide a language placeholder and the format string is ambiguous from a global standpoint, the authoring tool will automatically insert the language tag for your current language.  
+If you specify a custom format without a language placeholder and the format is ambiguous from a global standpoint, the language tag for your current language is inserted automatically.  
 
 **[$-en-US]** is assumed if this placeholder isn't present when your app is run. 
 
 > [!NOTE]
-> In a future version, the syntax of this placeholder may change to avoid confusion with a similar, but different, placeholder supported by Excel.
+> In a future version, the syntax of this placeholder may change to avoid confusion with a similar, but different, placeholder that Excel supports.
 
-#### Result language tag
-Appearing in the result of **Text** are translated strings for month, weekday, and AM/PM designations, as well as the appropriate group and decimal separators.
+### Result language tag
+The result of **Text** includes translated strings for months, weekdays, and AM/PM designations, as well as the appropriate group and decimal separators.
 
-By default, **Text** uses the language of the user running the app.  The **Language** function returns the language tag for the current user.  You can override this default by supplying a language tag for the optional third argument to **Text**.
+By default, **Text** uses the language of the user running the app. The **Language** function returns the language tag for the current user. You can override this default value by supplying a language tag for the third argument to **Text**.
 
 ## Syntax
 **Text**( *NumberOrDateTime*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
 
 * *NumberOrDateTime* - Required. The number or the date/time value to format.
 * *DateTimeFormat* - Required.  A member of the **DateTimeFormat** enumeration.
-* *ResultLanguageTag* - Optional.  The language tag to use for the result text.  By default, the language of the current user is used.
+* *ResultLanguageTag* - Optional. The language tag to use for the result text. By default, the language of the current user is used.
 
 **Text**( *NumberOrDateTime*, *CustomFormat* [, *ResultLanguageTag* ] )
 
 * *Number* - Required. The number or the date/time value to format.
 * *CustomFormat* - Required. One or more placeholders enclosed in double quotation marks.
-* *ResultLanguageTag* - Optional.  The language tag to use for the result text.  By default, the language of the current user is used.
+* *ResultLanguageTag* - Optional. The language tag to use for the result text. By default, the language of the current user is used.
 
 **Text**( *AnyValue* )
 
