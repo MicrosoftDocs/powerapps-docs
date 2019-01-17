@@ -58,10 +58,10 @@ This list of data sources and delegable functions and predicates will be updated
 <sup>2</sup> **See note below**.  The aggregate functions are limited to a collection of 50,000 records.  If needed, use the [**Filter** function](functions/function-filter-lookup.md) to select 50,000 records from a larger set before using the aggregate function.
 
 > [!NOTE]
-> Aggregate functions for CDS are only supported with the new version of the connector.  Depending on the version of PowerApps you are using, enable this connector with either this Preview switch:
-> ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-preview-switch.png)
-> or this Experimental switch:
-> ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-experimental-switch.png)
+> Aggregate functions for CDS are only supported with the new version of the connector.  Depending on the version of PowerApps you are using, enable this connector with either this Preview switch:<br>
+> <style> img { max-width: none } </style> ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-preview-switch.png)<br>
+> or this Experimental switch:<br>
+> ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-experimental-switch.png)<br>
 > Both switches are available in the File menu > App settings > Advanced settings.
 
 ### Filter and LookUp delegable predicates
