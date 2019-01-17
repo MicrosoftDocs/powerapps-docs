@@ -19,7 +19,7 @@ As the [Understand delegation](delegation-overview.md) article outlines in detai
 
 Delegation is supported for tabular data sources only. This list identifies tabular data sources and whether they support delegation, with details in the next section.
 
-* Common Data Service - **Yes**
+* Common Data Service (CDS) for Apps - **Yes**
 * SharePoint - **Yes**
 * SQL Server - **Yes**
 * Dynamics 365 - **Yes**
@@ -35,14 +35,14 @@ This document lists the current state of supported delegation per data source.
 
 ## Prerequisites
 
-* Familiarize yourself with the [Understand delegation](delegation-overview.md) article
+Familiarize yourself with the [Understand delegation](delegation-overview.md) article.
 
 ## List of data sources and supported delegation
 This list of data sources and delegable functions and predicates will be updated periodically to reflect the current status of delegation support in PowerApps.
 
 ### Top-level delegable functions
 
-| &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
+| &nbsp; | CDS for Apps | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Average |Yes<sup>2</sup> |No |Yes |No |No |
 | Filter |Yes |Yes |Yes |Yes |Yes |
@@ -58,11 +58,11 @@ This list of data sources and delegable functions and predicates will be updated
 <sup>2</sup> **See note below**.  The aggregate functions are limited to a collection of 50,000 records.  If needed, use the [**Filter** function](functions/function-filter-lookup.md) to select 50,000 records from a larger set before using the aggregate function.
 
 > [!NOTE]
-> Aggregate functions for CDS are only supported with the new version of the connector.  Depending on the version of PowerApps you are using, enable this connector with either this Preview switch:<br>
+> Aggregate functions for CDS for Apps are supported only with the new version of the connector. Depending on the version of PowerApps that you're using, enable this connector with either this Preview switch:<br>
 > ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-preview-switch.png)<br>
 > or this Experimental switch:<br>
 > ![Preview switch for Relational data, option sets, and other new features for CDS](media/delegation-list/cdsv2-experimental-switch.png)<br>
-> Both switches are available in the File menu > App settings > Advanced settings.
+> To find both switches, open the **File menu**, and then select **App settings** > **Advanced settings**.
 
 ### Filter and LookUp delegable predicates
 
