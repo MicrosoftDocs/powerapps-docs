@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -95,6 +95,5 @@ myValue = window.top.Xrm.Page.getAttribute("field1");
 In the scenarios mentioned, `window.top` refers to the window owned by an application context external to Dynamics 365. Due to the differing origins, the browser presents the user with a cross-origin security error.
 
 ### See also
-[Client scripting in Customer Engagement using JavaScript](/dynamics365/customer-engagement/developer/clientapi/client-scripting)<br/>
-[Events in forms and grids in Customer Engagement](/dynamics365/customer-engagement/developer/clientapi/events-forms-grids)<br/>
-[Best practices: Client scripting in Customer Engagement](/dynamics365/customer-engagement/developer/clientapi/client-scripting-best-practices)
+[Apply business logic using client scripting in model-driven apps using JavaScript](/powerapps/developer/model-driven-apps/client-scripting)<br/>
+[Events in forms and grids in model-driven apps](/powerapps/developer/model-driven-apps/clientapi/events-forms-grids)<br/>

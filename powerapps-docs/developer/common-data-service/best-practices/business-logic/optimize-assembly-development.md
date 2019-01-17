@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -83,5 +83,5 @@ Quite often, developers create a new Visual Studio project for each plug-in/cust
 
 ### See also
 
-[Event execution pipeline](/dynamics365/customer-engagement/developer/event-execution-pipeline)<br />
-[Plug-in Assemblies](/dynamics365/customer-engagement/developer/write-plugin#plug-in-assemblies)<br />
+[Event Framework](../../event-framework.md)<br />
+[Use plug-ins to extend business processes](../../plug-ins.md)<br />
