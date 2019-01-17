@@ -112,10 +112,12 @@ After 30 days, you'll be prompted to request an extension of the trial or purcha
 
 * If your only access to PowerApps is through the trial (for which you signed up on the [PowerApps site](http://powerapps.microsoft.com/) or the [pricing page](http://powerapps.microsoft.com/pricing)), you can request a 30-day extension of the trial license to retain access to PowerApps.
 
+<!--
 ### When will my trial license expire?
 To determine when your trial license will expire, select the gear icon near the upper-right corner of the [PowerApps site](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
 
 ![](./media/signup-for-powerapps/show-duration.png)
+-->
 
 ### What happens to my data if my trial license expires?
 If you still have access to PowerApps, you can continue to use it. Any data in the Common Data Service will remain as it is, and any app or flow that used the Common Data Service as a data source will continue to run as it did. But you won't be able to use that app or flow, and you'll be prompted to request a 30-day extension of the trial or purchase a plan if you try to modify a schema or entities in the Common Data Service.
