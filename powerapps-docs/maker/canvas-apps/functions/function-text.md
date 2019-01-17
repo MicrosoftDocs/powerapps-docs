@@ -21,7 +21,7 @@ Converts any value and formats a number or date/time value to a string of text.
 The **Text** function formats a number or a date/time value based on one of these types of arguments:
 
 * A predefined date/time format, which you specify by using the **DateTimeFormat** enumeration. For dates and times, this approach is preferred as it automatically adjusts to each user's language and location.
-* A custom format, which comprises a string of placeholders that define, for example, whether number show a decimal separator. PowerApps supports a subset of the placeholders that Microsoft Excel does. In this string, the first placeholder specifies the language in which to interpret the remaining placeholders. If the custom format includes a period, for example, the language-format placeholder specifies whether the a period is a decimal separator (en-US) or a thousands separator (es-ES).
+* A custom format, which comprises a string of placeholders that define, for example, whether numbers show a decimal separator and dates show the full name of the month, the month as an abbreviation, or the month as a number. PowerApps supports a subset of the placeholders that Microsoft Excel does. In this string, the language placeholder specifies the language in which to interpret the other placeholders. If the custom format includes a period, for example, the language-format placeholder specifies whether the period is a decimal separator (ja-JP) or a thousands separator (es-ES).
 
 See [working with dates and times](../show-text-dates-times.md) for more information.
 
@@ -101,25 +101,25 @@ You can include any of these characters in your format string.  They will appear
 | &nbsp; |Space character |
 
 ## Global apps
-The **Text** function is globally aware.  For a wide array of languages, it knows how to properly write out dates, times, currencies, and numbers.  To do its job, it needs two pieces of information:
+The **Text** function is globally aware. For a wide array of languages, it knows how to properly write out dates, times, currencies, and numbers. To do its job, it needs two pieces of information:
 
-* **The language of the custom format:** For authors, how should a custom format be interpreted? The separator characters (**.** and **,**) have different meanings in different languages.  This is handled with a special placeholder containing a language tag.  Even easier, the [predefined date/time formats](#predefined-datetime-formats) are language agnostic.
-* **The language of the result:** For users, what language should be used in the result of the function?  Names for months and weekdays need to be in the appropriate language for the user of the app.  This is handled with a third optional argument to the **Text** function. 
+* **The language of the custom format:** For makers, how should a custom format be interpreted? The separator characters (**.** and **,**) have different meanings in different languages. If you specify a custom format, you start it with the language placeholder. Even easier, you can use one of the [predefined date/time formats](#predefined-datetime-formats), which are language agnostic.
+* **The language of the result:** For users, in what language should the function result appear? Names of months and weekdays must be in the appropriate language for the user of the app, which you can specify by adding a third argument (optional) to the **Text** function. 
 
-For both, the language is provided with a [language tag](function-language.md#language-tags). To see the list of supported languages type **Text( 1234, "", )** in the formula bar or advanced view and scroll through the list of locales suggested for the third argument.
+For both, the language is provided with a [language tag](function-language.md#language-tags). To see the list of supported languages type **Text( 1234, "", )** in the formula bar or the **Advanced** tab of the right-hand pane, and then scroll through the list of locales suggested for the third argument.
 
-#### Language-region placeholder
+### Language placeholder
 To specify the language of the custom format, use:
 
 | Placeholder | Description |
 | --- | --- |
-| **[$-*LanguageTag*]** |*LanguageTag* is a language tag as returned from the **Language** function.  It can be in the form of just the language such as **[$-en]** for English, or it can also include the region such as **[$-en-GB]** to further specify Great Britain. |
+| **[$-*LanguageTag*]** |*LanguageTag* is a language tag as returned from the **Language** function. It specify just the language (such as **[$-en]** for English), or it can also specify the region (such as **[$-en-GB]** to further specify Great Britain). |
 
-The language-region placeholder can appear anywhere in the custom format but only once.
+The language placeholder can appear anywhere in the custom format but only once.
 
-While writing a formula, if you do not provide a language placeholder and the format string is ambiguous from a global standpoint, the authoring tool will automatically insert the language tag for your current language.  
+While writing a formula, if you don't provide a language placeholder and the format string is ambiguous from a global standpoint, the authoring tool will automatically insert the language tag for your current language.  
 
-**[$-en-US]** is assumed if this placeholder is not present when your app is run. 
+**[$-en-US]** is assumed if this placeholder isn't present when your app is run. 
 
 > [!NOTE]
 > In a future version, the syntax of this placeholder may change to avoid confusion with a similar, but different, placeholder supported by Excel.
