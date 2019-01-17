@@ -54,8 +54,8 @@ This list of data sources and delegable functions and predicates will be updated
 | SortByColumns |Yes |Yes |Yes |Yes |Yes |
 | Sum |Yes<sup>2</sup> |No |Yes |No |No |
 
-<sup>1</sup> For string fields only<br>
-<sup>2</sup> **See note below**.  The aggregate functions are limited to a collection of 50,000 records.  If needed, use the [**Filter** function](functions/function-filter-lookup.md) to select 50,000 records from a larger set before using the aggregate function.
+<sup>1</sup> For string fields only.<br>
+<sup>2</sup> **See note below**. The aggregate functions are limited to a collection of 50,000 records. If needed, use the [**Filter**](functions/function-filter-lookup.md) function to select 50,000 records from a larger set before using the aggregate function.
 
 > [!NOTE]
 > Aggregate functions for CDS for Apps are supported only with the new version of the connector. Depending on the version of PowerApps that you're using, enable this connector with either this Preview switch:<br>
@@ -66,7 +66,7 @@ This list of data sources and delegable functions and predicates will be updated
 
 ### Filter and LookUp delegable predicates
 
-| &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
+| &nbsp; | CDS for Apps | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Not |Yes |No |Yes |Yes |Yes |
 | IsBlank |No |No |Yes |Yes |No |
