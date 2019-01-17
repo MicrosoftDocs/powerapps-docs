@@ -55,6 +55,7 @@ This list of data sources and delegable functions and predicates will be updated
 | Sum |Yes<sup>2</sup> |No |Yes |No |No |
 
 <sup>1</sup>For string fields only
+
 <sup>2</sup>The aggregate functions are limited to a collection of 50,000 records.  If needed, use the [**Filter** function](functions/function-filter-lookup.md) to select 50,000 records from a larger set before using the aggregate function.
 
 
