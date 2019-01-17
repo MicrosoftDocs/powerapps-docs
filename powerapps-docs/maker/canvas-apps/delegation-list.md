@@ -44,17 +44,19 @@ This list of data sources and delegable functions and predicates will be updated
 
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
-| Average |No |No |Yes |No |No |
+| Average |Yes<sup>2</sup> |No |Yes |No |No |
 | Filter |Yes |Yes |Yes |Yes |Yes |
 | LookUp |Yes |Yes |Yes |Yes |Yes |
-| Max |No |No |Yes |No |No |
-| Min |No |No |Yes |No |No |
+| Max |Yes<sup>2</sup> |No |Yes |No |No |
+| Min |Yes<sup>2</sup> |No |Yes |No |No |
 | Search |Yes<sup>1</sup> |No |Yes |Yes |Yes |
 | Sort |Yes |Yes |Yes |Yes |Yes |
 | SortByColumns |Yes |Yes |Yes |Yes |Yes |
-| Sum |No |No |Yes |No |No |
+| Sum |Yes<sup>2</sup> |No |Yes |No |No |
 
 <sup>1</sup>For string fields only
+<sup>2</sup>The aggregate functions are limited to a collection of 50,000 records.  If needed, use the [**Filter** function](functions/function-filter-lookup.md) to select 50,000 records from a larger set before using the aggregate function.
+
 
 ### Filter and LookUp delegable predicates
 
