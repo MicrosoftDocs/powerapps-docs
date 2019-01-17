@@ -145,7 +145,7 @@ Using **MatchAll** is equivalent to using the standard "g" modifier for regular 
 * *Pattern* – Required. The pattern to match as a text string. Concatenate predefined patterns that the **Match** enum defines, or provide a regular expression. *Pattern* must be a constant formula without any variables, data sources, or other dynamic references that change as the app runs.
 * *Options* – Optional. A text-string combination of **MatchOptions** enum values. By default, **MatchOptions.Contains** is used.
 
-## IsMatch Examples
+## IsMatch examples
 ### Ordinary characters
 Imagine that your app contains a **Text input** control named **TextInput1**. The user enters values into this control to be stored in a database.   
 
@@ -179,7 +179,7 @@ The user types **Hello world** into **TextInput1**.
 |                                         `IsMatch( "AStrongPasswordNot", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )`                                        |                                        Validates a strong password, which must contain eight, nine, or 10 characters, in addition to at least one digit and at least one alphabetic character. The string must not contain special characters.                                        | **false** |
 | `IsMatch( "<http://microsoft.com>", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]\*)?" )` |                                                                                                                     Validates an http, https, or ftp URL.                                                                                                                      | **true**  |
 
-## Match and MatchAll Examples
+## Match and MatchAll examples
 
 | Formula | Description | Result |
 |--------|------------|-----------|
