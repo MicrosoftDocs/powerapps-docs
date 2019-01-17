@@ -79,4 +79,4 @@ This list of data sources and delegable functions and predicates will be updated
 | StartsWith |No |Yes |No |No |No |
 
 <sup>3</sup> For numeric columns, all operators can be delegated. For ID columns, only the '=' can be delegated. Date columns can't be delegated.<br/>
-<sup>4</sup> For operators only. And/Or/Not function not delegated.
+<sup>4</sup> For operators only. And/Or/Not functions aren't delegated.
