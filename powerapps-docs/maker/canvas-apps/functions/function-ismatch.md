@@ -221,7 +221,7 @@ To see the results of **MatchAll** in a gallery:
 
 	![](media/function-ismatch/pangram-gallery1.png)
 
-3. Select "Add an item from the Insert table" in the middle of the gallery to select the template of the gallery. 
+3. Select "Add an item from the Insert tab" in the middle of the gallery control to select the template of the gallery. 
 
 5. Add a **[Label](../controls/control-text-box.md)** control to the gallery's template.  
 
