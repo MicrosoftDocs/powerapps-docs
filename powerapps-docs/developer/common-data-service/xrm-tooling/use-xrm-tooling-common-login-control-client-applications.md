@@ -153,13 +153,14 @@ Here is a quick way to create a Windows Presentation Foundation (WPF) applicatio
     2.  Test the authentication by providing your credentials to connect to CDS for Apps, and then click **Login**. If successful, a message appears stating the version and the organization name that you are connected to. Click **OK** to close the message.  
   
  
- > [!div class="mx-imgBorder"]
- > ![Project test results](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results") 
+> [!div class="mx-imgBorder"]
+> ![Project test results](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results") 
   
     3.  If you click **Sign In to Dynamics 365** again, the application prompts you to either choose the saved credentials from the last sign-in activity, or to re-enter the new credentials.  
   
 
- ![Stored credentials](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")
+> [!div class="mx-imgBorder"]
+> ![Stored credentials](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")
   
 ### See also  
 
