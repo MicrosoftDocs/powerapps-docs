@@ -221,10 +221,12 @@ To see the results of **MatchAll** in a gallery:
 
 	![](media/function-ismatch/pangram-gallery1.png)
 
-3. Add a **[Label](../controls/control-text-box.md)** control to the gallery's template.
+3. Select "Add an item from the Insert table" in the middle of the gallery to select the template of the gallery. 
 
-4. Set the label's **Text** property to **ThisItem.FullMatch**.
+5. Add a **[Label](../controls/control-text-box.md)** control to the gallery's template.  
+
+4. Set the label's **Text** property to **ThisItem.FullMatch**.  
  
-    The gallery is filled with each word in our example text.
+    The gallery is filled with each word in our example text.  Resize the gallery's template and the label control in order to see all the words on one screen.
 
 	![](media/function-ismatch/pangram-gallery2.png)
