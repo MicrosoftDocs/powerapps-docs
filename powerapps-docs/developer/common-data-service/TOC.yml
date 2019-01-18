@@ -79,6 +79,8 @@
       href: register-plug-in.md
     - name: Debug a plug-in
       href: debug-plug-in.md
+    - name: Access external web resources
+      href: access-web-services.md
     - name: Tutorials
       items:
       - name: Write and register a plug-in
