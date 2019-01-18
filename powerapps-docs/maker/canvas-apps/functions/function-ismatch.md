@@ -28,7 +28,7 @@ Use **Match** to extract the first text string that matches a pattern and **Matc
 
 | Column | Type | Description |
 |----|----|----|
-| *named sub&#8209;match or sub&#8209;matches* | Text | Each named sub-match will have its own column. Create a named sub-match by using **(?&lt;*name*&gt;**...**)** in the regular expression. If a named sub-match has the same name as one of the above columns, the sub-match takes precedence, and a warning is generated. To avoid this warning, rename the sub-match. |
+| *named sub&#8209;match or sub&#8209;matches* | Text | Each named sub-match will have its own column. Create a named sub-match by using **(?&lt;*name*&gt;**...**)** in the regular expression. If a named sub-match has the same name as one of the predefined columns (below), the sub-match takes precedence, and a warning is generated. To avoid this warning, rename the sub-match. |
 | **FullMatch** | Text | All of the text string that was matched. |
 | **StartMatch** | Number | The starting position of the match within the input text string. The first character of the string returns 1. | 
 | **SubMatches** | Single-column table of Text (column **Value**) | The table of named and unnamed sub-matches in the order in which they appear in the regular expression. Generally, named sub-matches are easier to work with and are encouraged. Use the [**ForAll**](function-forall.md) function or [**Last**](function-first-last.md)( [**FirstN**](function-first-last.md)( **...** ) ) functions to work with an individual sub-match. If no sub-matches are defined in the regular expression, this table will be present but empty. |
@@ -153,19 +153,19 @@ The user types **Hello world** into **TextInput1**.
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **IsMatch( TextInput1.Text, "Hello world" )** |Tests whether the user's input matches, exactly, the string "Hello world". |**true** |
-| **IsMatch( TextInput1.Text, "Good bye" )** |Tests whether the user's input matches, exactly, the string "Good bye". |**false** |
-| **IsMatch( TextInput1.Text, "hello", Contains )** |Tests whether the user's input contains the word "hello" (case sensitive). |**false** |
-| **IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )** |Tests whether the user's input contains the word "hello" (case insensitive). |**true** |
+| `IsMatch( TextInput1.Text, "Hello world" )` |Tests whether the user's input matches, exactly, the string "Hello world". |**true** |
+| `IsMatch( TextInput1.Text, "Good bye" )` |Tests whether the user's input matches, exactly, the string "Good bye". |**false** |
+| `IsMatch( TextInput1.Text, "hello", Contains )` |Tests whether the user's input contains the word "hello" (case sensitive). |**false** |
+| `IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )` |Tests whether the user's input contains the word "hello" (case insensitive). |**true** |
 
 ### Predefined patterns
 
 |                                                            Formula                                                            |                                                                Description                                                                |  Result   |
 |-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit )** |                                              Matches a United States Social Security Number                                               | **true**  |
-|                                           **IsMatch( "joan@contoso.com", Email )**                                            |                                                         Matches an email address                                                          | **true**  |
-|                              **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )**                               |                                   Matches a sequence of digits, a period, and then zero or more digits.                                   | **true**  |
-|                                **IsMatch( "123", MultipleDigits & Period & OptionalDigits )**                                 | Matches a sequence of digits, a period, and then zero or more digits. A period doesn't appear in the text to match, so this pattern isn't matched. | **false** |
+| `IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit )` |                                              Matches a United States Social Security Number                                               | **true**  |
+|                                           `IsMatch( "joan@contoso.com", Email )`                                            |                                                         Matches an email address                                                          | **true**  |
+|                              `IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )`                               |                                   Matches a sequence of digits, a period, and then zero or more digits.                                   | **true**  |
+|                                `IsMatch( "123", MultipleDigits & Period & OptionalDigits )`                                 | Matches a sequence of digits, a period, and then zero or more digits. A period doesn't appear in the text to match, so this pattern isn't matched. | **false** |
 
 ### Regular expressions
 
@@ -208,9 +208,9 @@ Set( pangram, "The quick brown fox jumps over the lazy dog." )
 | Formula | Description | Result |
 |---------|-------------|--------|
 | `Match( pangram, "THE", IgnoreCase )` | Find all matches of "THE" in the text string that the **pangram** variable contains. The string contains two matches, but only the first is returned because you're using **Match** and not **MatchAll**. The SubMatches column is empty because no sub-matches were defined.  | {<br>FullMatch: "The",<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
-| `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string that the **pangram** variable contains. The test is case sensitive, so only the second instance of "the" is found. The SubMatches column is empty because no sub-matches were defined.  | ![](media/function-ismatch/pangram-the-one.png) |
-| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string that the **pangram** variable contains. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because no sub-matches were defined.  | ![](media/function-ismatch/pangram-the-two.png) |
-| `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three-letter words with an "o" in the middle. Note that "brown" is excluded because it's not a three-letter word and, therefore, fails to match "\b" (word boundary).  | ![](media/function-ismatch/pangram-fox-dog.png) |
+| `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string that the **pangram** variable contains. The test is case sensitive, so only the second instance of "the" is found. The SubMatches column is empty because no sub-matches were defined.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-one.png) |
+| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string that the **pangram** variable contains. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because no sub-matches were defined.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-two.png) |
+| `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three-letter words with an "o" in the middle. Note that "brown" is excluded because it's not a three-letter word and, therefore, fails to match "\b" (word boundary).  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-fox-dog.png) |
 | `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Matches all the characters between "fox" and "dog". | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
 
 To see the results of **MatchAll** in a gallery:
