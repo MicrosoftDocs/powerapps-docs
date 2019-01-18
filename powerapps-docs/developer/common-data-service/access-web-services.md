@@ -29,7 +29,7 @@ Other methods of accessing web resources include the use of webhooks and the [!I
 ## See also
 
 [Plug-ins](plug-ins.md)<br />
-[Workflow extensions](workflow\workflow-extensions.md)<br />
+[Workflow extensions](workflow/workflow-extensions.md)<br />
 [Azure integration](azure-integration.md)<br />
 [Use Web Hooks](use-webhooks.md)<br />
-[Sample: Web Access from a Sandboxed Plug-in](org-service\samples\web-access-plugin.md)
+[Sample: Web Access from a Sandboxed Plug-in](org-service/samples/web-access-plugin.md)
