@@ -62,6 +62,33 @@ Generally, you can expect to find a message for most of the **Request* classes i
 
 Data about messages is stored in the [SdkMessage](reference/entities/sdkmessage.md) and [SdkMessageFilter](reference/entities/sdkmessagefilter.md) entities. The Plug-in registration tool will filter this information to only show valid messages.
 
+To verify if a message and entity combination supports execution of plug-ins using a database query, use Advanced Find or a community tool (e.g., [FetchXML Builder](http://fxb.xrmtoolbox.com)) to execute the following fetchXML query. When using Advanced Find, you must create the query interactively.
+
+```xml
+<fetch>
+  <entity name='sdkmessage' >
+    <attribute name='name' />
+    <link-entity name='sdkmessagefilter' alias='filter' to='sdkmessageid' from='sdkmessageid' link-type='inner' >
+      <filter type='and' >
+        <condition attribute='iscustomprocessingstepallowed' operator='eq' value='1' />
+        <condition attribute='isvisible' operator='eq' value='1' />
+      </filter>
+      <attribute name='primaryobjecttypecode' />
+    </link-entity>
+    <filter>
+      <condition attribute='isprivate' operator='eq' value='0' />
+      <condition attribute='name' operator='not-in' >
+        <value>SetStateDynamicEntity</value>
+        <value>RemoveRelated</value>
+        <value>SetRelated</value>
+	   <value>Execute</value>
+      </condition>
+    </filter>
+    <order attribute='name' />
+  </entity>
+</fetch>
+```
+
 > [!CAUTION]
 > The `Execute` message is available, but you should typically not register extensions for it since it is called by every operation.
 
