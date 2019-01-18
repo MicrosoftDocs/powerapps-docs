@@ -50,7 +50,7 @@ Here is a quick way to create a Windows Presentation Foundation (WPF) applicatio
     4.  Specify the name and location of the project, and click **OK**.  
   
 > [!div class="mx-imgBorder"]
-> ![WPF Application for CDS for Apps template](../media/crm-sdk-v6-xrmtooling-newproject.png "WPF Application for CDS for Apps template")   
+> ![WPF Application for CDS for Apps template](../media/crm-sdk-v6-xrm-tooling-newproject.png "WPF Application for CDS for Apps template")   
 
 > [!NOTE]
 > **Known Issue with Visual Studio 2015**
