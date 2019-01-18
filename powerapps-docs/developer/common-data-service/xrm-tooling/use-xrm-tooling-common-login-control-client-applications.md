@@ -26,7 +26,7 @@ search.app:
 There is a template for Visual Studio that enables you to use the common login control in your client applications. The code for CDS for Apps authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for CDS for Apps. The common login control is an implementation of the <xref:Microsoft.Xrm.Tooling.CrmConnectControl>, and the control resembles the following image.  
   
  
- <!--![XRM Tooling common login control](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")-->
+ ![XRM Tooling common login control](../media/crm-sdk-v6-commonlogincontrol.png "XRM Tooling common login control")
   
 <a name="Prereq"></a>
 
@@ -49,7 +49,9 @@ Here is a quick way to create a Windows Presentation Foundation (WPF) applicatio
     3.  Select **WPF Application for Dynamics 365**.  
     4.  Specify the name and location of the project, and click **OK**.  
   
- <!-- TODO:![WPF Application for CDS for Apps template](../media/crm-sdk-v6-xrmtooling-newproject.png "WPF Application for CDS for Apps template")-->   
+> [!div class="mx-imgBorder"]
+> ![WPF Application for CDS for Apps template](../media/crm-sdk-v6-xrmtooling-newproject.png "WPF Application for CDS for Apps template")   
+
 > [!NOTE]
 > **Known Issue with Visual Studio 2015**
 > 
@@ -81,18 +83,20 @@ Here is a quick way to create a Windows Presentation Foundation (WPF) applicatio
   
     2.  In the **Add New Item** dialog box, from the list of installed templates, expand **Visual C#**, and select **CDS for Apps SDK Templates**. Click **CDS for Apps Login Form for WPF Applications**, and click **OK**.  
   
- <!--TODO:
- ![Add the common login control template](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")   -->
+ 
+ > [!div class="mx-imgBorder"]
+ > ![Add the common login control template](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
   
 3.  The newly added `CrmLoginForm1.xaml` login control is displayed in the XAML designer area. If it isn’t displayed, double-click the `CrmLoginForm1.xaml` file in the **Solution Explorer** pane.  
   
- <!--TODO: 
-![Verify that the login control renders properly](../media/crm-sdk-v6-xrmtooling-addtemplate03.png "Verify that the login control renders properly")   -->
+ 
+![Verify that the login control renders properly](../media/crm-sdk-v6-xrmtooling-addtemplate03.png "Verify that the login control renders properly")
   
 4.  You must now call the newly added login control from your application. To do this, add a **Button** control on your `MainWindow.xaml` file, and set the name and content to **btnSignIn** and **Sign in to CDS for Apps** respectively.  
   
- <!--TODO:
- ![Add a control to call the login form](../media/crm-sdk-v6-xrmtooling-addtemplate02.png "Add a control to call the login form")   -->
+ 
+ > [!div class="mx-imgBorder"]
+ > ![Add a control to call the login form](../media/crm-sdk-v6-xrmtooling-addtemplate02.png "Add a control to call the login form")
   
 5.  Double-click the button to add code for the click event of the **btnSignIn** button in the `MainWindow.xaml.cs` file.  
   
@@ -140,7 +144,7 @@ Here is a quick way to create a Windows Presentation Foundation (WPF) applicatio
   
 8.  This is how your `MainWindow.xaml.cs` file appears after adding code from the previous two steps:  
   
- <!--TODO: ![Sample code](../media/crm-sdk-v6-xrmtooling-addtemplate04.png "Sample code")   -->
+![Sample code](../media/crm-sdk-v6-xrmtooling-addtemplate04.png "Sample code")
   
 9. To test the project:  
   
@@ -148,13 +152,14 @@ Here is a quick way to create a Windows Presentation Foundation (WPF) applicatio
   
     2.  Test the authentication by providing your credentials to connect to CDS for Apps, and then click **Login**. If successful, a message appears stating the version and the organization name that you are connected to. Click **OK** to close the message.  
   
- <!--TODO:
- ![Project test results](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results")   -->
+ 
+ > [!div class="mx-imgBorder"]
+ > ![Project test results](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results") 
   
     3.  If you click **Sign In to Dynamics 365** again, the application prompts you to either choose the saved credentials from the last sign-in activity, or to re-enter the new credentials.  
   
- <!--TODO:
- ![Stored credentials](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")   -->
+
+ ![Stored credentials](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")
   
 ### See also  
 
