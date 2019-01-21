@@ -112,7 +112,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 1. [Create a connection to a SharePoint list](connect-to-sharepoint.md).
 
-1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this function, replacing *ListName* with the name of your SharePoint list:<br>
+1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this function, replacing *ListName* with the name of your SharePoint list:<br>
 
     `Collect(MySPCollection, ListName)`
 
