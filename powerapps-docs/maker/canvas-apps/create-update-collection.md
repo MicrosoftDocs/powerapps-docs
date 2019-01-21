@@ -110,7 +110,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 ## Put a SharePoint list into a collection
 
-1. [Create a connection to a SharePoint list](../connect-to-sharepoint.md).
+1. [Create a connection to a SharePoint list](connect-to-sharepoint.md).
 
 1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this function, replacing *ListName* with the name of your SharePoint list:<br>
 
@@ -122,10 +122,10 @@ Use a collection to store data that users can manage in your app. A collection i
 
 1. (optional) To preview the collection that you created, select **Collections** on the **File**  menu.
 
-For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery, see [Show data in a gallery](../connections/connection-sharepoint-online.md#show-data-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers), see [Edit form and 
-Display form controls](../controls/control-form-detail.md).
+For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery, see [Show data in a gallery](connections/connection-sharepoint-online.md#show-data-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers), see [Edit form and 
+Display form controls](controls/control-form-detail.md).
 
 ## Next steps
 
-- See the [reference topic](function-clear-collect-clearcollect.md) for the **Collect** function.
-- Learn how to shape data in a collection by using the [AddColumns, DropColumns, RenameColumns, and ShowColumns](function-table-shaping.md) functions.
+- See the [reference topic](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
+- Learn how to shape data in a collection by using the [AddColumns, DropColumns, RenameColumns, and ShowColumns](functions/function-table-shaping.md) functions.
