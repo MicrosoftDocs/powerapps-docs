@@ -84,4 +84,4 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 | **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Adds two records to the **IceCream** collection that includes a quantity of pistachio and Orange ice cream. |![Table with two records](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>The **IceCream** data source has also been modified. |
 | **Clear( IceCream )** |Removes all records from the **IceCream** collection. |![Empty table](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** data source has also been modified. |
 
-For step-by-step examples of how to create a collection, see [Create and update a collection](create-update-collection.md).
+For step-by-step examples of how to create a collection, see [Create and update a collection](../create-update-collection.md).
