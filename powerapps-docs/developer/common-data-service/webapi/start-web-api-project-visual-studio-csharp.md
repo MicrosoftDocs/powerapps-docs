@@ -74,9 +74,9 @@ The following procedures explain how to add all required managed references and 
   
 #### Add the helper code
 
-The Web API samples (c#) use the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. 
+The Web API samples (c#) use the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
 
-Create a new class file and copy paste the helper code or download the [SampleHelper.cs file](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
+Add a new class file to the solution and copy paste the helper code from [SampleHelper.cs file](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
   
 - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) – contains [Json.NET](http://www.newtonsoft.com/json), a popular, MIT-licensed JSON framework for .NET.  
   
@@ -91,28 +91,11 @@ Create a new class file and copy paste the helper code or download the [SampleHe
   
 1. In **Solution Explorer**, expand the **References** node.
   
-2. Confirm the at the following references have been added to the project.
+2. Confirm the following references have been added to the project.
   
 3. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).  
   
  Because the Common Data Service for Apps Web API is based on REST principles, it does not require client-side assemblies to access.
-  
-#### Add typical using statements  
-  
-1. In the **Solution Explorer**, open **Program.cs** for editing.  
-  
-2. At the top of the file, add the following `using` statements, which reference namespaces commonly used in Common Data Service for Apps Web API-based solutions.  
-  
-    ```csharp
-    using Newtonsoft.Json;  
-    using Newtonsoft.Json.Linq;  
-    using System.Net.Http;  
-    using System.Net.Http.Headers;
-    ```  
-  
-3. If you added routinely used assemblies or references in the previous sections, you may also want to add corresponding `using` statements for these resources.  
-  
-4. Save the file.  
   
 #### Edit the application configuration file
 
@@ -124,7 +107,7 @@ In **Solution Explorer**, open the **App.config** file for editing.  Add the fol
 <configuration>
 <connectionStrings>
   <!--Online using Office 365-->
-  <!-- <add name="Connect" connectionString="Url=https://yourorgname.crm.dynamics.com; Username=yourname@yourorg.onmicrosoft.com; Password=pasword; authtype=Office365; RequireNewInstance=True"/>-->
+  <add name="Connect" connectionString="Url=https://yourorgname.crm.dynamics.com;Username=yourname@yourorg.onmicrosoft.com;Password=pasword;authtype=Office365; RequireNewInstance=True"/>
 </connectionStrings>
 <system.diagnostics>
 <trace autoflush="true" />
@@ -183,7 +166,7 @@ In **Solution Explorer**, open the **App.config** file for editing.  Add the fol
 
 #### Add code to call the helper library
   
-1. Add a new class file and name it as `SampleMethod`. Add the following helper methods to it.
+1. Add a new class file and name it as `SampleMethod`. Add the following helper methods to it. The `SampleMethod` class file is shared commonly with all the Web API (C#) samples. The class file has all the methods that support the functions defined in the `Main` method.
 
 ```csharp
 using Newtonsoft.Json.Linq;
@@ -241,10 +224,19 @@ public class WhoAmIResponse
     }
 ```
 
-2. Now go to `Program.cs` file and in the `Main` method, add the following statements.  
+2. Now go to `Program.cs` file add the following code.  
   
-```csharp  
-  
+```csharp 
+
+using Newtonsoft.Json.Linq;
+using System;
+using System.Configuration;
+using System.Net.Http;
+
+namespace PowerApps.Samples 
+{
+public partial class SampleProgram
+{ 
 static void Main(string[] args)
   {
      try
@@ -295,7 +287,9 @@ static void Main(string[] args)
 
             }            
 }
-```  
+}
+}
+```
   
 3. Save all the files in the solution.
   
@@ -310,5 +304,5 @@ static void Main(string[] args)
   
 ### See also
 
-[Get Started with the Web API (C#)](get-started-dynamics-365-web-api-csharp.md)<br />
+[Simple Web API sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)<br/>
 [Perform operations using the Web API](perform-operations-web-api.md)
