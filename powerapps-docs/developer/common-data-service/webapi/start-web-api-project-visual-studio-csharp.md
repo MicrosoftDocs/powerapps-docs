@@ -33,14 +33,16 @@ This topic demonstrates how to create a new project in Visual Studio that builds
   
 - Visual Studio 2017 installed on your development computer. Any edition, including [Visual Studio Express](https://www.visualstudio.com/products/visual-studio-express-vs.aspx), should be sufficient to work with the Common Data Service for Apps Web API.
   
-- A NuGet client must be installed: either the command-line utility or the Visual Studio extension. For more information, see [Installing NuGet](https://docs.nuget.org/consume/installing-nuget).  
--  Download the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) helper class. 
+- A NuGet client must be installed: either the command-line utility or the Visual Studio extension. For more information, see [Installing NuGet]
+(https://docs.nuget.org/consume/installing-nuget).  
+
+<!--  Download the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) helper class. 
   
-<a name="bkmk_createProject"></a>
+<a name="bkmk_createProject"></a>-->
    
 ## Create a project  
 
-<!-- TODO: The following procedure demonstrates how to create a console application project in C# that uses the Microsoft .NET Framework. For more information on supported versions of the .NET Framework, see [Supported extensions](../supported-extensions.md).   -->
+The following procedure demonstrates how to create a console application project in C# that uses the Microsoft .NET Framework. For more information on supported versions of the .NET Framework, see [Supported extensions](../supported-extensions.md). 
   
 <a name="bkmk_newProject"></a>
 
@@ -64,12 +66,19 @@ The following procedures explain how to add all required managed references and 
   
 #### Add the helper code
 
-The Web API samples (c#) use the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, Web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. More information, see [SampleHelper.cs file](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
+The Web API samples (c#) use the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. 
+
+Create a new class file and copy paste the helper code or download the [SampleHelper.cs file](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
   
 - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) – contains [Json.NET](http://www.newtonsoft.com/json), a popular, MIT-licensed JSON framework for .NET.  
   
 - [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) – contains the binaries for the Active Directory Authentication Library ([ADAL](https://msdn.microsoft.com/library/azure/mt417579.aspx)), which provides authentication functionality for .NET clients.  
-  
+
+> [!IMPORTANT]
+> **Do not install the latest version of this NuGet package.**
+>
+> This sample depends on the capability to pass user credentials without a separate Azure login dialog which is not available in the 3.x version of this library.
+
 #### Verify the required assembly references  
   
 1. In **Solution Explorer**, expand the **References** node.
@@ -224,7 +233,7 @@ public class WhoAmIResponse
     }
 ```
 
-1. Now go to `Program.cs` file and in the `Main` method, add the following statements.  
+2. Now go to `Program.cs` file and in the `Main` method, add the following statements.  
   
 ```csharp  
   
@@ -236,7 +245,7 @@ static void Main(string[] args)
 
         //Get configuration data from App.config connectionStrings
 
-        string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;              
+        string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
           using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId, SampleHelpers.redirectUrl, "v9.0"))
 		  {
              ////Send the WhoAmI request to the Web API using a GET request. 
@@ -280,7 +289,7 @@ static void Main(string[] args)
 }
 ```  
   
- 1. Save all the files in the solution.  
+3. Save all the files in the solution.
   
 <a name="bkmk_nextSteps"></a>
 
