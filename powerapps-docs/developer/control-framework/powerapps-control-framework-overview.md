@@ -11,7 +11,7 @@ manager: "jdaly"
 ---
 # PowerApps Control Framework Overview
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Use the **PowerApps Control Framework (PCF)** to create custom controls to provide enhanced experience for people to view and work with data in forms, views, and dashboards. For example:
 
