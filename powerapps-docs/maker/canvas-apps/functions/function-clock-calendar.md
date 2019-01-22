@@ -60,11 +60,11 @@ In the United States, with **[Language](function-language.md)** returning "en-US
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Calendar.MonthsLong()** |The return value contains the full names of each month, starting with "January". |[ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ] |
-| **Calendar.MonthsShort()** |The return value contains the the abbreviated names of each month, starting with "January". |[ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] |
-| **Calendar.WeekdaysLong()** |The return value contains the the full names of each month, starting with "Sunday". |[ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ] |
-| **Calendar.WeekdaysShort()** |The return value contains the the abbreviated names of each month, starting with "Sunday". |[ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ] |
-| **Clock.AmPm()** |This language uses a 12-hour clock.  The return value contains the uppercase versions of the full AM and PM designations. |[ "AM", "PM" ] |
-| **Clock.AmPmShort()** |This language uses a 12-hour clock.  The return value contains the uppercase versions of the short AM and PM designations. |[ "A", "P" ] |
+| **Calendar.MonthsLong()** |The return value contains the full name of each month, starting with "January". |[ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ] |
+| **Calendar.MonthsShort()** |The return value contains the abbreviated name of each month, starting with "January". |[ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ] |
+| **Calendar.WeekdaysLong()** |The return value contains the full name of each day, starting with "Sunday". |[ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ] |
+| **Calendar.WeekdaysShort()** |The return value contains the abbreviated name of each day, starting with "Sunday". |[ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ] |
+| **Clock.AmPm()** |This language uses a 12-hour clock. The return value contains the uppercase versions of the full AM and PM designations. |[ "AM", "PM" ] |
+| **Clock.AmPmShort()** |This language uses a 12-hour clock. The return value contains the uppercase versions of the short AM and PM designations. |[ "A", "P" ] |
 | **Clock.IsClock24()** |This language uses a 12-hour clock. |**false** |
 
