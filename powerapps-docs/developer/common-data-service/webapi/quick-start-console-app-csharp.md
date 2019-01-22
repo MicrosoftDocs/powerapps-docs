@@ -36,12 +36,21 @@ You will authenticate using `OAuth2` and use an [HttpClient](/dotnet/api/system.
 
 ## Create Visual Studio project
 
-1. Create a new Console App (.NET Framework) project using .NET Framework 4.6.2
+1. Create a new Console App (.NET Framework) project using **.NET Framework 4.6.2**
 
     ![Start a console app project](../media/quick-start-web-api-console-app-csharp-1.png)
 
     > [!NOTE]
-    > This screenshot shows the name `WebAPIQuickStart`, but you can choose to name the project and solution whatever you want. 
+    > This screenshot shows the name `WebAPIQuickStart`, but you can choose to name the project and solution whatever you want.
+
+> [!NOTE]
+> **Known Issue with Visual Studio 2015**
+> 
+> When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 
+>
+> Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
+>
+> This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu.
 
@@ -80,7 +89,7 @@ You will authenticate using `OAuth2` and use an [HttpClient](/dotnet/api/system.
     ```csharp
     static void Main(string[] args)
     {
-        // Set these values:
+       // Set these values:
         // e.g. https://yourorg.crm.dynamics.com
         string url = "<your environment url>";
         // e.g. you@yourorg.onmicrosoft.com
@@ -154,5 +163,5 @@ You have successfully connected to the Web API.
 
 ### See also 
 
-[Start a Common Data Service for Apps Web API project in Visual studio (c#)](start-web-api-project-visual-studio-csharp.md)<br/>
+[Enhanced quick start](start-web-api-project-visual-studio-csharp.md)<br/>
 [Simple Web API sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)

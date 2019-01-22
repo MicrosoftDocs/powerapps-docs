@@ -1,5 +1,5 @@
 ---
-title: "Start a Common Data Service for Apps Web API project in Visual Studio (C#) (Common Data Service for Apps)| Microsoft Docs"
+title: "Enhanced quick Start(Common Data Service for Apps)| Microsoft Docs"
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service for Apps Web API"
 ms.custom: ""
 ms.date: 1/15/2018
@@ -21,85 +21,27 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Start a Common Data Service for Apps Web API project in Visual Studio (C#)
+# Enhanced Quick start
 
-This topic demonstrates how to create a new project in Visual Studio that builds a console application that uses the Common Data Service for Apps Web API. It illustrates the common references and project resources that most applications use to implement Web API-based solutions.  
-  
-<a name="bkmk_prerequisites"></a>
-  
-## Prerequisites  
+This topic demonstrates how to enhance the code in [Quick start](quick-tart-console-app-csharp.md) topic by adding error handling methods helper code. Complete the steps in the [Quick start](quick-tart-console-app-csharp.md) topic to create a new Visual Studio project.
 
- The following prerequisites are required to build the console application described in this section.  
-  
-- Visual Studio 2017 installed on your development computer. Any edition, including [Visual Studio Express](https://www.visualstudio.com/products/visual-studio-express-vs.aspx), should be sufficient to work with the Common Data Service for Apps Web API.
-  
-- A NuGet client must be installed: either the command-line utility or the Visual Studio extension. For more information, see [Installing NuGet](https://docs.nuget.org/consume/installing-nuget).  
-
-<!--  Download the [SampleHelper.cs](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) helper class. 
-  
-<a name="bkmk_createProject"></a>-->
-   
-## Create a project  
-
-The following procedure demonstrates how to create a console application project in C# that uses the Microsoft .NET Framework. For more information on supported versions of the .NET Framework, see [Supported extensions](../supported-extensions.md). 
-  
-<a name="bkmk_newProject"></a>
-
-### New Project  
-  
-1. In Visual Studio 2017, click **New Project**. The **New Project** dialog is displayed.
-1. In the left navigation pane under **Installed**, select **Visual C#**.  
-1. In the list of templates, select **Console Application (.NET Framework)**. All of the Web API C# samples are console applications.  
-  
-  ![A new console app project dialog in CDS for Apps](../media/new-project.PNG "A new console app project dialog in CDS for Apps")  
-  
-1. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name `SimpleWebAPI-CS` was used.) The initial solution files will be generated and the solution loaded into Visual Studio.
-  
-1. Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.6.2** or higher.
-
-> [!NOTE]
-> **Known Issue with Visual Studio 2015**
-> 
-> When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 
->
-> Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
->
-> This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
-  
 <a name="bkmk_addAllRequiredResources"></a>
-   
-### Add all required resources to your project  
+
+### Add all required resources to your project
 
 The following procedures explain how to add all required managed references and packages to your project. Consider this a base set of resources that most managed code applications will need for invoking Web API operations.  
   
 #### Add the helper code
 
-The Web API samples (c#) use the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
+The Web API samples (C#) uses the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
 
-Add a new class file to the project and copy paste the helper code from [SampleHelper.cs file](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
-  
-- [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) – contains [Json.NET](http://www.newtonsoft.com/json), a popular, MIT-licensed JSON framework for .NET.  
-  
-- [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) – contains the binaries for the Active Directory Authentication Library ([ADAL](https://msdn.microsoft.com/library/azure/mt417579.aspx)), which provides authentication functionality for .NET clients.  
+Add a new class file to the project and copy paste the [SampleHelper](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) code.
 
-> [!IMPORTANT]
-> **Do not install the latest version of this NuGet package.**
->
-> This sample depends on the capability to pass user credentials without a separate Azure login dialog which is not available in the 3.x version of this library.
-
-#### Verify the required assembly references  
-  
-1. In **Solution Explorer**, expand the **References** node.
-  
-2. Confirm the following references have been added to the project.
-  
-3. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).  
-  
- Because the Common Data Service for Apps Web API is based on REST principles, it does not require client-side assemblies to access.
-  
+Because the Common Data Service for Apps Web API is based on REST principles, it does not require client-side assemblies to access.
+ 
 #### Edit the application configuration file
 
-In **Solution Explorer**, open the **App.config** file for editing.  Add the following and then save the file.
+In **Solution Explorer**, open the **App.config** file for editing. Add the following and then save the file.  You need to pass the CDS for Apps Url and user credentials in the `App.config` file to connect to the CDS for Apps instance.
 
 ```xml  
   
@@ -160,7 +102,7 @@ In **Solution Explorer**, open the **App.config** file for editing.  Add the fol
 </runtime>
 </configuration
 
-```  
+```
   
 <a name="bkmk_addCodeToCallHelperLibrary"></a>
 
@@ -181,33 +123,28 @@ namespace PowerApps.Samples
 		{
 			WhoAmIResponse returnValue = new WhoAmIResponse();
 
-            //Send the WhoAmI request to the Web API using a GET request. 
+         //Send the WhoAmI request to the Web API using a GET request. 
 
-            HttpResponseMessage response = client.GetAsync("WhoAmI",
+        HttpResponseMessage response = client.GetAsync("WhoAmI",
 
-                    HttpCompletionOption.ResponseHeadersRead).Result;
+           HttpCompletionOption.ResponseHeadersRead).Result;
 
-            if (response.IsSuccessStatusCode)
+    if (response.IsSuccessStatusCode)
 
-            {
-				//Get the response content and parse it.
-				JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-				returnValue.BusinessUnitId = (Guid)body["BusinessUnitId"];
-				returnValue.UserId = (Guid)body["UserId"];
-				returnValue.OrganizationId = (Guid)body["OrganizationId"];
+      {
+			//Get the response content and parse it.
+			JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+			returnValue.BusinessUnitId = (Guid)body["BusinessUnitId"];
+			returnValue.UserId = (Guid)body["UserId"];
+			returnValue.OrganizationId = (Guid)body["OrganizationId"];
 			}
 
-            else
-
-            {
-
-                throw new Exception(string.Format("The WhoAmI request failed with a status of '{0}'",
-
-                       response.ReasonPhrase));
-
-            }
-
-            return returnValue;
+     else
+       {
+         throw new Exception(string.Format("The WhoAmI request failed with a status of '{0}'",
+         response.ReasonPhrase));
+       }
+          return returnValue;
 
         }
 
@@ -248,44 +185,31 @@ static void Main(string[] args)
         string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
           using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId, SampleHelpers.redirectUrl, "v9.0"))
 		  {
-             ////Send the WhoAmI request to the Web API using a GET request. 
-            HttpResponseMessage response = client.GetAsync("WhoAmI",HttpCompletionOption.ResponseHeadersRead).Result;
+         WhoAmIResponse response = WhoAmI(client);
+         Console.WriteLine("Your system user ID is: {0}", response.UserId);
+      }
 
-              if (response.IsSuccessStatusCode)
+      else
+       {
+          Console.WriteLine("The request failed with a status of '{0}'",response.ReasonPhrase);
 
-                {
-
-                  //Get the response content and parse it.
-
-                 JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-                 Guid userId = (Guid)body["UserId"];
-                 Console.WriteLine("Your system user ID is: {0}", userId);
-
-                }
-
-             else
-
-               {
-                 Console.WriteLine("The request failed with a status of '{0}'",response.ReasonPhrase);
-
-               } //WhoAmIResponse response = WhoAmI(client);//Console.WriteLine("Your system user ID is: {0}", response.UserId);
+        } 
 }
 
  }
 
-    catch (Exception ex)
+catch (Exception ex)
+   {
+     SampleHelpers.DisplayException(ex);
+     throw;
+   }
 
-       {
-         SampleHelpers.DisplayException(ex);
-         throw;
-
-       }
-
-    finally {
+finally 
+  {
 		Console.WriteLine("Press <Enter> to exit the program.");
 		Console.ReadLine();
 
-            }            
+  }            
 }
 }
 }
