@@ -11,10 +11,17 @@ manager: "jdaly"
 ---
 # PowerApps Control Framework Overview
 
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Use the **PowerApps Control Framework (PCF)** to create custom controls to provide enhanced experience for people to view and work with data in forms, views, and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` control.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
+
+> [!IMPORTANT]
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
+> - [!INCLUDE[cc_preview_features_expect_changes](../../includes/cc-preview-features-expect-changes.md)]  
+> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 Majority of the controls found in model-driven apps that use the **Unified Interface** are implemented using PCF. Custom controls are metadata driven, configurable, reusable, solution aware and responsive. As a developer, you will implement an interface and the application will take care of the rest.
 
