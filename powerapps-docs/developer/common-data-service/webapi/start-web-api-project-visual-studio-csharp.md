@@ -76,7 +76,7 @@ The following procedures explain how to add all required managed references and 
 
 The Web API samples (c#) use the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
 
-Add a new class file to the solution and copy paste the helper code from [SampleHelper.cs file](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
+Add a new class file to the project and copy paste the helper code from [SampleHelper.cs file](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs).  
   
 - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) – contains [Json.NET](http://www.newtonsoft.com/json), a popular, MIT-licensed JSON framework for .NET.  
   
@@ -166,7 +166,7 @@ In **Solution Explorer**, open the **App.config** file for editing.  Add the fol
 
 #### Add code to call the helper library
   
-1. Add a new class file and name it as `SampleMethod`. Add the following helper methods to it. The `SampleMethod` class file is shared commonly with all the Web API (C#) samples. The class file has all the methods that support the functions defined in the `Main` method.
+1. Add a new class file to the project and name it as `SampleMethod`. Add the following helper methods to it. The `SampleMethod` class file is shared commonly with all the Web API (C#) samples. The class file has all the methods that support the functions defined in the `Main` method.
 
 ```csharp
 using Newtonsoft.Json.Linq;
@@ -224,7 +224,7 @@ public class WhoAmIResponse
     }
 ```
 
-2. Now go to `Program.cs` file add the following code.  
+2. Now go to `Program.cs` file, add the following code.  
   
 ```csharp 
 
