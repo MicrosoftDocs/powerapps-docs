@@ -1,5 +1,5 @@
 ---
-title: "Reference for the calendar-screen template for canvas apps | Microsoft Docs"
+title: Reference for the calendar-screen template for canvas apps | Microsoft Docs
 description: Understand details of how the calendar-screen template for canvas apps works in PowerApps.
 author: emcoope-msft
 manager: kvivek
@@ -63,11 +63,11 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
     The preceding code defines the following variables:
     
-  - **_userDomain**: The app user's company domain, as reflected in the user's email address.
-  - **_dateSelected**: Today's date (by default). The calendar gallery highlights this date, and the event gallery shows the events that are scheduled for that date.
-  - **_firstDayOfMonth**: The first day of the current month. Because `(Today + (1 - Today)) = Today - Today + 1 = 1`, this **DateAdd** function always returns the first day of the month.
-  - **_firstDayInView**: The first day that the calendar gallery can show. This value isn't the same as the first day of the month unless the month starts on a Sunday. To prevent showing an entire week of the previous month, the value of **_firstDayInView** is `_firstDayOfMonth - Weekday(_firstDayOfMonth) + 1`.
-  - **_lastDayOfMonth**: The last day of the current month, which is the same as the first day of next month, minus one day.
+  - **\_userDomain**: The app user's company domain, as reflected in the user's email address.
+  - **\_dateSelected**: Today's date (by default). The calendar gallery highlights this date, and the event gallery shows the events that are scheduled for that date.
+  - **\_firstDayOfMonth**: The first day of the current month. Because `(Today + (1 - Today)) = Today - Today + 1 = 1`, this **DateAdd** function always returns the first day of the month.
+  - **\_firstDayInView**: The first day that the calendar gallery can show. This value isn't the same as the first day of the month unless the month starts on a Sunday. To prevent showing an entire week of the previous month, the value of **\_firstDayInView** is `_firstDayOfMonth - Weekday(_firstDayOfMonth) + 1`.
+  - **\_lastDayOfMonth**: The last day of the current month, which is the same as the first day of next month, minus one day.
 
    The functions after the **If** function run whenever the user selects an option in the calendar drop-down list (not just the first time the user opens the app):
 
@@ -97,13 +97,13 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
     The preceding code defines these variables and one collection:
 
-    - **_calendarVisible**: Set to **false** so that the calendar doesn't appear while the new selection is loaded.
-    - **_showLoading**: Set to **true** so that loading indicators appear while the new selection is being loaded.
-    - **_myCalendar**: Set to the current value of the **calendar drop-down** control so that events from the correct calendar are retrieved.
-    - **_minDate**: Set to the same value as **_firstDayInView**. This variable determines what events have already been retrieved from Outlook and cached in the app.
-    - **_maxDate**: Set to the last viewable day in the calendar. The formula is `_firstDayInView + 40`. The calendar displays a maximum of 41 days, so the **_maxDate** variable always reflects the last viewable day, and determines what events have already been retrieved from Outlook and cached in the app.
-    - **MyCalendarEvents**: Set to a collection of the user's events from the selected calendar, ranging from **_minDate** to **_maxDate**.
-    - **_showLoading**: Set to **false**; **_calendarVisible** is set to **true** after everything else has been loaded.
+    - **\_calendarVisible**: Set to **false** so that the calendar doesn't appear while the new selection is loaded.
+    - **\_showLoading**: Set to **true** so that loading indicators appear while the new selection is being loaded.
+    - **\_myCalendar**: Set to the current value of the **calendar drop-down** control so that events from the correct calendar are retrieved.
+    - **\_minDate**: Set to the same value as **\_firstDayInView**. This variable determines what events have already been retrieved from Outlook and cached in the app.
+    - **\_maxDate**: Set to the last viewable day in the calendar. The formula is `_firstDayInView + 40`. The calendar displays a maximum of 41 days, so the **\_maxDate** variable always reflects the last viewable day, and determines what events have already been retrieved from Outlook and cached in the app.
+    - **MyCalendarEvents**: Set to a collection of the user's events from the selected calendar, ranging from **\_minDate** to **\_maxDate**.
+    - **\_showLoading**: Set to **false**; **\_calendarVisible** is set to **true** after everything else has been loaded.
 
 ## Calendar icon
 
@@ -121,10 +121,10 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
     The preceding code resets all date variables that are necessary for displaying the proper calendar view:
 
-    - **_dateSelected** is reset to today.
-    - **_firstDayOfMonth** is reset to the first day of today's month.
-    - **_firstDayInView** is reset to the first day viewable when today's month is selected.
-    - **_lastDayOfMonth** is reset to the last day of today's month.
+    - **\_dateSelected** is reset to today.
+    - **\_firstDayOfMonth** is reset to the first day of today's month.
+    - **\_firstDayInView** is reset to the first day viewable when today's month is selected.
+    - **\_lastDayOfMonth** is reset to the last day of today's month.
 
     The [**Calendar drop-down**](#calendar-drop-down) section of this topic explains these variables in more detail.
 
@@ -152,15 +152,15 @@ Familiarity with how to add and configure screens and other controls as you [cre
     ```
 
     > [!NOTE]
-    > Definitions for **_firstDayOfMonth**, **_firstDayInView**, and **_lastDayOfMonth** are nearly identical to those in the [Calendar drop-down](#calendar-drop-down) section of this topic.
+    > Definitions for **\_firstDayOfMonth**, **\_firstDayInView**, and **\_lastDayOfMonth** are nearly identical to those in the [Calendar drop-down](#calendar-drop-down) section of this topic.
 
     The first three lines of the preceding code run whenever the user selects the previous-month chevron. The code sets the variables that are necessary to display the proper calendar view. The remaining code runs only if the user hasn't previously selected this month for the selected calendar.
 
-    If this is the case, **_minDate** is the first day that appears when the previous month displays. Before the user selects the icon, **_minDate** has a minimum possible value of the 23rd of the current month. (When March 1 falls on a Saturday, **_firstDayInView** for March is February 23.) That means that if a user hasn't selected this month yet, **_minDate** is greater than the new **_firstDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
+    If this is the case, **\_minDate** is the first day that appears when the previous month displays. Before the user selects the icon, **\_minDate** has a minimum possible value of the 23rd of the current month. (When March 1 falls on a Saturday, **\_firstDayInView** for March is February 23.) That means that if a user hasn't selected this month yet, **\_minDate** is greater than the new **\_firstDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
 
-    - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365.GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between the **_firstDayInView** date and **_minDate** - 1. Because **MyCalendarEvents** already contains events on the **_minDate** date, 1 is subtracted from that date for the maximum value in this new date range.
+    - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365.GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between the **\_firstDayInView** date and **\_minDate** - 1. Because **MyCalendarEvents** already contains events on the **\_minDate** date, 1 is subtracted from that date for the maximum value in this new date range.
 
-    - **_minDate** is set to the current **_firstDayInView** because this is the first date for which events have been retrieved. If a user returns to this date by selecting the previous-month chevron, the **If** function returns **false**; the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
+    - **\_minDate** is set to the current **\_firstDayInView** because this is the first date for which events have been retrieved. If a user returns to this date by selecting the previous-month chevron, the **If** function returns **false**; the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
 
 ## Next-month chevron
 
@@ -186,15 +186,15 @@ Familiarity with how to add and configure screens and other controls as you [cre
     ```
 
     > [!NOTE]
-    > Definitions for **_firstDayOfMonth**, **_firstDayInView**, and **_lastDayOfMonth** are nearly identical to those in the [Calendar drop-down](#calendar-dropdown) section of this topic.
+    > Definitions for **\_firstDayOfMonth**, **\_firstDayInView**, and **\_lastDayOfMonth** are nearly identical to those in the [Calendar drop-down](#calendar-dropdown) section of this topic.
 
     The first three lines of the preceding code, which run when the user selects the next-month chevron, set the variables that are necessary to display the proper calendar view. The remaining code runs only if the user hasn't previously selected this month for the selected calendar.
 
-    In that case, **_maxDate** is the last day that appears when the previous month displays. Before the user selects the next-month chevron, **_maxDate** has a maximum possible value of the 13th of the next month. (When February 1 falls on a non-leap year Sunday, **_maxDate** is March 13, which is **_firstDayInView** + 40 days.) That means that if a user hasn't selected this month yet, **_maxDate** is greater than the new **_lastDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
+    In that case, **\_maxDate** is the last day that appears when the previous month displays. Before the user selects the next-month chevron, **\_maxDate** has a maximum possible value of the 13th of the next month. (When February 1 falls on a non-leap year Sunday, **\_maxDate** is March 13, which is **\_firstDayInView** + 40 days.) That means that if a user hasn't selected this month yet, **\_maxDate** is greater than the new **\_lastDayOfMonth**, and the **If** function returns **true**. The code runs, and a collection and a variable are updated:
 
-    - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365.GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between **_maxDate** + 1 day and **_firstDayInView** + 40 days. Because **MyCalendarEvents** already contains events on the **_minDate** date, 1 is added to that date for the minimum value in this new date range. **_firstDayInView** + 40 is the formula for **_maxDate**, so the second date in the range is just the new **_maxDate**.
+    - **MyCalendarEvents** retrieves events from the selected calendar with the [Office365.GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) operation. The date range is between **\_maxDate** + 1 day and **\_firstDayInView** + 40 days. Because **MyCalendarEvents** already contains events on the **\_minDate** date, 1 is added to that date for the minimum value in this new date range. **\_firstDayInView** + 40 is the formula for **\_maxDate**, so the second date in the range is just the new **\_maxDate**.
 
-    - **_maxDate** is set to **_firstDayInView** + 40 days because this is the last day for which events have been retrieved. If a user returns to this date by selecting the next-month chevron, the **If** function returns **false**; the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
+    - **\_maxDate** is set to **\_firstDayInView** + 40 days because this is the last day for which events have been retrieved. If a user returns to this date by selecting the next-month chevron, the **If** function returns **false**; the code doesn't run because events for this view are already cached in **MyCalendarEvents**.
 
 ## Calendar gallery
 
@@ -203,7 +203,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 - Property: **Items**<br>
     Value: 
 	`[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,
-20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]`
+	20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]`
   
   The set of 0 through 41 is used for the items in the calendar gallery because, in the worst-case scenario, the calendar view will have to display 42 full days. This occurs when the first of the month occurs on a Saturday and the last of the month occurs on a Sunday. In this case, the calendar shows six days from the previous month in the row containing the first of the month, and six days from the following month in the row containing the last of the month. This is 42 unique values, of which 30 are for the selected month.
 
@@ -219,7 +219,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
 - Property: **Text**<br>
     Value: `Day( DateAdd( _firstDayInView, ThisItem.Value, Days ) )`
 
-    Recall that **_firstDayInView** is defined as (**_firstDayOfMonth** - its weekday value) + 1. This tells you that **_firstDayInView** is always a Sunday, and **_firstDayOfMonth** is always in the first row of **MonthDayGallery**. Because of these two facts, **_firstDayInView** is always in the very first cell of **MonthDayGallery**. **ThisItem.Value** is the number for that cell in the **MonthDayGallery** item property. So, taking **_firstDayInView** as a starting point, each cell displays the increment of **_firstDayInView** + its respective cell value.
+    Recall that **\_firstDayInView** is defined as (**\_firstDayOfMonth** - its weekday value) + 1. This tells you that **\_firstDayInView** is always a Sunday, and **\_firstDayOfMonth** is always in the first row of **MonthDayGallery**. Because of these two facts, **\_firstDayInView** is always in the very first cell of **MonthDayGallery**. **ThisItem.Value** is the number for that cell in the **MonthDayGallery** item property. So, taking **\_firstDayInView** as a starting point, each cell displays the increment of **\_firstDayInView** + its respective cell value.
 
 - Property: **Fill**<br>
     Value: One **If** function:
@@ -237,8 +237,8 @@ Familiarity with how to add and configure screens and other controls as you [cre
     ```
 
   As discussed in the description of the **Text** property, `DateAdd(_firstDayInView, ThisItem.Value)` represents the day in the visible cell. Taking this into account, the preceding code performs these comparisons:
-  1. If the cell’s value is today’s date AND this cell is equivalent to **_dateSelected**, don't provide a fill value.
-  1. If the cell’s value is today’s date but not equivalent to **_dateSelected**, provide the **ColorFade** fill.
+  1. If the cell’s value is today’s date AND this cell is equivalent to **\_dateSelected**, don't provide a fill value.
+  1. If the cell’s value is today’s date but not equivalent to **\_dateSelected**, provide the **ColorFade** fill.
   1. The last comparison isn't as clear. It's a comparison between the actual text value in the cell and the value of the cell item (the number on display and the item number).<br>
 
       To better understand this, consider September 2018, a month that starts on a Saturday and ends on a Sunday. In this case, the calendar displays the 26th through 31st of August and the 1st of September in the first row, and `Abs(Title.Text - ThisItem.Value) = 26` until September 1st. Then `Abs(Title.Text - ThisItem.Value) = 5`. It will stay at 5 until the last row in the calendar, which displays September 30th and October 1st through 6th. In that `Abs(Title.Text - ThisItem.Value)` will still be 5 for September 30th, but will be 35 for the October dates.<br>
@@ -264,7 +264,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
     The preceding statement checks whether the cell is in a row where no days of the currently selected month occur. Recall that subtracting the weekday value of any day from its date value and adding 1 always returns the first item in the row that day lives in. So this statement checks whether the first day in the row is after the last day of the viewable month. If it is, it won't appear because the entire row contains days of the following month.
 
 - Property: **OnSelect**<br>
-    Value: A **Set** function that sets the **_dateSelected** variable to the date of the selected cell:
+    Value: A **Set** function that sets the **\_dateSelected** variable to the date of the selected cell:
 
     ```powerapps-dot
     Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
@@ -298,7 +298,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
     DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected && Title.Visible
     ```
 
-  The **Subcircle** control is visible when **_dateSelected** is equivalent to the date of the cell, and the **Title** control is visible. In other words, this control appears when the cell is the currently selected date.
+  The **Subcircle** control is visible when **\_dateSelected** is equivalent to the date of the cell, and the **Title** control is visible. In other words, this control appears when the cell is the currently selected date.
 
 ## Events gallery
 
@@ -316,7 +316,7 @@ Familiarity with how to add and configure screens and other controls as you [cre
     )
     ```
 
-   The **MyCalendarEvents** collection contains all the events between **_minDate** and **_maxDate**. In order to display the events for only the date selected, a filter is applied on **MyCalendarEvents** to display the events that have a start date equivalent to **_dateSelected**. The items are then sorted by their start dates to put them in sequential order.
+   The **MyCalendarEvents** collection contains all the events between **\_minDate** and **\_maxDate**. In order to display the events for only the date selected, a filter is applied on **MyCalendarEvents** to display the events that have a start date equivalent to **\	_dateSelected**. The items are then sorted by their start dates to put them in sequential order.
 
 ## Next steps
 
