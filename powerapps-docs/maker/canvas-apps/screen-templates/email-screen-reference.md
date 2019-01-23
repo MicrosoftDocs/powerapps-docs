@@ -37,8 +37,8 @@ Familiarity with how to add and configure screens and other controls as you [cre
 
 Several other controls in the screen have a dependency on the **Text search box** control:
 
-* If a user starts typing any text, **PeopleBrowseGallery** becomes visible.
-* If a user types out a valid email address, **AddIcon** becomes visible.
+* If a user starts typing any text, **PeopleBrowseGallery** appears.
+* If a user types out a valid email address, **AddIcon** appears.
 * When a user selects a person within **PeopleBrowseGallery**, the search contents are reset.
 
 ## Add icon
