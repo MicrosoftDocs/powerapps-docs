@@ -64,7 +64,7 @@ ms.custom:
                               </a>
                            </li>
                            <li>
-                              <a href="https://docs.microsoft.com/en-us/learn/browse/?products=bizapps-power-apps&resource_type=learning%20path">
+                              <a href="https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">

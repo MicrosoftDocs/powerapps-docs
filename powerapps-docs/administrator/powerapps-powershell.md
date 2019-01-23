@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: reference
-ms.date: 01/14/2019
+ms.date: 01/18/2019
 ms.author: jamesol
 search.audienceType: 
   - admin
@@ -105,7 +105,7 @@ To perform the administration operations in the admin cmdlets, you'll need the f
 | Read, update, and delete custom connector permissions | Get-AdminPowerAppConnectorRoleAssignment *(previously Get-AdminConnectorRoleAssignment)*<br> Set-AdminPowerAppConnectorRoleAssignment *(previously Set-AdminConnectorRoleAssignment)* <br> Remove-AdminPowerAppConnectorRoleAssignment *(previously Remove-AdminConnectorRoleAssignment)* |
 | Read a user's PowerApps user settings, user-app settings, and notifications | Get-AdminPowerAppsUserDetails |
 | Read & delete a user's Microsoft Flow settings, which are not visible to user, but that support flow execution | Get-AdminFlowUserDetails <br> Remove-AdminFlowUserDetails |
-| Create, read, update & delete data loss prevention policies for your organization | Get-AdminDlpPolicy *(previously Get-AdminApiPolicy)* <br> New-AdminDlpPolicy *(previously Add-AdminApiPolicy)* <br> Remove-AdminDlpPolicy *(previously Remove-AdminApiPolicy)* <br> Set-AdminDlpPolicy *(previously Set-AdminApiPolicy)* <br> Add-ConnectorToBusinessDataGroup <br>  Remove-ConnectorFromBusinessDataGroup |
+| Create, read, update & delete data loss prevention policies for your organization | Get-AdminDlpPolicy *(previously Get-AdminApiPolicy)* <br> New-AdminDlpPolicy *(previously Add-AdminApiPolicy)* <br> Remove-AdminDlpPolicy *(previously Remove-AdminApiPolicy)* <br> Set-AdminDlpPolicy *(previously Set-AdminApiPolicy)* <br> Add-ConnectorToBusinessDataGroup <br>  Remove-ConnectorFromBusinessDataGroup <br/>Add-CustomConnectorToPolicy<br/> Remove-CustomConnectorFromPolicy|
 
 ## Tips
 
@@ -140,7 +140,7 @@ Use these commands to get details on and update environments in your tenant.
 #### Display a list of all environments
 
 ```
-Get-AdminEnvironment
+Get-AdminPowerAppEnvironment
 ```
 
 Returns a list of each environment across your tenant, with details of each (e.g., environment name (guid), display name, location, creator, etc).
@@ -148,7 +148,7 @@ Returns a list of each environment across your tenant, with details of each (e.g
 #### Display details of your default environment
 
 ```
-Get-AdminEnvironment –Default
+Get-AdminPowerAppEnvironment –Default
 ```
 
 Returns the details for only the default environment of the tenant.
@@ -156,7 +156,7 @@ Returns the details for only the default environment of the tenant.
 #### Display details of a specific environment
 
 ```
-Get-AdminEnvironment –EnvironmentName ‘EnvironmentName’
+Get-AdminPowerAppEnvironment –EnvironmentName ‘EnvironmentName’
 ```
 
 **Note**: The *EnvironmentName* field is a unique identifier, which is different from the *DisplayName* (see first and second fields in the output in the following image).
@@ -355,7 +355,7 @@ Adds a connector to the ‘Business data only’ group in a given DLP policy. Se
 | 3.0 | 07/30/2018 | <ol> <li> Added the ability to pass-in credentials to the Add-PowerAppsAccount (to enable recurring scripting) </li> <li>  Minor bug fixes in both the cmdlets for app creators and administrators </li> <li> Added the "PowerApp" or "Flow" prefix to each cmdlet for app creators </li> <li>  Added the "AdminPowerApp" or "AdminFlow" prefix to each cmdlet for administrators </li> <li> Added the following new administrative cmdlets: <br> New-AdminPowerAppEnvironment <br> Set-AdminPowerAppEnvironmentDisplayName <br> New-AdminPowerAppCdsDatabase <br> Get-AdminPowerAppCdsDatabaseLanguages <br> Get-AdminPowerAppCdsDatabaseCurrencies <br> Get-AdminPowerAppEnvironmentLocations <br> Get-AdminPowerAppConnectionReferences <br> Set-AdminPowerAppAsFeatured <br> Clear-AdminPowerAppAsFeatured <br> Set-AdminPowerAppAsHero <br> Clear-AdminPowerAppAsHero <br> Set-AdminPowerAppApisToBypassConsent <br> Clear-AdminPowerAppApisToBypassConsent <br> Remove-AdminFlowApprovals </li></ol>
 | 4.0 | 08/15/2018 | Added an optional parameter to the New-AdminPowerAppCdsDatabase to make the function synchronous, by default (i.e. it will not return until the database is successfully provisioned)
 | 5.0 | 08/24/2018 | Fixed an issue where the Flow admin cdmlets where not returning data for some using based on their security settings
-| 6.0 | 01/09/2019 | <ol><li>Cmdlets are now available on the PowerShell gallery as two separate modules: Administrator and Maker.</li> <br/><li>Added administrative cmdlet: Remove-LegacyCDSDatabase</li><br/><li> Added operation examples</li></ol>|
+| 6.0 | 01/09/2019 | <ol><li>Cmdlets are now available on the PowerShell gallery as two separate modules: Administrator and Maker.</li> <li>Added administrative cmdlet: Remove-LegacyCDSDatabase</li><li> Added operation examples</li><li>Added the ability to manage HTTP and custom connectors in data loss prevention (DLP)</li></ol>|
 
 ## Questions?
 

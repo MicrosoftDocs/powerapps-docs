@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -199,5 +199,5 @@ Another reason IPlugins should be stateless is that multiple system threads coul
 
 ### See also
 
-[Writing A Basic Plug-in](/dynamics365/customer-engagement/developer/write-plugin#writing-a-basic-plug-in)<br />
+[Write a plug-in](../../write-plug-in.md)<br />
 [CRM Team Blog: Thread Safety in Plug-ins](http://blogs.msdn.com/b/crm/archive/2008/11/18/member-static-variable-and-thread-safety-in-plug-in-for-crm-4-0.aspx)<br />
