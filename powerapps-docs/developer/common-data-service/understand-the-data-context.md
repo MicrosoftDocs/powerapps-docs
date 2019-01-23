@@ -36,7 +36,7 @@ Other frequently used properties are <xref:Microsoft.Xrm.Sdk.IExecutionContext.S
 > [!TIP]
 > A good way to visualize the data that is passed into the execution context is to install the plug-in profiler solution that is available as part of the plug-in registration tool. The profiler will capture the context information as well as information that allows for replaying event locally so you can debug. Within the plugin registration tool, you can download an xml document with all the data from the event that triggered the workflow. More information: [View Plug-in Profile data](debug-plug-in.md#view-plug-in-profile-data)
 
-## Work with ParameterCollections
+## ParameterCollections
 
 All the properties of the execution context are read-only. But the `InputParameters`, `OutputParameters`, and `SharedVariables` are <xref:Microsoft.Xrm.Sdk.ParameterCollection> values. You can manipulate the values of the items in these collections to change the behavior of the operation, depending on the stage in the event execution pipeline your plug-in is registered for.
 
@@ -123,7 +123,7 @@ var oldAccountName = (string)context.PreEntityImages["a"]["name"];
 
 More information: [Define entity images](register-plug-in.md#define-entity-images)
 
-## See also
+### See also
 
 [Event Framework](event-framework.md)  
-[Write a plug-in](write-a-plugin.md)
+[Write a plug-in](write-plugin.md)

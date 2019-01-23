@@ -121,27 +121,4 @@ If your extension is a Plug-in, it will receive a parameter that implements the 
 
 If your extension is an a Web hook or an Azure Service bus endpoint, the data that will be posted to the registered endpoint will be in form of a <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> which implements both <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> and <xref:Microsoft.Xrm.Sdk.IExecutionContext>
 
-### Information about the operation
-
-The properties of the <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface are the ones which provide most of the details about the operation that occurred.
-
-Two of the key properties about the event are found in the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties. These <xref:Microsoft.Xrm.Sdk.ParameterCollection> values contain the data of the operation.
-
-All the properties of the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> are read-only, but your extension can modify the contents of properties that are collections.
-
-In the **PreValidation** and **PreOperation** stages, the <xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> property contains the parameters for the  <xref:Microsoft.Xrm.Sdk.OrganizationRequest> class.
-
-In the **PostOperation** stage the <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> contain the parameters for the <xref:Microsoft.Xrm.Sdk.OrganizationResponse> class that will be returned by the operation.
-
-### Shared variables
-
-The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows for including data that can be passed from a plug-in to a step that occurrs later in the execution pipeline. Because this is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> value, plug-ins can add, read, or modifiy properties to share data with subsequent steps
-
-### Entity Images
-
-When you register a step for a plug-in that includes an entity as one of the parameters, you have the option to specify that a copy of the entity data be included as *snapshot* or image using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and/or <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
-
-This data provides a comparison point for entity data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve an entity just to compare the attribute values
-
-
-
+For more information about the execution context, read [Understand the execution context](understand-the-data-context.md).
