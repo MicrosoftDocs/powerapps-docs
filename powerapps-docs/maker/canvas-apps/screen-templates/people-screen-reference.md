@@ -100,12 +100,12 @@ Selecting this control does three things concurrently:
     )
     ```
 
-The image control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
+The **Image** control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
   
-   * Whether the ID field is empty or not empty. This prevents the image control from attempting to retrieve a user photo before the gallery has been populated with search results.
+   * Whether the ID field is empty or not empty. This prevents the **Image** control from trying to retrieve a user photo before the gallery has been populated with search results.
    * Whether the user has a photo (with the [Office365Users.UserPhotoMetadata](https://docs.microsoft.com/connectors/office365users/#get-user-photo-metadata) operation). This prevents the `Office365Users.UserPhoto` lookup from returning an exception if the user doesn't have a profile picture.
 
-Note that if an image isn't retrieved, the image control is blank, and the **iconUser** control is visible instead.
+Note that if an image isn't retrieved, the **Image** control is blank, and the **iconUser** control is visible instead.
 
 ## People-added gallery
 
