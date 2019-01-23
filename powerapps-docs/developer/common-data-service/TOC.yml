@@ -66,6 +66,8 @@
   - name: Event Framework
     href: event-framework.md
     items:
+    - name: Understand the execution context
+      href: understand-the-data-context.md
     - name: Behavior of specialized update operations
       href: special-update-operation-behavior.md
   - name: Asynchronous service
