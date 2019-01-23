@@ -30,18 +30,16 @@ This topic is written as though you have a data source that's named **Sales orde
 
 ## Add a gallery
 
-1. Create a tablet app from scratch.
+1. Create a tablet app from scratch, and add your data source.
 
     Everything discussed in this topic also applies to phone layouts, but phone apps often have only one vertical column.
     
-2. Add your data source for the app.
-
-3. Add a vertical **Gallery** control, and set its **Items** property to **'Sales order'**.
+2. Add a vertical **Gallery** control, and set its **Items** property to **'Sales order'**.
    
     (optional) To match the examples in this tutorial, change the gallery's **Layout** to show only **Title and subtitle**.
    
     ![Sales order list](./media/working-with-form-layout/gallery-layout.png)
-4. In the gallery, click or tap **SO004**.
+3. In the gallery, click or tap **SO004**.
    
     ![Sales order list](./media/working-with-form-layout/sales-order-gallery-screen.png)
    
