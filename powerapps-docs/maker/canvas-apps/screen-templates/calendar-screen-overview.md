@@ -207,13 +207,13 @@ If users select an event in **CalendarEventsGallery**, you can open another scre
     > [!NOTE]
     > PowerApps retrieves the message body of each event as HTML text, so you need to show that content in an **HTML text** control.
 
-1. Set the **Y** property of the **HTMLText** control to this expression:
+1. Set the **Y** property of the **HTML text** control to this expression:
 
     `Label1.Y + Label1.Height + 20`
 
 1. Adjust additional properties as necessary to suit your style needs.
 
-    For example, you might want to add a separator line below the **HtmlText** control.
+    For example, you might want to add a separator line below the **HTML text** control.
 
 1. Set the **Items** property of the flexible-height gallery to this formula:
 
@@ -230,7 +230,7 @@ If users select an event in **CalendarEventsGallery**, you can open another scre
 
     This formula creates a gallery of dynamic data that's set to the field values of **_selectedCalendarEvent**, which is set every time the user selects an event in the **CalendarEventsGallery** control. You can extend this gallery to include more fields by adding more labels to it, but this set provides a good starting point.
 
-1. With the gallery items in place, set the **Text** property of the **Label** control to `ThisItem.Title`, and the **HtmlText** property of the **HtmlText** control to `ThisItem.Value`.
+1. With the gallery items in place, set the **Text** property of the **Label** control to `ThisItem.Title`, and the **HtmlText** property of the **HTML text** control to `ThisItem.Value`.
 
 1. In **CalendarEventsGallery**, set the **OnSelect** property of the **Title** control to this formula:
 
@@ -330,11 +330,11 @@ This list discusses what each **ClearCollect** operation does:
         )
     );
     ```
-    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
+    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](https://docs.microsoft.com/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
 
     > [!NOTE]
     > You can achieve the same result with only one **ClearCollect** function:
-    
+
     ```powerapps-dot
     ClearCollect( MyPeople, 
         ForAll(

@@ -19,25 +19,6 @@ search.app:
 
 For canvas apps in PowerApps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
 
-## Prerequisite
-
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
-
-## Default functionality
-
-To add an email screen from the template:
-
-1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then create an app or open an existing app in PowerApps Studio.
-
-    This topic shows a phone app, but the same concepts apply to a tablet app.
-
-1. On the **Home** tab of the ribbon, select **New screen** > **Email**.
-
-    By default, the screen looks similar to this:
-
-    ![Email screen](media/email-screen/email-screen-full.png)
-
-
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 * [Text search box](#text-search-box)
@@ -46,14 +27,18 @@ This topic highlights some significant controls and explains the expressions or 
 * [Email people gallery](#email-people-gallery) (+ child controls)
 * [Mail icon](#mail-icon)
 
+## Prerequisite
+
+Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+
 ## Text search box
 
    ![TextSearchBox control](media/email-screen/email-search-box.png)
 
 Several other controls in the screen have a dependency on the **Text search box** control:
 
-* If a user starts typing any text, **PeopleBrowseGallery** becomes visible.
-* If a user types out a valid email address, **AddIcon** becomes visible.
+* If a user starts typing any text, **PeopleBrowseGallery** appears.
+* If a user types out a valid email address, **AddIcon** appears.
 * When a user selects a person within **PeopleBrowseGallery**, the search contents are reset.
 
 ## Add icon
@@ -105,7 +90,7 @@ The **Add icon** control allows app users to add people who don't exist inside t
     )
     ```
 
-  The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
+  The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
   
   **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid. The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function, which means that the operation is performed only if the search box contains user-entered text. This improves performance. 
 
@@ -203,7 +188,7 @@ Selecting this control does three things concurrently:
   Sending an email message requires a semicolon-separated string of email addresses. In the preceding code:
   1. The first line of code takes the **Mail** field from all the rows in the **MyPeople** collection, concatenates them into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
 
-  1. It then uses the [Office365.SendEmail](https://docs.microsoft.com/en-us/connectors/office365/#sendemail) operation to send the email to the recipients.
+  1. It then uses the [Office365.SendEmail](https://docs.microsoft.com/connectors/office365/#sendemail) operation to send the email to the recipients.
     The operation has three required parameters, **To**, **Subject**, and **Body**, and one optional parameter--**Importance**. In the preceding code, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and **Normal**, respectively.
   1. Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
 

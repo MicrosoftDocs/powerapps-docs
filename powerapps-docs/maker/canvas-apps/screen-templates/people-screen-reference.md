@@ -19,37 +19,15 @@ search.app:
 
 For canvas apps in PowerApps, understand how each significant control in the people-screen template contributes to the screen's overall default functionality. This deep dive presents behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [people-screen overview](people-screen-overview.md).
 
-## Prerequisite
-
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
-
-## Default functionality
-
-To add a people screen from the template:
-
-1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then create an app or open an existing app in PowerApps Studio.
-
-    This topic shows a phone app, but the same concepts apply to a tablet app.
-
-1. On the **Home** tab of the ribbon, select **New screen** > **People**.
-
-    By default, the screen looks similar to this:
-
-    ![Initial people screen state](media/people-screen/people-screen-empty.png)
-
-1. To start searching for users, select the text input box at the top of the screen and start typing a coworker's name. The search results appear below the text box:
-
-    ![people screen search state](media/people-screen/people-browse-gall-full.png)
-
-1. When you select individuals from the search results, they are added to the **MyPeople** collection, and the search bar input value is reset, revealing the collection of people you've selected:
-
-    ![people screen collection results](media/people-screen/people-people-gall-full.png)
-
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 * [Text search box](#text-search-box)
 * [User-browse gallery](#user-browse-gallery) (+ child controls)
 * [People added gallery](#people-added-gallery) (+ child controls)
+
+## Prerequisite
+
+Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
 
 ## Text search box
 
@@ -78,7 +56,7 @@ A couple other controls interact or have a dependency on the text search box:
     )
     ```
     
-The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search. **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid.
+The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search. **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid.
 
 The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function because you only need to call the operation when the search box contains user-entered text. This improves performance.
 
@@ -122,12 +100,12 @@ Selecting this control does three things concurrently:
     )
     ```
 
-The image control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
+The **Image** control retrieves the user's image with the [Office365Users.UserPhoto](https://docs.microsoft.com/connectors/office365users/#get-user-photo--v1-) operation. However, before doing that, it checks for two things:
   
-   * Whether the ID field is empty or not empty. This prevents the image control from attempting to retrieve a user photo before the gallery has been populated with search results.
-   * Whether the user has a photo (with the [Office365Users.UserPhotoMetadata](https://docs.microsoft.com/en-us/connectors/office365users/#get-user-photo-metadata) operation). This prevents the `Office365Users.UserPhoto` lookup from returning an exception if the user doesn't have a profile picture.
+   * Whether the ID field is empty or not empty. This prevents the **Image** control from trying to retrieve a user photo before the gallery has been populated with search results.
+   * Whether the user has a photo (with the [Office365Users.UserPhotoMetadata](https://docs.microsoft.com/connectors/office365users/#get-user-photo-metadata) operation). This prevents the `Office365Users.UserPhoto` lookup from returning an exception if the user doesn't have a profile picture.
 
-Note that if an image isn't retrieved, the image control is blank, and the **iconUser** control is visible instead.
+Note that if an image isn't retrieved, the **Image** control is blank, and the **iconUser** control is visible instead.
 
 ## People-added gallery
 
