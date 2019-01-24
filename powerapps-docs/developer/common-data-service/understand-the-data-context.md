@@ -107,7 +107,10 @@ public class PostOperation : IPlugin
     }
 }
 ```
-
+> [!IMPORTANT]
+> Any type of data added to the shared variables collection must be serializable otherwise the server will not know how to serialize the data and plug-in execution will fail.  
+  
+ For a plug-in registered in stage 20 or 40, to access the shared variables from a stage 10 registered plug-in that executes on create, update, delete, or by a <xref:Microsoft.Crm.Sdk.Messages.RetrieveExchangeRateRequest>, you must access the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>.**SharedVariables** collection. For all other cases, <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>.**SharedVariables** contains the collection. 
 
 ## Entity Images
 
