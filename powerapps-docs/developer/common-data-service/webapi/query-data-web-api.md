@@ -764,40 +764,6 @@ Instead of returning the related entities for entity sets, you can also return r
 
 ## Filter results based on values of collection-valued navigation properties
 
-<!--There are three options to set criteria that applies to values in collection valued navigation properties in a single operation:
-1. **Use $filter within $expand in the OData query**
-
-You can filter results based on values of collection valued navigation properties in a single Web API query using `$filter` within `$expand`.
-
-**Request**
-
-```http 
-GET [Organization URI]/api/data/v9.0/accounts(b45143be-3cd2-e811-a96d-000d3a34a0aa)?$select=name&$expand=contact_customer_accounts($select=firstname,lastname,emailaddress1;$filter=emailaddress1 ne null)  HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-If-None-Match: null
-```  
-
- **Response**  
-
- ```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
- { 
-"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,contact_customer_accounts,contact_customer_accounts(firstname,lastname))/$entity","@odata.etag":"W/\"625503367\"","name":"Account Name","accountid":"771931ce-9cc1-e811-a965-000d3a34a14b","contact_customer_accounts":[ 
-{ 
-"@odata.etag":"W/\"631241376\"","firstname":"Wade","lastname":"Roque","contactid":"4667cb46-a2db-e811-a96d-000d3a34a108" 
-},{ 
-"@odata.etag":"W/\"631241312\"","firstname":"Samuel","lastname":"Barba","contactid":"38a9f9b7-cddb-e811-a96d-000d3a34a108" 
-} 
-] 
-}
-```
-> [!NOTE]
-> Query options `$top` and `$orderby` are also suported within `$expand`.
--->
 You cannot use OData $filter to limit the entity records returned using criteria applied to collection-valued navigation properties in a single operation.
 
 > [!NOTE]
