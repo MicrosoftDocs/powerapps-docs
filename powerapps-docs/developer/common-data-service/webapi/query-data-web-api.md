@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service for Apps data using the Common Data Service for Apps Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 01/24/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -764,10 +764,48 @@ Instead of returning the related entities for entity sets, you can also return r
 
 ## Filter results based on values of collection-valued navigation properties
 
-You cannot use OData $filter to set criteria that applies to values in collection valued navigation properties in a single operation.
-You have two options:
-- Construct a query using FetchXML.  More information: Use custom FetchXML
-- Iterate over results filtering individual entities based on values in the collection using multiple operations.
+<!--There are three options to set criteria that applies to values in collection valued navigation properties in a single operation:
+1. **Use $filter within $expand in the OData query**
+
+You can filter results based on values of collection valued navigation properties in a single Web API query using `$filter` within `$expand`.
+
+**Request**
+
+```http 
+GET [Organization URI]/api/data/v9.0/accounts(b45143be-3cd2-e811-a96d-000d3a34a0aa)?$select=name&$expand=contact_customer_accounts($select=firstname,lastname,emailaddress1;$filter=emailaddress1 ne null)  HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+If-None-Match: null
+```  
+
+ **Response**  
+
+ ```http 
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+ { 
+"@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,contact_customer_accounts,contact_customer_accounts(firstname,lastname))/$entity","@odata.etag":"W/\"625503367\"","name":"Account Name","accountid":"771931ce-9cc1-e811-a965-000d3a34a14b","contact_customer_accounts":[ 
+{ 
+"@odata.etag":"W/\"631241376\"","firstname":"Wade","lastname":"Roque","contactid":"4667cb46-a2db-e811-a96d-000d3a34a108" 
+},{ 
+"@odata.etag":"W/\"631241312\"","firstname":"Samuel","lastname":"Barba","contactid":"38a9f9b7-cddb-e811-a96d-000d3a34a108" 
+} 
+] 
+}
+```
+> [!NOTE]
+> Query options `$top` and `$orderby` are also suported within `$expand`.
+-->
+You cannot use OData $filter to limit the entity records returned using criteria applied to collection-valued navigation properties in a single operation.
+
+> [!NOTE]
+> It is possible to use `$filter` within `$expand` to filter results for a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-entities).
+
+The two options for filtering results based on values of collection-valued navigation properties are:
+
+1. **Construct a query using FetchXML**
 
 Generally, using FetchXML should provide better performance because the filtering can be applied server-side in a single operation. The example shown below illustrates how to apply filter on values of collection properties for a link-entity.
 
@@ -791,6 +829,9 @@ Generally, using FetchXML should provide better performance because the filterin
   </entity>
 </fetch>
 ```
+More information: [Build queries with FetchXML](../org-service/build-queries-fetchxml.md).
+
+2. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
   
 ### See also
 
