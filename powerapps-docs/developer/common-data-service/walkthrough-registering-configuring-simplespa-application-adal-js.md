@@ -314,14 +314,11 @@ Finally, you can click the **Logout** button to logout.
   
 7.  Enter the following information :  
   
-    **Name**
-    The name of the application.
+  - **Name**<br />The name of the application.
 
-    **Web application type**
-    Select **Web app/API**.
+  - **Web application type**<br />Select **Web app/API**.
 
-    **Sign-on URL**  
-    This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the **Create a web application project** procedure.  
+  - **Sign-on URL**<br />This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the **Create a web application project** procedure.  
 
 ![Enter details](media/register-spa-enter-details.PNG)
     
@@ -364,7 +361,7 @@ Finally, you can click the **Logout** button to logout.
 
 13. Now close the **Settings** tab. In the registered app tab, select **Manifest**.
 
-14. Click on **Edit** and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** save the file.
+14. Click on **Edit** and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** to save the file.
 
 ![Set oauth2AllowImplicitFlow to true in Manifest file](media/register-spa-edit-manifest.PNG)
 
