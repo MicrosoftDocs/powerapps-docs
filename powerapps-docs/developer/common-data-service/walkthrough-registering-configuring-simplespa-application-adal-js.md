@@ -2,7 +2,7 @@
 title: "Walkthrough: Registering and configuring SimpleSPA application with adal.js (Common Data Service for Apps) | Microsoft Docs"
 description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Customer Engagement using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 01/24/2019
 ms.service:
   - "powerapps"
 ms.custom:
@@ -32,9 +32,9 @@ This walkthrough describes the process of registering and configuring the simple
   
 -   You must have a Dynamics 365 (online) system user account with administrator role for the Office 365.  
   
--   A Azure subscription for application registration. A trial account will also work.  
+-   An Azure subscription for application registration. A trial account will also work.  
   
-- Visual Studio 2015  
+- Visual Studio 2017  
   
 <a name="bkmk_goal"></a>
 
@@ -62,9 +62,9 @@ Finally, you can click the **Logout** button to logout.
   
 ### Create a web application project  
   
-1.  Using Visual Studio 2015, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
+1.  Using Visual Studio 2017, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
   
-    You should be able to use earlier versions of Visual Studio as well, but these steps will describe using Visual Studio 2015.  
+    You should be able to use earlier versions of Visual Studio as well, but these steps will describe using Visual Studio 2017.  
   
 2.  Add a new HTML page named SimpleSPA.html to the project and paste in the following code:  
   
@@ -279,7 +279,7 @@ Finally, you can click the **Logout** button to logout.
   
     ```javascript  
     //Set these variables to match your environment  
-    var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL to connect to CRM (online)  
+    var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL to connect to PowerApps CDS for Apps  
     var tenant = "[xxx.onmicrosoft.com]"; //The name of the Azure AD organization you use  
     var clientId = "[client id]"; //The ClientId you got when you registered the application  
     var pageUrl = "http://localhost:[PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  
@@ -294,32 +294,38 @@ Finally, you can click the **Logout** button to logout.
   
      If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](http://azure.microsoft.com/pricing/details/active-directory/)  
   
-2.  Click **Active Directory** in the left column of the page. You may need to scroll the left column to see the **Active Directory** icon and label.  
+2.  Click on **Azure Active Directory** in the left column of the page. You may need to scroll the left column to see the **Azure Active Directory** icon and label.  
   
-3.  Click the desired tenant directory in the directory list.  
+3.  Now select **Enterprise Applications** in the panel that opens up.
+
+![Select Enterprise Applications](media/register-spa-app-registration.PNG)
+
+4.  Select **New application**(near the top of the page), and then under **Add your own app** select **Application you're developing**.  
   
-    ![List of available Active Directory entries](media/azure-active-directory.PNG "List of available Active Directory entries")  
+5.  Now click on **Ok, take me to App Registrations to register my new application**.
   
-    If your Azure tenant directory isn’t shown in the directory list, click **Add**, and then select **Use existing directory** in the dialog box. Follow the prompts and instructions provided, and then go back to step 1.  
-  
-4.  With the target directory selected, click **Applications** (near the top of the page), and then click **Add**.  
-  
-5.  In the **What do you want to do?** dialog box, click **Add an application my organization is developing**.  
-  
-6.  When prompted, enter a name for your application, for example ‘SimpleSPA’, pick the type: **Web Application and/or Web API**, and then click the right arrow to continue. Click a question mark **?** for more information on the appropriate values for each input field.  
+6.  Now click on **New application registration**(near the top of the page).  
   
 7.  Enter the following information :  
   
+    **Name**
+    The name of the application.
+
+    **Web application type**
+    Select **Web app/API**.
+
     **Sign-on URL**  
     This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the **Create a web application project** procedure.  
   
-    **APP ID URI**  
+  <!--  **APP ID URI**  
     This must be a unique identifier for the application. Use `https://XXXX.onmicrosoft.com/SimpleSPA` where XXXX is the Active Directory tenant.  
-  
-8.  With the tab of the newly registered app selected, click **Configure**, locate the **Client id** and copy it.  
+  -->
+8. Then click on **Create** at the end of the page.
+
+8.  In the tab of the newly registered app, copy the **Application ID**.  
   
     Set the `clientId` variable in the SimpleSPA.html page to this value. Refer to step 5 of the **Create a web application project** procedure.  
-  
+<!--  
 9. Scroll to the bottom of the page and click **Add application**. In the dialog box select **Dynamics 365 Online** and close the dialog box.  
   
 10. Under permissions to other applications, you will find a row for **Dynamics 365 Online** and **Delegated Permissions: 0**. Select this and add **Access Dynamics 365 (online) as organization users**.  
@@ -331,7 +337,19 @@ Finally, you can click the **Logout** button to logout.
 13. Open the JSON file you downloaded and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and save the file.  
   
 14. Go back to **Manage Manifest** again. Choose **Upload Manifest** and upload the JSON file you just saved.  
-  
+  -->
+9. Now click on **Settings** and then select **Required permissions**.
+
+10. Click on **Add**, then select **Select an API**. Now select **Dynamics CRM Online** and click **Select** at the end of the page.
+
+11. Now in the **Selected permissions** tab, select all **Delegated Permissions** and click on **Select** at the end of the page.
+
+12. Then select **Done**. You will see a row for **Dynamics CRM Online** added.
+
+13. Now close the **Settings** tab. In the registered app tab, select **Manifest**.
+
+14. Click on **Edit** and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** save the file.
+
 ### Debugging the application  
   
 1.  Set the browser to use Microsoft Edge, Google Chrome, or Mozilla Firefox.  
