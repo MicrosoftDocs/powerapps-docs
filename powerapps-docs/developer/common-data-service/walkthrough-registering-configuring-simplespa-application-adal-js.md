@@ -301,10 +301,16 @@ Finally, you can click the **Logout** button to logout.
 ![Select Enterprise Applications](media/register-spa-app-registration.PNG)
 
 4.  Select **New application**(near the top of the page), and then under **Add your own app** select **Application you're developing**.  
+
+![Select Application you're developing](media/register-spa-app-you-developing.PNG)
   
 5.  Now click on **Ok, take me to App Registrations to register my new application**.
-  
+
+![Select Ok, take me to App Registrations](media/register-spa-take-me-app-reg.PNG)
+
 6.  Now click on **New application registration**(near the top of the page).  
+
+![Select New application registration](media/register-spa-new-reg.PNG)
   
 7.  Enter the following information :  
   
@@ -316,7 +322,9 @@ Finally, you can click the **Logout** button to logout.
 
     **Sign-on URL**  
     This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the **Create a web application project** procedure.  
-  
+
+![Enter details](media/register-spa-enter-details.PNG)
+    
   <!--  **APP ID URI**  
     This must be a unique identifier for the application. Use `https://XXXX.onmicrosoft.com/SimpleSPA` where XXXX is the Active Directory tenant.  
   -->
@@ -340,15 +348,25 @@ Finally, you can click the **Logout** button to logout.
   -->
 9. Now click on **Settings** and then select **Required permissions**.
 
+![Select Required permissions](media/register-spa-settings-permissions.PNG)
+
 10. Click on **Add**, then select **Select an API**. Now select **Dynamics CRM Online** and click **Select** at the end of the page.
+
+![Select Dynamics CRM Online under Select an API](media/register-spa-permissions-dyncrm.PNG)
 
 11. Now in the **Selected permissions** tab, select all **Delegated Permissions** and click on **Select** at the end of the page.
 
+![Select all Delegated permissions](media/register-spa-del-permissions.PNG)
+
 12. Then select **Done**. You will see a row for **Dynamics CRM Online** added.
+
+![New row for Dynamics CRM Online gets added](media/register-spa-row-dyncrm.PNG)
 
 13. Now close the **Settings** tab. In the registered app tab, select **Manifest**.
 
 14. Click on **Edit** and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** save the file.
+
+![Set oauth2AllowImplicitFlow to true in Manifest file](media/register-spa-edit-manifest.PNG)
 
 ### Debugging the application  
   
