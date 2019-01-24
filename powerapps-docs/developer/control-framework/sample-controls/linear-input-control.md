@@ -14,6 +14,9 @@ manager: ""
 
 The linear input control changes the user experience of interacting with numeric types on the form. Instead of keying in the numbers, this control provides a linear slider using which the value of the attribute can be set on the form.  
 
+> [!div class="mx-imgBorder"]
+> ![Linear Input Control](../media/linear_input_control.png "Linear Input Control")
+
 ## Manifest
 
 ```xml

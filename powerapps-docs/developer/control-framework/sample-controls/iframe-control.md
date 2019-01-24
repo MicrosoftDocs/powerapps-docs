@@ -14,6 +14,9 @@ manager: ""
 
 This sample describes how to bind a custom control to different fields on the form and use the value of these fields as input properties to the control.  
 
+> [!div class="mx-imgBorder"]
+> ![IFRAME Control](../media/iframe_control.png "IFRAME Control")
+
 ## Manifest
 
 ```xml

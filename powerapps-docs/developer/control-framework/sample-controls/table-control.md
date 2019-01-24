@@ -15,6 +15,9 @@ manager: ""
 
 The HTML Table control renders a table with two columns. The left column shows the name of the API method or property being showcased, and the right column shows the value returned by the API. You can open this control on different type of devices or modify your language or user settings to see the values adjust correctly in the table. 
 
+> [!div class="mx-imgBorder"]
+> ![Table Control](../media/table_control.png "Table Control")
+
 ## Manifest
 
 ```xml

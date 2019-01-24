@@ -13,6 +13,9 @@ manager: ""
 # Implementing Web API control
 
 The Web API control is designed to perform basic create, retrieve, update record functions. The control renders four buttons, which can be clicked to invoke a different Web API action. The result of the Web API call is injected into a HTML div element at the bottom of the custom control.  
+
+> [!div class="mx-imgBorder"]
+> ![Web API Control](../media/web_api_control.png "Web API Control")
  
  ## Manifest
 

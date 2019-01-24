@@ -16,6 +16,9 @@ The increment control shows how to bind data with PowerApps Control Framework, a
 
 This control renders as a textbox with a `Increment` button in run time. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox will be increased by 1. The increment value can be changed to any number you wish.
 
+> [!div class="mx-imgBorder"]
+> ![Increment Control](../media/increment_control.png "Increment Control")
+
 ## Manifest
 
 ```xml

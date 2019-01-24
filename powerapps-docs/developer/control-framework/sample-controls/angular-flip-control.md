@@ -54,6 +54,7 @@ The flip control sample consists of a label and a button. When you click on the 
 - Clicking on the Flip button, the label will update value using **notifyOutputEvents** method [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to PowerApps Control Framework. 
 - ClientAPI updates the bind attribute value, the updated value will flow to the control label. You could also use ClientAPI to update an attribute value and it will trigger control’s [updateView](../reference/control/updateview.md). Then control could then update third-party model and the label will be updated. 
 
+
 ## Code
 
 ```JavaScript

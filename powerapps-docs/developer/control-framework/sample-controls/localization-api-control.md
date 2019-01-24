@@ -15,6 +15,9 @@ manager: ""
 This sample showcases how localization can be done for custom controls. In this sample we use the Increment control to localize the text that is displayed on the increment button based on the user’s selected language. 
 PowerApps Control Framework (PCF) uses the concept of implementing String(resx) web resources that can be used to manage localized strings to be shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
 
+> [!div class="mx-imgBorder"]
+> ![Localization API Control](../media/localization_api_control.png "Localization API Control")
+
 ## Manifest 
 
 ```xml

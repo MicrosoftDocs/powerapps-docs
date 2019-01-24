@@ -16,6 +16,9 @@ manager: ""
 The Navigation API control explores the various methods available as part of the PowerApps Control Framework’s navigation API.  
 In this sample we create a series of input elements of type buttons which call into the respective methods of the PCF’s navigation API that matches with the value displayed.  
 
+> [!div class="mx-imgBorder"]
+> ![Navigation API Control](../media/navigation_api_control.png "Navigation API Control")
+
 ## Manifest
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
