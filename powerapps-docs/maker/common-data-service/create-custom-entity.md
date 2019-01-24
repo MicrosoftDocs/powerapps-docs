@@ -1,12 +1,12 @@
 ---
-title: Tutorial for creating a custom entity that has components with PowerApps | Microsoft Docs
-description: Tutorial with step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
+title: Create a custom entity that has components with PowerApps | Microsoft Docs
+description: Topic with step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
 author: Mattp123
 manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: tutorial
-ms.date: 06/22/2018
+ms.date: 01/23/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -15,11 +15,11 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Create a custom entity that has components in PowerApps
+# Create a custom entity that has components in PowerApps
 
-With PowerApps you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. PowerApps app development includes adding standard "out-of-box entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
+With PowerApps you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. PowerApps app development includes adding standard "out-of-box" entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
 
-In this tutorial you create an entity and then add or customize key components such as fields, relationships, views, and forms. You learn how to:
+In this topic you create an entity and then add or customize key components such as fields, relationships, views, and forms. You learn how to:
 
 - Create a custom entity
 - Add custom fields to your entity
@@ -27,7 +27,7 @@ In this tutorial you create an entity and then add or customize key components s
 - Customize a view 
 - Customize a form
 
-The tutorial will follow the company, Contoso, which is a pet grooming business that grooms dogs and cats. Contoso needs an app for client and pet tracking that can be used by employees across a variety of devices.
+The topic will follow the company, Contoso, which is a pet grooming business that grooms dogs and cats. Contoso needs an app for client and pet tracking that can be used by employees across a variety of devices.
 
 ## Prerequisites
 
@@ -117,17 +117,16 @@ Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=l
 
 Skip this step if you only want to use the Pet entity in a canvas app. 
 
-1. On the PowerApps left navigation pane, select **Model-driven**.
-2. On the left navigation pane, expand **Data**, select **Entities**, and then select **Pet**.
-3. Select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form editor.
+1. On the left navigation pane, expand **Data**, select **Entities**, and then select **Pet**.
+2. Select the **Forms** tab, and then select **Information** next to the **Main** form type to open the form editor.
     > [!div class="mx-imgBorder"] 
     > ![Edit main form](media/create-custom-entity/main-form-edit.png)
-4. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** fields located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
+3. On the form editor, drag and drop the **Species**, **Breed**, **Appointment date**, and **Account** fields located on the Field Explorer pane on to the General section of the form canvas until the form looks like this.
     > [!div class="mx-imgBorder"] 
     > ![Select fields for main form](media/create-custom-entity/main-form-edit2.png) 
-5. Select **Save**.
-6. Select **Publish**.
-7. Select **Save and close** to close the form designer.
+4. Select **Save**.
+5. Select **Publish**.
+6. Select **Save and close** to close the form designer.
 
 ## Add the custom entity to an app
 
@@ -135,6 +134,6 @@ Now your entity is ready to be used to build either a canvas or model-driven app
 
 ## Next steps
 
-In this tutorial, you learned how to create an entity that can be used to create a useful app. 
+In this topic, you learned how to create an entity that can be used to create a useful app. 
 - To learn how to create a model-driven app, see [Build your first model-driven app](../model-driven-apps/build-first-model-driven-app.md).
 - To learn how to create a canvas app, see [Create an app from scratch](../canvas-apps/get-started-create-from-blank.md).
