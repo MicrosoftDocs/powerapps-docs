@@ -795,7 +795,7 @@ Generally, using FetchXML should provide better performance because the filterin
   </entity>
 </fetch>
 ```
-More information: [Build queries with FetchXML](../org-service/build-queries-fetchxml.md).
+More information: [Build queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml).
 
 2. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
   
