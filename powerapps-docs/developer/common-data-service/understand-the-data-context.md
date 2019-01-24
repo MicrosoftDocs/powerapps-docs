@@ -126,4 +126,4 @@ More information: [Define entity images](register-plug-in.md#define-entity-image
 ### See also
 
 [Event Framework](event-framework.md)  
-[Write a plug-in](write-plugin.md)
+[Write a plug-in](write-plug-in.md)

@@ -2,7 +2,7 @@
 title: "Use plug-ins to extend business processes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "A plug-in is a .NET assembly that you can upload to the Common Data Service for Apps. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 1/23/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -77,5 +77,6 @@ These topics walk you through the process of creating some simple plug-ins.
 These topics provide details that you will use to create plug-ins.
 
 - [Write a plug-in](write-plug-in.md)
+- [Handle exceptions](handle-exceptions.md)
 - [Register a plug-in](register-plug-in.md)
 - [Debug Plug-ins](debug-plug-in.md)

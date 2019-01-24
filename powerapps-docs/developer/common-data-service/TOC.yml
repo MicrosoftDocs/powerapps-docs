@@ -77,6 +77,8 @@
     items:
     - name: Write a plug-in
       href: write-plug-in.md
+    - name: Handle exceptions
+      href: handle-exceptions.md
     - name: Register a plug-in
       href: register-plug-in.md
     - name: Debug a plug-in

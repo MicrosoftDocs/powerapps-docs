@@ -177,20 +177,6 @@ tracingService.Trace("Write {0} {1}.", "your", "message");
 
 More information: [Use Tracing](debug-plug-in.md#use-tracing).
 
-
-
-## Cancelling an operation
-
-Your code can cause an operation to be cancelled by throwing an exception. Any unhandled exception will cause the operation to be cancelled so it is important that you apply coding practices to manage any exceptions that are thrown and decide whether to allow it to cancel the operation or not.
-
-If your business logic dictates that the operation should be cancelled, you should throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception and provide a message to explain why the operation was cancelled.
-
-When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception within a synchronous plug-in an error dialog with your message will be displayed to the user. If you don't provide a message, a generic error dialog will be shown to the user. If any other type of exception is thrown, the user will see an error dialog with a generic message and the exception message and stack trace will be written to the [PluginTraceLog Entity](reference/entities/plugintracelog.md)
-
-Ideally, you should only cancel operations using synchronous plug-ins registered in the **PreValidation** stage. This stage *usually* occurs outside the main database transaction. Cancelling an operation before it reaches the transaction is highly desireable because the cancelled operation has to be rolled back. Rolling back the operation requires significant resources and has a performance impact on the system. Operations in the **PreOperation** and **PostOperation** stages are always within the database transaction.
-
-Sometimes **PreValidation** stages will be within a transaction when they are initated by logic in another operation. For example, if you create a task entity record in the **PreOperation** stage of the creation of an account, the task creation will pass through the event execution pipeline and occur within the **PreValidation** stage yet it will be part of the transaction that is creating the account entity record. You can tell whether an operation is within a transaction by the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.IsInTransaction> property.
-
 ## Performance considerations
 
 When you add the business logic for your plug-in you need to be very aware of the impact they will have on overall performance. The business logic in plug-ins should take no more than 2 seconds to complete.
@@ -231,6 +217,7 @@ This data is also available for you to browse using the [Organization Insights P
 ### See also
 
 [Write plug-ins to extend business processes](plug-ins.md)<br />
+[Handle exceptions](handle-exceptions.md)<br />
 [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)<br />
 [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />
 [Tutorial: Update a plug-in](tutorial-update-plug-in.md)<br />
