@@ -352,7 +352,7 @@ Finally, you can click the **Logout** button to logout.
 
 10. Click on **Add**, then select **Select an API**. Now select **Dynamics CRM Online** and click **Select** at the end of the page.
 
-![Select Dynamics CRM Online under Select an API](media/register-spa-permissions-dyncrm.PNG)
+![Select Dynamics CRM Online under Select an API](media/register-spa-permission-dyncrm.PNG)
 
 11. Now in the **Selected permissions** tab, select all **Delegated Permissions** and click on **Select** at the end of the page.
 
