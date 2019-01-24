@@ -156,5 +156,5 @@ Unhandled exceptions of other types should only occur when unexpected errors are
 
 ### See also
 
-[Cancelling an operation](../../write-plug-in.md#cancelling-an-operation)<br/>
+[Cancelling an operation](../../handle-exceptions.md#cancelling-an-operation)<br/>
 [Debug Workflow Activities](../../workflow/workflow-extensions.md#debug-workflow-activities)<br/>

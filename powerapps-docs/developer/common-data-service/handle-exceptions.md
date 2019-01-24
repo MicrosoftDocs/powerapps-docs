@@ -19,6 +19,8 @@ search.app:
 
 There are two possible outcomes when a plug-in allows an exception to be passed back to the D365 system: information about the exception is logged or displayed to the user, and the current message request being processed is cancelled. The exact behavior as described below is dependent on how the plug-in is executed: in the sandbox or not, synchronous or asynchronous.
 
+<a name='cancelling-an-operation'></a>
+
 ## Cancelling the current operation
 
 Your code can cause the current message request processing operation to be cancelled by throwing an exception or passing a uncaught exception back to the D365 system. Any exception passed back to the plug-in caller will cause the current operation to be cancelled, so it is important that you apply coding best practices to manage any exceptions that are thrown and to determine whether to allow the exception to cancel the current operation or not.
