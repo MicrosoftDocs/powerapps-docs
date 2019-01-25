@@ -22,15 +22,15 @@ search.app:
 
 # Walkthrough: Registering and configuring a SPA application with adal.js
 
-This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Common Data Service for Apps using adal.js and Cross-origin Resource Sharing (CORS). More information: [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application  to Dynamics 365 (online)](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
+This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Common Data Service for Apps using adal.js and Cross-origin Resource Sharing (CORS). More information: [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application  to Dynamics 365 (online)](oauth-cross-origin-resource-sharing-connect-single-page-application.md).
   
 ## Prerequisites  
   
-- Dynamics 365  
+- PowerApps CDS for Apps  
   
--   You must have a Dynamics 365 (online) system user account with administrator role for the Office 365.  
+- You must have a Dynamics 365 (online) system user account with administrator role for the Office 365.  
   
--   An Azure subscription for application registration. A trial account will also work.  
+- An Azure subscription for application registration. A trial account will also work.  
   
 - Visual Studio 2017  
   
@@ -38,7 +38,7 @@ This walkthrough describes the process of registering and configuring the simple
 
 ## Goal of this walkthrough
 
-When you complete this walkthrough you will be able to run a simple SPA application in Visual Studio that will provide the ability for a user to authenticate and retrieve data from Dynamics 365 (online). This application consists of a single HTML page.  
+When you complete this walkthrough you will be able to run a simple SPA application in Visual Studio that will provide the ability for a user to authenticate and retrieve data from CDS for Apps. This application consists of a single HTML page.  
 
 When you debug the application initially there will only be a **Login** button.  
 
@@ -46,19 +46,19 @@ Click **Login** and you will be re-directed to a sign-in page to enter your cred
 
 After you enter your credentials you will be directed back to the HTML page where you will find the **Login** button is hidden and a **Logout** button and a **Get Accounts** button are visible. You will also see a greeting using information from your user account.  
 
-Click the **Get Accounts** button to retrieve 10 account records from your Dynamics 365 organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
+Click the **Get Accounts** button to retrieve 10 account records from your CDS for Apps organization. The **Get Accounts** button is disabled as shown in the following screenshot:  
   
 ![The SimpleSPA page](media/simple-spa.png "The SimpleSPA page")  
 
 > [!NOTE]
->  The initial load of data from Dynamics 365 may be slow as the operations to support authentication take place, but subsequent operations are much faster.  
+>  The initial load of data from CDS for Apps may be slow as the operations to support authentication take place, but subsequent operations are much faster.  
 
 Finally, you can click the **Logout** button to logout.  
 
 > [!NOTE]
 >  This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application.  
   
-### Create a web application project  
+## Create a web application project  
   
 1.  Using Visual Studio 2017, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
   
@@ -77,7 +77,7 @@ Finally, you can click the **Logout** button to logout.
       "use strict";  
   
       //Set these variables to match your environment  
-      var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL of your organization  
+      var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL of your CDS for Apps organization  
       var tenant = "[xxx.onmicrosoft.com]"; //The name of the Azure AD organization you use  
       var clientId = "[client id]"; //The ClientId you got when you registered the application  
       var pageUrl = "http://localhost:[PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  
@@ -284,11 +284,11 @@ Finally, you can click the **Logout** button to logout.
   
     ```  
   
-### Register the application  
+## Register the application  
   
 1.  [Sign in](http://manage.windowsazure.com) to the Azure management portal by using an account with administrator permission. You must use an account in the same Office 365 subscription (tenant) as you intend to register the app with. You can also access the Azure portal through the Office 365 admin center by expanding the **ADMIN** item in the left navigation pane and selecting **Azure AD**.  
   
-     If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with Dynamics 365 (online) is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) to associate the two accounts.  
+     If you don’t have an Azure tenant (account) or you do have one but your Office 365 subscription with CDS for Apps is not available in your Azure subscription, following the instructions in the topic [Set up Azure Active Directory access for your Developer Site](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) to associate the two accounts.  
   
      If you don’t have an account, you can sign up for one by using a credit card. However, the account is free for application registration and your credit card won’t be charged if you only follow the procedures called out in this topic to register one or more apps. More information: [Active Directory Pricing Details](http://azure.microsoft.com/pricing/details/active-directory/)  
   
@@ -320,50 +320,36 @@ Finally, you can click the **Logout** button to logout.
 
 ![Enter details](media/register-spa-enter-details.PNG)
     
-  <!--  **APP ID URI**  
-    This must be a unique identifier for the application. Use `https://XXXX.onmicrosoft.com/SimpleSPA` where XXXX is the Active Directory tenant.  
-  -->
+  
 8. Then click on **Create** at the end of the page.
 
-8.  In the tab of the newly registered app, copy the **Application ID**.  
+9.  In the tab of the newly registered app, copy the **Application ID**.  
   
     Set the `clientId` variable in the SimpleSPA.html page to this value. Refer to step 5 of the **Create a web application project** procedure.  
-<!--  
-9. Scroll to the bottom of the page and click **Add application**. In the dialog box select **Dynamics 365 Online** and close the dialog box.  
-  
-10. Under permissions to other applications, you will find a row for **Dynamics 365 Online** and **Delegated Permissions: 0**. Select this and add **Access Dynamics 365 (online) as organization users**.  
-  
-11. Save the application registration  
-  
-12. At the bottom, select **Manage Manifest** and choose **Download Manifest**.  
-  
-13. Open the JSON file you downloaded and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and save the file.  
-  
-14. Go back to **Manage Manifest** again. Choose **Upload Manifest** and upload the JSON file you just saved.  
-  -->
-9. Now click on **Settings** and then select **Required permissions**.
+
+10. Now click on **Settings** and then select **Required permissions**.
 
 ![Select Required permissions](media/register-spa-settings-permissions.PNG)
 
-10. Click on **Add**, then select **Select an API**. Now select **Dynamics CRM Online** and click **Select** at the end of the page.
+11. Click on **Add**, then select **Select an API**. Now select **Dynamics CRM Online** and click **Select** at the end of the page.
 
 ![Select Dynamics CRM Online under Select an API](media/register-spa-permission-dyncrm.PNG)
 
-11. Now in the **Selected permissions** tab, select all **Delegated Permissions** and click on **Select** at the end of the page.
+12. Now in the **Selected permissions** tab, select all **Delegated Permissions** and click on **Select** at the end of the page.
 
 ![Select all Delegated permissions](media/register-spa-del-permissions.PNG)
 
-12. Then select **Done**. You will see a row for **Dynamics CRM Online** added.
+13. Then select **Done**. You will see a row for **Dynamics CRM Online** added.
 
 ![New row for Dynamics CRM Online gets added](media/register-spa-row-dyncrm.PNG)
 
-13. Now close the **Settings** tab. In the registered app tab, select **Manifest**.
+14. Now close the **Settings** tab. In the registered app tab, select **Manifest**.
 
-14. Click on **Edit** and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** to save the file.
+15. Click on **Edit** and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** to save the file.
 
 ![Set oauth2AllowImplicitFlow to true in Manifest file](media/register-spa-edit-manifest.PNG)
 
-### Debugging the application  
+## Debugging the application  
   
 1.  Set the browser to use Microsoft Edge, Google Chrome, or Mozilla Firefox.  
   
@@ -374,5 +360,5 @@ Finally, you can click the **Logout** button to logout.
   
      If you don’t get the results you expect, double-check the values you set when registering the application and configuring the SimpleSPA.html code.  
   
-### See also  
- [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application  to Dynamics 365 (online)](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
+## See also  
+ [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application to CDS for Apps](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
