@@ -52,13 +52,13 @@ In the screen, a box with six handles surrounds the label by default. That type 
 
 ## Rename a control
 
-In the hierarchical list of controls, hover over the control that you want to rename, select the ellipsis that appears, and then select **Rename**. You can then type a unique, memorable name to make building your app easier.
+In the hierarchical list of controls, hover over the control that you want to rename, select the ellipsis button that appears, and then select **Rename**. You can then type a unique, memorable name to make building your app easier.
 
 ![Rename control](./media/add-configure-controls/rename-control.png)
 
 ## Delete a control
 
-In the hierarchical list of controls, hover over the control that you want to delete, select the ellipsis that appears, and then select **Delete**. To delete a control that isn't a screen, you can also select the control on the canvas, and then press the Delete key.
+In the hierarchical list of controls, hover over the control that you want to delete, select the ellipsis button that appears, and then select **Delete**. To delete a control that isn't a screen, you can also select the control on the canvas, and then press the Delete key.
 
 ![Delete control](./media/add-configure-controls/delete-control.png)
 
