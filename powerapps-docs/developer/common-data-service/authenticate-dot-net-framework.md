@@ -45,7 +45,7 @@ More information: [Build Windows client applications using the XRM tools](xrm-to
 
 ## .NET Framework versions
 
-Use .NET Framework version 4.6.2 or higher when you create client applications. Only applications using Transport Level Security (TLS) 1.2 or better security can connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
+Use .NET Framework version 4.6.2 or higher when you create client applications. Only applications using Transport Level Security (TLS) 1.2 or better security can connect. 
 
 > [!NOTE]
 > **Known Issue with Visual Studio 2015**
@@ -55,9 +55,6 @@ Use .NET Framework version 4.6.2 or higher when you create client applications. 
 > Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
 >
 > This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
-
-> [!IMPORTANT]
-> When developing Plug-in and workflow activity assemblies, which do not require authentication, you must use .NET Framework 4.5.2
 
 ## .NET Framework applications without SDK assemblies
 
