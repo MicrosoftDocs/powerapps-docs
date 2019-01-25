@@ -2,7 +2,7 @@
 title: "Connect to Common Data Service for Apps web services using OAuth (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to connect to Dynamics 365 Customer Engagement web services using OAuth and how the ADAL API manages OAuth 2.0 authentication with the Dynamics 365 web service identity provider" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 01/25/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -51,7 +51,7 @@ AuthenticationResult result = authContext.AcquireToken(resource, clientId, new U
   
  The next line of code gets the authentication result that contains the access token you’re looking for. You can send message requests to the web service with this token.  
   
- A few more items of interest in this code are the string values used. The resource variable contains the Transport Layer Security (TLS) or Secure Sockets Layer (SSL) root address, including the domain (organization), of your CDS for Apps server. The                  `clientId` and `redirectUrl` variables contain the app registration information that is the result of registering the app with Azure Active Directory. For more information on app registration, see [Walkthrough: Register a Dynamics 365 app with Azure Active Directory](/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory).  
+ A few more items of interest in this code are the string values used. The resource variable contains the Transport Layer Security (TLS) or Secure Sockets Layer (SSL) root address, including the domain (organization), of your CDS for Apps server. The `clientId` and `redirectUrl` variables contain the app registration information that is the result of registering the app with Azure Active Directory. For more information on app registration, see [Walkthrough: Register a Dynamics 365 app with Azure Active Directory](/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory).  
   
 ## Use the access token in message requests  
  Depending on the CDS for Apps API you’re using, there are two different methods to send a message request to the web services. For the Web API, you would typically send an HTTP message request. For the Organization Service, you would send a message request using the web client proxy.  

@@ -2,7 +2,7 @@
 title: "Authentication with .NET Framework applications (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "How .NET Framework applications can authenticate with Common Data Service for Apps" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 01/25/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -45,7 +45,7 @@ More information: [Build Windows client applications using the XRM tools](xrm-to
 
 ## .NET Framework versions
 
-Use .NET Framework version 4.6.2 or higher when you create client applications. Only applications using Transport Level Security (TLS) 1.2 or better security can connect. 
+Use .NET Framework version 4.6.2 or higher when you create client applications. Only applications using Transport Level Security (TLS) 1.2 or better security can connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
 
 > [!NOTE]
 > **Known Issue with Visual Studio 2015**
