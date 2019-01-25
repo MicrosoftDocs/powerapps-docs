@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick create forms in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 10/15/2018
+ms.date: 01/25/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -49,7 +49,8 @@ You can enable custom activity entities to support quick create forms, and you c
  Although you can define multiple quick create forms, only one quick create form can be used by everyone. The form everyone will use is set using the form order. Quick create forms cannot be assigned to security roles and they do not provide the capability for the user to switch forms.  
   
 > [!NOTE]
->  The entity must have the **Allow Quick Create** option enabled for the quick create form to be displayed. 
+>  - The entity must have the **Allow Quick Create** option enabled for the quick create form to be displayed. 
+>  - Some fields, such as the CREATEDON field, aren’t available to add to a quick create form.  
   
 ### How to create a quick create form  
   
