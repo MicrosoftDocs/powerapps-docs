@@ -143,7 +143,7 @@ if (cmdargs.Length > 0) { config = new FileConfiguration(cmdargs[0]); } else { c
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
    <startup>
-      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.2" />
    </startup>
    <connectionStrings>
       <clear />
