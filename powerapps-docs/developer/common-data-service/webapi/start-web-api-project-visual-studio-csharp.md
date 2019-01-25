@@ -49,7 +49,7 @@ This topic demonstrates how to create a new project in Visual Studio that builds
   
 1.  In Visual Studio, click **New Project**. The **New Project** dialog is displayed.  
 2.  In the left navigation pane under **Templates**, select **Visual C#**.  
-3.  Above the list of available templates, select **.NET Framework 4.5.2**.  
+3.  Above the list of available templates, select **.NET Framework 4.6.2**.  
 4.  In the list of templates, select **Console Application**. (Alternately choose the project type suited to your solution.)  All of the Web API C# samples are console applications.  
   
  <!-- TODO:
@@ -57,7 +57,7 @@ This topic demonstrates how to create a new project in Visual Studio that builds
   
 5.  In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name `StartWebAPI-CS` was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
   
-6.  Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.5.2**.  
+6.  Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.6.2**.  
   
 <a name="bkmk_addAllRequiredResources"></a>
    
