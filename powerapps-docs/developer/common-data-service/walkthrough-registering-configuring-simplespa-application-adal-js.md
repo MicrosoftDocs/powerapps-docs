@@ -177,8 +177,8 @@ Finally, you can click the **Logout** button to logout.
        retrievingAccountsMessage.textContent = "Retrieving 10 accounts from " + organizationURI + "/api/data/v9.0/accounts";  
        message.appendChild(retrievingAccountsMessage)  
   
-       // Function to perform operation is passed as a parameter to the aquireToken method  
-       authContext.acquireToken(organizationURI, retrieveAccounts)  
+       // Function to perform operation is passed as a parameter to the aquireTokenRedirect method  
+       authContext.acquireTokenRedirect(organizationURI, retrieveAccounts)  
   
       }  
   
