@@ -96,7 +96,6 @@ The following describes the support considerations for custom code written the M
 > If clients designed for earlier versions of  Dynamics 365 Customer Engagement are designed to connect to any version or deployment type you can prepare by re-compiling the application to use .NET Framework 4.6.2. More information: [Blog Post: Updates coming to Dynamics 365 Customer Engagement connection security](https://blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/)
 
 - Any .NET assembly that is created with the Microsoft .NET Framework 4.6.2 for use in CDS for Apps as a plug-in assembly or as a custom workflow activity is supported.
-- Any visualization (chart) that is created with .NET Framework 4.5.2 .
 
 ## Unsupported customizations
 
