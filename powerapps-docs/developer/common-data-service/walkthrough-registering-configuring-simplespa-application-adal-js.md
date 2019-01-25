@@ -64,7 +64,7 @@ Finally, you can click the **Logout** button to logout.
   
     You should be able to use earlier versions of Visual Studio as well, but these steps will describe using Visual Studio 2017.  
   
-2.  Add a new HTML page named SimpleSPA.html to the project and paste in the following code:  
+2.  Add a new HTML page named `SimpleSPA.html` to the project and paste in the following code:  
   
     ```html  
     <!DOCTYPE html>  
