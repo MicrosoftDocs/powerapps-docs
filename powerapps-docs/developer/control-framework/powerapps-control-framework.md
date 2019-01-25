@@ -30,9 +30,20 @@ manager:
 <td>
 
 <h2> Sample Controls </h2>
-
+<li><a href="sample-controls/increment-control.md" data-raw-source="[Increment control](sample-controls/increment-control.md)">Increment control</a></li>
+<li><a href="sample-controls/linear-input-control.md" data-raw-source="[Linear input control](sample-controls/linear-input-control.md)">Linear input control</a></li>
+<li><a href="sample-controls/localization-api-control.md" data-raw-source="[Localization API control](sample-controls/localization-api-control.md)">Localization API control</a></li>
 <li><a href="sample-controls/angular-flip-control.md" data-raw-source="[Angular Flip control](sample-controls/angular-flip-control.md)">Angular Flip control</a></li>
+<li><a href="sample-controls/control-state-api.md" data-raw-source="[Control state API control](sample-controls/control-state-api.md)">Control state API control</a></li>
 <li><a href="sample-controls/data-set-grid-control.md" data-raw-source="[Data Set Grid control](sample-controls/data-set-grid-control.md)">Data Set Grid control</a></li>
+<li><a href="sample-controls/formatting-api-control.md" data-raw-source="[Formatting API control](sample-controls/formatting-api-control.md)">Formatting API control</a></li>
+<li><a href="sample-controls/iframe-control.md" data-raw-source="[IFRAME control](sample-controls/iframe-control.md)">IFRAME control</a></li>
+<li><a href="sample-controls/image-upload-control.md" data-raw-source="[Image upload control](sample-controls/image-upload-control.md)">Image upload control</a></li>
+<li><a href="sample-controls/map-control.md" data-raw-source="[Map control](sample-controls/map-control.md)">Map control</a></li>
+<li><a href="sample-controls/navigation-api-control.md" data-raw-source="[Navigation API control](sample-controls/navigation-api-control.md)">Navigation API control</a></li>
+<li><a href="sample-controls/table-control.md" data-raw-source="[Table control](sample-controls/table-control.md)">Table control</a></li>
+<li><a href="sample-controls/table-grid-control.md" data-raw-source="[Table grid control](sample-controls/table-grid-control.md)">Table grid control</a></li>
+<li><a href="sample-controls/web-api-control.md" data-raw-source="[Web API control](sample-controls/web-api-control.md)">Web API control</a></li>
 </td>
 </tr>
 <tr>
