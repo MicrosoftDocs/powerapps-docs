@@ -2,7 +2,7 @@
 title: "Walkthrough: Registering and configuring SimpleSPA application with adal.js (Common Data Service for Apps) | Microsoft Docs"
 description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Customer Engagement using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
-ms.date: 01/24/2019
+ms.date: 01/25/2019
 ms.service:
   - "powerapps"
 ms.custom:
@@ -79,10 +79,10 @@ Finally, you can click the **Logout** button to logout.
       "use strict";  
   
       //Set these variables to match your environment  
-      var organizationURI = "https:// [organization name].crm.dynamics.com"; //The URL to connect to CRM (online)  
+      var organizationURI = "https://[organization name].crm.dynamics.com"; //The URL of your organization  
       var tenant = "[xxx.onmicrosoft.com]"; //The name of the Azure AD organization you use  
       var clientId = "[client id]"; //The ClientId you got when you registered the application  
-      var pageUrl = "http://localhost: [PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  
+      var pageUrl = "http://localhost:[PORT #]/SimpleSPA.html"; //The URL of this page in your development environment when debugging.  
   
       var user, authContext, message, errorMessage, loginButton, logoutButton, getAccountsButton, accountsTable, accountsTableBody;  
   
@@ -176,7 +176,7 @@ Finally, you can click the **Logout** button to logout.
   
        getAccountsButton.disabled = true;  
        var retrievingAccountsMessage = document.createElement("p");  
-       retrievingAccountsMessage.textContent = "Retrieving 10 accounts from " + organizationURI + "/api/data/v8.0/accounts";  
+       retrievingAccountsMessage.textContent = "Retrieving 10 accounts from " + organizationURI + "/api/data/v9.0/accounts";  
        message.appendChild(retrievingAccountsMessage)  
   
        // Function to perform operation is passed as a parameter to the aquireToken method  
@@ -193,7 +193,7 @@ Finally, you can click the **Logout** button to logout.
        }  
   
        var req = new XMLHttpRequest()  
-       req.open("GET", encodeURI(organizationURI + "/api/data/v8.0/accounts?$select=name,address1_city&$top=10"), true);  
+       req.open("GET", encodeURI(organizationURI + "/api/data/v9.0/accounts?$select=name,address1_city&$top=10"), true);  
        //Set Bearer token  
        req.setRequestHeader("Authorization", "Bearer " + token);  
        req.setRequestHeader("Accept", "application/json");  
