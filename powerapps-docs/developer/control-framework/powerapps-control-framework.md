@@ -29,6 +29,17 @@ manager:
 </td>
 <td>
 
+<h2> How-to </h2>
+
+<li><a href="create-controls-using-pcf.md" data-raw-source="[How to create custom controls](create-controls-using-pcf.md)">How to create custom controls using PowerApps Control Framework</a></li>
+<li><a href="control-implementation-library.md" data-raw-source="[How to implement control library](control-implementation-library.md)">How to implement control library</a></li>
+<li><a href="import-controls.md" data-raw-source="[How to import custom controls](import-controls.md)">How to import custom controls</a></li>
+<li><a href="add-controls-to-a-field-or-entity.md" data-raw-source="[How to add controls to a field or entity](add-controls-to-a-field-or-entity.md)">How to add controls to a field or entity</a></li>
+<li><a href="debugging-custom-controls.md" data-raw-source="[How to debug custom controls](debugging-custom-controls.md)">How to debug custom controls</a></li>
+
+</td>
+<td>
+
 <h2> Sample Controls </h2>
 <li><a href="sample-controls/increment-control.md" data-raw-source="[Increment control](sample-controls/increment-control.md)">Increment control</a></li>
 <li><a href="sample-controls/linear-input-control.md" data-raw-source="[Linear input control](sample-controls/linear-input-control.md)">Linear input control</a></li>
@@ -47,15 +58,6 @@ manager:
 </td>
 </tr>
 <tr>
-<td>
-
-<h2> How-to </h2>
-
-<li><a href="create-controls-using-pcf.md" data-raw-source="[How to create custom controls using PowerApps Control Framework](create-controls-using-pcf.md)">How to create custom controls using PowerApps Control Framework</a></li>
-<li><a href="control-implementation-library.md" data-raw-source="[Control Implementation Library](control-implementation-library.md)">Control Implementation Library</a></li>
-<li><a href="debugging-custom-controls.md" data-raw-source="[How to debug custom controls](debugging-custom-controls.md)">How to debug custom controls</a></li>
-
-</td>
 <td>
 
 <h2> Reference </h2>
