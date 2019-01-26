@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/22/2019
+ms.date: 01/25/2019
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ Add a variety of UI elements to your canvas app, and configure aspects of their 
 1. Under **Make your own app**, hover over **Canvas app from blank**, and then select **Make this app**.
 1. If you're prompted to take the intro tour, select **Next** to get familiar with key areas of the PowerApps interface (or select **Skip**).
 
-    You can always take the tour later by clicking or tapping the question-mark icon near the upper-right corner and then clicking or tapping **Take the intro tour**.
+    You can always take the tour later by selecting the question-mark icon near the upper-right corner of your screen and then selecting **Take the intro tour**.
 
 ## Add and select a control
 
@@ -52,19 +52,19 @@ In the screen, a box with six handles surrounds the label by default. That type 
 
 ## Rename a control
 
-In the hierarchical list of controls, hover over the control that you want to rename, select the ellipsis that appears, and then select **Rename**. You can then type a unique, memorable name to make building your app easier.
+In the hierarchical list of controls, hover over the control that you want to rename, select the ellipsis button that appears, and then select **Rename**. You can then type a unique, memorable name to make building your app easier.
 
 ![Rename control](./media/add-configure-controls/rename-control.png)
 
 ## Delete a control
 
-In the hierarchical list of controls, hover over the control that you want to delete, select the ellipsis that appears, and then select **Delete**. To delete a control that isn't a screen, you can also select the control on the canvas, and then press the Delete key.
+In the hierarchical list of controls, hover over the control that you want to delete, select the ellipsis button that appears, and then select **Delete**. To delete a control that isn't a screen, you can also select the control on the canvas, and then press the Delete key.
 
 ![Delete control](./media/add-configure-controls/delete-control.png)
 
 ## Reorder screens
 
-In the hierarchical list of controls, hover over a screen that you want to move up or down, select the ellipsis that appears, and then select **Move up** or **Move down**.
+In the hierarchical list of controls, hover over a screen that you want to move up or down, select the ellipsis button that appears, and then select **Move up** or **Move down**.
 
 ![Reorder screen](./media/add-configure-controls/reorder-screen.png)
 
@@ -111,7 +111,7 @@ For example, you can select a control and then show or hide it by changing its *
 
 ## Configure a control in the formula bar
 
-Instead of configuring a control directly, from the toolbar, or in the **Properties** tab, you can also configure a control by selecting a property in property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
+Instead of configuring a control directly, from the toolbar, or in the **Properties** tab, you can configure a control by selecting a property in the property list and then specifying a value in the formula bar. By taking this approach, you can search for a property alphabetically, and you can specify more types of values.
 
 For example, you can select a label and then configure it in these ways:
 
