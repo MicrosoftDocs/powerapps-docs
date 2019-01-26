@@ -1,13 +1,13 @@
 ---
 title: Delete a custom entity | Microsoft Docs
 description: Step-by-step instructions for how to delete a custom entity and clear all data in PowerApps
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 

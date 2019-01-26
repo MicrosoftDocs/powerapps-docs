@@ -1,14 +1,14 @@
 ---
 title: Create a canvas app to manage projects | Microsoft Docs
 description: In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details.
-author: mgblythe
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 

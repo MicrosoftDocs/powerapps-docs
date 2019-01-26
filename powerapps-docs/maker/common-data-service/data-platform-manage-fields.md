@@ -1,13 +1,13 @@
 ---
 title: Manage custom fields in an entity | Microsoft Docs
 description: Walkthrough of how to create, read, update, and delete custom fields in an entity in Common Data Service (CDS) for Apps.
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 

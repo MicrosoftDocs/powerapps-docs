@@ -1,14 +1,14 @@
 ---
 title: Use Cognitive Services in PowerApps | Microsoft Docs
 description: Build a basic canvas app that uses the Microsoft Cognitive Services Text Analytics API to analyze text.
-author: AFTOwen
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 12/08/2017
-ms.author: anneta
+ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
