@@ -1,14 +1,14 @@
 ---
 title: Publish the Power BI project report and create a dashboard | Microsoft Docs
 description: In this task, we'll publish our dataset and report to the Power BI service; then we'll create a dashboard based on the report.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 01/30/2018
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType: 
   - maker
 search.app: 

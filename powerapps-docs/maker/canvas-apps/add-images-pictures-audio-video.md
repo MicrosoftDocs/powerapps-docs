@@ -1,14 +1,14 @@
 ---
 title: Embed multimedia files into a canvas app and upload | Microsoft Docs
 description: Show multimedia files in a canvas app, and upload them to a data source
-author: karthik-1
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
-ms.author: sharik
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 

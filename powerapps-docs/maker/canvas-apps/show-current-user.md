@@ -1,14 +1,14 @@
 ---
 title: Show details about the current user in a canvas app | Microsoft Docs
 description: In PowerApps, display the name and email address of the signed-in user in a canvas app
-author: lonu
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
-ms.author: lonu
+ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 

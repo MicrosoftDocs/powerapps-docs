@@ -1,14 +1,14 @@
 ---
 title: Edit a canvas app | Microsoft Docs
 description: Step-by-step instructions for editing canvas apps and session-locking scenarios in PowerApps.
-author: karthik-1
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/19/2017
-ms.author: sharik
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 

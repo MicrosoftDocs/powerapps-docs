@@ -1,14 +1,14 @@
 ---
 title: Create or edit apps in a browser | Microsoft Docs
 description: Create or edit apps in a browser by using PowerApps Studio for web.
-author: AFTOwen
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 03/08/2018
-ms.author: anneta
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
