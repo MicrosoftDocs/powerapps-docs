@@ -1,14 +1,14 @@
 ---
 title: Add data to an entity in Common Data Service for Apps by using Power Query | Microsoft Docs
 description: Step-by-step instructions for how to use Power Query to add data to a new or existing entity in Common Data Service (CDS) for Apps from another data source.
-author: AFTOwen
+author: mllopis
 manager: kfile
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: cds
 ms.date: 03/21/2018
-ms.author: anneta
+ms.author: millopis
 search.audienceType: 
   - maker
 search.app: 

@@ -1,13 +1,13 @@
 ---
 title: License requirements for entities| Microsoft Docs
 description: An explanation of license requirements for entities within Common Data Service (CDS) for Apps.
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 

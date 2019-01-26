@@ -1,14 +1,14 @@
 ---
 title: Create a relationship between SharePoint lists via a lookup field in a canvas app | Microsoft Docs
 description: In PowerApps, create a relationship between SharePoint lists by using a lookup field in a canvas app.
-author: skjerland
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 01/20/2017
-ms.author: sharik
+ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 

@@ -1,14 +1,14 @@
 ---
 title: Save images in an Excel file | Microsoft Docs
 description: How to save image in an Excel table in a cloud storage account
-author: AFTOwen
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/15/2016
-ms.author: anneta
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 

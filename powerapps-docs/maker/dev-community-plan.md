@@ -1,14 +1,14 @@
 ---
 title: PowerApps Community Plan -- a free development environment for individual use | Microsoft Docs
 description: Sign up to to build skills and learn more about PowerApps, Microsoft Flow, and the Common Data Service.
-author: AFTOwen
+author: ImadYanni
 manager: kvivek
 
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.date: 05/01/2016
-ms.author: anneta
+ms.author: iyanni
 ms.reviewer:
 
 ---

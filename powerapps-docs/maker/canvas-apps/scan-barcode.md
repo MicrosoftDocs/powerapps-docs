@@ -1,14 +1,14 @@
 ---
 title: Scan a barcode in a canvas app | Microsoft Docs
 description: Scan a variety of barcode types, such as UPC and Codabar
-author: AFTOwen
+author: fikaradz
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 10/23/2016
-ms.author: anneta
+ms.author: fikaradz
 search.audienceType: 
   - maker
 search.app: 
