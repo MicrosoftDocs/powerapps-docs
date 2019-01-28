@@ -351,7 +351,7 @@ Finally, you can click the **Logout** button to logout.
 
 ## Debugging the application  
   
-1.  Set the browser to use Microsoft Edge, Google Chrome, or Mozilla Firefox.  
+1.  Set the browser to use Microsoft Edge or Google Chrome.  
   
     > [!NOTE]
     > Internet Explorer will not work for debugging in this situation.  
