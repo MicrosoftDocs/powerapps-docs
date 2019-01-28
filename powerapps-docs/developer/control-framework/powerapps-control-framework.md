@@ -38,6 +38,9 @@ manager:
 <li><a href="debugging-custom-controls.md" data-raw-source="[How to debug custom controls](debugging-custom-controls.md)">How to debug custom controls</a></li>
 
 </td>
+</tr>
+
+<tr>
 <td>
 
 <h2> Sample Controls </h2>
@@ -56,8 +59,7 @@ manager:
 <li><a href="sample-controls/table-grid-control.md" data-raw-source="[Table grid control](sample-controls/table-grid-control.md)">Table grid control</a></li>
 <li><a href="sample-controls/web-api-control.md" data-raw-source="[Web API control](sample-controls/web-api-control.md)">Web API control</a></li>
 </td>
-</tr>
-<tr>
+
 <td>
 
 <h2> Reference </h2>
@@ -65,7 +67,6 @@ manager:
 <li><a href="reference/index.md" data-raw-source="[PowerApps Control Framework
  methods](reference/index.md)">PowerApps Control Framework</a></li>
 <li><a href="manifest-schema-reference/index.md" data-raw-source="[Manifest Schema Reference](manifest-schema-reference/index.md)">Manifest Schema Reference</a>
-
 </td>
 </tr>
 <tr> 

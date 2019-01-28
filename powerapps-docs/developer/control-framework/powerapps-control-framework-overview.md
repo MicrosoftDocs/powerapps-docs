@@ -13,7 +13,7 @@ manager: "jdaly"
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use the **PowerApps Control Framework (PCF)** to create custom controls to provide enhanced experience for people to view and work with data in forms, views, and dashboards. For example:
+Use the **PowerApps Control Framework (PCF)** to create custom controls in Model-driven apps to provide enhanced user experience for people to view and work with data in forms, views, and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` control.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
@@ -23,22 +23,21 @@ Use the **PowerApps Control Framework (PCF)** to create custom controls to provi
 > - [!INCLUDE[cc_preview_features_expect_changes](../../includes/cc-preview-features-expect-changes.md)]  
 > - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
-Majority of the controls found in model-driven apps that use the **Unified Interface** are implemented using PCF. Custom controls are metadata driven, configurable, reusable, solution aware and responsive. As a developer, you will implement an interface and the application will take care of the rest.
+Majority of the controls found in Model-driven apps that use the **Unified Interface** are implemented using PCF. Custom controls are metadata driven, configurable, reusable, solution aware and responsive. As a developer, you will implement an interface and the application will take care of the rest.
 
-> [!NOTE] 
-> Custom controls are supported only on Unified Interface. 
+> [!NOTE]
+> Custom controls are supported only on Unified Interface for Moe-driven apps.
 
 ## What are custom controls
 
-Custom controls are a type of solution component, which means they can be included in a solution and installed in different environments. More information: Package and distribute extensions using solutions.
+Custom controls are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions]().
 
-Custom controls created using PCF enable a developer to add custom visualization and logic for various UI elements. You can view custom controls in the solution explorer, but there is no way to add or edit them in the application. 
+Custom controls created using PCF enable a developer to add custom visualization and logic for various UI elements. You can view custom controls in the solution explorer, but there is no way to add or edit them in the application.
 
-You add custom controls by including them in a solution and then importing it into the system. Once they are in the system, customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default controls. 
+You add custom controls by including them in a solution and then importing it into the system. Once they are in the system, admin and system customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default controls.
 
-Data about custom controls is stored in the `CustomControl` and `CustomControlResource` entities. 
-The CustomControl entity has the following important attributes:
-
+In Model-driven apps data about custom controls is stored in the `CustomControl` and `CustomControlResource` entities. 
+The `CustomControl` entity has the following important attributes:
 
 |Attribute  |Description|
 |---|---|
@@ -50,28 +49,20 @@ The `CustomControlResource` entity is related to the `CustomControl` entity to p
 
 ### Manifest
 
-The manifest is the metadata file that defines a control. It is an XML document that describes:
+Manifest is the metadata file that defines a control. It is an XML document that describes:
 
 - The namespace of the control.
 - The kind of data it can be bound to, either a field or a data-set.
 - Any properties that can be configured in the application when the control is added.
 - A list of web resource files that the control needs. 
   - One of them must be a JavaScript web resource. This JavaScript must include a function that will instantiate an object. This implements an interface that exposes methods that are required for the control to work. This is called the control implementation library.
-- The name of a JavaScript function in the control implementation library that will return an object that applies the required control interface. 
+- The name of a JavaScript function in the control implementation library that will return an object that applies the required control interface.
 
-When someone configures a control in the application, the data in the manifest will filter out available controls so that only valid controls for the context are available for configuration.The properties defined in the manifest for a control are rendered as configuration fields so that the person configuring the control can specify values. These property values are then available to your control function at run time.More information: Manifest file reference
+When someone configures a control in the application, the data in the manifest will filter out available controls so that only valid controls for the context are available for configuration.The properties defined in the manifest for a control are rendered as configuration fields so that the person configuring the control can specify values. These property values are then available to your control function at run time.More information: [Manifest file reference](manifest-schema-reference/index.md)
 
 ### Control implementation library
 
-Each custom control must have one JavaScript library that includes the definition of a function which will return an object that implements the methods described in the custom control interface. 
-The object can implement the following methods:
-
-- [init](reference/control/init.md) (Required)
-- [updateView](reference/control/updateview.md) (Required)
-- [getOutputs](reference/control/getoutputs.md) (Optional)
-- [destroy](reference/control/destroy.md) (Required)
-
-These methods control the lifecycle of the custom control. 
+[!INCLUDE [control-implementation-library](control-implementation-library.md)]
 
 #### Page load
 
@@ -113,9 +104,9 @@ If the data is changed by the platform it will call the [updateView](reference/c
 When the user navigates away from the page the control will lose scope and usually all the memory allocated in that page for the objects in your control will be cleared. However, some items based on the browser implementation mechanism might stay and consume memory. Typically, these are event handlers. If user wants to store the information, they should implement the `setControlState` method so that the information will be given next time within the same session.
 You should define a [destroy](reference/control/destroy.md) method in your object. This will be called when the page closes and you should use it to remove any clean up code such as removing any event handlers. 
 
-### Resources 
+### Resources
 
-Each custom control should have a resource file to construct its visualization. More information: [Resources](manifest-schema-reference/resources.md)
+Each custom control should have a resource file to construct its visualization. You can define a resource file in the Manifest. The resource node in the Manifest file refers to the webresources that controls require to implement its visualization. information: [Resources](manifest-schema-reference/resources.md)
 
 ### Related topics
 

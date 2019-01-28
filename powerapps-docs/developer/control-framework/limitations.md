@@ -12,7 +12,7 @@ manager: "jdaly"
 
 # Limitations of PowerApps Control Framework
 
-With the release of the PowerApps Control Framework you can now create your own custom controls to improve the user experience in Model-driven Apps. Even though you can create your own controls there are some limitations that restrict developers implementing some features in the custom controls.
+With the release of the PowerApps Control Framework, you can now create your own custom controls to improve the user experience in Model-driven Apps. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
 
 ### Multiple controls in single manifest file
 
@@ -40,5 +40,3 @@ Currently font resource (.tff) is not supported in PCF.
 ### Custom controls on header section on a form
 
 When you add a custom control in the header section of a form, the form editor stops working and sometimes prevent you from removing control.
-
-

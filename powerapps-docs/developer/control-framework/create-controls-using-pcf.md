@@ -17,17 +17,15 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 This topic showcases how to implement custom controls using **PowerApps Control Framework**. Custom controls provide enhanced user experience to view and work with data in forms, views.
 
-Custom controls are metadata driven, configurable, reusable, solution aware and responsive. As a developer, you will need to implement the interface and the application will take care of the rest.
-
 Each custom control is comprised of the following key components:
 
-- Manifest
-- Control implementation library
-- Resources
+1. Manifest
+2. Control implementation library
+3. Resources
 
 ## Manifest
 
-Thr first step in implementing a custom control is to define a manifest file which defines various aspects of the control including namespace, version and dependent resource files.
+The first step in implementing a custom control is to define a manifest file which defines various aspects of the control including namespace, version and dependent resource files.
 
 ### Sample Manifest
 
@@ -44,7 +42,7 @@ Thr first step in implementing a custom control is to define a manifest file whi
 </manifest>
 ```
 
-The different nodes in the manifest file defines various aspects of the control in a format that Model-driven Apps can understand.More information: [Manifest](manifest-schema-reference/manifest.md).
+The different nodes in the manifest file defines various aspects of the control in a format that Model-driven apps can understand. More information: [Manifest](manifest-schema-reference/manifest.md).
 
 ## Control implementation library
 
@@ -54,16 +52,16 @@ The different nodes in the manifest file defines various aspects of the control 
 
 ```JavaScript
 /*
-	This file is part of the Microsoft PowerApps code samples. 
-	Copyright (C) Microsoft Corporation.  All rights reserved. 
-	This source code is intended only as a supplement to Microsoft Development Tools and/or  
-	on-line documentation.  See these other materials for detailed information regarding  
-	Microsoft code samples. 
+This file is part of the Microsoft PowerApps code samples.
+Copyright (C) Microsoft Corporation.  All rights reserved.
+This source code is intended only as a supplement to Microsoft Development Tools and/or
+on-line documentation.  See these other materials for detailed information regarding
+Microsoft code samples.
 
-	THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER  
-	EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF  
-	MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE. 
- */
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+*/
 
 "use strict";
 
@@ -74,39 +72,39 @@ MyNameSpace.JSHelloWorldControl = function(){
 
 
 /**
- * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
- * Data-set values are not initialized here, use updateView.
- * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
- * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
- * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
- * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
- */
+* Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
+* Data-set values are not initialized here, use updateView.
+* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
+* @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
+* @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
+* @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+*/
 MyNameSpace.JSHelloWorldControl.prototype.init = function (context, notifyOutputChanged, state, container) {
-	this._labelElement = document.createElement("label");
-	this._labelElement.setAttribute("class", "JS_HelloWorldColor");
-	container.appendChild(this._labelElement);
+this._labelElement = document.createElement("label");
+this._labelElement.setAttribute("class", "JS_HelloWorldColor");
+container.appendChild(this._labelElement);
 };
 
 /**
- * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
- * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
- */
+* Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
+*/
 MyNameSpace.JSHelloWorldControl.prototype.updateView = function (context) {
-	this._labelElement.innerText = "Hello World! (JS)";
+this._labelElement.innerText = "Hello World! (JS)";
 };
 
-/** 
- * It is called by the framework prior to a control receiving new data. 
- * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
- */
+/**
+* It is called by the framework prior to a control receiving new data.
+* @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
+*/
 MyNameSpace.JSHelloWorldControl.prototype.getOutputs = function () {
-	return {};
+return {};
 };
 
-/** 
- * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
- * i.e. cancelling any pending remote calls, removing listeners, etc.
- */
+/**
+* Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
+* i.e. cancelling any pending remote calls, removing listeners, etc.
+*/
 MyNameSpace.JSHelloWorldControl.prototype.destroy = function () {
 };
 ```
@@ -115,68 +113,68 @@ MyNameSpace.JSHelloWorldControl.prototype.destroy = function () {
 
 ```TypeScript
 /*
-	This file is part of the Microsoft PowerApps code samples. 
-	Copyright (C) Microsoft Corporation.  All rights reserved. 
-	This source code is intended only as a supplement to Microsoft Development Tools and/or  
-	on-line documentation.  See these other materials for detailed information regarding  
-	Microsoft code samples. 
+This file is part of the Microsoft PowerApps code samples.
+Copyright (C) Microsoft Corporation.  All rights reserved.
+This source code is intended only as a supplement to Microsoft Development Tools and/or
+on-line documentation.  See these other materials for detailed information regarding
+Microsoft code samples.
 
-	THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER  
-	EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF  
-	MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE. 
- */
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+*/
 
 /// <reference path="../../typing/ControlFramework.d.ts"/>
 /// <reference path="./private_typing/inputsOutputs.d.ts"/>
 
 module MyNameSpace
 {
-    export class TSHelloWorldControl implements ControlFramework.StandardControl<InputsOutputs.IInputs, InputsOutputs.IOutputs> {
+export class TSHelloWorldControl implements ControlFramework.StandardControl<InputsOutputs.IInputs, InputsOutputs.IOutputs> {
 
-        private _labelElement: HTMLLabelElement;
+private _labelElement: HTMLLabelElement;
 
-		/**
-		 * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
-		 * Data-set values are not initialized here, use updateView.
-		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-		 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
-		 */
-        public init(context: ControlFramework.Context<InputsOutputs.IInputs>, notifyOutputChanged: () => void, state: ControlFramework.Dictionary, container:HTMLDivElement)
-        {
-            this._labelElement = document.createElement("label");
-			this._labelElement.setAttribute("class", "TS_HelloWorldColor");
-            container.appendChild(this._labelElement);
-        }
+/**
+* Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
+* Data-set values are not initialized here, use updateView.
+* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
+* @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
+* @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
+* @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
+*/
+public init(context: ControlFramework.Context<InputsOutputs.IInputs>, notifyOutputChanged: () => void, state: ControlFramework.Dictionary, container:HTMLDivElement)
+{
+this._labelElement = document.createElement("label");
+this._labelElement.setAttribute("class", "TS_HelloWorldColor");
+container.appendChild(this._labelElement);
+}
 
-		/**
-		 * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
-		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
-		 */
-        public updateView(context: ControlFramework.Context<InputsOutputs.IInputs>,)
-        {
-            this._labelElement.innerText = "Hello World! (TS)";
-        }
+/**
+* Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
+* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
+*/
+public updateView(context: ControlFramework.Context<InputsOutputs.IInputs>,)
+{
+this._labelElement.innerText = "Hello World! (TS)";
+}
 
-		/** 
-		 * It is called by the framework prior to a control receiving new data. 
-		 * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
-		 */
-        public getOutputs(): InputsOutputs.IOutputs
-        {
-            return {};
-        }
+/**
+* It is called by the framework prior to a control receiving new data.
+* @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
+*/
+public getOutputs(): InputsOutputs.IOutputs
+{
+return {};
+}
 
-		/** 
- 		 * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-		 * i.e. cancelling any pending remote calls, removing listeners, etc.
-		 */
-        public destroy()
-        {
-          
-        }
+/**
+* Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
+* i.e. cancelling any pending remote calls, removing listeners, etc.
+*/
+public destroy()
+{
+
     }
+  }
 }
 ```
 
@@ -185,9 +183,11 @@ module MyNameSpace
 
 ## Resources
 
-[!INCLUDE [resources-description](manifest-schema-reference/includes/resources-description.md)].
-
+[!INCLUDE [resources-description](manifest-schema-reference/includes/resources-description.md)]
 More information: [Resources](manifest-schema-reference/resources.md)
+
+> [!div class="nextstepaction"]
+> [How to import controls](import-controls.md)
 
 ### Related Topics
 
