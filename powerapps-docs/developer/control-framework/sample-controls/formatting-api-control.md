@@ -18,7 +18,7 @@ The Formatting API control explores the various methods available as part of the
 In this sample you create a series of input elements which call into the respective methods of the PowerApps Control Framework's formatting API that matches with the value displayed. 
 
 > [!div class="mx-imgBorder"]
-> ![Formatting API Control](../media/formatting_api.png "Formatting API Control")
+> ![Formatting API Control](../media/formatting-api.png "Formatting API Control")
 
 ## Manifest
 

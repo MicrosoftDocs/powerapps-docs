@@ -19,7 +19,8 @@ The PowerApps Control Framework (PCF) allows you to persist state of a control a
 
 For example, if your custom control is a long list that the user can scroll through, you could leverage the ***SetControlState*** functionality to remember the point in the list the user was looking at when they navigated away from the form. You could then add logic on control initialization to check the stored state and render the control's list at the point where the user was previously reading.  
 
-![Control state API](../media/control_state_api.png "Control state API")
+> [!div class="mx-imgBorder"]
+> ![Control state API](../media/control-state-api.png "Control state API")
 
 ## Manifest
 

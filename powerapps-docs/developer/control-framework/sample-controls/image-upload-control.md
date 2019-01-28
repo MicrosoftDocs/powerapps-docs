@@ -17,7 +17,7 @@ This sample control renders as an `Upload` button to upload image and a default 
 The selected image will be rendered within the control. Meanwhile, the `Remove` button will show in case we need to reset. When you click on the `Remove` button, the default image is displayed.  
 
 > [!div class="mx-imgBorder"]
-> ![Image Upload Control](../media/image_upload_control.png "Image Upload Control")
+> ![Image Upload Control](../media/image-upload-control.png "Image Upload Control")
 
 ## Manifest
 

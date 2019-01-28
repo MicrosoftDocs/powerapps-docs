@@ -17,7 +17,7 @@ The Navigation API control explores the various methods available as part of the
 In this sample we create a series of input elements of type buttons which call into the respective methods of the PCF’s navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
-> ![Navigation API Control](../media/navigation_api_control.png "Navigation API Control")
+> ![Navigation API Control](../media/navigation-api-control.png "Navigation API Control")
 
 ## Manifest
 ```xml

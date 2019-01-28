@@ -7,14 +7,42 @@
     items:
     - name: How to create custom controls
       href: create-controls-using-pcf.md
-    - name: Control implementation library
-      href: control-implementation-library.md
-    - name: How to Debug custom controls
+    - name: How to import custom controls
+      href: import-controls.md
+    - name: How to add custom controls to entity or a field
+      href: add-controls-to-a-field-or-entity.md
+    - name: How to debug custom controls
       href: debugging-custom-controls.md
-    - name: How to Import custom controls
-      href: 
-    - name: How to Configure custom controls
-      href: 
+  - name: Sample Controls
+    items: 
+    - name: Increment control
+      href: icrement-control.md
+    - name: Linear input control
+      href: linear-input-control.md
+    - name: Localization API control
+      href: localization-api-control.md
+    - name: Angular Flip control
+      href: angular-flip-control.md
+    - name: Control State API control
+      href: control-state-api-control.md
+    - name: Data Set Grid control
+      href: data-set-grid-control.md
+    - name: Formatting API control
+      href: formatting-api-control.md
+    - name: IFRAME control
+      href: iframe-control.md
+    - name: Image upload control
+      href: image-upload-control.md
+    - name: Map control
+      href: map-control.md
+    - name: Navigation API control
+      href: navigation-api-control.md
+    - name: Table control
+      href: table-control.md
+    - name: Table grid control
+      href: table-grid-control.md
+    - name: Web API control
+      href: web-api-control.md
   - name: Limitations of PowerApps Control Framework
     href: limitations.md
   - name: Reference

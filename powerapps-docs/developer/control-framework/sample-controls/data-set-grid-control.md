@@ -13,10 +13,10 @@ ms.topic: "article"
 ms.assetid: 356561d0-a36b-4b93-8b76-3e1abf9414e9
 ---
 
-The data set grid control changes the user experience of interacting with datasets. For example, by default we only see the home page grid on an entity homepage as a table. We can build our own custom control that can display that data as per our choice. This sample show the records as tiles instead of the regular tabular grid. 
+This sample shows how to change the user experience of interacting with dataset. For example, by default you only see the home page grid on an entity homepage as a table. You can build your own custom control that can display the data as per your choice. This sample show the records as tiles instead of the regular tabular grid.
 
 > [!div class="mx-imgBorder"]
-> ![Data Set Grid Control](../media/data_set_grid.png "Data Set Grid Control")
+> ![Data Set Grid Control](../media/data-set-grid.png "Data Set Grid Control")
 
 ## Manifest 
 
@@ -285,8 +285,9 @@ this.toggleLoadMoreButtonWhenNeeded(this.contextObj.parameters.dataSetGrid);
 }
 }
 ```
+## OVerview
 
-In this sample we have the input parameter defined in the control Manifest with the data-set tag.  This is the input property that gets bound to the control.  
+In this sample we have the input parameter defined in the control Manifest with the data-set tag. This is the input property that gets bound to the control.  
  
 This control has two important containers that are added onto a main div that is added onto the div that is passed onto the control.  The first container holds the tiles that shows the record data from the view and the second container is for the Load More button that shows when there are records that needs more area that can fit in one page. 
  

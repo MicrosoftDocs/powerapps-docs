@@ -186,6 +186,7 @@ public destroy()
 [!INCLUDE [resources-description](manifest-schema-reference/includes/resources-description.md)]
 More information: [Resources](manifest-schema-reference/resources.md)
 
+
 > [!div class="nextstepaction"]
 > [How to import controls](import-controls.md)
 

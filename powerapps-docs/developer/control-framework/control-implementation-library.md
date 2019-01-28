@@ -25,6 +25,4 @@ The object can implement the following methods:
 - [getOutputs](reference/control/getoutputs.md) (Optional)
 - [destroy](reference/control/destroy.md) (Required)
 
-These methods control the life cycle of the custom control. 
-
-
+These methods control the life cycle of the custom control.

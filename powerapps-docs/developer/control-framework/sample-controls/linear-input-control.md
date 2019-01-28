@@ -12,10 +12,12 @@ manager: ""
 ---
 # Implementing linear input control
 
-The linear input control changes the user experience of interacting with numeric types on the form. Instead of keying in the numbers, this control provides a linear slider using which the value of the attribute can be set on the form.  
+This sample control changes the user experience of interacting with numeric types on the form. Instead of keying in the numbers, the linear input control provides a linear slider using which the value of the attribute can be set on the form.  
+
+To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file and them implement the custom logic in **JavaScript** or **TypeScript**
 
 > [!div class="mx-imgBorder"]
-> ![Linear Input Control](../media/linear_input_control.png "Linear Input Control")
+> ![Linear Input Control](../media/linear-input-control.png "Linear Input Control")
 
 ## Manifest
 
@@ -169,10 +171,12 @@ public destroy()
 
 ## Overview
 
-In this sample we defined a type -group tag and called it as `numbers` and included decimal, whole, floating and currency value types into that group. We use this group to bind our control property. 
-An input element of type range with min and max value set to 1 and 1000, respectively is created. 
-Create a label element which shows the value that is relative to the position of the slider. Attach a function refreshData to the eventlistener on input of the control. 
+In this sample, a [type -group](../manifest-schema-reference/type-group.md) is defined and named it as `numbers` which includes decimal, whole, floating and currency value types into that group in the manifest. This group  is used to bind the control property.
+
+An input element of type `range` with `min` and `max` value set to 1 and 1000, respectively is created. A label element is created which shows the value that is relative to the position of the slider. Attach a function `refreshData` to the eventlistener on input of the control. 
+
 Create a local variable for saving the [context](../reference/context.md) and `notifyOutputChanged`. Assign the context and notifyOutputChanged from the parameters that are passed as part of the init function. 
+
 Implement the logic for the `refreshData` function. As you can see in the sample, we take the value from the `inputElement` and set the value of the control, `innerHTML` property of the `labelElement` and then call the `notifyOutputChanged` so that the changes are cascaded up above the framework layer. 
 
 ```TypeScript
@@ -183,7 +187,8 @@ public refreshData(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>,)
     this._notifyOutputChanged(); 
 } 
 ```
-In the updateView method, we get the value of the attribute from the context.parameters and then set it to the value variable which stores the control value and also the input elements in the control. 
+
+In the `updateView` method, we get the value of the attribute from the context.parameters and then set it to the value variable which stores the control value and also the input elements in the control. 
 
 ```TypeScript
 
@@ -196,7 +201,7 @@ public updateView(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>,):
     } 
  ```
 
- ### Related topics
+### Related topics
 
 [PowerApps Control Framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
 [PowerApps Control Framework API Reference](../index.md)<br />

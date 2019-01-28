@@ -12,9 +12,12 @@ manager: ""
 ---
 # Implementing Flip Control
 
-This sample showcases how to use third-party libraries to create controls in PowerApps Control Framework.  
+This sample shows how to use third-party libraries to create controls in PowerApps Control Framework.  
 
-The control is based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap for sampling purpose only. The code may not reveal the best practices for the mentioned third-party libraries. 
+The control is based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap for sampling purpose only. The code may not reveal the best practices for the mentioned third-party libraries.
+
+> [!div class="mx-imgBorder"]
+> ![Anuglar Flip](../media/angular-flip.png "Angular Flip")
 
 ## Manifest
 

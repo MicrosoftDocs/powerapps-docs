@@ -17,7 +17,7 @@ This sample showcases how to create a simple dataset control, view’s column me
 The control header columns and internal record values are bound to the existing views.
 
 > [!div class="mx-imgBorder"]
-> ![Table Grid Control](../media/table_grid_control.png "Table Grid Control")
+> ![Table Grid Control](../media/table-grid-control.png "Table Grid Control")
 
 ## Manifest 
 

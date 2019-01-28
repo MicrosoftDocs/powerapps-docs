@@ -29,3 +29,8 @@ For example, on **Microsoft Edge**,
 ## Fiddler AutoResponder
 
 Use the Fiddler AutoResponder to quickly debug your custom controls. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
+
+### Related Topics
+
+[PowerApps Control Framework API Reference](index.md)<br />
+[PowerApps Control Framework Overview](powerapps-control-framework-overview.md)

@@ -12,12 +12,14 @@ manager: ""
 ---
 # Implementing increment control
 
-The increment control shows how to bind data with PowerApps Control Framework, and error handling. 
+This sample control shows how to bind data with PowerApps Control Framework, and error handling.
 
-This control renders as a textbox with a `Increment` button in run time. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox will be increased by 1. The increment value can be changed to any number you wish.
+This control renders as a textbox with a `Increment` button in runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox will be increased by 1. The increment value can be changed to any number you wish.
+
+To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file and them implement the custom logic in **JavaScript** or **TypeScript**
 
 > [!div class="mx-imgBorder"]
-> ![Increment Control](../media/increment_control.png "Increment Control")
+> ![Increment Control](../media/increment-control.png "Increment Control")
 
 ## Manifest
 
@@ -189,8 +191,13 @@ public init(context: ControlFramework.Context<InputsOutputs.IInputs>, notifyOutp
 ## Overview
 
 When you click on the button, the value in the text box will be increased by 1. The updated value will flow to PowerApps Control Framework through `notifyOutputChanged`. 
+
 > [!NOTE]
 > You can change the increment value when you  are configuring the control to the field on the form.
 
-Edit the value in the text box, if it is a valid integer, then it will update the value to PowerApps Control Framework. 
-One could continue click `Increment` button and update it .If it’s an invalid integer, error message will pop out. 
+Edit the value in the text box, if it is a valid integer, then it will update the value to PowerApps Control Framework. You can continuously click the `Increment` button and update it .If it’s an invalid integer, error message will pop out. 
+
+### Related topics
+
+[PowerApps Control Framework API Reference](reference/index.md)<br/>
+[PowerApps Control Framework Manifest Schema Reference](manifest-schema-reference/index.md)
