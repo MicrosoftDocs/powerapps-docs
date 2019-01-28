@@ -52,9 +52,9 @@ You need to use Visual Studio to write a plug-in. Use these steps to write a bas
 
 ### Create a Visual Studio Project for the Plug-in
 
-1. Open Visual Studio 2017 and open a new **Class Library (.NET Framework)** project using **.NET Framework 4.5.2**
+1. Open Visual Studio 2017 and open a new **Class Library (.NET Framework)** project using **.NET Framework 4.6.2**
 
-    ![open a new Class Library (.NET Framework) project using .NET Framework 4.5.2](media/tutorial-write-plug-in-create-visual-studio-project.png)
+    ![open a new Class Library (.NET Framework) project using .NET Framework 4.6.2](media/tutorial-write-plug-in-create-visual-studio-project.png)
 
     The name used for the project will be the name of the assembly. This tutorial uses the name `BasicPlugin`.
 1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages…** from the context menu.

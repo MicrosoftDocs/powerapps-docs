@@ -1,14 +1,14 @@
 ---
 title: Restore your canvas app to a previous version | Microsoft Docs
 description: Restore a canvas app in PowerApps
-author: jamesol-msft
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
-ms.author: jamesol
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 

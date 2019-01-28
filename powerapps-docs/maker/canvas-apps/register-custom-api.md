@@ -1,14 +1,14 @@
 ---
 title: Links to content about custom connectors for canvas apps | Microsoft Docs
 description: Links to content for creating, using, sharing, and certifying custom connectors for canvas apps in PowerApps.
-author: mgblythe
+author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 05/05/2017
-ms.author: mblythe
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
