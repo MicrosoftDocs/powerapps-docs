@@ -1,14 +1,14 @@
 ---
 title: Create or edit apps in a browser | Microsoft Docs
 description: Create or edit apps in a browser by using PowerApps Studio for web.
-author: AFTOwen
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 03/08/2018
-ms.author: anneta
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
@@ -33,18 +33,13 @@ PowerApps Studio for web opens in a new tab in your browser, where you can creat
 1. **Create a connection.**
 
     To [create a connection](add-manage-connections.md) to a data source that requires service authentication, use [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then [add the connection](add-data-connection.md) to an app in PowerApps Studio for web.
-2. **Edit and save an app locally**.
 
-    For best results, use PowerApps Studio for Windows to edit and save apps locally. In a browser, you can't save changes to a local app, or you must save a new file instead of replacing the file that you opened.
-3. **Use signal functions.**
+2. **Use signal functions.**
 
     **[Acceleration and Compass](functions/signals.md)** functions return accurate values in a published app, but those functions return zero values as you create or modify an app in a browser.
-4. **Export and import data.**
+3. **Export and import data.**
 
     You can [export and import data](controls/control-export-import.md) in a published app but not as you create or modify an app in a browser.
-5. **Copy a control across two sessions.**
-
-    You can't copy controls from one session of PowerApps Studio for web to another session of PowerApps Studio for web.
 
 ## Next steps
 * Automatically generate an app from your data in, for example, [Excel](get-started-create-from-data.md) or [SharePoint](app-from-sharepoint.md).

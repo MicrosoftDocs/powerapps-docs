@@ -2,7 +2,7 @@
 title: "Supported Customizations for Common Data Service for Apps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can customize Common Data Service for Apps by using tools that are available in the PowerApps portal or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 01/25/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -86,17 +86,16 @@ The ability to create custom workflow activities (assemblies) to be called from 
 
 ## Support for .NET Framework Versions
 
-The following describes the support considerations for custom code written the Microsoft .NET Framework 4.5.2.
+The following describes the support considerations for custom code written the Microsoft .NET Framework 4.6.2.
 
-- Any web service client created by using the Microsoft .NET Framework 4.5.2 or higher that calls the web services is fully supported in CDS for Apps.
+- Any web service client created by using the Microsoft .NET Framework 4.6.2 or higher that calls the web services is fully supported in CDS for Apps.
 
 > [!IMPORTANT]
 > You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later. Only applications using Transport Level Security (TLS) 1.2 or better security will be allowed to connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
 > 
 > If clients designed for earlier versions of  Dynamics 365 Customer Engagement are designed to connect to any version or deployment type you can prepare by re-compiling the application to use .NET Framework 4.6.2. More information: [Blog Post: Updates coming to Dynamics 365 Customer Engagement connection security](https://blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/)
 
-- Any .NET assembly that is created with the Microsoft .NET Framework 4.5.2 for use in CDS for Apps as a plug-in assembly or as a custom workflow activity is supported.
-- Any visualization (chart) that is created with .NET Framework 4.5.2 .
+- Any .NET assembly that is created with the Microsoft .NET Framework 4.6.2 for use in CDS for Apps as a plug-in assembly or as a custom workflow activity is supported.
 
 ## Unsupported customizations
 

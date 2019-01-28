@@ -1,14 +1,14 @@
 ---
 title: Set up lists for SharePoint Online integration with PowerApps, Microsoft Flow, and Power BI | Microsoft Docs
 description: In this task, we'll set up SharePoint lists to use as a data source for apps, flows, reports, and dashboards.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 12/19/2017
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType: 
   - maker
 search.app: 

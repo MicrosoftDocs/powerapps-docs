@@ -1,14 +1,14 @@
 ---
 title: Create a canvas app to manage projects | Microsoft Docs
 description: In this task, we'll build a canvas app from scratch. This app allows a user to assign a manager to projects and to update project details.
-author: mgblythe
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
@@ -490,7 +490,7 @@ Now that we have the app in our SharePoint site, we'll assume the role of the pr
 ## Formula deep-dive
 This is the second optional section on PowerApps formulas. In the first deep-dive, we looked at one of the formulas that PowerApps generates for the browse gallery in a three-screen app. In this deep-dive, we'll look at a formula that we use for the **AssignManager** screen of our second app. Here's the formula:
 
-**Patch ( 'Project Details', LookUp ( 'Project Details', ID = Gallery1.Selected.ID ), {PMAssigned: TextInput1.Text} )**
+**Patch( 'Project Details', LookUp( 'Project Details', ID = Gallery1.Selected.ID ), {PMAssigned: TextInput1.Text} )**
 
 What does this formula do? When you select an item in the gallery and click the **OK** button, the formula updates the **Project Details** list, setting the **PMAssigned** column to the value that you specify in the text input. The formula uses functions to do its work:
 

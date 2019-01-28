@@ -1,14 +1,14 @@
 ---
 title: Show, sort, and filter data in a gallery | Microsoft Docs
 description: Use a gallery to display images and text. Sort and filter the images in PowerApps.
-author: lonu
+author: adrianorth
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/02/2015
-ms.author: lonu
+ms.author: aorth
 search.audienceType: 
   - maker
 search.app: 
@@ -37,7 +37,7 @@ In PowerApps, you can use a gallery to show several related items, just as you s
       
       ![][1]  
    2. Set the **[OnSelect](controls/properties-core.md)** property of the import control to the following formula:  
-      **Collect(Inventory, Import1!Data)**
+      **Collect(Inventory, Import1.Data)**
       
       ![][12]  
    3. Select the **Import Data** button to open Windows Explorer. Select *CreateFirstApp.zip*, and select **Open**.
@@ -73,14 +73,14 @@ In PowerApps, you can use a gallery to show several related items, just as you s
    > 
    > 
 8. Set the **[Text](controls/properties-core.md)** property of the label to the following expression:  
-    **ThisItem!UnitsInStock** <br/>
+    **ThisItem.UnitsInStock** <br/>
    
     When you do this, the label shows the units in stock for each product:
 
 ![][8]  
 
 > [!NOTE]
-> By default, the **[Text](controls/properties-core.md)** property of the top label is set to ```ThisItem!ProductName```. You can change it to any other item in your collection. For example, if your collection has *ProductDescription* or *Price* fields, you can set the label to ```ThisItem!ProductDescription``` or ```ThisItem!Price```.
+> By default, the **[Text](controls/properties-core.md)** property of the top label is set to ```ThisItem.ProductName```. You can change it to any other item in your collection. For example, if your collection has *ProductDescription* or *Price* fields, you can set the label to ```ThisItem.ProductDescription``` or ```ThisItem.Price```.
 > 
 > 
 
@@ -96,7 +96,7 @@ Using these steps, you imported data that includes .jpg images into a collection
    ![][10]  
 6. On the **Shape** tab, select **Visible**, and then enter the following formula in the Formula Bar:  
    
-    **If(ThisItem!IsSelected, true)**
+    **If(ThisItem.IsSelected, true)**
    
     A blue rectangle surrounds the current selection in a gallery. Select a few gallery items to confirm that the rectangle appears around each item that you select. Remember, you can also open **Preview** ![][2] to see and test what you're creating.
 
@@ -132,7 +132,7 @@ In these steps, we are going to sort the gallery items in ascending and descendi
    2. On the **Content** tab, select **Max**, and then enter the following expression:  
       ```Max(Inventory, UnitsInStock)```
 3. Select any item in the gallery *except* the first one. Set the **[Items](controls/properties-core.md)** property of the gallery to the following expression:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter!Value)```
+   ```Filter(Inventory, UnitsInStock<=StockFilter.Value)```
 4. In **Preview**, adjust the slider to a value that's between the highest and the lowest quantity in the gallery. As you adjust the slider, the gallery shows only those products that are less than the value you choose:  
    ![][13]  
 
@@ -141,7 +141,7 @@ Now, let's add to our filter:
 1. Go back to the designer.
 2. On the **Insert** tab, select **Text**, select **Input Text**, and rename the new control to **NameFilter**. Move the text control below the slider.
 3. Set the **[Items](controls/properties-core.md)** property of the gallery to the following expression:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter!Value && NameFilter!Text in ProductName)```
+   ```Filter(Inventory, UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
 4. In **Preview**, set the slider to *30*, and type the letter *g* in the text-input control. The gallery shows the only product with less than 30 units in stock *and* has a name with the letter "g":  
    ![][14]  
 

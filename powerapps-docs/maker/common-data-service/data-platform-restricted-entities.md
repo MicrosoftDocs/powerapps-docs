@@ -1,13 +1,13 @@
 ---
 title: Restricted entities requiring Dynamics 365 licenses | Microsoft Docs
 description: A list of restricted entities in Common Data Service (CDS) for Apps that require Dynamics 365 licenses.
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
 ms.date: 05/01/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 

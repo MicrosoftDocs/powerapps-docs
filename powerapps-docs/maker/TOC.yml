@@ -464,6 +464,10 @@
             href: ./canvas-apps/functions/function-filter-lookup.md
           - name: Lower
             href: ./canvas-apps/functions/function-lower-upper-proper.md
+          - name: Match
+            href: ./canvas-apps/functions/function-ismatch.md
+          - name: MatchAll
+            href: ./canvas-apps/functions/function-ismatch.md
           - name: Max
             href: ./canvas-apps/functions/function-aggregates.md
           - name: Mid
@@ -694,6 +698,8 @@
       href: ./canvas-apps/offline-apps.md
     - name: Let customers test drive your apps
       href: ./canvas-apps/dev-appsource-test-drive.md
+    - name: Create a component
+      href: ./canvas-apps/create-component.md
 - name: Model-driven apps
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
@@ -793,6 +799,10 @@
           href: ./model-driven-apps/pass-current-embedded-canvas-app.md
         - name: "Pass related records to an embedded canvas app"
           href:  ./model-driven-apps/pass-related-embedded-canvas-app.md 
+        - name: "Share an embedded canvas app"
+          href:  ./model-driven-apps/share-embedded-canvas-app.md 
+        - name: "Embedded canvas app guidelines"
+          href:  ./model-driven-apps/embedded-canvas-app-guidelines.md 
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items: 

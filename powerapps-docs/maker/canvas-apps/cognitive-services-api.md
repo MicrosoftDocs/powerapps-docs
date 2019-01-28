@@ -1,14 +1,14 @@
 ---
 title: Use Cognitive Services in PowerApps | Microsoft Docs
 description: Build a basic canvas app that uses the Microsoft Cognitive Services Text Analytics API to analyze text.
-author: AFTOwen
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 12/08/2017
-ms.author: anneta
+ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
@@ -41,11 +41,7 @@ The API is available as a free preview, and it is associated with an Azure subsc
 
 1. If you don't already have an Azure subscription, [sign up for a free subscription](https://azure.microsoft.com/free/).
 
-2. Sign in to your Azure account.
-
-3. Go to the [Create Cognitive Services blade](https://go.microsoft.com/fwlink/?LinkId=761108) in the Azure portal.
-
-4. Enter information for the Text Analytics API, like in the following image. Select the **F0** (free) pricing tier.
+2. In [this page](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics), enter information for the Text Analytics API, as this image shows. Select the **F0** (free) pricing tier.
    
     ![Create Text Analytics API](./media/cognitive-services-api/azure-create.png)
 
@@ -125,23 +121,38 @@ OK, you have a nice-looking app, but it doesn't do anything yet. You'll fix that
 
 With that background, let's add the formula for the **OnSelect** property of the button. This is where all the magic happens.
 
-```
-If(chkLanguage.Value=true,
-
-        ClearCollect(languageCollect, TextAnalytics.DetectLanguage({numberOfLanguagesToDetect:1, text:tiTextToAnalyze.Text}).detectedLanguages.name)
-
+```powerapps-dot
+If( chkLanguage.Value = true,
+    ClearCollect( languageCollect, 
+        TextAnalytics.DetectLanguage(
+            {
+                numberOfLanguagesToDetect: 1, 
+                text: tiTextToAnalyze.Text
+            }
+        ).detectedLanguages.name
+    )
 );
 
-If(chkPhrases.Value=true,
-
-        ClearCollect(phrasesCollect, TextAnalytics.KeyPhrases({language:"en", text:tiTextToAnalyze.Text}).keyPhrases)
-
+If( chkPhrases.Value = true,
+    ClearCollect( phrasesCollect, 
+        TextAnalytics.KeyPhrases(
+            {
+                language: "en", 
+                text: tiTextToAnalyze.Text
+            }
+        ).keyPhrases
+    )
 );
 
-If(chkSentiment.Value=true,
-
-        ClearCollect(sentimentCollect, TextAnalytics.DetectSentiment({language:"en", text:tiTextToAnalyze.Text}).score)
-
+If( chkSentiment.Value = true,
+    ClearCollect( sentimentCollect, 
+        TextAnalytics.DetectSentiment(
+            {
+                language: "en", 
+                text: tiTextToAnalyze.Text
+            }
+        ).score
+    )
 )
 ```
 
@@ -155,7 +166,7 @@ There's a bit going on here, so let's break it down:
 
   * In **DetectLanguage()**, **numberOfLanguagesToDetect** is hard-coded as 1, but you could pass this parameter based on some logic in the app.
 
-  * In **KeyPhrases()** and **DetectSentiment()**,**language** is hard-coded as "en", but you could pass this parameter based on some logic in the app. For example, you could detect the language first, then set this parameter based on what **DetectLanguage()** returns.
+  * In **KeyPhrases()** and **DetectSentiment()**, **language** is hard-coded as "en", but you could pass this parameter based on some logic in the app. For example, you could detect the language first, then set this parameter based on what **DetectLanguage()** returns.
 
 * For each call that is made, add the results to the appropriate collection:
 

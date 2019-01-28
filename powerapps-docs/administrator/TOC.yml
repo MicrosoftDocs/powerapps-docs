@@ -27,6 +27,8 @@
       href: environment-and-tenant-migration.md
     - name: PowerShell support for PowerApps (preview)
       href: powerapps-powershell.md
+    - name: Activity logging for PowerApps
+      href: https://docs.microsoft.com/power-platform/admin/logging-powerapps
   - name: Data integration
     items:
     - name: Integrate data into CDS for Apps
@@ -61,6 +63,8 @@
       href: create-database.md
     - name: Preview environments
       href: preview-environments.md
+    - name: Trial environments
+      href: trial-environments.md
   - name: Configure environment security
     href: database-security.md
     items:

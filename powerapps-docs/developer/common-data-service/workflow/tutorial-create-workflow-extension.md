@@ -83,7 +83,7 @@ This project will create a simple workflow assembly that will increment an decim
 
     ![create workflow activity project](media/tutorial-create-workflow-activity-create-workflow-activity-project.png)
 
-1. Navigate to the **Project** menu and select **Properties**. On the **Application** tab, specify **.NET Framework 4.5.2** as the target framework.
+1. Navigate to the **Project** menu and select **Properties**. On the **Application** tab, specify **.NET Framework 4.6.2** as the target framework.
 
     ![set project properties](media/tutorial-create-workflow-activity-workflow-project.png)
 

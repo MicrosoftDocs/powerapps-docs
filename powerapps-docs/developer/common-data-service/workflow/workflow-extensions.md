@@ -75,7 +75,7 @@ More information:
 
 Because processes use Windows Workflow foundation, you can register an assembly built using the [.NET Framework Activity library](/dotnet/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library) that defines custom activities that will appear within the web application editor and will be invoked when the process runs.
 
-Custom workflow activities require creating a .NET Framework assembly that includes one or more classes that are derived from the abstract [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.5.2). This class provides the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.5.2) called by the CDS for Apps platform when the activity is executed. Each class in your assembly will define a specific activity.
+Custom workflow activities require creating a .NET Framework assembly that includes one or more classes that are derived from the abstract [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2). This class provides the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2) called by the CDS for Apps platform when the activity is executed. Each class in your assembly will define a specific activity.
 
 Workflow activities can also define input and output parameters which are visible in the process designer and enable someone to pass data into the workflow activity and receive the processed output. When you write the class you will add properties for these parameters and annotate them with [.NET attributes](/dotnet/standard/attributes/index) to provide the metadata that CDS for Apps will use to expose your custom workflow activity with any parameters in the designer.
 
@@ -102,7 +102,7 @@ More information: [Install Visual Studio 2017](/visualstudio/install/install-vis
 
 These are general steps used to create a custom workflow activity using Visual Studio. For a complete step-by-step example see [Tutorial: Create workflow extension ](tutorial-create-workflow-extension.md).
 
-1. Create a Workflow Activity Library project using .NET Framework 4.5.2 as the target framework
+1. Create a Workflow Activity Library project using .NET Framework 4.6.2 as the target framework
 1. Delete the Activity1.xaml file generated with the project
 1. Install the [Microsoft.CrmSdk.Workflow](https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/) NuGet package.
 
@@ -128,7 +128,7 @@ These are general steps used to create a custom workflow activity using Visual S
 
     More information: [Add parameters](#add-parameters)
 
-1. Make your class derive from the [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.5.2) and implement the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.5.2) that contains the operations your activity will perform.
+1. Make your class derive from the [CodeActivity Class](/dotnet/api/system.activities.codeactivity?view=netframework-4.6.2) and implement the [Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2) that contains the operations your activity will perform.
 
     More information: [Add your code to the Execute method](#add-your-code-to-the-execute-method)
 
@@ -232,7 +232,7 @@ public InArgument<OptionSetValue> IndustryCode { get; set; }
 
 ## Add your code to the Execute method
 
-The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.5.2) method defines what your workflow activity does.
+The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](/dotnet/api/system.activities.codeactivity.execute?view=netframework-4.6.2) method defines what your workflow activity does.
 
 > [!IMPORTANT]
 > The code in the `Execute` method should be written to be stateless. It is not recommended to use global or member variables to pass data from one invocation to the next.
@@ -240,7 +240,7 @@ The logic you include in the [CodeActivity.Execute(CodeActivityContext) Method](
 
 ### Reference parameters
 
-To reference parameters defined for your class you will use the [Argument.Get](/dotnet/api/system.activities.argument.get?view=netframework-4.5.2) or [Argument.Set(ActivityContext, Object)](/dotnet/api/system.activities.argument.set?view=netframework-4.5.2) methods they provide which require the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) instance that is passed to the `Execute` method. The following example shows accessing the value of an input parameter and setting the value of an output parameter.
+To reference parameters defined for your class you will use the [Argument.Get](/dotnet/api/system.activities.argument.get?view=netframework-4.6.2) or [Argument.Set(ActivityContext, Object)](/dotnet/api/system.activities.argument.set?view=netframework-4.6.2) methods they provide which require the [CodeActivityContext](/dotnet/api/system.activities.codeactivitycontext) instance that is passed to the `Execute` method. The following example shows accessing the value of an input parameter and setting the value of an output parameter.
 
 ```csharp
 using Microsoft.Xrm.Sdk.Workflow;

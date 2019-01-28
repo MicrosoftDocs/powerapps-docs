@@ -57,7 +57,7 @@ Plug-in assemblies must contain all the necessary logic within the respective dl
 
 ## IPlugin interface
 
-A plug-in is a class within an assembly created using a .NET Framework Class library project using .NET Framework 4.5.2 in Visual Studio. Each class in the project that will be registered as a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
+A plug-in is a class within an assembly created using a .NET Framework Class library project using .NET Framework 4.6.2 in Visual Studio. Each class in the project that will be registered as a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface which requires the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method.
 
 > [!IMPORTANT]
 > When implementing `IPlugin`, the class should be *stateless*. This is because the platform caches a class instance and re-uses it for performance reasons. A simple way of thinking about this is that you shouldn't add any properties or methods to the class and everything should be included within the `Execute` method. There are some exceptions to this. For example you can have a property that represents a constant and you can have methods that represent functions that are called from the `Execute` method. The important thing is that you never store any service instance or context data as a property in your class. These change with every invocation and you don't want that data to be cached and applied to subsequent invocations.  More information: [Develop IPlugin implementations as stateless](/dynamics365/customer-engagement/guidance/server/develop-iplugin-implementations-stateless)
