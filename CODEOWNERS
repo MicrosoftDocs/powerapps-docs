@@ -1,4 +1,8 @@
 # Lines starting with '#' are comments.
 # Each line is a file pattern followed by one or more owners.
 
-/powerapps-docs/                                    @jimholtz @Mattp123 @JimDaly @KumarVivek @AFTOwen
+/powerapps-docs/                                    @KumarVivek
+/powerapps-docs/administrator/                      @jimholtz
+/powerapps-docs/developer/                          @JimDaly @PHecke @Nkrb
+/powerapps-docs/maker/                              @Mattp123 @AFTOwen
+/powerapps-docs/user/                               @mduelae
