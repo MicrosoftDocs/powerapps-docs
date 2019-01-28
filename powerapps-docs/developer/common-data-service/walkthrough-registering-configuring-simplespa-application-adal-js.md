@@ -2,7 +2,7 @@
 title: "Walkthrough: Registering and configuring SimpleSPA application with adal.js (Common Data Service for Apps) | Microsoft Docs"
 description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Customer Engagement using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
-ms.date: 01/25/2019
+ms.date: 01/28/2019
 ms.service:
   - "powerapps"
 ms.custom:
@@ -72,7 +72,7 @@ Finally, you can click the **Logout** button to logout.
     <head>  
      <title>Simple SPA</title>  
      <meta charset="utf-8" />  
-     <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js"></script>  
+     <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.18/js/adal.min.js"></script>  
      <script type="text/javascript">  
       "use strict";  
   
@@ -361,4 +361,7 @@ Finally, you can click the **Logout** button to logout.
      If you don’t get the results you expect, double-check the values you set when registering the application and configuring the SimpleSPA.html code.  
   
 ## See also  
+ [Create client applications](connect-cds.md)
+ [Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)
+ [Build web applications using Server to Server(S2S) authentication](build-web-applications-server-server-s2s-authentication.md)
  [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application to CDS for Apps](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
