@@ -106,7 +106,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
     `Clear(ProductList)`
 
-1. While holding down the Alt key, select the **Trash** icon for an item to remove that item from the collection, and then select the **Clear** button to remove all items from the collection.
+1. While holding down the Alt key, select the **Trash** icon for an item to remove that item from the collection, or select the **Clear** button to remove all items from the collection.
 
 ## Put a SharePoint list into a collection
 
@@ -127,5 +127,5 @@ Display form controls](controls/control-form-detail.md).
 
 ## Next steps
 
-- Read the [reference topic](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
+- Review the [reference topic](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
 - Learn how to shape data in a collection by using the [AddColumns, DropColumns, RenameColumns, and ShowColumns](functions/function-table-shaping.md) functions.
