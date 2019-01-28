@@ -90,7 +90,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 ## Remove one or all items
 
-1. Select the gallery template by clicking or tapping near the bottom of the gallery and then clicking or tapping the **Pencil** icon near the upper-left corner.
+1. Select the gallery template by clicking or tapping near the bottom of the gallery and then clicking or tapping the pencil icon near the upper-left corner.
 
     ![Select gallery template](./media/create-update-collection/select-template.png)
 
