@@ -361,7 +361,7 @@ Finally, you can click the **Logout** button to logout.
      If you don’t get the results you expect, double-check the values you set when registering the application and configuring the SimpleSPA.html code.  
   
 ## See also  
- [Create client applications](connect-cds.md)
- [Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)
- [Build web applications using Server to Server(S2S) authentication](build-web-applications-server-server-s2s-authentication.md)
+ [Create client applications](connect-cds.md)<br />
+ [Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md) <br />
+ [Build web applications using Server to Server(S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
  [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application to CDS for Apps](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
