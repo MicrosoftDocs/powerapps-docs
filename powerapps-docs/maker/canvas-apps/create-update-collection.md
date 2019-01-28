@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 01/21/2018
+ms.date: 01/28/2019
 ms.author: anneta
 search.audienceType:
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 # Create and update a collection in a canvas app
 
-Use a collection to store data that users can manage in your app. A collection is a group of items that are similar, such as products in a product list. For more information about different types of variables such as collections, see [Understand canvas-app variables](working-with-variables.md).
+Use a collection to store data that users can manage in your app. A collection is a group of items that are similar, such as products in a product list. For more information about different types of variables such as collections: [Understand canvas-app variables](working-with-variables.md).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Use a collection to store data that users can manage in your app. A collection i
 - Create an app or open an existing app in PowerApps.
 - Learn how to [configure a control](add-configure-controls.md) in PowerApps.
 
-## Create a multi-column collection
+## Create a multicolumn collection
 
 1. In PowerApps Studio, add a **Text input** control.
 
@@ -90,7 +90,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 ## Remove one or all items
 
-1. Select the gallery template by clicking or tapping near the bottom of the gallery and then clicking or tapping the pencil icon near the upper-left corner.
+1. Select the gallery template by clicking or tapping near the bottom of the gallery and then clicking or tapping the **Pencil** icon near the upper-left corner.
 
     ![Select gallery template](./media/create-update-collection/select-template.png)
 
@@ -122,10 +122,10 @@ Use a collection to store data that users can manage in your app. A collection i
 
 1. (optional) To preview the collection that you created, select **Collections** on the **File**  menu.
 
-For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery, see [Show data in a gallery](connections/connection-sharepoint-online.md#show-data-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers), see [Edit form and 
+For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery: [Show data in a gallery](connections/connection-sharepoint-online.md#show-data-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and 
 Display form controls](controls/control-form-detail.md).
 
 ## Next steps
 
-- See the [reference topic](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
+- Read the [reference topic](functions/function-clear-collect-clearcollect.md) for the **Collect** function.
 - Learn how to shape data in a collection by using the [AddColumns, DropColumns, RenameColumns, and ShowColumns](functions/function-table-shaping.md) functions.
