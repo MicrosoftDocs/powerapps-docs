@@ -21,23 +21,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Enhanced Quick start
+# Enhanced quick start
 
-This topic demonstrates how to re-factor the code in [Quick start](quick-tart-console-app-csharp.md) topic by adding re -usable `httpClient` and error handling methods. Complete the steps in the [Quick start](quick-tart-console-app-csharp.md) topic to create a new Visual Studio project before you start enhancing the code.
+This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable `httpClient` and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you start enhancing the code.
 
 <a name="bkmk_addAllRequiredResources"></a>
 
-### Add all required resources to your project
+## Add all required resources to your project
 
-The following procedures explain how to add all required managed references and packages to your project. Consider this a base set of resources that most managed code applications will need for invoking Web API operations.  
+The following process explains how to add all required managed references and additional class files to your project. Consider this as a base set of resources that most managed code applications will need for invoking Web API operations.  
   
-#### Add the helper code
-
-Add a new class file to the project and copy paste the [SampleHelper](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) code. The [Web API samples (C#)](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23) uses the `SampleHelper` file which contains methods to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
-
-Because the Common Data Service for Apps Web API is based on REST principles, it does not require client-side assemblies to access.
- 
-#### Edit the application configuration file
+### Edit the application configuration file
 
 In **Solution Explorer**, open the **App.config** file for editing. Add the following and then save the file.  You need to pass the CDS for Apps url and user credentials in the `App.config` file to connect to the CDS for Apps instance.
 
@@ -103,6 +97,14 @@ In **Solution Explorer**, open the **App.config** file for editing. Add the foll
 ```
   
 <a name="bkmk_addCodeToCallHelperLibrary"></a>
+
+### Add the helper code
+
+First step is to add a new helper class file to the project and copy paste the [SampleHelper](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) code.
+
+The [Web API samples (C#)](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23) uses the `SampleHelper` file which contains methods to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
+
+Because the Common Data Service for Apps Web API is based on REST principles, it does not require client-side assemblies to access.
 
 #### Add code to call the helper library
   
