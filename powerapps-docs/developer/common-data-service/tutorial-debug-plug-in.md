@@ -2,8 +2,8 @@
 title: "Tutorial: Debug a plug-in (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This tutorial is the second in a series that will show you how to work with plug-ins. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 1/28/2019
+ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
@@ -60,6 +60,9 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
 1. In the **Profiler Settings** dialog accept the default settings and click **OK** to close the dialog.
 
     ![foo](media/tutorial-debug-plug-in-profiler-settings.png)
+
+
+Form more information about running the profiler see [Run the plug-in profiler from a Command Prompt window](#run-profiler-standalone).
 
 ## Capture a profile
 
@@ -122,3 +125,14 @@ To learn more about common things you will do with plug-ins, continue to [Tutori
 
 If you will not continue to the next tutorial you should unregister the BasicPlugin assembly you created in this step. See [Unregister assembly, plug-in, and step](tutorial-update-plug-in.md#unregister-assembly-plug-in-and-step) for instructions.
 
+<a name="run-profiler-standalone"></a>
+
+## Run the plug-in profiler from a Command Prompt window
+
+ While it is often preferable to run the profiler interactively from the Plug-in Registration tool, the profiler can be executed from a Command Prompt window independent of the tool. This is useful to obtain the plug-in profile log from a customer's [!INCLUDE[pn_dynamics_crm](../includes/pn-dynamics-crm.md)] apps server to debug a failed plug-in. A developer can then use that log to replay the plug-in's execution in the Plug-in Registration tool and debug the plug-in using[!INCLUDE[pn_Visual_Studio](../includes/pn-visual-studio.md)].
+
+### Procedure: Run the plug-in profiler from a command prompt
+
+1. Open a Command Prompt window and set the working directory to the folder where you downloaded the Plug-in Registration tool `PluginRegistration.exe`.
+2. Type this command to see the available run-time parameters: `PluginProfiler.Debugger.exe /?`.  
+3. Review the supported parameter list and re-run the PluginProfiler.Debugger.exe program with the appropriate parameters. 
