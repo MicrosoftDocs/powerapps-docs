@@ -23,7 +23,7 @@ search.app:
 ---
 # Enhanced quick start
 
-This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable `httpClient` and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you start enhancing the code.
+This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable [httpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient) and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you start enhancing the code.
 
 <a name="bkmk_addAllRequiredResources"></a>
 
@@ -100,7 +100,7 @@ In **Solution Explorer**, open the **App.config** file for editing. Add the foll
 
 ### Add the helper code
 
-First step is to add a new helper class file to the project and copy paste the [SampleHelper](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) code.
+Next step in the process is to add a new helper class file to the project and copy paste the [SampleHelper](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) code.
 
 The [Web API samples (C#)](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23) uses the `SampleHelper` file which contains methods to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
 
@@ -108,7 +108,7 @@ Because the Common Data Service for Apps Web API is based on REST principles, it
 
 #### Add code to call the helper library
   
-1. Add a new class file to the project and name it as `SampleMethod`. Add the following helper methods to it. The `SampleMethod` class file is added to show a pattern to encapsulate method calls into re-usable methods to be used in `Program.cs`. This class file is shared commonly with all the Web API (C#) samples. 
+1. Add a new class file to the project and name it as `SampleMethod`. Add the following helper methods to it. The `SampleMethod` class file is added to show a pattern to encapsulate method calls into re-usable methods to be used in `Program.cs`. This class file is shared commonly with all the [Web API sample (C#)](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23). 
 
 ```csharp
 using Newtonsoft.Json.Linq;
@@ -117,32 +117,28 @@ using System.Net.Http;
 
 namespace PowerApps.Samples
 {
-	public partial class SampleProgram
-	{
-		public static WhoAmIResponse WhoAmI(HttpClient client)
-		{
-			WhoAmIResponse returnValue = new WhoAmIResponse();
+  public partial class SampleProgram
+   {
+	 public static WhoAmIResponse WhoAmI(HttpClient client)
+	  {
+		WhoAmIResponse returnValue = new WhoAmIResponse();
 
          //Send the WhoAmI request to the Web API using a GET request. 
+HttpResponseMessage response = client.GetAsync("WhoAmI"HttpCompletionOption.ResponseHeadersRead).Result;
 
-        HttpResponseMessage response = client.GetAsync("WhoAmI",
+if (response.IsSuccessStatusCode)
+ {
+	//Get the response content and parse it.
+	JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+	returnValue.BusinessUnitId = (Guid)body["BusinessUnitId"];
+	returnValue.UserId = (Guid)body["UserId"];
+	returnValue.OrganizationId = (Guid)body["OrganizationId"];
+		}
 
-           HttpCompletionOption.ResponseHeadersRead).Result;
-
-    if (response.IsSuccessStatusCode)
-
-      {
-			//Get the response content and parse it.
-			JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-			returnValue.BusinessUnitId = (Guid)body["BusinessUnitId"];
-			returnValue.UserId = (Guid)body["UserId"];
-			returnValue.OrganizationId = (Guid)body["OrganizationId"];
-			}
-
-     else
-       {
-         throw new Exception(string.Format("The WhoAmI request failed with a status of '{0}'",
-         response.ReasonPhrase));
+ else
+   {
+       throw new Exception(string.Format("The WhoAmI request failed with a status of '{0}'",
+        response.ReasonPhrase));
        }
           return returnValue;
 
@@ -151,19 +147,17 @@ namespace PowerApps.Samples
     }
 
 public class WhoAmIResponse
-
-    {
-
-    public Guid BusinessUnitId { get; set; } 
-		public Guid UserId { get; set; }
-		public Guid OrganizationId { get; set; }
+ {
+   public Guid BusinessUnitId { get; set; } 
+   public Guid UserId { get; set; }
+   public Guid OrganizationId { get; set; }
 
     }
 ```
 
 2. Now go to `Program.cs` file, add the following code.  
   
-```csharp 
+```csharp
 
 using Newtonsoft.Json.Linq;
 using System;
@@ -177,21 +171,19 @@ public partial class SampleProgram
 static void Main(string[] args)
   {
      try
-
       {
-
-        //Get configuration data from App.config connectionStrings
-
-        string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
-          using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId, SampleHelpers.redirectUrl, "v9.0"))
-		  {
-         WhoAmIResponse response = WhoAmI(client);
+ //Get configuration data from App.config connectionStrings
+string connectionString = ConfigurationManager.ConnectionStrings["Connect"].ConnectionString;
+ 
+using (HttpClient client = SampleHelpers.GetHttpClient(connectionString, SampleHelpers.clientId, SampleHelpers.redirectUrl, "v9.0"))
+ {
+    WhoAmIResponse response = WhoAmI(client);
          Console.WriteLine("Your system user ID is: {0}", response.UserId);
       }
 
-      else
-       {
-          Console.WriteLine("The request failed with a status of '{0}'",response.ReasonPhrase);
+ else
+  {
+      Console.WriteLine("The request failed with a status of '{0}'",response.ReasonPhrase);
 
         } 
 }
@@ -204,29 +196,29 @@ catch (Exception ex)
      throw;
    }
 
-finally 
+finally
   {
 	Console.WriteLine("Press <Enter> to exit the program.");
 	Console.ReadLine();
 
-  }            
+  }
 }
 }
 }
 ```
-  
+
 3. Save all the files in the solution.
   
 <a name="bkmk_nextSteps"></a>
 
 ### Next steps
 
- At this point the solution can be built without errors.  If you edit the application configuration file to supply values for your Common Data Service for Apps, the program should also successfully connect to that server.  The solution represents a skeletal frame that is ready to accept custom code, including calls to the Common Data Service for Apps Web API.  
+ At this point the solution can be built without errors. The solution represents a skeletal frame that is ready to accept custom code, including calls to the Common Data Service for Apps Web API.  
   
 > [!TIP]
 > Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://msdn.microsoft.com/library/xkh1wxd8.aspx) instructions to create the template.  
   
 ### See also
 
-[Simple Web API sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)<br/>
+[Web API samples (C#)](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)<br/>
 [Perform operations using the Web API](perform-operations-web-api.md)
