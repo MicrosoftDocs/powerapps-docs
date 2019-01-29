@@ -58,7 +58,36 @@ search.app:
 
  Download the sample: [Work with plug-ins](https://code.msdn.microsoft.com/Sample-Create-a-basic-plug-64d86ade).
   
- [!code-csharp[Plug-ins#AdvancedPlugin2](/dynamics365/customer-engagement/snippets/csharp/CRMV8/plug-ins/cs/advancedplugin2.cs#advancedplugin2)]  
+ ```csharp
+//Extract the tracing service for use in debugging sandboxed plug-ins.
+ ITracingService tracingService =
+     (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+
+ // Obtain the execution context from the service provider.
+ IPluginExecutionContext context = (IPluginExecutionContext)
+     serviceProvider.GetService(typeof(IPluginExecutionContext));
+
+ // For this sample, execute the plug-in code only while the client is online. 
+ tracingService.Trace("AdvancedPlugin: Verifying the client is not offline.");
+ if (context.IsExecutingOffline || context.IsOfflinePlayback)
+     return;
+
+ // The InputParameters collection contains all the data passed 
+ // in the message request.
+ if (context.InputParameters.Contains("Target") &&
+     context.InputParameters["Target"] is Entity)
+ {
+     // Obtain the target entity from the Input Parameters.
+     tracingService.Trace
+         ("AdvancedPlugin: Getting the target entity from Input Parameters.");
+     Entity entity = (Entity)context.InputParameters["Target"];
+
+     // Obtain the image entity from the Pre Entity Images.
+     tracingService.Trace
+         ("AdvancedPlugin: Getting image entity from PreEntityImages.");
+     Entity image = (Entity)context.PreEntityImages["Target"];
+```
+
   
  Next, build and deploy the plug-in or custom workflow activity. During execution of the custom code, the information provided in the **Trace** method calls is written to a trace log entity record by <xref:Microsoft.Xrm.Sdk.ITracingService>, if supported by your organization and enabled, and may also be made available to the user in a Web dialog or system job as described in the previous section. Tracing information written to the trace log is configured in the trace settings. For more information see [Enable trace logging](#bkmk_trace-settings).  
   
