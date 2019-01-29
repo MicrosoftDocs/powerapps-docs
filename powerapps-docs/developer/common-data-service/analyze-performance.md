@@ -1,0 +1,30 @@
+---
+title: "Analyze plug-in performance (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn how to find and analyze data about how your registered plug-ins are performing.
+ms.custom: ""
+ms.date: 1/29/2019
+ms.reviewer: ""
+ms.service: "powerapps"
+ms.topic: "article"
+author: "phecke"
+ms.author: "pehecke"
+manager: "kvivek"
+search.audienceType: 
+  - developer
+search.app: 
+  - PowerApps
+  - D365CE
+---
+# Analyze plug-in performance
+
+In addition to using a debugger and profiler to learn how your plug-in is performing at the code level, you can obtain metrics as to the overall performance of your registered plug-ins in an organization through [Common Data Service for Apps analytics](/power-platform/admin/analytics-common-data-service.md).
+
+Through the [Plug-in](/power-platform/admin/analytics-common-data-service#plug-ins.md) dashboard you can view metrics such as average execution time, failures, most active plug-ins, and more.
+
+![Analytics plug-in dashboard](media/cds-insights-plugins.png)
+
+## See also
+
+[Use plug-ins to extend business processes](plug-ins.md)  
+[Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)  
+[Debug Plug-ins](debug-plug-in.md)
