@@ -23,7 +23,7 @@ search.app:
 ---
 # Enhanced Quick start
 
-This topic demonstrates how to enhance the code in [Quick start](quick-tart-console-app-csharp.md) topic by adding error handling methods helper code. Complete the steps in the [Quick start](quick-tart-console-app-csharp.md) topic to create a new Visual Studio project.
+This topic demonstrates how to re-factor the code in [Quick start](quick-tart-console-app-csharp.md) topic by adding re -usable `httpClient` and error handling methods. Complete the steps in the [Quick start](quick-tart-console-app-csharp.md) topic to create a new Visual Studio project before you start enhancing the code.
 
 <a name="bkmk_addAllRequiredResources"></a>
 
@@ -33,15 +33,13 @@ The following procedures explain how to add all required managed references and 
   
 #### Add the helper code
 
-The Web API samples (C#) uses the `SampleHelper.cs` file which contains classes to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
-
-Add a new class file to the project and copy paste the [SampleHelper](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) code.
+Add a new class file to the project and copy paste the [SampleHelper](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23/SampleHelpers.cs) code. The [Web API samples (C#)](https://github.com/Microsoft/PowerApps-Samples/blob/master/cds/webapi/C%23) uses the `SampleHelper` file which contains methods to assist with supplemental operations, such as application configuration, Common Data Service for Apps server authentication, exception handling, web communication and `OAuthMessageHandler` class which manages the renewal of the tokens. This file is shared with all the Web API (C#) samples.
 
 Because the Common Data Service for Apps Web API is based on REST principles, it does not require client-side assemblies to access.
  
 #### Edit the application configuration file
 
-In **Solution Explorer**, open the **App.config** file for editing. Add the following and then save the file.  You need to pass the CDS for Apps Url and user credentials in the `App.config` file to connect to the CDS for Apps instance.
+In **Solution Explorer**, open the **App.config** file for editing. Add the following and then save the file.  You need to pass the CDS for Apps url and user credentials in the `App.config` file to connect to the CDS for Apps instance.
 
 ```xml  
   
@@ -108,7 +106,7 @@ In **Solution Explorer**, open the **App.config** file for editing. Add the foll
 
 #### Add code to call the helper library
   
-1. Add a new class file to the project and name it as `SampleMethod`. Add the following helper methods to it. The `SampleMethod` class file is shared commonly with all the Web API (C#) samples. The class file has all the methods that support the functions defined in the `Main` method.
+1. Add a new class file to the project and name it as `SampleMethod`. Add the following helper methods to it. The `SampleMethod` class file is added to show a pattern to encapsulate method calls into re-usable methods to be used in `Program.cs`. This class file is shared commonly with all the Web API (C#) samples. 
 
 ```csharp
 using Newtonsoft.Json.Linq;
@@ -206,8 +204,8 @@ catch (Exception ex)
 
 finally 
   {
-		Console.WriteLine("Press <Enter> to exit the program.");
-		Console.ReadLine();
+	Console.WriteLine("Press <Enter> to exit the program.");
+	Console.ReadLine();
 
   }            
 }
