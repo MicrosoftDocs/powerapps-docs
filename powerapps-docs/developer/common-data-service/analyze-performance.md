@@ -1,6 +1,6 @@
 ---
-title: "Analyze plug-in performance (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn how to find and analyze data about how your registered plug-ins are performing.
+title: "Analyze plug-in performance (Common Data Service for Apps) | Microsoft Docs"
+description: "Learn how to find and analyze data about how your registered plug-ins are performing."
 ms.custom: ""
 ms.date: 1/29/2019
 ms.reviewer: ""
