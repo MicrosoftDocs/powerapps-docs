@@ -148,7 +148,7 @@ To write to the trace, use the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Mi
 tracingService.Trace("Write {0} {1}.", "your", "message");
 ```
 
-More information: [Use Tracing](debug-plug-in.md#use-tracing).
+More information: [Use Tracing](debug-plug-in.md#use-tracing), [Logging and tracing](logging-tracing.md).
 
 ## Performance considerations
 
