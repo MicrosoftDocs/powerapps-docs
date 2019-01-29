@@ -20,7 +20,7 @@ After developing custom controls using PowerApps Control Framework, next step is
 
 ## Prerequisites
 
-Download the [PowerAppsControlFramework_Preview.zip] file and extract it so that you will have a copy in your local folder. When you extract it you will see
+Download the [PowerAppsControlFramework_Preview.zip]() file and extract it so that you will have a copy in your local folder. When you extract it you will see
 
 1. `Docs` folder which has documentation files for all the individual sample controls.
 2. `src` folder which has two sub folders `controls` and `typing`.

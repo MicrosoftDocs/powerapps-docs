@@ -23,7 +23,7 @@ For example, on **Microsoft Edge**,
 - Press **F12** to open inspector.
 - On top bar, go to **Debugger**, and then start searching for the control name described in the Manifest file in the search bar. For example, type your control name like ‘Hello World Control’
 
-[!NOTE]
+> [!NOTE]
 > It is always a good practice to set breakpoints on the control's life cycle methods like `init` and `updateView`
 
 ## Fiddler AutoResponder

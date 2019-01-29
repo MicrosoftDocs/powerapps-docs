@@ -16,33 +16,33 @@
   - name: Sample Controls
     items: 
     - name: Increment control
-      href: icrement-control.md
+      href: sample-controls/increment-control.md
     - name: Linear input control
-      href: linear-input-control.md
+      href: sample-controls/linear-input-control.md
     - name: Localization API control
-      href: localization-api-control.md
+      href: sample-controls/localization-api-control.md
     - name: Angular Flip control
-      href: angular-flip-control.md
+      href: sample-controls/angular-flip-control.md
     - name: Control State API control
-      href: control-state-api-control.md
+      href: sample-controls/control-state-api-control.md
     - name: Data Set Grid control
-      href: data-set-grid-control.md
+      href: sample-controls/data-set-grid-control.md
     - name: Formatting API control
-      href: formatting-api-control.md
+      href: sample-controls/formatting-api-control.md
     - name: IFRAME control
-      href: iframe-control.md
+      href: sample-controls/iframe-control.md
     - name: Image upload control
-      href: image-upload-control.md
+      href: sample-controls/image-upload-control.md
     - name: Map control
-      href: map-control.md
+      href: sample-controls/map-control.md
     - name: Navigation API control
-      href: navigation-api-control.md
+      href: sample-controls/navigation-api-control.md
     - name: Table control
-      href: table-control.md
+      href: sample-controls/table-control.md
     - name: Table grid control
-      href: table-grid-control.md
+      href: sample-controls/table-grid-control.md
     - name: Web API control
-      href: web-api-control.md
+      href: sample-controls/web-api-control.md
   - name: Limitations of PowerApps Control Framework
     href: limitations.md
   - name: Reference
