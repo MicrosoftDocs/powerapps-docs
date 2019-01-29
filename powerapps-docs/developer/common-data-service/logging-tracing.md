@@ -58,7 +58,7 @@ search.app:
 
  Download the sample: [Work with plug-ins](https://code.msdn.microsoft.com/Sample-Create-a-basic-plug-64d86ade).
   
- [!code-csharp[Plug-ins#AdvancedPlugin2](/dynamics365/customer-engagement/snippets/csharp/CRMV8/plug-ins/cs/advancedplugin2.cs#advancedplugin2)  
+ [!code-csharp[Plug-ins#AdvancedPlugin2](/dynamics365/customer-engagement/snippets/csharp/CRMV8/plug-ins/cs/advancedplugin2.cs#advancedplugin2)]  
   
  Next, build and deploy the plug-in or custom workflow activity. During execution of the custom code, the information provided in the **Trace** method calls is written to a trace log entity record by <xref:Microsoft.Xrm.Sdk.ITracingService>, if supported by your organization and enabled, and may also be made available to the user in a Web dialog or system job as described in the previous section. Tracing information written to the trace log is configured in the trace settings. For more information see [Enable trace logging](#bkmk_trace-settings).  
   
@@ -86,4 +86,5 @@ search.app:
 [Plug-ins](plug-ins.md)  
 [Debug a plug-in](debug-plug-in.md#use-tracing)  
 [View trace logs](tutorial-write-plug-in.md#view-trace-logs)  
-[Use the tracing service](write-plug-in.md#use-the-tracing-service)
+[Use the tracing service](write-plug-in.md#use-the-tracing-service)  
+[PluginTraceLog Entity](reference/entities/plugintracelog.md)
