@@ -33,8 +33,7 @@ ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|
 |[types](types.md)|[!INCLUDE [types-description](includes/types-description.md)]|
 
-
-### Related topics
+## Related topics
 
 [PowerApps Control Framework API Reference](../reference/index.md)<br />
 [PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)

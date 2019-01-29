@@ -24,7 +24,7 @@
     - name: Angular Flip control
       href: sample-controls/angular-flip-control.md
     - name: Control State API control
-      href: sample-controls/control-state-api-control.md
+      href: sample-controls/control-state-api.md
     - name: Data Set Grid control
       href: sample-controls/data-set-grid-control.md
     - name: Formatting API control
@@ -42,7 +42,7 @@
     - name: Table grid control
       href: sample-controls/table-grid-control.md
     - name: Web API control
-      href: sample-controls/web-api-control.md
+      href: sample-controls/webapi-control.md
   - name: Limitations of PowerApps Control Framework
     href: limitations.md
   - name: Reference
@@ -55,7 +55,7 @@
       - name: Column
         href: reference/column.md
       - name: ConditionExpression
-        href: reference/conditionrxpression.md
+        href: reference/conditionexpression.md
       - name: Context
         href: reference/context.md
       - name: Control

@@ -12,7 +12,7 @@ manager: ""
 ---
 # Implementing a image upload control
 
-This sample control renders as an `Upload` button to upload image and a default image when the control loads for the first time. When you click on the `Upload`, a file explorer will pop up to pick an image.   
+This sample control renders as an `Upload` button to upload image and a default image when the control loads for the first time. When you click on the `Upload`, a file explorer will pop up to pick an image.
  
 The selected image will be rendered within the control. Meanwhile, the `Remove` button will show in case we need to reset. When you click on the `Remove` button, the default image is displayed.  
 

@@ -35,7 +35,7 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 
 |Element|Description|Occurrences|
 |--|--|--|
-|[types](types.md)|[!INCLUDE [types-description](includes/types-description.md)]|0 or more|
+|[types](types.md)||0 or more|
 
 ### Related topics
 

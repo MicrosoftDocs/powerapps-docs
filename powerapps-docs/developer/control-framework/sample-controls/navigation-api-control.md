@@ -13,8 +13,9 @@ manager: ""
 
 # Implementing Navigation API  control
 
-The Navigation API control explores the various methods available as part of the PowerApps Control Framework’s navigation API.  
-In this sample we create a series of input elements of type buttons which call into the respective methods of the PCF’s navigation API that matches with the value displayed.  
+This sample control explores the various methods available as part of the **PowerApps Control Framework** navigation API. 
+ 
+In this sample you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API Control](../media/navigation-api-control.png "Navigation API Control")
@@ -225,7 +226,7 @@ public destroy()
 
 ## Overview
 
-The `openAlertDialog` method provides the capability to display an alert dialog containing a message and a button. You can also implement callback methods when the alert dialog is closed or on if an error is encountered when loading the dialog. 
+The `openAlertDialog` method provides the capability to display an alert dialog containing a message and a button. You can also implement callback methods when the alert dialog is closed or on if an error is encountered when loading the dialog.
   
 In this sample when you click on the `openAlertDialogButton` a alert dialog pops up and sets the value of it to `Alert dialog closed` when the dialog is closed either using the `OK` button or the `X` button.
 

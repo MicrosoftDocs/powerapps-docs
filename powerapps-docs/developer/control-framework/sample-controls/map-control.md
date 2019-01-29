@@ -13,7 +13,7 @@ manager: ""
 
 # Implementing map control
 
-This sample control changes the user experience of interacting with address fields on the form. Along with the text values of the address, this control provides the ability to visually identify a particular address on a map without navigating to another tab/screen.   
+This sample control changes the user experience of interacting with address fields on the form. Along with the text values of the address, this control provides the ability to visually identify a particular address on a map without navigating to another tab or screen. 
 
 > [!div class="mx-imgBorder"]
 > ![Map Control](../media/map-control.png "Map Control")

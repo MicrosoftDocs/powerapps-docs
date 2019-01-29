@@ -1,6 +1,5 @@
 # types element
 
-[!INCLUDE [types-description](includes/types-description.md)]
 
 ## Parent Elements
 

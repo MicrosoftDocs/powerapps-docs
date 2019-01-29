@@ -285,7 +285,8 @@ this.toggleLoadMoreButtonWhenNeeded(this.contextObj.parameters.dataSetGrid);
 }
 }
 ```
-## OVerview
+
+## Overview
 
 In this sample we have the input parameter defined in the control Manifest with the data-set tag. This is the input property that gets bound to the control.  
  

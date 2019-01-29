@@ -13,7 +13,9 @@ manager: ""
 
 # Implementing Table control
 
-The HTML Table control renders a table with two columns. The left column shows the name of the API method or property being showcased, and the right column shows the value returned by the API. You can open this control on different type of devices or modify your language or user settings to see the values adjust correctly in the table. 
+This sample control renders a table with two columns. The left column shows the name of the API method or property being showcased, and the right column shows the value returned by the API.
+
+You can open this control on different type of devices or modify your language or user settings to see the values adjust correctly in the table.
 
 > [!div class="mx-imgBorder"]
 > ![Table Control](../media/table-control.png "Table Control")
@@ -409,7 +411,7 @@ public getOutputs(): InputsOutputs.IOutputs
 
 ## Overview
 
-This sample provides examples on how to use methods from the `IClient, IUserSettings, IUtility, IFormatting interfaces`. 
+This sample provides examples on how to use methods from the `IClient, IUserSettings, IUtility, IFormatting interfaces`.
 
 This control also showcases two utility functions, `setFullScreen` and `lookupObjects`. These functions are invoked by clicking the button rendered as part of the custom control. The `setFullScreen` button will toggle the control in and out of full screen mode. The `lookupObjects` button will open a lookup dialog, and then inject the selected record as text into div in the control.
 

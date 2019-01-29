@@ -160,27 +160,29 @@ public destroy()
 > [!NOTE]
 > Composite fields are not yet supported by PCF, so you will not be able to bind this control to the out of the box latitude and longitude address fields. You will need to bind the custom control to different floating-point field.
 
-
 ## Overview
 
 This sample control renders an `IFRAME` which displays `Bing Maps URL`. The control is bound to two floating point fields on the form, which are passed as parameters to the control and injected into the `IFRAME URL` to update the Bing Map to the latitude and longitude of the provided inputs.  
-Update the ControlManifest file to include binding to two additional fields on the form.  
+
+Update the `Manifest` file to include binding to two additional fields on the form.  
 This change informs the PowerApps Control Framework (PCF) that these bound fields need to be passed to the control during initialization and whenever one of the values is updated.
   
 ```xml
+
 <property name="latitudeValue" display-name-key="Bing_Maps_Latitude_Value" description-key="latitude" of-type="FP" usage="bound" required="true" />  
 <property name="longitudeValue" display-name-key="Bing_Maps_Longitude_Value" description-key="longitude" of-type="FP" usage="bound" required="true" />  
 ```
 
-Additional bound properties may be required or not. This will be enforced during control configuration when the control is being bound to the form. This can be configured by the `required` attribute of the property node in the control Manifest. Set the value to false if you don't want to require the control property be bound to a field.  
-ControlFramework.d.ts needs to be updated to add two fields to IInputs interface. This is the format the PCF will pass the field values in. Adding these values to the IInputs interface allows your TypeScript file to reference the values and compile successfully.  
+Additional bound properties may be required or not. This will be enforced during control configuration when the control is being bound to the form. This can be configured by the `required` attribute of the property node in the control Manifest. Set the value to false if you don't want to require the control property be bound to a field. 
+ 
+`ControlFramework.d.ts` needs to be updated to add two fields to IInputs interface. This is the format the PCF will pass the field values in. Adding these values to the IInputs interface allows your TypeScript file to reference the values and compile successfully.  
 
 ```TypeScript
-    export interface IInputs   
+    export interface IInputs 
     { latitudeValue: ControlFramework.PropertyTypes.NumberProperty;  
         longitudeValue: ControlFramework.PropertyTypes.NumberProperty;  
     }  
-    ```
+ ```
 The initial rendering generates an `IFRAME` element and appends it to the controls container. This `IFRAME` is used to display the Bing Map. The URL of the `IFRAME` is set to a `Bing Map URL` and includes the bound fields (latitudeValue and longitudeValue) in the URL to center the map at the provided location. 
 
 The [updateView](../reference/control/updateview.md) method is invoked whenever one of these fields are updated on the form. This method updates the URL of the Bing Map IFRAME to use the new latitude and longitude values passed to the control. 
@@ -191,5 +193,3 @@ To view this control in run time, bind the control to a field on the form like a
 [PowerApps Control Framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
 [PowerApps Control Framework API Reference](../index.md)<br />
 [PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
-
-

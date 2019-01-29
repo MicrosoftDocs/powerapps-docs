@@ -12,7 +12,8 @@ manager: ""
 ---
 # Implementing localization API control
 
-This sample showcases how localization can be done for custom controls. In this sample we use the Increment control to localize the text that is displayed on the increment button based on the user’s selected language. 
+This sample showcases how localization can be done for custom controls. In this sample we use the [Increment control](increment-control.md) to localize the text that is displayed on the increment button based on the user’s selected language. 
+
 PowerApps Control Framework (PCF) uses the concept of implementing String(resx) web resources that can be used to manage localized strings to be shown on any user interface. More information: [String(Resx) Webresources](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources). 
 
 > [!div class="mx-imgBorder"]
@@ -186,16 +187,19 @@ public destroy(): void
 
 To localize an existing project, all you need to do is to create additional resource(resx) files, one each for a specific language as mentioned in the string web resources and include them as part of the control’s manifest file under the [resources](../reference/resources.md) node.  
 
-The PCF identifies the user’s language and returns the strings from that language specific resource file when you try to access a string using `context.resources.getString` method. 
+The PCF identifies the user’s language and returns the strings from that language specific resource file when you try to access a string using `context.resources.getString` method.
 
-In this sample, two languages `Spanish` and `Finnish` which has the language codes 3082 and 1035 respectively are defined. 
-we have made a copy of the `Increment Control` sample and renamed it to `Localization API`. All the corresponding files including the files in the sub folders have been renamed accordingly. 
-As you can see in the strings folder under TS_LocalizationAPI, two additional resx files with the suffixes corresponding to Spanish and Finnish as 3082 and 1035 respectively are added. So, the new files that are created should have their file names ending as {filename}.3082.resx and {filename}.1035.resx because the framework relies on this naming convention to identify which resource file should be picked for reading the strings for the user. 
+In this sample, two languages `Spanish` and `Finnish` which has the language codes 3082 and 1035 respectively are defined.
 
-Ensure that the keys used for strings in all these resource files share the same name across all the languages. 
-Now, when the control is being rendered on the UI, we see in the code that we retrieve the value to be displayed on the button using `context.resources.getString("PCF_LocalizationSample_ButtonLabel")`. 
+we have made a copy of the `Increment Control` sample and renamed it to `Localization API`. All the corresponding files including the files in the sub folders have been renamed accordingly.
 
-When this line of code is executed, the PCF automatically identifies the language of the user and picks up the value for the button label using the key provided in the corresponding language file we defined. Below is the text you see for each of the 3 languages we support for this sample control. 
+As you can see in the strings folder under TS_LocalizationAPI, two additional resx files with the suffixes corresponding to Spanish and Finnish as 3082 and 1035 respectively are added. So, the new files that are created should have their file names ending as {filename}.3082.resx and {filename}.1035.resx because the framework relies on this naming convention to identify which resource file should be picked for reading the strings for the user.
+
+Ensure that the keys used for strings in all these resource files share the same name across all the languages.
+
+Now, when the control is being rendered on the UI, we see in the code that we retrieve the value to be displayed on the button using `context.resources.getString("PCF_LocalizationSample_ButtonLabel")`.
+
+When this line of code is executed, the PCF automatically identifies the language of the user and picks up the value for the button label using the key provided in the corresponding language file we defined. Below is the text you see for each of the 3 languages we support for this sample control.
   
 |LanguageCode |Value Displayed |
 |---|---|
