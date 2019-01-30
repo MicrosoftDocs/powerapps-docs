@@ -23,13 +23,13 @@ search.app:
 ---
 # Enhanced quick start
 
-This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable [httpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient) and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you start enhancing the code.
+This topic demonstrates how to re-factor the code in [Quick start](quick-start-console-app-csharp.md) topic by adding re-usable [HttpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient) and error handling methods. Complete the steps in the [Quick start](quick-start-console-app-csharp.md) topic to create a new Visual Studio project before you start enhancing the code.
 
 <a name="bkmk_addAllRequiredResources"></a>
 
 ## Add all required resources to your project
 
-The following process explains how to add all required managed references and additional class files to your project. Consider this as a base set of resources that most managed code applications will need for invoking Web API operations.  
+The following process explains how to add all the required managed references and additional class files to your project. Consider this as a base set of resources that most managed code applications will need for invoking Web API operations.  
   
 ### Edit the application configuration file
 
