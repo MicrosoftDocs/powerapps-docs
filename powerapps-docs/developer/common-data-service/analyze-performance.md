@@ -17,9 +17,9 @@ search.app:
 ---
 # Analyze plug-in performance
 
-In addition to using a debugger and profiler to learn how your plug-in is performing at the code level, you can obtain metrics as to the overall performance of your registered plug-ins in an organization through [Common Data Service for Apps analytics](/power-platform/admin/analytics-common-data-service.md).
+In addition to using a debugger and profiler to learn how your plug-in is performing at the code level, you can obtain metrics as to the overall performance of your registered plug-ins in an organization through [Common Data Service for Apps analytics](/power-platform/admin/analytics-common-data-service).
 
-Through the [Plug-in](/power-platform/admin/analytics-common-data-service#plug-ins.md) dashboard you can view metrics such as average execution time, failures, most active plug-ins, and more.
+Through the [Plug-in](/power-platform/admin/analytics-common-data-service#plug-ins) dashboard you can view metrics such as average execution time, failures, most active plug-ins, and more.
 
 ![Analytics plug-in dashboard](media/cds-insights-plugins.png)
 
