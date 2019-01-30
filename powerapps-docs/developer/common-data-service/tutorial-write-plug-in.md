@@ -48,7 +48,7 @@ Create an asynchronous plug-in registered on the Create message of the account e
 
 ## Create a plug-in project
 
-You need to use Visual Studio to write a plug-in. Use these steps to write a basic plug-in. Alternately, you can find the complete plug-in solution files here: [Sample: Create a basic plug-in](org-service\samples\basic-followup-plugin.md).
+You need to use Visual Studio to write a plug-in. Use these steps to write a basic plug-in. Alternately, you can find the complete plug-in solution files here: [Sample: Create a basic plug-in](org-service/samples/basic-followup-plugin.md).
 
 ### Create a Visual Studio Project for the Plug-in
 
