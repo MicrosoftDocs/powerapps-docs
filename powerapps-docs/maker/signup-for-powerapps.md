@@ -87,7 +87,7 @@ To determine when your trial license will expire, select the gear icon near the 
 
 You'll be prompted to request an extension of the trial or purchase a plan 30 days after the trial starts. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of PowerApps that your other license provides. Any data in CDS for Apps will remain as it is, and any app or flow that uses CDS for Apps will continue to run as it did if your license supports them. If you try to use features that Plan 2 supports but your existing license doesn't (for example, modify a schema or entities in CDS for Apps), you'll be prompted to extend the trial or purchase a plan.
+If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of PowerApps that your other license provides. Any data in CDS for Apps will remain as it is, and any app or flow that uses CDS for Apps will continue to run as it did if your license supports them. If you try to use features that Plan 2 supports but your existing license doesn't (for example, modify a schema or entities in CDS for Apps), you'll be prompted to purchase a plan.
 
 ### More questions?
 
