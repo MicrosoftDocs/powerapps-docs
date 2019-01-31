@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.date: 01/31/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -22,9 +22,15 @@ The **SaveData** function stores a collection for later use under a name.
 
 The **LoadData** function re-loads a collection by name that was previously saved with **SaveData**. You can't use this function to load a collection from another source.  
 
-**LoadData** doesn't create the collection; the function only fills an existing collection. You must first create the collection with the correct [columns](../working-with-tables.md#columns) by using **[Collect](function-clear-collect-clearcollect.md)**.
+Use these functions to improve app-startup performance by caching data in the **[App.OnStart](../controls/control-screen.md#additional-properties)** formula on a first run and then re-loading the local cache on subsequent runs. You can also use these functions to add [simple offline capabilities](../offline-apps.md) to your app.
 
-Storage is encrypted and in a private location on the local device, isolated from other users and other apps.  
+You can't use these functions inside a browser, either when authoring the app in PowerApps Studio or when running the app in the web player. To test your app, run it in PowerApps Mobile on an iPhone or Android device.
+
+These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device and operating system, the memory that the PowerApps player uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect the app to run. You should generally expect to have between 30 and 70 megabytes of available memory.  
+
+**LoadData** doesn't create the collection; the function only fills an existing collection. You must first create the collection with the correct [columns](../working-with-tables.md#columns) by using **[Collect](function-clear-collect-clearcollect.md)**. The loaded data will be appended to the collection; use the **[Clear](function-clear-collect-clearcollect.md)** function first if you want to start with an empty collection.
+
+Storage is encrypted and in a private location on the local device, isolated from other users and other apps.
 
 ## Syntax
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
