@@ -25,8 +25,8 @@ This article lists some common issues that you might encounter while using Solut
 
 <!-- Using this article as the template: https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/common-issues-and-resolutions -->
 
-## Checks fail due to PowerApps Checker version installed
-Solution Checker is a component of the PowerApps Checker solution.  If you have a PowerApps Checker version lower than 1.0.0.47, solution checks will fail to complete successfully. You should upgrade your PowerApps Checker version from the Dynamics 365 Administration portal. 
+## Solution Checker runs fail due to PowerApps Checker version installed
+Solution Checker is a feature included with the PowerApps Checker solution.  If you have a PowerApps Checker version lower than 1.0.0.47, Solution Checker runs will fail to complete successfully. You should upgrade your PowerApps Checker version from the Dynamics 365 Administration portal. 
 
 However, if you have a PowerApps Checker version lower than 1.0.0.45 installed, it is recommended to delete the solution and install it again. Due to recent schema changes, upgrade of PowerApps Checker from versions lower than 1.0.0.45 may fail.
 
@@ -53,10 +53,11 @@ To add PowerApps Checker back to your CDS instance:
 2. Click on **Solutions**
 3. Click on **Solution Checker** and **Install**
 
-## Checks on large solutions fail
+## Runs on large solutions fail
 
 Solution Checker has a 10-minute timeout for exporting a solution from the Common Data Service (CDS) for Apps environment. Large solutions, like the Default Solution, may fail to get exported within this time, and the check will not complete successfully. Solution Checker will retry three times before it fails to process the job, so it may take over 30-minutes before you receive a failure notification.
-To address this issue, check or create smaller solutions to be analysed. To minimize false positives, ensure to add dependant customizations. When creating a solution and adding these components, include:
+
+To address this issue, check or create smaller solutions to be analyzed. To minimize false positives, ensure to add dependent customizations. When creating a solution and adding these components, include:
 
 - When adding plug-ins, include the SDK Message Processing Steps for the plug-in.
 - When adding entity forms, include the JavaScript web resources attached to the form events.  
