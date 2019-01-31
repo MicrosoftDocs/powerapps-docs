@@ -1,5 +1,5 @@
 ---
-title: Create Controls Using PowerApps Control Framework | Microsoft Docs
+title: Create custom controls using PowerApps Control Framework | Microsoft Docs
 description: Start creating controls using the powerapps control Framework
 keywords: PowerApps Control Framework, Custom Controls, Control Framework
 ms.author: nabuthuk
@@ -13,7 +13,7 @@ ms.topic: "article"
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 
-# Create Controls Using PowerApps Control Framework
+# Create Controls using PowerApps Control Framework
 
 This topic showcases how to implement custom controls using **PowerApps Control Framework**. Custom controls provide enhanced user experience to view and work with data in forms, views.
 
@@ -188,9 +188,6 @@ More information: [Resources](manifest-schema-reference/resources.md)
 
 
 > [!div class="nextstepaction"]
-> [How to import controls](import-controls.md)
+> [How to import controls](import-custom-controls.md)
 
-### Related Topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](powerapps-control-framework-overview.md)

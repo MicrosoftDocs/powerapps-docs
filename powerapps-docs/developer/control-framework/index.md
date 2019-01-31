@@ -1,3 +1,3 @@
 ---
-redirect_url: /dynamics365/customer-engagement/developer/powerapps-control-framework/powerapps-control-framework-overview
+redirect_url: /powerapps/developer/control-framework/overview
 ---

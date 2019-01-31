@@ -9,26 +9,8 @@ author: "Nkrb"
 ms.author: "nabuthuk"
 manager: "jdaly"
 ---
-# PowerApps Control Framework Overview
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
-Use the **PowerApps Control Framework (PCF)** to create custom controls in model-driven apps to provide enhanced user experience for users to view and work with data in forms, views, and dashboards. For example:
-
-- Replace a field that displays a numeric text value with a `dial` or `slider` control.
-- Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
-
-> [!IMPORTANT]
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_expect_changes](../../includes/cc-preview-features-expect-changes.md)]  
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
-
-Majority of the controls found in Model-driven apps that use the **Unified Interface** are implemented using **PowerApps Control Framework**. Custom controls are metadata driven, configurable, reusable, solution aware and responsive. As a developer, you will implement an interface and the application will take care of the rest.
-
-> [!NOTE]
-> Custom controls are supported only on Unified Interface for Model-driven apps.
-
-## What are custom controls
+## What are custom controls?
 
 Custom controls are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions]().
 
@@ -108,11 +90,6 @@ You should define a [destroy](reference/control/destroy.md) method in your objec
 
 Each custom control should have a resource file to construct its visualization. You can define a resource file in the Manifest. The resource node in the Manifest file refers to the webresources that controls require to implement its visualization. More information: [Resources](manifest-schema-reference/resources.md)
 
-
-> [!div class ="nextstepaction"]
-> [How to create custom controls](create-controls-using-pcf.md)
-
 ### Related topics
 
-[PowerApps Control Framework API Reference](reference/index.md)<br/>
-[PowerApps Control Framework Manifest Schema Reference](manifest-schema-reference/index.md)
+[Create custom controls](create-custom-controls-using-pcf.md)
