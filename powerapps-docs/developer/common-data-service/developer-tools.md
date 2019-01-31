@@ -1,9 +1,9 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Developer tools and resources (Common Data Service for Apps) | Microsoft Docs" 
+description: "Learn about available tools and resources when working with solutions."
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 1/31/2019
+ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
@@ -15,10 +15,6 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- The information about SDK assemblies should be found elsewhere
-Perhaps this topic should call out the available tools at a high level?
-Community tools should go here?
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/developer-tools -->
 
 # Developer tools and resources
 
