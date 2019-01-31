@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 01/31/2019
-ms.author: mblythe
+ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
@@ -25,13 +25,13 @@ One of the most common scenarios you face as a mobile-app developer is enabling 
 
 ## Limitations
 
-LoadData and SaveData are a simple mechanism to store small amounts of data on a local device.  Using these function you can add simple offline capabilities to your app.  
+**LoadData** and **SaveData** combine to form a simple mechanism to store small amounts of data on a local device. By using these functions, you can add simple offline capabilities to your app.  
 
-These functions are limited by the amount of available app memory as they operate on an in-memory collection.  Available memory can vary depending on the device and operating system, the memory used by the PowerApps player, and the complexity of the app in terms of screens and controls.  if you store more than a few megabytes of data, test your app with expected scenarios on the devices you expect to be used.  You should generally expect to have between 30 and 70 megabytes of available memory.  
+These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device, the operating system, the memory that PowerApps Mobile uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect it to run. You should generally expect to have between 30 and 70 megabytes of available memory.  
 
 The functions also don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
 
-We are working to expand the capabilities for offline scenarios.  Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
+We're working to expand the capabilities for offline scenarios. Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
 
 ## How to build offline capable apps
 
