@@ -22,13 +22,15 @@ The **SaveData** function stores a collection for later use under a name.
 
 The **LoadData** function re-loads a collection by name that was previously saved with **SaveData**. You can't use this function to load a collection from another source.  
 
-**LoadData** doesn't create the collection; the function only fills an existing collection. You must first create the collection with the correct [columns](../working-with-tables.md#columns) by using **[Collect](function-clear-collect-clearcollect.md)**.  The loaded data will be appended to the end of the collection; use the **[Clear](function-clear-collect-clearcollect.md)** function first if you would like to start with a clean slate.
+Use these functions to improve app startup performance by caching data in the **[App.OnStart](../controls/control-screen.md#additional-properties)** formula on a first run and then reloading the local data on subsequent runs.  These functions can also be used to add [simple offline capabilities](../offline-apps.md) to your app.
 
 Storage is encrypted and in a private location on the local device, isolated from other users and other apps.
 
 These functions cannot be used inside a browser either when authoring the app in the Studio or running the app in the Web Player.  Use a native player on a device to test your app during development.
 
 These functions are limited by the amount of available app memory as they operate on an in-memory collection.  Available memory can vary depending on the device and operating system, the memory used by the PowerApps player, and the complexity of the app in terms of screens and controls.  if you store more than a few megabytes of data, test your app with expected scenarios on the devices you expect to be used.  You should generally expect to have between 30 and 70 megabytes of available memory.  
+
+**LoadData** doesn't create the collection; the function only fills an existing collection. You must first create the collection with the correct [columns](../working-with-tables.md#columns) by using **[Collect](function-clear-collect-clearcollect.md)**.  The loaded data will be appended to the end of the collection; use the **[Clear](function-clear-collect-clearcollect.md)** function first if you would like to start with a clean slate.
 
 ## Syntax
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
