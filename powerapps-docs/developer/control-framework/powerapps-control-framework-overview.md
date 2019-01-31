@@ -1,8 +1,8 @@
 ---
-title: "PowerApps Control Framework Overview for Dynamics 365 Customer Engagement | MicrosoftDocs"
-description: "The topic provides PowerApps Control for Dynamics 365 Customer Engagement."
+title: "PowerApps Control Framework Overview | MicrosoftDocs"
+description: "Use the PowerApps Control Framework (PCF) to create custom controls in model-driven apps to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
 ms.date: 01/12/2018
-ms.service: "crm-online"
+ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
 author: "Nkrb"
@@ -13,7 +13,7 @@ manager: "jdaly"
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Use the **PowerApps Control Framework (PCF)** to create custom controls in Model-driven apps to provide enhanced user experience for users to view and work with data in forms, views, and dashboards. For example:
+Use the **PowerApps Control Framework (PCF)** to create custom controls in model-driven apps to provide enhanced user experience for users to view and work with data in forms, views, and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` control.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
