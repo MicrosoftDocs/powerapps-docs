@@ -6,7 +6,5 @@ This file tracks files marked for deletion. Localization requirements mean that 
 
 These files have been redirected, but the actual .md topic files can't been removed yet.
 
-powerapps-docs\maker\canvas-apps\create-app-browser.md
-
 These files have been redirected, and the .md topic files have been deleted. This list hasn't been provided to loc yet.
 
