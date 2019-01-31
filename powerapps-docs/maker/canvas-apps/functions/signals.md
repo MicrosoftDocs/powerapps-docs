@@ -20,6 +20,9 @@ Returns information about the app's environment, such as where the user is locat
 ## Description and syntax
 All signals return a [record](../working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](operators.md).
 
+> [!NOTE]
+> The **Acceleration** and **Compass** functions return accurate values in a native player such as on iOS or Android, but those functions return zero values as you create or modify an app in the browser.
+
 ### Acceleration
 The **Acceleration** signal returns the device's acceleration in three dimensions relative to the device's screen. Acceleration is measured in *g* units of 9.81 m/second<sup>2</sup> or 32.2 ft/second<sup>2</sup> (the acceleration that the Earth imparts to objects at its surface due to gravity).
 
@@ -65,14 +68,14 @@ As the location changes, dependencies on the location will continuously recalcul
 | **Location.Longitude** |Returns a number, from 0 to 180, that indicates the longitude, as measured in degrees west from Greenwich, England. |
 
 ## Examples
-From the pitcher's mound at Safeco Field in Seattle, Washington, a baseball pitcher throws a phone to a catcher at home plate. The phone is lying flat with respect to the ground, the top of the screen is pointed at the catcher, and the pitcher adds no spin. At this location, the phone has cellular network service that's metered but no WiFi. The **PlayBall** screen is displayed.   
+In a baseball field, a pitcher throws a phone from the pitcher's mound to a catcher at home plate. The phone is lying flat with respect to the ground, the top of the screen is pointed at the catcher, and the pitcher adds no spin. At this location, the phone has cellular network service that's metered but no WiFi. The **PlayBall** screen is displayed.   
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Location.Latitude** |Returns the latitude of the current location.  Safeco Field is located at map coordinates 47.591 N, 122.333 W. |47.591<br><br>The latitude will change continuously as the ball moves between the pitcher and the catcher. |
+| **Location.Latitude** |Returns the latitude of the current location. The field is located at map coordinates 47.591 N, 122.333 W. |47.591<br><br>The latitude will change continuously as the ball moves between the pitcher and the catcher. |
 | **Location.Longitude** |Returns the longitude of the current location. |122.333<br><br>The longitude will change continuously as the ball moves between the pitcher and the catcher. |
 | **Location** |Returns the latitude and longitude of the current location, as a record. |{&nbsp;Latitude:&nbsp;47.591, Longitude:&nbsp;122.333&nbsp;} |
-| **Compass.Heading** |Returns the compass heading of the top of the screen. At Safeco Field, home plate is roughly southwest from the pitcher's mound. |230.25 |
+| **Compass.Heading** |Returns the compass heading of the top of the screen. At this field, home plate is roughly southwest from the pitcher's mound. |230.25 |
 | **Acceleration.X** |Returns the acceleration of the device side to side. The pitcher is throwing the phone straight ahead with respect to the screen's top, so the device isn't accelerating side to side. |0 |
 | **Acceleration.Y** |Returns the acceleration of the device front to back. The pitcher initially gives the device a large acceleration when throwing the device, going from 0 to 90 miles per hour (132 feet per second) in half a second. After the device is in the air, ignoring air friction, the device doesn't accelerate further. The device decelerates when the catcher catches it, bringing it to a stop. |8.2, while the pitcher throws the device.<br><br>0, while the device is in the air.<br><br>-8.2, as the catcher catches the device. |
 | **Acceleration.Z** |Returns the acceleration of the device top to bottom. While in the air, the device experiences the effects of gravity. |0, before the pitcher throws the device.<br><br>1, while the device is in the air.<br><br>0, after the catcher catches the device. |

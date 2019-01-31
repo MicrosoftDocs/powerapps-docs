@@ -2,7 +2,7 @@
 title: "Authentication with .NET Framework applications (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "How .NET Framework applications can authenticate with Common Data Service for Apps" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 01/25/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -55,9 +55,6 @@ Use .NET Framework version 4.6.2 or higher when you create client applications. 
 > Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
 >
 > This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
-
-> [!IMPORTANT]
-> When developing Plug-in and workflow activity assemblies, which do not require authentication, you must use .NET Framework 4.5.2
 
 ## .NET Framework applications without SDK assemblies
 

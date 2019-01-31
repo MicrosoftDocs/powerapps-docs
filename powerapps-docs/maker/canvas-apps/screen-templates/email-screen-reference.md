@@ -1,13 +1,13 @@
 ---
-title: Email screen template reference | Microsoft Docs
-description: Understand, at a low level, how the email screen template works in PowerApps
+title: Reference for the email-screen template for canvas apps | Microsoft Docs
+description: Understand details of how the email-screen template for canvas apps works in PowerApps
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/19/2018
+ms.date: 12/31/2018
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -19,25 +19,7 @@ search.app:
 
 For canvas apps in PowerApps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
 
-## Prerequisite
-
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
-
-## Default functionality
-
-To add an email screen from the template:
-
-1. [Sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to PowerApps, and then create an app or open an existing app in PowerApps Studio.
-
-    This topic shows a phone app, but the same concepts apply to a tablet app.
-
-1. On the **Home** tab of the ribbon, select **New screen** > **Email**.
-
-    By default, the screen resembles this graphic:
-
-    ![Email screen](media/email-screen/email-screen-full.png)
-
-This topic explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of significant controls are set. Those controls are presented in this order:
+This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
 * [Text search box](#text-search-box)
 * [Add Icon](#add-icon)
@@ -45,39 +27,42 @@ This topic explains the expressions or formulas to which various properties (suc
 * [Email people gallery](#email-people-gallery) (+ child controls)
 * [Mail icon](#mail-icon)
 
+## Prerequisite
+
+Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+
 ## Text search box
 
    ![TextSearchBox control](media/email-screen/email-search-box.png)
 
-Several other controls in the screen have a dependency on this one:
+Several other controls in the screen have a dependency on the **Text search box** control:
 
-* If a user starts typing any text, **PeopleBrowseGallery** becomes visible.
-* If a user types out a valid email address, **AddIcon** becomes visible.
-* When a user selects a person within **PeopleBrowseGallery** the search contents are reset.
+* If a user starts typing any text, **PeopleBrowseGallery** appears.
+* If a user types out a valid email address, **AddIcon** appears.
+* When a user selects a person within **PeopleBrowseGallery**, the search contents are reset.
 
 ## Add icon
 
    ![AddIcon control](media/email-screen/email-add-icon.png)
 
-The purpose of this control is to allow app users to add people who don't exist inside their org to the recipient list for the email being composed.
+The **Add icon** control allows app users to add people who don't exist inside their org to the recipient list of the email being composed.
 
 * Property: **Visible**<br>
-    Value: Logic to show the control only when a user types out a full and valid email address into the search box.
+    Value: Logic to show the control only when a user types a valid email address into the search box:
 
     ```powerapps-dot
     !IsBlank( TextSearchBox.Text ) &&
         IsMatch( TextSearchBox.Text, Match.Email ) &&
         Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
     ```
+  Line by line, the preceding code block says that the **Add icon** control will be visible only if:
 
-* Line by line this code block says that the **AddIcon** control will only be visible if:
-
-    1. The text in **TextSearchBox** contains something
-    1. The text in **TextSearchBox** is a valid email address
-    1. The text in **TextSearchBox** doesn't already exist in the MyPeople collection
+    * **TextSearchBox** contains text.
+    * The text in **TextSearchBox** is a valid email address.
+    * The text in **TextSearchBox** doesn't already exist in the **MyPeople** collection.
 
 * Property: **OnSelect**<br>
-    Value: Selecting this adds the valid email address to the **MyPeople** collection. This collection is used by the screen as the recipient list.
+    Value: Selecting this adds the valid email address to the **MyPeople** collection. This collection is used by the screen as the recipient list:
 
     ```powerapps-dot
     Collect( MyPeople,
@@ -90,14 +75,14 @@ The purpose of this control is to allow app users to add people who don't exist 
     Reset( TextSearchBox )
     ```
   
-  * This code block adds a row to the **MyPeople** collection and populates three fields with the text in **TextSearchBox**. These 3 fields are DisplayName, UserPrincipalName, and Mail. It then resets the contents of **TextSearchBox**
+  This code block adds a row to the **MyPeople** collection and populates three fields with the text in **TextSearchBox**. These three fields are **DisplayName**, **UserPrincipalName**, and **Mail**. It then resets the contents of **TextSearchBox**.
 
 ## People browse gallery
 
    ![PeopleBrowseGallery control](media/email-screen/email-browse-gall.png)
 
-* Property: **Items**
-    Value: The top 15 search results of the search text from the **TextSearchBox** control.
+* Property: **Items**<br>
+    Value: The top 15 search results of the search text typed into the **TextSearchBox** control:
     
     ```powerapps-dot
     If( !IsBlank( Trim(TextSearchBox.Text ) ), 
@@ -105,10 +90,9 @@ The purpose of this control is to allow app users to add people who don't exist 
     )
     ```
 
-  * The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/en-us/connectors/office365users/#searchuser) operation.
-    * The operation takes the text in Trim(**TextSearchBox**) as its search term and returns the top 15 results based on that search.
-  * **TextSearchBox** is wrapped in a Trim() function because a user search on spaces is invalid.
-  * The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function because you only want to call the operation when the search box has user entered text. Otherwise it will be a performance waste.
+  The items of this gallery are populated by search results from the [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) operation. The operation takes the text in `Trim(TextSearchBox)` as its search term and returns the top 15 results based on that search.
+  
+  **TextSearchBox** is wrapped in a `Trim()` function because a user search on spaces is invalid. The `Office365Users.SearchUser` operation is wrapped in an `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` function, which means that the operation is performed only if the search box contains user-entered text. This improves performance. 
 
 ### People browse gallery Title control
 
@@ -117,10 +101,10 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **Text**<br>
     Value: `ThisItem.DisplayName`
 
-  * Displays the person's display name from their Office365 profile.
+  Displays the person's display name from their Office 365 profile.
 
-* Property: **OnSelect**
-    Value: Code to add the user to an app level collection, and select the user.
+* Property: **OnSelect**<br>
+    Value: Code to add the user to an app-level collection, and then select the user:
 
     ```powerapps-dot
     Concurrent(
@@ -131,11 +115,11 @@ The purpose of this control is to allow app users to add people who don't exist 
         )
     )
     ```
-    Selecting this control does 3 things concurrently:
+Selecting this control does three things concurrently:
 
-    1. Sets the **_selectedUser** variable to the item selected
-    1. Resets the search term in **TextSearchBox**
-    1. Adds the selected item to the **MyPeople** collection, a collection of all the selected users which the email screen uses as a set of recipients
+   * Sets the **_selectedUser** variable to the item selected.
+   * Resets the search term in **TextSearchBox**.
+   * Adds the selected item to the **MyPeople** collection, a collection of all the selected users that the email screen uses as a set of recipients.
 
 ## Email people gallery
 
@@ -144,10 +128,10 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **Items**<br>
     Value: `MyPeople`
 
-  * This is the collection of people initialized / added to by selecting the **PeopleBrowseGallery Title** control
+  This is the collection of people initialized or added to by selecting the **PeopleBrowseGallery Title** control.
 
 * Property: **Height**<br>
-    Value: Logic to set the height based on the number of items currently in the gallery.
+    Value: Logic to set the height, based on the number of items currently in the gallery:
 
     ```powerapps-dot
     Min( 
@@ -157,13 +141,14 @@ The purpose of this control is to allow app users to add people who don't exist 
     )
     ```
 
-  * The height of this gallery adjusts to the number of items in the gallery to a maximum height of 304.
-  * It takes TemplateHeight + TemplatePadding * 2 as the total height of a single row of the EmailPeopleGallery, then multiplies it by the number of rows. Since WrapCount = 2, the number of true rows is RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0).
+  The height of this gallery adjusts to the number of items in the gallery, with a maximum height of 304.
+  
+  It takes `TemplateHeight + TemplatePadding * 2` as the total height of a single row of **EmailPeopleGallery**, then multiplies it by the number of rows. Since `WrapCount = 2`, the number of true rows is `RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0)`.
 
 * Property: **ShowScrollbar**<br>
     Value: `EmailPeopleGallery.Height >= 304`
-
-  * When the height of the gallery reaches 304, the scrollbar will be visible.
+  
+  When the height of the gallery reaches 304, the scroll bar is visible.
 
 ### Email people gallery Title control
 
@@ -172,7 +157,7 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **OnSelect**<br>
     Value: `Set(_selectedUser, ThisItem)`
 
-  * Sets the **_selectedUser** variable to the item selected in the **EmailPeopleGallery**
+  Sets the **_selectedUser** variable to the item selected in **EmailPeopleGallery**.
 
 ### Email people gallery iconRemove control
 
@@ -181,12 +166,12 @@ The purpose of this control is to allow app users to add people who don't exist 
 * Property: **OnSelect**<br>
     Value: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
-  * Looks up the record in the **MyPeople** collection where the UserPrincipalName matches the UserPrincipalName of the selected item, and removes that record from the collection
+  Looks up the record in the **MyPeople** collection, where **UserPrincipalName** matches the **UserPrincipalName** of the selected item, and removes that record from the collection.
 
 ## Mail icon
 
 * Property: **OnSelect**<br>
-    Value: Logic to send the user's email.
+    Value: Logic to send the user's email message:
 
     ```powerapps-dot
     Set( _emailRecipientString, Concat( MyPeople, Mail & ";" ) );
@@ -200,17 +185,19 @@ The purpose of this control is to allow app users to add people who don't exist 
     Clear( MyPeople )
     ```
 
-  * Sending an email requires a semicolon separated string of email addresses. The first line takes the 'Mail' field from all the rows in the **MyPeople** collection and concatenates them down into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
-  * It then uses the [Office365.SendEmail](https://docs.microsoft.com/en-us/connectors/office365/#sendemail) operation to send the email to the recipients.
-    * The operation has 3 required parameters and 1 optional parameter: **To**, **Subject**, **Body**, and **Importance**. In this example, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and Normal, respectively.
-  * Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
+  Sending an email message requires a semicolon-separated string of email addresses. In the preceding code:
+  1. The first line of code takes the **Mail** field from all the rows in the **MyPeople** collection, concatenates them into a single string of email addresses separated by semicolons, and sets the **_emailRecipientString** variable to that string value.
+
+  1. It then uses the [Office365.SendEmail](https://docs.microsoft.com/connectors/office365/#sendemail) operation to send the email to the recipients.
+    The operation has three required parameters, **To**, **Subject**, and **Body**, and one optional parameter--**Importance**. In the preceding code, these are **_emailRecipientString**, **TextEmailSubject**.Text, **TextEmailMessage**.Text, and **Normal**, respectively.
+  1. Finally, it resets the **TextEmailSubject** and **TextEmailMessage** controls and clears the **MyPeople** collection.
 
 * Property: **DisplayMode**<br>
     Value: `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ), DisplayMode.Edit, DisplayMode.Disabled )`
-  * To send an email, the email subject line must have text, and the recipient (**MyPeople**) collection must not be empty.
+  For an email to be sent, the email subject line must have text, and the recipient (**MyPeople**) collection must not be empty.
 
 ## Next steps
 
 * [Learn more about this screen](./email-screen-overview.md)
-* [Learn more about the Office365 Outlook connector in PowerApps](../connections/connection-office365-outlook.md)
-* [Learn more about the Office365 Users connector in PowerApps](../connections/connection-office365-users.md)
+* [Learn more about the Office 365 Outlook connector in PowerApps](../connections/connection-office365-outlook.md)
+* [Learn more about the Office 365 Users connector in PowerApps](../connections/connection-office365-users.md)

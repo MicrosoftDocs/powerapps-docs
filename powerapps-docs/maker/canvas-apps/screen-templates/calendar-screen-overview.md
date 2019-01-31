@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/14/2018
+ms.date: 12/28/2018
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -19,13 +19,13 @@ search.app:
 
 In a canvas app, add a calendar screen that shows users upcoming events from their Office 365 Outlook accounts. Users can select a date from a calendar and scroll through a list of that day's events. You can change which details appear in the list, add a second screen that shows more details about each event, show a list of attendees for each event, and make other customizations.
 
-You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), [people](people-screen-overview.md) in an organization, and [availability](meeting-screen-overview.md) of people whom you want to invite to a meeting.
+You can also add other template-based screens that show different data from Office 365, such as [email](email-screen-overview.md), [people](people-screen-overview.md) in an organization, and [availability](meeting-screen-overview.md) of people users might want to invite to a meeting.
 
 This overview teaches you:
 > [!div class="checklist"]
-> * How to use the default calendar screen
-> * How to modify it
-> * How to integrate it into an app
+> * How to use the default calendar screen.
+> * How to modify it.
+> * How to integrate it into an app.
 
 For a deeper dive into this screen's default functionality, see the [calendar-screen reference](calendar-screen-reference.md).
 
@@ -43,7 +43,7 @@ To add a calendar screen from the template:
 
 1. On the **Home** tab of the ribbon, select **New screen** > **Calendar**.
 
-    By default, the screen resembles this graphic:
+    By default, the screen looks similar to this:
 
     ![Calendar screen](media/calendar-screen/calendar-initial.png)
 
@@ -55,22 +55,22 @@ A few helpful notes:
 
 * Today's date is selected by default, and you can easily return to it by selecting the calendar icon in the upper-right corner.
 * If you select a different date, a circle surrounds it, and a light-colored rectangle (blue if the default theme is applied) surrounds today's date.
-* If at least one event is scheduled for a particular date, a small, colored circle appears under that date in the calendar.
-* If you select a date for which one or more events are scheduled, they appear in a list under the calendar.
+* If at least one event is scheduled for a particular date, a small colored circle appears under that date in the calendar.
+* If you select a date for which one or more events are scheduled, the event(s) appear in a list under the calendar.
 
 ## Modify the screen
 
 You can modify the default functionality of this screen in a few common ways:
 
-* [Specify the calendar](calendar-screen-overview.md#specify-the-calendar)
-* [Show different details about an event](calendar-screen-overview.md#show-different-details-about-an-event)
-* [Hide non-blocking events](calendar-screen-overview.md#hide-non-blocking-events)
+* [Specify the calendar](calendar-screen-overview.md#specify-the-calendar).
+* [Show different details about an event](calendar-screen-overview.md#show-different-details-about-an-event).
+* [Hide nonblocking events](calendar-screen-overview.md#hide-nonblocking-events).
 
-If you want to modify the screen further, use the [calender-screen reference](./calendar-screen-reference.md) as a guide.
+If you want to modify the screen further, use the [calendar-screen reference](./calendar-screen-reference.md) as a guide.
 
 ### Specify the calendar
 
-If you already know which calendar your users should view, you can simplify the screen by specifying that calendar before you publish the app. This change obviates the need for the drop-down list of calendars, so you can remove it.
+If you already know which calendar your users should view, you can simplify the screen by specifying that calendar before you publish the app. This change removes the need for the drop-down list of calendars, so you can remove it.
 
 1. Set the **[OnStart](../controls/control-screen.md)** property of the default screen in the app to this formula:
 
@@ -106,7 +106,7 @@ If you already know which calendar your users should view, you can simplify the 
     ```
 
     > [!NOTE]
-    > This formula is slightly edited from the default value of the **OnSelect** property of the drop-down list for selecting a calendar. For more information about that control, see its section in the [calendar-screen reference](./calendar-screen-reference.md#calendar-dropdown).
+    > This formula is slightly edited from the default value of the **OnSelect** property of the drop-down list for selecting a calendar. For more information about that control, see its section in the [calendar-screen reference](./calendar-screen-reference.md#calendar-drop-down).
 
 1. Replace `{YourCalendarNameHere}`, including the curly braces, with the name of the calendar that you want to show (for example, **Calendar**).
 
@@ -143,17 +143,17 @@ If you already know which calendar your users should view, you can simplify the 
 
 ### Show different details about an event
 
-By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](https://docs.microsoft.comconnectors/office365/#calendareventclientreceive) supports.
+By default, the gallery under the calendar, named **CalendarEventsGallery**, shows the start time, the duration, the subject, and the location of each event. You can configure the gallery to show any field (such as the organizer) that the [Office 365 connector](https://docs.microsoft.com/connectors/office365/#calendareventclientreceive) supports.
 
 1. In **CalendarEventsGallery**, set the **Text** property of a new or an existing label to `ThisItem` followed by a period.
 
-    Intellisense lists the fields that you can select.
+    IntelliSense lists the fields that you can select.
 
 1. Select the field that you want.
 
     The label shows the type of information that you specified.
 
-### Hide non-blocking events
+### Hide nonblocking events
 
 In many offices, team members send meeting requests to notify each other when they'll be away from the office. To avoid blocking everyone's schedules, the person sending the request sets its availability to **Free**. You can hide these events from the calendar and the gallery by updating a couple of properties.
 
@@ -188,32 +188,32 @@ In many offices, team members send meeting requests to notify each other when th
 
 ## Integrate the screen into an app
 
-The calendar screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including:
+The calendar screen is a powerful bundle of controls in its own right, but it usually performs best as part of a larger, more versatile app. You can integrate this screen into a larger app in a number of ways, including adding these options:
 
-* [View event details](calendar-screen-overview.md#view-event-details)
-* [Show event attendees](calendar-screen-overview.md#show-event-attendees)
+* [View event details](calendar-screen-overview.md#view-event-details).
+* [Show event attendees](calendar-screen-overview.md#show-event-attendees).
 
 ### View event details
 
-If users select an event by clicking or tapping it in **CalendarEventsGallery**, you can open another screen that shows more information about that event.
+If users select an event in **CalendarEventsGallery**, you can open another screen that shows more information about that event.
 
-> [!Note]
+> [!NOTE]
 > This procedure shows event details in a gallery with dynamic content, but you can achieve similar results by taking other approaches. For example, you can get more design control by using a series of labels instead.
 
 1. Add a blank screen, named **EventDetailsScreen**, that contains a blank flexible-height gallery and a button that navigates back to the calendar screen.
 
-1. In the flexible-height gallery, add a **Label** control and a **HTML text** control, and set the **AutoHeight** property of both to true.
+1. In the flexible-height gallery, add a **Label** control and an **HTML text** control, and set the **AutoHeight** property of both to **true**.
 
-    > [!Note]
-    > PowerApps retrieves the message body of each event as HTML text, so you'll want to show that content in an **HTML text** control.
+    > [!NOTE]
+    > PowerApps retrieves the message body of each event as HTML text, so you need to show that content in an **HTML text** control.
 
-1. Set the **Y** property of the **HTMLText** control to this expression:
+1. Set the **Y** property of the **HTML text** control to this expression:
 
     `Label1.Y + Label1.Height + 20`
 
 1. Adjust additional properties as necessary to suit your style needs.
 
-    For example, you might want to add a separator line below the **HtmlText** control.
+    For example, you might want to add a separator line below the **HTML text** control.
 
 1. Set the **Items** property of the flexible-height gallery to this formula:
 
@@ -228,9 +228,9 @@ If users select an event by clicking or tapping it in **CalendarEventsGallery**,
     )
     ```
 
-    This formula creates a gallery of dynamic data that's set to the field values of **_selectedCalendarEvent**, which is set every time the user selects an event in the **CalendarEventsGallery** control. You can extend this gallery to include more fields by adding more labels to it, but this set provides a good basis.
+    This formula creates a gallery of dynamic data that's set to the field values of **_selectedCalendarEvent**, which is set every time the user selects an event in the **CalendarEventsGallery** control. You can extend this gallery to include more fields by adding more labels to it, but this set provides a good starting point.
 
-1. With the gallery items in place, set the **Text** property of the **Label** control to `ThisItem.Title`, and the **HtmlText** property of **HtmlText** control to `ThisItem.Value`.
+1. With the gallery items in place, set the **Text** property of the **Label** control to `ThisItem.Title`, and the **HtmlText** property of the **HTML text** control to `ThisItem.Value`.
 
 1. In **CalendarEventsGallery**, set the **OnSelect** property of the **Title** control to this formula:
 
@@ -276,7 +276,7 @@ The `Office365.GetEventsCalendarViewV2` operation retrieves a variety of fields 
     )
     ```
 
-These bullets discuss what each **ClearCollect** operation does:
+This list discusses what each **ClearCollect** operation does:
 
 - ClearCollect(AttendeeEmailsTemp)
     ```powerapps-dot
@@ -299,9 +299,9 @@ These bullets discuss what each **ClearCollect** operation does:
         )
     );
     ```
-    This formula roughly determines whether an attendee is in your organization. The definition of **_userDomain** is simply the domain URL in the email address of the person who's running the app. This line creates an additional true/false column, named **InOrg**, in the **AttendeeEmailsTemp** collection. This column contains true if **userDomain** is equivalent to the domain URL of the email address in that particular row of **AttendeeEmailsTemp**.
+    This formula roughly determines whether an attendee is in your organization. The definition of **_userDomain** is simply the domain URL in the email address of the person who's running the app. This line creates an additional true/false column, named **InOrg**, in the **AttendeeEmailsTemp** collection. This column contains **true** if **userDomain** is equivalent to the domain URL of the email address in that particular row of **AttendeeEmailsTemp**.
 
-    This approach isn't always accurate, but it gets pretty close. For example, certain attendees in your org might have an email address like Jane@OnContoso.com, whereas **_userDomain** is Contoso.com. The app user and Jane might work at the same company but have slight variations in their email addresses. For cases such as these, you may want to use this formula:
+    This approach isn't always accurate, but it gets pretty close. For example, certain attendees in your org might have an email address like Jane@OnContoso.com, whereas **_userDomain** is Contoso.com. The app user and Jane might work at the same company but have slight variations in their email addresses. For cases such as these, you might want to use this formula:
 
     `Upper(_userDomain) in Upper(Right(Result, Len(Result) - Find("@", Result)))`
 
@@ -330,11 +330,11 @@ These bullets discuss what each **ClearCollect** operation does:
         )
     );
     ```
-    To retrieve Office 365 profiles, you must us the  [Office365Users.UserProfile](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/en-us/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
+    To retrieve Office 365 profiles, you must use the  [Office365Users.UserProfile](https://docs.microsoft.com/connectors/office365users/#userprofile) or [Office365Users.UserProfileV2](https://docs.microsoft.com/connectors/office365users/#userprofile) operation. These operations first gather all the Office 365 profiles for attendees who are in the user's org. Then the operations add a few fields for attendees from outside the organization. You separated these two items into distinct operations because the **ForAll** loop doesn't guarantee order. Therefore, **ForAll** might collect an attendee from outside the organization first. In this case, the schema for **MyPeople** contains only **DisplayName**, **Id**, **JobTitle**, and **UserPrincipalName**. However, the UserProfile operations retrieve much richer data than that. So you force the **MyPeople** collection to add Office 365 profiles before the other profiles.
 
-    > [!Note]
+    > [!NOTE]
     > You can achieve the same result with only one **ClearCollect** function:
-    
+
     ```powerapps-dot
     ClearCollect( MyPeople, 
         ForAll(
