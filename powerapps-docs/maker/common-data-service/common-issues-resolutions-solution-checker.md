@@ -13,6 +13,7 @@ author: jowells1 # GitHub ID
 ms.author: jowells # MSFT alias of Microsoft employees only
 manager: austinj # MSFT alias of manager or PM counterpart
 ms.reviewer: 
+robots: noindex,nofollow
 search.audienceType: 
   - developer
 search.app: 
