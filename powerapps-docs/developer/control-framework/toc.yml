@@ -1,5 +1,5 @@
 - name: "PowerApps Control Framework"
-  href: index.md
+  href: overview.md
   items:
   - name: "What are custom controls?"
     href: custom-controls-overview.md
@@ -9,7 +9,7 @@
     href: import-custom-controls.md
   - name: Add custom controls to entity or a field
     href: add-custom-controls-to-a-field-or-entity.md
-  - name: How to debug custom controls
+  - name: Debug custom controls
     href: debugging-custom-controls.md
   - name: Sample Controls
     items: 
