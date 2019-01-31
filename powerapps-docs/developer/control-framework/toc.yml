@@ -11,6 +11,8 @@
     href: add-custom-controls-to-a-field-or-entity.md
   - name: Debug custom controls
     href: debugging-custom-controls.md
+  - name: Limitations of PowerApps Control Framework
+    href: limitations.md
   - name: Sample Controls
     items: 
     - name: Increment control
@@ -41,8 +43,6 @@
       href: sample-controls/table-grid-control.md
     - name: Web API control
       href: sample-controls/webapi-control.md
-  - name: Limitations of PowerApps Control Framework
-    href: limitations.md
   - name: Reference
     items:
     - name: PowerApps Control Framework 

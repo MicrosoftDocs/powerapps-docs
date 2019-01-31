@@ -1,6 +1,6 @@
 ---
-title: "PowerApps Control Framework API Reference for Dynamics 365 Customer Engagement | MicrosoftDocs"
-description: "The topic provides PowerApps Control Framework API reference for Dynamics 365 Customer Engagement."
+title: "PowerApps Control Framework API Reference | MicrosoftDocs"
+description: "The topic provides PowerApps Control Framework API reference."
 ms.date: 01/12/2018
 ms.service: "crm-online"
 ms.topic: "index-page"
