@@ -27,7 +27,7 @@ One of the most common scenarios you face as a mobile-app developer is enabling 
 
 LoadData and SaveData are a simple mechanism to store small amounts of data on a local device.  Using these function you can add simple offline capabilities to your app.  
 
-These functions are limited by the amount of available app memory as they operate on an in-memory collection.  Available memory can vary depending on the device and operating system, the memory used by the PowerApps player, and the complexity of the app in terms of screens and controls.  if you store more than a few megabytes of data, test your app with expected scenarios on the devices you expect to be used. 
+These functions are limited by the amount of available app memory as they operate on an in-memory collection.  Available memory can vary depending on the device and operating system, the memory used by the PowerApps player, and the complexity of the app in terms of screens and controls.  if you store more than a few megabytes of data, test your app with expected scenarios on the devices you expect to be used.  You should generally expect to have between 30 and 70 megabytes of available memory.  
 
 The functions also don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
 

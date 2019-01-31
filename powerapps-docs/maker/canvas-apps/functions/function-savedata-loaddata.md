@@ -28,7 +28,7 @@ Storage is encrypted and in a private location on the local device, isolated fro
 
 These functions cannot be used inside a browser either when authoring the app in the Studio or running the app in the Web Player.  Use a native player on a device to test your app during development.
 
-These functions are limited by the amount of available app memory as they operate on an in-memory collection.  Available memory can vary depending on the device and operating system, the memory used by the PowerApps player, and the complexity of the app in terms of screens and controls.  if you store more than a few megabytes of data, test your app with expected scenarios on the devices you expect to be used. 
+These functions are limited by the amount of available app memory as they operate on an in-memory collection.  Available memory can vary depending on the device and operating system, the memory used by the PowerApps player, and the complexity of the app in terms of screens and controls.  if you store more than a few megabytes of data, test your app with expected scenarios on the devices you expect to be used.  You should generally expect to have between 30 and 70 megabytes of available memory.  
 
 ## Syntax
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
