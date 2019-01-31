@@ -1,14 +1,14 @@
 ---
 title: Delete a canvas app | Microsoft Docs
 description: How to delete an existing canvas app in PowerApps
-author: jamesol-msft
+author: linhtranms
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
-ms.author: jamesol
+ms.author: litran
 search.audienceType: 
   - maker
 search.app: 

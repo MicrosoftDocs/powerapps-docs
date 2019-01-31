@@ -1,13 +1,13 @@
 ---
 title: Create a PowerBI report | Microsoft Docs
 description: Connecting to your data from PowerBI Desktop using the Common Data Service for Apps connector.
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 

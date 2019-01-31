@@ -11,9 +11,9 @@ tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
+ms.reviewer: kvivek
 ms.workload: na
-ms.date: 10/31/2018
+ms.date: 01/28/2019
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -29,6 +29,9 @@ search.app:
 Every customization that you make to CDS for Apps, or to a previously installed solution, is part of a solution. Every change you apply is tracked and any dependencies can be calculated. When you export a managed solution, it contains all the changes that have been applied for that solution into a file that you can then import into a different CDS for Apps environment.
 
 If you intend to transport customizations or extensions between different CDS for Apps environments or distribute solutions using AppSource, you must understand the solution framework.
+
+> [!NOTE]
+> For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/en-us/download/details.aspx?id=57777)
 
 ## Managed and unmanaged solutions
 
