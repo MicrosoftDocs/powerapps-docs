@@ -23,11 +23,15 @@ One of the most common scenarios you face as a mobile-app developer is enabling 
 * Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
 * Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
-> [!NOTE]
-> This feature area is still under development and isn't optimized for every scenario today. The functions 
-to SaveData() to a local device and LoadData() from that device work best in their current implementation over relatively small quantities of data (for example, dozens of text records in a table) that generally don't exceed 2MB. This is useful for some basic “offline” scenarios, as well as to increase the startup performance of canvas apps by caching data locally. However, using this feature to save large amounts of data (for example, saving thousands of rows in a table or caching large images or videos) may cause errors or unexpected behavior with the current implementation and should be avoided. Also, the functions don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
->
-> We are working to expand the capabilities of offline apps, to increase stability and size limits, and (in the future) to automatically handle decisions about what to save and how to handle conflicts. Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
+## Limitations
+
+LoadData and SaveData are a simple mechanism to store small amounts of data on a local device.  Using these function you can add simple offline capabilities to your app.  
+
+These functions are limited by the amount of available app memory as they operate on an in-memory collection.  Available memory can vary depending on the device and operating system, the memory used by the PowerApps player, and the complexity of the app in terms of screens and controls.  if you store more than a few megabytes of data, test your app with expected scenarios on the devices you expect to be used. 
+
+The functions also don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
+
+We are working to expand the capabilities for offline scenarios.  Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
 
 ## How to build offline capable apps
 
