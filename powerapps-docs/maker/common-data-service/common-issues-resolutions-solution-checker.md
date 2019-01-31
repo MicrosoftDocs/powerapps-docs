@@ -26,9 +26,9 @@ This article lists some common issues that you might encounter while using Solut
 <!-- Using this article as the template: https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/common-issues-and-resolutions -->
 
 ## Checks fail due to PowerApps Checker version installed
-If you have a PowerApps Checker version lower than 1.0.0.47, solution checks will fail to complete successfully. You should upgrade your PowerApps checker version from the Dynamics 365 Administration portal. 
+Solution Checker is a component of the PowerApps Checker solution.  If you have a PowerApps Checker version lower than 1.0.0.47, solution checks will fail to complete successfully. You should upgrade your PowerApps Checker version from the Dynamics 365 Administration portal. 
 
-However, if you have a PowerApps Checker version lower than 1.0.0.45 installed, it is recommended to delete the solution and install it again. Due to recent schema changes, upgrades from versions lower than 1.0.0.45 may fail.
+However, if you have a PowerApps Checker version lower than 1.0.0.45 installed, it is recommended to delete the solution and install it again. Due to recent schema changes, upgrade of PowerApps Checker from versions lower than 1.0.0.45 may fail.
 
 If you want to keep the past results from Solution Checker, export the results from a previous run or export all Solution Checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following entities:
 
@@ -37,17 +37,17 @@ If you want to keep the past results from Solution Checker, export the results f
 - Analysis Result
 - Analysis Result Detail
 
-### Delete Solution Checker
+### Delete PowerApps Checker
 
-To delete the Solution Checker solution:
+To delete the PowerApps Checker solution:
 
 1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments
 2. Click on **Solutions**
 3. Select **PowerApps Checker** and click on **Delete**
 
-### Add Solution Checker
+### Add PowerApps Checker
 
-To add Solution Checker back to your CDS instance:
+To add PowerApps Checker back to your CDS instance:
 
 1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments
 2. Click on **Solutions**
