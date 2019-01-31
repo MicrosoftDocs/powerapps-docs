@@ -22,7 +22,7 @@ The **SaveData** function stores a collection for later use under a name.
 
 The **LoadData** function re-loads a collection by name that was previously saved with **SaveData**. You can't use this function to load a collection from another source.  
 
-Use these functions to improve app startup performance by caching data in the **[App.OnStart](../controls/control-screen.md#additional-properties)** formula on a first run and then re-loading the local data on subsequent runs.  These functions can also be used to add [simple offline capabilities](../offline-apps.md) to your app.
+Use these functions to improve app startup performance by caching data in the **[App.OnStart](../controls/control-screen.md#additional-properties)** formula on a first run and then re-loading the local cache on subsequent runs.  These functions can also be used to add [simple offline capabilities](../offline-apps.md) to your app.
 
 These functions cannot be used inside a browser either when authoring the app in the Studio or running the app in the Web Player.  Use a native player on a device to test your app during development.
 
