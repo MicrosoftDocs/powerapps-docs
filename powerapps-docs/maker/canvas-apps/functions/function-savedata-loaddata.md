@@ -24,7 +24,7 @@ The **LoadData** function re-loads a collection by name that was previously save
 
 Use these functions to improve app-startup performance by caching data in the **[App.OnStart](../controls/control-screen.md#additional-properties)** formula on a first run and then re-loading the local cache on subsequent runs. You can also use these functions to add [simple offline capabilities](../offline-apps.md) to your app.
 
-You can't use these functions inside a browser, either when authoring the app in PowerApps Studio or when running the app in the web player. Use a native player on a device to test your app during development.
+You can't use these functions inside a browser, either when authoring the app in PowerApps Studio or when running the app in the web player. To test your app, run it in PowerApps Mobile on an iPhone or Android device.
 
 These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device and operating system, the memory that the PowerApps player uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect the app to run. You should generally expect to have between 30 and 70 megabytes of available memory.  
 
