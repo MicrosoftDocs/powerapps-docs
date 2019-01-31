@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/09/2017
+ms.date: 01/31/2019
 ms.author: mblythe
 search.audienceType: 
   - maker
