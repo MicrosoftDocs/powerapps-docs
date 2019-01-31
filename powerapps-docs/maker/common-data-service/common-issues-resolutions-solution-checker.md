@@ -25,20 +25,10 @@ This article lists some common issues that you might encounter while using Solut
 
 <!-- Using this article as the template: https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/common-issues-and-resolutions -->
 
-## Running Solution Checker on large solutions fail
+## Checks fail due to PowerApps Checker version installed
+If you have a PowerApps Checker version lower than 1.0.0.47, solution checks will fail to complete successfully. You should upgrade your PowerApps checker version from the Dynamics 365 Administration portal. 
 
-Larger solutions, such as the Default Solution, will fail during the export of the solution process for Solution Checker.  Solution Checker has a 10-minute timeout while exporting the solution selected for processing.  Solution Checker will retry three times before it fails to process the job.  It may take over 30-minutes before you receive the failure notification. 
-
-To address this issue, create multiple, smaller, solutions.  To minimize false positives, ensure to add dependant customizations.  When creating a solution and adding these components, include:
-- When adding plug-ins, include the SDK Message Processing Steps for the plug-in.
-- When adding entity forms, include the JavaScript web resources attached to the form events.  
-- When adding JavaScript web resources, include any dependent JavaScript web resources.
-- When adding HTML web resources, include any dependent scripts that are defined within the HTML web resource.
-- When adding custom workflows, include the assembly used within the workflow.
-
-## Upgrading Solution Checker solution fails
-
-If you have Solution Checker version lower than 1.0.0.45, it is recommended to Delete the solution and Install it again, due to schema changes.  Upgrades tend to fail when solutions have been analyzed and many Analysis Jobs or Analysis Results have been created.
+However, if you have a PowerApps Checker version lower than 1.0.0.45 installed, it is recommended to delete the solution and install it again. Due to recent schema changes, upgrades from versions lower than 1.0.0.45 may fail.
 
 If you want to keep the past results from Solution Checker, export the results from a previous run or export all Solution Checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following entities:
 
@@ -51,7 +41,7 @@ If you want to keep the past results from Solution Checker, export the results f
 
 To delete the Solution Checker solution:
 
-1. As a System Administrator or as a System Customizaer, open up your PowerApps portal by going to https://web.powerapps.com/environments
+1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments
 2. Click on **Solutions**
 3. Select **PowerApps Checker** and click on **Delete**
 
@@ -59,17 +49,34 @@ To delete the Solution Checker solution:
 
 To add Solution Checker back to your CDS instance:
 
-1. As a System Administrator or as a System Customizaer, open up your PowerApps portal by going to https://web.powerapps.com/environments
+1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments
 2. Click on **Solutions**
 3. Click on **Solution Checker** and **Install**
 
+## Checks on large solutions fail
+
+Solution Checker has a 10-minute timeout for exporting a solution from the Common Data Service (CDS) for Apps environment. Large solutions, like the Default Solution, may fail to get exported within this time, and the check will not complete successfully. Solution Checker will retry three times before it fails to process the job, so it may take over 30-minutes before you receive a failure notification.
+To address this issue, check or create smaller solutions to be analysed. To minimize false positives, ensure to add dependant customizations. When creating a solution and adding these components, include:
+
+- When adding plug-ins, include the SDK Message Processing Steps for the plug-in.
+- When adding entity forms, include the JavaScript web resources attached to the form events.  
+- When adding JavaScript web resources, include any dependent JavaScript web resources.
+- When adding HTML web resources, include any dependent scripts that are defined within the HTML web resource.
+- When adding custom workflows, include the assembly used within the workflow.
+
 ## Solution Checker will not process patched solutions
 
-If a solution has had a patch applied to it, Solution Checker will fail to export the solution for analysis. The development team is actively working on a solution to this issue.  Until the solution has been released, you will need to create a new solution with all the necessary components you'd like to have analyzed.
+If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported, as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
-## HTML web resource violations that contain JavaScript will have a different Line Number 
+To address this issue, all patches to that solution could be merged into a new version of the solution. This unlocks the solution and allows the solution to be exported from the system. 
 
-When HTML web resources are processed within Solution Checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be the same of the HTML page.
+## Line number references for issues in HTML resources with embedded JavaScript are not correct 
+
+When HTML web resources are processed within Solution Checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
+
+## JS1001 syntax issue for web resources
+
+ECMAScript 6 (2015) or later versions are not currently supported. When Solution Checker analyzes JavaScript using ECMAScript 6 or later, a JS1001 syntax issue for the web resource is reported.  
 
 ## See also
 [Best practices and guidance for the Common Data Service for Apps](../../developer/common-data-service/best-practices/index.md)<br />
