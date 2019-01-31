@@ -25,8 +25,8 @@ Use the **PowerApps Control Framework (PCF)** to create custom controls in model
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
 > [!IMPORTANT]
+> - PowerApps Control Framework is a preview feature.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_expect_changes](../../includes/cc-preview-features-expect-changes.md)]  
 > - [!INCLUDE[cc_preview_features_no_MS_support](../../includes/cc-preview-features-no-ms-support.md)]
 
 Majority of the controls found in Model-driven apps that use the **Unified Interface** are implemented using **PowerApps Control Framework**. Custom controls are metadata driven, configurable, reusable, solution aware and responsive. As a developer, you will implement an interface and the application will take care of the rest.

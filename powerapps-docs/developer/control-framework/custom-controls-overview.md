@@ -3,7 +3,7 @@ title: "PowerApps Control Framework Overview | MicrosoftDocs"
 description: "Use the PowerApps Control Framework (PCF) to create custom controls in model-driven apps to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
 ms.date: 01/12/2018
 ms.service: "powerapps"
-ms.topic: "index-page"
+ms.topic: "article"
 ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
 author: "Nkrb"
 ms.author: "nabuthuk"
