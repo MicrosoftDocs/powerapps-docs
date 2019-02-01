@@ -41,16 +41,16 @@ If you want to keep the past results from Solution Checker, export the results f
 To delete the PowerApps Checker solution:
 
 1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments.
-2. Select **Solutions**
-3. Select **PowerApps Checker** and then select **Delete**
+2. Select **Solutions**.
+3. Select **PowerApps Checker** and then select **Delete**.
 
 ### Add PowerApps Checker
 
 To add PowerApps Checker back to your CDS for Apps environment:
 
-1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments
-2. Select **Solutions**
-3. Select **Solution Checker** and then select **Install**
+1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments.
+2. Select **Solutions**.
+3. Select **Solution Checker** and then select **Install**.
 
 ## Runs on large solutions fail
 
