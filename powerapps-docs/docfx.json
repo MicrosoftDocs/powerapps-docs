@@ -60,7 +60,8 @@
         "maker/TOC.yml": "",
         "maker/dev-community-plan.md": "",
         "maker/index.md": "",
-        "maker/signup-for-powerapps.md": ""
+        "maker/signup-for-powerapps.md": "",
+        "developer/control-framework/manifest-schema-reference/**/*": ""
       }
     },
     "template": [],
