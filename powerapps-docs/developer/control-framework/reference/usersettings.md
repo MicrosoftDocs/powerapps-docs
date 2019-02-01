@@ -68,4 +68,4 @@ The name of the current user
 ### Related topics
 
 [PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../overview.md)

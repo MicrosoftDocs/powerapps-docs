@@ -1,8 +1,8 @@
 ---
-title: "PowerApps Control Framework API Reference for Dynamics 365 Customer Engagement | MicrosoftDocs"
-description: "The topic provides PowerApps Control Framework API reference for Dynamics 365 Customer Engagement."
+title: "PowerApps Control Framework API Reference | MicrosoftDocs"
+description: "The topic provides PowerApps Control Framework API reference."
 ms.date: 01/12/2018
-ms.service: "crm-online"
+ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 7da1b8e9-97af-4acb-a393-2e09caf86fc2
 ms.assetid: 
@@ -16,8 +16,8 @@ This section contains reference documentation for creating custom controls using
 
 |Name|Description|
 |----|-----------|
-|[Column](column.md)|[!INCLUDE [column-description](includes/column-description.md)]|
 |[Client](client.md)|[!INCLUDE [client-description](includes/client-description.md)]|
+|[Column](column.md)|[!INCLUDE [column-description](includes/column-description.md)]|
 |[ConditionExpression](conditionexpression.md)|[!INCLUDE [conditionexpression-description](includes/conditionexpression-description.md)]|
 |[Context](context.md)|[!INCLUDE [context-description](includes/context-description.md)]|
 |[Control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|
@@ -41,4 +41,4 @@ This section contains reference documentation for creating custom controls using
 |[WebApi](webapi.md)|[!INCLUDE [webapi-description](includes/webapi-description.md)]|
 
 ### Related topics
-[PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../overview.md)

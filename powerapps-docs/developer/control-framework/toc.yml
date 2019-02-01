@@ -1,18 +1,18 @@
 - name: "PowerApps Control Framework"
-  href: powerapps-control-framework.md
+  href: overview.md
   items:
-  - name: Overview
-    href: powerapps-control-framework-overview.md
-  - name: How-to
-    items:
-    - name: How to create custom controls
-      href: create-controls-using-pcf.md
-    - name: How to import custom controls
-      href: import-controls.md
-    - name: How to add custom controls to entity or a field
-      href: add-controls-to-a-field-or-entity.md
-    - name: How to debug custom controls
-      href: debugging-custom-controls.md
+  - name: "What are custom controls?"
+    href: custom-controls-overview.md
+  - name: Create custom controls
+    href: create-custom-controls-using-pcf.md
+  - name: Import custom controls
+    href: import-custom-controls.md
+  - name: Add custom controls to entity or a field
+    href: add-custom-controls-to-a-field-or-entity.md
+  - name: Debug custom controls
+    href: debugging-custom-controls.md
+  - name: Limitations of PowerApps Control Framework
+    href: limitations.md
   - name: Sample Controls
     items: 
     - name: Increment control
@@ -43,8 +43,6 @@
       href: sample-controls/table-grid-control.md
     - name: Web API control
       href: sample-controls/webapi-control.md
-  - name: Limitations of PowerApps Control Framework
-    href: limitations.md
   - name: Reference
     items:
     - name: PowerApps Control Framework 

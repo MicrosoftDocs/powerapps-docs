@@ -11,6 +11,8 @@ manager: "jdaly"
 ---
 # Debugging Custom Controls
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 Debugging a custom control is as simple as debugging webresources in the Model-driven apps.You can debug custom controls in two ways.
 
 ## Browser Debugging
@@ -33,4 +35,4 @@ Use the Fiddler AutoResponder to quickly debug your custom controls. Install [Fi
 ### Related Topics
 
 [PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](overview.md)

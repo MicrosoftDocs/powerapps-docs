@@ -30,4 +30,4 @@ If the number of records being retrieved is more than the value specified in the
 ### Related topics
 
 [PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../overview.md)

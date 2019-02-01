@@ -25,4 +25,4 @@ ms.assetid: d8fde7bd-6e69-46cb-a644-d3c527726169
 
 [DataSet](../dataset.md)<br />
 [PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../powerapps-control-framework-overview.md)<br />
+[PowerApps Control Framework Overview](../../overview.md)<br />

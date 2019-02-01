@@ -33,4 +33,4 @@ ms.assetid: fd98d153-391d-41e6-ac9d-d2350a4791b9
 
 [PopupService](../popupservice.md)<br />
 [PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../powerapps-control-framework-overview.md)<br />
+[PowerApps Control Framework Overview](../../overview.md)<br />

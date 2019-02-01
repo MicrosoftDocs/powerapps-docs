@@ -35,4 +35,4 @@ ms.assetid: 74992f97-89b7-401e-ac95-9c8a47f990d1
 
 [Entity Record](../entityrecord.md)<br />
 [PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../powerapps-control-framework-overview.md)<br />
+[PowerApps Control Framework Overview](../../overview.md)<br />

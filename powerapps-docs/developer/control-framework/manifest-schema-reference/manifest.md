@@ -43,4 +43,4 @@ ms.assetid: a48831c6-133a-4747-99fa-7cc1df4558d0
 [Control](control.md)<br />
 [PowerApps Control Framework Manifest Schema Reference](index.md)<br />
 [PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../overview.md)

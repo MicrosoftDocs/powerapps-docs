@@ -25,4 +25,4 @@ ms.assetid: 878465d9-3e25-44df-ad7b-de50916fd9d2
 
 [Factory](../factory.md)<br/>
 [PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../../overview.md)

@@ -42,4 +42,4 @@ ms.assetid: a118f54f-be47-4f35-9ffb-7afa6c296631
 ### Related topics
 
 [PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../overview.md)

@@ -1,0 +1,1 @@
+Gets value of the specified column name.
