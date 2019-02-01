@@ -68,7 +68,7 @@ To address this issue, check or create smaller solutions to be analyzed. To mini
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
-To address this issue, merge all patches to the solution into a new version of the solution. This unlocks the solution and allows the solution to be exported from the system. 
+To address this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system. More information: [Clone a solution](use-segmented-solutions-patches-simplify-updates.md#clone-a-solution)
 
 ## Line number references for issues in HTML resources with embedded JavaScript are not correct 
 
