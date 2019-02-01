@@ -24,12 +24,10 @@ search.app:
 
 This article lists some common issues that you might encounter while using Solution Checker. Where applicable, workarounds are provided.
 
-<!-- Using this article as the template: https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/common-issues-and-resolutions -->
-
 ## Solution Checker runs fail due to PowerApps Checker version installed
-Solution Checker is a feature included with the PowerApps Checker solution.  If you have a PowerApps Checker version lower than 1.0.0.47, Solution Checker runs will fail to complete successfully. You should upgrade your PowerApps Checker version from the Dynamics 365 Administration portal. 
+Solution Checker is a feature included with the PowerApps Checker solution.  If you have a PowerApps Checker version earlier than 1.0.0.47, Solution Checker runs will fail to complete successfully. You should upgrade your PowerApps Checker version from the [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)]. 
 
-However, if you have a PowerApps Checker version lower than 1.0.0.45 installed, it is recommended to delete the solution and install it again. Due to recent schema changes, upgrade of PowerApps Checker from versions lower than 1.0.0.45 may fail.
+However, if you have a PowerApps Checker version earlier than 1.0.0.45 installed, it is recommended to delete the solution and install it again. Due to recent schema changes, upgrade of PowerApps Checker from versions earlier than 1.0.0.45 may fail.
 
 If you want to keep the past results from Solution Checker, export the results from a previous run or export all Solution Checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following entities:
 
@@ -42,35 +40,35 @@ If you want to keep the past results from Solution Checker, export the results f
 
 To delete the PowerApps Checker solution:
 
-1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments
-2. Click on **Solutions**
-3. Select **PowerApps Checker** and click on **Delete**
+1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments.
+2. Select **Solutions**
+3. Select **PowerApps Checker** and then select **Delete**
 
 ### Add PowerApps Checker
 
-To add PowerApps Checker back to your CDS instance:
+To add PowerApps Checker back to your CDS for Apps environment:
 
 1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments
-2. Click on **Solutions**
-3. Click on **Solution Checker** and **Install**
+2. Select **Solutions**
+3. Select **Solution Checker** and then select **Install**
 
 ## Runs on large solutions fail
 
 Solution Checker has a 10-minute timeout for exporting a solution from the Common Data Service (CDS) for Apps environment. Large solutions, like the Default Solution, may fail to get exported within this time, and the check will not complete successfully. Solution Checker will retry three times before it fails to process the job, so it may take over 30-minutes before you receive a failure notification.
 
-To address this issue, check or create smaller solutions to be analyzed. To minimize false positives, ensure to add dependent customizations. When creating a solution and adding these components, include:
+To address this issue, check or create smaller solutions to be analyzed. To minimize false positives, ensure you add dependent customizations. When you create a solution and add these components, include the following:
 
-- When adding plug-ins, include the SDK Message Processing Steps for the plug-in.
-- When adding entity forms, include the JavaScript web resources attached to the form events.  
-- When adding JavaScript web resources, include any dependent JavaScript web resources.
-- When adding HTML web resources, include any dependent scripts that are defined within the HTML web resource.
-- When adding custom workflows, include the assembly used within the workflow.
+- When you add plug-ins, include the SDK Message Processing Steps for the plug-in.
+- When you add entity forms, include the JavaScript web resources attached to the form events.  
+- When you add JavaScript web resources, include any dependent JavaScript web resources.
+- When you add HTML web resources, include any dependent scripts that are defined within the HTML web resource.
+- When you add custom workflows, include the assembly used within the workflow.
 
 ## Solution Checker will not process patched solutions
 
-If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported, as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
+If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
-To address this issue, all patches to that solution could be merged into a new version of the solution. This unlocks the solution and allows the solution to be exported from the system. 
+To address this issue, merge all patches to the solution into a new version of the solution. This unlocks the solution and allows the solution to be exported from the system. 
 
 ## Line number references for issues in HTML resources with embedded JavaScript are not correct 
 
