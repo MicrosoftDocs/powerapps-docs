@@ -32,7 +32,9 @@ To know more about how to browse information in the weekly release notes, read t
 
 ## Release notes
 
-For information about new features releasing over the next few months that you can use for planning, see [October 2018 release notes](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/planned-features).
+For information about new features releasing over the next few months that you can use for planning, see:
+- [October 2018 release notes](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/planned-features)
+- [April 2019 release notes](https://docs.microsoft.com/business-applications-release-notes/April19/microsoft-powerapps/planned-features)
 
 ## Known limitations
 

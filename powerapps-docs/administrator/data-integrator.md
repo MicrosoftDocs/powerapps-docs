@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 11/07/2018
+ms.date: 1/31/2019
 ms.author: sabinn
 search.audienceType: 
   - admin
@@ -24,6 +24,9 @@ We started with first-party apps—for example, Dynamics 365 for Finance and Ope
 
 > [!div class="mx-imgBorder"]
 > ![Data source to destination](media/data-integrator/DataIntegratorP2P-new.PNG "Data source to destination")
+
+> [!TIP]
+> Check out the blog: [Data Integrator Updates – New features with an intuitive user interface providing a fluent experience](https://powerapps.microsoft.com/blog/data-integrator-updates-new-features-with-an-intuitive-user-interface-providing-a-fluent-experience/).
 
 ## How can you use the Data Integrator for your business?
 
@@ -126,6 +129,8 @@ Your connection set is ready to be used across various integration projects.
 
 Projects enable the flow of data between systems. A project contains mappings for one or more entities. Mappings indicate which fields map to which other fields.
 
+<a name="CreateProject">
+
 **To create a data integration project**
 
 1. Go to [PowerApps Admin center](https://admin.powerapps.com).
@@ -192,6 +197,10 @@ Execution history shows the history of all project executions with project name,
 
     In either case, you could also choose to manually ‘re-run execution.’
 
+> [!NOTE]
+> Anytime you execute a project, manually or schedule based, it generates a detailed log which shows project name, last updated timestamp along with status. You can view this under the execution history for each project. Project execution history is maintained for 45 days after which it is automatically purged.
+
+
 ### How to set up a schedule-based refresh
 
 We support two types of executions/writes today:
@@ -230,6 +239,7 @@ Also note that under Notifications, you can opt in for email-based alert notific
 For trial tenants, we have an additional limitation that a scheduled project would only run for first 50 executions.
 > - While we support scheduling projects to run every minute, please bear in mind that this may put a lot of stress on your apps and in turn impact overall performance. We highly encourage users to test project executions under true load conditions and optimize for performance with less frequent refreshes.
 In production environments, we do not recommend running more than 5 projects per minute per tenant.
+> - Anytime you execute a project, manually or schedule based, it generates a detailed log which shows project name, last updated timestamp along with status. You can view this under the execution history for each project. Project execution history is maintained for 45 days after which it is automatically purged.
 
 ## Customizing projects, templates, and mappings 
 
@@ -261,9 +271,9 @@ You can customize projects and templates in these ways:
 
 4. Once you have customized your field mappings, select **Save**.
 
-### How to customize or create your own template 
+### How to create your own template 
 
-**To create your own template**
+**To create your own template by modifying existing templates**
 
 1. Go to [PowerApps Admin center](https://admin.powerapps.com).
 
@@ -313,6 +323,51 @@ You can customize projects and templates in these ways:
 
     > [!div class="mx-imgBorder"] 
     > ![Customize template save as template](media/data-integrator/CustomizeTemplateSaveAsTemplate175.png "Customize template save as template")
+
+**To create your own template from blank templates**
+
+1. Go to [PowerApps Admin center](https://admin.powerapps.com).
+2. Create a data integration project. Select the **Data integration** tab in the left navigation pane.
+3. Select **New project** and provide a name for your project. For example, "Demo_CreateYourOwnTemplate project".
+4. In the **Select a template** list page, pick a generic blank template. 
+   For this example, choose the **Sales to Fin and Ops** template since we want to move data from Dynamics 365 for Finance and Operations to Dynamics 365 for Sales.
+    
+    > [!div class="mx-imgBorder"] 
+    > ![](media/create-data-integration-project.png "Create data integration project")
+
+4. Follow the steps 6 through 9 <a href="#CreateProject">here</a> to finish creating a data integration project. Select **Save**.
+
+5. You’ll see the Tasks page which is empty since it’s a blank template, without any tasks. Select **Add task** to pick an entity from the drop-down list and add a new task.
+   In this case, for demo purposes, we will create an **Activities Sales to Fin and Ops** task by picking **Activities** entity for Dynamics 365 for Finance and Operations and Dynamics 365 for Sales. Select **Create**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/activities-sales-fin-opps-task.png "ActivitiesSales to Fin and Ops task")
+
+6. You'll see a new task has been added **Activities Sales to Fin and Ops**. Select **Save** to save your changes.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/new-task-added.png "New task added")
+
+7. The project is created. Select **Save as template** from the **Projects** list page.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/save-as-template.png "Save as template")
+
+8. Provide and name and description, then select **Save**. Additionally, select **Share with everyone in my organization** to share this template.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/save-describe-share.png "Save project as template")
+
+You'll see the newly created template listed on the **Templates** list page.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/newly-created-template.png "Newly created template")
+
+Additionally, after creating a new integration project, when you choose **Select a template** you'll see your newly created template as part of the **Select a template** list.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/new-data-integration-project.png "New data integration project")
+
 
 ## Advanced data transformation and filtering 
 
