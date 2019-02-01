@@ -100,7 +100,7 @@ Let's rebuild our adding machine by using a global variable:
 
 3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
-    **Set( RunningTotal, RunningTotal + Text1 )**
+    **Set( RunningTotal, RunningTotal + TextInput1 )**
    
     The first time a user selects the **Add** button and **[Set](functions/function-set.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
    
