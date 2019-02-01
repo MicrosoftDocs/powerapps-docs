@@ -21,7 +21,7 @@ The Common Data Service for Apps platform applies an additional security restric
   
 ### Get the public key token  
   
-1.  Load the assembly containing the offline plug-in into the Plug-in Registration tool. For more information about how to use the tool, see [Walkthrough: Register a Plug-in using the Plug-in Registration Tool](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool).  
+1.  Load the assembly containing the offline plug-in into the Plug-in Registration tool. For more information about how to use the tool, see [Register a plug-in](../register-plug-in.md).  
   
 2.  Select the plug-in assembly in the tree view of the tool.  
   
