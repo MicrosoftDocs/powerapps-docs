@@ -167,4 +167,6 @@ Here's a summary of each column in the report.
 
 
 ## See also
-[Guidance and best practices for building PowerApps solutions](https://docs.microsoft.com/dynamics365/customer-engagement/guidance/)
+[Best practices and guidance for the Common Data Service for Apps](../../developer/common-data-service/best-practices/index.md)<br />
+[Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)<br />
+[Common issues and resolutions for Solution Checker](common-issues-resolutions-solution-checker.md)<br />
