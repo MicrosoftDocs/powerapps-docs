@@ -81,5 +81,5 @@ Tracing is especially useful to troubleshoot registered custom code as it is the
 
 ### See also
 
-[Debug a plug-In](/dynamics365/customer-engagement/developer/debug-plugin)<br />
-[Plug-in isolation, trusts, and statistics](/dynamics365/customer-engagement/developer/plugin-isolation-trusts-statistics)<br />
+[Write a plug-in](../../write-plug-in.md)  
+[Tracing and logging](../../logging-tracing.md)
