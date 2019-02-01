@@ -18,14 +18,14 @@ search.app:
 Encodes and decodes strings.
 
 ## Description
-The **EncodeUrl** function encodes a URL string, replacing non-alphanumeric characters with % and a hexadecimal number.  
+The **EncodeUrl** function encodes a URL string, replacing certain non-alphanumeric characters with % and a hexadecimal number.  
 
-The **PlainText** function removes HTML and XML tags, converting tags such as these to an appropriate symbol:
+The **PlainText** function removes HTML and XML tags, converting certain tags such as these to an appropriate symbol:
 
 * **&amp;nbsp;**
 * **&amp;quot;**
 
-The return value from these functions is the encoded or decoded string.   
+The return value from these functions is the encoded or decoded string. This function doesn't remove all HTML and XML tags. 
 
 ## Syntax
 **EncodeUrl**( *String* )
