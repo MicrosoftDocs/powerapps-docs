@@ -163,7 +163,7 @@ Let's rebuild our adding machine by using a context variable:
 
 3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
-    **UpdateContext( { RunningTotal: RunningTotal + Text1 } )**
+    **UpdateContext( { RunningTotal: RunningTotal + TextInput1 } )**
    
     The first time a user selects the **Add** button and **[UpdateContext](functions/function-updatecontext.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
    
