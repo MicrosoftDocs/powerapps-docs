@@ -43,5 +43,5 @@ The Common Data Service for Apps platform applies an additional security restric
   
 ### See also  
  [Plug-in Development](/dynamics365/customer-engagement/developer/plugin-development)   
- [Sample: Create a basic plug-in](../org-service/samples/basic-followup-plugin)   
+ [Sample: Create a basic plug-in](../org-service/samples/basic-followup-plugin.md)   
  [Register and Deploy Plug-ins](/dynamics365/customer-engagement/developer/register-deploy-plugins)
