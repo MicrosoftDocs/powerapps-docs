@@ -2,7 +2,7 @@
 title: "PowerApps Control Framework (PCF) | Microsoft Docs"
 description: "Use the PowerApps Control Framework (PCF) to create custom controls to provide enhanced experience for people to view and work with data in forms, views, and dashboards."
 keywords: ""
-ms.date: 10/01/2018
+ms.date: 02/01/2019
 ms.service:
   - "dynamics-365-cross-app"
 ms.custom:
