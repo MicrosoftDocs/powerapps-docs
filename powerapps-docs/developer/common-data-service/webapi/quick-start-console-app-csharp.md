@@ -161,7 +161,7 @@ You will authenticate using `OAuth2` and use an [HttpClient](/dotnet/api/system.
 
 You have successfully connected to the Web API.
 
-### See also 
+The quick start sample shows a simple approach to create a Visual Studio project without any basic exception handling method, and method to refresh the token. The [Enhanced quick start](start-web-api-project-visual-studio-csharp.md) topic shows how to implement exception handling methods, basic authentication method using connection string and re-usable method to refresh the token. 
 
-[Enhanced quick start](start-web-api-project-visual-studio-csharp.md)<br/>
-[Simple Web API sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)
+> [!div class="nextstepaction"]
+> [Enhanced quick start](start-web-api-project-visual-studio-csharp.md)<br/>
