@@ -631,4 +631,4 @@ The callback method from the Web API call will inject the result of the Web API 
 
 [PowerApps Control Framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
 [PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../overview.md)

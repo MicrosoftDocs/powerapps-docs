@@ -427,4 +427,4 @@ If the promise is rejected, the error callback method is invoked where your cont
 
 [PowerApps Control Framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
 [PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../overview.md)

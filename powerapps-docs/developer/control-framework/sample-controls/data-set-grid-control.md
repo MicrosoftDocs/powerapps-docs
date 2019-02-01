@@ -308,4 +308,4 @@ The ***getSortedColumnsOnView*** method returns the list of columns based on the
 
 [PowerApps Control Framework API Reference](../reference/index.md)<br />
 [PowerApps Control Framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps Control Framework Overview](../powerapps-control-framework-overview.md)
+[PowerApps Control Framework Overview](../overview.md)

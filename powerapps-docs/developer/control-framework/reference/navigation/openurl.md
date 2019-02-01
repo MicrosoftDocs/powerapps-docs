@@ -33,4 +33,4 @@ ms.assetid: 590078f3-c604-4bd0-ac74-9cf6d8806802
 
 [Navigation](../navigation.md)<br />
 [PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../powerapps-control-framework-overview.md)<br />
+[PowerApps Control Framework Overview](../../overview.md)<br />
