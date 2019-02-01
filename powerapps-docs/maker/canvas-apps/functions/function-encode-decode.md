@@ -25,7 +25,7 @@ The **PlainText** function removes HTML and XML tags, converting certain tags su
 * **&amp;nbsp;**
 * **&amp;quot;**
 
-The return value from these functions is the encoded or decoded string.  Note that this function does not remove all HTML and XML tags. 
+The return value from these functions is the encoded or decoded string. This function doesn't remove all HTML and XML tags. 
 
 ## Syntax
 **EncodeUrl**( *String* )
