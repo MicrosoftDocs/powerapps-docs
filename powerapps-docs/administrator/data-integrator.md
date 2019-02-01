@@ -341,7 +341,7 @@ You can customize projects and templates in these ways:
    In this case, for demo purposes, we will create an **Activities Sales to Fin and Ops** task by picking **Activities** entity for Dynamics 365 for Finance and Operations and Dynamics 365 for Sales. Select **Create**.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/activitities-sales-fin-opps-task.png "ActivitiesSales to Fin and Ops task")
+    > ![](media/activities-sales-fin-opps-task.png "ActivitiesSales to Fin and Ops task")
 
 6. You'll see a new task has been added **Activities Sales to Fin and Ops**. Select **Save** to save your changes.
 
