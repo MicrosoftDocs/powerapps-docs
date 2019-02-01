@@ -22,7 +22,6 @@ Use the **Set** function to set the value of a global variable, which temporaril
 
 Global variables are available throughout your app on all screens.  These are the simplest kind of variables and fill the needs of most situations.  There are also context variables which are scoped to a single screen and collections that allow row level modifications to tables.  For more information on these other options see [working with variables](../working-with-variables.md).
 
-PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Global variables don't offer this benefit and can make your app harder to create and understand.  Before you use a variable, review [working with variables](../working-with-variables.md).
 
 ## Description
 Global variables are implicitly created by using the **Set** function.  There is no explicit declaration required.  If you remove all the **Set** functions for a global variable, then that global variable will cease to exist.  To clear a variable set its value to the result of the [**Blank** function](function-isblank-isempty.md).
