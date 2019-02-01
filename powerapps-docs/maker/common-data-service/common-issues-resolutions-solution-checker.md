@@ -27,7 +27,7 @@ This article lists some common issues that you might encounter while using Solut
 ## Solution Checker runs fail due to PowerApps Checker version installed
 Solution Checker is a feature included with the PowerApps Checker solution.  If you have a PowerApps Checker version earlier than 1.0.0.47, Solution Checker runs will fail to complete successfully. You should upgrade your PowerApps Checker version from the [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)]. 
 
-However, if you have a PowerApps Checker version earlier than 1.0.0.45 installed, it is recommended to delete the solution and install it again. Due to recent schema changes, upgrade of PowerApps Checker from versions earlier than 1.0.0.45 may fail.
+However, if you have a PowerApps Checker version earlier than 1.0.0.45 installed, we recommend that you delete the solution and install it again. Due to recent schema changes, upgrade of PowerApps Checker from versions earlier than 1.0.0.45 may fail.
 
 If you want to keep the past results from Solution Checker, export the results from a previous run or export all Solution Checker data using [Export data to Excel](../../user/export-data-excel.md) to export the data from the following entities:
 
@@ -40,7 +40,7 @@ If you want to keep the past results from Solution Checker, export the results f
 
 To delete the PowerApps Checker solution:
 
-1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments.
+1. As a System Administrator or as a System Customizer, open the PowerApps portal by going to https://web.powerapps.com/environments.
 2. Select **Solutions**.
 3. Select **PowerApps Checker**, and then on the solutions toolbar select **Delete**.
 
