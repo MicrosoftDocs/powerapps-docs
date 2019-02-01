@@ -216,7 +216,7 @@ finally
  At this point the solution can be built without errors. The solution represents a skeletal frame that is ready to accept custom code, including calls to the Common Data Service for Apps Web API.  
   
 > [!TIP]
-> Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](to https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-project-templates) instructions to create the template.  
+> Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-project-templates) instructions to create the template.  
   
 ### See also
 
