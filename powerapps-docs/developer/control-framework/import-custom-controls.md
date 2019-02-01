@@ -14,6 +14,8 @@ ms.topic: "article"
 
 # Import controls into Mode-driven apps
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This topic demonstrates how to create a solution file using the PowerShell script to import controls into Model-driven apps.
 
 After developing custom controls using PowerApps Control Framework, next step is to import those controls into Model-driven apps, so that we can see the controls in runtime.

@@ -12,6 +12,8 @@ manager: "jdaly"
 
 # Limitations of PowerApps Control Framework
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 With the release of the PowerApps Control Framework, you can now create your own custom controls to improve the user experience in Model-driven Apps. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
 
 ### Multiple controls in single manifest file

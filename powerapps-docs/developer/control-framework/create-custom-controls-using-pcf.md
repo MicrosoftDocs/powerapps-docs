@@ -15,6 +15,8 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create Controls using PowerApps Control Framework
 
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 This topic showcases how to implement custom controls using **PowerApps Control Framework**. Custom controls provide enhanced user experience to view and work with data in forms, views.
 
 Each custom control is comprised of the following key components:
