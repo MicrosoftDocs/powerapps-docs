@@ -397,7 +397,7 @@ When all processes are converted to use the new assembly, you can use the Plug-i
 
 ### See also
 
-[Best practices and guidance regarding plug-in and workflow development](../best-practices/business-logic)
+[Best practices and guidance regarding plug-in and workflow development](../best-practices/business-logic/index.md)
 [Tutorial: Create workflow extension](tutorial-create-workflow-extension.md)<br />
 [Sample: Create a custom workflow activity](sample-create-custom-workflow-activity.md)<br />
 [Sample: Update next birthday using a custom workflow activity](sample-update-next-birthday-using-custom-workflow-activity.md)<br />

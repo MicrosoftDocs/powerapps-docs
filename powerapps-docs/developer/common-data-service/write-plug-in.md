@@ -190,7 +190,7 @@ This data is also available for you to browse using the [Organization Insights P
 ### See also
 
 [Write plug-ins to extend business processes](plug-ins.md)<br />
-[Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic)
+[Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)
 [Handle exceptions](handle-exceptions.md)<br />
 [Impersonate a user](impersonate-a-user.md)<br />
 [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)<br />
