@@ -74,7 +74,7 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
 ```
 This creates a connection string that can be referenced by name, in this case `Connect`, so that you can define more than one connection if you wish.
 
-Edit the connection string `Url`, `Username` and `Password` values to match what you need to connect to your CDS environment.
+Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your CDS environment.
 
 ### Add using statement to Program.cs
 
@@ -93,8 +93,8 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
 1. In **Solution Explorer**, right click your project and select **Add** > **Class...** (or press `Shift`+`Alt`+`C`) to open the **Add New Item** dialog.
 1. Specify a name for your class. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it `SampleHelpers.cs`. 
 
-  > [!NOTE]
-  > The name of the class will determine how you will reference these helper properties and methods within your `Program.cs`. The remaining instructions will expect you named it `SampleHelpers`, so remember if you named it something else.
+    > [!NOTE]
+    > The name of the class will determine how you will reference these helper properties and methods within your `Program.cs`. The remaining instructions will expect you named it `SampleHelpers`, so remember if you named it something else.
 
 1. Add the following `using` statements:
 
@@ -182,8 +182,8 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
 
 1. Add the `OAuthMessageHandler` class within the namespace of your `SampleHelpers.cs` file.
 
-  > [!NOTE]
-  > Do not add this within the `SampleHelpers` class
+    > [!NOTE]
+    > Do not add this within the `SampleHelpers` class itself.
 
   This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AquireToken` method everytime an operation is performed so you don't need to explicitly manage token expiration.
 
@@ -332,7 +332,8 @@ In your Visual Studio project perform the following steps:
     `partial class Program`
 
 1. Create a new class named `ProgramMethods.cs`
-  In `ProgramMethods.cs`, change this:
+
+    In `ProgramMethods.cs`, change this:
 
     `class ProgramMethods`
 
@@ -340,7 +341,7 @@ In your Visual Studio project perform the following steps:
 
     `partial class Program`
 
-    In this way the `ProgramMethods.cs` file is just an extension of the original `Program` class in the `Program.cs` file. 
+    In this way the `Program` class in `ProgramMethods.cs` file is just an extension of the original `Program` class in the `Program.cs` file. 
 
 1. Add the following using statements to the top of the `ProgramMethods.cs` file.
 
@@ -388,30 +389,30 @@ In your Visual Studio project perform the following steps:
 
 1. In the `Program` `main` method in the original `Program.cs` file:
 
-  Replace this:
+    Replace this:
 
-  ```csharp
-  var response = client.GetAsync("WhoAmI").Result;
+    ```csharp
+    var response = client.GetAsync("WhoAmI").Result;
 
-  if (response.IsSuccessStatusCode)
-  {
-    //Get the response content and parse it.  
-    JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-    Guid userId = (Guid)body["UserId"];
-    Console.WriteLine("Your UserId is {0}", userId);
-  }
-  else
-  {
-    Console.WriteLine("The request failed with a status of '{0}'",
-                response.ReasonPhrase);
-  }
-  ```
-  With this:
+    if (response.IsSuccessStatusCode)
+    {
+      //Get the response content and parse it.  
+      JObject body = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+      Guid userId = (Guid)body["UserId"];
+      Console.WriteLine("Your UserId is {0}", userId);
+    }
+    else
+    {
+      Console.WriteLine("The request failed with a status of '{0}'",
+                  response.ReasonPhrase);
+    }
+    ```
+    With this:
 
-  ```csharp
-  WhoAmIResponse response = WhoAmI(client);
-  Console.WriteLine("Your system user ID is: {0}", response.UserId);
-  ```
+    ```csharp
+    WhoAmIResponse response = WhoAmI(client);
+    Console.WriteLine("Your system user ID is: {0}", response.UserId);
+    ```
 
 1. Press F5 to run the sample and you should get the same results as before.
 
