@@ -422,14 +422,18 @@ This sample is based on the [SimpleWebApi](https://github.com/Microsoft/PowerApp
 You should be able to open the `SimpleWebApi.sln` file in Visual Studio and run the sample. It should work for you as long as you have valid credentials.
 
 > [!IMPORTANT]
-> All the samples on the GitHub repo are configured to use a common App.config that is located at `PowerApps-Samples-master\cds\App.config`. When you set your connection string you must edit this file.
+> All the samples on the GitHub repo are configured to use a common App.config that is located at `PowerApps-Samples-master\cds\App.config`. When you set your connection string you must edit this file. When you do, you can run all the samples without setting your credentials again.
 
 ## Create a Template project
 
 Before you leave this topic, consider saving your project as a project template. You can then reuse that template for future learning projects and save yourself some time and effort in setting up new projects. To do this, while your project is open in Microsoft Visual Studio, in the **File** menu select **Export template**. Follow the [Export Template Wizard](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-project-templates) instructions to create the template.  
   
+## Next steps
+
+Use the following resources to learn more:
+
 > [!div class="nextstepaction"]
-> [Perform operations using the Web API](perform-operations-web-api.md)
-> [Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br />
-> [Web API samples (C#) on GitHub](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)<br/>
+> [Perform operations using the Web API](perform-operations-web-api.md)<br />
+> [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br />
+> [Review Web API samples (C#) on GitHub](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)<br/>
 
