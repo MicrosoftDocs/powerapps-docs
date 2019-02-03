@@ -19,7 +19,10 @@ search.app:
 
 In this quick start you will create a simple console application to connect to your Common Data Service for Apps environment using the Web API. 
 
-You will authenticate and use an <xref:System.Net.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value value.
+You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
+
+> [!NOTE]
+> This is a very simple example to show how to get connected with a minimum of code. The following [Enhanced quick start](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
 
 ## Prerequisites
 
@@ -169,11 +172,11 @@ You will authenticate and use an <xref:System.Net.HttpClient> to send a `GET` re
 
 You have successfully connected to the Web API.
 
-The quick start sample shows a simple approach to create a Visual Studio project without any basic exception handling method, and method to refresh the token. 
+The quick start sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. 
 
 This is enough to verify you can connect, but it doesn't represent a good pattern for building an app.
 
-The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string and re-usable method to refresh the token. 
+The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string, a re-usable method to refresh the acces token, and introduces how to build re-usable methods to perform data operations.
 
 > [!div class="nextstepaction"]
 > [Enhanced quick start](enhanced-quick-start.md)<br/>
