@@ -92,8 +92,10 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
 
 1. In **Solution Explorer**, right click your project and select **Add** > **Class...** (or press `Shift`+`Alt`+`C`) to open the **Add New Item** dialog.
 1. Specify a name for your class. To follow the pattern used by the [Web API Data operations Samples (C#)](web-api-samples-csharp.md), call it `SampleHelpers.cs`. 
+
   > [!NOTE]
   > The name of the class will determine how you will reference these helper properties and methods within your `Program.cs`. The remaining instructions will expect you named it `SampleHelpers`, so remember if you named it something else.
+
 1. Add the following `using` statements:
 
     ```csharp
@@ -185,46 +187,46 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
 
   This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AquireToken` method everytime an operation is performed so you don't need to explicitly manage token expiration.
 
-    ```csharp
-    /// <summary>
-    ///Custom HTTP message handler that uses OAuth authentication thru ADAL.
-    /// </summary>
-    class OAuthMessageHandler : DelegatingHandler
+  ```csharp
+  /// <summary>
+  ///Custom HTTP message handler that uses OAuth authentication thru ADAL.
+  /// </summary>
+  class OAuthMessageHandler : DelegatingHandler
+  {
+    private AuthenticationHeaderValue authHeader;
+
+    public OAuthMessageHandler(string serviceUrl, string clientId, string redirectUrl, string username, string password,
+            HttpMessageHandler innerHandler)
+        : base(innerHandler)
     {
-      private AuthenticationHeaderValue authHeader;
-
-      public OAuthMessageHandler(string serviceUrl, string clientId, string redirectUrl, string username, string password,
-              HttpMessageHandler innerHandler)
-          : base(innerHandler)
+      // Obtain the Azure Active Directory Authentication Library (ADAL) authentication context.
+      AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(
+              new Uri(serviceUrl + "/api/data/")).Result;
+      AuthenticationContext authContext = new AuthenticationContext(ap.Authority, false);
+      //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
+      AuthenticationResult authResult;
+      if (username != string.Empty && password != string.Empty)
       {
-        // Obtain the Azure Active Directory Authentication Library (ADAL) authentication context.
-        AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(
-                new Uri(serviceUrl + "/api/data/")).Result;
-        AuthenticationContext authContext = new AuthenticationContext(ap.Authority, false);
-        //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
-        AuthenticationResult authResult;
-        if (username != string.Empty && password != string.Empty)
-        {
 
-          UserCredential cred = new UserCredential(username, password);
-          authResult = authContext.AcquireToken(serviceUrl, clientId, cred);
-        }
-        else
-        {
-          authResult = authContext.AcquireToken(serviceUrl, clientId, new Uri(redirectUrl), PromptBehavior.Auto);
-        }
-
-        authHeader = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
+        UserCredential cred = new UserCredential(username, password);
+        authResult = authContext.AcquireToken(serviceUrl, clientId, cred);
+      }
+      else
+      {
+        authResult = authContext.AcquireToken(serviceUrl, clientId, new Uri(redirectUrl), PromptBehavior.Auto);
       }
 
-      protected override Task<HttpResponseMessage> SendAsync(
-                HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
-      {
-        request.Headers.Authorization = authHeader;
-        return base.SendAsync(request, cancellationToken);
-      }
+      authHeader = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
     }
-    ```
+
+    protected override Task<HttpResponseMessage> SendAsync(
+              HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
+    {
+      request.Headers.Authorization = authHeader;
+      return base.SendAsync(request, cancellationToken);
+    }
+  }
+  ```
 
 ## Update Program.cs
 
@@ -383,6 +385,7 @@ In your Visual Studio project perform the following steps:
         public Guid OrganizationId { get; set; }
     }
     ```
+
 1. In the `Program` `main` method in the original `Program.cs` file:
 
   Replace this:
