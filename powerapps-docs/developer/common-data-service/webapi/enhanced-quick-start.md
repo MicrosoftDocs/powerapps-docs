@@ -185,48 +185,48 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
     > [!NOTE]
     > Do not add this within the `SampleHelpers` class itself.
 
-  This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AquireToken` method everytime an operation is performed so you don't need to explicitly manage token expiration.
+    This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AquireToken` method everytime an operation is performed so you don't need to explicitly manage token expiration.
 
-  ```csharp
-  /// <summary>
-  ///Custom HTTP message handler that uses OAuth authentication thru ADAL.
-  /// </summary>
-  class OAuthMessageHandler : DelegatingHandler
-  {
-    private AuthenticationHeaderValue authHeader;
-
-    public OAuthMessageHandler(string serviceUrl, string clientId, string redirectUrl, string username, string password,
-            HttpMessageHandler innerHandler)
-        : base(innerHandler)
+    ```csharp
+    /// <summary>
+    ///Custom HTTP message handler that uses OAuth authentication thru ADAL.
+    /// </summary>
+    class OAuthMessageHandler : DelegatingHandler
     {
-      // Obtain the Azure Active Directory Authentication Library (ADAL) authentication context.
-      AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(
-              new Uri(serviceUrl + "/api/data/")).Result;
-      AuthenticationContext authContext = new AuthenticationContext(ap.Authority, false);
-      //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
-      AuthenticationResult authResult;
-      if (username != string.Empty && password != string.Empty)
+      private AuthenticationHeaderValue authHeader;
+
+      public OAuthMessageHandler(string serviceUrl, string clientId, string redirectUrl, string username, string password,
+              HttpMessageHandler innerHandler)
+          : base(innerHandler)
       {
+        // Obtain the Azure Active Directory Authentication Library (ADAL) authentication context.
+        AuthenticationParameters ap = AuthenticationParameters.CreateFromResourceUrlAsync(
+                new Uri(serviceUrl + "/api/data/")).Result;
+        AuthenticationContext authContext = new AuthenticationContext(ap.Authority, false);
+        //Note that an Azure AD access token has finite lifetime, default expiration is 60 minutes.
+        AuthenticationResult authResult;
+        if (username != string.Empty && password != string.Empty)
+        {
 
-        UserCredential cred = new UserCredential(username, password);
-        authResult = authContext.AcquireToken(serviceUrl, clientId, cred);
+          UserCredential cred = new UserCredential(username, password);
+          authResult = authContext.AcquireToken(serviceUrl, clientId, cred);
+        }
+        else
+        {
+          authResult = authContext.AcquireToken(serviceUrl, clientId, new Uri(redirectUrl), PromptBehavior.Auto);
+        }
+
+        authHeader = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
       }
-      else
+
+      protected override Task<HttpResponseMessage> SendAsync(
+                HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
       {
-        authResult = authContext.AcquireToken(serviceUrl, clientId, new Uri(redirectUrl), PromptBehavior.Auto);
+        request.Headers.Authorization = authHeader;
+        return base.SendAsync(request, cancellationToken);
       }
-
-      authHeader = new AuthenticationHeaderValue("Bearer", authResult.AccessToken);
     }
-
-    protected override Task<HttpResponseMessage> SendAsync(
-              HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
-    {
-      request.Headers.Authorization = authHeader;
-      return base.SendAsync(request, cancellationToken);
-    }
-  }
-  ```
+    ```
 
 ## Update Program.cs
 
@@ -283,7 +283,7 @@ Press F5 to run the program. Just like the [Quick start](quick-start-console-app
 
 While we have reduced the total amount of code in the `Program.cs` `main` method, you aren't going to write a program to just call one operation, and it isn't realistic to write so much code just to call a single operation.
 
-This section is how you can change this:
+This section shows how you can change this:
 
   ```csharp
   var response = client.GetAsync("WhoAmI").Result;
@@ -308,11 +308,11 @@ to this:
         Console.WriteLine("Your system user ID is: {0}", response.UserId);
   ```
 
-Before you begin, it would be a good idea for you to go out to the Web API Reference and review these topics:
+Before you begin, it would be a good idea to go out to the Web API Reference and review these topics:
 - <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> 
 - <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />
 
-Notice how the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> returns a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> and the <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> contains three properties: `BusinessUnitId`, `UserId`, and `OrganizationId`;
+Notice how the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> returns a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> and the <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" /> contains three `GUID` properties: `BusinessUnitId`, `UserId`, and `OrganizationId`;
 
 The code we will add is simply to model these into a re-usable method that accepts an `HttpClient` as a parameter.
 
@@ -437,7 +437,7 @@ Before you leave this topic, consider saving your project as a project template.
 Use the following resources to learn more:
 
 > [!div class="nextstepaction"]
-> [Perform operations using the Web API](perform-operations-web-api.md)<br />
-> [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br />
-> [Review Web API samples (C#) on GitHub](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)<br/>
+> [Perform operations using the Web API](perform-operations-web-api.md)<br /><br />
+> [Try Web API Data operations Samples (C#)](web-api-samples-csharp.md)<br /><br />
+> [Review Web API samples (C#) on GitHub](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23)
 
