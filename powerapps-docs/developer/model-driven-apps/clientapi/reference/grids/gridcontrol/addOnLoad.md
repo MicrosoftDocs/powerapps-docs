@@ -1,6 +1,6 @@
 ---
 title: "addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 01/24/2019
+ms.date: 01/29/2019
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"

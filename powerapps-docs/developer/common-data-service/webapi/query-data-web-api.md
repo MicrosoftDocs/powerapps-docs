@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service for Apps data using the Common Data Service for Apps Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 01/24/2019
+ms.date: 02/03/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -14,7 +14,7 @@ ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
 caps.latest.revision: 78
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -764,16 +764,18 @@ Instead of returning the related entities for entity sets, you can also return r
 
 ## Filter results based on values of collection-valued navigation properties
 
-You cannot use OData $filter to limit the entity records returned using criteria applied to collection-valued navigation properties in a single operation.
+You cannot use OData `$filter` to limit the entity records returned using criteria applied to collection-valued navigation properties in a single operation.
 
 > [!NOTE]
-> It is possible to use `$filter` within `$expand` to filter results for a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-entities).
+> It is possible to use `$filter` within `$expand` to filter results for related records in a Retrieve operation. You can use a semi-colon separated list of system query options enclosed in parentheses after the name of the collection-valued navigation property. The query options that are supported within `$expand` are `$select`, `$filter`, `$top` and `$orderby`. More information: [Options to apply to expanded entities](retrieve-entity-using-web-api.md#options-to-apply-to-expanded-entities).
 
 The two options for filtering results based on values of collection-valued navigation properties are:
 
 1. **Construct a query using FetchXML**
 
 Generally, using FetchXML should provide better performance because the filtering can be applied server-side in a single operation. The example shown below illustrates how to apply filter on values of collection properties for a link-entity.
+
+The below example retrieves the records of `systemuser` entity type that are linked with `team` and `teammembership` entity types, that means it retrieves `systemuser` records who are also administrators of a team.
 
 ```xml
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
@@ -798,7 +800,17 @@ Generally, using FetchXML should provide better performance because the filterin
 More information: [Build queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml).
 
 2. **Iterate over results filtering individual entities based on values in the collection using multiple operations**
-  
+
+To get the same results as the FetchXML example above, you can retrieve records of two entity types and then iteratively match the values in the collection of one entity to the value in the other entity, thereby filtering entities based on the values in the collection.
+
+Follow the steps in the below example to understand how we can filter results using the iteration method:
+
+1. Get a distinct list of <xref href="Microsoft.Dynamics.CRM.team" />._administratorid_value values.
+      - `[OrganizationURI]/api/data/v9.0/teams?$select=_administratorid_value&$filter=_administrator_value ne null`
+      - Then loop through the returned values to remove duplicates and get a distinct list. i.e. Create a new array, loop through the query results, for each check to see if they are already in the new array, if not, add them. This should give you a list of distinct `systemuserid` values
+      - The way you would do this in JavaScript vs C# would be different, but essentially you should be able to get the same results.
+2. Query <xref href="Microsoft.Dynamics.CRM.systemuser" /> using <xref href="Microsoft.Dynamics.CRM.ContainValues?text=ContainValues Query Function" /> to compare the `systemuserid` values with the list collected in Step 1.  
+
 ### See also
 
 [Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
