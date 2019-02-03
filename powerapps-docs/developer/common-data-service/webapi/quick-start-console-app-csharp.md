@@ -46,14 +46,14 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
     > [!NOTE]
     > This screenshot shows the name `WebAPIQuickStart`, but you can choose to name the project and solution whatever you want.
 
-> [!IMPORTANT]
-> **Known Issue with Visual Studio 2015**
-> 
-> When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 
->
-> Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
->
-> This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
+    > [!IMPORTANT]
+    > **Known Issue with Visual Studio 2015**
+    > 
+    > When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 
+    >
+    > Right-click on the name of your project in Visual Studio and then click **Properties**. On the **Debug** tab you can uncheck the **Enable the Visual Studio hosting process** option. 
+    >
+    > This only impacts the debug experience in VS 2015. This does not impact the binaries or executable that are built. The same issue does not occur in Visual Studio 2017.
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu.
 
@@ -177,6 +177,10 @@ The quick start sample shows a simple approach to create a Visual Studio project
 This is enough to verify you can connect, but it doesn't represent a good pattern for building an app.
 
 The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string, a re-usable method to refresh the acces token, and introduces how to build re-usable methods to perform data operations.
+
+## Next steps
+
+Learn how to structure your code for a better design.
 
 > [!div class="nextstepaction"]
 > [Enhanced quick start](enhanced-quick-start.md)<br/>
