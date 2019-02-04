@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-Add Custom Controls to a field or entity in model-driven Apps
+# Add Custom Controls to a field or entity in model-driven Apps
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
