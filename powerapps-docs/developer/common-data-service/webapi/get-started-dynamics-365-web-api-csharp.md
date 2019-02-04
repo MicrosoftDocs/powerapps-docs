@@ -30,9 +30,7 @@ After completing this guide, you will have learned enough to explore the many ot
 ## In this section
 
 [Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md)<br />
-[Enhanced Quick Start (C#)](enhanced-quick-start.md)<br />
-[Use the Common Data Service for Apps Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)
-  
+
 ### See also
   
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
