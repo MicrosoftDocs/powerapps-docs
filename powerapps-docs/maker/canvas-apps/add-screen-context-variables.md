@@ -65,4 +65,4 @@ In the left navigation bar, hover over a screen that you want to move up or down
 
 ## More information
 
-[Screen-control reference](../controls/control-screen.md)
+[Screen-control reference](controls/control-screen.md)
