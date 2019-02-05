@@ -36,8 +36,9 @@ App properties define important details about the app, like its title or URL. Yo
     > ![App designer Properties pane](media/app-designer-properties-tab.png "App designer Properties pane")  
   
 2.  Change the information, as required:  
-> [!NOTE]
-> The **Client** and **App URL Suffix** properties are no longer available when you create a new app.
+
+   > [!NOTE]
+   > The **Client** and **App URL Suffix** properties are no longer available when you create a new app.
 
     |Property|Description|  
     |--------------|-----------------|
