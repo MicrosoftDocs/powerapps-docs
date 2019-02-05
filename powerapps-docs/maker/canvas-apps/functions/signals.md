@@ -39,6 +39,16 @@ The **App** signal returns information about the running app.
 | --- | --- |
 | **App.ActiveScreen** |Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function, you can change the displayed screen. |
 
+The **App** item in the tree view has app specific properties.
+
+| App Property  | Description |
+| --- | --- |
+| **OnStart** | The behavior of an app when the user opens it. Commonly used to create collections to use elsewhere in the app or to determine which screen to open the app to. |
+
+To run the expressions in the OnStart property of the app while editing, select the context menu of the App item and select "Run OnStart".
+
+![]()
+
 ### Compass
 The **Compass** signal returns the compass heading of the top of the screen. The heading is based on magnetic north.
 
