@@ -47,7 +47,7 @@ The **App** item in the tree view has app specific properties.
 
 To run the expressions in the OnStart property of the app while editing, select the context menu of the App item and select "Run OnStart".
 
-![]()
+ ![App item context menu with Run OnStart](media/appobject-runonstart.png)
 
 ### Compass
 The **Compass** signal returns the compass heading of the top of the screen. The heading is based on magnetic north.
