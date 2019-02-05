@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 10/15/2018
+ms.date: 02/05/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -35,15 +35,18 @@ Sign in to [PowerApps](https://web.powerapps.com/). If you don’t already have 
   > [!IMPORTANT]
   > If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
-2. On the **Home** page, select the **Start from blank** option for a model-driven app.
-![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png)
+2. On the **Home** page, select **Model-driven app from blank**.
+<!-- ![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png) -->
 
 3.	On the **Create a New App** page, enter the following details, and then select **Done**: 
-  - **Name**: Enter a name for the app, such as *Myfirstapp*. 
+  - **Name**: Enter a name for the app, such as *My first app*. 
+  - **Unique Name**: By default, the unique name uses the name your specify in the **Name** box without spaces and preceeded by the publisher prefix and an underscore (_). For example, *crecf_Myfirstapp*. More information: [Change the solution publisher prefix](../common-data-service/change-solution-publisher-prefix.md)
   - **Description**: Type a short description of what the app is or does, such as *This is my first app*.
 For information about the additional app properties, see [Create an app](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
- 
-    ![Create-new-app](media/build-first-model-driven-app/create-new-app.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/create-new-app.png "Create a new app") 
+
 
 ## Add components to your app
 From the app designer you add components to your app.
