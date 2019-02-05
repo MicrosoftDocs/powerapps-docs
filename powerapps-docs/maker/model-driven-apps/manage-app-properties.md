@@ -37,8 +37,9 @@ App properties define important details about the app, like its title or URL. Yo
   
 2.  Change the information, as required:  
 
-   > [!NOTE]
-   > The **Client** and **App URL Suffix** properties are no longer available when you create a new app.
+    > [!NOTE]
+    > The **Client** and **App URL Suffix** properties are no longer available when you create a new app.
+
 
     |Property|Description|  
     |--------------|-----------------|
