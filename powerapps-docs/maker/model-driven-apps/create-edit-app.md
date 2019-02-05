@@ -26,9 +26,9 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Create a model-driven app by using the app designer
+# Create a model-driven app by using the app designer
 
-In this tutorial you learn the basics of how to create and edit a model-driven app by using the tile-based app designer.
+In this topic you learn the basics of how to create and edit a model-driven app by using the tile-based app designer.
 
 ## Prerequisites
 Verify the following prerequisites before you start creating an app:
