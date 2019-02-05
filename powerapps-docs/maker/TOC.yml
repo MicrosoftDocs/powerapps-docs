@@ -43,7 +43,10 @@
       - name: Create a record
         href: ../user/create-a-record.md
       - name: Add activities to the timeline
-        href: ../user/add-activities.md
+        href: ../user/add-activities.md 
+        items:
+        - name: FAQ about activities
+          href: ../user/faq-for-timeline-and-activity.md
       - name: Assign or share records
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
@@ -464,6 +467,10 @@
             href: ./canvas-apps/functions/function-filter-lookup.md
           - name: Lower
             href: ./canvas-apps/functions/function-lower-upper-proper.md
+          - name: Match
+            href: ./canvas-apps/functions/function-ismatch.md
+          - name: MatchAll
+            href: ./canvas-apps/functions/function-ismatch.md
           - name: Max
             href: ./canvas-apps/functions/function-aggregates.md
           - name: Mid

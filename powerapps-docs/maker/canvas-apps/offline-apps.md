@@ -1,14 +1,14 @@
 ---
 title: Develop offline-capable canvas apps | Microsoft Docs
 description: Develop offline-capable canvas apps so that your users are productive whether they are online or offline.
-author: mgblythe
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/09/2017
-ms.author: mblythe
+ms.date: 01/31/2019
+ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
@@ -23,11 +23,15 @@ One of the most common scenarios you face as a mobile-app developer is enabling 
 * Determine when an app is offline, online, or in a metered connection by using the [Connection](../canvas-apps/functions/signals.md#connection) signal object.
 * Use [collections](../canvas-apps/create-update-collection.md) and leverage functions such as [LoadData and SaveData](../canvas-apps/functions/function-savedata-loaddata.md) for basic data storage when offline.
 
-> [!NOTE]
-> This feature area is still under development and isn't optimized for every scenario today. The functions 
-to SaveData() to a local device and LoadData() from that device work best in their current implementation over relatively small quantities of data (for example, dozens of text records in a table) that generally don't exceed 2MB. This is useful for some basic “offline” scenarios, as well as to increase the startup performance of canvas apps by caching data locally. However, using this feature to save large amounts of data (for example, saving thousands of rows in a table or caching large images or videos) may cause errors or unexpected behavior with the current implementation and should be avoided. Also, the functions don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
->
-> We are working to expand the capabilities of offline apps, to increase stability and size limits, and (in the future) to automatically handle decisions about what to save and how to handle conflicts. Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
+## Limitations
+
+**LoadData** and **SaveData** combine to form a simple mechanism to store small amounts of data on a local device. By using these functions, you can add simple offline capabilities to your app.  
+
+These functions are limited by the amount of available app memory because they operate on an in-memory collection. Available memory can vary depending on the device, the operating system, the memory that PowerApps Mobile uses, and the complexity of the app in terms of screens and controls. If you store more than a few megabytes of data, test your app with expected scenarios on the devices on which you expect it to run. You should generally expect to have between 30 and 70 megabytes of available memory.  
+
+The functions also don't automatically resolve merge conflicts when a device returns to connectivity from offline – configuration on what data is saved and how to handle reconnection is up to the maker when writing expressions.
+
+We're working to expand the capabilities for offline scenarios. Stay tuned here and on the [PowerApps blog](https://powerapps.microsoft.com/blog/) for updates when they become available.
 
 ## How to build offline capable apps
 

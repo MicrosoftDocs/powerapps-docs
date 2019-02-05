@@ -26,20 +26,20 @@ In this tutorial, we'll walk through the steps to create this form. We'll also l
 
 If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
 
+This topic is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a PowerApps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service (CDS) for Apps and add similar fields. 
+
 ## Add a gallery
 
-1. Create a tablet app from scratch.
+1. Create a tablet app from scratch, and add your data source.
 
     Everything discussed in this topic also applies to phone layouts, but phone apps often have only one vertical column.
-2. Add the **Sales order** entity in the [Common Data Service](../common-data-service/data-platform-intro.md) as a data source for the app.
-
-    Outside of this tutorial, you can use any data source, including SharePoint lists and Excel tables.
-3. Add a vertical **Gallery** control, and set its **Items** property to **'Sales order'**.
+    
+2. Add a vertical **Gallery** control, and set its **Items** property to **'Sales order'**.
    
     (optional) To match the examples in this tutorial, change the gallery's **Layout** to show only **Title and subtitle**.
    
     ![Sales order list](./media/working-with-form-layout/gallery-layout.png)
-4. In the gallery, click or tap **SO004**.
+3. In the gallery, click or tap **SO004**.
    
     ![Sales order list](./media/working-with-form-layout/sales-order-gallery-screen.png)
    

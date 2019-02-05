@@ -1,14 +1,14 @@
 ---
 title: Integrate canvas apps into websites and other services | Microsoft Docs
 description: Embed canvas apps in websites and other services.
-author: mgblythe
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 10/20/2017
-ms.author: mblythe
+ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
