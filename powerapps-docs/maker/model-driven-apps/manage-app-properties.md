@@ -2,7 +2,7 @@
 title: "Manage model-driven app properties in the PowerApps app designer | MicrosoftDocs"
 description: "Learn how to manage the properties for your app"
 keywords: ""
-ms.date: 06/27/2018
+ms.date: 02/05/2019
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -19,6 +19,11 @@ ms.suite:
 ms.tgt_pltfrm: 
 caps.latest.revision: 14
 topic-status: Drafting
+search.audienceType: 
+  - maker
+search.app: 
+  - PowerApps
+  - D365CE
 ---
 
 # Manage model-driven app properties in the app designer
@@ -31,6 +36,10 @@ App properties define important details about the app, like its title or URL. Yo
     > ![App designer Properties pane](media/app-designer-properties-tab.png "App designer Properties pane")  
   
 2.  Change the information, as required:  
+
+    > [!NOTE]
+    > The **Client** and **App URL Suffix** properties are no longer available when you create a new app.
+
 
     |Property|Description|  
     |--------------|-----------------|
