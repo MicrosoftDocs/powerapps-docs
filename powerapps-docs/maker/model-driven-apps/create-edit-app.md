@@ -2,7 +2,7 @@
 title: "Create or edit a model-driven app using the app designer in PowerApps | MicrosoftDocs"
 description: "Learn how to create or edit apps using the app designer"
 keywords: ""
-ms.date: 10/15/2018
+ms.date: 02/05/2019
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -38,16 +38,14 @@ Verify the following prerequisites before you start creating an app:
 <a name="createApp"></a>   
 ## Create an app  
 
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select the **Start from blank** option for a model-driven app.  
+1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **Home** page, select the **Model-driven app from blank** option for a model-driven app.  
 
-    ![Model-driven start from blank](media/start-from-blank-model-driven.png)
+  <!--  ![Model-driven start from blank](media/start-from-blank-model-driven.png) -->
 
     > [!IMPORTANT]
     > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. Select **Make this app**.
-
-3. On the **Create a New App** page, enter the following details: 
+2. On the **Create a New App** page, enter the following details: 
 
     - **Name**: Enter a name for the app.  
   
@@ -59,21 +57,6 @@ Verify the following prerequisites before you start creating an app:
     - **Description**: Type a short description of what the app is or does.  
   
     - **Icon**: By default, the **Use Default App** thumbnail check box is checked. To select a different web resource as an icon for the app, clear the check box, and then select an icon from the drop-down list. This icon will be displayed on the preview tile of the app.  
-  
-    - Select the client type that the app will be used for.  
-  
-        - **Unified Interface**: This is the newer responsive web browser client that has a similar interface across PC and mobile devices.  
-
-        - **Web**: This is the classic Dynamics 365 customer engagement web browser client.  
-    
-    - **App URL Suffix**: The app URL is automatically populated based on the app name that you specify. You'll see a preview of how the complete URL looks. The app URL must be unique.  
-  
-         For example: https://\<org>.crm#.dynamics.com/Apps/\<App URL>
-
-         For on-premises: http://\<server>/\<org name>/Apps/\<App URL> 
-  
-      > [!NOTE]
-      >  If you clear the **App URL Suffix** field and then save the app, the app URL will be automatically generated with the app ID.  
   
     - **Use existing solution to create the App**: Select this option to create the app from a list of installed solutions. When you select this option, **Done** switches to **Next** on the header. If you select **Next**, the **Create app from existing solution** page opens. From the **Select Solution** drop-down list, select a solution from which you want to create the app. If any site map is available for the selected solution, the **Select Sitemap** drop-down list will appear. Select the site map, and then select **Done**.
 
@@ -89,7 +72,7 @@ Verify the following prerequisites before you start creating an app:
      > [!NOTE]
      >  You can't change the unique name and app URL suffix on the **Properties** tab.  
   
-4. Select **Done** or&mdash;if you selected **Use an existing solution to create the App**&mdash;select **Next** to select from the available solutions that were imported in the organization.  
+3. Select **Done** or&mdash;if you selected **Use an existing solution to create the App**&mdash;select **Next** to select from the available solutions that were imported in the organization.  
   
     A new app is created and is shown in Draft status. You'll see the app designer canvas for the new app. From there you can add components, such as entities, views, and dashboards to make your app useful. More information: [Add or edit app components](add-edit-app-components.md)  
    
