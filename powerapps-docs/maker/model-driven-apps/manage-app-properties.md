@@ -2,7 +2,7 @@
 title: "Manage model-driven app properties in the PowerApps app designer | MicrosoftDocs"
 description: "Learn how to manage the properties for your app"
 keywords: ""
-ms.date: 06/27/2018
+ms.date: 02/05/2019
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
