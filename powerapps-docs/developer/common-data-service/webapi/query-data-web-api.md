@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service for Apps data using the Common Data Service for Apps Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 02/03/2019
+ms.date: 02/05/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -12,7 +12,7 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
 caps.latest.revision: 78
-author: "brandonsimons" # GitHub ID
+author: "brandonsimons"
 ms.author: "jdaly"
 manager: "annbe"
 search.audienceType: 
@@ -233,6 +233,27 @@ More information: [Compose a query with functions](use-web-api-functions.md#bkmk
 ```http 
 GET [Organization URI]/api/data/v9.0/accounts?$select=name,revenue,&$orderby=revenue asc,name desc&$filter=revenue ne null  
 ```  
+<a name="bkmk_AggregateGroup"></a>
+
+## Aggregate and Grouping results
+
+By using `$apply` you can aggregate and group your data dynamically.  Possible use cases with `$apply`:
+
+|Use Case|Example|
+|--------------|-------------| 
+|List of unique statuses in the query|`$apply=groupby((statuscode))`|
+|Aggregate sum of the estimated value|`$apply=aggregate(estimatedvalue with sum as total)`|
+|Average size of the deal based on estimated value and status|`$apply=groupby((statuscode),aggregate(estimatedvalue with average as averagevalue)`|
+|Sum of estimated value based on status|`$apply=groupby((statuscode),aggregate(estimatedvalue with sum as total))`|
+|Total opportunity revenue by Account name|`$apply=groupby((parentaccountid/name),aggregate(estimatedvalue with sum as total))`|
+|Last created record date and time|`$apply=aggregate(createdon with max as lastCreate)`|
+|First created record date and time|`$apply=aggregate(createdon with min as firstCreate)`|
+
+The aggregate functions are limited to a collection of 50,000 records.  Further information around using aggregate functionality with CDS for Apps can be found here: [Use FetchXML to construct a query](../use-fetchxml-construct-query.md)
+
+Additional details on OData data aggregation can be found here: [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).  Note that Dynamics 365 for Customer Engagement apps only supports a sub-set of these aggregate methods.
+
+
 <a name="bkmk_useParameterAliases"></a>
   
 ## Use parameter aliases with system query options
@@ -532,251 +553,7 @@ OData-Version: 4.0
 
 ## Retrieve related entities by expanding navigation properties
 
- Use the `$expand` system query option in the navigation properties to control what data from related entities is returned. There are two types of navigation properties:  
-  
-- *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity.  
-  
-- *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.  
-  
-  If you include only the name of the navigation property, you’ll receive all the properties for related records. You can limit the properties returned for related records using the `$select` system query option in parentheses after the navigation property name. Use this for both single-valued and collection-valued navigation properties.  
-  
-> [!NOTE]
->  To retrieve related entities for an entity instance, see [Retrieve related entities for an entity by expanding navigation properties](retrieve-entity-using-web-api.md#bkmk_expandRelated).  
-
-<a bkmk="bkmk_retrieverelatedentityexpandsinglenavprop"></a>
-
-### Retrieve related entities by expanding single-valued navigation properties
-
-The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the contactid and fullname.  
-  
-**Request**  
-
-```http 
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
-**Response** 
  
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,primarycontactid(contactid,fullname))",
-   "value":[  
-      {  
-         "@odata.etag":"W/\"513475\"",
-         "name":"Fourth Coffee (sample)",
-         "accountid":"36dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"9cdbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Yvonne McKay (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513477\"",
-         "name":"Litware, Inc. (sample)",
-         "accountid":"38dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"9edbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Susanna Stubberod (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513479\"",
-         "name":"Adventure Works (sample)",
-         "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"a0dbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Nancy Anderson (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513481\"",
-         "name":"Fabrikam, Inc. (sample)",
-         "accountid":"3cdbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"a2dbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Maria Campbell (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"514057\"",
-         "name":"Blue Yonder Airlines (sample)",
-         "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"a0dbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Nancy Anderson (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513485\"",
-         "name":"City Power & Light (sample)",
-         "accountid":"40dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"a6dbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Scott Konersmann (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513487\"",
-         "name":"Contoso Pharmaceuticals (sample)",
-         "accountid":"42dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"a8dbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Robert Lyon (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513489\"",
-         "name":"Alpine Ski House (sample)",
-         "accountid":"44dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"aadbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Paul Cannon (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513491\"",
-         "name":"A. Datum Corporation (sample)",
-         "accountid":"46dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"acdbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Rene Valdes (sample)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513493\"",
-         "name":"Coho Winery (sample)",
-         "accountid":"48dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "contactid":"aedbf27c-8efb-e511-80d2-00155db07c77",
-            "fullname":"Jim Glynn (sample)"
-         }
-      }
-   ]
-}    
-```  
-
-Instead of returning the related entities for entity sets, you can also return references (links) to the related entities by expanding the single-valued navigation property with the `$ref` option. The following example returns links to the contact records for all the accounts.  
-  
- **Request**
-
-```http  
-GET [Organization URI]/api/data/v9.0/accounts?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-```  
-  
- **Response**
- 
-```http 
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-   "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid)",
-   "value":[  
-      {  
-         "@odata.etag":"W/\"513475\"",
-         "name":"Fourth Coffee (sample)",
-         "_primarycontactid_value":"9cdbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"36dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(9cdbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513477\"",
-         "name":"Litware, Inc. (sample)",
-         "_primarycontactid_value":"9edbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"38dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(9edbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513479\"",
-         "name":"Adventure Works (sample)",
-         "_primarycontactid_value":"a0dbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a0dbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513481\"",
-         "name":"Fabrikam, Inc. (sample)",
-         "_primarycontactid_value":"a2dbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"3cdbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a2dbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"514057\"",
-         "name":"Blue Yonder Airlines (sample)",
-         "_primarycontactid_value":"a0dbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"3edbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a0dbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513485\"",
-         "name":"City Power & Light (sample)",
-         "_primarycontactid_value":"a6dbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"40dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a6dbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513487\"",
-         "name":"Contoso Pharmaceuticals (sample)",
-         "_primarycontactid_value":"a8dbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"42dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(a8dbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513489\"",
-         "name":"Alpine Ski House (sample)",
-         "_primarycontactid_value":"aadbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"44dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(aadbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513491\"",
-         "name":"A. Datum Corporation (sample)",
-         "_primarycontactid_value":"acdbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"46dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(acdbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      },
-      {  
-         "@odata.etag":"W/\"513493\"",
-         "name":"Coho Winery (sample)",
-         "_primarycontactid_value":"aedbf27c-8efb-e511-80d2-00155db07c77",
-         "accountid":"48dbf27c-8efb-e511-80d2-00155db07c77",
-         "primarycontactid":{  
-            "@odata.id":"[Organization URI]/api/data/v9.0/contacts(aedbf27c-8efb-e511-80d2-00155db07c77)"
-         }
-      }
-   ]
-}  
-```  
-
 <a bkmk="bkmk_retrieverelatedentityexpandcollectionnavprop"></a>
 
 ### Retrieve related entities by expanding collection-valued navigation properties
