@@ -515,6 +515,8 @@
             href: ./canvas-apps/functions/function-rand.md
           - name: Refresh
             href: ./canvas-apps/functions/function-refresh.md
+          - name: Relate
+            href: ./canvas-apps/functions/function-relate-unrelate.md
           - name: Remove
             href: ./canvas-apps/functions/function-remove-removeif.md
           - name: RemoveIf
@@ -595,6 +597,8 @@
             href: ./canvas-apps/functions/function-trim.md
           - name: Ungroup
             href: ./canvas-apps/functions/function-groupby.md
+          - name: Unrelate
+            href: ./canvas-apps/functions/function-relate-unrelate.md
           - name: Update
             href: ./canvas-apps/functions/function-update-updateif.md
           - name: UpdateContext

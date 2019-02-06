@@ -82,15 +82,15 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. Move and resize **Gallery2** to fill the upper-right quadrant of the screen.
 
-1. (optional) Add the blue **Label** control above **Gallery2**, as the graphic shows.
+1. (optional) Add the blue **Label** control above **Gallery2**, as the next graphic shows.
 
 1. In the formula bar, set the **Items** property of **Gallery2** to **Gallery1.Selected.Reservations**.
 
-1. In the properties pane, set the **Layout** of **Gallery2** to **Title**.
+1. In the properties pane, set **Gallery2**'s **Layout** to **Title**.
 
     ![Configure Gallery2](media/function-relate-unrelate/reservations-gallery.png)
 
-1. In **Gallery2**, add a **[Combo box](../controls/control-combo-box.md)** control, ensure that it's named **ComboBox1**, and move it to avoid blocking the other controls in **Gallery2**.
+1. In **Gallery2**, add a **[Combo box](../controls/control-combo-box.md)** control, ensure that it's named **ComboBox1**, and then move and resize it to avoid blocking the other controls in **Gallery2**.
 
 1. On the **Properties** tab, set **ComboBox1**'s **Items** property to **Products**.
 
@@ -98,15 +98,15 @@ You'll first create a simple app to view and reassign the reservations that are 
 
     ![Set DefaultSelectedItems for ReserveCombo](media/function-relate-unrelate/reservations-combo.png)
 
-1. In **Gallery2**, set the **OnSelect** property of the **Right** icon to **Relate( ComboBox1.Selected.Reservations, ThisItem )**.
+1. In **Gallery2**, set **NextArrow2**'s **OnSelect** property to **Relate( ComboBox1.Selected.Reservations, ThisItem )**.
 
-    When the user selects this arrow, the current reservation moves to the product that the user selected in **ComboBox1**.
+    When the user selects this icon, the current reservation changes to the product that the user selected in **ComboBox1**.
 
-    ![Configure Right icon](media/function-relate-unrelate/reservations-relate.png)
+    ![Configure NextArrow2](media/function-relate-unrelate/reservations-relate.png)
 
 1. Press F5 to test the app in Preview mode.
 
-With this app, users can move reservations from one product to another. For a reservation on one product, users can select a different product in **ComboBox1** and then select the **Right** icon to move that reservation.
+With this app, the user can move a reservation from one product to another. For a reservation on one product, the user can select a different product in **ComboBox1** and then select **NextArrow2** to change that reservation.
 
 ![Demonstrate Relate function in one-to-many app](media/function-relate-unrelate/reservations-reassign.gif)
 
@@ -118,7 +118,7 @@ At this point, you can move the relationship from one record to another, but you
 
 1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Reservations** > **Connect**.
 
-1. In **Gallery2**, set the **OnSelect** formula for the **Right** icon to this formula:
+1. In **Gallery2**, set the **OnSelect** formula for **NextArrow2** to this formula:
 
     ```powerapps-dot
     If( IsBlank( ComboBox1.Selected ),
@@ -179,7 +179,7 @@ The sample data doesn't include a many-to-many relationship, but you'll create o
 
     ![List of relationships for Products entity](media/function-relate-unrelate/entity-done.png)
 
-#### Relate and unrelate contacts with products
+#### Relate and unrelate contacts with one or more products
 
 You'll create another app that resembles the one you created earlier in this topic, but the new app will offer a many-to-many relationship. Each contact will be able to reserve multiple products instead of only one.
 
@@ -201,7 +201,7 @@ You'll create another app that resembles the one you created earlier in this top
 
     ![Show contact name](media/function-relate-unrelate/contacts-title.png)
 
-1. Delete the **Right** icon, and insert a **Cancel** icon.
+1. Delete **NextArrow2**, insert a **Cancel** icon, and ensure that it's named **icon1**.
 
 1. Set the **Cancel** icon's **OnSelect** property to **Unrelate( Gallery1.Selected.Contacts, ThisItem )**.
 
@@ -230,7 +230,7 @@ With this app, users can now freely relate and unrelate a set of contacts to eac
 
 ![Demonstrate Relate and Unrelate functions in many-to-many app](media/function-relate-unrelate/contacts-relate-unrelate.gif)
 
-#### In reverse: relate and unrelate products with contacts
+#### In reverse: relate and unrelate products with multiple contacts
 
 Many-to-many relationships are symmetric. You can extend the example to add products to a contact and then flip between the two screens to show how the relationship appears from either direction.
 
