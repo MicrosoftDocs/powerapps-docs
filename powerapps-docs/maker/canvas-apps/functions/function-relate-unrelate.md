@@ -56,55 +56,57 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. Create a [tablet app from blank](../data-platform-create-app-scratch.md).
 
-1. On the **View** tab, select **Data sources**. Add a connection to CDS for Apps, and specify the **Products** entity.
+1. On the **View** tab, select **Data sources**.
+
+1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Products** > **Connect**.
 
     The Products entity is part of the sample data loaded above.
 
      ![Add the Products entity as a data source](media/function-relate-unrelate/products-datasource.png)
 
-1. On the **Insert** tab, add a blank vertical **[Gallery](../controls/control-gallery.md)** control, and name it **ProductGallery**.
+1. On the **Insert** tab, add a blank vertical **[Gallery](../controls/control-gallery.md)** control.
 
-1. Re-size **ProductGallery** to fill the left-hand side of the screen.
+1. Ensure that the control that you just added is named **Gallery1**, and re-size it to fill the left-hand side of the screen.
 
-1. On the **Properties** tab, set **ProductGallery**'s **Items** property to **Products** and its **Layout** to **Images and title**.
+1. On the **Properties** tab, set **Gallery1**'s **Items** property to **Products** and its **Layout** to **Images and title**.
 
     ![Configure ProductsGallery](media/function-relate-unrelate/products-gallery.png)
 
-1. Select the **Label** control in **ProductGallery**, and change the label's **Text** property to **ThisItem.Name**.
+1. In **Gallery1**, ensure that the **Label** control is named **Title1**, and then set its **Text** property to **ThisItem.Name**.
 
-    ![Configure the label in ProductsGallery](media/function-relate-unrelate/products-title.png)
+    ![Configure the label in Gallery1](media/function-relate-unrelate/products-title.png)
 
-1. Add a second blank vertical **Gallery** control, and name it **ReserveGallery**.
+1. Add a second blank vertical **Gallery** control, and ensure that it's named **Gallery2**.
 
-    **ReserveGallery** will show the reservations for the selected product in **ProductGallery**.
+    **Gallery2** will show the reservations for the selected product in **Gallery1**.
 
-1. Re-size **ReserveGallery** to fill the upper-right quadrant of the screen.
+1. Re-size **Gallery2** to fill the upper-right quadrant of the screen.
 
-1. (optional) Add the blue **Label** control above **ReserveGallery**, as the graphic shows.
+1. (optional) Add the blue **Label** control above **Gallery2**, as the graphic shows.
 
-1. In the formula bar, set the **Items** property of **ReserveGallery** to **ProductGallery.Selected.Reservations**.
+1. In the formula bar, set the **Items** property of **Gallery2** to **ProductGallery.Selected.Reservations**.
 
-1. In the properties pane, set the **Layout** of **ReserveGallery** to **Title**.
+1. In the properties pane, set the **Layout** of **Gallery2** to **Title**.
 
-    ![Configure ReserveGallery](media/function-relate-unrelate/reservations-gallery.png)
+    ![Configure Gallery2](media/function-relate-unrelate/reservations-gallery.png)
 
-1. Add a **[Combo box](../controls/control-combo-box.md)** control into **ReserveGallery**, and name the newest control **ReserveCombo**.
+1. Add a **[Combo box](../controls/control-combo-box.md)** control into **Gallery2**, and ensure that the newest control is named **ComboBox1**.
 
-1. On the **Properties** tab, set **ReserveCombo**'s **Items** property to **Products**.
+1. On the **Properties** tab, set **ComboBox1**'s **Items** property to **Products**.
 
-1. In the formula bar, set **ReserveCombo**'s **DefaultSelectedItems** property to **ThisItem.'Product Reservation'**.
+1. In the formula bar, set **ComboBox1**'s **DefaultSelectedItems** property to **ThisItem.'Product Reservation'**.
 
     ![Set DefaultSelectedItems for ReserveCombo](media/function-relate-unrelate/reservations-combo.png)
 
-1. In **ReserveGallery**, set the **OnSelect** property of the **Right** icon to **Relate( ComboBox1.Selected.Reservations, ThisItem )**.
+1. In **Gallery2**, set the **OnSelect** property of the **Right** icon to **Relate( ComboBox1.Selected.Reservations, ThisItem )**.
 
-    When the user selects this arrow, the current reservation moves to the product that the user selected in the combo box.
+    When the user selects this arrow, the current reservation moves to the product that the user selected in **ComboBox1**.
 
     ![Configure Right icon](media/function-relate-unrelate/reservations-relate.png)
 
 1. Press F5 to test the app in Preview mode.
 
-With your app, users can move reservations from one product to another. For a reservation on one product, users can select a different product in the combo-box control and select the **Right** icon to move that reservation.
+With your app, users can move reservations from one product to another. For a reservation on one product, users can select a different product in **ComboBox1** and then select the **Right** icon to move that reservation.
 
 ![Demonstrate Relate function in one-to-many app](media/function-relate-unrelate/reservations-reassign.gif)
 
@@ -114,7 +116,7 @@ Before this point, you've moved the relationship between records but not removed
 
 1. On the **View** tab, select **Data sources**, and then add the **Reservations** entity from CDS for Apps.
 
-1. In **ReserveGallery**, set the **OnSelect** formula for the **Right** icon to this formula:
+1. In **Gallery2**, set the **OnSelect** formula for the **Right** icon to this formula:
 
     ```powerapps-dot
     If( IsBlank( ComboBox1.Selected ),
@@ -125,19 +127,19 @@ Before this point, you've moved the relationship between records but not removed
     ```
     ![Configure Right icon](media/function-relate-unrelate/reservations-relate-unrelate.png)
 
-1. Select **ReserveGallery** (and the label above it if you added one), and copy them to the clipboard by pressing Ctrl-C.
+1. Copy **Gallery2** (and the label above it if you added one) to the Clipboard by selecting them and then pressing Ctrl-C.
 
 1. Paste the controls to the same screen by pressing Ctrl-V, and then position them in the lower-right corner of the screen.
 
-1. Rename the copy of the gallery to **ReserveGallery2**, and set its **Items** property to this formula:
+1. Ensure that the duplicate gallery is named **Gallery2_1**, and then set its **Items** property to this formula:
 
     **Filter( Reservations, IsBlank( 'Product Reservation' ) )**
 
     A delegation warning appears, but it won't matter with the small amount of data in this example.
 
-    ![Set Items property of ReserveGallery2](media/function-relate-unrelate/reservations-lost.png)
+    ![Set the Items property of Gallery2_1](media/function-relate-unrelate/reservations-lost.png)
 
-With these changes, users can clear the selection in the combo box for a reservation and disconnect it from any product. Reservations that have no associated product appear in **ReserveGallery2** from which users can assign them to products.
+With these changes, users can clear the selection in the combo box for a reservation and disconnect it from any product. Reservations that have no associated product appear in **Gallery2_1** from which users can assign them to products.
 
    ![Demonstrate Relate and Unrelate functions in one-to-many app](media/function-relate-unrelate/reservations-lostandfound.gif)
 
@@ -177,17 +179,21 @@ The sample data doesn't include a many-to-many relationship, but you'll create o
 
 You'll create another app that resembles the one you created earlier in this topic, but the new app will offer a many-to-many relationship. Each contact will be able to reserve multiple products instead of only one.
 
-1. Follow the first five steps in the [first procedure](#one-to-many) in this topic to create **ProductsGallery**.
+1. Follow the first five steps in the [first procedure](#one-to-many) in this topic to create **Gallery1**.
 
-1. Add a second gallery on the right hand side of the screen.  Leave a small amount of space at the bottom where we'll add a **Combo box** control.
+1. Add another blank vertical **Gallery** control, and ensure that it's named **Gallery2**.
 
-1. In the formula bar, set the **Items** property to **ProductGallery.Selected.Contacts**.
+1. Move and resize **Gallery2** so that it covers most of the right-hand side of the screen except for a small amount of space at the bottom
+
+    Later in this topic, you'll add a **Combo box** control under **Gallery2**.
+
+1. In the formula bar, set **Gallery2**'s **Items** property to **ProductGallery.Selected.Contacts**.
 
 1. On the **Properties** tab, set **Layout** to **Image and title**.
 
     ![Configure ContactsGallery](media/function-relate-unrelate/contacts-gallery.png)
 
-1. In the formula bar, set the **Text** property of the **Label** control within the gallery to **ThisItem.'Full Name'**.
+1. In **Gallery2**, set the **Text** property of the **Label** control to **ThisItem.'Full Name'**.
 
     ![Show contact name](media/function-relate-unrelate/contacts-title.png)
 
