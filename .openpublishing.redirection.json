@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/use-microsoft-dynamics-365-web-api-helper-library-csharp.md",
+      "redirect_url": "enhanced-quick-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/web-api-helper-code-crmhttpresponseexception-class.md",
+      "redirect_url": "enhanced-quick-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/web-api-helper-code-configuration-classes.md",
+      "redirect_url": "enhanced-quick-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/web-api-helper-code-authentication-class.md",
+      "redirect_url": "enhanced-quick-start",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/create-app-browser.md",
       "redirect_url": "getting-started",
       "redirect_document_id": true
