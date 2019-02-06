@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 02/01/2019
+ms.date: 02/05/2019
 ms.author: jamesol
 search.audienceType: 
   - admin
@@ -97,6 +97,9 @@ If you want to build skills and learn more about PowerApps, Microsoft Flow, and 
 
 ## Resource capacity is included with each license
 Per-user licenses come with included capacity for resources used when an app or flow is executed. These resources include data storage management and flow runs. The capacities included in the per-user licenses are pooled at the tenant level and, when the tenant’s capacity is exhausted, customers may purchase additional capacity through add-on licenses. See the [PowerApps pricing page](https://powerapps.microsoft.com/pricing) for details.
+
+> [!NOTE]
+> We've removed the 10 GB per instance (database) maximum capacity for the Common Data Service. You can buy up to 30 TB capacity which will be consumed across instances in the tenant.
 
 ### PowerApps for Dynamics 365
 
