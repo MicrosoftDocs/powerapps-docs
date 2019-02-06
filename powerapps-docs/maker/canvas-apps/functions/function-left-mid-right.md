@@ -33,13 +33,13 @@ If the starting position is negative or beyond the end of the string, **Mid** re
 
 * *String* - Required. The string to from which to extract the result.
 * *StartingPosition* - Required (**Mid** only).  The starting position.  The first character of the string is position 1.
-* *NumberOfCharacters* - Required.  The number of characters to return.
+* *NumberOfCharacters* - Required (**Left** and **Right** only).  The number of characters to return.  If omitted for the **Mid** function, the function returns the portion from the starting position until the end of the string.
 
 **Left**( *SingleColumnTable*, *NumberOfCharacters* )<br>**Mid**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *SingleColumnTable*, *NumberOfCharacters* )
 
 * *SingleColumnTable* - Required. A single-column table of strings from which to extract the results.
 * *StartingPosition* - Required (**Mid** only).  The starting position.  The first character of the string is position 1.
-* *NumberOfCharacters* - Required.  The number of characters to return.
+* *NumberOfCharacters* - Required (**Left** and **Right** only).  The number of characters to return.  If omitted for the **Mid** function, the function returns the portion from the starting position until the end of the string.
 
 ## Examples
 ### Single string
@@ -49,6 +49,7 @@ The examples in this section use a text-input control as their [data source](../
 | --- | --- | --- |
 | **Left( Author.Text, 5 )** |Extracts up to five characters from the start of the string. |"E. E." |
 | **Mid( Author.Text, 7, 4 )** |Extracts up to four characters, starting with the seventh character, from the string. |"Cumm" |
+| **Mid( Author.Text, 7 )** |Extracts all characters, starting with the seventh character, from the string. |"Cummings" |
 | **Right( Author.Text, 5 )** |Extracts up to five characters from the end of the string. |"mings" |
 
 ### Single-column table

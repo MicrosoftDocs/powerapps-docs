@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/03/2018
+ms.date: 02/01/2019
 ms.author: manasma
 search.audienceType: 
   - admin
@@ -39,8 +39,6 @@ There are various ways to create a database:
     
     ![](./media/create-database/DB-Choose-options.png)
 
-
-
 ## Create a database in the Entities pane of PowerApps
 1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
@@ -48,11 +46,8 @@ There are various ways to create a database:
 
     ![](./media/create-database/Create-DB-From-Entities.png)
 
-> [!NOTE]
-> Currently, it's not possible to create a database outside your Azure AD region. It will be possible to create a database in a different region than your Azure AD home region soon, but for now, make sure you create a database in an environment that has the same region as your Azure AD home region.
-
 ## Security model for the databases
-When a database is created, the users who have environment roles assigned to them, will continue to maintain those priviliges.  
+When a database is created, the users who have environment roles assigned to them, will continue to maintain those privileges.  
     Users with **Environment Admin** role are now assigned to **System Administrator** role. 
     Users with **Environment Maker** continue to possess the same role.
 
