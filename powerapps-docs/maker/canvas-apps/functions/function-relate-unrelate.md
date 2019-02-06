@@ -66,9 +66,9 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. On the **Insert** tab, add a blank vertical **[Gallery](../controls/control-gallery.md)** control.
 
-1. Ensure that the control that you just added is named **Gallery1**, and re-size it to fill the left-hand side of the screen.
+1. Ensure that the control that you just added is named **Gallery1**, and then move and resize it to fill the left-hand side of the screen.
 
-1. On the **Properties** tab, set **Gallery1**'s **Items** property to **Products** and its **Layout** to **Images and title**.
+1. On the **Properties** tab, set **Gallery1**'s **Items** property to **Products** and its **Layout** to **Image and title**.
 
     ![Configure ProductsGallery](media/function-relate-unrelate/products-gallery.png)
 
@@ -76,21 +76,21 @@ You'll first create a simple app to view and reassign the reservations that are 
 
     ![Configure the label in Gallery1](media/function-relate-unrelate/products-title.png)
 
-1. Add a second blank vertical **Gallery** control, and ensure that it's named **Gallery2**.
+1. Select the default screen, add a second blank vertical **Gallery** control, and ensure that it's named **Gallery2**.
 
-    **Gallery2** will show the reservations for the selected product in **Gallery1**.
+    **Gallery2** will show the reservations for whatever product the user selects in **Gallery1**.
 
-1. Re-size **Gallery2** to fill the upper-right quadrant of the screen.
+1. Move and resize **Gallery2** to fill the upper-right quadrant of the screen.
 
 1. (optional) Add the blue **Label** control above **Gallery2**, as the graphic shows.
 
-1. In the formula bar, set the **Items** property of **Gallery2** to **ProductGallery.Selected.Reservations**.
+1. In the formula bar, set the **Items** property of **Gallery2** to **Gallery1.Selected.Reservations**.
 
 1. In the properties pane, set the **Layout** of **Gallery2** to **Title**.
 
     ![Configure Gallery2](media/function-relate-unrelate/reservations-gallery.png)
 
-1. Add a **[Combo box](../controls/control-combo-box.md)** control into **Gallery2**, and ensure that the newest control is named **ComboBox1**.
+1. In **Gallery2**, add a **[Combo box](../controls/control-combo-box.md)** control, ensure that it's named **ComboBox1**, and move it to avoid blocking the other controls in **Gallery2**.
 
 1. On the **Properties** tab, set **ComboBox1**'s **Items** property to **Products**.
 
@@ -106,15 +106,17 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. Press F5 to test the app in Preview mode.
 
-With your app, users can move reservations from one product to another. For a reservation on one product, users can select a different product in **ComboBox1** and then select the **Right** icon to move that reservation.
+With this app, users can move reservations from one product to another. For a reservation on one product, users can select a different product in **ComboBox1** and then select the **Right** icon to move that reservation.
 
 ![Demonstrate Relate function in one-to-many app](media/function-relate-unrelate/reservations-reassign.gif)
 
 #### **Unrelate** function
 
-Before this point, you've moved the relationship between records but not removed the relationship altogether. You can use the **Unrelate** function to disconnect a reservation record from any product.
+At this point, you can move the relationship from one record to another, but you can't remove the relationship altogether. You can use the **Unrelate** function to disconnect a reservation record from any product.
 
-1. On the **View** tab, select **Data sources**, and then add the **Reservations** entity from CDS for Apps.
+1. On the **View** tab, select **Data sources**.
+
+1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Reservations** > **Connect**.
 
 1. In **Gallery2**, set the **OnSelect** formula for the **Right** icon to this formula:
 
@@ -127,11 +129,13 @@ Before this point, you've moved the relationship between records but not removed
     ```
     ![Configure Right icon](media/function-relate-unrelate/reservations-relate-unrelate.png)
 
-1. Copy **Gallery2** (and the label above it if you added one) to the Clipboard by selecting them and then pressing Ctrl-C.
+1. Copy **Gallery2** to the Clipboard by selecting it and then pressing Ctrl-C.
 
-1. Paste the controls to the same screen by pressing Ctrl-V, and then position them in the lower-right corner of the screen.
+1. Paste a duplicate of **Gallery2** to the same screen by pressing Ctrl-V, and then move it to the lower-right quadrant of the screen.
 
-1. Ensure that the duplicate gallery is named **Gallery2_1**, and then set its **Items** property to this formula:
+1. (optional) If you added a label above **Gallery2**, repeat the previous two steps for that label.
+
+1. Ensure that the duplicate of **Gallery2** is named **Gallery2_1**, and then set its **Items** property to this formula:
 
     **Filter( Reservations, IsBlank( 'Product Reservation' ) )**
 
@@ -139,7 +143,7 @@ Before this point, you've moved the relationship between records but not removed
 
     ![Set the Items property of Gallery2_1](media/function-relate-unrelate/reservations-lost.png)
 
-With these changes, users can clear the selection in the combo box for a reservation and disconnect it from any product. Reservations that have no associated product appear in **Gallery2_1** from which users can assign them to products.
+With these changes, users can clear the selection in **ComboBox1** for a contact if that person hasn't reserved a product. Contacts who haven't reserved a product appear in **Gallery2_1** where users can assign each contact to a product.
 
    ![Demonstrate Relate and Unrelate functions in one-to-many app](media/function-relate-unrelate/reservations-lostandfound.gif)
 
@@ -149,7 +153,7 @@ With these changes, users can clear the selection in the combo box for a reserva
 
 The sample data doesn't include a many-to-many relationship, but you'll create one between the Products entity and the Contacts entity. Users can relate each product to more than one contact and each contact to more than one product.
 
-1. From [this page](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Entities** in the left navigation bar, and then select **Data**.
+1. From [this page](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** in the left navigation bar, and then select **Entities**.
 
     ![Open list of entities](media/function-relate-unrelate/entity-list.png)
 
@@ -163,15 +167,15 @@ The sample data doesn't include a many-to-many relationship, but you'll create o
 
     ![Relationships tab for the Product entity](media/function-relate-unrelate/entity-relationships.png)
 
-1. Add a many-to-many relationship.
+1. Select **Add relationship** > **Many-to-many**.
 
     ![Add many-to-many relationship](media/function-relate-unrelate/entity-manytomany.png)
 
-1. Select the **Contacts** entity for the relationship.
+1. Select the **Contact** entity for the relationship.
 
-    ![Select the Contacts entity](media/function-relate-unrelate/entity-contact.png)
+    ![Select the Contact entity](media/function-relate-unrelate/entity-contact.png)
 
-1. Save and confirm the change.
+1. Select **Done** > **Save entity**.
 
     ![List of relationships for Products entity](media/function-relate-unrelate/entity-done.png)
 
@@ -179,33 +183,35 @@ The sample data doesn't include a many-to-many relationship, but you'll create o
 
 You'll create another app that resembles the one you created earlier in this topic, but the new app will offer a many-to-many relationship. Each contact will be able to reserve multiple products instead of only one.
 
-1. Follow the first five steps in the [first procedure](#one-to-many) in this topic to create **Gallery1**.
+1. In a blank app for tablets, create **Gallery1** as the [first procedure](#one-to-many) in this topic describes.
 
-1. Add another blank vertical **Gallery** control, and ensure that it's named **Gallery2**.
-
-1. Move and resize **Gallery2** so that it covers most of the right-hand side of the screen except for a small amount of space at the bottom
+1. Add another blank vertical **Gallery** control, ensure that it's named **Gallery2**, and then move it into the upper-right corner of the screen.
 
     Later in this topic, you'll add a **Combo box** control under **Gallery2**.
 
-1. In the formula bar, set **Gallery2**'s **Items** property to **ProductGallery.Selected.Contacts**.
+1. In the formula bar, set **Gallery2**'s **Items** property to **Gallery1.Selected.Contacts**.
 
 1. On the **Properties** tab, set **Layout** to **Image and title**.
 
     ![Configure ContactsGallery](media/function-relate-unrelate/contacts-gallery.png)
 
-1. In **Gallery2**, set the **Text** property of the **Label** control to **ThisItem.'Full Name'**.
+1. In **Gallery2**, ensure that the **Label** control is named **Title2**, and then set its **Text** property to **ThisItem.'Full Name'**.
+
+    No text will appear in that control until you finish this procedure and assign a contact to a product.
 
     ![Show contact name](media/function-relate-unrelate/contacts-title.png)
 
 1. Delete the **Right** icon, and insert a **Cancel** icon.
 
-1. Set the **OnSelect** property to **Unrelate( Gallery1.Selected.Contacts, ThisItem )**.
+1. Set the **Cancel** icon's **OnSelect** property to **Unrelate( Gallery1.Selected.Contacts, ThisItem )**.
 
     ![Configure Cancel icon](media/function-relate-unrelate/contacts-unrelate.png)
 
-1. On the **View** tab, select **Data sources**, and add the **Contacts** entity from CDS for Apps.
+1. On the **View** tab, select **Data sources**.
 
-1. Add a **Combo box** control to the bottom of the right column.  Set its **Items** property to **Contacts**.
+1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Contacts** > **Connect**.
+
+1. Under **Gallery2**, add a **Combo box** control, ensure that it's named **ComboBox1**, and then set its **Items** property to **Contacts**.
 
 1. On the **Properties** tab, set **Allow multiple selection** to **Off**.
 
@@ -220,13 +226,13 @@ With this app, users can now freely relate and unrelate a set of contacts to eac
 - To add a contact to a product, select the contact in the combo box at the bottom of the screen, and then select the **Add** icon.
 - To remove a contact from a product, select the **Cancel** icon for that contact.
 
-    Unlike one-to-many, a many-to-many relationship allows users can associate the same contact with multiple products.
+    Unlike one-to-many, a many-to-many relationship allows users to associate the same contact with multiple products.
 
 ![Demonstrate Relate and Unrelate functions in many-to-many app](media/function-relate-unrelate/contacts-relate-unrelate.gif)
 
 #### In reverse: relate and unrelate products with contacts
 
-Many-to-many relationships are symmetric. You can extend the example to add products to a contact. You'll flip between the two screens to show how the relationship appears from either direction.
+Many-to-many relationships are symmetric. You can extend the example to add products to a contact and then flip between the two screens to show how the relationship appears from either direction.
 
 1. Set the **OnVisible** property of **Screen1** to **Refresh( Products )**.
 
@@ -247,10 +253,10 @@ Many-to-many relationships are symmetric. You can extend the example to add prod
     - Title1_1.Text = `ThisItem.'Full Name'`
     - Label1_1.Text = `"Selected Contact Products"`
     - Gallery2_1.Items = `Gallery1_1.Selected.Products`
-    - Title3_1.Text = `ThisItem.Name`
-    - Icon7_1.OnSelect = `Unrelate( Gallery1_1.Selected.Products, ThisItem )`
+    - Title2_1.Text = `ThisItem.Name`
+    - Icon1_1.OnSelect = `Unrelate( Gallery1_1.Selected.Products, ThisItem )`
     - ComboBox1_1.Items = `Products`
-    - Icon9_1.OnSelect = `Relate( Gallery1_1.Selected.Products, ComboBox1_1.Selected )`
+    - Icon2_1.OnSelect = `Relate( Gallery1_1.Selected.Products, ComboBox1_1.Selected )`
 
     The result will look very similar to the previous screen but comes at the relationship from the **Contacts** side.
 
