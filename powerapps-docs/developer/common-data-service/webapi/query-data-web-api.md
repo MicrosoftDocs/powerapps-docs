@@ -2,7 +2,7 @@
 title: "Query Data using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Read about the various ways to query Common Data Service for Apps data using the Common Data Service for Apps Web API and various system query options that can be applied in these queries"
 ms.custom: ""
-ms.date: 02/05/2019
+ms.date: 02/06/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -558,7 +558,7 @@ OData-Version: 4.0
 
 ### Retrieve related entities by expanding collection-valued navigation properties
 
-If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, an `@odata.nextLink` property will be returned for the related entities. You should use the value of the `@odata.nextLink` property with a new GET request to return the required data.  
+If you expand on collection-valued navigation parameters to retrieve related entities for entity sets, an `@odata.nextLink` property will be returned for the related entities. You should use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
 
 The following example retrieves the tasks assigned to the top 5 account records.  
   
@@ -635,7 +635,7 @@ OData-Version: 4.0
   
 ### Retrieve related entities by expanding both single-valued and collection-valued navigation properties
 
-The following example demonstrates how you can expand related entities for entity sets using both single- and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns an `@odata.nextLink` property for the related entities. You should use the value of the `@odata.nextLink` property with a new GET request to return the required data.  
+The following example demonstrates how you can expand related entities for entity sets using both single- and collection-valued navigation properties. As explained earlier, expanding on collection-valued navigation properties to retrieve related entities for entity sets returns an `@odata.nextLink` property for the related entities. You should use the value of the `@odata.nextLink` property with a new `GET` request to return the required data.  
   
 In this example, we are retrieving the contact and tasks assigned to the top 3 accounts.  
   
