@@ -30,6 +30,8 @@ The data for the entity that you specify in the first argument will be refreshed
 
 These functions never create or delete a record. They only relate or unrelate two records that already exist.
 
+You can use these functions only in [behavior formulas](../working-with-formulas-in-depth.md).
+
 ## Syntax
 
 **Relate**( *Entity1RelatedTable*, *Entity2Record* )
@@ -255,7 +257,7 @@ You'll create another app that resembles the one you created earlier in this top
 1. Set the **Cancel** icon's **OnSelect** property to this formula: 
 
     ```powerapps-dot
-    **Unrelate( Gallery1.Selected.Contacts, ThisItem )**
+    Unrelate( Gallery1.Selected.Contacts, ThisItem )
     ```
 
     ![Configure Cancel icon](media/function-relate-unrelate/contacts-unrelate.png)
@@ -275,7 +277,7 @@ You'll create another app that resembles the one you created earlier in this top
 1. Insert an **Add** icon, and set its **OnSelect** property to this formula: 
 
     ```powerapps-dot
-    **Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )**
+    Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )
     ```
 
     ![Configure Add icon](media/function-relate-unrelate/contacts-relate.png)
