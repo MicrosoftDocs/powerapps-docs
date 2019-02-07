@@ -26,8 +26,6 @@ For one-to-many relationships, the Many entity has a foreign-key field that poin
 
 For many-to-many relationships, the system that links the records maintains a hidden join table. You can't access this join table directly; it can be read only through a one-to-many projection and set through the **Relate** and **Unrelate** functions. Neither related entity has a foreign key.
 
-Nothing changes if you try to relate records that are already related.
-
 The data for the entity that you specify in the first argument will be refreshed to reflect the change, but the data for the entity that you specify in the second argument won't. That data must be manually refreshed with the **[Refresh](function-refresh.md)** function to show the result of the operation.
 
 These functions never create or delete a record. They only relate or unrelate two records that already exist.
@@ -46,6 +44,41 @@ These functions never create or delete a record. They only relate or unrelate tw
 
 ## Examples
 
+Consider a **Products** entity with the following relationships as seen in the entity viewer:
+
+| Relationship display name | Related entity | Relationship type |
+| --- | --- |
+| Product Reservation | Reservation | One-to-many |
+| Product &harr; Contact | Contact | Many-to-many |
+
+**Products** and **Reservations** are related through a One-to-Many relationship.  To relate the first record of the **Reservations** entity with the first record of the **Products** entity:
+
+`Relate( First( Products ).Reservations, First( Reservations ) )`
+
+To remove the relationship between these records:
+
+`Unrelate( First( Products ).Reservations, First( Reservations ) )`
+
+At no time did we create or remove or a record, only the relationship between records was modified.
+
+**Products** and **Contacts** are related through a Many-to-Many relationship.  To relate the first record of the **Contacts** entity with the first record of the **Products** entity:
+
+`Relate( First( Products ).Contacts, First( Contacts ) )`
+
+As Many-to-Many relationships are symmetric, we could also have done this in the opposite direction:
+
+`Relate( First( Contacts ).Products, First( Products ) )`
+
+To remove the relationship between these records:
+
+`Unrelate( First( Products ).Contacts, First( Contacts ) )`
+
+or:
+
+`Unrelate( First( Contacts ).Products, First( Products ) )`
+
+The walk through that follows does exactly these operations on these entities using an app with **Gallery** and **Combo box** controls for selecting the records involved.
+
 These examples depend on the sample data being installed in your environment. Either [create a trial environment including sample data](../../model-driven-apps/overview-model-driven-samples.md#get-sample-apps) or [add sample data to an existing environment](../../model-driven-apps/overview-model-driven-samples.md#install-or-uninstall-sample-data).
 
 ### One-to-many
@@ -58,11 +91,11 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. On the **View** tab, select **Data sources**.
 
-1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Products** > **Connect**.
+1. In the **Data** pane, select **Add data source** > **Common Data Service** > **Products** > **Connect**.  
 
     The Products entity is part of the sample data loaded above.
 
-     ![Add the Products entity as a data source](media/function-relate-unrelate/products-datasource.png)
+     ![Add the Products entity as a data source](media/function-relate-unrelate/products-connect.png)
 
 1. On the **Insert** tab, add a blank vertical **[Gallery](../controls/control-gallery.md)** control.
 
@@ -76,7 +109,7 @@ You'll first create a simple app to view and reassign the reservations that are 
 
     ![Configure the label in Gallery1](media/function-relate-unrelate/products-title.png)
 
-1. Select the default screen, add a second blank vertical **Gallery** control, and ensure that it's named **Gallery2**.
+1. Select the screen to avoid inserting the next item into **Gallery1**.  Add a second blank vertical **Gallery** control, and ensure that it's named **Gallery2**.
 
     **Gallery2** will show the reservations for whatever product the user selects in **Gallery1**.
 
@@ -86,19 +119,31 @@ You'll first create a simple app to view and reassign the reservations that are 
 
 1. In the formula bar, set the **Items** property of **Gallery2** to **Gallery1.Selected.Reservations**.
 
+    ![Configure Gallery2 Items](media/function-relate-unrelate/reservations-gallery.png)
+
 1. In the properties pane, set **Gallery2**'s **Layout** to **Title**.
 
-    ![Configure Gallery2](media/function-relate-unrelate/reservations-gallery.png)
+    ![Configure Gallery2 Layout](media/function-relate-unrelate/reservations-gallery-right.png)
 
 1. In **Gallery2**, add a **[Combo box](../controls/control-combo-box.md)** control, ensure that it's named **ComboBox1**, and then move and resize it to avoid blocking the other controls in **Gallery2**.
 
 1. On the **Properties** tab, set **ComboBox1**'s **Items** property to **Products**.
 
+    ![Set Items property to Products](media/function-relate-unrelate/reservations-combo-right.png)
+
+1. Scroll down on the **Properties** tab, set **ComboBox1**'s **Allow multiple selection** property to **Off**.
+
+    ![Set Allow multiple selection to Off](media/function-relate-unrelate/reservations-singleselect-right.png)
+
 1. In the formula bar, set **ComboBox1**'s **DefaultSelectedItems** property to **ThisItem.'Product Reservation'**.
 
     ![Set DefaultSelectedItems for ReserveCombo](media/function-relate-unrelate/reservations-combo.png)
 
-1. In **Gallery2**, set **NextArrow2**'s **OnSelect** property to **Relate( ComboBox1.Selected.Reservations, ThisItem )**.
+1. In **Gallery2**, set **NextArrow2**'s **OnSelect** property to this formula:
+
+    ```powerapps-dot
+    Relate( ComboBox1.Selected.Reservations, ThisItem )
+    ```
 
     When the user selects this icon, the current reservation changes to the product that the user selected in **ComboBox1**.
 
@@ -122,8 +167,8 @@ At this point, you can move the relationship from one record to another, but you
 
     ```powerapps-dot
     If( IsBlank( ComboBox1.Selected ),
-        Relate( Gallery1.Selected.Reservations, ThisItem ),
-        Unrelate( ComboBox1.Selected.Reservations, ThisItem )
+        Unrelate( Gallery1.Selected.Reservations, ThisItem ),
+        Relate( ComboBox1.Selected.Reservations, ThisItem )
     );
     Refresh( Reservations )
     ```
@@ -137,7 +182,9 @@ At this point, you can move the relationship from one record to another, but you
 
 1. Ensure that the duplicate of **Gallery2** is named **Gallery2_1**, and then set its **Items** property to this formula:
 
-    **Filter( Reservations, IsBlank( 'Product Reservation' ) )**
+    ```powerapps-dot
+    Filter( Reservations, IsBlank( 'Product Reservation' ) )
+    ```
 
     A delegation warning appears, but it won't matter with the small amount of data in this example.
 
@@ -191,9 +238,11 @@ You'll create another app that resembles the one you created earlier in this top
 
 1. In the formula bar, set **Gallery2**'s **Items** property to **Gallery1.Selected.Contacts**.
 
+    ![Configure ContactsGallery](media/function-relate-unrelate/contacts-gallery.png)
+
 1. On the **Properties** tab, set **Layout** to **Image and title**.
 
-    ![Configure ContactsGallery](media/function-relate-unrelate/contacts-gallery.png)
+    ![Configure ContactsGallery](media/function-relate-unrelate/contacts-gallery-right.png)
 
 1. In **Gallery2**, ensure that the **Label** control is named **Title2**, and then set its **Text** property to **ThisItem.'Full Name'**.
 
@@ -213,9 +262,11 @@ You'll create another app that resembles the one you created earlier in this top
 
 1. Under **Gallery2**, add a **Combo box** control, ensure that it's named **ComboBox1**, and then set its **Items** property to **Contacts**.
 
+    ![Configure the combo box Items property](media/function-relate-unrelate/contacts-combo.png)
+
 1. On the **Properties** tab, set **Allow multiple selection** to **Off**.
 
-    ![Configure the combo box](media/function-relate-unrelate/contacts-combo.png)
+    ![Configure the combo box Layout property](media/function-relate-unrelate/contacts-combo-right.png)
 
 1. Insert an **Add** icon, and set its **OnSelect** property to **Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )**.
 
