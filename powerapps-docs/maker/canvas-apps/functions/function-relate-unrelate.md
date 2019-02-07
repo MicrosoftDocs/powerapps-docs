@@ -32,6 +32,9 @@ These functions never create or delete a record. They only relate or unrelate tw
 
 You can use these functions only in [behavior formulas](../working-with-formulas-in-depth.md).
 
+> [!NOTE]
+> These functions are part of a preview feature.  The behavior described here is only available when the *Relationsl data, option sets, and other new features for CDS* feature is turned on.  This is an app level setting that defaults to on for new apps.  To change this feature switch, navigate to the *File* tab, *App settings* in the left hand menu, and then *Preview features*.  Your feedback is very valuable to us - please let us know what you think in the [PowerApps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+
 ## Syntax
 
 **Relate**( *Entity1RelatedTable*, *Entity2Record* )
