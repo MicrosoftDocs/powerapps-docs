@@ -84,6 +84,6 @@ These topics provide details that you will use to create plug-ins.
 These topics provide additional information about writing or debugging a plug-in, or analyzing its performance.
 
 - [Impersonate a user](impersonate-a-user.md)
-- [Tracing and logging](logging-tracing.md])
+- [Tracing and logging](logging-tracing.md)
 - [Analyze performance](analyze-performance.md)
 - [Access external web resources](access-web-services.md)]
