@@ -196,8 +196,6 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
-          - name: Scan a barcode
-            href: ./canvas-apps/scan-barcode.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Control reference
@@ -211,6 +209,8 @@
               href: ./canvas-apps/controls/control-audio-video.md
             - name: Barcode scanner (experimental)
               href: ./canvas-apps/controls/control-barcodescanner.md
+            - name: Barcode scanner
+              href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
               href: ./canvas-apps/controls/control-button.md
             - name: Camera
