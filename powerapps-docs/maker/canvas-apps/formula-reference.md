@@ -254,6 +254,8 @@ Other elements include:
 
 **[Refresh](functions/function-refresh.md)** – Refreshes the records of a data source.
 
+**[Relate](functions/function-relate-unrelate.md)** – Relates records of two entities through a one-to-many or many-to-many relationship.
+
 **[Remove](functions/function-remove-removeif.md)** – Removes one or more specific records from a data source.
 
 **[RemoveIf](functions/function-remove-removeif.md)** – Removes records from a data source based on a condition.
@@ -338,6 +340,8 @@ Other elements include:
 
 ## U
 **[Ungroup](functions/function-groupby.md)** – Removes a grouping.
+
+**[Unrelate](functions/function-relate-unrelate.md)** – Unrelates records of two entities from a one-to-many or many-to-many relationship.
 
 **[Update](functions/function-update-updateif.md)** – Replaces a record in a data source.
 
