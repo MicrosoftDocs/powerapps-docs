@@ -44,7 +44,7 @@ These functions never create or delete a record. They only relate or unrelate tw
 
 ## Examples
 
-Consider a **Products** entity with the following relationships as seen in the entity viewer:
+Consider a **Products** entity with the following relationships as seen in the [PowerApps portal's entity viewer](../../common-data-service/create-edit-entities-portal.md):
 
 | Relationship display name | Related entity | Relationship type |
 | --- | --- |
@@ -131,7 +131,7 @@ You'll first create a simple app to view and reassign the reservations that are 
 
     ![Set Items property to Products](media/function-relate-unrelate/reservations-combo-right.png)
 
-1. Scroll down on the **Properties** tab, set **ComboBox1**'s **Allow multiple selection** property to **Off**.
+1. Scroll down in the **Properties** tab and set **ComboBox1**'s **Allow multiple selection** property to **Off**.
 
     ![Set Allow multiple selection to Off](media/function-relate-unrelate/reservations-singleselect-right.png)
 
@@ -252,7 +252,11 @@ You'll create another app that resembles the one you created earlier in this top
 
 1. Delete **NextArrow2**, insert a **Cancel** icon, and ensure that it's named **icon1**.
 
-1. Set the **Cancel** icon's **OnSelect** property to **Unrelate( Gallery1.Selected.Contacts, ThisItem )**.
+1. Set the **Cancel** icon's **OnSelect** property to this formula: 
+
+    ```powerapps-dot
+    **Unrelate( Gallery1.Selected.Contacts, ThisItem )**
+    ```
 
     ![Configure Cancel icon](media/function-relate-unrelate/contacts-unrelate.png)
 
@@ -268,7 +272,11 @@ You'll create another app that resembles the one you created earlier in this top
 
     ![Configure the combo box Layout property](media/function-relate-unrelate/contacts-combo-right.png)
 
-1. Insert an **Add** icon, and set its **OnSelect** property to **Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )**.
+1. Insert an **Add** icon, and set its **OnSelect** property to this formula: 
+
+    ```powerapps-dot
+    **Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )**
+    ```
 
     ![Configure Add icon](media/function-relate-unrelate/contacts-relate.png)
 
