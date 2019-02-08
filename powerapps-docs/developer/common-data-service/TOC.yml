@@ -66,6 +66,8 @@
   - name: Event Framework
     href: event-framework.md
     items:
+    - name: Understand the execution context
+      href: understand-the-data-context.md
     - name: Behavior of specialized update operations
       href: special-update-operation-behavior.md
   - name: Asynchronous service
@@ -75,10 +77,20 @@
     items:
     - name: Write a plug-in
       href: write-plug-in.md
+    - name: Handle exceptions
+      href: handle-exceptions.md
+    - name: Inpersonate a user
+      href: impersonate-a-user.md
     - name: Register a plug-in
       href: register-plug-in.md
     - name: Debug a plug-in
       href: debug-plug-in.md
+    - name: Tracing and logging
+      href: logging-tracing.md
+    - name: Analyze performance
+      href: analyze-performance.md
+    - name: Access external web resources
+      href: access-web-services.md
     - name: Tutorials
       items:
       - name: Write and register a plug-in
@@ -87,6 +99,12 @@
         href: tutorial-debug-plug-in.md
       - name: Update a plug-in
         href: tutorial-update-plug-in.md
+    - name: Sample code
+      items:
+      - name: "Create a basic plug-in"
+        href: org-service/samples/basic-followup-plugin.md
+      - name: "Web access from a plug-in"
+        href: org-service/samples/web-access-plugin.md
   - name: Workflow extensions
     href: workflow/workflow-extensions.md
   - name: Scalable customization design

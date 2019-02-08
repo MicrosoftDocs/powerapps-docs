@@ -39,6 +39,8 @@ The control supports QR codes, data-matrix codes, and these types of barcodes:
 
 **Text** - Text that appears on the button that activates the scanner.
 
+**OnScan** – How an app responds when a barcode is successfully scanned.
+
 ## Additional properties
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
