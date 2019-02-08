@@ -51,7 +51,7 @@ You should use the PowerApps portal to Create and edit fields for Common Data Se
    - More information: [Solutions overview](solutions-overview.md)
 - Define status reason transitions. 
    - More information: [Define status reason transitions for the Case or custom entities](define-status-reason-transitions.md)
-- Edit multiple fields at once
+- Edit multiple fields at once.
 - Enable Auditing. 
    - More information: [Auditing overview](../../developer/common-data-service/auditing-overview.md)
 - Enable Field Level Security. 
