@@ -23,7 +23,7 @@ Plug-ins and custom workflow activities executing in the sandbox can access the 
 - Access to localhost (loopback) is not permitted.
 - IP addresses cannot be used. You must use a named web address that requires DNS name resolution.
 - Anonymous authentication is supported and recommended. There is no provision for prompting the logged on user for credentials or saving those credentials.
-- 
+
 Other methods of accessing web resources include the use of webhooks and the [!INCLUDE [pn_azure_service_bus](../../includes/pn_azure_service_bus.md)]. Refer to the links provided below for more information on those topics.
 
 ## See also
