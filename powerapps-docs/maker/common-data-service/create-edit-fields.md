@@ -14,7 +14,7 @@ applies_to:
 ms.assetid: d88677fa-2caf-47b0-aec6-10a25a7ec9c3
 caps.latest.revision: 55
 ms.author: "matp"
-manager: "brycho"
+manager: "kvivek"
 search.audienceType: 
   - maker
 search.app: 
@@ -47,13 +47,13 @@ You should use the PowerApps portal to Create and edit fields for Common Data Se
 
 - Create a Customer Lookup field. More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)
 - Create a field in a solution other than the CDS Default solution. More information: [Solutions overview](solutions-overview.md)
-- Define status reason transitions. [Define status reason transitions for the Case or custom entities](define-status-reason-transitions.md)
+- Define status reason transitions. More information: [Define status reason transitions for the Case or custom entities](define-status-reason-transitions.md)
 - Edit multiple fields at once
 - Enable Auditing. More information: [Auditing overview](../../developer/common-data-service/auditing-overview.md)
 - Enable Field Level Security. More information: [Field security entities](../../developer/common-data-service/field-security-entities.md)
 - Select whether the field appears in global filter in interactive experience. More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
 - Select whether the field is sortable in interactive experience dashboards. More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
-- Set a field Requirement Level as Business Recommended. More information:[Create business rules and recommendations to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+- Set a field Requirement Level as Business Recommended. More information: [Create business rules and recommendations to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 - Set managed properties for a field. More information: [Set managed properties for fields](set-managed-properties-for-field.md)
 
 > [!NOTE]
