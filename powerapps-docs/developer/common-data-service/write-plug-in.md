@@ -91,113 +91,6 @@ The <xref:System.IServiceProvider>.<xref:System.IServiceProvider.GetService*> me
 > [!NOTE]
 > When you write a plug-in that uses Azure Service Bus integration, you will use a notification service that implements the <xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService> interface, but this will not be described here. More information: [Azure Integration](azure-integration.md)
 
-## Execution Context
-
-You can get a variable that implements the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> interface using the following code:
-
-```csharp
-// Obtain the execution context from the service provider.  
-IPluginExecutionContext context = (IPluginExecutionContext)
-    serviceProvider.GetService(typeof(IPluginExecutionContext));
-```
-
-This <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> provides some information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.Stage> that the plugin is registered for as well as information about the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext> which provides information about any operation within another plug-in that triggered the current operation.
-
-But the rest of the information available is provided by the <xref:Microsoft.Xrm.Sdk.IExecutionContext> interface that this class implements. All the properties of this class provide useful information you may need to access in your code, but two of the most important are the 
-<xref:Microsoft.Xrm.Sdk.IExecutionContext.InputParameters> and <xref:Microsoft.Xrm.Sdk.IExecutionContext.OutputParameters> properties. 
-
-Other frequently used properties are <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables>, <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages>, and <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages>.
-
-> [!TIP]
-> A good way to visualize the data that is passed into the execution context is to install the plug-in profiler solution that is available as part of the plug-in registration tool. The profiler will capture the context information as well as information that allows for replaying event locally so you can debug. Within the plugin registration tool, you can download an xml document with all the data from the event that triggered the workflow. More information: [View Plug-in Profile data](debug-plug-in.md#view-plug-in-profile-data)
-
-### Work with ParameterCollections
-
-All the properties of the execution context are read-only. But the `InputParameters`, `OutputParameters`, and `SharedVariables` are <xref:Microsoft.Xrm.Sdk.ParameterCollection> values. You can manipulate the values of the items in these collections to change the behavior of the operation, depending on the stage in the event execution pipeline your plug-in is registered for.
-
-The <xref:Microsoft.Xrm.Sdk.ParameterCollection> values are defined as <xref:System.Collections.Generic.KeyValuePair%602> structures. In order to access a property you will need to know the name of the property that is exposed by the message. For example, to access the <xref:Microsoft.Xrm.Sdk.Entity> property that is passed as part of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest>, you need to know that the name of that property is `Target`. Then you can access this value using code like this:
-
-```csharp
-var entity = (Entity)context.InputParameters["Target"];
-```
-Use the <xref:Microsoft.Xrm.Sdk.Messages> and <xref:Microsoft.Crm.Sdk.Messages> documentation to learn the names of the messages defined in the SDK assemblies. For custom actions, refer to the names of the parameters defined in the system.
-
-### InputParameters
-
-The `InputParameters` represent the value of the <xref:Microsoft.Xrm.Sdk.OrganizationRequest>.<xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters> property that represents the operation coming in from the web services.
-
-As described in [Use messages with the Organization service](org-service/use-messages.md), all operations that occur in the system are ultimately instances of the `OrganizationRequest` class being processed by the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method.
-
-As described in [Event Framework](event-framework.md), operations go through a series of stages and you can register your plug-in on stages that occur before the data is written to the database. Within the **PreValidation** and **PreOperation** stages, you can read and change the values of the `InputParameters` so that you can control the expected outcome of the data operation.
-
-If you find that the values in the `InputParameters` collection represent a condition that you cannot allow, you can throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> (preferably in the **PreValidation** stage) that will cancel the operation and display an error to the user with a synchronous plug-in, or log the error if the plug-in is asynchronous. More information: [Cancelling an operation](#cancelling-an-operation)
-
-### OutputParameters
-
-The `OutputParameters` represent the value of the <xref:Microsoft.Xrm.Sdk.OrganizationResponse>.<xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results> property that represents the return value of the operation. The `OutputParameters` are not populated until after the database transaction, so they are only available for plug-ins registered in the **PostOperation** stage. If you want to change the values returned by the operation, you can modify them within the `OutputParameters`.
-
-### Shared variables
-
-The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows for including data that can be passed from a plug-in to a step that occurs later in the execution pipeline. Because this is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> value, plug-ins can add, read, or modify properties to share data with subsequent steps.
-
-The following example shows how a `PrimaryContact` value can be passed from a plug-in registered for a **PreOperation** step to a **PostOperation** step.
-
-```csharp
-public class PreOperation : IPlugin
-{
-    public void Execute(IServiceProvider serviceProvider)
-    {
-        // Obtain the execution context from the service provider.
-        Microsoft.Xrm.Sdk.IPluginExecutionContext context = (Microsoft.Xrm.Sdk.IPluginExecutionContext)
-            serviceProvider.GetService(typeof(Microsoft.Xrm.Sdk.IPluginExecutionContext));
-
-        // Create or retrieve some data that will be needed by the post event
-        // plug-in. You could run a query, create an entity, or perform a calculation.
-        //In this sample, the data to be passed to the post plug-in is
-        // represented by a GUID.
-        Guid contact = new Guid("{74882D5C-381A-4863-A5B9-B8604615C2D0}");
-
-        // Pass the data to the post event plug-in in an execution context shared
-        // variable named PrimaryContact.
-        context.SharedVariables.Add("PrimaryContact", (Object)contact.ToString());
-    }
-}
-
-public class PostOperation : IPlugin
-{
-    public void Execute(IServiceProvider serviceProvider)
-    {
-        // Obtain the execution context from the service provider.
-        Microsoft.Xrm.Sdk.IPluginExecutionContext context = (Microsoft.Xrm.Sdk.IPluginExecutionContext)
-            serviceProvider.GetService(typeof(Microsoft.Xrm.Sdk.IPluginExecutionContext));
-
-        // Obtain the contact from the execution context shared variables.
-        if (context.SharedVariables.Contains("PrimaryContact"))
-        {
-            Guid contact =
-                new Guid((string)context.SharedVariables["PrimaryContact"]);
-
-            // Do something with the contact.
-        }
-    }
-}
-```
-
-
-### Entity Images
-
-When you register a step for a plug-in that includes an entity as one of the parameters, you have the option to specify that a copy of the entity data be included as *snapshot* or image using the <xref:Microsoft.Xrm.Sdk.IExecutionContext.PreEntityImages> and/or <xref:Microsoft.Xrm.Sdk.IExecutionContext.PostEntityImages> properties.
-
-This data provides a comparison point for entity data as it flows through the event pipeline. Using these images provides much better performance than including code in a plug-in to retrieve an entity just to compare the attribute values.
-
-When you define an entity image, you specify an entity alias value you can use to access the specific image. For example, if you define a pre entity image with the alias '`a`', you can use the following code to access the `name` attribute value.
-
-```csharp
-var oldAccountName = (string)context.PreEntityImages["a"]["name"];
-```
-
-More information: [Define entity images](register-plug-in.md#define-entity-images)
-
 ## Organization Service
 
 To work with data within a plug-in you use the organization service. Do not try to use the Web API. Plug-ins are optimized to use the .NET SDK assemblies.
@@ -236,33 +129,6 @@ context.InputParameters["Target"] = new Account() { Name = "MyAccount" }; // WRO
 ```
 This will cause an <xref:System.Runtime.Serialization.SerializationException> to occur.
 
-## Impersonation
-
-Sometimes you need the code in a plug-in to run in the context of a different user.
-
-There are two ways to apply impersonation in plug-ins: at registration or execution.
-
-### At plug-in registration
-
-When you register a plug-in step you can specify a user account to use when the code is run by choosing from the **Run in User's Context** option. By default this is set to use the **Calling User**, which is the user account which initiated the action. When this default option is applied, the [SdkMessageProcessingStep.ImpersonatingUserId](reference/entities/sdkmessageprocessingstep.md#BKMK_ImpersonatingUserId) will be set to null or <xref:System.Guid.Empty>.
-
-More information: [Register plug-in step](register-plug-in.md#register-plug-in-step)
-
-### During plug-in execution
-
-You can override the setting specified at registration at run time by setting the <xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory>.<xref:Microsoft.Xrm.Sdk.IOrganizationServiceFactory.CreateOrganizationService(System.Nullable{System.Guid})> `userId` parameter.
-
-This is typically set to the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.UserId> value which will apply the user account defined by the plug-in step registration.
-
-```csharp
-(IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-    IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
-```
-
-If you want to override the step registration you can pass the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.InitiatingUserId> to have a service that will use the user account that initiated the action that caused the plug-in to run.
-
-You can also provide the [SystemUser.SystemUserId](reference/entities/systemuser.md#BKMK_SystemUserId) from any valid user account. This will work as long as that user has the permissions to perform the operations in the plug-in.
-
 ## Use the tracing service
 
 Use the tracing service to write messages to the [PluginTraceLog Entity](reference/entities/plugintracelog.md) so that you can review the logs to understand what occurred when the plug-in ran.
@@ -282,21 +148,7 @@ To write to the trace, use the <xref:Microsoft.Xrm.Sdk.ITracingService>.<xref:Mi
 tracingService.Trace("Write {0} {1}.", "your", "message");
 ```
 
-More information: [Use Tracing](debug-plug-in.md#use-tracing).
-
-
-
-## Cancelling an operation
-
-Your code can cause an operation to be cancelled by throwing an exception. Any unhandled exception will cause the operation to be cancelled so it is important that you apply coding practices to manage any exceptions that are thrown and decide whether to allow it to cancel the operation or not.
-
-If your business logic dictates that the operation should be cancelled, you should throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception and provide a message to explain why the operation was cancelled.
-
-When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception within a synchronous plug-in an error dialog with your message will be displayed to the user. If you don't provide a message, a generic error dialog will be shown to the user. If any other type of exception is thrown, the user will see an error dialog with a generic message and the exception message and stack trace will be written to the [PluginTraceLog Entity](reference/entities/plugintracelog.md)
-
-Ideally, you should only cancel operations using synchronous plug-ins registered in the **PreValidation** stage. This stage *usually* occurs outside the main database transaction. Cancelling an operation before it reaches the transaction is highly desireable because the cancelled operation has to be rolled back. Rolling back the operation requires significant resources and has a performance impact on the system. Operations in the **PreOperation** and **PostOperation** stages are always within the database transaction.
-
-Sometimes **PreValidation** stages will be within a transaction when they are initated by logic in another operation. For example, if you create a task entity record in the **PreOperation** stage of the creation of an account, the task creation will pass through the event execution pipeline and occur within the **PreValidation** stage yet it will be part of the transaction that is creating the account entity record. You can tell whether an operation is within a transaction by the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.IsInTransaction> property.
+More information: [Use Tracing](debug-plug-in.md#use-tracing), [Logging and tracing](logging-tracing.md).
 
 ## Performance considerations
 
@@ -338,6 +190,9 @@ This data is also available for you to browse using the [Organization Insights P
 ### See also
 
 [Write plug-ins to extend business processes](plug-ins.md)<br />
+[Best practices and guidance regarding plug-in and workflow development](best-practices/business-logic/index.md)
+[Handle exceptions](handle-exceptions.md)<br />
+[Impersonate a user](impersonate-a-user.md)<br />
 [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)<br />
 [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)<br />
 [Tutorial: Update a plug-in](tutorial-update-plug-in.md)<br />
