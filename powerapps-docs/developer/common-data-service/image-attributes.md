@@ -19,7 +19,7 @@ search.app:
 
 Entity records that include image data provide a unique experience within the application. As a developer you need to understand how you work with image data.  
   
- Only certain system entities and custom entities support images. For information about which system entities support images, see [Entity images](/dynamics365/customer-engagement/developer/introduction-entities.md#entity-images).  
+ Only certain system entities and custom entities support images. For information about which system entities support images, see [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).  
   
 <a name="BKMK_SupportingAttributes"></a>   
 ## Supporting attributes  
@@ -85,9 +85,9 @@ Entity records that include image data provide a unique experience within the ap
 |![Image before resize](media/crm-itpro-cust-imagebeforeresize.png "Image before resize")<br /><br /> 300x428|![image after resize](media/crm-itpro-cust-imageafterresize.jpg "image after resize")<br /><br /> 144x144|  
 |![Second image resize example](media/crm-itpro-cust-imagebeforeresizeexample2.png "Second image resize example")<br /><br /> 91x130|![second resize example](media/crm-itpro-cust-imageafterresizeexample2.jpg "second resize example")<br /><br /> 91x91|  
   
- More information: [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images.md).  
+ More information: [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images).  
   
 ### See also  
  [Introduction to Entities in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entities)   
  [Introduction to entity attributes in Dynamics 365](/dynamics365/customer-engagement/developer/introduction-entity-attributes)   
- [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images.md)
+ [Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
