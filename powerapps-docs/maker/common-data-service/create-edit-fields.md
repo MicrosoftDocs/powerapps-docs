@@ -43,7 +43,7 @@ There are two designers you can use to create or edit fields:
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the PowerApps portal to Create and edit fields for Common Data Service for Appsunless you need to address any of the following requirements:
+You should use the PowerApps portal to Create and edit fields for Common Data Service for Apps unless you need to address any of the following requirements:
 
 - Create a Customer Lookup field. 
    - More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)
