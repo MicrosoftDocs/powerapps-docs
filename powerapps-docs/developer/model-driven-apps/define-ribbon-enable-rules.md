@@ -2,17 +2,17 @@
 title: "Define ribbon enable rules (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 02/08/2019
 ms.service:
   - "powerapps"
 ms.custom:
   - ""
 ms.topic: article
 ms.assetid: 201f5db9-be65-7c3b-8202-822d78338bd6
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
-manager: shilpas # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+author: JesseParsons 
+ms.author: jeparson 
+manager: annbe 
+ms.reviewer: kvivek 
 search.audienceType: 
   - developer
 search.app: 
@@ -21,8 +21,6 @@ search.app:
 ---
 
 # Define ribbon enable rules
-
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-enable-rules -->
 
 When configuring Ribbon elements you can define specific rules to control when the ribbon elements are enabled. The `<EnableRule>` element is used as follows:  
 
@@ -48,9 +46,9 @@ When configuring Ribbon elements you can define specific rules to control when t
 
 |   Value   |                                                                               Presentation                                                                               |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Modern`  |                                       The command bar is presented using Dynamics 365 for tablets.                                       |
+| `Modern`  |                                       The command bar is presented using [!INCLUDE[pn_moca_full](../../includes/pn-moca-full.md)].                                       |
 | `Refresh` |                                                      The command bar is presented using the updated user interface.                                                      |
-| `Legacy`  | The ribbon is presented in forms for entities that were not updated or in a list view in Dynamics 365 for Outlook. |
+| `Legacy`  | The ribbon is presented in forms for entities that were not updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
 
 ### Crm Client Type Rule
 Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending on the type of client used. Type options are as follows:  
@@ -60,27 +58,64 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 -   `Outlook`  
 
 ### Crm Offline Access State Rule
- Uses the `<CrmOfflineAccessStateRule>` element. Use this criteria to enable a ribbon element based on whether Dynamics 365 for Microsoft Office Outlook with Offline Access is currently offline.  
+ Uses the `<CrmOfflineAccessStateRule>` element. Use this criteria to enable a ribbon element based on whether [!INCLUDE[pn_crm_outlook_offline_access](../../includes/pn-crm-outlook-offline-access.md)] is currently offline.  
 
 ### Crm Outlook Client Type Rule
- Uses the `<CrmOutlookClientTypeRule>` element. Use this rule if you want to only display a button for a specific type of Dynamics 365 for Outlook. Type options are as follows:  
+ Uses the `<CrmOutlookClientTypeRule>` element. Use this rule if you want to only display a button for a specific type of [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. Type options are as follows:  
 
 -   `CrmForOutlook`  
 
 -   `CrmForOutlookOfflineAccess`  
 
 ### Custom Rule
- Uses the `<CustomRule>` element. Use this kind of rule to call a function in a JavaScript Library that returns a Boolean value.  
+ Uses the `<CustomRule>` element. Use this kind of rule to call a function in a JavaScript library that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
+
+```JavaScript
+function EnableRule()
+{
+    const value = Xrm.Page.getAttribute("field1").getValue();
+    return value === "Active";
+}
+```
 
 > [!NOTE]
->  Custom rules that do not return a value quickly can affect the performance of the ribbon. If you have to perform logic that might take some time to complete, use the following strategy to make your custom rule asynchronous:  
->   
-> 1.  Define a rule that checks for a custom object. You might check for an object such as `Window.ContosoCustomObject.RuleIsTrue` that you just attach to the Window.  
-> 2.  If that object exists, return it.  
-> 3.  If that object does not exist, define the object and set the value as false.  
-> 4.  Before you return a value, use [settimeout](https://msdn.microsoft.com/library/ms536753\(VS.85\).aspx) <!-- TODO not sure about this link--> to execute an asynchronous callback function to re-set the object. Then return false.  
-> 5.  After the callback function has performed the operations that are required to determine the correct result, it sets the value of the object and uses the `refreshRibbon` method to refresh the ribbon.  
-> 6.  When the ribbon is refreshed, it detects the object together with the accurate value set and the rule is evaluated.  
+>  Custom rules that do not return a value quickly can affect the performance of the ribbon. If you have to perform logic that might take some time to complete (for example, a network request), use the following strategy to make your custom rule asynchronous.
+
+ Unified Interface rules support returning a Promise rather than boolean for asynchronous rule evaluation. If the promise does not resolve within 10 seconds, the rule will resolve with a false value.
+ > [!NOTE]
+>  Promises-based rules will only work on Unified Interface, so they cannot be used if classic Web Client is still being used.
+ ```JavaScript
+function EnableRule()
+{
+    const request = new XMLHttpRequest();
+    request.open('GET', '/bar/foo');
+
+    return new Promise((resolve, reject) =>
+    {
+        request.onload = function (e)
+        {
+            if (request.readyState === 4)
+            {
+                if (request.status === 200)
+                {
+                    resolve(request.responseText === "true");
+                }
+                else
+                {
+                    reject(request.statusText);
+                }
+            }
+        };
+        request.onerror = function (e)
+        {
+            reject(request.statusText);
+        };
+
+        request.send(null);
+    });
+}
+```
+
 
 ### Entity Rule
  Uses the `<EntityRule>` element. Entity rules allow for evaluation of the current entity. This is useful when you define custom actions that apply to the Entity Template instead of for specific entities. For example, you may want to add a ribbon element to all entities except for several specific entities. It is easier to define the custom action for the Entity Template that applies to all entities and then use an Entity Rule to filter out those that should be excluded.  
@@ -104,10 +139,10 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
  Uses the `<OrRule>` element. The `OrRule` lets you override the default AND comparison for multiple enable rule types. Use the `OrRule` element to define several possible valid combinations to check.
 
 ### Outlook Item Tracking Rule
- Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in Common Data Service for Apps.  
+ Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in PowerApps.  
 
 ### Outlook Version Rule
- Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of Office Outlook as follows:  
+ Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  
 
 -   `2003`  
 
@@ -124,17 +159,8 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 ### Selection Count Rule
  Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  
 
-### Sku Rule
- Uses the `<SkuRule>` element. Use this kind of rule to enable a ribbon element for a specific SKU version of Dynamics 365 as follows:  
-
--   `OnPremise`  
-
--   `Online`  
-
--   `Spla`  
-
 ### Value Rule
-Uses the `<ValueRule>` element. Use this rule to check the value of a specific field in the record being displayed in the form. You must specify the `Field` and the `Value` to check.  
+Uses the `<ValueRule>` element. Use this rule to check the value of a specific field in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
 
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   

@@ -1,7 +1,7 @@
 ---
 title: "How to create and edit fields for Common Data Service for Apps| MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/18/2018
+ms.date: 02/08/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -14,7 +14,7 @@ applies_to:
 ms.assetid: d88677fa-2caf-47b0-aec6-10a25a7ec9c3
 caps.latest.revision: 55
 ms.author: "matp"
-manager: "brycho"
+manager: "kvivek"
 search.audienceType: 
   - maker
 search.app: 
@@ -43,18 +43,27 @@ There are two designers you can use to create or edit fields:
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the PowerApps portal to Create and edit fields for Common Data Service for Appsunless you need to address any of the following requirements:
+You should use the PowerApps portal to Create and edit fields for Common Data Service for Apps unless you need to address any of the following requirements:
 
-- Create a Customer Lookup field
-- Create a field in a solution other than the CDS Default solution
-- Define status reason transitions
-- Edit multiple fields at once
-- Enable Auditing
-- Enable Field Level Security
-- Select whether the field appears in global filter in interactive experience
-- Select whether the field is sortable in interactive experience dashboards
-- Set a field Requirement Level as Business Recommended
-- Set managed properties for a field
+- Create a Customer Lookup field. 
+   - More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)
+- Create a field in a solution other than the CDS Default solution. 
+   - More information: [Solutions overview](solutions-overview.md)
+- Define status reason transitions. 
+   - More information: [Define status reason transitions for the Case or custom entities](define-status-reason-transitions.md)
+- Edit multiple fields at once.
+- Enable Auditing. 
+   - More information: [Auditing overview](../../developer/common-data-service/auditing-overview.md)
+- Enable Field Level Security. 
+   - More information: [Field security entities](../../developer/common-data-service/field-security-entities.md)
+- Select whether the field appears in global filter in interactive experience. 
+   - More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
+- Select whether the field is sortable in interactive experience dashboards. 
+   - More information: [Configure model-driven app interactive experience dashboards](../model-driven-apps/configure-interactive-experience-dashboards.md)
+- Set a field Requirement Level as Business Recommended. 
+   - More information: [Create business rules and recommendations to apply logic in a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+- Set managed properties for a field. 
+   - More information: [Set managed properties for fields](set-managed-properties-for-field.md)
 
 > [!NOTE]
 > You can create a Lookup field in the PowerApps portal or in solution explorer by creating a One-to-many relationship on the entity. But only solution explorer offers the option to create this relationship while creating a field.
