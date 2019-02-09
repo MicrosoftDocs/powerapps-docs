@@ -139,7 +139,7 @@ function EnableRule()
  Uses the `<OrRule>` element. The `OrRule` lets you override the default AND comparison for multiple enable rule types. Use the `OrRule` element to define several possible valid combinations to check.
 
 ### Outlook Item Tracking Rule
- Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] Customer Engagement.  
+ Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` attribute for this element to determine whether the record is being tracked in PowerApps.  
 
 ### Outlook Version Rule
  Uses the `<OutlookVersionRule>` element. Use this to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  
@@ -159,17 +159,8 @@ function EnableRule()
 ### Selection Count Rule
  Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  
 
-### Sku Rule
- Uses the `<SkuRule>` element. Use this kind of rule to enable a ribbon element for a specific SKU version of [!INCLUDE[pn_dynamics_crm](../../includes/pn-dynamics-crm.md)] as follows:  
-
--   `OnPremise`  
-
--   `Online`  
-
--   `Spla`  
-
 ### Value Rule
-Uses the `<ValueRule>` element. Use this rule to check the value of a specific field in the record being displayed in the form. You must specify the `Field` and the `Value` to check.    
+Uses the `<ValueRule>` element. Use this rule to check the value of a specific field in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
 
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
