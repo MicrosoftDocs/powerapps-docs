@@ -2,7 +2,7 @@
 title: "Walkthrough: Registering and configuring SimpleSPA application with adal.js (Common Data Service for Apps) | Microsoft Docs"
 description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Customer Engagement using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
-ms.date: 01/28/2019
+ms.date: 02/11/2019
 ms.service:
   - "powerapps"
 ms.custom:
@@ -72,7 +72,7 @@ Finally, you can click the **Logout** button to logout.
     <head>  
      <title>Simple SPA</title>  
      <meta charset="utf-8" />  
-     <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.18/js/adal.min.js"></script>  
+     <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.17/js/adal.min.js"></script>  
      <script type="text/javascript">  
       "use strict";  
   
@@ -174,7 +174,7 @@ Finally, you can click the **Logout** button to logout.
   
        getAccountsButton.disabled = true;  
        var retrievingAccountsMessage = document.createElement("p");  
-       retrievingAccountsMessage.textContent = "Retrieving 10 accounts from " + organizationURI + "/api/data/v9.0/accounts";  
+       retrievingAccountsMessage.textContent = "Retrieving 10 accounts from " + organizationURI + "/api/data/v9.1/accounts";  
        message.appendChild(retrievingAccountsMessage)  
   
        // Function to perform operation is passed as a parameter to the aquireTokenRedirect method  
@@ -191,7 +191,7 @@ Finally, you can click the **Logout** button to logout.
        }  
   
        var req = new XMLHttpRequest()  
-       req.open("GET", encodeURI(organizationURI + "/api/data/v9.0/accounts?$select=name,address1_city&$top=10"), true);  
+       req.open("GET", encodeURI(organizationURI + "/api/data/v9.1/accounts?$select=name,address1_city&$top=10"), true);  
        //Set Bearer token  
        req.setRequestHeader("Authorization", "Bearer " + token);  
        req.setRequestHeader("Accept", "application/json");  
@@ -269,9 +269,9 @@ Finally, you can click the **Logout** button to logout.
   
     ```  
   
-3.  Set this page as the start page for the project  
+3.  Right click on the SimpleSPA.html file and select **Set As Start Page** to set this page as the start page for the project.  
   
-4.  In the properties of the project, select **Web** and under **Servers** note the **Project URL**. It should be something like `http://localhost:46575/`. Note the port number that is generated. You will need this in the next step.  
+4.  In the properties of the project, select **Web** and under **Servers** note the **Project URL**. It should be something like `http://localhost:62111/`. Note the port number that is generated. You will need this in the next step.  
   
 5.  Within the SimpleSPA.html page, locate the following configuration variables and set them accordingly. You will be able to set the `clientId` after you complete the next part of the walkthrough.  
   
@@ -348,6 +348,18 @@ Finally, you can click the **Logout** button to logout.
 15. Click on **Edit** and locate the line: `"oauth2AllowImplicitFlow": false,` and change `false` to `true` and then click on **Save** to save the file.
 
 ![Set oauth2AllowImplicitFlow to true in Manifest file](media/register-spa-edit-manifest.PNG)
+
+16. For successful execution of your application, you will also need to grant admin consent to it. For this, select **Azure Active Directory** in your Azure management portal, then select **Enterprise Applications** and from the list of applications that appear, select the application that you just created.
+
+![Grant admin consent to your application](media/simple-spa-admin-consent.PNG)
+
+17. Now, select **Permissions** as shown above, and click on **Grant admin consent for <Your AAD org name>**
+
+![Click on Grant admin consent button](media/simple-spa-admin-consent-button.PNG)
+
+18. Once you click on this button, it will open a login window and ask you whether you wish to grant the requested permissions to your application. Click on **Accept** to proceed.
+
+![Click on Accept to grant the requested permissions](media/simple-spa-admin-consent-click-accept.PNG)
 
 ## Debugging the application  
   
