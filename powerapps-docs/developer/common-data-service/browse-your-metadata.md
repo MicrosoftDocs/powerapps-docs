@@ -90,4 +90,4 @@ You can perform the following actions for a single entity:
 
  [Developer Tools for CDS for Apps](developer-tools.md)<br />
  [Customize Entity Metadata](customize-entity-metadata.md)<br />
- [Analyze Plug-in Performance](/dynamics365/customer-engagement/developer/analyze-plugin-performance)<br />
+ 

@@ -148,6 +148,6 @@ If one of the steps in the action’s real-time workflow is a custom workflow ac
 ### See also  
  [Create real-time workflows](/dynamics365/customer-engagement/developer/create-real-time-workflows)   
  [Use dialogs for guided processes](/dynamics365/customer-engagement/developer/use-dialogs-guided-processes)   
- [Event Execution Pipeline](/dynamics365/customer-engagement/developer/event-execution-pipeline)   
+ [Event execution pipeline](event-framework.md#event-execution-pipeline)   
  [Write Workflows to Automate Business Processes](/dynamics365/customer-engagement/developer/automate-business-processes-customer-engagement)   
  [Customize your system](https://technet.microsoft.com/library/dn531158.aspx)

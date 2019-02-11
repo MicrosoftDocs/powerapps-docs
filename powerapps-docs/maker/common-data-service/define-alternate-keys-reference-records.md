@@ -87,7 +87,7 @@ When a key is created, the system validates that the key can be supported by the
 
 ### Unicode characters in key value
 
-If the data within a field that is used in an alternate key will contain one of the following characters `<`,`>`,`*`,`%`,`&`,`:`,`\\` then patch or upsert actions will not work. 
+If the data within a field that is used in an alternate key will contain one of the following characters `<`,`>`,`*`,`%`,`&`,`:`,`/`,`\\` then patch or upsert actions will not work. 
 
 If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with these characters.
 
