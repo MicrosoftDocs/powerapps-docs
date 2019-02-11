@@ -30,7 +30,7 @@ This walkthrough describes the process of registering and configuring the simple
   
 - You must have a Dynamics 365 (online) system user account with administrator role for the Office 365.  
   
-- An Azure subscription for application registration. A trial account will also work.  
+- An Azure subscription to register your application. A trial account will also work.  
   
 - Visual Studio 2017  
   
@@ -38,7 +38,7 @@ This walkthrough describes the process of registering and configuring the simple
 
 ## Goal of this walkthrough
 
-When you complete this walkthrough you will be able to run a simple SPA application in Visual Studio that will provide the ability for a user to authenticate and retrieve data from CDS for Apps. This application consists of a single HTML page.  
+When you complete this walkthrough you will be able to run a simple SPA application in Visual Studio that will provide the ability for a user to authenticate and retrieve data from CDS for Apps. This application consists of a sample HTML page.  
 
 When you debug the application initially there will only be a **Login** button.  
 
@@ -57,7 +57,9 @@ Finally, you can click the **Logout** button to logout.
 
 > [!NOTE]
 >  This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application.  
-  
+
+<a name="bkmk_createwebapp"></a>
+
 ## Create a web application project  
   
 1.  Using Visual Studio 2017, create a new **ASP.NET Web Application** project and use the **Empty** template. You can name the project whatever you like.  
@@ -316,11 +318,10 @@ Finally, you can click the **Logout** button to logout.
 
   - **Web application type**<br />Select **Web app/API**.
 
-  - **Sign-on URL**<br />This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the **Create a web application project** procedure.  
+  - **Sign-on URL**<br />This is the URL which the user should be redirected to after they sign in. For debugging purposes in Visual Studio it should be  `http://localhost:####/SimpleSPA.html` where #### represents the port number you got from step 4 of the [Create a web application project](#bkmk_createwebapp) procedure.  
 
 ![Enter details](media/register-spa-enter-details.PNG)
     
-  
 8. Then click on **Create** at the end of the page.
 
 9.  In the tab of the newly registered app, copy the **Application ID**.  
@@ -370,10 +371,10 @@ Finally, you can click the **Logout** button to logout.
   
 2.  Press F5 to start debugging. You should expect the behavior described in [Goal of this walkthrough](walkthrough-registering-configuring-simplespa-application-adal-js.md#bkmk_goal).  
   
-     If you don’t get the results you expect, double-check the values you set when registering the application and configuring the SimpleSPA.html code.  
+If you don’t get the results you expect, double-check the values you set while registering the application and configuring the `SimpleSPA.html` code.  
   
 ## See also  
  [Create client applications](connect-cds.md)<br />
- [Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md) <br />
+ [Tutorial: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md) <br />
  [Build web applications using Server to Server(S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
  [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application to CDS for Apps](oauth-cross-origin-resource-sharing-connect-single-page-application.md)
