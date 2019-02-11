@@ -64,6 +64,21 @@ To address this issue, check or create smaller solutions to be analyzed. To mini
 - When you add HTML web resources, include any dependent scripts that are defined within the HTML web resource.
 - When you add custom workflows, include the assembly used within the workflow.
 
+## Solution Checker Run or Download Results fail due to instance in Administration mode
+Shortly after running Solution Checker, it fails shortly after with the following message bar:<br />
+"We weren't able to run the check on SOLUTIONNAME Solution. Try running it again."
+![Weren't able to run](media/solution-checker-werent-able-to-run.png)
+
+The issue is that the organization is in Administration state and Solution Checker is unable to validate the user's permissions executing the request.
+
+1. Access the Dynamics 365 Instance Picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx
+2. Click on the instance having issues
+3. Click on ADMIN<br />
+![Instance Admin](media/solution-checker-instance-admin.png)
+
+4. Uncheck "Enable administration mode" <br />
+![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
+
 ## Solution Checker will not process patched solutions
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
@@ -74,9 +89,9 @@ To address this issue, clone the solution so that all patches related to the sol
 
 When HTML web resources are processed within Solution Checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
 
-## JS1001 syntax issue for web resources
+## Web-unsupported-syntax issue for web resources
 
-ECMAScript 6 (2015) or later versions are not currently supported. When Solution Checker analyzes JavaScript using ECMAScript 6 or later, a JS1001 syntax issue for the web resource is reported.  
+ECMAScript 6 (2015) or later versions are not currently supported for Solution Checker. When Solution Checker analyzes JavaScript using ECMAScript 6 or later, a web-supported-syntax issue for the web resource is reported.  
 
 ## See also
 [Best practices and guidance for the Common Data Service for Apps](../../developer/common-data-service/best-practices/index.md)<br />
