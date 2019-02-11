@@ -350,9 +350,9 @@ Finally, you can click on **Logout** button to logout.
 
 ![Set oauth2AllowImplicitFlow to true in Manifest file](media/register-spa-edit-manifest.PNG)
 
-16. For successful execution of your application, you will also need to grant admin consent to it. To do this, select **Azure Active Directory** in your Azure management portal, then select **Enterprise Applications** and from the list of applications that appear, select the application that you just created.
+16. For successful execution of your application, you will also need to grant administrator consent to it. To do this, login as a tenant admin in your Azure management portal and select **Azure Active Directory**. Then click on **Enterprise Applications** and from the list of applications that appear, select the application that you just created.
 
-![Grant admin consent to your application](media/simple-spa-admin-consent.PNG)
+![Grant administrator consent to your application](media/simple-spa-admin-consent.PNG)
 
 17. Now select **Permissions** as shown above, and click on **Grant admin consent for**`<your AAD Org name>`.
 
@@ -361,6 +361,8 @@ Finally, you can click on **Logout** button to logout.
 18. Once you click on this button, it will open a login window and ask you whether you wish to grant the requested permissions to your application. Click on **Accept** to proceed.
 
 ![Click on Accept to grant the requested permissions](media/simple-spa-admin-consent-click-accept.PNG)
+
+19. Once this is done, proceed to debugging the application.
 
 ## Debugging the application  
   
