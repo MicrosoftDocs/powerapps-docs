@@ -53,7 +53,7 @@ Click the **Get Accounts** button to retrieve 10 account records from your CDS f
 > [!NOTE]
 >  The initial load of data from CDS for Apps may be slow as the operations to support authentication take place, but subsequent operations are much faster.  
 
-Finally, you can click the **Logout** button to logout.  
+Finally, you can click on **Logout** button to logout.  
 
 > [!NOTE]
 >  This SPA application is not intended to represent a pattern for developing robust SPA applications. It is simplified to focus on the process of registering and configuring the application.  
@@ -96,7 +96,7 @@ Finally, you can click the **Logout** button to logout.
        clientId: clientId,  
        postLogoutRedirectUri: pageUrl,  
        endpoints: endpoints,  
-       cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.  
+       cacheLocation: 'localStorage', 
       };  
   
       document.onreadystatechange = function () {  
@@ -179,8 +179,8 @@ Finally, you can click the **Logout** button to logout.
        retrievingAccountsMessage.textContent = "Retrieving 10 accounts from " + organizationURI + "/api/data/v9.1/accounts";  
        message.appendChild(retrievingAccountsMessage)  
   
-       // Function to perform operation is passed as a parameter to the aquireTokenRedirect method  
-       authContext.acquireTokenRedirect(organizationURI, retrieveAccounts)  
+       // Function to perform operation is passed as a parameter to the aquireToken method  
+       authContext.acquireToken(organizationURI, retrieveAccounts)  
   
       }  
   
