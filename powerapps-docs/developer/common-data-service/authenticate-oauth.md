@@ -312,7 +312,7 @@ To add a password:
 
 #### CDS for Apps user account bound to the registered app
 
-The first thing you must do is create a custom security role that will define what access and privileges this account will have within the CDS for apps organization. More information: [Create or configure a custom security role](../../administrator/database-security.md#create-or-configure-a-custom-security-role)
+The first thing you must do is create a custom security role that will define what access and privileges this account will have within the CDS for apps organization. More information: [Create or configure a custom security role](https://docs.microsoft.com/power-platform/admin/database-security.md#create-or-configure-a-custom-security-role)
 
 After you have created the custom security role, you must create the user account which will use it.
 
