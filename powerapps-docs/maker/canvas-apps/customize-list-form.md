@@ -202,7 +202,7 @@ If you create one or more items with this form, the **Title** field will be empt
 
 **Q:** Do I need a PowerApps license to create or use custom list forms?
 
-**A:** You need an [Office 365 plan that includes PowerApps](../../administrator/pricing-billing-skus.md#licenses).
+**A:** You need an [Office 365 plan that includes PowerApps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus.md#licenses).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
