@@ -2,7 +2,7 @@
 title: "Walkthrough: Registering and configuring SimpleSPA application with adal.js (Common Data Service for Apps) | Microsoft Docs"
 description: "This walkthrough describes the process of registering and configuring the simplest Single Page Application (SPA) to access data in Dynamics 365 Customer Engagement using adal.js and Cross-origin Resource Sharing (CORS)."
 keywords: ""
-ms.date: 02/11/2019
+ms.date: 02/12/2019
 ms.service:
   - "powerapps"
 ms.custom:
