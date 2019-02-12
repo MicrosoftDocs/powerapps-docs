@@ -53,7 +53,7 @@ For more information about how to to customize your formula for custom updates, 
 
 ## Popular connectors
 
-This table has links to more information about our most popular connectors. For a complete list of connectors, see [All connectors](#all-standard-connectors).
+This table has links to more information about our most popular connectors. For a complete list of connectors, see [All connectors](https://docs.microsoft.com/connectors/).
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
