@@ -64,20 +64,23 @@ To address this issue, check or create smaller solutions to be analyzed. To mini
 - When you add HTML web resources, include any dependent scripts that are defined within the HTML web resource.
 - When you add custom workflows, include the assembly used within the workflow.
 
-## Solution Checker Run or Download Results fail due to instance in Administration mode
-Shortly after running Solution Checker, it fails shortly after with the following message bar:<br />
-"We weren't able to run the check on SOLUTIONNAME Solution. Try running it again."
+## Solution Checker run or download results don't complete 
+Shortly after running Solution Checker the operation doesn't commplete and the following message is displayed:<br />
+"We weren't able to run the check on *SOLUTIONNAME* Solution. Try running it again."
 ![Weren't able to run](media/solution-checker-werent-able-to-run.png)
 
-The issue is that the organization is in Administration state and Solution Checker is unable to validate the user's permissions executing the request.
+This issue occurs because the organization is in the **administration mode** state and Solution Checker is unable to validate the user's permissions executing the request. To resolve this issue, disable administration mode. 
 
-1. Access the Dynamics 365 Instance Picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx
-2. Click on the instance having issues
-3. Click on ADMIN<br />
+### Disable administration mode for an instance
+1. Access the Dynamics 365 for Customer Engagement instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
+2. Select the instance that has issues running Solution Checker.
+3. Select **ADMIN**.<br />
 ![Instance Admin](media/solution-checker-instance-admin.png)
 
-4. Uncheck "Enable administration mode" <br />
+4. Clear **Enable administration mode**. <br />
 ![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
+
+5. Run Solution Checker again.
 
 ## Solution Checker will not process patched solutions
 
