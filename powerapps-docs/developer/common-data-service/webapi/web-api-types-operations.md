@@ -2,7 +2,7 @@
 title: "Web API types and operations (Common Data Service for Apps)| Microsoft Docs"
 description: "This topic describes what is available for you to use vis-a-vis the Web API and will introduce important topics and how you can find information you need from the documentation generated from the service and metadata documents as well as the documentation of the system entity types, functions, and actions"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 02/05/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -252,14 +252,15 @@ OData supports a wide range of data types but Common Data Service for Apps doesn
 |Memo|Edm.String|Sequence of UTF-8 characters|  
 |Money|Edm.Decimal|Numeric values with fixed precision and scale|  
 |Owner|Single-valued navigation property|A reference to the <xref href="Microsoft.Dynamics.CRM.principal?text=principal EntityType" />. Both systemuser and team entity types inherit their ownerid property from the prinicipal entity type.|  
-<!-- TODO:
-|PartyList|Collection-valued navigation property to the `activityparty` entity type.|The activitypartyparticipationtypemask property contains a value to represent the role of the participant. See [Activity Party Types](../activityparty-entity.md#ActivityPartyTypes) for more information.|   -->
 |Picklist|Edm.Int32|Signed 32-bit integer|  
 |State|Edm.Int32|Signed 32-bit integer|  
 |Status|Edm.Int32|Signed 32-bit integer|  
 |String|Edm.String|Sequence of UTF-8 characters|  
 |Uniqueidentifier|Edm.Guid|16-byte (128-bit) unique identifier|  
-  
+
+<!-- TODO:
+|PartyList|Collection-valued navigation property to the `activityparty` entity type.|The activitypartyparticipationtypemask property contains a value to represent the role of the participant. See [Activity Party Types](../activityparty-entity.md#ActivityPartyTypes) for more information.|   -->
+
 <a name="bkmk_lookupProperties"></a>
  
 ### Lookup properties
