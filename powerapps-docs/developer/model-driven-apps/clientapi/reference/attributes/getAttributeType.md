@@ -1,6 +1,6 @@
 ---
 title: "getAttributeType (Client API reference)| MicrosoftDocs"
-ms.date: 12/17/2018
+ms.date: 02/13/2019
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
@@ -40,6 +40,6 @@ This method will return one of the following **string** values:
 - lookup
 - memo
 - money
-- multioptionset
+- multiselectoptionset
 - optionset
 - string
