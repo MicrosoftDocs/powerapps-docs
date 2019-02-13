@@ -24,6 +24,8 @@
     href: compose-http-requests-handle-errors.md
   - name: Query Data
     href: query-data-web-api.md
+  - name: Retrieve related entities with query
+    href: retrieve-related-entities-query.md
   - name: Retrieve and execute predefined queries
     href: retrieve-and-execute-predefined-queries.md
   - name: Create an entity
