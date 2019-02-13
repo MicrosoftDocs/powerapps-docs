@@ -1,13 +1,12 @@
 ---
 title: "getAttributeType (Client API reference)| MicrosoftDocs"
 ms.date: 02/13/2019
-ms.service: "crm-online"
+ms.service: "powerapps"
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
 ms.assetid: 9ef1c886-a0b8-4ba9-bb9f-e6ecfa9d6dff
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
