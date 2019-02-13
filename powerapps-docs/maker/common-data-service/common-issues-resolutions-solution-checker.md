@@ -66,7 +66,7 @@ To address this issue, check or create smaller solutions to be analyzed. To mini
 
 ## Solution Checker run or download results don't complete 
 Shortly after running Solution Checker the operation doesn't commplete and the following message is displayed:<br />
-"We weren't able to run the check on *SOLUTIONNAME* Solution. Try running it again."
+"We weren't able to run the check on *SOLUTIONNAME* Solution. Try running it again." <br />
 ![Weren't able to run](media/solution-checker-werent-able-to-run.png)
 
 This issue occurs because the organization is in the **administration mode** state and Solution Checker is unable to validate the user's permissions executing the request. To resolve this issue, disable administration mode. 
