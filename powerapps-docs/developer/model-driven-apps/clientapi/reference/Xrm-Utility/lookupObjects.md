@@ -34,7 +34,7 @@ search.app:
 |defaultViewId|String|No|The default view to use.|
 |disableMru|Boolean|No|Decides whether to display the most recently used(MRU) item.<br />Available only for Unified Interface.|
 |entityTypes|Array|No|The entity types to display.|
-|filters|Array|No|Used to filter the results. Contains the following objects:<br /><ul><li>**filterXml**: String. The FetchXML filter element to apply.</li><li>**entityLogicalName**: String. The entity type to which to apply this filter.</li></ul>|
+|filters|Array of objects|No|Used to filter the results. Each object in the array contains the following attributes:<br /><ul><li>**filterXml**: String. The FetchXML filter element to apply.</li><li>**entityLogicalName**: String. The entity type to which to apply this filter.</li></ul>|
 |showBarcodeScanner|Boolean|No|Indicates whether the lookup control should show the barcode scanner in mobile clients.|
 |viewIds|Array|No|The views to be available in the view picker. Only system views are supported.|
 |successCallback |Function |Yes |A function to call when the lookup control is invoked. An array of objects with the following properties is passed:<br/><ul><li>**entityType**: String. Entity type of the record selected in the lookup control.</li><li>**id**: String. ID of the record selected in the lookup control.</li><li>**name**: String. Name of the record selected in the lookup control.</li>|
