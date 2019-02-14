@@ -39,13 +39,15 @@ The **App** signal returns information about the running app.
 | --- | --- |
 | **App.ActiveScreen** |Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function, you can change the displayed screen. |
 
-The **App** item appears in the tree view and has a property that you can set by specifying a behavior formula in the formula bar.
+The **App** object also has a [behavior formula](../working-with-formulas-in-depth.md) that you can set.
 
 | Property  | Description |
 | --- | --- |
-| **OnStart** | The behavior of the app when the user opens it. Commonly used to create collections or to determine which screen to open first. |
+| **OnStart** | The behavior of the app when the user starts it. This property is commonly used to retrieve and cache data into collections with the **[Collect](function-clear-collect-clearcollect.md)** function, set up variables with the **[Set](function-set.md)** function, and navigate to an initial screen with the **[Navigate](function-navigate.md)** function. This formula is evaluated before the first screen appears. No screen is loaded, so you can't set context variables with the **[UpdateContext](function-updatecontext.md)** function. However, you can pass context variables with the **Navigate** function. |
 
-To test the **OnStart** property of an app while you edit it, hover over the **App** in the tree view, select the ellipsis (...) that appears, and then select **Run OnStart**.
+The **App** object appears at the top of the hierarchical list of controls in the left navigation pane, and you can this object like a control on a screen. After you select the object, you can view and edit a property if you select it in the drop-down list to the left of the formula bar.  
+
+After you change the **OnStart** property, you can test it by hovering over the **App** object in the left navigation pane, selecting the ellipsis (...) that appears, and then selecting **Run OnStart**. Unlike when the app is loaded for the first time, existing collections and variables will already be set. Use the **[ClearCollect](function-clear-collect-clearcollect.md)** function instead of the **Collect** function to start with empty collections.
 
  ![App item context menu with Run OnStart](media/appobject-runonstart.png)
 
