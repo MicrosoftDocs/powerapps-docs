@@ -2,7 +2,7 @@
 title: "Display custom icons alongside values in list views with PowerApps | MicrosoftDocs"
 description: "Learn how to display custom icon graphics in a view"
 ms.custom: ""
-ms.date: 06/21/2018
+ms.date: 02/14/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -27,7 +27,10 @@ search.app:
 
 <a name="GridIcons"></a>   
 
- PowerApps environment administrators and customizers can add graphics to a view and establish the logic used to select the graphic based on a column values using JavaScript. The capability to display list views that show icons rather than text or numerical values in some columns was introduced in Relationship Insights. 
+ PowerApps environment administrators and customizers can add graphics to a view and establish the logic used to select a graphic based on the column value using JavaScript. The capability lets you customize list views that display icons alongside text or numerical values. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/icon-in-opportunity-view.png "All Opportunities view with Rating column displaying icons and text value")
   
 > [!NOTE]
 >  Grid icons are only shown in the web interface. They are not shown in [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)] or the mobile app.  
@@ -38,7 +41,7 @@ search.app:
   
 2.  Write one or more JavaScript functions that establish which icons to show for which values (you'll typically need one function for each column you want to customize). Each function must accept a row data object and a language (LCID) code as input and return an array containing an image name and tooltip text. For an example function, see [Sample JavaScript function](#SampleJavascript), later in this topic.  
   
-3.  Sign into your environment as an administrator and open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).  
+3.  Sign into your environment as an administrator and open solution explorer.  
   
 4.  The **Default Solution** pop-up window opens. Navigate to **Components** > **Web Resources** here.  
   
@@ -91,14 +94,14 @@ search.app:
 <a name="SampleJavascript"></a>   
 
 ### Sample JavaScript function  
- The JavaScript function for displaying custom icons and tooltips expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text in multiple languages. For more information about the languages supported by the environment, see [Enable languages](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) and [Install or upgrade language packs for Dynamics 365](https://technet.microsoft.com/library/hh699674.aspx). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs assigned by Microsoft](https://go.microsoft.com/fwlink/?linkid=829588).
+ The JavaScript function for displaying custom icons and tooltips expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text in multiple languages. For more information about the languages supported by the environment, see [Enable languages](../admin/enable-languages.md) and [Install or upgrade language packs for Dynamics 365 for Customer Engagement](https://technet.microsoft.com/library/hh699674.aspx). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs assigned by Microsoft](https://go.microsoft.com/fwlink/?linkid=829588).
 
   
  Assuming you will be adding custom icons for an option-set type of attribute, which has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid localization issues.  
   
  The following sample code displays icons and tooltips based on one of three values (1: Hot, 2: Warm, 3: Cold) in the opportunityratingcode (Rating) attribute. The sample code also shows how to display localized tooltip text. For this sample to work, you must create three image web resources with 16x16 images with the following names: new_Hot, new_Warm, and new_Cold.  
   
-```javascript
+```  
 function displayIconTooltip(rowData, userLCID) {      
     var str = JSON.parse(rowData);  
     var coldata = str.opportunityratingcode_Value;  
@@ -148,9 +151,9 @@ function displayIconTooltip(rowData, userLCID) {
 }  
 ```  
   
- This results in displaying icons with tooltips in the **Rating** column that depend on the value in each row. The result could look like this:  
+ <!-- This results in displaying icons with tooltips in the **Rating** column that depend on the value in each row. The result could look like this:  
   
- ![Custom column graphics example](media/custom-column-graphics-example.png "Custom column graphics example")  
+ ![Custom column graphics example](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  -->
  
  ### See also
- [Create or edit views](../model-driven-apps/create-edit-views.md)
+ [Create or edit views](create-edit-views.md)
