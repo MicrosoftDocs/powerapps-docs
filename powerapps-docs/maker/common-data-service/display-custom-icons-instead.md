@@ -1,5 +1,5 @@
 ---
-title: "Display custom icons instead of values in list views with PowerApps | MicrosoftDocs"
+title: "Display custom icons alongside values in list views with PowerApps | MicrosoftDocs"
 description: "Learn how to display custom icon graphics in a view"
 ms.custom: ""
 ms.date: 06/21/2018
