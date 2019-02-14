@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 02/14/2019
+ms.date: 12/08/2017
 ms.author: gregli
 search.audienceType: 
   - maker
