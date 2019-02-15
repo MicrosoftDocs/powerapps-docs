@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Display custom icons instead of values in list views
+# Display custom icons alongside values in list views
 
 <a name="GridIcons"></a>   
 
