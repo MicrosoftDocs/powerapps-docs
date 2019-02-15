@@ -207,7 +207,7 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
-            - name: Barcode scanner (experimental)
+            - name: Web barcode scanner (experimental)
               href: ./canvas-apps/controls/control-barcodescanner.md
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md

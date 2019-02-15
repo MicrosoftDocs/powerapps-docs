@@ -1,6 +1,156 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/administrator/admin-guide.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/admin-guide",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/overview-role-powerapps-admin.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/overview-role-powerapps-admin",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/admin-powerapps-enterprise-deployment.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/admin-powerapps-enterprise-deployment",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/pricing-billing-skus.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/pricing-billing-skus",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/signup-question-and-answer.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/signup-question-and-answer",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/signup-for-powerapps-admin.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/admin-view-apps.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/admin-view-apps",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/admin-manage-apps.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/admin-manage-apps",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/environment-and-tenant-migration.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/environment-and-tenant-migration",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/powerapps-powershell.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/powerapps-powershell",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/data-integrator.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/data-integrator",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/data-integrator-error-management.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/data-integrator-error-management",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/powerapps-gdpr-dsr-guide-systemlogs.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/powerapps-gdpr-dsr-guide-systemlogs",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/data-integration-gdpr-dsr-guide.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/data-integration-gdpr-dsr-guide",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/powerapps-gdpr-dsr-guide.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/powerapps-gdpr-dsr-guide",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/powerapps-gdpr-export-dsr.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/powerapps-gdpr-export-dsr",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/powerapps-gdpr-delete-dsr.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/powerapps-gdpr-delete-dsr",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/common-data-service-gdpr-dsr-guide.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/common-data-service-gdpr-dsr-guide",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/environments-administration.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/environments-administration",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/environments-overview.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/environments-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/regions-overview.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/regions-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/create-environment.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/create-environment",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/create-database.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/create-database",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/preview-environments.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/preview-environments",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/trial-environments.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/trial-environments",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/database-security.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/database-security",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/introduction-to-data-groups.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/introduction-to-data-groups",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/create-dlp-policy.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/create-dlp-policy",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/prevent-data-loss.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/prevent-data-loss",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/administrator/admin-view-user-licenses.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/admin-view-user-licenses",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/webapi/use-microsoft-dynamics-365-web-api-helper-library-csharp.md",
       "redirect_url": "enhanced-quick-start",
       "redirect_document_id": false

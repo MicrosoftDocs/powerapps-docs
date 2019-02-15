@@ -1,13 +1,13 @@
 ---
 title: "addOnLoad (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 01/29/2019
 ms.service: "crm-online"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 24f34ac9-2a15-478e-980c-588a79d84e8d
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -22,7 +22,7 @@ search.app:
 
 ## Grid types supported
 
-Read-only grids
+Read-only and editable grids
 
 ## Syntax
 
