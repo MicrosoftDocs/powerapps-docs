@@ -2,7 +2,7 @@
 title: "Preview Feature: Use the Azure Cosmos DB for SQL API Data Provider with Common Data Service for Apps | MicrosoftDocs"
 description: "Learn how to configure the Azure Cosmos DB for SQL API Data Provider to use with virtual entities."
 keywords: "SQL API"
-ms.date: 06/27/2018
+ms.date: 02/15/2019
 ms.service: crm-online
 ms.custom: 
 ms.topic: article
@@ -94,7 +94,7 @@ SQL query filtering supports the following operators.
     |Field|Description|
     |--|--|
     |**Name**|Type a name that describes the data source.|
-    |**Collection Name**|The id of the Azure Cosmos DB database collection containing the data you want to surface in a virtual entity.  |
+    |**Collection Name**|The name of the Azure Cosmos DB *database* containing the collection you want to surface in a virtual entity.  |
     |**Authorization Key**|The primary or secondary key for the Azure Cosmos DB account. You can find the key from the Azure admin portal under the **Keys** setting under your Azure Cosmos DB account.|
     |**Uri**|The URI of the resource group where the Azure Cosmos DB collection is located. The URI is formed similar to `https://contoso/documents.azure.com:443`. You can find the URI from the Azure admin portal under the **Keys** setting for the Azure Cosmos DB account. |
     |**Timeout in seconds**|Enter the number of seconds to wait for a response from the Azure Cosmos DB service before a data request time-out. For example, enter 30 to wait a maximum of thirty seconds before a time-out occurs. The default timeout is 120 seconds.|
