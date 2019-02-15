@@ -51,11 +51,8 @@ For more information about how to to customize your formula for custom updates, 
 
 [Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Update](functions/function-update-updateif.md)
 
-
 > [!NOTE]
->  **PowerApps does not work with dynamic schema**. Dynamic schema is the possibility that the same action may return a different table with different columns.  Examples of the conditions that may cause the columns in the tables to be different include the action input parameters, the user or role executing the action, or the group the user is working in.  For example, SQL Server stored procedures may return different columns if run with different inputs.  The connector documentation shows **The outputs of this operation are dynamic.** as the return value for actions with dynamic schema.  Flow does work with dynamic schema.  Using Flow may provide a work-around for your scenario.
-
-
+>  **PowerApps doesn't work with dynamic schema**. The phrase dynamic schema refers to the possibility that the same action may return a different table with different columns. Examples of the conditions that may cause the columns in the tables to differ include the action input parameters, the user or role that's executing the action, or the group in which the user is working. For example, SQL Server stored procedures may return different columns if run with different inputs. For actions with dynamic schema, the connector documentation shows **The outputs of this operation are dynamic.** as the return value. In contrast, Microsoft Flow works with dynamic schema and might provide a work-around for your scenario.
 
 ## Popular connectors
 
