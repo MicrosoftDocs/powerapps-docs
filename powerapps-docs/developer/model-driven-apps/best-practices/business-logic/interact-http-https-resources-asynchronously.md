@@ -80,6 +80,10 @@ The following options are available in modern browsers for interacting with serv
   var requestAjax = $.ajax({ async: true, url: '/test/test.txt' });
   ```
 
+- Custom ribbon rules
+
+    Custom rules that do not return a value quickly can affect the performance of the ribbon. If you have to perform logic that might take some time to complete (for example, a network request), use the strategy outlined in [Define ribbon enable rules](/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-enable-rules#custom-rule) to make your custom rule asynchronous.
+
 <a name='problem'></a>
 
 ## Problematic patterns
@@ -144,6 +148,7 @@ The approach in this example still processes on the main browser UI thread, lock
 
 ### See also
 
+[Define ribbon enable rules](/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-enable-rules#custom-rule)
 [XMLHttpRequest](https://docs.microsoft.com/microsoft-edge/dev-guide/performance/xmlhttprequest)<br />
 [XMLHttpRequest specification (with synchronous deprecation statement)](https://xhr.spec.whatwg.org/#the-open()-method)<br />
 [Fetch API specification](https://fetch.spec.whatwg.org/#fetch-api)<br />
