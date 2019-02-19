@@ -66,20 +66,6 @@ The following options are available in modern browsers for interacting with serv
   > [!IMPORTANT]
   > Before proceeding with this option, ensure that support is available for the browsers that are being used to interact with your customizations. Review the [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) documentation's **Browser compatibility** section.
 
-- [`jQuery`](https://www.jquery.com).[`ajax`](http://api.jquery.com/jquery.ajax/) function with the `async` parameter being left alone or set to true
-
-  > [!IMPORTANT]
-  > Usage of jQuery isn't the preferred approach because it adds a dependency to an external library and isn't recommended in interacting with the product. Refer to [Use of jQuery](/dynamics365/customer-engagement/developer/use-javascript#use-of-jquery) for more information.
-
-  ```javascript
-  // jQuery example that is missing the async parameter, which is the third parameter. It defaults to true, which is the value you want.
-  var requestXhr = new XMLHttpRequest();
-  var requestAjaxDefault = $.ajax({ url: '/test/test.txt' });
-
-  // jQuery example explicitly setting the async property to true.
-  var requestAjax = $.ajax({ async: true, url: '/test/test.txt' });
-  ```
-
 <a name='problem'></a>
 
 ## Problematic patterns
