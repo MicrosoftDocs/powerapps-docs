@@ -9,19 +9,10 @@
     items:
     - name: 'Quick Start: Web API sample (C#)'
       href: quick-start-console-app-csharp.md
-    - name: Start a Web API project in Visual Studio (C#)
-      href: start-web-api-project-visual-studio-csharp.md
-    - name: Use the CDS for Apps Web API Helper Library (C#)
-      href: use-microsoft-dynamics-365-web-api-helper-library-csharp.md
-      items:
-      - name: 'Helper code: Configuration classes'
-        href: web-api-helper-code-configuration-classes.md
-      - name: 'Helper code: Authentication class'
-        href: web-api-helper-code-authentication-class.md
-      - name: 'Helper code: CrmHttpResponseException class'
-        href: web-api-helper-code-crmhttpresponseexception-class.md
-  - name: Client-side JavaScript
-    href: get-started-web-api-client-side-javascript.md
+    - name: Enhanced quick start (C#)
+      href: enhanced-quick-start.md
+- name: Client-side JavaScript
+  href: get-started-web-api-client-side-javascript.md
 - name: Authenticate
   href: authenticate-web-api.md
 - name: Types and operations
@@ -33,6 +24,8 @@
     href: compose-http-requests-handle-errors.md
   - name: Query Data
     href: query-data-web-api.md
+  - name: Retrieve related entities with query
+    href: retrieve-related-entities-query.md
   - name: Retrieve and execute predefined queries
     href: retrieve-and-execute-predefined-queries.md
   - name: Create an entity

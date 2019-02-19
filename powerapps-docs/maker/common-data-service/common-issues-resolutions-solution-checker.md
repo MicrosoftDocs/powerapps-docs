@@ -2,7 +2,7 @@
 title: "Common issues and resolutions for Solution Checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within Solution Checker"
 keywords: ""
-ms.date: 01/28/2019
+ms.date: 02/11/2019
 ms.service:
   - "powerapps"
 ms.custom:
@@ -64,6 +64,24 @@ To address this issue, check or create smaller solutions to be analyzed. To mini
 - When you add HTML web resources, include any dependent scripts that are defined within the HTML web resource.
 - When you add custom workflows, include the assembly used within the workflow.
 
+## Solution Checker run or download results don't complete 
+Shortly after running Solution Checker the operation doesn't commplete and the following message is displayed:<br />
+"We weren't able to run the check on *SOLUTIONNAME* Solution. Try running it again." <br />
+![Weren't able to run](media/solution-checker-werent-able-to-run.png)
+
+This issue occurs because the organization is in the **administration mode** state and Solution Checker is unable to validate the user's permissions executing the request. To resolve this issue, disable administration mode. 
+
+### Disable administration mode for an instance
+1. Access the Dynamics 365 for Customer Engagement instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
+2. Select the instance that has issues running Solution Checker.
+3. Select **ADMIN**.<br />
+![Instance Admin](media/solution-checker-instance-admin.png)
+
+4. Clear **Enable administration mode**. <br />
+![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
+
+5. Run Solution Checker again.
+
 ## Solution Checker will not process patched solutions
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
@@ -74,9 +92,9 @@ To address this issue, clone the solution so that all patches related to the sol
 
 When HTML web resources are processed within Solution Checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
 
-## JS1001 syntax issue for web resources
+## Web-unsupported-syntax issue for web resources
 
-ECMAScript 6 (2015) or later versions are not currently supported. When Solution Checker analyzes JavaScript using ECMAScript 6 or later, a JS1001 syntax issue for the web resource is reported.  
+ECMAScript 6 (2015) or later versions are not currently supported for Solution Checker. When Solution Checker analyzes JavaScript using ECMAScript 6 or later, a web-supported-syntax issue for the web resource is reported.  
 
 ## See also
 [Best practices and guidance for the Common Data Service for Apps](../../developer/common-data-service/best-practices/index.md)<br />

@@ -133,5 +133,5 @@ Sync workflow 'Name of Entity Scope Business Rule returning Error' terminated wi
  [Troubleshooting and error handling](/dynamics365/customer-engagement/developer/troubleshooting-error-handling)   
  [Troubleshooting tips](/dynamics365/customer-engagement/developer/troubleshooting-tips)   
  [Web service error codes](web-service-error-codes.md)   
- [Handle exceptions in plug-ins](/dynamics365/customer-engagement/developer/handle-exceptions-plugins)   
+ [Handle exceptions in plug-ins](../handle-exceptions.md)   
  [.NET Framework Developer Center](https://docs.microsoft.com/en-us/dotnet/framework/development-guide)
