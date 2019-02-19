@@ -47,6 +47,8 @@ The following options are available in modern browsers for interacting with serv
 > [!NOTE]
 > Adding asynchronous interactions requires a different style of design than synchronous interactions. Callbacks can execute in a non-deterministic order, which means you must give more thought to ensure that the page flow and integrity are correct at all times. For example, you'll often need to put measures in place to ensure that controls aren't enabled until all dependent service calls have returned. Taking a few additional steps can help ensure a more enjoyable user experience.
 
+- Traditionally, ribbon rules were written with synchronous requests since true/false needed to be returned. Unified Interface supports returning a promise rather than a boolean, which allows ribbon rules to issue asynchronous network requests. For more information, see [here](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-enable-rules#custom-rule).
+
 - [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) with the async parameter omitted or set to true
 
   ```javascript
