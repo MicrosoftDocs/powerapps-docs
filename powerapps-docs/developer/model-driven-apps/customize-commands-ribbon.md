@@ -22,7 +22,7 @@ search.app:
 
 # Customize commands and the ribbon
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customize-commands-ribbon -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/customize-commands-ribbon -->
 
  Common Data Service for Apps displays commands in different ways depending on the entity and the client. In most places in the web application you will see a *command bar* instead of a ribbon. Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
   

@@ -4,9 +4,9 @@ You don't need to activate the webinar feature to use the rest of the event-mana
 
 [!INCLUDE[pn-windows-azure](../includes/pn-windows-azure.md)] components and services used by the webinar-integration feature are:
 
-- [!INCLUDE[pn_azure_key_vault](../includes/pn_azure_key_vault.md)] ([!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [What is Azure Key Vault?](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis))
+- [!INCLUDE[pn_azure_key_vault](../includes/pn_azure_key_vault.md)] ([!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [What is Azure Key Vault?](https://docs.microsoft.com/azure/key-vault/key-vault-whatis))
   - Provides encryption key for encrypting/decrypting customer’s ON24 account credentials
-- [!INCLUDE[pn-azure-service-fabric](../includes/pn-azure-service-fabric.md)] ([!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [Overview of Azure Service Fabric](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview))
+- [!INCLUDE[pn-azure-service-fabric](../includes/pn-azure-service-fabric.md)] ([!INCLUDE[proc-more-information](../includes/proc-more-information.md)] [Overview of Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview))
   - Processes and sends registration data and webinar account credentials to ON24
   - Retrieves webinar metrics from On24 to [!INCLUDE[pn-microsoftcrm](../includes/pn-microsoftcrm.md)]
   -Stores customer’s ON24 account credentials (custom encrypted)

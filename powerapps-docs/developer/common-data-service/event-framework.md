@@ -18,8 +18,8 @@ search.app:
 # Event Framework
 
 <!-- Re-write from
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-event-framework
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/event-execution-pipeline
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-event-framework
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/event-execution-pipeline
 
 See notes at https://microsoft-my.sharepoint.com/:w:/p/jdaly/EfmTW7DQXNREuqj1s7tBtIIB4VZmvasZ1Nsbl4F5zlD1ZQ?e=FNlBmr 
 
@@ -27,9 +27,9 @@ See notes at https://microsoft-my.sharepoint.com/:w:/p/jdaly/EfmTW7DQXNREuqj1s7t
 Make sure to call out the changes due to the legacy update messages. That information was moved.
 
 See 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update#impact-of-this-change-on-plug-ins
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update#impact-of-this-change-on-plug-ins
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update#impact-of-this-change-on-workflows
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update#impact-of-this-change-on-workflows
 
 
 -->

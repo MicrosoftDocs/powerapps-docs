@@ -19,7 +19,7 @@ search.app:
 
 <!-- 
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/online-management-api 
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/online-management-api 
 
 Isn't this a duplicate of the topic in the online admin api folder?
 

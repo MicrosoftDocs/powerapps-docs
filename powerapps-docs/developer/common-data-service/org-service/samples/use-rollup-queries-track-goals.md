@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Use rollup queries to track goals
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-use-rollup-queries-track-goals -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-use-rollup-queries-track-goals -->
 
 This sample shows how to use rollup queries to track goals. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/QueriesTrackGoals).
 

@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Use aggregation in FetchXML
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-use-aggregation-fetchxml -->
 
 This sample shows how to retrieve aggregate record data using FetchXML.
 

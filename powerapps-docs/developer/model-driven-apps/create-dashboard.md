@@ -22,7 +22,7 @@ search.app:
 
 # Create a dashboard
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/create-dashboard -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/create-dashboard -->
 
 Organization-owned dashboards can be created by using the Common Data Service for Apps or by customizing the entity form in Common Data Service for Apps by editing the customizations.xml file.  
   

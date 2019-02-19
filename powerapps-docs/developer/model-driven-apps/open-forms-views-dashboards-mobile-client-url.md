@@ -17,7 +17,7 @@ search.app:
 ---
 # Open forms, views, and dashboards in mobile client with a URL
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/open-forms-views-dashboards-mobile-client-url
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/open-forms-views-dashboards-mobile-client-url
 
 At this point I understand this mobile client is still branded as 'Dynamics 365'
  -->

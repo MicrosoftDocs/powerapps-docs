@@ -17,7 +17,7 @@ search.app:
 ---
 # Developer resources page
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/developer-resources-page
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-resources-page
 
 - The UI in the app needs to be updated
 - Remove references to on-premises

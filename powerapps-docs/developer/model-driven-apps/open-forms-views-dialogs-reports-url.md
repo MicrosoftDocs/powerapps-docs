@@ -17,7 +17,7 @@ search.app:
 ---
 # Open forms, views, dialogs, and reports with a URL
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/open-forms-views-dialogs-reports-url -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/open-forms-views-dialogs-reports-url -->
 
 URL addressable elements enable you to include links to forms, views, dialogs, and reports in other applications. In this manner, you can easily extend other applications, reports, or websites so that users can view information and perform actions without switching applications.  
 
