@@ -58,9 +58,9 @@ The following options are available in modern browsers for interacting with serv
   requestXhr.open('GET', '/test/test.txt', true);
   ```
 
-- APIs initiated within a [web worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API) context
-
 - [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) API usage
+
+- APIs initiated within a [web worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API) context
 
   > [!IMPORTANT]
   > Before proceeding with this option, ensure that support is available for the browsers that are being used to interact with your customizations. Review the [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) documentation's **Browser compatibility** section.
