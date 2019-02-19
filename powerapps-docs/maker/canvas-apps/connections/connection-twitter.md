@@ -108,7 +108,7 @@ The Twitter connection has been created, and added to your app. Now, it's ready 
 
        `Twitter.MyFollowing()`  
        `Twitter.MyFollowing({maxResults:3})`
-   * To show which users another user is following, set the **[Items](../controls/properties-core.md)** property of the gallery to to the following formula:
+   * To show which users another user is following, set the **[Items](../controls/properties-core.md)** property of the gallery to the following formula:
 
        `Twitter.Following( *TwitterHandle* )`
 
