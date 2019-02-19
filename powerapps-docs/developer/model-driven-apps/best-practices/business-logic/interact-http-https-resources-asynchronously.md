@@ -33,7 +33,7 @@ search.app:
 
 Synchronous requests block the execution of other scripts, which can cause the following:
 
-- Unresponsive model-driven and canvas-driven apps
+- Unresponsive model-driven and canvas apps
 - Slow client interactions
 
 <a name='guidance'></a>
