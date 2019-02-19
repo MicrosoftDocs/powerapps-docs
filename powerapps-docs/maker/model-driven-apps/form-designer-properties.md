@@ -27,7 +27,8 @@ search.app:
 
 Located on the right-pane of the model-driven form designer, the always available property pane lets you quickly view and update the properties of any selected element. 
 
-![Form designer property pane](media/form-designer-property-pane.png)
+> [!div class="mx-imgBorder"] 
+> ![](media/form-designer-property-pane.png "Form designer property pane")
 
 ## Form properties
 
@@ -41,6 +42,17 @@ Located on the right-pane of the model-driven form designer, the always availabl
 
 
 ## Tab properties
+
+|Category   |Name  |Description  |
+|---------|---------|---------|
+|**Display options**      | **Tab label**      | The localizable label for the tab visible to users. <br /> This property is required.         |
+| **Display options**      |  **Name**     |  The unique name for the tab that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br />This property is required.      |
+| **Display options**      |  **Expand this tab by default**      |  The tab state can toggle between expanded or collapsed using form scripts or by people selecting the label. Choose the default state for the tab.       |
+| **Display options**      | **Hide tab**     | When selected, tab is hidden by default and can be shown using code.       |
+| **Display options**      | **Hide on phone**     |  For a condensed version of this form on phone screens, tabs can be hidden.     |
+| **Formatting**   | **Layout**     |  Tabs may have up to three columns. Use these options to set the number of tabs and what percentage of the total width they should fill.      |
+
+## Section properties
 
 
 

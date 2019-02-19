@@ -1,7 +1,7 @@
 ---
 title: "Overview of the model-driven form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 01/07/2019
+ms.date: 02/19/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -40,7 +40,7 @@ The form designer interface has the following areas:
 - Command bar – Displays available actions such as **Save**, **Publish**, **Undo**, and **Redo**. 
 - Panes – Displays panes with specific functions, such as a **Fields** pane that you use to add fields to a form. 
 - Form preview – Displays a real-time preview of the form as it will appear to users when published. 
-- Property pane – Displays properties of the selected element, and also allows you to make changes.
+- Property pane – Displays properties of the selected element, and also allows you to make changes. More information: [Properties available in the form designer](form-designer-properties.md)
 
    ![Form designer layout](media/form-designer.png)
 
