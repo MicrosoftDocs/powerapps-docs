@@ -33,9 +33,8 @@ search.app:
 
 Synchronous requests block the execution of other scripts, which can cause the following:
 
-- Unresponsive model-driven apps
+- Unresponsive model-driven and canvas-driven apps
 - Slow client interactions
-- The browser stops responding
 
 <a name='guidance'></a>
 
@@ -46,7 +45,7 @@ Interact asynchronously with HTTP and HTTPS resources whenever possible. Users s
 The following options are available in modern browsers for interacting with services asynchronously.
 
 > [!NOTE]
-> Adding asynchronous interactions requires a different style of design than synchronous interactions. Multiple script paths can be in process simultaneously, which means you must give more thought to ensure that the page flow and integrity are correct at all times. For example, you'll often need to put measures in place to ensure that controls aren't enabled until all dependent service calls have returned. Taking a few additional steps can help ensure a more enjoyable user experience.
+> Adding asynchronous interactions requires a different style of design than synchronous interactions. Callbacks can execute in a non-deterministic order, which means you must give more thought to ensure that the page flow and integrity are correct at all times. For example, you'll often need to put measures in place to ensure that controls aren't enabled until all dependent service calls have returned. Taking a few additional steps can help ensure a more enjoyable user experience.
 
 - [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) with the async parameter omitted or set to true
 
@@ -100,14 +99,14 @@ There are multiple ways to interact with the server or request resources. Common
 
 ### Performance
 
-Traditionally, a browser interprets script on a single thread. If that thread is being used to execute a long-running process synchronously, the browser is likely to stop responding to the user's interactions while it waits for the process to be completed. Synchronous calls also remove the ability to perform more than one interaction simultaneously, forcing all calls to be serial in nature. In many cases, this leads to the frustration of your users. Optimize user responsiveness by incorporating asynchronous service calls.
+A browser interprets script on a single thread. If that thread is being used to execute a process synchronously, the browser will stop responding to the user's interactions ("freeze") while it waits for the process to be completed. Synchronous calls also remove the ability to perform more than one interaction simultaneously, forcing all calls to be serial in nature. In many cases, this leads to the frustration of your users. Optimize user responsiveness by incorporating asynchronous service calls.
 
 > [!NOTE]
 > An acceptable alternative approach is to leverage a [web worker](https://developer.mozilla.org/docs/Web/API/Worker). This modern feature allows for a background thread to be employed. In cases where synchronous calls are being executed within a worker, these are actually processed asynchronously.
 
 ### Browser support
 
-The specification for `XMLHttpRequest` states that synchronous usage is being removed from the standard because it's now deprecated. We recommend that browsers warn when synchronous executions are performed. Currently, browsers are only presenting warnings, but an `InvalidAccessError` exception might be thrown in the future when a value of false is passed to the async parameter. Modern browsers have declared synchronous requests executed on the main thread as deprecated.
+The specification for `XMLHttpRequest` states that synchronous usage is being removed from the standard because it's now deprecated. Currently, browsers are only presenting warnings, but an `InvalidAccessError` exception might be thrown in the future when a value of false is passed to the async parameter. Modern browsers have declared synchronous requests executed on the main thread as deprecated.
 
 > [!NOTE]
 > Modern APIs are being introduced that will no longer provide an option for synchronous operations. Refer to documentation of the [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) for more details.
