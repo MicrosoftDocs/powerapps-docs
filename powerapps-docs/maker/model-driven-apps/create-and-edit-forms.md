@@ -1,7 +1,7 @@
 ---
 title: "Create and edit forms using the model-driven form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 01/07/2019
+ms.date: 02/19/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -131,6 +131,24 @@ You can expand or collapse nodes in the tree view to see or hide the elements wi
 ### Open the tree view 
 1. Open the form designer to create or edit a form. More information: [Create a form](#create-a-form) and [Edit a form](#edit-a-form)  
 2. In the left pane, select **Tree View**.
+ 
+
+## Preview your form
+The form designer displays a WYSIWYG preview in the center of the authoring environment. Changes to the form instantly reflect in the preview so you see how the form will appear to app users. Notice that you can also select elements in the preview such as fields, sections, or tabs and then update the properties for that element in the property pane. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/form-preview.png "Form designer preview")
+
+
+### Form preview controls
+Located at the bottom of the designer are the following form preview controls:
+- Form factor switcher. This enables you to quickly see how your form appears on various device screens: Desktop, Tablet and Phone. There is an additional form factor named Responsive. In responsive mode you can drag the right and bottom edges of the form preview to a custom size that you want to preview.
+- Zoom slider. This enables you quickly zoom in or out the form preview. 
+- Auto fit – This enables makers to automatically zoom in or zoom out the preview to achieve the best fit based on the available width and height.   
+
+> [!div class="mx-imgBorder"] 
+> ![](media/form-designer-preview-controls.png "Form designer preview controls")
+
 
 ## See also
 [Overview of the model-driven form designer](form-designer-overview.md) <br />
