@@ -139,7 +139,7 @@ Once the note has been added, you can delete or edit the note. You can also add 
   
 ## Refresh the Timeline 
 
-You can refresh the timeline wall to see the the most up to date information.
+You can refresh the timeline wall to see the most up to date information.
 
 In the **Timeline** wall, select ![More button ](media/MoreButton.png "More button") and then select **Refresh Timeline**.
 
