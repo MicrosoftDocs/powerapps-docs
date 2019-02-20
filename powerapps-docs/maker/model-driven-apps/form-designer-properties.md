@@ -55,6 +55,30 @@ Located on the right-pane of the model-driven form designer, the always availabl
 ## Section properties
 
 
+|Category   |Name  |Description  |
+|---------|---------|---------|
+|**Display options**      | **Section label**    | The localizable label for the section visible to users. <br /> This property is required.      |
+|**Display options**      | **Name**    | The unique name for the section that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /> This property is required.        |
+|**Display options**      | **Hide label**   |  When selected, the section label is hidden.  |
+|**Display options**      | **Lock section**    | Lock this section to keep it from being removed.      |
+|**Display options**      | **Hide section**     | When selected, section is hidden by default and can be shown using code.      |
+|**Display options**      | **Hide on phone**     |  For a condensed version of this form on phone screens, sections can be hidden.     |
+|**Formatting**     |  **Columns**    |  Specify up to four columns to be in the section.      |
+
+## Field properties
+
+
+|Category  |Name  |Description  |
+|---------|---------|---------|
+|**Display options**     | **Field label**    | By default the label will match the display name of the field. You can override that name for the form by entering a different label here.       |
+|**Display options**     |  **Field name**    | The name of the field. This comes from the field properties on the entity and is read-only.     |
+|**Display options**     | **Hide label**     | When selected, the field label is hidden.      |
+|**Display options**     | **Read-only field**    | When selected, the field value is not editable.      |
+|**Display options**     |  **Lock field**   |  Lock this field to keep it from being removed.     |
+|**Display options**     |  **Hide field**     | When selected, field is hidden by default and can be shown using code.      |
+|**Display options**     |  **Hide on phone**    | For a condensed version of this form on phone screens, fields can be hidden.         |
+|**Display options**     | **Field width**      |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has.       |
+
 
 ## See also
 [Create and edit forms using the form designer](create-and-edit-forms.md)
