@@ -142,9 +142,9 @@ The form designer displays a WYSIWYG preview in the center of the authoring envi
 
 ### Form preview controls
 Located at the bottom of the designer are the following form preview controls:
-- Form factor switcher. This enables you to quickly see how your form appears on various device screens: Desktop, Tablet and Phone. There is an additional form factor named Responsive. In responsive mode you can drag the right and bottom edges of the form preview to a custom size that you want to preview.
-- Zoom slider. This enables you quickly zoom in or out the form preview. 
-- Auto fit – This enables makers to automatically zoom in or zoom out the preview to achieve the best fit based on the available width and height.   
+- Form factor switcher. This enables you to quickly see how your form appears on various device screens: desktop, tablet, and phone. There is an additional form factor named **Responsive**. In responsive mode you can drag the right and bottom edges of the form preview to a custom size that you want to preview.
+- Zoom slider. This control lets you quickly zoom in or out of the form preview. 
+- Auto fit – This resizes the preview to achieve the best fit based on the current width and height of the form designer.   
 
 > [!div class="mx-imgBorder"] 
 > ![](media/form-designer-preview-controls.png "Form designer preview controls")
