@@ -65,7 +65,7 @@ When creating a field, **Data type** provides the following choices:
 
 ### Text 
 
-Standard text fields can store up to to 4,000 characters. The default [Max Length](#max-length) option is set to a lower value you can adjust.
+Standard text fields can store up to 4,000 characters. The default [Max Length](#max-length) option is set to a lower value you can adjust.
 
 |Data type|Description|
 |--|--|

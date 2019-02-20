@@ -33,7 +33,7 @@ If all of the arguments to **IfError** result in an error, the value of the last
 **IfError**( *Value*, *Fallback1* [, *Fallback2*, ... ] )
 
 * *Value* - Required. Formula(s) to test for an error value. 
-* *Fallback(s)* - Required. The formulas to evaluate and values to return if previous arguments returned an error.  *Fallback* arguments are evaluated in order up to the point a a non-error value is found.
+* *Fallback(s)* - Required. The formulas to evaluate and values to return if previous arguments returned an error.  *Fallback* arguments are evaluated in order up to the point a non-error value is found.
 
 ## Examples
 
