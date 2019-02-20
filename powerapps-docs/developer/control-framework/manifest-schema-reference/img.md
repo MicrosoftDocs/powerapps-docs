@@ -3,10 +3,9 @@ title: Image Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,7 +23,7 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where image files are located|`string`|yes|
+|`path`|Place where image files are located|`string`|Yes|
 
 ## Parent Elements
 

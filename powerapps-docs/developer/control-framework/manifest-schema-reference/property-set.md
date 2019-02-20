@@ -3,9 +3,8 @@ title: Property Set Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,9 +20,9 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`name`|Name of the field|`string`|yes|
-|`display-name-key`|Used in customization screens as localized strings that describe the name of the property|`string`|yes|
-|`description-key`|Used in customization screens as localized strings that describe the description of the property|`string`|no|
+|`name`|Name of the field|`string`|Yes|
+|`display-name-key`|Used in customization screens as localized strings that describe the name of the property|`string`|Yes|
+|`description-key`|Used in customization screens as localized strings that describe the description of the property|`string`|Optional|
 
 ## Parent Elements
 

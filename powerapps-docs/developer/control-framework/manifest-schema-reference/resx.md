@@ -3,9 +3,8 @@ title: Resx Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,8 +20,8 @@ ms.assetid: 38acfda3-4adc-4aa2-bb8b-f29ba572a6e5
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where resx files are located|`string`|yes|
-|`version`|The current version of the resx file|`string`|yes|
+|`path`|Place where resx files are located|`string`|Yes|
+|`version`|The current version of the resx file|`string`|Yes|
 
 ## Parent Elements
 

@@ -3,10 +3,9 @@ title: DataSet Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,9 +23,9 @@ ms.assetid: 9ffe8930-b290-4252-98d4-a1195b00205f
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`description-key`|Used in the customization screen as localized strings that describes the description of the property.|`string`|no|
-|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|yes|
-|`name`|Name of the grid|`string`|yes|
+|`description-key`|Used in the customization screen as localized strings that describes the description of the property.|`string`|Optional|
+|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|Yes|
+|`name`|Name of the grid|`string`|Yes|
 
 ## Parent Elements
 

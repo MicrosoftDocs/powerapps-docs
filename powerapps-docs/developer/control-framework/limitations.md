@@ -1,13 +1,12 @@
 ---
 title: "Limitations of PowerApps Control Framework | MicrosoftDocs"
 description: "Limitations using powerapps control framework"
-ms.date: 01/12/2018
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
-author: ""
 ms.author: "nabuthuk"
-manager: "jdaly"
 ---
 
 # Limitations of PowerApps Control Framework

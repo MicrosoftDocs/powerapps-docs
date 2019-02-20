@@ -2,14 +2,13 @@
 title: " Image Upload Control| Microsoft Docs" 
 description: "Implementing image upload control using typescript" 
 ms.custom: ""
-ms.date: 08/01/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.topic: "article"
-author: "NavaKiran" 
 ms.author: "nkrb" 
-manager: "" 
 ---
+
 # Implementing a image upload control
 
 This sample control renders as an `Upload` button to upload image and a default image when the control loads for the first time. When you click on the `Upload`, a file explorer will pop up to pick an image.

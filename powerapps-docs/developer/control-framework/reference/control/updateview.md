@@ -1,13 +1,12 @@
 ---
 title: "updateView| MicrosoftDocs"
-ms.date: 01/12/2018
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 899d6eb3-62b4-4c1f-947c-aed1f8643caa
-author: "nkrb"
 ms.author: "nabuthuk"
-manager: "jdaly"
 ---
 # updateView
 

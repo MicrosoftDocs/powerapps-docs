@@ -1,13 +1,12 @@
 ---
 title: "destroy | MicrosoftDocs"
-ms.date: 10/12/2018
-ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: ""
 ms.assetid: ba66b513-2a7b-4ba6-b2d5-446ea2b42fdb
 author: "nkrb"
 ms.author: "nabuthuk"
-manager: "jdaly"
+manager: kvivek
+ms.date: 03/01/2019
 ---
 # destroy
 

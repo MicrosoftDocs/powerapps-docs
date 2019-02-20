@@ -1,20 +1,19 @@
 ---
 title: "PowerApps Control Framework Overview | MicrosoftDocs"
 description: "Use the PowerApps Control Framework (PCF) to create custom controls in model-driven apps to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
-ms.date: 01/12/2018
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
-author: "Nkrb"
 ms.author: "nabuthuk"
-manager: "jdaly"
 ---
 
 # What are custom controls?
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Custom controls are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions]().
+Custom controls are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
 Custom controls created using **PowerApps Control Framework** enable a developer to add custom visualization and logic for various UI elements. You can view custom controls in the solution explorer, but there is no way to add or edit them in the application.
 

@@ -3,10 +3,9 @@ title: Add Custom Controls to a field or entity in Model-driven Apps | Microsoft
 description: Process to import custom controls
 keywords:
 ms.author: nabuthuk
-manager: 
-ms.date: 06/4/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

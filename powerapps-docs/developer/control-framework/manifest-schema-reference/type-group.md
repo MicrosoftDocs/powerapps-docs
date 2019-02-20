@@ -3,9 +3,8 @@ title: Type Group Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,7 +20,7 @@ ms.assetid: ec7c1ad4-b834-4755-8a04-2c8940f75674
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`name`|Name of the data type|`string`|yes|
+|`name`|Name of the data type|`string`|Yes|
 
 ## Parent Elements
 

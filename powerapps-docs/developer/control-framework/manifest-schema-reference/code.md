@@ -24,8 +24,8 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where files are located|`string`|yes|
-|`order`|The order in which webresource must load|Positive integer|yes|
+|`path`|Place where files are located|`string`|Yes|
+|`order`|The order in which webresource must load|Positive integer|Yes|
 
 ## Parent Elements
 

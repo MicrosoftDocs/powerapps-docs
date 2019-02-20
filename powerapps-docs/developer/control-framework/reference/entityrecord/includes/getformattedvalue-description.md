@@ -2,9 +2,9 @@
 title: GetFormatteValue | Microsoft Docs
 description: 
 keywords:
-ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""

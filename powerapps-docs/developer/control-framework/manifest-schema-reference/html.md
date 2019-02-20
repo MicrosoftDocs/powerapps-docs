@@ -4,9 +4,9 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,8 +24,8 @@ ms.assetid: dcb8e71d-9a2f-4789-9a84-34673ccfd5c1
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where HTML files are located|`string`|yes|
-|`order`|The order in which HTML files must load|`Positive integer`|no|
+|`path`|Place where HTML files are located|`string`|Yes|
+|`order`|The order in which HTML files must load|`Positive integer`|Optional|
 
 ## Parent Elements
 

@@ -1,13 +1,13 @@
 ---
 title: StandardControl | MicrosoftDocs
-ms.date: 01/12/2018
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 0b589cb1-fe63-4152-a9ad-7bde9d75de62
 author: ""
 ms.author: "nabuthuk"
-manager: "jdaly"
 ---
 # StandardControl
 

@@ -1,13 +1,12 @@
 ---
 title: "Debugging Custom Controls | MicrosoftDocs"
 description: "How to debug a custom control using Fiddler and Native debugging"
-ms.date: 01/12/2018
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.topic: "index-page"
 ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
-author: "Nkrb"
 ms.author: "nabuthuk"
-manager: "jdaly"
 ---
 # Debugging Custom Controls
 

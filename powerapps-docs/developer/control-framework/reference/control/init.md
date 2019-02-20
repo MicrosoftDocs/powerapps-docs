@@ -1,13 +1,12 @@
 ---
 title: "init | MicrosoftDocs"
-ms.date: 01/12/2018
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: ""
 ms.assetid: 4485b7d4-c68f-4298-8676-1820eb33c1ad
-author: "nkrb"
 ms.author: "nabuthuk"
-manager: "jdaly"
 ---
 # init
 

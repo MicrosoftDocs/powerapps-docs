@@ -2,13 +2,11 @@
 title: " Increment Control| Microsoft Docs" 
 description: "Implementing a increment control" 
 ms.custom: ""
-ms.date: 08/01/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.topic: "article"
-author: "NavaKiran" 
-ms.author: "nkrb" 
-manager: "" 
+ms.author: "nabuthuk" 
 ---
 # Implementing increment control
 

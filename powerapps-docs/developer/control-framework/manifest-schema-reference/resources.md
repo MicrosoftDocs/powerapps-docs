@@ -3,9 +3,8 @@ title: Resources Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -28,6 +27,7 @@ ms.assetid: 66599c2f-6651-4b27-92da-a38897acdfb5
 |Element|Description|Occurrences|
 |--|--|--|
 |[library](library.md)|[!INCLUDE [library-description](includes/library-description.md)]|0 or more|
+|[packaged_library](packaged_library.md)|[!INCLUDE [packaged_library-description](includes/packaged_library-description.md)]|0 or more|
 |[code](code.md)|[!INCLUDE [code-description](includes/code-description.md)]|1 or more|
 |[css](css.md)|[!INCLUDE [css-description](includes/css-description.md)]|0 or more|
 |[img](img.md)|[!INCLUDE [img-description](includes/img-description.md)]|0 or more|

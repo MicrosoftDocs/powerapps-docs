@@ -3,9 +3,8 @@ title: Property Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,13 +20,13 @@ ms.assetid: 45f4872d-c1d2-4c5a-8721-251b96ede370
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`name`|Name of the property|`string`|yes|
-|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|yes|
-|`of-type`|Defines the data type of the property|See [Remarks](#remarks)|no|
-|`usage`|The usage attribute identifies if the property is meant to represent an entity attribute that the control can change (bound) or read-only values (input)|`bound`,`input` or `output`|no|
-|`required`|Whether the property is required or not|`boolean`|no|
-|`of-type-group`|Defines the set of related data types identified by a single name|`string`|no|
-|`description-key`|Used in the customization screens as localized strings that describes the description of the property.|`string`|no|
+|`name`|Name of the property|`string`|Yes|
+|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|Yes|
+|`of-type`|Defines the data type of the property|See [Remarks](#remarks)|Optional|
+|`usage`|The usage attribute identifies if the property is meant to represent an entity attribute that the control can change (bound) or read-only values (input)|`bound`,`input` or `output`|Optional|
+|`required`|Whether the property is required or not|`boolean`|Optional|
+|`of-type-group`|Defines the set of related data types identified by a single name|`string`|Optional|
+|`description-key`|Used in the customization screens as localized strings that describes the description of the property.|`string`|Optional|
 
 ### Remarks
 

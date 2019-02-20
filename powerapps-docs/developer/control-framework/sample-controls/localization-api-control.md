@@ -1,14 +1,12 @@
 ---
 title: " Localization API Control| Microsoft Docs" 
-description: "Implementing localzation api control" 
+description: "Implementing localization api control" 
 ms.custom: ""
-ms.date: 08/01/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.topic: "article"
-author: "NavaKiran" 
-ms.author: "nkrb" 
-manager: "" 
+ms.author: "nabuthuk" 
 ---
 # Implementing localization API control
 

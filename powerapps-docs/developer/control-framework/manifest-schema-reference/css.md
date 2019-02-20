@@ -3,10 +3,9 @@ title: CSS Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+manager: kvivek
+ms.date: 03/01/2019
+ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,8 +23,8 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where CSS files are located|`string`|yes|
-|`order`|The order in which the webresource must load|`Positive integer`|yes|
+|`path`|Place where CSS files are located|`string`|Yes|
+|`order`|The order in which the webresource must load|`Positive integer`|Optional|
 
 ## Parent Elements
 

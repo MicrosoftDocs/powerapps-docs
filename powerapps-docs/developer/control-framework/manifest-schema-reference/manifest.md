@@ -3,9 +3,8 @@ title: Manifest Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -22,6 +21,11 @@ ms.assetid: a48831c6-133a-4747-99fa-7cc1df4558d0
 |Element|Description|Occurrences|
 |--|--|--|
 |[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|1 or more|
+|[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description)]|0 or more|
+|[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|0 or more|
+|[data-set](data-set.md)|[!INCLUDE [data-set-description](includes/data-set-description.md)]|0 or more|
+|[resource](respurce.md)|[!INCLUDE [resource-description](includes/resource-description.md)]|1 or more|
+
 
 ## Example
 

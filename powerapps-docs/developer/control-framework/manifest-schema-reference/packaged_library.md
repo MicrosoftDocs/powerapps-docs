@@ -3,9 +3,8 @@ title: Packaged Library Element | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
-manager: jdaly
-ms.date: 06/4/2018
-ms.reviewer: ""
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -21,8 +20,8 @@ ms.assetid: 41c50db2-3096-4990-ac2b-e702c161bf4f
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`path`|Place where packaged library files are located|`string`|yes|
-|`version`|The current version of the packaged library|`string`|yes|
+|`path`|Place where packaged library files are located|`string`|Yes|
+|`version`|The current version of the packaged library|`string`|Yes|
 
 ## Parent Elements
 
@@ -34,9 +33,9 @@ ms.assetid: 41c50db2-3096-4990-ac2b-e702c161bf4f
 
 ```xml
 <resources>
-			<library name="AngularJSCore" version=">=1" order="1">
-				<packaged_library path="libs/angular.min.js" version="1.5.8" />
-			</library>
+	<library name="AngularJSCore" version=">=1" order="1">
+	<packaged_library path="libs/angular.min.js" version="1.5.8" />
+	</library>
 ```
 
 ### Related topics

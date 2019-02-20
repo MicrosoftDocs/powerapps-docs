@@ -1,13 +1,12 @@
 ---
 title: "getOutputs | MicrosoftDocs"
-ms.date: 01/12/2018
+manager: kvivek
+ms.date: 03/01/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: ""
 ms.assetid: c83c3a09-f04e-4dc6-8ddf-ccd0b4cc080e
-author: "nkrb"
 ms.author: "nabuthuk"
-manager: "jdaly"
 ---
 # getOutputs
 
