@@ -45,7 +45,7 @@ In this view you can see all the connection roles that are available for this en
 
 ## View connection roles in the solution explorer.
 
-Because connection roles are *solution aware*, which means that they can be included in a solution, you can also add connection roles to a a solution you distribute.
+Because connection roles are *solution aware*, which means that they can be included in a solution, you can also add connection roles to a solution you distribute.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
