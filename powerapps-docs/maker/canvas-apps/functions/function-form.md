@@ -55,8 +55,8 @@ The **ResetForm** function resets the contents of a form to their initial values
 ### ViewForm
 The **ViewForm** function changes the Form control's mode to **FormMode.View**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are used to populate the form.  The **SubmitForm** and **ResetForm** functions have no effect when in this mode.
 
-### DisplayMode Poperty
-The current mode can be read through the **Mode** property.  The mode also determines the value of the **DisplayMode** property which can be used by data cards and controls within the form control.  Often, the data card's **DisplayMode** property will be set to **Parent.DisplayMode** (refernceing the form) as will the control's **DisplayMode** property (referncing the data card): 
+### DisplayMode Property
+The current mode can be read through the **Mode** property.  The mode also determines the value of the **DisplayMode** property which can be used by data cards and controls within the form control.  Often, the data card's **DisplayMode** property will be set to **Parent.DisplayMode** (referencing the form) as will the control's **DisplayMode** property (referencing the data card): 
 
 | Mode | DisplayMode | Description |
 | --- | --- | --- |
