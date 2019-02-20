@@ -18,7 +18,7 @@ search.app:
 
 A control that shows a [Power BI](https://powerbi.microsoft.com) tile inside an app.
 
-Don't have have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
+Don't have Power BI? [Sign up](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 
 ## Description
 

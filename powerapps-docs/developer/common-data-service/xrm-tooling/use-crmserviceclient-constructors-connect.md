@@ -27,9 +27,9 @@ search.app:
 ---
 # Use CrmServiceClient constructors to connect to CDS for Apps
 
-Use the various constructors to create an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class to connect to Dynamics 365 for Customer Engagement apps. More information: [CrmServiceClient Constructors](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor)
+Use the various constructors to create an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class to connect to Dynamics 365 for Customer Engagement apps. More information: [CrmServiceClient Constructors](https://docs.microsoft.com/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor)
 
-The [connection string](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor?view=dynamics-xrmtooling-ce-9#Microsoft_Xrm_Tooling_Connector_CrmServiceClient__ctor_System_String_) constructor is the most easy, convenient way to get an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. More information: [Use connection strings in XRM tooling to connect to Dynamics 365 for Customer Engagement apps](use-connection-strings-xrm-tooling-connect.md)
+The [connection string](https://docs.microsoft.com/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor?view=dynamics-xrmtooling-ce-9#Microsoft_Xrm_Tooling_Connector_CrmServiceClient__ctor_System_String_) constructor is the most easy, convenient way to get an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. More information: [Use connection strings in XRM tooling to connect to Dynamics 365 for Customer Engagement apps](use-connection-strings-xrm-tooling-connect.md)
 
 ### See also
 

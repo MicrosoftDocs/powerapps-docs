@@ -17,4 +17,4 @@ search.app:
 ---
 # Use the QueryByAttribute class
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-querybyattribute-class -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/use-querybyattribute-class -->

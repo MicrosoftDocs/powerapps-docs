@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample charts
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/sample-charts -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/sample-charts -->
 
 This topic contains sample charts along with the respective data description and presentation XML strings. You can specify the:  
   
