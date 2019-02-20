@@ -85,7 +85,7 @@ As an example, if you had an option set on your entity called ApprovalStatus, yo
 * ApprovalStatus - This will show a unique integer value for each item in your option set, this is help when applying filters so they will not be impacted if you make future changes to the display name.
 * ApprovalStatus_display - This will show the friendly display name of the item and is most commonly used when presenting the option in a table or chart.
 
-    |ApproalStatus|ApprovalStatus_Display|
+    |ApprovalStatus|ApprovalStatus_Display|
     |---------|---------|
     1|Submitted
     2|In Review
