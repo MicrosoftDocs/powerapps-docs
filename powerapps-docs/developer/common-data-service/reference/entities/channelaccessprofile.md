@@ -265,7 +265,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
-**Description**: Select the the channel access profiles status.<br />
+**Description**: Select the channel access profiles status.<br />
 **DisplayName**: Status Reason<br />
 **LogicalName**: statuscode<br />
 **IsValidForForm**: True<br />

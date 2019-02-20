@@ -146,7 +146,7 @@ var AccountTasksRelationship = new Relationship("Account_Tasks");
 //Update the account name
 account["name"] = "New Account name";
 
-//Update the email address for the primary contact of the the account
+//Update the email address for the primary contact of the account
 var contact = new Entity("contact");
 contact.Id = retrievedAccount.RelatedEntities[primaryContactRelationship]
 .Entities.FirstOrDefault().Id;
@@ -190,7 +190,7 @@ account.Id = retrievedAccount.Id;
 //Update the account
 account.Name = "New Account name";
 
-//Update the email address for the primary contact of the the account
+//Update the email address for the primary contact of the account
 account.account_primary_contact = new Contact
 { Id = retrievedAccount.PrimaryContactId.Id, EMailAddress1 = "someone_a@example.com" };
 

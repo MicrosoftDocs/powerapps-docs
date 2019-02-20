@@ -235,7 +235,7 @@ To disassociate a security role from a Model-driven app, you use the DELETE requ
 
 ## Manage your model-driven apps and its components
 
-This section provides you information information about retrieving your apps, updating app properties, retrieving app components, and deleting apps.
+This section provides you information about retrieving your apps, updating app properties, retrieving app components, and deleting apps.
 
 ### Retrieve published apps
 To retrieve published apps, use the following request:
