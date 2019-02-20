@@ -62,8 +62,6 @@ The following options are available in modern browsers for interacting with serv
 
 - [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) API usage
 
-- APIs initiated within a [web worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API) context
-
   > [!IMPORTANT]
   > Before proceeding with this option, ensure that support is available for the browsers that are being used to interact with your customizations. Review the [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) documentation's **Browser compatibility** section.
 
@@ -76,7 +74,7 @@ There are multiple ways to interact with the server or request resources. Common
 > [!WARNING]
 > These scenarios should be avoided.
 
-- Usage of the `XMLHttpRequest` object, aside from being executed within the context of a `Worker`, passing in `false` for the value of the `async` parameter for the `open` function call
+- Usage of the `XMLHttpRequest` object passing in `false` for the value of the `async` parameter for the `open` function call
 
   ```javascript
   var requestXhr = new XMLHttpRequest();
@@ -102,9 +100,6 @@ There are multiple ways to interact with the server or request resources. Common
 ### Performance
 
 A browser interprets script on a single thread. If that thread is being used to execute a process synchronously, the browser will stop responding to the user's interactions ("freeze") while it waits for the process to be completed. Synchronous calls also remove the ability to perform more than one interaction simultaneously, forcing all calls to be serial in nature. In many cases, this leads to the frustration of your users. Optimize user responsiveness by incorporating asynchronous service calls.
-
-> [!NOTE]
-> An acceptable alternative approach is to leverage a [web worker](https://developer.mozilla.org/docs/Web/API/Worker). This modern feature allows for a background thread to be employed. In cases where synchronous calls are being executed within a worker, these are actually processed asynchronously.
 
 ### Browser support
 
@@ -134,6 +129,4 @@ The approach in this example still processes on the main browser UI thread, lock
 [XMLHttpRequest](https://docs.microsoft.com/microsoft-edge/dev-guide/performance/xmlhttprequest)<br />
 [XMLHttpRequest specification (with synchronous deprecation statement)](https://xhr.spec.whatwg.org/#the-open()-method)<br />
 [Fetch API specification](https://fetch.spec.whatwg.org/#fetch-api)<br />
-[Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)<br />
-[Web worker specification](https://html.spec.whatwg.org/multipage/workers.html)<br />
-[Web worker](https://developer.mozilla.org/docs/Web/API/Worker)
+[Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)
