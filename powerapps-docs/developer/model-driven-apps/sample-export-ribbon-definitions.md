@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Export ribbon definitions
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/sample-export-ribbon-definitions -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/sample-export-ribbon-definitions -->
 
 
 This sample code is for Mode-driven Apps. [Download the Export ribbon definitions sample](https://code.msdn.microsoft.com/Export-ribbon-definitions-df97a4cb).

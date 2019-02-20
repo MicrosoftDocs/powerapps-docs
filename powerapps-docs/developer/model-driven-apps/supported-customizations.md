@@ -17,7 +17,7 @@ search.app:
 ---
 # Get started with Model-driven apps customization using code
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-extensions
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
 Split to just include MDA issues
  -->
 

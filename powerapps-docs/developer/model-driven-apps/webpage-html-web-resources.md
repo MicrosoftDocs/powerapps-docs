@@ -17,7 +17,7 @@ search.app:
 ---
 # Webpage (HTML) web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webpage-html-web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/webpage-html-web-resources -->
 
 Use webpage (HTML) web resources to create user interface elements for client extensions.
 

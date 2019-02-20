@@ -22,7 +22,7 @@ search.app:
 
 # Write a custom Azure-aware plug-in
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/write-custom-azure-aware-plugin -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/write-custom-azure-aware-plugin -->
 
 Writing a plug-in that works with Azure is similar to writing any other Dynamics 365 Common Data Service for Apps plug-in. However, in addition to invoking any desired web service methods, the plug-in must include code to initiate posting the execution context to the Azure Service Bus.  
   

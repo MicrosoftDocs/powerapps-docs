@@ -22,7 +22,7 @@ search.app:
 
 # Define scaling for ribbon elements
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/define-scaling-ribbon-elements -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/define-scaling-ribbon-elements -->
 
 For application ribbons and updated entity form ribbons there is no scaling. Scaling only applies to forms for entities that weren’t updated and list ribbons displayed using Dynamics 365 for Outlook.  
   

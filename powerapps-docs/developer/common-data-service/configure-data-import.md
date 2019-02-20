@@ -20,7 +20,7 @@ search.app:
 <!-- 
 Was Mike Carter's
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/configure-data-import 
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/configure-data-import 
 
 Child topic of 
 powerapps-docs/developer/common-data-service/import-data.md

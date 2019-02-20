@@ -17,7 +17,7 @@ search.app:
 ---
 # Pass parameters to a URL by using the ribbon
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/pass-parameters-url-by-using-ribbon -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/pass-parameters-url-by-using-ribbon -->
 
 Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>` element. There are several ways to pass contextual Model-driven apps information as query string parameters to a URL by using the ribbon.  
   

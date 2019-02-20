@@ -17,7 +17,7 @@ search.app:
 ---
 # Use IFRAME and web resource controls on a form
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form -->
 
 
 IFRAME and web resource controls embed content from another location in pages by using an HTML IFRAME element.  

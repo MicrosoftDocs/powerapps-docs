@@ -22,7 +22,7 @@ search.app:
 sample-initialize-record-existing-record.md
 sample-create-retrieve-update-delete-late-bound.md
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-late-bound
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-late-bound
 
 -->
 This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound Entity class. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/LateBoundEntityOperations).

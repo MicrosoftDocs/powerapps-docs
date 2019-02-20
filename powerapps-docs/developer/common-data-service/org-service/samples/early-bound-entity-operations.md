@@ -25,7 +25,7 @@ show deep insert equivalent
 
 sample-initialize-record-existing-record.md
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-records-early-bound
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-records-early-bound
 
 -->
 

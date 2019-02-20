@@ -136,7 +136,7 @@ These examples show how you can configure the **AutoNumberFormat** property to g
 |`CAS-{SEQNUM:6}-{DATETIMEUTC:yyyyMMddhh}-{RANDSTRING:6}`|`CAS-002002-2017091309-HTZOUR`|
 |`CAS-{SEQNUM:6}-{DATETIMEUTC:yyyyMM}-{RANDSTRING:6}-{DATETIMEUTC:hhmmss}`|`CAS-002000-201709-Z8M2Z6-110901`|
 
-The random string placeholders are optional.You can include more than one random string placeholder. Use any of the format value for datetime placeholders from [Standard Date and Time Format Strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings).
+The random string placeholders are optional.You can include more than one random string placeholder. Use any of the format value for datetime placeholders from [Standard Date and Time Format Strings](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings).
 
 ### String length
 

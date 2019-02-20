@@ -22,7 +22,7 @@ search.app:
 
 # Create, manage, and publish model-driven apps using code
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-manage-custom-business-apps-using-code -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-manage-custom-business-apps-using-code -->
 
 In addition to creating a Model-driven app using the PowerApps app designer, you can programmatically create and manage Model-driven apps. 
 

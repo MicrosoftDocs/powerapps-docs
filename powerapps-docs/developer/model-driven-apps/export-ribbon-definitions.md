@@ -17,7 +17,7 @@ search.app:
 ---
 # Export ribbon definitions
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/export-ribbon-definitions -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/export-ribbon-definitions -->
 
 To effectively define changes to the default RibbonXml, you must be able to reference the RibbonXml data that defines those ribbons.  
   
