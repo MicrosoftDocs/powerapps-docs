@@ -43,7 +43,7 @@ Located on the right-pane of the model-driven form designer, the property pane l
 
 ## Tab properties
 
-|Category   |Name  |Description  |
+|Area   |Name  |Description  |
 |---------|---------|---------|
 |**Display options**      | **Tab label**      | The localizable label for the tab visible to users. <br /> This property is required.         |
 | **Display options**      |  **Name**     |  The unique name for the tab that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br />This property is required.      |
@@ -55,7 +55,7 @@ Located on the right-pane of the model-driven form designer, the property pane l
 ## Section properties
 
 
-|Category   |Name  |Description  |
+|Area   |Name  |Description  |
 |---------|---------|---------|
 |**Display options**      | **Section label**    | The localizable label for the section visible to users. <br /> This property is required.      |
 |**Display options**      | **Name**    | The unique name for the section that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores. <br /> This property is required.        |
@@ -68,7 +68,7 @@ Located on the right-pane of the model-driven form designer, the property pane l
 ## Field properties
 
 
-|Category  |Name  |Description  |
+|Area  |Name  |Description  |
 |---------|---------|---------|
 |**Display options**     | **Field label**    | By default the label will match the display name of the field. You can override that name for the form by entering a different label here.       |
 |**Display options**     |  **Field name**    | The name of the field. This comes from the field properties on the entity and is read-only.     |

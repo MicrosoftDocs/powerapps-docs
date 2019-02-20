@@ -747,7 +747,7 @@
           - name: "Create or edit forms"
             href: ./model-driven-apps/create-and-edit-forms.md
           - name: "Properties in the form designer"
-            href: ./model-driven-apps/form-designer-properties  
+            href: ./model-driven-apps/form-designer-properties.md 
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:

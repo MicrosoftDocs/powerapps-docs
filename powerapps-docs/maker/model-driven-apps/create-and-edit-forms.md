@@ -134,7 +134,7 @@ You can expand or collapse nodes in the tree view to see or hide the elements wi
  
 
 ## Preview your form
-The form designer displays a WYSIWYG preview in the center of the authoring environment. Changes to the form instantly reflect in the preview so you see how the form will appear to app users. Notice that you can also select elements in the preview such as fields, sections, or tabs and then update the properties for that element in the property pane. 
+The form designer displays a WYSIWYG preview in the center of the authoring environment. Changes to the form appear in the preview so you see how the form will display for app users. Notice that you can select elements in the preview such as fields, sections, or tabs and then update the properties for that element in the property pane. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/form-preview.png "Form designer preview")
