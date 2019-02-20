@@ -32,7 +32,7 @@ Common sense and uncomplicated design helps apps be more accessible to all users
 When testing your app's accessibility, ensure the app can be used with the keyboard only, the accessibility modes on iOS and Android, as well as navigated successfully with the screen reader enabled.
 
 For keyboard navigation (with or without the screen reader) ensure that a logical order is followed when using the TAB key to navigate to input fields by setting each control's **[TabIndex](controls/properties-accessibility.md)** property:
-- Label, Image, Icon, Shape contols - if they represent interactive elements (i.e.buttons) set TabIndex to 0; if they are decorative elements or text, set TabIndex to -1.
+- Label, Image, Icon, Shape controls - if they represent interactive elements (i.e.buttons) set TabIndex to 0; if they are decorative elements or text, set TabIndex to -1.
 - Avoid setting tab index higher than zero.
 
 ## Screen reader support
@@ -52,7 +52,7 @@ To ensure a satisfying experience with the screen reader it is recommended to:
 
 
 ## Multimedia
-Ensure all videos are captioned and a transcript of all audio recordings is available to the user.  **Video** control suppports closed captions  in WebVTT format via the **ClosedCaptionsUrl** property.
+Ensure all videos are captioned and a transcript of all audio recordings is available to the user.  **Video** control supports closed captions  in WebVTT format via the **ClosedCaptionsUrl** property.
 
 Note that with the screen reader enabled, **Timer** does not announce button text, but how much time has passed.  Announcements can't be turned off, even if timer is hidden with low opacity.
 
