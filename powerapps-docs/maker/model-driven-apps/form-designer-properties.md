@@ -25,7 +25,7 @@ search.app:
 
 # Properties available in the form designer
 
-Located on the right-pane of the model-driven form designer, the always available property pane lets you quickly view and update the properties of any selected element. 
+Located on the right-pane of the model-driven form designer, the property pane lets you quickly view and update the properties of any element selected from the preview or navigation panes. 
 
 > [!div class="mx-imgBorder"] 
 > ![](media/form-designer-property-pane.png "Form designer property pane")
