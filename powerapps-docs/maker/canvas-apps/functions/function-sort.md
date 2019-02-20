@@ -97,7 +97,7 @@ To run these examples yourself, create the **IceCream** data source as a [collec
 1. Add another button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:<br>
    **ClearCollect( SortByQuantity, SortByColumns( IceCream, "Quantity", Ascending, "Flavor", Descending ) )**
    
-     The previous formula creates a third collection, named **SortByQuantity**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted numerically by the **Quanity** column in ascending order, and then by the **Flavor** column in descending order.
+     The previous formula creates a third collection, named **SortByQuantity**, that contains the same data as **Ice Cream**. However, the new collection contains the data sorted numerically by the **Quantity** column in ascending order, and then by the **Flavor** column in descending order.
 2. Press F5, select the new button, and then press Esc.
 3. Select **Collections** on the **File** menu to display all three collections, and then press Esc to return to the default workspace.
 4. Repeat the last three steps, but change the name of the collection that you want to create, and replace the **SortByColumns** formula with a different formula from the table of examples earlier in this section that uses **SortByColumns**.
