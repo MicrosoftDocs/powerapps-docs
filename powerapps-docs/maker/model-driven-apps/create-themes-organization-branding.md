@@ -1,7 +1,7 @@
 ---
 title: "Change the color scheme or add a logo to match your organization’s brand  | MicrosoftDocs"
 ms.custom: ""
-ms.date: 06/18/2018
+ms.date: 02/19/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
@@ -50,7 +50,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
   
 -   Hover link effect  
   
--   Process control color  
+-   Legacy accent color (primary background for process controls)  
   
 -   Default entity color  
   
