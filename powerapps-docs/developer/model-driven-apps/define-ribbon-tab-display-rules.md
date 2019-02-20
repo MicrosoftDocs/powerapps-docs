@@ -22,7 +22,7 @@ search.app:
 
 # Define ribbon tab display rules
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-tab-display-rules -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-tab-display-rules -->
 
 Tab display rules control whether a specific tab is displayed for a ribbon or not.  
   

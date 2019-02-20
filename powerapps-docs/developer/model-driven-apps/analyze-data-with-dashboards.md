@@ -22,7 +22,7 @@ search.app:
 
 # Analyze data with dashboards
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/analyze-data-with-dashboards -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/analyze-data-with-dashboards -->
 
 The dashboard entities in Common Data Service for Apps enable you to present data 
 from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots.  

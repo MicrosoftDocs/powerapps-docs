@@ -17,7 +17,7 @@ search.app:
 ---
 # Web resources in model-driven apps
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/web-resources -->
 
 
 Web resources are *virtual files* that are stored in Common Data Services for Apps database and that you can retrieve by using a unique URL address.  

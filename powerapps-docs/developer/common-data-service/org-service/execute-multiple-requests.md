@@ -19,7 +19,7 @@ search.app:
 
 <!-- 
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-executemultiple-improve-performance-bulk-data-load 
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/use-executemultiple-improve-performance-bulk-data-load 
 
 -->
 The primary purpose of executing multiple requests it so improve performance in high-latency environments by reducing the total volume of data that is transmitted over the network.

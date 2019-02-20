@@ -17,7 +17,7 @@ search.app:
 ---
 # Export ribbon definitions
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/export-ribbon-definitions -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/export-ribbon-definitions -->
 
 To effectively define changes to the default RibbonXml, you must be able to reference the RibbonXml data that defines those ribbons.  
   
@@ -45,7 +45,7 @@ To effectively define changes to the default RibbonXml, you must be able to refe
  The ribbon data is exported as a compressed file. To decompress the file into XML you have to use the [System.IO.Packaging.ZipPackage](https://msdn.microsoft.com/library/system.io.packaging.zippackage.aspx) class. The following example is a helper method used in the SDK sample to decompress the file.  
  ``` C# 
 /// <summary>
-/// A helper method that decompresses the the Ribbon data returned
+/// A helper method that decompresses the Ribbon data returned
 /// </summary>
 /// <param name="data">The compressed ribbon data</param>
 /// <returns></returns>

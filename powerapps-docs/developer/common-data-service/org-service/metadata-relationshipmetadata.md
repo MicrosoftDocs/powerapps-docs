@@ -17,7 +17,7 @@ search.app:
 ---
 # Create and retrieve entity relationships
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships -->
 
 This topic shows how to create and retrieve entity relationships.  
   

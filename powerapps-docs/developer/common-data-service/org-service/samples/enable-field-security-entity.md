@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Enable field security for an entity
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-enable-field-security-entity -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-enable-field-security-entity -->
 
 This sample shows how to enable field security for an entity.  You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FieldSecurity). 
 

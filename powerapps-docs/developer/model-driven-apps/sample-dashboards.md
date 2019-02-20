@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample dashboards
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/sample-dashboards -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/sample-dashboards -->
 
 This topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the `SystemForm.FormXml` attribute for an organization-owned dashboard or `UserForm.FormXml` for a user-owned dashboard.  
   

@@ -20,7 +20,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/oauth-cross-origin-resource-sharing-connect-single-page-application 
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/oauth-cross-origin-resource-sharing-connect-single-page-application 
 
 -->
 # Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application

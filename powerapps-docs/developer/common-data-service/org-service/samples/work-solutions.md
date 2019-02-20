@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Work with solutions
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-work-solutions -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
 This sample shows how to how to perform the following actions with solutions:
 

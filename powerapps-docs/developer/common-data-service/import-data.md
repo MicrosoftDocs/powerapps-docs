@@ -21,7 +21,7 @@ search.app:
 Was Mike Carter
 
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/import-data
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/import-data
 
 
 
@@ -31,19 +31,19 @@ Should there be a separate topic for organization service and Web API?
 All these functions & actions exist:
 
 RetrieveParsedDataImportFile Function
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/retrieveparseddataimportfile?view=dynamics-ce-odata-9
+https://docs.microsoft.com/dynamics365/customer-engagement/web-api/retrieveparseddataimportfile?view=dynamics-ce-odata-9
 GetDistinctValuesImportFile Function
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/getdistinctvaluesimportfile?view=dynamics-ce-odata-9
+https://docs.microsoft.com/dynamics365/customer-engagement/web-api/getdistinctvaluesimportfile?view=dynamics-ce-odata-9
 ParseImport Function
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/parseimport?view=dynamics-ce-odata-9
+https://docs.microsoft.com/dynamics365/customer-engagement/web-api/parseimport?view=dynamics-ce-odata-9
 TransformImport Action
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/transformimport?view=dynamics-ce-odata-9
+https://docs.microsoft.com/dynamics365/customer-engagement/web-api/transformimport?view=dynamics-ce-odata-9
 ImportRecordsImport Action
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/importrecordsimport?view=dynamics-ce-odata-9
+https://docs.microsoft.com/dynamics365/customer-engagement/web-api/importrecordsimport?view=dynamics-ce-odata-9
 ExportMappingsImportMap Action
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/exportmappingsimportmap?view=dynamics-ce-odata-9
+https://docs.microsoft.com/dynamics365/customer-engagement/web-api/exportmappingsimportmap?view=dynamics-ce-odata-9
 ImportMappingsImportMap Action
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/web-api/importmappingsimportmap?view=dynamics-ce-odata-9
+https://docs.microsoft.com/dynamics365/customer-engagement/web-api/importmappingsimportmap?view=dynamics-ce-odata-9
 
 Or should the core general content simply include both?
 

@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: One-way listener
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-one-way-listener -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-one-way-listener -->
 
 This sample shows how to write a `Azure Service Bus` listener for a one-way endpoint contract. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/OneWayListeners).
 
