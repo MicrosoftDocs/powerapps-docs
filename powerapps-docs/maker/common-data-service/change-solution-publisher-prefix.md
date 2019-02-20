@@ -34,7 +34,7 @@ For this reason, many people like to change the solution publisher prefix so tha
 
 > [!NOTE]
 > If you change the solution publisher prefix, you should do it before you create an new metadata items. You can't change the names of metadata items.
-> When you change the customizaiton prefix value, make sure to tab to the next field. The **Option Value Prefix** will automatically generate a number based on the customization prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
+> When you change the customization prefix value, make sure to tab to the next field. The **Option Value Prefix** will automatically generate a number based on the customization prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
 
 ## Change the solution publisher prefix for the CDS Default Publisher  
 
