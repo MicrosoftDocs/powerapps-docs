@@ -77,4 +77,4 @@ The PowerApps custom visual is available in preview and has these limitations:
 ## Next steps
 
 * Go through a simple [step-by-step tutorial](embed-powerapps-powerbi.md).
-* Check out out our [video](https://aka.ms/powerappscustomvisualvideo).
+* Check out our [video](https://aka.ms/powerappscustomvisualvideo).
