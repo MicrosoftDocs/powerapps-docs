@@ -81,7 +81,7 @@ Setting all the individual options to **False**, is equivilent to setting **Can 
 Apply your choices and click **Set** to close the dialog box.
 
 > [!NOTE]
-> If this field is a **Date and Time** field, an addional **Can change date and time behavior** property is available. More information: [Behavior and format of the Date and Time field](behavior-format-date-time-field.md)
+> If this field is a **Date and Time** field, an additional **Can change date and time behavior** property is available. More information: [Behavior and format of the Date and Time field](behavior-format-date-time-field.md)
 
 ## Relationship managed properties
 
