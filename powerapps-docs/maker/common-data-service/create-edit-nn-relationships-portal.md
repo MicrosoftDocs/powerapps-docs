@@ -1,5 +1,5 @@
 ---
-title: "Create Many-to-many enity relationships in Common Data Service for Apps using PowerApps portal | MicrosoftDocs"
+title: "Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal | MicrosoftDocs"
 description: "Learn how to create many-to-may relationships"
 ms.custom: ""
 ms.date: 06/11/2018
@@ -79,7 +79,7 @@ While [viewing entity relationships](#view-many-to-many-entity-relationships), s
 
 ![Delete entity relationship](media/delete-entity-relationship-portal.png)
 
-You can use the **Delete relationship** command from the command bar or from the row context menu when you select the elipses (**...**).
+You can use the **Delete relationship** command from the command bar or from the row context menu when you select the ellipses (**...**).
 
 Deleting the Many-to-Many relationship will delete the relationship entity created. All data connecting entities using the relationship will be lost.
 
