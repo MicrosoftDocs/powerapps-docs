@@ -70,7 +70,7 @@ Specify two or more records that you want to merge. Records are processed in ord
 * *ChangeRecord(s)* – Required.  One or more records that contain properties to modify in the *BaseRecord*.  Change records are processed in order from the beginning of the argument list to the end, with later property values overriding earlier ones.
 
 #### Modify or create a set of records in a data source
-**Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1* [, *ChangeRecordTable2*, … ] )
+**Patch**( *DataSource*, *BaseRecordsTable*, *ChangeRecordTable1* [, *ChangeRecordTable2*, … ] )
 
 * *DataSource* – Required. The data source that contains the records that you want to modify or will contain the records that you want to create.
 * *BaseRecordTable* – Required. A table of records to modify or create.  If the record came from a data source, the record is found and modified. If the result of **[Defaults](function-defaults.md)** is used, a record is created.
