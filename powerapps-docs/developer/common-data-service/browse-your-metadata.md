@@ -33,8 +33,8 @@ CDS for Apps is configured as an app. After you install the **Entity Metadata Br
 For earlier versions you must use the following steps, but these also work for the latest verison.  
 
 After you install the **Entity Metadata Browser** solution, open the managed solution by double-clicking the row in the solutions list and view the **Configuration** page to view information about the Entity Metadata Browser and buttons to launch two different views.
-- **Metadata Browser** is equivilent to the **Entities** view in the app.
-- **Entity Metadata Browser** is equivilent to the **Entity Metadata** view in the app.
+- **Metadata Browser** is equivalent to the **Entities** view in the app.
+- **Entity Metadata Browser** is equivalent to the **Entity Metadata** view in the app.
 
 ## Entities view
 You can perform the following actions:
