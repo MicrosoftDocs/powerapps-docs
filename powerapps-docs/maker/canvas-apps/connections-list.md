@@ -29,7 +29,7 @@ You can specify the data that your app retrieves by customing the **Items** prop
 
  ![Expanded data source Items property](./media/connections-list/ItemPropertyExpanded.png)
 
-For more information about how to to customize your formula with tables, see these topics:
+For more information about how to customize your formula with tables, see these topics:
 
   [Understand data sources in PowerApps](working-with-data-sources.md)<br> 
   [Generate an app from Excel data](get-started-create-from-data.md)<br> 
@@ -47,7 +47,7 @@ If your connector provides actions, you must still select your data source as yo
 
 If you need to handle custom data updates for action connectors, build a formula that includes the **Patch** function. In the formula, identify the action and the fields that you'll bind to the action.  
 
-For more information about how to to customize your formula for custom updates, see these topics:
+For more information about how to customize your formula for custom updates, see these topics:
 
 [Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Update](functions/function-update-updateif.md)
 
