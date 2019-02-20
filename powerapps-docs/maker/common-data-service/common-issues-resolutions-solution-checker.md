@@ -65,7 +65,7 @@ To address this issue, check or create smaller solutions to be analyzed. To mini
 - When you add custom workflows, include the assembly used within the workflow.
 
 ## Solution Checker run or download results don't complete 
-Shortly after running Solution Checker the operation doesn't commplete and the following message is displayed:<br />
+Shortly after running Solution Checker the operation doesn't complete and the following message is displayed:<br />
 "We weren't able to run the check on *SOLUTIONNAME* Solution. Try running it again." <br />
 ![Weren't able to run](media/solution-checker-werent-able-to-run.png)
 
