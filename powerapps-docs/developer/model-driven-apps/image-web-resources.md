@@ -17,7 +17,7 @@ search.app:
 ---
 # Image web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/image-web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/image-web-resources -->
 
 Use image web resources to make images available for use in Model-driven apps.  
 

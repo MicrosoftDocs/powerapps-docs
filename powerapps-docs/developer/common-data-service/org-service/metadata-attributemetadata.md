@@ -17,4 +17,4 @@ search.app:
 ---
 # Work with attribute metadata
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata -->

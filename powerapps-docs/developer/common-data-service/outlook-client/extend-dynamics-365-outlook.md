@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook 
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook 
 
 This topic should be in powerapps-docs/developer/common-data-service/outlook-client/
 -->

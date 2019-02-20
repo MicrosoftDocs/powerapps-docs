@@ -17,7 +17,7 @@ search.app:
 ---
 # Publish customizations
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/publish-customizations -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/publish-customizations -->
 
 Publishing customizations makes the Web application aware of changes to the data that affects the user interface.  
   

@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Create a connection role
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-create-connection-role-early-bound -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-create-connection-role-early-bound -->
 
 This sample shows how to create a connection role that can be used for accounts and contacts. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ConnectionRole).
 
