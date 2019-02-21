@@ -90,7 +90,7 @@
         - name: openDatasetItem
           href: reference/dataset/opendatasetitem.md
         - name: refresh
-          href: reference/datasaet/refresh.md
+          href: reference/dataset/refresh.md
         - name: setSelectedRecordIds
           href: reference/dataset/setselectedrecordids.md
       - name: DateFormattingInfo
@@ -145,8 +145,8 @@
           href: reference/mode/setcontrolstate.md
         - name: setFullScreen
           href: reference/mode/setfullscreen.md
-        - name: trackContainerSize
-          href: reference/mode/trackcontainersize.md
+        - name: trackContainerResize
+          href: reference/mode/trackcontainerresize.md
       - name: Navigation
         href: reference/navigation.md
         items:

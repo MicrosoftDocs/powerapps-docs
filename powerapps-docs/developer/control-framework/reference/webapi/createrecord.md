@@ -19,7 +19,58 @@ ms.assetid: 9179f03b-9d26-4253-9535-13ab544d58ac
 
 [!INCLUDE [createrecord-description](includes/createrecord-description.md)]
 
-See [createRecord (Client API reference)](../../../clientapi/reference/Xrm-WebApi/createRecord.md)
+## Syntax
+
+`createRecord(entityLogicalName, data).then(successCallback, errorCallback);`
+
+## Parameters
+
+<table style="width:100%">
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>entityLogicalName</td>
+<td>String</td>
+<td>Yes</td>
+<td>Logical name of the entity you want to create. For example: &quot;account&quot;.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Object</td>
+<td>Yes</td>
+<td><p>A JSON object defining the attributes and values for the new entity record.</p>
+<p>See examples later in this topic to see how you can define the <code>data</code> object for various create scenarios.</td>
+</tr>
+<tr>
+<td>successCallback</td>
+<td>Function</td>
+<td>No</td>
+<td><p>A function to call when a record is created. An object with the following properties will be passed to identify the new record:</p>
+<ul>
+<li><b>entityType</b>: String. The entity logical name of the new record.</li>
+<li><b>id</b>: String. GUID of the new record.</li>
+</ul></td>
+</tr>
+<tr>
+<td>errorCallback</td>
+<td>Function</td>
+<td>No</td>
+<td>A function to call when the operation fails. An object with the following properties will be passed:
+<ul>
+<li><b>errorCode</b>: Number. The error code.</li>
+<li><b>message</b>: String. An error message describing the issue.</li>
+</ul></td>
+</tr>
+</table>
+
+## Return Value
+
+On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+
 
 ## Related topics
 

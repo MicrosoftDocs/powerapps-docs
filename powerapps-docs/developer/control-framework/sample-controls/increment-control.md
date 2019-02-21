@@ -197,5 +197,5 @@ Edit the value in the text box, if it is a valid integer, then it will update th
 
 ### Related topics
 
-[PowerApps Control Framework API Reference](reference/index.md)<br/>
-[PowerApps Control Framework Manifest Schema Reference](manifest-schema-reference/index.md)
+[PowerApps Control Framework API Reference](../index.md)<br/>
+[PowerApps Control Framework Manifest Schema Reference](../manifest-schema-reference/index.md)
