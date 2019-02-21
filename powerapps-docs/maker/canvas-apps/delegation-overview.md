@@ -28,10 +28,13 @@ Where this becomes complicated, and the reason this article exists, is because n
 > [!NOTE]
 > Delegation warnings were previously flagged in PowerApps as "blue dot" suggestions, but delegation suggestions have since been re-classified as warnings. If the data in your data source exceeds 500 records and a function can't be delegated, PowerApps might not be able to retrieve all of the data, and your app may have wrong results. Delegation warnings help you manage your app so that it has correct results.
 
-## Delegable data sources
-See the [delegation list](delegation-list.md) for the full list of which data sources support delegation and to what extent.
+## Delegable data sources in canvas apps
+Delegation is only supported for certain tabular data sources.  If a data source supports delegation, details about its support is outlined in its [connector documentation.](https://docs.microsoft.com/connectors/).  The list below identifies the most popular tabular data sources that support delegation and provides links to the connector documentation.  
 
-We are continuing to add delegation support to existing data sources, as well as add more data sources.
+### Popular tabular data sources
+* [Common Data Service (CDS) for Apps](https://docs.microsoft.com/connectors/commondataservice/) 
+* [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
+* [SQL Server](https://docs.microsoft.com/connectors/sql/) 
 
 Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full PowerApps language can be applied.
 
