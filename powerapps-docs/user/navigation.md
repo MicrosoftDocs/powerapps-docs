@@ -75,11 +75,11 @@ There are three types of notifications that are shown on a form: Informational, 
 
 If there is only one notification you will see a single line.
 
-![Example of single notificationsl](media/single_notificationsl.png "Example of single notifications")
+![Example of single notificationsl](media/single_notification.png "Example of single notifications")
 
 If there is more than one notificatoin, you will see the number of notifications. Select the chevron, to view each message.
 
-![Example of multiple notificationsl](media/multiple_notificationsl.png "Example of multiple notifications")
+![Example of multiple notificationsl](media/multiple_notification.png "Example of multiple notifications")
 
 
 
