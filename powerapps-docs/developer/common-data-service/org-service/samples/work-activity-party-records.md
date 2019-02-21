@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Work with activity party records
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-work-activity-party-records -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-work-activity-party-records -->
 
 This sample code shows how to work with activity party records. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ActivityPartyRecords).
 

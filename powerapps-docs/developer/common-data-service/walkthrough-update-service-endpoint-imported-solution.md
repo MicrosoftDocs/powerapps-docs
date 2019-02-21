@@ -22,7 +22,7 @@ search.app:
 
 # Tutorial: Update a service endpoint imported from a solution
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-update-service-endpoint-imported-solution -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/walkthrough-update-service-endpoint-imported-solution -->
 
 An extra step is required after importing into an organization a solution containing one or more service endpoints configured for SAS authorization. When the solution containing the service endpoints is exported, the exported solution does not contain the SAS Key for each service endpoint. After importing the solution into an organization, you must perform an additional step to provide the SAS Key for each service endpoint.  
   

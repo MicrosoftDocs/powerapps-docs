@@ -22,7 +22,7 @@ search.app:
 
 # Actions on dashboards
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/actions-dashboards -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/actions-dashboards -->
 
 You can perform actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards.  
   

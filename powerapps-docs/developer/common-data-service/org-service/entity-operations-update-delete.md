@@ -20,10 +20,10 @@ search.app:
 <!-- 
 Adding parity with Web API topics
 
-include information from https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update 
+include information from https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update 
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/use-early-bound-entity-classes-create-update-delete
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/manage-duplicate-detection-create-update
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/use-early-bound-entity-classes-create-update-delete
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/manage-duplicate-detection-create-update
 
 -->
 
@@ -146,7 +146,7 @@ var AccountTasksRelationship = new Relationship("Account_Tasks");
 //Update the account name
 account["name"] = "New Account name";
 
-//Update the email address for the primary contact of the the account
+//Update the email address for the primary contact of the account
 var contact = new Entity("contact");
 contact.Id = retrievedAccount.RelatedEntities[primaryContactRelationship]
 .Entities.FirstOrDefault().Id;
@@ -190,7 +190,7 @@ account.Id = retrievedAccount.Id;
 //Update the account
 account.Name = "New Account name";
 
-//Update the email address for the primary contact of the the account
+//Update the email address for the primary contact of the account
 account.account_primary_contact = new Contact
 { Id = retrievedAccount.PrimaryContactId.Id, EMailAddress1 = "someone_a@example.com" };
 
@@ -358,7 +358,7 @@ More information:
 
 ## Legacy update messages
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/perform-specialized-operations-using-update -->
 
 There are several deprecated specialized messages that perform update operations. In earlier versions it was required to use these messages, but now the same operations should be performed using <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> class with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
 

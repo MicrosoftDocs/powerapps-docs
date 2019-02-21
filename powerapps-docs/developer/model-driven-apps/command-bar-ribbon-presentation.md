@@ -22,7 +22,7 @@ search.app:
 
 # Command bar or ribbon presentation
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/command-bar-ribbon-presentation -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/command-bar-ribbon-presentation -->
 
 Data defining commands in Common Data Service for Apps can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
   

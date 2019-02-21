@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Retrieve records from an intersect table
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-retrieve-records-intersect-table -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-retrieve-records-intersect-table -->
 This sample shows how to retrieve records from an intersect table. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveRecordsFromIntersectTable).
 
 ## How to run this sample

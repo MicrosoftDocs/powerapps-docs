@@ -17,7 +17,7 @@ search.app:
 ---
 # Set field values using parameters passed to a form
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/set-field-values-using-parameters-passed-form -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/set-field-values-using-parameters-passed-form -->
 
 You can set default values for new records created by users by specifying attribute values in the URL that is used to open the form. By default, these values are set in the form, but can be changed by users before they save the record.  
   

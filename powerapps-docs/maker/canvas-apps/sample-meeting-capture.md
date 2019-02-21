@@ -42,15 +42,15 @@ Meeting Capture includes a lot of functionality commonly used in PowerApps. By w
 
 Meeting Capture connects to these services in Office 365.
 
-- [Office 365 Users](https://docs.microsoft.com/en-us/connectors/office365users/)
-- [Office 365 Outlook](https://docs.microsoft.com/en-us/connectors/office365/)
-- [Planner](https://docs.microsoft.com/en-us/connectors/planner/)
-- [OneNote (Business)](https://docs.microsoft.com/en-us/connectors/onenote/)
-- [Content Conversion](https://docs.microsoft.com/en-us/connectors/conversionservice/)
+- [Office 365 Users](https://docs.microsoft.com/connectors/office365users/)
+- [Office 365 Outlook](https://docs.microsoft.com/connectors/office365/)
+- [Planner](https://docs.microsoft.com/connectors/planner/)
+- [OneNote (Business)](https://docs.microsoft.com/connectors/onenote/)
+- [Content Conversion](https://docs.microsoft.com/connectors/conversionservice/)
 
 We hope you enjoy exploring Meeting Capture, and we look forward to hearing how you extend it for your organization!
 
 ## Next steps
-- [Formula reference](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/formula-reference)
-- [Controls reference](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/reference-properties)
+- [Formula reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference)
+- [Controls reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties)
  

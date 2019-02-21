@@ -17,7 +17,7 @@ search.app:
 ---
 
 <!-- This is the portion of the old topic that applies to CDS
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-extensions
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
  -->
 
 

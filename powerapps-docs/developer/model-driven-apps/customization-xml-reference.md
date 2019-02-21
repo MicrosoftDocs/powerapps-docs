@@ -22,7 +22,7 @@ search.app:
 
 # Customization XML reference
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customization-xml-reference -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customization-xml-reference -->
 
 The customizations.xml file is one of the files included in an exported unmanaged solution. The file contains all or selected portions of the customizations and configurations for your system. 
   

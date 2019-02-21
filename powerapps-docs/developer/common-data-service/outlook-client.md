@@ -23,4 +23,4 @@ All outlook client topics ought to be in powerapps-docs/developer/common-data-se
 
 
 A replacement for 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook -->
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook -->

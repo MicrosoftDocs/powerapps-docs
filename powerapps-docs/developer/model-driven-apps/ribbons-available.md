@@ -17,7 +17,7 @@ search.app:
 ---
 # Ribbons available
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365 -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365 -->
 
 This topic describes where ribbons are defined and modified in Model-driven apps.
 
