@@ -112,14 +112,14 @@
         - name: addLinkedEntity
           href: reference/linking/addlinkedentity.md
         - name: getLinkedEntity
-          href: reference/linking/getlinkedEntity.md
+          href: reference/linking/getlinkedentities.md
       - name: Formatting
         href: reference/formatting.md
         items:
         - name: formatCurrency
           href: reference/formatting/formatcurrency.md
-        - name: formatDateAsFilteringStringInUTC
-          href: reference/formatting/formatdateasfilteringstringinutc.md
+        - name: formatDateAsFilterStringInUTC
+          href: reference/formatting/formatdateasfilterstringinutc.md
         - name: formatDateLong
           href: reference/formatting/formatdatelong.md
         - name: formatDateLongAbbreviated
