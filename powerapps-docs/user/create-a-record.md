@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 2/21/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -24,12 +24,12 @@ The **Create a new record** command makes it fast and easy to enter almost any t
     
 1. On the navigation bar, select the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then select the item you want.  
   
-2.  Fill in the fields, and then select **Save**.  
-  
-3.  If you want to continue adding information, select **View Record**. To create another, select **Save & Create New*.  
+2.  Fill in the fields, and then select **Save and Close**.  
+
+  ![Save a record](media/quick_create.png "Save a record")
   
 > [!NOTE]
-> An asterisk ![Required Field button](media/required-field-button.png "Required Field button") next to the field on the screen means the field is required.  
+> An asterisk ![Required Field button](media/required-field-button.png "Required Field button") next to the field on the screen means the field is required. If you select **Save and Close** before entering required fields an error message will be displayed or if you have entered information and select **Cancel** a warning will be displayed.
 >   
 > A plus sign ![Recommended Field button](media/recommended-field-button.png "Recommended Field button") next to the field on the screen means your organization recommends that you fill in the field.  
     
