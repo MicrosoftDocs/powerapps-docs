@@ -25,6 +25,8 @@ The **Create a new record** command makes it fast and easy to enter almost any t
 1. On the navigation bar, select the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then select the item you want.  
   
 2.  Fill in the fields, and then select **Save and Close**.  
+
+  ![Save a record](media/quick_create.png "Save a record")
   
 > [!NOTE]
 > An asterisk ![Required Field button](media/required-field-button.png "Required Field button") next to the field on the screen means the field is required. If you select **Save and Close** before entering required fields an error message will be displayed or if you have entered information and select **Cancel** a warning will be displayed.
