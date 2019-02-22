@@ -1,9 +1,9 @@
 ---
 title: "Use Single-Tenant server-to-server authentication (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Describes how to access D365 data from an application or service without explicit user authentication." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 2/21/2019
+ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -17,24 +17,88 @@ search.app:
 ---
 # Use Single-Tenant server-to-server authentication
 
-
 The single-tenant server-to-server scenario typically applies for enterprise organizations who have multiple Common Data Service (CDS) for Apps environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
   
- An enterprise can create a web application or service to connect to all the CDS for Apps environments for the single tenant.  
+ An enterprise can create a web application or service to connect to any CDS for Apps environments associated with a single Azure Active Directory (AD) tenant.
   
 ## Differences from multi-tenant scenario  
  Creating a web application or service for a single-tenant server-to-server authentication is similar to that used for a multi-tenant organization but there are some important differences.  
   
--   Because all the organizations are in the same tenant, there is no need for a tenant admin to grant consent. The application is already registered on the tenant.  
+-   Because all the organizations are in the same tenant, there is no need for a tenant admin to grant consent for each organization. The application is simply registered once for the tenant.
   
 -   You have the opportunity to use certificates rather than keys if you prefer.  
+
+<a name="bkmk_Requirements"></a>
+## Requirements  
+
+ To create and test a single-tenant application that uses server-to-server (S2S) authentication you will need:  
   
-### See also  
+- An Azure AD tenant to use when registering the provided sample application.
+- A CDS for Apps subscription that is associated with the Azure AD tenant.
+- Administrator privileges in the Azure AD tenant and D365 organization.
+
+<a name="bkmk_registration"></a>
+## Azure application registration
+To create an application registration in Azure AD, follow these steps.
+1. Navigate to https://portal.office.com
+2. Choose **Admin** > **Admin centers** > **Azure Active Directory** [image: admin center]
+3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
+4. Choose **+ New registration** [image: app registration]
+5. In the overview screen, select **API permissions**
+6. Choose **+ Add a permission**
+7. Choose **Dynamics CRM** [image: add permission]
+8. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions** [image: request API permission]
+9. In the **API permissions** form, select **Grant admin consent for "org-name"** and when prompted choose **Yes** [image: permissions completed]
+10. On the **Overview** screen, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will need these later.
+11. Select **Certificates & secrets**
+12. Below **Client secrets**, choose **+ New client secret** to create a secret
+13. In the form, enter a description and select **Add**. Record the secret string. You will not be able to view the secret again once you leave the current screen.
+
+<a name="bkmk_appuser"></a>
+## Application User creation
+To create an unlicensed "application user" in your Dynamics 365 organization, follow these steps. This application user will be given access to your organization's data on behalf of the end user who is using your application.
+
+1. Navigate to the Azure Active Directory admin center
+2. In the left navigation panel, choose **Users**
+3. Select **+ New user**
+4. In the **User** form, enter a name and username for the new user and select **Create**. Make sure the username contains the organization domain URL of your D365 tenant (i.e., someuser@myorg.onmicrosoft.com). You can exit Azure AD now.
+5. Navigate to your D365 organization
+6. Navigate to **Settings** > **Security** > **Users**
+7. Choose **Application Users** in the view filter
+8. Select **+ New**
+9. In the **New User** form, enter the required information. These values must be identical to those values for the new user you created in the Azure tenant. [image: New D365 user]
+10. If all goes well, after selecting **SAVE**, the **Application ID URI** and **Azure AD Object Id** fields will auto-populate with their correct values
+11. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
+
+> [!IMPORTANT]
+> When developing a real-world application using S2S, you should use a custom security role which can be stored in a solution and distributed along with your application. [image: New user completed]
+
+<a name="bkmk_coding"></a>
+## Application coding and execution
+Follow these steps to create or download the sample application.
+1. Create a new console application project in Visual Studio, and then add the Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package to your project.
+2. Replace the project's default source code file with the sample code.
+3. Add the app.config file to the project and replace its appSettings (example) key values with your own. 
+4. Build and run the application.
+
+### Expected results
+An ODATA response listing the top 3 account names in your D365 organization.
+
+### Example console output
+SHown below is example console output obtained from a D365 organization that only had two accounts named "Test Account 1", and "Test Account 2".
+
+```json
+{
+"@odata.context":"https://crmue2.api.crm.dynamics.com/api/data/v9.1/$metadata#accounts(name)",
+"@Microsoft.Dynamics.CRM.totalrecordcount":-1,
+"@Microsoft.Dynamics.CRM.totalrecordcountlimitexceeded":false,
+
+"value":[
+{"@odata.etag":"W/\"4648334\"","name":"Test Account 1","accountid":"28630624-cac9-e811-a964-000d3a3ac063"},
+{"@odata.etag":"W/\"4648337\"","name":"Test Account 2","accountid":"543fd72a-cac9-e811-a964-000d3a3ac063"}]
+}
+```
+
+### See also
  [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)   
  [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)
-
-<!--
-
- Can this scenario be hightlighted here: https://crmtipoftheday.com/767/server-to-server-authentication-is-here/
-
--->
