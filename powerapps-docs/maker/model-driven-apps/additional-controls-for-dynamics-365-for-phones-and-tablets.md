@@ -92,7 +92,7 @@ search.app:
 |CC_Timeline_URL|URL  field to map for displaying the URL of each timeline item.|  
 |CC_Timeline_URL_Desc|Description for URL field.|  
 |CC_Timeline_ThumbnailURL|Field to map for thumbnail of image/icon to display for each item.|  
-|CC_Timeline_ThumnailURL_Desc|Description for the `ThumbnailURL` field.|  
+|CC_Timeline_ThumbnailURL_Desc|Description for the `ThumbnailURL` field.|  
 |CC_Timeline_Filter|Field to map for timeline filter.|  
 |CC_Timeline_Filter_Desc|Description for Filter.|  
 |CC_Timeline_Footer|Web resource to display as the footer of the timeline.|  
