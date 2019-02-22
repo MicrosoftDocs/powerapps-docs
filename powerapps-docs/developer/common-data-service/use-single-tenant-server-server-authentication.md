@@ -40,19 +40,21 @@ The single-tenant server-to-server scenario typically applies for enterprise org
 <a name="bkmk_registration"></a>
 ## Azure application registration
 To create an application registration in Azure AD, follow these steps.
-1. Navigate to https://portal.office.com
+
+1. Navigate to https://portal.office.com and sign in, or from your D365 organization web page select the application launcher in the top left corner.
 2. Choose **Admin** > **Admin centers** > **Azure Active Directory** [image: admin center]
 3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
 4. Choose **+ New registration** [image: app registration]
-5. In the overview screen, select **API permissions**
-6. Choose **+ Add a permission**
-7. Choose **Dynamics CRM** [image: add permission]
-8. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions** [image: request API permission]
-9. In the **API permissions** form, select **Grant admin consent for "org-name"** and when prompted choose **Yes** [image: permissions completed]
-10. On the **Overview** screen, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will need these later.
-11. Select **Certificates & secrets**
-12. Below **Client secrets**, choose **+ New client secret** to create a secret
-13. In the form, enter a description and select **Add**. Record the secret string. You will not be able to view the secret again once you leave the current screen.
+5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, provide a valid web URI for the **Redirect URI**, and choose **Register**. Note that the URI must syntactically correct but does not need to actually exist.
+6. On the **Overview** page, select **API permissions**
+7. Choose **+ Add a permission**
+8. In the **Microsoft APIs** tab, choose **Dynamics CRM** [image: add permission]
+9. In the **Request API permission** form, select **Delegated permissions**, check **user_impersonation**, and select **Add permissions** [image: request API permission]
+10. ON the **API permissions** page below **Grant consent**, select **Grant admin consent for "org-name"** and when prompted choose **Yes** [image: permissions completed]
+11. Select **Overview** in the navigation panel, record the **Display name**, **Application ID**, and **Directory ID** values of the app registration. You will provide these later in the code sample.
+12. In the navigation panel, select **Certificates & secrets**
+13. Below **Client secrets**, choose **+ New client secret** to create a secret
+14. In the form, enter a description and select **Add**. Record the secret string. You will not be able to view the secret again once you leave the current screen.
 
 <a name="bkmk_appuser"></a>
 ## Application User creation
@@ -75,17 +77,18 @@ To create an unlicensed "application user" in your Dynamics 365 organization, fo
 
 <a name="bkmk_coding"></a>
 ## Application coding and execution
-Follow these steps to create or download the sample application.
-1. Create a new console application project in Visual Studio, and then add the Microsoft.IdentityModel.Clients.ActiveDirectory NuGet package to your project.
-2. Replace the project's default source code file with the sample code.
-3. Add the app.config file to the project and replace its appSettings (example) key values with your own. 
-4. Build and run the application.
+
+Follow these steps to download, build, and execute the sample application.
+
+1. Download the Visual Studio 2017 SingleTenantS2S [sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SingleTenantS2S).
+2. Update the App.config file with your app registration and server key values.
+3. Build and run the application.
 
 ### Expected results
-An ODATA response listing the top 3 account names in your D365 organization.
+An OData response listing the top 3 account names in your D365 organization.
 
 ### Example console output
-SHown below is example console output obtained from a D365 organization that only had two accounts named "Test Account 1", and "Test Account 2".
+Shown below is example console output obtained from a D365 organization that only had two accounts named "Test Account 1", and "Test Account 2".
 
 ```json
 {
@@ -102,3 +105,8 @@ SHown below is example console output obtained from a D365 organization that onl
 ### See also
  [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)   
  [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)
+
+## List of figures
+
+![Azure AD app registration](media/S2S=app-registration-started.PNG "Azure AD app registration")<br/>
+\[[go back](bkmk_registration)]
