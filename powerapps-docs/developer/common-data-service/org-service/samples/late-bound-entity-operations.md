@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Late-bound entity operations
 
-<!-- show deep insert equivilent 
+<!-- show deep insert equivalent 
 
 sample-initialize-record-existing-record.md
 sample-create-retrieve-update-delete-late-bound.md
