@@ -23,17 +23,19 @@ The key to building efficient apps is to minimize the amount of data that must b
 
 Where this becomes complicated, and the reason this article exists, is because not everything that can be expressed in a PowerApps formula can be delegated to every data source. The PowerApps language mimics Excel's formula language, designed with complete and instant access to a full workbook in memory, with a wide variety of numerical and text manipulation functions. As a result, the PowerApps language is far richer than most data sources can support, including powerful database engines such as SQL Server.
 
-**Working with large data sets requires using data sources and formulas that can be delegated.**  It's the only way to keep your app performing well and ensure users can access all the information they need. Take heed of delegation warnings that identify places where delegation isn't possible. If you're working with small data sets (fewer than 500 records), you can use any data source and formula because the app can process data locally if the formula can't be delegated. 
+**Working with large data sets requires using data sources and formulas that can be delegated.** It's the only way to keep your app performing well and ensure users can access all the information they need. Take heed of delegation warnings that identify places where delegation isn't possible. If you're working with small data sets (fewer than 500 records), you can use any data source and formula because the app can process data locally if the formula can't be delegated. 
 
 > [!NOTE]
 > Delegation warnings were previously flagged in PowerApps as "blue dot" suggestions, but delegation suggestions have since been re-classified as warnings. If the data in your data source exceeds 500 records and a function can't be delegated, PowerApps might not be able to retrieve all of the data, and your app may have wrong results. Delegation warnings help you manage your app so that it has correct results.
 
 ## Delegable data sources
-See the [delegation list](delegation-list.md) for the full list of which data sources support delegation and to what extent.
+Delegation is supported for certain tabular data sources only. If a data source supports delegation, its [connector documentation](https://docs.microsoft.com/connectors/) outlines that support. For example, these tabular data sources are the most popular, and they support delegation:
 
-We are continuing to add delegation support to existing data sources, as well as add more data sources.
+- [Common Data Service (CDS) for Apps](https://docs.microsoft.com/connectors/commondataservice/) 
+- [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
+- [SQL Server](https://docs.microsoft.com/connectors/sql/) 
 
-Imported Excel workbooks (using the "Add static data to your app" data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full PowerApps language can be applied.
+Imported Excel workbooks (using the **Add static data to your app** data source), collections, and tables stored in context variables don't require delegation. All of this data is already in memory, and the full PowerApps language can be applied.
 
 ## Delegable functions
 The next step is to use only those formulas that can be delegated. Included here are the formula elements that could be delegated. However, every data source is different, and not all of them support all of these elements. Check for delegation warnings in your particular formula.
