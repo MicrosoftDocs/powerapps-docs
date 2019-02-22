@@ -9,7 +9,7 @@
     href: ../whats-new.md
 - name: Find and run apps
   href: ../user/index.md
-  items: 
+  items:
   - name: In a browser
     href: ../user/run-app-browser.md
   - name: On a phone (canvas)
@@ -30,20 +30,20 @@
     - name: Navigation and basics
       href: ../user/navigation.md
       items:
-      - name: View your profile 
+      - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Set personal options
         href: ../user/set-personal-options.md
-      - name: Use a screen reader 
+      - name: Use a screen reader
         href: ../user/screen-reader.md
-      - name: Keyboard shortcuts 
+      - name: Keyboard shortcuts
         href: ../user/keyboard-shortcuts.md
     - name: Work with records
       items:
       - name: Create a record
         href: ../user/create-a-record.md
       - name: Add activities to the timeline
-        href: ../user/add-activities.md 
+        href: ../user/add-activities.md
         items:
         - name: FAQ about activities
           href: ../user/faq-for-timeline-and-activity.md
@@ -51,9 +51,9 @@
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
         href: ../user/Access-team.md
-      - name: Deactivate accounts or contacts 
+      - name: Deactivate accounts or contacts
         href: ../user/deactivate-activate-account-contact.md
-      - name: Track your progress with dashboards and charts 
+      - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
     - name: Search records
       items:
@@ -63,21 +63,21 @@
         href: ../user/create-edit-or-save-advanced-find-search.md
     - name: Import and export data
       items:
-      - name: Import data 
+      - name: Import data
         href: ../user/import-data.md
       - name: Export data to Excel Online
         href: ../user/export-to-excel-online.md
       - name: Export data to Excel
         href: ../user/export-data-excel.md
-      - name: Export to a dynamic worksheet 
+      - name: Export to a dynamic worksheet
         href: ../user/export-excel-dynamic-worksheet.md
-      - name: Export to a static worksheet 
+      - name: Export to a static worksheet
         href: ../user/export-excel-static-worksheet.md
-      - name: Export to an Exel PivotTable 
-        href: ../user/export-excel-pivottable.md     
+      - name: Export to an Excel PivotTable
+        href: ../user/export-excel-pivottable.md
     - name: Automate processes
       items:
-      - name: Work with business processes 
+      - name: Work with business processes
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
@@ -426,7 +426,7 @@
           - name: GroupBy
             href: ./canvas-apps/functions/function-groupby.md
           - name: GUID
-            href: ./canvas-apps/functions/function-guid.md	    
+            href: ./canvas-apps/functions/function-guid.md
           - name: HashTags
             href: ./canvas-apps/functions/function-hashtags.md
           - name: Hour
@@ -720,9 +720,9 @@
       href: ./model-driven-apps/model-driven-app-components.md
     - name: Define data for an app
       href: ./model-driven-apps/define-data-model-driven-app.md
-      items: 
+      items:
       - name: Common field properties
-        href: ./model-driven-apps/common-field-properties-legacy.md 
+        href: ./model-driven-apps/common-field-properties-legacy.md
       - name: Overview of special field properties
         href: ./model-driven-apps/special-field-properties-legacy.md
       - name: Translate localizable text
@@ -731,16 +731,16 @@
       items:
       - name: Use app designer to build an app
         href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
-        items: 
+        items:
         - name: Create an app
           href: ./model-driven-apps/create-edit-app.md
         - name: Create a site map for an app
-          href: ./model-driven-apps/create-site-map-app.md 
+          href: ./model-driven-apps/create-site-map-app.md
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
-        items: 
+        items:
         - name: Use the new form designer
           href: ./model-driven-apps/form-designer-overview.md
           items:
@@ -755,7 +755,7 @@
             href: ./model-driven-apps/create-edit-quick-create-forms.md
           - name: "Create a quick view form"
             href: ./model-driven-apps/create-edit-quick-view-forms.md
-        - name: Form editor overview 
+        - name: Form editor overview
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
           items:
           - name: Form properties overview
@@ -766,12 +766,12 @@
             href: ./model-driven-apps/tab-properties-legacy.md
         - name: Design considerations for main forms
           href: ./model-driven-apps/design-considerations-main-forms.md
-        - name: How main forms appear 
+        - name: How main forms appear
           href: ./model-driven-apps/main-form-presentations.md
         - name: Control access to forms
           href: ./model-driven-apps/control-access-forms.md
         - name: Add a field to a form
-          href: ./model-driven-apps/add-field-form.md 
+          href: ./model-driven-apps/add-field-form.md
         - name: Show or hide form elements
           href: ./model-driven-apps/visibility-options-legacy.md
         - name: Change navigation within a form
@@ -780,39 +780,39 @@
           - name: "Add form navigation for related entities"
             href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
         - name: "How-to guides: Forms"
-          items:  
+          items:
           - name: How to use the main form and its components
-            href: ./model-driven-apps/use-main-form-and-components.md   
+            href: ./model-driven-apps/use-main-form-and-components.md
           - name: How to open the form editor
             href: ./model-driven-apps/open-form-editor.md
           - name: How to add iFrames to forms
-            href: ./model-driven-apps/iframe-properties-legacy.md   
+            href: ./model-driven-apps/iframe-properties-legacy.md
           - name: How to optimize form performance
-            href: ./model-driven-apps/optimize-form-performance.md   
+            href: ./model-driven-apps/optimize-form-performance.md
           - name: How to work with sections in a form
-            href: ./model-driven-apps/section-properties-legacy.md                                                           
+            href: ./model-driven-apps/section-properties-legacy.md
           - name: How to configure Bing maps in a form
-            href: ./model-driven-apps/configure-bing-maps-legacy.md   
+            href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: How to assign form order
-            href: ./model-driven-apps/assign-form-order.md   
+            href: ./model-driven-apps/assign-form-order.md
           - name: How to configure event handlers in a form
-            href: ./model-driven-apps/configure-event-handlers-legacy.md   
+            href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: How to disable auto-save in a form
             href: ./model-driven-apps/manage-auto-save.md
       - name: Embed a canvas app on a form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
-        items: 
+        items:
         - name: "Pass the current record to an embedded canvas app"
           href: ./model-driven-apps/pass-current-embedded-canvas-app.md
         - name: "Pass related records to an embedded canvas app"
-          href:  ./model-driven-apps/pass-related-embedded-canvas-app.md 
+          href:  ./model-driven-apps/pass-related-embedded-canvas-app.md
         - name: "Share an embedded canvas app"
-          href:  ./model-driven-apps/share-embedded-canvas-app.md 
+          href:  ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines"
-          href:  ./model-driven-apps/embedded-canvas-app-guidelines.md 
+          href:  ./model-driven-apps/embedded-canvas-app-guidelines.md
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
-        items: 
+        items:
         - name: "Create or edit a view"
           href: ./model-driven-apps/create-and-edit-views.md
         - name: "Access a view definition"
@@ -822,19 +822,19 @@
         - name: Choose and configure columns in views
           href: ./model-driven-apps/choose-and-configure-columns.md
         - name: "How to guides: Views"
-          items: 
+          items:
           - name: How to make grids editable
-            href: ./model-driven-apps/make-grids-lists-editable-custom-control.md     
+            href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
           - name: How to sort records in a view
-            href: ./model-driven-apps/configure-sorting.md 
+            href: ./model-driven-apps/configure-sorting.md
           - name: How to edit filter criteria and sort order
-            href: ./model-driven-apps/edit-filter-criteria.md 
+            href: ./model-driven-apps/edit-filter-criteria.md
           - name: How to set managed properties for views
-            href: ./model-driven-apps/managed-properties-views.md 
+            href: ./model-driven-apps/managed-properties-views.md
           - name: How to Specify a default view
-            href: ./model-driven-apps/specify-default-views.md 
+            href: ./model-driven-apps/specify-default-views.md
         - name: How to delete or deactivate a view
-          href: ./model-driven-apps/remove-views.md  
+          href: ./model-driven-apps/remove-views.md
     - name: Apply business logic in an app
       href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
       items:
@@ -851,11 +851,11 @@
       - name: Set properties for a chart or list
         href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
       - name: Use system controls for data visualizations
-        items:  
+        items:
         - name: Set up the Notes control
-          href: ./model-driven-apps/notes-control-legacy.md 
+          href: ./model-driven-apps/notes-control-legacy.md
         - name: Quick view control properties
-          href: ./model-driven-apps/quick-view-control-properties-legacy.md 
+          href: ./model-driven-apps/quick-view-control-properties-legacy.md
         - name: Additional controls for Dynamics 365 for phones and tablets
           href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
         - name: Timer control overview
@@ -871,7 +871,7 @@
   - name: Manage an app
     items:
     - name: Manage app properties
-      href: ./model-driven-apps/manage-app-properties.md  
+      href: ./model-driven-apps/manage-app-properties.md
     - name: Specify properties for Unified Interface apps
       href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
     - name: Delete an app
@@ -882,7 +882,7 @@
     - name: Privileges for customization
       href: ./model-driven-apps/privileges-required-customization.md
     - name: Create or edit web resources
-      href: ./model-driven-apps/create-edit-web-resources.md      
+      href: ./model-driven-apps/create-edit-web-resources.md
     - name: Web resource properties
       href: ./model-driven-apps/web-resource-properties-legacy.md
     - name: Change custom entity icons
@@ -905,11 +905,11 @@
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
     - name: Add data to an entity using Power Query
-      href: ./common-data-service/data-platform-cds-newentity-pq.md  
+      href: ./common-data-service/data-platform-cds-newentity-pq.md
     - name: Entities and metadata
       href: ./common-data-service/create-edit-metadata.md
     - name: Types of entities
-      href: ./common-data-service/types-of-entities.md 
+      href: ./common-data-service/types-of-entities.md
     - name: Create and edit entities
       href: ./common-data-service/create-edit-entities.md
     - name: Edit an entity
@@ -919,15 +919,15 @@
     - name: Virtual entity OData v4 data provider
       href: ./common-data-service/virtual-entity-odata-provider-requirements.md
     - name: Define alternate keys using PowerApps portal
-      href: ./common-data-service/define-alternate-keys-portal.md   
+      href: ./common-data-service/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer
       href: ./common-data-service/define-alternate-keys-solution-explorer.md
     - name: "How to guides: Entity"
-      items: 
+      items:
       - name: How to create entities using PowerApps portal
         href: ./common-data-service/create-edit-entities-portal.md
       - name: How to create entities using solution explorer
-        href: ./common-data-service/create-edit-entities-solution-explorer.md  
+        href: ./common-data-service/create-edit-entities-solution-explorer.md
       - name: How to import or export data
         href: ./common-data-service/data-platform-import-export.md
       - name: How to open entity data in Excel
@@ -935,9 +935,9 @@
       - name: How to define alternate keys
         href: ./common-data-service/define-alternate-keys-reference-records.md
       - name: How to define status reason transitions
-        href: ./common-data-service/define-status-reason-transitions.md  
+        href: ./common-data-service/define-status-reason-transitions.md
       - name: How to delete a custom entity
-        href: ./common-data-service/data-platform-delete-entity.md  
+        href: ./common-data-service/data-platform-delete-entity.md
       - name: How to display custom icons
         href: ./common-data-service/display-custom-icons-instead.md
       - name: How to edit system entity messages
@@ -950,19 +950,19 @@
         href: ./common-data-service/virtual-entity-walkthrough-using-odata-provider.md
   - name: Work with entity relationships
     href: ./common-data-service/relationships-overview.md
-    items: 
+    items:
     - name: Entity relationships overview
-      href: ./common-data-service/create-edit-entity-relationships.md  
+      href: ./common-data-service/create-edit-entity-relationships.md
     - name: Create one-to-many entity relationships overview
       href: ./common-data-service/create-edit-1n-relationships.md
     - name: Create many-to-many entity relationships overview
       href: ./common-data-service/create-edit-nn-relationships.md
     - name: Create an entity relationship
       href: ./common-data-service/data-platform-entity-lookup.md
-    - name: Create one-to-many entity relationships 
+    - name: Create one-to-many entity relationships
       href: ./common-data-service/create-edit-1n-relationships-portal.md
     - name: Create one-to-many entity relationships using solution explorer
-      href: ./common-data-service/create-edit-1n-relationships-solution-explorer.md 
+      href: ./common-data-service/create-edit-1n-relationships-solution-explorer.md
     - name: Create many-to-many entity relationships using PowerApps portal
       href: ./common-data-service/create-edit-nn-relationships-portal.md
     - name: Set managed properties for entity relationships
@@ -974,43 +974,43 @@
     - name: Configure connection roles
       href: ./common-data-service/configure-connection-roles.md
     - name: "How-to guides: Relationships"
-      items: 
+      items:
       - name: How to create many-to-many relationships using PowerApps portal
         href: ./common-data-service/create-edit-nn-relationships-portal.md
       - name: How to create many-to-many relationships using PowerApps solution explorer
-        href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md  
+        href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md
       - name: How to set managed properties for relationships
         href: ./common-data-service/set-managed-properties-relationships.md
       - name: How to query and visualize hierarchically related data
-        href: ./common-data-service/query-visualize-hierarchical-data.md 
+        href: ./common-data-service/query-visualize-hierarchical-data.md
       - name: How to define and query hierarchically related data
         href: ./common-data-service/define-query-hierarchical-data.md
       - name: How to configure connection roles
         href: ./common-data-service/configure-connection-roles.md
   - name: Work with fields
     href: ./common-data-service/fields-overview.md
-    items: 
+    items:
     - name: Types of fields
       href: ./common-data-service/types-of-fields.md
     - name: Global option sets overview
       href: ./common-data-service/create-edit-global-option-sets.md
     - name: Set managed properties for fields
-      href: ./common-data-service/set-managed-properties-for-field.md 
+      href: ./common-data-service/set-managed-properties-for-field.md
     - name: Behavior and format of the Date and Time field
-      href: ./common-data-service/behavior-format-date-time-field.md     
+      href: ./common-data-service/behavior-format-date-time-field.md
     - name: "How-to guides: Fields"
-      items: 
-      - name: How to create fields 
-        href: ./common-data-service/create-edit-fields.md 
+      items:
+      - name: How to create fields
+        href: ./common-data-service/create-edit-fields.md
       - name: How to manage fields
         href: ./common-data-service/data-platform-manage-fields.md
       - name: How to create fields using PowerApps portal
-        href: ./common-data-service/create-edit-field-portal.md 
+        href: ./common-data-service/create-edit-field-portal.md
       - name: How to create fields using PowerApps solution explorer
         href: ./common-data-service/create-edit-field-solution-explorer.md
       - name: How to create an option set using PowerApps portal
         href: ./common-data-service/custom-picklists.md
-      - name: How to create global option sets using solution explorer  
+      - name: How to create global option sets using solution explorer
         href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
       - name: How to define calculated fields
         href: ./common-data-service/define-calculated-fields.md
@@ -1022,24 +1022,24 @@
         href: ./common-data-service/delete-fields.md
   - name: Apply business logic
     href: ./common-data-service/cds-processes.md
-    items: 
-      - name: Create a business rule for an entity 
+    items:
+      - name: Create a business rule for an entity
         href: ./common-data-service/data-platform-create-business-rule.md
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
     items:
-    - name: Use solutions 
+    - name: Use solutions
       href: ./common-data-service/use-solution-explorer.md
     - name: Use the Common Data Services default solution
-      href: ./common-data-service/use-solutions-for-your-customizations.md   
+      href: ./common-data-service/use-solutions-for-your-customizations.md
     - name: Import, update, and export solutions
-      href: ./common-data-service/import-update-export-solutions.md 
+      href: ./common-data-service/import-update-export-solutions.md
     - name: Navigate to a specific solution
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution
       href: ./common-data-service/create-solution.md
     - name: Use solution checker
-      href: ./common-data-service/use-powerapps-checker.md      
+      href: ./common-data-service/use-powerapps-checker.md
     - name: Use segmented solutions
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Change the solution publisher prefix
@@ -1047,12 +1047,12 @@
     - name: Set managed properties in metadata
       href: ./common-data-service/set-managed-properties-metadata.md
     - name: Publish changes
-      href: ./common-data-service/publish-changes-for-use-customer-service-hub.md                                                 
+      href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
   - name: License requirements for entities
     href: ./common-data-service/data-platform-entity-licenses.md
     items:
     - name: Complex entities and licensing
-      href: ./common-data-service/data-platform-complex-entities.md 
+      href: ./common-data-service/data-platform-complex-entities.md
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: Create a Power BI report

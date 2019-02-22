@@ -38,7 +38,7 @@ Some standard entities already have hierarchies defined. Other entities, includi
 With Common Data Service for Apps, hierarchical data structures are supported by *self-referential* one-to-many (1:N) relationships of the related records. 
 
 > [!NOTE]
-> *Self-referential* means that the entity is related to itself. For example, the account entity has a lookup field to assoicate it with another account entity record.
+> *Self-referential* means that the entity is related to itself. For example, the account entity has a lookup field to associate it with another account entity record.
 
 When a self-referential one-to-many (1:N) relationship exists, in the relationship definition the **Hierarchcial** option is available to be set to **Yes**.
 
