@@ -42,9 +42,9 @@ The single-tenant server-to-server scenario typically applies for enterprise org
 To create an application registration in Azure AD, follow these steps.
 
 1. Navigate to https://portal.office.com and sign in, or from your D365 organization web page select the application launcher in the top left corner.
-2. Choose **Admin** > **Admin centers** > **Azure Active Directory** [image: admin center]
+2. Choose **Admin** > **Admin centers** > **Azure Active Directory**
 3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
-4. Choose **+ New registration** [image: app registration]
+4. Choose **+ New registration** [ [image](#bkmk_app-registration-image) ]
 5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, provide a valid web URI for the **Redirect URI**, and choose **Register**. Note that the URI must syntactically correct but does not need to actually exist.
 6. On the **Overview** page, select **API permissions**
 7. Choose **+ Add a permission**
@@ -108,5 +108,6 @@ Shown below is example console output obtained from a D365 organization that onl
 
 ## List of figures
 
-![Azure AD app registration](media/S2S=app-registration-started.PNG "Azure AD app registration")<br/>
-\[[go back](bkmk_registration)]
+<a name="bkmk_app-registration-image"></a>
+![Azure AD app registration](media/S2S-app-registration-started.PNG "Azure AD app registration")<br/>
+*Azure AD app registration* \[[go back](#bkmk_registration)]
