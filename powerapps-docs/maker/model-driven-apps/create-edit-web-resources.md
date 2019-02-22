@@ -137,4 +137,4 @@ When your customizations are complete, publish them:
 [Web resource properties](web-resource-properties-legacy.md) <br /> 
 [Create and design forms](create-design-forms.md) <br />
 [Understand model-driven app components](model-driven-app-components.md) <br /> 
-[Developer Documenttion: Web resources for Customer Engagement](/dynamics365/customer-engagement/developer/web-resources)
+[Developer Documentation: Web resources for Customer Engagement](/dynamics365/customer-engagement/developer/web-resources)

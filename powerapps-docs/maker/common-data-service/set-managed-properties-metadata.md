@@ -76,12 +76,12 @@ If the field is customizable, you set the following options to **True** or **Fal
 - **Can change requirement level** 
 - **Can change Additional Properties** : This property controls any other customizations that do not have a specific managed property.
 
-Setting all the individual options to **False**, is equivilent to setting **Can be customized** to **False**.  
+Setting all the individual options to **False**, is equivalent to setting **Can be customized** to **False**.  
 
 Apply your choices and click **Set** to close the dialog box.
 
 > [!NOTE]
-> If this field is a **Date and Time** field, an addional **Can change date and time behavior** property is available. More information: [Behavior and format of the Date and Time field](behavior-format-date-time-field.md)
+> If this field is a **Date and Time** field, an additional **Can change date and time behavior** property is available. More information: [Behavior and format of the Date and Time field](behavior-format-date-time-field.md)
 
 ## Relationship managed properties
 

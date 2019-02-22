@@ -180,7 +180,7 @@ Let's rebuild our adding machine by using a context variable:
     This formula will automatically be recalculated and show the user the value of **RunningTotal** as it changes based on the buttons that the user selects.
    
     ![](media/working-with-variables/context-variable-3.png)
-6. Preview the app and we have our adding machine as described above.  Enter a number in the text box and press the **Add** button a few timnes.  When ready, return to the authoring experience using the Esc key.  
+6. Preview the app and we have our adding machine as described above.  Enter a number in the text box and press the **Add** button a few times.  When ready, return to the authoring experience using the Esc key.  
    
     ![](media/working-with-variables/context-variable-4.png)
 7. You can set the value of a context variable while navigating to a screen.  This is useful for passing "context" or "parameters" from one screen to another.  To see this, insert a new screen, and insert a button with the **OnSelect** property set to:

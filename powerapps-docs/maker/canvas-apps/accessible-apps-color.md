@@ -30,7 +30,7 @@ In practical terms, all interactive controls must have adequate color contrast b
 ## Minimum contrast for non-text
 
 > [!NOTE]
-> In the [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) standard, contrast requirements only applies to text. For greater accessibility, consider the upcoming [WCAG 2.1 contrast guidelines](https://www.w3.org/TR/WCAG21/#non-text-contrast) for essential user interface components like icon buttons. A minimum ratio of 3:1 is recommended for these components. The guidelines descibed in this section are **optional** for WCAG 2.0 compliance.
+> In the [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) standard, contrast requirements only applies to text. For greater accessibility, consider the upcoming [WCAG 2.1 contrast guidelines](https://www.w3.org/TR/WCAG21/#non-text-contrast) for essential user interface components like icon buttons. A minimum ratio of 3:1 is recommended for these components. The guidelines described in this section are **optional** for WCAG 2.0 compliance.
 
 ### User interface components
 All interactive controls must have adequate color contrast between:

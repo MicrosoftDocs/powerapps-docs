@@ -44,7 +44,7 @@ PowerApps is a great tool for making your SharePoint experience better in two wa
 
 **Customizing a SharePoint form** is great if you want to customize how users add, view, or edit items in a list that they use for their everyday work. Clicking **Customize Forms** will create a single-screen &quot;forms app&quot; that will change modes (new/edit/view) based on context. SharePoint manages these apps; their permissions are the same as the list permissions for editing/viewing.
 
-**Creating a PowerApps canvas app from SharePoint** allows you to run the app by itself on a mobile device. You can also embedd the app in a SharePoint page. Clicking this will create a three-screen app (browse list, view details, and create/update an item). The permission/sharing model for these apps isn't tied to SharePoint but instead is managed from PowerApps.
+**Creating a PowerApps canvas app from SharePoint** allows you to run the app by itself on a mobile device. You can also embed the app in a SharePoint page. Clicking this will create a three-screen app (browse list, view details, and create/update an item). The permission/sharing model for these apps isn't tied to SharePoint but instead is managed from PowerApps.
 
 Now that you understand the difference between the two options, the following section will give you an overview of using each.
 
