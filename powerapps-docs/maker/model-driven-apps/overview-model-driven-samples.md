@@ -47,10 +47,10 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 ![Model Sample App](media/overview-model-driven-samples/model-driven-create-page-sample.png)
 
 3. The App designer will open providing multiple options for customizing the app. 
-4. For additonal customization options, click **Advanced** from the left navigation in the portal.
+4. For additional customization options, click **Advanced** from the left navigation in the portal.
 
 ## Remove sample apps and data 
-- Deleting a sample app requires deleting the corresponsing  [managed solution](https://docs.microsoft.com/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
+- Deleting a sample app requires deleting the corresponding  [managed solution](https://docs.microsoft.com/dynamics365/customer-engagement/developer/uninstall-delete-solution). 
 - Deleting the solution also deletes any sample data specific to the custom entities for the app.
 - If customizations were made to the sample app, there may be [dependencies](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
