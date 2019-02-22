@@ -24,7 +24,7 @@ A label shows data that you specify as a literal string of text, which appears e
 
 ## Key properties
 
-**[AutoHeight](properties-core.md)** – Set to true to allow the label to auto-grow its height to show all text configurated. Set to false to truncate the text to the height assigned.
+**[AutoHeight](properties-core.md)** – Set to true to allow the label to auto-grow its height to show all text. Set to false to truncate the text to the height assigned.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
 

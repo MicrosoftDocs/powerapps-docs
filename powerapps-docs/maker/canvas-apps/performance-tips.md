@@ -67,7 +67,7 @@ You can enclose the same formula in the **Concurrent** function to reduce the ov
 		
 With this change, the app fetches the tables in parallel: 
 
-![Parellel ClearCollect](./media/performance-tips/perfconcurrent2.png)	
+![Parallel ClearCollect](./media/performance-tips/perfconcurrent2.png)	
 
 ## Cache lookup data
 Use the **Set** function to cache data from lookup tables locally to avoid repeatedly retrieving data from the source. This technique
