@@ -2,7 +2,7 @@
 title: "Use an alternate key to create a record (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Alternate keys can be used to create instances of Entity and EntityReference classes. This topic discusses the usage patterns and possible exceptions that might be thrown when using alternate keys." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 02/23/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -18,8 +18,12 @@ search.app:
 # Use an alternate key to create a record
 
 You   can now use alternate keys to create instances of <xref:Microsoft.Xrm.Sdk.Entity> and <xref:Microsoft.Xrm.Sdk.EntityReference> classes. This topic discusses the usage patterns and possible exceptions that might be thrown when using alternate keys. To understand how to define alternate keys for an entity, see [Define alternate keys for an entity](define-alternate-keys-entity.md).  
+
+> [!NOTE]
+> You can also update records using alternate keys. More information: [Update with Alternate Key](org-service/entity-operations-update-delete.md#update-with-alternate-key)
   
-<a name="BKMK_entity"></a>   
+<a name="BKMK_entity"></a>
+
 ## Using alternate keys to create an entity  
  You can now create an <xref:Microsoft.Xrm.Sdk.Entity> with a primary ID or with a single `KeyAttribute` in a single call using the new constructor.  
   
@@ -53,11 +57,13 @@ public EntityReference(string logicalName, KeyAttributeCollection keyAttributeCo
   
 -   A <xref:Microsoft.Xrm.Sdk.KeyAttributeCollection> collection with a valid set of attributes matching a defined key for the entity.  
   
-<a name="BKMK_input"></a>   
+<a name="BKMK_input"></a> 
+  
 ## Alternative input to messages  
  When passing entities to <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>, values provided for Lookup attributes using an <xref:Microsoft.Xrm.Sdk.EntityReference> can now use <xref:Microsoft.Xrm.Sdk.EntityReference> with alternate keys defined in <xref:Microsoft.Xrm.Sdk.EntityReference.KeyAttributes> to specify related record.  These will be resolved to and replaced by primary ID based entity references before the messages are processed.  
   
 <a name="BKMK_Exceptions"></a>   
+
 ## Exceptions when using alternate keys  
  You have to be aware of the following conditions and possible exceptions when using alternate keys:  
   

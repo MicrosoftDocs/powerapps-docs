@@ -2,7 +2,7 @@
 title: "Update and Delete entities using the Organization Service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to update and delete entities using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 02/23/2019
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.topic: "article"
@@ -44,6 +44,11 @@ Each of the examples uses a `svc` variable that represents an instance of a clas
 Both of the examples below uses the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> method to set attribute values for an entity that was previously retrieved.
 
 Use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Id> property to transfer the unique identifier value of the retrieved entity to the entity instance used to perform the update operation.
+
+> [!NOTE]
+> If you attempt to update a record without a primary key value you will get the error: `Entity Id must be specified for Update`.
+> 
+> If you don't have a primary key value, you can also update records using alternate keys. More information: [Update with Alternate Key](#update-with-alternate-key)
 
 ### Late-bound example
 
@@ -222,6 +227,30 @@ svc.Update(account);
 ## Check for duplicate records
 
 When updating an entity you may change the values so that the record represents a duplicate of another record. More information: [Detect duplicate data using the Organization service](detect-duplicate-data.md)
+
+## Update with Alternate Key
+
+If you have an alternate key defined for an entity, you can use that in place of the primary key to update a record. You cannot use the early-bound class to specify the alternate key. You must use the [Entity(String, KeyAttributeCollection)](/dotnet/api/microsoft.xrm.sdk.entity.-ctor#Microsoft_Xrm_Sdk_Entity__ctor_System_String_Microsoft_Xrm_Sdk_KeyAttributeCollection_) constructor to specify the alternate key.
+
+If you want to use early bound types, you can convert the <xref:Microsoft.Xrm.Sdk.Entity> to an early bound class using the <xref:Microsoft.Xrm.Sdk.Entity.ToEntity``1> method.
+
+The following example shows how to update an `Account` entity using an alternate key defined for the `accountnumber` attribute.
+
+> [!IMPORTANT]
+> By default there are no alternate keys defined for any entities. This method can only be used when the environment is configured to define an alternate key for an entity.
+
+```csharp
+var accountNumberKey = new KeyAttributeCollection();
+accountNumberKey.Add(new KeyValuePair<string, object>("accountnumber", "123456"));
+
+Account exampleAccount = new Entity("account", accountNumberKey).ToEntity<Account>();
+exampleAccount.Name = "New Account Name";
+svc.Update(exampleAccount);
+```
+
+More information: 
+- [Work with alternate keys](../define-alternate-keys-entity.md)
+- [Use an alternate key to create a record](../use-alternate-key-create-record.md)
 
 ## Use Upsert
 
