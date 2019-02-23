@@ -110,26 +110,25 @@ Shown below is example console output obtained from a D365 organization that onl
 
 <a name="bkmk_app-registration-started"></a>
 |Azure AD app registration [[go back](#bkmk_registration)] |
-|---------|
+|--------- |
 |![Azure AD app registration](media/S2S-app-registration-started.PNG "Azure AD app registration") |
 
 <a name="bkmk_app-registration-completed"></a>
 |Azure AD app registration overview [[go back](#bkmk_registration)] |
-|---------|
+|--------- |
 |![Azure AD app registration overview](media/S2S-app-registration-completed.PNG "Azure AD app registration overview") |
 
 <a name="bkmk_api-permission-started"></a>
 |Setting app permissions [[go back](#bkmk_registration)] |
-|---------|
+|--------- |
 |![Setting app permissions](media/S2S-api-permission-started.PNG "Setting app permissions") |
 
 <a name="bkmk_api-permission-completed"></a>
 |Completedd app permissions and consent [[go back](#bkmk_registration)] |
-|---------|
+|--------- |
 |![Completedd app permissions and consent](media/S2S-api-permission-completed.PNG "Completedd app permissions and consent") |
 
 <a name="bkmk_new-appuser"></a>
 |Adding a new application user in D365 [[go back](#bkmk_appuser)] |
-|---------|
+|--------- |
 |![Adding a new application user in D365](media/S2S-new-appuser.PNG "Adding a new application user in D365") |
-
