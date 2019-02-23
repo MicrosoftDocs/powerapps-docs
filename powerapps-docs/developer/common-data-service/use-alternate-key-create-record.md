@@ -17,7 +17,7 @@ search.app:
 ---
 # Use an alternate key to create a record
 
-You   can now use alternate keys to create instances of <xref:Microsoft.Xrm.Sdk.Entity> and <xref:Microsoft.Xrm.Sdk.EntityReference> classes. This topic discusses the usage patterns and possible exceptions that might be thrown when using alternate keys. To understand how to define alternate keys for an entity, see [Define alternate keys for an entity](define-alternate-keys-entity.md).  
+You can use alternate keys to create instances of <xref:Microsoft.Xrm.Sdk.Entity> and <xref:Microsoft.Xrm.Sdk.EntityReference> classes. This topic discusses the usage patterns and possible exceptions that might be thrown when using alternate keys. To understand how to define alternate keys for an entity, see [Define alternate keys for an entity](define-alternate-keys-entity.md).  
 
 > [!NOTE]
 > You can also update records using alternate keys. More information: [Update with Alternate Key](org-service/entity-operations-update-delete.md#update-with-alternate-key)
