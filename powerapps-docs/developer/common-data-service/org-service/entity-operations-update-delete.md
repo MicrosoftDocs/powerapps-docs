@@ -37,7 +37,9 @@ Each of the examples uses a `svc` variable that represents an instance of a clas
 > You should create a new entity instance, set the id attribute and any attribute values you are changing, and use that entity instance to update the record.
 
 > [!NOTE]
-> The metadata for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. More information: [Attribute requirement level](../entity-attribute-metadata.md#attribute-requirement-level)
+> The metadata for attributes includes a `RequiredLevel` property. When this is set to `SystemRequired`, you cannot set these attributes to a null value. If you attempt this you will get error code  `-2147220989` with the message `Attribute: <attribute name> cannot be set to NULL`.
+> 
+> More information: [Attribute requirement level](../entity-attribute-metadata.md#attribute-requirement-level)
 
 ## Basic update
 
