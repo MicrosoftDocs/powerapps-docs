@@ -1,6 +1,6 @@
 ---
-title: Create custom controls using PowerApps Control Framework | Microsoft Docs
-description: Start creating controls using the powerapps control Framework
+title: Create custom controls using PowerApps Control Framework Tooling| Microsoft Docs
+description: Start creating controls using the powerapps control Framework Tooling
 keywords: PowerApps Control Framework, Custom Controls, Control Framework
 ms.author: nabuthuk
 manager: kvivek
@@ -12,11 +12,15 @@ ms.topic: "article"
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 
-# Create Controls using PowerApps Control Framework
+# Create Controls using PowerApps Control Framework Tooling
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic showcases how to implement custom controls using **PowerApps Control Framework**. Custom controls provide enhanced user experience to view and work with data in forms, views.
+This topic showcases how to implement custom controls using **PowerApps Control Framework Tooling**. Use the PowerApps CLI (Command Line Interface) to create, debug and deploy custom controls. While in Preview the PowerApps CLI will enable developers to quickly create PCF controls and in the coming months the set of capabilities will expand to include plugin development and aid the **Microsoft** recommended **Application Lifecycle Management (ALM) processes**. 
+
+Microsoft PowerApps CLI is a simple, single-stop developer command line interface which offers you everything that is required to create a custom control and enable you to perform all the development tasks via a simple and efficient set of commands. The PowerApps CLI is the first step towards a comprehensive **ALM** story where Enterprise Developers and ISVs can create, build, debug and publish their extensions and customizations quickly and efficiently. The significance here is a shift towards a source centric approach, to provide better support for continuous validation starting from internal development loop through to AppSource publishing and end-customer deployment. 
+ 
+Developers will be empowered to identify problems early and operations like adding a component to a solution, or publishing to upstream environments can be automated with simple tasks as we enable deeper integration with Azure DevOps 
 
 Each custom control is comprised of the following key components:
 
@@ -49,146 +53,41 @@ The different nodes in the manifest file defines various aspects of the control 
 
 [!INCLUDE [control-implementation-library](control-implementation-library.md)]
 
-### Sample Code in JavaScript
-
-```JavaScript
-/*
-This file is part of the Microsoft PowerApps code samples.
-Copyright (C) Microsoft Corporation.  All rights reserved.
-This source code is intended only as a supplement to Microsoft Development Tools and/or
-on-line documentation.  See these other materials for detailed information regarding
-Microsoft code samples.
-
-THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
-EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
-MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
-*/
-
-"use strict";
-
-var MyNameSpace = MyNameSpace || {};
-
-MyNameSpace.JSHelloWorldControl = function(){
-}
-
-
-/**
-* Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
-* Data-set values are not initialized here, use updateView.
-* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-* @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-* @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-* @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
-*/
-MyNameSpace.JSHelloWorldControl.prototype.init = function (context, notifyOutputChanged, state, container) {
-this._labelElement = document.createElement("label");
-this._labelElement.setAttribute("class", "JS_HelloWorldColor");
-container.appendChild(this._labelElement);
-};
-
-/**
-* Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
-* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
-*/
-MyNameSpace.JSHelloWorldControl.prototype.updateView = function (context) {
-this._labelElement.innerText = "Hello World! (JS)";
-};
-
-/**
-* It is called by the framework prior to a control receiving new data.
-* @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
-*/
-MyNameSpace.JSHelloWorldControl.prototype.getOutputs = function () {
-return {};
-};
-
-/**
-* Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-* i.e. cancelling any pending remote calls, removing listeners, etc.
-*/
-MyNameSpace.JSHelloWorldControl.prototype.destroy = function () {
-};
-```
-
-### Sample code in TypeScript
-
-```TypeScript
-/*
-This file is part of the Microsoft PowerApps code samples.
-Copyright (C) Microsoft Corporation.  All rights reserved.
-This source code is intended only as a supplement to Microsoft Development Tools and/or
-on-line documentation.  See these other materials for detailed information regarding
-Microsoft code samples.
-
-THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
-EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
-MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
-*/
-
-/// <reference path="../../typing/ControlFramework.d.ts"/>
-/// <reference path="./private_typing/inputsOutputs.d.ts"/>
-
-module MyNameSpace
-{
-export class TSHelloWorldControl implements ControlFramework.StandardControl<InputsOutputs.IInputs, InputsOutputs.IOutputs> {
-
-private _labelElement: HTMLLabelElement;
-
-/**
-* Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
-* Data-set values are not initialized here, use updateView.
-* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-* @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-* @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-* @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
-*/
-public init(context: ControlFramework.Context<InputsOutputs.IInputs>, notifyOutputChanged: () => void, state: ControlFramework.Dictionary, container:HTMLDivElement)
-{
-this._labelElement = document.createElement("label");
-this._labelElement.setAttribute("class", "TS_HelloWorldColor");
-container.appendChild(this._labelElement);
-}
-
-/**
-* Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
-* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
-*/
-public updateView(context: ControlFramework.Context<InputsOutputs.IInputs>,)
-{
-this._labelElement.innerText = "Hello World! (TS)";
-}
-
-/**
-* It is called by the framework prior to a control receiving new data.
-* @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
-*/
-public getOutputs(): InputsOutputs.IOutputs
-{
-return {};
-}
-
-/**
-* Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
-* i.e. cancelling any pending remote calls, removing listeners, etc.
-*/
-public destroy()
-{
-
-    }
-  }
-}
-```
-
-> [!NOTE]
-> Developers need to transpile their code into `JavaScript` if you wish to implement the custom logic in `TypeScript` and add a reference to it in the manifest file.
-
 ## Resources
 
 [!INCLUDE [resources-description](manifest-schema-reference/includes/resources-description.md)]
 More information: [Resources](manifest-schema-reference/resources.md)
 
+## Prerequisites to use PowerApps CLI
+
+To use PowerApps CLI you will need the following: 
+- Install Npm (comes with Node.js) 
+- OR Install Node.js (comes with npm) 
+- Install CLI from Nuget (path to be provided) 
+- Install the PCF modules (includes typescript) from npm  
+- Install Visual Studio Code (optional)  
+- To deploy your custom control, you will need Common Data Service for Apps environment with System administrator or System customizer Privileges.
+
+## Creating custom controls
+
+To get started, open a command line interface (PowerShell).
+
+1. Create a new folder where desired on your local hard drive 
+2. Use a single command to create a new control project with some basic parameters: 
+ 
+    `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>` 
+ 
+> [!NOTE]
+>Today we offer two types of controls field and dataset.
+ 
+3. To retrieve all required project dependencies, run the command `npm install`. 
+4. Open your project in any developer environment of your choice and get started with your amazing custom control development.
+5. Implement the custom logic for the control. More information: [Implementing custom controls using TypeScript]()
+6. To build your control you can use **Visual Studio Code** by using the (Ctrl-Shift-B) command, then selecting your build options or you can build your control quickly using `npm run build` command.
+ 
 
 > [!div class="nextstepaction"]
-> [How to import controls](import-custom-controls.md)
+> [Import controls](import-custom-controls.md)
+> [Debug controls](debugging-custom-controls.md)
 
 
