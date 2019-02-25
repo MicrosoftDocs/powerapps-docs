@@ -78,14 +78,14 @@ To create an unlicensed "application user" in your Dynamics 365 organization, fo
 <a name="bkmk_coding"></a>
 ## Application coding and execution
 
-Follow these steps to download, build, and execute the sample application.
+Follow these steps to download, build, and execute the sample application. The sample calls the WebAPI to return a list of the top 3 accounts (by name) in the organization.
 
 1. Download the Visual Studio 2017 SingleTenantS2S [sample](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SingleTenantS2S).
 2. Update the App.config file with your app registration and server key values.
 3. Build and run the application.
 
 ### Expected results
-An OData response listing the top 3 account names in your D365 organization.
+An OData response listing the names of the top 3 accounts in your D365 organization.
 
 ### Example console output
 Shown below is example console output obtained from a D365 organization that only had two accounts named "Test Account 1", and "Test Account 2".
@@ -109,26 +109,26 @@ Shown below is example console output obtained from a D365 organization that onl
 ## List of figures
 
 <a name="bkmk_app-registration-started"></a>
-* **Azure AD app registration**   [[go back](#bkmk_registration)]<br />
-![Azure AD app registration](media/S2S-app-registration-started.PNG "Azure AD app registration")
-![](media/horizontal-blue-line.PNG)
+### Figure: Azure AD app registration
+![Azure AD app registration](media/S2S-app-registration-started.PNG "Azure AD app registration")<br />
+[[go back](#bkmk_registration)]
 
 <a name="bkmk_app-registration-completed"></a>
-* **Azure AD app registration overview** [[go back](#bkmk_registration)]<br />
-![Azure AD app registration overview](media/S2S-app-registration-completed.PNG "Azure AD app registration overview")
-![](media/horizontal-blue-line.PNG)
+### Figure: Azure AD app registration overview [[go back](#bkmk_registration)]
+![Azure AD app registration overview](media/S2S-app-registration-completed.PNG "Azure AD app registration overview")<br />
+[[go back](#bkmk_registration)]
 
 <a name="bkmk_api-permission-started"></a>
-* **Setting app permissions** [[go back](#bkmk_registration)]<br />
-![Setting app permissions](media/S2S-api-permission-started.PNG "Setting app permissions")
-![](media/horizontal-blue-line.PNG)
+### Figure: Setting app permissions [[go back](#bkmk_registration)]
+![Setting app permissions](media/S2S-api-permission-started.PNG "Setting app permissions")<br />
+[[go back](#bkmk_registration)]
 
 <a name="bkmk_api-permission-completed"></a>
-* **Completedd app permissions and consent** [[go back](#bkmk_registration)]<br />
-![Completedd app permissions and consent](media/S2S-api-permission-completed.PNG "Completedd app permissions and consent")
-![](media/horizontal-blue-line.PNG)
+### Figure: Completedd app permissions and consent [[go back](#bkmk_registration)]
+![Completedd app permissions and consent](media/S2S-api-permission-completed.PNG "Completedd app permissions and consent")<br />
+[[go back](#bkmk_registration)]
 
 <a name="bkmk_new-appuser"></a>
-* **Adding a new application user in D365** [[go back](#bkmk_appuser)]<br />
-![Adding a new application user in D365](media/S2S-new-appuser.PNG "Adding a new application user in D365")
-![](media/horizontal-blue-line.PNG)
+### Figure: Adding a new application user in D365
+![Adding a new application user in D365](media/S2S-new-appuser.PNG "Adding a new application user in D365")<br />
+[[go back](#bkmk_appuser)]
