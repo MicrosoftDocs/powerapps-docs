@@ -71,6 +71,8 @@ The reference panel is a great way to get work done without moving away from the
 
 There are three types of notifications that are shown on a form: Informational, Warning and Error. Notifications are always available at the top of the form, just above the header.
 
+The notifications described below are available with version 9.1.9.3010.
+
 ![Example of notifications](media/notifications.png "Example of notifications")
 
 If there is only one notification you will see a single line.
