@@ -114,7 +114,7 @@ Shown below is example console output obtained from a D365 organization that onl
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_app-registration-completed"></a>
-### Figure: Azure AD app registration overview [[go back](#bkmk_registration)]
+### Figure: Azure AD app registration overview
 ![Azure AD app registration overview](media/S2S-app-registration-completed.PNG "Azure AD app registration overview")<br />
 [[go back](#bkmk_registration)]
 
@@ -124,7 +124,7 @@ Shown below is example console output obtained from a D365 organization that onl
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_api-permission-completed"></a>
-### Figure: Completedd app permissions and consent
+### Figure: Completed app permissions and consent
 ![Completedd app permissions and consent](media/S2S-api-permission-completed.PNG "Completedd app permissions and consent")<br />
 [[go back](#bkmk_registration)]
 
