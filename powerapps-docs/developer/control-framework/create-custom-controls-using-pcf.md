@@ -16,78 +16,38 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic showcases how to implement custom controls using **PowerApps Control Framework Tooling**. Use the PowerApps CLI (Command Line Interface) to create, debug and deploy custom controls. While in Preview the PowerApps CLI will enable developers to quickly create PCF controls and in the coming months the set of capabilities will expand to include plugin development and aid the **Microsoft** recommended **Application Lifecycle Management (ALM) processes**. 
+This topic showcases how to create custom controls using **PowerApps CLI (Command Line Interface)**. Use the **PowerApps CLI** to create, debug and deploy custom controls. The PowerApps CLI will enable developers to quickly create PCF controls and in the coming months the set of capabilities will expand to include plugin development and aid the **Microsoft** recommended **Application Lifecycle Management (ALM) processes**.
 
-Microsoft PowerApps CLI is a simple, single-stop developer command line interface which offers you everything that is required to create a custom control and enable you to perform all the development tasks via a simple and efficient set of commands. The PowerApps CLI is the first step towards a comprehensive **ALM** story where Enterprise Developers and ISVs can create, build, debug and publish their extensions and customizations quickly and efficiently. The significance here is a shift towards a source centric approach, to provide better support for continuous validation starting from internal development loop through to AppSource publishing and end-customer deployment. 
+**Microsoft PowerApps CLI** is a simple, single-stop developer command line interface which offers you everything that is required to create a custom control and enable you to perform all the development tasks via a simple and efficient set of commands. The **PowerApps CLI** is the first step towards a comprehensive **ALM** story where Enterprise developers and ISVs can create, build, debug and publish their extensions and customizations quickly and efficiently. The significance here is a shift towards a source centric approach, to provide better support for continuous validation starting from internal development loop through to AppSource publishing and end-customer deployment. 
  
-Developers will be empowered to identify problems early and operations like adding a component to a solution, or publishing to upstream environments can be automated with simple tasks as we enable deeper integration with Azure DevOps 
-
-Each custom control is comprised of the following key components:
-
-1. Manifest
-2. Control implementation library
-3. Resources
-
-## Manifest
-
-The first step in implementing a custom control is to define a manifest file which defines various aspects of the control including namespace, version and dependent resource files.
-
-### Sample Manifest
-
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<manifest>
-	<control namespace="MyNameSpace" constructor="JSHelloWorldControl" version="1.0.0" display-name-key="JS_HelloWorldControl_Display_Key" description-key="JS_HelloWorldControl_Desc_Key" control-type="standard">
-		<property name="myFirstProperty" display-name-key="myFirstProperty_Display_Key" description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
-		<resources>
-			<code path="JS_HelloWorldControl.js" order="1" />
-			<css path="css/JS_HelloWorldControl.css" order="1" />
-		</resources>
-	</control>
-</manifest>
-```
-
-The different nodes in the manifest file defines various aspects of the control in a format that Model-driven apps can understand. More information: [Manifest](manifest-schema-reference/manifest.md).
-
-## Control implementation library
-
-[!INCLUDE [control-implementation-library](control-implementation-library.md)]
-
-## Resources
-
-[!INCLUDE [resources-description](manifest-schema-reference/includes/resources-description.md)]
-More information: [Resources](manifest-schema-reference/resources.md)
+Developers will be empowered to identify problems early and operations like adding a component to a solution, or publishing to upstream environments can be automated with simple tasks as we enable deeper integration with Azure DevOps.
 
 ## Prerequisites to use PowerApps CLI
 
 To use PowerApps CLI you will need the following: 
-- Install Npm (comes with Node.js) 
-- OR Install Node.js (comes with npm) 
-- Install CLI from Nuget (path to be provided) 
-- Install the PCF modules (includes typescript) from npm  
-- Install Visual Studio Code (optional)  
-- To deploy your custom control, you will need Common Data Service for Apps environment with System administrator or System customizer Privileges.
+
+- Install Node.js (comes with npm).
+- Install CLI from Nuget (path to be provided). 
+- Install the PCF modules (includes typescript) from npm.  
+- Install Visual Studio Code (optional).  
+- To deploy your custom control, you will need Common Data Service for Apps environment with System administrator or System customizer privileges.
 
 ## Creating custom controls
 
 To get started, open a command line interface (PowerShell).
 
 1. Create a new folder where desired on your local hard drive 
-2. Use a single command to create a new control project with some basic parameters: 
- 
-    `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>` 
+2. Use a single command to create a new control project with some basic parameters:
+ `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
  
 > [!NOTE]
 >Today we offer two types of controls field and dataset.
- 
-3. To retrieve all required project dependencies, run the command `npm install`. 
-4. Open your project in any developer environment of your choice and get started with your amazing custom control development.
-5. Implement the custom logic for the control. More information: [Implementing custom controls using TypeScript]()
+
+3. To retrieve all required project dependencies, run the command `npm install`.
+4. Open your project in any developer environment of your choice and get started with your custom control development.
+5. Implement the custom logic for the control. More information: [Implementing custom controls using TypeScript]().
 6. To build your control you can use **Visual Studio Code** by using the (Ctrl-Shift-B) command, then selecting your build options or you can build your control quickly using `npm run build` command.
- 
 
 > [!div class="nextstepaction"]
 > [Import controls](import-custom-controls.md)
 > [Debug controls](debugging-custom-controls.md)
-
-
