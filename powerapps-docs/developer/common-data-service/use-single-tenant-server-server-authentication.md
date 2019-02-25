@@ -119,12 +119,12 @@ Shown below is example console output obtained from a D365 organization that onl
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_api-permission-started"></a>
-### Figure: Setting app permissions [[go back](#bkmk_registration)]
+### Figure: Setting app permissions
 ![Setting app permissions](media/S2S-api-permission-started.PNG "Setting app permissions")<br />
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_api-permission-completed"></a>
-### Figure: Completedd app permissions and consent [[go back](#bkmk_registration)]
+### Figure: Completedd app permissions and consent
 ![Completedd app permissions and consent](media/S2S-api-permission-completed.PNG "Completedd app permissions and consent")<br />
 [[go back](#bkmk_registration)]
 
