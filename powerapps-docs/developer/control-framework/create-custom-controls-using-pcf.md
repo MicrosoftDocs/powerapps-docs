@@ -1,6 +1,6 @@
 ---
 title: Create custom controls using PowerApps Control Framework Tooling| Microsoft Docs
-description: Start creating controls using the powerapps control Framework Tooling
+description: Start creating controls using the PowerApps control Framework Tooling
 keywords: PowerApps Control Framework, Custom Controls, Control Framework
 ms.author: nabuthuk
 manager: kvivek
@@ -27,7 +27,7 @@ Developers will be empowered to identify problems early and operations like addi
 To use PowerApps CLI you will need the following: 
 
 - Install Node.js (comes with npm).
-- Install CLI from Nuget (path to be provided). 
+- Install CLI from NuGet (path to be provided). 
 - Install the PCF modules (includes typescript) from npm.  
 - Install Visual Studio Code (optional).  
 - To deploy your custom control, you will need Common Data Service for Apps environment with System administrator or System customizer privileges.
@@ -45,9 +45,10 @@ To get started, open a command line interface (PowerShell).
 
 3. To retrieve all required project dependencies, run the command `npm install`.
 4. Open your project in any developer environment of your choice and get started with your custom control development.
-5. Implement the custom logic for the control. More information: [Implementing custom controls using TypeScript]().
+5. Implement the custom logic for the control. More information: [Implementing custom controls using TypeScript](implementing-controls-using-typescript.md).
 6. To build your control you can use **Visual Studio Code** by using the (Ctrl-Shift-B) command, then selecting your build options or you can build your control quickly using `npm run build` command.
 
 > [!div class="nextstepaction"]
+> [Implementing controls using TypeScript](implementing-controls-using-typescript.md)
 > [Import controls](import-custom-controls.md)
 > [Debug controls](debugging-custom-controls.md)
