@@ -22,23 +22,29 @@ The following checklist provides the list of validations performed by Microsoft 
 <table>
 <tbody>
 <tr>
-<th>S.No</th>
-<th>Artifact</th>
-<th>Success Criteria</th>
+<th>Modules included</th>
+<th>Validation Type</th>
+<th>Certification checklist</th>
 </tr>
 <tr>
-<td>1</td>
-<td>Font uniformity</td>
+<td rowspan=3>Dynamics 365 for Customer Engagement + PowerApps + Flow<br/><br/>Dynamics 365 for Customer Engagement includes:
+<ul>
+<li>Dynamics 365 for Sales</li>
+<li>Dynamics 365 for Customer Service</li>
+<li>Dynamics 365 for Field Service</li>
+<li>Dynamics 365 for Project Service Automation</li>
+<li>Dynamics 365 for Marketing</li>
+</td>
+<td>Sanity Check</td>
 <td><ul>
-<li>Font size is uniform across the solution</li>
-<li>Font color is uniform across the solution</li>
-<li>Fonts are readable in all the intended device</li>
+<li>Check for app registration type. Free, Trial or Contact me. If registered in Contact me then publisher need to enable test drive.</li>
+<li>Verify the submitted [package](create-package-app-appsource.md) contains all the artifacts required to publish on AppSource.</li>
+<li>Download the E2E functional document from Cloud Partner Portal and validate if document is updated with functional scenarios and user/admin journey</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td>2</td>
-<td>Color Accessibility</td>
+<td>Code Validation</td>
 <td>Colors used in this solution are accessible by all user
 groups.</td>
 </tr>
