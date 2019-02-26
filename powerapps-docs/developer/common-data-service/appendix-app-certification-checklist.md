@@ -27,7 +27,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <th>Certification checklist</th>
 </tr>
 <tr>
-<td rowspan=3>Dynamics 365 for Customer Engagement + PowerApps + Flow<br/><br/>Dynamics 365 for Customer Engagement includes:
+<td rowspan=5>**Dynamics 365 for Customer Engagement** + **PowerApps** + **Microsoft Flow**<br/><br/>Dynamics 365 for Customer Engagement includes:
 <ul>
 <li>Dynamics 365 for Sales</li>
 <li>Dynamics 365 for Customer Service</li>
@@ -38,35 +38,61 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Sanity Check</td>
 <td><ul>
 <li>Check for app registration type. Free, Trial or Contact me. If registered in Contact me then publisher need to enable test drive.</li>
-<li>Verify the submitted [package](create-package-app-appsource.md) contains all the artifacts required to publish on AppSource.</li>
-<li>Download the E2E functional document from Cloud Partner Portal and validate if document is updated with functional scenarios and user/admin journey</li>
+<li>Verify the submitted <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/create-package-app-appsource">package</a> contains all the artifacts required to publish on AppSource.</li>
+<li>Download the end-to-end (E2E) functional document from Cloud Partner Portal and validate if document is updated with functional scenarios and user/admin journey.</li>
 </ul>
 </td>
 </tr>
 <tr>
 <td>Code Validation</td>
-<td>Colors used in this solution are accessible by all user
-groups.</td>
+<td>
+<ul>
+<li>Code validation for Canvas apps will be done through <a href="https://docs.microsoft.com/powerapps/maker/common-data-service/use-powerapps-checker
+">Solution Checker tool</a> in PowerApps to check for the following:
+<ul>
+<li>Static formula errors and warnings: If any issues found then certification team will share the feedback to resolve and resubmit to AppSource.</li>
+<li>Runtime errors: May occur once the app is opened in Run mode to view. Any issues found will be reported through email.</li>
+<li>Accessibility errors and warnings: All Accessibility errors should be resolved as per Solution Checker guidelines.</li>
+</ul></li>
+<li>Code Validation for CRM managed solution will be done through <a href="https://experienceisv.microsoftcrmportals.com/precertification/#/">OnDemand Code Analysis (ODCA)</a> tool.</li>
+<li>Issues reported from ODCA will be manually validated for correctness and false positive issues will be reduced to low severity.</li>
+<li>Generated report is shared with the publisher through email.</li>
+</ul>
+</td>
 </tr>
 <tr>
-<td>3</td>
-<td> Uniformity of color and design scheme </td>
-<td>The color and UI design are uniform and presentable</td>
+<td>Deployment Validation</td>
+<td>
+<ul>
+<li>CRM solution will be installed to a PowerApps studio using Dynamics Package Deployer. Installed canvas apps will be manually located on the CRM solution as well as on Apps section after installation and will make sure the app is opened in edit and run mode. Canvas App will be manually deleted from PowerApps studio to validate successful uninstallation</li>
+<li>Check the canvas app successfully connects through the connectors provided by the publishers. For example, Common Data Service (CDS) for Apps or any other connections.</li>
+<li>Check all Common Data Model (CDM) components (entities, web resources, plug-ins and other components) are available in the solution.</li>
+<li>Manually uninstall the solution and check if all the components associated to the managed solution is removed.</li>
+</ul>
+</td>
 </tr>
 <tr>
-<td>4</td>
-<td>Ease of use for users</td>
-<td>The solution is intuitive and easy to use with minimal
-directions</td>
+<td>Functionality Validation</td>
+<td>
+<ul>
+<li>Validate the functionality of the app based on the functional document shared by the publisher. All the features that are implemented in the app should pass.</li>
+<li>Publisher should submit E2E functional document through Cloud Partner Portal or can share video links through emails.</li>
+<li>If app requires any license configuration, certification team will share the instance details for publisher to update the required license.</li>
+</ul></td>
 </tr>
 <tr>
-<td>5</td>
-<td>Minimum number of screens to achieve a use-case</td>
-<td>All use-cases could be achieved in minimum number of
-screens and steps</td>
+<td>Security Validation</td>
+<td>
+<ul>
+<li>Check whether canvas app connects to any external data source or connections that require access, and proper connection details to be shared in E2E document.</li>
+<li>Check canvas app connects to any external connections out of PowerApps connectors.</li>
+<li>Check any custom code provided inside Package Deployer. Validate the code before approving the app to AppSource.</li>
+<li>Manually validate the code to see if the custom code is retrieving any customer data from target environment.</li>
+</ul>
+</td>
 </tr>
 <tr>
-<td>6</td>
+<td>Canvas Apps</td>
 <td>Performance</td>
 <td>
 <ul>
