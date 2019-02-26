@@ -2,7 +2,7 @@
 title: "Create and edit entities using solution explorer | MicrosoftDocs"
 description: "Learn how to create an entity using solution explorer"
 ms.custom: ""
-ms.date: 05/30/2018
+ms.date: 02/26/2019
 ms.reviewer: ""
 ms.service: "crm-online"
 ms.suite: ""
