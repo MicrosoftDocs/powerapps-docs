@@ -16,28 +16,28 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic showcases how to create custom controls using **PowerApps CLI (Command Line Interface)**. Use the **PowerApps CLI** to create, debug and deploy custom controls. The PowerApps CLI will enable developers to quickly create PCF controls and in the coming months the set of capabilities will expand to include plugin development and aid the **Microsoft** recommended **Application Lifecycle Management (ALM) processes**.
+This topic shows how to create custom controls using **PowerApps CLI (Command Line Interface)**. Use the **PowerApps CLI** to create, debug and deploy custom controls. **The PowerApps CLI** will enable developers to quickly create PCF controls and in the coming months the set of capabilities will expand to include plugin development and aid the **Microsoft** recommended **Application Lifecycle Management (ALM) processes**.
 
 **Microsoft PowerApps CLI** is a simple, single-stop developer command line interface which offers you everything that is required to create a custom control and enable you to perform all the development tasks via a simple and efficient set of commands. The **PowerApps CLI** is the first step towards a comprehensive **ALM** story where Enterprise developers and ISVs can create, build, debug and publish their extensions and customizations quickly and efficiently. The significance here is a shift towards a source centric approach, to provide better support for continuous validation starting from internal development loop through to AppSource publishing and end-customer deployment. 
  
-Developers will be empowered to identify problems early and operations like adding a component to a solution, or publishing to upstream environments can be automated with simple tasks as we enable deeper integration with Azure DevOps.
+Developers will be empowered to identify problems early and operations like adding a component to a solution, or publishing to upstream environments can be automated with simple tasks as we enable deeper integration with **Azure DevOps**.
 
 ## Prerequisites to use PowerApps CLI
 
 To use PowerApps CLI you will need the following: 
 
-- Install Node.js (comes with npm).
+- Install [Node.js](https://nodejs.org/en/).
 - Install CLI from NuGet (path to be provided). 
-- Install the PCF modules (includes typescript) from npm.  
+- Install the PCF modules (includes typescript) from `npm` by using tge command `npm install pcf-scripts`.  
 - Install Visual Studio Code (optional).  
 - To deploy your custom control, you will need Common Data Service for Apps environment with System administrator or System customizer privileges.
 
 ## Creating custom controls
 
-To get started, open a command line interface (PowerShell).
+To get started, open a command line interface (**PowerShell**).
 
-1. Create a new folder where desired on your local hard drive 
-2. Use a single command to create a new control project with some basic parameters:
+1. Create a new folder where desired on your local hard drive.
+2. Use a single command to create a new control project with some basic parameters
  `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
  
 > [!NOTE]

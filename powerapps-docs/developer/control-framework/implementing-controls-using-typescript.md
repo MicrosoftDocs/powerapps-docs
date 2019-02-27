@@ -19,8 +19,8 @@ Each custom control is comprised of the following key components:
 
 ## Creating a new control project
 
-1. Open PowerShell or command window 
-2. Create a new folder for the control project using the command `mkdir LinearControl`. 
+1. Open **PowerShell** or command window 
+2. Create a new folder for the control project using the command `mkdir LinearControl`.
 3. `cd` into the new directory and type the command `cd LinearControl` 
 4. Create the control project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
@@ -29,7 +29,7 @@ Each custom control is comprised of the following key components:
 
 A custom control is defined by the information in the `ControlManifest.Input.xml` manifest file.  In this walkthrough, this file is created under the `TSLinearInputControl` sub folder. For the linear input control, a property will be defined to store the numeric value of the slider input.
 
-1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial control property called `sampleProperty`. 
+1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial control property called `sampleProperty`.
 
 ```XML
 <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" /> 
