@@ -5,12 +5,16 @@
     href: custom-controls-overview.md
   - name: Create custom controls
     href: create-custom-controls-using-pcf.md
+  - name: Implementing custom controls in TypeScript
+    href: implementing-custom-controls-in-typescript.md
   - name: Import custom controls
     href: import-custom-controls.md
   - name: Add custom controls to entity or a field
     href: add-custom-controls-to-a-field-or-entity.md
   - name: Debug custom controls
     href: debugging-custom-controls.md
+  - name: Update existing PCF controls
+    href: updating-existing-controls.md
   - name: Limitations of PowerApps Control Framework
     href: limitations.md
   - name: Sample Controls

@@ -48,6 +48,13 @@ To get started, open a command line interface (**PowerShell**).
 5. Implement the custom logic for the control. More information: [Implementing custom controls using TypeScript](implementing-controls-using-typescript.md).
 6. To build your control you can use **Visual Studio Code** by using the (Ctrl-Shift-B) command, then selecting your build options or you can build your control quickly using `npm run build` command.
 
+## Telemetry
+
+The feature team is aggregating anonymized telemetry in order to understand which features/capabilities in the **Microsoft PowerApps CLI** tool are most often used by developers. The aggregated data allows us to provide the best experience to our customers by focusing on what’s truly important.
+
+If for any reason you would like to disable telemetry collection, run the command `pac telemetry - -enabled false`. To turn telemetry back on, use the  command `pac telemetry- -enabled true`.
+
+
 > [!div class="nextstepaction"]
 > [Implementing controls using TypeScript](implementing-controls-using-typescript.md)
 > [Import controls](import-custom-controls.md)
