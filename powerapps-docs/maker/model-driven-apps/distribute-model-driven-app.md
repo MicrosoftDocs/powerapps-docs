@@ -31,7 +31,7 @@ search.app:
 Model-driven apps are distributed as solution components. After you have created a model-driven app, you can make it available for other environments to use by packaging the app into a solution and then exporting it into a zip file. After the solution (.zip file) is successfully imported in the target environment, the packaged app is available for use. 
   
 ## Add an app to a solution
-In order to distibute your app, you create a solution so the app can be packaged for export.
+In order to distribute your app, you create a solution so the app can be packaged for export.
 
 1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 

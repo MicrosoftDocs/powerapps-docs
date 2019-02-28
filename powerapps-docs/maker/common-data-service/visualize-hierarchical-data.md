@@ -1,6 +1,6 @@
 ---
 title: "Visualize hierarchical data with model-driven apps | MicrosoftDocs"
-description: "Learn how to query and visualize heirarchical related data"
+description: "Learn how to query and visualize hierarchical related data"
 ms.custom: ""
 ms.date: 09/19/2018
 ms.reviewer: ""
@@ -54,7 +54,7 @@ The hierarchy settings are associated to an entity in the solution explorer.
 2. If an existing hierarchy setting exists you can edit it. Otherwise click **New** to create a new one.
     
     > [!NOTE]
-    > If the hierarchy settings do not exist the entity is not elgible to have a hierarchy configured.
+    > If the hierarchy settings do not exist the entity is not eligible to have a hierarchy configured.
     >There can be only one hierarchy setting 
 
 1. Set the data in the following fields:
@@ -63,7 +63,7 @@ The hierarchy settings are associated to an entity in the solution explorer.
 |--|--|
 |**Name**|*Required.* Add a unique name for the hierarchy settings. This is typically just the name of the entity. This value will include the solution publisher's customization prefix.|
 |**Default Quick View Form**|*Required.* Choose from an existing Quick View form or choose **Create New** to open the Quick View form editor to create a new one.|
-|**Hierarchical Relationship**|*Required.* If a hierarchical relationship is already defined for the entity the value will be set here. If there is no value, select **Mark a relationship as enabled for hieerarchies** to open a dialog to choose one of the available self-referential relationships.|
+|**Hierarchical Relationship**|*Required.* If a hierarchical relationship is already defined for the entity the value will be set here. If there is no value, select **Mark a relationship as enabled for hierarchies** to open a dialog to choose one of the available self-referential relationships.|
 |**Description**|Include a description of the purpose for this hierarchy so that future people customizing the system can understand why this was done.|
     
 
@@ -78,7 +78,7 @@ Let’s look at an example of creating the visualization for a custom entity. We
 Next, in the **Hierarchy Settings** grid view, we selected the `new_new_widget_new_widget` hierarchical relationship. In the form, we filled in the required fields. If you haven’t yet marked the (1:N) relationship as hierarchical, the link on the form will take you back to the relationship definition form, where you can mark the relationship as hierarchical.  
 
 > [!IMPORTANT]
-> Each entity can have only one hierarchical relationship at a time. Changing this to a different self-referential relationship can have concequences. More information: [Define hierarchical data](../common-data-service/define-query-hierarchical-data.md#define-hierarchical-data)
+> Each entity can have only one hierarchical relationship at a time. Changing this to a different self-referential relationship can have consequences. More information: [Define hierarchical data](../common-data-service/define-query-hierarchical-data.md#define-hierarchical-data)
 
 > [!div class="mx-imgBorder"] 
 > ![Hierarchy settings](media/hierarchy-settings.png)  

@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/delegation-list.md",
+      "redirect_url": "delegation-overview#delegable-data-sources",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/administrator/admin-guide.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/admin/admin-guide",
       "redirect_document_id": "false"
