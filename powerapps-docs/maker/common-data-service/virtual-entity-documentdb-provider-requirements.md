@@ -78,7 +78,7 @@ SQL query filtering supports the following operators.
 - Comparison operators:`<`,`>`,`<=`, `>=`,`!=`
 - Logical operators: `and`, `or` 
 - Set operators: `in`, `not in`
-- String operators: `like`, `contains`, b`egins with`, `ends with`
+- String operators: `like`, `contains`, `begins with`, `ends with`
 
 > [!NOTE]
 > Usage of the like operator is translated to the equivalent `contains`/`begins with`/`ends with` operators. The  SQL API does not support pattern arguments as described in the topic [Like (Transact-SQL)](/sql/t-sql/language-elements/like-transact-sql). The Azure Cosmos DB for SQL API Data Provider can translate the single special case `Like('[aA]%')` to `BeginsWith('a')` OR `BeginsWith('A')`. Notice that string comparison in the SQL API is case sensitive.

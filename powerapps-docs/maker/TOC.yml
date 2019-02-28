@@ -141,8 +141,6 @@
           href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
           href: ./canvas-apps/delegation-overview.md
-        - name: Delegable data sources
-          href: ./canvas-apps/delegation-list.md
         - name: Manage gateways
           href: ./canvas-apps/gateway-management.md
         - name: Understand gateways
