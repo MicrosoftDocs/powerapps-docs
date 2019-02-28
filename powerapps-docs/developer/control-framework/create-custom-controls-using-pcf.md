@@ -56,6 +56,6 @@ If for any reason you would like to disable telemetry collection, run the comman
 
 
 > [!div class="nextstepaction"]
-> [Implementing controls using TypeScript](implementing-controls-using-typescript.md)
-> [Import controls](import-custom-controls.md)
+> [Implementing controls using TypeScript](implementing-controls-using-typescript.md)<br />
+> [Import controls](import-custom-controls.md)<br />
 > [Debug controls](debugging-custom-controls.md)

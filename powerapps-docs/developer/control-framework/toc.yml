@@ -6,7 +6,7 @@
   - name: Create custom controls
     href: create-custom-controls-using-pcf.md
   - name: Implementing custom controls in TypeScript
-    href: implementing-controls-in-typescript.md
+    href: implementing-controls-using-typescript.md
   - name: Import custom controls
     href: import-custom-controls.md
   - name: Add custom controls to entity or a field

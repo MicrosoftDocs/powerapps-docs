@@ -245,6 +245,6 @@ opacity:1;
 
 
 > [!div class="nextstepaction"]
-> [Update existing PCF controls](updating-existing-controls.md)
-> [Import controls](import-custom-controls.md)
+> [Update existing PCF controls](updating-existing-controls.md)<br />
+> [Import controls](import-custom-controls.md)<br />
 > [Debug controls](debugging-custom-controls.md)

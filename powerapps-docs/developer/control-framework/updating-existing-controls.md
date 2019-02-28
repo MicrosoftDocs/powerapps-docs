@@ -17,7 +17,7 @@ To use the new **PowerApps Control Framework (PCF)** build tools with your exist
 
 ## Creating an empty project
 
-Use the **PowerApps CLI** to create a new empty project for your custom control. More information [Create Controls using tooling](create-custom-controls-using-pcf.md)
+Use the **PowerApps CLI** to create a new empty project for your custom control. More information [Create Controls using tooling](create-custom-controls-using-pcf.md).
 Once the project has been created migrate your custom control source to the new project:
 
 1. Copy/Replace control source from the old source file into **index.ts**.
@@ -90,6 +90,6 @@ import { IInputs, IOutputs } from `./generated/ManifestTypes`.
 4.	Build the project to generate a new **ManifestTypes.d.ts** file  using the command `npm run build`.
 
 > [!div class="nextstepaction"]
-> [Implementing controls using TypeScript](implementing-controls-using-typescript.md)
-> [Import controls](import-custom-controls.md)
+> [Implementing controls using TypeScript](implementing-controls-using-typescript.md)<br />
+> [Import controls](import-custom-controls.md)<br />
 > [Debug controls](debugging-custom-controls.md)
