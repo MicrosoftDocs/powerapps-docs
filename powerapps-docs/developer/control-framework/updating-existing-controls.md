@@ -35,10 +35,12 @@ Once the project has been created migrate your custom control source to the new 
 The **ControlManifest.xml** file that defines the custom control properties has been replaced with a **ControlManifest.Input.xml** file. There should otherwise be very little change in schema between the two files.
 There are a couple of important semantic changes.
 
-1. The <code> resource entry must now point to the pre-compiled source file of the custom control.  The file name has been defaulted to **index.ts**.
-For example, if your control source is implemented in a file called `MyControl.ts`, then the <code> entry in **ControlManifest.Input.xml** must point to that file.  The <code> file must also be a valid Typescript file.  This is in contrast to legacy manifest files that specified the compiled JS output file in the <code> entry.
-2.	The path attribute of a resource element like <code> or <css> now refers to the local path to the file on disk.
+1. The `code` resource entry must now point to the pre-compiled source file of the custom control.  The file name has been defaulted to **index.ts**.
+For example, if your control source is implemented in a file called `MyControl.ts`, then the `code` entry in **ControlManifest.Input.xml** must point to that file.  The `code` file must also be a valid Typescript file.  This is in contrast to legacy manifest files that specified the compiled JS output file in the `code` entry.
+2.	The path attribute of a resource element like `code` or `css` now refers to the local path to the file on disk.
+
 For example,
+
 ```XML
 <resources>
     <css path="css/TS_LinearInputControl.css" order="1"/>
@@ -48,7 +50,7 @@ For example,
 The `path` attribute above indicates that the `TS_LinearInputControl.css` file is located in `css` subfolder relative to the current directory where the **ControlManifest.Input.xml** resides on disk.
 Update the ControlManifest.Input.xml files as follows:
 
-1.	Edit the <code> entry in **ControlManifest.Input.xml** to the pre-compiled source file of your custom control (typically this is will be index.ts).
+1.	Edit the `code` entry in **ControlManifest.Input.xml** to the pre-compiled source file of your custom control (typically this is will be index.ts).
 2.	Edit any paths of resources to correctly reference the relative paths to files on disk.
 
 ## Using ES6 Module Syntax
@@ -82,7 +84,12 @@ The typing file has been renamed to `ManifestTypes.d.ts` and it is now generated
 To use the new typing file:
 
 1.	Import the new ManifestTypes.d.ts file by adding the following line at the top of the control source file:
-import { IInputs, IOutputs } from "./generated/ManifestTypes";
-2.	Rename all references of InputsOutputs.IInputBag to IInputs.
-3.	Rename all references of InputsOutputs.IOutputBag to IOutputs.
-4.	Build the project to generate a new ManifestTypes.d.ts file  using the command `npm run build`.
+import { IInputs, IOutputs } from `./generated/ManifestTypes`.
+2.	Rename all references of **InputsOutputs.IInputBag** to **IInputs**.
+3.	Rename all references of **InputsOutputs.IOutputBag** to IOutputs**.
+4.	Build the project to generate a new **ManifestTypes.d.ts** file  using the command `npm run build`.
+
+> [!div class="nextstepaction"]
+> [Implementing controls using TypeScript](implementing-controls-using-typescript.md)
+> [Import controls](import-custom-controls.md)
+> [Debug controls](debugging-custom-controls.md)

@@ -242,3 +242,9 @@ opacity:1;
 5. Save the `TS_LinearInputControl.css` 
 6. Rebuild the project using the command `npm run build `.
 7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
+
+
+> [!div class="nextstepaction"]
+> [Update existing PCF controls](updating-existing-controls.md)
+> [Import controls](import-custom-controls.md)
+> [Debug controls](debugging-custom-controls.md)
