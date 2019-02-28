@@ -1,13 +1,13 @@
 ---
 title: Create a dependent drop-down list in a canvas app | Microsoft Docs
-description: In PowerApps, create a drop-down list that filters another drop down list in a canvas app.
+description: In PowerApps, create a drop-down list that filters another drop-down list in a canvas app.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 
+ms.date: 02/28/2019
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 # Create dependent drop-down lists in a canvas app
 
-Dependent drop-down lists, also known as "cascading drop-down lists", is the scenario where making one selection on a drop down filters the options available for selection on a following drop down. This is a common scenario across business forms in order to optimize the form filling out experience for the user. Configure these drop downs to achieve scenarios such as cities that are associated with selected states, categories that are associated with certain codes.
+When you create dependent drop-down lists (also known as "cascading drop-down lists") in an app, it filters one list based on a selection in another list. Many organizations create such lists to help users fill out forms more efficiently. For example, a user might select a country or region in one list to filter another list so that it shows only the cities in that location, or a user might select a category to show only the codes in that category.
 
 The recommended method of setting up your data is to have one app data source that you submit data to and to have another table for the dropdown list values. Using a separate data source to create the options and matching logic for multiple dropdowns allows changes to the options to be done without publishing the app. Additionally this data table could be used across multiple apps. Although you could accomplish the same outcome with a collection or static data, it isn't recommended for enterprise scenarios.
 
@@ -48,7 +48,7 @@ The Store Incidents table to which  employees are submitting incidents (in this 
 
 1. Open the SharePoint list named Store Incidents, and then select **PowerApps** > **Customize form**.
 
-    ![SharePoint list](./media/dependent-drop-down-lists/storeincidents_createform.png)
+    ![SharePoint list](./media/dependent-drop-down-lists/store_incidents_createform.png)
 
     A new tab will open with the PowerApps Studio with the default form on a screen looking like this:
 
@@ -73,7 +73,7 @@ The Store Incidents table to which  employees are submitting incidents (in this 
 
 1. By default, all the cards are locked. To create the dependent drop-down list, unlock the **Store Location** and **Department** data cards. To unlock a card, select it or a control within it, select the **Advanced** tab in the property pane, and then select **Unlock**.
 
-1. Rename the Store Location control by selecting it (not the data card) and editing the name in the top of the property pane to “ddStoreLocation”, and the Department control to “ddDepartment”. It is best practice to rename your controls so that you know what they are, and it makes the example easier to follow. To learn more best practices, you can view the Coding Standards and Guidelines Whitepaper.
+1. Rename the Store Location control by selecting it (not the data card) and editing the name in the top of the property pane to “ddStoreLocation”, and the Department control to “ddDepartment”. It is best practice to rename your controls so that you know what they are, and it makes the example easier to follow. To learn more best practices, you can view the Coding Standards and Guidelines whitepaper.
 
 ![rename controls](./media/dependent-drop-down-lists/rename-control.png)
 
@@ -81,7 +81,7 @@ The Store Incidents table to which  employees are submitting incidents (in this 
 
 1. Now the final step – select the child ddDepartment control.  In the properties pane, select the new “Depends on…” text.
 
-    ![depends on flyout](./media/dependent-drop-down-lists/Depends-On.png)
+    ![depends on flyout](./media/dependent-drop-down-lists/dependson.png)
 
 Select the parent control “ddStoreLocation”, in the following drop down select the column Value. The column name may change depending on the function you used. In some cases where you are evaluating expressions in the parent using LookUps or Distinct(), select Result. In cases where you don’t want to match on string, but on the actual ID of the row of data, select ID.
 
@@ -96,13 +96,14 @@ Select Apply. This will have written a Filter formula in the Items property of t
 Check that you are displaying the correct field for your control. This can be done selecting the Value property in the property pane for drop downs or by editing the field for combo boxes and ensuring that the primary text is the field you want to display.
 
 ![Change combo box](./media/dependent-drop-down-lists/combo-box-display-field.png)
+
 ![Change drop down](./media/dependent-drop-down-lists/drop-down-display-field.png)
 
 **I am seeing multiple, repeated items in my child dropdown.**
-This is likely due to using a LookUp column or a Choices() function. This is easily solved by wrapping a Distinct() function around the properly returning Data. See more on the Distinct function.
+This is likely due to using a LookUp column or a Choices function. This is easily solved by wrapping a Distinct function around the properly returning Data. See more on the Distinct function.
 
 ## Known limitations
 
-This configuration is only available on **Drop down**, **Combo box**, and **List box** controls that are single select. Multi-select isn't supported at this time. In the future we plan to extend the same type of functionality to galleries. This isn't the recommended experience for working with option sets in CDS. There is more documentation on the way on using option sets in canvas apps.
+This configuration is only available on **Drop down**, **Combo box**, and **List box** controls that are single select. Multi-select isn't supported at this time. We plan to extend the same type of functionality to galleries. This isn't the recommended experience for working with option sets in CDS. There is more documentation on the way on using option sets in canvas apps.
 
 The Depends On configuration doesn't support static data or collections. To configure with these sources, use the formula bar to edit the expression directly. Additionally, using two choice fields in SharePoint without any matching table of data isn't supported, and defining the Matching within this UI isn't possible.
