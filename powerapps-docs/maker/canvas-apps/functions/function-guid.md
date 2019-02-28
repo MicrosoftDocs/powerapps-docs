@@ -26,13 +26,9 @@ The string passed can contain uppercase or lowercase letters, but it must be 32 
 - **"123e4567-e89b-12d3-a456-426655440000"** (hyphens in standard locations)
 - **"123e4567e89b12d3a456426655440000"** (no hyphens)
 
-If you don't specify an argument, this function creates a new GUID.
+If you don't specify an argument, this function creates a new GUID.  Pseudo-random numbers are used to generate a version 4 [IETF RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID. When converting a string to a GUID any string of 32 hexadecimal digits are accepted supporting any version of GUIDs.
 
 To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
-
-> [!NOTE]
-> GUID values are currently blocked from being directly coerced to text values in function and operator contexts. You can directly coerce a GUID value to a text property of a control.  For now, use the [**Text** function](function-text.md) to convert values explicitly, as in this example:<br>
-> **Text( GUID() )**
 
 ## Volatile functions
 **GUID** is a volatile function when used without an argument. Each time the function is evaluated, it returns a different value.  
