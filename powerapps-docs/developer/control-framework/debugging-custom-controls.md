@@ -12,6 +12,9 @@ ms.author: "nabuthuk"
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
+Once you are done implementing your custom control logic, you can use the following command to start the debugging process
+`npm start`
+
 Debugging a custom control is as simple as debugging webresources in the Model-driven apps.You can debug custom controls in two ways.
 
 ## Browser Debugging

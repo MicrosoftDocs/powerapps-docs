@@ -27,9 +27,7 @@ Following the steps in this procedure will change the default label and text box
 
 4. On the **Field Properties** page, select the **Controls** tab, and then select **Add Control**.
 
-5. On the Add Control page, select the control that you want, such as the **Linear Slider** control shown here, and then select **Add**.
-
-![Add linear slider control](dynamics365/customer-engagement/customize/media/add-slider.PNG "Add linear slider control")  
+5. On the Add Control page, select the control that you want, such as the **Linear Slider** control, and then select **Add**.
 
 6. Choose the client where you want the control to appear.
 
@@ -38,9 +36,7 @@ Following the steps in this procedure will change the default label and text box
    - **Phone**. To make the custom control available on phones running Dynamics 365 for phones, select the Phone option next to the control.
 
    - **Tablet**. To make the custom control available on tablet devices running Dynamics 365 for tablets, select the Tablet option next to the control.
-7. Select the ![Edit custom control property icon](dynamics365/customer-engagement/customize/media/ccf-pencil-icon.png "Edit custom control property icon") pencil icon next to **Min**, **Max**, and **Step**, set the property option described below, and then select **OK**.  
-  
-   ![Add custom control properties](dynamics365/customer-engagement/customize/media/ccf-add-properties.png "Add custom control properties")  
+7. Select the pencil icon next to **Min**, **Max**, and **Step**, set the property option, and then select **OK**.  
   
    - **Min**. Set the minimum accepted value. You can bind a static value that you enter or bind the value to an existing field. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
   
@@ -52,13 +48,7 @@ Following the steps in this procedure will change the default label and text box
   
    - **Step**. This represents the unit to increment or decrement when adding to or subtracting from  the current value. For example, for budget amount you can select 100 dollar increments\decrements.  
   
-   - **Hide Default Control**. Selecting this option hides the control so neither the control or the data is displayed in any of the clients that don't support the custom control.  
-  
-       > [!NOTE]
-
-       >  The default control is identified with **(default)** following the control name.  
-       >   
-       > ![Default control](dynamics365/customer-engagement/customize/media/default-control.png "Default control")  
+   - **Hide Default Control**. Selecting this option hides the control so neither the control or the data is displayed in any of the clients that don't support the custom control.   
   
 8. Select **OK**, to close the Field Properties page.  
   
@@ -68,9 +58,5 @@ Following the steps in this procedure will change the default label and text box
   
 ## See the custom control in action  
 
- Open a record that includes the field with the custom control, such as the Opportunity form from the previous example, and view how the field is changed.  
-  
- ![Slider control rendered on form](dynamics365/customer-engagement/customize/media/slider-control.PNG "Slider control rendered on form")  
-  
- The field is now rendered as a slider control instead of the text field.  
+ Open a record that includes the field with the custom control, such as the Opportunity form from the previous example, and view how the field is changed. The field is now rendered as a slider control instead of the text field.  
  
