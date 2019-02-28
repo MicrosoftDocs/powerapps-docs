@@ -56,13 +56,13 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
 5. Save the changes to the `ControlManifest.Input.xml` file.
 6. Build the control project using the command `npm run build`.
 
-The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your control will have access to in our Typescript source code.
+The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your control will have access to in our **Typescript** source code.
 
-## Impplementing control logic
+## Implementing control logic
 
 Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the **PowerApps Control Framework**. 
 
-1. Open the index.ts file in a code editor of your choice.
+1. Open the `index.ts` file in code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following
 
 ```TypeScript

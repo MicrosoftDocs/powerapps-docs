@@ -10,11 +10,11 @@ ms.suite: ""
 ms.topic: "article"
 ---
 
-# Import controls into Mode-driven apps
+# Import controls into Model-driven apps
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic demonstrates how to import custom controls into Model-driven apps. After developing custom controls using PowerApps CLI, next step is to import those controls into Model-driven apps, so that we can see the controls in runtime.
+This topic demonstrates how to import custom controls into Model-driven apps. After developing custom controls using **PowerApps CLI**, next step is to import those controls into Model-driven apps, so that we can see the controls in runtime.
 
 Follow the steps below to create and import a solution file:
 
