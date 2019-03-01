@@ -22,7 +22,7 @@ In other tools, you may have explicitly performed a calculation and stored the r
 
 In some cases, you'll need to use variables in PowerApps, which extends Excel's model by adding [behavior formulas](working-with-formulas-in-depth.md). These formulas run when, for example, a user selects a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
-In general, avoid using variables. But sometimes only a variable can enable the experience you want. Key point to remember: variables in PowerApps are implicitly created and typed.
+In general, avoid using variables. But sometimes only a variable can enable the experience you want. Variables are implicitly created and typed when they appear in functions that set their values. 
 
 ## Translate Excel into PowerApps
 
@@ -73,7 +73,13 @@ In general, if you can achieve an effect by using a formula, you'll be better of
 ## Know when to use variables
 Let's change our simple adder to act like an old-fashioned adding machine, with a running total. If you select an **Add** button, you'll add a number to the running total. If you select a **Clear** button, you'll reset the running total to zero.
 
-![](media/working-with-variables/button-changes-state.png)
+| Display | Description |
+|----|----|
+| ![](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>With the user's finger represented by the red dot, the user enteres "77" in the text box. |
+| ![](media/working-with-variables/button-changes-state-2.png) | The user presses "Add". |
+| ![](media/working-with-variables/button-changes-state-3.png) | 77 has been added to the running total.<br><br>The user presses "Add" again. |
+| ![](media/working-with-variables/button-changes-state-4.png) | 77 is again added to the running total, resulting in 154.<br><br>The user presses "Clear". |
+| ![](media/working-with-variables/button-changes-state-5.png) | The running total has been reset to 0. |
 
 Our adding machine uses something that doesn't exist in Excel: a button. In this app, you can't use only formulas to calculate the running total because its value depends on a series of actions that the user takes. Instead, our running total must be recorded and updated manually. Most programming tools store this information in a *variable*.    
 
