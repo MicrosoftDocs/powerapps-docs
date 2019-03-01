@@ -26,7 +26,7 @@ The string passed can contain uppercase or lowercase letters, but it must be 32 
 - **"123e4567-e89b-12d3-a456-426655440000"** (hyphens in standard locations)
 - **"123e4567e89b12d3a456426655440000"** (no hyphens)
 
-If you don't specify an argument, this function creates a new GUID.  
+If you don't specify an argument, this function creates a new GUID.
 
 To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
 
