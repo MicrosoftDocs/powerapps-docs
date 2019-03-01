@@ -23,12 +23,11 @@ Business process flows provide a guide for users to get their work done efficien
 
 For exmaple, as you work on a new customer record, the business process flow helps you see each step that you need to take to create the new record and fill out the required information according to your organizations business process. 
 
-You can dock the business process bar, which helps you focus on the information required in each step.
+The process bar can be docked to the right side of the screen for easy reference as you work with a customer record. 
 
 > [!div class="mx-imgBorder"]
 > ![Business process bar](media/BPdock.png "Business process bar")
  
-The process bar can be docked to the right side of the screen for easy reference as you work with a customer record. 
 
 > [!div class="mx-imgBorder"]
 > ![Business process bar](media/BPdocked.png "Business process bar")
