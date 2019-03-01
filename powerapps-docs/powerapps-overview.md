@@ -20,7 +20,7 @@ PowerApps also provides an extensible platform that lets pro developers programm
 
 ## PowerApps for app makers/creators
 
-Using PowerApps, you can create two types of apps: **Canvas** and **model-driven**. More information: [Overview of creating apps in PowerApps](maker/index.md).
+Using PowerApps, you can create two types of apps: **canvas** and **model-driven**. More information: [Overview of creating apps in PowerApps](maker/index.md).
 
 To create an app, you start with [web.powerapps.com](https://web.powerapps.com).
 
