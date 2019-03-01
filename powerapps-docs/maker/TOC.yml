@@ -177,8 +177,9 @@
                 href: ./canvas-apps/add-scrolling-screen.md
           - name: Show a table of items
             href: ./canvas-apps/add-gallery.md
-          - name: Show items of different heights
-            href: ./canvas-apps/gallery-dynamic-sizing.md
+            items:
+            - name: Show items of different heights
+              href: ./canvas-apps/gallery-dynamic-sizing.md
           - name: Add a form
             href: ./canvas-apps/add-form.md
             items:
