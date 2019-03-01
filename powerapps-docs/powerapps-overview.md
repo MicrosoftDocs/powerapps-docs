@@ -38,7 +38,7 @@ PowerApps admins can use:
 
 - **PowerApps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies. 
 
-- **Power Platform Admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for Dynamics 365 for Customer Engagement apps, PowerApps, and Microsoft Flow, and view CDS for Apps analytics. 
+- **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for Dynamics 365 for Customer Engagement apps, PowerApps, and Microsoft Flow, and view CDS for Apps analytics. 
 
 More information: [Administer PowerApps](/power-platform/admin/admin-guide)
 
