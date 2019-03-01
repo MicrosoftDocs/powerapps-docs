@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 07/06/2017
+ms.date: 02/28/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -22,7 +22,7 @@ In other tools, you may have explicitly performed a calculation and stored the r
 
 In some cases, you'll need to use variables in PowerApps, which extends Excel's model by adding [behavior formulas](working-with-formulas-in-depth.md). These formulas run when, for example, a user selects a button. Within a behavior formula, it's often helpful to set a variable to be used in other formulas.
 
-In general, avoid using variables. But sometimes only a variable can enable the experience you want.
+In general, avoid using variables. But sometimes only a variable can enable the experience you want. Key point to remember: variables in PowerApps are implicitly created and typed.
 
 ## Translate Excel into PowerApps
 
@@ -83,7 +83,7 @@ You'll sometimes need a variable for your app to behave the way you want.  But t
 * The running total can no longer be calculated based on the values of other controls. It depends on how many times the user selected the **Add** button and what value was in the text-input control each time. Did the user enter 77 and select **Add** twice, or did they specify 24 and 130 for each of the additions? You can't tell the difference after the total has reached 154.
 * Changes to the total can come from different paths. In this example, both the **Add** and **Clear** buttons can update the total. If the app doesn't behave the way you expect, which button is causing the problem?
 
-## Create a global variable
+## Use a global variable
 To create our adding machine, we require a variable to hold the running total. The simplest variables to work with in PowerApps are *global variables*.  
 
 How global variables work:
@@ -102,7 +102,9 @@ Let's rebuild our adding machine by using a global variable:
    
     **Set( RunningTotal, RunningTotal + TextInput1 )**
    
-    The first time a user selects the **Add** button and **[Set](functions/function-set.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
+    The mere existance of this formula establishes **RunningTotal** as a global variable that holds a number because of the **+** operator.  **RunningTotal** can now be referenced anywhere in the app.  Whenever this app is loaded and begins execution, **RunningTotal** will have an initial value of *blank*.    
+
+    The first time a user selects the **Add** button and **[Set](functions/function-set.md)** is executed, **RunningTotal** will be set to the value **RunningTotal + TextInput1**
    
     ![](media/working-with-variables/global-variable-1.png)
 4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
@@ -128,29 +130,42 @@ Let's rebuild our adding machine by using a global variable:
 ## Types of variables
 There are three types of variables in PowerApps:
 
-| Variables type | Scope | Description | Functions |
+| Variables type | Scope | Description | Functions that Establish |
 | --- | --- | --- | --- |
 | Global variables |App |Simplest to use.  Holds a number, text string, Boolean, record, table, etc. that can be references from anywhere in the app. |[**Set**](functions/function-set.md) |
-| Context variables |Screen |Great for passing values to a screen, much like parameters to a procedure in other languages.  Can only be referenced from one screen. |[**UpdateContext**](functions/function-updatecontext.md) |
-| Collections |App |Holds a table that can be references from anywhere in the app.  Allows the contents of the table to be modified rather than being set as a whole. Can be saved to the local device for later use. |[**Collect**](functions/function-savedata-loaddata.md)<br>etc. |
+| Context variables |Screen |Great for passing values to a screen, much like parameters to a procedure in other languages.  Can only be referenced from one screen. |[**UpdateContext**](functions/function-updatecontext.md)<br>[**Navigate**](functions/function-navigate.md) |
+| Collections |App |Holds a table that can be references from anywhere in the app.  Allows the contents of the table to be modified rather than being set as a whole. Can be saved to the local device for later use. |[**Collect**](functions/function-clear-collect-clearcollect.md)<br>[**ClearCollect**](functions/function-clear-collect-clearcollect.md) |
 
-All variables are created implicitly when used in **Set**, **UpdateContext**, **Navigate**, or **Collect** functions.  There is no explicit declaration of variables as is done in other programming tools.  The types of the variables are also derived implicitly from the values that are placed in them.
+## Creating and removing variables
+All variables are created implicitly when they appear in a **Set**, **UpdateContext**, **Navigate**, **Collect**, or **ClearCollect** function.  Appearance in these functions, anywhere in your app, is all that is needed to declare a variable and its type.  Executing these functions does not create a variable; these function only fill a variable with a value.  There is no explicit declaration of variables as is done in other programming tools and all typing is implicit from usage.
 
-All variables are held in memory while the app is running.  After the app closes, the values held in the variables are lost.  You can store the contents of a variable in a Data Source using **Patch** or **Collect** functions, or in the case of collections you can store to the local device with the **SaveData** function.  When the app is first loaded, all variables will have the *blank* value.
+For example, imagine you have a button control with an **OnSelect** formula equal to **Set( X, 1 )**.  That this formula exists in your app establishes **X** as a variable with a type of number.  You can now use **X** in formulas as a number and it will default to its initial value of *blank*.  **All this happened without pressing the button!**  Press the button and **X** will now have a value of **1**.
 
+What would happen if you add another button with an **OnSelect** formula equal to **Set( X, "Hello" )**?  This will produce an error because the type (text string) does not match the type in the previous **Set** (number).  All implicit definitions of the variable must agree on type.  Again, all this happened because **X** was mentioned in formulas, not because any of those formulas had actually executed.
+
+How do you remove a variable?  Simply remove all the **Set**, **UpdateContext**, **Navigate**, **Collect**, or **ClearCollect** function calls that had implicitly established the variable.  Without these the variable does not exist.  Remember to remove any references to the variable too as those will now be in error.
+
+## Variable lifetime and initial value
+All variables are held in memory while the app is running.  After the app closes, the values held in the variables are lost.  
+
+You can store the contents of a variable in a Data Source using **Patch** or **Collect** functions, or in the case of collections you can store to the local device with the [**SaveData**](functions/function-savedata-loaddata.md) function.  
+
+When the app is first loaded all variables will have the *blank* value.
+
+## Reading variables
 You use the variable's name to read its value. For example, you can define a variable with this formula:
 
 `Set( MyColor, Red )`
 
 Then you can simply use **MyColor** anywhere a color value can be used, and it will be replaced with **Red**. If you give a context variable the same name as a global variable or a collection, the context variable will take precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **@[MyColor]**.
 
-## Create a context variable
+## Use a context variable
 Let's look at how our adding machine would be created using a context variable instead of a global variable.    
 
 How context variables work:
 
-* You create and set context variables by using the **[UpdateContext](functions/function-updatecontext.md)** function.  If a context variable doesn't already exist when first updated, it will be created with a default value of *blank*.
-* You create and update context variables with records. In other programming tools, you commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead. When you use a context variable, use its name directly.  
+* You implicitly establish and set context variables by using the **[UpdateContext](functions/function-updatecontext.md)** or **[Navigate](functions/function-navigate.md)** function.  When the app starts its initial value will be *blank*.
+* You update context variables with records. In other programming tools, you commonly use "=" for assignment, as in "x = 1".  For context variables, use **{ x: 1 }** instead. When you use a context variable, use its name directly without the record syntax.  
 * You can also set a context variable when a screen is displayed, by using the **[Navigate](functions/function-navigate.md)** function. If you think of a screen as a kind of procedure or subroutine, this is similar to parameter passing in other programming tools.
 * Except for **[Navigate](functions/function-navigate.md)**, context variables are limited to the context of a single screen, which is where they get their name.  You can't use or set them outside of this context.
 * Context variables can hold any value, including strings, numbers, records, and [tables](working-with-tables.md).
@@ -165,7 +180,9 @@ Let's rebuild our adding machine by using a context variable:
    
     **UpdateContext( { RunningTotal: RunningTotal + TextInput1 } )**
    
-    The first time a user selects the **Add** button and **[UpdateContext](functions/function-updatecontext.md)** is called, **RunningTotal** is created with a default value of *blank*.  In the addition, it will be treated as a zero.
+    The mere existance of this formula establishes **RunningTotal** as a context variable that holds a number because of the **+** operator.  **RunningTotal** can now be referenced anywhere in this screen.  Whenever this app is loaded and begins execution, **RunningTotal** will have an initial value of *blank*.    
+
+    The first time a user selects the **Add** button and **[UpdateContext](functions/function-updatecontext.md)** is executed, **RunningTotal** will be set to the value **RunningTotal + TextInput1**.
    
     ![](media/working-with-variables/context-variable-1.png)
 4. To set the running total to **0** whenever the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
@@ -199,7 +216,7 @@ Let's rebuild our adding machine by using a context variable:
    
     ![](media/working-with-variables/context-variable-file-2.png)
 
-## Create a collection
+## Use a collection
 Finally, let's look at creating our adding machine with a collection.  Since a collection holds a table that is easy to modify, we will make this adding machine keep a "paper tape" of each value as they are entered.
 
 How collections work:
@@ -216,8 +233,10 @@ Let's recreate our adding machine by using a collection:
 3. To update the running total whenever a user selects the **Add** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
    
     **Collect( PaperTape, TextInput1.Text )**
+
+    The mere existance of this formula establishes **PaperTape** as a collection that holds a single column table of text strings.  **PaperTape** can now be referenced anywhere in this app.  Whenever this app is loaded and begins execution, **PaperTape** will be an empty table.  
    
-    This formula will add the new value to the end of the collection.  Since we are adding a single value, **Collect** will automatically place it in a single column table with the column name **Value** which we will use later.
+    When executed, this formula will add the new value to the end of the collection.  Since we are adding a single value, **Collect** will automatically place it in a single column table with the column name **Value** which we will use later.
    
     ![](media/working-with-variables/papertape-1.png)
 4. To clear our paper tape when the user selects the **Clear** button, set its **[OnSelect](controls/properties-core.md)** property to this formula:
@@ -259,5 +278,5 @@ Let's recreate our adding machine by using a collection:
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons.  Select the **Save** button.  Close and reload your app, and select the **Load** button to reload your collection.  
     
     > [!NOTE]
-    > **SaveData** and **LoadData** don't function in PowerApps Studio, but they do in PowerApps Mobile.
+    > **SaveData** and **LoadData** don't function in PowerApps Studio or the web player for PowerApps, but they do in PowerApps Mobile.
 
