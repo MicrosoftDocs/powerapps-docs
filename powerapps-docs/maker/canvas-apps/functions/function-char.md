@@ -59,8 +59,11 @@ The **Char** function translates a number into a string with the corresponding A
 
     ![](media/function-char/chart-lower.png)
 
-1. To show the extended ASCII characters, modify the **Items** property for the second gallery to add 128:
+1. To show the extended ASCII characters, modify the **Items** property for the second gallery to add 128 to each of the character values:
     `ForAll( [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16], Value + ThisItem.Value * 16 + 128)`
 
     ![](media/function-char/chart-higher.png)
 
+1. Change the **Font** property of the second label to see the characters in a different font. 
+
+    ![](media/function-char/chart-higher-dancing-script.png)
