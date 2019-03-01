@@ -19,7 +19,7 @@ search.app:
 ---
 # Work with business processes
 
-Business process flows provide a guide for users to get work done efficiently. They help you enter data consistently and follow the same steps every time you work with a record. 
+Business process flows provide a guide for users to get their work done efficiently. They help you enter data consistently and follow the same steps every time you work with a record. 
 
 For exmaple, as you work on a new customer record, the business process flow helps you see each step that you need to take to create the new record and fill out the required information according to your organizations business process. 
 
