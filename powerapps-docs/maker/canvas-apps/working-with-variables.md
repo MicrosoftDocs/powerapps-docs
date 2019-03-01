@@ -27,33 +27,32 @@ In general, avoid using variables. But sometimes only a variable can enable the 
 ## Translate Excel into PowerApps
 
 ### Excel
-Let's review how Excel works. A cell can contain a value, such as a number or a string, or a formula that's based on the values of other cells. After the user enters a different value into a cell, Excel automatically recalculates any formulas that depend on the new value. You don't have to do any programming to enable this behavior.
+Let's review how Excel works. A cell can contain a value, such as a number or a string, or a formula that's based on the values of other cells. After the user enters a different value into a cell, Excel automatically recalculates any formulas that depend on the new value. You don't have to do any programming to enable this behavior.  
 
-![](media/working-with-variables/excel-recalc.png)
+In the following example, cell **A3** is set to the formula **A1+A2**. If **A1** or **A2** changes then **A3** will automatically recalculate to reflect the change.  No coding is required to make this automatic behavior happen, writing the formula is enough.
+
+![](media/working-with-variables/excel-recalc.gif)
 
 Excel doesn't have variables. The value of a cell that contains a formula changes based on its input, but there's no way to remember the result of a formula and store it in a cell or anywhere else. If you change a cell's value, the entire spreadsheet may change, and any previously calculated values are lost.  An Excel user can copy and paste cells, but that's under the user's manual control and isn't possible with formulas.
 
 ### PowerApps
 Apps that you create in PowerApps behave very much like Excel. Instead of updating cells, you can add controls wherever you want on a screen and name them for use in formulas.
 
-For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **TextBox1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **TextBox1** to **TextInput1 + TextInput2**,  it will always shows the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
+For example, you can replicate the Excel behavior in an app by adding a **[Label](controls/control-text-box.md)** control, named **Label1**, and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**. If you then set the **[Text](controls/properties-core.md)** property of **Label1** to **TextInput1 + TextInput2**, it will always show the sum of whatever numbers are in **TextInput1** and **TextInput2** automatically.
 
 ![](media/working-with-variables/recalc1.png)
 
-Notice that the **TextBox1** control is selected, showing its **[Text](controls/properties-core.md)** formula in the formula bar at the top of the screen.  Here we find the formula **TextInput1 + TextInput2**.  This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of the **TextInput1**:
+Notice that the **Label1** control is selected, showing its **[Text](controls/properties-core.md)** formula in the formula bar at the top of the screen.  Here we find the formula **TextInput1 + TextInput2**.  This formula creates a dependency between these controls, just as dependencies are created between cells in an Excel workbook.  Let's change the value of **TextInput1**:
 
-![](media/working-with-variables/recalc2.png)
+![](media/working-with-variables/recalc2.gif)
 
-The formula for **TextBox1** has been automatically recalculated, showing the new value.
+The formula for **Label1** has been automatically recalculated, showing the new value.
 
 In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
-<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
 
-![](media/working-with-variables/recalc-color1.png)
+`If( Value(Label1.Text) < 0, Red, Black )`
 
-Now, if the result of our calculation in **TextBox1.Text** is negative, the number will be shown in red:
-
-![](media/working-with-variables/recalc-color2.png)
+![](media/working-with-variables/recalc-color.gif)
 
 You can use formulas for a wide variety of scenarios:
 
@@ -65,7 +64,7 @@ Using formulas to build apps has many advantages:
 
 * If you know Excel, you know PowerApps. The model and formula language are the same.
 * If you've used other programming tools, think about how much code would be required to accomplish these examples.  In Visual Basic, you'd need to write an event handler for the change event on each text-input control.  The code to perform the calculation in each of these is redundant and could get out of sync, or you'd need to write a common subroutine.  In PowerApps, you accomplished all of that with a single, one-line formula.
-* To understand where **TextBox1**'s text is coming from, you know exactly where to look: the formula in the **[Text](controls/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
+* To understand where **Label1**'s text is coming from, you know exactly where to look: the formula in the **[Text](controls/properties-core.md)** property.  There's no other way to affect the text of this control.  In a traditional programming tool, any event handler or subroutine could change the value of the label, from anywhere in the program.  This can make it hard to track down when and where a variable was changed.
 * If the user changes a slider control and then changes their mind, they can change the slider back to its original value.  And it's as if nothing had ever changed: the app shows the same control values as it did before.  There are no ramifications for experimenting and asking "what if," just as there are none in Excel.  
 
 In general, if you can achieve an effect by using a formula, you'll be better off. Let the formula engine in PowerApps work for you.  
@@ -156,14 +155,18 @@ All variables are held in memory while the app is running.  After the app closes
 
 You can store the contents of a variable in a Data Source using **Patch** or **Collect** functions, or in the case of collections you can store to the local device with the [**SaveData**](functions/function-savedata-loaddata.md) function.  
 
-When the app is first loaded all variables will have the *blank* value.
+When the app is first loaded all variables will have an initial value of *blank*.
 
 ## Reading variables
 You use the variable's name to read its value. For example, you can define a variable with this formula:
 
-`Set( MyColor, Red )`
+`Set( Radius, 12 )`
 
-Then you can simply use **MyColor** anywhere a color value can be used, and it will be replaced with **Red**. If you give a context variable the same name as a global variable or a collection, the context variable will take precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **@[MyColor]**.
+Then you can simply use **Radius** anywhere a number can be used, and it will be replaced with **12**:
+
+`Pi() * Power( Radius, 2 )`
+
+If you give a context variable the same name as a global variable or a collection, the context variable will take precedence. However, you can still reference the global variable or collection if you use the [disambiguation operator](functions/operators.md#disambiguation-operator) **@[Radius]**.
 
 ## Use a context variable
 Let's look at how our adding machine would be created using a context variable instead of a global variable.    
