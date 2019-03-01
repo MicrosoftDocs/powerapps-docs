@@ -18,9 +18,6 @@ search.app:
   - D365CE
 ---
 # Work with business processes
-   
-   
-# Work with business processes
 
 Business process flows provide a guide for users to get work done. They help you enter data consistently and follow the same steps every time you work with a record. 
 
