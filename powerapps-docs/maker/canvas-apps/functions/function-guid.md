@@ -30,7 +30,7 @@ If you don't specify an argument, this function creates a new GUID.
 
 To convert a GUID value to a string, simply use it in a string context. The GUID value will be converted to a hexadecimal representation string with hyphens and lowercase letters. 
 
-When generating a new GUID, pseudo-random numbers are used to create a version 4 [IETF RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID. When converting a string to a GUID, any string of 32 hexadecimal digits are accepted which will support any GUID version.
+When generating a new GUID, this function uses pseudo-random numbers to create a version 4 [IETF RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID. When converting a string to a GUID, this function supports any GUID version by accepting any string of 32 hexadecimal digits.
 
 ## Volatile functions
 **GUID** is a volatile function when used without an argument. Each time the function is evaluated, it returns a different value.  
