@@ -16,11 +16,15 @@ search.app:
 ---
 # Create dependent drop-down lists in a canvas app
 
-When you create dependent drop-down lists (also known as "cascading drop-down lists") in an app, users select an option in a list to filter options in a different list. Many organizations create such lists to help users fill out forms more efficiently. For example, a user might select an option in a list of countries or regions to filter a list of cities, or a user might select an option in a list of categories to show only the codes in that category.
+When you create dependent (or cascading) drop-down lists, users select an option in a list to filter options in a different list. Many organizations create such lists to help users fill out forms more efficiently. For example, users might select a country or region to filter a list of cities, or users might select a category to show only the codes in that category.
 
-The recommended method of setting up your data is to have one app data source that you submit data to and to have another table for the dropdown list values. Using a separate data source to create the options and matching logic for multiple dropdowns allows changes to the options to be done without publishing the app. Additionally this data table could be used across multiple apps. You can accomplish the same outcome with a collection or static data, but it isn't recommended for enterprise scenarios.
+As a best practice, create a data source for the values in the "parent" (the list that filters the other list), and create another data source for the "child" (which users update by using the app). If you take this approach, you can use the same parent list in more than one app, and you can update the parent list without republishing the app. You can accomplish the same outcome by using a collection or static data, but it isn't recommended for enterprise scenarios.
 
-This topic uses SharePoint lists as data sources. In this scenario, employees of a store submit issues to a **Incidents** list through a form. Employees can specify not only the store at which the incident occurred but also the department within that store. Not all stores have the same departments, so the list of departments should reflect the store that the employee specifies. For example, the store in Eganville doesn't have a pharmacy department, so an employee who reports an incident at that store shouldn't have the pharmacy option in the list of departments.
+For this topic, store employees submit issues to an **Incidents** list through a form. Employees specify not only the location at which the incident occurred but also the department within that location. Not all locations have the same departments, so a **Departments** list ensures that employees can't specify a department for a location that doesn't have that department.
+
+This topic uses SharePoint lists as data sources, but all tabular data sources work the same way.
+
+## Create data sources
 
 The **Departments** list shows the departments at each location.
 
@@ -41,10 +45,10 @@ The **Departments** list shows the departments at each location.
 
 The **Incidents** list shows contact information and information about each incident.
 
-| First Name | Last Name | Phone Number     | Store Location | Department | Issue Description       | Date      |
+| First Name | Last Name | Phone Number     | Location | Department | Description       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
-| Ruby       | Shaffer   | (555) 555 - 1055 | Eganville      | Produce    | I had a problem with…   | 2/12/2019 |
-| Kaylin     | Perez     | (333) 555 - 1033 | Renfrew        | Floral     | I experienced an issue… | 2/13/2019 |
+| Tonya       | Cortez   | (206) 555 - 1022 | Eganville      | Produce    | I had a problem with…   | 2/12/2019 |
+| Moses     | Laflamme     | (425) 555 - 1044 | Renfrew        | Floral     | I experienced an issue… | 2/13/2019 |
 
 1. In the **Incidents** list, select **PowerApps** > **Customize forms**.
 
@@ -75,9 +79,13 @@ The **Incidents** list shows contact information and information about each inci
 
     To unlock a card, select it or a control within it, select the **Advanced** tab in the right-hand pane, and then select **Unlock**.
 
-1. Rename the Location control by selecting it (not the data card) and editing the name in the top of the property pane to **ddLocation**, and rename the Department control to **ddDepartment**. It is best practice to rename your controls so that you know what they are, and it makes the example easier to follow. To learn more best practices, review the Coding Standards and Guidelines whitepaper.
+1. Rename the Location control to **ddLocation** and the Department control to **ddDepartment**.
+
+    To rename a control, select it (not the data card), and edit the name at the top of the **Properties** tab of the right-hand pane.
 
     ![rename controls](./media/dependent-drop-down-lists/rename-control.png)
+
+    If you rename your controls, you can identify them more easily, and the examples are easier to follow. To discover other best practices, review the Coding Standards and Guidelines whitepaper.
 
 1. Test the app by pressing F5, selecting an option in  **ddLocation**, and confirming that **ddDepartment** shows the appropriate options. If the column in the SharePoint list is a choice field, Eganville, Renfrew, and Pembroke would correctly appear. If this column is a LookUp field to another list or table, the data may contain duplicate options. In that case, wrap a **Distinct** function around the **Items** property of this control, and ensure that the second part of the formula where I select which column to ensure there is only one option for, in this case, Store Location.
 
@@ -85,11 +93,18 @@ The **Incidents** list shows contact information and information about each inci
 
     ![depends on flyout](./media/dependent-drop-down-lists/dependson.png)
 
-Select **ddStoreLocation**, in the following drop down select the column Value. The column name may change depending on the function you used. In some cases where you are evaluating expressions in the parent using LookUps or Distinct, select Result. In cases where you don’t want to match on string, but on the actual ID of the row of data, select ID.
+1. In the list just under **Parent control**, select **ddStoreLocation**, and then select **Value** in the list under that.
 
-In the Matching field section, select the data source that has your table “Store Department Information." Now the field in this data source that will match the one in the parent control is Store Location. Select Store Location in the following drop down.
+    The column name may change depending on the function that you used.
 
-Select **Apply**.
+    - Select **Result** if you're evaluating expressions in the parent using **LookUp** or **Distinct**.
+    - Select **ID** if you don’t want to match on string but on the actual ID of the row of data.
+
+1. Under **Matching field**, select **Departments**.
+
+    Now the field in this data source that will match the one in the parent control is **Location. Select Store Location in the following drop down.
+
+1. Select **Apply**.
 
 The **Items** property of **ddDepartment** is set to a formula with the **Filter** function.
 
