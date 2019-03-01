@@ -50,6 +50,8 @@ The **Incidents** list shows contact information and information about each inci
 | Tonya       | Cortez   | (206) 555 - 1022 | Eganville      | Produce    | I had a problem with…   | 2/12/2019 |
 | Moses     | Laflamme     | (425) 555 - 1044 | Renfrew        | Floral     | I experienced an issue… | 2/13/2019 |
 
+## Open the form
+
 1. In the **Incidents** list, select **PowerApps** > **Customize forms**.
 
     ![SharePoint list](./media/dependent-drop-down-lists/store_incidents_createform.png)
@@ -63,67 +65,73 @@ The **Incidents** list shows contact information and information about each inci
 
     ![Allowed values](./media/dependent-drop-down-lists/field-type-allowed-values.png)
 
-1. Add the **Departments** list as a data source.
+## Add the parent list
 
-    1. Select **View** > **Data Sources**.
+1. Select **View** > **Data Sources**.
 
-    1. Select your existing SharePoint connection or create another one, select the **Departments** list, and then select **Connect**.
+1. Select your existing SharePoint connection or create another one.
 
-        ![Data pane](./media/dependent-drop-down-lists/sp-datapane.png)
+1. Select the **Departments** list, and then select **Connect**.
 
-        The form or app shows two SharePoint connections in the form or app. The form is connected to one, and you'll create the dependent drop-down list with the other.
+    ![Data pane](./media/dependent-drop-down-lists/sp-datapane.png)
 
-        ![SharePoint data sources](./media/dependent-drop-down-lists/datasources.png)
+    The form or app shows two SharePoint connections in the form or app. The form is connected to one, and you'll create the dependent drop-down list with the other.
 
-1. By default, all the cards are locked. To create the dependent drop-down list, unlock the **Location** and **Department** data cards.
+    ![SharePoint data sources](./media/dependent-drop-down-lists/datasources.png)
 
-    To unlock a card, select it or a control within it, select the **Advanced** tab in the right-hand pane, and then select **Unlock**.
+1. Unlock the **Location** and **Department** data cards.
+
+    To unlock a card, select it, select the **Advanced** tab in the right-hand pane, and then select **Unlock**.
 
 1. Rename the Location control to **ddLocation** and the Department control to **ddDepartment**.
 
-    To rename a control, select it (not the data card), and edit the name at the top of the **Properties** tab of the right-hand pane.
+    To rename a control, select it (not the data card that contains it), and edit the name near the top of the **Properties** tab of the right-hand pane.
 
-    ![rename controls](./media/dependent-drop-down-lists/rename-control.png)
+    ![Rename a control](./media/dependent-drop-down-lists/rename-control.png)
 
-    If you rename your controls, you can identify them more easily, and the examples are easier to follow. To discover other best practices, review the Coding Standards and Guidelines whitepaper.
+    If you rename your controls, you can identify them more easily, and the examples are easier to follow. To discover other best practices, review the [Coding Standards and Guidelines whitepaper](https://aka.ms/powerappscanvasguidelines).
 
-1. Test the app by pressing F5, selecting an option in  **ddLocation**, and confirming that **ddDepartment** shows the appropriate options. If the column in the SharePoint list is a choice field, Eganville, Renfrew, and Pembroke would correctly appear. If this column is a LookUp field to another list or table, the data may contain duplicate options. In that case, wrap a **Distinct** function around the **Items** property of this control, and ensure that the second part of the formula where I select which column to ensure there is only one option for, in this case, Store Location.
+1. Test the app by pressing F5, selecting an option in  **ddLocation**, and confirming that **ddDepartment** shows the appropriate options. If the column in the SharePoint list is a choice field, Eganville, Renfrew, and Pembroke will correctly appear. If this column is a LookUp field to another list or table, the data may contain duplicate options. In that case, wrap a **Distinct** function around the **Items** property of this control, and ensure that the second part of the formula where I select which column to ensure there is only one option for (in this case, location).
 
 1. Select **ddDepartment** and then, on the **Properties** tab of the right-hand pane, select **Depends on.**
 
-    ![depends on flyout](./media/dependent-drop-down-lists/dependson.png)
+    ![Depends-on flyout](./media/dependent-drop-down-lists/dependson.png)
 
 1. In the list just under **Parent control**, select **ddStoreLocation**, and then select **Value** in the list under that.
 
     The column name may change depending on the function that you used.
 
     - Select **Result** if you're evaluating expressions in the parent using **LookUp** or **Distinct**.
-    - Select **ID** if you don’t want to match on string but on the actual ID of the row of data.
+    - Select **ID** if you don’t want to match on a string but on the actual ID of the row of data.
 
 1. Under **Matching field**, select **Departments**.
 
-    Now the field in this data source that will match the one in the parent control is **Location. Select Store Location in the following drop down.
+    Now the field in this data source that will match the one in the parent control is **Location**.
 
-1. Select **Apply**.
+1. Select **Location** in the following drop-down list, and then select **Apply**.
 
 The **Items** property of **ddDepartment** is set to a formula with the **Filter** function.
 
-![dependent dropdown](./media/dependent-drop-down-lists/dddropdowns.gif)
+![Dependent drop-down list](./media/dependent-drop-down-lists/dddropdowns.gif)
 
 ## FAQ
 
 **I can’t see any data: the sources are all blank or have the wrong data.**
-Check that you are displaying the correct field for your control. This can be done selecting the Value property in the property pane for drop downs or by editing the field for combo boxes and ensuring that the primary text is the field you want to display.
+Confirm whether you're displaying the correct field for your control in either of two ways:
 
-![Change combo box](./media/dependent-drop-down-lists/combo-box-display-field.png)
+- Select a drop-down list, and then select the **Value** property in the **Properties** tab of the right-hand pane.
 
-![Change drop down](./media/dependent-drop-down-lists/drop-down-display-field.png)
+    ![Change drop down](./media/dependent-drop-down-lists/drop-down-display-field.png)
 
-**I am seeing multiple, repeated items in my child dropdown.**
-This is likely due to using a LookUp column or a Choices function. This is easily solved by wrapping a Distinct function around the properly returning Data. See more on the Distinct function.
+- Select a combo box, and then ensure that the primary text is the field that you want to display.
+
+    ![Change combo box](./media/dependent-drop-down-lists/combo-box-display-field.png)
+
+**My child drop-down list contains duplicate items.**
+This is likely due to using a LookUp column or a Choices function. This is easily solved by wrapping a Distinct function around the properly returning data. More information: [Distinct function](functions/function-distinct.md)
 
 ## Known limitations
 
-This configuration is only available on **Drop down**, **Combo box**, and **List box** controls that are single select. Multi-select isn't supported at this time. We plan to extend the same type of functionality to galleries. This isn't the recommended experience for working with option sets in CDS. There is more documentation on the way on using option sets in canvas apps.
+This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Common Data Service for Apps. You can find more documentation on how to use option sets in canvas apps.
 
-The Depends On configuration doesn't support static data or collections. To configure with these sources, use the formula bar to edit the expression directly. Additionally, using two choice fields in SharePoint without any matching table of data isn't supported, and defining the Matching within this UI isn't possible.
+The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. Additionally, using two choice fields in SharePoint without any matching table of data isn't supported, and defining the Matching within this UI isn't possible.
