@@ -75,7 +75,7 @@ Let's change our simple adder to act like an old-fashioned adding machine, with 
 
 | Display | Description |
 |----|----|
-| ![](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>With the user's finger represented by the red dot, the user enteres "77" in the text box. |
+| <style> img { max-width: none } </style> ![](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>With the user's finger represented by the red dot, the user enteres "77" in the text box. |
 | ![](media/working-with-variables/button-changes-state-2.png) | The user presses "Add". |
 | ![](media/working-with-variables/button-changes-state-3.png) | 77 has been added to the running total.<br><br>The user presses "Add" again. |
 | ![](media/working-with-variables/button-changes-state-4.png) | 77 is again added to the running total, resulting in 154.<br><br>The user presses "Clear". |
