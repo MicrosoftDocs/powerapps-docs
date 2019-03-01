@@ -190,9 +190,9 @@
               href: ./canvas-apps/working-with-cards.md
           - name: Add a list
             href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
-            items:./canvas-apps/dependent-drop-down-lists.md
+            items:
             - name: Add dependent drop-down lists
-              href: 
+              href: ./canvas-apps/dependent-drop-down-lists.md
           - name: Add a chart
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
