@@ -1,7 +1,7 @@
 ---
 title: Char function | Microsoft Docs
 description: Reference information for the Char function in PowerApps, including syntax and examples
-dauthor: gregli-msft
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
@@ -15,15 +15,18 @@ search.app:
   - PowerApps
 ---
 # Char function in PowerApps
+
 Translates a character code into a string.
 
 ## Description
+
 The **Char** function translates a number into a string with the corresponding ASCII character.
 
 ## Syntax
+
 **Char**( *CharacterCode* )
 
-* *CharacterCode* - Required. ASCII character code to translate.
+- *CharacterCode* - Required. ASCII character code to translate.
 
 ## Examples
 
@@ -35,38 +38,45 @@ The **Char** function translates a number into a string with the corresponding A
 
 ### Display a character map
 
-1. Create a new tablet app.
+1. On an empty screen in a tablet app, add a [**Gallery**](../controls/control-gallery.md) control with a **Blank Horizontal** layout, and then set these properties:
 
-1. Add a [**Gallery**](../controls/control-gallery.md) control with a Blank Horizontal layout.  
-    - Re-size this gallery so that 8 columns fit across the screen.
-    - Set the **TemplatePadding** property to 0.
-    - Set the **Items** property to the formula: `[0,1,2,3,4,5,6,7]`
+    - **Items**: `[0,1,2,3,4,5,6,7]`
+    - **Width**: 800
+    - **Height**: 500
+    - **TemplateSize**: 100
+    - **TemplatePadding**: 0
 
-1. Add a second **Gallery** control within the first gallery, with a Blank Vertical layout. 
-    - Resize the gallery to fit within the first gallery with 16 rows.
+1. Inside that gallery, add a **Gallery** control with a **Blank Vertical** layout, and then set these properties:
 
-1. Set the **Items** property of the second gallery to the formula:
+    - **Items**: `ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 )`
+    - **Width**: 100
+    - **Height**: 500
+    - **TemplateSize**: 30
+    - **TemplatePadding**: 0
 
-    `ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 )`
+    The value of the **Items** property multiplies 16 by the column number provided by the Value column of the **Items** property from the first gallery (0-7 in ThisItem.Value). The formula then adds the result to one of the row numbers from the second gallery (0-15 in the record scope that the [**ForAll**](function-forall.md) function provides).
 
-    This formula will take the column number provided by the Value column of the **Items** property from the first gallery (0-7 in ThisItem.Value), multiply it by 16, and add it to one of the row numbers from the second gallery (0-15 in the record scope provided by the [**ForAll**](function-forall.md) function).
+1. Inside the second (vertical) gallery, add a **Label** control, and set these properties:
 
-1. Add a label control within the second gallery with the formula:
-    `ThisItem.Value`
+    - **Text**: `ThisItem.Value`
+    - **Width**: 50
 
-1. Add a second label control within the second gallery with the formula:
-    `Char( ThisItem.Value )`
+1. Inside the second (vertical) gallery, add another **Label** control, and set these properties:
 
-1. You will now see a chart of the first 128 ASCII characters.  Characters that show as a small square are not printable.
+    - **Text**: `Char( ThisItem.Value )`
+    - **Width**: 50
+    - **X**: 50
 
-    ![](media/function-char/chart-lower.png)
+You've created a chart of the first 128 ASCII characters. Characters that appear as a small square can't be printed.
 
-1. To show the extended ASCII characters, modify the **Items** property for the second gallery to add 128 to each of the character values:
+![First 128 ASCII characters](media/function-char/chart-lower.png)
 
-    `ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 + 128)`
+To show the extended ASCII characters, set the **Items** property of the second gallery to this formula, which adds 128 to each character value:
 
-    ![](media/function-char/chart-higher.png)
+`ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 + 128)`
 
-1. Change the **Font** property of the second label to **'Dancing Script'** (or another font name) to see the characters in a different font. 
+![Extended ASCII characters](media/function-char/chart-higher.png)
 
-    ![](media/function-char/chart-higher-dancing-script.png)
+To show the characters in a different font, set the **Font** property of the second label to a value such as **'Dancing Script'**.
+
+![Dancing Script](media/function-char/chart-higher-dancing-script.png)
