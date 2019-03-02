@@ -56,20 +56,25 @@ The confirmation dialog will be shown in any situation where data could be lost,
 - Executing the [**Exit**](function-exit.md) function.
 - If running the app on the web:
     - Closing the browser or browser tab.
+    - Selecting the back button in the browser.
+    - Closing a web page that contains an embedded app.
 - If running the app in a native player (iOS or Android):
     - Executing the [**Launch**](function-param.md) function.  When used on the web, **Launch** will open a new browser tab and no data would be lost.
     - Closing the native player.
-    - Swiping left to switch to a different app.
+    - Swiping to switch to a different app.
+    - Selecting the back button on the device (Android only).
 
 The confirmation dialog will not be shown for Studio sessions.
 
 ### ConfirmExitMessage
 
-**ConfirmExitMessage** is a text string property for a custom message to show in the confirmation dialog.  
+**ConfirmExitMessage** is a text string property for a custom message to show in the confirmation dialog.  The dialog contains this message, an action question such as "Close this app?", and response buttons.  
 
-The default is the generic message **You may have unsaved changes.** in the language of the user.  This message is included in the confirmation dialog along with an action question (such as "Close this app?") and response buttons.  The look of the dialog may vary across players and versions of PowerApps.
+The default for this property is a blank text string (**""**).  If the message is blank, the generic message **You may have unsaved changes.** in the language of the user will be used.  
 
 The message will be truncated to fit within the confirmation dialog.  Keep the message to a few lines at most. 
+
+The exact look of the confirmation dialog may vary across players and versions of PowerApps.  
 
 ### Example
 
