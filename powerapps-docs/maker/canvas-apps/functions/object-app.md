@@ -44,13 +44,13 @@ After you change the **OnStart** property, you can test it by hovering over the 
 
 ## ConfirmExit properties
 
-Nobody wants to lose unsaved changes.  Use the **ConfirmExit** and **ConfirmExitMessage** properties to warn the user before they close the app.
+Nobody wants to lose unsaved changes.  Use the **ConfirmExit** and **ConfirmExitMessage** properties to warn the user before they close your app.
 
 ### ConfirmExit
 
-**ConfirmExit** is a Boolean property that if true causes a confirmation dialog to be shown before closing the app.  The default for this property is *false* and no confirmation dialog is shown.
+**ConfirmExit** is a Boolean property that if *true* causes a confirmation dialog to be shown before closing the app.  The default for this property is *false* and no confirmation dialog is shown.
 
-Use this property to control when a confirmation dialog should be shown based on the state of unsaved data in the app.  Use a formula that can check variables and other properties, for example, the **Unsaved** property of form controls.
+Use this property to control when a confirmation dialog should be shown based on the state of unsaved data in the app.  Use a formula that can check variables and control properties, for example, the **Unsaved** property of form controls.
 
 The confirmation dialog will be shown in any situation where data could be lost, including:
 - Executing the [**Exit**](function-exit.md) function.
@@ -67,7 +67,7 @@ The confirmation dialog will not be shown for Studio sessions.
 
 **ConfirmExitMessage** is a text string property for a custom message to show in the confirmation dialog.  
 
-The default is the generic message **You may have unsaved changes.** (in the language of the user).  This message is included in the confirmation dialog along with an action question (such as "Close this app?") and response buttons.  The look of the dialog may vary across players and versions of PowerApps.
+The default is the generic message **You may have unsaved changes.** in the language of the user.  This message is included in the confirmation dialog along with an action question (such as "Close this app?") and response buttons.  The look of the dialog may vary across players and versions of PowerApps.
 
 The message will be truncated to fit within the confirmation dialog.  Keep the message to a few lines at most. 
 
