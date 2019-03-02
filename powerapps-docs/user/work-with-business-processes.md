@@ -18,11 +18,11 @@ search.app:
   - D365CE
 ---
 # Work with business processes
-  
-  
+   
+   
 <!--In first sentence, gives step-by-step what - process? guidance? -->
 
-  
+   
 The business process bar on forms gives a clear, step-by-step for building customer relationships. You can see at a glance exactly where you are with a customer and what you need to do next.
 
 > [!div class="mx-imgBorder"]
