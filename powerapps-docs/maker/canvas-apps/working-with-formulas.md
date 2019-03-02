@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 04/26/2016
+ms.date: 03/01/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -76,32 +76,26 @@ In Excel, you can enter a specific piece of data, such as the number **42** or t
     ![Using the complete formula Sum(1,2,3)](./media/working-with-formulas/label-sum.png)
 
 ## Change a value based on input
-In Excel, you type **=SUM(A1:A2)** into a cell to show the sum of whatever values cells A1 and A2 contain. If either or both of those values change, the cell that contains the formula automatically shows the updated result.
 
-![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.png)
+In Excel, you type **=A1+A2** into a cell to show the sum of whatever values cells **A1** and **A2** contain. If either or both of those values change, the cell that contains the formula automatically shows the updated result.
 
-In PowerApps, you can achieve a similar result by adding controls and setting their properties. This example shows the label from the previous procedure and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
+![Illustration of Excel recalc adding two numbers together](./media/working-with-formulas/excel-recalc.gif)
+
+In PowerApps, you can achieve a similar result by adding controls to a screen and setting their properties. This example shows a label control named **Label1** and two **[Text input](controls/control-text-input.md)** controls, named **TextInput1** and **TextInput2**.
 
 ![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc1.png)
 
 Regardless of what numbers you type in the text-input controls, the label always shows the sum of those numbers because its **[Text](controls/properties-core.md)** property is set to this formula:
-<br>**TextInput1 + TextInput2**
 
-![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc2.png)
+`TextInput1 + TextInput2`
 
-In Excel, you can use conditional formatting to show, for example, negative values in red. In PowerApps, you use a formula that contains the **[If](functions/function-if.md)** function, which behaves similarly to how it behaves in Excel.
+![Illustration of PowerApps recalc adding two numbers together](./media/working-with-formulas/recalc2.gif)
 
-1. Set the **[Color](controls/properties-color-border.md)** property of the label to this formula:<br>**If( Value(TextBox1.Text) < 0, Red, Black )**
-   
-    > [!NOTE]
-   > In a formula, specify the property of a control by providing the name of the control, followed by a period, followed by the name of the property. For example, specify the **[Text](controls/properties-core.md)** property of **TextBox1** by typing **TextBox1.Text**.
-   
-    ![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color1.png)
-2. In **TextInput1** and **TextInput2**, specify two numbers that, when added together, result in a negative number.
-   
-    ![Illustration of PowerApps recalc changing the color of a label based on its value](./media/working-with-formulas/recalc-color2.png)
-   
-    The value in the label appears in red.
+In Excel, you can use conditional formatting formulas to show, for example, negative values in red. In PowerApps, you can use formulas to determine not only the primary value of a control but also properties such as formatting. In the next example, a formula for the **[Color](controls/properties-color-border.md)** property of the label will automatically show negative values in red. The **[If](functions/function-if.md)** function should look very familiar from Excel:
+
+`If( Value(Label1.Text) < 0, Red, Black )`
+
+![](media/working-with-variables/recalc-color.gif)
 
 ## Change a color based on user input
 You can configure your app with formulas so that users can change your app's appearance or behavior. For example, you can create a filter to show only data that contains a string of text that the user specifies, or you can let users sort a set of data based on a certain column in the data set. In this procedure, you'll let users change the color of the screen by adjusting one or more sliders.
@@ -130,7 +124,7 @@ You can configure your app with formulas so that users can change your app's app
    
     As each slider changes, the formula that contains the **[RGBA](functions/function-colors.md)** function is recalculated, which immediately changes how the screen appears.
    
-    ![Change the formula for the background fill color of the screen, now complete](./media/working-with-formulas/three-sliders-example-colors.png)
+    ![Change the formula for the background fill color of the screen, now complete](./media/working-with-formulas/color-sliders.gif)
 
 ## Manage app behavior
 You can use formulas not only to perform calculations and change appearance but also to take action. For example, you can set the **[OnSelect](controls/properties-core.md)** property of a button to a formula that includes the **[Navigate](functions/function-navigate.md)** function. When a user selects that button, the screen that you specify in the formula appears.
