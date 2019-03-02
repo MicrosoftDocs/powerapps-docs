@@ -43,7 +43,7 @@ A **Locations** list shows the departments at each location.
 | Pembroke       | Produce          |
 | Pembroke       | Floral           |
 
-An **Incidents** list shows contact information and information about each incident.
+An **Incidents** list shows contact information and information about each incident. To allow for easier configuration, and avoidance of [delegation limitations](./delegation-overview.md), the Location and Department columns that are in the form should be of type Text.
 
 | First Name | Last Name | Phone Number     | Location | Department | Description       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
@@ -144,8 +144,10 @@ You'll need to change the controls in the **Location** and **Department** cards 
     The **Items** property of **ddDepartment** is set to this formula:
 
     `Filter(Locations, Location = ddLocation.Selected.Result)`
+    
+    This filters the items in the Department drop-down list in the form by the selection in the parent Location drop-down list that is equal to the Locations in the Locations SharePoint List. 
 
-1. On the **Properties** tab of the right-hand pane, open the list next to **Value**, and then select **Department**.
+1. On the **Properties** tab of the right-hand pane, open the list next to **Value**, and then select **Department**. This sets the display text to the options from the **Department** column in the SharePoint List. 
 
     ![Department value](./media/dependent-drop-down-lists/dept-value.png)
 
@@ -183,6 +185,6 @@ This is likely due to using a LookUp column or a Choices function. This is easil
 
 ## Known limitations
 
-This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Common Data Service for Apps. You can find more documentation on how to use option sets in canvas apps.
+This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Common Data Service for Apps. You can find more documentation on how to use option sets in canvas apps.
 
 The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. Additionally, using two choice fields in SharePoint without any matching table of data isn't supported, and you can't define **Matching field** within this UI.
