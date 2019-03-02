@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.date: 03/01/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -18,7 +18,9 @@ search.app:
 Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.  
 
 ## Description and syntax
-All signals return a [record](../working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](operators.md).
+Signals are values that can change at any time, independent of how the end user may be interacting with the app.  Formulas based on signals will automatically recalculate as these values change.
+
+Signals typically return a [record](../working-with-tables.md#records) of information. You can use and store this information as a record, or you can extract individual properties by using the **.** [operator](operators.md).
 
 > [!NOTE]
 > The **Acceleration** and **Compass** functions return accurate values in a native player such as on iOS or Android, but those functions return zero values as you create or modify an app in the browser.
@@ -33,23 +35,13 @@ The **Acceleration** signal returns the device's acceleration in three dimension
 | **Acceleration.Z** |Up and down.  Up is a positive number. |
 
 ### App
-The **App** signal returns information about the running app.
+Among other properties, the **App** object includes a signal that indicates which screen is currently being displayed.  
 
 | Property | Description |
 | --- | --- |
-| **App.ActiveScreen** |Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function, you can change the displayed screen. |
+| **App.ActiveScreen** |Screen that's currently displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function, you can change the displayed screen. |
 
-The **App** object also has a [behavior formula](../working-with-formulas-in-depth.md) that you can set.
-
-| Property  | Description |
-| --- | --- |
-| **OnStart** | The behavior of the app when the user starts it. This property is commonly used to retrieve and cache data into collections with the **[Collect](function-clear-collect-clearcollect.md)** function, set up variables with the **[Set](function-set.md)** function, and navigate to an initial screen with the **[Navigate](function-navigate.md)** function. This formula is evaluated before the first screen appears. No screen is loaded, so you can't set context variables with the **[UpdateContext](function-updatecontext.md)** function. However, you can pass context variables with the **Navigate** function. |
-
-The **App** object appears at the top of the hierarchical list of controls in the left navigation pane, and you can select this object like a control on a screen. After you select the object, you can view and edit one of its properties if you select that property in the drop-down list to the left of the formula bar.  
-
-After you change the **OnStart** property, you can test it by hovering over the **App** object in the left navigation pane, selecting the ellipsis (...) that appears, and then selecting **Run OnStart**. Unlike when the app is loaded for the first time, existing collections and variables will already be set. Use the **[ClearCollect](function-clear-collect-clearcollect.md)** function instead of the **Collect** function to start with empty collections.
-
- ![App item context menu with Run OnStart](media/appobject-runonstart.png)
+See the [**App** object documentation](functions/object-app.md) for more information.
 
 ### Compass
 The **Compass** signal returns the compass heading of the top of the screen. The heading is based on magnetic north.
