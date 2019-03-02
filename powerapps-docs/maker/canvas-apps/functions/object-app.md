@@ -70,7 +70,7 @@ The confirmation dialog will not be shown for Studio sessions.
 
 **ConfirmExitMessage** is a text string property for a custom message to show in the confirmation dialog.  The dialog contains this message, an action question such as "Close this app?", and response buttons.  
 
-The default for this property is a blank text string (**""**).  If the message is blank, the generic message **You may have unsaved changes.** in the language of the user will be used.  
+The default for this property is a blank text string (**""**).  If the message is blank, the generic message **"You may have unsaved changes."** will be used, in the language of the user.  
 
 The message will be truncated to fit within the confirmation dialog.  Keep the message to a few lines at most. 
 
