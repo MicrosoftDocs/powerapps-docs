@@ -315,7 +315,7 @@
           - name: And
             href: ./canvas-apps/functions/function-logicals.md
           - name: App
-            href: ./canvas-apps/functions/signals.md
+            href: ./canvas-apps/functions/object-app.md
           - name: Asin
             href: ./canvas-apps/functions/function-trig.md
           - name: Atan
