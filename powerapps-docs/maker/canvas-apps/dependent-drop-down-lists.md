@@ -20,13 +20,13 @@ When you create dependent (or cascading) drop-down lists, users select an option
 
 As a best practice, create a data source for the values in the "parent" (the list that filters the other list), and create another data source for the "child" (which users update by using the app). If you take this approach, you can use the same parent list in more than one app, and you can update the parent list without republishing the app. You can accomplish the same outcome by using a collection or static data, but it isn't recommended for enterprise scenarios.
 
-For this topic, store employees submit issues to an **Incidents** list through a form. Employees specify not only the location at which the incident occurred but also the department within that location. Not all locations have the same departments, so a **Departments** list ensures that employees can't specify a department for a location that doesn't have that department.
+For this topic, store employees submit issues to an **Incidents** list through a form. Employees specify not only the location of the store at which the incident occurred but also the department within that location. Not all locations have the same departments, so a **Locations** list ensures that employees can't specify a department for a location that doesn't have that department.
 
-This topic uses SharePoint lists as data sources, but all tabular data sources work the same way.
+This topic uses SharePoint lists as data sources, but all tabular data sources work the same way. 
 
 ## Create data sources
 
-The **Departments** list shows the departments at each location.
+A **Locations** list shows the departments at each location.
 
 | Location | Department |
 |----------------|------------------|
@@ -43,76 +43,127 @@ The **Departments** list shows the departments at each location.
 | Pembroke       | Produce          |
 | Pembroke       | Floral           |
 
-The **Incidents** list shows contact information and information about each incident.
+An **Incidents** list shows contact information and information about each incident.
 
 | First Name | Last Name | Phone Number     | Location | Department | Description       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
 | Tonya       | Cortez   | (206) 555 - 1022 | Eganville      | Produce    | I had a problem with…   | 2/12/2019 |
 | Moses     | Laflamme     | (425) 555 - 1044 | Renfrew        | Floral     | I experienced an issue… | 2/13/2019 |
 
+By default, custom SharePoint lists include a **Title** column that you can't rename or remove, and it must contain data before you can save an item in the list. To configure the column so that it doesn't require data:
+
+1. Near the upper-right corner, select the gear icon, and then select **List settings**.
+1. On the **Settings** page, select **Title** in the list of columns.
+1. Under **Require that this column contains information**, select **No**.
+
+After that change, you can ignore the **Title** column, or you can [remove it](https://support.office.com/article/edit-a-list-column-in-sharepoint-online-77130c2e-76d1-4f80-af8b-4c6f47b264b8) from the default view if at least one other column appears.
+
 ## Open the form
 
 1. In the **Incidents** list, select **PowerApps** > **Customize forms**.
 
-    ![SharePoint list](./media/dependent-drop-down-lists/store_incidents_createform.png)
+    ![SharePoint list](./media/dependent-drop-down-lists/open-form.png)
 
-    A tab will open with the default form in PowerApps Studio:
+    A browser tab opens with the default form in PowerApps Studio
 
-    ![Default form in PowerApps](./media/dependent-drop-down-lists/default-form.png)
+1. (optional) In the **Fields** pane, hover over the **Title** field, select the ellipsis (...) that appears, and then select **Remove**.
 
-    > [!NOTE]
-    > If your parent and child fields aren't **Drop down**, **Combo box**, or **List box** controls, you'll have to change the control type. This usually occurs when the type of column is of type Text or Choice. On the **Fields** pane, select the field to expand its information, and then set the control type to **Allowed Values**, which will change the input mechanism to a **Drop down** control.
+    If you've closed the **Fields** pane, you can open it again by selecting **SharePointForm1** in the left navigation bar and then selecting **Edit fields** on the **Properties** tab of the right-hand pane.
 
-    ![Allowed values](./media/dependent-drop-down-lists/field-type-allowed-values.png)
+1. (optional) Repeat the previous step to remove the **Attachments** field from the form.
 
-## Add the parent list
+    ![Form without Title and Attachments fields](./media/dependent-drop-down-lists/default-form.png)
 
-1. Select **View** > **Data Sources**.
+## Replace the controls
 
-1. Select your existing SharePoint connection or create another one.
+You'll need to change the controls in the **Location** and **Department** cards if they're anything other than **Drop down**, **Combo box**, or **List box** controls. For example, the cards might contain **Text input** controls by default if you created **Text** or **Choice** columns in SharePoint.
 
-1. Select the **Departments** list, and then select **Connect**.
+1. In the **Fields** pane, select the down arrow next to **Location**, open the **Control type** list, and then select **Allowed Values**.
 
-    ![Data pane](./media/dependent-drop-down-lists/sp-datapane.png)
+    If you've closed the **Fields** pane, you can open it again by selecting **SharePointForm1** in the left navigation bar and then selecting **Edit fields** on the **Properties** tab of the right-hand pane.
 
-    The form or app shows two SharePoint connections in the form or app. The form is connected to one, and you'll create the dependent drop-down list with the other.
+    ![Allowed values](./media/dependent-drop-down-lists/change-control.png)
 
-    ![SharePoint data sources](./media/dependent-drop-down-lists/datasources.png)
+    The input mechanism changes to a **Combo box** control.
 
-1. Unlock the **Location** and **Department** data cards.
+1. Repeat the previous step for the **Department** card.
 
-    To unlock a card, select it, select the **Advanced** tab in the right-hand pane, and then select **Unlock**.
+## Add the Locations list
 
-1. Rename the Location control to **ddLocation** and the Department control to **ddDepartment**.
+1. Select **View** > **Data Sources** > **Add data source**.
 
-    To rename a control, select it (not the data card that contains it), and edit the name near the top of the **Properties** tab of the right-hand pane.
+1. Select your existing SharePoint connection, or create one.
+
+1. Specify the SharePoint site that contains the **Locations** list, select the check box for that list, and then select **Connect**.
+
+    ![Data pane](./media/dependent-drop-down-lists/select-list.png)
+
+    The list of connections shows the **Incidents** list, on which the form is based, and the **Locations** list, which will identify locations and departments in the form.
+
+    ![SharePoint data sources](./media/dependent-drop-down-lists/data-sources.png)
+
+## Unlock the cards
+
+1. Select the **Location** card, select the **Advanced** tab in the right-hand pane, and then select **Unlock to change properties**.
+
+1. Repeat the previous step for the **Department** card.
+
+## Rename the controls
+
+1. Select the control in the **Location** card (not the card itself).
+
+1. Near the top of the **Properties** tab of the right-hand pane, rename the selected control by typing or pasting **ddLocation**.
 
     ![Rename a control](./media/dependent-drop-down-lists/rename-control.png)
 
     If you rename your controls, you can identify them more easily, and the examples are easier to follow. To discover other best practices, review the [Coding Standards and Guidelines whitepaper](https://aka.ms/powerappscanvasguidelines).
 
-1. Test the app by pressing F5, selecting an option in  **ddLocation**, and confirming that **ddDepartment** shows the appropriate options. If the column in the SharePoint list is a choice field, Eganville, Renfrew, and Pembroke will correctly appear. If this column is a LookUp field to another list or table, the data may contain duplicate options. In that case, wrap a **Distinct** function around the **Items** property of this control, and ensure that the second part of the formula where I select which column to ensure there is only one option for (in this case, location).
+1. Repeat the previous two steps to rename the control in the **Department** card to **ddDepartment**.
+
+## Configure the locations
+
+1. Set the **Items** property of **ddlocation** to this formula:
+
+    `Distinct(Locations, Location)`
+
+1. (optional) While holding down the Alt key, select an option in **ddLocation**, and confirm that the list shows the three locations.
+
+## Configure the departments
 
 1. Select **ddDepartment** and then, on the **Properties** tab of the right-hand pane, select **Depends on.**
 
-    ![Depends-on flyout](./media/dependent-drop-down-lists/dependson.png)
+1. Under **Parent control**, ensure that **ddLocation** appears in the upper list and **Result** appears in the lower list.
 
-1. In the list just under **Parent control**, select **ddStoreLocation**, and then select **Value** in the list under that.
+    > [!NOTE]
+    > If you don’t want to match on a string but on the actual ID of the row of data, select **ID** Instead of **Result**.
 
-    The column name may change depending on the function that you used.
+1. Under **Matching field**, select **Locations** in the upper list, select **Location** in the lower list, and then select **Apply**.
 
-    - Select **Result** if you're evaluating expressions in the parent using **LookUp** or **Distinct**.
-    - Select **ID** if you don’t want to match on a string but on the actual ID of the row of data.
+    ![Depends on link](./media/dependent-drop-down-lists/depends-on.png)
 
-1. Under **Matching field**, select **Departments**.
+    The **Items** property of **ddDepartment** is set to this formula:
 
-    Now the field in this data source that will match the one in the parent control is **Location**.
+    `Filter(Locations, Location = ddLocation.Selected.Result)`
 
-1. Select **Location** in the following drop-down list, and then select **Apply**.
+1. On the **Properties** tab of the right-hand pane, open the list next to **Value**, and then select **Department**.
 
-The **Items** property of **ddDepartment** is set to a formula with the **Filter** function.
+    ![Department value](./media/dependent-drop-down-lists/dept-value.png)
+
+## Test the form
+
+While holding down the Alt key, open the list of locations, select one, open the list of departments, and select one.
+
+The lists of locations and departments reflects the information in the **Locations** list in SharePoint.
 
 ![Dependent drop-down list](./media/dependent-drop-down-lists/dddropdowns.gif)
+
+## Save the form (optional)
+
+1. Open the **File** menu, select **Save**, and then select **Publish to SharePoint** twice.
+
+1. In the upper-left corner, select the back arrow, and then select **Back to SharePoint**.
+
+1. In the command bar, select **New** to open your customized form.
 
 ## FAQ
 
@@ -134,4 +185,4 @@ This is likely due to using a LookUp column or a Choices function. This is easil
 
 This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Common Data Service for Apps. You can find more documentation on how to use option sets in canvas apps.
 
-The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. Additionally, using two choice fields in SharePoint without any matching table of data isn't supported, and defining the Matching within this UI isn't possible.
+The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. Additionally, using two choice fields in SharePoint without any matching table of data isn't supported, and you can't define **Matching field** within this UI.
