@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 03/01/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -32,7 +32,7 @@ The process bar can be docked to the right side of the screen for easy reference
 > [!div class="mx-imgBorder"]
 > ![Business process bar](media/BPdocked.png "Business process bar")
 
-For more information on how to work with business process flows, see [Business process flows overview](https://docs.microsoft.com/en-us/flow/business-process-flows-overview).
+For more information on how to create and manage business process flows, see [Business process flows overview](/flow/business-process-flows-overview).
   
  
 ## What if your business processes looks different from these examples?  
