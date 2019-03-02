@@ -8,9 +8,10 @@ ms.service: "crm-online"
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-applies_to:  
+applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: get-started-dynamics-365-web-api-client-side-JavaScript
+caps.latest.revision: 51
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly"
 manager: "amyla"
