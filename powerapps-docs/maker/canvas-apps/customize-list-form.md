@@ -70,7 +70,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     The three fields that you configured appear and disappear from the form.
 
-![Set conditional formatting](./media/customize-list-form/set-conditional-format.gif)
+![Set conditional formatting](./media/customize-list-form/conditional-format.gif)
 
 ## Save and publish the form
 
