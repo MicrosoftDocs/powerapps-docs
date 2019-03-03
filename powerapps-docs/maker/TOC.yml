@@ -192,7 +192,7 @@
           - name: Add a list
             href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
             items:
-            - name: Add dependent drop-down lists
+            - name: Create dependent drop-down lists
               href: ./canvas-apps/dependent-drop-down-lists.md
           - name: Add a chart
             href: ./canvas-apps/use-line-pie-bar-chart.md

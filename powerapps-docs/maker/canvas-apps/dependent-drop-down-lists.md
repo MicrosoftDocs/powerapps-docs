@@ -16,13 +16,13 @@ search.app:
 ---
 # Create dependent drop-down lists in a canvas app
 
-When you create dependent (or cascading) drop-down lists, users select an option in a list to filter options in a different list. Many organizations create such lists to help users fill out forms more efficiently. For example, users might select a country or region to filter a list of cities, or users might select a category to show only the codes in that category.
+When you create dependent (or cascading) drop-down lists, users select an option in a list to filter options in another list. Many organizations create dependent lists to help users fill out forms more efficiently. For example, users might select a country or region to filter a list of cities, or users might select a category to show only the codes in that category.
 
-As a best practice, create a data source for the values in the "parent" (the list that filters the other list), and create another data source for the "child" (which users update by using the app). If you take this approach, you can use the same parent list in more than one app, and you can update the parent list without republishing the app. You can accomplish the same outcome by using a collection or static data, but it isn't recommended for enterprise scenarios.
+As a best practice, create a data source for the values in the "parent" and "child" lists (for example, countries/regions and cities) that's separate from the data source that users update by using the app. If you take this approach, you can use the same parent and child data in more than one app, and you can update that data without republishing the app or apps that use them. You can accomplish the same outcome by using a collection or static data, but it isn't recommended for enterprise scenarios.
 
-For this topic, store employees submit issues to an **Incidents** list through a form. Employees specify not only the location of the store at which the incident occurred but also the department within that location. Not all locations have the same departments, so a **Locations** list ensures that employees can't specify a department for a location that doesn't have that department.
+For the scenario in this topic, store employees submit issues to an **Incidents** list through a form. Employees specify not only the location of the store at which the incident occurred but also the department within that location. Not all locations have the same departments, so a **Locations** list ensures that employees can't specify a department for a location that doesn't have that department.
 
-This topic uses SharePoint lists as data sources, but all tabular data sources work the same way. 
+This topic uses SharePoint lists as data sources, but all tabular data sources work the same way.
 
 ## Create data sources
 
@@ -43,7 +43,7 @@ A **Locations** list shows the departments at each location.
 | Pembroke       | Produce          |
 | Pembroke       | Floral           |
 
-An **Incidents** list shows contact information and information about each incident. Create these columns as **Single line of text** columns to simplify configuration and avoid warnings about [delegation](./delegation-overview.md) in PowerApps.
+An **Incidents** list shows contact information and information about each incident. Create the Date column as a **Date** column, but create the other columns as **Single line of text** columns to simplify configuration and avoid [delegation](./delegation-overview.md) warnings in PowerApps.
 
 | First Name | Last Name | Phone Number     | Location | Department | Description       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
@@ -60,11 +60,11 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 
 ## Open the form
 
-1. In the **Incidents** list, select **PowerApps** > **Customize forms**.
+1. Open the **Incidents** list, and then select **PowerApps** > **Customize forms**.
 
     ![SharePoint list](./media/dependent-drop-down-lists/open-form.png)
 
-    A browser tab opens with the default form in PowerApps Studio
+    A browser tab opens with the default form in PowerApps Studio.
 
 1. (optional) In the **Fields** pane, hover over the **Title** field, select the ellipsis (...) that appears, and then select **Remove**.
 
@@ -72,29 +72,31 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 
 1. (optional) Repeat the previous step to remove the **Attachments** field from the form.
 
+    The form appears with just the fields that you added.
+
     ![Form without Title and Attachments fields](./media/dependent-drop-down-lists/default-form.png)
 
 ## Replace the controls
 
-You'll need to change the controls in the **Location** and **Department** cards if they're anything other than **Drop down**, **Combo box**, or **List box** controls. For example, the cards might contain **Text input** controls by default if you created **Text** or **Choice** columns in SharePoint.
-
-1. In the **Fields** pane, select the down arrow next to **Location**, open the **Control type** list, and then select **Allowed Values**.
+1. In the **Fields** pane, select the down arrow next to **Location**.
 
     If you've closed the **Fields** pane, you can open it again by selecting **SharePointForm1** in the left navigation bar and then selecting **Edit fields** on the **Properties** tab of the right-hand pane.
 
+1. Open the **Control type** list, and then select **Allowed Values**.
+
     ![Allowed values](./media/dependent-drop-down-lists/change-control.png)
 
-    The input mechanism changes to a **Combo box** control.
+    The input mechanism changes to a **Drop down** control.
 
-1. Repeat the previous step for the **Department** card.
+1. Repeat these steps for the **Department** card.
 
 ## Add the Locations list
 
 1. Select **View** > **Data Sources** > **Add data source**.
 
-1. Select your existing SharePoint connection, or create one.
+1. Select or create a SharePoint connection, and then specify the site that contains the **Locations** list.
 
-1. Specify the SharePoint site that contains the **Locations** list, select the check box for that list, and then select **Connect**.
+1. Select the check box for that list, and then select **Connect**.
 
     ![Data pane](./media/dependent-drop-down-lists/select-list.png)
 
@@ -110,15 +112,15 @@ You'll need to change the controls in the **Location** and **Department** cards 
 
 ## Rename the controls
 
-1. Select the control in the **Location** card (not the card itself).
+If you rename your controls, you can identify them more easily, and the examples are easier to follow. To discover other best practices, review the [Coding Standards and Guidelines whitepaper](https://aka.ms/powerappscanvasguidelines).
 
-1. Near the top of the **Properties** tab of the right-hand pane, rename the selected control by typing or pasting **ddLocation**.
+1. In the **Location** card, select the **Drop down** control.
+
+1. Near the top of the right-hand pane, rename the selected control by typing or pasting **ddLocation**.
 
     ![Rename a control](./media/dependent-drop-down-lists/rename-control.png)
 
-    If you rename your controls, you can identify them more easily, and the examples are easier to follow. To discover other best practices, review the [Coding Standards and Guidelines whitepaper](https://aka.ms/powerappscanvasguidelines).
-
-1. Repeat the previous two steps to rename the control in the **Department** card to **ddDepartment**.
+1. Repeat the previous two steps in the **Department** card to rename the **Drop down** control to **ddDepartment**.
 
 ## Configure the locations
 
@@ -126,7 +128,7 @@ You'll need to change the controls in the **Location** and **Department** cards 
 
     `Distinct(Locations, Location)`
 
-1. (optional) While holding down the Alt key, select an option in **ddLocation**, and confirm that the list shows the three locations.
+1. (optional) While holding down the Alt key, open **ddLocation**, and confirm that the list shows the three locations.
 
 ## Configure the departments
 
@@ -144,26 +146,26 @@ You'll need to change the controls in the **Location** and **Department** cards 
     The **Items** property of **ddDepartment** is set to this formula:
 
     `Filter(Locations, Location = ddLocation.Selected.Result)`
-    
-    This formula filters the items in **ddDepartment** based on what the user selects in **ddLocation**. Such a configuration ensures that the "child" list of departments reflects the data for its "parent" location, as the **Locations** list in SharePoint specifies. 
+
+    This formula filters the items in **ddDepartment** based on what the user selects in **ddLocation**. Such a configuration ensures that the "child" list of departments reflects the data for its "parent" location, as the **Locations** list in SharePoint specifies.
 
 1. On the **Properties** tab of the right-hand pane, open the list next to **Value**, and then select **Department**.
 
-    This value sets the display text to the options from the **Department** column of the **Locations** list in SharePoint. 
+    This step sets the display text to the options from the **Department** column of the **Locations** list in SharePoint.
 
     ![Department value](./media/dependent-drop-down-lists/dept-value.png)
 
 ## Test the form
 
-While holding down the Alt key, open the list of locations, select one, open the list of departments, and select one.
+While holding down the Alt key, open the list of locations, select one, open the list of departments, and then select one.
 
 The lists of locations and departments reflects the information in the **Locations** list in SharePoint.
 
-![Dependent drop-down list](./media/dependent-drop-down-lists/dddropdowns.gif)
+![Dependent drop-down list](./media/dependent-drop-down-lists/dropdowns.gif)
 
-## Save the form (optional)
+## Save and open the form (optional)
 
-1. Open the **File** menu, select **Save**, and then select **Publish to SharePoint** twice.
+1. Open the **File** menu, and then select **Save** > **Publish to SharePoint** > **Publish to SharePoint**.
 
 1. In the upper-left corner, select the back arrow, and then select **Back to SharePoint**.
 
@@ -172,7 +174,7 @@ The lists of locations and departments reflects the information in the **Locatio
 ## FAQ
 
 **I can’t see any data: the sources are all blank or have the wrong data.**
-Confirm whether you're displaying the correct field for your control in either of two ways:
+Confirm whether you're displaying the correct field for your control in either of these ways:
 
 - Select a drop-down list, and then select the **Value** property in the **Properties** tab of the right-hand pane.
 
@@ -183,7 +185,7 @@ Confirm whether you're displaying the correct field for your control in either o
     ![Change combo box](./media/dependent-drop-down-lists/combo-box-display-field.png)
 
 **My child drop-down list contains duplicate items.**
-This is likely due to using a LookUp column or a Choices function. This is easily solved by wrapping a Distinct function around the properly returning data. More information: [Distinct function](functions/function-distinct.md)
+This symptom is likely due to using a **LookUp** column in SharePoint or a **Choices** function in PowerApps. To remove the duplication, wrap a **Distinct** function around the properly returning data. More information: [Distinct function](functions/function-distinct.md)
 
 ## Known limitations
 
