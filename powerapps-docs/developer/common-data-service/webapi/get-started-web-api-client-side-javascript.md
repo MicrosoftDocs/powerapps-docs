@@ -22,9 +22,8 @@ search.app:
 
 In HTML web resources, form scripts, or ribbon commands you can use JavaScript to perform operations on Common Data Service for Apps data using the Web API. Use the [Xrm.WebApi](/powerapps/developer/model-driven-apps/clientapi/reference/xrm-webapi) client API methods to use Web API with JavaScript and web resources.
 
-### See also 
+### See also
 [Apply business logic using client scripting](/powerapps/developer/model-driven-apps/client-scripting)
-
 
 
 
