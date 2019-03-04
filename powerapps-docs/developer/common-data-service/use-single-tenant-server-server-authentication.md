@@ -45,7 +45,7 @@ To create an application registration in Azure AD, follow these steps.
 2. Choose **Admin** > **Admin centers** > **Azure Active Directory**
 3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
 4. Choose **+ New registration** [[image](#bkmk_app-registration-started)]
-5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, provide a valid web URI for the **Redirect URI**, and choose **Register**. Note that the URI must syntactically correct but does not need to actually exist.
+5. In the **Register an application** form provide a name for your app, select **Accounts in this organizational directory only**, and choose **Register**. A redirect URI is not needed for this walkthrough and the provided sample code.
 6. On the **Overview** page, select **API permissions** [[image](#bkmk_app-registration-completed)]
 7. Choose **+ Add a permission**
 8. In the **Microsoft APIs** tab, choose **Dynamics CRM**
