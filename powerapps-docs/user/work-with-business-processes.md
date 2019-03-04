@@ -19,20 +19,21 @@ search.app:
 ---
 # Work with business processes
 
-Business process flows provide a guide for users to get their work done efficiently. They help you enter data consistently and follow the same steps every time you work with a record.  
+Business process flows provide a guide for users to get their work done efficiently. They help you enter data consistently and follow the same steps every time you work with a record. 
 
-For exmaple, as you work on a new customer record, the business process flow helps you see each step that you need to take to create the new record and fill out the required information according to your organizations business process.  
+For exmaple, as you work on a new customer record, the business process flow helps you see each step that you need to take to create the new record and fill out the required information according to your organizations business process. 
 
-The process bar can be docked to the right side of the screen for easy reference as you work with a customer record.  
+The process bar can be docked to the right side of the screen for easy reference as you work with a customer record. 
 
 > [!div class="mx-imgBorder"]
 > ![Business process bar](media/BPdock.png "Business process bar")
-
+ 
 
 > [!div class="mx-imgBorder"]
 > ![Business process bar](media/BPdocked.png "Business process bar")
 
 For more information on how to create and manage business process flows, see [Business process flows overview](/flow/business-process-flows-overview).
+
 
 ## What if your business processes looks different from these examples?  
 

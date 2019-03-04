@@ -24,8 +24,7 @@ search.app:
 # Authenticate to Common Data Service for Apps with the Web API
 
 
-You must use OAuth as described in [Use OAuth with Common Data Service for apps](../authenticate-oauth.md).<br />
-
+You must use OAuth as described in [Use OAuth with Common Data Service for apps](../authenticate-oauth.md).
   
 If you’re creating a single page application (SPA) using JavaScript you can use the adal.js library as described in [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md).  
   

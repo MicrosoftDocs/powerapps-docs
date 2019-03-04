@@ -1,5 +1,5 @@
 ---
-title: "Client-side JavaScript using Web API (client-side JavaScript) | Microsoft Docs"
+title: "Client-side JavaScript using Web API | Microsoft Docs"
 description: "JavaScript can be used in HTML web resources, form scripts or ribbon commands to perform operations on Common Data Service for Appsdata using Web API"
 ms.custom: ""
 ms.date: 02/28/2019
@@ -24,3 +24,7 @@ In HTML web resources, form scripts, or ribbon commands you can use JavaScript t
 
 ### See also 
 [Apply business logic using client scripting](/powerapps/developer/model-driven-apps/client-scripting)
+
+
+
+
