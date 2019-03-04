@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/connect-web-services-using-oauth.md",
+      "redirect_url": "authenticate-oauth",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/delegation-list.md",
       "redirect_url": "delegation-overview#delegable-data-sources",
       "redirect_document_id": "false"
