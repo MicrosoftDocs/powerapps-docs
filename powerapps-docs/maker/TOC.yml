@@ -996,6 +996,8 @@
       href: ./common-data-service/types-of-fields.md
     - name: Global option sets overview
       href: ./common-data-service/create-edit-global-option-sets.md
+    - name: Autonumber fields
+      href: ./common-data-service/autonumber-fields.md  
     - name: Set managed properties for fields
       href: ./common-data-service/set-managed-properties-for-field.md
     - name: Behavior and format of the Date and Time field
