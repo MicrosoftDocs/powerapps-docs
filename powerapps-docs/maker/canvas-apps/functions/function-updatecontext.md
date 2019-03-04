@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 # UpdateContext function in PowerApps
-Creates or updates [context variables](../working-with-variables.md#create-a-context-variable) of the current screen.
+Creates or updates [context variables](../working-with-variables.md#use-a-context-variable) of the current screen.
 
 ## Overview
 Use the **UpdateContext** function to create a context variable, which temporarily holds a piece of information, such as the number of times the user has selected a button or the result of a data operation.
