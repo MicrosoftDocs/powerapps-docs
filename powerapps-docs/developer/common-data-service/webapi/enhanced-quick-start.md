@@ -4,7 +4,7 @@ description: "Create a new project in Visual Studio to build a console applicati
 ms.custom: ""
 ms.date: 02/02/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

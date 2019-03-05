@@ -2,7 +2,7 @@
 title: "setSharedVariable (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the getEventSource method that returns a reference to the form or an item on the form depending on where the method was called." 
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 702a13c1-f4ae-4de2-9e8b-95360ad9240c

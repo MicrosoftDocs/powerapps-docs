@@ -3,7 +3,7 @@ title: "Create model-driven app business rules and recommendations | MicrosoftDo
 ms.custom: ""
 ms.date: 01/23/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

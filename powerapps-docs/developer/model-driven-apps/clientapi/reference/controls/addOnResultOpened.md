@@ -1,7 +1,7 @@
 ---
 title: "addOnResultOpened (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 5f0eabe1-985a-4e89-b23a-72657208ae7e

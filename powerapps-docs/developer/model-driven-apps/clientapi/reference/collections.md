@@ -1,7 +1,7 @@
 ---
 title: "Collections (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 29ec134e-8fa5-4f88-a353-a3c15398eb37

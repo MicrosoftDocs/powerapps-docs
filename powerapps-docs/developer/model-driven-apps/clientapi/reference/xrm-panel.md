@@ -1,7 +1,7 @@
 ---
 title: "Xrm.Panel| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 5bc5295b-0232-4d1b-8583-f20417571c1f

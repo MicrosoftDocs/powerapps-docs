@@ -1,7 +1,7 @@
 ---
 title: "getName (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 05f2320e-f6fb-4fe1-88ee-67d57d921738

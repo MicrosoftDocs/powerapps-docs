@@ -1,7 +1,7 @@
 ---
 title: "OnStageChange Event (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 0c85fe34-1368-4d0d-87eb-4109206ce4f7

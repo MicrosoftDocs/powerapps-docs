@@ -1,7 +1,7 @@
 ---
 title: "getEnabledProcesses (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 52f79803-2ce0-4ca7-8200-aec544545d62

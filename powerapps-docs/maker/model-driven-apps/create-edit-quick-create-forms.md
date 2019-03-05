@@ -4,7 +4,7 @@ description: "Learn how to create or edit a quick create form"
 ms.custom: ""
 ms.date: 01/25/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

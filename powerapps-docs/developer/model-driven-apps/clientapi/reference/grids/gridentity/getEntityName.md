@@ -1,7 +1,7 @@
 ---
 title: "getEntityName (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 20f9127f-c90a-4ea9-aab3-6ef1f0347a48

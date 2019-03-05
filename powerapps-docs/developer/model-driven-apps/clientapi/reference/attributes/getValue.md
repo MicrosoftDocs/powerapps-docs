@@ -1,7 +1,7 @@
 ---
 title: "getValue (Client API reference)| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: acc78a1e-212a-4eef-88c5-8272f9ba3009

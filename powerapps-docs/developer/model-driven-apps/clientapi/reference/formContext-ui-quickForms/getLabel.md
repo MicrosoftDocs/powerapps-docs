@@ -1,7 +1,7 @@
 ---
 title: "getLabel (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 489d9ea0-6858-4e7c-86bd-4084fd94b044

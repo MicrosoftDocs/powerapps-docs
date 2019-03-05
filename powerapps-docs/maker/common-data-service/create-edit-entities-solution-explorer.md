@@ -4,7 +4,7 @@ description: "Learn how to create an entity using solution explorer"
 ms.custom: ""
 ms.date: 02/26/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
