@@ -3,7 +3,7 @@ title: "Choose and configure columns in model-driven app views in PowerApps | Mi
 description: "Learn how to select and configure views for your app"
 keywords: ""
 ms.date: 11/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

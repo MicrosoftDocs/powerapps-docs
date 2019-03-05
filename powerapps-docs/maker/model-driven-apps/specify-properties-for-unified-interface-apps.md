@@ -3,7 +3,7 @@ title: "Specify properties for model-driven unified interface apps in PowerApps 
 description: "Learn how to configure the grid control for your app"
 keywords: ""
 ms.date: 06/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

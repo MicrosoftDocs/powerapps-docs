@@ -1,7 +1,7 @@
 ---
 title: "getFormat (Client API reference)| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e5f97552-4a48-4bf9-b460-6105442e2e6b

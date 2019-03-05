@@ -4,7 +4,7 @@ description: In this topic you learn how to access entity views
 ms.custom: ""
 ms.date: 11/27/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

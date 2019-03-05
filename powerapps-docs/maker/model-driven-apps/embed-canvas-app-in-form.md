@@ -3,7 +3,7 @@ title: "Embed a canvas app on a model-driven form | MicrosoftDocs"
 ms.custom: ""
 ms.date: 12/17/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

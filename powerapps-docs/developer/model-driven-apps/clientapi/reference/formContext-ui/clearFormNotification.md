@@ -1,7 +1,7 @@
 ---
 title: "clearFormNotification (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 6c57db71-a76d-404c-852e-9c36a1c549ee

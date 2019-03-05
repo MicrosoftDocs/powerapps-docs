@@ -3,7 +3,7 @@ title: "Create a model-driven app site map for an app in PowerApps | MicrosoftDo
 description: "Learn how to create a site map for you app"
 keywords: ""
 ms.date: 05/29/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

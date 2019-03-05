@@ -3,7 +3,7 @@ title: "Change the color scheme or add a logo to match your organization’s bra
 ms.custom: ""
 ms.date: 02/19/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

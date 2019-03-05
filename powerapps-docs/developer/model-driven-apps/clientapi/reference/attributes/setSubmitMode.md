@@ -1,7 +1,7 @@
 ---
 title: "setSubmitMode (Client API reference)| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d0728377-4365-4571-97af-9b99b2a39b65

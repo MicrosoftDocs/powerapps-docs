@@ -1,7 +1,7 @@
 ---
 title: "Xrm.WebApi (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: a6646fc8-c2e4-43fe-95f1-51483de38688

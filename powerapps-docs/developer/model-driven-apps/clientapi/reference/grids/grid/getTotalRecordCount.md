@@ -1,7 +1,7 @@
 ---
 title: "getTotalRecordCount (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 8305f0cb-9959-4429-a721-a864ade4cd35
