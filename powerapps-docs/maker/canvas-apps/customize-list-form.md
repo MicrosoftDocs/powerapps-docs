@@ -23,40 +23,38 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 > [!NOTE]
 > If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [PowerApps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md).
 
-## Prerequisites
+## Create a list
 
-1. On a SharePoint site, create a list.
+On a SharePoint site, create a list, and then add these columns to that list:
 
-1. Rename the **Title** column to **ProductName** (no space).
+- **Details** (yes/no)
+- **Price** (currency)
+- **Availability** (date without time)
+- **Color** (choice)
 
-1. Add these columns:
+![Select Site contents > New > List, type the list name, and select Create. For each column, select Add column, specify the list type (Yes/No, Currency, Date, Choice), specify the list name (Details, Price, Availability, Color), and select Save.](./media/customize-list-form/create-list.gif)
 
-    - **Details** (yes/no)
-    - **Price** (currency)
-    - **Availability** (date without time)
-    - **Color** (choice)
+## Open the form
 
-## Open the form in PowerApps
-
-1. Open the list that you created, and then select **New** in the command bar.
-
-    The form opens and shows the fields that this topic specifies, plus **Attachments**.
-
-1. Near the top of the form, select **Customize**.
+1. In the command bar, select **PowerApps**, and then select **Customize form**.
 
     PowerApps Studio opens in the same browser tab.
 
 1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
 
-## Hide an extra field
+![In the command bar, select PowerApps, and then select Customize form. PowerApps Studio opens in the same browser tab. If the Welcome to PowerApps Studio dialog box opens, select Skip.](./media/customize-list-form/create-form.gif)
 
-In the center of your screen, PowerApps shows your form, but it contains fields that you don't need.
+## Move and remove a field
 
-- In the **Data** pane, clear the check box for the **Attachments** field.
+1. Drag the **Availability** field to the bottom of the list of fields.
 
-    That field disappears from the form, leaving only the fields that you want.
+    The fields appear in the order that you specify.
 
-    ![Field list](./media/customize-list-form/field-list.png)
+1. Hover over the **Attachments** field, select the ellipsis (...) that appears, and then select **Remove**.
+
+    The field that you specify disappears from the form.
+
+![Drag the Availability field to the bottom of the list of fields. Hover over the Attachments field, select the ellipsis (...) that appears, and then select Remove.](./media/customize-list-form/move-remove-fields.gif)
 
 ## Set conditional formatting
 
@@ -64,49 +62,35 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. In the left navigation bar, expand **Details_DataCard1**, and note the numeral that appears at the end of **DataCardValue**.
 
-    In this example, the numeral is 2.
-
-    ![Data-card value for Details column](./media/customize-list-form/data-card-value.png)
-
-1. Select the **Price** card by clicking or tapping it.
-
-    ![Select the Availability card](./media/customize-list-form/select-card.png)
-
-1. In the property list, select **Visible**.
-
-    ![Select the Visible property](./media/customize-list-form/select-property.png)
-
-1. In the formula bar, type or paste this formula and then, if necessary, replace the numeral with the one that you noted in step 1:
+1. Set the **Visibility** property of the **Color**, **Availability**, and **Price** cards to this formula (replacing, if necessary, the numeral with the one that you noted in the previous step):
 
     **If(DataCardValue2.Value = true, true)**
-
-    ![Set the value of the Visible property](./media/customize-list-form/build-formula.png)
-
-1. Repeat last three steps with the **Availability** and **Color** cards.
 
 1. While holding down the Alt key, select the **Details** toggle (by clicking or tapping it) multiple times.
 
     The three fields that you configured appear and disappear from the form.
 
-1. (optional) Customize your form in a variety of other ways, including these:
+![In the left navigation bar, note the numeral that appears at the end of DataCardValue. Set the Visibility property of the Color, Availability, and Price cards to this formula. Hold down the Alt key, and select the Details control multiple times.](./media/customize-list-form/conditional-format.gif)
 
-    - Change its size, orientation, or both (for example, to [make the form wider](set-aspect-ratio-portrait-landscape.md)).
-    - Add a control so that users can [upload attachments](controls/properties-text.md).
-    - Create a [lookup field](sharepoint-lookup-fields.md).
-
-## Save, publish, and show the form
+## Save and publish the form
 
 1. Open the **File** menu, select **Save**, and then select **Publish to SharePoint** twice.
 
 1. In the upper-left corner, select the back arrow, and then select **Back to SharePoint**.
 
-1. In the command bar, select **New** to open your customized form.
+![Open the File menu, select Save, and then select Publish to SharePoint twice. In the upper-left corner, select the back arrow, and then select Back to SharePoint.](./media/customize-list-form/save-form.gif)
 
-1. Select the **Details** toggle multiple times to hide and show the last three fields.
+## Further customize your form
 
-To [customize your form further](sharepoint-form-integration.md), open it, select **Customize** near the top of the form, and then make, save, and publish your changes.
+1. Open your list, select **New** in the command bar, and then select **Customize** near the top of the form.
 
-If you create one or more items with this form, the **Title** field will be empty. You can hide this field by modifying the default view.
+1. Customize your form a variety of ways such as those that these topics describe:
+
+    - Change its size, orientation, or both (for example, to [make the form wider](set-aspect-ratio-portrait-landscape.md)).
+    - Add a control so that users can [upload attachments](controls/properties-text.md).
+    - Create a [lookup field](sharepoint-lookup-fields.md).
+
+    More information: [Understand SharePoint forms integration](sharepoint-form-integration.md)
 
 ## Use the default form
 
