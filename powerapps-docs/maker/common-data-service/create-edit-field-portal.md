@@ -3,7 +3,7 @@ title: "Create and edit fields for Common Data Service for Apps using PowerApps 
 ms.custom: ""
 ms.date: 02/28/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

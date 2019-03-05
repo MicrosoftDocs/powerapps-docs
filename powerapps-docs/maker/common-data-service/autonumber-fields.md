@@ -3,7 +3,7 @@ title: "Autonumber fields in Common Data Service for Apps | MicrosoftDocs"
 description: "Understand how to create, manage, and use autonumber fields"
 keywords: ""
 ms.date: 02/26/2019
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

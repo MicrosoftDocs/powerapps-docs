@@ -1,7 +1,7 @@
 ---
 title: "getControlType (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 72d6c761-bcc7-4de6-b73f-5f2833297825

@@ -4,7 +4,7 @@ description: "Learn how to access the Common Data Service for Apps Web API using
 ms.custom: ""
 ms.date: 1/09/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

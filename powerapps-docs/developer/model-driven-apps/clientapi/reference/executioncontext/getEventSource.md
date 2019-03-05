@@ -2,7 +2,7 @@
 title: "getEventSource (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about the getEventSource method that returns a reference to the object that the event occurred on." 
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9f3b2fed-fde5-46e4-8c59-43aa51aa82df

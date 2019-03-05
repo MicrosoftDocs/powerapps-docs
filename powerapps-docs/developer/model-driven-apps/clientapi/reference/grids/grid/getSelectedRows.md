@@ -1,7 +1,7 @@
 ---
 title: "getSelectedRows (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 49f39f0f-33ef-41d1-9ab3-14966ae075b5

@@ -1,7 +1,7 @@
 ---
 title: "Debug your JavaScript code for model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "conceptual"
 applies_to: 
   - "Dynamics 365 (online)"

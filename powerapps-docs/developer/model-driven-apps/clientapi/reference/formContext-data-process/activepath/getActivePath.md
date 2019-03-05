@@ -1,7 +1,7 @@
 ---
 title: "getActivePath (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4916df68-b2d4-4a0b-b341-eb9f7032bc20

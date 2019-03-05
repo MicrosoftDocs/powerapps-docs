@@ -4,7 +4,7 @@ definition: "Learn how to change the icon for a custom entity"
 ms.custom: ""
 ms.date: 05/17/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -2,7 +2,7 @@
 title: "Custom virtual entity data providers (Common Data Service for Apps) | Microsoft Docs"
 description: "Using the CDS for Apps Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider."
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"

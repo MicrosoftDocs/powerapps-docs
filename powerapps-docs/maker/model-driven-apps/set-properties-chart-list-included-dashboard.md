@@ -4,7 +4,7 @@ description: "Learn how to set properties for  chart or list included in a dashb
 ms.custom: ""
 ms.date: 06/06/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
