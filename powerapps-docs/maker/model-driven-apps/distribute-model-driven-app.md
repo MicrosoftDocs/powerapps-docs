@@ -3,7 +3,7 @@ title: "Distribute a model-driven app using a solution | MicrosoftDocs"
 description: "Learn how you distribute a model-driven app using solutions"
 keywords: ""
 ms.date: 08/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

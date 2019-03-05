@@ -4,7 +4,7 @@ description: "Learn how you can use the Web API to discover at runtime the organ
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

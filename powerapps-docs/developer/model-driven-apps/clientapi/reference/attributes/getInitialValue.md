@@ -1,7 +1,7 @@
 ---
 title: "getInitialValue (Client API reference)| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 56fb62e6-d357-4096-bf4c-f4c1b543d633

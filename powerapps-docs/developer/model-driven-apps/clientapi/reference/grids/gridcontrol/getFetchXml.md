@@ -1,7 +1,7 @@
 ---
 title: "getFetchXml (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862

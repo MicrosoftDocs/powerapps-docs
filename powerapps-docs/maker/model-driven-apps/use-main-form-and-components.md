@@ -6,7 +6,7 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"

@@ -1,7 +1,7 @@
 ---
 title: "setVisible (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 485d9843-5907-49e4-971b-0e86f3bd1eb8

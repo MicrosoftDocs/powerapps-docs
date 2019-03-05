@@ -10,7 +10,7 @@ applies_to:
 ms.author: matp
 manager: kvivek
 ms.date: 06/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: article
 ms.assetid: 68f68d5b-6c71-4b95-bb46-d48c59d9008e
 search.audienceType: 

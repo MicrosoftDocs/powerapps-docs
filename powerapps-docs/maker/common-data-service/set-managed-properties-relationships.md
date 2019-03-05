@@ -4,7 +4,7 @@ description: "Learn how to set managed properties for an entity relationship"
 ms.custom: ""
 ms.date: 06/20/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

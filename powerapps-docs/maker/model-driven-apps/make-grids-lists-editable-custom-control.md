@@ -4,7 +4,7 @@ description: "Learn how to use the editable grid custom control"
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
