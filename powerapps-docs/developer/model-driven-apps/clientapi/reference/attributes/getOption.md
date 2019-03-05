@@ -1,7 +1,7 @@
 ---
 title: "getOption (Client API reference)| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e334d2d9-91c0-4953-956d-444a84dc9da2

@@ -1,7 +1,7 @@
 ---
 title: "getInitialUrl (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 2c6d6ab4-98a8-4444-b24a-65c140e8f192

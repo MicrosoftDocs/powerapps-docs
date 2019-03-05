@@ -4,7 +4,7 @@ description: "The sample demonstrates workflow activity calculates the credit sc
 ms.custom: ""
 ms.date: 12/03/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "samples"

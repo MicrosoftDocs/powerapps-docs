@@ -4,7 +4,7 @@ description: "Learn how to display custom icon graphics in a view"
 ms.custom: ""
 ms.date: 02/14/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

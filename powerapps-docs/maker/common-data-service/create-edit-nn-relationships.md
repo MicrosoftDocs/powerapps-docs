@@ -4,7 +4,7 @@ description: "Learn how to create many-to-many entity relationships"
 ms.custom: ""
 ms.date: 05/29/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

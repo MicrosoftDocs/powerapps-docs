@@ -1,7 +1,7 @@
 ---
 title: "getParent (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: ad0d1d8a-b781-403b-9f9f-a13b99a4bf22

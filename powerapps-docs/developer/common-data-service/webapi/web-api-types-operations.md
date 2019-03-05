@@ -4,7 +4,7 @@ description: "This topic describes what is available for you to use vis-a-vis th
 ms.custom: ""
 ms.date: 02/05/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

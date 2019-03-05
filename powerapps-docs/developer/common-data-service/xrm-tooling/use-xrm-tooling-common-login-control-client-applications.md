@@ -4,7 +4,7 @@ description: "The CDS for Apps SDK provides you with a template for Visual Studi
 ms.custom: ""
 ms.date: 1/16/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

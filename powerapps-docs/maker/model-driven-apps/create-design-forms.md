@@ -3,7 +3,7 @@ title: "Create and design model-driven app forms | MicrosoftDocs"
 ms.custom: ""
 ms.date: 12/06/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

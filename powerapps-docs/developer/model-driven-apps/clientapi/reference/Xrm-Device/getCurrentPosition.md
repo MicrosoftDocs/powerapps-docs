@@ -1,7 +1,7 @@
 ---
 title: "getCurrentPosition| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 062a52d8-170c-4e98-b48a-ac99ec759f83

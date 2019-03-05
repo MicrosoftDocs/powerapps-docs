@@ -4,7 +4,7 @@ description: "The section provides guidance about how to use the Web API with th
 ms.custom: ""
 ms.date: 11/04/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

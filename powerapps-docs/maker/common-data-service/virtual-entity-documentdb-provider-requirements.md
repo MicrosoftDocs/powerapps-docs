@@ -3,7 +3,7 @@ title: "Preview Feature: Use the Azure Cosmos DB for SQL API Data Provider with 
 description: "Learn how to configure the Azure Cosmos DB for SQL API Data Provider to use with virtual entities."
 keywords: "SQL API"
 ms.date: 02/15/2019
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

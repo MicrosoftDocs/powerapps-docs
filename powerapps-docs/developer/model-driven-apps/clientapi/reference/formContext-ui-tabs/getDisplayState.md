@@ -1,7 +1,7 @@
 ---
 title: "getDisplayState (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: adc135d1-7a29-4079-b745-f317fca0fbe4
