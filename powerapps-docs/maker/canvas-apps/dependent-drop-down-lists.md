@@ -162,7 +162,8 @@ While holding down the Alt key, open the list of locations, select one, open the
 
 The lists of locations and departments reflects the information in the **Locations** list in SharePoint.
 
-![Open the list of locations, change the selection from Renfrew to Pembroke, and then open the list of departments](./media/dependent-drop-down-lists/dropdowns.gif)
+> !div class="mx-imgBorder"]
+> ![Open the list of locations, change the selection from Renfrew to Pembroke, and then open the list of departments](./media/dependent-drop-down-lists/dropdowns.gif)
 
 ## Save and open the form (optional)
 
