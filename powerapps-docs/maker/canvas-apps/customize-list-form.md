@@ -32,7 +32,7 @@ On a SharePoint site, create a list, and then add these columns to that list:
 - **Availability** (date without time)
 - **Color** (choice)
 
-![Create the list, and add columns](./media/customize-list-form/create-list.gif)
+![Select Site contents > New > List, type the list name, and select Create. For each column, select Add column, specify the list type (Yes/No, Currency, Date, Choice), specify the list name (Details, Price, Availability, Color), and select Save.](./media/customize-list-form/create-list.gif)
 
 ## Open the form
 
@@ -42,7 +42,7 @@ On a SharePoint site, create a list, and then add these columns to that list:
 
 1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
 
-![Create the form in PowerApps](./media/customize-list-form/create-form.gif)
+![In the command bar, select PowerApps, and then select Customize form. PowerApps Studio opens in the same browser tab. If the Welcome to PowerApps Studio dialog box opens, select Skip.](./media/customize-list-form/create-form.gif)
 
 ## Move and remove a field
 
@@ -54,7 +54,7 @@ On a SharePoint site, create a list, and then add these columns to that list:
 
     The field that you specify disappears from the form.
 
-![Move and remove a field](./media/customize-list-form/move-remove-fields.gif)
+![Drag the Availability field to the bottom of the list of fields. Hover over the Attachments field, select the ellipsis (...) that appears, and then select Remove.](./media/customize-list-form/move-remove-fields.gif)
 
 ## Set conditional formatting
 
@@ -70,7 +70,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
     The three fields that you configured appear and disappear from the form.
 
-![Set conditional formatting](./media/customize-list-form/conditional-format.gif)
+![In the left navigation bar, note the numeral that appears at the end of DataCardValue. Set the Visibility property of the Color, Availability, and Price cards to this formula. Hold down the Alt key, and select the Details control multiple times.](./media/customize-list-form/conditional-format.gif)
 
 ## Save and publish the form
 
@@ -78,7 +78,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. In the upper-left corner, select the back arrow, and then select **Back to SharePoint**.
 
-![Save and publish the form](./media/customize-list-form/save-form.gif)
+![Open the File menu, select Save, and then select Publish to SharePoint twice. In the upper-left corner, select the back arrow, and then select Back to SharePoint.](./media/customize-list-form/save-form.gif)
 
 ## Further customize your form
 
