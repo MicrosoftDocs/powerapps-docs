@@ -62,7 +62,8 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 
 1. Open the **Incidents** list, and then select **PowerApps** > **Customize forms**.
 
-    ![SharePoint list](./media/dependent-drop-down-lists/open-form.png)
+    > !div class="mx-imgBorder"]
+    > ![SharePoint list](./media/dependent-drop-down-lists/open-form.png)
 
     A browser tab opens with the default form in PowerApps Studio.
 
