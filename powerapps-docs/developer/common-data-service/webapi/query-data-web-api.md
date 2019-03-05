@@ -4,7 +4,7 @@ description: "Read about the various ways to query Common Data Service for Apps 
 ms.custom: ""
 ms.date: 02/06/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

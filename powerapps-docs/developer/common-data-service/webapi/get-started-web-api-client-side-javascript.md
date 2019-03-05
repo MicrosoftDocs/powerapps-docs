@@ -26,6 +26,5 @@ In HTML web resources, form scripts, or ribbon commands you can use JavaScript t
 [Apply business logic using client scripting](/powerapps/developer/model-driven-apps/client-scripting)
 
 
-  
-  
-  
+
+

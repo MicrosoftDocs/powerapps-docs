@@ -1,7 +1,7 @@
 ---
 title: "Grids and subgrids in model-driven apps for Dynamics 365| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 9d35c036-637f-4580-8ba0-027a44c0fdee

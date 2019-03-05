@@ -1,7 +1,7 @@
 ---
 title: "setDisabled (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: a2b54b6a-f560-4b2c-8a39-11cbb768145a

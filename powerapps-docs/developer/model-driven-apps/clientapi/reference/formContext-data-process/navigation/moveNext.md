@@ -1,7 +1,7 @@
 ---
 title: "moveNext (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 97640c6a-816b-4d18-9b0b-e79411787c1a

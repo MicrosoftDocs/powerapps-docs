@@ -3,7 +3,7 @@ title: "Pass the current record as data context with an embedded canvas app | Mi
 ms.custom: ""
 ms.date: 12/17/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

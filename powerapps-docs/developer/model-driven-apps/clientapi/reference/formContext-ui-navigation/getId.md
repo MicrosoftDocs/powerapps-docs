@@ -1,7 +1,7 @@
 ---
 title: "getId (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: ca9eee7e-c8db-4f34-9986-b3991db2a48a

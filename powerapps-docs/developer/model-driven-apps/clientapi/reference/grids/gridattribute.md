@@ -1,7 +1,7 @@
 ---
 title: "GridAttribute (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 8139c622-e4d9-478f-9510-414d140e5556

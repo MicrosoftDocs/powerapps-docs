@@ -1,7 +1,7 @@
 ---
 title: "reflow (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 6833e4ea-70fc-4ee0-8aab-68cc55e21444
