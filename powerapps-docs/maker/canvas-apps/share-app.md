@@ -45,8 +45,9 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. Specify by name or alias the users or security groups in Azure Active Directory with which you want to share the app.
 
-    To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
-
+    - To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
+    - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Jane Doe &lt;jane.doe@contoso.com>**) if the items are separated by semi-colons. If more than one person has the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved. 
+    
     ![Specify users and co-owners](./media/share-app/share-everyone.png)
 
     > [!NOTE]
