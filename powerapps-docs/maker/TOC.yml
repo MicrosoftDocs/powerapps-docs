@@ -759,6 +759,8 @@
             href: ./model-driven-apps/create-edit-quick-create-forms.md
           - name: "Create a quick view form"
             href: ./model-driven-apps/create-edit-quick-view-forms.md
+          - name: "Create a card form"
+            href: ./model-driven-apps/create-card-forms.md
         - name: Form editor overview
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
           items:
