@@ -111,12 +111,16 @@ Shown below is example console output obtained from a D365 organization that onl
 <a name="bkmk_app-registration-started"></a>
 ### Figure: Azure AD app registration
 <!--![Azure AD app registration](media/S2S-app-registration-started.PNG "Azure AD app registration")<br />-->
-<img src="media/S2S-app-registration-started.PNG" style="padding:1px;border:thin solid black;"><br />
+<kbd><img src="media/S2S-app-registration-started.PNG"></kbd><br />
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_app-registration-completed"></a>
 ### Figure: Azure AD app registration overview
-![Azure AD app registration overview](media/S2S-app-registration-completed.PNG "Azure AD app registration overview")<br />
+<!--![Azure AD app registration overview](media/S2S-app-registration-completed.PNG "Azure AD app registration overview")<br />-->
+> [![screenshot][1]][1]
+
+  [1]: media/S2S-app-registration-completed.PNG
+
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_api-permission-started"></a>
