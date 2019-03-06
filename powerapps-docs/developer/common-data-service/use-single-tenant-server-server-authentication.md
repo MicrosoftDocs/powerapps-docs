@@ -110,7 +110,8 @@ Shown below is example console output obtained from a D365 organization that onl
 
 <a name="bkmk_app-registration-started"></a>
 ### Figure: Azure AD app registration
-![Azure AD app registration](media/S2S-app-registration-started.PNG "Azure AD app registration")<br />
+<!--![Azure AD app registration](media/S2S-app-registration-started.PNG "Azure AD app registration")<br />-->
+<img src="media/S2S-app-registration-started.PNG" style="padding:1px;border:thin solid black;"><br />
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_app-registration-completed"></a>
