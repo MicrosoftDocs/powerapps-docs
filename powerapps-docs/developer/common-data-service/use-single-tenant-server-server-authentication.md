@@ -26,7 +26,9 @@ The single-tenant server-to-server scenario typically applies for enterprise org
   
 -   Because all the organizations are in the same tenant, there is no need for a tenant admin to grant consent for each organization. The application is simply registered once for the tenant.
   
--   You have the opportunity to use certificates rather than keys if you prefer.  
+-   You have the opportunity to use certificates rather than keys if you prefer. 
+
+In the [See also](#bkmk_seealso) section at the end of this article, there are links to information on upgrading a single-tenant application to multi-tenancy.  
 
 <a name="bkmk_Requirements"></a>
 ## Requirements  
@@ -102,9 +104,13 @@ Shown below is example console output obtained from a D365 organization that onl
 }
 ```
 
+<a name="bkmk_seealso"></a>
+
 ### See also
- [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)   
- [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)
+
+[Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)   
+[Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)  
+[How to: Sign in any Azure Active Directory user using the multi-tenant application pattern](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant)
 
 ## List of figures
 
