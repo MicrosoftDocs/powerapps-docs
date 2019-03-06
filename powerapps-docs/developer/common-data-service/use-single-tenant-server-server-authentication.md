@@ -110,30 +110,25 @@ Shown below is example console output obtained from a D365 organization that onl
 
 <a name="bkmk_app-registration-started"></a>
 ### Figure: Azure AD app registration
-<!--![Azure AD app registration](media/S2S-app-registration-started.PNG "Azure AD app registration")<br />-->
 <kbd><img src="media/S2S-app-registration-started.PNG"></kbd><br />
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_app-registration-completed"></a>
 ### Figure: Azure AD app registration overview
-<!--![Azure AD app registration overview](media/S2S-app-registration-completed.PNG "Azure AD app registration overview")<br />-->
-> [![screenshot][1]][1]
-
-  [1]: media/S2S-app-registration-completed.PNG
-
+<kbd><img src="media/S2S-app-registration-completed.PNG"></kbd><br />
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_api-permission-started"></a>
 ### Figure: Setting app permissions
-![Setting app permissions](media/S2S-api-permission-started.PNG "Setting app permissions")<br />
+<kbd><img src="media/S2S-api-permission-started.PNG" ></kbd><br />
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_api-permission-completed"></a>
 ### Figure: Completed app permissions and consent
-![Completedd app permissions and consent](media/S2S-api-permission-completed.PNG "Completedd app permissions and consent")<br />
+<kbd><img src="media/S2S-api-permission-completed.PNG" ></kbd><br />
 [[go back](#bkmk_registration)]
 
 <a name="bkmk_new-appuser"></a>
 ### Figure: Adding a new application user in D365
-![Adding a new application user in D365](media/S2S-new-appuser.PNG "Adding a new application user in D365")<br />
+<kbd><img src="media/S2S-new-appuser.PNG" ></kbd><br />
 [[go back](#bkmk_appuser)]
