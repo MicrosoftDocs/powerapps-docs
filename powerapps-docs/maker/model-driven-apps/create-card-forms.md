@@ -47,8 +47,8 @@ Although card forms can be created and edited in the same way as other form type
 4. Select **Custom Controls** from the **Common Tasks** pane.
 5. Select **Add Control**, from the list of controls select **Read Only Grid**, and then select **Add**.
 
-  > [!NOTE]
-  > There are two read only grid controls. The default read only grid control that is named **Read-only Grid (default)** doesn’t support custom card forms. 
+   > [!NOTE]
+   > There are two read only grid controls. The default read only grid control that is named **Read-only Grid (default)** doesn’t support custom card forms. 
 
 6. From the **Read Only Grid** properties page configure the following properties, and then select **OK**. 
    - **Card Form**. Select the pencil icon ![Edit control properties](media/ccf-pencil-icon.png) and then select the card form you want to display in the view. By default, the primary entity associated with the view is already selected, but you can change it. 
