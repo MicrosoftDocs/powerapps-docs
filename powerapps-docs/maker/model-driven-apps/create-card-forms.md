@@ -3,7 +3,7 @@ title: "Create a card form with PowerApps | MicrosoftDocs"
 description: "Learn how to create and use card forms in PowerApps"
 keywords: ""
 ms.date: 03/05/2019
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 
@@ -12,7 +12,9 @@ applies_to:
   - "PowerApps"
 author: "Mattp123"
 ms.assetid: be93b9d7-f1c2-4ee7-8d7c-0f5c34dfa5f7
-ms.author: matp
+author: "Mattp123"
+ms.author: "matp"
+manager: "kvivek"
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
