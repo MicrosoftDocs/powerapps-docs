@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Connect to SharePoint from a canvas app
+
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
 Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch.
@@ -23,6 +24,7 @@ Connect to a SharePoint site to generate an app automatically from a custom list
 - Show images and play video or audio files in a library (SharePoint Online only).
 
 ## Generate an app
+
 If you want to manage data in a custom list, PowerApps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
 
 > [!NOTE]
@@ -40,53 +42,58 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
     > [!div class="mx-imgBorder"]
     > ![In the search box near the upper-right corner, type or paste SharePoint, and then select SharePoint.](./media/connection-sharepoint-online/select-sharepoint.png)
 
-1. To connect to SharePoint Online, select **Connect directly (cloud services)**, and then provide credentials (if prompted).
+1. Perform either of these sets of steps:
 
-    > [!div class="mx-imgBorder"]
-    > ![To connect to SharePoint Online, select Connect directly (cloud services)](./media/connection-sharepoint-online/select-online.png)
+    - To connect to SharePoint Online, select **Connect directly (cloud services)**, select **Create**, and then provide credentials (if prompted).
 
-    The connection is created, and you can add a data to an existing app or build an app from scratch.
+        > [!div class="mx-imgBorder"]
+        > ![To connect to SharePoint Online, select Connect directly (cloud services)](./media/connection-sharepoint-online/select-online.png)
 
-1. To connect to an on-premises site, select **Connect using on-premises data gateway**.
+        The connection is created, and you can add a data to an existing app or build an app from scratch.
 
-    > [!div class="mx-imgBorder"]
-    > ![To connect to on-premises site, select **Connect using on-premises data gateway)](./media/connection-sharepoint-online/select-onprem.png)
+    - To connect to an on-premises site, select **Connect using on-premises data gateway**.
 
-1. Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
+        > [!div class="mx-imgBorder"]
+        > ![To connect to on-premises site, select **Connect using on-premises data gateway)](./media/connection-sharepoint-online/select-onprem.png)
 
-    > [!div class="mx-imgBorder"]
-    > ![Specify credentials](./media/connection-sharepoint-online/specify-creds.png)
+        Specify **Windows** as the authentication type, and then specify your credentials. (If your credentials include a domain name, specify it as *domain\alias*.)
 
-    > [!NOTE]
-    > If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then select the icon to refresh the list of gateways.
+        > [!div class="mx-imgBorder"]
+        > ![Specify credentials](./media/connection-sharepoint-online/specify-creds.png)
 
-1. Under **Choose a gateway**, select the gateway that you want to use, and then select **Create**.
+        Under **Choose a gateway**, select the gateway that you want to use, and then select **Create**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Choose gateway](./media/connection-sharepoint-online/choose-gateway.png)
+        > [!NOTE]
+        > If you don't have an on-premises data gateway installed, [install one](../gateway-reference.md), and then select the icon to refresh the list of gateways.
 
-    The connection is created, and you can add a data to an existing app or build an app from scratch.
+        > [!div class="mx-imgBorder"]
+        > ![Choose gateway](./media/connection-sharepoint-online/choose-gateway.png)
+
+        The connection is created, and you can add a data to an existing app or build an app from scratch.
 
 ## Add data to an existing app
+
 1. In PowerApps Studio, open the app that you want to update, select the **View** tab, and then select **Data sources**.
 
-     > [!div class="mx-imgBorder"]
-    > ![Choose gateway](./media/connection-sharepoint-online/view-data-sources.png)
+    > [!div class="mx-imgBorder"]
+    > ![On the View tab, and then select Data sources](./media/connection-sharepoint-online/view-data-sources.png)
 
 1. In the **Data** pane, select **Add data source** > **SharePoint**.
 
 1. Under **Connect to a SharePoint site**, select an entry in the **Recent sites** list (or type or paste the URL for the site that you want to use), and then select **Connect**.
 
-     > [!div class="mx-imgBorder"]
-    > ![Choose gateway](./media/connection-sharepoint-online/select-sp-site.png)
+    > [!div class="mx-imgBorder"]
+    > ![Select site](./media/connection-sharepoint-online/select-sp-site.png)
 
 1. Under **Choose a list**, select the check box for **Documents** or one or more lists that you want to use, and then select **Connect**:
 
-    ![Select the tables in SharePoint](./media/connection-sharepoint-online/select-sp-tables.png)
+    > [!div class="mx-imgBorder"]
+    > ![Under Choose a list, select the check box for Documents or one or more lists that you want to use, and then select Connect](./media/connection-sharepoint-online/select-sp-tables.png)
 
     Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists.  If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter a custom list name**.
 
-    ![Custom list in SharePoint](./media/connection-sharepoint-online/custom-list.png)
+    > [!div class="mx-imgBorder"]
+    > ![Type the name of the list in the box that contains Enter a custom list name.](./media/connection-sharepoint-online/custom-list.png)
 
     The data source or sources are added to your app.
 
@@ -95,7 +102,8 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
 Apply the concepts in [Create an app from scratch](../get-started-create-from-blank.md) to SharePoint instead of Excel.
 
 ## Show list columns in a gallery
-To show data from any of these types of columns in a gallery, use the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
+
+If your custom list contains any of these types of columns, show that data in a **Gallery** control by using the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
 
 - For a **Choice** or **Lookup** column, specify **ThisItem.[ColumnName].Value** to show data in that column.
 
@@ -109,13 +117,14 @@ To show data from any of these types of columns in a gallery, use the formula ba
 
     **Note:** For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
 
-* For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
+- For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
 
     For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
 
 ## Known issues
 
 ### Lists
+
 PowerApps can read column names that contain spaces, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
 
 Not all types of columns are supported, and not all types of columns support all types of cards.
@@ -147,6 +156,7 @@ Not all types of columns are supported, and not all types of columns support all
 - PowerApps Mobile doesn't support the **Download** function.
 
 ## Next steps
-* Learn how to [show data from a data source](../add-gallery.md).
-* Learn how to [view details and create or update records](../add-form.md).
-* See other types of [data sources](../connections-list.md) to which you can connect.
+
+- Learn how to [show data from a data source](../add-gallery.md).
+- Learn how to [view details and create or update records](../add-form.md).
+- See other types of [data sources](../connections-list.md) to which you can connect.
