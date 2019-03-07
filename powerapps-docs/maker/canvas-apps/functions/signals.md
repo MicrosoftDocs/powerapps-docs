@@ -41,7 +41,7 @@ The **App** signal returns information about the running app.
 | **App.Width** | Returns the width of the app playing window, which can be used in the formula for the Width property of the screen in order to build a responsive app.  |
 | **App.Height** | Returns the height of the app playing window, which can be used in the formula for the Height property of the screen in order to build a responsive app. |
 | **App.DesignWidth** | Returns the width of the app in the authoring experience, which can be used in the formula for the Width property of the screen in order to ensure a minimum width in a responsive app.  |
-| **App.DesignHeight** | Returns the height of the app in the authoring experience, which can be used to set the Height property of the screen in order to build a responsive app ensuring the app uses a minimum height.  |
+| **App.DesignHeight** | Returns the height of the app in the authoring experience, which can be used in the formula for the Height property of the screen in order to ensure a minimum height in a responsive app.  |
 
 The **App** object also has a [behavior formula](../working-with-formulas-in-depth.md) that you can set.
 
