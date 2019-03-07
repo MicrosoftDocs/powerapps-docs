@@ -54,7 +54,7 @@ To add PowerApps Checker back to your CDS for Apps environment:
 
 ## Runs on large solutions fail
 
-There are a couple different scenarios that can occur if a solution is too large. These scenarios are further explained below. The solution to each scenario is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to plug-in assembly components, please see guidance to [Optimize custom assembly development](../../../common-data-service/best-practices/business-logic/optimize-assembly-development.md).
+There are a couple different scenarios that can occur if a solution is too large. These scenarios are further explained below. The solution to each scenario is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to plug-in assembly components, please see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md).
 
 Solution Checker has a solution file size limit of 30MB and a 10-minute timeout for exporting a solution from the Common Data Service (CDS) for Apps environment. Large solutions, like the Default Solution, may fail to get exported within this time, and the check will not complete successfully. Solution Checker will retry three times before it fails to process the job, so it may take over 30-minutes before you receive a failure notification.
 
