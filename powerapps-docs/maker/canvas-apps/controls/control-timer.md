@@ -165,4 +165,4 @@ Some scenarios are exempt from these requirements. Learn more in the [WCAG 2.0 g
 * Consider adding a **[Label](control-text-box.md)** to show the elapsed time. Use the timer's **[Text](properties-core.md)** to instruct the user to start or stop the timer.
 
 ### Support in PowerApps Studio
-As you build an app, timers are disabled to prevent events from triggering. You can test timers in PowerApps Studio if you open Preview, or you can save the app and test it in PowerApps Mobile or the web player.
+As you build an app, timers are disabled to prevent events from triggering. You can test timers in PowerApps Studio if you open Preview, or you can save the app and test them in PowerApps Mobile or the web player.
