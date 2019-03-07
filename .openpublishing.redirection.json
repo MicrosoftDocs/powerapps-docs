@@ -1242,11 +1242,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "powerapps-docs/maker/canvas-apps/release-notes.md",
-      "redirect_url": "/powerapps/whats-new",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "powerapps-docs/restore-an-app.md",
       "redirect_url": "/powerapps/maker/canvas-apps/restore-an-app",
       "redirect_document_id": true
