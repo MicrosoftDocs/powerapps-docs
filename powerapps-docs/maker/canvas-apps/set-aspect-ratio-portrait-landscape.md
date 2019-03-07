@@ -38,14 +38,14 @@ Customize a canvas app by changing its screen size and orientation.
     
 4. Under **Scale to fit**, specify either **On** or **Off**.
 
-    If scale to fit is turned on, the app screens will resize to fit the available space on the device. This is the default setting.
+    If scale to fit is turned on, the app screens will resize to fit the available space on the device. App.Width is equal to App.DesignWidth, and App.Height is equal to App.DesignHeight. This is the default setting.
     
     If scale to fit is turned off, the app will adjust to the aspect ratio of the device on which it's running and take up all of the available space. The app will not scale, and as a result screens can show more information. When scale to fit is turned off, Lock Aspect ratio is automatically turned off and disabled.  
-    Scale to fit turned off sets the Screen Width property to be Max(App.Width, App.DesignWidth) and Screen Height property to be Max(App.Height, App.DesignHeight). This enables creating apps that are responsive when you configure layout properties. See more on creating responsive apps. 
+    Scale to fit turned off enables the Screen Width property of Max(App.Width, App.DesignWidth) and Screen Height property of Max(App.Height, App.DesignHeight) to track the dimensions of the app playing window instead. This enables creating apps that are responsive when you configure layout properties. See more on creating responsive apps. 
     
 5. Under **Lock aspect ratio**, specify either **On** or **Off**.
 
-    If you lock the aspect ratio, the app will retain the appropriate aspect ratio for a phone. If the app is running on another kind of device, the app will display incorrectly and may show unwanted results. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running.
+    If you lock the aspect ratio, the app will retain the appropriate aspect ratio for the selections made in the screen orientation and aspect ratio in steps 1 and 2, no matter the device. For example, if a phone app is running on another kind of device like a web browser, the app may appear display incorrectly by retaining it's phone aspect ratio, not filling the window and having dark bars to fill in the aspect ratio mismatch. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running. This may cause unintended or unwanted distortion of the controls on the screen. 
 
 6. Under **Lock orientation**, specify either **On** or **Off**.
 
