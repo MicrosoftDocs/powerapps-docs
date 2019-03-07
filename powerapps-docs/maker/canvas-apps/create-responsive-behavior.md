@@ -16,17 +16,17 @@ search.app:
 ---
 # Create responsive layouts in canvas apps
 
-Before you build a canvas app in PowerApps, you choose whether to tailor the app for a phone or a tablet. This choice determines the size and shape of the canvas on which you'll build your app.
+Before you build a canvas app in PowerApps, you specify whether to tailor the app for a phone or a tablet. This choice determines the size and shape of the canvas on which you'll build your app.
 
-After you choose a layout, you can make a few more selections that affect the layout. If you select **File** > **App settings** > **Screen size + orientation**, you can choose whether you want portrait or landscape orientation, which screen size (tablet only), whether to lock the aspect ratio, and whether to support device rotation.
+After you make that choice, you can make a few more choices about the canvas. If you select **File** > **App settings** > **Screen size + orientation**, you can choose whether you want portrait or landscape orientation and which screen size (tablet only) to use. You can also lock or unlock the aspect ratio and support device rotation (or not).
 
-After you make those selections and construct the screens of your app, everything about your design is based on your choices. If your app is used on a device of a different size (or on the web), your entire layout is scaled larger (or smaller) to fit the screen where it runs. If an app designed for a phone runs in a large web browser window, for example, the app appears almost comically oversized for its space. It can't take advantage of all those additional pixels, by showing more controls or more content.
+Those choices underlie every other choice you make as you design screen layouts. If your app is used on a device of a different size (or on the web), your entire layout is scaled larger (or smaller) to fit the screen where it runs. If an app designed for a phone runs in a large browser window, for example, the app appears almost comically oversized for its space. It can't take advantage of all those additional pixels, by showing more controls or more content.
 
 ## Disable Scale to Fit
 
-You can adapt the layout of each of your screens to the actual space in which they're running.
+You can configure each screen so that its layout adapts to the actual space in which the app runs.
 
-To activate responsiveness, turn off the **Scale to fit** setting, which is on by default in every app. When you turn this setting off, you also turn off **Lock aspect ratio** because you're no longer designing for a specific screen shape. (You can still choose whether your app supports device rotation.)
+You start activate responsiveness by turning off the **Scale to fit** setting, which is on by default when you create an app. When you turn this setting off, you also turn off **Lock aspect ratio** because you're no longer designing for a specific screen shape. (You can still specify whether your app supports device rotation.)
 
 To make your app responsive, you must do more than just turn the **Scale to fit** setting off. However, this change is the first step toward making responsiveness possible.
 
@@ -130,7 +130,7 @@ You can use these formula patterns for expressing common layout relationships be
 | Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | to add |
 | **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | to add |
 | **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | to add |
-| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width � N` | to add |
+| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width - N` | to add |
 | **C** positioned below **D** with a gap of N             | **Y** | `D.Y + D.Height + N` | to add |
 | **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | to add |
 |  | **Width** | `Parent.Width - C.X` | to add |
@@ -150,7 +150,7 @@ If you use a gallery in your app, you'll need to lay out controls within the gal
 
 ### Enhanced Group control
 
-An experimental PowerApps feature, the enhanced Group control allows you to use a Group control as a parent control. To turn this feature on, select **File** > **App settings** > **Advanced settings**.
+You can use an experimental PowerApps feature, the enhanced **Group** control, as a parent control. To turn this feature on, select **File** > **App settings** > **Advanced settings**.
 
 Consider the example of a header at the top of a screen. It's common to have a header with a title and several icons with which your users can interact. You can construct such a header using the enhanced Group control, containing a **Label** control and two **Icon** controls:
 
@@ -171,49 +171,43 @@ With these formulas written, it should be very easy to adjust the size or positi
 
 ### Components
 
-Another experimental PowerApps feature, Components allows you to construct building blocks and reuse them in multiple places in your app. As with the enhanced Group control, the controls you place within a component should base their position and size formulas on Parent.Width and Parent.Height, which will refer to the size of the component. Learn more about building and using components here.
+If you use another experimental PowerApps feature, named Components, you can construct building blocks and reuse them in multiple places in your app. As with the **Group** control, the controls that you place within a component should base their position and size formulas on `Parent.Width` and `Parent.Height`, which refer to the size of the component. Learn more about building and using components here.
 
 ## Adapting layout for device size and orientation
 
-So far, we have explained how to use formulas to let each control change its size in response the available space, while staying aligned relative to the other controls. But often, you may want or need to make more substantial layout changes in response to different device sizes and orientations. When a device is rotated from portrait to landscape orientation, for example, you may want to switch from a vertical layout to a horizontal one. On a larger device, you can present more content, or rearrange it to provide a more appealing layout. On a smaller device, you may need to split up content across multiple screens.
+So far, you've learned how to use formulas to change each control's size in response to the available space, while keeping controls aligned relative to each other. But often, you may want or need to make more substantial layout changes in response to different device sizes and orientations. When a device is rotated from portrait to landscape orientation, for example, you may want to switch from a vertical layout to a horizontal one. On a larger device, you can present more content or rearrange it to provide a more appealing layout. On a smaller device, you may need to split up content across multiple screens.
 
 ### Device orientation
 
-The default formulas for a screen's **Width** and **Height**, introduced earlier, will not necessarily provide a good experience when the device has been rotated out of the orientation for which you have designed. For example , if you have designed for a phone in portrait orientation (App.DesignWidth = 640, App.DesignHeight = 1136), the screen **Width** and **Height** formulas on a phone in landscape orientation will evaluate as follows:
+The default formulas for a screen's **Width** and **Height**, introduced earlier, won't necessarily provide a good experience if a user rotates a device. For example, an app designed for a phone in portrait orientation has a **DesignWidth** of 640 and a **DesignHeight** of 1136. The same app on a phone in landscape orientation will have these property values:
 
-Screen.Width = Max(App.Width, App.DesignWidth) -> Max(1136, 640) -> 1136
+- The screen's **Width** property is set to `Max(App.Width, App.DesignWidth)`. The app's **Width** (1136) is larger than its **DesignWidth** (640), so the formula evaluates to 1136.
+- The screen's **Height** property is set to `Max(App.Height, App.DesignHeight)`. The app's **Height** (640) is smaller than it's **DesignHeight** (1136) so the formula evaluates to 1136.
 
-Screen.Height = Max(App.Height, App.DesignHeight) -> Max(640, 1136) -> 1136
+With a screen **Height** of 1136 and a device height (in this orientation) of 640, the user must scroll the screen vertically to show all of its content, which may not be the experience that you want.
 
-Notice that Screen.Height evaluates to 1136, even though the device in this orientation has a height of only 640. As a result, the user will need to scroll the screen vertically to see all of its content, which may not be the design you want.
-To adapt Screen.Width and Screen.Height to the device orientation, you can use different formulas:
+To adapt the screen's **Width** and **Height** properties to the device orientation, you can use different formulas:
 
-Screen.Width = Max(App.Width, If(App.Width < App.Height, App.DesignWidth, App.DesignHeight))
+**Width** = `Max(App.Width, If(App.Width < App.Height, App.DesignWidth, App.DesignHeight))`
 
-Screen.Height = Max(App.Height, If(App.Width < App.Height, App.DesignHeight, App.DesignWidth))
+**Height** = `Max(App.Height, If(App.Width < App.Height, App.DesignHeight, App.DesignWidth))`
 
-These formulas swap the App.DesignWidth and App.DesignHeight values, based on whether the device's width is less than its height (portrait orientation) or not (landscape orientation).
-Once you have adjusted the Screen.Width and Screen.Height formulas, you may also want to rearrange controls on within your screen to better use the available space. For example, if two controls each occupy half of the screen, you might stack them vertically in portrait, but arrange them side-by-side in landscape.
+These formulas swap the app's **DesignWidth** and **DesignHeight** values, based on whether the device's width is less than its height (portrait orientation) or not (landscape orientation).
 
-Note that when in landscape orientation, the upper and lower controls will be arranged as left and right controls instead.
+After you adjust the screen's **Width** and **Height** formulas, you may also want to rearrange controls within your screen to better use the available space. For example, if two controls each occupy half of the screen, you might stack them vertically in portrait but arrange them side-by-side in landscape.
 
-Upper control
+In landscape orientation, the **Upper** and **Lower** controls appear as left and right controls.
 
-| Property | Formula                                                            |
-|----------|--------------------------------------------------------------------|
-| X        | 0                                                                  |
-| Y        | 0                                                                  |
-| **Width**    | If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)   |
-| **Height**   | If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height) |
-
-Lower control
-
-| Property | Formula                                                     |
-|----------|-------------------------------------------------------------|
-| X        | If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)  |
-| Y        | If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0) |
-| **Width**    | Parent.Width - Lower.X                                      |
-| **Height**   | Parent.Height - Lower.Y                                     |
+| Control | Property | Formula |
+|--|----------|---|
+| **Upper** | **X** | 0 |
+| **Upper** | **Y** | 0 |
+| **Upper** | **Width** | `If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)` |
+| **Upper** | **Height**   | `If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height)` |
+| **Lower** | X | `If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)`  |
+| **Lower** | Y | `If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0)` |
+| **Lower** | **Width** | `Parent.Width - Lower.X` |
+| **Lower** | **Height** | `Parent.Height - Lower.Y` |
 
 ![expressions to adapt a portrait orientation](media/create-responsive-apps/portrait.png)
 
