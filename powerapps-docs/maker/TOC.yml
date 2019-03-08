@@ -748,6 +748,8 @@
           items:
           - name: "Create or edit forms"
             href: ./model-driven-apps/create-and-edit-forms.md
+          - name: "Properties in the form designer"
+            href: ./model-driven-apps/form-designer-properties.md 
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:
@@ -757,6 +759,8 @@
             href: ./model-driven-apps/create-edit-quick-create-forms.md
           - name: "Create a quick view form"
             href: ./model-driven-apps/create-edit-quick-view-forms.md
+          - name: "Create a card form"
+            href: ./model-driven-apps/create-card-forms.md
         - name: Form editor overview
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
           items:
@@ -812,6 +816,8 @@
           href:  ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines"
           href:  ./model-driven-apps/embedded-canvas-app-guidelines.md
+      - name: Embed a Power BI report on a form
+        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items:
