@@ -2,7 +2,7 @@
 title: "Use XRM tooling to create data (Common Data Service for Apps)| Microsoft Docs"
 description: "Use CrmServiceClient class to create data on CDS for Apps"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/15/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: f6a03552-1f07-4d4b-b7ae-fa246a0d7c29
 caps.latest.revision: 14
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -30,21 +30,17 @@ There are seven methods available in the <xref:Microsoft.Xrm.Tooling.Connector.C
 This method is used to create any type of entity data in CDS for Apps. To use it, you need to know the schema name of the entity you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.  
   
 ```csharp 
-CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential("<UserName>", "<Password>",“<Domain>”),"<Server>", "<Port>", "<OrgName>");  
+CrmServiceClient svc = new CrmServiceClient(connectionstring");  
   
 // Verify that you are connected  
-if (crmSvc != null && crmSvc.IsReady)  
+if (svc != null && svc.IsReady)  
 {  
-    //Display the CRM version number and org name that you’re connected to.  
-    Console.WriteLine("Connected to CRM! (Version: {0}; Org: {1}",   
-    crmSvc.ConnectedOrgVersion, crmSvc.ConnectedOrgUniqueName);  
-  
     // Create an account record  
     Dictionary<string, CrmDataTypeWrapper> inData = new Dictionary<string, CrmDataTypeWrapper>();  
     inData.Add("name", new CrmDataTypeWrapper("Sample Account Name", CrmFieldType.String));  
     inData.Add("address1_city", new CrmDataTypeWrapper("Redmond", CrmFieldType.String));  
     inData.Add("telephone1", new CrmDataTypeWrapper("555-0160", CrmFieldType.String));  
-    accountId = ctrl.CrmConnectionMgr.CrmSvc.CreateNewRecord("account", inData);  
+    accountId = ctrl.CrmConnectionMgr.svc.CreateNewRecord("account", inData);  
   
     // Verify if the account is created.  
     if (accountId != Guid.Empty)  
@@ -55,12 +51,12 @@ if (crmSvc != null && crmSvc.IsReady)
 else  
 {  
     // Display the last error.  
-    Console.WriteLine("An error occurred: {0}", crmSvc.LastCrmError);  
+    Console.WriteLine("An error occurred: {0}", svc.LastCrmError);  
   
     // Display the last exception message if any.  
-    Console.WriteLine(crmSvc.LastCrmException.Message);  
-    Console.WriteLine(crmSvc.LastCrmException.Source);  
-    Console.WriteLine(crmSvc.LastCrmException.StackTrace);  
+    Console.WriteLine(svc.LastCrmException.Message);  
+    Console.WriteLine(svc.LastCrmException.Source);  
+    Console.WriteLine(svc.LastCrmException.StackTrace);  
   
     return;  
 }  
@@ -76,30 +72,26 @@ In this example, we created a data payload object called `indata`. Next, we popu
 This method is used to create and attach a note object to any entity record. While you can populate all the variables for the note in the first pass, you only need to provide subject and note text fields. In practice, this is generally used to attach system-generated notes to an entity, or to attach files that are stored in CDS for Apps to an entity. Additionally, if you provide your own UI for creating notes for your user, this is how you would attach that note to the owner entity in CDS for Apps. This example continues from the prior example to create a note on the newly created account.  
   
 ```csharp
-CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential("<UserName>", "<Password>", “<Domain>”),"<Server>", "<Port>", "<OrgName>");  
+CrmServiceClient svc = new CrmServiceClient(connectionstring);  
   
 // Verify that you are connected.  
-if (crmSvc != null && crmSvc.IsReady)  
+if (svc != null && svc.IsReady)  
 {  
-    //Display the CRM version number and org name that you are connected to.  
-    Console.WriteLine("Connected to CRM! (Version: {0}; Org: {1}",   
-    crmSvc.ConnectedOrgVersion, crmSvc.ConnectedOrgUniqueName);  
-  
     // Create and attach a note.  
     inData.Clear();   
     inData.Add("subject", new CrmDataTypeWrapper("This is a NOTE from the API" , CrmFieldType.String));   
     inData.Add("notetext", new CrmDataTypeWrapper("This is text that will go in the body of the note" , CrmFieldType.String));  
-    Guid noteID = crmSvc.CreateAnnotation("account", accountId, inData);  
+    Guid noteID = svc.CreateAnnotation("account", accountId, inData);  
 }  
 else  
 {  
     // Display the last error.  
-    Console.WriteLine("An error occurred: {0}", crmSvc.LastCrmError);  
+    Console.WriteLine("An error occurred: {0}", svc.LastCrmError);  
   
     // Display the last exception message if any.  
-    Console.WriteLine(crmSvc.LastCrmException.Message);  
-    Console.WriteLine(crmSvc.LastCrmException.Source);  
-    Console.WriteLine(crmSvc.LastCrmException.StackTrace);  
+    Console.WriteLine(svc.LastCrmException.Message);  
+    Console.WriteLine(svc.LastCrmException.Source);  
+    Console.WriteLine(svc.LastCrmException.StackTrace);  
   
     return;  
 }  
