@@ -111,30 +111,30 @@ You can use these formula patterns for expressing common layout relationships be
 
 | Relationship between C and its parent | Property | Formula | Illustration |
 |--|--|--|--|
-| **C** fills width of parent, with a margin of N | **X**| N | to add |
-|  | **Width** | `Parent.Width - (N * 2)` | to add |
-| **C** fills height of parent, with a margin of N | **Y** | N | to add |
-|  | **Height** | `Parent.Height - (N * 2)` | to add |
-| **C** aligned with right edge of parent, with margin of N | **X** | `Parent.Width - (C.Width + N)` | to add |
-| **C** aligned with bottom edge of parent, with margin of N | **Y** | `Parent.Height - (C.Height + N)` | to add |
-| **C** centered horizontally on parent | **X** | `(Parent.Width - C.Width) / 2` | to add |
-| **C** centered vertically on parent | **Y** | `(Parent.Height - C.Height) / 2` | to add |
+| **C** fills width of parent, with a margin of N | **X**| N | ![Example of C filling width of parent](media/create-responsive-apps/c1.png) |
+|  | **Width** | `Parent.Width - (N * 2)` |  |
+| **C** fills height of parent, with a margin of N | **Y** | N | ![Example of C filling height of parent](media/create-responsive-apps/c2.png) |
+|  | **Height** | `Parent.Height - (N * 2)` |  |
+| **C** aligned with right edge of parent, with margin of N | **X** | `Parent.Width - (C.Width + N)` | ![Example of C aligning with edge of parent](media/create-responsive-apps/c3.png) |
+| **C** aligned with bottom edge of parent, with margin of N | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with edge of parent](media/create-responsive-apps/c4.png) |
+| **C** centered horizontally on parent | **X** | `(Parent.Width - C.Width) / 2` | ![Example of C centered horizontally on parent](media/create-responsive-apps/c5.png) |
+| **C** centered vertically on parent | **Y** | `(Parent.Height - C.Height) / 2` | ![Example of C centered vertically on parent](media/create-responsive-apps/c6.png) |
 
 | Relationship between C and D | Property | Formula | Illustration |
 |--|--|--|--|
-| **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | to add |
-|  | **Width**    | `D.Width` | to add |
-| **C** vertically aligned with **D** and same height as **D**  | **Y** | `D.Y` | to add |
-|  | **Height** | `D.Height` | to add |
-| Right edge of **C** aligned with right edge of **D** | **X** | `D.X + D.Width - C.Width` | to add |
-| Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | to add |
-| **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | to add |
-| **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | to add |
-| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width - N` | to add |
-| **C** positioned below **D** with a gap of N             | **Y** | `D.Y + D.Height + N` | to add |
-| **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | to add |
-|  | **Width** | `Parent.Width - C.X` | to add |
-| **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | to add |
+| **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | ![Example of pattern](media/create-responsive-apps/d1.png) |
+|  | **Width**    | `D.Width` |  |
+| **C** vertically aligned with **D** and same height as **D**  | **Y** | `D.Y` | ![Example of pattern](media/create-responsive-apps/d2.png) |
+|  | **Height** | `D.Height` |  |
+| Right edge of **C** aligned with right edge of **D** | **X** | `D.X + D.Width - C.Width` | ![Example of pattern](media/create-responsive-apps/d3.png) |
+| Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of pattern](media/create-responsive-apps/d4.png) |
+| **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of pattern](media/create-responsive-apps/d5.png) |
+| **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of pattern](media/create-responsive-apps/d6.png) |
+| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width - N` | ![Example of pattern](media/create-responsive-apps/d7.png) |
+| **C** positioned below **D** with a gap of N             | **Y** | `D.Y + D.Height + N` | ![Example of pattern](media/create-responsive-apps/d8.png) |
+| **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of pattern](media/create-responsive-apps/d9.png) |
+|  | **Width** | `Parent.Width - C.X` |  |
+| **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | ![Example of pattern](media/create-responsive-apps/d10.png) |
 
 ## Hierarchical layout
 
@@ -142,7 +142,7 @@ As you construct screens that contain more controls, it will become more conveni
 
 ### Galleries
 
-If you use a gallery in your app, you'll need to lay out controls within the gallery's template. You can position these controls by writing formulas that use the Parent operator, which will refer to the gallery template. If the gallery is vertical, use `Parent.TemplateHeight` for the template's height and `Parent.Width` for its width. For a horizontal gallery, use `Parent.TemplateWidth` for the template's width and `Parent.Height` for its height.
+If you use a gallery in your app, you'll need to lay out controls within the gallery's template. You can position these controls by writing formulas that use the Parent operator, which will refer to the gallery template. In the formulas on controls within a gallery template, use the Parent.TemplateHeight and Parent.TemplateWidth properties. Use these instead of Parent.Width and Parent.Height, which refer to the overall size of the gallery.
 
 ![Vertical gallery showing Template Width and Height](media/create-responsive-apps/gallery_vertical.png)
 
