@@ -2,11 +2,7 @@
 title: "Use CrmServiceClient constructors to connect to CDS for Apps (Common Data Service for Apps)| Microsoft Docs"
 description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Common Data Service for Apps"
 ms.custom: ""
-ms.date: 10/31---
-title: "Use CrmServiceClient constructors to connect to CDS for Apps (Common Data Service for Apps)| Microsoft Docs"
-description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Common Data Service for Apps"
-ms.custom: ""
-ms.date: 12/03/2018
+ms.date: 03/15/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -17,7 +13,7 @@ applies_to:
 ms.assetid: 74862506-a955-4846-a148-ac266f65592f
 caps.latest.revision: 27
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
