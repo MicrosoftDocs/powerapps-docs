@@ -78,7 +78,7 @@ Now view this same formula in a language and region where a comma is used for th
 
 ![PowerApps formula If open paren slider1 dot value greater than 12 comma 59 semi-colon notify open paren "Valid!" semi-colon success close paren double semi-colon Navigate open paren "NextScreen" semi-colon None close paren semi-colon notify open paren "Invalid, try again" semi-colon error close paren close paren](media/global-apps/operators-comma.png)
 
-The highlight shows the operators that change between the two versions.  Note that the property selection operator dot in **Slider1.Value** is always the same, no matter what the decimal separator is.
+The highlight shows the operators that change between the two versions.  Note that the property selection operator **.** (dot or period) in **Slider1.Value** is always the same, no matter what the decimal separator is.
 
 Internally the formula does not change, all that changes is how it is displayed and edited by the author.  Two different authors using two different languages can view and edit the same formula, with each seeing the appropriate separators and operators for their language.
 
