@@ -20,7 +20,9 @@ Before you build a canvas app in PowerApps, you specify whether to tailor the ap
 
 After you make that choice, you can make a few more choices about the canvas. If you select **File** > **App settings** > **Screen size + orientation**, you can choose whether you want portrait or landscape orientation and which screen size (tablet only) to use. You can also lock or unlock the aspect ratio and support device rotation (or not).
 
-Those choices underlie every other choice you make as you design screen layouts. If your app is used on a device of a different size (or on the web), your entire layout is scaled larger (or smaller) to fit the screen where it runs. If an app designed for a phone runs in a large browser window, for example, the app appears almost comically oversized for its space. It can't take advantage of all those additional pixels, by showing more controls or more content.
+Those choices underlie every other choice you make as you design screen layouts. If your app is used on a device of a different size (or on the web), your entire layout is scaled larger (or smaller) to fit the screen where it runs. If an app designed for a phone runs in a large browser window, for example, the app scales to compensate and looks oversized for its space. It can't take advantage of all those additional pixels, by showing more controls or more content.
+
+Responsive layout and design means that the controls on the screen can respond to the different sizes of the app accordingly, making the experience on different form factors feel more at home. In order to achieve responsive layout, you will have to adjust some settings and write expressions throughout your app. 
 
 ## Disable Scale to Fit
 
@@ -47,11 +49,6 @@ The **DesignWidth** and **DesignHeight** properties come from the dimensions tha
 As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. When this happens, a scroll bar appears to accommodate your screen's minimum design size, while still allowing the user to show all of it.
 
 After you establish your app's **DesignWidth** and **DesignHeight**, you won't (in most cases) need to change default formulas for each screen's **Width** and **Height** properties. Later, this topic discusses cases in which you might want to customize these formulas.
-
-## Understanding breakpoints
-
-TODO: Content with units for mobile, tablet, desktop recommendations
-Expectation to rarely work with these numbers themselves.
 
 ## Using formulas for dynamic layout
 
@@ -212,3 +209,13 @@ In landscape orientation, the **Upper** and **Lower** controls appear as left an
 ![expressions to adapt a portrait orientation](media/create-responsive-apps/portrait.png)
 
 ![expressions to adapt a landscape orientation](media/create-responsive-apps/landscape.png)
+
+
+###Known limitations
+
+There are some limitations with the existing implementation. 
+
+The authoring canvas does not respond to the sizing formulas created. In order to test the responsive behavior, you will need to save and publish your app, then test it using the playing experience. 
+After writing expressions in the X,Y, Width and Height properties, if you drag the controls on the screen or change their sizes, you will overwrite the formulas. 
+
+The current process for creating responsive layout is complex, requiring a lot of dedication to achieve. There is intention to continue to invest in this area to make it easier. 
