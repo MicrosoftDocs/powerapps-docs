@@ -2,7 +2,7 @@
 title: "Build Windows client applications using the XRM tools (Common Data Service for Apps)| Microsoft Docs"
 description: "XRM tooling is a set of APIs that provides support for building Windows client applications for CDS for Apps"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/15/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: e2f22576-1705-4854-a804-a1ca232c0cfc
 caps.latest.revision: 33
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -48,19 +48,14 @@ The following applications in the current version of CDS for Apps use the common
   
 - Unified Service Desk. More information: [Extend Unified Service Desk](/dynamics365/customer-engagement/unified-service-desk/extend-unified-service-desk)
 
-<!-- TODO: fix links when files added to admin guide
-
 - Package Deployer tool. More information: [Deploy packages using Dynamics 365 Package Deployer and Windows PowerShell](../../administrator/deploy-packages-using-package-deployer-windows-powershell.md)   
 
 - Configuration Migration tool. More information [Manage your configuration data](../../administrator/manage-configuration-data.md)  
-
--->
   
 ### See also
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-<!-- TODO:
 [Use the CDS for Apps Organization service](use-microsoft-dynamics-365-organization-service.md)<br />
 [Discover the URL for Your Organization With IDiscoveryService Web Service](org-service/discover-url-organization-organization-service.md)<br />
-[Write Applications and Server Extensions](extend-dynamics-365-server.md)<br /> -->
+[Write Applications and Server Extensions](extend-dynamics-365-server.md)<br />
 [Blog: PowerShell module for performing data operations and manipulating user and system settings in CRM](http://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
