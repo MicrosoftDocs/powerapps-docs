@@ -2,7 +2,7 @@
 title: "Use PowerShell cmdlets for XRM tooling to connect to CDS for Apps (Common Data Service for Apps)| Microsoft Docs"
 description: "Learn how to use Powershell cmdlets for XRM tooling like Get-CrmConnection and Get-CrmOrganizations to connect to Common Data Service for Apps and retrieve organizations that the current user has access to"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/15/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: 81816457-c963-46ca-b350-615fa75f56a7
 caps.latest.revision: 27
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -95,6 +95,9 @@ Get-Help “Crm”
   
 <a name="RetrieveOrgs"></a>   
 
+> [!NOTE]
+> In this documentation release, the PowerShell cmdlets documentation that is common to all on-premise deployment types has been moved to the [Customer Engagement for apps](/dynamics365/customer-engagement/developer/xrm-tooling/use-powershell-cmdlets-xrm-tooling-connect) documentation. The sub-sections that follow contain only the information specifically related to PowerShell cmdlets for online deployment. To learn about PowerShell cmdlets development, start by reading the connection string[documentation](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-string-xrm-tooling-connect) under Dynamics 365 Customer Engagement for apps
+
 ## Use the cmdlet to retrieve organizations from CDS for Apps  
 
 Use the `Get-CrmOrganizations` cmdlet to retrieve the organizations that you have access to.  
@@ -114,32 +117,18 @@ Use the `Get-CrmOrganizations` cmdlet to retrieve the organizations that you hav
   
         > [!NOTE]
         >  For the `DeploymentRegion` parameter, valid values are `NorthAmerica`, `EMEA`, `APAC`, `SouthAmerica`, `Oceania`, `JPN`, `CAN`, `IND`, and `NorthAmerica2`. For the `OnlineType` parameter, specify `Office365`.
-<!--   
-    -   If you’re connecting to the on-premises server:  
-  
-        ```powershell  
-        $CRMOrgs = Get-CrmOrganizations –ServerUrl http://<CRM_Server_Host> –Credential $Cred  
-        ```      
-  
-    -   If you’re connecting to the CDS for Apps server using the claims-based authentication against the specified Home realm:  
-  
-        ```powershell  
-        $CRMOrgs = Get-CrmOrganizations –ServerUrl http://<CRM_Server_Host> –Credential $Cred –HomRealmURL http://<Identity_Provider_Address>  
-        ```   -->
   
 3.  Your supplied credentials are validated when you run the command in step 2. On successful execution of the command, type the following command, and press ENTER to display the organizations that you have access to:  
   
     ```powershell  
     $CRMOrgs  
     ```  
+![CDS for Apps organization information](../media/xrm-tooling-powershell-1.png "CDS for Apps")
   
-    <!-- TODO:
-     ![CDS for Apps organization information](../media/xrmtooling-powershell-1.png)   -->
-  
-    > [!TIP]
-    >  You can use the variable that was used to store the retrieved CDS for Apps organizations (in this case `$CRMOrgs`) with the `Get-CrmConnection` cmdlet to connect to CDS for Apps. To specify the org name, use the following command: `$CRMOrgs.UniqueName`.  
-    >   
-    >  If there is more than one organization value stored in the `$CRMOrgs` variable, you can refer to the `nth` organization using the following command: `$CRMOrgs[n-1]`. For example, to refer to the unique name of the second organization in the `$CRMOrgs` variable, use the following command: `$CRMOrgs[1].UniqueName`. More information: [Accessing Values in an Array](/previous-versions/windows/it-pro/windows-powershell-1.0/ee692791\(v=technet.10\))  
+> [!TIP]
+>  You can use the variable that was used to store the retrieved CDS for Apps organizations (in this case `$CRMOrgs`) with the `Get-CrmConnection` cmdlet to connect to CDS for Apps. To specify the org name, use the following command: `$CRMOrgs.UniqueName`.  
+>   
+>  If there is more than one organization value stored in the `$CRMOrgs` variable, you can refer to the `nth` organization using the following command: `$CRMOrgs[n-1]`. For example, to refer to the unique name of the second organization in the `$CRMOrgs` variable, use the following command: `$CRMOrgs[1].UniqueName`. More information: [Accessing Values in an Array](/previous-versions/windows/it-pro/windows-powershell-1.0/ee692791\(v=technet.10\))  
   
 <a name="ConnecttoCRM"></a>
    
@@ -166,30 +155,16 @@ Use the `Get-CrmConnection` cmdlet to connect to a CDS for Apps instance. The cm
   
 1.  To connect to CDS for Apps, use the following commands. Note that these commands use the `$Cred` variable created earlier to store the credential while retrieving the organizations. The connection information is stored in the `$CRMConn` variable:
 
-    <!-- -   If you’re connecting to a CDS for Apps instance:   -->
+ If you’re connecting to a CDS for Apps instance:
   
-        ```powershell  
-        $CRMConn = Get-CrmConnection -Credential $Cred -DeploymentRegion <Deployment region name> –OnlineType Office365 –OrganizationName <OrgName>  
-        ```
+```powershell  
+       $CRMConn = Get-CrmConnection -Credential $Cred -DeploymentRegion <Deployment region name> –OnlineType Office365 –OrganizationName <OrgName>  
+```
+ > [!NOTE]
+ >  For the `DeploymentRegion` parameter, valid values are `NorthAmerica`, `EMEA`, `APAC`, `SouthAmerica`, `Oceania`, `JPN`, `CAN`, `IND` and `NorthAmerica2`. For the `OnlineType` parameter, specify `Office365`. 
   
-        > [!NOTE]
-        >  For the `DeploymentRegion` parameter, valid values are `NorthAmerica`, `EMEA`, `APAC`, `SouthAmerica`, `Oceania`, `JPN`, `CAN`, `IND` and `NorthAmerica2`. For the `OnlineType` parameter, specify `Office365`. 
-  
-    <!-- not available for this version at this time
-     -   If you’re connecting to the on-premises server:  
-  
-        ```powershell  
-        $CRMConn = Get-CrmConnection –ServerUrl http://<CRM_Server_Host> -Credential $Cred -OrganizationName <OrgName>  
-        ```
-  
-    -   If you’re connecting to the CDS for Apps server using the claims-based authentication against the specified Home realm:  
-  
-        ```powershell  
-        $CRMConn = Get-CrmConnection –ServerUrl http://<CRM_Server_Host> -Credential $Cred -OrganizationName <OrgName> –HomRealmURL http://<Identity_Provider_Address>  
-        ```   -->
-  
-    > [!NOTE]
-    > For the `OrganizationName` parameter in all the preceding commands, you can either specify the organization unique name or friendly name. You can also use the organization unique name or friendly name that you retrieved using the `Get-CrmOrganizations` cmdlet and stored in the `$CRMOrgs` variable. For example, you can use `$CRMOrgs[x].UniqueName` or `$CRMOrgs[x].FriendlyName`.  
+ > [!NOTE]
+ > For the `OrganizationName` parameter in all the preceding commands, you can either specify the organization unique name or friendly name. You can also use the organization unique name or friendly name that you retrieved using the `Get-CrmOrganizations` cmdlet and stored in the `$CRMOrgs` variable. For example, you can use `$CRMOrgs[x].UniqueName` or `$CRMOrgs[x].FriendlyName`.  
   
 2.  Your supplied credentials are validated when you run the command in step 1. On successful execution of the cmdlet, type the following command, and press ENTER to display the connection information and status:  
   
@@ -197,8 +172,7 @@ Use the `Get-CrmConnection` cmdlet to connect to a CDS for Apps instance. The cm
     $CRMConn  
     ```  
   
-    <!--TODO:
-     ![CDS for Apps connection information and status](../media/xrm-tooling-powershell-2.png "CDS for Apps connection information and status")   -->
+     ![CDS for Apps connection information and status](../media/xrm-tooling-powershell-2.png "CDS for Apps connection information and status") 
   
 ### See also
   
