@@ -2,7 +2,7 @@
 title: "Use connection strings in XRM tooling to connect to Common Data Service for Apps (Common Data Service for Apps)| Microsoft Docs"
 description: "XRM tooling enables you to connect to your Common Data Service for Apps environment by using connection strings"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/15/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: a98b2fce-df49-4b60-91f4-a4446aa61cd3
 caps.latest.revision: 21
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -80,22 +80,9 @@ CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionSt
 
 ## Connection string examples
  
-The following examples show how you can use connection strings for connecting to different deployments and authentication scenarios.  
+The following examples show how you can use connection strings for connecting to on-line deployments and authentication scenarios.  
 
-<!-- TODO: Get rid of on-premises examples & settings? or just comment them out? -->
 
-<!-- ### Integrated on-premises authentication  
-  
-```xml
-<add name="MyCRMServer" connectionString="AuthType=AD;Url=http://contoso:8080/Test;" />  
-```  
-  
-### Named account using on-premises authentication  
-  
-```xml  
-<add name="MyCRMServer" connectionString="AuthType=AD;Url=http://contoso:8080/Test; Domain=CONTOSO; Username=jsmith; Password=passcode" />  
-```  
-   -->
 ### Named account using Office 365  
   
 ```xml
@@ -121,18 +108,6 @@ The following examples show how you can use connection strings for connecting to
   TokenCacheStorePath =c:\MyTokenCache;
   LoginPrompt=Auto"/>  
 ```  
-  
-<!-- ### OAuth using named account in CDS for Apps on-premises with UX to prompt for authentication  
-  
-```xml
-<add name="MyCRMServer" connectionString="AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com; Password=passcode;Url=https://contoso:8080/Test;AppId=<GUID>;RedirectUri=app://<GUID>;TokenCacheStorePath =c:\MyTokenCache;LoginPrompt=Auto"/>  
-```  
-  
-### IFD using a named account with delegation to a sub realm  
-  
-```xml
-<add name="MyCRMServer" connectionString="AuthType=IFD;Url=http://contoso:8080/Test; HomeRealmUri=https://server-1.server.com/adfs/services/trust/mex/;Domain=CONTOSO; Username=jsmith; Password=passcode" />  
-```   -->
 
 ### Certificate based authentication
 
