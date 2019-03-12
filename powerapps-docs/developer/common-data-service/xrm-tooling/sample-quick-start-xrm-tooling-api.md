@@ -2,7 +2,7 @@
 title: "Sample: Quick start for XRM Tooling API (Common Data Service for Apps)| Microsoft Docs"
 description: ""
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/15/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: 060d45bb-b7fd-48bd-ab8f-629c1b8bc1dc
 caps.latest.revision: 20
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -25,15 +25,13 @@ search.app:
 
 The QuickStart sample is a .NET Framework managed code sample that shows how to connect to a Common Data Service for Apps instance by using the XRM Tooling APIs, and perform basic create, update, retrieve, and delete operations on an entity. For more information about XRM Tooling, see [Build windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md).
 
-Download the sample: [Work with XRM Tooling API](https://code.msdn.microsoft.com/XRM-Tooling-Sample-24a5c55c)
+Download the sample: [Work with XRM Tooling API]()
 
-## Prerequisites
+## How to run the sample
 
-[!INCLUDE [sdk-prerequisite](../../../includes/sdk-prerequisite.md)]
-  
-## Requirements
-
-You must have access to a CDS for Apps environment.
+1. Download and extract the sample from [here]().  
+1. Open the `Quick start for XRM Tooling\C#\QuickStartXRMToolingWPFClient.sln`  file in Visual Studio.  
+2. Press **F5** to compile and run the program.  
 
 ## Demonstrates
 
@@ -44,12 +42,6 @@ You must have access to a CDS for Apps environment.
 - Generates the following log files, if any issue occurs, to aid troubleshooting:  
 - Login_ErrorLog.log: To report sign-in errors. This file is available at `C:\Users\`*`<username>`*`\AppData\Roaming\Microsoft\QuickStartXRMToolingWPFClient`.  
 - QuickStartXRMToolingWPFClient.log: To report operational errors. This file is available at the same location as the executable, that is in the debug folder of your Visual Studio project.  
-
-## To run the sample
-
-1. Download and extract the sample.  
-1. Open the `Quick start for XRM Tooling\C#\QuickStartXRMToolingWPFClient.sln`  file in Visual Studio.  
-2. Press **F5** to compile and run the program.  
 
 ## Example
 
