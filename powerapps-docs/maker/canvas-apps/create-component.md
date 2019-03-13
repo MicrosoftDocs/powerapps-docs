@@ -175,10 +175,9 @@ So far, you've created a component and added it to an app. Next, you'll create a
 
 ## Known limitations
 
-- As of this writing, data sources aren't saved with components. Forms and data-grids are disabled due to this reason. 
-- Variables created in components are scoped to the components and they don't appear with app variables.
-- Collections: using a collection within a component is not yet fully supported, but you can use variables today.
-- Nesting: components cannot be inserted into galleries, forms, and data cards today. Likewise, forms and data-grids cannot be embedded into components.
-- Instance: a master-instance of a component is scoped to the app. It is a local master. This means that changes you make to the master-instance only affect the copies of the component within the app. The changes do not affect the copies in other apps.
-However, you can update the copies in other apps by explicitly re-importing the component ‘library’. It would automatically detect the masters imported previously and update them.
-- Images: it is not yet possible to package media files when importing a component, but this feature is coming soon.
+- As of this writing, data sources aren't saved with components, so forms and data tables are disabled. 
+- If you create a variable in a component, that variable is scoped only to that component and doesn't appear with app variables.
+- PowerApps doesn't support collections in components.
+- You can't insert a component into a gallery, form, data card, and you can't embed a form or a data table into a component.
+- A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
+- You can't package media files when you import a component.
