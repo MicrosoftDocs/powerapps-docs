@@ -28,7 +28,7 @@ Responsive layout and design means that the controls on the screen can respond t
 
 You can configure each screen so that its layout adapts to the actual space in which the app runs.
 
-You start activate responsiveness by turning off the **Scale to fit** setting, which is on by default when you create an app. When you turn this setting off, you also turn off **Lock aspect ratio** because you're no longer designing for a specific screen shape. (You can still specify whether your app supports device rotation.)
+You activate responsiveness by turning off the **Scale to fit** setting, which is on by default when you create an app. When you turn this setting off, you also turn off **Lock aspect ratio** because you're no longer designing for a specific screen shape. (You can still specify whether your app supports device rotation.)
 
 To make your app responsive, you must do more than just turn the **Scale to fit** setting off. However, this change is the first step toward making responsiveness possible.
 
@@ -44,9 +44,9 @@ To make your app's layouts respond to changes in the screen dimensions, you'll w
 
 These formulas refer to the **Width**, **Height**, **DesignWidth**, and **DesignHeight** properties of the app. The app's **Width** and **Height** properties correspond to the dimensions of the device (or browser window) in which your app is running. If the user resizes the browser window (or rotates the device if you've turned off **Lock orientation**), the values of these properties change dynamically. The formulas in the screen's **Width** and **Height** properties are reevaluated when these values change.
 
-The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Screen size + orientation** pane of **App settings**. For example, if you select the phone layout in the portrait orientation, **DesignWidth** is 650, and **DesignHeight** is 1136.
+The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Screen size + orientation** pane of **App settings**. For example, if you select the phone layout in the portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
 
-As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. When this happens, a scroll bar appears to accommodate your screen's minimum design size, while still allowing the user to show all of it.
+As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. When this happens, the screen will become scrollable to accommodate your screen's minimum design size, while still allowing the user to show all of it.
 
 After you establish your app's **DesignWidth** and **DesignHeight**, you won't (in most cases) need to change default formulas for each screen's **Width** and **Height** properties. Later, this topic discusses cases in which you might want to customize these formulas.
 

@@ -45,7 +45,7 @@ Customize a canvas app by changing its screen size and orientation.
     
 5. Under **Lock aspect ratio**, specify either **On** or **Off**.
 
-    If you lock the aspect ratio, the app will retain the appropriate aspect ratio for the selections made in the screen orientation and aspect ratio in steps 1 and 2, no matter the device. For example, if a phone app is running on another kind of device like a web browser, the app may appear display incorrectly by retaining it's phone aspect ratio, not filling the window and having dark bars to fill in the aspect ratio mismatch. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running. This may cause unintended or unwanted distortion of the controls on the screen. 
+    If you lock the aspect ratio, the app will retain the appropriate aspect ratio for the selections made in the screen orientation and aspect ratio in steps 1 and 2, no matter the device. For example, if a phone app is running on another kind of device like a web browser, the app may display incorrectly by retaining its phone aspect ratio, not filling the window and having dark bars to fill in the aspect ratio mismatch. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running. This may cause unintended or unwanted distortion of the controls on the screen. 
 
 6. Under **Lock orientation**, specify either **On** or **Off**.
 
