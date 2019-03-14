@@ -27,17 +27,23 @@ Developers will be empowered to identify problems early and operations like addi
 To use PowerApps CLI you will need the following: 
 
 - Install [Node.js](https://nodejs.org/en/).
-- Install CLI from NuGet (path to be provided). 
-- Install the PCF modules (includes typescript) from `npm` by using tge command `npm install pcf-scripts`.  
-- Install Visual Studio Code (optional).  
+- If you don’t have Visual Studio 2017 (or newer) follow one of the options below
+   - Option 1: Install Visual Studio 2017 (or newer) 
+   - Option 2: Install .NET Core 2.2 SDK (or newer), Install Visual Studio Code  
+- Install Microsoft CLI using the steps below
+    - Create a directory on your machine, called something like `c:\pac` 
+    - Open the command line interface and navigate to the directory you created above `Cd c:\pac` 
+    - Copy-Paste below command and run it
+ `powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallAndConfigureCLI.ps1'))"`  
 - To deploy your custom control, you will need Common Data Service for Apps environment with System administrator or System customizer privileges.
 
 ## Creating custom controls
 
 To get started, open a command line interface (**PowerShell**).
 
-1. Create a new folder where desired on your local hard drive.
-2. Use a single command to create a new control project with some basic parameters
+1. Make sure that you restart your command line interface after installing **PowerApps CLI**. 
+2. Create a new folder where desired on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
+3. Use a single command to create a new control project with some basic parameters
  `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
  
 > [!NOTE]

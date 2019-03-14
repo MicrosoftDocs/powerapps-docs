@@ -22,7 +22,7 @@ Once the project has been created migrate your custom control source to the new 
 
 1. Copy/Replace control source from the old source file into **index.ts**.
 2. Copy/Replace contents of **ControlManifest.xml** into **ControlManifest.Input.xml** file.
-3. Copy all other peripheral control resources (css, resx, img, etc.) into the corresponding subfolder from the old project to the new project.
+3. Copy all other peripheral control resources (css, resx, img, etc.) into the corresponding sub folder from the old project to the new project.
 
 > [!div class="mx-imgBorder"]
 > ![Old control project](../media/old-control-project.png "Old control project")
