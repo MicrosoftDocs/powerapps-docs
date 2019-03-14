@@ -107,7 +107,7 @@ Use the `Get-CrmOrganizations` cmdlet to retrieve the organizations that you hav
     ```powershell  
     $Cred = Get-Credential  
     ```  
-2.  Use the following command to retrieve your organizations, and store the information in the `$CRMOrgs` variable: 
+2.  Use the following command to retrieve your organizations, and store the information in the `$CRMOrgs` variable
 
     - If you’re connecting to a CDS for Apps instance:  
   
