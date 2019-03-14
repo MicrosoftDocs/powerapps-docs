@@ -28,11 +28,11 @@ Responsive layout and design means that the controls on the screen can respond t
 
 You can configure each screen so that its layout adapts to the actual space in which the app runs.
 
-You start activate responsiveness by turning off the **Scale to fit** setting, which is on by default when you create an app. When you turn this setting off, you also turn off **Lock aspect ratio** because you're no longer designing for a specific screen shape. (You can still specify whether your app supports device rotation.)
+You activate responsiveness by turning off the **Scale to fit** setting, which is on by default when you create an app. When you turn this setting off, you also turn off **Lock aspect ratio** because you're no longer designing for a specific screen shape. (You can still specify whether your app supports device rotation.)
 
 To make your app responsive, you must do more than just turn the **Scale to fit** setting off. However, this change is the first step toward making responsiveness possible.
 
-![Disable Scale to Fit setting](media/create-responsive-apps/scale_to_fit_off.png)
+![Disable Scale to Fit setting](media/create-responsive-layout/scale-to-fit-off.png)
 
 ## Understanding app dimensions and screen dimensions
 
@@ -44,9 +44,9 @@ To make your app's layouts respond to changes in the screen dimensions, you'll w
 
 These formulas refer to the **Width**, **Height**, **DesignWidth**, and **DesignHeight** properties of the app. The app's **Width** and **Height** properties correspond to the dimensions of the device (or browser window) in which your app is running. If the user resizes the browser window (or rotates the device if you've turned off **Lock orientation**), the values of these properties change dynamically. The formulas in the screen's **Width** and **Height** properties are reevaluated when these values change.
 
-The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Screen size + orientation** pane of **App settings**. For example, if you select the phone layout in the portrait orientation, **DesignWidth** is 650, and **DesignHeight** is 1136.
+The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Screen size + orientation** pane of **App settings**. For example, if you select the phone layout in the portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
 
-As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. When this happens, a scroll bar appears to accommodate your screen's minimum design size, while still allowing the user to show all of it.
+As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. When this happens, the screen will become scrollable to accommodate your screen's minimum design size, while still allowing the user to show all of it.
 
 After you establish your app's **DesignWidth** and **DesignHeight**, you won't (in most cases) need to change default formulas for each screen's **Width** and **Height** properties. Later, this topic discusses cases in which you might want to customize these formulas.
 
@@ -85,7 +85,7 @@ If you had a second control that you wanted to fill the bottom half of the same 
 | **Lower** | **Width**    | `Parent.Width`      |
 | **Lower** | **Height**   | `Parent.Height / 2` |
 
-![Upper and Lower control](media/create-responsive-apps/dynamic_layout.png)
+![Upper and Lower control](media/create-responsive-layout/dynamic-layout.png)
 
 This configuration would achieve the effect that you want. However, you'd need to edit each formula if you changed your mind about the relative sizes of the controls. For example, you might decide that the top control should occupy only the top one-third of the screen , with the bottom control filling the lower two-thirds. In that case, you'd need to change the formulas for the **Height** property of the **Upper** control and the **Y** and **Height** properties of the **Lower** control. Instead, consider writing the formulas for the **Lower** control in terms of the **Upper** control (and itself), like this:
 
@@ -100,7 +100,7 @@ This configuration would achieve the effect that you want. However, you'd need t
 | **Lower** | **Width**    | `Parent.Width`            |
 | **Lower** | **Height**   | `Parent.Height - Lower.Y` |
 
-![Upper and Lower controls relative sizing](media/create-responsive-apps/dynamic_layout2.png)
+![Upper and Lower controls relative sizing](media/create-responsive-layout/dynamic-layout2.png)
 
 With these formulas in place, you need only change the **Height** property of the **Upper** control to express a different fraction of the height of the screen. The formulas for the **Lower** control will automatically calculate the correct position and size to account for the change.
 
@@ -108,30 +108,30 @@ You can use these formula patterns for expressing common layout relationships be
 
 | Relationship between C and its parent | Property | Formula | Illustration |
 |--|--|--|--|
-| **C** fills width of parent, with a margin of N | **X**| N | ![Example of C filling width of parent](media/create-responsive-apps/c1.png) |
+| **C** fills width of parent, with a margin of N | **X**| N | ![Example of C filling width of parent](media/create-responsive-layout/c1.png) |
 |  | **Width** | `Parent.Width - (N * 2)` |  |
-| **C** fills height of parent, with a margin of N | **Y** | N | ![Example of C filling height of parent](media/create-responsive-apps/c2.png) |
+| **C** fills height of parent, with a margin of N | **Y** | N | ![Example of C filling height of parent](media/create-responsive-layout/c2.png) |
 |  | **Height** | `Parent.Height - (N * 2)` |  |
-| **C** aligned with right edge of parent, with margin of N | **X** | `Parent.Width - (C.Width + N)` | ![Example of C aligning with edge of parent](media/create-responsive-apps/c3.png) |
-| **C** aligned with bottom edge of parent, with margin of N | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with edge of parent](media/create-responsive-apps/c4.png) |
-| **C** centered horizontally on parent | **X** | `(Parent.Width - C.Width) / 2` | ![Example of C centered horizontally on parent](media/create-responsive-apps/c5.png) |
-| **C** centered vertically on parent | **Y** | `(Parent.Height - C.Height) / 2` | ![Example of C centered vertically on parent](media/create-responsive-apps/c6.png) |
+| **C** aligned with right edge of parent, with margin of N | **X** | `Parent.Width - (C.Width + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c3.png) |
+| **C** aligned with bottom edge of parent, with margin of N | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c4.png) |
+| **C** centered horizontally on parent | **X** | `(Parent.Width - C.Width) / 2` | ![Example of C centered horizontally on parent](media/create-responsive-layout/c5.png) |
+| **C** centered vertically on parent | **Y** | `(Parent.Height - C.Height) / 2` | ![Example of C centered vertically on parent](media/create-responsive-layout/c6.png) |
 
 | Relationship between C and D | Property | Formula | Illustration |
 |--|--|--|--|
-| **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | ![Example of pattern](media/create-responsive-apps/d1.png) |
+| **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | ![Example of pattern](media/create-responsive-layout/d1.png) |
 |  | **Width**    | `D.Width` |  |
-| **C** vertically aligned with **D** and same height as **D**  | **Y** | `D.Y` | ![Example of pattern](media/create-responsive-apps/d2.png) |
+| **C** vertically aligned with **D** and same height as **D**  | **Y** | `D.Y` | ![Example of pattern](media/create-responsive-layout/d2.png) |
 |  | **Height** | `D.Height` |  |
-| Right edge of **C** aligned with right edge of **D** | **X** | `D.X + D.Width - C.Width` | ![Example of pattern](media/create-responsive-apps/d3.png) |
-| Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of pattern](media/create-responsive-apps/d4.png) |
-| **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of pattern](media/create-responsive-apps/d5.png) |
-| **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of pattern](media/create-responsive-apps/d6.png) |
-| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width - N` | ![Example of pattern](media/create-responsive-apps/d7.png) |
-| **C** positioned below **D** with a gap of N             | **Y** | `D.Y + D.Height + N` | ![Example of pattern](media/create-responsive-apps/d8.png) |
-| **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of pattern](media/create-responsive-apps/d9.png) |
+| Right edge of **C** aligned with right edge of **D** | **X** | `D.X + D.Width - C.Width` | ![Example of pattern](media/create-responsive-layout/d3.png) |
+| Bottom edge of **C** aligned with bottom edge of **D** | **Y** | `D.Y + D.Height - C.Height` | ![Example of pattern](media/create-responsive-layout/d4.png) |
+| **C** centered horizontally relative to **D** | **X** | `D.X + (D.Width - C.Width) / 2`  | ![Example of pattern](media/create-responsive-layout/d5.png) |
+| **C** centered vertically relative to **D** | **Y** | `D.Y + (D.Height - C.Height) /2` | ![Example of pattern](media/create-responsive-layout/d6.png) |
+| **C** positioned to the right of **D** with a gap of N | **X** | `D.X + D.Width - N` | ![Example of pattern](media/create-responsive-layout/d7.png) |
+| **C** positioned below **D** with a gap of N             | **Y** | `D.Y + D.Height + N` | ![Example of pattern](media/create-responsive-layout/d8.png) |
+| **C** fills space between **D** and right edge of parent | **X** | `D.X + D.Width` | ![Example of pattern](media/create-responsive-layout/d9.png) |
 |  | **Width** | `Parent.Width - C.X` |  |
-| **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | ![Example of pattern](media/create-responsive-apps/d10.png) |
+| **C** fills space between **D** and bottom edge of parent | Y | `D.Y + D.Height` | ![Example of pattern](media/create-responsive-layout/d10.png) |
 
 ## Hierarchical layout
 
@@ -141,7 +141,7 @@ As you construct screens that contain more controls, it will become more conveni
 
 If you use a gallery in your app, you'll need to lay out controls within the gallery's template. You can position these controls by writing formulas that use the Parent operator, which will refer to the gallery template. In the formulas on controls within a gallery template, use the Parent.TemplateHeight and Parent.TemplateWidth properties. Use these instead of Parent.Width and Parent.Height, which refer to the overall size of the gallery.
 
-![Vertical gallery showing Template Width and Height](media/create-responsive-apps/gallery_vertical.png)
+![Vertical gallery showing Template Width and Height](media/create-responsive-layout/gallery-vertical.png)
 
 ### Enhanced Group control
 
@@ -149,7 +149,7 @@ You can use an experimental PowerApps feature, the enhanced **Group** control, a
 
 Consider the example of a header at the top of a screen. It's common to have a header with a title and several icons with which your users can interact. You can construct such a header using the enhanced Group control, containing a **Label** control and two **Icon** controls:
 
-![Header example using a group](media/create-responsive-apps/header_group.png)
+![Header example using a group](media/create-responsive-layout/header-group.png)
 
 Configure the formulas for these controls as follows:
 
@@ -204,9 +204,9 @@ In landscape orientation, the **Upper** and **Lower** controls appear as left an
 | **Lower** | **Width** | `Parent.Width - Lower.X` |
 | **Lower** | **Height** | `Parent.Height - Lower.Y` |
 
-![expressions to adapt a portrait orientation](media/create-responsive-apps/portrait.png)
+![expressions to adapt a portrait orientation](media/create-responsive-layout/portrait.png)
 
-![expressions to adapt a landscape orientation](media/create-responsive-apps/landscape.png)
+![expressions to adapt a landscape orientation](media/create-responsive-layout/landscape.png)
 
 
 ###Known limitations
