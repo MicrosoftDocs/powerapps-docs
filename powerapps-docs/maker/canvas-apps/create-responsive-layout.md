@@ -53,14 +53,14 @@ After you establish your app's **DesignWidth** and **DesignHeight**, you won't (
 ## Using formulas for dynamic layout
 
 The essence of responsive design involves arranging the controls on each screen not by using absolute (constant) coordinate values, but instead by using formulas that express each control's position and size in terms of the overall screen size, or relative to other controls on the screen.
-Beware: After you write formulas for the X, Y, **Width** and **Height** properties of a control, if you subsequently drag the control in the canvas editor, your formulas will be overwritten with constant values. When you start using formulas to achieve dynamic layout, you should avoid dragging controls.
+Beware: After you write formulas for the **X**, **Y**, **Width** and **Height** properties of a control, if you subsequently drag the control in the canvas editor, your formulas will be overwritten with constant values. When you start using formulas to achieve dynamic layout, you should avoid dragging controls.
 
 Let's start with a very simple case: A screen containing one control, which should fill the entire area of the screen. For such a control, you would set its properties as follows:
 
 | Property      | Formula            |
 |--------|---------------|
-| X      | 0             |
-| Y      | 0             |
+| **X**      | 0             |
+| **Y**      | 0             |
 | **Width**  | `Parent.Width`  |
 | **Height** | `Parent.Height` |
 
@@ -208,12 +208,10 @@ In landscape orientation, the **Upper** and **Lower** controls appear as left an
 
 ![expressions to adapt a landscape orientation](media/create-responsive-layout/landscape.png)
 
+### Known limitations
 
-###Known limitations
+The authoring canvas doesn't respond to the sizing formulas created. To test the responsive behavior, save and publish your app, then open it using the playing experience.
 
-There are some limitations with the existing implementation. 
+If you write expressions or formulas in the **X**, **Y**, **Width**, and **Height** properties of a control, you will overwrite the expressions or formulas if you drag the control to a different location or resize the control by dragging its border.
 
-The authoring canvas does not respond to the sizing formulas created. In order to test the responsive behavior, you will need to save and publish your app, then test it using the playing experience. 
-After writing expressions in the X,Y, Width and Height properties, if you drag the controls on the screen or change their sizes, you will overwrite the formulas. 
-
-The current process for creating responsive layout is complex, requiring a lot of dedication to achieve. There is intention to continue to invest in this area to make it easier. 
+The current process for creating responsive layout is complex, requiring a lot of dedication to achieve. There is intention to continue to invest in this area to make it easier.
