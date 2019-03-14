@@ -23,7 +23,7 @@ Components are useful in building larger apps that have similar control patterns
 
 ## Prerequisite
 
-Open the **App Settings** screen, enable the feature, and ensure that **Improved app rendering** is also enabled.
+Open the **App Settings** screen, select **Advanced settings**, and enable the feature, as well as ensuring that **Improved app rendering** is also enabled.
 
 ## Component canvas
 
@@ -178,6 +178,6 @@ So far, you've created a component and added it to an app. Next, you'll create a
 - As of this writing, data sources aren't saved with components, so forms and data tables are disabled. 
 - If you create a variable in a component, that variable is scoped only to that component and doesn't appear with app variables.
 - PowerApps doesn't support collections in components.
-- You can't insert a component into a gallery, form, data card, and you can't embed a form or a data table into a component.
+- You can't insert a component into a gallery, a form, or a data card.
 - A master instance of a component is a local master and scoped to the app. If you change a master instance, only copies of the component within the app will reflect the change. Copies in other apps will remain the same unless you import the component library again. All master instances in those apps will be automatically detected and updated.
 - You can't package media files when you import a component.
