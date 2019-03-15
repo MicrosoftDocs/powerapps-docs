@@ -55,7 +55,7 @@ After you establish your app's **DesignWidth** and **DesignHeight**, you won't (
 To create a responsive design, you locate and size each control by using formulas instead of absolute (constant) coordinate values. These formulas express each control's position and size in terms of the overall screen size or relative to other controls on the screen.
 
 > [!IMPORTANT]
-> After you write formulas for the **X**, **Y**, **Width** and **Height** properties of a control,your formulas will be overwritten with constant values if you subsequently drag the control in the canvas editor. When you start to use formulas to achieve dynamic layout, you should avoid dragging controls.
+> After you write formulas for the **X**, **Y**, **Width** and **Height** properties of a control, your formulas will be overwritten with constant values if you subsequently drag the control in the canvas editor. When you start to use formulas to achieve dynamic layout, you should avoid dragging controls.
 
 In the simplest case, one control fills an entire screen. To create this effect, set the control's properties to these values:
 
