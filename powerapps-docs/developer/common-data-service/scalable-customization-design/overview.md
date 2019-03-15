@@ -4,7 +4,7 @@ description: "The first in a series of topics. This topic introduces symptoms th
 ms.custom: ""
 ms.date: 1/15/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "rogergilchrist" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

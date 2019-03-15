@@ -4,7 +4,7 @@ description: "The customizations.xml file is one of the files included in an exp
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

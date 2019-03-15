@@ -4,7 +4,7 @@ description: "Learn about using data (XML) Web resources to save and access data
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

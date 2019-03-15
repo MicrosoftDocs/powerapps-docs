@@ -4,7 +4,7 @@ description: "Queues in PowerApps are instrumental in organizing, prioritizing, 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID Temp owner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

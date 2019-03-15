@@ -4,7 +4,7 @@ description: "Learn how to register a plug-in to apply custom business logic to 
 ms.custom: ""
 ms.date: 02/19/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

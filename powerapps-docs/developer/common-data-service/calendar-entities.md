@@ -4,7 +4,7 @@ description: "Read how you can store data for customer service calendars and hol
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
