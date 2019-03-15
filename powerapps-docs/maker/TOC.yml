@@ -663,6 +663,9 @@
       href: ./canvas-apps/set-name-tile.md
     - name: Change screen size and orientation
       href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+      items:
+        - name: Create responsive layout
+          href: ./canvas-apps/create-responsive-layout.md
   - name: Customize a SharePoint list form
     href: ./canvas-apps/customize-list-form.md
     items:

@@ -41,15 +41,17 @@ Create an app or open one for editing, and then select **App settings** on the *
 
     If you turn this setting off, the app adjusts to the aspect ratio of the device on which it's running and takes up all of the available space. The app doesn't scale and, as a result, screens can show more information.
 
-    When this setting is turned off, **Lock aspect ratio** is automatically turned off and disabled. In addition, the **Width** property of all screens is set to `Max(App.Width, App.DesignWidth)`, and their **Height** property is set to `Max(App.Height, App.DesignHeight)` so that they track the dimensions of the window in which the app is playing instead. With this change, you can create apps that respond to different devices and window dimensions. More information: [Create responsive layout](create-responsive-layout.md)
+    When this setting is turned off, **Lock aspect ratio** is automatically turned off and disabled. In addition, the **Width** property of all screens is set to `Max(App.Width, App.DesignWidth)`, and their **Height** property is set to `Max(App.Height, App.DesignHeight)` so that they track the dimensions of the window in which the app is running. With this change, you can create apps that respond to different devices and window dimensions. More information: [Create responsive layout](create-responsive-layout.md)
 
 1. Under **Lock aspect ratio**, specify either **On** or **Off**.
 
-    If you lock the aspect ratio, the app will retain the appropriate aspect ratio for the selections made in the screen orientation and aspect ratio in steps 1 and 2, no matter the device. For example, if a phone app is running on another kind of device like a web browser, the app may display incorrectly by retaining its phone aspect ratio, not filling the window and having dark bars to fill in the aspect ratio mismatch. If you unlock the aspect ratio, the app will adjust to the aspect ratio of the device on which it's running. This may cause unintended or unwanted distortion of the controls on the screen.
+    If this setting is on, the app retains the screen orientation and aspect ratio that you specified in steps 2 and 3, no matter the device. For example, a phone app that's running in a web browser retains the ratio for a phone, showing a dark bar on each side instead of filling the window.
+
+    If this setting is off, the app adjusts to the aspect ratio of the device on which it's running (and distorting the UI if necessary).
 
 1. Under **Lock orientation**, specify either **On** or **Off**.
 
-    If you lock the app's orientation, the app will retain the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app will display incorrectly and may show unwanted results. If you unlock the app's orientation, it will adjust to the screen orientation of the device on which it's running.
+    If you lock the app's orientation, the app retains the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app displays incorrectly and may show unwanted results. If you unlock the app's orientation, it adjusts to the screen orientation of the device on which it's running.
 
     You can also modify the app's orientation by enabling **Enable app embedding user experience** in **Advanced settings**. This feature top-left aligns the app when it's embedded and changes the background color of the hosting canvas to white.
 
