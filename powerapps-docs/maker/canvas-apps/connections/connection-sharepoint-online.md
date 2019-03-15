@@ -123,7 +123,7 @@ If your custom list contains any of these types of columns, show that data in a 
     
 ## Show data from a library
 
-If you have several images to a SharePoint libary, you can add a **List box** control to your app so that users can specify which image to show. You can also apply the same principles to other controls, such as **Gallery** controls, and other types of data, such as videos.
+If you have several images in a SharePoint libary, you can add a **List box** control to your app so that users can specify which image to show. You can also apply the same principles to other controls, such as **Gallery** controls, and other types of data, such as videos.
 
 1. If you haven't already, [create a connection](#create-a-connection), and then [add data to an existing app](#add-data-to-an-existing-app).
 
