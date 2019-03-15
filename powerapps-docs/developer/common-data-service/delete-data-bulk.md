@@ -4,7 +4,7 @@ description: "Deleting data in bulk helps maintain data quality and manage the c
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

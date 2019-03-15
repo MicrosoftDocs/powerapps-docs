@@ -4,7 +4,7 @@ description: "This walkthrough describes the process of registering and configur
 keywords: ""
 ms.date: 02/12/2019
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

@@ -4,7 +4,7 @@ description: "How .NET Framework applications can authenticate with Common Data 
 ms.custom: ""
 ms.date: 01/25/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

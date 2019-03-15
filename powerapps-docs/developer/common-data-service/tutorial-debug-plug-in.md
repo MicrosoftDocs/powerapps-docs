@@ -4,7 +4,7 @@ description: "This tutorial is the second in a series that will show you how to 
 ms.custom: ""
 ms.date: 1/28/2019
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

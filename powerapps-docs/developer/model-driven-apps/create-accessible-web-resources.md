@@ -4,7 +4,7 @@ description: "The topic introduces general guidance and links to more resources 
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

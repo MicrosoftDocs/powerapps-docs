@@ -3,7 +3,7 @@ title: "Properties available in the form designer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 02/19/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: crm-online
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

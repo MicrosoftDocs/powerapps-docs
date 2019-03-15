@@ -4,7 +4,7 @@ description: "A plug-in is a .NET assembly that you can upload to the Common Dat
 ms.custom: ""
 ms.date: 1/23/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

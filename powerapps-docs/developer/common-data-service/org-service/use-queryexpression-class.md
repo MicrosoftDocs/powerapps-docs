@@ -4,7 +4,7 @@ description: "In Dynamics 365 (online) Customer Engagement, you can use the Quer
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
