@@ -135,7 +135,7 @@ In this procedure, you'll add a **List box** control in which users can specify 
 
 1. Add an **Image** control, and set its **Image** property to this expression:
 
-  `lbImage.Selected.'Link to item'`
+    `lbImage.Selected.'Link to item'`
 
 1. Press F5, and then select a different value in **lbImage**.
 
