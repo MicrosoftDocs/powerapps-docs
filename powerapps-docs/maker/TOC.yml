@@ -267,7 +267,7 @@
               href: ./canvas-apps/controls/control-radio.md
             - name: Rating
               href: ./canvas-apps/controls/control-rating.md
-            - name: Rich text editor (experimental)
+            - name: Rich text editor
               href: ./canvas-apps/controls/control-richtexteditor.md
             - name: Screen
               href: ./canvas-apps/controls/control-screen.md
