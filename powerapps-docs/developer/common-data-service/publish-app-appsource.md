@@ -4,7 +4,7 @@ description: "Learn about how to publish your PowerApps on Microsoft AppSource s
 ms.custom: ""
 ms.date: 02/26/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only

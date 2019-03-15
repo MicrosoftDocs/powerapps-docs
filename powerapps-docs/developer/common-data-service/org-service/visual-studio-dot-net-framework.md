@@ -4,7 +4,7 @@ description: "Learn about managed code development tools and requirements."
 ms.custom: ""
 ms.date: 01/25/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

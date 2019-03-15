@@ -3,7 +3,7 @@ title: "Embed a Power BI report in a model-driven system form | MicrosoftDocs"
 ms.custom: ""
 ms.date: 03/05/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: crm-online
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

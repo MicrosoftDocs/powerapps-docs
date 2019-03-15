@@ -4,7 +4,7 @@ description: "Understand how the asynchronous service that manages system jobs w
 ms.custom: ""
 ms.date: 11/27/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

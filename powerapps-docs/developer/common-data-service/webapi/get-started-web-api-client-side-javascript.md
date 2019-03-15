@@ -4,7 +4,7 @@ description: "JavaScript can be used in HTML web resources, form scripts or ribb
 ms.custom: ""
 ms.date: 02/28/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

@@ -4,7 +4,7 @@ description: "The sample shows how plug-in code can be added to obtain the Azure
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

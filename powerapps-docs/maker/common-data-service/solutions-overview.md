@@ -4,7 +4,7 @@ description: "Learn how solutions are distributed"
 ms.custom: ""
 ms.date: 01/28/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
