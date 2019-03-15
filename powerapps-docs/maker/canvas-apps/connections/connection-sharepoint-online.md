@@ -120,6 +120,26 @@ If your custom list contains any of these types of columns, show that data in a 
 - For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
 
     For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
+    
+## Show data from a library
+
+In this procedure, you'll add a **List box** control in which users can specify any of several images to show from a library. However, the same principles apply to other controls, such as **Gallery** controls, and other types of data, such as videos.
+
+1. Add a **List box** control, and name it **lbImage**.
+
+1. Set the **Items** property of **lbImage** to **Documents**.
+
+1. On the **Properties** tab of the right-hand pane, open the **Value** list, and then select **Name**.
+
+    The file names of the images in your library appear in **lbImage**.
+
+1. Add an **Image** control, and set its **Image** property to this expression:
+
+  `lbImage.Selected.'Link to item'`
+
+1. Press F5, and then select a different value in **lbImage**.
+
+    The **Image** control shows the image that you specified.
 
 ## Known issues
 
