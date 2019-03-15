@@ -123,23 +123,25 @@ If your custom list contains any of these types of columns, show that data in a 
     
 ## Show data from a library
 
-In this procedure, you'll add a **List box** control in which users can specify any of several images to show from a library. However, the same principles apply to other controls, such as **Gallery** controls, and other types of data, such as videos.
+If you have several images to a SharePoint libary, you can add a **List box** control to your app so that users can specify which image to show. You can also apply the same principles to other controls, such as **Gallery** controls, and other types of data, such as videos.
 
-1. Add a **List box** control, and name it **lbImage**.
+1. If you haven't already, [create a connection](#create-a-connection), and then [add data to an existing app](#add-data-to-an-existing-app).
 
-1. Set the **Items** property of **lbImage** to **Documents**.
+1. Add a **List box** control, and name it **ImageList**.
+
+1. Set the **Items** property of **ImageList** to **Documents**.
 
 1. On the **Properties** tab of the right-hand pane, open the **Value** list, and then select **Name**.
 
-    The file names of the images in your library appear in **lbImage**.
+    The file names of the images in your library appear in **ImageList**.
 
 1. Add an **Image** control, and set its **Image** property to this expression:
 
-    `lbImage.Selected.'Link to item'`
+    `ImageList.Selected.'Link to item'`
 
-1. Press F5, and then select a different value in **lbImage**.
+1. Press F5, and then select a different value in **ImageList**.
 
-    The **Image** control shows the image that you specified.
+    The image that you specified appears.
 
 ## Known issues
 
