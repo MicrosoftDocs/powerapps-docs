@@ -209,8 +209,7 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
-            - name: Web barcode scanner (experimental)
-              href: ./canvas-apps/controls/control-barcodescanner.md
+
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
@@ -267,7 +266,7 @@
               href: ./canvas-apps/controls/control-radio.md
             - name: Rating
               href: ./canvas-apps/controls/control-rating.md
-            - name: Rich text editor (experimental)
+            - name: Rich text editor
               href: ./canvas-apps/controls/control-richtexteditor.md
             - name: Screen
               href: ./canvas-apps/controls/control-screen.md
@@ -285,6 +284,8 @@
               href: ./canvas-apps/controls/control-toggle.md
             - name: Video
               href: ./canvas-apps/controls/control-audio-video.md
+            - name: Web barcode scanner (experimental)
+              href: ./canvas-apps/controls/control-barcodescanner.md
       - name: Configure app functionality
         href: ./canvas-apps/working-with-formulas.md
         items:
