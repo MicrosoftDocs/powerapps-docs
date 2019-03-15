@@ -4,7 +4,7 @@ description: "The walkthrough demonstrates how to register a service endpoint st
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

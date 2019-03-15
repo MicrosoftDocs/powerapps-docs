@@ -4,7 +4,7 @@ description: "Use the trace log to store plug-in execution information to aid in
 ms.custom: ""
 ms.date: 1/28/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: JimDaly
 ms.author: pehecke

@@ -17,7 +17,7 @@ search.app:
 # Build global support into canvas apps
 PowerApps is a global product. You can build and use canvas apps in many different languages and regions.
 
-Both while building and running apps, the text displayed by PowerApps has been translated into a variety of languages.  You will see menu items, dialog boxes, ribbon tabs, and other text in your native language.  Typing in and displaying dates and numbers is also adapted for your particular language and region.  For example, some regions of the world use "." as a decimal separator while others use ",".  
+Both while building and running apps, the text displayed by PowerApps has been translated into a variety of languages.  You will see menu items, dialog boxes, ribbon tabs, and other text in your native language.  Typing in and displaying dates and numbers is also adapted for your particular language and region.  For example, some regions of the world use a **.** (dot or period) as the decimal separator while others use a **,** (comma).  
 
 The apps you create can be globally aware as well.  Use the **[Language](functions/function-language.md)**, **[Text](functions/function-text.md)**, **[Value](functions/function-value.md)**, **[DateValue](functions/function-datevalue-timevalue.md)** and other functions to adapt what is displayed and used as input in different languages.   
 
@@ -70,15 +70,15 @@ The change in the PowerApps list separator is consistent with that happens to th
 * Fields in a [record](working-with-tables.md#elements-of-a-table).
 * Records in a [Value table](working-with-tables.md#inline-syntax).
 
-For example, consider the following formula expressed in a language and region that uses "**.**" (dot) as the decimal separator, such as Japan or the United Kingdom:
+For example, consider the following formula expressed in a language and region that uses dot or period as the decimal separator, such as Japan or the United Kingdom:
 
 ![PowerApps formula If open paren slider1 dot value greater than 12 dot 59 comma notify open paren "Valid!" comma success close paren semi-colon Navigate open paren "NextScreen" comma None close paren comma notify open paren "Invalid, try again" comma error close paren close paren](media/global-apps/operators-dot.png)
 
-Now view this same formula in a language and region where "**,**" (comma) is used for the decimal separator, such as France or Spain:
+Now view this same formula in a language and region where a comma is used for the decimal separator, such as France or Spain:
 
 ![PowerApps formula If open paren slider1 dot value greater than 12 comma 59 semi-colon notify open paren "Valid!" semi-colon success close paren double semi-colon Navigate open paren "NextScreen" semi-colon None close paren semi-colon notify open paren "Invalid, try again" semi-colon error close paren close paren](media/global-apps/operators-comma.png)
 
-The highlight shows the operators that change between the two versions.  Note that the property selection operator "**.**" (dot) in **Slider1.Value** is always the same, no matter what the decimal separator is.
+The highlight shows the operators that change between the two versions.  Note that the property selection operator **.** (dot or period) in **Slider1.Value** is always the same, no matter what the decimal separator is.
 
 Internally the formula does not change, all that changes is how it is displayed and edited by the author.  Two different authors using two different languages can view and edit the same formula, with each seeing the appropriate separators and operators for their language.
 

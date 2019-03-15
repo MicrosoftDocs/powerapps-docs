@@ -4,7 +4,7 @@ description: "The topic describes how to write an Azure solution listener applic
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

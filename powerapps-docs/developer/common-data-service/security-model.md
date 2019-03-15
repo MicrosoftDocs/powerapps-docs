@@ -4,7 +4,7 @@ description: "PowerApps provides a security model that protects data integrity a
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -31,7 +31,7 @@ PowerApps provides a security model that protects data integrity and privacy, an
 Combine role-based security, record-level security, and field-level security to define the overall security rights that users have within your custom Dynamics 365 application.
 
 As a developer, you should know that your queries run in the context of a user, and will only return records that the user is entitled to read.
-Further, yoo will only be able to perform operations based on the privileges assigned to your user account through the security roles.
+Further, you will only be able to perform operations based on the privileges assigned to your user account through the security roles.
 
 For detailed information about the security concepts, see [Security concepts](/dynamics365/customer-engagement/admin/security-concepts)
 

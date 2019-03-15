@@ -4,7 +4,7 @@ description: "Both the [Web API](webapi/overview.md) and the [Organization servi
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh"
 ms.author: "jdaly"

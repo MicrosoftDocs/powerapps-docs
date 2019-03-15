@@ -4,7 +4,7 @@ description: "Understand the limits for API requests." # 115-145 characters incl
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "MicroSri" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

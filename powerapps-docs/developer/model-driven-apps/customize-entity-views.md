@@ -4,7 +4,7 @@ description: "Learn about customizing the entity views." # 115-145 characters in
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
