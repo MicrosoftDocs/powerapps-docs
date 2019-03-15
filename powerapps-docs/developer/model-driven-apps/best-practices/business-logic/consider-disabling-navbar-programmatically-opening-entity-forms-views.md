@@ -1,5 +1,5 @@
 ---
-title: "Disable NavBar when programmatically opening entity forms or views | MicrosoftDocs"
+title: "Consider disabling NavBar when programmatically opening entity forms or views | MicrosoftDocs"
 description: "Opening up entity forms or views with a URL, could lead to slower client performance on high latency networks when the navigation bar (NavBar) is enabled."
 services: ''
 suite: powerapps
@@ -21,7 +21,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Disable NavBar when programmatically opening entity forms or views
+# Consider disabling NavBar when programmatically opening entity forms or views
 
 **Category**: Design, Performance
 
