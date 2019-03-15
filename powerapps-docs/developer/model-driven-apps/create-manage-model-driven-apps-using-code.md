@@ -4,7 +4,7 @@ description: "Learn about how to create, manage, and publish model-driven apps u
 keywords: ""
 ms.date: 03/04/2019
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

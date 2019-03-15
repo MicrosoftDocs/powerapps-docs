@@ -4,7 +4,7 @@ description: "The topic describes options for using the <CrmParameter> element t
 ms.custom: ""
 ms.date: 02/15/2019
 ms.reviewer: "kvivek"
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "hazhouMSFT"
 ms.author: "hazhou" # MSFT alias of Microsoft employees only

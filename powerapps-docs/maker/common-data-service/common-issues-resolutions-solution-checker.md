@@ -4,7 +4,7 @@ description: " A list of common issues and resolutions within Solution Checker"
 keywords: ""
 ms.date: 02/11/2019
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

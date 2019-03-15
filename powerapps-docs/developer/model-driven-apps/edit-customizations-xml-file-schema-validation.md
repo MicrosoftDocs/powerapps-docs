@@ -4,7 +4,7 @@ description: "The customizations.xml file is included within the compressed .zip
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

@@ -4,7 +4,7 @@ description: "Describes how to access D365 data from an application or service w
 ms.custom: ""
 ms.date: 2/21/2019
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

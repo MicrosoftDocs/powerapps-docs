@@ -4,7 +4,7 @@ description: "Learn about available tools and resources when working with soluti
 ms.custom: ""
 ms.date: 1/31/2019
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

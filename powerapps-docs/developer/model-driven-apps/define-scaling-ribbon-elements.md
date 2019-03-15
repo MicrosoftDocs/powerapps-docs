@@ -4,7 +4,7 @@ description: "Learn about defining scaling for ribbon elements." # 115-145 chara
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

@@ -4,7 +4,7 @@ description: "Server-side synchronization provides an interface between Common D
 ms.custom: ""
 ms.date: 02/21/2019
 ms.reviewer: "kvivek"
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh"
 ms.author: "mayadu" 

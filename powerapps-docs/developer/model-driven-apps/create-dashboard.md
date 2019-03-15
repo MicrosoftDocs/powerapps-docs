@@ -4,7 +4,7 @@ description: "Organization-owned dashboards can be created by using the Common D
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
