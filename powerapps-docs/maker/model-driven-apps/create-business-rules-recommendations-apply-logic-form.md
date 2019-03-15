@@ -133,7 +133,7 @@ This topic shows you how to create business rules and recommendations to apply f
 This section describes common issues that may occur when you use business rules. 
 
 ### Full Name field not supported with unified interface apps
-Actions that use a Full Name (fullname) field aren’t supported in apps based on the unified interface.  Alternatively, you can use actions with First Name (firstname) and Last Name (lastname) fields. Notice that conditions that use a Full Name (fullname) field are supported.
+Actions or conditions that use a **Full Name** (fullname) field aren’t supported in apps based on the unified interface.  Alternatively, you can use actions or conditions with **First Name** (firstname) and **Last Name** (lastname) fields. 
 
 ### Is your business rule not firing for a form?
 A business rule may not execute because the field referenced in the business rule isn’t included with the form. 
