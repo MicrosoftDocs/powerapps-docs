@@ -115,7 +115,8 @@ If your custom list contains any of these types of columns, show that data in a 
 
     You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (with the trailing period).
 
-    **Note:** For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
+    > [!NOTE]
+    > For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
 
 - For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
 
@@ -142,6 +143,18 @@ If you have several images in a SharePoint libary, you can add a **List box** co
 1. Press F5, and then select a different value in **ImageList**.
 
     The image that you specified appears.
+
+You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library. After you download the app, open [PowerApps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the steps from earlier in this topic.
+
+> [!NOTE]
+> By default, this app shows [delegation warnings](../delegation-overview.md), but you can ignore them if your library contains fewer than 500 items.
+
+In this one-screen app, the list in the lower-left corner shows all files in your library.
+
+- You can search for a file by typing or pasting one or more characters in the search box near the top.
+- If your library contains folders, you can filter the list of files by selecting a filter icon in the list of folders just under the title bar.
+
+When you find the file that you want, select it to show it in the **Video**, **Image**, or **Audio** control along the right-hand side.
 
 ## Known issues
 
