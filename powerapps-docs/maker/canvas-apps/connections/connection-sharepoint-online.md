@@ -144,7 +144,10 @@ If you have several images in a SharePoint libary, you can add a **List box** co
 
     The image that you specified appears.
 
-You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library. After you download the app, open [PowerApps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the steps from earlier in this topic.
+You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library.
+
+1. After you download the app, open [PowerApps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**.
+1. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the steps from earlier in this topic.
 
 > [!NOTE]
 > By default, this app shows [delegation warnings](../delegation-overview.md), but you can ignore them if your library contains fewer than 500 items.
