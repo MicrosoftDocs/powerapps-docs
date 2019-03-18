@@ -99,7 +99,5 @@ else
   
 ### See also  
 
-
-[Use Messages (Request and Response Classes) with the Execute Method](../org-service/use-messages-request-response-classes-execute-method.md)<br />
 [Use XRM Tooling to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)

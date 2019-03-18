@@ -37,7 +37,7 @@ XRM tooling provides you with the following **Windows PowerShell** cmdlets that 
 
 ## Register the cmdlets  
 
- Before you can use the **PowerShell** cmdlets, you have to register them. The XRM tooling **PowerShell** cmdlets are available as a NuGet package here: [https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CrmConnector.PowerShell](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CrmConnector.PowerShell/). To download and register the cmdlets: 
+ Before you can use the **PowerShell** cmdlets, you have to register them. The XRM tooling **PowerShell** cmdlets are available as a NuGet package [here](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CrmConnector.PowerShell](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CrmConnector.PowerShell/). To download and register the cmdlets
   
 1. Open Notepad, and copy the following script:
 
@@ -123,7 +123,7 @@ Use the `Get-CrmOrganizations` cmdlet to retrieve the organizations that you hav
     ```powershell  
     $CRMOrgs  
     ```  
-![CDS for Apps organization information](../media/xrm-tooling-powershell-1.png "CDS for Apps")
+![CDS for Apps organization information](../media/xrmtooling-powershell-1.png "CDS for Apps")
   
 > [!TIP]
 > You can use the variable that was used to store the retrieved CDS for Apps organizations (in this case `$CRMOrgs`) with the `Get-CrmConnection` cmdlet to connect to CDS for Apps. To specify the org name, use the following command: `$CRMOrgs.UniqueName`.  
