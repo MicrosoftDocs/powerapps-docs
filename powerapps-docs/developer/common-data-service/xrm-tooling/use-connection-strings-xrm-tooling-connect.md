@@ -2,7 +2,7 @@
 title: "Use connection strings in XRM tooling to connect to Common Data Service for Apps (Common Data Service for Apps)| Microsoft Docs"
 description: "XRM tooling enables you to connect to your Common Data Service for Apps environment by using connection strings"
 ms.custom: ""
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -23,33 +23,34 @@ search.app:
 ---
 # Use connection strings in XRM tooling to connect to Common Data Service for Apps
 
-With Common Data Service for Apps, XRM tooling enables you to connect to your CDS for Apps environment by using connection strings. This is similar to the concept of connection strings used with SQL Server. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure CDS for Apps connections at deployment time, and not hard code in your application to connect to your CDS for Apps environment.  
+With Common Data Service for Apps, XRM tooling enables you to connect to your CDS for Apps environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure CDS for Apps connections at deployment time, and not hard code in your application to connect to your CDS for Apps environment.  
   
 <a name="Create"></a> 
 
 ## Create a connection string
 
- You specify the connection string in the app.config or web.config file for your project, as shown in the following example.  
+ You specify the connection string in the `app.config` or `web.config` file for your project, as shown in the following example.  
   
 ```xml  
 <connectionStrings>  
-    <add name="MyCDSServer" connectionString="AuthType=AD;Url=http://contoso:8080/Test;" />  
+    <add name="MyCDSServer" connectionString="AuthType=Office365;Url=http://contoso:8080/Test;UserName=jsmith@contoso.onmicrosoft.com; 
+  Password=passcode;" />  
 </connectionStrings>  
 ```  
   
 > [!IMPORTANT]
->  If you add any sensitive information to the app.config or web.config file, for example an account password, be sure to take appropriate security precautions to protect the information.  
+> If you add any sensitive information to the `app.config` or `web.config file`, for example an account password, be sure to take appropriate security precautions to protect the information.  
   
  After creating the connection string, you use it to create a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object.  
   
 ```csharp  
 //Use the connection string named "MyCDSServer"  
 //from the configuration file  
-CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionStrings["MyCDSServer"].ConnectionString);  
+CrmServiceClient svc = new CrmServiceClient(ConnectionString);  
 ```  
   
 > [!NOTE]
->  You’ll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
+> You’ll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
   
  After creating a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object, you can use the object to perform actions in CDS for Apps. More information: [Use XRM Tooling to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)  
   
@@ -77,7 +78,7 @@ CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionSt
 |`SkipDiscovery`|Specifies whether to call instance discovery to determine the connection uri for a given instance. As of Nuget release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.0.2.7, default = true. Older versions default to false. <br/> Note: If set to true, it is important that the user provide the correct and accurate URI for the target instance.|
  
 > [!NOTE]
-> In this documentation release, the connection string documentation that is common to all on-premise deployment types has been moved to the [Customer Engagement for apps](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) documentation. The sub-sections that follow contain only the information specifically related to implementing connection string for online deployment. To learn about connection strings development, start by reading the connection string[documentation](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) under Dynamics 365 Customer Engagement for apps
+> In this documentation release, the connection string documentation that is common to all `on-premise` deployment types has been moved to the [Customer Engagement for apps](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) documentation. The sub-sections that follow contain only the information specifically related to implementing connection string for `online` deployment. To learn about connection strings development, start by reading the connection string [documentation](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) under Dynamics 365 Customer Engagement for apps
 
 <a name="Examples"></a>
 

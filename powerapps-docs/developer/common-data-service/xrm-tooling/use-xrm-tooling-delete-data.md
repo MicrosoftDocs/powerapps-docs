@@ -2,7 +2,7 @@
 title: "Use XRM tooling to delete data (Common Data Service for Apps)| Microsoft Docs"
 description: "Use CrmServiceClient class to delete data from CDS for Apps"
 ms.custom: ""
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,7 +27,7 @@ There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.Crm
   
 ## DeleteEntity  
 
-DeleteEntity is used to remove a single row of data from CDS for Apps. To use this method, you need to know the entity schema name you wish to affect, and the GUID of the row you want to remove.  
+`DeleteEntity` is used to remove a single row of data from CDS for Apps. To use this method, you need to know the entity schema name you wish to affect, and the GUID of the row you want to remove.  
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
@@ -55,7 +55,7 @@ else
   
 ## DeleteEntityAssociation  
 
-DeleteEntityAssociation removes the many-to-many association between records in entities. In this example, we will remove the association between a record in the lead and account entities.  
+`DeleteEntityAssociation` removes the many-to-many association between records in entities. In this example, we will remove the association between a record in the lead and account entities.  
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  

@@ -2,7 +2,7 @@
 title: "Use XRM tooling to execute actions in Dynamics 365 (Developer Guide for Dynamics 365 Customer Engagement) | MicrosoftDocs"
 description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Dynamics 365 data"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -12,7 +12,6 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 72e9238d-e0fb-453b-b1ab-3a15ffb19838
 caps.latest.revision: 13
-author: "Navakiran"
 ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
@@ -71,4 +70,3 @@ The following code sample demonstrates how to create a record using the <!--<xre
 
             }
 ```
-

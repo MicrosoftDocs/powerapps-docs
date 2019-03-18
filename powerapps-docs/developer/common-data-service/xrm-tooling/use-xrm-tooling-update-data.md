@@ -2,7 +2,7 @@
 title: "Use XRM tooling to update data (Common Data Service for Apps)| Microsoft Docs"
 description: "Use CrmServiceClient class to update data on CDS for Apps"
 ms.custom: ""
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -72,7 +72,7 @@ else
 }  
 ```  
   
-## UpdateStateAndStatusForEntity 
+## UpdateStateAndStatusForEntity
  
 This method is used to set the state of a record in CDS for Apps. For example, all records generally start in an “open” state. The name of the state changes based on the kind of record, or even the developers choices. A quote, for example, has several possible status and states, **Draft**, **Active**, **Close**, **Lost**, **Won**.  
   
@@ -113,4 +113,4 @@ else
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
 [Use XRM Tooling to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
 [Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)<br />
-[Work with attribute metadata](../org-service/work-attribute-metadata.md)
+

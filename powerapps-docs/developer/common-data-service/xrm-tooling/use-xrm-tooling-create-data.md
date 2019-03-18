@@ -2,7 +2,7 @@
 title: "Use XRM tooling to create data (Common Data Service for Apps)| Microsoft Docs"
 description: "Use CrmServiceClient class to create data on CDS for Apps"
 ms.custom: ""
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -29,7 +29,8 @@ There are seven methods available in the <xref:Microsoft.Xrm.Tooling.Connector.C
 
 This method is used to create any type of entity data in CDS for Apps. To use it, you need to know the schema name of the entity you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.  
   
-```csharp 
+```C#
+
 CrmServiceClient svc = new CrmServiceClient(connectionstring");  
   
 // Verify that you are connected  
@@ -62,10 +63,10 @@ else
 }  
 ```  
   
-In this example, we created a data payload object called `indata`. Next, we populated it using the general syntax: `crmFieldName , new CrmDataTypeWrapper(data,CrmFieldType)`. After setting up the `indata` object to get the values to create, we called `CreateNewRecord` method providing the entity logical name for the account and the data payload (`indata`).  
+In this example, we created a data payload object called `indata`. Next, we populated it using the general syntax `crmFieldName , new CrmDataTypeWrapper(data,CrmFieldType)`. After setting up the `indata` object to get the values to create, we called `CreateNewRecord` method providing the entity logical name for the account and the data payload (`indata`).  
   
 > [!NOTE]
->  You can also create an entity record using XRM tooling by executing the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message with the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method. More information: [Use messages with the ExecuteCrmOrganizationRequest method](use-messages-executecrmorganizationrequest-method.md)  
+> You can also create an entity record using XRM tooling by executing the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message with the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method. More information: [Use messages with the ExecuteCrmOrganizationRequest method](use-messages-executecrmorganizationrequest-method.md)  
   
 ## CreateAnnotation
   
@@ -79,7 +80,7 @@ if (svc != null && svc.IsReady)
 {  
     // Create and attach a note.  
     inData.Clear();   
-    inData.Add("subject", new CrmDataTypeWrapper("This is a NOTE from the API" , CrmFieldType.String));   
+    inData.Add("subject", new CrmDataTypeWrapper("This is a NOTE from the API" , CrmFieldType.String));
     inData.Add("notetext", new CrmDataTypeWrapper("This is text that will go in the body of the note" , CrmFieldType.String));  
     Guid noteID = svc.CreateAnnotation("account", accountId, inData);  
 }  

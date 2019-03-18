@@ -2,7 +2,7 @@
 title: "Use XRM tooling to retrieve data (Common Data Service for Apps)| Microsoft Docs"
 description: "Use CrmServiceClient class to retrieve data from CDS for Apps"
 ms.custom: ""
-ms.date: 03/15/2019
+ms.date: 03/20/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -61,7 +61,7 @@ else
   
 ## GetEntityDataByFetchSearchEC  
 
-This method searches for the entity based on the specified FetchXML query. In this sample, we retrieve and display the count of all account records in the system.  
+This method searches for the entity based on the specified `FetchXML` query. In this sample, we retrieve and display the count of all account records in the system.  
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
