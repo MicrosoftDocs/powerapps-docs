@@ -1,12 +1,12 @@
 ---
-title: What is PowerApps | Microsoft Docs
-description: Provides an overview of PowerApps and talks about how end users, app makers, admin, and pro developers can use PowerApps.
+title: What is PowerApps? | Microsoft Docs
+description: Provides an overview of PowerApps and talks about how end users, app makers, admins, and pro developers can use PowerApps.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/28/2019
+ms.date: 03/18/2019
 ms.author: kvivek
 ms.reviewer: kvivek
 ---
@@ -17,6 +17,8 @@ PowerApps is a suite of apps, services, connectors and data platform that provid
 Apps built using PowerApps provide rich business logic and workflow capabilities to transform your manual business processes to digital, automated processes. Further, apps built using PowerApps have a responsive design, and can run seamlessly in browser or on mobile devices (phone or tablet). PowerApps "democratizes" the custom business app building experience by enabling users to build feature-rich, custom business apps without writing code.
 
 PowerApps also provides an extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data.
+
+For more information, see the [PowerApps channel](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) on YouTube.
 
 ## PowerApps for app makers/creators
 
