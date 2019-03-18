@@ -29,8 +29,7 @@ There are seven methods available in the <xref:Microsoft.Xrm.Tooling.Connector.C
 
 This method is used to create any type of entity data in CDS for Apps. To use it, you need to know the schema name of the entity you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.  
   
-```C#
-
+```csharp
 CrmServiceClient svc = new CrmServiceClient(connectionstring");  
   
 // Verify that you are connected  

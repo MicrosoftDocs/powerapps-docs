@@ -34,7 +34,7 @@ With Common Data Service for Apps, XRM tooling enables you to connect to your CD
 ```xml  
 <connectionStrings>  
     <add name="MyCDSServer" connectionString="AuthType=Office365;Url=http://contoso:8080/Test;UserName=jsmith@contoso.onmicrosoft.com; 
-  Password=passcode;" />  
+  Password=passcode" />  
 </connectionStrings>  
 ```  
   
