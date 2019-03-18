@@ -2,7 +2,7 @@
 title: "Impersonate another user using the Web API (Common Data Service for Apps)| Microsoft Docs"
 description: "Impersonation is used to execute business logic(code) on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Common Data Service for Apps using the Web API"
 ms.custom: ""
-ms.date: 03/18/2018
+ms.date: 03/18/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -47,7 +47,7 @@ There are two ways you can impersonate a user, both of which are made possible b
  1. **Preferred:** Impersonate a user based on their Azure Active Directory (AAD) object id by passing that value along with the header `CallerObjectId`.
 2. **Legacy:** To impersonate a user based on their systemuserid you can leverage `MSCRMCallerID` with the corresponding guid value.
 
- In this example, a new account entity is created on behalf of the user with an Azure Active Directory object id e39c5d16-675b-48d1-8e67-667427e9c084.   
+ In this example, a new account entity is created on behalf of the user with an Azure Active Directory object id `e39c5d16-675b-48d1-8e67-667427e9c084`.   
   
  **Request**  
 ```http 
