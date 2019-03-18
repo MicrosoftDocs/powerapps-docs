@@ -92,7 +92,8 @@ search.app:
 <td>formParameters</td>
 <td>Object</td>
 <td>No</td>
-<td>A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/><br/>For information about passing parameters to a form, see [Set field values using parameters passed to a form](../../../set-field-values-using-parameters-passed-form.md) and [Configure a form to accept custom querystring parameters](../../../configure-form-accept-custom-querystring-parameters.md) </td>
+<td>A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/><br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
+">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a></td>
 </tr>
 <tr>
 <td>successCallback</td>
