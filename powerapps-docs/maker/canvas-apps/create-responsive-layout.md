@@ -214,5 +214,3 @@ After you adjust the screen's **Width** and **Height** formulas, you may also wa
 The authoring canvas doesn't respond to the sizing formulas created. To test responsive behavior, save and publish your app, then open it on devices or in browser windows of various sizes and orientations.
 
 If you write expressions or formulas in the **X**, **Y**, **Width**, and **Height** properties of a control, you'll overwrite those expressions or formulas if you later drag the control to a different location or resize the control by dragging its border.
-
-The process that this topic describes is complex and requires a lot of dedication to achieve. There's intention to continue to invest in this area to make it easier.
