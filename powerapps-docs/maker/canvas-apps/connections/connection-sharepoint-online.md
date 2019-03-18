@@ -124,11 +124,11 @@ If your custom list contains any of these types of columns, show that data in a 
     
 ## Show data from a library
 
-If you have several images in a SharePoint libary, you can add a **List box** control to your app so that users can specify which image to show. You can also apply the same principles to other controls, such as **Gallery** controls, and other types of data, such as videos.
+If you have several images in a SharePoint libary, you can add a **Drop down** control to your app so that users can specify which image to show. You can also apply the same principles to other controls, such as **Gallery** controls, and other types of data, such as videos.
 
 1. If you haven't already, [create a connection](#create-a-connection), and then [add data to an existing app](#add-data-to-an-existing-app).
 
-1. Add a **List box** control, and name it **ImageList**.
+1. Add a **Drop down** control, and name it **ImageList**.
 
 1. Set the **Items** property of **ImageList** to **Documents**.
 
@@ -147,7 +147,7 @@ If you have several images in a SharePoint libary, you can add a **List box** co
 You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library.
 
 1. After you download the app, open [PowerApps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**.
-1. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the steps from earlier in this topic.
+1. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the first two procedures in this topic.
 
 > [!NOTE]
 > By default, this app shows [delegation warnings](../delegation-overview.md), but you can ignore them if your library contains fewer than 500 items.
