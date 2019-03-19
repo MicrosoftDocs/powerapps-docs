@@ -4,7 +4,7 @@ description: "Learn how to create virtual entities"
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -27,7 +27,7 @@ search.app:
 
 A virtual entity is a custom entity in Common Data Service for Apps that has fields containing data from an external data source. Virtual entities appear in your app to users as regular entity records, but contain data that is sourced from an external database, such as an  Azure SQL Database. Records based on virtual entities are available in all clients including custom clients developed using the CDS for Apps web services.  
   
-In the past, to integrate the disparate data sources you would need to create a connector to move data or develop a custom plug-in, either client or server-side. However, with virtual entities you can connect directly with an external data source  at runtime so that specific data from the external data source is available in an environmnent, without the need for data replication.  
+In the past, to integrate the disparate data sources you would need to create a connector to move data or develop a custom plug-in, either client or server-side. However, with virtual entities you can connect directly with an external data source  at runtime so that specific data from the external data source is available in an environment, without the need for data replication.  
 
 Virtual entities are made up of three main components, a *data provider*, a *data source* record, and a *virtual entity*. The data provider consists of plug-ins and a data source entity. The data source is an entity record in CDS for Apps, which includes metadata that represents the schema of the connection parameters. Each virtual entity references a data source in the entity definition.  
   
@@ -132,7 +132,7 @@ Part of the name of any virtual entity you create is the customization prefix. T
 
 Virtual entities have these restrictions.  
   
-- All virtual entitites are read-only.  
+- All virtual entities are read-only.  
 - Existing entities cannot be converted to virtual entities.  
 - By default, virtual entities contain only a Name and Id field.  No other system managed fields, such as Status or Created On/Modified On are supported.
 - Virtual entities don't support custom fields with the Currency, Image, or Customer data types.
@@ -140,7 +140,7 @@ Virtual entities have these restrictions.
 - Virtual entity fields can't be used in rollups or calculated fields.
 - A virtual entity can't be an activity type of entity.  
 - Many features that affect entity table rows cannot be enabled with virtual entities.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, field security, Relevance Search, Portals for Dynamics 365 web portal solutions, and N:N relationships between virtual entities.  
-- Virtual entities are organization owned and don't support the row-level Commond Data Service for Apps security concepts. We recommend that you implement your own security model for the external data source.  
+- Virtual entities are organization owned and don't support the row-level Common Data Service for Apps security concepts. We recommend that you implement your own security model for the external data source.  
 - We recommend that you target a single data source when you use virtual entities in Advanced Finds. For example, creating an  Advanced Find that ultimately creates a join between the Common Data Service for Apps native data and the virtual entity external data isn't supported.  
 - Field metadata properties that validate on update don’t apply to virtual entities. For example, a Whole Number field on a virtual entity field may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual entity.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.
 - Virtual entities don't support change tracking and cannot be synchronized by using a CDS for Apps feature, such as the Data Export Service.

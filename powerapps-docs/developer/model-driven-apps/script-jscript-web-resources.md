@@ -4,7 +4,7 @@ description: "Learn about using JavaScript web resources to create a library of 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Script (JScript) web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/script-jscript-web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/script-jscript-web-resources -->
 
 Use Script(JScript) web resources to create a library of JavaScript functions that can be accessed from anywhere.  
   

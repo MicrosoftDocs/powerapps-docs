@@ -4,7 +4,7 @@ description: "The following is the schema definition for the PublishXmlRequest m
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Publish request schema
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/publish-request-schema -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/publish-request-schema -->
 
 The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> message. For more information, see [Publish Customizations](publish-customizations.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
   

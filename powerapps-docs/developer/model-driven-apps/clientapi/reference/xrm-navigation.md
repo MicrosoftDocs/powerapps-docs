@@ -1,7 +1,7 @@
 ---
 title: "Xrm.Navigation (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: c1239eca-2148-4bcc-bb7d-aae1da1ab6b5

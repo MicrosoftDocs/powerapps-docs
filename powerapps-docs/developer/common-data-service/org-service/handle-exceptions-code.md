@@ -4,7 +4,7 @@ description: "This article discusses the exceptions that are returned from a Dyn
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -134,4 +134,4 @@ Sync workflow 'Name of Entity Scope Business Rule returning Error' terminated wi
  [Troubleshooting tips](/dynamics365/customer-engagement/developer/troubleshooting-tips)   
  [Web service error codes](web-service-error-codes.md)   
  [Handle exceptions in plug-ins](../handle-exceptions.md)   
- [.NET Framework Developer Center](https://docs.microsoft.com/en-us/dotnet/framework/development-guide)
+ [.NET Framework Developer Center](https://docs.microsoft.com/dotnet/framework/development-guide)

@@ -4,7 +4,7 @@ description: "Learn about defining custom actions to modify the ribbon." # 115-1
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Define custom actions to modify the ribbon
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/define-custom-actions-modify-ribbon -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/define-custom-actions-modify-ribbon -->
 
 The default, an application command bar or ribbon is defined by Common Data Service for Apps metadata. This default data can’t be changed, but you can include definitions of specific actions that will override the default ribbon.  
   

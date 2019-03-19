@@ -4,7 +4,7 @@ description: "Learn about using image web resources to make images available for
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Image web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/image-web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/image-web-resources -->
 
 Use image web resources to make images available for use in Model-driven apps.  
 

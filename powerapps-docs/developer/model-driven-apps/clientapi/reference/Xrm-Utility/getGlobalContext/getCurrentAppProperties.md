@@ -1,7 +1,7 @@
 ---
 title: "getCurrentAppProperties (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 5f8d91ff-ba0d-4e90-a79a-18e32d09baa3
@@ -40,7 +40,7 @@ If this method is called in the context of a business app, returns the propertie
 
 ### Related topics
 
-[Create, manage, nd publish model-driven apps apps using code](../../../../create-manage-model-driven-apps-using-code.md)
+[Create, manage, and publish model-driven apps using code](../../../../create-manage-model-driven-apps-using-code.md)
 
 [Xrm.Utility.getGlobalContext](../getGlobalContext.md) 
 

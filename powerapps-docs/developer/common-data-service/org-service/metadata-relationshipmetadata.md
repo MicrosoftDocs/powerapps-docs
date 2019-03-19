@@ -4,7 +4,7 @@ description: "Shows code samples to create and retrieve entity relationships." #
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Create and retrieve entity relationships
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/create-retrieve-entity-relationships -->
 
 This topic shows how to create and retrieve entity relationships.  
   

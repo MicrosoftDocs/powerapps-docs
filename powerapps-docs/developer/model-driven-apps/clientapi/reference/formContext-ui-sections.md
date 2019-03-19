@@ -2,7 +2,7 @@
 title: "formContext.ui.sections (Client API reference) in model-driven apps| MicrosoftDocs"
 description: "Learn about working with processes in model-driven apps using client API."
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e362dfb2-cb64-49f5-b3d4-d77e813325ca

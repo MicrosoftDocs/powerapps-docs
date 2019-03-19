@@ -4,7 +4,7 @@ description: "Learn how to define rollup fields"
 ms.custom: ""
 ms.date: 05/23/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -82,7 +82,7 @@ To view rollup jobs:
  
 ### Mass Calculate Rollup Field
 
-**Mass Calculate Rollup Field** is a recurring job, created per a rollup field. It runs once, after you created or updated a rollup field. The job recalculates the specified rollup field value in all existing records that contain this field. By default, the job will run 12 hours after you created or updated a field. After the job completes, it is automatically scheduled to run in the distant future, approximately, in 10 years. If the field is modified, the job resets to run again in 12 hours after the the update. The 12 hour delay is needed to assure that the **Mass Calculate Rollup Field** runs during the non-operational hours of the environment. It is recommended that an administrator adjusts the start time of a **Mass Calculate Rollup Field** job after the rollup field is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup fields.  
+**Mass Calculate Rollup Field** is a recurring job, created per a rollup field. It runs once, after you created or updated a rollup field. The job recalculates the specified rollup field value in all existing records that contain this field. By default, the job will run 12 hours after you created or updated a field. After the job completes, it is automatically scheduled to run in the distant future, approximately, in 10 years. If the field is modified, the job resets to run again in 12 hours after the update. The 12 hour delay is needed to assure that the **Mass Calculate Rollup Field** runs during the non-operational hours of the environment. It is recommended that an administrator adjusts the start time of a **Mass Calculate Rollup Field** job after the rollup field is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup fields.  
 
 ### Calculate Rollup Field 
 

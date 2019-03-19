@@ -24,7 +24,7 @@ search.app:
 
 <!-- This topic was not migrated it was written for PowerApps 
 Was Mike Carter
-Overlap with https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/introduction-entity-attributes
+Overlap with https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-entity-attributes
 
 -->
 # Attribute metadata

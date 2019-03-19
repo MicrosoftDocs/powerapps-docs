@@ -4,7 +4,7 @@ description: "Dynamics 365 for Outlook lets users interact with data while theyâ
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "sriharibs" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook 
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook 
 
 This topic should be in powerapps-docs/developer/common-data-service/outlook-client/
 -->

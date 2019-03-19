@@ -4,7 +4,7 @@ description: "Learn how solutions are distributed"
 ms.custom: ""
 ms.date: 01/28/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -23,8 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
-<a name="BKMK_Solutions"></a>   
+   
 # Solutions overview  
 
   In PowerApps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as entities, option sets, etc.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).

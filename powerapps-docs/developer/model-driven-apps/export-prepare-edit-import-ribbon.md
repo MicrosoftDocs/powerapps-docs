@@ -4,7 +4,7 @@ description: "Learn about exporting the ribbon by including it in a solution and
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Export, prepare to edit, and import the ribbon
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/export-prepare-edit-import-ribbon -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/export-prepare-edit-import-ribbon -->
 
 To edit the ribbon, you must perform the following steps:  
   

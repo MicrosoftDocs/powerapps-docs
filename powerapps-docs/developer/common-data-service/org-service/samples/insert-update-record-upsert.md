@@ -4,7 +4,7 @@ description: "This sample shows how to insert or update records using the Upsert
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,9 +17,9 @@ search.app:
 ---
 # Sample: Insert or update a record using Upsert
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-insert-update-record-upsert -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-insert-update-record-upsert -->
 
-This sample code shows how to insert or update records by using the [UpsertRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.messages.upsertrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/InsertRecordUsingUpsert).
+This sample code shows how to insert or update records by using the [UpsertRequest](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.messages.upsertrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/InsertRecordUsingUpsert).
 
 ## How to run this sample
 

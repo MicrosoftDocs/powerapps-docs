@@ -1,7 +1,7 @@
 ---
 title: "getAttributeType (Client API reference)| MicrosoftDocs"
 ms.date: 02/13/2019
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 9ef1c886-a0b8-4ba9-bb9f-e6ecfa9d6dff
 author: "KumarVivek"

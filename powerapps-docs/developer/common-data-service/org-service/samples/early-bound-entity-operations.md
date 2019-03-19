@@ -4,7 +4,7 @@ description: "This sample shows how to create, retrieve, update, and delete oper
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -25,7 +25,7 @@ show deep insert equivalent
 
 sample-initialize-record-existing-record.md
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-records-early-bound
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-records-early-bound
 
 -->
 

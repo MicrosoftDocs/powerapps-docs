@@ -4,7 +4,7 @@ description: "This sample shows how to audit user access" # 115-145 characters i
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Audit user access
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-audit-user-access -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-audit-user-access -->
 
 This sample code shows how to audit user access. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AuditUserAccess).
 

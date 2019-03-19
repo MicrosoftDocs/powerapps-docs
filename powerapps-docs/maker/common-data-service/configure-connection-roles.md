@@ -3,7 +3,7 @@ title: "Configure connection roles | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/27/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -21,7 +21,7 @@ search.app:
 ---
 # Configure connection roles
 
-With Common Data Service for Apps you can define **connections** between entity records without creating an entity relationship. In model-driven apps people can establish a named link between records to establish less a formal relationship which doesn't justify creating an actual entity relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can can also be reciprocol, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
+With Common Data Service for Apps you can define **connections** between entity records without creating an entity relationship. In model-driven apps people can establish a named link between records to establish less a formal relationship which doesn't justify creating an actual entity relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
 
 When people set a connection between two records, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between records](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
 
@@ -45,7 +45,7 @@ In this view you can see all the connection roles that are available for this en
 
 ## View connection roles in the solution explorer.
 
-Because connection roles are *solution aware*, which means that they can be included in a solution, you can also add connection roles to a a solution you distribute.
+Because connection roles are *solution aware*, which means that they can be included in a solution, you can also add connection roles to a solution you distribute.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
@@ -113,9 +113,9 @@ For role definitions like *Friend*, *Spouse*, *Colleague*, or *Sibling*, it is b
 > [!IMPORTANT]
 > You will need to save a new connection role without this matching connection role before you can set the matching connection role to itself.
 
-You will find that some connection roles are are already configured with matching connection roles. *Former Employee* is matched with *Former Employer* and vice versa. This kind of one-to-one matching connection role is most common.
+You will find that some connection roles are already configured with matching connection roles. *Former Employee* is matched with *Former Employer* and vice versa. This kind of one-to-one matching connection role is most common.
 
-You can configure multiple matching connection roles to describe complex relationships. If you create a connection role such as *Father*, you could configure two more roles such as *Daughter* and *Son* and apply both of them as matching connection roles to *Father*. In turn, both the *Daughter* and *Son* connection roles should be matched to *Father*. Of course, then you should set up an equivilent role for *Mother* that is similarly matched with *Daughter* and *Son*.
+You can configure multiple matching connection roles to describe complex relationships. If you create a connection role such as *Father*, you could configure two more roles such as *Daughter* and *Son* and apply both of them as matching connection roles to *Father*. In turn, both the *Daughter* and *Son* connection roles should be matched to *Father*. Of course, then you should set up an equivalent role for *Mother* that is similarly matched with *Daughter* and *Son*.
 
 > [!TIP]
 > Before you create a complex set of connection roles, consider if a more simple set of roles will be enough. For example, rather than creating a complex set of connection roles like *Father*, *Mother*, *Son*, and *Daughter* - consider if simply using *Parent* and *Child* will work for you.

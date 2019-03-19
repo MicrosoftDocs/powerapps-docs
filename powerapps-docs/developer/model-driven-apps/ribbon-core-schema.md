@@ -4,7 +4,7 @@ description: "The following is the schema definition for the ribbon core portion
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Ribbon core schema
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/ribbon-core-schema -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-core-schema -->
 
 The following is the schema definition for the ribbon core portion of an import/export customization file. It is included from the [Customization Solutions File Schema](../common-data-service/customization-solutions-file-schema.md). `RibbonCore.xsd` schema includes `RibbonTypes.xsd` and `RibbonWss.xsd` and you can find schema  in the `Schemas\9.0.0.2090\RibbonCore.xsd` folder when you download the Schemas zip file.
 

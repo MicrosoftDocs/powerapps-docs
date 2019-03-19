@@ -4,7 +4,7 @@ description: "Learn about configuring a form to acept custom querystring paramet
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Configure a form to accept custom querystring parameters
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/configure-form-accept-custom-querystring-parameters -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/configure-form-accept-custom-querystring-parameters -->
 
 The ability to pass values to a Web page by using query strings represents a concern for security. Model=driven Apps applies the best practice of always comparing any parameter passed as a query string against a list of expected parameter names and data types.  
   

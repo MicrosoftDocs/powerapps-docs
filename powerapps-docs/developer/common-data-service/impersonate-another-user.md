@@ -4,7 +4,7 @@ description: "Use impersonation to execute business logic on behalf of another C
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -59,7 +59,7 @@ To impersonate another user, set the `CallerId` property to the Guid value of th
 - <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.CallerId>
 - <xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient.CallerId>
 
-## Impersonate another using in Plug-ins
+## Impersonate another user using Plug-ins
 
 You can register a plug-in you can specify a user that the operations should use. Within the code of a plug-in you can override this setting.
 More information: [Impersonate a user](impersonate-a-user.md).

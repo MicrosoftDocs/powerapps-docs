@@ -4,7 +4,7 @@ description: "Data that should be synchronized between the Common Data Service f
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "sriharibs" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

@@ -4,7 +4,7 @@ description: "Sample that showcases how to convert a faxt into a task " # 115-14
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Convert a fax to a task
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-convert-fax-task -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-convert-fax-task -->
 
 
 This sample shows how to convert a **Fax** to a **Task**. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ConvertFaxToTask).

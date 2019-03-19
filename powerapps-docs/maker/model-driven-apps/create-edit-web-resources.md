@@ -4,7 +4,7 @@ description: "Learn how to create or edit a web resource"
 ms.custom: ""
 ms.date: 06/02/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -137,4 +137,4 @@ When your customizations are complete, publish them:
 [Web resource properties](web-resource-properties-legacy.md) <br /> 
 [Create and design forms](create-design-forms.md) <br />
 [Understand model-driven app components](model-driven-app-components.md) <br /> 
-[Developer Documenttion: Web resources for Customer Engagement](/dynamics365/customer-engagement/developer/web-resources)
+[Developer Documentation: Web resources for Customer Engagement](/dynamics365/customer-engagement/developer/web-resources)

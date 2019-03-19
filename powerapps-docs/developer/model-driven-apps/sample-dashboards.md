@@ -4,7 +4,7 @@ description: "The topic contains sample dashboards along with the respective For
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "Kumarvivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample dashboards
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/sample-dashboards -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/sample-dashboards -->
 
 This topic contains sample dashboards along with the respective FormXML strings. You can specify the FormXML string for a dashboard using the `SystemForm.FormXml` attribute for an organization-owned dashboard or `UserForm.FormXml` for a user-owned dashboard.  
   

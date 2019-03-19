@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 12/12/2018
+ms.date: 02/20/2018
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -33,9 +33,8 @@ search.app:
 
 Synchronous requests block the execution of other scripts, which can cause the following:
 
-- Unresponsive model-driven apps
+- Unresponsive model-driven and canvas apps
 - Slow client interactions
-- The browser stops responding
 
 <a name='guidance'></a>
 
@@ -46,7 +45,9 @@ Interact asynchronously with HTTP and HTTPS resources whenever possible. Users s
 The following options are available in modern browsers for interacting with services asynchronously.
 
 > [!NOTE]
-> Adding asynchronous interactions requires a different style of design than synchronous interactions. Multiple script paths can be in process simultaneously, which means you must give more thought to ensure that the page flow and integrity are correct at all times. For example, you'll often need to put measures in place to ensure that controls aren't enabled until all dependent service calls have returned. Taking a few additional steps can help ensure a more enjoyable user experience.
+> Adding asynchronous interactions requires a different style of design than synchronous interactions. Callbacks can execute in a non-deterministic order, which means you must give more thought to ensure that the page flow and integrity are correct at all times. For example, you'll often need to put measures in place to ensure that controls aren't enabled until all dependent service calls have returned. Taking a few additional steps can help ensure a more enjoyable user experience.
+
+- Traditionally, ribbon rules were written with synchronous requests since true/false needed to be returned. Unified Interface supports returning a promise rather than a boolean, which allows ribbon rules to issue asynchronous network requests. For more information, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules#custom-rule).
 
 - [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest) with the async parameter omitted or set to true
 
@@ -59,26 +60,10 @@ The following options are available in modern browsers for interacting with serv
   requestXhr.open('GET', '/test/test.txt', true);
   ```
 
-- APIs initiated within a [web worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API) context
-
 - [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) API usage
 
   > [!IMPORTANT]
   > Before proceeding with this option, ensure that support is available for the browsers that are being used to interact with your customizations. Review the [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) documentation's **Browser compatibility** section.
-
-- [`jQuery`](https://www.jquery.com).[`ajax`](http://api.jquery.com/jquery.ajax/) function with the `async` parameter being left alone or set to true
-
-  > [!IMPORTANT]
-  > Usage of jQuery isn't the preferred approach because it adds a dependency to an external library and isn't recommended in interacting with the product. Refer to [Use of jQuery](/dynamics365/customer-engagement/developer/use-javascript#use-of-jquery) for more information.
-
-  ```javascript
-  // jQuery example that is missing the async parameter, which is the third parameter. It defaults to true, which is the value you want.
-  var requestXhr = new XMLHttpRequest();
-  var requestAjaxDefault = $.ajax({ url: '/test/test.txt' });
-
-  // jQuery example explicitly setting the async property to true.
-  var requestAjax = $.ajax({ async: true, url: '/test/test.txt' });
-  ```
 
 <a name='problem'></a>
 
@@ -89,7 +74,7 @@ There are multiple ways to interact with the server or request resources. Common
 > [!WARNING]
 > These scenarios should be avoided.
 
-- Usage of the `XMLHttpRequest` object, aside from being executed within the context of a `Worker`, passing in `false` for the value of the `async` parameter for the `open` function call
+- Usage of the `XMLHttpRequest` object passing in `false` for the value of the `async` parameter for the `open` function call
 
   ```javascript
   var requestXhr = new XMLHttpRequest();
@@ -114,14 +99,11 @@ There are multiple ways to interact with the server or request resources. Common
 
 ### Performance
 
-Traditionally, a browser interprets script on a single thread. If that thread is being used to execute a long-running process synchronously, the browser is likely to stop responding to the user's interactions while it waits for the process to be completed. Synchronous calls also remove the ability to perform more than one interaction simultaneously, forcing all calls to be serial in nature. In many cases, this leads to the frustration of your users. Optimize user responsiveness by incorporating asynchronous service calls.
-
-> [!NOTE]
-> An acceptable alternative approach is to leverage a [web worker](https://developer.mozilla.org/docs/Web/API/Worker). This modern feature allows for a background thread to be employed. In cases where synchronous calls are being executed within a worker, these are actually processed asynchronously.
+A browser interprets script on a single thread. If that thread is being used to execute a process synchronously, the browser will stop responding to the user's interactions ("freeze") while it waits for the process to be completed. Synchronous calls also remove the ability to perform more than one interaction simultaneously, forcing all calls to be serial in nature. In many cases, this leads to the frustration of your users. Optimize user responsiveness by incorporating asynchronous service calls.
 
 ### Browser support
 
-The specification for `XMLHttpRequest` states that synchronous usage is being removed from the standard because it's now deprecated. We recommend that browsers warn when synchronous executions are performed. Currently, browsers are only presenting warnings, but an `InvalidAccessError` exception might be thrown in the future when a value of false is passed to the async parameter. Modern browsers have declared synchronous requests executed on the main thread as deprecated.
+The specification for `XMLHttpRequest` states that synchronous usage is being removed from the standard because it's now deprecated. Currently, browsers are only presenting warnings, but an `InvalidAccessError` exception might be thrown in the future when a value of false is passed to the async parameter. Modern browsers have declared synchronous requests executed on the main thread as deprecated.
 
 > [!NOTE]
 > Modern APIs are being introduced that will no longer provide an option for synchronous operations. Refer to documentation of the [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API) for more details.
@@ -144,9 +126,8 @@ The approach in this example still processes on the main browser UI thread, lock
 
 ### See also
 
+[Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules#custom-rule)
 [XMLHttpRequest](https://docs.microsoft.com/microsoft-edge/dev-guide/performance/xmlhttprequest)<br />
 [XMLHttpRequest specification (with synchronous deprecation statement)](https://xhr.spec.whatwg.org/#the-open()-method)<br />
 [Fetch API specification](https://fetch.spec.whatwg.org/#fetch-api)<br />
-[Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)<br />
-[Web worker specification](https://html.spec.whatwg.org/multipage/workers.html)<br />
-[Web worker](https://developer.mozilla.org/docs/Web/API/Worker)
+[Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)

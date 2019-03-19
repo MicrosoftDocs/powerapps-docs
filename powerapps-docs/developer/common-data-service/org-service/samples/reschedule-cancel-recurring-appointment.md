@@ -4,7 +4,7 @@ description: "This sample shows how to reschedule and cancel a recurring appoint
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,9 +17,9 @@ search.app:
 ---
 # Sample: Reschedule and cancel a recurring appointment
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-reschedule-cancel-recurring-appointment -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-reschedule-cancel-recurring-appointment -->
 
-This sample demonstrates how to reschedule and cancel appointment instances in a recurring appointment series using the [RescheduleRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.crm.sdk.messages.reschedulerequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RecurringAppointment).
+This sample demonstrates how to reschedule and cancel appointment instances in a recurring appointment series using the [RescheduleRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.reschedulerequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RecurringAppointment).
 
 ## How to run this sample
 

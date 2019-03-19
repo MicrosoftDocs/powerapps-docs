@@ -4,7 +4,7 @@ description: "<Description>" # 115-145 characters including spaces. This abstrac
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -31,11 +31,11 @@ powerapps-docs/developer/common-data-service/webapi/detect-duplicate-data.md
 Also: powerapps-docs/developer/common-data-service/webapi/manage-duplicate-detection-create-update.md
 
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/detect-duplicate-data-for-developers
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/enable-disable-duplicate-detection
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/run-duplicate-detection
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicate-detection-create-update
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicate-detection-messages
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/duplicaterule-entities
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/detect-duplicate-data-for-developers
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/enable-disable-duplicate-detection
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/run-duplicate-detection
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/duplicate-detection-create-update
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/duplicate-detection-messages
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/duplicaterule-entities
 
 -->

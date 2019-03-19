@@ -4,7 +4,7 @@ description: "This sample shows how to retrieve time zone information" # 115-145
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Retrieve time zone information
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-retrieve-time-zone-information -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-retrieve-time-zone-information -->
 
 This sample shows how to retrieve time zone information. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveTimeZone).
 

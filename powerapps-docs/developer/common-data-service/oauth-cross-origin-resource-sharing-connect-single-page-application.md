@@ -4,7 +4,7 @@ description: "Learn how to use OAuth with Cross-Origin Resource Sharing to conne
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
@@ -20,7 +20,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/oauth-cross-origin-resource-sharing-connect-single-page-application 
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/oauth-cross-origin-resource-sharing-connect-single-page-application 
 
 -->
 # Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application

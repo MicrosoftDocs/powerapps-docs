@@ -4,7 +4,7 @@ description: "Use cascading style sheet (CSS) web resources to create style shee
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # CSS web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/css-web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/css-web-resources -->
 
 Use cascading style sheet (CSS) web resources to create style sheets for use in webpage web resources.  
   

@@ -4,7 +4,7 @@ description: "This topic covers how to implement HTML web resources and its capa
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Webpage (HTML) web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webpage-html-web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/webpage-html-web-resources -->
 
 Use webpage (HTML) web resources to create user interface elements for client extensions.
 

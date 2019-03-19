@@ -4,7 +4,7 @@ description: "The walkthrough guides you through configuring the Azure Service B
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Tutorial: Configure Azure (SAS) for integration with Common Data Service for Apps
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-configure-azure-sas-integration -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/walkthrough-configure-azure-sas-integration -->
 
 This walkthrough guides you through configuring the Azure Service Bus issuer, scope, and rules to allow a listener application to read the CDS for Apps messages posted to the Azure Service Bus.  
   

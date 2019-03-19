@@ -4,7 +4,7 @@ description: "Configuration information that is required for importing data is c
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -20,7 +20,7 @@ search.app:
 <!-- 
 Was Mike Carter's
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/configure-data-import 
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/configure-data-import 
 
 Child topic of 
 powerapps-docs/developer/common-data-service/import-data.md

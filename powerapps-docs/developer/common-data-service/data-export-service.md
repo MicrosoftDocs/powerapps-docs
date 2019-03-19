@@ -4,7 +4,7 @@ description: "Capabilities, prerequisites, API, and programming of the Data Expo
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "sabinn-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

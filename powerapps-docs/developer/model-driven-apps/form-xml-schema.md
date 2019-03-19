@@ -4,7 +4,7 @@ description: "Learn about schema definition for form customizations." # 115-145 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Form XML schema
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/form-xml-schema -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/form-xml-schema -->
 
 The following is the schema definition for form customizations for Model-driven apps. For more information, see [Customize Entity Forms](customize-entity-forms.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
   

@@ -4,7 +4,7 @@ description: "Learn about multi-select picklist attributes that allow storing mu
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "MicroSri" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -64,7 +64,7 @@ _serviceProxy.Create(contact);
 
 ## Query data from multi-select picklists
 
-Two new condition operators have been added to support querying values in multi-select option sets: `ContainValues` and `DoesNotContainValues` or the FetchXml `contain-values` and `not-contain-values` operators. With the Web API there are the equivilent `ContainValues` and `DoesNotContainValues` query functions.
+Two new condition operators have been added to support querying values in multi-select option sets: `ContainValues` and `DoesNotContainValues` or the FetchXml `contain-values` and `not-contain-values` operators. With the Web API there are the equivalent `ContainValues` and `DoesNotContainValues` query functions.
 
 Other existing condition operators that can be used with this type of attribute include: `Equal`, `NotEqual`, `NotNull`, `Null`, `In` and `NotIn`. 
 

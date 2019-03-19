@@ -4,7 +4,7 @@ description: "<Description>" # 115-145 characters including spaces. This abstrac
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "jamesol-msft" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -19,7 +19,7 @@ search.app:
 
 <!-- 
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/online-management-api 
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/online-management-api 
 
 Isn't this a duplicate of the topic in the online admin api folder?
 

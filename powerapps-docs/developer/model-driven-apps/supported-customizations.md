@@ -4,7 +4,7 @@ description: "You can customize Model-driven apps by using tools that are availa
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Get started with Model-driven apps customization using code
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-extensions
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
 Split to just include MDA issues
  -->
 

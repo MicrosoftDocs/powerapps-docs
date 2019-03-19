@@ -4,7 +4,7 @@ description: "The following is the schema definition for the ribbon types WSS of
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Ribbon WSS schema
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/ribbon-wss-schema -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-wss-schema -->
 
 The following is the schema definition for the ribbon types WSS of an import/export customization file. Ribbon WSS is included from the [Ribbon Core Schema](ribbon-core-schema.md). You can find schema in the `Schemas\9.0.0.2090\RibbonWSS.xsd` folder when you download the Schemas zip file.
 

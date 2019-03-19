@@ -4,7 +4,7 @@ description: "Charts display data visually by mapping textual values on two axes
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Understand charts: Underlying data and chart representation
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/understand-charts-underlying-data-chart-representation -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/understand-charts-underlying-data-chart-representation -->
 
 Charts display data visually by mapping textual values on two axes: horizontal (x) and vertical (y). The x axis is called the *category* axis and the y axis is called the *series* axis. The category axis can display numeric as well as non-numeric values whereas the series axis only displays numeric values.  
   

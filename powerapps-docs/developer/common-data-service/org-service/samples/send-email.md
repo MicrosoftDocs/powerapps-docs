@@ -4,7 +4,7 @@ description: "This sample shows how to send an email" # 115-145 characters inclu
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,9 +17,9 @@ search.app:
 ---
 # Sample: Send an email
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-send-email -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-send-email -->
 
-This sample shows how to send an email using [SendEmailRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.crm.sdk.messages.sendemailrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SenEmail).
+This sample shows how to send an email using [SendEmailRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.sendemailrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/SenEmail).
 
 ## How to run this sample
 

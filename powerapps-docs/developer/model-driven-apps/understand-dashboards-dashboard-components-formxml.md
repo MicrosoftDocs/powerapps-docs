@@ -4,7 +4,7 @@ description: "Dashboards are one of the different types of forms in Mode-driven 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Understand dashboards: Dashboard components and FormXML
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/understand-dashboards-dashboard-components-formxml -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/understand-dashboards-dashboard-components-formxml -->
 
 Dashboards are one of the different types of forms in Model-driven apps. You can use the `SystemForm.Type` or `UserForm.Type` attribute to determine whether the form is a dashboard. A form of dashboard type has the property value of ”0”.  
 

@@ -4,7 +4,7 @@ description: "Learn how to create many-to-many entity relationships"
 ms.custom: ""
 ms.date: 05/29/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -27,7 +27,7 @@ search.app:
 
 One-to-many (1:N) entity relationships establish a hierarchy between records. With Many-to-many (N:N) relationships there is no explicit hierarchy. There are no lookup fields or behaviors to configure. Records created using Many-to-many relationships can be considered peers and the relationship is reciprocal.  
   
-With Many-to-many relationships a Relationship (or Intersect) entity stores the data that assoicates the entities. This entity has a One-to-many entity relationship with both of the related entities and only stores the necessary values to define the relationship. You can’t add custom fields to a relationship entity and it is never visible in the user interface. 
+With Many-to-many relationships a Relationship (or Intersect) entity stores the data that associates the entities. This entity has a One-to-many entity relationship with both of the related entities and only stores the necessary values to define the relationship. You can’t add custom fields to a relationship entity and it is never visible in the user interface. 
   
 Creating a Many-to-many relationship requires choosing the two entities that you want to participate in the relationship. For model-driven apps you can decide how you want the respective lists to be available within the navigation for each entity. These are the same options used for the primary entity in 1:N entity relationships. More information:  [Navigation Pane Item for Primary Entity](create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity)
   

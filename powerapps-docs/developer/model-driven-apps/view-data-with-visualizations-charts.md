@@ -4,7 +4,7 @@ description: "Visualizations let you see your business data graphically. A visua
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # View data with visualizations (charts)
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/view-data-with-visualizations-charts -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/view-data-with-visualizations-charts -->
 
 
 Visualizations let you see your business data graphically. A visualization is attached to an entity in Common Data Services for Apps. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard. More information: [Analyze Data with Dashboards](analyze-data-with-dashboards.md)  

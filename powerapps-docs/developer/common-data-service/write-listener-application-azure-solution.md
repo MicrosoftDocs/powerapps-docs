@@ -4,7 +4,7 @@ description: "The topic describes how to write an Azure solution listener applic
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Write a listener application for a Azure solution
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/write-listener-application-azure-solution -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/write-listener-application-azure-solution -->
 
 This topic describes how to write an Azure solution  listener application that can read and process Dynamics 365 (online) Common Data Service for Apps messages that are posted to the Azure Service Bus. As a prerequisite, you should familiarize yourself with how to write a Azure Service Bus listener before trying to learn the specifics of a Dynamics 365 listener. For more information, see the [Azure Service Bus documentation](https://azure.microsoft.com/en-us/documentation/services/service-bus/).  
   
@@ -35,14 +35,14 @@ A message *queue* is a repository of messages received at a service bus endpoint
 > [!IMPORTANT]
 >  When writing a queue listener, check each message header action to determine if the message originated from Dynamics 365. For information on how to do this see [Filter messages](write-listener-application-azure-solution.md#filter).  
   
-You can do a destructive message read using [Receive](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.queueclient?redirectedfrom=MSDN&view=azure-dotnet#Microsoft_ServiceBus_Messaging_QueueClient_Receive) in [ReceiveAndDelete](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.receivemode?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_messaging_receivemode) mode, where the message is read and removed from the queue, or a non-destructive read using [PeekLock](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.receivemode?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_messaging_receivemode) mode, where the message is read but still available in the queue. The persistent queue listener sample code provided in this SDK does a destructive read. For more information about reading messages from a queue, see [How to Receive Messages from a Queue](http://azure.microsoft.com/documentation/articles/service-bus-dotnet-how-to-use-queues/#how-to-receive-messages-from-a-queue).  
+You can do a destructive message read using [Receive](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.queueclient?redirectedfrom=MSDN&view=azure-dotnet#Microsoft_ServiceBus_Messaging_QueueClient_Receive) in [ReceiveAndDelete](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.receivemode?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_messaging_receivemode) mode, where the message is read and removed from the queue, or a non-destructive read using [PeekLock](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.messaging.receivemode?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_messaging_receivemode) mode, where the message is read but still available in the queue. The persistent queue listener sample code provided in this SDK does a destructive read. For more information about reading messages from a queue, see [How to Receive Messages from a Queue](http://azure.microsoft.com/documentation/articles/service-bus-dotnet-how-to-use-queues/#how-to-receive-messages-from-a-queue).  
   
-A *topic* is similar to a queue but implements a publish/subscribe model. One or more listeners can subscribe to the topic and receive messages from its queue. More information: [Queues, Topics, and Subscriptions](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
+A *topic* is similar to a queue but implements a publish/subscribe model. One or more listeners can subscribe to the topic and receive messages from its queue. More information: [Queues, Topics, and Subscriptions](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
   
 > [!IMPORTANT]
 >  To use these queue or topic contracts, you must write your listener applications using the [Azure SDK](http://azure.microsoft.com/downloads/archive-net-downloads/) version 1.7 or higher.  
   
-Use of queues and topics in your multi-system software design can result in the decoupling of systems. If the listener application ever becomes unavailable, the message delivery from Dynamics 365 will still succeed and the listener application can continue processing the queue message when it is back online. [!INCLUDEMore information [Queues, Topics, and Subscriptions](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
+Use of queues and topics in your multi-system software design can result in the decoupling of systems. If the listener application ever becomes unavailable, the message delivery from Dynamics 365 will still succeed and the listener application can continue processing the queue message when it is back online. [!INCLUDEMore information [Queues, Topics, and Subscriptions](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)  
   
 <a name="bkmk_writeoneway"></a>
 
@@ -56,7 +56,7 @@ Writing a listener is structured around what is known as ABC: address, binding, 
   
 - Address: service URI  
   
-- Binding: [WS2007HttpRelayBinding](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.ws2007httprelaybinding?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_ws2007httprelaybinding)  
+- Binding: [WS2007HttpRelayBinding](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.ws2007httprelaybinding?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_ws2007httprelaybinding)  
   
 - Contract: <xref:Microsoft.Xrm.Sdk.IServiceEndpointPlugin>  
   
@@ -66,7 +66,7 @@ After your listener is registered with an endpoint, the listener’s <xref:Micro
   
 - Address: service URI  
   
-- Binding: [WS2007HttpRelayBinding](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.ws2007httprelaybinding?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_ws2007httprelaybinding)  
+- Binding: [WS2007HttpRelayBinding](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.ws2007httprelaybinding?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_ws2007httprelaybinding)  
   
 - Contract: <xref:Microsoft.Xrm.Sdk.ITwoWayServiceEndpointPlugin>  
   
@@ -76,7 +76,7 @@ For this two-way contract, the <xref:Microsoft.Xrm.Sdk.ITwoWayServiceEndpointPlu
   
 - Address: service URI  
   
-- Binding: [WebHttpRelayBinding](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.webhttprelaybinding?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_webhttprelaybinding)
+- Binding: [WebHttpRelayBinding](https://docs.microsoft.com/dotnet/api/microsoft.servicebus.webhttprelaybinding?redirectedfrom=MSDN&view=azure-dotnet#microsoft_servicebus_webhttprelaybinding)
   
 - Contract: <xref:Microsoft.Xrm.Sdk.IWebHttpServiceEndpointPlugin>  
   

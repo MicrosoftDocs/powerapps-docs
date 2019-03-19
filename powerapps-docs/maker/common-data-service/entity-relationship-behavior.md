@@ -4,7 +4,7 @@ description: "<Description>" # 115-145 characters including spaces. This abstrac
 ms.custom: ""
 ms.date: 08/01/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "Mattp123" # GitHub ID
 ms.author: "matp" # MSFT alias of Microsoft employees only
@@ -80,7 +80,7 @@ A parental entity relationship is any 1:N entity relationship where one of the c
 
 For example, if you create a new custom entity and add a 1:N entity relationship with the account entity where your custom entity is the related entity, you can configure the actions for that entity relationship to use the options in the **Parental** column. If you later add another 1:N entity relationship with your custom entity as the referencing entity you can only configure the actions to use the options in the **Not Parental** column.
 
-Usually this means that for each entity pair there is only one parental relationship. There are some cases where the lookup on the related entity may allow for a relationship to  to more than one type of entity.
+Usually this means that for each entity pair there is only one parental relationship. There are some cases where the lookup on the related entity may allow for a relationship to more than one type of entity.
 
 For example, if an entity has a Customer lookup that can refer to either a contact or account entity. There are two separate parental 1:N entity relationships.
 

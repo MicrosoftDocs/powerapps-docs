@@ -4,7 +4,7 @@ description: "The topic describes working with event data in your Azure Event Hu
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

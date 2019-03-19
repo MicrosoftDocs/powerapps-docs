@@ -4,7 +4,7 @@ description: "This sample shows how to write a Azure Service Bus listener applic
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: Persistent queue listener
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-persistent-queue-listener -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-persistent-queue-listener -->
 
 This sample shows how to write a Azure Service Bus listener application for a persistent queue endpoint contract. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/PersistentQueueListener).
 

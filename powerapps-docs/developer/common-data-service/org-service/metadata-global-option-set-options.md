@@ -4,7 +4,7 @@ description: "Code samples to show you how to insert, update, delete, and order 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -19,7 +19,7 @@ search.app:
 
 <!-- 
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/insert-update-delete-order-global-option-set-options 
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/insert-update-delete-order-global-option-set-options 
 
 -->
 

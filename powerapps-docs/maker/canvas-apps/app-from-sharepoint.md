@@ -16,7 +16,7 @@ search.app:
 ---
 # Generate a canvas app in PowerApps from a SharePoint list
 
-In this topic, you'll use PowerApps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within PowerApps or SharePoint Online. From within PowerApps, you can generate the app based on a list in an on-premises SharePoint site if you [connect to it](connect-to-sharepoint.md) through a data gateway.
+In this topic, you'll use PowerApps to automatically generate a canvas app based on items in a SharePoint list. You can generate the app from within PowerApps or SharePoint Online. From within PowerApps, you can generate the app based on a list in an on-premises SharePoint site if you [connect to it](connections/connection-sharepoint-online.md#create-a-connection) through a data gateway.
 
 The app that you generate will contain three screens:
 

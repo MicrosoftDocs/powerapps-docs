@@ -4,7 +4,7 @@ description: "Learn about configuring dashboards in such a way that enables you 
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Customize visualizations and dashboards
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/customize-visualizations-dashboards -->
 
 Data visualization and analytics in Model-driven Apps enable you to graphically view and analyze the data for your business, and help you to derive quick insights to make important business decisions. You can configure dashboards in such a way that enables you to view data from multiple areas such as sales, marketing, and service. You can even adjust the data displayed in visualizations and dashboards per your business requirements by applying filters.  
   

@@ -4,7 +4,7 @@ description: "This sample demonstrates how to authenticate with a Common Data Se
 ms.custom: ""
 ms.date: 02/02/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

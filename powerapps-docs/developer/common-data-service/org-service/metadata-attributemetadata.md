@@ -4,7 +4,7 @@ description: "<Description>" # 115-145 characters including spaces. This abstrac
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,4 +17,4 @@ search.app:
 ---
 # Work with attribute metadata
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata -->

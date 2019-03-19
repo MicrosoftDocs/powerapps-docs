@@ -4,7 +4,7 @@ description: "Learn about defining dependencies between web resources in CDS for
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Web resource dependencies
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/web-resource-dependencies -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/web-resource-dependencies -->
 
 You can define dependencies between other web resources. The primary purpose of this feature is to allow association of String (RESX) web resources with the JavaScript web resources that will use them. This is also the way that web resources required by HTML web resources for use offline can be configured to also be available offline. 
 

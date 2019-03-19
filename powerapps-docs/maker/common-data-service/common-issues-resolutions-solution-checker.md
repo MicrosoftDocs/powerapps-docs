@@ -4,7 +4,7 @@ description: " A list of common issues and resolutions within Solution Checker"
 keywords: ""
 ms.date: 02/11/2019
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -54,9 +54,13 @@ To add PowerApps Checker back to your CDS for Apps environment:
 
 ## Runs on large solutions fail
 
-Solution Checker has a 10-minute timeout for exporting a solution from the Common Data Service (CDS) for Apps environment. Large solutions, like the Default Solution, may fail to get exported within this time, and the check will not complete successfully. Solution Checker will retry three times before it fails to process the job, so it may take over 30-minutes before you receive a failure notification.
+There are a couple different scenarios that can occur if a solution is too large. These scenarios are further explained below. The solution to each scenario is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to plug-in assembly components, please see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md).
 
-To address this issue, check or create smaller solutions to be analyzed. To minimize false positives, ensure you add dependent customizations. When you create a solution and add these components, include the following:
+Solution Checker can fail to check a solution based on these scenarios:
+- Hard limitation of a solution file size limit of 30MB.  
+- 10-minute timeout for exporting a solution from the Common Data Service (CDS) for Apps environment. Large solutions, like the Default Solution, may fail to get exported within this time, and the check will not complete successfully. Solution Checker will retry three times before it fails to process the job, so it may take over 30-minutes before you receive a failure notification.
+
+To address these issues, check or create smaller solutions to be analyzed. To minimize false positives, ensure you add dependent customizations. When you create a solution and add these components, include the following:
 
 - When you add plug-ins, include the SDK Message Processing Steps for the plug-in.
 - When you add entity forms, include the JavaScript web resources attached to the form events.  
@@ -65,7 +69,7 @@ To address this issue, check or create smaller solutions to be analyzed. To mini
 - When you add custom workflows, include the assembly used within the workflow.
 
 ## Solution Checker run or download results don't complete 
-Shortly after running Solution Checker the operation doesn't commplete and the following message is displayed:<br />
+Shortly after running Solution Checker the operation doesn't complete and the following message is displayed:<br />
 "We weren't able to run the check on *SOLUTIONNAME* Solution. Try running it again." <br />
 ![Weren't able to run](media/solution-checker-werent-able-to-run.png)
 

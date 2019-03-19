@@ -4,7 +4,7 @@ description: "Read how you can customize Common Data Service for Apps by using t
 ms.custom: ""
 ms.date: 01/25/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 
 <!-- This is the portion of the old topic that applies to CDS
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/supported-extensions
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
  -->
 
 

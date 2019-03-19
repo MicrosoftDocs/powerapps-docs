@@ -4,7 +4,7 @@ description: "This sample shows how the application registers a remote service p
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Sample: One-way listener
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-one-way-listener -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-one-way-listener -->
 
 This sample shows how to write a `Azure Service Bus` listener for a one-way endpoint contract. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/OneWayListeners).
 

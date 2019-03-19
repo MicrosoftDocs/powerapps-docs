@@ -4,7 +4,7 @@ description: "Learn about performing actions such as create, retrieve, update, o
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Actions on dashboards
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/actions-dashboards -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/actions-dashboards -->
 
 You can perform actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards.  
   

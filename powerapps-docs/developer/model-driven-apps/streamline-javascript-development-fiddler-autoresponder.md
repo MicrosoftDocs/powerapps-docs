@@ -4,7 +4,7 @@ description: "Learn about how to setup and use AutoResponder in Fiddler for loca
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -29,7 +29,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
 
 > [!NOTE]
 > If it is the first time you are enabling this setting, Fiddler will prompt you to install a certificate. Install the certificate and restart Fiddler so that the new settings take effect.<br />
-> If you have run Fiddler in the past and get a `NET::ERR_CERT_AUTHORITY_INVALID` error, in the **HTTPS** tab, click the **Actions** button and choose **Reset All Certificates**. This will will also present a number of prompts for the new certificates to be installed.
+> If you have run Fiddler in the past and get a `NET::ERR_CERT_AUTHORITY_INVALID` error, in the **HTTPS** tab, click the **Actions** button and choose **Reset All Certificates**. This will also present a number of prompts for the new certificates to be installed.
 
 ## Configure AutoResponder
 
@@ -69,7 +69,7 @@ By following the above steps, Fiddler is configured to listen to the requests an
 
 1. Apply changes to your local file.
 2. Start Fiddler trace capture again and go back to your browser and hard reload the page with empty cache.
-3. In the browser developer tools you can see that the file that is now received will be the the local one.
+3. In the browser developer tools you can see that the file that is now received will be the local one.
 4. Continue repeating this process while updating your code until you get the results you require.
 
 

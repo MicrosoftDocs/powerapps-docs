@@ -4,9 +4,9 @@ description: "Learn how to find and analyze data about how your registered plug-
 ms.custom: ""
 ms.date: 1/29/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
-author: "phecke"
+author: "JimDaly"
 ms.author: "pehecke"
 manager: "kvivek"
 search.audienceType: 

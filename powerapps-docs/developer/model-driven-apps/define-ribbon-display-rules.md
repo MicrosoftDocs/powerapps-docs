@@ -4,7 +4,7 @@ description: "Learn about defining specific rules to control when the ribbon ele
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Define ribbon display rules
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-display-rules -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/define-ribbon-display-rules -->
 
 When configuring ribbon elements, you can define specific rules to control when the ribbon elements will display.  
 

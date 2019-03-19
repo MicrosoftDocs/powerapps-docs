@@ -3,7 +3,7 @@ title: "Field data types in Common Data Service for Apps | MicrosoftDocs"
 description: "Understand the different field data types available for your app"
 keywords: ""
 ms.date: 06/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

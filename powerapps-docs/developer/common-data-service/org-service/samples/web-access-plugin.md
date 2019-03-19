@@ -4,9 +4,9 @@ description: "This sample shows how to write a plug-in that can access resources
 ms.custom: ""
 ms.date: 1/16/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
-author: "phecke"
+author: "JimDaly"
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 

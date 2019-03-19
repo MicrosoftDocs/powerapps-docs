@@ -4,7 +4,7 @@ description: ""
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "samples"
@@ -173,7 +173,7 @@ namespace QuickStartXRMToolingWPFClient
             updateData.Add("telephone1", new CrmDataTypeWrapper("555-0161", CrmFieldType.String));   
             bool updateAccountStatus = _ctrl.CrmConnectionMgr.CrmSvc.UpdateEntity("account","accountid",_accountId,updateData);  
   
-            // Validate if the the account record was updated successfully, and then display the updated information  
+            // Validate if the account record was updated successfully, and then display the updated information  
             if (updateAccountStatus == true)  
             {  
                 UpdateStatus("***************************************");  

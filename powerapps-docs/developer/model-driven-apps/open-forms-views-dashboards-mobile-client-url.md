@@ -4,7 +4,7 @@ description: "Use the new application handler for Dynamics 365 mobile clients to
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Open forms, views, and dashboards in mobile client with a URL
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/open-forms-views-dashboards-mobile-client-url
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/open-forms-views-dashboards-mobile-client-url
 
 At this point I understand this mobile client is still branded as 'Dynamics 365'
  -->

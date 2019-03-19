@@ -4,7 +4,7 @@ description: "This sample shows how to query the working hours of multiple hours
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,9 +17,9 @@ search.app:
 ---
 # Sample: Query the working hours of multiple users
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/sample-query-working-hours-multiple-users -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-working-hours-multiple-users -->
 
-This sample shows how to retrieve the working hours of multiple users by using the [QueryMultipleSchedulesRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.crm.sdk.messages.querymultipleschedulesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23).
+This sample shows how to retrieve the working hours of multiple users by using the [QueryMultipleSchedulesRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.querymultipleschedulesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23).
 
 This sample requires additional users that are not present in your system. Create the required user manually **as is** shown below in **Office 365** before you run the sample. Replace `yourorg` with the `OrgName` of your organization.
 

@@ -4,7 +4,7 @@ description: "The account and contact entities in Dynamics 365 are essential for
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -20,7 +20,7 @@ search.app:
 <!-- 
 Was Mike Carter
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customer-entities-account-contact
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/customer-entities-account-contact
 
 Refactor so that the links to entity reference are in the body, not just in the See allso.
 Add some h2 sections so it is skimmable

@@ -1,9 +1,9 @@
 ---
 title: "View or download developer resources | MicrosoftDocs"
-description: "Find developer resources and service enpoint URLs"
+description: "Find developer resources and service endpoint URLs"
 keywords: ""
 ms.date: 06/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

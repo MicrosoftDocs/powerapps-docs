@@ -3,8 +3,8 @@ title: "Authenticate to Common Data Service for Apps with the Web API (Common Da
 description: "Learn about the different ways to manage authentication when using the Web API"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
-ms.service: "crm-online"
+ms.reviewer: "pehecke"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -24,9 +24,8 @@ search.app:
 # Authenticate to Common Data Service for Apps with the Web API
 
 
-You must use OAuth as described in [Connect to web services using OAuth](../connect-web-services-using-oauth.md).<br />
+You must use OAuth as described in [Use OAuth with Common Data Service for apps](../authenticate-oauth.md).
 
-  
 If you’re creating a single page application (SPA) using JavaScript you can use the adal.js library as described in [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md).  
   
 ### See also
@@ -34,5 +33,5 @@ If you’re creating a single page application (SPA) using JavaScript you can us
 [Use the Common Data Service for Apps Web API](overview.md)<br />
 [Web API types and operations](web-api-types-operations.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
-[Connect to web services using OAuth](../connect-web-services-using-oauth.md)<br />
+[Use OAuth with Common Data Service for apps](../authenticate-oauth.md)<br />
 [Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md)

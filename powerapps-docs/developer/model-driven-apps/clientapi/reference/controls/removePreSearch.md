@@ -1,7 +1,7 @@
 ---
 title: "removePreSearch (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 2451c4ac-527c-4487-8f52-bde1690c5bde

@@ -4,7 +4,7 @@ description: "The following is the schema definition for an solution customizati
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/customization-solutions-file-schema -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/customization-solutions-file-schema -->
 
 # Customization solutions file schema
 

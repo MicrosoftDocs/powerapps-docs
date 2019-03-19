@@ -3,7 +3,7 @@ title: "Use the Virtual Entity OData v4 Data Provider with Common Data Service f
 ms.custom: ""
 ms.date: 06/04/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

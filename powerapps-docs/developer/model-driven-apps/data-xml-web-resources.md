@@ -4,7 +4,7 @@ description: "Learn about using data (XML) Web resources to save and access data
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Data (XML) Web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/data-xml-web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/data-xml-web-resources -->
 
 Use Data (XML) Web resources to save and access data.  
   

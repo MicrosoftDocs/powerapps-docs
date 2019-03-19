@@ -4,7 +4,7 @@ description: "Using the Common Data Service for Apps web services, you can perfo
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Actions on visualizations (charts)
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/actions-visualizations-charts -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/actions-visualizations-charts -->
 
 Using the Common Data Service (CDS) for Apps Web Services, you can perform the following actions on the visualization entities.  
   

@@ -4,7 +4,7 @@ description: "The topic shows how to create a chart visualization and a web reso
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
 
 # Create a visualization (chart)
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/create-visualization-chart -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/create-visualization-chart -->
 
 To create a visualization programmatically, you must create a record for the [SavedQueryVisualization Entity](../common-data-service/reference/entities/savedqueryvisualization.md) or [UserQueryVisualization Entity](../common-data-service/reference/entities/userqueryvisualization.md) entity to create an organization-owned or user-owned chart respectively. This topic shows how to create a chart visualization and a web resource visualization.  
   

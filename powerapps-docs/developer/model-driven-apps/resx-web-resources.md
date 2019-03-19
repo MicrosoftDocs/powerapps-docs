@@ -4,7 +4,7 @@ description: "Learn about using string web resources to make localized strings a
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # RESX web resources
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/resx-web-resources -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/resx-web-resources -->
 
 Use these web resources to manage localized strings in any user interface you define or with error messages you will display. 
 

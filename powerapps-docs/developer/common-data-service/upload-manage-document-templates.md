@@ -4,7 +4,7 @@ description: "<Description>" # 115-145 characters including spaces. This abstrac
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -19,9 +19,9 @@ search.app:
 
 <!-- 
 Was Mike Carter
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/upload-manage-document-templates
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/upload-manage-document-templates
 
-Add the short description from  https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/template-entities which was not migrated.
+Add the short description from  https://docs.microsoft.com/dynamics365/customer-engagement/developer/template-entities which was not migrated.
 -->
 
 In Common Data Service for Apps, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).

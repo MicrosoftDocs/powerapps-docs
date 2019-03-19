@@ -4,7 +4,7 @@ description: "This sample demonstrates the create, retrieve, update, and delete 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "samples"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,12 +17,12 @@ search.app:
 ---
 # Sample: Late-bound entity operations
 
-<!-- show deep insert equivilent 
+<!-- show deep insert equivalent 
 
 sample-initialize-record-existing-record.md
 sample-create-retrieve-update-delete-late-bound.md
 
-https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-late-bound
+https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/sample-create-retrieve-update-delete-late-bound
 
 -->
 This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound Entity class. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/LateBoundEntityOperations).

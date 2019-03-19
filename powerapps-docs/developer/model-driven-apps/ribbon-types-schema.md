@@ -4,7 +4,7 @@ description: "The following is the schema definition for the ribbon types portio
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Ribbon types schema
 
-<!-- https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/customize-dev/ribbon-types-schema -->
+<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbon-types-schema -->
 
 The following is the schema definition for the ribbon types portion of an import/export customization file. Ribbon types schema is included from the [Ribbon Core Schema](ribbon-core-schema.md). You can find schema  in the `Schemas\9.0.0.2090\RibbonTypes.xsd` folder when you download the Schemas zip file.
 
