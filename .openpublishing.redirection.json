@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/connect-to-sharepoint.md",
+      "redirect_url": "connections/connection-sharepoint-online",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/connect-web-services-using-oauth.md",
       "redirect_url": "authenticate-oauth",
       "redirect_document_id": "false"
