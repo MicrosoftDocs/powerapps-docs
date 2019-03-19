@@ -121,10 +121,10 @@ If your custom list contains any of these types of columns, show that data in a 
 - For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
 
     For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
-    
+
 ## Show data from a library
 
-If you have several images in a SharePoint libary, you can add a **Drop down** control to your app so that users can specify which image to show. You can also apply the same principles to other controls, such as **Gallery** controls, and other types of data, such as videos.
+If you have several images in a SharePoint library, you can add a **Drop down** control to your app so that users can specify which image to show. You can also apply the same principles to other controls, such as **Gallery** controls, and other types of data, such as videos.
 
 1. If you haven't already, [create a connection](#create-a-connection), and then [add data to an existing app](#add-data-to-an-existing-app).
 
@@ -136,6 +136,9 @@ If you have several images in a SharePoint libary, you can add a **Drop down** c
 
     The file names of the images in your library appear in **ImageList**.
 
+    > [!div class="mx-imgBorder"]
+    > ![List of images](./media/connection-sharepoint-online/dropdown-items.png)
+
 1. Add an **Image** control, and set its **Image** property to this expression:
 
     `ImageList.Selected.'Link to item'`
@@ -143,6 +146,9 @@ If you have several images in a SharePoint libary, you can add a **Drop down** c
 1. Press F5, and then select a different value in **ImageList**.
 
     The image that you specified appears.
+
+    > [!div class="mx-imgBorder"]
+    > ![Sample image](./media/connection-sharepoint-online/golden-honey.png)
 
 You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library.
 
@@ -158,6 +164,9 @@ In this one-screen app, the list in the lower-left corner shows all files in you
 - If your library contains folders, you can filter the list of files by selecting a filter icon in the list of folders just under the title bar.
 
 When you find the file that you want, select it to show it in the **Video**, **Image**, or **Audio** control along the right-hand side.
+
+> [!div class="mx-imgBorder"]
+> ![Sample image](./media/connection-sharepoint-online/library-app.png)
 
 ## Known issues
 
