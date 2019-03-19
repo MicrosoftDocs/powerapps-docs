@@ -1,16 +1,16 @@
 ---
-title: Tutorial for sharing a model-driven app with PowerApps | Microsoft Docs
+title: Share a model-driven app with PowerApps | Microsoft Docs
 description: In this tutorial learn how to share a model-driven app
 documentationcenter: ''
 author: Mattp123
-manager: kfile
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/21/2018
+ms.date: 03/19/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -19,7 +19,7 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Share a model-driven app with PowerApps
+# Share a model-driven app with PowerApps
 
 [!INCLUDE [powerapps](../../includes/powerapps.md)] apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed within the app. All app users must be assigned to one or more predefined or custom roles. Or, roles can also be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role. 
 
@@ -50,22 +50,34 @@ For more information about access and scope privileges, see [Security roles](htt
 
 ## Create a custom security role
 1. On the [!INCLUDE [powerapps](../../includes/powerapps.md)] site, select **Apps** > **…**> **Share link**.
+
 2. From the **Share this app** dialog, under **Create a security role** select **Security Setting**.
+
 3. On the **Settings** page, select **New**.  
 
 4. From the security role designer, you select the actions, such as read, write, or delete, and the scope for performing that action. Scope determines how deep or high within the environments hierarchy the user can perform a particular action. In the **Role Name** box enter *Pet Grooming Technicians*.
+
 5. Select the **Custom Entities** tab, and then locate the custom entity that you want. For this example, the custom entity named **Pet** is used. 
+
 6. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected: **Read, Write, Append**
-> [!div class="mx-imgBorder"] 
-> ![New security role](media/share-model-driven-app/custom-security-role.png)
+
+   > [!div class="mx-imgBorder"] 
+   > ![New security role](media/share-model-driven-app/custom-security-role.png)
+
 7. Because the pet grooming app also has a relationship with the account entity, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
+
 8. Select **Save and Close**. 
+
 9. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 
+
 10. Select the **Custom Entities** tab, and then locate the **Pet** entity. 
+
 11. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected:
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
+
 12. Because the pet grooming app also has a relationship with the account entity and schedulers must be able to create and modify account records, select the **Core Records** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
+
 13. Select **Save and Close**.
 
 ## Assign security roles to users
