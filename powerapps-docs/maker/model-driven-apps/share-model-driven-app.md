@@ -1,6 +1,6 @@
 ---
 title: Share a model-driven app with PowerApps | Microsoft Docs
-description: In this tutorial learn how to share a model-driven app
+description: Learn how to share a model-driven app
 documentationcenter: ''
 author: Mattp123
 manager: kvivek
@@ -23,7 +23,7 @@ search.app:
 
 [!INCLUDE [powerapps](../../includes/powerapps.md)] apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed within the app. All app users must be assigned to one or more predefined or custom roles. Or, roles can also be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role. 
 
-In this tutorial you perform the tasks for sharing a model-driven app so that others can use it. You learn how to:
+In this topic you perform the tasks for sharing a model-driven app so that others can use it. You learn how to:
 - Create a custom security role
 - Assign users to the custom security role
 - Assign the security role to an app
@@ -35,7 +35,7 @@ To share an app you must have the [!INCLUDE [powerapps](../../includes/powerapps
 Sign in to [PowerApps](https://powerapps.microsoft.com/). If you don’t already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link.
 
 ## Share an app 
-The tutorial will follow the company, Contoso, which has a pet grooming business that services dogs and cats. An app that contains a custom entity for tracking the pet grooming business has already been created and published. Now the app must be shared so that the pet grooming staff can use it. To share the app, an administrator or app maker assigns one or more security roles to users and to the app. 
+The topic will follow the company, Contoso, which has a pet grooming business that services dogs and cats. An app that contains a custom entity for tracking the pet grooming business has already been created and published. Now the app must be shared so that the pet grooming staff can use it. To share the app, an administrator or app maker assigns one or more security roles to users and to the app. 
 
 ## Create or configure a security role
 The [!INCLUDE [powerapps](../../includes/powerapps.md)] environment includes [predefined security roles](#about-predefined-security-roles) that reflect common user tasks with access levels defined to match the security best-practice goal of providing access to the minimum amount of business data required to use the app. Remember that the Contoso pet grooming app is based on a custom entity. Because the entity is custom, privileges must be explicitly specified before users may work in it. To do this, you can choose to do one of the following.
