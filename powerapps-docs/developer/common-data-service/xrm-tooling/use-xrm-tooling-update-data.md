@@ -1,6 +1,6 @@
 ---
 title: "Use XRM tooling to update data (Common Data Service for Apps)| Microsoft Docs"
-description: "Use CrmServiceClient class to update data on CDS for Apps"
+description: "Use CrmServiceClient class to update data on Common Data Service"
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: ""
@@ -23,13 +23,13 @@ search.app:
 ---
 # Use XRM tooling to update data
 
-There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for updating data in CDS for Apps: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateEntity(System.String,System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.String,System.Boolean,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateStateAndStatusForEntity(System.String,System.Guid,System.String,System.String,System.Guid)>.  
+There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for updating data in Common Data Service: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateEntity(System.String,System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.String,System.Boolean,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateStateAndStatusForEntity(System.String,System.Guid,System.String,System.String,System.Guid)>.  
   
 An update action using XRM Tooling API requires a data payload. The data payload takes the form of a Dictionary\<string, CrmDataTypeWrapper> object. <xref:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper> is used to inform the interface what sort of handling needs to be applied to the data point you are referencing.  
   
 ## UpdateEntity  
 
-This is the anchor method for updating any record in CDS for Apps, with the exception of setting status or state of a record. To use it, you need to know the following information: schema name of the entity you want to update, the primary key field of the entity you want to update, the GUID of the record you want to update, and finally the data payload array to update it with.  
+This is the anchor method for updating any record in Common Data Service, with the exception of setting status or state of a record. To use it, you need to know the following information: schema name of the entity you want to update, the primary key field of the entity you want to update, the GUID of the record you want to update, and finally the data payload array to update it with.  
   
 ```csharp  
 CrmServiceClient svc = new CrmServiceClient(connectionstring);  
@@ -74,7 +74,7 @@ else
   
 ## UpdateStateAndStatusForEntity
  
-This method is used to set the state of a record in CDS for Apps. For example, all records generally start in an “open” state. The name of the state changes based on the kind of record, or even the developers choices. A quote, for example, has several possible status and states, **Draft**, **Active**, **Close**, **Lost**, **Won**.  
+This method is used to set the state of a record in Common Data Service. For example, all records generally start in an “open” state. The name of the state changes based on the kind of record, or even the developers choices. A quote, for example, has several possible status and states, **Draft**, **Active**, **Close**, **Lost**, **Won**.  
   
 Updating the state of an entity requires that you know what the target state and status are, either by the names or IDs. Both the names and the IDs can be found by querying the metadata for the entity and looking at the status and state fields. In this example, we will demonstrate how to set the status of an account record to **Inactive**.  
   
@@ -111,6 +111,6 @@ else
 ### See also  
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Use XRM Tooling to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
-[Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)<br />
+[Use XRM Tooling to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)<br />
 

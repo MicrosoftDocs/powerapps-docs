@@ -36,9 +36,9 @@ Download the sample: [Work with XRM Tooling API](https://github.com/Microsoft/Po
 ## Demonstrates
 
 - The sample code is built using the **WPF Application for CRM** SDK template that provides a common login control with built-in support for authentication and credential caching and reuse. For more information about the common login control and how to use the SDK template in Visual Studio, see [Use the XRM Tooling common login control](use-xrm-tooling-common-login-control-client-applications.md).  
-- No helper code is used to establish a connection to CDS for Apps.  
-- After connecting to CDS for Apps, the sample performs basic create, update, retrieve, and delete operations on an account entity.  
-- Stores user credentials in a configuration file (`Default_QuickStartXRMToolingWPFClient.exe.config`) in the `c:\Users\`*`<username>`*`\AppData\Roaming\Microsoft\QuickStartXRMToolingWPFClient` folder when the sample is run for the first time, and thereafter prompts the user to either use the stored or specify new credentials at runtime to sign in to CDS for Apps.  
+- No helper code is used to establish a connection to Common Data Service.  
+- After connecting to Common Data Service, the sample performs basic create, update, retrieve, and delete operations on an account entity.  
+- Stores user credentials in a configuration file (`Default_QuickStartXRMToolingWPFClient.exe.config`) in the `c:\Users\`*`<username>`*`\AppData\Roaming\Microsoft\QuickStartXRMToolingWPFClient` folder when the sample is run for the first time, and thereafter prompts the user to either use the stored or specify new credentials at runtime to sign in to Common Data Service.  
 - Generates the following log files, if any issue occurs, to aid troubleshooting:  
 - Login_ErrorLog.log: To report sign-in errors. This file is available at `C:\Users\`*`<username>`*`\AppData\Roaming\Microsoft\QuickStartXRMToolingWPFClient`.  
 - QuickStartXRMToolingWPFClient.log: To report operational errors. This file is available at the same location as the executable, that is in the debug folder of your Visual Studio project.  

@@ -28,7 +28,7 @@ This sample shows how to connect to the Common Data Service for Apps web service
 
 The complete sample code can be found here [Sample: Quick start for Common Data Service for Apps](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/QuickStartCS) 
 
-You must modify the `app.config` file with connection information for your CDS for apps instance before running the sample. 
+You must modify the `app.config` file with connection information for your Common Data Service instance before running the sample. 
 
 ## Demonstrates
 
@@ -231,5 +231,5 @@ namespace PowerApps.Samples
 
 ### See also
 
-[Use connection strings in XRM tooling to connect to CDS for apps](use-connection-strings-xrm-tooling-connect.md)<br />
+[Use connection strings in XRM tooling to connect to Common Data Service](use-connection-strings-xrm-tooling-connect.md)<br />
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
