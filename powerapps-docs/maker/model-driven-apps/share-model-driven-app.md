@@ -66,19 +66,21 @@ For more information about access and scope privileges, see [Security roles](htt
 
 7. Because the pet grooming app also has a relationship with the account entity, select the **Core Records** tab, and on the **Account** row select **Read** four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
 
-8. Select **Save and Close**. 
+8. Select the **Customization** tab, and then in the privileges list select the **Read** privilege next to **Model-driven App** so that organization scope ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) is selected.
 
-9. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 
+9. Select **Save and Close**. 
 
-10. Select the **Custom Entities** tab, and then locate the **Pet** entity. 
+10. On the security role designer, in the **Role Name** box enter *Pet Grooming Schedulers*. 
 
-11. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected:
+11. Select the **Custom Entities** tab, and then locate the **Pet** entity. 
+
+12. On the **Pet** row, select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected:
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
 
-12. Because the pet grooming app also has a relationship with the account entity and schedulers must be able to create and modify account records, select the **Core Records** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
+13. Because the pet grooming app also has a relationship with the account entity and schedulers must be able to create and modify account records, select the **Core Records** tab, and on the **Account** row select each of the following privileges four times until organization scope global ![Organization global scope](media/share-model-driven-app/organizational-scope-privilege.png) has been selected. 
     **Create, Read, Write, Delete, Append, Append To, Assign, Share**
 
-13. Select **Save and Close**.
+14. Select **Save and Close**.
 
 ## Assign security roles to users
 Security roles control a user’s access to data through a set of access levels and permissions. The combination of access levels and permissions that are included in a specific security role sets limits on the user’s view of data and on the user’s interactions with that data.
