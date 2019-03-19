@@ -1,6 +1,6 @@
 ---
 title: "openForm (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/10/2018
+ms.date: 03/10/2019
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
