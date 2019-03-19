@@ -198,9 +198,10 @@ Not all types of columns are supported, and not all types of columns support all
 
 ### Libraries
 
+- You can't upload files from PowerApps to a library.
 - You can't show PDF files from a library in a PDF Viewer control.
-- If your users will run the app in PowerApps Mobile or the Windows 10 app, use the **Launch** function to display library content in a gallery.
 - PowerApps Mobile doesn't support the **Download** function.
+- If your users will run the app in PowerApps Mobile or the Windows 10 app, use the **Launch** function to display library content in a gallery.
 
 ## Next steps
 
