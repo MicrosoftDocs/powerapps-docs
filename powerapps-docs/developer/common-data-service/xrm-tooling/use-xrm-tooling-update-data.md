@@ -1,5 +1,5 @@
 ---
-title: "Use XRM tooling to update data (Common Data Service for Apps)| Microsoft Docs"
+title: "Use XRM tooling to update data (Common Data Service)| Microsoft Docs"
 description: "Use CrmServiceClient class to update data on Common Data Service"
 ms.custom: ""
 ms.date: 03/20/2019

@@ -1,6 +1,6 @@
 ---
-title: "Use connection strings in XRM tooling to connect to Common Data Service for Apps (Common Data Service for Apps)| Microsoft Docs"
-description: "XRM tooling enables you to connect to your Common Data Service for Apps environment by using connection strings"
+title: "Use connection strings in XRM tooling to connect to Common Data Service (Common Data Service)| Microsoft Docs"
+description: "XRM tooling enables you to connect to your Common Data Service environment by using connection strings"
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: ""
@@ -21,10 +21,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use connection strings in XRM tooling to connect to Common Data Service for Apps
+# Use connection strings in XRM tooling to connect to Common Data Service
 
-With Common Data Service for Apps, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
-  
+With Common Data Service, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
+
+> [!NOTE]
+> In this documentation release, the connection string documentation that is common to all `on-premise` deployment types has been moved to the [Customer Engagement for apps](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) documentation. The sub-sections that follow contain only the information specifically related to implementing connection string for `online` deployment. To learn about connection strings development, start by reading the connection string [documentation](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) under Dynamics 365 Customer Engagement for apps
+
 <a name="Create"></a> 
 
 ## Create a connection string
@@ -76,9 +79,6 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 |`StoreName` or `CertificateStoreName`|Specifies the store name where the certificate identified by thumbprint can be found. When set, Thumbprint is required.|
 |`Thumbprint` or `CertThumbprint`| Specifies the thumbprint of the certificate to be utilized during an S2S connection. When set, AppID is required and UserID and Password values are ignored.|
 |`SkipDiscovery`|Specifies whether to call instance discovery to determine the connection uri for a given instance. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.0.2.7, default = true. Older versions default to false. <br/> Note: If set to true, it is important that the user provide the correct and accurate URI for the target instance.|
- 
-> [!NOTE]
-> In this documentation release, the connection string documentation that is common to all `on-premise` deployment types has been moved to the [Customer Engagement for apps](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) documentation. The sub-sections that follow contain only the information specifically related to implementing connection string for `online` deployment. To learn about connection strings development, start by reading the connection string [documentation](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) under Dynamics 365 Customer Engagement for apps
 
 <a name="Examples"></a>
 

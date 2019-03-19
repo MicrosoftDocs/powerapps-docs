@@ -83,13 +83,13 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
     2. In the **Add New Item** dialog box, from the list of installed templates, expand **Visual C#**, and select **Common Data Service SDK Templates**. Click **Common Data Service Login Form for WPF Applications**, and click **OK**.  
   
  
- > [!div class="mx-imgBorder"]
- > ![Add the common login control template](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
+     > [!div class="mx-imgBorder"]
+     > ![Add the common login control template](../media/crm-sdk-v6-xrmtooling-addtemplate01.png "Add the common login control template")
   
 3. The newly added `CrmLoginForm1.xaml` login control is displayed in the XAML designer area. If it isn’t displayed, double-click the `CrmLoginForm1.xaml` file in the **Solution Explorer** pane.  
   
- 
-![Verify that the login control renders properly](../media/crm-sdk-v6-xrmtooling-addtemplate03.png "Verify that the login control renders properly")
+> [!div class="mx-imgBorder"]
+> ![Verify that the login control renders properly](../media/crm-sdk-v6-xrmtooling-addtemplate03.png "Verify that the login control renders properly")
   
 4. You must now call the newly added login control from your application. To do this, add a **Button** control on your `MainWindow.xaml` file, and set the name and content to **btnSignIn** and **Sign in to Common Data Service** respectively.  
   
@@ -142,24 +142,23 @@ Here is a quick way to create a **Windows Presentation Foundation (WPF)** applic
  ```  
   
 8. This is how your `MainWindow.xaml.cs` file appears after adding code from the previous two steps:
-  
-![Sample code](../media/crm-sdk-v6-xrmtooling-addtemplate04.png "Sample code")
+
+    > [!div class="mx-imgBorder"]
+    > ![Sample code](../media/crm-sdk-v6-xrmtooling-addtemplate04.png "Sample code")
   
 9. To test the project:  
   
     1. Save the project and press F5 or click **Debug** > **Start Debugging** to verify if the project compiles successfully. On successful compilation, you will see a MainWindow with the new **Sign In to Common Data Service** button. Click it to display the common login control.  
   
     2. Test the authentication by providing your credentials to connect to Common Data Service, and then click **Login**. If successful, a message appears stating the version and the organization name that you are connected to. Click **OK** to close the message.  
+   
+     > [!div class="mx-imgBorder"]
+     > ![Project test results](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results") 
   
- 
-> [!div class="mx-imgBorder"]
-> ![Project test results](../media/crm-sdk-v6-xrmtooling-addtemplate05.png "Project test results") 
+    3. If you click **Sign In to Dynamics 365** again, the application prompts you to either choose the saved credentials from the last sign-in activity, or to re-enter the new credentials.  
   
-    3.  If you click **Sign In to Dynamics 365** again, the application prompts you to either choose the saved credentials from the last sign-in activity, or to re-enter the new credentials.  
-  
-
-> [!div class="mx-imgBorder"]
-> ![Stored credentials](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")
+      > [!div class="mx-imgBorder"]
+      > ![Stored credentials](../media/crm-sdk-v6-xrmtooling-addtemplate06.png "Stored credentials")
   
 ### See also  
 

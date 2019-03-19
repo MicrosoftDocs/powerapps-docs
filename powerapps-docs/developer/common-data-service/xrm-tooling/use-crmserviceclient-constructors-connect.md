@@ -1,6 +1,6 @@
 ---
-title: "Use CrmServiceClient constructors to connect to Common Data Service (Common Data Service for Apps)| Microsoft Docs"
-description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Common Data Service for Apps"
+title: "Use CrmServiceClient constructors to connect to Common Data Service (Common Data Service)| Microsoft Docs"
+description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Common Data Service"
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: ""

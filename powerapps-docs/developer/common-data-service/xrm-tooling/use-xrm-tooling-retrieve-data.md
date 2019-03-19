@@ -1,5 +1,5 @@
 ---
-title: "Use XRM tooling to retrieve data (Common Data Service for Apps)| Microsoft Docs"
+title: "Use XRM tooling to retrieve data (Common Data Service)| Microsoft Docs"
 description: "Use CrmServiceClient class to retrieve data from Common Data Service"
 ms.custom: ""
 ms.date: 03/20/2019

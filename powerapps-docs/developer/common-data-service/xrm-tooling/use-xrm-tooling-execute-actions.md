@@ -1,5 +1,5 @@
 ---
-title: "Use XRM tooling to execute actions in Common Data Service (Common Data Service for Apps) | Microsoft Docs"
+title: "Use XRM tooling to execute actions in Common Data Service (Common Data Service) | Microsoft Docs"
 description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Common Data Service data"
 ms.custom: ""
 ms.date: 03/20/2019

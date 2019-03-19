@@ -1,6 +1,6 @@
 ---
-title: "Use PowerShell cmdlets for XRM tooling to connect to Common Data Service (Common Data Service for Apps)| Microsoft Docs"
-description: "Learn how to use Powershell cmdlets for XRM tooling like Get-CrmConnection and Get-CrmOrganizations to connect to Common Data Service for Apps and retrieve organizations that the current user has access to"
+title: "Use PowerShell cmdlets for XRM tooling to connect to Common Data Service (Common Data Service)| Microsoft Docs"
+description: "Learn how to use Powershell cmdlets for XRM tooling like Get-CrmConnection and Get-CrmOrganizations to connect to Common Data Service and retrieve organizations that the current user has access to"
 ms.custom: ""
 ms.date: 03/20/2019
 ms.reviewer: ""
@@ -24,6 +24,9 @@ search.app:
 # Use PowerShell cmdlets for XRM tooling to connect to Common Data Service
 
 XRM tooling provides you with the following **Windows PowerShell** cmdlets that you can use to connect to Common Data Service and retrieve organizations that the current user has access to: `Get-CrmConnection` and `Get-CrmOrganizations`.  
+
+> [!NOTE]
+> In this documentation release, the PowerShell cmdlets documentation that is common to all on-premise deployment types has been moved to the [Customer Engagement for apps](/dynamics365/customer-engagement/developer/xrm-tooling/use-powershell-cmdlets-xrm-tooling-connect) documentation. The sub-sections that follow contain only the information specifically related to PowerShell cmdlets for online deployment. To learn about PowerShell cmdlets development, start by reading the connection string [documentation](/dynamics365/customer-engagement/developer/common-data-service/xrm-tooling/use-connection-string-xrm-tooling-connect) under Dynamics 365 Customer Engagement for apps
   
 <a name="Prereq"></a>   
 
@@ -94,9 +97,6 @@ Get-Help “Crm”
 ```  
   
 <a name="RetrieveOrgs"></a>   
-
-> [!NOTE]
-> In this documentation release, the PowerShell cmdlets documentation that is common to all on-premise deployment types has been moved to the [Customer Engagement for apps](/dynamics365/customer-engagement/developer/xrm-tooling/use-powershell-cmdlets-xrm-tooling-connect) documentation. The sub-sections that follow contain only the information specifically related to PowerShell cmdlets for online deployment. To learn about PowerShell cmdlets development, start by reading the connection string [documentation](/dynamics365/customer-engagement/developer/common-data-service/xrm-tooling/use-connection-string-xrm-tooling-connect) under Dynamics 365 Customer Engagement for apps
 
 ## Use the cmdlet to retrieve organizations from Common Data Service  
 
