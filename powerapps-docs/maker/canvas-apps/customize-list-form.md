@@ -92,7 +92,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 1. Customize your form a variety of ways such as those that these topics describe:
 
     - Change its size, orientation, or both (for example, to [make the form wider](set-aspect-ratio-portrait-landscape.md)).
-    - Add a control so that users can [upload attachments](controls/properties-text.md).
+    - [Customize one or more cards](working-with-cards.md) (for example, change a card's display text or input control).
     - Create a [lookup field](sharepoint-lookup-fields.md).
 
     More information: [Understand SharePoint forms integration](sharepoint-form-integration.md)
