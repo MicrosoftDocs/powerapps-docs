@@ -46,7 +46,7 @@ This table may help you decide when you should jump in:
 
 Toward the end of Preview, we might enable the feature for all apps one time, and we mark it as being in **final validation**.  This change gives the most people a last chance to try out the feature while they can still turn it off. Timely feedback is critical in this period because, in the next stage, the feature is fully shipped, and you can't turn it off.
 
-In the final transition to **Shipped** we may remove the Preview switch to turn the feature off but allow the feature to remain off for apps that already had it turned off.  In this case, you can turn the feature on with the switch, test with the feature, and still turn the feature off within the same Studio session.  But if the switch is turned on when the app is saved, the switch will disappear when reloaded and can not be turned off. [Restore the app to a previous version](restore-an-app.md) to bring the app back to the state before the feature was turned on.
+In the final transition to **Shipped** we may remove the Preview switch for the feature but allow the feature to remain disabled for apps that already had it disabled.  In this case the Preview switch will still be available for you to turn on, test with the feature, and still turn off within the same Studio session.  But if the switch is turned on when the app is saved, the switch will not be available when the app is reloaded and the feature can not be turned off again. [Restore the app to a previous version](restore-an-app.md) to bring the app back to the state before the feature was turned on.
 
 ## Documentation
 
