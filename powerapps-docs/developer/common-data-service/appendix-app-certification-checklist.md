@@ -27,7 +27,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <th>Certification checklist</th>
 </tr>
 <tr>
-<td rowspan=5>**Dynamics 365 for Customer Engagement** + **PowerApps** + **Microsoft Flow**<br/><br/>Dynamics 365 for Customer Engagement includes:
+<td rowspan=5><strong>Dynamics 365 for Customer Engagement</strong> + <strong>PowerApps</strong>+ <strong>Microsoft Flow</strong><br/><br/>Dynamics 365 for Customer Engagement includes:
 <ul>
 <li>Dynamics 365 for Sales</li>
 <li>Dynamics 365 for Customer Service</li>
@@ -37,7 +37,7 @@ The following checklist provides the list of validations performed by Microsoft 
 </td>
 <td>Sanity Check</td>
 <td><ul>
-<li>Check for app registration type. Free, Trial or Contact me. If registered in Contact me then publisher need to enable test drive.</li>
+<li>Check for app registration type: Free, Trial or Contact me. If registered in Contact me then publisher need to enable test drive.</li>
 <li>Verify the submitted <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/create-package-app-appsource">package</a> contains all the artifacts required to publish on AppSource.</li>
 <li>Download the end-to-end (E2E) functional document from Cloud Partner Portal and validate if document is updated with functional scenarios and user/admin journey.</li>
 </ul>
@@ -47,14 +47,13 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Code Validation</td>
 <td>
 <ul>
-<li>Code validation for Canvas apps will be done through <a href="https://docs.microsoft.com/powerapps/maker/common-data-service/use-powerapps-checker
-">Solution Checker tool</a> in PowerApps to check for the following:
+<li>Code validation for Canvas apps will be done through <a href="https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/accessibility-checker">Accessibility Checker tool</a> in PowerApps to check for the following:
 <ul>
 <li>Static formula errors and warnings: If any issues found then certification team will share the feedback to resolve and resubmit to AppSource.</li>
 <li>Runtime errors: May occur once the app is opened in Run mode to view. Any issues found will be reported through email.</li>
 <li>Accessibility errors and warnings: All Accessibility errors should be resolved as per Solution Checker guidelines.</li>
 </ul></li>
-<li>Code Validation for CRM managed solution will be done through <a href="https://experienceisv.microsoftcrmportals.com/precertification/#/">OnDemand Code Analysis (ODCA)</a> tool.</li>
+<li>Code Validation for Common Data Service solution will be done through <a href="https://experienceisv.microsoftcrmportals.com/precertification/#/">OnDemand Code Analysis (ODCA)</a> tool.</li>
 <li>Issues reported from ODCA will be manually validated for correctness and false positive issues will be reduced to low severity.</li>
 <li>Generated report is shared with the publisher through email.</li>
 </ul>
