@@ -4,7 +4,7 @@ description: "Learn about image attributes that include image data witht in the 
 ms.custom: ""
 ms.date: 11/26/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

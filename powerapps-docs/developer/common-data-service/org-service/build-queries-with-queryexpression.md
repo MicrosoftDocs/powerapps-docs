@@ -4,7 +4,7 @@ description: "Read how you can use the QueryExpression class to programmatically
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" 
 ms.author: "jdaly" 

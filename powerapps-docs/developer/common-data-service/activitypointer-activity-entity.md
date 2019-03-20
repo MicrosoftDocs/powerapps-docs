@@ -4,7 +4,7 @@ description: "The activity pointer (activity) entity represents any activity or 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" 
 ms.author: "jdaly" 

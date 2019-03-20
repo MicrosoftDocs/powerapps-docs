@@ -3,7 +3,7 @@ title: "Create and edit public or system model-driven app views with PowerApps |
 description: "Learn now to create or edit views by using the app designer"
 keywords: ""
 ms.date: 11/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

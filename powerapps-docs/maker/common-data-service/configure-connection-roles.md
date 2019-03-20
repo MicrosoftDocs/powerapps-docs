@@ -3,7 +3,7 @@ title: "Configure connection roles | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/27/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -21,7 +21,7 @@ search.app:
 ---
 # Configure connection roles
 
-With Common Data Service for Apps you can define **connections** between entity records without creating an entity relationship. In model-driven apps people can establish a named link between records to establish less a formal relationship which doesn't justify creating an actual entity relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocol, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
+With Common Data Service for Apps you can define **connections** between entity records without creating an entity relationship. In model-driven apps people can establish a named link between records to establish less a formal relationship which doesn't justify creating an actual entity relationship. Some examples include *friend*, *sibling*, *spouse*, *attendee*, and *stakeholder*. Some connections can also be reciprocal, such as *child* and *parent*, *husband* and *wife*, or *doctor* and *patient*.
 
 When people set a connection between two records, they can also add a description and additional information such as start and end dates for the relationship. More information: [Create connections to define and view relationships between records](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
 

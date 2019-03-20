@@ -3,7 +3,7 @@ title: "Create or edit model-driven app dashboards | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/23/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

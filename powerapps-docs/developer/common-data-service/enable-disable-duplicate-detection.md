@@ -4,7 +4,7 @@ description: "This topic covers information on how to enable duplicate detection
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

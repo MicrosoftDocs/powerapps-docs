@@ -1,7 +1,7 @@
 ---
 title: "navigate (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 292a1b29-ec24-48ee-b20d-63c88ddf3f91

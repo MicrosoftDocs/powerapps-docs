@@ -1,7 +1,7 @@
 ---
 title: "getObject (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: ad68d177-3715-468e-b4af-8cf9b3c77799

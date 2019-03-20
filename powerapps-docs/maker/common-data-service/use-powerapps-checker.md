@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 12/04/2018
+ms.date: 03/20/2019
 ms.author: matp
 search.audienceType: 
   - maker
@@ -25,14 +25,10 @@ The solution checker analyzes these solution components:
 - CDS for Apps web resources (HTML and JavaScript)
 - CDS for Apps configurations, such as SDK message steps 
 
-Solution checker works with unmanaged solutions that can be exported from an environment. Solution checker *doesn't* work with the following solutions: 
+Solution checker works with unmanaged solutions that can be exported from an environment. 
 
-
-<!--from editor: Should it be Common Data Service (singular) below, rather than Services? -->
-
-- The system default solutions (Default Solution and Common Data Services Default Solution).
-- Solutions that contain JavaScript using ECMAScript 6 (2015) or later versions. When JavaScript using one of these versions is detected, a JS001 syntax issue for the web resource is reported.
-
+> [!NOTE]
+> Solution checker doesn't work with solutions that contain JavaScript using ECMAScript 6 (2015) or later versions. When JavaScript using one of these versions is detected, a JS001 syntax issue for the web resource is reported.
 
 ## Enable the solution checker
 The solution checker becomes available in the Solutions area of PowerApps after you install the PowerApps checker solution. Notice that you can't find it by browsing or searching on Microsoft AppSource. To install it, follow these steps:  

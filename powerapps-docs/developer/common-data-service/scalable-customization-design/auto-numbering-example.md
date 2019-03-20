@@ -4,7 +4,7 @@ description: "This example illustrates how transactions and concurrency issues n
 ms.custom: ""
 ms.date: 1/15/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "rogergilchrist" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only

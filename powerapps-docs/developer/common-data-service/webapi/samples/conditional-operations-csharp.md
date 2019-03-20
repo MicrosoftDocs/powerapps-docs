@@ -4,7 +4,7 @@ description: "This sample demonstrates how to perform conditional operations usi
 ms.custom: ""
 ms.date: 1/09/2019
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

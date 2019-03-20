@@ -3,7 +3,7 @@ title: "Tutorial to add or edit model-driven app components with PowerApps | Mic
 description: "Use the PowerApps app designer to add or edit components"
 keywords: ""
 ms.date: 10/15/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: 
 ms.topic: article
 applies_to: 

@@ -4,7 +4,7 @@ description: "This group of samples shows how to query data using the Web API. T
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

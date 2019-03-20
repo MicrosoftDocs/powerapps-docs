@@ -135,8 +135,6 @@
           href: ./canvas-apps/add-data-connection.md
         - name: Manage connections
           href: ./canvas-apps/add-manage-connections.md
-        - name: Connect to SharePoint
-          href: ./canvas-apps/connect-to-sharepoint.md
         - name: Prepare Excel data
           href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
@@ -177,8 +175,9 @@
                 href: ./canvas-apps/add-scrolling-screen.md
           - name: Show a table of items
             href: ./canvas-apps/add-gallery.md
-          - name: Show items of different heights
-            href: ./canvas-apps/gallery-dynamic-sizing.md
+            items:
+            - name: Show items of different heights
+              href: ./canvas-apps/gallery-dynamic-sizing.md
           - name: Add a form
             href: ./canvas-apps/add-form.md
             items:
@@ -190,6 +189,9 @@
               href: ./canvas-apps/working-with-cards.md
           - name: Add a list
             href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
+            items:
+            - name: Create dependent drop-down lists
+              href: ./canvas-apps/dependent-drop-down-lists.md
           - name: Add a chart
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
@@ -205,8 +207,7 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
-            - name: Web barcode scanner (experimental)
-              href: ./canvas-apps/controls/control-barcodescanner.md
+
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
@@ -263,7 +264,7 @@
               href: ./canvas-apps/controls/control-radio.md
             - name: Rating
               href: ./canvas-apps/controls/control-rating.md
-            - name: Rich text editor (experimental)
+            - name: Rich text editor
               href: ./canvas-apps/controls/control-richtexteditor.md
             - name: Screen
               href: ./canvas-apps/controls/control-screen.md
@@ -281,6 +282,8 @@
               href: ./canvas-apps/controls/control-toggle.md
             - name: Video
               href: ./canvas-apps/controls/control-audio-video.md
+            - name: Web barcode scanner (experimental)
+              href: ./canvas-apps/controls/control-barcodescanner.md
       - name: Configure app functionality
         href: ./canvas-apps/working-with-formulas.md
         items:
@@ -659,6 +662,9 @@
       href: ./canvas-apps/set-name-tile.md
     - name: Change screen size and orientation
       href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+      items:
+        - name: Create responsive layout
+          href: ./canvas-apps/create-responsive-layout.md
   - name: Customize a SharePoint list form
     href: ./canvas-apps/customize-list-form.md
     items:
@@ -744,6 +750,8 @@
           items:
           - name: "Create or edit forms"
             href: ./model-driven-apps/create-and-edit-forms.md
+          - name: "Properties in the form designer"
+            href: ./model-driven-apps/form-designer-properties.md 
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:
@@ -753,6 +761,8 @@
             href: ./model-driven-apps/create-edit-quick-create-forms.md
           - name: "Create a quick view form"
             href: ./model-driven-apps/create-edit-quick-view-forms.md
+          - name: "Create a card form"
+            href: ./model-driven-apps/create-card-forms.md
         - name: Form editor overview
           href: ./model-driven-apps/form-editor-user-interface-legacy.md
           items:
@@ -808,6 +818,8 @@
           href:  ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines"
           href:  ./model-driven-apps/embedded-canvas-app-guidelines.md
+      - name: Embed a Power BI report on a form
+        href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items:
@@ -992,6 +1004,8 @@
       href: ./common-data-service/types-of-fields.md
     - name: Global option sets overview
       href: ./common-data-service/create-edit-global-option-sets.md
+    - name: Autonumber fields
+      href: ./common-data-service/autonumber-fields.md  
     - name: Set managed properties for fields
       href: ./common-data-service/set-managed-properties-for-field.md
     - name: Behavior and format of the Date and Time field

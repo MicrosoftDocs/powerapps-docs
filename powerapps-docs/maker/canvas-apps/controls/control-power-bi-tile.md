@@ -38,7 +38,7 @@ By passing a single parameter from the app, you can filter the results that appe
 
 To pass a single filter value, modify the value of the **TileURL** property, which follows this syntax:
 
-```"https://msit.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>" ```
+```"https://app.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>" ```
 
 To that value, append this syntax:
 

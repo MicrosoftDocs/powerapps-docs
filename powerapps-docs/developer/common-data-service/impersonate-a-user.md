@@ -4,7 +4,7 @@ description: "Learn how to write plug-in code to act on behalf of a specific use
 ms.custom: ""
 ms.date: 1/24/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: JimDaly
 ms.author: pehecke

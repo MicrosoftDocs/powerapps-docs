@@ -3,7 +3,7 @@ title: "Common Data Service for Apps app building practices | MicrosoftDocs"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "crm-online"
+ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"

@@ -2,9 +2,9 @@
 title: "Use Multi-Tenant Server-to-server authentication (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to configure an application user for server-to-server authentication with Common Data Service for Apps." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 2/28/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -55,8 +55,6 @@ In this scenario any CDS for Apps tenant can potentially use your multi-tenant a
   
 5. Test your application using a separate CDS for Apps tenant  
   
-   For a complete example of this process, see [Walkthrough: Multi-tenant server-to-server authentication](/dynamics365/customer-engagement/developer/walkthrough-multi-tenant-server-server-authentication).  
-  
 <a name="bkmk_CreateAMultitenantWebApp"></a>
    
 ## Create a multi-tenant web application registered with your Azure AD tenant 
@@ -84,7 +82,7 @@ In this scenario any CDS for Apps tenant can potentially use your multi-tenant a
   
  ![ASP.NET  MVC Change Authentication Dialog](media/mvc-change-authentication-dialog.png "ASP.NET  MVC Change Authentication Dialog")  
   
- When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with CDS for Apps. This is the approach demonstrated in [Walkthrough: Multi-tenant server-to-server authentication](/dynamics365/customer-engagement/developer/walkthrough-multi-tenant-server-server-authentication).  
+ When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with CDS for Apps. 
   
  In the process of creating and registering your application for development you will most likely use `http://localhost` as the **Sign-on URL** and **Reply URL** values so you can test and debug your application locally before publishing. You will need to change these values before you publish your app.  
   
@@ -215,7 +213,6 @@ In this scenario any CDS for Apps tenant can potentially use your multi-tenant a
   The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different CDS for Apps organization. More information: [Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)  
   
 ### See also  
- [Walkthrough: Multi-tenant server-to-server authentication](/dynamics365/customer-engagement/developer/walkthrough-multi-tenant-server-server-authentication)   
  [Use Single-Tenant Server-to-server authentication](use-single-tenant-server-server-authentication.md)   
  [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)   
  [Connect to Dynamics 365](/dynamics365/customer-engagement/developer/connect-customer-engagement)

@@ -1,7 +1,7 @@
 ---
 title: "Form data OnLoad Event (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: fb13c0a1-0e00-4592-8e58-3c2412141fbd

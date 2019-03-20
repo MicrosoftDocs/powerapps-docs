@@ -2,7 +2,7 @@
 title: "API considerations of virtual entities (Common Data Service for Apps) | Microsoft Docs"
 description: "Describes API considerations of virtual entities"
 ms.date: 10/31/2018
-ms.service: "crm-online"
+ms.service: powerapps
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"

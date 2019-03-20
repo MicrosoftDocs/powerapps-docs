@@ -4,7 +4,7 @@ description: "Web resources are virtual files that are stored in the CDS for App
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
