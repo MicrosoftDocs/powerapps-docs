@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 07/16/2018
+ms.date: 03/20/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -44,7 +44,9 @@ This table may help you decide when you should jump in:
 | **Preview** | New apps automatically include this feature.  Start enabling and testing in existing apps because this feature will be eventually turned on for them too. | Yes. This feature is on track to become a permanent part of the product.  | Yes. You may want to turn it off if you run into a problem.  Please report issues; this is the main reason the feature is in Preview. | 
 | **Shipped** (no longer appears in **Advanced settings**) | All apps have this feature. | Yes. | Yes.  Most can't be disabled.  |  
 
-Toward the end of Preview, we might enable the feature for all apps one time, and we mark it as being in **final validation**.  This change gives the most people a last chance to try out the feature while they can still turn it off. Timely feedback is critical in this period because, in the next stage, the feature is fully shipped, and you can't turn it off.  
+Toward the end of Preview, we might enable the feature for all apps one time, and we mark it as being in **final validation**.  This change gives the most people a last chance to try out the feature while they can still turn it off. Timely feedback is critical in this period because, in the next stage, the feature is fully shipped, and you can't turn it off.
+
+In the final transition to **Shipped** we may remove the Preview switch to turn the feature off but allow the feature to remain off for apps that already had it turned off.  In this case, you can turn the feature on with the switch, test with the feature, and still turn the feature off within the same Studio session.  But if the switch is turned on when the app is saved, the switch will disappear when reloaded and can not be turned off. [Restore the app to a previous version](restore-an-app.md) to bring the app back to the state before the feature was turned on.
 
 ## Documentation
 
