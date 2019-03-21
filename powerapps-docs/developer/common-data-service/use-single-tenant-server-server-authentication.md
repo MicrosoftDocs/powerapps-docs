@@ -43,7 +43,7 @@ In the [See also](#bkmk_seealso) section at the end of this article, there are l
 ## Azure application registration
 To create an application registration in Azure AD, follow these steps.
 
-1. Navigate to https://portal.office.com and sign in, or from your D365 organization web page select the application launcher in the top left corner.
+1. Navigate to https://admin.microsoft.com and sign in, or from your D365 organization web page select the application launcher in the top left corner.
 2. Choose **Admin** > **Admin centers** > **Azure Active Directory**
 3. From the left panel, choose **Azure Active Directory** > **App registrations (Preview)**
 4. Choose **+ New registration** [[image](#bkmk_app-registration-started)]
