@@ -2,7 +2,7 @@
 title: "API Limits (Common Data Service for Apps) | Microsoft Docs" 
 description: "Understand the limits for API requests." 
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/21/2019
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
