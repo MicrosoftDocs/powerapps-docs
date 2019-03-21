@@ -19,7 +19,7 @@ search.app:
 Converts a GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) string to a GUID value or creates a new GUID value.
 
 ## Description
-Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as Common Data Service for Apps and SQL Server.
+Use the **GUID** function to convert a string that contains the hexadecimal representation of a GUID into a GUID value that can be passed to a database. GUID values are used as keys by database systems such as Common Data Service and SQL Server.
 
 The string passed can contain uppercase or lowercase letters, but it must be 32 hexadecimal digits in either of these formats:
 

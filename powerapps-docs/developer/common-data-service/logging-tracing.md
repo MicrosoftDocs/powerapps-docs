@@ -1,5 +1,5 @@
 ---
-title: "Logging and tracing (Common Data Service for Apps) | Microsoft Docs"
+title: "Logging and tracing (Common Data Service) | Microsoft Docs"
 description: "Use the trace log to store plug-in execution information to aid in plug-in debugging."
 ms.custom: ""
 ms.date: 1/28/2019

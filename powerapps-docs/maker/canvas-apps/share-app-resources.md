@@ -18,7 +18,7 @@ search.app:
 
 Before you [share a canvas app](share-app.md), consider the types of resources on which it relies, such as one or more of the following:
 
-* entities in Common Data Service for Apps
+* entities in Common Data Service
 
     For information about giving users access to this data, see [Manage entity permissions](share-app.md#manage-entity-permissions).
     

@@ -1,5 +1,5 @@
 ---
-title: "Types of calendars (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Types of calendars (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Types of calendars
 
-The calendar entity was modified to support additional types of calendars in Common Data Service for Apps.  
+The calendar entity was modified to support additional types of calendars in Common Data Service.  
   
 ## Calendar type  
  The `Type` Picklist attribute contains the following options:  

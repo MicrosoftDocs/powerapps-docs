@@ -1,5 +1,5 @@
 ---
-title: "KbArticleTemplate Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "KbArticleTemplate Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the KbArticleTemplate entity."
 services: ''
 suite: powerapps

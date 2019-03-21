@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Register for Microsoft Partner Network account (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Step 2: Register for Microsoft Partner Network account (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "App builders must be members of Microsoft Partner Network (MPN) to publish apps on AppSource." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018

@@ -1,5 +1,5 @@
 ---
-title: "Image attributes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Image attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about image attributes that include image data witht in the application, and supporting attributes, Retrieving image data, and Uploading image data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 11/26/2018

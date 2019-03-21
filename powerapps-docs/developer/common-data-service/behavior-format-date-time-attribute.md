@@ -1,5 +1,5 @@
 ---
-title: "Behavior and format of the date and time attribute (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Behavior and format of the date and time attribute (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The DateTimeAttributeMetadata class is used to define and manage attributes of type DateTime in Dynamics 365 Customer Engagement." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,13 +17,13 @@ search.app:
 ---
 # Behavior and format of the date and time attribute
 
-If you have users and offices around the world, it is important to properly represent date and time values in multiple time zones. The `DateTimeAttributeMetadata` (<xref href="Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> class) is used to define and manage attributes of type `DateTime` in Common Data Service for Apps. Use the `DateTimeBehavior` property (For Organization Service see, <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.DateTimeBehavior>) to define whether to store date and time values with or without time zone information, and use the `DateTimeAttributeMetadata.Format` property to specify the display format of these attributes.  
+If you have users and offices around the world, it is important to properly represent date and time values in multiple time zones. The `DateTimeAttributeMetadata` (<xref href="Microsoft.Dynamics.CRM.DateTimeAttributeMetadata?text=DateTimeAttributeMetadata EntityType" /> or <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata> class) is used to define and manage attributes of type `DateTime` in Common Data Service. Use the `DateTimeBehavior` property (For Organization Service see, <xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.DateTimeAttributeMetadata.DateTimeBehavior>) to define whether to store date and time values with or without time zone information, and use the `DateTimeAttributeMetadata.Format` property to specify the display format of these attributes.  
 
   
- You can also use the customization area in CDS for Apps to define the behavior and format of the date and time attributes. More information: [Behavior and format of the Date and Time field](/dynamics365/customer-engagement/customize/behavior-format-date-time-field).  
+ You can also use the customization area in Common Data Service to define the behavior and format of the date and time attributes. More information: [Behavior and format of the Date and Time field](/dynamics365/customer-engagement/customize/behavior-format-date-time-field).  
   
 > [!NOTE]
->  All date and time attributes in Common Data Service for Apps support values as early as 1/1/1753 12:00 AM.  
+>  All date and time attributes in Common Data Service support values as early as 1/1/1753 12:00 AM.  
   
 <a name="SpecifyBehavior"></a>   
 
@@ -69,7 +69,7 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
   
 > [!IMPORTANT]
 >  -   Once you create a date and time attribute with behavior set to `DateOnly` or `TimeZoneIndependent`, you cannot change the behavior of the attribute. More information: [Change the behavior of a DateTime attribute](behavior-format-date-time-attribute.md#ChangeBehavior)  
-> -   The date and time attributes with the `DateOnly` or `TimeZoneIndependent` behavior will be treated like having the `UserLocal` behavior when edited in an earlier version of the Dynamics 365 for Outlook client in the offline mode. This is because the client doesn’t understand the new behaviors and won’t treat them differently from `UserLocal`. No date and time attributes are converted to the new behaviors on upgrade so the best practice here would be to upgrade all CDS for Apps clients to the latest release before a customizer adopts one of the new behaviors. When online, editing data for fields with the new behaviors will work fine.  
+> -   The date and time attributes with the `DateOnly` or `TimeZoneIndependent` behavior will be treated like having the `UserLocal` behavior when edited in an earlier version of the Dynamics 365 for Outlook client in the offline mode. This is because the client doesn’t understand the new behaviors and won’t treat them differently from `UserLocal`. No date and time attributes are converted to the new behaviors on upgrade so the best practice here would be to upgrade all Common Data Service clients to the latest release before a customizer adopts one of the new behaviors. When online, editing data for fields with the new behaviors will work fine.  
   
 <a name="SpecifyFormat"></a>   
 
@@ -99,25 +99,25 @@ Console.WriteLine("Created attribute '{0}' with UserLocal behavior\nfor the Acco
    
 ## Change the behavior of a date and time attribute  
 
- You can update a date and time attribute to change its behavior if you have the System Customizer role in your CDS for Apps instance and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property for the date and time attribute is set to `True`.  
+ You can update a date and time attribute to change its behavior if you have the System Customizer role in your Common Data Service instance and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property for the date and time attribute is set to `True`.  
   
 > [!CAUTION]
 >  Before changing the behavior of a date and time attribute, you should review all the dependencies of the attribute, such as business rules, workflows, and calculated or rollup attributes, to ensure that there are no issues as a result of changing the behavior. System Customizers can restrict modifying the behavior of existing date and time attributes using the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property.  
 >   
 >  At the minimum, after changing the behavior of a date and time attribute, you should open each business rule, workflow, calculated attribute, and rollup attribute record that is dependent on the changed date and time attribute, review the information, and save the record to ensure that the latest attribute behavior and value is used.  
 >   
->  After changing the data and time behavior of a calculated or rollup attribute, open the calculated or rollup field definition editor, and save the field definition to ensure that the attribute is still valid after the behavior change. System customizers can open the field definition editor for calculated or rollup attribute by clicking **Edit** next to **Field Type** in the customization area in CDS for Apps. More information: [Define calculated fields](/dynamics365/customer-engagement/customize/define-calculated-fields) and [Define rollup fields](/dynamics365/customer-engagement/developer/customize/define-rollup-fields)  
+>  After changing the data and time behavior of a calculated or rollup attribute, open the calculated or rollup field definition editor, and save the field definition to ensure that the attribute is still valid after the behavior change. System customizers can open the field definition editor for calculated or rollup attribute by clicking **Edit** next to **Field Type** in the customization area in Common Data Service. More information: [Define calculated fields](/dynamics365/customer-engagement/customize/define-calculated-fields) and [Define rollup fields](/dynamics365/customer-engagement/developer/customize/define-rollup-fields)  
   
 -   The behavior of the `CreatedOn` and `ModifiedOn` attributes for the out-of-box and custom entities is set to `UserLocal` by default, and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `False`, which implies that you cannot change the behavior of these attributes. Although users can change the value of the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property of these attributes for custom entities, but they still can’t change the behavior of the attributes.  
   
 -   For new custom date and time attributes, the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `True`. This implies that you can change behavior of a custom date and time attribute from `UserLocal` to either `DateOnly` or `TimeZoneIndependent`; no other behavior transitions are allowed.  
   
-     For custom date and time attributes that are part of a CDS for Apps organization, the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `True` unless the attribute or the parent entity is not customizable.  
+     For custom date and time attributes that are part of a Common Data Service organization, the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `True` unless the attribute or the parent entity is not customizable.  
   
     > [!NOTE]
     >  When you update `DateTimeAttributeMetadata.DateTimeBehavior` property of an attribute from `UserLocal` to `DateOnly`, ensure that you also change the`DateTimeAttributeMetadata.Format` property from `DateAndTime` to `DateOnly`. Otherwise, an exception will occur.  
   
--   The following out-of-box date and time attributes in CDS for Apps are by default set to `DateOnly` and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `False` of these attributes, which implies that you cannot change the behavior for these attributes:  
+-   The following out-of-box date and time attributes in Common Data Service are by default set to `DateOnly` and the `DateTimeAttributeMetadata.CanChangeDateTimeBehavior` managed property is set to `False` of these attributes, which implies that you cannot change the behavior for these attributes:  
   
     |Date and time attribute|Parent entity|  
     |-----------------------------|-------------------|  
@@ -186,11 +186,11 @@ Console.WriteLine("Published customizations to the Account entity.\n");
 <a name="Convert"></a>   
 ## Convert behavior of existing date and time values in the database 
 
- When you update a date and time attribute to change its behavior from `UserLocal` to `DateOnly` or `TimeZoneIndependent`, it does not automatically convert the existing attribute values in the database. The behavior change affects only those values that will be entered or updated in the attribute *after* the behavior has been changed. The existing date and time values in the system continue to be in UTC, and displayed by CDS for Apps according to the new behavior when retrieved through SDK or in the UI as explained in the previous section. For attributes whose behavior has changed from `UserLocal` to `DateOnly`, you can convert the existing UTC values in the database to appropriate `DateOnly` value to avoid any data anomalies by using the `ConvertDateAndTimeBehavior` message.  
+ When you update a date and time attribute to change its behavior from `UserLocal` to `DateOnly` or `TimeZoneIndependent`, it does not automatically convert the existing attribute values in the database. The behavior change affects only those values that will be entered or updated in the attribute *after* the behavior has been changed. The existing date and time values in the system continue to be in UTC, and displayed by Common Data Service according to the new behavior when retrieved through SDK or in the UI as explained in the previous section. For attributes whose behavior has changed from `UserLocal` to `DateOnly`, you can convert the existing UTC values in the database to appropriate `DateOnly` value to avoid any data anomalies by using the `ConvertDateAndTimeBehavior` message.  
   
  The message enables you to specify a conversion rule (If working with Organization Service see, <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest.ConversionRule>) to select the time zone to use for conversion of the values from UTC to DateOnly. You can specify one of the following conversion rules:  
   
--   `SpecificTimeZone`: Converts UTC value to a DateOnly value as per the specified CDS for Apps time zone code. In this case, you also need to specify a value for the <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest.TimeZoneCode> parameter.  
+-   `SpecificTimeZone`: Converts UTC value to a DateOnly value as per the specified Common Data Service time zone code. In this case, you also need to specify a value for the <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest.TimeZoneCode> parameter.  
   
 -   `CreatedByTimeZone`: Converts UTC value to a DateOnly value that the user who created the record would see in the UI.  
   
@@ -201,7 +201,7 @@ Console.WriteLine("Published customizations to the Account entity.\n");
  You can use one of the four members of the <xref:Microsoft.Xrm.Sdk.DateTimeBehaviorConversionRule> class to specify a valid value for the <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest.ConversionRule> parameter.  
   
 > [!NOTE]
->  You must have the System Administrator role in your CDS for Apps instance to execute the <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest> message.  
+>  You must have the System Administrator role in your Common Data Service instance to execute the <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest> message.  
   
  When you execute the `ConvertDateAndTimeBehavior` (If working with Organization Service see, <xref:Microsoft.Xrm.Sdk.Messages.ConvertDateAndTimeBehaviorRequest> message), a system job (asynchronous operation) is created to run the conversion request. The `ConvertDateAndTimeBehaviorResponse.JobId` attribute in the message response displays the ID of the system job that is created as a result of the conversion request. After the system job completes, check the job details (`AsyncOperation.Message`) to view conversion details or errors, if any.  
   
@@ -210,7 +210,7 @@ Console.WriteLine("Published customizations to the Account entity.\n");
   
  Some important points to be considered while using the `ConvertDateAndTimeBehavior` message:  
   
--   You should avoid any major changes to the solutions in CDS for Apps during the execution of the message such as importing a solution or deleting an attribute or parent entity. Doing so might lead to unexpected behavior; however no data loss will occur.  
+-   You should avoid any major changes to the solutions in Common Data Service during the execution of the message such as importing a solution or deleting an attribute or parent entity. Doing so might lead to unexpected behavior; however no data loss will occur.  
   
 -   Updates done in the system as a result of executing the message won’t run workflows and plug-ins.  
   

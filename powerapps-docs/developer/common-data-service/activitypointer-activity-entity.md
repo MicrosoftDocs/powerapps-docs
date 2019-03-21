@@ -1,5 +1,5 @@
 ---
-title: "ActivityPointer (activity) entity (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "ActivityPointer (activity) entity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The activity pointer (activity) entity represents any activity or task that is performed, or to be performed by a user. An activity is any action for which an entry can be made on a calendar" 
 ms.custom: ""
 ms.date: 10/31/2018
@@ -19,7 +19,7 @@ search.app:
 
 The activity pointer (activity) entity represents any activity or task that is performed, or to be performed by a user. An activity is any action for which an entry can be made on a calendar.  
   
- Whenever you create an activity record in Common Data Service for Apps, a corresponding activity pointer record is created. This indicates that the activity record and the corresponding activity pointer record have the same value for the `ActivityId` attribute. For example, if you create an `Email` record, the attribute values of `Email.ActivityId` and the corresponding `ActivityPointer.ActivityId` will be the same.  
+ Whenever you create an activity record in Common Data Service, a corresponding activity pointer record is created. This indicates that the activity record and the corresponding activity pointer record have the same value for the `ActivityId` attribute. For example, if you create an `Email` record, the attribute values of `Email.ActivityId` and the corresponding `ActivityPointer.ActivityId` will be the same.  
   
  The `ActivityPointer.ActivityTypeCode` attribute defines the type of the activity. The possible values for this attribute are defined in `activitypointer_activitytypecode` global option set.  
   

@@ -26,7 +26,7 @@ search.app:
 ---
 # Create one-to-many or many-to-one entity relationships overview
 
-In Common Data Service for Apps 1:N (one-to-many) or N:1 (many-to-one) relationships define how two entities are related to each other. 
+In Common Data Service 1:N (one-to-many) or N:1 (many-to-one) relationships define how two entities are related to each other. 
   
 Before you create a custom entity relationship, evaluate whether using an existing entity relationship would meet your requirements. <br />More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -42,7 +42,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 > - In model-driven apps, select **New Field** from the form editor and create a *Lookup* field. <br />More information: [Add a field to a form](../model-driven-apps/add-field-form.md)
 > - Create a new Lookup field for the related entity. <br />More information: [Create and edit fields](create-edit-fields.md)
 > - Import a solution that contains the definition of the entity relationship. <br />More information: [Import, update, and export solutions](import-update-export-solutions.md)
-> - Use Power Query to create new entities and fill them with data. <br />More information: [Add data to an entity in Common Data Service for Apps by using Power Query](data-platform-cds-newentity-pq.md).
+> - Use Power Query to create new entities and fill them with data. <br />More information: [Add data to an entity in Common Data Service by using Power Query](data-platform-cds-newentity-pq.md).
 > - A developer can use [Metadata services](../../developer/common-data-service/metadata-services.md) to write a program to create and update entity relationships. <br />More information: [Customize entity relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Information in this topic will help you choose which designer you can use. 
@@ -58,7 +58,7 @@ You should use the PowerApps portal to create and edit 1:N (one-to-many) or N:1 
 
 ## Community tools
 
-**[Entity Relation Diagram Creator](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** is a tool that XrmToolbox community developed for CDS for Apps. Please see the [Developer tools for Common Data Service for Apps](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
+**[Entity Relation Diagram Creator](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** is a tool that XrmToolbox community developed for Common Data Service. Please see the [Developer tools for Common Data Service](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 

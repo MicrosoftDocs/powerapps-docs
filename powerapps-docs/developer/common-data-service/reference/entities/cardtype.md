@@ -1,5 +1,5 @@
 ---
-title: "CardType Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "CardType Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the CardType entity."
 services: ''
 suite: powerapps

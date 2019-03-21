@@ -1,5 +1,5 @@
 ---
-title: "API Limits (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "API Limits (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand the limits for API requests." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -19,7 +19,7 @@ search.app:
 
 Beginning March 19, 2018 we will limit the number of API requests made by each user, per organization instance, within a five minute interval. When this limit is exceeded, an exception will be thrown by the platform.
 
-The limit will help ensure that users running applications that make extraordinarily large demands on servers will not affect other users. The limit will not affect normal users of the platform. Only applications that perform a very large number of API requests will be affected. Based on telemetry data analysis, this limit is well within the bounds of most applications that perform a large number of API requests. The limit will help provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service for Apps platform.
+The limit will help ensure that users running applications that make extraordinarily large demands on servers will not affect other users. The limit will not affect normal users of the platform. Only applications that perform a very large number of API requests will be affected. Based on telemetry data analysis, this limit is well within the bounds of most applications that perform a large number of API requests. The limit will help provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.
 
 If your application has the potential to exceed the limit, please consider the guidance given in the [What should I do if my application exceeds the limit?](#what-should-i-do-if-my-application-exceeds-the-limit) section below.
 
@@ -144,7 +144,7 @@ public class Retry
 
 ### See also
 
-[Use CDS for Apps Web API](webapi/overview.md)<br />
-[Use CDS for Apps Organization Service](org-service/overview.md)<br />
+[Use Common Data Service Web API](webapi/overview.md)<br />
+[Use Common Data Service Organization Service](org-service/overview.md)<br />
 [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)<br />
 [Use ExecuteMultiple to improve performance for bulk data load](org-service/execute-multiple-requests.md)

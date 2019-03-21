@@ -1,5 +1,5 @@
 ---
-title: "Apply SLAs to entities (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Apply SLAs to entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about applying SLAs to custom entities by enabling entities for applying SLAs. Also, you can create SLA KPIs."
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Apply SLAs to entities
 
-Service level agreements (SLAs) in Common Data Service for Apps help you define the level of service or support that your organization agrees to offer a customer by including items to define metrics or key performance indicators (KPIs) to attain the service level. You can apply SLAs to custom entities and the following system entities:  
+Service level agreements (SLAs) in Common Data Service help you define the level of service or support that your organization agrees to offer a customer by including items to define metrics or key performance indicators (KPIs) to attain the service level. You can apply SLAs to custom entities and the following system entities:  
   
 -   All activity entities (such as Email, Task, and Appointment) except recurring appointments (RecurringAppointmentMaster)  
   
@@ -57,7 +57,7 @@ Service level agreements (SLAs) in Common Data Service for Apps help you define 
    
 ## Apply SLAs to entity records  
 
- Using the CDS for Apps web client, you can create SLAs for an SLA-enabled entity, and set an SLA as default for the entity so that it is applied automatically to any new entity records.  
+ Using the Common Data Service web client, you can create SLAs for an SLA-enabled entity, and set an SLA as default for the entity so that it is applied automatically to any new entity records.  
   
  However, if you want to manually apply SLAs to entity records based on any custom business requirement, you can programmatically update the entity record to set the `SLAId` attribute value to the desired active SLA record.  
   
@@ -65,7 +65,7 @@ Service level agreements (SLAs) in Common Data Service for Apps help you define 
 
 ## Limitations to applying SLAs in Dynamics 365 (online)  
 
- In CDS for Apps, the following limitations are applicable for SLAs per CDS for Apps instance (organization):  
+ In Common Data Service, the following limitations are applicable for SLAs per Common Data Service instance (organization):  
   
 -   You can have a maximum of 7 entities that can have active SLAs. You will encounter an error on activating an SLA if this limit is exceeded.  
   

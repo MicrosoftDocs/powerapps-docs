@@ -1,5 +1,5 @@
 ---
-title: "License Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "License Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the License entity."
 services: ''
 suite: powerapps

@@ -1,5 +1,5 @@
 ---
-title: "SdkMessagePair Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "SdkMessagePair Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessagePair entity."
 services: ''
 suite: powerapps

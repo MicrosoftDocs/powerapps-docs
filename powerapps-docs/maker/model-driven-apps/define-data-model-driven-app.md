@@ -20,11 +20,11 @@ search.app:
 ---
 # Define data for your model-driven app
 
-Data for your model-driven app is defined in [Common Data Service (CDS) for Apps](../common-data-service/data-platform-intro.md). 
+Data for your model-driven app is defined in [Common Data Service](../common-data-service/data-platform-intro.md). 
 
 You define your app data using the following components: *entity*, *field*, and *relationship*.
 
-For detailed information about working with these components in CDS for Apps to define data for your model-driven app, see the following topics under CDS for Apps section:
+For detailed information about working with these components in Common Data Service to define data for your model-driven app, see the following topics under Common Data Service section:
 
 |Component |Topic|
 |-----|----|

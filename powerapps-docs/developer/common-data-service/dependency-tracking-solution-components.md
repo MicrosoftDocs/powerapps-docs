@@ -1,5 +1,5 @@
 ---
-title: "Dependency tracking for solution components (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Dependency tracking for solution components (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Solution component dependencies help make sure you have a reliable experience working with solutions. They can be viewed in the application by clicking Show Dependencies" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Dependency tracking for solution components
 
-Solutions are made of solution components. You’ll use the **Solutions** area in Common Data Service for Apps to create or add solution components. You can perform these actions programmatically by using the <xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest> message or any messages that create or update solution components that include a `SolutionUniqueName` parameter.  
+Solutions are made of solution components. You’ll use the **Solutions** area in Common Data Service to create or add solution components. You can perform these actions programmatically by using the <xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest> message or any messages that create or update solution components that include a `SolutionUniqueName` parameter.  
   
  Solution components often depend on other solution components. You can’t delete any solution component that has dependencies on another solution component. For example, a customized ribbon typically requires image or script web resources to display icons and perform actions using scripts. As long as the customized ribbon is in the solution, the specific web resources it uses are required. Before you can delete the web resources you must remove references to them in the customized ribbon. These solution component dependencies can be viewed in the application by clicking **Show Dependencies**.  
   
@@ -50,7 +50,7 @@ Solutions are made of solution components. You’ll use the **Solutions** area i
   There are three types of solution component dependencies:  
   
   **Solution Internal**  
-  Internal dependencies are managed by CDS for Apps. They exist when a particular solution component can’t exist without another solution component.  
+  Internal dependencies are managed by Common Data Service. They exist when a particular solution component can’t exist without another solution component.  
   
   **Published**  
   Published dependencies are created when two solution components are related to each other and then published. To remove this type of dependency, the association must be removed and the entities published again.  
@@ -120,7 +120,7 @@ Solutions are made of solution components. You’ll use the **Solutions** area i
 <a name="BKMK_Entity"></a>   
 
 ### Entity (Entity)  
- The primary structure used to model and manage data in CDS for Apps. Charts, forms, entity relationships, views, and attributes associated with an entity are deleted automatically when the entity is deleted because of the internal dependencies between them. Entities frequently have published dependencies with processes, dashboards, and email templates.  
+ The primary structure used to model and manage data in Common Data Service. Charts, forms, entity relationships, views, and attributes associated with an entity are deleted automatically when the entity is deleted because of the internal dependencies between them. Entities frequently have published dependencies with processes, dashboards, and email templates.  
   
 <a name="BKMK_FieldSecurityProfile"></a>   
 ### Field security profile (FieldSecurityProfile)  
@@ -152,7 +152,7 @@ Solutions are made of solution components. You’ll use the **Solutions** area i
   
 <a name="BKMK_Role"></a>   
 ### Security role (Role)  
- Grouping of security privileges. Users are assigned roles that authorize their access to the CDS for Apps system. Entity forms can be associated with specific security roles to control who can view the form. This creates a published dependency between the security role and the form.  
+ Grouping of security privileges. Users are assigned roles that authorize their access to the Common Data Service system. Entity forms can be associated with specific security roles to control who can view the form. This creates a published dependency between the security role and the form.  
   
 > [!NOTE]
 >  Only security roles from the organization business unit can be added to a solution. Only a user with read access to those security roles can add them to a solution.  

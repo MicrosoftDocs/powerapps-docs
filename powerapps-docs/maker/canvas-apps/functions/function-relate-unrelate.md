@@ -20,7 +20,7 @@ Relate and unrelate records of two entities through a one-to-many or many-to-man
 
 ## Description
 
-The **Relate** function links two records through a one-to-many or many-to-many relationship in Common Data Service (CDS) for Apps. The **Unrelate** function reverses the process and removes the link.
+The **Relate** function links two records through a one-to-many or many-to-many relationship in Common Data Service. The **Unrelate** function reverses the process and removes the link.
 
 For one-to-many relationships, the Many entity has a foreign-key field that points to a record of the One entity. **Relate** sets this field to point to a specific record of the One entity, while **Unrelate** sets this field to *blank*. If the field is already set when **Relate** is called, the existing link is lost in favor of the new link. You can also set this field by using the [**Patch**](function-patch.md) function or an **[Edit form](../controls/control-form-detail.md)** control; you need not use the **Relate** function.
 
@@ -33,7 +33,7 @@ These functions never create or delete a record. They only relate or unrelate tw
 You can use these functions only in [behavior formulas](../working-with-formulas-in-depth.md).
 
 > [!NOTE]
-> These functions are part of a preview feature, and their behavior is available only when the **Relational data, option sets, and other new features for CDS** feature is enabled. This is an app-level setting that's enabled by default for new apps. To find this feature switch, open the **File** menu, select **App settings**, and then select **Advanced settings**. Your feedback is very valuable to us - please let us know what you think in the [PowerApps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> These functions are part of a preview feature, and their behavior is available only when the **Relational data, option sets, and other new features for Common Data Service** feature is enabled. This is an app-level setting that's enabled by default for new apps. To find this feature switch, open the **File** menu, select **App settings**, and then select **Advanced settings**. Your feedback is very valuable to us - please let us know what you think in the [PowerApps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
 ## Syntax
 

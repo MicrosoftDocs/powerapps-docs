@@ -1,5 +1,5 @@
 ---
-title: "SdkMessageProcessingStep Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "SdkMessageProcessingStep Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SdkMessageProcessingStep entity."
 services: ''
 suite: powerapps

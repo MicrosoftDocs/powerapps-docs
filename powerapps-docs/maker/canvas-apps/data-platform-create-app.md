@@ -1,6 +1,6 @@
 ---
-title: Generate a canvas app from Common Data Service for Apps | Microsoft Docs
-description: In PowerApps, automatically generate a canvas app to manage data in Common Data Service for Apps
+title: Generate a canvas app from Common Data Service | Microsoft Docs
+description: In PowerApps, automatically generate a canvas app to manage data in Common Data Service
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -14,15 +14,15 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Generate a canvas app from Common Data Service for Apps in PowerApps
+# Generate a canvas app from Common Data Service in PowerApps
 
-In PowerApps, automatically generate a canvas app based on a list of sample accounts in [Common Data Service (CDS) for Apps](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
+In PowerApps, automatically generate a canvas app based on a list of sample accounts in [Common Data Service](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
 If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 ## Prerequisites
 
-To follow this quickstart, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) security role, and you must [switch to an environment](working-with-environments.md) in which a database in CDS for Apps has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment) that meets this requirement.
+To follow this quickstart, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) security role, and you must [switch to an environment](working-with-environments.md) in which a database in Common Data Service has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment) that meets this requirement.
 
 ## Generate an app
 
@@ -58,7 +58,7 @@ You'll probably want to make more changes before you use this app or share it wi
 1. Near the left edge, select **Save** and then, in the lower-left corner, select **Save**.
 
 ## Next steps
-In this quickstart, you created an app to manage sample data about accounts in CDS for Apps. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs.
+In this quickstart, you created an app to manage sample data about accounts in Common Data Service. As a next step, customize the gallery and other elements of the default browse screen to better suit your needs.
 
 > [!div class="nextstepaction"]
 > [Customize a gallery](customize-layout-sharepoint.md).

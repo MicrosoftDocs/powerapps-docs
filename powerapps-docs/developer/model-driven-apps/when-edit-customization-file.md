@@ -48,7 +48,7 @@ The customizations.xml file that is exported as part of an unmanaged solution ca
  Definitions of views for entities are included in the customizations.xml file and may be manually edited. The view editor in the application is the most commonly used tool for this purpose. Editing customizations.xml is an alternative method. For more information, see [Customize Entity Views](customize-entity-views.md).  
   
  **Editing the ISV.config**  
-  For CDS for Apps, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see  [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration).  
+  For Common Data Service, the Ribbon provides the way to extend the application. The only remaining capability left in ISV.Config is to customize the appearance of the Service Calendar. For more information, see  [Service Calendar Appearance Configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration).  
   
 ## Unsupported tasks  
  Defining any other solution components by editing the exported customizations.xml file is not supported. This includes the following:  

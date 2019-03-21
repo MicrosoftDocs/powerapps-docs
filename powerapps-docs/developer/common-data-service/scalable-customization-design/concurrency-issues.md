@@ -1,5 +1,5 @@
 ---
-title: "Scalable Customization Design: Concurrency issues (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Scalable Customization Design: Concurrency issues (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The third in a series of topics. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/15/2019
@@ -19,7 +19,7 @@ search.app:
 # Scalable Customization Design: Concurrency issues
 
 > [!NOTE]
-> This is the third in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
+> This is the third in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service](overview.md).
 > The previous topic [Scalable Customization Design: Database transactions](database-transactions.md) described how database transactions are applied and the effect they have on different types of customizations.
 
 When you have concurrent requests, the chance of collisions on locks becomes higher. The longer the transactions take, the longer the locks are held. The chances are even higher of collision and the overall impact would be greater on end users. 
@@ -32,15 +32,15 @@ Some key areas to consider design for, and check for if you do see problems, are
 
 - **User driven activity**: Directly through the user interface.
 - **Async actions**: Activity that occurs later as a result of other actions. When this activity will be processed isn’t known at the time the initiating action is triggered.
-- **Batch activities**: Either driven from within Common Data Service for Apps (CDS for Apps) (such as bulk delete jobs or server side synchronization processing), or driven from external sources such as integration from another system.
+- **Batch activities**: Either driven from within Common Data Service (Common Data Service) (such as bulk delete jobs or server side synchronization processing), or driven from external sources such as integration from another system.
 
 ## Async operations in parallel
 
-A common misconception is that async workflows or plug-ins are processed serially from a queue and there wouldn’t be conflict between them. This isn’t accurate, since CDS for Apps processes multiple asynchronous activities in parallel both within each async service instance and across async service instances spread over different servers to increase throughput. Each async service actually retrieves jobs to be performed in batches of approximately 20 per service based on configuration and load.
+A common misconception is that async workflows or plug-ins are processed serially from a queue and there wouldn’t be conflict between them. This isn’t accurate, since Common Data Service processes multiple asynchronous activities in parallel both within each async service instance and across async service instances spread over different servers to increase throughput. Each async service actually retrieves jobs to be performed in batches of approximately 20 per service based on configuration and load.
 
 If you initiate multiple asynchronous activities from the same event on the same record, they’re likely to process in parallel. As they fired on the same record, a common pattern is updates back to the same parent record; therefore the conflict opportunity is high. 
 
-When a triggering event occurs, such as the creation of an account, asynchronous logic in CDS for Apps may create entries in the [AsyncOperation (System Job) Entity](../reference/entities/asyncoperation.md) for each process or action to be taken. The Async Service monitors this table, picks up waiting requests in batches, and then processes them. Because the workflows are triggered at the same time, they are highly likely to be picked up in the same batch and processed at the same time. 
+When a triggering event occurs, such as the creation of an account, asynchronous logic in Common Data Service may create entries in the [AsyncOperation (System Job) Entity](../reference/entities/asyncoperation.md) for each process or action to be taken. The Async Service monitors this table, picks up waiting requests in batches, and then processes them. Because the workflows are triggered at the same time, they are highly likely to be picked up in the same batch and processed at the same time. 
 
 ## Why it’s important to understand transactions
 

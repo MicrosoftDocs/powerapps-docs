@@ -1,5 +1,5 @@
 ---
-title: "TranslationProcess Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "TranslationProcess Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the TranslationProcess entity."
 services: ''
 suite: powerapps

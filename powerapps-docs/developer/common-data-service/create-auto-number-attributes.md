@@ -1,5 +1,5 @@
 ---
-title: "Create auto-number attributes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create auto-number attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about creating auto-number attribute in the same way you create a string attribute using the StringAttributeMetadata class except that you use the new AutoNumberFormat property. Use the AutoNumberFormat property to define a pattern that includes sequential numbers and random strings by composing placeholders, which indicates the length and type of values that are generated."
 keywords: "Auto-number attributes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
@@ -18,7 +18,7 @@ search.app:
 ---
 # Create auto-number attributes
 
-With Common Data Service for Apps, you can add an auto-number attribute for any entity. Currently, you can add the attribute programmatically. There is no user interface to add this type of attribute. The topic explains how you can programmatically create an auto-number attribute and set a seed value for sequential elements. In addition, the topic shows how to set the sequence number for the next record if you need to reset the seed at any time later.
+With Common Data Service, you can add an auto-number attribute for any entity. Currently, you can add the attribute programmatically. There is no user interface to add this type of attribute. The topic explains how you can programmatically create an auto-number attribute and set a seed value for sequential elements. In addition, the topic shows how to set the sequence number for the next record if you need to reset the seed at any time later.
 > [!NOTE]
 >The setting of the seed is optional. There is no need to call the seed if you don’t need to reseed.
 
@@ -264,11 +264,11 @@ OData-Version: 4.0
 
 ### Auto Number Manager
 
-**[Auto Number Manager](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.AutoNumManager/)** for XrmToolBox is a community driven tool for CDS for Apps that provides a UI to set, update and remove auto number format on new or existing attributes.
+**[Auto Number Manager](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.AutoNumManager/)** for XrmToolBox is a community driven tool for Common Data Service that provides a UI to set, update and remove auto number format on new or existing attributes.
 Please see the [Developer tools](developer-tools.md) topic for community developed tools and [anm.xrmtoolbox.com](http://anm.xrmtoolbox.com) for more information about Auto Number Manager.
 
 > [!NOTE]
-> The community tools are not a product of CDS for Apps and does not extend support to the community tools. 
+> The community tools are not a product of Common Data Service and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com). 
 
 

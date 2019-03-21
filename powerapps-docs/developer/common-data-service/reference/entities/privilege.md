@@ -1,5 +1,5 @@
 ---
-title: "Privilege Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "Privilege Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the Privilege entity."
 services: ''
 suite: powerapps

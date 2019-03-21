@@ -46,7 +46,7 @@ To delete the PowerApps Checker solution:
 
 ### Add PowerApps Checker
 
-To add PowerApps Checker back to your CDS for Apps environment:
+To add PowerApps Checker back to your Common Data Service environment:
 
 1. As a System Administrator or as a System Customizer, open up your PowerApps portal by going to https://web.powerapps.com/environments.
 2. Select **Solutions**.
@@ -58,7 +58,7 @@ There are a couple different scenarios that can occur if a solution is too large
 
 Solution Checker can fail to check a solution based on these scenarios:
 - Hard limitation of a solution file size limit of 30MB.  
-- 10-minute timeout for exporting a solution from the Common Data Service (CDS) for Apps environment. Large solutions, like the Default Solution, may fail to get exported within this time, and the check will not complete successfully. Solution Checker will retry three times before it fails to process the job, so it may take over 30-minutes before you receive a failure notification.
+- 10-minute timeout for exporting a solution from the Common Data Service environment. Large solutions, like the Default Solution, may fail to get exported within this time, and the check will not complete successfully. Solution Checker will retry three times before it fails to process the job, so it may take over 30-minutes before you receive a failure notification.
 
 To address these issues, check or create smaller solutions to be analyzed. To minimize false positives, ensure you add dependent customizations. When you create a solution and add these components, include the following:
 
@@ -101,5 +101,5 @@ When HTML web resources are processed within Solution Checker, the HTML web reso
 ECMAScript 6 (2015) or later versions are not currently supported for Solution Checker. When Solution Checker analyzes JavaScript using ECMAScript 6 or later, a web-supported-syntax issue for the web resource is reported.  
 
 ## See also
-[Best practices and guidance for the Common Data Service for Apps](../../developer/common-data-service/best-practices/index.md)<br />
+[Best practices and guidance for the Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)<br />

@@ -1,5 +1,5 @@
 ---
-title: "ReportEntity Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ReportEntity Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ReportEntity entity."
 services: ''
 suite: powerapps

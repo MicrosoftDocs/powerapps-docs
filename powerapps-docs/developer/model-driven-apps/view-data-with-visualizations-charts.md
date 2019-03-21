@@ -22,7 +22,7 @@ search.app:
 
 Visualizations let you see your business data graphically. A visualization is attached to an entity in Common Data Services for Apps. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard. More information: [Analyze Data with Dashboards](analyze-data-with-dashboards.md)  
   
- You can use a chart or a web resource as a visualization in CDS for Apps. For charts, you can use the chart designer in Model-driven Apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into Model-driven Apps.
+ You can use a chart or a web resource as a visualization in Common Data Service. For charts, you can use the chart designer in Model-driven Apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into Model-driven Apps.
   
 <a name="VisualizationTypes"></a>   
 ## Visualization ownership  
@@ -50,7 +50,7 @@ Visualizations let you see your business data graphically. A visualization is at
 ### Chart types in Microsoft chart controls  
  Microsoft Chart Controls is used to build charts in Model-driven Apps. Microsoft Chart Controls enable you to create various chart types such as column, bar, area, stacked, line, bubble, and pie.  
   
- The following chart types are supported out-of-box in CDS for Apps: *Column*, *Area*, *Bar*, *Line*, *Pie*, and *Funnel*. However, you can extend the functionality by creating other supported Microsoft Chart Controls chart types such as multi-series, stacked, and 100% stacked (comparison) charts by specifying appropriate content in the data description and presentation description XML strings for a chart. More information: [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)  
+ The following chart types are supported out-of-box in Common Data Service: *Column*, *Area*, *Bar*, *Line*, *Pie*, and *Funnel*. However, you can extend the functionality by creating other supported Microsoft Chart Controls chart types such as multi-series, stacked, and 100% stacked (comparison) charts by specifying appropriate content in the data description and presentation description XML strings for a chart. More information: [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)  
   
 <a name="WebResources"></a>   
 ## Web resource visualizations  
@@ -60,7 +60,7 @@ Visualizations let you see your business data graphically. A visualization is at
   
 <a name="SupportedVisualizationEntities"></a>   
 ## Entities supported for visualizations  
- You can create and attach visualizations to only those entities in CDS for Apps that support the new ribbon interface. This is because all of the chart controls are only present in the ribbon interface of CDS for Apps. Custom entities are also supported for visualizations. You can turn off the visualization support for custom entities if you want to. However, you cannot disable visualization support for the default entities.  
+ You can create and attach visualizations to only those entities in Common Data Service that support the new ribbon interface. This is because all of the chart controls are only present in the ribbon interface of Common Data Service. Custom entities are also supported for visualizations. You can turn off the visualization support for custom entities if you want to. However, you cannot disable visualization support for the default entities.  
   
  The following lists the default entities that are supported for visualizations.  
   

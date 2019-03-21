@@ -1,5 +1,5 @@
 ---
-title: "Email activity entities (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Email activity entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The email activity in Dynamics 365 lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Email activity entities
 
-The email activity lets you track and manage email communications with customers. Common Data Service for Apps includes the Email Router software that manages the routing of email to or from CDS for Apps. The email activity is delivered using email protocols. Email Router supports the following email protocols: Exchange Web services, POP3, and SMTP. In addition to the Email Router software, the email activity can also be delivered by using Dynamics 365 for Outlook.  
+The email activity lets you track and manage email communications with customers. Common Data Service includes the Email Router software that manages the routing of email to or from Common Data Service. The email activity is delivered using email protocols. Email Router supports the following email protocols: Exchange Web services, POP3, and SMTP. In addition to the Email Router software, the email activity can also be delivered by using Dynamics 365 for Outlook.  
   
 <a name="Actions"></a>   
 
@@ -37,12 +37,12 @@ The email activity lets you track and manage email communications with customers
    If the `Organization.RequireApprovalForuserEmail` and `Organization.RequireApprovalForQueueEmail` (process emails only for approved users/queues) organization attributes are set to **true** (1),  the following occurs: email messages are delivered or sent from a user or queue only if the primary email address of the user or queue is approved. The `SystemUser.EmailRouterAccessApproval` and the `Queue.EmailRouterAccessApproval` attributes indicate the status of the primary email address of the user and queue respectively, and the value must be set to 1. Otherwise, the incoming and outgoing messages will be blocked. You can update the user or queue record to change the attribute value, if it is not already in the approved state, provided your user account has the **prvApproveRejectEmailAddress** privilege assigned.
   
 > [!NOTE]
->  In CDS for Apps, the `Email.StatusCode` attribute cannot be **null**.  
+>  In Common Data Service, the `Email.StatusCode` attribute cannot be **null**.  
   
 <a name="BulkE-Mail"></a>   
 
 ## Bulk Email  
- CDS for Apps supports sending email to a large list of recipients through a bulk email request. When a bulk email request is sent to CDS for Apps, an asynchronous operation is created in the asynchronous service queue that sends the email messages by using a background process. This gives you improved system performance.  
+ Common Data Service supports sending email to a large list of recipients through a bulk email request. When a bulk email request is sent to Common Data Service, an asynchronous operation is created in the asynchronous service queue that sends the email messages by using a background process. This gives you improved system performance.  
   
  The <xref:Microsoft.Crm.Sdk.Messages.SendBulkMailRequest> and <xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest> messages are used for sending bulk email messages. The following lists the sequence used to send bulk email:  
   
@@ -52,7 +52,7 @@ The email activity lets you track and manage email communications with customers
   
 3. The asynchronous service sends each email message. The email messages have a "pending" send status.  
   
-4. The email router, Dynamics 365 for Outlook, or a third-party email send component polls CDS for Apps for pending email messages, and if one is found, downloads it by using the `BackgroundSendEmail` request.  
+4. The email router, Dynamics 365 for Outlook, or a third-party email send component polls Common Data Service for pending email messages, and if one is found, downloads it by using the `BackgroundSendEmail` request.  
   
 5. The `BackgroundSendEmail` request performs the following operations: checks if pending email messages are present, downloads the email to the caller of the <xref:Microsoft.Crm.Sdk.Messages.BackgroundSendEmailRequest> message, and synchronizes the downloads if there are multiple callers.  
   

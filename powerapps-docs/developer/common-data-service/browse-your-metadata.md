@@ -1,5 +1,5 @@
 ---
-title: "Browse the metadata for your organization (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Browse the metadata for your organization (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can use the Entity Metadata Browser to view entities and their properties in Dynamics 365 Customer Engagement. The Entity Metadata Browser is a managed solution you can download and install on your organization." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,17 +17,17 @@ search.app:
 ---
 # Browse the metadata for your environment
 
-You can use the Entity Metadata Browser to view entities and their properties in Common Data Service for Apps. The Entity Metadata Browser is a managed solution you can download using the links below.
+You can use the Entity Metadata Browser to view entities and their properties in Common Data Service. The Entity Metadata Browser is a managed solution you can download using the links below.
 
 
 |                                                                                               Version                                                                                                |                                                                                     Download                                                                                      |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Common Data Service for Apps | [Microsoft Downloads: MetadataBrowser_3_0_0_5_managed.zip](http://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip) |
+| Common Data Service | [Microsoft Downloads: MetadataBrowser_3_0_0_5_managed.zip](http://download.microsoft.com/download/8/E/3/8E3279FE-7915-48FE-A68B-ACAFB86DA69C/MetadataBrowser_3_0_0_5_managed.zip) |
 
 After you download the solution, you must install it. For information about how to install a managed solution, see [Import, update, and export solutions](/dynamics365/customer-engagement/developer/customize/import-update-export-solutions)  
 
 ## Open as an app
-CDS for Apps is configured as an app. After you install the **Entity Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual entities.
+Common Data Service is configured as an app. After you install the **Entity Metadata Browser** solution, locate the **Metadata Tools** app and open it. **Entities** is the default view. From the **Tools** navigation area you can select **Entity Metadata** to inspect individual entities.
 
 ## Open from the solution configuration page
 For earlier versions you must use the following steps, but these also work for the latest verison.  
@@ -80,14 +80,14 @@ You can perform the following actions for a single entity:
 
 ## Community tools
 
-**Metadata Browser** is a tool that XrmToolbox community developed for CDS for Apps. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
+**Metadata Browser** is a tool that XrmToolbox community developed for Common Data Service. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
 
 > [!NOTE]
-> The community tools are not a product of CDS for Apps and does not extend support to the community tools. 
+> The community tools are not a product of Common Data Service and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also
 
- [Developer Tools for CDS for Apps](developer-tools.md)<br />
+ [Developer Tools for Common Data Service](developer-tools.md)<br />
  [Customize Entity Metadata](customize-entity-metadata.md)<br />
  

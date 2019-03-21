@@ -36,7 +36,7 @@ For best results, start by ensuring that the home page is set to the right envir
 
 ## Choose an environment
 
-Whether you're creating an app, a flow, a data connection, or an entity in the Common Data Service for Apps, much of what you do in PowerApps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
+Whether you're creating an app, a flow, a data connection, or an entity in the Common Data Service, much of what you do in PowerApps is contained in a specific environment. Environments create boundaries between different types of work; for example, an organization might have separate environments for different departments. Many organizations use environments to separate apps that are still being developed from those that are ready for widespread use. You might have access to multiple environments or only one and, if you have appropriate permissions, you might be able to create your own environments.
 
 To verify which environment you're in, find the environment switcher near the right side of the header.
 
@@ -54,9 +54,9 @@ For more information, see [Environments overview](../../administrator/environmen
 In PowerApps, you can create and run these types of apps:
 
 - **Canvas apps** support designing custom UI and connecting to data from a variety of sources.
-- **Model-driven apps** have a standard UI and connect to data only in Common Data Service (CDS) for Apps. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
+- **Model-driven apps** have a standard UI and connect to data only in Common Data Service. However, you can more easily create other elements such as views, dashboards, and different types of business logic.
 
-If you choose an environment that has a CDS for Apps database, you can build canvas or model-driven apps from the same **Home** page.
+If you choose an environment that has a Common Data Service database, you can build canvas or model-driven apps from the same **Home** page.
 
 ## Play or edit an app
 
@@ -114,6 +114,6 @@ By selecting options in the header and left navigation bar, you can do more than
 
 Extend the functionality of your apps by performing these tasks:
 
-- Manage entities, option sets, and data integration in [Common Data Service for Apps](../common-data-service/data-platform-intro.md).
+- Manage entities, option sets, and data integration in [Common Data Service](../common-data-service/data-platform-intro.md).
 - Configure business logic in [Microsoft Flow](https://docs.microsoft.com/flow/getting-started).
 - Author, package, and maintain [solutions](../../developer/common-data-service/introduction-solutions.md).

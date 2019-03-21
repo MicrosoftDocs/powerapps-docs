@@ -22,7 +22,7 @@ In this topic, you'll learn how to create a custom entity called Product Review 
 ## Prerequisites
 To follow this procedure, the following items are required:
 * Either a PowerApps Plan 2 or Microsoft Flow Plan 2 license. Alternatively, you can sign up for a [free PowerApps Plan 2 trial](https://web.powerapps.com/signup?redirect=marketing&email=).
-* Either a System Administrator or System Customizer security role within Common Data Service for Apps.
+* Either a System Administrator or System Customizer security role within Common Data Service.
 
 ## Sign in to PowerApps
 Sign in to PowerApps at [https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
