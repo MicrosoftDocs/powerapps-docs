@@ -6,8 +6,8 @@ ms.date: 02/25/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "shmcarth" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "KumarVivek" # GitHub ID
+ms.author: "kvivek" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -21,7 +21,7 @@ Your app is ready for submission after completing steps 1-5.
 
 If you have been granted access to the [Cloud Partner Portal](https://cloudpartner.azure.com) in response to the information you provided in [step 1](fill-app-submission-form-appsource.md), proceed to [create an offer](https://cloudpartner.azure.com/#new/microsoft-crm/form/offerSettings) on the Cloud partner Portal to submit your app. 
 
-All apps that are submitted to be listed on AppSource go through a certification process. More information: [Appendix: App certification checklist](appendix-app-certification-checklist.md)
+All apps that are submitted to be listed on AppSource go through a certification process. For information about the checks done in the certification process, see [Appendix: App certification checklist](appendix-app-certification-checklist.md)
 
 Detailed information about submitting an app for Dynamics 365 Customer Engagement is available in the Cloud Partner Portal [documentation](https://cloudpartner.azure.com/#documentation/crm-create-offer). The portal documentation is only accessible to authorized users of the Cloud Partner Portal.
 
