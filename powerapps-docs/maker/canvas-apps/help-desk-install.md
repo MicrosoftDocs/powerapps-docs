@@ -41,7 +41,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 This list stores the Help Desk tickets.
 
-1. Open a web browser and navigate to https://portal.office.com.
+1. Open a web browser and navigate to https://admin.microsoft.com.
 2. Log in with an account that has permission to create SharePoint lists.
 3. Navigate to the site collection where you want the HelpDesk list to reside.
 4. Click the **gear icon** in the top right portion of the web page.
