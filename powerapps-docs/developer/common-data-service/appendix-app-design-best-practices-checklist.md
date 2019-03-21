@@ -2,7 +2,7 @@
 title: "Appendix: App design best practices checklist (PowerApps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use the app design checklist to evaluate your app design in PowerApps." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/25/2019
+ms.date: 03/20/2019
 ms.reviewer: "kvivek"
 ms.service: "powerapps"
 ms.topic: "article"
