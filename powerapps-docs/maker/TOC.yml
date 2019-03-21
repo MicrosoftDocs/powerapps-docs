@@ -134,7 +134,7 @@
         - name: Popular connectors
           items:
             - name: Common Data Service
-              href: common-data-service/data-platform-into.md
+              href: common-data-service/data-platform-intro.md
             - name: SharePoint
               href: canvas-apps/connections/connection-sharepoint-online.md
             - name: SQL Server
