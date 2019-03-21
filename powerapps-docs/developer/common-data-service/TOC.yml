@@ -4,7 +4,7 @@
 - name: Developer overview
   href: overview.md
 - name: Get started
-  href: get-started-Common Data Service-developers.md
+  href: get-started-cds-developers.md
   items:
   - name: Supported customizations
     href: supported-customizations.md
