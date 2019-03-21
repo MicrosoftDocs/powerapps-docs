@@ -21,7 +21,7 @@ search.app:
 > [!NOTE]
 > This is the second in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service](overview.md).
 
-One of the most fundamental concepts behind many of the challenges faced here is that of the database transaction. In Common Data Service (Common Data Service) the database is at the heart of almost all requests to the system and the place data consistency is primarily enforced.
+One of the most fundamental concepts behind many of the challenges faced here is that of the database transaction. In Common Data Service the database is at the heart of almost all requests to the system and the place data consistency is primarily enforced.
 
 - No Common Data Service data operations, either internal or part of code customizations, work completely in isolation.
 - All Common Data Service data operations interact with the same database resources, either at a data level or an infrastructure level such as processor, memory, or I/O usage.

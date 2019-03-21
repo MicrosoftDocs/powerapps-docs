@@ -17,7 +17,7 @@ search.app:
 ---
 # SolutionPackager tool
 
-SolutionPackager is a tool that can reversibly decompose a Common Data Service(Common Data Service) for Apps compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system. The following sections show you how to run the tool and how to use the tool with managed and unmanaged solutions.  
+SolutionPackager is a tool that can reversibly decompose a Common Data Service compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system. The following sections show you how to run the tool and how to use the tool with managed and unmanaged solutions.  
   
 <a name="bkm_where"></a>   
 

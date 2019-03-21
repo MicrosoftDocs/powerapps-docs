@@ -32,7 +32,7 @@ Some key areas to consider design for, and check for if you do see problems, are
 
 - **User driven activity**: Directly through the user interface.
 - **Async actions**: Activity that occurs later as a result of other actions. When this activity will be processed isn’t known at the time the initiating action is triggered.
-- **Batch activities**: Either driven from within Common Data Service (Common Data Service) (such as bulk delete jobs or server side synchronization processing), or driven from external sources such as integration from another system.
+- **Batch activities**: Either driven from within Common Data Service such as bulk delete jobs or server side synchronization processing), or driven from external sources such as integration from another system.
 
 ## Async operations in parallel
 
