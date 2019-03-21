@@ -42,7 +42,7 @@ More information: [Next steps: Submit your app on Cloud Partner Portal](next-ste
 ## Checklists
 
 - [App design best practices](appendix-app-design-best-practices-checklist.md): Use this checklist to evaluate your app design to provide the best and consistent user experience.
-- [App certification checklist](appendix-app-certification-checklist.md): Provides information about the checks done during the app certification process after you submit your app for publishing on AppSource. 
+- [App certification](appendix-app-certification-checklist.md): Provides information about the checks done during the app certification process after you submit your app for publishing on AppSource. 
   
 ### See also  
 [Video: Microsoft AppSource: find the right app for your business](https://youtu.be/hpq_Y9LuIB8)
