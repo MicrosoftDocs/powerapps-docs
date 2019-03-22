@@ -1,5 +1,5 @@
 ---
-title: "Create a recurring appointment series, instance, or exception (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create a recurring appointment series, instance, or exception (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Programmatically create a recurring appointment master (series),  individual recurring appointment instances, exceptions to those instances, or convert an appointment to a recurring appointment." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Create a recurring appointment series, instance, or exception
 
-When you create a recurring appointment master (series), Common Data Service for Apps creates individual appointment instances based on the specified recurrence information. You can also create individual recurring appointment instances and exceptions to those instances, and you can convert an appointment to a recurring appointment.  
+When you create a recurring appointment master (series), Common Data Service creates individual appointment instances based on the specified recurrence information. You can also create individual recurring appointment instances and exceptions to those instances, and you can convert an appointment to a recurring appointment.  
   
 <a name="bkmk_createseries"></a>   
 
@@ -61,7 +61,7 @@ When you create a recurring appointment master (series), Common Data Service for
 <a name="bkmk_convert"></a>   
 
 ## Convert an appointment to a recurring appointment  
- A recurring appointment is an appointment with recurrence information. You can convert an existing appointment in CDS for Apps to a recurring appointment by using <xref:Microsoft.Crm.Sdk.Messages.AddRecurrenceRequest>. When you convert an existing appointment to a recurring appointment, the data from the existing appointment is copied to a new recurring appointment master instance and the existing appointment is deleted.  
+ A recurring appointment is an appointment with recurrence information. You can convert an existing appointment in Common Data Service to a recurring appointment by using <xref:Microsoft.Crm.Sdk.Messages.AddRecurrenceRequest>. When you convert an existing appointment to a recurring appointment, the data from the existing appointment is copied to a new recurring appointment master instance and the existing appointment is deleted.  
   
 ### See also  
  [Recurring Appointment Entities](/dynamics365/customer-engagement/developer/recurring-appointment-entities)   

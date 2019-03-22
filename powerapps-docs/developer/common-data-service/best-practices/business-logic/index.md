@@ -1,6 +1,6 @@
 ---
-title: "Developers: Best practices and guidance regarding plug-in and workflow development for the Common Data Service for Apps | Microsoft Docs"
-description: Best practices and guidance regarding plug-in and workflow development for developers of the Common Data Service for Apps in PowerApps.
+title: "Developers: Best practices and guidance regarding plug-in and workflow development for the Common Data Service | Microsoft Docs"
+description: Best practices and guidance regarding plug-in and workflow development for developers of the Common Data Service in PowerApps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -21,9 +21,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Best practices and guidance regarding plug-in and workflow development for the Common Data Service for Apps
+# Best practices and guidance regarding plug-in and workflow development for the Common Data Service
 
-This list below contains all of the guidance and best practices regarding the plug-in and workflow development within the Common Data Service for Apps.
+This list below contains all of the guidance and best practices regarding the plug-in and workflow development within the Common Data Service.
 
 |Best Practice  |Description  |
 |---------|---------|

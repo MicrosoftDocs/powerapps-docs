@@ -1,5 +1,5 @@
 ---
-title: "Behavior of specialized update operations (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Behavior of specialized update operations (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes special behavior in plug-ins and workflows for update events due to deprecated messages." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018

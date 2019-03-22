@@ -1,5 +1,5 @@
 ---
-title: "MobileOfflineProfile Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "MobileOfflineProfile Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the MobileOfflineProfile entity."
 services: ''
 suite: powerapps

@@ -1,6 +1,6 @@
 ---
-title: "Impersonate another user using the Web API (Common Data Service for Apps)| Microsoft Docs"
-description: "Impersonation is used to execute business logic(code) on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Common Data Service for Apps using the Web API"
+title: "Impersonate another user using the Web API (Common Data Service)| Microsoft Docs"
+description: "Impersonation is used to execute business logic(code) on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. Read how you can impersonate another user in Common Data Service using the Web API"
 ms.custom: ""
 ms.date: 03/18/2019
 ms.reviewer: ""
@@ -34,7 +34,7 @@ There are times when your code will need to perform operations on behalf of anot
 
 ## Requirements for impersonation
 
-Impersonation is used to execute business logic (code) on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. This is necessary because the Common Data Service for Apps Web services can be called by various clients and services on behalf of a CDS for Apps user, for example, in a workflow or custom ISV solution. Impersonation involves two different user accounts: one user account (A) is used when executing code to perform some task on behalf of another user (B).  
+Impersonation is used to execute business logic (code) on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. This is necessary because the Common Data Service Web services can be called by various clients and services on behalf of a Common Data Service user, for example, in a workflow or custom ISV solution. Impersonation involves two different user accounts: one user account (A) is used when executing code to perform some task on behalf of another user (B).  
   
 User account (A) needs the `prvActOnBehalfOfAnotherUser` privilege, which is included in the Delegate security role. The actual set of privileges that is used to modify data is the intersection of the privileges that the Delegate role user possesses with that of the user who is being impersonated. In other words, user (A) is allowed to do something if and only if user (A) and the impersonated user (B) have the privilege necessary for the action.  
   

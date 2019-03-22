@@ -116,7 +116,7 @@ The following screenshot shows a portion of the default theme setup.
 ### Theme contrast  
  We recommend the following approach to providing contrast colors:  
   
--   Carefully choose the contrasting colors. The Common Data Service for Apps out-of-the-box default theme has the correct contrast ratios to ensure optimal usability. Use similar rations for your new themes.  
+-   Carefully choose the contrasting colors. The Common Data Service out-of-the-box default theme has the correct contrast ratios to ensure optimal usability. Use similar rations for your new themes.  
   
 -   For high contrast mode, use the default color settings.  
   

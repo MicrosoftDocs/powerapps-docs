@@ -58,7 +58,7 @@ If you don't have a license for PowerApps, you can [sign up for free](../signup-
 1. Near the left edge, click or tap **Save**. 
 
 ## Next steps
-In this quickstart, you created your own app based on a sample that uses fictitious data stored in your cloud account. For more help learning how to create an app, you can also automatically generate an app based on data in other sources such as the Common Data Service for Apps, SharePoint, or Excel.
+In this quickstart, you created your own app based on a sample that uses fictitious data stored in your cloud account. For more help learning how to create an app, you can also automatically generate an app based on data in other sources such as Common Data Service, SharePoint, or Excel.
 
 > [!div class="nextstepaction"]
 > [Generate an app](data-platform-create-app.md)

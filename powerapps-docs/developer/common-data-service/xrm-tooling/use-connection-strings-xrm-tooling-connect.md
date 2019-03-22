@@ -1,6 +1,6 @@
 ---
-title: "Use connection strings in XRM tooling to connect to Common Data Service for Apps (Common Data Service for Apps)| Microsoft Docs"
-description: "XRM tooling enables you to connect to your Common Data Service for Apps environment by using connection strings"
+title: "Use connection strings in XRM tooling to connect to Common Data Service (Common Data Service)| Microsoft Docs"
+description: "XRM tooling enables you to connect to your Common Data Service environment by using connection strings"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -21,9 +21,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use connection strings in XRM tooling to connect to Common Data Service for Apps
+# Use connection strings in XRM tooling to connect to Common Data Service
 
-With CDS for Apps, XRM tooling enables you to connect to your CDS for Apps environment by using connection strings. This is similar to the concept of connection strings used with SQL Server. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure CDS for Apps connections at deployment time, and not hard code in your application to connect to your CDS for Apps environment.  
+With Common Data Service, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with SQL Server. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
   
 <a name="Create"></a> 
 
@@ -51,7 +51,7 @@ CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionSt
 > [!NOTE]
 >  You’ll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
   
- After creating a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object, you can use the object to perform actions in CDS for Apps. More information: [Use XRM Tooling to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)  
+ After creating a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object, you can use the object to perform actions in Common Data Service. More information: [Use XRM Tooling to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)  
   
 <a name="Parameters"></a>
 
@@ -61,12 +61,12 @@ CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionSt
   
 |Parameter name|Description|  
 |--------------------|-----------------|  
-|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the CDS for Apps environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|  
+|`ServiceUri`, `Service Uri`, `Url`, or `Server`|Specifies the URL to the Common Data Service environment. The URL can use http or https protocol, and the port is optional. The default port is 80 for the http protocol and 443 for the https protocol. The server URL is typically in the format `https://`*`<organization-name>`*`.crm.dynamics.com`<br /><br /> The organization-name is required.|  
 |`Domain`|Specifies the domain that will verify user credentials.|  
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
-|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to CDS for Apps environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, or `Office365`.<br /><br /> -   `AD` and `IFD` are permitted for CDS for Apps on-premises environments only.<br />-   `OAuth` is permitted for CDS for Apps and on-premises environments.<br />-   `Office365` is permitted for CDS for Apps environments only.|  
+|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Common Data Service environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, or `Office365`.<br /><br /> -   `AD` and `IFD` are permitted for Common Data Service on-premises environments only.<br />-   `OAuth` is permitted for Common Data Service and on-premises environments.<br />-   `Office365` is permitted for Common Data Service environments only.|  
 |`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. Default value is `false` that indicates the existing connection be reused. If set to `true`, will force the system to create a unique connection.|  
 |`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
 |`RedirectUri` or `ReplyUrl`|Specifies the redirect URI of the application you registered in Azure Active Directory or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
@@ -122,7 +122,7 @@ The following examples show how you can use connection strings for connecting to
   LoginPrompt=Auto"/>  
 ```  
   
-<!-- ### OAuth using named account in CDS for Apps on-premises with UX to prompt for authentication  
+<!-- ### OAuth using named account in Common Data Service on-premises with UX to prompt for authentication  
   
 ```xml
 <add name="MyCRMServer" connectionString="AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com; Password=passcode;Url=https://contoso:8080/Test;AppId=<GUID>;RedirectUri=app://<GUID>;TokenCacheStorePath =c:\MyTokenCache;LoginPrompt=Auto"/>  
@@ -158,6 +158,6 @@ The following examples show how you can use connection strings for connecting to
 ### See also
 
 [Build Windows client applications using the XRM tools](build-windows-client-applications-xrm-tools.md)<br />
-[Use CrmServiceClient constructors to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
-[Use XRM Tooling to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)<br />
+[Use CrmServiceClient constructors to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)<br />
 <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>

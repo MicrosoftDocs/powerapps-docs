@@ -1,5 +1,5 @@
 ---
-title: "OrganizationUI Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "OrganizationUI Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the OrganizationUI entity."
 services: ''
 suite: powerapps

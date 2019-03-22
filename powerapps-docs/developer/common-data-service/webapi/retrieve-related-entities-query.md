@@ -1,5 +1,5 @@
 ---
-title: "Retrieve related entities with a query (Common Data Service for Apps)| Microsoft Docs"
+title: "Retrieve related entities with a query (Common Data Service)| Microsoft Docs"
 description: "ead how you can retrieve related entities by expanding the navigation properties."
 ms.custom: ""
 ms.date: 02/06/2019

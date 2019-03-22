@@ -49,7 +49,7 @@ The customizations.xml file is included within the compressed .zip file exported
   
 - VisualizationDataDescription.xsd  
   
-  These files are also installed on the on-premises [!INCLUDE[pn_dynamics_crm_online](../../includes/pn-dynamics-crm-online.md)] Common Data Service for Apps server at: `[Install Drive]\Program Files\Microsoft Dynamics CRM\Server\ApplicationFiles`  
+  These files are also installed on the on-premises [!INCLUDE[pn_dynamics_crm_online](../../includes/pn-dynamics-crm-online.md)] Common Data Service server at: `[Install Drive]\Program Files\Microsoft Dynamics CRM\Server\ApplicationFiles`  
   
 [!INCLUDE[cc_sdk_onpremises_note](../../includes/cc-sdk-onpremises-note.md)] CustomizationsSolution.xsd is the schema for the exported solution. It contains references to the other XSD files. All the files should be located in the same folder.  
   
@@ -78,7 +78,7 @@ The customizations.xml file is included within the compressed .zip file exported
   
 ### See also
 
-[When to Edit the Customizations File for Common Data Service for Apps](when-edit-customization-file.md)<br/> 
+[When to Edit the Customizations File for Common Data Service](when-edit-customization-file.md)<br/> 
 [Ribbon core schema](ribbon-core-schema.md)<br/>
 [Ribbon types schema](ribbon-types-schema.md)<br/>
 [Ribbon WSS schema](ribbon-wss-schema.md)<br/>

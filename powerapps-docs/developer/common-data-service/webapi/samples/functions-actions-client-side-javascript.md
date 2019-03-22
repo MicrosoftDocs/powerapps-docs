@@ -1,6 +1,6 @@
 ---
-title: "Web API Functions and Actions Sample (Client-side JavaScript) (Common Data Service for Apps)| Microsoft Docs"
-description: "This sample demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service for Apps Web API and client-side JavaScript"
+title: "Web API Functions and Actions Sample (Client-side JavaScript) (Common Data Service)| Microsoft Docs"
+description: "This sample demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service Web API and client-side JavaScript"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -22,7 +22,7 @@ search.app:
 ---
 # Web API Functions and Actions Sample (Client-side JavaScript)
 
-This sample demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service for Apps Web API using client-side JavaScript.  
+This sample demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service Web API using client-side JavaScript.  
   
 > [!NOTE]
 >  This sample implements the operations detailed in the [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md) and uses the common client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
@@ -39,14 +39,14 @@ This sample demonstrates how to perform bound and unbound functions and actions,
 
  To run this sample, the following is required:  
   
-- Access to CDS for Apps online or on-premises version 8.0 or higher.  
+- Access to Common Data Service online or on-premises version 8.0 or higher.  
 - A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.  
   
 <a name="bkmk_runsample"></a>
  
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824048) and download the Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the  WebAPIFunctionsandActions_1_0_0_0_managed.zip managed solution file. Import the managed solution into your CDS for Apps organization and view the configuration page of the solution to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824048) and download the Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the  WebAPIFunctionsandActions_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Common Data Service organization and view the configuration page of the solution to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 
@@ -711,7 +711,7 @@ Sdk.createAccountWithOpportunityToWin = function () {
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Use the Common Data Service Web API](../overview.md)<br />
 [Use Web API functions](../use-web-api-functions.md)<br />
 [Use Web API actions](../use-web-api-actions.md)<br />
 [Web API Samples](../web-api-samples.md)<br />

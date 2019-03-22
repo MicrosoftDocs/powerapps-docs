@@ -1,5 +1,5 @@
 ---
-title: "Authentication with Common Data Service for Apps web services (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Authentication with Common Data Service web services (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Introduces authentication options that depend on the software framework you use." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,9 +15,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Authentication with Common Data Service for Apps web services
+# Authentication with Common Data Service web services
 
-When you create client applications that use CDS for Apps web services you need to authenticate to gain access to data. 
+When you create client applications that use Common Data Service web services you need to authenticate to gain access to data. 
 How you authenticate depends on the software framework you use and which web service you want to connect with.
 
 ## .NET Framework Applications
@@ -37,7 +37,7 @@ OAuth is also required to support:
  - Use of client secrets to enable server-to-server authentication scenarios.
  - Cross-Origin Resource Sharing (CORS) to connect a Single Page Application (SPA)
 
-More information: [Use OAuth with Common Data Service for apps](authenticate-oauth.md)
+More information: [Use OAuth with Common Data Service](authenticate-oauth.md)
 
 ### Office 365
 
@@ -52,4 +52,4 @@ More information: [Authentication with .NET Framework applications](authenticate
 If you are using anything other than .NET Framework, you must authenticate using OAuth and you must use the OData RESTful 
 web services (Web API and OData Global Discovery Service).
 
-More information:  [Use OAuth with Common Data Service for apps](authenticate-oauth.md)
+More information:  [Use OAuth with Common Data Service](authenticate-oauth.md)

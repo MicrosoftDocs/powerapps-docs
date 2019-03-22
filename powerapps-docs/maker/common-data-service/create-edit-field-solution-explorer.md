@@ -1,5 +1,5 @@
 ---
-title: "Create and edit fields for Common Data Service for Apps using PowerApps solution explorer | MicrosoftDocs"
+title: "Create and edit fields for Common Data Service using PowerApps solution explorer | MicrosoftDocs"
 ms.custom: ""
 ms.date: 05/18/2018
 ms.reviewer: ""
@@ -19,13 +19,13 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit fields for Common Data Service for Apps using PowerApps solution explorer
+# Create and edit fields for Common Data Service using PowerApps solution explorer
 
-Solution explorer provides one way to Create and edit fields for Common Data Service for Apps.
+Solution explorer provides one way to Create and edit fields for Common Data Service.
 
 The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Create and edit fields for Common Data Service for Apps](create-edit-fields.md)
-- [Create and edit fields for Common Data Service for Apps using PowerApps portal](create-edit-field-portal.md)
+- [Create and edit fields for Common Data Service](create-edit-fields.md)
+- [Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)
   
 ## Open solution explorer
 
@@ -142,7 +142,7 @@ If you to choose **Use Existing Option Set** the designer will display a list of
 
 ![Configure a global option set](media/global-option-set-solution-explorer.png)
 
-You can also configure global option sets separately. More information: [Create and edit global option sets for Common Data Service for Apps (picklists)](create-edit-global-option-sets.md)
+You can also configure global option sets separately. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)
 
 > [!NOTE]
 > If you define every option set as a global option set your list of global option sets will grow and could be difficult to manage. If you know that the set of options will only be used in one place, use a local option set.
@@ -261,8 +261,8 @@ Any of the fields that provide direct text input have an IME Mode. The Input Met
 
 
 ### See also  
-[Create and edit fields for Common Data Service for Apps](create-edit-fields.md)<br />
-[Create and edit fields for Common Data Service for Apps using PowerApps portal](create-edit-field-portal.md)<br />
+[Create and edit fields for Common Data Service](create-edit-fields.md)<br />
+[Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)<br />
 [Types of fields and field data types](types-of-fields.md)<br />
 [Define calculated fields to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup fields that aggregate values](define-rollup-fields.md)<br />

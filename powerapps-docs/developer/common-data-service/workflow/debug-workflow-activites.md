@@ -1,5 +1,5 @@
 ---
-title: "Debug Workflow Activities (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Debug Workflow Activities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -33,7 +33,7 @@ From the PRT you can install the Plug-in profiler solution by clicking the **Ins
 
 This solution add the capability to capture the context that is passed to your workflow activity and enables replay that you can use to debug the logic in your code locally using Visual Studio.
 
-When the **Plug-in profiler** is installed for your CDS for Apps instance, you will see it in the PRT at the bottom of the list of **Registered Plugins & Custom Workflow Activities**.
+When the **Plug-in profiler** is installed for your Common Data Service instance, you will see it in the PRT at the bottom of the list of **Registered Plugins & Custom Workflow Activities**.
 
 ![Plug-in Profiler in the Plug-in Registration Tool](media/Plug-in-Profiler.png)
 
@@ -91,7 +91,7 @@ The copied profile workflow will also be changed to a background (asynchronous) 
 
 Save the copied profile workflow and activate it.
 
-In an app connected to your CDS for apps instance, or by using the web services, update the **Account Name** value of an account entity. This will capture an instance of the context passed to your custom workflow activity and persist it as a profile record in the system.
+In an app connected to your Common Data Service instance, or by using the web services, update the **Account Name** value of an account entity. This will capture an instance of the context passed to your custom workflow activity and persist it as a profile record in the system.
 
 > [!TIP]
 > If your workflow is asynchronous, make sure that it completes before moving on to the next step. Go to Settings > System Jobs and verify that the workflow succeeded.

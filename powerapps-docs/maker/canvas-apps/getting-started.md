@@ -17,13 +17,13 @@ search.app:
 # What are canvas apps in PowerApps?
 Design and build a business app from a canvas in Microsoft PowerApps without writing code in a traditional programming language such as C#. Design the app by dragging and dropping elements onto a canvas, just as you would design a slide in PowerPoint. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so that users can run it in a browser or on a mobile device, and embed your app so that users can run it in SharePoint, Power BI, or Teams.
 
-If you don't need a custom design and your data is in Common Data Service (CDS) for Apps, you can automatically generate a model-driven app from your business data and processes. This type of app can model forms, views, and other components, and the default UI automatically adjusts to phones, laptops, and other devices. For more information about this type of app, see [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md).
+If you don't need a custom design and your data is in Common Data Service, you can automatically generate a model-driven app from your business data and processes. This type of app can model forms, views, and other components, and the default UI automatically adjusts to phones, laptops, and other devices. For more information about this type of app, see [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md).
 
 ## Build an app
 To get started, automatically generate an app from one of these sources, among others:
 - [a sample app](open-and-run-a-sample-app.md)
 - [a template](get-started-test-drive.md)
-- [CDS for Apps](data-platform-create-app.md)
+- [Common Data Service](data-platform-create-app.md)
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
@@ -33,7 +33,7 @@ To get started, automatically generate an app from one of these sources, among o
 
 After you generate an app automatically, customize its default appearance and behavior based on your users' workflows. For example, change which types of data appear, how they're sorted, or even whether users specify a number by typing it or adjusting a slider. Add and customize [screens](add-screen-context-variables.md), [galleries](customize-layout-sharepoint.md), [forms](customize-forms-sharepoint.md), and other controls.
 
-After you've generated an app or two automatically and gained some experience with customization, create an app from scratch based on [CDS for Apps](data-platform-create-app-scratch.md), [Excel](get-started-create-from-blank.md), or another data source. By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
+After you've generated an app or two automatically and gained some experience with customization, create an app from scratch based on [Common Data Service](data-platform-create-app-scratch.md), [Excel](get-started-create-from-blank.md), or another data source. By working from the ground up, you gain flexibility in app design, flow, and controls, and you can incorporate a larger variety of data sources.
 
 ## Share and run an app
 When you finish the app and save it to the cloud, [share it with others](share-app.md) in your organization. Specify which users or groups can run the app and whether they can also customize and share it with additional people in the organization.

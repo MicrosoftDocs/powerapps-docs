@@ -32,7 +32,7 @@ At this time, you can't [delegate](../delegation-overview.md) **Choices**. If th
 
 Column references must be direct to the data source. For example, if the data source is **Accounts** and the lookup is **SLA**, the column reference would be **Accounts.SLA**. The reference can't pass through a function, a variable, or a control. Furthering this example, if **Accounts** is fed to a **Gallery** control, use the formula **Gallery.Selected.SLA** to reference the SLA for the selected account. However, this reference has passed through a control, so it can't be passed to the **Columns** function - you must still use **Accounts.SLA**.
 
-At this time, you can use lookup columns only with SharePoint and Common Data Service for Apps.
+At this time, you can use lookup columns only with SharePoint and Common Data Service.
 
 ## Syntax
 **Choices**( *column-reference* )
@@ -43,7 +43,7 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
 #### Choices for a lookup
 
-1. [Create a database](../../../administrator/create-database.md) in Common Data Service for Apps, and select the **Include sample apps and data** box.
+1. [Create a database](../../../administrator/create-database.md) in Common Data Service, and select the **Include sample apps and data** box.
 
     Many entities, such as **Accounts**, are created.
 

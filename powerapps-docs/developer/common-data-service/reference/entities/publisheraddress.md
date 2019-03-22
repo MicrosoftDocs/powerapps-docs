@@ -1,5 +1,5 @@
 ---
-title: "PublisherAddress Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "PublisherAddress Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the PublisherAddress entity."
 services: ''
 suite: powerapps
