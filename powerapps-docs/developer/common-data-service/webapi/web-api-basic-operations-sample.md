@@ -321,11 +321,11 @@ Prefer: return=representation
   
  **Console output**  
   
-    ```    
-    Contact 'Peter_Alt Cambel' updated:  
-            Annual income: 95000  
-            Job title: Senior Developer   
-    ```  
+```    
+Contact 'Peter_Alt Cambel' updated:  
+        Annual income: 95000  
+        Job title: Senior Developer   
+```  
   
 <a name="bkmk_section2"></a>  
  
