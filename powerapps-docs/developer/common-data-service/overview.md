@@ -30,7 +30,7 @@ PowerApps offers users, businesses, independent software vendors (ISVs), and sys
 > If you are already experienced with the Dynamics 365 for Sales, Marketing, or Customer Service apps, you will find that you will be able to apply your experience to customize and extend Common Data Service.
 
 > [!div class="nextstepaction"]
-> [Get started](get-started-Common Data Service-developers.md)
+> [Get started](get-started-cds-developers.md)
 
 ### See also
 
