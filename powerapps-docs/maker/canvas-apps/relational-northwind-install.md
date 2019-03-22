@@ -16,9 +16,11 @@ search.app:
 ---
 # Install Northwind Traders sample database and apps
 
-Northwind Traders is a fictitious company that sells products to customers.  It is a good example of a relational database that combines Orders, Products, Customers, Suppliers, and many other aspects of a small business.  This sample appeared with the first versions of Microsoft Access and is still available as an Access template today.
+Northwind Traders is a sample database and set of applications that illustrate how to build business apps over relational data in the Common Data Service.  It showcases the use of both Canvas and Model-driven apps, relationships between entities, and Option sets.       
 
-We have moved this database to the Common Data Service and PowerApps to illustrate relationships, Option sets, and other data concepts.  This article explains how to install this sample in your own environment and start exploring.
+Northwind Traders is the name of our fictitious that needs to manage Orders, Products, Customers, Suppliers, and many other aspects of a small business.  This sample appeared with the first versions of Microsoft Access and is still available as an Access template today.
+
+This article explains how to install this sample in your own environment and start exploring.  
 
 ## Environment
 
@@ -32,7 +34,9 @@ As this is a sample intended for educational purposes, you may want to create a 
 
 ## Solution
 
-This sample is provided as a Solution file.  
+This sample is provided as a [Solution](../../developer/common-data-service/introduction-solutions).  A solution file is a .zip file that contains the entity definitions, Option set definitions, business process definitions, Canvas and Model-driven apps, and any other pieces that are used together.
+
+To begin, download the Northwind Traders solution file to your local computer.
 
 To install the Solution, navigate to the Solutions on the 
 
