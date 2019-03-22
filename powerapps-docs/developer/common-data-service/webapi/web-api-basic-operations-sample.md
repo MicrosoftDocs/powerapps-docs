@@ -335,51 +335,51 @@ This section creates a new account instance named `Contoso, Ltd.` and associates
   
 1.  Create the Contoso, Ltd. account and set its primary contact attribute to the existing contact Peter Cambel.  The `@odata.bind` annotation indicates that an association is being created, here binding the `primarycontactid` single-valued navigation property to an existing contact, Peter Cambel.  
   
- **Request** 
+**Request** 
   
-    ```http  
-    POST http://[Organization URI]/api/data/v9.0/accounts HTTP/1.1  
-    Content-Type: application/json  
-    OData-MaxVersion: 4.0  
-    OData-Version: 4.0  
-    {  
-      "name": "Contoso Inc",  
-      "telephone1": "555-5555",  
-      "primarycontactid@odata.bind": "http://[Organization URI]/api/data/v9.0/contacts(60f77a42-5f0e-e611-80e0-00155da84c03)"  
-    }    
-    ```  
+```http  
+POST http://[Organization URI]/api/data/v9.0/accounts HTTP/1.1  
+Content-Type: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+{  
+  "name": "Contoso Inc",  
+  "telephone1": "555-5555",  
+  "primarycontactid@odata.bind": "http://[Organization URI]/api/data/v9.0/contacts(60f77a42-5f0e-e611-80e0-00155da84c03)"  
+}    
+```  
   
- **Response**  
+**Response**  
   
-    ```http    
-    HTTP/1.1 204 No Content  
-    OData-Version: 4.0  
-    OData-EntityId: http://[Organization URI]/api/data/v9.0/accounts(65f77a42-5f0e-e611-80e0-00155da84c03)    
-    ```  
+```http    
+HTTP/1.1 204 No Content  
+OData-Version: 4.0  
+OData-EntityId: http://[Organization URI]/api/data/v9.0/accounts(65f77a42-5f0e-e611-80e0-00155da84c03)    
+```  
   
- **Console output**  
+**Console output**  
   
-    ```  
-    Account 'Contoso Inc' created.  
-    ```  
+```  
+Account 'Contoso Inc' created.  
+```  
   
 2.  Retrieve the primary contact for the account Contoso, Ltd., again using `$expand`  with the  `primarycontactid` single-valued navigation property to access the associated <xref href="Microsoft.Dynamics.CRM.contact?text=contact EntityType" /> record.  
   
- **Request** 
+**Request** 
   
-    ```http    
-    GET http://[Organization URI]/api/data/v9.0/accounts(65f77a42-5f0e-e611-80e0-00155da84c03)?$select=name,&$expand=primarycontactid($select=fullname,jobtitle,annualincome) HTTP/1.1  
-    OData-MaxVersion: 4.0  
-    OData-Version: 4.0   
-    ```  
+```http    
+GET http://[Organization URI]/api/data/v9.0/accounts(65f77a42-5f0e-e611-80e0-00155da84c03)?$select=name,&$expand=primarycontactid($select=fullname,jobtitle,annualincome) HTTP/1.1  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0   
+```  
   
- **Response**  
+**Response**  
   
-    ```http    
-    HTTP/1.1 200 OK  
-    Content-Type: application/json; odata.metadata=minimal  
-    OData-Version: 4.0  
-    {   
+```http    
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0  
+{   
        "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,primarycontactid(fullname,jobtitle,annualincome))/$entity",  
        "@odata.etag":"W/\"628886\"",  
        "name":"Contoso Inc",  
@@ -391,17 +391,17 @@ This section creates a new account instance named `Contoso, Ltd.` and associates
           "annualincome":95000.0000,  
           "_transactioncurrencyid_value":"0d4ed62e-95f7-e511-80d1-00155da84c03",  
           "contactid":"60f77a42-5f0e-e611-80e0-00155da84c03"  
-       }  
-    }    
-    ```  
+     }  
+}    
+```  
   
  **Console output**  
   
-    ```    
-    Account 'Contoso Inc' has primary contact 'Peter Cambel':  
-         Job title: Senior Developer  
-         Income: 95000    
-    ```  
+ ```    
+ Account 'Contoso Inc' has primary contact 'Peter Cambel':  
+     Job title: Senior Developer  
+     Income: 95000    
+ ```  
   
 <a name="bkmk_section3"></a>  
  
@@ -557,21 +557,21 @@ OData-Version: 4.0
 **Console output**  
   
 ```    
-    Contact 'Susie Curtis' has the following assigned tasks:  
-    Subject: Sign invoice,  
-            Description: Invoice #12321  
-            Start: 4/19/2016  
-            End: 4/19/2016  
+Contact 'Susie Curtis' has the following assigned tasks:  
+Subject: Sign invoice,  
+        Description: Invoice #12321  
+        Start: 4/19/2016  
+        End: 4/19/2016  
   
-    Subject: Setup new display,  
-            Description: Theme is - Spring is in the air  
-            Start: 4/20/2016  
-            End: 4/20/2016  
+Subject: Setup new display,  
+        Description: Theme is - Spring is in the air  
+        Start: 4/20/2016  
+        End: 4/20/2016  
   
-    Subject: Conduct training  
-            Description: Train team on making our new blended coffee,  
-            Start: 6/1/2016  
-            End: 6/1/2016    
+Subject: Conduct training  
+        Description: Train team on making our new blended coffee,  
+        Start: 6/1/2016  
+        End: 6/1/2016    
 ```  
   
 <a name="bkmk_section4"></a>
@@ -644,10 +644,10 @@ OData-Version: 4.0
  **Request** 
   
 ```http    
-    DELETE http://[Organization URI]/api/data/v9.0/accounts(6af77a42-5f0e-e611-80e0-00155da84c03)/contact_customer_accounts/$ref?$id=http://[Organization URI]/api/data/v9.0/contacts(60f77a42-5f0e-e611-80e0-00155da84c03) HTTP/1.1  
-    Content-Type: application/json  
-    OData-MaxVersion: 4.0  
-    OData-Version: 4.0    
+DELETE http://[Organization URI]/api/data/v9.0/accounts(6af77a42-5f0e-e611-80e0-00155da84c03)/contact_customer_accounts/$ref?$id=http://[Organization URI]/api/data/v9.0/contacts(60f77a42-5f0e-e611-80e0-00155da84c03) HTTP/1.1  
+Content-Type: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0    
 ```  
   
 **Response**  
