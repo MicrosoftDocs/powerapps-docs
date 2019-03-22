@@ -20,7 +20,7 @@ search.app:
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/web-resources -->
 
 
-Web resources are *virtual files* that are stored in Common Data Services for Apps database and that you can retrieve by using a unique URL address.  
+Web resources are *virtual files* that are stored in the Common Data Service database and that you can retrieve by using a unique URL address.  
   
 <a name="BKMK_CapabilitiesOfWebResources"></a>   
 ## Capabilities of web resources  
