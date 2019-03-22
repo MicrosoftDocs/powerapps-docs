@@ -110,18 +110,18 @@ $webresource:<name of Web Resource>
  The following sample shows the style of URL you can use to view web resources.  
   
 ```  
-<Common Data Service URL>/WebResources/<name of web resource>  
+<Common Data Service Environment URL>/WebResources/<name of web resource>  
 ```  
   
  The application will process this URL and return the file that contains the latest version of the web resource. This URL will look like this:  
   
 ```  
-<Common Data Service URL>/%7B<version value>%7D/WebResources/<name of web resource>  
+<Common Data Service Environment URL>/%7B<version value>%7D/WebResources/<name of web resource>  
 ```  
   
  The version value is updated when you publish customizations and ensures that the browser uses the latest cached version of the web resource. Because of this, use a relative path to a web resource, the Xrm.Navigation.[openWebResource](clientapi/reference/Xrm-Navigation/openWebResource.md) function, or the [$webresource Directive](web-resources.md#BKMK_WebResourceDirective) (when possible) because the version value will automatically be included. For large web resources there can be significant performance implications if you don’t use the cached version of the file.  
   
- The following sample shows a URL for Common Data Service, where `MyOrganization` is the name of your organization, and `new_/test/test.htm` is the name of the web resource:  
+ The following sample shows a URL for Common Data Service, where `MyOrganization` is the name of your Common Data Service Environment, and `new_/test/test.htm` is the name of the web resource:  
   
 ```  
 https://MyOrganization.crm.dynamics.com/WebResources/new_/test/test.htm  
