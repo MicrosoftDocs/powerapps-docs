@@ -10,8 +10,6 @@ ms.author: "nabuthuk"
 ---
 # Debugging Custom Controls
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Once you are done implementing your custom control logic, you can use the following command to start the debugging process
 `npm start`
 
@@ -20,7 +18,7 @@ Once you are done implementing your custom control logic, you can use the follow
 > Today you can only visualize your field control, but dataset support is coming soon.
 
 > [!div class="mx-imgBorder"]
-> ![local-host](../media/local-host.png "local host")
+> ![local-host](media/local-host.png "local host")
 
 As show in the image above, the browse window will open with 3 sections. Your control will be rendered in the left pane while the right pane consists of **Inputs** and **Outputs** sections
 
@@ -38,8 +36,8 @@ For example, on **Microsoft Edge**,
 - Click on your control
 - On top bar, go to **Debugger**, and then start searching for the control name described in the Manifest file in the search bar. For example, type your control name like `Hello World Control`.
 
-> [!div class="mx-imgBorder"]
-> ![debug-control](../media/debug-control.png "Debug control")
+     > [!div class="mx-imgBorder"]
+     > ![debug-control](media/debug-control.png "Debug control")
 
 > [!NOTE]
 > It is always a good practice to set breakpoints on the control's life cycle methods like `init` and `updateView`
@@ -47,10 +45,10 @@ For example, on **Microsoft Edge**,
 You can also interact with the control locally in real time and observe elements in the DOM by setting a breakpoint in the sources tab as follows
 
 > [!div class="mx-imgBorder"]
-> ![local-host](../media/local-host.png "local host")
+> ![local-host](media/local-host.png "local host")
 
 > [!div class="mx-imgBorder"]
-> ![debug-control](../media/debug-control1.png "Debug control 1")
+> ![debug-control](media/debug-control1.png "Debug control 1")
 
 ## Fiddler AutoResponder
 

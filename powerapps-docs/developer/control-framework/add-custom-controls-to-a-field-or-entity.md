@@ -60,5 +60,6 @@ Following the steps in this procedure will change the default label and text box
 
  Open a record that includes the field with the custom control, such as the Opportunity form from the previous example, and view how the field is changed. The field is now rendered as a slider control instead of the text field.  
  
-> [!div class="nextstepaction"]
-> [Debug controls](debugging-custom-controls.md)
+### See also
+
+[Debug controls](debugging-custom-controls.md)

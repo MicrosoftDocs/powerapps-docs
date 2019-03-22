@@ -153,14 +153,12 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 ```
 
 > [!NOTE]
-> Composite fields are not yet supported by PCF, so you will not be able to bind this control to the out of the box latitude and longitude address fields. You will need to bind the custom control to different floating-point field.
-
-## Overview
+> Composite fields are not yet supported by PowerApps Component Framework, so you will not be able to bind this control to the out of the box latitude and longitude address fields. You will need to bind the custom control to different floating-point field.
 
 This sample control renders an `IFRAME` which displays `Bing Maps URL`. The control is bound to two floating point fields on the form, which are passed as parameters to the control and injected into the `IFRAME URL` to update the Bing Map to the latitude and longitude of the provided inputs.  
 
 Update the `Manifest` file to include binding to two additional fields on the form.  
-This change informs the PowerApps Component Framework (PCF) that these bound fields need to be passed to the control during initialization and whenever one of the values is updated.
+This change informs the PowerApps Component Framework that these bound fields need to be passed to the control during initialization and whenever one of the values is updated.
   
 ```xml
 
@@ -178,6 +176,7 @@ Additional bound properties may be required or not. This will be enforced during
         longitudeValue: ControlFramework.PropertyTypes.NumberProperty;  
     }  
  ```
+
 The initial rendering generates an `IFRAME` element and appends it to the controls container. This `IFRAME` is used to display the Bing Map. The URL of the `IFRAME` is set to a `Bing Map URL` and includes the bound fields (latitudeValue and longitudeValue) in the URL to center the map at the provided location. 
 
 The [updateView](../reference/control/updateview.md) method is invoked whenever one of these fields are updated on the form. This method updates the URL of the Bing Map IFRAME to use the new latitude and longitude values passed to the control. 

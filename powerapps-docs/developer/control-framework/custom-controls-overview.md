@@ -11,8 +11,6 @@ ms.author: "nabuthuk"
 
 # What are custom controls
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 Custom controls are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
 Custom controls created using the **PowerApps Component Framework** enables a developer to add custom visualization and logic for various UI elements. You can view custom controls in the solution explorer, but there is no way to add or edit them in the application.
@@ -24,9 +22,9 @@ The `CustomControl` entity has the following important attributes:
 
 |Attribute|Description|
 |---|---|
-|Manifest|An XML document describing application metadata about the control|
-|Name | The name of the control described in the manifest|
-|Version |The version number of the control described in the manifest|
+|Manifest|An XML document describing application metadata about the control.|
+|Name | The name of the control described in the manifest.|
+|Version |The version number of the control described in the manifest.|
 
 The `CustomControlResource` entity is related to the `CustomControl` entity to provide details about the resources used by the control. The `CustomControlResource.WebResourceId` attribute contains the value of the `WebResource.WebResourceId` for the `WebResource` entity record that will contain the definition of the resource used by the custom control.
 
@@ -41,7 +39,7 @@ Manifest is the metadata file that defines a control. It is an XML document that
   - One of them must be a JavaScript web resource. This JavaScript must include a function that will instantiate an object. This implements an interface that exposes methods that are required for the control to work. This is called the control implementation library.
 - The name of a JavaScript function in the control implementation library that will return an object that applies the required control interface.
 
-When someone configures a control in the application, the data in the manifest will filter out available controls so that only valid controls for the context are available for configuration.The properties defined in the manifest for a control are rendered as configuration fields so that the person configuring the control can specify values. These property values are then available to your control function at run time.More information: [Manifest file reference](manifest-schema-reference/index.md)
+When someone configures a control in the application, the data in the manifest will filter out available controls so that only valid controls for the context are available for configuration. The properties defined in the manifest for a control are rendered as configuration fields so that the person configuring the control can specify values. These property values are then available to your control function at run time. More information: [Manifest file reference](manifest-schema-reference/index.md)
 
 ## Control implementation library
 
@@ -69,10 +67,10 @@ controlObj.init(context,notifyOutputChanged,state,container);
 
 |Parameter|Description|
 |---|---|
-|context| Contains all the information about how the control is configured and all the parameters that can be used within the custom control. For example, the `context.parameters.["property name from manifest"]` can be used to access an input property.|
+|context| Contains all the information about how the control is configured and all the parameters that can be used within the control. For example, the `context.parameters.["property name from manifest"]` can be used to access the input property.|
 |notifyOutputChanged |Function that alerts the framework that the control has new outputs ready to be retrieved asynchronously. You must implement this within the [init](reference/control/init.md) function.|
 |state|Contains control data from the previous page load in the current session.|
-|container|An HTML div element to which you will append the HTML elements for the UI that defines your control. To display the value in your UI, you must get the data from the `context.parameters.controlValue object`. You must implement this in the [init](reference/control/init.md) function.|
+|container|An HTML div element to which you will append the HTML elements for the UI that defines your control. To display the value in the UI, you must get the data from `context.parameters.controlValue object`. You must implement this in the [init](reference/control/init.md) function.|
 
 ### User changes data
 

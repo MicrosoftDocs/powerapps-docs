@@ -14,7 +14,7 @@ This sample control shows how to bind data with PowerApps Component Framework, a
 
 This control renders as a textbox with a `Increment` button in runtime. The text box shows the current value and the `Increment` button is clickable. Whenever you click on the button, the value within the textbox will be increased by 1. The increment value can be changed to any number you wish.
 
-To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file and them implement the custom logic in **JavaScript** or **TypeScript**
+To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file and them implement the custom logic in TypeScript.
 
 > [!div class="mx-imgBorder"]
 > ![Increment Control](../media/increment-control.png "Increment Control")
@@ -258,7 +258,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 </root>
 ```
 
-When you click on the button, the value in the text box will be increased by 1. The updated value will flow to PowerApps Component Framework through `notifyOutputChanged`. 
+When you click on the button, the value in the text box will be increased by 1. The updated value will flow to PowerApps Component Framework through `notifyOutputChanged`.
 
 > [!NOTE]
 > You can change the increment value when you  are configuring the control to the field on the form.

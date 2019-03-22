@@ -12,7 +12,7 @@ ms.author: "nabuthuk"
 
 This sample control changes the user experience of interacting with numeric types on the form. Instead of keying in the numbers, the linear input control provides a linear slider using which the value of the attribute can be set on the form.  
 
-To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file and them implement the custom logic in **JavaScript** or **TypeScript**
+To implement this control, first you need to define the [Manifest](../manifest-schema-reference/manifest.md)file and them implement the custom logic in TypeScript
 
 > [!div class="mx-imgBorder"]
 > ![Linear Input Control](../media/linear-input-control.png "Linear Input Control")
@@ -227,11 +227,11 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
 In this sample, a [type -group](../manifest-schema-reference/type-group.md) is defined and named it as `numbers` which includes decimal, whole, floating and currency value types into that group in the manifest. This group  is used to bind the control property.
 
-An input element of type `range` with `min` and `max` value set to 1 and 1000, respectively is created. A label element is created which shows the value that is relative to the position of the slider. Attach a function `refreshData` to the eventlistener on input of the control. 
+An input element of type `range` with `min` and `max` value set to 1 and 1000, respectively is created. A label element is created which shows the value that is relative to the position of the slider. Attach a function `refreshData` to the eventlistener on input of the control.
 
-Create a local variable for saving the [context](../reference/context.md) and `notifyOutputChanged`. Assign the context and notifyOutputChanged from the parameters that are passed as part of the init function. 
+Create a local variable for saving the [context](../reference/context.md) and `notifyOutputChanged`. Assign the context and notifyOutputChanged from the parameters that are passed as part of the init function.
 
-Implement the logic for the `refreshData` function. As you can see in the sample, we take the value from the `inputElement` and set the value of the control, `innerHTML` property of the `labelElement` and then call the `notifyOutputChanged` so that the changes are cascaded up above the framework layer. 
+Implement the logic for the `refreshData` function. As you can see in the sample, we take the value from the `inputElement` and set the value of the control, `innerHTML` property of the `labelElement` and then call the `notifyOutputChanged` so that the changes are cascaded up above the framework layer.
 
 ```TypeScript
 public refreshData(context: ControlFramework.IPropBag<InputsOutputs.IInputBag>,) 

@@ -19,9 +19,11 @@ Each custom control is comprised of the following key components:
 
 ## Creating a new control project
 
-1. Open **PowerShell** or command window 
-2. Create a new folder for the control project using the command `mkdir LinearControl`.
-3. `cd` into the new directory and type the command `cd LinearControl` 
+To create a new project, follow the steps below:
+
+1. Open PowerShell or command window 
+2. Create a new folder for the project using the command `mkdir LinearControl`.
+3. `cd` into the new directory and run the command `cd LinearControl` 
 4. Create the control project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
 5. Install the project build tools using the command `npm install` 
 
@@ -31,36 +33,36 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
 
 1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial control property called `sampleProperty`.
 
-```XML
-<property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" /> 
- ```
+    ```XML
+    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" /> 
+    ```
 
 2. Rename the `sampleProperty` to the name of your choice and change the property type as shown below
 
-```XML
-<property name="sliderValue" display-name-key=" sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
-```
+    ```XML
+    <property name="sliderValue" display-name-key=" sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
+    ```
 
 3. The [of-type-group]() attribute references a group of allowable numbers. Add the following [type-group]() element as a sibling to the <property> element in the manifest.
 
-```XML
-<type-group name="numbers"> 
+    ```XML
+    <type-group name="numbers"> 
       <type>Whole.None</type> 
       <type>Currency</type> 
       <type>FP</type> 
       <type>Decimal</type> 
-</type-group> 
-```
+     </type-group> 
+    ```
 
 4. The type-group specifies the control value and can contain whole, currency, floating point, or decimal values. 
 5. Save the changes to the `ControlManifest.Input.xml` file.
 6. Build the control project using the command `npm run build`.
 
-The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your control will have access to in our **Typescript** source code.
+The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your control will have access to Typescript source code.
 
 ## Implementing control logic
 
-Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the **PowerApps Component Framework**. 
+Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the PowerApps Component Framework. 
 
 1. Open the `index.ts` file in code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following
@@ -157,9 +159,10 @@ this.inputElement.removeEventListener("input", this._refreshData);
 
 3. Rebuild the project using the command `npm run build` 
  
-4. The control is compiled into the `/out/controls/TSLinearInputControl` folder. The build artifacts include
+4. The control is compiled into the `/out/controls/TSLinearInputControl` folder. The build artifacts includes:
+
    - bundle.js – Bundled control source code 
-   - ControlManifest.xml – Actual control manifest file that will be uploaded to Common Data Service for Apps organization.
+   - ControlManifest.xml – Actual control manifest file that will be uploaded to Common Data Service organization.
 
 ## Styling custom control
 
@@ -167,84 +170,84 @@ The linear input control’s `init` method creates an input element and sets the
 
 1. Edit the `ControlManifest.Input.xml` file to include an additional `css` resource inside the <resources> element
  
-```XML
-    <resources> 
+    ```XML
+      <resources> 
       <code path="index.ts" order="1"/> 
       <css path="css/TS_LinearInputControl.css" order="1"/> 
     </resources> 
-```
+     ```
 
 2. Create a new `css` sub folder under the `TSLinearInputControl` folder. 
 3. Create a new `TS_LinearInputControl.css` file inside the `css` sub folder. 
 4. Add the following style content to `TS_LinearInputControl.css` file
 
-```CSS
-.SampleNamespace\.TSLinearInputControl input[type=range].linearslider {    
-margin: 1px 0;    
-background:transparent; 
--webkit-appearance:none; 
-width:100%;padding:0; 
-height:24px; 
--webkit-tap-highlight-color:transparent 
-} 
-.SampleNamespace\.TSLinearInputControl input[type=range].linearslider:focus { 
-outline: none; 
-} 
-.SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-webkit-slider-runnable-track {    
-background: #666; 
-height:2px; 
-cursor:pointer 
-}    
-.SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-webkit-slider-thumb {    
-background: #666;    
-border:0 solid #f00; 
-height:24px; 
-width:10px; 
-border-radius:48px; 
-cursor:pointer; 
-opacity:1; 
--webkit-appearance:none; 
-margin-top:-12px 
-}     
-.SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-moz-range-track {    
-background: #666;    
-height:2px; 
-cursor:pointer   
-}    
-.SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-moz-range-thumb {    
-background: #666;    
-border:0 solid #f00; 
-height:24px; 
-width:10px; 
-border-radius:48px; 
-cursor:pointer; 
-opacity:1; 
--webkit-appearance:none; 
-margin-top:-12px 
-}    
-.SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-ms-track {    
-background: #666;    
-height:2px; 
-cursor:pointer   
-}     
-.SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-ms-thumb {    
-background: #666;    
-border:0 solid #f00; 
-height:24px; 
-width:10px; 
-border-radius:48px; 
-cursor:pointer; 
-opacity:1; 
--webkit-appearance:none; 
-} 
-```
+   ```CSS
+    .SampleNamespace\.TSLinearInputControl input[type=range].linearslider {    
+    margin: 1px 0;    
+    background:transparent; 
+   -webkit-appearance:none; 
+    width:100%;padding:0; 
+    height:24px; 
+   -webkit-tap-highlight-color:transparent 
+    } 
+    .SampleNamespace\.TSLinearInputControl input[type=range].linearslider:focus { 
+     outline: none; 
+     } 
+    .SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-webkit-slider-runnable-track {    
+     background: #666; 
+     height:2px; 
+     cursor:pointer 
+     }    
+     .SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-webkit-slider-thumb {    
+     background: #666;    
+     border:0 solid #f00; 
+     height:24px; 
+     width:10px; 
+     border-radius:48px; 
+     cursor:pointer; 
+     opacity:1; 
+    -webkit-appearance:none; 
+     margin-top:-12px 
+     }     
+    .SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-moz-range-track {    
+     background: #666;    
+     height:2px; 
+     cursor:pointer   
+     }    
+     .SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-moz-range-thumb {    
+     background: #666;    
+     border:0 solid #f00; 
+     height:24px; 
+     width:10px; 
+     border-radius:48px; 
+    cursor:pointer; 
+    opacity:1; 
+   -webkit-appearance:none; 
+   margin-top:-12px 
+   }    
+   .SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-ms-track {    
+    background: #666;    
+    height:2px; 
+    cursor:pointer   
+     }     
+    .SampleNamespace\.TSLinearInputControl input[type=range].linearslider::-ms-thumb {    
+    background: #666;    
+    border:0 solid #f00; 
+    height:24px; 
+    width:10px; 
+    border-radius:48px; 
+   cursor:pointer; 
+   opacity:1; 
+   -webkit-appearance:none; 
+    } 
+   ```
 
 5. Save the `TS_LinearInputControl.css` 
 6. Rebuild the project using the command `npm run build `.
 7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
 
+### See also
 
-> [!div class="nextstepaction"]
-> [Update existing PCF controls](updating-existing-controls.md)<br />
-> [Import controls](import-custom-controls.md)<br />
-> [Debug controls](debugging-custom-controls.md)
+[Update existing PCF controls](updating-existing-controls.md)<br />
+[Import controls](import-custom-controls.md)<br />
+[Debug controls](debugging-custom-controls.md)

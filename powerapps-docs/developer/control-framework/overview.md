@@ -15,12 +15,12 @@ ms.author: nabuthuk
 
 # PowerApps Component Framework
 
-Use the **PowerApps Component Framework (PCF)** to create custom controls in model-driven apps to provide enhanced user experience for users to view and work with data in forms, views, and dashboards. For example:
+Use the **PowerApps Component Framework (PCF)** to create custom controls in Common Data Service to provide enhanced user experience for the users to view and work with data in forms, views and dashboards. For example:
 
 - Replace a field that displays a numeric text value with a `dial` or `slider` control.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
-Majority of the controls found Common Data Service that uses the **Unified Interface** are implemented using **PowerApps Component Framework**. Custom controls are metadata driven, configurable, reusable, solution aware and responsive. As a developer, you will implement an interface and the application will take care of the rest.
+Majority of the controls found in Common Data Service that uses the **Unified Interface** are implemented using the **PowerApps Component Framework**. Custom controls are metadata driven, configurable, reusable, solution aware and responsive. As a developer, you will implement an interface and the application will take care of the rest.
 
 > [!NOTE]
 > Custom controls are supported only on Unified Interface.

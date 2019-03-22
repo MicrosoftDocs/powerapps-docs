@@ -55,9 +55,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 	// 'RemoveButton' css class name
 	const RemoveButtonClassName = "RemoveButton";
-
-
-	export class TSImageUploadControl implements ControlFramework.StandardControl<IInputs, IOutputs> 
+export class TSImageUploadControl implements ControlFramework.StandardControl<IInputs, IOutputs> 
 	{
 		// Value of the field is stored and used inside the control 
 		private _value: string | null;
@@ -421,4 +419,4 @@ The `successCallback` will be triggered and the resource content will be injecte
 The `device.pickFile` method opens a dialog box to select files from your computer (web client) or mobile device (mobile clients). For desktop, it opens the file explorer, for mobile client, it opens the library of the photo. When you click on the `upload` button, the device API `pickFile` will be triggered and user will pick up the file. Once file is successfully picked, the file's filename, file content will be injected in the `successCallback`. 
 
 > [!NOTE]
-> If the same form/entity is also used on legacy web client, then the field will show out-of-box text control on legacy web client, where there might have UX issues.  To make it hidden on legacy web client, we could uncheck the ‘Visibility’ checkbox and check ‘Hide Default Control’ checkbox together.   
+> If the same form or entity is used on legacy web client, then the field will show out-of-box text control on legacy web client, where there might have UX issues.  To make it hidden on legacy web client, we could uncheck the **Visibility** checkbox and check **Hide Default Control** checkbox together. 

@@ -430,7 +430,7 @@ On click of the load more button, we load the next page of records and append it
  
 The ***toggleLoadMoreButtonWhenNeeded*** function takes the input as the data set and checks if the data set has next page and if the button is hidden/visible and respectively hides/shows the button.  
  
-The ***onRowClick*** function attaches the context of the record using its GUID and invokes the [openForm](../reference/navigation/openform.md) method of the NavigationAPI to open that respective record. This method is bound to each tile that gets generated as part of the ***createGridBody*** method. 
+The ***onRowClick*** function attaches the context of the record using its Guid and invokes the [openForm](../reference/navigation/openform.md) method of the NavigationAPI to open that respective record. This method is bound to each tile that gets generated as part of the ***createGridBody*** method. 
  
 The ***getSortedColumnsOnView*** method returns the list of columns based on the defined order on the view. 
 
