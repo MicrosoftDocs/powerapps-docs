@@ -21,7 +21,7 @@ search.app:
 ---
 # Create and edit global option sets for Common Data Service using solution explorer
 
-Solution explorer provides one way to Create and edit global option sets for Common Data Service using Common Data Service.
+Solution explorer provides one way to Create and edit global option sets for Common Data Service.
 
 The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit global option sets for Common Data Service](create-edit-global-option-sets.md)
