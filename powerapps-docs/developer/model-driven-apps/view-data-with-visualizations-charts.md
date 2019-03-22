@@ -20,7 +20,7 @@ search.app:
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/view-data-with-visualizations-charts -->
 
 
-Visualizations let you see your business data graphically. A visualization is attached to an entity in Common Data Services. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard. More information: [Analyze Data with Dashboards](analyze-data-with-dashboards.md)  
+Visualizations let you see your business data graphically. A visualization is attached to an entity in Common Data Service. You can attach multiple visualizations to an entity, however, only one visualization can be displayed at a time along-side a grid. You can view multiple visualizations at the same time by using a dashboard. More information: [Analyze Data with Dashboards](analyze-data-with-dashboards.md)  
   
  You can use a chart or a web resource as a visualization in Common Data Service. For charts, you can use the chart designer in Model-driven Apps. However, to use a web resource in a visualization, you must either use the SDK or import a custom visualization XML into Model-driven Apps.
   
