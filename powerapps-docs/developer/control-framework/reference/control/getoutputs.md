@@ -38,8 +38,4 @@ MyControl.prototype.getOutputs = function () {
 };
 ```
 
-### Related topics
 
-[Control](../control.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

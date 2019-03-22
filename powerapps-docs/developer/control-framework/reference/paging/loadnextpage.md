@@ -20,8 +20,3 @@ ms.assetid: e119c1e1-e35f-47cf-9437-e7376657bbc0
 
 `loadNextPage()`
 
-### Related topics
-
-[Paging](../paging.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

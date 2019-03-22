@@ -31,8 +31,4 @@ ms.assetid: 6a334af7-ca5b-449c-b90f-0901824654d2
 
 Type: `Promise`
 
-### Related topics
 
-[Utility](../utility.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

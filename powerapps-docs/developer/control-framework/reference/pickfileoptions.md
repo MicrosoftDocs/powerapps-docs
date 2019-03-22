@@ -32,7 +32,4 @@ Maximum size of the file(s) ro be selected.
 
 **Type**: `number`
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

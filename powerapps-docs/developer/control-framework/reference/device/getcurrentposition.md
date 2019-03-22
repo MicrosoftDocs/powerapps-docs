@@ -30,6 +30,4 @@ See [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global
 
 ### Related topics
 
-[Device](../device.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />
+

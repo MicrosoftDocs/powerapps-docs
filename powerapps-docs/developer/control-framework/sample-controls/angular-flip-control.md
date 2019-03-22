@@ -10,7 +10,7 @@ ms.author: "nabuthuk"
 ---
 # Implementing Flip Control
 
-This sample shows how to use third-party libraries to create controls in **PowerApps Control Framework**.  
+This sample shows how to use third-party libraries to create controls in **PowerApps Component Framework**.  
 
 The control is based on angular.js, angular-ui, angular-animate, angular-sanitize, bootstrap for sampling purpose only. The code may not reveal the best practices for the mentioned third-party libraries.
 
@@ -46,13 +46,13 @@ The control is based on angular.js, angular-ui, angular-animate, angular-sanitiz
 
 ## Overview
 
-This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between PowerApps Control Framework, control model and third party inner data model in bi-direction. 
+This sample provides examples on how to add dependencies for third-party libraries, showcasing how to perform data-binding between PowerApps Component Framework, control model and third party inner data model in bi-direction. 
 
 The flip control sample consists of a label and a button. When you click on the button, the text on the label will toggle. 
 
 - When the control is loaded, the label shows the text based on the bind attribute value. The `context.parameters.[property_name].attributes` contains the associated metadata. 
 - For TwoOptions, `context.parameters.[property_name].Options` will include both true and false value option. 
-- Clicking on the Flip button, the label will update value using **notifyOutputEvents** method [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to PowerApps Control Framework. 
+- Clicking on the Flip button, the label will update value using **notifyOutputEvents** method [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to PowerApps Component Framework. 
 - ClientAPI updates the bind attribute value, the updated value will flow to the control label. You could also use ClientAPI to update an attribute value and it will trigger control’s [updateView](../reference/control/updateview.md). Then control could then update third-party model and the label will be updated. 
 
 
@@ -249,9 +249,3 @@ SampleNamespace.JSAngularJSFlipControl.prototype.destroy = function () {
 
 };
 ```
-
-### Related topics
-
-[PowerApps Control Framework Manifest Schema Reference](../manifest-schema-reference/index.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

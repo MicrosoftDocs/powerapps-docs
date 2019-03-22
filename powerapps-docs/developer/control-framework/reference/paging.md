@@ -43,7 +43,4 @@ Whether the result set can be paged backwards.
 |[reset](paging/reset.md)|[!INCLUDE [reset-description](paging/includes/reset-description.md)]|
 |[setPageSize](paging/setpagesize.md)|[!INCLUDE [setpagesize-description](paging/includes/setpagesize-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

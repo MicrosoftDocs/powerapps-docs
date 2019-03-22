@@ -14,13 +14,11 @@ ms.assetid: 058c0319-4d46-40fc-a4f6-e9f722a6b3c7
 
 # Formatting
 
-<!-- IFormatting -->
-
 [!INCLUDE [formatting-description](includes/formatting-description.md)]
 
 ## Methods
 
-|Method | Description | 
+|Method | Description |
 | ------------- |-------------|
 |[formatCurrency](formatting/formatcurrency.md)|[!INCLUDE [formatcurrency-description](formatting/includes/formatcurrency-description.md)]|
 |[formatDateAsFilterStringInUTC](formatting/formatdateasfilterstringinutc.md)|[!INCLUDE [formatdateasfilterstringinutc-description](formatting/includes/formatdateasfilterstringinutc-description.md)]|
@@ -34,7 +32,4 @@ ms.assetid: 058c0319-4d46-40fc-a4f6-e9f722a6b3c7
 |[formatTime](formatting/formattime.md)|[!INCLUDE [formattime-description](formatting/includes/formattime-description.md)]|
 |[getWeekOfYear](formatting/getweekofyear.md)|[!INCLUDE [getweekofyear-description](formatting/includes/getweekofyear-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

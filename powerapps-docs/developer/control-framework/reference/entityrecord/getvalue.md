@@ -30,8 +30,4 @@ ms.assetid: 5928055f-784f-496d-bd96-6921d9574d2f
 
 Type: `string`
 
-### Related topics
 
-[Entity Record](../entityrecord.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

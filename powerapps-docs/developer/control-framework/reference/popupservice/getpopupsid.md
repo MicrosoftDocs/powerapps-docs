@@ -25,8 +25,4 @@ ms.assetid: 08b572ab-3c66-4406-9de7-869026973ce8
 
 Type: `string`
 
-### Related topics
 
-[PopupService](../popupservice.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

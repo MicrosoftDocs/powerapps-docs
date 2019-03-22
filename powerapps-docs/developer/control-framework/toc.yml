@@ -1,4 +1,4 @@
-- name: "PowerApps Control Framework"
+- name: "PowerApps Component Framework"
   href: overview.md
   items:
   - name: "What are custom controls?"
@@ -15,7 +15,7 @@
     href: debugging-custom-controls.md
   - name: Update existing PCF controls
     href: updating-existing-controls.md
-  - name: Limitations of PowerApps Control Framework
+  - name: Limitations of PowerApps Component Framework
     href: limitations.md
   - name: Sample Controls
     items: 
@@ -49,7 +49,7 @@
       href: sample-controls/webapi-control.md
   - name: Reference
     items:
-    - name: PowerApps Control Framework 
+    - name: PowerApps Component Framework 
       href: reference/index.md
       items: 
       - name: Client

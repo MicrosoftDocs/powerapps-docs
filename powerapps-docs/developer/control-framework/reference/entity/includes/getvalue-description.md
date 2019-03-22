@@ -1,1 +1,1 @@
-Gets value of the specified column name.
+Gets the value of the specified column name.

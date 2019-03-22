@@ -26,8 +26,4 @@ ms.assetid: eb191796-37bf-46a3-b055-ee043375a42c
 | ------------- |----|--------|-----------|
 |name|`string`|yes|The name of the popup you're trying to close.|
 
-### Related topics
 
-[PopupService](../popupservice.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

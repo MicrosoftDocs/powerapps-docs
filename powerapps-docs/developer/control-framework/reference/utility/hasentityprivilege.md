@@ -34,9 +34,4 @@ ms.assetid: f22723f0-c606-465c-abba-0a8c46a10e32
 ## Return Value
 
 **Type**: `boolean`
-\
-### Related topics
 
-[Utility](../utility.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

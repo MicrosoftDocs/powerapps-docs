@@ -30,7 +30,4 @@ ms.assetid: 8f8d46c1-cc61-48c3-8e15-71f36e1cada1
 |[setPopupsId](popupservice/setpopupsid.md)|[!INCLUDE [setpopupsid-description](popupservice/includes/setpopupsid-description.md)]|
 |[updatePopup](popupservice/updatepopup.md)|[!INCLUDE [updatepopup-description](popupservice/includes/updatepopup-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

@@ -26,8 +26,4 @@ ms.assetid: 094978b8-971b-41ac-89e9-1f578447c689
 | ------------- |----|--------|-----------|
 |pageSize|`number`|yes|Pagesize to be set.|
 
-### Related topics
 
-[Paging](../paging.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

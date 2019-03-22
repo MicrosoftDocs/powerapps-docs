@@ -54,7 +54,4 @@ The defined control label.
 |[setFullScreen](mode/setfullscreen.md)|[!INCLUDE [setfullscreen-description](mode/includes/setfullscreen-description.md)]|
 |[trackContainerResize](mode/trackcontainerresize.md)|[!INCLUDE [trackcontainerresize-description](mode/includes/trackcontainerresize-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

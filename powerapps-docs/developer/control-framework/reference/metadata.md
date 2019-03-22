@@ -48,7 +48,4 @@ The `RequiredLevel` has following values:
 |2|Applicationrequired|
 |3|Recommended|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

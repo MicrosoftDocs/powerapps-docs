@@ -24,8 +24,4 @@ ms.assetid: 52c0cd68-5558-4985-a56c-21dc8a1f55de
 
 **Type**: `string`
 
-### Related topics
 
-[DataSet](../dataset.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

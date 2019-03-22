@@ -31,8 +31,4 @@ Type: `number`
 |2|Tablet|
 |3|Phone|
 
-### Related topics
 
-[Client](../client.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

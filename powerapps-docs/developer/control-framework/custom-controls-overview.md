@@ -1,6 +1,6 @@
 ---
-title: "PowerApps Control Framework Overview | MicrosoftDocs"
-description: "Use the PowerApps Control Framework (PCF) to create custom controls in model-driven apps to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
+title: "PowerApps Component Framework Overview | MicrosoftDocs"
+description: "Use the PowerApps Component Framework (PCF) to create custom controls to provide enhanced user experience for users to view and work with data in forms, views, and dashboards."
 manager: kvivek
 ms.date: 03/01/2019
 ms.service: "powerapps"
@@ -9,22 +9,22 @@ ms.assetid: 135481cd-4583-4e49-8f58-02f32a9b054a
 ms.author: "nabuthuk"
 ---
 
-# What are custom controls?
+# What are custom controls
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Custom controls are a type of solution component, which means they can be included in a solution and installed in different environments. More information: [Package and distribute extensions using solutions](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions).
 
-Custom controls created using **PowerApps Control Framework** enable a developer to add custom visualization and logic for various UI elements. You can view custom controls in the solution explorer, but there is no way to add or edit them in the application.
+Custom controls created using the **PowerApps Component Framework** enables a developer to add custom visualization and logic for various UI elements. You can view custom controls in the solution explorer, but there is no way to add or edit them in the application.
 
 You add custom controls by including them in a solution and then importing it into the system. Once they are in the system, admin and system customizers can configure form fields, sub-grids, views, and dashboard sub-grids to use them in place of default controls.
 
-In model-driven apps, data about custom controls is stored in the `CustomControl` and `CustomControlResource` entities.
+In Common Data Service, data about custom controls is stored in the `CustomControl` and `CustomControlResource` entities.
 The `CustomControl` entity has the following important attributes:
 
-|Attribute  |Description|
+|Attribute|Description|
 |---|---|
-|Manifest |An XML document describing application metadata about the control|
+|Manifest|An XML document describing application metadata about the control|
 |Name | The name of the control described in the manifest|
 |Version |The version number of the control described in the manifest|
 

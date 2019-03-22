@@ -26,7 +26,4 @@ ms.assetid: 47a15499-c526-4289-a632-49b717ba455f
 |[getPopupService](factory/getpopupservice.md)|[!INCLUDE [getpopupservice-description](factory/includes/getpopupservice-description.md)]|
 |[requestRender](factory/requestrender.md)|[!INCLUDE [requestrender-description](factory/includes/requestrender-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

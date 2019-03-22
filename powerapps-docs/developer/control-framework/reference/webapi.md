@@ -26,7 +26,4 @@ ms.assetid: f6e1aca7-7415-42a2-8ca2-44c962cdc90a
 |[retrieveRecord](webapi/retrieverecord.md)|[!INCLUDE [retrieverecord-description](webapi/includes/retrieverecord-description.md)]|
 |[updateRecord](webapi/updaterecord.md)|[!INCLUDE [updaterecord-description](webapi/includes/updaterecord-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

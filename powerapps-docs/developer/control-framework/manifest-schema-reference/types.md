@@ -13,8 +13,4 @@
 |--|--|--|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|0 or more|
 
-### Related topics
 
-[PowerApps Control Framework Manifest Schema Reference](index.md)<br />
-[PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

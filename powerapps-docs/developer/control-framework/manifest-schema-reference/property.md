@@ -52,8 +52,3 @@ The `of-type` attribute value must be one of the following:
 <property name="myFirstProperty" display-name-key="myFirstProperty_Display_Key" description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
 ```
 
-### Related topics
-
-[PowerApps Control Framework Manifest Schema Reference](index.md)<br />
-[PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

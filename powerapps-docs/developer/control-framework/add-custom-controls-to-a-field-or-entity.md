@@ -1,5 +1,5 @@
 ---
-title: Add Custom Controls to a field or entity in Model-driven Apps | Microsoft Docs
+title: Add Custom Controls to a field or entity | Microsoft Docs
 description: Process to import custom controls
 keywords:
 ms.author: nabuthuk
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-# Add Custom Controls to a field or entity in model-driven Apps
+# Add Custom Controls to a field or entity
 
 Custom controls let you transform fields that traditionally contain text into visualizations. Similarly, you can use custom controls to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Custom controls can appear as visualizations on forms, dashboards, views, and homepage grids. 
 

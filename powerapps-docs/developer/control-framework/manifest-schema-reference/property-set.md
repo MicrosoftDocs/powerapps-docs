@@ -36,8 +36,4 @@ ms.assetid: 996f10e5-8057-40ea-9680-555e4cd682ff
 |--|--|--|
 |[types](types.md)||0 or more|
 
-### Related topics
 
-[PowerApps Control Framework Manifest Schema Reference](index.md)<br />
-[PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

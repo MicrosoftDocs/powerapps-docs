@@ -28,8 +28,4 @@ This element contains a `string` with one of the following values:
 
 [!INCLUDE [type-table](includes/type-table.md)]
 
-### Related topics
 
-[PowerApps Control Framework Manifest Schema Reference](index.md)<br />
-[PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

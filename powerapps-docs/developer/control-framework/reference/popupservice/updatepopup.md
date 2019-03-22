@@ -28,8 +28,4 @@ ms.assetid: fd98d153-391d-41e6-ac9d-d2350a4791b9
 |name|`string`|yes|The name of the popup you're trying to update.|
 |newProps|`Popup`|no|The updated properties to give to the popup.|
 
-### Related topics
 
-[PopupService](../popupservice.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

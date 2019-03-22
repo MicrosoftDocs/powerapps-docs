@@ -30,8 +30,4 @@ value|`Date`|yes|Value Date to format.|
 
 Type: `string`
 
-### Related topics
 
-[Formatting](../formatting.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

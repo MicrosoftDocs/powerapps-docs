@@ -24,7 +24,4 @@ ms.assetid: b9b232cd-5d3a-4bd6-a745-5242a63978ad
 |[hasEntityPrivilege](utility/hasentityprivilege.md)|[!INCLUDE [hasentityprivilege-description](utility/includes/hasentityprivilege-description.md)]|
 |[lookupObjects](utility/lookupobjects.md)|[!INCLUDE [lookupobjects-description](utility/includes/lookupobjects-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

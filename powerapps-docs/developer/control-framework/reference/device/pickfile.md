@@ -42,8 +42,4 @@ The `options` parameter object has the following properties:
 |`allowMultipleFiles`|`boolean`|Indicates whether to allow select multiple files|
 |`maximumAllowedFileSize`|`number`|Maximum size of the files(s) to be selected|
 
-### Related topics
 
-[Device](../device.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

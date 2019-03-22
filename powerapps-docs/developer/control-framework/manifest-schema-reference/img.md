@@ -31,8 +31,4 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 |--|--|
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework Manifest Schema Reference](index.md)<br />
-[PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

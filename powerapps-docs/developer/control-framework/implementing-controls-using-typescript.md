@@ -60,7 +60,7 @@ The build generates an updated Typescript type declaration file under `TSLinearI
 
 ## Implementing control logic
 
-Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the **PowerApps Control Framework**. 
+Source for the custom control is implemented in the `index.ts` file. The `index.ts` file includes scaffolding for interface methods that are required by the **PowerApps Component Framework**. 
 
 1. Open the `index.ts` file in code editor of your choice.
 2. Update the `TSLinearInputControl` class with the following

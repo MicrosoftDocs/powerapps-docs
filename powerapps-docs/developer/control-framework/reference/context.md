@@ -86,8 +86,3 @@ The interface for `context.utils`
 The interface for `context.webApi`
 
 **Type**: [WebApi](webapi.md)
-
-### Related topics
-
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

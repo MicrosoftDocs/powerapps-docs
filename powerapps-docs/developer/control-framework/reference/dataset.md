@@ -72,8 +72,6 @@ Map of IDs to the full record object.
 
 **Type**: `object`
 
-<!-- QUESTION: Is this a Map object? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map -->
-
 ## sortedRecordIds
 
 IDs of the records in the dataset, in order.
@@ -99,7 +97,4 @@ The column sorting for the current query.
 |[refresh](dataset/refresh.md)|[!INCLUDE [refresh-description](dataset/includes/refresh-description.md)]| 
 |[setSelectedRecordIds](dataset/setselectedrecordids.md)|[!INCLUDE [setselectedrecordids-description](dataset/includes/setselectedrecordids-description.md)]| 
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

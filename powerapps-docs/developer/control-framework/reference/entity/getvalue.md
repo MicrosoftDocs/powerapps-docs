@@ -22,6 +22,3 @@ Type: `string | Date | number | boolean |` [EntityReference](../entityreference.
 
 ### Related topics
 
-[Entity](../entity.md)<br />
-[Custom Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

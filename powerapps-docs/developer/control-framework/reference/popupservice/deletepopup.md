@@ -26,8 +26,4 @@ ms.assetid: 89029a0b-5e03-4314-95fe-253b4d8d6da1
 | ------------- |----|--------|-----------|
 |name|`string`|yes|The name of the popup to remove.|
 
-### Related topics
 
-[PopupService](../popupservice.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

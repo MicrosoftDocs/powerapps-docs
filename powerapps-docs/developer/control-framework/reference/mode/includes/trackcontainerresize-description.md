@@ -14,4 +14,4 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: 6536db92-de91-4eab-bd56-9f9eaf5e212a
 ---
-API to determine container sizing if control needs to react. Control will get allocatedWidth/allocatedHeight if input is 'true'
+API to determine the container sizing if the control needs to react. Control will get allocatedWidth or allocatedHeight if the input is 'true'

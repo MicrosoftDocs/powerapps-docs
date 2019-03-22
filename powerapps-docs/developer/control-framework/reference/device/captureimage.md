@@ -44,8 +44,4 @@ The `options` parameter object has the following properties:
 |`quality`|`number`|Quality of the image file in percentage|
 |`width`|`number`|Width of the image to capture|
 
-### Related topics
 
-[Device](../device.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

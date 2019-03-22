@@ -28,8 +28,4 @@ ms.assetid: 590078f3-c604-4bd0-ac74-9cf6d8806802
 |url|`string`|yes|Url to be opened.|
 |options|`OpenUrlOptions`|yes|Window options for the url. The OpenUrlOptions has the following parameters: <br/>- **height**: `number`. Height of the window to display the resultant page in pixels.<br/>- **width**: `number`. Width of the window to display the resultant page in pixels.|
 
-### Related topics
 
-[Navigation](../navigation.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

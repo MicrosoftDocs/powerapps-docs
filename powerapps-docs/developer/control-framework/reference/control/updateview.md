@@ -34,8 +34,4 @@ MyNameSpace.JSHelloWorldControl.prototype.updateView = function (context) {
 
 Set the value of the field control to the raw value from the configured field
 
-### Related topics
 
-[Control](../control.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

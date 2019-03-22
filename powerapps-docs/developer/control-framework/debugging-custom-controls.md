@@ -22,7 +22,6 @@ Once you are done implementing your custom control logic, you can use the follow
 > [!div class="mx-imgBorder"]
 > ![local-host](../media/local-host.png "local host")
 
-
 As show in the image above, the browse window will open with 3 sections. Your control will be rendered in the left pane while the right pane consists of **Inputs** and **Outputs** sections
 
   - **Inputs** section is an interactive UI that displays all properties and their types/type-groups defined in the manifest.xml. It allows you to key in mock data for each property. 
@@ -31,7 +30,7 @@ As show in the image above, the browse window will open with 3 sections. Your co
 > [!NOTE]
 > If you want to modify the `manifest.xml` or create additional properties, you will need to restart the debug process before they appear in the inputs section.
 
-As you are inputting mock data you can use the browser’s debugging capabilities to observe the control behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
+As you are inputting mock data, you can use the browser’s debugging capabilities to observe the control behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
 
 For example, on **Microsoft Edge**,
 
@@ -57,7 +56,3 @@ You can also interact with the control locally in real time and observe elements
 
 Use the Fiddler AutoResponder to quickly debug your custom controls. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
-### Related Topics
-
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](overview.md)

@@ -40,5 +40,4 @@ This section contains reference documentation for creating custom controls using
 |[Utility](utility.md)|[!INCLUDE [utility-description](includes/utility-description.md)]|
 |[WebApi](webapi.md)|[!INCLUDE [webapi-description](includes/webapi-description.md)]|
 
-### Related topics
-[PowerApps Control Framework Overview](../overview.md)
+

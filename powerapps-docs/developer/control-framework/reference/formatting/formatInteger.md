@@ -30,8 +30,4 @@ ms.assetid: 58ce031a-cd68-4f19-a755-59a7b6030ddc
 
 Type: `string`
 
-### Related topics
 
-[Formatting](../formatting.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

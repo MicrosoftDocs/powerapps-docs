@@ -66,8 +66,3 @@ The `type` value is an enum with the following possible values
 ### Remarks
 
 Should be only one `Root` Popup for each set of Popups.
-
-### Related topics
-
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

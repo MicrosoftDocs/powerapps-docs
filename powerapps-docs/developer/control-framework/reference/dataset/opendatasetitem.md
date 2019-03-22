@@ -24,8 +24,4 @@ ms.assetid: ec4d6f14-d08b-410f-aad7-6a040c2b1c6a
 
 **Type**: [EntityReference](../entityreference.md)
 
-### Related topics
 
-[DataSet](../dataset.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

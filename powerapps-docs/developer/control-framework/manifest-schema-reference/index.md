@@ -1,5 +1,5 @@
 ---
-title: PowerApps Control Framework MAnifest Schema Reference | Microsoft Docs
+title: PowerApps Component Framework Manifest Schema Reference | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
 ---
-# PowerApps Control Framework Manifest Schema Reference
+# PowerApps Component Framework Manifest Schema Reference
 
 |Element|Description|
 |----|-----------|
@@ -33,7 +33,4 @@ ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
 |[type-group](type-group.md)|[!INCLUDE [type-group-description](includes/type-group-description.md)]|
 |[types](types.md)|[!INCLUDE [types-description](includes/types-description.md)]|
 
-## Related topics
 
-[PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

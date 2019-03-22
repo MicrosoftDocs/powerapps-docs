@@ -35,8 +35,4 @@ ms.assetid: ec7c1ad4-b834-4755-8a04-2c8940f75674
 |--|--|--|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
-### Related topics
 
-[PowerApps Control Framework Manifest Schema Reference](index.md)<br />
-[PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

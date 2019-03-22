@@ -28,7 +28,4 @@ ms.assetid: af1bf8bb-380f-45db-8bbc-b7d4a18e5623
 |[openUrl](navigation/openurl.md)|[!INCLUDE [openurl-description](navigation/includes/openurl-description.md)]|
 |[openWebResource](navigation/openwebresource.md)|[!INCLUDE [openwebresource-description](navigation/includes/openwebresource-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

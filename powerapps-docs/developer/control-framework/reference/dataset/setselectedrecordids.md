@@ -26,8 +26,3 @@ ms.assetid: 61989422-7745-4a0b-9606-37c16a04eab9
 |----|----|----|----|
 |ids|`string`|yes|List of record id's|
 
-### Related topics
-
-[DataSet](../dataset.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

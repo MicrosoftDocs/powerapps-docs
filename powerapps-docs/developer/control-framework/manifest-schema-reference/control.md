@@ -53,8 +53,3 @@ ms.assetid: 4dacd337-c9df-458e-86f3-bfb3ab543ea7
 <control namespace="MyNameSpace" constructor="JSHelloWorldControl" version="1.0.0" display-name-key="JS_HelloWorldControl_Display_Key" description-key="JS_HelloWorldControl_Desc_Key" control-type="standard" preview-image="img/preview.png">
   ```
 
-### Related topics
-
-[PowerApps Control Framework Manifest Schema Reference](index.md)<br />
-[PowerApps Control Framework API Reference](../reference/index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

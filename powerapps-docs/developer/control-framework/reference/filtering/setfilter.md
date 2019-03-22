@@ -26,8 +26,4 @@ ms.assetid: 5af40d6f-111f-4c74-a2eb-4ffc79025415
 | ------------- |----|--------|-----------|
 |expression|[FilterExpression](../filterexpression.md)|yes|The `FilterExpression` to set.|
 
-### Related topics
 
-[Filtering](../filtering.md)<br/>
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

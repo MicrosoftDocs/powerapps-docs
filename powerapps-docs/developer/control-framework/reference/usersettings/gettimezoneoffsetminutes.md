@@ -30,8 +30,4 @@ ms.assetid: 86290d20-7dbb-4932-adaa-31121ae7a3f6
 
 Type: `number`
 
-### Related topics
 
-[UserSettings](../usersettings.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

@@ -27,8 +27,4 @@ ms.assetid: 1052db82-7002-44ca-ad1f-9d3d4c311817
 
 Type: `boolean`
 
-### Related topics
 
-[Mode](../mode.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

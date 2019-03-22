@@ -72,7 +72,4 @@ The windowPosition value is a number with the following possible values
 |1|Center|
 |2|Side|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

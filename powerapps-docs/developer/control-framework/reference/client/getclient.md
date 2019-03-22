@@ -26,8 +26,3 @@ ms.assetid: 4b7c18f8-cd00-4f39-8f88-ed9306d6a055
 
 Type: `string`
 
-### Related topics
-
-[Client](../client.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

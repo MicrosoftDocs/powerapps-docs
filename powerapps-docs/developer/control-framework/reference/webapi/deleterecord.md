@@ -64,8 +64,4 @@ ms.assetid: 5c9968bf-d535-425c-b1f1-0db6b7822de1
 
 On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
 
-## Related topics
 
-[WebApi](../webapi.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

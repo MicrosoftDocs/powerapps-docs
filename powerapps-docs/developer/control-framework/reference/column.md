@@ -70,7 +70,4 @@ Customized column width ratios.
 
 **Type**: `number`
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

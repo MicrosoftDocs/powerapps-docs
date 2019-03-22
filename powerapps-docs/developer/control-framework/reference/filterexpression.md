@@ -43,7 +43,3 @@ Any child filters that should be evaluated after evaluating this filter.
 
 **Type**: [FilterExpression](filterexpression.md)[]<br />
 
-### Related topics
-
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

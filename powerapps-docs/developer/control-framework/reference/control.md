@@ -22,7 +22,4 @@ ms.author: "nabuthuk"
 |[init](control/init.md)|[!INCLUDE [init-description](control/includes/init-description.md)]|
 |[updateView](control/updateview.md)|[!INCLUDE [updateview-description](control/includes/updateview-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

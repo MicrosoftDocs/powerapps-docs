@@ -23,7 +23,4 @@ ms.assetid: 48dc8649-3a98-4f5e-8319-a6f5e378a9cc
 |[getResource](resources/getresource.md)|[!INCLUDE [getresource-description](resources/includes/getresource-description.md)]|
 |[getString](resources/getstring.md)|[!INCLUDE [getstring-description](resources/includes/getstring-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

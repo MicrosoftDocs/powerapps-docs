@@ -1,6 +1,6 @@
 ---
-title: "Limitations of PowerApps Control Framework | MicrosoftDocs"
-description: "Limitations using powerapps control framework"
+title: "Limitations of PowerApps Component Framework | MicrosoftDocs"
+description: "Limitations using powerapps Component framework"
 manager: kvivek
 ms.date: 03/01/2019
 ms.service: "powerapps"
@@ -9,11 +9,11 @@ ms.assetid: 18e88d702-3349-4022-a7d8-a9adf52cd34f
 ms.author: "nabuthuk"
 ---
 
-# Limitations of PowerApps Control Framework
+# Limitations of PowerApps Component Framework
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-With the release of the PowerApps Control Framework, you can now create your own custom controls to improve the user experience in Model-driven Apps. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
+With the release of the PowerApps Component Framework, you can now create your own custom controls to improve the user experience in Model-driven Apps. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
 
 ### Multiple controls in single manifest file
 
@@ -25,7 +25,7 @@ This is not supported yet. For now you can only call dialog boxes using the [Nav
 
 ### Support for external libraries
 
-The PowerApps Control Framework supports all the external libraries for implementing custom controls. 
+The PowerApps Component Framework supports all the external libraries for implementing custom controls. 
 
 > [!NOTE]
 > When you use JQuery for implementing the custom controls, at run time, it loads the platform version of the JQuery not the version you used to implement. 

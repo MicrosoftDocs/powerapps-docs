@@ -44,7 +44,4 @@ The views to be available in the view picker. Only System views are supported (n
 
 **Type**: `string[]`
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

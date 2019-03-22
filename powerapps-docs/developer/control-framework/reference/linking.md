@@ -23,7 +23,4 @@ ms.assetid: f9fbfe65-4a9f-42f6-91a4-fe997f030012
 |[addLinkedEntity](linking/addlinkedentity.md)|[!INCLUDE [addlinkedentity-description](linking/includes/addlinkedentity-description.md)]|
 |[getLinkedEntities](linking/getlinkedentities.md)|[!INCLUDE [getlinkedentities-description](linking/includes/getlinkedentities-description.md)]|
 
-### Related topics
 
-[PowerApps Control Framework API Reference](index.md)<br />
-[PowerApps Control Framework Overview](../overview.md)

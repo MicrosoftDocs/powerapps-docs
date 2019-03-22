@@ -78,8 +78,4 @@ ms.assetid: 824a53f9-c743-435a-9de2-8128846f3191
 
 On success, returns a promise that contains an array of JSON objects (**entities**) containing the retrieved entity records and the **nextLink** attribute (optional) with the URL pointing to next set of records in case paging (`maxPageSize`) is specified in the request, and the record count returned exceeds the paging value.
 
-## Related topics
 
-[WebApi](../webapi.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />

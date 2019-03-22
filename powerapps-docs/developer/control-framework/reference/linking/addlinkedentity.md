@@ -27,8 +27,3 @@ ms.assetid: 05fd8a07-e850-4b56-9c8b-70ef3a35cf4d
 | ------------- |----|--------|-----------|
 |expression|[ILinkEntityExposedExpression](../ilinkentityexposedexpression.md)|yes|The `ILinkEntityExposedExpression` to set.|
 
-### Related topics
-
-[Linking](../linking.md)<br />
-[PowerApps Control Framework API Reference](../index.md)<br />
-[PowerApps Control Framework Overview](../../overview.md)<br />
