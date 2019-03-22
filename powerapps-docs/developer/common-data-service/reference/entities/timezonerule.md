@@ -1,5 +1,5 @@
 ---
-title: "TimeZoneRule Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "TimeZoneRule Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the TimeZoneRule entity."
 services: ''
 suite: powerapps

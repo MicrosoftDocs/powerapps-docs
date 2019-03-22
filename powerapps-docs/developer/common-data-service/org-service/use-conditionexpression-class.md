@@ -1,5 +1,5 @@
 ---
-title: "Use the ConditionExpression class (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use the ConditionExpression class (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use the ConditionExpression class to compare an attribute to a value or set of values by using an operator, such as &quot;equal to&quot; or &quot;greater than&quot;" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Use the ConditionExpression class
 
-In Common Data Service for Apps, you can use the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> class to compare an attribute to a value or set of values by using an operator, such as “equal to” or “greater than”. The `ConditionExpression` class lets you pass condition expressions as parameters to other classes, such as <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.  
+In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression> class to compare an attribute to a value or set of values by using an operator, such as “equal to” or “greater than”. The `ConditionExpression` class lets you pass condition expressions as parameters to other classes, such as <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression>.  
   
  The following table lists the properties you can set to create a condition using the `ConditionExpression` class.  
   

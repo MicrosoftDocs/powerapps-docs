@@ -1,5 +1,5 @@
 ---
-title: "SharePointDocument Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "SharePointDocument Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SharePointDocument entity."
 services: ''
 suite: powerapps

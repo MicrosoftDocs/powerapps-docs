@@ -41,7 +41,7 @@ If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.
 
 ## Prerequisites
 
-[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Common Data Service (CDS) for Apps.
+[Generate an app](data-platform-create-app.md) from the **Accounts** entity of Common Data Service.
 
 ## Open the generated app
 

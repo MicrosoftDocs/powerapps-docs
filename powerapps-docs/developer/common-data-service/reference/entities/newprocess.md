@@ -1,5 +1,5 @@
 ---
-title: "NewProcess Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "NewProcess Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the NewProcess entity."
 services: ''
 suite: powerapps

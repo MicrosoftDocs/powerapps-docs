@@ -1,5 +1,5 @@
 ---
-title: "ConnectionRoleObjectTypeCode Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ConnectionRoleObjectTypeCode Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ConnectionRoleObjectTypeCode entity."
 services: ''
 suite: powerapps

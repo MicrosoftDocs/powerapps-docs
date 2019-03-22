@@ -1,5 +1,5 @@
 ---
-title: "ImportEntityMapping Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ImportEntityMapping Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ImportEntityMapping entity."
 services: ''
 suite: powerapps

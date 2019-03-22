@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Create workflow extension (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Tutorial: Create workflow extension (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -33,8 +33,8 @@ This tutorial uses a very simple example to focus on the requirements and proces
 ## Prerequisites
 
 - You must have Windows Workflow Foundation included as an individual component with Visual Studio 2017.  More information: [Visual Studio requirements](workflow-extensions.md#visual-studio-requirements)
-- A Common Data Service for Apps instance and administrator privileges
-- Understanding of how to configure workflows. More information: [Classic Common Data Service (CDS) for Apps workflows](/flow/workflow-processes)
+- A Common Data Service instance and administrator privileges
+- Understanding of how to configure workflows. More information: [Classic Common Data Service workflows](/flow/workflow-processes)
 - A model-driven app that allows you to edit accounts.
 
 ## Goal
@@ -204,7 +204,7 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
     ![register assembly dialog](media/tutorial-create-workflow-activity-register-assembly-dialog.png)
 
     > [!NOTE]
-    > Note: With CDS for Apps the only valid options for Steps 3 & 4 are selected and invalid options are disabled.
+    > Note: With Common Data Service the only valid options for Steps 3 & 4 are selected and invalid options are disabled.
 
 1. Click **Register Selected Plugins**. You should see a confirmation dialog.
 
@@ -222,7 +222,7 @@ Custom workflow activity assemblies are registered using the Plug-in Registratio
     |Description||Returns the value of the input parameter plus 10.|Not visible in the UI of the process designer, but may be useful when generating documentation from data drawn from the PluginType Entity that stores this information.|
     |FriendlyName|a GUID value|IncrementByTen|User friendly name for the plug-in.|
     |Name|SampleWorkflowActivity.IncrementByTen|Increment By 10|The name of the menu represented|
-    |WorkflowActivityGroupName|SampleWorkflowActivity (1.0.0.0)|Sample|The name of the submenu added to the main menu in the CDS for Apps process designer.|
+    |WorkflowActivityGroupName|SampleWorkflowActivity (1.0.0.0)|Sample|The name of the submenu added to the main menu in the Common Data Service process designer.|
 
     > [!NOTE]
     > If the **Name** and **WorkflowActivityGroupName** are set to null, the custom activity will not be visible in the process designer.

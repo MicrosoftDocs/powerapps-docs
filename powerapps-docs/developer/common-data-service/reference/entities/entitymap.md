@@ -1,5 +1,5 @@
 ---
-title: "EntityMap Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "EntityMap Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the EntityMap entity."
 services: ''
 suite: powerapps

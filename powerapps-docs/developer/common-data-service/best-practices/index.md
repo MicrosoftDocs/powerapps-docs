@@ -1,6 +1,6 @@
 ---
-title: "Developers: Best practices and guidance for the Common Data Service for Apps | Microsoft Docs"
-description: Best practices and guidance for developers of the Common Data Service for Apps in PowerApps.
+title: "Developers: Best practices and guidance for the Common Data Service | Microsoft Docs"
+description: Best practices and guidance for developers of the Common Data Service in PowerApps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -22,9 +22,9 @@ search.app:
   - D365CE
 ---
 
-# Best practices and guidance for the Common Data Service for Apps
+# Best practices and guidance for the Common Data Service
 
-The Common Data Service (CDS) for Apps is an extensible framework that will allow developers to build highly customized and tailored experiences. While customizing, extending, or integrating with the Common Data Service (CDS) for Apps, a developer should be aware of the established guidance and best practices. 
+The Common Data Service is an extensible framework that will allow developers to build highly customized and tailored experiences. While customizing, extending, or integrating with the Common Data Service, a developer should be aware of the established guidance and best practices. 
 
 Within this section you will learn about the issues we have identified, their impact, and understand the guidance to resolve them. We will explain the background about why things should be done in a certain way and avoid potential problems in the future. This can benefit the usability, supportability, and performance of your environment. The guidance documentation supports the existing information within the Developer and Administration guides.
 
@@ -32,8 +32,8 @@ Within this section you will learn about the issues we have identified, their im
 The documentation targets the following customization types:
 
 - Custom workflow activities and plug-ins
-- Working with CDS data
-- Integrations extending Common Data Service for Apps
+- Working with Common Data Service data
+- Integrations extending Common Data Service
 
 # Sections
 Each guidance article includes most or all of the following sections:

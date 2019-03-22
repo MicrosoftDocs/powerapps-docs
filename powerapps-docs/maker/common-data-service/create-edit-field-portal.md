@@ -1,5 +1,5 @@
 ---
-title: "Create and edit fields for Common Data Service for Apps using PowerApps portal | MicrosoftDocs"
+title: "Create and edit fields for Common Data Service using PowerApps portal | MicrosoftDocs"
 ms.custom: ""
 ms.date: 02/28/2019
 ms.reviewer: ""
@@ -19,13 +19,13 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create and edit fields for Common Data Service for Apps using PowerApps portal
+# Create and edit fields for Common Data Service using PowerApps portal
 
-The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entity fields with the Common Data Service for Apps.
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entity fields with the Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Create and edit fields for Common Data Service for Apps](create-edit-fields.md)
-- [Create and edit fields for Common Data Service for Apps using PowerApps solution explorer](create-edit-field-solution-explorer.md)
+- [Create and edit fields for Common Data Service](create-edit-fields.md)
+- [Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)
 
 ## View fields
 
@@ -52,7 +52,7 @@ Initially, just three field properties are available:
  |Property|Description|
  |--|--|
  |**Display Name**|The text to be displayed for the field in the user interface.|
- |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a field is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **CDS Default Publisher** prepended to it.|
+ |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a field is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Common Data Service Default Publisher** prepended to it.|
  |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a field is saved, you cannot change the data type with the exception of converting text fields to autonumber fields.|
 
 You can set additional options depending on your choice of **Data type**.
@@ -172,7 +172,7 @@ More information: [Define rollup fields that aggregate values](define-rollup-fie
 
 ## Number field options
 
-Each type of number field has absolute minimum and maximum values. You can set appropriate **Minimum value** and **Maximum value** within these absolute values. Do this to have CDS for Apps validate the values for the data you want to store in the field.
+Each type of number field has absolute minimum and maximum values. You can set appropriate **Minimum value** and **Maximum value** within these absolute values. Do this to have Common Data Service validate the values for the data you want to store in the field.
 
 For **Floating Point Number** and **Decimal Number** data types, you can specify a number of  **Decimal places**.
 
@@ -226,8 +226,8 @@ Any of the fields that provide direct text input have an IME Mode. The Input Met
 
 
 ### See also  
-[Create and edit fields for Common Data Service for Apps](create-edit-fields.md)<br />
-[Create and edit fields for Common Data Service for Apps using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit fields for Common Data Service](create-edit-fields.md)<br />
+[Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Types of fields and field data types](types-of-fields.md)<br />
 [Define calculated fields to automate manual calculations](define-calculated-fields.md)<br />
 [Define rollup fields that aggregate values](define-rollup-fields.md)<br />

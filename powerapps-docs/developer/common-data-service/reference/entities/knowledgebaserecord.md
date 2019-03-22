@@ -1,5 +1,5 @@
 ---
-title: "KnowledgeBaseRecord Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "KnowledgeBaseRecord Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeBaseRecord entity."
 services: ''
 suite: powerapps

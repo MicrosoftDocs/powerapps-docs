@@ -32,7 +32,7 @@ search.app:
 ## Symptoms
 
 - The following script error will be displayed to users or included in your error logs: `Error: Blocked a frame with origin "https://<yourinstance>.dynamics.com" from accessing a cross-origin frame.`
-- Customizations might not behave correctly in the context of Dynamics 365 App for Outlook, Dynamics 365 for phones and tablets, or an external application that hosts Common Data Service for Apps within an Iframe.
+- Customizations might not behave correctly in the context of Dynamics 365 App for Outlook, Dynamics 365 for phones and tablets, or an external application that hosts Common Data Service within an Iframe.
 
   > [!NOTE]
   > There might be some scenarios where error handling masks the error and continues script processing, causing unexpected behavior.
@@ -41,7 +41,7 @@ search.app:
 
 ## Guidance
 
-Avoid using `window.top` in scripts running within the context of Dynamics 365 App for Outlook, Dynamics 365 for phones and tablets, or an external application that hosts Common Data Service for Apps within an Iframe. Even if these scenarios don't currently apply to your organization, you should avoid using `window.top` or guard against this issue.
+Avoid using `window.top` in scripts running within the context of Dynamics 365 App for Outlook, Dynamics 365 for phones and tablets, or an external application that hosts Common Data Service within an Iframe. Even if these scenarios don't currently apply to your organization, you should avoid using `window.top` or guard against this issue.
 
  > [!IMPORTANT]
  > Usage of `window.parent` or variations of the parent hierarchy (for example,`window.parent.parent`) can cause the same symptoms.

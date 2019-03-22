@@ -1,5 +1,5 @@
 ---
-title: "ActionCardUserState Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ActionCardUserState Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ActionCardUserState entity."
 services: ''
 suite: powerapps

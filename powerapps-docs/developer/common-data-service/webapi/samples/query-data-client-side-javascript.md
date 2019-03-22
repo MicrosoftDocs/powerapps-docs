@@ -22,7 +22,7 @@ search.app:
 ---
 # Web API Query Data Sample (Client-side JavaScript)
 
-This sample demonstrates how to perform basic query requests using the Common Data Service for Apps Web API using client-side JavaScript  
+This sample demonstrates how to perform basic query requests using the Common Data Service Web API using client-side JavaScript  
   
 > [!NOTE]
 >  This sample implements the operations detailed in the [Web API Query Data Sample](../web-api-query-data-sample.md) and uses the common  client-side JavaScript constructs described in [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md)  
@@ -33,7 +33,7 @@ This sample demonstrates how to perform basic query requests using the Common Da
 
  To run this sample, the following is required:  
   
-- Access to CDS for Apps environment.  
+- Access to Common Data Service environment.  
   
 - A user account with privileges to import solutions and perform CRUD operations, typically a system administrator or system customizer security role.  
   
@@ -41,7 +41,7 @@ This sample demonstrates how to perform basic query requests using the Common Da
 
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824050) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your CDS for Apps organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824050) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Common Data Service organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 
@@ -757,7 +757,7 @@ distinct=\"false\" page=\"3\" count=\"4\"> \
   
 ### See also
 
-[Use the Common Data Service for Apps Web API](../overview.md)<br />
+[Use the Common Data Service Web API](../overview.md)<br />
 [Query Data using the Web API](../query-data-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Query Data Sample](../web-api-query-data-sample.md)<br />

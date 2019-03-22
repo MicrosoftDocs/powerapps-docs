@@ -15,18 +15,18 @@ search.app:
   - PowerApps
 ---
 # Attachments control in PowerApps
-A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Common Data Service for Apps entity.
+A control that allows users to download files to their device, as well as upload and delete files from a SharePoint list or a Common Data Service entity.
 
 ## Limitations
 The attachment control has these limitations:
-1. Attachments are supported with SharePoint lists and CDS for Apps entities.
+1. Attachments are supported with SharePoint lists and Common Data Service entities.
 
 1. Upload and delete functionality only work inside a form.  Attachment control will look disabled when in Edit mode and not inside a form. Note that in order to save the file additions and deletions to the back end, the end user must save the form.
 
 1. You can only upload files up to 10 MB in size.  
 
 ## Description
-An **Attachments** control lets you open, add, and delete files from a SharePoint list or a CDS for Apps entity.
+An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Common Data Service entity.
 
 ## Key properties
 **[Items](properties-core.md)** – The source describing the files that can be downloaded.

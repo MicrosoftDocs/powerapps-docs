@@ -1,10 +1,10 @@
 # This TOC is a work in progress. The specific location of items is not locked down
-- name: Common Data Service for Apps
+- name: Common Data Service
   href: ../../maker/common-data-service/data-platform-intro.md
 - name: Developer overview
   href: overview.md
 - name: Get started
-  href: get-started-CDS-developers.md
+  href: get-started-cds-developers.md
   items:
   - name: Supported customizations
     href: supported-customizations.md
@@ -175,7 +175,7 @@
       href: register-web-hook.md
     - name: Test webhook registration
       href: test-webhook-registration.md
-- name: Work with CDS for Apps entities
+- name: Work with Common Data Service entities
   href: entities.md
   items:
   - name: Customer entities

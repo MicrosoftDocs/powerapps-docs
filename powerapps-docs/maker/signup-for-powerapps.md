@@ -16,10 +16,10 @@ ms.reviewer:
 You can explore all PowerApps capabilities for free by signing up for a PowerApps Plan 2 license that expires after 30 days. If you don't have any license for PowerApps, the trial plan provides temporary access to these and other features:
 
 - Extend the capabilities of Office 365 (SharePoint Online, Teams, Excel and more).
-- Create and run canvas apps that connect to Common Data Service (CDS) for Apps and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
+- Create and run canvas apps that connect to Common Data Service and a wide range of more than 200 other data sources, including premium connectors and on-premises data.
 - Create and run model-driven apps.
 - Create automated workflows with Microsoft Flow.
-- Create and manage environments and CDS for Apps databases.
+- Create and manage environments and Common Data Service databases.
 
 If you have a PowerApps Plan 1 license or a license through Office 365, you already have access to some of these features; the trial license temporarily expands your access to include all features in the previous list. To find out what capabilities each type of license offers, see the [pricing page](https://powerapps.microsoft.com/pricing/).
 
@@ -87,7 +87,7 @@ To determine when your trial license will expire, select the gear icon near the 
 
 You'll be prompted to request an extension of the trial or purchase a plan 30 days after the trial starts. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of PowerApps that your other license provides. Any data in CDS for Apps will remain as it is, and any app or flow that uses CDS for Apps will continue to run as it did if your license supports them. If you try to use features that Plan 2 supports but your existing license doesn't (for example, modify a schema or entities in CDS for Apps), you'll be prompted to purchase a plan.
+If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of PowerApps that your other license provides. Any data in Common Data Service will remain as it is, and any app or flow that uses Common Data Service will continue to run as it did if your license supports them. If you try to use features that Plan 2 supports but your existing license doesn't (for example, modify a schema or entities in Common Data Service), you'll be prompted to purchase a plan.
 
 ### More questions?
 

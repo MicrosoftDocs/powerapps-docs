@@ -1,5 +1,5 @@
 ---
-title: "Offline use of the Dynamics 365 services (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Offline use of the Dynamics 365 services (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how various Dynamics 365 services can be used offline. There are several messages that are supported offline. You can also determine whether a IOrganizationService message works offline by checking the SdkMessage.Availability attribute for the desired message" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -20,7 +20,7 @@ search.app:
 
 Dynamics 365 for Microsoft Office Outlook with Offline Access enables you to continue your work when you are disconnected from the server.  
   
- In addition, the event and plug-in infrastructure lets you leverage development investments across solutions by using the same APIs and programming model. The <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and the Common Data Service for Apps OData service methods function both online and offline. When using a method such as `Create` or `Update` offline, the data is written locally and then when the user connects to the server, the actions are played back to the server.  
+ In addition, the event and plug-in infrastructure lets you leverage development investments across solutions by using the same APIs and programming model. The <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and the Common Data Service OData service methods function both online and offline. When using a method such as `Create` or `Update` offline, the data is written locally and then when the user connects to the server, the actions are played back to the server.  
   
  For more information about whether a message is supported offline, see <xref:Microsoft.Crm.Sdk.Messages>. You can also determine whether a <xref:Microsoft.Xrm.Sdk.IOrganizationService> message works offline by checking the `SdkMessage.Availability` attribute for the desired message. If the message works for multiple entity types, you must also check the `SdkMessageFilter.Availability` attribute to see whether the message is available offline for the entity you want to work with. For example, the `Create` message is available offline, but not for the queue, user, or site entities.  
   

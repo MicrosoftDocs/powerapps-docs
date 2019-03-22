@@ -24,9 +24,9 @@ search.app:
 
 # Change the solution publisher prefix
 
-Every customization you make is part of a solution. Every solution has a publisher. By default, the solution you will work with in PowerApps will be the **Common Data Services Default Solution** which is associated with the **CDS Default Publisher**.
+Every customization you make is part of a solution. Every solution has a publisher. By default, the solution you will work with in PowerApps will be the **Common Data Services Default Solution** which is associated with the **Common Data Service Default Publisher**.
 
-The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items. If you create a new entity named **Animal**, the unique name used by CDS for Apps would be `cr8a3_animal`. The same is true for any new fields (attributes), relationships, or optionset options.
+The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items. If you create a new entity named **Animal**, the unique name used by Common Data Service would be `cr8a3_animal`. The same is true for any new fields (attributes), relationships, or optionset options.
 
 Unless you will distribute your solution so that it is installed together with metadata items that were created for another solution publisher, it really isn't important what the customization prefix is. It isn't visible to most people who use your apps. But it is exposed to developers and other technical people who do things like build reports. It provides a quick way to understand which solution added the item.
 
@@ -36,12 +36,12 @@ For this reason, many people like to change the solution publisher prefix so tha
 > If you change the solution publisher prefix, you should do it before you create an new metadata items. You can't change the names of metadata items.
 > When you change the customization prefix value, make sure to tab to the next field. The **Option Value Prefix** will automatically generate a number based on the customization prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
 
-## Change the solution publisher prefix for the CDS Default Publisher  
+## Change the solution publisher prefix for the Common Data Service Default Publisher  
 
  1. In the PowerApps portal, select **Model-driven** in the bottom left corner.
  2. Click **Advanced** in the left navigation to open the **Common Data Services Default Solution**
  3. In the solution explorer, select the **Information** area in the left navigation.
- 4. Click the **Publisher** link to open the **CDS Default Publisher** form.
+ 4. Click the **Publisher** link to open the **Common Data Service Default Publisher** form.
  5. Edit the **Prefix** field value to the customization prefix you want.
  6. Click **Save and Close**.
   

@@ -40,7 +40,7 @@ Retrieving all columns can cause:
 
 ## Guidance
 
-For optimal performance, you should only select the minimum amount of data needed by your application when querying Common Data Service for Apps data. 
+For optimal performance, you should only select the minimum amount of data needed by your application when querying Common Data Service data. 
 
 ### ColumnSet Parameter
 

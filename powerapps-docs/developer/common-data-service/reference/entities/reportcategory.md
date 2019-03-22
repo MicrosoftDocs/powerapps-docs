@@ -1,5 +1,5 @@
 ---
-title: "ReportCategory Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ReportCategory Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ReportCategory entity."
 services: ''
 suite: powerapps

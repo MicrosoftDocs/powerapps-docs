@@ -1,5 +1,5 @@
 ---
-title: "KbArticleComment Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "KbArticleComment Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the KbArticleComment entity."
 services: ''
 suite: powerapps

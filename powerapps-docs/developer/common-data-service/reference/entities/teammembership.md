@@ -1,5 +1,5 @@
 ---
-title: "TeamMembership Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "TeamMembership Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the TeamMembership entity."
 services: ''
 suite: powerapps

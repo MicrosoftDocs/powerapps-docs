@@ -1,5 +1,5 @@
 ---
-title: "AttributeMap Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "AttributeMap Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the AttributeMap entity."
 services: ''
 suite: powerapps

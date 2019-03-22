@@ -1,10 +1,10 @@
 ---
-title: "Use CrmServiceClient constructors to connect to CDS for Apps (Common Data Service for Apps)| Microsoft Docs"
-description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Common Data Service for Apps"
+title: "Use CrmServiceClient constructors to connect to Common Data Service (Common Data Service)| Microsoft Docs"
+description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Common Data Service"
 ms.custom: ""
 ms.date: 10/31---
-title: "Use CrmServiceClient constructors to connect to CDS for Apps (Common Data Service for Apps)| Microsoft Docs"
-description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Common Data Service for Apps"
+title: "Use CrmServiceClient constructors to connect to Common Data Service (Common Data Service)| Microsoft Docs"
+description: "You can create an instance of the CrmServiceClient class, and then use one of the constructors to connect to Common Data Service"
 ms.custom: ""
 ms.date: 12/03/2018
 ms.reviewer: ""
@@ -25,7 +25,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use CrmServiceClient constructors to connect to CDS for Apps
+# Use CrmServiceClient constructors to connect to Common Data Service
 
 Use the various constructors to create an instance of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class to connect to Dynamics 365 for Customer Engagement apps. More information: [CrmServiceClient Constructors](https://docs.microsoft.com/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.-ctor)
 

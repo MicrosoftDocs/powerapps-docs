@@ -1,6 +1,6 @@
 ---
-title: "Use XRM tooling to delete data (Common Data Service for Apps)| Microsoft Docs"
-description: "Use CrmServiceClient class to delete data from CDS for Apps"
+title: "Use XRM tooling to delete data (Common Data Service)| Microsoft Docs"
+description: "Use CrmServiceClient class to delete data from Common Data Service"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -23,11 +23,11 @@ search.app:
 ---
 # Use XRM tooling to delete data
 
-There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for deleting data in CDS for Apps: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntity(System.String,System.Guid,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)>.  
+There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for deleting data in Common Data Service: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntity(System.String,System.Guid,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)>.  
   
 ## DeleteEntity  
 
-DeleteEntity is used to remove a single row of data from CDS for Apps. To use this method, you need to know the entity schema name you wish to affect, and the GUID of the row you want to remove.  
+DeleteEntity is used to remove a single row of data from Common Data Service. To use this method, you need to know the entity schema name you wish to affect, and the GUID of the row you want to remove.  
   
 ```csharp  
 CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential("<UserName>", "<Password>", <Domain>),"<Server>", "<Port>", "<OrgName>");  
@@ -93,5 +93,5 @@ else
 ### See also  
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Use XRM Tooling to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
-[Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)
+[Use XRM Tooling to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)

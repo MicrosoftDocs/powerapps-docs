@@ -1,5 +1,5 @@
 ---
-title: "SystemUserRoles Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "SystemUserRoles Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SystemUserRoles entity."
 services: ''
 suite: powerapps

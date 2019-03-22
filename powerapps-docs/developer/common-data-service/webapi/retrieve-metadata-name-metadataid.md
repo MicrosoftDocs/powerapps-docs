@@ -1,6 +1,6 @@
 ---
-title: "Retrieve metadata by name or MetadataId (Common Data Service for Apps) | Microsoft Docs"
-description: "Common Data Service for Apps uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
+title: "Retrieve metadata by name or MetadataId (Common Data Service) | Microsoft Docs"
+description: "Common Data Service uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -294,7 +294,7 @@ OData-Version: 4.0
   
 ### See also
 
-[Use the Web API with Common Data Service for Apps metadata](use-web-api-metadata.md)<br />
+[Use the Web API with Common Data Service metadata](use-web-api-metadata.md)<br />
 [Query metadata using the Web API](query-metadata-web-api.md)<br />
 [Create and update entity definitions using the Web API](create-update-entity-definitions-using-web-api.md)<br /> 
 [Create and update entity relationships using the Web API](create-update-entity-relationships-using-web-api.md)

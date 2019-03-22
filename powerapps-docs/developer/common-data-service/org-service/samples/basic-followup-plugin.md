@@ -1,5 +1,5 @@
 ---
-title: "Sample: Create a basic plug-in (Common Data Service for Apps) | Microsoft Docs"
+title: "Sample: Create a basic plug-in (Common Data Service) | Microsoft Docs"
 description: "This sample shows how to write a simple plug-in that creates a follow-up activity."
 ms.custom: ""
 ms.date: 1/29/2019

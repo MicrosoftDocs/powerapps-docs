@@ -104,7 +104,7 @@
     items:
     - name: 1 - Generate an app from data
       items:
-      - name: From Common Data Service for Apps
+      - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app.md
       - name: From SharePoint
         href: ./canvas-apps/app-from-sharepoint.md
@@ -120,7 +120,7 @@
         href: ./canvas-apps/customize-card.md
     - name: 3 - Create an app yourself
       items:
-      - name: From Common Data Service for Apps
+      - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app-scratch.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
@@ -926,7 +926,7 @@
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
-- name: Common Data Service for Apps
+- name: Common Data Service
   href: ./common-data-service/data-platform-intro.md
   items:
   - name: Work with entities

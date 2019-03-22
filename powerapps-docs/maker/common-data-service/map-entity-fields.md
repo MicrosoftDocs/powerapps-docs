@@ -98,7 +98,7 @@ The following rules show what kinds of data can be mapped.
 - If the fields are option sets, the integer values for each option should be identical.  
   
 > [!NOTE]
->  If you need to map option set fields, we recommend you configure both fields to use the same global option set. Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global option sets for Common Data Service for Apps (picklists)](create-edit-global-option-sets.md)  
+>  If you need to map option set fields, we recommend you configure both fields to use the same global option set. Otherwise, it can be difficult to keep two separate sets of options synchronized manually. If the integer values for each option aren’t mapped correctly you can introduce problems in your data. More information: [Create and edit global option sets for Common Data Service (picklists)](create-edit-global-option-sets.md)  
   
 ## Automatically generate field mappings  
 
