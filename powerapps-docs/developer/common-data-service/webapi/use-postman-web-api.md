@@ -23,9 +23,9 @@ search.app:
 
 # Use Postman with the Web API
 
-There are a number of third-party tools that allow you to authenticate to [!INCLUDE[](../../includes/pn-dyn-365.md)] for Customer Engagement app instances and to compose and send Web API requests and view responses. Postman is one of the most popular.
+There are a number of third-party tools that allow you to authenticate to Common Data Service instances and to compose and send Web API requests and view responses. Postman is one of the most popular.
 
-Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your [!INCLUDE[](../../includes/pn-dyn-365.md)] for Customer Engagement apps instance and use Postman to perform operations with the Web API.
+Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Common Data Service instance and use Postman to perform operations with the Web API.
 
 Postman offers many other capabilities beyond those covered in this content. More information: [First 5 things to try if you’re new to Postman](http://blog.getpostman.com/2018/04/11/first-5-things-to-try-if-youre-new-to-postman/)
 
