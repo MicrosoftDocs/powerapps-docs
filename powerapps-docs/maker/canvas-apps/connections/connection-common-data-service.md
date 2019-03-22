@@ -17,6 +17,6 @@ search.app:
 
 # Connect to Common Data Service
 
-With Common Data Service, you can securely store and manage data that's used by business applications. App makers can then use PowerApps to build rich applications using this data.
+You can securely store your business data in Common Data Service and build rich apps in PowerApps so that users can manage that data. You can also integrate that data into solutions that include Microsoft Flow, Power BI, and data from Dynamics 365.
 
 More information: [What is Common Data Service?](../../common-data-service/data-platform-intro.md)
