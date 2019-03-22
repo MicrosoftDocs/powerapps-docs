@@ -134,7 +134,7 @@
         - name: Popular connectors
           items:
             - name: Common Data Service
-              href: common-data-service/data-platform-intro.md
+              href: canvas-apps/connections/connection-common-data-service.md
             - name: SharePoint
               href: canvas-apps/connections/connection-sharepoint-online.md
             - name: SQL Server
@@ -147,11 +147,7 @@
               href: canvas-apps/connections/connection-office365-outlook.md
             - name: Excel
               href: canvas-apps/connections/connection-excel.md
-            - name: OneDrive for Business
-              href: canvas-apps/connections/cloud-storage-blob-connections.md
-            - name: OneDrive
-              href: canvas-apps/connections/cloud-storage-blob-connections.md
-            - name: Dropbox
+            - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
         - name: Add a connection
           href: ./canvas-apps/add-data-connection.md
@@ -229,7 +225,6 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
-
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
