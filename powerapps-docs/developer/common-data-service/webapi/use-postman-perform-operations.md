@@ -45,7 +45,7 @@ The HTTP methods and values you use depend on the type of operations you want to
 Use a `GET` request to retrieve a set of records. The following example retrieves the first three account records.
 
 > [!NOTE]
-> Web API requests should include certain HTTP headers. Every request should include the `Accept` header value of `application/json`, even when no response body is expected. The current OData version is `4.0`, so include header `OData-Version: 4.0`. Include the `OData-MaxVersion` header so that there is no ambiguity about the version when there are new releases of OData. [!INCLUDE[](../../includes/proc-more-information.md)] [HTTP headers](compose-http-requests-handle-errors.md#http-headers).
+> Web API requests should include certain HTTP headers. Every request should include the `Accept` header value of `application/json`, even when no response body is expected. The current OData version is `4.0`, so include header `OData-Version: 4.0`. Include the `OData-MaxVersion` header so that there is no ambiguity about the version when there are new releases of OData. More information: [HTTP headers](compose-http-requests-handle-errors.md#http-headers).
 
 **Example**
 
