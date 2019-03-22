@@ -4,7 +4,7 @@ description: "Learn how to set up and configure a Postman environment that conne
 ms.custom: 
 ms.date: 03/22/2019
 ms.reviewer: 
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,7 +29,7 @@ You can use a Postman environment to save a set of variables that you use to con
 
 ## Prerequisites
 
-* Have an online or on-premises environment you can connect to. 
+* Have an PowerApps Common Data Service environment that you can connect to. 
 * Download and install the [Postman desktop application](https://www.getpostman.com/apps).
 
 <a name="bkmk_connectcds"></a> 

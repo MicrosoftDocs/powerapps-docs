@@ -48,8 +48,6 @@
     href: perform-conditional-operations-using-web-api.md
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
-- name: Version Differences
-  href: web-api-versions.md
 - name: Work with metadata
   href: use-web-api-metadata.md
   items:
@@ -63,6 +61,13 @@
     href: create-update-entity-relationships-using-web-api.md
   - name: Work with Option sets
     href: create-update-optionsets.md
+- name: Use Postman with Web API
+  href: use-postman-web-api.md
+  items:
+  - name: Setup a Postman environment
+    href: setup-postman-environment.md
+  - name: Use Postman to perform operations
+    href: use-postman-perform-operations.md
 - name: Discover the URL for your organization
   href: discover-url-organization-web-api.md
   items:
