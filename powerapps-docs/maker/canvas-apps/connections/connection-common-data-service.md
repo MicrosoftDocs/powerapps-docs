@@ -19,5 +19,4 @@ search.app:
 
 With Common Data Service, you can securely store and manage data that's used by business applications. App makers can then use PowerApps to build rich applications using this data.
 
-More information: [What is Common Data Service?](../../common-data-service/data-platform-intro
-.md)
+More information: [What is Common Data Service?](../../common-data-service/data-platform-intro.md)
