@@ -32,5 +32,3 @@ ms.assetid: dcb8e71d-9a2f-4789-9a84-34673ccfd5c1
 |Element|Description|
 |--|--|
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|
-
-

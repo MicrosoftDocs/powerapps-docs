@@ -1,7 +1,7 @@
 - name: "PowerApps Component Framework"
   href: overview.md
   items:
-  - name: "What are custom controls?"
+  - name: "What are custom controls"
     href: custom-controls-overview.md
   - name: Create custom controls
     href: create-custom-controls-using-pcf.md

@@ -43,7 +43,7 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
     <property name="sliderValue" display-name-key=" sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
-3. The [of-type-group]() attribute references a group of allowable numbers. Add the following [type-group]() element as a sibling to the <property> element in the manifest.
+3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest.
 
     ```XML
     <type-group name="numbers"> 

@@ -33,3 +33,10 @@ ms.assetid: 44d9fcfb-0cd8-48cc-aace-dd589099dd79
 |--|--|
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|
 
+### Example
+
+```XML
+<code path="TS_IncrementControl.js" order="1" />
+	    <css path="css/TS_IncrementControl.css" order="1" />
+      <resx path="strings/TSIncrementControl.1033.resx" version="1.0.0" />
+```

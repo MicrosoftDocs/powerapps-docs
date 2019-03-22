@@ -32,3 +32,8 @@ ms.assetid: 0e776647-a4a2-42c9-85e8-62718154052f
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|
 
 
+### Example
+
+```XML
+<img path="img/default.png" />
+```

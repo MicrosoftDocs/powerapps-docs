@@ -49,6 +49,7 @@ The `of-type` attribute value must be one of the following:
 ## Example
 
 ```xml
-<property name="myFirstProperty" display-name-key="myFirstProperty_Display_Key" description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+<property name="myFirstProperty" display-name-key="myFirstProperty_Display_Key" 
+description-key="myFirstProperty_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
 ```
 

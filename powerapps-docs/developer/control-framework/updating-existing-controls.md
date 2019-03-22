@@ -64,9 +64,10 @@ The build tools expect the control source to be exported using standard ES6 modu
      {
     export class TSLinearInputControl implements ControlFramework.StandardControl<InputsOutputs.IInputBag, InputsOutputs.IOutputBag> {
 	      <your class implementation>
-	}
-}
-```
+	       }
+            }
+     
+      ```
     After:
     ```TypeScript
      export class TSLinearInputControl implements ControlFramework.StandardControl<InputsOutputs.IInputBag, InputsOutputs.IOutputBag> {

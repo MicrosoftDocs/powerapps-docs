@@ -28,4 +28,13 @@ This element contains a `string` with one of the following values:
 
 [!INCLUDE [type-table](includes/type-table.md)]
 
+### Example
 
+```XML
+<type-group name="numbers">
+      <type>Whole.None</type>
+      <type>Currency</type>
+      <type>FP</type>
+      <type>Decimal</type>
+    </type-group>
+```

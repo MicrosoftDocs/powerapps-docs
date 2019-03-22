@@ -38,8 +38,8 @@ ms.assetid: 66599c2f-6651-4b27-92da-a38897acdfb5
 
 ```xml
 <resources>
-			<code path="JS_HelloWorldControl.js" order="1" />
-			<css path="css/JS_HelloWorldControl.css" order="1" />
+  <code path="JS_HelloWorldControl.js" order="1" />
+<css path="css/JS_HelloWorldControl.css" order="1" />
 		</resources>
 ```
 

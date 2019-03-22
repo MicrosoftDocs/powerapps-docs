@@ -50,6 +50,9 @@ ms.assetid: 4dacd337-c9df-458e-86f3-bfb3ab543ea7
 ## Example
 
 ```xml
-<control namespace="MyNameSpace" constructor="JSHelloWorldControl" version="1.0.0" display-name-key="JS_HelloWorldControl_Display_Key" description-key="JS_HelloWorldControl_Desc_Key" control-type="standard" preview-image="img/preview.png">
+<control namespace="MyNameSpace" constructor="JSHelloWorldControl" version="1.0.0"
+ display-name-key="JS_HelloWorldControl_Display_Key" description-key="JS_HelloWorldControl_Desc_Key"
+ control-type="standard" preview-image="img/preview.png">
+</control>
   ```
 

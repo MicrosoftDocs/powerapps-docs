@@ -35,4 +35,13 @@ ms.assetid: ec7c1ad4-b834-4755-8a04-2c8940f75674
 |--|--|--|
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
+### Example
 
+```XML
+<type-group name="numbers">
+      <type>Whole.None</type>
+      <type>Currency</type>
+      <type>FP</type>
+      <type>Decimal</type>
+    </type-group>
+```

@@ -39,7 +39,7 @@ To use PowerApps CLI you will need the following:
 
 To get started, open a command line interface (PowerShell).
 
-1. Make sure that you restart the  command line interface after installing the PowerApps CLI. 
+1. Make sure that you restart the  command line interface after installing the PowerApps CLI.
 2. Create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
 3. Run the following command to create a new control project by passing some basic parameters
  `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
@@ -56,7 +56,7 @@ To get started, open a command line interface (PowerShell).
 
 The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows to provide the best experience to the customers by focusing on what’s truly is important.
 
-If you would like to disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
+To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
 
 ## See also
 

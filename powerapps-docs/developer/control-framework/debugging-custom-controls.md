@@ -10,7 +10,7 @@ ms.author: "nabuthuk"
 ---
 # Debugging Custom Controls
 
-Once you are done implementing your custom control logic, you can use the following command to start the debugging process
+Once you are done implementing your custom control logic, run the following command to start the debugging process
 `npm start`
 
 > [!NOTE]
@@ -48,7 +48,7 @@ You can also interact with the control locally in real time and observe elements
 > ![local-host](media/local-host.png "local host")
 
 > [!div class="mx-imgBorder"]
-> ![debug-control](media/debug-control1.png "Debug control 1")
+> ![debug-control](media/debug-control-1.png "Debug control 1")
 
 ## Fiddler AutoResponder
 
