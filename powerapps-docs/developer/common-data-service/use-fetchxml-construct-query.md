@@ -44,7 +44,7 @@ In the following example, the **FetchXML** statement retrieves all accounts:
    <entity name='account'>  
       <attribute name='accountid'/>   
       <attribute name='name'/>   
-</entity>  
+   </entity>  
 </fetch>  
   
 ```  
@@ -73,7 +73,8 @@ In the following example, the **FetchXML** statement retrieves all accounts:
 <fetch mapping='logical' count='3'>  
   <entity name='account'>  
    <attribute name='name' alias='name'/>  
-  </entity></fetch>  
+  </entity>
+</fetch>  
 ```  
   
 This example shows an inner join between EntityMap and AttributeMap where the EntityMapID matches.  
