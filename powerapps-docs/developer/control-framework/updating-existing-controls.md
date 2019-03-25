@@ -13,7 +13,7 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 # Updating existing custom controls 
 
-To use the new **PowerApps Component Framework (PCF)** build tools with your existing PCF custom control source, a few changes are required.
+If you are a PCF Private Preview participant and have already built a PCF control, you will need to make some minor updates to make it compatible with the new ALM-centric project structures. To use the new PCF build tools with your existing PCF custom control source, a few changes are required.
 
 ## Creating an empty project
 
@@ -41,11 +41,11 @@ For example, if your control source is implemented in a file called `MyControl.t
 
     ```XML
    <resources>
-    <css path="css/TS_LinearInputControl.css" order="1"/>
+    <css path="css/YourControlName" order="1"/>
     </resources>
     ```
 
-The `path` attribute above indicates that the `TS_LinearInputControl.css` file is located in `css` subfolder relative to the current directory where the `ControlManifest.Input.xml` resides on disk.
+The `path` attribute above indicates that the `YourControlName.css` file is located in `css` subfolder relative to the current directory where the `ControlManifest.Input.xml` resides on disk.
 Update the ControlManifest.Input.xml files as follows:
 
 1. Edit the `code` entry in `ControlManifest.Input.xml` to the pre-compiled source file of your custom control (typically this is will be index.ts).

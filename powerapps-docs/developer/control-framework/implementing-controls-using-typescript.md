@@ -29,7 +29,7 @@ To create a new project, follow the steps below:
 
 ## Implementing Manifest
 
-A custom control is defined by the information in the `ControlManifest.Input.xml` manifest file.  In this walkthrough, this file is created under the `TSLinearInputControl` sub folder. For the linear input control, a property will be defined to store the numeric value of the slider input.
+A custom control is defined by the information in the `ControlManifest.Input.xml` manifest file.  In this walkthrough, this file is created under the `<Your Control Name>` sub folder. For the linear input control, a property will be defined to store the numeric value of the slider input.
 
 1. Open the `ControlManifest.Input.xml` file in the code editor (Visual Studio Code). The `ControlManifest.Input.xml` file defines an initial control property called `sampleProperty`.
 
@@ -37,13 +37,13 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
     <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" /> 
     ```
 
-2. Rename the `sampleProperty` to the name of your choice and change the property type as shown below
+2. Rename the `sampleProperty` and change the property type
 
     ```XML
     <property name="sliderValue" display-name-key=" sliderValue _Display_Key" description-key=" sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" /> 
     ```
 
-3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest.
+3. The of-type-group attribute references a group of allowable numbers. Add the following type-group element as a sibling to the <property> element in the manifest. The type-group specifies the control value and can contain whole, currency, floating point, or decimal values.
 
     ```XML
     <type-group name="numbers"> 
@@ -54,11 +54,10 @@ A custom control is defined by the information in the `ControlManifest.Input.xml
      </type-group> 
     ```
 
-4. The type-group specifies the control value and can contain whole, currency, floating point, or decimal values. 
-5. Save the changes to the `ControlManifest.Input.xml` file.
-6. Build the control project using the command `npm run build`.
 
-The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your control will have access to Typescript source code.
+4. Save the changes to the `ControlManifest.Input.xml` file.
+5. Build the control project using the command `npm run build`.
+6. The build generates an updated Typescript type declaration file under `TSLinearInputControl/generated folder`.  The `ManifestTypes.d.ts` file defines the properties that your control will have access to Typescript source code.
 
 ## Implementing control logic
 
