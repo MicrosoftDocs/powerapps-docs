@@ -100,6 +100,10 @@ When HTML web resources are processed within Solution Checker, the HTML web reso
 
 ECMAScript 6 (2015) or later versions are not currently supported for Solution Checker. When Solution Checker analyzes JavaScript using ECMAScript 6 or later, a web-supported-syntax issue for the web resource is reported.  
 
+## Multiple violations reported for plug-ins and workflow activities based on call scope
+
+For plugin and workflow activity rules where the issue is only relevant in the calling context, Solution Checker starts its analysis at the IPlugin implementation and traverses a call graph to detect issues within the scope of that implementation.  In some cases, many call paths may arrive at the same location where we detect the issue.  Since the issue is relevant to the call scope, we may choose to report based on that scope to provide a better picture of impact rather than on distinct locations and thus, multiple issues, in fact, may reference a single location that needs to be fixed.
+
 ## See also
 [Best practices and guidance for the Common Data Service](../../developer/common-data-service/best-practices/index.md)<br />
 [Best practices and guidance for model-driven apps](../../developer/model-driven-apps/best-practices/index.md)<br />
