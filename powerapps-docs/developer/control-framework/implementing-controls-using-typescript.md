@@ -21,7 +21,7 @@ Each custom control is comprised of the following key components:
 
 To create a new project, follow the steps below:
 
-1. Open PowerShell or command window 
+1. Open PowerShell or command window.
 2. Create a new folder for the project using the command `mkdir LinearControl`.
 3. `cd` into the new directory and run the command `cd LinearControl` 
 4. Create the control project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 

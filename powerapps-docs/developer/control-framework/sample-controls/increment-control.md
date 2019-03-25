@@ -46,7 +46,7 @@ To implement this control, first you need to define the [Manifest](../manifest-s
 ```TypeScript
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
-	export class TSIncrementControl implements ControlFramework.StandardControl<IInputs, IOutputs> {
+	export class TSIncrementControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 		// Value of the field is stored and used inside the control 
 		private _value: number;
 
@@ -79,7 +79,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
 		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
 		 */
-		public init(context: ControlFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ControlFramework.Dictionary, container:HTMLDivElement)
+		public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 		{
 			// Creating the label for the control and setting the relevant values.
 			this.label = document.createElement("input");
@@ -128,7 +128,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
 		 */
-		public updateView(context: ControlFramework.Context<IInputs>): void
+		public updateView(context: ComponentFramework.Context<IInputs>): void
 		{
 			// This method would rerender the control with the updated values after we call NotifyOutputChanged
 			//set the value of the field control to the raw value from the configured field

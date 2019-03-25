@@ -38,7 +38,7 @@ This sample describes how to bind a custom control to different fields on the fo
 
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
-    export class TSIFrameControl implements ControlFramework.StandardControl<IInputs, IOutputs> 
+    export class TSIFrameControl implements ComponentFramework.StandardControl<IInputs, IOutputs> 
     {
         // Reference to Bing Map IFrame HTMLElement
         private _bingMapIFrame: HTMLElement;
@@ -58,7 +58,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
 		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
 		 */
-        public init(context: ControlFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ControlFramework.Dictionary, container:HTMLDivElement)
+        public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
         {
             this._container = container;
             this._controlViewRendered = false;
@@ -68,7 +68,7 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 		 * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
 		 */
-        public updateView(context: ControlFramework.Context<IInputs>)
+        public updateView(context: ComponentFramework.Context<IInputs>)
         {
             if (!this._controlViewRendered)
 			{

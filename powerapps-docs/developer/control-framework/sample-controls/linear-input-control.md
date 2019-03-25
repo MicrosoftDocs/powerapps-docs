@@ -43,7 +43,7 @@ To implement this control, first you need to define the [Manifest](../manifest-s
 ```TypeScript
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-    export class TSLinearInputControl implements ControlFramework.StandardControl<IInputs, IOutputs> {
+    export class TSLinearInputControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 		// Value of the field is stored and used inside the control 
 		private _value: number;
 
@@ -60,8 +60,8 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 		// This element contains all elements of our custom control example
 		private _container: HTMLDivElement;
 
-		// Reference to ControlFramework Context object
-        private _context: ControlFramework.Context<IInputs>;
+		// Reference to ComponentFramework Context object
+        private _context: ComponentFramework.Context<IInputs>;
         
         // Event Handelr 'refreshData' reference
         private _refreshData: EventListenerOrEventListenerObject;
@@ -80,7 +80,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
 		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
 		 */
-        public init(context: ControlFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ControlFramework.Dictionary, container:HTMLDivElement)
+        public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
         {
             this._context = context;
             this._container = document.createElement("div");
@@ -130,7 +130,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 		 * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
 		 */
-        public updateView(context: ControlFramework.Context<IInputs>): void
+        public updateView(context: ComponentFramework.Context<IInputs>): void
         {
             // storing the latest context from the control.
             this._value = context.parameters.controlValue.raw;

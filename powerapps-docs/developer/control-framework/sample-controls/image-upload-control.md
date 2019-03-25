@@ -55,13 +55,15 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 	// 'RemoveButton' css class name
 	const RemoveButtonClassName = "RemoveButton";
-export class TSImageUploadControl implements ControlFramework.StandardControl<IInputs, IOutputs> 
+
+
+	export class TSImageUploadControl implements ComponentFramework.StandardControl<IInputs, IOutputs> 
 	{
 		// Value of the field is stored and used inside the control 
 		private _value: string | null;
 
 		// PCF framework context, "Input Properties" containing the parameters, control metadata and interface functions.
-		private _context: ControlFramework.Context<IInputs>;
+		private _context: ComponentFramework.Context<IInputs>;
 
 		// PCF framework delegate which will be assigned to this object which would be called whenever any update happens. 
 		private _notifyOutputChanged: () => void;
@@ -97,7 +99,7 @@ export class TSImageUploadControl implements ControlFramework.StandardControl<II
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
 		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
 		 */
-		public init(context: ControlFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ControlFramework.Dictionary, container:HTMLDivElement)
+		public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 		{
 			this._context = context;
 			this._notifyOutputChanged = notifyOutputChanged;
@@ -144,7 +146,7 @@ export class TSImageUploadControl implements ControlFramework.StandardControl<II
 		 * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
 		 */
-		public updateView(context: ControlFramework.Context<IInputs>): void
+		public updateView(context: ComponentFramework.Context<IInputs>): void
 		{
 			// Always need to update the _context obj
 			this._context = context;
@@ -175,11 +177,11 @@ export class TSImageUploadControl implements ControlFramework.StandardControl<II
 		 * 
 		 * @param files 
 		 */
-		private processFile(files: ControlFramework.FileObject[]): void
+		private processFile(files: ComponentFramework.FileObject[]): void
 		{
 			if(files.length > 0)
 			{
-				let file: ControlFramework.FileObject = files[0];
+				let file: ComponentFramework.FileObject = files[0];
 
 				try
 				{

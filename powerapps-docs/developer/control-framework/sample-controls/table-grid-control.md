@@ -39,8 +39,8 @@ The control header columns and internal record values are bound to the existing 
 ```TypeScript
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
-import DataSetInterfaces = ControlFramework.PropertyHelper.DataSetApi;
-type DataSet = ControlFramework.PropertyTypes.DataSet;
+import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
+type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
 
 	// Define const here
@@ -49,10 +49,10 @@ type DataSet = ControlFramework.PropertyTypes.DataSet;
 	// Style name of Load More Button
 	const LoadMoreButton_Hidden_Style = "LoadMoreButton_Hidden_Style";
 
-	export class TSTableGrid implements ControlFramework.StandardControl<IInputs, IOutputs> {
+	export class TSTableGrid implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
 		// Cached context object for the latest updateView
-		private contextObj: ControlFramework.Context<IInputs>;
+		private contextObj: ComponentFramework.Context<IInputs>;
 		
 		// Div element created as part of this control's main container
 		private mainContainer: HTMLDivElement;
@@ -79,7 +79,7 @@ type DataSet = ControlFramework.PropertyTypes.DataSet;
 		 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
 		 * @param container If a control is marked control-type='starndard', it will receive an empty div element within which it can render its content.
 		 */
-		public init(context: ControlFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ControlFramework.Dictionary, container:HTMLDivElement)
+		public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 		{
 			// Need to track container resize so that control could get the available width. The available height won't be provided even this is true
 			context.mode.trackContainerResize(true);
@@ -111,7 +111,7 @@ type DataSet = ControlFramework.PropertyTypes.DataSet;
 		 * Called when any value in the property bag has changed. This includes field values, data-sets, global values such as container height and width, offline status, control metadata values such as label, visible, etc.
 		 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
 		 */
-		public updateView(context: ControlFramework.Context<IInputs>): void
+		public updateView(context: ComponentFramework.Context<IInputs>): void
 		{
 			this.contextObj = context;
 			this.toggleLoadMoreButtonWhenNeeded(context.parameters.simpleTableGrid);
@@ -162,7 +162,7 @@ type DataSet = ControlFramework.PropertyTypes.DataSet;
 		 * @param context 
 		 * @return sorted columns object on View
 		 */
-		private getSortedColumnsOnView(context: ControlFramework.Context<IInputs>): DataSetInterfaces.Column[]
+		private getSortedColumnsOnView(context: ComponentFramework.Context<IInputs>): DataSetInterfaces.Column[]
 		{
 			if (!context.parameters.simpleTableGrid.columns) {
 				return [];
@@ -188,7 +188,7 @@ type DataSet = ControlFramework.PropertyTypes.DataSet;
 		 * @param columnsOnView columns array on the configured view
 		 * @returns column width distribution
 		 */
-		private getColumnWidthDistribution(context: ControlFramework.Context<IInputs>, columnsOnView: DataSetInterfaces.Column[]): string[]{
+		private getColumnWidthDistribution(context: ComponentFramework.Context<IInputs>, columnsOnView: DataSetInterfaces.Column[]): string[]{
 
 			let widthDistribution: string[] = [];
 			

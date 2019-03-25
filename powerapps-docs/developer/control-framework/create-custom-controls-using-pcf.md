@@ -28,12 +28,15 @@ To use PowerApps CLI you will need the following:
 - If you don’t have Visual Studio 2017 or later, follow one of the options below:
    - Option 1: Install Visual Studio 2017 or later
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
-- Install Microsoft CLI using the steps below
+- Install Microsoft CLI using the steps below:
     1. Create a directory on your machine, called something like `c:\pac` 
-    2. Open the command line interface and navigate to the directory that you created above `Cd c:\pac` 
+    2. Open the command line interface as `adminitrator` and navigate to the directory that you created above `Cd c:\pac` 
     3. Run the below command
- `powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallAndConfigureCLI.ps1'))"`  
+ `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallAndConfigureCLI.ps1')))) -ArgumentList "stable"`   
 - To deploy your custom control, you will need Common Data Service environment with System administrator or System customizer privileges.
+
+> [!NOTE]
+> PowerApps Component Framework is only supported in new  unified interface and only for online deployment types.
 
 ## Creating custom controls
 
