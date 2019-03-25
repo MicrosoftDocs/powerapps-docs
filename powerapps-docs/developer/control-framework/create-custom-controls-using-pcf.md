@@ -14,7 +14,11 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create Controls using PowerApps Component Framework tooling
 
-This topic shows how to create custom controls using the **PowerApps CLI (Command Line Interface)**. Use the PowerApps CLI to create, debug and deploy custom controls. The PowerApps CLI will enable developers to quickly create PCF controls and in the coming months the set of capabilities will expand to include plugin development and aid the Microsoft recommended Application Lifecycle Management (ALM) processes.
+Use the PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps Component Framework (PCF) controls. The PowerApps CLI will enable developers to quickly create PCF controls and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
+ 
+In this private preview, we are enabling developers to use the first version of PowerApps CLI to create PCF custom controls, thus your feedback will help us take this tool to the next level. 
+
+## What is Microsoft PowerApps CLI 
 
 Microsoft PowerApps CLI is a simple, single-stop developer command line interface which offers you everything that is required to create a custom control and enable you to perform all the development tasks via a simple and efficient set of commands. The PowerApps CLI is the first step towards a comprehensive **ALM** story where enterprise developers and ISVs can create, build, debug and publish their extensions and customizations quickly and efficiently. The significance here is a shift towards a source centric approach, to provide better support for continuous validation starting from internal development loop through to AppSource publishing and end-customer deployment.
  
@@ -24,7 +28,7 @@ Developers will be empowered to identify problems early and operations like addi
 
 To use PowerApps CLI you will need the following:
 
-- Install [Node.js](https://nodejs.org/en/).
+- Install [Node.js](https://nodejs.org/en/). We recommend LTS (Long Term Support) version 10.15.3 LTS as it seems to be most stable.
 - If you don’t have Visual Studio 2017 or later, follow one of the options below:
    - Option 1: Install Visual Studio 2017 or later
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
@@ -32,19 +36,18 @@ To use PowerApps CLI you will need the following:
     1. Create a directory on your machine, called something like `c:\pac` 
     2. Open the command line interface as `adminitrator` and navigate to the directory that you created above `Cd c:\pac` 
     3. Run the below command
- `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallAndConfigureCLI.ps1')))) -ArgumentList "stable"`   
-- To deploy your custom control, you will need Common Data Service environment with System administrator or System customizer privileges.
+ `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1')))) -ArgumentList "stable"`  
 
 > [!NOTE]
-> PowerApps Component Framework is only supported in new  unified interface and only for online deployment types.
+> To deploy your custom control, you will need Common Data Service environment with System administrator or System customizer privileges.
 
 > Currently PowerApps CLI is supported only on Windows 10.
 
 ## Creating custom controls
 
-To get started, open command prompt for vs 2017 after installing PowerApps CLI.
+To get started, open command prompt for VS 2017 after installing PowerApps CLI.
 
-1. In the developer command prompt for vs 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
+1. In the developer command prompt for VS 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
 3. Run the following command to create a new control project by passing some basic parameters
  `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
@@ -107,7 +110,7 @@ Use the Fiddler AutoResponder to quickly debug your custom controls. Install [Fi
 
 ## Deploying controls into Common Data Service
 
-This topic demonstrates how to import custom controls into Common Data Service. After developing custom controls using the PowerApps CLI, next step is to import those controls, so that you can see the controls in runtime.
+This section demonstrates how to import custom controls into Common Data Service. After developing custom controls using the PowerApps CLI, next step is to import those controls, so that you can see the controls in runtime.
 
 Follow the steps below to create and import a solution file:
 
@@ -129,12 +132,13 @@ Follow the steps below to create and import a solution file:
 4. The generated solution files are located in `\bin\debug\`.
 5. You should manually import the solution using the web portal.
 
+## Adding custom controls to entity or a field
+
+To add a custom control like data-set control or simple table control to a grid or view, follow the steps mentioned in the topic [Add controls to fields and entities](add-custom-controls-to-a-field-or-entity.md). 
+
 ## Telemetry
 
 The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows to provide the best experience to the customers by focusing on what’s truly is important.
 
 To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
 
-### See also
-
-[Add Controls to entities or fields](add-custom-controls-to-a-field-or-entity.md)

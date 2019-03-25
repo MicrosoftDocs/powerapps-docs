@@ -11,7 +11,7 @@ ms.author: "nabuthuk"
 
 # Limitations of PowerApps Component Framework
 
-With the release of the PowerApps Component Framework, you can now create your own custom controls to improve the user experience in Model-driven Apps. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
+With the release of the PowerApps Component Framework, you can now create your own custom controls to improve the user experience in Common Data Service. Even though you can create your own controls, there are some limitations that restrict developers implementing some features in the custom controls.Below are some of the limitations:
 
 ### Multiple controls in single manifest file
 
