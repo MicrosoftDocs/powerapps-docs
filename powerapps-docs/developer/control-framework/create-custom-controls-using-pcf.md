@@ -38,12 +38,14 @@ To use PowerApps CLI you will need the following:
 > [!NOTE]
 > PowerApps Component Framework is only supported in new  unified interface and only for online deployment types.
 
+> Currently PowerApps CLI is supported only on Windows 10.
+
 ## Creating custom controls
 
-To get started, open a command line interface (PowerShell).
+To get started, open command prompt for vs 2017 after installing PowerApps CLI.
 
-1. Make sure that you restart the  command line interface after installing the PowerApps CLI.
-2. Create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
+1. In the developer command prompt for vs 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
+2. Go to the newly created folder using the command `cd <specify your new folder path>`.
 3. Run the following command to create a new control project by passing some basic parameters
  `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
  
@@ -53,13 +55,10 @@ To get started, open a command line interface (PowerShell).
 4. To retrieve all the required project dependencies, run the command `npm install`.
 5. Open your project in any developer environment of your choice and get started with your custom control development.
 6. Implement the custom logic for the control. More information: [Implementing custom controls using TypeScript](implementing-controls-using-typescript.md).
-7. To build your control you can use **Visual Studio Code** by using the (Ctrl-Shift-B) command, and selecting your build options or you can build your control quickly using `npm run build` command.
 
-## Telemetry
+## Building your controls
 
-The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows to provide the best experience to the customers by focusing on what’s truly is important.
-
-To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
+To build your control you can open the folder in Visual Studio Code and use the (Ctrl-Shift-B) command, and select your build options or you can build your control quickly using  `npm run build` command.
 
 ## See also
 
