@@ -14,7 +14,6 @@ Once you are done implementing your custom control logic, run the following comm
 `npm start`
 
 > [!NOTE]
-> The debug harness is locally served by `BrowserSync` and will launch on your local machine's default browser using localhost:3000 port.  
 > Today you can only visualize your field control, but dataset support is coming soon.
 
 > [!div class="mx-imgBorder"]
