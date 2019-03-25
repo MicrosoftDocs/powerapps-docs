@@ -10,8 +10,7 @@ ms.suite: ""
 ms.topic: "article"
 ---
 
-# Import controls into Common Data Service
-
+# Deploying controls into Common Data Service
 
 This topic demonstrates how to import custom controls into Common Data Service. After developing custom controls using the PowerApps CLI, next step is to import those controls, so that you can see the controls in runtime.
 

@@ -3,18 +3,12 @@
   items:
   - name: "What are custom controls"
     href: custom-controls-overview.md
-  - name: Create custom controls
+  - name: Create, debug and deploy custom controls using Microsoft PowerApps CLI
     href: create-custom-controls-using-pcf.md
-  - name: Implementing custom controls in TypeScript
-    href: implementing-controls-using-typescript.md
-  - name: Import custom controls
-    href: import-custom-controls.md
   - name: Add custom controls to entity or a field
     href: add-custom-controls-to-a-field-or-entity.md
-  - name: Debug custom controls
-    href: debugging-custom-controls.md
-  - name: Update existing PCF controls
-    href: updating-existing-controls.md
+  - name: Implementing custom controls in TypeScript
+    href: implementing-controls-using-typescript.md
   - name: Limitations of PowerApps Component Framework
     href: limitations.md
   - name: Sample Controls
