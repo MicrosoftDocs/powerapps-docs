@@ -142,3 +142,7 @@ The feature team is aggregating anonymized telemetry in order to understand whic
 
 To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
 
+### See also
+
+[Implementing controls in TypeScript](implementing-controls-using-typescript.md)
+[Updating existing controls into new tools format](updating-existing-controls.md)

@@ -89,6 +89,4 @@ import { IInputs, IOutputs } from `./generated/ManifestTypes`.
 
 ### See also
 
-[Implementing controls using TypeScript](implementing-controls-using-typescript.md)<br />
-[Import controls](import-custom-controls.md)<br />
-[Debug controls](debugging-custom-controls.md)
+[Limitations of PowerApps Component Framework](limitations.md)

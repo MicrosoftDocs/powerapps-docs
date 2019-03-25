@@ -39,3 +39,4 @@ Currently font resource (.tff) is not supported in PCF.
 ### Custom controls on header section on a form
 
 When you add a custom control in the header section of a form, the form editor stops working and sometimes prevent you from removing control.
+

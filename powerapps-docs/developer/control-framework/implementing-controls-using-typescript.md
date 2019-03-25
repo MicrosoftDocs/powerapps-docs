@@ -279,6 +279,4 @@ The linear input control’s `init` method creates an input element and sets the
 
 ### See also
 
-[Update existing PCF controls](updating-existing-controls.md)<br />
-[Import controls](import-custom-controls.md)<br />
-[Debug controls](debugging-custom-controls.md)
+[Update existing PCF controls](updating-existing-controls.md)
