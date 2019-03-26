@@ -26,7 +26,7 @@ search.app:
 With Common Data Service, XRM tooling enables you to connect to your Common Data Service environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Common Data Service connections at deployment time, and not hard code in your application to connect to your Common Data Service environment.  
 
 > [!NOTE]
-> In this documentation release, the connection string documentation that is common to all `on-premise` deployment types has been moved to the [Customer Engagement for apps](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) documentation. The sub-sections that follow contain only the information specifically related to implementing connection string for `online` deployment. To learn about connection strings development, start by reading the connection string [documentation](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) under Dynamics 365 Customer Engagement for apps
+> The connection string documentation that is applicable to Dynamics 365 for customer Engagement apps (on-premises) users is now available in the Customer Engagement documentation at : [Use Connection strings to connect to Customer Engagement)](/dynamics365/customer-engagement/developer/use-connection-strings-xrm-tooling-connect)
 
 <a name="Create"></a> 
 
@@ -84,7 +84,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 
 ## Connection string examples
  
-The following examples show how you can use connection strings for connecting to on-line deployments and authentication scenarios.  
+The following examples show how you can use connection strings for connecting to on-ine deployments and authentication scenarios. The connection string examples for  on-premises and IFD deployment instances is now available in the Customer Engagement documentation at: [Use connection strings in XRM tooling to connect to Customer Engagement](/dynamics365/customer-engagement/developer/use-connection-strings-xrm-tooling-connect) 
 
 ### Named account using Office 365  
   
