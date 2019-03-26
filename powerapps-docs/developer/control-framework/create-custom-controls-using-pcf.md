@@ -20,7 +20,7 @@ In this private preview, we are enabling developers to use the first version of 
 
 ## What is Microsoft PowerApps CLI 
 
-Microsoft PowerApps CLI is a simple, single-stop developer command line interface which offers you everything that is required to create a custom control and enable you to perform all the development tasks via a simple and efficient set of commands. The PowerApps CLI is the first step towards a comprehensive **ALM** story where enterprise developers and ISVs can create, build, debug and publish their extensions and customizations quickly and efficiently.
+Microsoft PowerApps CLI is a simple, single-stop developer command line interface enabling you to create custom controls. The PowerApps CLI is also the first step towards a comprehensive ALM story where enterprise developers and ISVs can create, build, debug and publish their PowerApps and Dynamics 365 for Customer Engaement apps extensions and customizations quickly and efficiently.  
 
 ## Prerequisites to use PowerApps CLI
 
