@@ -33,7 +33,7 @@ To use PowerApps CLI you will need the following:
 - Install Microsoft CLI using the steps below:
     1. Create a directory on your machine, something like `c:\pac` 
     2. Open the Developer Command Prompt for VS 2017 and navigate to the directory that you created above `Cd c:\pac` 
-    3. Run the below command
+    3. Copy-paste below command into your command prompt and hit enter:
  `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1'))))`  
 
 > [!NOTE]
