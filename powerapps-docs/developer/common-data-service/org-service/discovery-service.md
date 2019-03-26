@@ -1,5 +1,5 @@
 ---
-title: "Use the Discovery Service with the SDK Assemblies (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use the Discovery Service with the SDK Assemblies (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Describes how to use the discovery service with the .NET SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -43,7 +43,7 @@ There are three messages that you can use which all inherit from the abstract <x
   
 |Message|Description|  
 |-------------|-----------------|  
-|<xref:Microsoft.Xrm.Sdk.Discovery.RetrieveUserIdByExternalIdRequest>|Retrieves the logged-on user's ID in CDS for Apps|  
+|<xref:Microsoft.Xrm.Sdk.Discovery.RetrieveUserIdByExternalIdRequest>|Retrieves the logged-on user's ID in Common Data Service|  
 |<xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationRequest>|Retrieves information about a single organization.|  
 |<xref:Microsoft.Xrm.Sdk.Discovery.RetrieveOrganizationsRequest>|Retrieves information about all organizations to which the user belongs.|  
 

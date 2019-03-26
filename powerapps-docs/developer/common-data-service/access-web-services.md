@@ -1,5 +1,5 @@
 ---
-title: "Access external web services (Common Data Service for Apps) | MicrosoftDocs"
+title: "Access external web services (Common Data Service) | MicrosoftDocs"
 description: "Learn how to access a web service from a custom plug-in or workflow activity."
 ms.custom: ""
 ms.date: 2/6/2019

@@ -1,6 +1,6 @@
 ---
-title: "Use XRM tooling to create data (Common Data Service for Apps)| Microsoft Docs"
-description: "Use CrmServiceClient class to create data on CDS for Apps"
+title: "Use XRM tooling to create data (Common Data Service)| Microsoft Docs"
+description: "Use CrmServiceClient class to create data on Common Data Service"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -27,7 +27,7 @@ There are seven methods available in the <xref:Microsoft.Xrm.Tooling.Connector.C
   
 ## CreateNewRecord  
 
-This method is used to create any type of entity data in CDS for Apps. To use it, you need to know the schema name of the entity you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.  
+This method is used to create any type of entity data in Common Data Service. To use it, you need to know the schema name of the entity you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.  
   
 ```csharp 
 CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential("<UserName>", "<Password>",“<Domain>”),"<Server>", "<Port>", "<OrgName>");  
@@ -73,7 +73,7 @@ In this example, we created a data payload object called `indata`. Next, we popu
   
 ## CreateAnnotation
   
-This method is used to create and attach a note object to any entity record. While you can populate all the variables for the note in the first pass, you only need to provide subject and note text fields. In practice, this is generally used to attach system-generated notes to an entity, or to attach files that are stored in CDS for Apps to an entity. Additionally, if you provide your own UI for creating notes for your user, this is how you would attach that note to the owner entity in CDS for Apps. This example continues from the prior example to create a note on the newly created account.  
+This method is used to create and attach a note object to any entity record. While you can populate all the variables for the note in the first pass, you only need to provide subject and note text fields. In practice, this is generally used to attach system-generated notes to an entity, or to attach files that are stored in Common Data Service to an entity. Additionally, if you provide your own UI for creating notes for your user, this is how you would attach that note to the owner entity in Common Data Service. This example continues from the prior example to create a note on the newly created account.  
   
 ```csharp
 CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential("<UserName>", "<Password>", “<Domain>”),"<Server>", "<Port>", "<OrgName>");  
@@ -108,4 +108,4 @@ else
 ### See also  
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)
+[Use XRM Tooling API to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)

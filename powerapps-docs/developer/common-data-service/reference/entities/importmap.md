@@ -1,5 +1,5 @@
 ---
-title: "ImportMap Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ImportMap Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ImportMap entity."
 services: ''
 suite: powerapps

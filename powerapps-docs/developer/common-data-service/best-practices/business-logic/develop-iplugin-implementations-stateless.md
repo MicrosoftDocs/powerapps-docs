@@ -189,7 +189,7 @@ Read-only, static, and constant members are inherently thread-safe and can also 
 
 ## Additional information
 
-After Common Data Services for Apps instantiates the plug-in class, the platform caches that plug-in instance for performance reasons. The length of time that a plug-in instance is held in cache is managed by the platform.  Certain operations, such as changing a plug-in's registration properties, will trigger a notification to the platform to refresh the cache.  In these scenarios, the plug-in will be reinitialized.
+After Common Data Services instantiates the plug-in class, the platform caches that plug-in instance for performance reasons. The length of time that a plug-in instance is held in cache is managed by the platform.  Certain operations, such as changing a plug-in's registration properties, will trigger a notification to the platform to refresh the cache.  In these scenarios, the plug-in will be reinitialized.
 
 Because the platform caches plug-in class instances, the constructor is not called for every invocation of plug-in execution.  For this reason, IPlugin implementations should not depend on the timing of operations in the constructor apart from obtaining static configuration data. 
 

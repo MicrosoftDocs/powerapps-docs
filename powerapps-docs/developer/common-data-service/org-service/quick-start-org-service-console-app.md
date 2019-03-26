@@ -1,6 +1,6 @@
 ---
-title: "Quick Start: Organization service sample (C#) (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This quick start will show you how to connect to the organization service of the Common Data Service for Apps" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Quick Start: Organization service sample (C#) (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This quick start will show you how to connect to the organization service of the Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -17,7 +17,7 @@ search.app:
 ---
 # Quick Start: Organization service sample (C#)
 
-This is where you begin working with the .NET SDK assemblies to work with data using Common Data Service for Apps.
+This is where you begin working with the .NET SDK assemblies to work with data using Common Data Service.
 
 In this quick start you will create a minimum console application to connect to the Organization service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. You will pass  your connection information using a connection string passed to the constructor.
 
@@ -31,10 +31,10 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
 
  - Visual Studio (2017 recommended)
  - Internet connection
- - Valid user account for a Common Data Service for Apps instance
+ - Valid user account for a Common Data Service instance
     - Your username
     - Your password
- - Url to the CDS for Apps environment you want to connect with
+ - Url to the Common Data Service environment you want to connect with
  - Basic understanding of the Visual C# language
 
 ## Create Visual Studio project
@@ -127,7 +127,7 @@ You have successfully connected to the organization service.
 
 ## Next Steps
 
-These topics will explain how to work with CDS for Apps entities:
+These topics will explain how to work with Common Data Service entities:
 
 [Entity Operations using the Organization service](entity-operations.md)<br />
 [Create entities using the Organization Service](entity-operations-create.md)<br />

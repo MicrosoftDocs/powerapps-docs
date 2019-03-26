@@ -32,4 +32,4 @@ Entity relationships define the ways that entity records can be associated with 
 
 ## See also
 [Create a relationship between entities](data-platform-entity-lookup.md) <br/>
-[Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal](create-edit-nn-relationships-portal.md)
+[Create Many-to-many entity relationships in Common Data Service using PowerApps portal](create-edit-nn-relationships-portal.md)

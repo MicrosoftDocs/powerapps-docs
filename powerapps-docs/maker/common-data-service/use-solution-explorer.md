@@ -101,8 +101,8 @@ In PowerApps, you can view the classic solution explorer by selecting **Solution
 - If a canvas app is packaged in a managed solution, it can still be edited in the target environment.
 - Dependencies are not available for canvas apps.
 - Deleting a managed solution will not rollback to a different canvas app's version. 
--	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service for Apps (CDS) database.
--	CDS APIs to call canvas apps are blocked and don't return anything. 
+-	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service (Common Data Service) database.
+-	Common Data Service APIs to call canvas apps are blocked and don't return anything. 
 -	Canvas apps created in a solution can't be shared as co-owner to an AAD Security Group.
 -	Canvas apps won't display in the classic solution explorer.
 -	Existing canvas apps are not solution aware. 

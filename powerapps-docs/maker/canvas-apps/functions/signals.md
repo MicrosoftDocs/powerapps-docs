@@ -37,7 +37,11 @@ The **App** signal returns information about the running app.
 
 | Property | Description |
 | --- | --- |
-| **App.ActiveScreen** |Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed.  By using the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function, you can change the displayed screen. |
+| **App.ActiveScreen** | Screen that's displayed. Returns a screen object, which you can use to reference properties of the screen or compare to another screen to determine which screen is displayed. To change the displayed screen, use the **[Back](function-navigate.md)** or **[Navigate](function-navigate.md)** function. |
+| **App.Width** | Returns the width of the window in which the app is running. You can use this property in a formula when you set the **Width** property of the screen to build a responsive app.  |
+| **App.Height** | Returns the height of the window in which the app is running. You can use this property in a formula when you set the **Height** property of the screen to build a responsive app. |
+| **App.DesignWidth** | Returns the width of the app in PowerApps Studio. You can use this property in a formula when you set the **Width** property of the screen to to ensure a minimum width in a responsive app.  |
+| **App.DesignHeight** | Returns the height of the app in PowerApps Studio. You can use this property in a formula when you set the **Height** property of the screen to to ensure a minimum height in a responsive app.  |
 
 The **App** object also has a [behavior formula](../working-with-formulas-in-depth.md) that you can set.
 

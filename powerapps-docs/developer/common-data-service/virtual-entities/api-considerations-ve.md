@@ -1,5 +1,5 @@
 ---
-title: "API considerations of virtual entities (Common Data Service for Apps) | Microsoft Docs"
+title: "API considerations of virtual entities (Common Data Service) | Microsoft Docs"
 description: "Describes API considerations of virtual entities"
 ms.date: 10/31/2018
 ms.service: powerapps
@@ -19,7 +19,7 @@ search.app:
 
 # API considerations of virtual entities
 
-There are two broad categories of changes to the metadata system that are associated with the introduction of virtual entities in Common Data Service for Apps:
+There are two broad categories of changes to the metadata system that are associated with the introduction of virtual entities in Common Data Service:
 
 - Addition of a new assembly, namespaces, classes and other types to support development of custom virtual entity data providers
 - Changes to the core platform, including a few additional properties to support external data source mapping, and modification of behaviors of existing entity and attribute properties that reflect the limitations of the initial implementation of this feature
@@ -43,11 +43,11 @@ This assembly is distributed as a NuGet package: [Microsoft.CrmSdk.Data](https:/
 
 ## Changes to the core platform
 
-The following changes to the standard CDS for Apps reference types were introduced to support virtual entities.
+The following changes to the standard Common Data Service reference types were introduced to support virtual entities.
 
 ### New Entities
 
-The CDS for Apps exposes virtual entity data providers and sources as the following new entities: [EntityDataProvider](../reference/entities/entitydataprovider.md) and [EntityDataSource](../reference/entities/entitydatasource.md). 
+The Common Data Service exposes virtual entity data providers and sources as the following new entities: [EntityDataProvider](../reference/entities/entitydataprovider.md) and [EntityDataSource](../reference/entities/entitydatasource.md). 
 
 ### New metadata properties
 

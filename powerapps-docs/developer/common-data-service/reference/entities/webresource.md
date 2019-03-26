@@ -1,5 +1,5 @@
 ---
-title: "WebResource Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "WebResource Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the WebResource entity."
 services: ''
 suite: powerapps

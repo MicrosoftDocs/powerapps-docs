@@ -1,5 +1,5 @@
 ---
-title: "HierarchyRule Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "HierarchyRule Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the HierarchyRule entity."
 services: ''
 suite: powerapps

@@ -1,5 +1,5 @@
 ---
-title: "Email Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "Email Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the Email entity."
 services: ''
 suite: powerapps

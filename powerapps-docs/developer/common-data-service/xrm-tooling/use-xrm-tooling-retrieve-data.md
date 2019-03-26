@@ -1,6 +1,6 @@
 ---
-title: "Use XRM tooling to retrieve data (Common Data Service for Apps)| Microsoft Docs"
-description: "Use CrmServiceClient class to retrieve data from CDS for Apps"
+title: "Use XRM tooling to retrieve data (Common Data Service)| Microsoft Docs"
+description: "Use CrmServiceClient class to retrieve data from Common Data Service"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -23,7 +23,7 @@ search.app:
 ---
 # Use XRM tooling to retrieve data
 
-There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in CDS for Apps. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
+There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in Common Data Service. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
   
 ## GetEntityDataById  
 
@@ -106,5 +106,5 @@ else
 ### See also  
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Use XRM Tooling to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
-[Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)
+[Use XRM Tooling to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)

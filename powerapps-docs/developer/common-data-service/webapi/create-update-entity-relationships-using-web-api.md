@@ -1,6 +1,6 @@
 ---
-title: "Create and update entity relationships using the Web API (Common Data Service for Apps) | Microsoft Docs"
-description: "Learn about creating and updating entity Common Data Service for Apps uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
+title: "Create and update entity relationships using the Web API (Common Data Service) | Microsoft Docs"
+description: "Learn about creating and updating entity Common Data Service uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -241,7 +241,7 @@ To delete a relationship using the Web API, use the HTTP DELETE method with the 
 
 <!-- TODO:
 [Customize entity relationship metadata](../customize-entity-relationship-metadata.md)<br /> -->
-[Use the Web API with Common Data Service for Apps metadata](use-web-api-metadata.md)<br />
+[Use the Web API with Common Data Service metadata](use-web-api-metadata.md)<br />
 [Query Metadata using the Web API](query-metadata-web-api.md)<br />
 [Retrieve metadata by name or MetadataId](retrieve-metadata-name-metadataid.md)<br />
 [Model entites and attributes using the Web API](create-update-entity-definitions-using-web-api.md)

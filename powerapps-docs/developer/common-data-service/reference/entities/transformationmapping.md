@@ -1,5 +1,5 @@
 ---
-title: "TransformationMapping Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "TransformationMapping Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the TransformationMapping entity."
 services: ''
 suite: powerapps

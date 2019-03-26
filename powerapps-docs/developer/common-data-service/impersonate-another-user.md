@@ -1,6 +1,6 @@
 ---
-title: "Impersonate another user (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use impersonation to execute business logic on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Impersonate another user (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Use impersonation to execute business logic on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -17,9 +17,9 @@ search.app:
 ---
 # Impersonate another user
 
-Use impersonation to execute business logic on behalf of another Common Data Service for Apps user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. 
+Use impersonation to execute business logic on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. 
 
-This is necessary because the CDS for Apps web services can be called by various clients and services on behalf of a CDS for Apps user.
+This is necessary because the Common Data Service web services can be called by various clients and services on behalf of a Common Data Service user.
 
 Impersonation involves two different user accounts: 
 
@@ -40,7 +40,7 @@ In other words, the *impersonator* is allowed to do something *if and only if* t
 
 ## Impersonation with Server-to-Server authentication
 
-If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you do not need to use a paid CDS for Apps user license.
+If you are creating a web client application that requires a user account that can act on behalf of a subscribing user, you can use the special *application user* account so that you do not need to use a paid Common Data Service user license.
 
 More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
 
@@ -59,7 +59,7 @@ To impersonate another user, set the `CallerId` property to the Guid value of th
 - <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.CallerId>
 - <xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient.CallerId>
 
-## Impersonate another using in Plug-ins
+## Impersonate another user using Plug-ins
 
 You can register a plug-in you can specify a user that the operations should use. Within the code of a plug-in you can override this setting.
 More information: [Impersonate a user](impersonate-a-user.md).

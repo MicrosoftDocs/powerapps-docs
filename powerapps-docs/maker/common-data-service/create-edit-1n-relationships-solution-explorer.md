@@ -24,7 +24,7 @@ search.app:
 
 # Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer 
 
-Solution explorer provides one way to create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships for Common Data Service for Apps.
+Solution explorer provides one way to create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships for Common Data Service.
 
 The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)

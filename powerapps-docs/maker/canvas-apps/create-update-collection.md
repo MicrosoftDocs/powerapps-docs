@@ -110,7 +110,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 ## Put a SharePoint list into a collection
 
-1. [Create a connection to a SharePoint list](connect-to-sharepoint.md).
+1. [Create a connection to a SharePoint list](connections/connection-sharepoint-online.md#create-a-connection).
 
 1. Add a button, and set its **[OnSelect](controls/properties-core.md)** property to this function, replacing *ListName* with the name of your SharePoint list:<br>
 
@@ -122,7 +122,7 @@ Use a collection to store data that users can manage in your app. A collection i
 
 1. (optional) To preview the collection that you created, select **Collections** on the **File**  menu.
 
-For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery: [Show data in a gallery](connections/connection-sharepoint-online.md#show-data-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and 
+For information about how to show data from a SharePoint list (such as dates, choices, and people) in a gallery: [Show list columns in a gallery](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). For information about how to show data in a form (with drop-down lists, date pickers, and people pickers): [Edit form and 
 Display form controls](controls/control-form-detail.md).
 
 ## Next steps

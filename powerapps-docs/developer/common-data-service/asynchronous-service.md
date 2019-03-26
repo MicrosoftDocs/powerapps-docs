@@ -1,5 +1,5 @@
 ---
-title: "Asynchronous service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Asynchronous service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how the asynchronous service that manages system jobs works." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 11/27/2018
@@ -17,7 +17,7 @@ search.app:
 ---
 # Asynchronous service
 
-The asynchronous service executes long-running operations independent of the main Common Data Service for Apps core operation. This results in improved overall system performance and improved scalability. The asynchronous service features a managed first-in, first-out (FIFO) queue for the execution of asynchronous registered plug-ins, workflows, and operations such as bulk mail, bulk import, and campaign activity propagation. These operations are registered with the asynchronous service and executed periodically when the service processes its queue.
+The asynchronous service executes long-running operations independent of the main Common Data Service core operation. This results in improved overall system performance and improved scalability. The asynchronous service features a managed first-in, first-out (FIFO) queue for the execution of asynchronous registered plug-ins, workflows, and operations such as bulk mail, bulk import, and campaign activity propagation. These operations are registered with the asynchronous service and executed periodically when the service processes its queue.
 
 
 After an event occurs and any synchronous extensions have been processed, the platform serializes the context for any asynchronous extensions and saves it to the database as a **System Job** in the [AsyncOperation Entity](reference/entities/asyncoperation.md). The system job defines and tracks the execution of the asynchronous operation. As resources become available system jobs are processed and the operations they define are executed. Any data operations defined in the extension will again be processed by the event execution pipeline, but this time as a synchronous operation.

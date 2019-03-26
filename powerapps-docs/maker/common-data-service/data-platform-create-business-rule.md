@@ -1,6 +1,6 @@
 ---
-title: Create a business rule in Common Data Service for Apps | Microsoft Docs
-description: Step-by-step instructions for how to create a business rule in Common Data Service (CDS) for Apps.
+title: Create a business rule in Common Data Service | Microsoft Docs
+description: Step-by-step instructions for how to create a business rule in Common Data Service.
 author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps

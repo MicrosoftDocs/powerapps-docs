@@ -1,6 +1,6 @@
 ---
 title: Complex entities requiring PowerApps Plan 2 licenses | Microsoft Docs
-description: A list of complex entities in Common Data Service (CDS) for Apps that require a PowerApps Plan 2 license.
+description: A list of complex entities in Common Data Service that require a PowerApps Plan 2 license.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps

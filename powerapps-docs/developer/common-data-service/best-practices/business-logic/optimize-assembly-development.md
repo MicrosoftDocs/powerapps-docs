@@ -37,7 +37,7 @@ When developing custom assemblies, there are a couple of considerations to take 
     - Increased maintainability complexity
     - Potential increase plug-in execution length
 
-2. Sandbox assembly size constraint is 16 MB in Common Data Service for Apps.
+2. Sandbox assembly size constraint is 16 MB in Common Data Service.
 
 <a name='guidance'></a>
 
@@ -48,11 +48,11 @@ When developing custom assemblies, there are a couple of considerations to take 
 
 ### Consolidate Plug-ins or Custom Workflow Activities into a Single Assembly
 
-Plug-ins and custom workflow activities developed for a Common Data Service for Apps solution should exist with others in a single Visual Studio project. Consider merging separate plug-ins/custom workflow activities into a single Visual Studio project/assembly unless the plug-ins fall into the following exceptions:
+Plug-ins and custom workflow activities developed for a Common Data Service solution should exist with others in a single Visual Studio project. Consider merging separate plug-ins/custom workflow activities into a single Visual Studio project/assembly unless the plug-ins fall into the following exceptions:
 
 1. A plug-in/custom workflow activity needs to be selectively deployed to one environment but not to others.
 
-2. The physical assembly size is near or greater than 16 MB for a Common Data Service for Apps instance.
+2. The physical assembly size is near or greater than 16 MB for a Common Data Service instance.
 
 
 ### Move Plug-ins/Custom Workflow Activities into Multiple Assemblies
@@ -66,12 +66,12 @@ PowerApps and Dynamics 365 (online) has an assembly size constraint of 16 MB whi
 ### Multiple assemblies
 Having multiple assemblies has a couple of areas that can be impacted:
 
-1. Performance - each assembly has a lifecycle that is managed by Common Data Service for Apps.  This includes loading, caching, and unloading the assemblies.  Having more than one assembly causes more work to be done on the server, loading and caching an assembly, and could affect the overall plug-in/custom workflow activity execution length.
+1. Performance - each assembly has a lifecycle that is managed by Common Data Service.  This includes loading, caching, and unloading the assemblies.  Having more than one assembly causes more work to be done on the server, loading and caching an assembly, and could affect the overall plug-in/custom workflow activity execution length.
 
 2. Maintainability - having more than one plug-in/custom workflow activity Visual Studio project leads to more complex application lifecycle management (ALM). It increases the risk and the amount of time when updating/patching the appropriate project for a specific plug-in/custom workflow activity, packaging the plug-ins/custom workflow activities within a solution, and managing plug-ins/custom workflow activities within a deployment.
 
 ### Assembly larger than 16 MB
-You will not be able to register a custom assembly within Common Data Service for Apps that is larger than 16 MB.
+You will not be able to register a custom assembly within Common Data Service that is larger than 16 MB.
 
 <a name='additional'></a>
 
