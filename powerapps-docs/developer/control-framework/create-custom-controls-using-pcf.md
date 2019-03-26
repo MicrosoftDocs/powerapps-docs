@@ -80,7 +80,7 @@ As shown in the image above, the browse window will open with 3 sections. Your c
 > [!NOTE]
 > If you want to modify the `manifest.xml` or create additional properties, you will need to restart the debug process before they appear in the inputs section.
 
-As you are inputting mock data, you can use the browser’s debugging capabilities to observe the control behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
+As you are inputting mock data, you can use the browser’s debugging capabilities to observe the control behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging. Today both Chrome and Edge browsers are supported.
 
 For example, on **Microsoft Edge**,
 
