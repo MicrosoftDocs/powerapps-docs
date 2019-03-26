@@ -31,8 +31,8 @@ To use PowerApps CLI you will need the following:
    - Option 1: Install Visual Studio 2017 or later
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
 - Install Microsoft CLI using the steps below:
-    1. Create a directory on your machine, called something like `c:\pac` 
-    2. Open the command line interface as `adminitrator` and navigate to the directory that you created above `Cd c:\pac` 
+    1. Create a directory on your machine, something like `c:\pac` 
+    2. Open the Developer Command Prompt for VS 2017 and navigate to the directory that you created above `Cd c:\pac` 
     3. Run the below command
  `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1'))))`  
 
@@ -42,11 +42,11 @@ To use PowerApps CLI you will need the following:
 > [!NOTE]
 > Currently PowerApps CLI is supported only on Windows 10.
 
-## Creating custom controls
+## Creating a new PCF control
 
 To get started, open developer command prompt for VS 2017 after installing PowerApps CLI.
 
-1. In the developer command prompt for VS 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
+1. In the Developer Command Prompt for VS 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
 3. Run the following command to create a new control project by passing some basic parameters
  `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
@@ -62,7 +62,7 @@ To get started, open developer command prompt for VS 2017 after installing Power
 
 To build your control you can open the folder in Visual Studio Code and use the (Ctrl-Shift-B) command, and select your build options or you can build your control quickly using  `npm run build` command.
 
-## Debugging Custom Controls
+## Debugging your PCF control
 
 Once you are done implementing your custom control logic, run the following command to start the debugging process
 `npm start`
@@ -103,11 +103,11 @@ You can also interact with the control locally in real time and observe elements
 > [!div class="mx-imgBorder"]
 > ![debug-control](media/debug-control-1.png "Debug control 1")
 
-## Fiddler AutoResponder
+## Debugging using Fiddler AutoResponder
 
 Use the Fiddler AutoResponder to quickly debug your custom controls. Install [Fiddler](https://www.telerik.com/download/fiddler) and follow the steps to configure [AutoResponder](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/streamline-javascript-development-fiddler-autoresponder)
 
-## Deploying controls into Common Data Service
+## Deploying your PCF controls
 
 When the debugging and development is finished, you just have one step remaining to deploy your new control.  
 
@@ -139,9 +139,10 @@ To add a custom control like data-set control or simple table control to a grid 
 
 The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows to provide the best experience to the customers by focusing on what’s truly is important.
 
-To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
+> [!NOTE]
+> To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
 
 ### See also
 
-[Implementing controls in TypeScript](implementing-controls-using-typescript.md)
+[Implementing controls in TypeScript](implementing-controls-using-typescript.md)<br />
 [Updating existing controls into new tools format](updating-existing-controls.md)
