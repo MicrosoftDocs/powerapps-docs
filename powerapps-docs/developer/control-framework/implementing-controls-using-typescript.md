@@ -21,7 +21,7 @@ Each custom control is comprised of the following key components:
 
 To create a new project, follow the steps below:
 
-1. Open PowerShell or command window.
+1. Open a Developer Command Prompt for VS 2017 window.
 2. Create a new folder for the project using the command `mkdir LinearControl`.
 3. `cd` into the new directory and run the command `cd LinearControl` 
 4. Create the control project using the command `pac pcf init --namespace SampleNamespace --name TSLinearInputControl --template field` 
@@ -194,7 +194,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
    - bundle.js – Bundled control source code 
    - ControlManifest.xml – Actual control manifest file that will be uploaded to Common Data Service organization.
 
-## Styling custom control
+## Adding Style to the custom control
 
 The linear input control’s `init` method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `css` file. Additional control resources like `css` files can be included with the custom control to support further customizations.
 
