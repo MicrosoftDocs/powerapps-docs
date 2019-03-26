@@ -31,12 +31,7 @@ Use Postman to compose and send Web API requests and view responses. This topic 
 The environment created by using the instructions in [Set up a Postman environment](setup-postman-environment.md) creates a `{{webapiurl}}` Postman variable that provides the base URL for requests. Append to this variable to define the URL for your requests.
 
 > [!IMPORTANT]
-> To create your environment, use the instructions appropriate to your deployment type.
->
->    |Online|On-premises|
->    |--|--|
->    |[Connect with an online environment](setup-postman-environment.md#bkmk_connectonline)|[Connect with an on-premises environment](setup-postman-environment.md#bkmk_connectonpremise)|
-
+> To create your environment, follow the instructions mentioned here: [Connect with Common Data Service environment](setup-postman-environment.md#bkmk_connectonline).
 
 The HTTP methods and values you use depend on the type of operations you want to perform. The following sections show examples of common operations.
 
