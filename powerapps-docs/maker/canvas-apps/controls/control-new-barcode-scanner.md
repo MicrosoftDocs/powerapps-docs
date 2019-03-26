@@ -66,3 +66,11 @@ The control supports QR codes, data-matrix codes, and these types of barcodes:
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+## Accessibility guidelines
+The same guidelines for **[Button](control-button.md)** apply because **Barcode scanner** is a button that launches the scan.
+
+### Visual alternatives
+* The barcode scanner is a button that does not display the scan result. Consider showing the scan result with a **[Label](control-text-box.md)**. Set the label's **[Text](properties-core.md)** to the barcode scanner's **Value**. Set the label's **[Live](properties-accessibility.md)** property to **Polite** so that screen reader users will be notified of changes. This makes the scanned value accessible to everyone, not just to those with visual disabilities.
+
+* Pointing the camera to a barcode is difficult for users with visual and motor disabilities. Consider adding an alternative form of input, like a **[Text input](control-text-input.md)**, for users to enter barcodes.

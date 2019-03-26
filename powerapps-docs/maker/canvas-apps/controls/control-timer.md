@@ -20,7 +20,9 @@ A control that can determine how your app responds after a certain amount of tim
 ## Description
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.
 
-Note that you need to preview the app in order for Timer to run in the designer.  This allows user to configure the timer in the designer without any time restrictions.
+> [!NOTE]
+> In PowerApps Studio, timers do not run except in Preview mode.
+
 
 ## Key properties
 **Duration** – How long a timer runs in milliseconds.  There is no maximum value.
@@ -138,15 +140,15 @@ Note that you need to preview the app in order for Timer to run in the designer.
 
 
 ## Accessibility guidelines
-The same guidelines for **[Button](control-button.md)**  apply because **Timer** is just a specialized button.
+The same guidelines for **[Button](control-button.md)** apply if users can interact with the **Timer**.
 
-> [!IMPORTANT]
-> Controlling the **Timer** without direct user intervention is not supported for accessibility. For example, a timer can be visually hidden by positioning other controls above it or setting its **[Visible](properties-core.md)** property to **false**. The timer automatically starts when a screen is shown, and after some time, executes some action automatically. Currently, there is no general way to make this scenario accessible.
+### Background timers
+Background timers are timers that run automatically and are hidden. These are used in a supporting role where the elapsed time is of little interest to the user. Example usages are to hide a notification message after a delay or to refresh data every minute.
 
-Other accessibility guidelines are as follows.
+Background timers should have **[Visible](properties-core.md)** set to false so that they are hidden from all users.
 
-### Timing
-If a **Timer** is started or stopped automatically, consider if users have sufficient time to read and use content. Keyboard and screen reader users may require more time to react to a timed event.
+### Timing considerations
+If a **Timer** runs automatically, consider if users have sufficient time to read and use content. Keyboard and screen reader users may require more time to react to a timed event.
 
 Any one of these strategies is sufficient:
 * Allow users to cancel the timed event
@@ -156,13 +158,12 @@ Any one of these strategies is sufficient:
 Some scenarios are exempt from these requirements. Learn more in the [WCAG 2.0 guideline for time limits](https://www.w3.org/TR/WCAG20/#time-limits).
 
 ### Screen reader support
-* **[Text](properties-core.md)** must be present.
-* Do not use **[Text](properties-core.md)** for time-sensitive and important information. Screen reader users will not be alerted to changes to **[Text](properties-core.md)**.
+* If a timer triggers changes on the current screen, use a [live region](../accessible-apps-live-regions.md) to tell screen reader users what changed.
 
     > [!NOTE]
-  > Screen readers will announce the elapsed time every 5 seconds. However, the timer **[Text](properties-core.md)** will not be included in the announcement.
+  > When the timer is visible and running, screen readers will announce the elapsed time every 5 seconds.
 
-* Consider adding a **[Label](control-text-box.md)** to show the elapsed time. Use the timer's **[Text](properties-core.md)** to instruct the user to start or stop the timer.
-
-### Support in PowerApps Studio
-As you build an app, timers are disabled to prevent events from triggering. You can test timers in PowerApps Studio if you open Preview, or you can save the app and test them in PowerApps Mobile or the web player.
+* Do not use **[Text](properties-core.md)** for time-sensitive and important information. Screen reader users will not be alerted to changes to **[Text](properties-core.md)**.
+* For interactive timers,
+  * **[Text](properties-core.md)** must be present.
+  * Consider adding a **[Label](control-text-box.md)** to show the elapsed time. Use the timer's **[Text](properties-core.md)** to instruct the user to start or stop the timer.
