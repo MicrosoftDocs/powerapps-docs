@@ -20,15 +20,13 @@ In this private preview, we are enabling developers to use the first version of 
 
 ## What is Microsoft PowerApps CLI 
 
-Microsoft PowerApps CLI is a simple, single-stop developer command line interface which offers you everything that is required to create a custom control and enable you to perform all the development tasks via a simple and efficient set of commands. The PowerApps CLI is the first step towards a comprehensive **ALM** story where enterprise developers and ISVs can create, build, debug and publish their extensions and customizations quickly and efficiently. The significance here is a shift towards a source centric approach, to provide better support for continuous validation starting from internal development loop through to AppSource publishing and end-customer deployment.
- 
-Developers will be empowered to identify problems early and operations like adding a component to a solution, or publishing to upstream environments can be automated with simple tasks as we enable deeper integration with Azure DevOps.
+Microsoft PowerApps CLI is a simple, single-stop developer command line interface which offers you everything that is required to create a custom control and enable you to perform all the development tasks via a simple and efficient set of commands. The PowerApps CLI is the first step towards a comprehensive **ALM** story where enterprise developers and ISVs can create, build, debug and publish their extensions and customizations quickly and efficiently.
 
 ## Prerequisites to use PowerApps CLI
 
 To use PowerApps CLI you will need the following:
 
-- Install [Node.js](https://nodejs.org/en/). We recommend LTS (Long Term Support) version 10.15.3 LTS as it seems to be most stable.
+- Install [Npm](https://www.npmjs.com/get-npm)(comes with Node.js) or install [Node.js](https://nodejs.org/en/) (comes with npm). We recommend LTS (Long Term Support) version 10.15.3 LTS as it seems to be most stable.
 - If you don’t have Visual Studio 2017 or later, follow one of the options below:
    - Option 1: Install Visual Studio 2017 or later
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
@@ -36,16 +34,17 @@ To use PowerApps CLI you will need the following:
     1. Create a directory on your machine, called something like `c:\pac` 
     2. Open the command line interface as `adminitrator` and navigate to the directory that you created above `Cd c:\pac` 
     3. Run the below command
- `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1')))) -ArgumentList "stable"`  
+ `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1'))))`  
 
 > [!NOTE]
 > To deploy your custom control, you will need Common Data Service environment with System administrator or System customizer privileges.
 
+> [!NOTE]
 > Currently PowerApps CLI is supported only on Windows 10.
 
 ## Creating custom controls
 
-To get started, open command prompt for VS 2017 after installing PowerApps CLI.
+To get started, open developer command prompt for VS 2017 after installing PowerApps CLI.
 
 1. In the developer command prompt for VS 2017, create a new folder on your local hard drive for example, `C:\Users\<your name>\Documents\My_PCF_Control`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
@@ -69,7 +68,7 @@ Once you are done implementing your custom control logic, run the following comm
 `npm start`
 
 > [!NOTE]
-> Today you can only visualize your field control, but dataset support is coming soon.
+> Today you can only visualize your field control, but dataset support is coming soon. elow image shows a sample control implemented in the tutorial below just as an example. 
 
 > [!div class="mx-imgBorder"]
 > ![local-host](media/local-host.png "local host")
