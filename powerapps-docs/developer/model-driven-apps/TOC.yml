@@ -51,6 +51,8 @@
 - name: Apply business logic using client scripting
   href: client-scripting.md
   items:
+  - name: Client-side JavaScript
+    href: clientapi/get-started-web-api-client-side-javascript.md
   - name: Events in forms and grids
     href: clientapi/events-forms-grids.md
   - name: Understand Client API object model
