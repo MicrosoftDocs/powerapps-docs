@@ -124,5 +124,4 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 * Focus indicators must be clearly visible. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
 
 > [!TIP]
-> When the calendar is open, use the **Page up** and **Page down** keys to navigate between months.
-> Use **Shift+Page up** and **Shift+Page down** to navigate between years.
+> When the calendar is open, press **Page up** and **Page down** to navigate between months and **Shift+Page up** and **Shift+Page down** to navigate between years.
