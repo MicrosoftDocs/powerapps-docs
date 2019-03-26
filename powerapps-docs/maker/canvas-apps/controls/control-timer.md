@@ -21,7 +21,7 @@ A control that can determine how your app responds after a certain amount of tim
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.
 
 > [!NOTE]
-> In PowerApps Studio, timers do not run except when in Preview mode.
+> In PowerApps Studio, timers run only in Preview mode.
 
 
 ## Key properties
@@ -138,32 +138,31 @@ Timers can, for example, determine how long a control appears or change other pr
 
 5. Select the timer button to start or stop the animation. The text in the label fades to white, returns to full intensity, and repeats the process.
 
-
 ## Accessibility guidelines
-The same guidelines for **[Button](control-button.md)** apply if users can interact with the **Timer**.
+The same guidelines for the **[Button](control-button.md)** control apply to the **Timer** control if users can interact with it.
 
 ### Background timers
-Background timers are timers that run automatically and are hidden. These are used in a supporting role where the elapsed time is of little interest to the user. Example usages are to hide a notification message after a delay or to refresh data every minute.
+Background timers run automatically and are hidden. Use them in a supporting role where the elapsed time is of little interest to the user. For example, you can refresh data every minute or show a notification message only for a certain amount of time.
 
-Background timers should have **[Visible](properties-core.md)** set to false so that they are hidden from all users.
+Background timers should have their **[Visible](properties-core.md)** property set to false so that they are hidden from all users.
 
 ### Timing considerations
-If a **Timer** runs automatically, consider if users have sufficient time to read and use content. Keyboard and screen reader users may require more time to react to a timed event.
+If a **Timer** runs automatically, consider whether users have enough time to read and use content. Keyboard and screen-reader users may need more time to react to a timed event.
 
-Any one of these strategies is sufficient:
-* Allow users to cancel the timed event
-* Allow users to adjust the time limit before it begins
-* Warn 20 seconds before the time limit expires and provide a way to extend the limit easily
+Any of these strategies is sufficient:
+* Allow users to cancel the timed event.
+* Allow users to adjust the time limit before it begins.
+* Warn 20 seconds before the time limit expires and provide an easy way to extend the limit.
 
 Some scenarios are exempt from these requirements. Learn more in the [WCAG 2.0 guideline for time limits](https://www.w3.org/TR/WCAG20/#time-limits).
 
 ### Screen reader support
-* If a timer triggers changes on the current screen, use a [live region](../accessible-apps-live-regions.md) to tell screen reader users what changed.
+* If a timer triggers changes on the current screen, use a [live region](../accessible-apps-live-regions.md) to tell screen-reader users what changed.
 
     > [!NOTE]
-  > When the timer is visible and running, screen readers will announce the elapsed time every 5 seconds.
+    > If the timer is visible and running, screen readers will announce the elapsed time every five seconds.
 
-* Do not use **[Text](properties-core.md)** for time-sensitive and important information. Screen reader users will not be alerted to changes to **[Text](properties-core.md)**.
-* For interactive timers,
-  * **[Text](properties-core.md)** must be present.
-  * Consider adding a **[Label](control-text-box.md)** to show the elapsed time. Use the timer's **[Text](properties-core.md)** to instruct the user to start or stop the timer.
+* Don't use the **[Text](properties-core.md)** property of a control for time-sensitive and important information. Screen readers won't announce changes to **[Text](properties-core.md)**.
+* For interactive timers:
+    * **[Text](properties-core.md)** must be present.
+    * Consider adding a **[Label](control-text-box.md)** control to show the elapsed time. Use the timer's **[Text](properties-core.md)** property to instruct the user to start or stop the timer.
