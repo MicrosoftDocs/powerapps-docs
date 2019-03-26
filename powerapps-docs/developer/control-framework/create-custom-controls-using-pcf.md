@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 ---
 
-# Create Controls using PowerApps Component Framework tooling
+# Create, debug and deploy controls using  Microsoft PowerApps CLI
 
 Use the PowerApps Command Line Interface (CLI) to create, debug and deploy custom PowerApps Component Framework (PCF) controls. The PowerApps CLI will enable developers to quickly create PCF controls and will in the future be expanded to include support for additional development and Application Lifecycle Management (ALM) experiences. 
  
