@@ -31,6 +31,10 @@ XRM tooling is a set of APIs built on top of the Common Data Service assembly AP
 - Provides a common Windows Presentation Foundation login control for Common Data Service for consistent sign-in experience to Common Data Service from your Windows client applications.  
 - Supports secure storage of the sign-in credentials and reuse of the stored credentials to automatically sign in to Common Data Service after initial sign in.  
 - Provides built-in diagnostic tracing and performance reporting of the actions performed in Common Data Service, which you can configure based on your organization’s requirements.  
+
+> [!NOTE]
+> [!INCLUDE[cc-d365ce-note-section](../includes/cc-d365ce-note-section.md)] [Build Windows client applications using the XRM tools (Customer Engagement)](https://docs.microsoft.com/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools)
+
   
 ## Components of XRM tooling  
 
