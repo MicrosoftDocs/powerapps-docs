@@ -1,10 +1,10 @@
 ---
-title: "Enable and disable duplicate detection (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Enable and disable duplicate detection (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic covers information on how to enable duplicate detection for all entities in an organization, for a specific entity and for specific operations and how to disable duplicate detection globally or for an entity type by unpublishing the duplicate detection rules or by deleting the published rules." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -47,7 +47,7 @@ Before running duplicate detection, enable it for each of the following:
   
 - Set the following attributes to `true`:  
   
-  - `Organization.IsDuplicateDetectionEnabledForOnlineCreateUpdate`. Create and update records in CDS for Apps by using the Web application or Dynamics 365 for Outlook. This attribute enables or disables duplicate detection for records created or updated with the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> messages. However, it does not affect records created or updated with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> and <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> methods.  
+  - `Organization.IsDuplicateDetectionEnabledForOnlineCreateUpdate`. Create and update records in Common Data Service by using the Web application or Dynamics 365 for Outlook. This attribute enables or disables duplicate detection for records created or updated with the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> messages. However, it does not affect records created or updated with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> and <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*> methods.  
   
   - `Organization.IsDuplicateDetectionEnabledForOfflineSync`. Synchronize offline records when Dynamics 365 for Outlook goes from offline to online.  
   

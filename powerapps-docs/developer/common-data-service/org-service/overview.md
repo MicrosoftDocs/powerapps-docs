@@ -1,10 +1,10 @@
 ---
-title: "Use the Common Data Service for Apps Organization Service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how you can use CDS for Apps Organization Service to work with data and metadata." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use the Common Data Service Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Read how you can use Common Data Service Organization Service to work with data and metadata." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -16,13 +16,13 @@ search.app:
   - D365CE
 ---
 
-# Use the Common Data Service for Apps Organization Service
+# Use the Common Data Service Organization Service
 
-The Organization service is one of two web services you can use to work with data and metadata in Common Data Service for Apps. The other is the [Web API](../webapi/overview.md).
+The Organization service is one of two web services you can use to work with data and metadata in Common Data Service. The other is the [Web API](../webapi/overview.md).
 
 The organization service is optimized for use with the .NET Framework and the SDK assemblies in the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package provide the classes for the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface necessary work with data and metadata using this service. 
 
-Some extension capabilities, such as plug-ins and workflow extensions, depend on the .NET Framework and classes defined in these assemblies so the organization service is the only option when using these methods to extend CDS for apps.
+Some extension capabilities, such as plug-ins and workflow extensions, depend on the .NET Framework and classes defined in these assemblies so the organization service is the only option when using these methods to extend Common Data Service.
 
 ## Organization service assemblies
 

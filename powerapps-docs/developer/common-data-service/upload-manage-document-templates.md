@@ -1,10 +1,10 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "<Topic Title> (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -24,11 +24,11 @@ https://docs.microsoft.com/dynamics365/customer-engagement/developer/upload-mana
 Add the short description from  https://docs.microsoft.com/dynamics365/customer-engagement/developer/template-entities which was not migrated.
 -->
 
-In Common Data Service for Apps, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).
+In Common Data Service, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word).
 
 These are the types of template entites:
 
-<!-- Not in CDS, must be in service ContractTemplate  -->
+<!-- Not in Common Data Service, must be in service ContractTemplate  -->
 - [DocumentTemplate](reference/entities/documenttemplate.md)
 - [KbArticleTemplate](reference/entities/kbarticletemplate.md) 
 - [MailMergeTemplate](reference/entities/mailmergetemplate.md) 

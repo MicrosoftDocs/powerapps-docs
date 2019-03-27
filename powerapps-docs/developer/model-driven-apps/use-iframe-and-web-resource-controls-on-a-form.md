@@ -4,7 +4,7 @@ description: "IFRAME and web resource controls embed content from another locati
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
 ms.author: "kvivek" # MSFT alias of Microsoft employees only
@@ -74,7 +74,7 @@ IFRAME and web resource controls embed content from another location in pages by
  [!INCLUDE[languagecode](../../includes/languagecode.md)]  
 
 > [!NOTE]
->  We suggest that you use the entity name instead of the type code because the entity type code for custom entities may be different between CDS for Apps organizations.  
+>  We suggest that you use the entity name instead of the type code because the entity type code for custom entities may be different between Common Data Service organizations.  
 
 ### Example  
  The following sample shows the URL without parameters.  

@@ -1,10 +1,10 @@
 ---
-title: "Walkthrough: Register an Azure-aware plug-in using the Plug-in Registration Tool (Common Data Service for Apps) | Microsoft Docs"
+title: "Walkthrough: Register an Azure-aware plug-in using the Plug-in Registration Tool (Common Data Service) | Microsoft Docs"
 description: "The walkthrough demonstrates how to register a service endpoint step using the Plug-in Registration Tool. "
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -24,7 +24,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool -->
 
-This walkthrough demonstrates how to register a service endpoint step using the Plug-in Registration Tool. Once configured, Dynamics 365 (online) Common Data Service for Apps can post the execution context of the current operation to a Azure solution endpoint. For this walkthrough, the step is registered to post the execution context of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message for an `Account` entity to the Azure Service Bus.  
+This walkthrough demonstrates how to register a service endpoint step using the Plug-in Registration Tool. Once configured, Dynamics 365 (online) Common Data Service can post the execution context of the current operation to a Azure solution endpoint. For this walkthrough, the step is registered to post the execution context of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message for an `Account` entity to the Azure Service Bus.  
   
  The following prerequisites must be completed before you start this walkthrough:  
   

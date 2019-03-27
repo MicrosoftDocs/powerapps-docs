@@ -1,10 +1,10 @@
 ---
-title: "Use the Category entity (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use the Category entity (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about categorizing the entity records using category entity." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Use the Category entity
 
-Categorizing entity records in Common Data Service (CDS) for Apps helps you tag the records so that you can easily search them. Use the  `Category` entity to create and manage a hierarchical structure of categories in CDS for Apps, and then associate entity records to one or more categories.  
+Categorizing entity records in Common Data Service helps you tag the records so that you can easily search them. Use the  `Category` entity to create and manage a hierarchical structure of categories in Common Data Service, and then associate entity records to one or more categories.  
   
  A category can have multiple child categories, but a child category can have only one parent category. Deleting a parent `Category` record automatically deletes all its child records and entity associations. You define a parent category for a category using the `Category.ParentCategoryId` attribute.  
   

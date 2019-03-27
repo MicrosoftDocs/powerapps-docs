@@ -1,5 +1,5 @@
 ---
-title: "KnowledgeArticleViews Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "KnowledgeArticleViews Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the KnowledgeArticleViews entity."
 services: ''
 suite: powerapps

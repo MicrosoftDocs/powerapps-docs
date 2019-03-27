@@ -1,5 +1,5 @@
 ---
-title: "ImportLog Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ImportLog Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ImportLog entity."
 services: ''
 suite: powerapps

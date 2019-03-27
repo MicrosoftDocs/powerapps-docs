@@ -1,10 +1,10 @@
 ---
-title: "Customize entity and attribute mappings in PowerApps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Customize entity and attribute mappings in PowerApps (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about mapping attributes between entities that have an entity relationship in PowerApps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -23,7 +23,7 @@ You can map attributes between entities that have an entity relationship. This l
 
 ## Behavior in the application
 
- Mapping in Common Data Service (CDS) for Apps streamlines data entry when you create new records that are associated with another record. When an entity has an entity relationship with another entity, you can create new related entity records by using the **Create Related** tab in the ribbon. When you create a new record in this manner, mapped data from the primary entity record is copied to the form for the new related entity record. By mapping entity attributes, you control what data is copied by adding new mappings in the relationship between the two entities. If you create a record in any way other than from the associated view of the primary entity, data is not mapped.  
+ Mapping in Common Data Service streamlines data entry when you create new records that are associated with another record. When an entity has an entity relationship with another entity, you can create new related entity records by using the **Create Related** tab in the ribbon. When you create a new record in this manner, mapped data from the primary entity record is copied to the form for the new related entity record. By mapping entity attributes, you control what data is copied by adding new mappings in the relationship between the two entities. If you create a record in any way other than from the associated view of the primary entity, data is not mapped.  
 
  For example, you might want to set up a mapping between the address fields in accounts and the address fields in contacts. With this mapping, when a user adds a contact associated with a specific account, the address fields for the contact are populated automatically.  
 

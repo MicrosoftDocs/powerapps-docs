@@ -102,7 +102,9 @@ Get-Help “Crm”
 
 Use the `Get-CrmOrganizations` cmdlet to retrieve the organizations that you have access to.  
   
-1. Provide your credentials to connect to your Common Data Service instance. Running the following command will prompt you to type your user name and password to connect to the Common Data Service instance, and it will be stored in the `$Cred` variable.  
+
+1.  Provide your credentials to connect to your Common Data Service instance. Running the following command will prompt you to type your user name and password to connect to the Common Data Service instance, and it will be stored in the `$Cred` variable.  
+
   
     ```powershell  
     $Cred = Get-Credential  
@@ -118,14 +120,16 @@ Use the `Get-CrmOrganizations` cmdlet to retrieve the organizations that you hav
         > [!NOTE]
         > For the `DeploymentRegion` parameter, valid values are `NorthAmerica`, `EMEA`, `APAC`, `SouthAmerica`, `Oceania`, `JPN`, `CAN`, `IND`, and `NorthAmerica2`. For the `OnlineType` parameter, specify `Office365`.
   
-3. Your supplied credentials are validated when you run the command in **step 2**. On successful execution of the command, type the following command, and press **ENTER** to display the organizations that you have access to
   
-    ```powershell  
-    $CRMOrgs  
-    ```  
-   > [!div class="mx-imgBorder"]
-   > ![Common Data Service organization information](../media/xrmtooling-powershell-1.png "Common Data Service")
+3.  Your supplied credentials are validated when you run the command in step 2. On successful execution of the command, type the following command, and press ENTER to display the organizations that you have access to:  
   
+      ```powershell  
+      $CRMOrgs  
+      ```  
+      > [!div class="mx-imgBorder"]
+      > ![Common Data Service organization information](../media/xrmtooling-powershell-1.png "Common Data Service")
+  
+
 > [!TIP]
 > You can use the variable that was used to store the retrieved Common Data Service organizations (in this case `$CRMOrgs`) with the `Get-CrmConnection` cmdlet to connect to Common Data Service. To specify the org name, use the following command: `$CRMOrgs.UniqueName`.  
 >   
@@ -144,36 +148,38 @@ Use the `Get-CrmConnection` cmdlet to connect to a Common Data Service instance.
   
 ### Connect to Common Data Service by using the common login control  
   
-1. If you want to use the common login control to provide your credentials to connect to Common Data Service, use the following command. The connection information is stored in the `$CRMConn` variable so that you can use it later.  
+1.  If you want to use the common login control to provide your credentials to connect to Common Data Service, use the following command. The connection information is stored in the `$CRMConn` variable so that you can use it later.  
   
     ```powershell  
     $CRMConn = Get-CrmConnection -InteractiveMode  
     ```  
   
-2. The **LoginControl** dialog box appears. Provide your credentials to connect to your Common Data Service instance, and click **Login**.  
+2. The **LoginControl** dialog box appears. Provide your credentials to connect to your Common Data Service instance, and click **Login**.    
   
 ### Connect to Common Data Service by specifying credentials inline  
   
-1. To connect to Common Data Service, use the following commands. Note that these commands use the `$Cred` variable created earlier to store the credential while retrieving the organizations. The connection information is stored in the `$CRMConn` variable:
+1.  To connect to Common Data Service, use the following commands. Note that these commands use the `$Cred` variable created earlier to store the credential while retrieving the organizations. The connection information is stored in the `$CRMConn` variable:
 
-    - If you’re connecting to a Common Data Service instance
+     - If you’re connecting to a Common Data Service instance
+
+        ```powershell  
+        $CRMConn = Get-CrmConnection -Credential $Cred -DeploymentRegion <Deployment region name> –OnlineType Office365 –OrganizationName <OrgName>  
+        ```
+        > [!NOTE]
+        > For the `DeploymentRegion` parameter, valid values are `NorthAmerica`, `EMEA`, `APAC`, `SouthAmerica`, `Oceania`, `JPN`, `CAN`, `IND` and `NorthAmerica2`. For the `OnlineType` parameter, specify `Office365`. 
   
-       ```powershell  
-       $CRMConn = Get-CrmConnection -Credential $Cred -DeploymentRegion <Deployment region name> –OnlineType Office365 –OrganizationName <OrgName>  
-       ```
-       > [!NOTE]
-       > For the `DeploymentRegion` parameter, valid values are `NorthAmerica`, `EMEA`, `APAC`, `SouthAmerica`, `Oceania`, `JPN`, `CAN`, `IND` and `NorthAmerica2`. For the `OnlineType` parameter, specify `Office365`. 
+        > [!NOTE]
+        > For the `OrganizationName` parameter in all the preceding commands, you can either specify the organization unique name or friendly name. You can also use the organization unique name or friendly name that you retrieved using the `Get-CrmOrganizations` cmdlet and stored in the `$CRMOrgs` variable. For example, you can use `$CRMOrgs[x].UniqueName` or `$CRMOrgs[x].FriendlyName`.  
   
-       > [!NOTE]
-       > For the `OrganizationName` parameter in all the preceding commands, you can either specify the organization unique name or friendly name. You can also use the organization unique name or friendly name that you retrieved using the `Get-CrmOrganizations` cmdlet and stored in the `$CRMOrgs` variable. For example, you can use `$CRMOrgs[x].UniqueName` or `$CRMOrgs[x].FriendlyName`.  
-  
-2. Your supplied credentials are validated when you run the command in step 1. On successful execution of the cmdlet, type the following command, and press ENTER to display the connection information and status:  
-  
-    ```powershell  
-    $CRMConn  
-    ```  
-     > [!div class="mx-imgBorder"]
-     > ![Common Data Service connection information and status](../media/xrm-tooling-powershell-2.png "Common Data Service connection information and status") 
+2.  Your supplied credentials are validated when you run the command in step 1. On successful execution of the cmdlet, type the following command, and press ENTER to display the connection information and status:  
+
+      ```powershell  
+       $CRMConn  
+       ```  
+
+       > [!div class="mx-imgBorder"]
+       > ![Common Data Service connection information and status](../media/xrm-tooling-powershell-2.png "Common Data Service connection information and status") 
+
   
 ### See also
   

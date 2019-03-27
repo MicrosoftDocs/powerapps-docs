@@ -1,5 +1,5 @@
 ---
-title: "CustomControlDefaultConfig Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "CustomControlDefaultConfig Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the CustomControlDefaultConfig entity."
 services: ''
 suite: powerapps

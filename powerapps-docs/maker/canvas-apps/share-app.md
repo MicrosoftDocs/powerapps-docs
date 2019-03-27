@@ -19,7 +19,7 @@ search.app:
 After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name, or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
 
 > [!IMPORTANT]
-> For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Common Data Service for Apps](#common-data-service-for-apps) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
+> For a shared app to function as you expect, you must also manage permissions for the data source or sources on which the app is based, such as [Common Data Service](#common-data-service) or [Excel](share-app-data.md). You might also need to share [other resources](share-app-resources.md) on which the app depends, such as flows, gateways, or connections.
 
 ## Prerequisites
 
@@ -45,8 +45,9 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. Specify by name or alias the users or security groups in Azure Active Directory with which you want to share the app.
 
-    To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
-
+    - To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
+    - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Jane Doe &lt;jane.doe@contoso.com>**) if the items are separated by semi-colons. If more than one person has the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved. 
+    
     ![Specify users and co-owners](./media/share-app/share-everyone.png)
 
     > [!NOTE]
@@ -61,7 +62,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 1. If your app connects to data for which users need access permissions, specify them.
 
-    For example, your app might connect to an entity in a CDS for Apps database. When you share such an app, the sharing panel prompts you to manage security for that entity.
+    For example, your app might connect to an entity in a Common Data Service database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
     ![Set permissions](./media/share-app/set-permissions.png)
 
@@ -92,16 +93,16 @@ You can change permissions for a user or a security group by selecting their nam
 
 ## Manage entity permissions
 
-### Common Data Service for Apps
+### Common Data Service
 
-If you create an app based on CDS for Apps, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
+If you create an app based on Common Data Service, you must also ensure that the users with whom you share the app have the appropriate permissions for the entity or entities on which the app relies. Specifically, those users must belong to a security role that can perform tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
 
 > [!NOTE]
 > As of this writing, you can assign security roles to individual users but not to security groups.
 
 #### Prerequisite
 
-To perform the next two procedures, you must have **System administrator** permissions for a CDS for Apps database.
+To perform the next two procedures, you must have **System administrator** permissions for a Common Data Service database.
 
 #### Create a security role
 

@@ -1,10 +1,10 @@
 ---
-title: "Build web applications using Server-to-Server (S2S) authentication (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Use server-to-server (S2S) authentication to securely and seamlessly communicate with CDS for Apps with your web applications and services. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the CDS for Apps  data of their subscribers." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Build web applications using Server-to-Server (S2S) authentication (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Use server-to-server (S2S) authentication to securely and seamlessly communicate with Common Data Service with your web applications and services. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the Common Data Service  data of their subscribers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,9 +17,9 @@ search.app:
 ---
 # Build web applications using Server-to-Server (S2S) authentication
 
-Use server-to-server (S2S) authentication to securely and seamlessly communicate with Common Data Service (CDS) for Apps with your web applications and services. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the CDS for Apps data of their subscribers.  
+Use server-to-server (S2S) authentication to securely and seamlessly communicate with Common Data Service with your web applications and services. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the Common Data Service data of their subscribers.  
 
- S2S authentication means you don’t need to use a paid PowerApps user license when you connect to CDS for Apps environments. There is no license fee for the special *application user* account you will use with S2S authentication. With S2S authentication a special unlicensed application user account is created and includes information about your application registered with Azure Active Directory (Azure AD). Rather than user credentials, the application is authenticated based on a service principal identified by an Azure AD Object ID value which is stored in the application user record. The application user is associated with a custom security role which controls the kinds of data and operations the application is allowed to perform.  
+ S2S authentication means you don’t need to use a paid PowerApps user license when you connect to Common Data Service environments. There is no license fee for the special *application user* account you will use with S2S authentication. With S2S authentication a special unlicensed application user account is created and includes information about your application registered with Azure Active Directory (Azure AD). Rather than user credentials, the application is authenticated based on a service principal identified by an Azure AD Object ID value which is stored in the application user record. The application user is associated with a custom security role which controls the kinds of data and operations the application is allowed to perform.  
 
  All operations performed by your application or service using S2S will be performed as the application user you provide rather than as the user who is accessing your application. If you want your application to perform data operations on behalf of a specific user, such as the one who is interacting with your application, you can apply impersonation when the custom security role applied to your application service principal has the privileges required. More information: [Impersonate another user](impersonate-another-user.md)  
 
@@ -31,8 +31,8 @@ Use server-to-server (S2S) authentication to securely and seamlessly communicate
 
 |   Scenario    |   Description  |
 |---------------|---------------|
-| Multi-Tenant  | This is the most common scenario and the one which is used for apps distributed using Microsoft AppSource.<br /><br /> Each CDS for Apps tenant is associated with an Azure AD tenant. Your web application or service is registered with your Azure AD tenant.<br /><br /> In this scenario any CDS for Apps tenant can potentially use your multi-tenant application after they grant consent for the application to access data in their tenant.                                                           |
-| Single-Tenant | This scenario typically applies to CDS for Apps environments that want to develop apps for their own tenant and don’t intend to distribute them to other [CDS for Apps environments.<br /><br /> An enterprise can create a web application or service to connect to all the CDS for Apps environments for their tenant.<br /><br /> In this scenario, your web application or service will only be able to connect to CDS for Apps environments using the same Azure AD tenant. |
+| Multi-Tenant  | This is the most common scenario and the one which is used for apps distributed using Microsoft AppSource.<br /><br /> Each Common Data Service tenant is associated with an Azure AD tenant. Your web application or service is registered with your Azure AD tenant.<br /><br /> In this scenario any Common Data Service tenant can potentially use your multi-tenant application after they grant consent for the application to access data in their tenant.                                                           |
+| Single-Tenant | This scenario typically applies to Common Data Service environments that want to develop apps for their own tenant and don’t intend to distribute them to other [Common Data Service environments.<br /><br /> An enterprise can create a web application or service to connect to all the Common Data Service environments for their tenant.<br /><br /> In this scenario, your web application or service will only be able to connect to Common Data Service environments using the same Azure AD tenant. |
 
  Both scenarios have common elements but there are some differences. Since multi-tenant is the most common scenario, the [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md) content describes how you can use S2S in this scenario and include notes where the options for single-tenant configuration is different. 
 

@@ -127,7 +127,7 @@ A **Drop down** control conserves screen real estate, especially when the list c
 1. Show the items in the list by selecting the control's down arrow while pressing the Alt key.
 
 ### List from a data source
-The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Common Data Service for Apps database has been created and sample data added.
+The principles in this procedure apply to any [data source that provides tables](../connections-list.md#tables) but, to follow these steps exactly, you must open an environment for which a Common Data Service database has been created and sample data added.
 
 1. [Open a blank app](../data-platform-create-app-scratch.md#open-a-blank-app), and then [specify the **Accounts** entity](../data-platform-create-app-scratch.md#specify-an-entity).
 

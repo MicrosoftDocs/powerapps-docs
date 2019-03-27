@@ -1,6 +1,6 @@
 ---
-title: "Use Web API functions (Common Data Service for Apps)| Microsoft Docs"
-description: "Functions are reusable operations that are used with a GET request to retrieve data from CDS for Apps"
+title: "Use Web API functions (Common Data Service)| Microsoft Docs"
+description: "Functions are reusable operations that are used with a GET request to retrieve data from Common Data Service"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""

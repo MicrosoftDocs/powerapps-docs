@@ -25,10 +25,10 @@ search.app:
 
 # Create and edit entities using PowerApps portal
 
-The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entities for  Common Data Service for Apps.
+The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entities for  Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
-- [Create and edit entities in Common Data Service for Apps](create-edit-entities.md)
+- [Create and edit entities in Common Data Service](create-edit-entities.md)
 - [Create and edit entities using solution explorer](create-edit-entities-solution-explorer.md)
 
 ## View entities
@@ -62,7 +62,7 @@ Enter data for the following fields
 |--|--|
 |**Display name**|This is the singular name for the entity that will be shown in the app. This can be changed later.|
 |**Plural display name**|This is the plural name for the entity that will be shown in the app. This can be changed later.|
-|**Name**|This field is pre-populated based on the **Display name** you enter. It includes the customization prefix for the CDS solution publisher. You cannot change this after the entity is saved.|
+|**Name**|This field is pre-populated based on the **Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the entity is saved.|
 |**Description**|Provide a meaningful description of the purpose of the entity.|
 
 Select **Next** to continue, this will close the **New entity** panel and display the list of fields.
@@ -144,7 +144,7 @@ If the entity has dependencies that prevent it from being deleted you will see a
 
 ### See also
 
-[Create and edit entities in Common Data Service for Apps](create-edit-entities.md)<br />
+[Create and edit entities in Common Data Service](create-edit-entities.md)<br />
 [Create and edit entities using solution explorer](create-edit-entities-solution-explorer.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Use messages with the ExecuteCrmOrganizationRequest method (Common Data Service for Apps)| Microsoft Docs"
+title: "Use messages with the ExecuteCrmOrganizationRequest method (Common Data Service)| Microsoft Docs"
 description: "Learn how to use messages with the ExecuteCrmOrganizationRequest method. The samples demonstrate how to execute CreateRequest and RetrieveMultipleRequest message using the CrmServiceClient.String) method."
 ms.custom: ""
 ms.date: 03/27/2019
@@ -23,7 +23,7 @@ search.app:
 ---
 # Use messages with the ExecuteCrmOrganizationRequest method
   
- The following code samples demonstrate how you can execute messages using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method.  
+The following code samples demonstrate how you can execute messages using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest*> method.  
   
 ## Example 1: CreateRequest message  
 

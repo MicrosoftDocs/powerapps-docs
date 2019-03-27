@@ -1,10 +1,10 @@
 ---
-title: "Understand the execution context (Common Data Service for Apps) | Microsoft Docs" 
+title: "Understand the execution context (Common Data Service) | Microsoft Docs" 
 description: "Learn about the data that is passed to your plug-ins when it is executed." 
 ms.custom: ""
 ms.date: 1/23/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: phecke
 ms.author: pehecke

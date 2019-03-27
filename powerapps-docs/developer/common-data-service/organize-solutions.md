@@ -1,10 +1,10 @@
 ---
-title: "Organize your solutions (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Organize your solutions (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This document lists down some strategies to organize your solutions" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -19,7 +19,7 @@ search.app:
 
 Before you create solutions, take some time to plan ahead. For example, think about how many solutions you want to release and whether the solutions will share components.  
   
- Also, determine how many Common Data Service for Apps organizations you’ll need to develop your line of solutions. You can use a single organization for most strategies described in this topic. However, if you decide to have only one organization and later realize that you need more, it can be challenging to change the solutions if people have already installed them. Using multiple organizations, although introducing more complexity, can provide better flexibility.  
+ Also, determine how many Common Data Service organizations you’ll need to develop your line of solutions. You can use a single organization for most strategies described in this topic. However, if you decide to have only one organization and later realize that you need more, it can be challenging to change the solutions if people have already installed them. Using multiple organizations, although introducing more complexity, can provide better flexibility.  
   
 <a name="BKMK_OptionsToModularize"></a>   
 ## Strategies to organize your solutions  
@@ -38,7 +38,7 @@ Before you create solutions, take some time to plan ahead. For example, think ab
 <a name="BKMK_NoCustomSolution"></a> 
   
 ### No custom solutions  
- You don’t have to create solutions. You can customize CDS for Apps directly by using the default solution.  
+ You don’t have to create solutions. You can customize Common Data Service directly by using the default solution.  
   
  You can still export your default solution as an unmanaged solution to transport it between organizations.  
   
@@ -69,7 +69,7 @@ Before you create solutions, take some time to plan ahead. For example, think ab
 ### Solution libraries  
  For an ISV with multiple solutions or a large enterprise deployment, many solution components will probably have to be shared. The best ways for solutions to share components is through solution libraries. Create a solution library by creating an unmanaged solution in a separate organization and then packaging those components into a managed solution. Install the managed solution into another organization and let developers reference these shared components.  
   
- The CDS for Apps Solutions Framework lets you build layers of solutions that depend on each other. Typically, you create a solution library representing a ”base” solution. Other solutions can be built on top of this base solution. This allows for cleaner separation of components. Development teams that are working on solution libraries and those working on the dependent solutions can develop at different paces. The dependent solutions must be created after the solution libraries are installed.  
+ The Common Data Service Solutions Framework lets you build layers of solutions that depend on each other. Typically, you create a solution library representing a ”base” solution. Other solutions can be built on top of this base solution. This allows for cleaner separation of components. Development teams that are working on solution libraries and those working on the dependent solutions can develop at different paces. The dependent solutions must be created after the solution libraries are installed.  
   
  This requires that you create a prerequisite solution that customers must install before they can install a dependent solution. Developers working on the solution libraries can continue to work on them and update them as long as they don’t break any dependent solutions that require them.  
   

@@ -1,10 +1,10 @@
 ---
-title: "Use access teams and owner teams to collaborate and share information (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use access teams and owner teams to collaborate and share information (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about using access teams and owner teams to colloborate and share information." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Use access teams and owner teams to collaborate and share information
 
-With *owner* teams or *access* teams, you can easily share business objects and collaborate with the users across business units in Common Data Service for Apps. A team belongs to one business unit, but it can include users from other business units. A user can be associated with more than one team.  
+With *owner* teams or *access* teams, you can easily share business objects and collaborate with the users across business units in Common Data Service. A team belongs to one business unit, but it can include users from other business units. A user can be associated with more than one team.  
   
  An owner team owns records and has security roles assigned to the team. The team’s privileges are defined by these security roles. In addition to privileges provided by the team, team members have the privileges defined by their individual security roles and by the roles from other teams in which they are members. A team has full access rights on the records that the team owns.  
   
@@ -36,7 +36,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
   
 - Owning records by entities other than users is required by your company’s business policies.  
   
-- The number of teams is known at the design time of your CDS for Apps system.  
+- The number of teams is known at the design time of your Common Data Service system.  
   
 - Daily reporting on progress by owning teams is required.  
   
@@ -44,7 +44,7 @@ With *owner* teams or *access* teams, you can easily share business objects and 
   
 - The teams are dynamically formed and dissolved. This typically happens if the clear criteria for defining the teams, such as established territory, product, or volume aren’t provided.  
   
-- The number of teams isn’t known at the design time of your CDS for Apps system.  
+- The number of teams isn’t known at the design time of your Common Data Service system.  
   
 - The team members require different access rights on the records. You can share a record with several access teams, each team providing different access rights on the record. For example, one team is granted the Read access right on the account and another team, the Read, Write and Share access rights on the same account.  
   

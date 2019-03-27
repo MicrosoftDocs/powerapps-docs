@@ -1,5 +1,5 @@
 ---
-title: "UserQuery Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "UserQuery Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the UserQuery entity."
 services: ''
 suite: powerapps

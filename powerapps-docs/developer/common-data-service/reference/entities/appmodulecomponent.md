@@ -1,5 +1,5 @@
 ---
-title: "AppModuleComponent Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "AppModuleComponent Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the AppModuleComponent entity."
 services: ''
 suite: powerapps

@@ -1,10 +1,10 @@
 ---
 title: "Analyze data with dashboards (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "The dashboard entities in Dynamics 365 Common Data Service for Apps enable you to present data from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "The dashboard entities in Dynamics 365 Common Data Service enable you to present data from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -24,7 +24,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/analyze-data-with-dashboards -->
 
-The dashboard entities in Common Data Service for Apps enable you to present data 
+The dashboard entities in Common Data Service enable you to present data 
 from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots.  
   
 ## Types of dashboards  

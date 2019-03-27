@@ -1,10 +1,10 @@
 ---
-title: "Use connections to link records to each other (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use connections to link records to each other (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Connection entites help you enable, create, and query connections." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,11 +17,11 @@ search.app:
 ---
 # Use connections to link records to each other
 
-The *connections* provide a flexible way to connect and describe the relationships between any two entity records Common Data Service for Apps. It helps you to promote teamwork, collaboration, and effective management of business and sales processes. Connections enable you to easily associate users, contacts, quotes, sales orders, and many other entity records with each other. The records in the association can be assigned particular roles that help define the purpose of the relationship.  
+The *connections* provide a flexible way to connect and describe the relationships between any two entity records Common Data Service. It helps you to promote teamwork, collaboration, and effective management of business and sales processes. Connections enable you to easily associate users, contacts, quotes, sales orders, and many other entity records with each other. The records in the association can be assigned particular roles that help define the purpose of the relationship.  
   
  Connections provide the following capabilities:  
   
-- An easy and flexible way to make a connection between two records of most CDS for Apps entity types. All customizable business and custom entities can be enabled for connections.  
+- An easy and flexible way to make a connection between two records of most Common Data Service entity types. All customizable business and custom entities can be enabled for connections.  
   
 - An option to add useful information, such as a description of the connection and the duration.  
   

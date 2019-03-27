@@ -1,10 +1,10 @@
 ---
-title: "Update and Delete entities using the Organization Service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Update and Delete entities using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to update and delete entities using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -225,7 +225,7 @@ When updating an entity you may change the values so that the record represents 
 
 ## Use Upsert
 
-Typically in data integration scenarios you will need to create or update data in CDS for Apps from other sources. CDS for apps may already have records with the same unique identifier, which may be an alternate key. If an entity record exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This is when you want to use upsert.
+Typically in data integration scenarios you will need to create or update data in Common Data Service from other sources. Common Data Service may already have records with the same unique identifier, which may be an alternate key. If an entity record exists, you want to update it. If it doesn't exist, you want to create it so that the data being added is synchronized with the source data. This is when you want to use upsert.
 
 The following example uses <xref:Microsoft.Xrm.Sdk.Messages.UpsertRequest> twice. The first time the account entity record is created, and the second time it is updated because it has an `accountnumber` value and there is an alternate key using that attribute.
 

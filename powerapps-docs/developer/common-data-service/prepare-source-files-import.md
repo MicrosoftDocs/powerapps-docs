@@ -1,10 +1,10 @@
 ---
-title: "Prepare source files for import (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Prepare source files for import (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Data import supports source files formatted as comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,9 +17,9 @@ search.app:
 ---
 # Prepare source files for import
 
-Before you can import data into Common Data Service(CDS) for Apps, you must create the source data files.  
+Before you can import data into Common Data Service, you must create the source data files.  
   
-The data source files that you use in an import must be formatted as comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files. The use of source files enables the transfer of data from database systems that use different formats into CDS for Apps.  
+The data source files that you use in an import must be formatted as comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files. The use of source files enables the transfer of data from database systems that use different formats into Common Data Service.  
   
 A source file may contain data for one entity type or multiple entity types, such as accounts and contacts. For the source files that contain multiple entity data, you must provide a map that includes the `<EntitiesPerFile>` tag. Set the value of this tag to “Multiple” to indicate that there is more than one entity type in the source file. Add the `Dedupe = “Eliminate”` attribute to the `<EntityMap>` tag. This assures that if the file contains duplicate rows for the entity type, a single row is used to minimize lookup related errors.  
   

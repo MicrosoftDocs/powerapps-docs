@@ -1,10 +1,10 @@
 ---
-title: "Azure Integration (Common Data Service for Apps) | Microsoft Docs"
+title: "Azure Integration (Common Data Service) | Microsoft Docs"
 description: "<Description>" 
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons"
 ms.author: "jdaly" 
@@ -17,19 +17,19 @@ search.app:
 ---
 # Azure Integration
 
-Common Data Service (CDS) for Apps supports integration with Azure. Developers can register plug-ins with CDS for Apps that can pass runtime message data, known as the execution context, to one or more Azure solutions in the cloud. This is especially important because Azure is one of two supported solutions for communicating runtime context obtained in a plug-in to external line-of-business (LOB) applications. The other solution is the external custom endpoint access capability from a plug-in registered in the sandbox.
+Common Data Service supports integration with Azure. Developers can register plug-ins with Common Data Service that can pass runtime message data, known as the execution context, to one or more Azure solutions in the cloud. This is especially important because Azure is one of two supported solutions for communicating runtime context obtained in a plug-in to external line-of-business (LOB) applications. The other solution is the external custom endpoint access capability from a plug-in registered in the sandbox.
 
-The Azure Service Bus provides a secure and reliable communication channel between CDS for Apps runtime data and external cloud-based line-of-business (LOB) applications. This capability is especially useful in keeping disparate CDS for Apps systems or other CDS for Apps servers synchronized with business data changes.
+The Azure Service Bus provides a secure and reliable communication channel between Common Data Service runtime data and external cloud-based line-of-business (LOB) applications. This capability is especially useful in keeping disparate Common Data Service systems or other Common Data Service servers synchronized with business data changes.
 
 ## Key elements of the connection  
 
- The key elements that implement the connection between CDS for Apps and the Azure Service Bus are described later. A diagram in the next section shows these elements in operation.  
+ The key elements that implement the connection between Common Data Service and the Azure Service Bus are described later. A diagram in the next section shows these elements in operation.  
   
  ### Data Context 
 
- The *data context* contains the business data that is being processed as part of the current CDS for Apps operation. This processing was initiated when a request to perform a certain operation was made by a user, workflow, or application,  to the Dynamics 365 platform. The data context is passed to any plug-ins or custom workflow activities that are registered with the event pipeline to execute on the specific request and entity combination that is currently being processed. The data context is of type <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> when it is being passed along the event execution pipeline and <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> when it is posted to the service bus.  
+ The *data context* contains the business data that is being processed as part of the current Common Data Service operation. This processing was initiated when a request to perform a certain operation was made by a user, workflow, or application,  to the Dynamics 365 platform. The data context is passed to any plug-ins or custom workflow activities that are registered with the event pipeline to execute on the specific request and entity combination that is currently being processed. The data context is of type <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext> when it is being passed along the event execution pipeline and <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> when it is posted to the service bus.  
   
- The data context contained within the message that is posted to the Azure Service Bus can be formatted in XML or JSON in addition to the default .NET binary format. This allows for cross-platform interoperability where Azure hosted non-.NET clients can read CDS for Apps data from the service bus. 
+ The data context contained within the message that is posted to the Azure Service Bus can be formatted in XML or JSON in addition to the default .NET binary format. This allows for cross-platform interoperability where Azure hosted non-.NET clients can read Common Data Service data from the service bus. 
 
 > [!IMPORTANT]
 > When the size of the entire HTTP payload exceeds 192Kb, the following properties will be removed:
@@ -51,7 +51,7 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
  ### Plug-ins  
  Plug-ins are one of two methods used to initiate posting the message containing the data context to the Azure Service Bus, the other method being a custom workflow activity. There are two kinds of plug-ins supported by the Dynamics 365-Azure connection feature: out-of-box (OOB), and custom. In either case, it is recommended that you register the plug-in to run asynchronously for best system performance.  
   
- An Azure-aware OOB plug-in is provided with CDS for Apps and can be registered using the Plug-in Registration Tool. This plug-in executes in full trust with the CDS for Apps platform. You must register a plug-in 'step' in the event execution pipeline  that identifies the message and entity combination that triggers  the plug-in to execute and perform the posting notification. When executed, the plug-in  notifies the asynchronous service, through a service endpoint notification service (<xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService>), to post the current request data context to the Azure Service Bus.  
+ An Azure-aware OOB plug-in is provided with Common Data Service and can be registered using the Plug-in Registration Tool. This plug-in executes in full trust with the Common Data Service platform. You must register a plug-in 'step' in the event execution pipeline  that identifies the message and entity combination that triggers  the plug-in to execute and perform the posting notification. When executed, the plug-in  notifies the asynchronous service, through a service endpoint notification service (<xref:Microsoft.Xrm.Sdk.IServiceEndpointNotificationService>), to post the current request data context to the Azure Service Bus.  
   
  You can also write your own custom plug-in that is “Azure-aware”. The custom plug-in executes in partial trust mode in the sandbox. A custom plug-in can initiate posting of the data context to the service bus through the service endpoint notification service. Adding code to invoke this service makes the plug-in “Azure-aware”. 
  
@@ -66,47 +66,47 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
  For more information about the asynchronous service see [Asynchronous service](asynchronous-service.md).  
   
  ### Microsoft Azure Service Bus  
- The service bus relays the request message data context between CDS for Apps and Azure Service Bus solution listener applications. The service bus also provides data security so that only authorized applications can access the posted Dynamics 365 data.  Authorization of CDS for Apps to post the data context to the service bus and for listener applications to read it is managed by  Azure Shared Access Signatures (SAS).  
+ The service bus relays the request message data context between Common Data Service and Azure Service Bus solution listener applications. The service bus also provides data security so that only authorized applications can access the posted Dynamics 365 data.  Authorization of Common Data Service to post the data context to the service bus and for listener applications to read it is managed by  Azure Shared Access Signatures (SAS).  
   
   
  For more information about the service bus, see [Service Bus](https://azure.microsoft.com/en-us/services/service-bus/). For more information about service bus authorization, see [Service Bus authentication and authorization](https://azure.microsoft.com/en-us/documentation/articles/service-bus-authentication-and-authorization/).  
   
  ### Microsoft Azure Solution
 
- For the CDS for Apps and Azure connection to work, there must be at least one solution in an Azure Service Bus solution account, where the solution contains one or more service endpoints. For a relay endpoint contract, a listener application that is “CDS for Apps-aware” must be actively listening on the endpoint for the CDS for Apps request on the service bus. For a queue endpoint contract, a listener doesn’t have to be actively listening. A listener is made CDS for Apps-aware by linking it to the <xref:Microsoft.Xrm.Sdk> assembly so that type <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> is defined. More information: [Write a Listener for a Microsoft Azure Solution](write-listener-application-azure-solution.md)  
+ For the Common Data Service and Azure connection to work, there must be at least one solution in an Azure Service Bus solution account, where the solution contains one or more service endpoints. For a relay endpoint contract, a listener application that is “Common Data Service-aware” must be actively listening on the endpoint for the Common Data Service request on the service bus. For a queue endpoint contract, a listener doesn’t have to be actively listening. A listener is made Common Data Service-aware by linking it to the <xref:Microsoft.Xrm.Sdk> assembly so that type <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> is defined. More information: [Write a Listener for a Microsoft Azure Solution](write-listener-application-azure-solution.md)  
   
- CDS for Apps supports sending event data to an Azure Event Hubs solution. More information about event hubs, see [Work with event data in your Azure Event Hub solution](work-event-data-azure-event-hub-solution.md).  
+ Common Data Service supports sending event data to an Azure Event Hubs solution. More information about event hubs, see [Work with event data in your Azure Event Hub solution](work-event-data-azure-event-hub-solution.md).  
   
 <a name="bkmk_describing"></a>  
  
-## CDS for Apps to service bus scenario  
+## Common Data Service to service bus scenario  
 
- Let us now identify a scenario that implements the previously mentioned connection components. As a prerequisite, SAS has been configured to recognize CDS for Apps as the supported issuer and the Azure Service Bus solution configured with rules to allow CDS for Apps to post to the endpoint where the listener is.  
+ Let us now identify a scenario that implements the previously mentioned connection components. As a prerequisite, SAS has been configured to recognize Common Data Service as the supported issuer and the Azure Service Bus solution configured with rules to allow Common Data Service to post to the endpoint where the listener is.  
   
  The following diagram shows the physical elements that make up the scenario.  
   
- ![Dynamics 365 to Service Bus scenario](media/crm-v5s-az.png "CDS for Apps to Service Bus scenario")  
+ ![Dynamics 365 to Service Bus scenario](media/crm-v5s-az.png "Common Data Service to Service Bus scenario")  
   
  The sequence of events as identified in this diagram are as follows:  
   
-1. A listener application is registered on a Azure Service Bus solution endpoint, and begins actively listening for the CDS for Apps remote execution context on the service bus.  
+1. A listener application is registered on a Azure Service Bus solution endpoint, and begins actively listening for the Common Data Service remote execution context on the service bus.  
 
-2. A user performs some operation in CDS for Apps that triggers execution of the registered OOB plug-in or a custom Azure-aware plug-in. The plug-in initiates a post, through an asynchronous service system job, of the current request data context to the service bus.  
+2. A user performs some operation in Common Data Service that triggers execution of the registered OOB plug-in or a custom Azure-aware plug-in. The plug-in initiates a post, through an asynchronous service system job, of the current request data context to the service bus.  
   
-3. The claims posted by CDS for Apps are authenticated. The service bus then relays the remote execution context to the listener. The listener processes the context information and performs some business-related task with that information. The service bus notifies the asynchronous service of a successful post and sets the related system job to a completed status.  
+3. The claims posted by Common Data Service are authenticated. The service bus then relays the remote execution context to the listener. The listener processes the context information and performs some business-related task with that information. The service bus notifies the asynchronous service of a successful post and sets the related system job to a completed status.  
   
 <a name="bkmk_establising"></a>  
  
-## Establish a contract between CDS for Apps and an Azure solution  
+## Establish a contract between Common Data Service and an Azure solution  
  For each solution endpoint, you configure a contract that defines the handling of these remote execution context “messages” on the service bus and the security that should be used on that endpoint. Service bus messages are received at an endpoint using one of the supported contracts listed here.  
   
  **Queue**  
  A queue contract provides a message queue in the cloud. With a queue contract, a listener doesn’t have to be actively listening for messages on the endpoint. For queues, there is a destructive read and a non-destructive read. A destructive read reads an available message from the queue and the message is removed. A non-destructive read doesn’t remove a message from the queue.  
   
- The type of queue supported by CDS for Apps is called a persistent queue. Persistent queues have a long but finite message availability duration that can be specified in code.  
+ The type of queue supported by Common Data Service is called a persistent queue. Persistent queues have a long but finite message availability duration that can be specified in code.  
   
  **One-way**  
- A one-way contract requires an active listener. If there is no active listener on an endpoint, the post to the service bus fails. CDS for Apps will retry the post in exponentially larger and larger time spans until the asynchronous system job that is posting the request is eventually aborted and its status is set to “Failed.”  
+ A one-way contract requires an active listener. If there is no active listener on an endpoint, the post to the service bus fails. Common Data Service will retry the post in exponentially larger and larger time spans until the asynchronous system job that is posting the request is eventually aborted and its status is set to “Failed.”  
   
  **Two-way**  
  A two-way contract is similar to a one-way contract except that a string value can be returned from the listener to the plug-in or custom workflow activity that initiated the post.  
@@ -125,10 +125,10 @@ The Azure Service Bus provides a secure and reliable communication channel betwe
   
  Identifying the kind of security a contract uses is part of the contract’s configuration. A contract can use Transport security, which uses Transport Layer Security (TLS) or Secure Sockets Layer (SSL) (https).  
   
- Claims authentication is used for secure access to the service bus. The claim used to authenticate to the service bus is generated in CDS for Apps and signed by the AppFabricIssuer certificate specified in the CDS for Apps configuration database.  
+ Claims authentication is used for secure access to the service bus. The claim used to authenticate to the service bus is generated in Common Data Service and signed by the AppFabricIssuer certificate specified in the Common Data Service configuration database.  
   
 <a name="bkmk_management"></a>
 
 ## Manage run-time errors  
 
- If an error occurred after a post was attempted to the service bus, check the status of the related system job in the web application for more information on the error. If the service bus is down or a listener/endpoint isn’t available, the current message being processed in CDS for Apps will not be posted to the bus. The asynchronous service will continue to try to post the message in an exponential pattern where it will try to post frequently at first and then at longer and longer intervals. For an internal CDS for Apps error, message posts are not attempted. For an external service bus or network error, the related system job will be in a “Wait” state.
+ If an error occurred after a post was attempted to the service bus, check the status of the related system job in the web application for more information on the error. If the service bus is down or a listener/endpoint isn’t available, the current message being processed in Common Data Service will not be posted to the bus. The asynchronous service will continue to try to post the message in an exponential pattern where it will try to post frequently at first and then at longer and longer intervals. For an internal Common Data Service error, message posts are not attempted. For an external service bus or network error, the related system job will be in a “Wait” state.

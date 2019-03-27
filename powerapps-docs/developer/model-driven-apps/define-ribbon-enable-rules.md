@@ -4,7 +4,7 @@ description: "Learn about defining specific rules to control when the ribbon ele
 keywords: ""
 ms.date: 02/08/2019
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article

@@ -1,10 +1,10 @@
 ---
-title: "Tutorial: Debug a plug-in (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Tutorial: Debug a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This tutorial is the second in a series that will show you how to work with plug-ins. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/28/2019
 ms.reviewer: "pehecke"
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -49,7 +49,7 @@ Because the plug-in executes on a remote server, you cannot attach a debugger to
 
     ![Install Profiler](media/tutorial-debug-plug-in-install-profiler.md.png)
 
-1. This will install a new managed solution named Plug-in Profiler in your CDS for Apps environment. This will take a minute or two to complete.
+1. This will install a new managed solution named Plug-in Profiler in your Common Data Service environment. This will take a minute or two to complete.
 
 ## Start profiling
 

@@ -1,5 +1,5 @@
 ---
-title: "Create and edit entities in Common Data Service for Apps | MicrosoftDocs"
+title: "Create and edit entities in Common Data Service | MicrosoftDocs"
 description: "Learn how to create and edit entities"
 ms.custom: ""
 ms.date: 05/11/2018
@@ -22,7 +22,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create and edit entities in Common Data Service for Apps
+# Create and edit entities in Common Data Service
 
 Before you create a custom entity, evaluate whether using an existing entity will meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 

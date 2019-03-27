@@ -1,6 +1,6 @@
 ---
-title: "Retrieve an entity using the Web API (Common Data Service for Apps)| Microsoft Docs"
-description: "Read how to form a GET request using the Common Data Service for Apps Web API to retrieve data for an entity specified as the resource with a unique identifier"
+title: "Retrieve an entity using the Web API (Common Data Service)| Microsoft Docs"
+description: "Read how to form a GET request using the Common Data Service Web API to retrieve data for an entity specified as the resource with a unique identifier"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -42,7 +42,7 @@ GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-0000000000
 To retrieve more than one entity at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) topic.
 
 > [!CAUTION]
->  The above example will return all the properties for account record, which is against the performance best practices for retrieving data. This example was just to illustrate how you can do a basic retrieve of an entity instance in CDS for Apps. Because all the properties were returned, we haven't included the response information for the request in this example.
+>  The above example will return all the properties for account record, which is against the performance best practices for retrieving data. This example was just to illustrate how you can do a basic retrieve of an entity instance in Common Data Service. Because all the properties were returned, we haven't included the response information for the request in this example.
 >
 >  As a performance best practice, you must always use the `$select` system query option to limit the properties returned while retrieving data. See the following section, **Retrieve specific properties**, for information about this.
   

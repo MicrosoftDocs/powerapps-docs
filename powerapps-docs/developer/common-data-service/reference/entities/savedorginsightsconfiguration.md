@@ -1,5 +1,5 @@
 ---
-title: "SavedOrgInsightsConfiguration Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "SavedOrgInsightsConfiguration Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the SavedOrgInsightsConfiguration entity."
 services: ''
 suite: powerapps

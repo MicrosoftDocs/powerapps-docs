@@ -1,6 +1,6 @@
 ---
-title: "Use the Common Data Service for Apps Web API (Common Data Service for Apps)| Microsoft Docs"
-description: "The Common Data Service for Apps Web API implements OData v4 and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
+title: "Use the Common Data Service Web API (Common Data Service)| Microsoft Docs"
+description: "The Common Data Service Web API implements OData v4 and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
@@ -21,11 +21,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use the Common Data Service for Apps Web API
+# Use the Common Data Service Web API
 
-The Web API is one of two web services you can use to work with data and metadata in Common Data Service for Apps. The other is the [Organization Service](../org-service/overview.md).
+The Web API is one of two web services you can use to work with data and metadata in Common Data Service. The other is the [Organization Service](../org-service/overview.md).
 
-The CDS for Apps Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [http://www.odata.org/](http://www.odata.org/). Details about this standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0).  
+The Common Data Service Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [http://www.odata.org/](http://www.odata.org/). Details about this standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0).  
   
 Because the Web API is built on open standards, we don’t provide assemblies for a specific developer experience. You can compose HTTP requests for specific operations or use third-party libraries to generate classes for whatever language or platform you want. You can find a list of libraries that support OData version 4.0 at [http://www.odata.org/libraries/](http://www.odata.org/libraries/).  
 

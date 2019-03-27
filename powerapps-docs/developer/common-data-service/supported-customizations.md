@@ -1,10 +1,10 @@
 ---
-title: "Supported Customizations for Common Data Service for Apps (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Read how you can customize Common Data Service for Apps by using tools that are available in the PowerApps portal or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Supported Customizations for Common Data Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Read how you can customize Common Data Service by using tools that are available in the PowerApps portal or the ones described in docs." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/25/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -16,27 +16,27 @@ search.app:
   - D365CE
 ---
 
-<!-- This is the portion of the old topic that applies to CDS
+<!-- This is the portion of the old topic that applies to Common Data Service
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
  -->
 
 
-# Supported Customizations for Common Data Service for Apps
+# Supported Customizations for Common Data Service
 
-You can customize Common Data Service for Apps by using tools that are available in the PowerApps portal or that are described in the official documentation. These customizations are supported and can be upgraded.
+You can customize Common Data Service by using tools that are available in the PowerApps portal or that are described in the official documentation. These customizations are supported and can be upgraded.
 
-Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to CDS for Apps. For more information, see [Unsupported Customizations](#unsupported-customizations).
+Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Common Data Service. For more information, see [Unsupported Customizations](#unsupported-customizations).
 
 Topics covered in technical articles published on Microsoft sites such as docs.microsoft.com, msdn.microsoft.com or technet.microsoft.com are supported, but might not be upgradable.
 
 
 ## Customizations using PowerApps portal
 
-There are a variety of tools included with CDS for Apps that you can use to customize it. Customizations made using the PowerApps portal tools and web application are fully supported and fully upgradeable.
+There are a variety of tools included with Common Data Service that you can use to customize it. Customizations made using the PowerApps portal tools and web application are fully supported and fully upgradeable.
 
 The following customization methods can be used to produce fully supported customizations:
 
-- Customization in the PowerApps portal or solution explorer. For more information, see [What is Common Data Service for Apps?](../../maker/common-data-service/data-platform-intro.md)
+- Customization in the PowerApps portal or solution explorer. For more information, see [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md)
 
 - Settings in the web application. For more information, see [Administer PowerApps](../../administrator/admin-guide.md).
 
@@ -45,14 +45,14 @@ The following customization methods can be used to produce fully supported custo
 > [!NOTE]
 > Fully supported means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
 
-For more information about using the customization tools in the web application, see the [What is Common Data Service for Apps?](../../maker/common-data-service/data-platform-intro.md).
+For more information about using the customization tools in the web application, see the [What is Common Data Service?](../../maker/common-data-service/data-platform-intro.md).
 
 
 ## Customizations applied using code
 
-The documentation on this site for developers, technical articles, and sample code published on this site, and information released by the CDS for Apps Developer Support Team are included in the area of customizations applied using code. The specific actions and levels of supportability and upgradeability are described later in this topic.
+The documentation on this site for developers, technical articles, and sample code published on this site, and information released by the Common Data Service Developer Support Team are included in the area of customizations applied using code. The specific actions and levels of supportability and upgradeability are described later in this topic.
 
-### CDS for Apps web services
+### Common Data Service web services
 
 Use of the web services are fully supported. This includes: Web API, Organization Service, Discovery Service, and the Organization Data Service. We strive to keep the APIs backward compatible but reserve the right to change APIs for additional features. Entity attributes may also change in future versions.
 
@@ -88,22 +88,22 @@ The ability to create custom workflow activities (assemblies) to be called from 
 
 The following describes the support considerations for custom code written the Microsoft .NET Framework 4.6.2.
 
-- Any web service client created by using the Microsoft .NET Framework 4.6.2 or higher that calls the web services is fully supported in CDS for Apps.
+- Any web service client created by using the Microsoft .NET Framework 4.6.2 or higher that calls the web services is fully supported in Common Data Service.
 
 > [!IMPORTANT]
 > You should build any custom client applications using Microsoft .NET Framework 4.6.2 or later. Only applications using Transport Level Security (TLS) 1.2 or better security will be allowed to connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
 > 
 > If clients designed for earlier versions of  Dynamics 365 Customer Engagement are designed to connect to any version or deployment type you can prepare by re-compiling the application to use .NET Framework 4.6.2. More information: [Blog Post: Updates coming to Dynamics 365 Customer Engagement connection security](https://blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/)
 
-- Any .NET assembly that is created with the Microsoft .NET Framework 4.6.2 for use in CDS for Apps as a plug-in assembly or as a custom workflow activity is supported.
+- Any .NET assembly that is created with the Microsoft .NET Framework 4.6.2 for use in Common Data Service as a plug-in assembly or as a custom workflow activity is supported.
 
 ## Unsupported customizations
 
-Modifications to CDS for Apps that are made without using either the methods described in this documentation or CDS for Apps tools are not supported and are not preserved during updates or upgrades of CDS for Apps. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade CDS for Apps. 
+Modifications to Common Data Service that are made without using either the methods described in this documentation or Common Data Service tools are not supported and are not preserved during updates or upgrades of Common Data Service. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade Common Data Service. 
 
 The following is a list of unsupported action types that are frequently asked about:
 
-- Referencing any CDS for Apps dynamic-link libraries (DLLs) other than the following:
+- Referencing any Common Data Service dynamic-link libraries (DLLs) other than the following:
 
     - Microsoft.Crm.Outlook.Sdk.dll
     - Microsoft.Crm.Sdk.Proxy.dll
@@ -120,7 +120,7 @@ The following is a list of unsupported action types that are frequently asked ab
 
 - Plugin and Workflow Assemblies must contain all the necessary logic within the respective dll. Plugins may reference some core .Net assemblies. However, we do not support dependencies on .Net assemblies that interact with low-level Windows APIs, such as the graphics design interface. Previously, Dynamics 365 allowed for assemblies to refer to these interfaces, but to adhere to our security standards, changes to this behavior are required.
 
-- Creating a plug-in assembly for a standard CDS for Apps assembly (Microsoft.Crm.*.dll) or performing an update or delete of a platform created `pluginassembly` is not supported.
+- Creating a plug-in assembly for a standard Common Data Service assembly (Microsoft.Crm.*.dll) or performing an update or delete of a platform created `pluginassembly` is not supported.
 
 - Editing a solutions file to edit any solution components other than ribbons, forms, SiteMap, or saved queries is not supported. For more information, see [When to edit the customizations file](when-edit-customization-file.md). Defining new solution components by editing the solutions file is not supported. Editing web resource files exported with a solution is not supported. Except for the steps documented in [Maintain managed solutions](maintain-managed-solutions.md), editing the contents of a managed solution is not supported.
 

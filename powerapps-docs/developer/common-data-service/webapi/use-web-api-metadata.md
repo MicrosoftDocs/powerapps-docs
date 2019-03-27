@@ -1,5 +1,5 @@
 ---
-title: "Use the Web API with metadata (Common Data Service for Apps) | Microsoft Docs"
+title: "Use the Web API with metadata (Common Data Service) | Microsoft Docs"
 description: "The section provides guidance about how to use the Web API with the entity types included in Web API Metadata EntityType Reference."
 ms.custom: ""
 ms.date: 11/04/2018
@@ -63,5 +63,5 @@ You can check whether entities are eligible to participate in a relationship wit
 
 <!-- TODO [Metadata and data models](../metadata-data-models.md)<br /> -->
 [Browse the metadata for your environment](../browse-your-metadata.md)<br />
-<!--  TODO [Use the Organization service with Common Data Service for Apps metadata](../org-service/use-organization-service-metadata.md)<br /> -->
-[Use the Common Data Service for Apps Web API](overview.md)
+<!--  TODO [Use the Organization service with Common Data Service metadata](../org-service/use-organization-service-metadata.md)<br /> -->
+[Use the Common Data Service Web API](overview.md)

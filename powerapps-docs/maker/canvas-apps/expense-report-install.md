@@ -38,7 +38,7 @@ Track expense reports from submission to approval. Tally line items as individua
 
 This list stores the expense reports.
 
-1. Open a web browser and navigate to https://portal.office.com.
+1. Open a web browser and navigate to https://admin.microsoft.com.
 2. Log in with an account that has permission to create lists.
 3. Navigate to the site collection where you want the Expenses list to reside.
 4. Click the **gear icon** in the top right portion of the web page.

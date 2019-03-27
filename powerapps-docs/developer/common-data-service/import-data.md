@@ -1,10 +1,10 @@
 ---
-title: "Import Data (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "If you want to import data into Common Data Service for Apps, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into CDS for Apps" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Import Data (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "If you want to import data into Common Data Service, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -48,13 +48,13 @@ https://docs.microsoft.com/dynamics365/customer-engagement/web-api/importmapping
 Or should the core general content simply include both?
 
 -->
-If you want to import data into Common Data Service for Apps, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into CDS for Apps. You can import data into standard and customized attributes of most business and custom entities. You can also include related data, such as notes and attachments.  
+If you want to import data into Common Data Service, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Common Data Service. You can import data into standard and customized attributes of most business and custom entities. You can also include related data, such as notes and attachments.  
   
-Common Data Service for Apps includes a web application tool called Import Data Wizard. You use this tool to import data records from one or more comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files.  
+Common Data Service includes a web application tool called Import Data Wizard. You use this tool to import data records from one or more comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files.  
   
- For more information about the Import Data Wizard, see CDS for Apps Help.  
+ For more information about the Import Data Wizard, see Common Data Service Help.  
   
- The Common Data Service for Apps web services provide the following additional capabilities that aren’t available in the Import Data Wizard:  
+ The Common Data Service web services provide the following additional capabilities that aren’t available in the Import Data Wizard:  
   
 - Create data maps that include complex transformation mapping, such as concatenation, split, and replace.  
   
@@ -68,7 +68,7 @@ Common Data Service for Apps includes a web application tool called Import Data 
   
 - Add `LookupMap`XML tags in the data map to indicate that the data lookup will be initiated and performed on a source file that is used in the import.  
   
-- Add custom `OwnerMetadata`XML tags in the data map to match the user records in the source file with the records of the user (system user) in CDS for Apps.  
+- Add custom `OwnerMetadata`XML tags in the data map to match the user records in the source file with the records of the user (system user) in Common Data Service.  
   
 - Use optional validation checks.  
   
@@ -89,7 +89,7 @@ Common Data Service for Apps includes a web application tool called Import Data 
   
 - Transform the parsed data.  
   
-- Upload the transformed data into the target CDS for Apps server.  
+- Upload the transformed data into the target Common Data Service server.  
   
   You can import data from one source file or several source files. A source file can contain data for one entity type or multiple entity types.  
   

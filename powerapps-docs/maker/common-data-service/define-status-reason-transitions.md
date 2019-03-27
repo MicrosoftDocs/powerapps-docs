@@ -29,7 +29,7 @@ search.app:
 You can specify status reason transitions for the Incident (**Case**) entity or a custom entity.
 
 > [!NOTE]
-> Although the Incident (Case) entity isn't included in a default Common Data Service for Apps environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
+> Although the Incident (Case) entity isn't included in a default Common Data Service environment, it is used by [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) and defined within the [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json)
   
 Status reason transitions are an optional additional level of filtering to define what the status reason value can be changed to for each status reason. Defining a limited list of valid options can make it easier for people to choose the correct next status reason for a record when you have a large number of combinations for valid status reason values.  
   
@@ -60,7 +60,7 @@ The metadata for the field defines what status values are valid for a given stat
 You can modify the status reason field options for the Case entity and custom entities to define which other status reason options people can choose. The only restriction is that each status reason option for an active status must allow at least one path to an inactive status. Otherwise you could create a condition where it would not be possible to resolve or cancel the case.  
 
 > [!NOTE]
-> Editing the status reason transitions requires using solution explorer. See [Create and edit fields for Common Data Service for Apps using PowerApps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
+> Editing the status reason transitions requires using solution explorer. See [Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md) for information about how to edit fields.
   
  When you edit a status reason field the **Edit Status Reason Transitions** button is in the menu. 
 
@@ -81,7 +81,7 @@ The screenshot below provides an example that meets the following requirements:
   
 ### See Also  
 
-[Create and edit fields for Common Data Service for Apps using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Entity metadata > Entity states](/powerapps/developer/common-data-service/entity-metadata#entity-states)<br />
 [Define custom state model transitions](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 

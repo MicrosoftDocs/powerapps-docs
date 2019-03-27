@@ -1,10 +1,10 @@
 ---
-title: "Quick Start: Web API sample (C#) (Common Data Service for Apps)| Microsoft Docs"
-description: "This sample demonstrates how to authenticate with a Common Data Service for Apps Server and then call a basic Web API operation, the WhoAmI Function"
+title: "Quick Start: Web API sample (C#) (Common Data Service)| Microsoft Docs"
+description: "This sample demonstrates how to authenticate with a Common Data Service Server and then call a basic Web API operation, the WhoAmI Function"
 ms.custom: ""
 ms.date: 02/02/2019
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Quick Start: Web API sample (C#)
 
-In this quick start you will create a simple console application to connect to your Common Data Service for Apps environment using the Web API. 
+In this quick start you will create a simple console application to connect to your Common Data Service environment using the Web API. 
 
 You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
 
@@ -28,10 +28,10 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
  - Visual Studio (2017 recommended)
  - Internet connection
- - Valid user account for a Common Data Service for Apps instance
+ - Valid user account for a Common Data Service instance
     - Your username
     - Your password
- - Url to the CDS for Apps environment you want to connect with
+ - Url to the Common Data Service environment you want to connect with
  - Basic understanding of the Visual C# language
 
 > [!NOTE]

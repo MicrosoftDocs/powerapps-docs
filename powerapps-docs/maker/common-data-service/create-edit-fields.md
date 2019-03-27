@@ -1,5 +1,5 @@
 ---
-title: "How to create and edit fields for Common Data Service for Apps| MicrosoftDocs"
+title: "How to create and edit fields for Common Data Service| MicrosoftDocs"
 ms.custom: ""
 ms.date: 02/08/2019
 ms.reviewer: ""
@@ -23,7 +23,7 @@ search.app:
 ---
 # How to create and edit fields
 
-In Common Data Service for Apps fields define the individual data items that can be used to store data in an entity. Fields are sometimes called *attributes* by developers. 
+In Common Data Service fields define the individual data items that can be used to store data in an entity. Fields are sometimes called *attributes* by developers. 
   
 Before you create a custom field, evaluate whether using an existing field would meet your requirements. More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -31,8 +31,8 @@ There are two designers you can use to create or edit fields:
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit fields for Common Data Service for Apps using PowerApps portal](create-edit-field-portal.md)|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit fields for Common Data Service for Apps using PowerApps solution explorer](create-edit-field-solution-explorer.md) |
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)|
+|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md) |
 
 > [!NOTE]
 > You can also create fields in your environment using the following:
@@ -43,11 +43,11 @@ There are two designers you can use to create or edit fields:
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the PowerApps portal to Create and edit fields for Common Data Service for Apps unless you need to address any of the following requirements:
+You should use the PowerApps portal to Create and edit fields for Common Data Service unless you need to address any of the following requirements:
 
 - Create a Customer Lookup field. 
    - More information: [Different types of lookups](types-of-fields.md#different-types-of-lookups)
-- Create a field in a solution other than the CDS Default solution. 
+- Create a field in a solution other than the Common Data Service Default solution. 
    - More information: [Solutions overview](solutions-overview.md)
 - Define status reason transitions. 
    - More information: [Define status reason transitions for the Case or custom entities](define-status-reason-transitions.md)
@@ -70,15 +70,15 @@ You should use the PowerApps portal to Create and edit fields for Common Data Se
 
 ## Community tools
 
-**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for CDS for Apps. Please see the [Developer Tools](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
+**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** is a tool that XrmToolbox community developed for Common Data Service. Please see the [Developer Tools](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools) topic for more community developed tools.
 
 > [!NOTE]
 > The community tools are not a product of Microsoft and does not extend support to the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also  
-[Create and edit fields for Common Data Service for Apps using PowerApps portal](create-edit-field-portal.md)<br />
-[Create and edit fields for Common Data Service for Apps using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
+[Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)<br />
+[Create and edit fields for Common Data Service using PowerApps solution explorer](create-edit-field-solution-explorer.md)<br />
 [Types of fields and field data types](types-of-fields.md)<br />
 [Developer Documentation: Work with attribute metadata](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)
  

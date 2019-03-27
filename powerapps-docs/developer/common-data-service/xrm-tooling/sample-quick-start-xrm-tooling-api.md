@@ -33,6 +33,7 @@ Download the sample: [Work with XRM Tooling API](https://github.com/Microsoft/Po
 1. Open the `Quick start for XRM Tooling\C#\QuickStartXRMToolingWPFClient.sln`  file in Visual Studio.  
 1. Press **F5** to compile and run the program.  
 
+
 ## Demonstrates
 
 - The sample code is built using the **WPF Application for CRM** SDK template that provides a common login control with built-in support for authentication and credential caching and reuse. For more information about the common login control and how to use the SDK template in Visual Studio, see [Use the XRM Tooling common login control](use-xrm-tooling-common-login-control-client-applications.md).  

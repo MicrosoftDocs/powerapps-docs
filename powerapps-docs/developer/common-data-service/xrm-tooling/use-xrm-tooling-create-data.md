@@ -52,7 +52,7 @@ else
     // Display the last error.  
     Console.WriteLine("An error occurred: {0}", svc.LastCrmError);  
   
-    // Display the last exception message if any.  
+    // Display the last exception message if any.   
     Console.WriteLine(svc.LastCrmException.Message);  
     Console.WriteLine(svc.LastCrmException.Source);  
     Console.WriteLine(svc.LastCrmException.StackTrace);  

@@ -4,7 +4,7 @@ description: "Learn about how to create, manage, and publish model-driven apps u
 keywords: ""
 ms.date: 03/04/2019
 ms.service:
-  - "powerapps"
+  - powerapps
 ms.custom:
   - ""
 ms.topic: article
@@ -76,7 +76,7 @@ You can add or remove components in an app such as sitemap, entity, dashboard, b
 
 Use the <xref:Microsoft.Dynamics.CRM.AddAppComponents> action or the <xref:Microsoft.Crm.Sdk.Messages.AddAppComponentsRequest> message to add components to your Model-driven app. The action requires you to specify the following:
 - **AppId**: ID of the app where you want to add components
-- **Components** A collection of components to be added. You need to specify the ID and the entity type of the component you want to add. For a list of entity types in CDS for Apps Web API, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
+- **Components** A collection of components to be added. You need to specify the ID and the entity type of the component you want to add. For a list of entity types in Common Data Service Web API, see <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>.
 
 The following Web API request adds a view (savedquery) and a form (systemform) to your app:
 
@@ -207,7 +207,7 @@ Accept: application/json
 
 ## Manage access to model-driven app using security roles
 
-To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your Model-driven apps. Users assigned to the associated security roles and can see and use your Model-driven apps in CDS for Apps. 
+To provide users access to your apps so that they can access it from their **Settings** > **My Apps** area or the Dynamics 365 home page, you can associate security roles to your Model-driven apps. Users assigned to the associated security roles and can see and use your Model-driven apps in Common Data Service. 
 
 Use the **appmoduleroles_association** navigation property of the [AppModule Entity](../common-data-service/reference/entities/appmodule.md) entity to associate a Model-driven app with a security role. The following request shows how to associate a Model-driven app with a security role:
 

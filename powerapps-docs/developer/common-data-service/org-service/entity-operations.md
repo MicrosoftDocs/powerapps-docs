@@ -1,10 +1,10 @@
 ---
-title: "Entity Operations using the Organization service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about the Entity class used for data operations using the CDS for Apps organization service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Entity Operations using the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about the Entity class used for data operations using the Common Data Service organization service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
-ms.service: "powerapps"
+ms.service: powerapps
 ms.topic: "article"
 author: "brandonsimons" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
@@ -17,7 +17,7 @@ search.app:
 ---
 # Entity Operations using the Organization service
 
-When you work with Common Data Service for Apps data using the organization service you will use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
+When you work with Common Data Service data using the organization service you will use the <xref:Microsoft.Xrm.Sdk.Entity> class with the late-bound style or with generated entity classes using the early-bound style. The generated entity classes inherit from the <xref:Microsoft.Xrm.Sdk.Entity> class, so understanding the <xref:Microsoft.Xrm.Sdk.Entity> class is important for either style.
 
 This topic will describe some of the most frequently used properties and methods of the <xref:Microsoft.Xrm.Sdk.Entity> class.
 
@@ -199,7 +199,7 @@ Account account2 = retrievedEntity.ToEntity<Account>();
 
 ## Next Steps
 
-These topics will explain more about working with CDS for Apps entities.
+These topics will explain more about working with Common Data Service entities.
 
 [Quick Start: Organization service sample (C#)](quick-start-org-service-console-app.md)
 [Query data](entity-operations-query-data.md)<br />
