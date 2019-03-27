@@ -2,7 +2,7 @@
 title: "Configure tracing for XRM tooling (Common Data Service)| Microsoft Docs"
 description: "Learn how you can configure tracing for components such as operation calls, warnings, exceptions, and other significant events in XRM Tooling"
 ms.custom: ""
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""

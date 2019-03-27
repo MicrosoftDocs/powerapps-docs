@@ -2,7 +2,7 @@
 title: "Use XRM tooling to create data (Common Data Service)| Microsoft Docs"
 description: "Use CrmServiceClient class to create data on Common Data Service"
 ms.custom: ""
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,10 +27,10 @@ There are seven methods available in the <xref:Microsoft.Xrm.Tooling.Connector.C
   
 ## CreateNewRecord  
 
-This method is used to create any type of entity data in Common Data Service. To use it, you need to know the schema name of the entity you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.  
-  
+This method is used to create any type of entity data in Common Data Service. To use it, you need to know the schema name of the entity you want to create a record in, and must construct a data payload to pass to it. This example creates an account record.
+
 ```csharp
-CrmServiceClient svc = new CrmServiceClient(connectionstring");  
+CrmServiceClient svc = new CrmServiceClient("connectionstring");  
 // Verify that you are connected  
 if (svc != null && svc.IsReady)  
 {  
@@ -59,8 +59,7 @@ else
   
     return;  
 }  
-```  
-  
+```
 In this example, we created a data payload object called `indata`. Next, we populated it using the general syntax `crmFieldName , new CrmDataTypeWrapper(data,CrmFieldType)`. After setting up the `indata` object to get the values to create, we called `CreateNewRecord` method providing the entity logical name for the account and the data payload (`indata`).  
   
 > [!NOTE]

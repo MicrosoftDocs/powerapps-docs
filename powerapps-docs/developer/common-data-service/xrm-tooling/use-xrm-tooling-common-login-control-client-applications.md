@@ -2,7 +2,7 @@
 title: "Use the XRM tooling common login control in your client applications (Common Data Service for Apps)| Microsoft Docs"
 description: "The Common Data Service SDK provides you with a template for Visual Studio that enables you to use the common login control in your client applications. The code for Common Data Service authentication, credential storage and retrieval, and diagnostic logging is built into the template so that you can quickly leverage these capabilities in your Windows client applications for Common Data Service"
 ms.custom: ""
-ms.date: 03/15/2019
+ms.date: 03/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
