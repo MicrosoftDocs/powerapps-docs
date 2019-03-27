@@ -48,7 +48,7 @@ The following procedure demonstrates how to create a console application project
   
 4. In the list of templates, select **Console Application**. (Alternately choose the project type suited to your solution.)  All of the Web API C# samples are console applications.  
   
-   ![A new console app project dialog in Dynamics 365 for Customer Engagement apps](media/new-project.PNG "A new console app project dialog in Dynamics 365 for Customer Engagement apps")  
+   ![A new console app project dialog in Common Data Service](media/new-project.PNG "A new console app project dialog in Common Data Service")  
   
 5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name “StartWebAPI-CS” was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
   
@@ -131,7 +131,7 @@ The following procedure demonstrates how to create a console application project
  
 ### Add connection code
 
- This section explains how to add a basic set of settings and instructions to perform these operations.  For more information about the common code used, see [Use the Dynamics 365 for Customer Engagement Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)  
+This section explains how to add a basic set of settings and instructions to perform these operations.  
   
 #### Edit the application configuration file
   
@@ -163,7 +163,7 @@ The following procedure demonstrates how to create a console application project
   
     ```  
   
-2.  When developing or deploying a solution, the actual connection and application registration values must be substituted for the example placeholder values.  For more information, see [Helper code: Configuration classes](web-api-helper-code-configuration-classes.md).  
+2.  When developing or deploying a solution, the actual connection and application registration values must be substituted for the example placeholder values.  
   
 <!--<a name="bkmk_addCodeToCallHelperLibrary"></a>
 
