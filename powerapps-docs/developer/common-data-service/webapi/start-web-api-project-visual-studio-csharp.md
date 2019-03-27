@@ -22,8 +22,6 @@ search.app:
 ---
 # Start a Common Data Service Web API project in Visual Studio (C#)
 
-[!INCLUDE[](../../includes/cc_applies_to_update_9_0_0.md)]
-
 This topic demonstrates how to create a new project in Visual Studio 2017 that builds a console application that uses the Common Data Service Web API. It illustrates the common references and project resources that most applications, including the SDK C# samples, use to implement Web API-based solutions.  
   
 <a name="bkmk_prerequisites"></a>   
@@ -52,7 +50,7 @@ The following procedure demonstrates how to create a console application project
   
    ![A new console app project dialog in Dynamics 365 for Customer Engagement apps](media/new-project.PNG "A new console app project dialog in Dynamics 365 for Customer Engagement apps")  
   
-5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name “StartWebAPI-CS” was used.) The initial solution files will be generated and the solution loaded into [!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)].  
+5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name “StartWebAPI-CS” was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
   
 6. Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.6.2**.  
   
