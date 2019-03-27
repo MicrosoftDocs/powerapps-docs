@@ -54,9 +54,7 @@ The following procedure demonstrates how to create a console application project
   
 6. Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.6.2**.  
   
-<a name="bkmk_addAllRequiredResources"></a>   
-
-### Add all required resources to your project  
+<!--### Add all required resources to your project  
  The following procedures explain how to add all required managed references and packages to your project. Consider this a base set of resources that most managed code applications will need for invoking Web API operations.  
 <!--  
 #### Add the helper library NuGet package  
@@ -106,7 +104,7 @@ The following procedure demonstrates how to create a console application project
   
 2. Confirm that all the required references have been added to the project.  
   
-  <!--> ![VS Solution Explorer showing references for the helper library](../media/solution-explorer-references-helper-code.png "VS Solution Explorer showing references for the helper library")  
+  <!-- ![VS Solution Explorer showing references for the helper library](../media/solution-explorer-references-helper-code.png "VS Solution Explorer showing references for the helper library")  
   -->
 3. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](https://msdn.microsoft.com/library/wkze6zky.aspx).  
   
