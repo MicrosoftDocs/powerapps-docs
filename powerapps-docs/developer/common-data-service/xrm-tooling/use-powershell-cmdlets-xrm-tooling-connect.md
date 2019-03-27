@@ -2,7 +2,7 @@
 title: "Use PowerShell cmdlets for XRM tooling to connect to Common Data Service (Common Data Service)| Microsoft Docs"
 description: "Learn how to use Powershell cmdlets for XRM tooling like Get-CrmConnection and Get-CrmOrganizations to connect to Common Data Service and retrieve organizations that the current user has access to"
 ms.custom: ""
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""

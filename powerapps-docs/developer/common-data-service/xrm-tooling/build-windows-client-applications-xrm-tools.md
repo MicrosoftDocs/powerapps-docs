@@ -35,7 +35,6 @@ XRM tooling is a set of APIs built on top of the Common Data Service assembly AP
 > [!NOTE]
 > [!INCLUDE[cc-d365ce-note-section](../includes/cc-d365ce-note-section.md)] [Build Windows client applications using the XRM tools (Customer Engagement)](/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools)
 
-  
 ## Components of XRM tooling  
 
 XRM tooling has the following three components:  
