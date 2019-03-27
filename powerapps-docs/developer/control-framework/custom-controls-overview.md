@@ -32,7 +32,7 @@ The `CustomControlResource` entity is related to the `CustomControl` entity to p
 
 Manifest is the metadata file that defines a control. It is an XML document that describes:
 
-- The namespace of the control.
+- The namespace and name of the control.
 - The kind of data it can be bound to, either a field or a data-set.
 - Any properties that can be configured in the application when the control is added.
 - A list of web resource files that the control needs. 
