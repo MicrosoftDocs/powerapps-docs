@@ -16,7 +16,7 @@ search.app:
 ---
 # Create a canvas app from scratch based on Excel data
 
-Create your own canvas app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but experienced app makers can use it to build the best app for their needs.
+Create your own canvas app from scratch based on Excel data, formatted as a table, and then add data from other sources if you want. By following this tutorial, you'll create an app that contains two screens. On one screen, users can browse through a set of records. On the other screen, users can create a record, update one or more fields in a record, or delete an entire record. This approach takes more time than [generating an app automatically](get-started-create-from-data.md) does, but app makers who have more experience can use it to build the best app for their needs.
 
 ## Prerequisites
 
@@ -28,10 +28,10 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
     | --- | --- | --- | --- |
     | Saturday |10am-noon |Vasquez |Kumashiro |
     | Saturday |noon-2pm |Ice |Singhal |
-    | Saturday |2pm-4-pm |Myk |Mueller |
+    | Saturday |2pm-4pm |Myk |Mueller |
     | Sunday |10am-noon |Li |Adams |
-    | Sunday |10am-noon |Singh |Morgan |
-    | Sunday |10am-noon |Batye |Nguyen |
+    | Sunday | noon-2pm |Singh |Morgan |
+    | Sunday | 2pm-4pm |Batye |Nguyen |
 
 2. Format that data as a table, named **Schedule**, so that PowerApps can parse the information.
 
@@ -46,14 +46,14 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
-
 1. Under **Make your own app**, select **Canvas app from blank**.
 
     > [!div class="mx-imgBorder"]
     >![Create blank canvas app](./media/get-started-create-from-blank/blank-app.png)
 
-1. Specify a name for your app, select **Phone** format, icon, and then select **Create**.
+1. Specify a name for your app, select **Phone**, and then select **Create**.
+
+    You can design an app from scratch for phones or for other devices (such as tablets). This topic focuses on designing an app for phones.
 
     > [!div class="mx-imgBorder"]
     >![Specify name and format of app](./media/get-started-create-from-blank/excel-demo.png)
@@ -63,6 +63,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 1. If the **Welcome to PowerApps Studio** dialog box opens, select **Skip**.
 
 ## Connect to data
+
 1. In the middle of the screen, select **connect to data**.
 
 1. In the **Data** pane, select the connection for your cloud-storage account if it appears. Otherwise, follow these steps to add a connection:
@@ -73,6 +74,8 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 1. Under **Choose an Excel file**, type or paste the first letters of **eventsignup** to filter the list, and then select the file that you uploaded.
 
 1. Under **Choose a table**, select the checkbox for **Schedule**, and then select **Connect**.
+
+1. In the upper-right corner of the **Data** pane, close it by selecting the close icon (X).
 
 ## Create the view screen
 
@@ -90,7 +93,11 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
     ![Add a list screen](./media/get-started-create-from-blank/select-gallery.png)
 
-1. On the **Properties** tab of the right-hand pane, select the down arrow for the **Layout** menu, and then select **Title, subtitle, and body**.
+1. On the **Properties** tab of the right-hand pane, select the down arrow for the **Layout** menu.
+
+    ![Open the layout menu](./media/get-started-create-from-blank/select-layout.png)
+
+1. Select **Title, subtitle, and body**.
 
 1. In the formula bar, replace **CustomGallerySample** with **Schedule**, and replace both instances of **SampleText** with **Volunteer**.
 
@@ -116,9 +123,7 @@ To follow the steps in this tutorial exactly, first create an Excel file using t
 
 1. On the **Properties** tab of the right-hand pane, select **Edit** next to the **Fields** label.
 
-    - In the **Body1** box, select **Volunteer**.
-    - In the **Subtitle2** box, select **StartTime**.
-    - In the **Title2** box, select **StartDay**.
+1. In the **Title2** box, select **Volunteer**.
 
 1. In the upper-right corner of the **Data** pane, close it by selecting the close icon (X).
 
@@ -171,7 +176,9 @@ For more information about these and other functions, see the [formula reference
 
     ![Add record](./media/get-started-create-from-blank/refresh-icon.png)
 
-1. Set the **OnSelect** property for that icon to this formula:<br>**Refresh(Schedule)**
+1. Set the **OnSelect** property for that icon to this formula:
+
+    `Refresh(Schedule)`
 
     When the user selects this icon, the data from **Schedule** is refreshed from the Excel file.
 
@@ -181,7 +188,9 @@ For more information about these and other functions, see the [formula reference
 
     ![Add record](./media/get-started-create-from-blank/add-record.png)
 
-1. Set the **OnSelect** property for that icon to this formula:<br>**NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)**
+1. Set the **OnSelect** property for that icon to this formula:
+
+    `NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)`
 
     When the user selects this icon, **ChangeScreen** appears with each field empty, so that the user can create a record more easily.
 
@@ -223,11 +232,15 @@ For more information about these and other functions, see the [formula reference
 
     ![Trash icon](./media/get-started-create-from-blank/trash-icon.png)
 
-1. Set the **Visible** property for the trash icon to this formula:<br>**EditForm1.Mode = FormMode.Edit**
+1. Set the **Visible** property for the trash icon to this formula:
+
+    `EditForm1.Mode = FormMode.Edit`
 
     This icon will appear only when the form is in **Edit** mode, not in **New** mode.
 
-1. Set the **OnSelect** property for the trash icon to this formula:<br>**Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)**
+1. Set the **OnSelect** property for the trash icon to this formula:
+
+    `Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)`
 
     When the user selects this icon, the selected record is deleted from the data source, and the view screen opens.
 
