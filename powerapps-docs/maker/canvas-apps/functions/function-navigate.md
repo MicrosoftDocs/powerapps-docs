@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/08/2015
+ms.date: 03/27/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -33,12 +33,14 @@ In the first argument, specify the name of the screen to display.
 
  In the second argument, specify how the old screen changes to the new screen:
 
-| Transition Argument | Description |
-| --- | --- |
-| **ScreenTransition.Cover** |The new screen slides into view, covering the current screen. |
-| **ScreenTransition.Fade** |The old screen fades away to reveal the new screen. |
-| **ScreenTransition.None** |The old screen is quickly replaced with the new screen. |
-| **ScreenTransition.UnCover** |The old screen slides out of view, uncovering the new screen. |
+| Transition Argument | Description | Animation |
+| --- | --- | --- |
+| **ScreenTransition.Cover** |The new screen slides into view covering the current screen, moving right to left. | ![screen transition cover animation](media/function-navigate/cover.gif) |
+| **ScreenTransition.CoverRight** |The new screen slides into view covering the current screen, moving left to right. | ![screen transition cover right animation](media/function-navigate/coverright.gif) |
+| **ScreenTransition.Fade** |The current screen fades away to reveal the new screen. | ![screen transition fade animation](media/function-navigate/fade.gif) |
+| **ScreenTransition.None** |The current screen is quickly replaced with the new screen. | ![screen transition none animation](media/function-navigate/none.gif) |
+| **ScreenTransition.UnCover** | The current screen slides out of view to uncover the new screen, moving right to left. | ![screen transition uncover animation](media/function-navigate/uncover.gif) |
+| **ScreenTransition.UnCoverRight** | The current screen slides out of view to uncover the new screen, moving left to right. | ![screen transition uncover right animation](media/function-navigate/uncoverright.gif) |
 
 You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](../working-with-tables.md#records) that contains the context-variable name as a [column](../working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
 
