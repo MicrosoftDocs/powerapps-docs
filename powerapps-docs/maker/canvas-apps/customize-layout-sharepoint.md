@@ -47,8 +47,6 @@ If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.
 
 1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Apps** near the left edge.
 
-    [![PowerApps home page](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
-
 1. Find the app that you generated, select the ellipsis icon (**...**) for it, and then select **Edit**.
 
     ![Open app for editing](./media/customize-layout-sharepoint/open-app.png)
@@ -63,25 +61,15 @@ If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.
 
     ![Select gallery](media/customize-layout-sharepoint/select-gallery-1.png)
 
-1. Near the right edge, select **Accounts** to open the **Data** pane.
-
-    ![Open the **Data** pane](./media/customize-layout-sharepoint/open-data-pane.png)
-
-1. In the **Data** pane, open the list of options under **Layout**.
-
-    ![Show layout options](./media/customize-layout-sharepoint/show-layouts.png)
-
-1. In the list of options, select the option that shows only a title.
+1. On the **Properties** tab of the right-hand pane, open the list of options under **Layout**, and then select the option that shows only a title.
 
     ![Select title-only layout](./media/customize-layout-sharepoint/choose-layout.png)
 
-1. In the **Data** pane, open the list of options for the title.
+1. Next to **Fields**, select **Edit**, and then select the down arrow for the title box.
 
     The name of this control will end in a numeral, such as **Title1**, but the numeral might differ based on other actions you might have taken.
 
-    ![Open list of options for title label](./media/customize-layout-sharepoint/show-title-options.png)
-
-1. In the list of options, select **Account name (name)**, and then close the **Data** pane.
+1. In the list of options, select **Account name**, and then close the **Data** pane.
 
     The gallery shows the name of each account.
 
@@ -148,9 +136,7 @@ If your users might have neither touch screens nor mouse wheels, configure the g
 
     ![Select gallery](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
-1. On the **Gallery** tab, select **Show scrollbar**, and confirm that the value of that property has changed to **true**.
-
-    ![Show scrollbar](./media/customize-layout-sharepoint/show-scrollbar.png)
+1. Set the gallery's **Show scrollbar** property to **true**.
 
 ## Next steps
 
