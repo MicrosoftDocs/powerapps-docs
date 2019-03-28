@@ -28,20 +28,20 @@ Track expense reports from submission to approval. Tally line items as individua
 ![Opening screen of the Expense Report PowerApp](./media/expense-report-install/expense-report-powerapp.png)
 
 > [!TIP]
-> Watch [this](https://youtu.be/h6E9cdrOvMU) video to see how to use the Expense Report PowerApps Sample.
+> Watch [this](https://youtu.be/h6E9cdrOvMU) video to see how to use the Expense Report sample.
 
 ## Prerequisites
 
 - [Sign up](../signup-for-powerapps.md) for PowerApps.
 
-## Create the Expenses SharePoint list
+## Create the Expenses list in SharePoint
 
 This list stores the expense reports.
 
-1. Open a web browser and navigate to https://admin.microsoft.com.
+1. Open a web browser, and navigate to https://admin.microsoft.com.
 2. Log in with an account that has permission to create lists.
 3. Navigate to the site collection where you want the Expenses list to reside.
-4. Click the **gear icon** in the top right portion of the web page.
+4. Click the gear icon in the top right portion of the web page.
 5. Click **Add an app**.
 6. In the **Find an app** textbox, enter **Custom**.
 7. Click the **search icon**.
@@ -134,14 +134,14 @@ This list stores the lines items associated with expense reports.
 7. In the **Name** textbox, enter **LineItems**.
 
 	> [!IMPORTANT] 
-	> If you choose a different name for the list make sure you write it down because you will need to substitute it for Expense everywhere you see it during the installation and configuration process.
+	> If you choose a different name for the list, make sure you write it down because you will need to substitute it for Expense everywhere you see it during the installation and configuration process.
 
 8. Click **Create**.
  
 ### Create Category column
 
 1. Click the **LineItems** list.
-2. Click the **gear icon** in the top right portion of the web page.
+2. Click the gear icon in the top right portion of the web page.
 3. Click **List settings**.
 4. Click **Create column**.
 5. In the **Column name** textbox enter **Category**.
@@ -194,13 +194,13 @@ This list stores the lines items associated with expense reports.
 2. In the **Require that this column contains information** radio button list, select **No**.
 3. Click **OK**.
 
-## Download the Expense Report PowerApp
+## Download the Expense Report app
 
-1.	In a web browser, navigate to the following link:
+1. In a web browser, navigate to the following link:
 
-	[http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip).
+    [http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip).
 
-2.	Download the Expense Report PowerApps Sample package and save it to your machine.
+2. Download the Expense Report PowerApps Sample package, and save it to your machine.
 
 ## Create connections
 
@@ -208,14 +208,14 @@ This list stores the lines items associated with expense reports.
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Connections**.
 
-### Create Approvals connection
+### Create an Approvals connection
 
 1.	Click **+ New connection**.
 2.	In the **Search** textbox, enter **Approvals**.
 3.	Select **Approvals** in the list.
 4.	Click **Create**.
 	
-### Create Office 365 Outlook connection
+### Create an Office 365 Outlook connection
 
 1.	Click **+ New connection**.
 2.	In the **Search** textbox, enter **Office 365 Outlook**.
@@ -223,7 +223,7 @@ This list stores the lines items associated with expense reports.
 4.	Click **Create**.
 5.	In the popup window, select the account you logged in with.
 
-### Create SharePoint connection
+### Create a SharePoint connection
 
 1.	Click **+ New connection**.
 2.	In the **Search** textbox, enter **SharePoint**.
@@ -231,151 +231,128 @@ This list stores the lines items associated with expense reports.
 4.	Click **Create**.
 5.	In the popup window, select the account you logged in with.
 
-## Import the Expense Report PowerApp
+## Import the app
 
 1. In a web browser, navigate to https://web.powerapps.com.
-2. Sign in by providing the same credentials that you used to sign up.
-3. In the menu on the left, select **Apps**. 
-4. Click **Import package(preview)**.
-	
-   ![Import package screen](./media/expense-report-install/import-package.png)
+1. Sign in by providing the same credentials that you used to sign up.
+1. In left navigation bar, select **Apps**, and then select **Import package(preview)**.
 
-5. Click the **Upload** button and select the PowerApp package you downloaded in previous steps.
-6. For the **App** and **Flow** resource types, set **IMPORT SETUP** to **Create as new**.
-7. For the **SharePoint** and **Outlook** connections, set **IMPORT SETUP** to **Select during import**.
-	
-   ![Import settings screen](./media/expense-report-install/import-settings.png)
+    ![Import package screen](./media/expense-report-install/import-package.png)
 
-8. Click the **red icon** for the **SharePoint Connection**.
-9. In the connections list, click the item with your username.
+1. Select **Upload**, and then select the package that you downloaded earlier.
+1. For the **App** and **Flow** resource types, set **IMPORT SETUP** to **Create as new**.
+1. For the **SharePoint** and **Outlook** connections, set **IMPORT SETUP** to **Select during import**.
 
-   ![Import settings screen](./media/expense-report-install/import-settings-sharepoint.png)
+    ![Import settings screen](./media/expense-report-install/import-settings.png)
 
-10. Click **Save**.
-11. Click the **red icon** for the **Approval Connection**.
-12. In the connections list, click the item with your username.
+1. Select the red icon for the **SharePoint Connection**.
+1. In the connections list, select the item with your username.
 
-	![Import settings screen](./media/expense-report-install/import-settings-approvals.png)
+    ![Import settings screen](./media/expense-report-install/import-settings-sharepoint.png)
 
-13. Click **Save**.
-14. Click the **red icon** for the **Office 365 Outlook Connection**.
-15. In the connections list, click the item with your username.
+1. Select **Save**.
+1. Select the red icon for the **Approval Connection**.
+1. In the connections list, select the item with your username.
 
-	![Import settings screen](./media/expense-report-install/import-settings-office365outlook.png)
+    ![Import settings screen](./media/expense-report-install/import-settings-approvals.png)
 
-16. Click **Save**.
+1. Select **Save**.
+1. Select the red icon for the **Office 365 Outlook Connection**.
+1. In the connections list, select the item with your username.
 
-	> [!TIP] 
-	> When you are done, it will look like this:
+    ![Import settings screen](./media/expense-report-install/import-settings-office365outlook.png)
 
-	![Import settings screen](./media/expense-report-install/import-settings-done.png)
+1. Select **Save**.
 
-17.	Click **Import** and wait until the process is complete.
+    > [!TIP] 
+    > When you're done, it will look like this:
 
-	![Import settings screen](./media/expense-report-install/import-done.png)
+    ![Import settings screen](./media/expense-report-install/import-settings-done.png)
 
-## Configure the PowerApp to use the SharePoint lists
+1. Select **Import**, and then wait until the process is complete.
 
-1. In the web browser, click **Apps**.
-2. Click the **ellipses** next to the Expense Report PowerApp.
-3. Click **Edit on the web**.
-4. Click **Allow**.
+    ![Import settings screen](./media/expense-report-install/import-done.png)
+
+## Configure the app to use the SharePoint lists
+
+1. In the web browser, select **Apps**.
+2. Select the ellipsis (...) next to the Expense Report app.
+3. Select **Edit on the web** > **Allow**.
 
 ### Delete connections
-1. Click **View**.
-2. Click **Data sources**.
-3. In the **Data** pane, click the **ellipses** next to **Expenses**.
-4. Click **Remove**.
-5. In the **Data** pane, click the **ellipses** next to **LineItems**.
-6. Click **Remove**.
+1. On the **View** tab, select **Data sources**.
+1. In the **Data** pane, select the ellipsis (...) next to **Expenses**, and then select **Remove**.
+1. Repeat the previous step to remove the **LineItems** data source.
 
 ### Expenses list
 
-1. Click **View**.
-2. Click **Data sources**.
-3. In the **Data** pane, click **+ Add data source**.
-4. Click **+ New connection**.
-5. Select **SharePoint**.
-6. Click **Create**.
-7. In the **Recent sites** list, select the SharePoint site where you created the Expenses List.
+1. On the **View** tab, select **Data sources**.
+1. In the **Data** pane, select **Add data source** > **New connection** > **SharePoint** > **Create**.
+1. In the **Recent sites** list, select the SharePoint site where you created the Expenses list.
 
-	> [!TIP] 
-	> If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
+    > [!TIP] 
+    > If the site doesn't appear in the list, type or paste the URL to the SharePoint site in the textbox, and then select **Go**.
 
-8. In the **Search** textbox at the top of the list enter **Expenses**.
-9. Check the checkbox next to the **Expenses** list.
-10. Click **Connect**.
+1. In the **Search** box at the top of the list, type or paste **Expenses**.
+1. Select the checkbox next to **Expenses**, and then select **Connect**.
 
 ### LineItems list
 
-1. Click **View**.
-2. Click **Data sources**.
-3. In the **Data** pane, click **+ Add data source**.
-4. Click **+ New connection**.
-5. Select **SharePoint**.
-6. Click **Create**.
-7. In the **Recent sites** list, select the SharePoint site where you created the LineItems List.
+1. On the **View** tab, select **Data sources**.
+1. In the **Data** pane, select **SharePoint**.
+1. In the **Recent sites** list, select the SharePoint site where you created the LineItems list.
 
-	> [!TIP] 
-	> If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
+    > [!TIP] 
+    > If the site doesn't appear in the list, type or paste the URL to the SharePoint site in the textbox, and then select **Go**.
 
-8. In the **Search** textbox at the top of the list enter **LineItems**.
-9. Check the checkbox next to the **LineItems** list.
-10. Click **Connect**.
-11. Click **File**.
-12. Click **Save**.
-13. Click **Publish**.
-14. Click **Publish this version**.
+1. In the **Search** box at the top of the list, type or paste **LineItems**.
+1. Select the checkbox next to **LineItems**, and then select **Connect**.
+1. Select **File** > **Save** > **Publish** > **Publish this version**.
 
-## Modify the Flow
+## Modify the flow
 
-1.	In the menu on the left, click **Flows**.
-2.	If prompted to sign in, sign in by providing the same credentials that you used to sign up.
-3.	Select **My flows** in the top menu.
-4.	Next to the **ApproveExpense** Flow, click the **pencil icon**.
- 
-	![Edit Flow screen](./media/expense-report-install/edit-flow.png)
+1. In left navigation bar, select **Flows**.
+1. If prompted to sign in, provide the same credentials that you used to sign up.
+1. Near the top of the screen, select **My flows**.
+1. Next to the **ApproveExpense** flow, select the pencil icon.
 
-5.	Expand the **Get items** action. 
-6.	Change the **Site Address** and **List Name** to match the Expense SharePoint list you created.
-	
-	![Edit Flow screen](./media/expense-report-install/edit-flow-getitems.png)
+    ![Edit Flow screen](./media/expense-report-install/edit-flow.png)
 
-	> [!TIP] 
-	> You don’t need to type it manually, you can choose it in the dropdown lists.
+1. Expand the **Get items** action. 
+1. Change the **Site Address** and **List Name** to match the Expense SharePoint list you created.
 
-7.	Expand the **Condition**.
-8.	Expand the **If yes** section.
-9.	Expand the **Change item status to Approved** action.
-10.	Change the **Site Address** and **List Name** to match the Expense SharePoint list you created.
+    ![Edit Flow screen](./media/expense-report-install/edit-flow-getitems.png)
 
-	![Edit Flow screen](./media/expense-report-install/edit-flow-condition-ifyes.png) 
+    > [!TIP] 
+    > You don’t need to type it manually; you can select it in the drop-down lists.
 
-	> [!TIP] 
-	> You don’t need to type it manually, you can choose it in the dropdown lists.
+1. Expand the **Condition**.
+1. Expand the **If yes** section.
+1. Expand the **Change item status to Approved** action.
+1. Change the **Site Address** and **List Name** to match the Expenses list that you created in SharePoint.
 
-11. Expand the **If no** section.
-12.	Expand the **Change item status to Open** action.
-13.	Change the **Site Address** and **List Name** to match the Expense SharePoint list you created. 
+    ![Edit Flow screen](./media/expense-report-install/edit-flow-condition-ifyes.png) 
 
-	![Edit Flow screen](./media/expense-report-install/edit-flow-condition-ifno.png)
+    > [!TIP] 
+    > You don’t need to type it manually; you can select it in the drop-down lists.
 
-	> [!TIP] 
-	> You don’t need to type it manually, you can choose it in the dropdown lists.
+1. Expand the **If no** section.
+1. Expand the **Change item status to Open** action.
+1. Change the **Site Address** and **List Name** to match the Expenses list that you created in SharePoint. 
 
-14.	Click **Update flow**.
+    ![Edit Flow screen](./media/expense-report-install/edit-flow-condition-ifno.png)
 
-## Play the PowerApp
+    > [!TIP] 
+    > You don’t need to type it manually; you can select it in the drop-down lists.
 
-1. In the web browser, click **Apps**.
-2. Click the **ellipses** next to the Expense Report PowerApp.
-3. Click **Open**.
+14. Select **Update flow**.
 
+## Play the app
+
+1. In the web browser, select **Apps**.
+1. Select the ellipsis (...) next to the Expense Report app, and then select **Open**.
 
 ## Next steps
 - [Customize a SharePoint list form](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
 - [Add and configure a control](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-configure-controls)
-- [Edit and manage permissions for a SharePoint list or library](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
-
-
-
+- [Edit and manage permissions for a SharePoint list or library](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
