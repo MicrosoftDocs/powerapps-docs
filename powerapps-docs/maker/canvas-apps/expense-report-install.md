@@ -34,7 +34,7 @@ Track expense reports from submission to approval. Tally line items as individua
 
 - [Sign up](../signup-for-powerapps.md) for PowerApps.
 
-## Create the Expenses list in SharePoint
+## Create the Expenses list
 
 This list stores the expense reports.
 
@@ -49,19 +49,19 @@ This list stores the expense reports.
 9. In the **Name** textbox, enter **Expenses**.
 
 	> [!IMPORTANT]
-	> If you choose a different name for the list make sure you write it down because you will need to substitute it for Expenses everywhere you see it during the installation and configuration process.
+	> If you choose a different name for the list, make sure you write it down because you will need to substitute it for Expenses everywhere you see it during the installation and configuration process.
 
 10. Click **Create**.
 
 ### Create Cost Center column
 
 1. Click the **Expenses** list.
-2. Click the **gear icon** in the top right portion of the web page.
+2. Click the gear icon in the top right portion of the web page.
 3. Click **List settings**.
 4. Click **Create column**.
 5. In the **Column name** textbox enter **Cost Center**.
 6. In the **type of information in this column is** radio button list, select **Choice**.
-7. In the **Type each choice on a separate line** textbox enter the following values, each on a separate line: 
+7. In the **Type each choice on a separate line** textbox, enter the following values, each on a separate line: 
 	- Microsoft
 	- Contoso
 8. In the **Default value** textbox, enter **Microsoft**.
@@ -70,7 +70,7 @@ This list stores the expense reports.
 ### Create Comments column
 
 1. Click **Create column**.
-2. In the **Column name** textbox enter **Comments**.
+2. In the **Column name** textbox, enter **Comments**.
 3. In the **type of information in this column is** radio button list, select **Multiple lines of text**.
 4. Click **OK**.
 
@@ -82,7 +82,7 @@ This list stores the expense reports.
 4. Click **Create column**.
 5. In the **Column name** textbox enter **Status**.
 6. In the **type of information in this column is** radio button list, select **Choice**.
-7. In the **Type each choice on a separate line** textbox enter the following values, each on a separate line: 
+7. In the **Type each choice on a separate line** textbox, enter the following values, each on a separate line: 
 	- Open
 	- Pending
 	- Approved
@@ -92,7 +92,7 @@ This list stores the expense reports.
 ### Create ApproverName column
 
 1. Click **Create column**.
-2. In the **Column name** textbox enter **ApproverName**.
+2. In the **Column name** textbox, enter **ApproverName**.
 3. In the **type of information in this column is** radio button list, select **Person or Group**.
 4. In the **Require that this column contains information** radio button list, select **Yes**.
 5. Click **OK**.
@@ -100,7 +100,7 @@ This list stores the expense reports.
 ### Create DateSubmitted column
 
 1. Click **Create column**.
-2. In the **Column name** textbox enter **DateSubmitted**.
+2. In the **Column name** textbox, enter **DateSubmitted**.
 3. In the **type of information in this column is** radio button list, select **Date and Time**.
 4. In the **Require that this column contains information** radio button list, select **Yes**.
 5. Click **OK**.
@@ -108,7 +108,7 @@ This list stores the expense reports.
 ### Create StartDate column
 
 1. Click **Create column**.
-2. In the **Column name** textbox enter **StartDate**.
+2. In the **Column name** textbox, enter **StartDate**.
 3. In the **type of information in this column is** radio button list, select **Date and Time**.
 4. In the **Require that this column contains information** radio button list, select **Yes**.
 5. Click **OK**.
@@ -116,17 +116,17 @@ This list stores the expense reports.
 ### Create EndDate column
 
 1. Click **Create column**.
-2. In the **Column name** textbox enter **EndDate**.
+2. In the **Column name** textbox, enter **EndDate**.
 3. In the **type of information in this column is** radio button list, select **Date and Time**.
 4. In the **Require that this column contains information** radio button list, select **Yes**.
 5. Click **OK**.
 
-## Create the Line Items SharePoint list
+## Create the LineItems list
 
-This list stores the lines items associated with expense reports.
+This list stores the line items that are associated with each expense report.
 
-1. Navigate to the same site collection where you created the Expense list.
-2. Click the **gear icon** in the top right portion of the web page.
+1. Navigate to the same site collection where you created the Expenses list.
+2. Click the gear icon in the top right portion of the web page.
 3. Click **Add an app**.
 4. In the **Find an app** textbox, enter **Custom**.
 5. Click the **search icon**.
@@ -134,7 +134,7 @@ This list stores the lines items associated with expense reports.
 7. In the **Name** textbox, enter **LineItems**.
 
 	> [!IMPORTANT] 
-	> If you choose a different name for the list, make sure you write it down because you will need to substitute it for Expense everywhere you see it during the installation and configuration process.
+	> If you choose a different name for the list, make sure you write it down because you will need to substitute it for LineItems everywhere you see it during the installation and configuration process.
 
 8. Click **Create**.
  
@@ -305,7 +305,7 @@ This list stores the lines items associated with expense reports.
     > [!TIP] 
     > If the site doesn't appear in the list, type or paste the URL to the SharePoint site in the textbox, and then select **Go**.
 
-1. In the **Search** box at the top of the list, type or paste **LineItems**.
+1. In the **Search** box at the top of the list, type or paste **Line Items**.
 1. Select the checkbox next to **LineItems**, and then select **Connect**.
 1. Select **File** > **Save** > **Publish** > **Publish this version**.
 
@@ -319,7 +319,7 @@ This list stores the lines items associated with expense reports.
     ![Edit Flow screen](./media/expense-report-install/edit-flow.png)
 
 1. Expand the **Get items** action. 
-1. Change the **Site Address** and **List Name** to match the Expense SharePoint list you created.
+1. Change the **Site Address** and **List Name** to match the Expenses list that you created in SharePoint.
 
     ![Edit Flow screen](./media/expense-report-install/edit-flow-getitems.png)
 

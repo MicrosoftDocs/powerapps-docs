@@ -132,7 +132,7 @@ This list stores the Help Desk tickets.
 2. In the **Require that this column contains information** radio button list, select **No**.
 3. Click **OK**.
 
-## Download the Help Desk PowerApp
+## Download the app
 
 1.	[Download](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the PowerApps package and save it to your machine.
 
@@ -166,7 +166,7 @@ This list stores the Help Desk tickets.
 4.	Click **Create**.
 5.	In the popup window, select the account you logged in with.
 
-## Import the Help Desk PowerApp
+## Import the app
 
 1. In a web browser, navigate to https://web.powerapps.com.
 2. Sign in by providing the same credentials that you used to sign up.
@@ -271,7 +271,7 @@ This list stores the Help Desk tickets.
 ## Play the app
 
 1. In the web browser, click **Apps**.
-2. Click the **ellipses** next to the Help Desk PowerApp.
+2. Click the ellipsis (...) next to the Help Desk app.
 3. Click **Open**. 
 
 > [!TIP]
