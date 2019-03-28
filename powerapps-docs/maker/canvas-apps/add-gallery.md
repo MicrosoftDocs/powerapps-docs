@@ -20,21 +20,23 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 ## Prerequisites
 
-* Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
+- Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
 
-* Set up the sample data:
+- Set up the sample data:
     1. Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 
     2. Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 
-## Open a blank app
-1. Open PowerApps, and then click or tap **New** near the left edge.
+- Open a blank app:
+    1. [Sign in to PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. On the **Blank app** tile, click or tap **Phone layout**.
+    1. Under **Make your own app**, select **Canvas app from blank**.
 
-3. In the **Welcome to PowerApps Studio** dialog box, click or tap **Skip**.
+    1. Specify a name for your app, select **Phone**, and then select **Create**.
 
-4. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
+    1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+
+    1. [Add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
 ## Add a gallery to a blank screen
 
@@ -60,10 +62,8 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
     ![Show data](./media/add-gallery/show-data-default.png)
 
-    You'll configure sort and search later in this topic.
-
 ## Add a control to the Gallery control
-Before you do any customization, decide on a **Gallery** control layout. The first set of controls in a **Gallery** control is the template, which determines how all data in the **Gallery** control appears.
+Before you do any other customization, select the layout for your **Gallery** control. The first set of controls in a **Gallery** control is the template, which determines how all data in the **Gallery** control appears.
 
 1. Select the template by clicking or tapping near the bottom of the **Gallery** control and then clicking or tapping the pencil icon in the upper-left corner.
 
@@ -86,7 +86,7 @@ Before you do any customization, decide on a **Gallery** control layout. The fir
     ![Final Gallery](./media/add-gallery/final-gallery.png)
 
 ## Filter and sort a gallery
-The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. The same property can also determine in what order the data appears and which records appear based on filter criteria. In this procedure, you configure that property so that the **Gallery** control shows only those items for which the product name contains the text in **TextSearchBox1**.
+The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so it also determines which records appear based on filter criteria and in what order.
 
 ![Search box and sort icon](./media/add-gallery/text-search-box.png)
 
@@ -122,12 +122,12 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
     The records toggle between ascending and descending alphabetical order based on the product name.
 
 ## Highlight the selected item
-Set the **Gallery** control's **TemplateFill** property to a formula that's similar to this example:
+Set the **Gallery** control's **TemplateFill** property to a formula that's similar to this example, but you can specify different colors if you want:
 
 **If(ThisItem.IsSelected, LightCyan, White)**
 
 ## Change the default selection
-Set the **Gallery** control's **Default** property to the record that you want to select by default. For example, specify the fifth item in the **FlooringEstimates** data source:
+Set the **Gallery** control's **Default** property to the record that you want to select by default. For example, you can specify the fifth item in the **FlooringEstimates** data source:
 
 **Last(FirstN(FlooringEstimates, 5))**
 
