@@ -2,7 +2,7 @@
 title: "Build Windows client applications using the XRM tools (Common Data Service)| Microsoft Docs"
 description: "XRM tooling is a set of APIs that provides support for building Windows client applications for Common Data Service"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: e2f22576-1705-4854-a804-a1ca232c0cfc
 caps.latest.revision: 33
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -25,13 +25,16 @@ search.app:
 
 XRM tooling is a set of APIs built on top of the Common Data Service assembly APIs (Organization service and Discovery service) that provide support for building Windows client applications for Common Data Service. It provides the following capabilities:  
   
-- Supports all the authentication modes to sign in to Common Data Service.  
-- Provides PowerShell support for authentication and connection to Common Data Service.  
+- Supports all the authentication modes to sign in to Common Data Service instance.  
+- Provides PowerShell support for authentication and connection to Common Data Service instance.  
 - Provides thread safety for actions performed in Common Data Service in a multithreaded environment. More information [Multithreading in Components](https://msdn.microsoft.com/library/vstudio/3es4b6yy.aspx), [Thread-Safe Components](https://msdn.microsoft.com/library/vstudio/a8544e2s.aspx)  
 - Provides a common Windows Presentation Foundation login control for Common Data Service for consistent sign-in experience to Common Data Service from your Windows client applications.  
 - Supports secure storage of the sign-in credentials and reuse of the stored credentials to automatically sign in to Common Data Service after initial sign in.  
 - Provides built-in diagnostic tracing and performance reporting of the actions performed in Common Data Service, which you can configure based on your organization’s requirements.  
-  
+
+> [!NOTE]
+> [!INCLUDE[cc-d365ce-note-section](../includes/cc-d365ce-note-section.md)] [Build Windows client applications using the XRM tools (Customer Engagement)](/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools)
+
 ## Components of XRM tooling  
 
 XRM tooling has the following three components:  
@@ -48,19 +51,12 @@ The following applications in the current version of Common Data Service use the
   
 - Unified Service Desk. More information: [Extend Unified Service Desk](/dynamics365/customer-engagement/unified-service-desk/extend-unified-service-desk)
 
-<!-- TODO: fix links when files added to admin guide
+<!--Package Deployer tool. More information: [Deploy packages using Package Deployer and Windows PowerShell](../../administrator/deploy-packages-using-package-deployer-windows-powershell.md)-->   
 
-- Package Deployer tool. More information: [Deploy packages using Dynamics 365 Package Deployer and Windows PowerShell](../../administrator/deploy-packages-using-package-deployer-windows-powershell.md)   
-
-- Configuration Migration tool. More information [Manage your configuration data](../../administrator/manage-configuration-data.md)  
-
--->
+<!--Configuration Migration tool. More information [Manage your configuration data](../../administrator/manage-configuration-data.md)-->  
   
 ### See also
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-<!-- TODO:
-[Use the Common Data Service Organization service](use-microsoft-dynamics-365-organization-service.md)<br />
-[Discover the URL for Your Organization With IDiscoveryService Web Service](org-service/discover-url-organization-organization-service.md)<br />
-[Write Applications and Server Extensions](extend-dynamics-365-server.md)<br /> -->
-[Blog: PowerShell module for performing data operations and manipulating user and system settings in CRM](http://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
+[Blog: PowerShell module for performing data operations and manipulating user and system settings in Common Data Service](http://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
+
