@@ -50,7 +50,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 1. Select **New connection** to display a list of connections.
 
-    ![Add connection](./media/add-data-connection/new-connection.png)
+    ![Add connection](./media/add-data-connection/add-connection.png)
 
 1. In the search bar, type or paste the first few letters of the connection you want, and then select then connection when it appears.
 
