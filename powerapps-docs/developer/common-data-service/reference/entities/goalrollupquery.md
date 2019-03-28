@@ -1,5 +1,5 @@
 ---
-title: "GoalRollupQuery Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "GoalRollupQuery Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the GoalRollupQuery entity."
 services: ''
 suite: powerapps

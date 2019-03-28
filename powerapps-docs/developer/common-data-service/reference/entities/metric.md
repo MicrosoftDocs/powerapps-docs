@@ -1,5 +1,5 @@
 ---
-title: "Metric Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "Metric Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the Metric entity."
 services: ''
 suite: powerapps

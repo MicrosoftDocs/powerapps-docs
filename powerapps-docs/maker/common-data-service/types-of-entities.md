@@ -24,7 +24,7 @@ search.app:
 ---
 # Types of entities
 
-Before creating or editing entities in Common Data Service for Apps, you should understand that there are different types of entities. Once a custom entity is created, these types cannot be changed. The two major divisions are based on entity ownership and whether the entities are activity entities.  
+Before creating or editing entities in Common Data Service, you should understand that there are different types of entities. Once a custom entity is created, these types cannot be changed. The two major divisions are based on entity ownership and whether the entities are activity entities.  
   
 <a name="BKMK_EntityOwnership"></a>
 
@@ -51,7 +51,7 @@ An activity can be thought of as any action for which an entry can be made on a 
   
 Activity entities can only be owned by a user or team, they can’t be owned by an organization.  
   
-The following table lists activity entities that are available in a default CDS for Apps environment.
+The following table lists activity entities that are available in a default Common Data Service environment.
   
 |Name|Description|Display in activity menus|Reference|
 |----------|-----------------|----------------|---------------|  

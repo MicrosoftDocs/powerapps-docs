@@ -1,5 +1,5 @@
 ---
-title: "ServiceEndpoint Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ServiceEndpoint Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ServiceEndpoint entity."
 services: ''
 suite: powerapps

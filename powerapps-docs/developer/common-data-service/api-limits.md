@@ -1,5 +1,5 @@
 ---
-title: "API Limits (Common Data Service for Apps) | Microsoft Docs" 
+title: "API Limits (Common Data Service) | Microsoft Docs" 
 description: "Understand the limits for API requests." 
 ms.custom: ""
 ms.date: 03/21/2019
@@ -131,7 +131,7 @@ public class Retry
 
 ### See also
 
-[Use CDS for Apps Web API](webapi/overview.md)<br />
-[Use CDS for Apps Organization Service](org-service/overview.md)<br />
+[Use Common Data Service Web API](webapi/overview.md)<br />
+[Use Common Data Service Organization Service](org-service/overview.md)<br />
 [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)<br />
 [Use ExecuteMultiple to improve performance for bulk data load](org-service/execute-multiple-requests.md)

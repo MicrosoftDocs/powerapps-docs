@@ -1,5 +1,5 @@
 ---
-title: "ConnectionRoleAssociation Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ConnectionRoleAssociation Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ConnectionRoleAssociation entity."
 services: ''
 suite: powerapps

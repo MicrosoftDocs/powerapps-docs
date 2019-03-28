@@ -1,5 +1,5 @@
 ---
-title: "Scalable Customization Design: Transaction design patterns (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Scalable Customization Design: Transaction design patterns (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The fourth in a series of topics. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 11/18/2018
@@ -18,17 +18,17 @@ search.app:
 # Scalable Customization Design: Transaction design patterns
 
 > [!NOTE]
-> This is the fourth in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service for Apps](overview.md).
+> This is the fourth in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service](overview.md).
 
 This section describes design patterns to avoid or minimize and their implications. Each design pattern needs to be considered in the context of the business problem being solved and can be useful as options to investigate.
 
 ## Don’t avoid locking
 
-Locking is a very important component of SQL Server and CDS for Apps, and is essential to healthy operation and consistency of the system. For this reason it is important to understand its implications on design, particularly at scale.
+Locking is a very important component of SQL Server and Common Data Service, and is essential to healthy operation and consistency of the system. For this reason it is important to understand its implications on design, particularly at scale.
 
 ## Transaction usage: Nolock hint
 
-One capability of the CDS for Apps platform that is heavily used by views is the ability to specify that a query can be performed with a nolock hint, telling the database that no lock is needed for this query. 
+One capability of the Common Data Service platform that is heavily used by views is the ability to specify that a query can be performed with a nolock hint, telling the database that no lock is needed for this query. 
 
 Views use this approach because there is no direct link between the act of launching the view and subsequent actions. A number of other activities could happen either by that user or others in between and it is not practical or beneficial to lock the entire table of data the view shows waiting until the user has moved on. 
 
@@ -139,9 +139,9 @@ When designing multiple layers of functional activity, while it is good practice
  
 In the case handling scenario, first updating a case with a default owner based on the customer it is raised against and then later having a separate process to automatically send communications to that customer and update the last contact date against the case is a perfectly logical thing to do functionally. 
 
-The challenge, however, is that this means there are multiple requests to CDS for Apps to update the same record, which has a number of implications:
+The challenge, however, is that this means there are multiple requests to Common Data Service to update the same record, which has a number of implications:
 
-- Each request is a separate platform update, adding overall load to the CDS for Apps server and adding time to the overall transaction length, increasing the chance of blocking.
+- Each request is a separate platform update, adding overall load to the Common Data Service server and adding time to the overall transaction length, increasing the chance of blocking.
 - It also means that the case record will be locked from the first action taken on that case, meaning that the lock is held throughout the rest of the transaction. If the case is accessed by multiple parallel processes, that could cause blocking of other activities. 
 
 Consolidating updates to the same record to a single update step, and later in the transaction, can have a significant benefit to overall scalability, particularly if the record is heavily contested or accessed by multiple people quickly after creation, for example, as with a case.
@@ -150,9 +150,9 @@ Deciding whether to consolidate updates to the same record to a single process w
 
 ## Only update things you need to
 
-While it is important not to reduce the benefit of a CDS for Apps system by excluding activities that would be beneficial, often requests are made to include customizations that add little business value but drive real technical complexity.
+While it is important not to reduce the benefit of a Common Data Service system by excluding activities that would be beneficial, often requests are made to include customizations that add little business value but drive real technical complexity.
  
-If every time we create a task we also update the user record with the number of tasks they currently have allocated, that could introduce a secondary level of blocking as the user record would also now be heavily contended. It would add another resource that each request may need to block and wait for, despite not necessarily being critical to the action. In that example, consider carefully whether storing the count of tasks against the user is important or if the count can be calculated on demand or stored elsewhere such as using hierarchy and rollup field capabilities in CDS for Apps natively. 
+If every time we create a task we also update the user record with the number of tasks they currently have allocated, that could introduce a secondary level of blocking as the user record would also now be heavily contended. It would add another resource that each request may need to block and wait for, despite not necessarily being critical to the action. In that example, consider carefully whether storing the count of tasks against the user is important or if the count can be calculated on demand or stored elsewhere such as using hierarchy and rollup field capabilities in Common Data Service natively. 
 
 ![Problem example showing unecessary updates](media/only-update-things-you-need-to.png)
 
@@ -177,12 +177,12 @@ Often a compromise between different behaviors may need to be considered so this
 |Pre Validation|Sync|Plug-in|Short term validation of input values|Long running actions.<br /><br />When creating related items that should be rolled back if later steps fail.|
 |Pre Operation|Sync|Workflow/Plug-in|Short term validation of input values.<br /><br />When creating related items that should be rolled back as part of platform step failure.|Long running actions.<br /><br />When creating an item and the resulting GUID will need to be stored against the item the platform step will create/update.|
 |Post Operation |Sync|Workflow/ Plug-in|Short running actions that naturally follow the platform step and need to be rolled back if later steps fail, for example, creation of a task for the owner of a newly created account.<br /><br />Creation of related items that need the GUID of the created item and that should roll back the platform step in the event of failure|Long running actions.<br /><br />Where failure should not affect the completion of the platform pipeline step.|
-|Not in event pipeline|Async|Workflow/ Plug-in|Medium length actions that would impact on the user experience.<br /><br />Actions that cannot be rolled back anyway in the event of failure.<br /><br />Actions that should not force the rollback of the platform step in the event of failure.|Very long running actions.<br /><br />These shouldn’t be managed in CDS for Apps.<br /><br />Very low cost actions. The overhead of generating async behavior for very low cost actions may be prohibitive; where possible do these synchronously and avoid the overhead of async processing.|
+|Not in event pipeline|Async|Workflow/ Plug-in|Medium length actions that would impact on the user experience.<br /><br />Actions that cannot be rolled back anyway in the event of failure.<br /><br />Actions that should not force the rollback of the platform step in the event of failure.|Very long running actions.<br /><br />These shouldn’t be managed in Common Data Service.<br /><br />Very low cost actions. The overhead of generating async behavior for very low cost actions may be prohibitive; where possible do these synchronously and avoid the overhead of async processing.|
 |N/A<br />Takes context of where it is called from||Custom Actions|Combinations of actions launched from an external source, for example, from a web resource|When always triggered in response to a platform event, use plug-in/workflow in those cases.|
 
 ## Plug-ins/workflows aren’t batch processing mechanisms
 
-Long running or volume actions aren’t intended to be run from plug-ins or workflows. CDS for Apps isn’t intended to be a compute platform and especially isn’t intended as the controller to drive big groups of unrelated updates.
+Long running or volume actions aren’t intended to be run from plug-ins or workflows. Common Data Service isn’t intended to be a compute platform and especially isn’t intended as the controller to drive big groups of unrelated updates.
 
 If you have a need to do that, offload and run from a separate service, such as an Azure worker role. 
 
@@ -215,7 +215,7 @@ A very common escalation area is scalability of setting up security. This is a c
 
 ## Diagram related actions
 
-An activity that is very beneficial as a preventative measure, as well as a tool for diagnosing blocking problems, is to diagram related actions triggered in the CDS for Apps platform. When doing this it helps to highlight both intentional and unintentional dependencies and triggers in the system. If you aren’t able to do this for your solution, you might not have a clear picture of what your implementation actually does. Creating such a diagram can expose unintended consequences and is good practice at any time in an implementation. 
+An activity that is very beneficial as a preventative measure, as well as a tool for diagnosing blocking problems, is to diagram related actions triggered in the Common Data Service platform. When doing this it helps to highlight both intentional and unintentional dependencies and triggers in the system. If you aren’t able to do this for your solution, you might not have a clear picture of what your implementation actually does. Creating such a diagram can expose unintended consequences and is good practice at any time in an implementation. 
 
 The following example highlights how initially two processes work perfectly well together but in ongoing maintenance the addition of a new step to create a task can create an unintended loop. Using this documentation technique can highlight this at the design stage and avoid this affecting the system.
 
@@ -231,7 +231,7 @@ When certain errors are occurring, using the server trace files to understand wh
 
 ## Summary
 
-The content in [Scalable Customization Design in Common Data Service for Apps](overview.md) and the subsequent topics [Database transactions](database-transactions.md), [Concurrency issues](concurrency-issues.md), and this one have described the following concepts with examples and strategies that will help you understand how to design and implement scalable customizations for CDS for Apps.
+The content in [Scalable Customization Design in Common Data Service](overview.md) and the subsequent topics [Database transactions](database-transactions.md), [Concurrency issues](concurrency-issues.md), and this one have described the following concepts with examples and strategies that will help you understand how to design and implement scalable customizations for Common Data Service.
 
 Some key things to remember include the following: 
 

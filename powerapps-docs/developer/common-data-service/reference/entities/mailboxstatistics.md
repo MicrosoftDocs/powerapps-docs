@@ -1,5 +1,5 @@
 ---
-title: "MailboxStatistics Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "MailboxStatistics Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the MailboxStatistics entity."
 services: ''
 suite: powerapps

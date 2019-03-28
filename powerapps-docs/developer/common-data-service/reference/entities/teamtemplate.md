@@ -1,5 +1,5 @@
 ---
-title: "TeamTemplate Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "TeamTemplate Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the TeamTemplate entity."
 services: ''
 suite: powerapps

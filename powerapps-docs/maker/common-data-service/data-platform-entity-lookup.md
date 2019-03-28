@@ -88,7 +88,7 @@ Currently this is only available through the Advanced menu. From the PowerApps h
 If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from an entity that contains a lookup field, it appears as a **Drop down** control that contains data from the **Primary name** field of the entity.
 
 ## Add 1:N and N:N relationships for canvas apps
-Use the **Relate** function to link two records through a one-to-many or many-to-many relationship in Common Data Service (CDS) for Apps. More information: [Relate and Unrelate functions in PowerApps](../canvas-apps/functions/function-relate-unrelate.md)
+Use the **Relate** function to link two records through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in PowerApps](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## Next steps
 * [Generate an app by using a Common Data Service database](../canvas-apps/data-platform-create-app.md)

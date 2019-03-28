@@ -1,5 +1,5 @@
 ---
-title: "Register a webhook (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Register a webhook (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic will describe how to register a webhook using the plug-in registration tool" 
 ms.custom: ""
 ms.date: 10/31/2018
@@ -34,7 +34,7 @@ When you register a webhook you must provide three items of information:
 
 ## Authentication options
 
-The correct webhook registration authentication option and values to use depend on what the endpoint expects.  The owner of the endpoint must tell you what to use. To use webhooks with CDS for Apps, the endpoint must allow one of the three authentication options described below:
+The correct webhook registration authentication option and values to use depend on what the endpoint expects.  The owner of the endpoint must tell you what to use. To use webhooks with Common Data Service, the endpoint must allow one of the three authentication options described below:
 
 
 |Type  |Description  |

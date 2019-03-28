@@ -1,6 +1,10 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/scan-barcode.md",
+      "redirect_url": "controls/control-new-barcode-scanner",
+      "redirect_document_id": "false"
+    },    {
       "source_path": "powerapps-docs/maker/canvas-apps/connect-to-sharepoint.md",
       "redirect_url": "connections/connection-sharepoint-online",
       "redirect_document_id": "false"

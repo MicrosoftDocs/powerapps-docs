@@ -56,3 +56,14 @@ To use the control inside a form, select the "Edit multi-line text" card, and cu
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or screen, if no parent container).
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or screen, if no parent container).
+
+
+## Accessibility guidelines
+### Screen reader support
+* **[AccessibleLabel](properties-accessibility.md)** must be present.
+
+### Keyboard support
+* **[TabIndex](properties-accessibility.md)** must be zero or greater so that keyboard users can navigate to it.
+
+> [!TIP]
+> Use **Alt+0** while the editor is focused to learn about other keyboard shortcuts.
