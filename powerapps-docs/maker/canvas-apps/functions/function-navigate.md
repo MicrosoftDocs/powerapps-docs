@@ -33,7 +33,7 @@ In the first argument, specify the name of the screen to display.
 
  In the second argument, specify how the old screen changes to the new screen:
 
-| Transition Argument | Description | Animation |
+| Transition Argument | Description | Demonstration |
 | --- | --- | --- |
 | **ScreenTransition.Cover** |The new screen slides into view covering the current screen, moving right to left. | ![screen transition cover animation](media/function-navigate/cover.gif) |
 | **ScreenTransition.CoverRight** |The new screen slides into view covering the current screen, moving left to right. | ![screen transition cover right animation](media/function-navigate/coverright.gif) |
@@ -56,7 +56,7 @@ You can use these functions only within a [behavior formula](../working-with-for
 **Navigate**( *Screen* [, *Transition* [, *UpdateContextRecord* ] ] )
 
 * *Screen* - Required. The screen to display.
-* *Transition* - Optional.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this topic.  Default is **ScreenTransition.None**.
+* *Transition* - Optional.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this topic.  Default is **None**.
 * *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the context variables of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
 
 ## Examples
