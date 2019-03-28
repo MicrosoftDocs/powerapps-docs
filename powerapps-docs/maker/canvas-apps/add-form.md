@@ -1,5 +1,5 @@
 ---
-title: Show, edit, or add a record from a table in a canvas app | Microsoft Docs
+title: Show, edit, or add a record in a canvas app | Microsoft Docs
 description: Use a canvas-app form to show, edit, or add a record from a table in your data source.
 author: emcoope-msft
 manager: kvivek
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show, edit, or add a record from a table in PowerApps
+# Show, edit, or add a record in a canvas app
 
-To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control in a canvas app. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control in a canvas app.
+In a canvas app, add and configure a **[Display](controls/control-form-detail.md)** form control to show all fields in a record, You can also add and configure an **[Edit](controls/control-form-detail.md)** form control to edit any field in a record, add a record, and save your changes back to a data source.
 
 ## Prerequisites
 
@@ -25,12 +25,12 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 - Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 - Create or open an app for phones, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
-    If you add a form to a tablet app, the form will have three columns by default, which won't match this topic.
+    You can add a form to a tablet app, but it won't match this topic because the form will have three columns by default.
 
 - If you open an existing app, [add a screen](add-screen-context-variables.md) to it.
 
 ## Add a form, and show data
-1. Add a **[Drop down](controls/control-drop-down.md)** control, and name it **ChooseProduct**.
+1. On a blank screen, add a **[Drop down](controls/control-drop-down.md)** control, and name it **ChooseProduct**.
 
     > [!NOTE]
    > If you're not sure how to add a control, rename it, or set a property, see [Add and configure controls](add-configure-controls.md).
@@ -46,7 +46,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
     ![Add a form](./media/add-form/add-a-form.png)
 
     > [!NOTE]
-   > This topic describes the **Edit form** control, but similar principles apply to the **Display form** control.
+   > This topic describes the **Edit** form control, but similar principles apply to the **Display** form control.
 
 1. Set the form's **[DataSource](controls/control-form-detail.md)** property to **FlooringEstimates** and its **[Item](controls/control-form-detail.md)** property to this formula:
 
@@ -66,7 +66,7 @@ To show all fields in a record, add and configure a **[Display form](controls/co
 
     ![Move field](./media/add-form/move-field.png)
 
-    The **Edit form** control reflects your change.
+    The **Edit** form control reflects your change.
 
     ![Show form](./media/add-form/show-form1.png)
 
