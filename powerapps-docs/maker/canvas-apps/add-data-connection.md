@@ -28,28 +28,33 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 [Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
-## Add a data source
-1. On the **Home** tab, select **Canvas app from blank**, specify a name for your app, and then select **Create**. 
+## Open a blank app
+
+1. On the **Home** tab, select **Canvas app from blank**.
+
+1. Specify a name for your app, and then select **Create**.
 
 1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
 
+## Add data source
+
 1. In the center pane, select **connect to data** to open the **Data** pane.
 
-  If this screen already contained a control, you can select **View** > **Data sources** to open the same pane.
- 
+    If this were an existing app and the screen already contained a control, select **View** > **Data sources** to open the same pane.
+
 1. Select **Add data source**.
 
-1. If the list that appears includes the connection that you want, select it to add it to the app. Otherwise, skip to the next step.
+1. If the list of connections includes the one that you want, select it to add it to the app. Otherwise, skip to the next step.
 
-    ![Add data source](./media/add-data-connection/choose-existing-connections.png)
+    ![Choose an existing connection](./media/add-data-connection/choose-existing-connection.png)
 
-1. Select **New connection** to display a list of connectors.
+1. Select **New connection** to display a list of connections.
 
     ![Add connection](./media/add-data-connection/new-connection.png)
 
-1. In the search bar, type or paste the first few letters of the connection you want, and then select then connection when it appears (for example, **Office 365 Outlook**).
+1. In the search bar, type or paste the first few letters of the connection you want, and then select then connection when it appears.
 
-    ![Choose connection](./media/add-data-connection/choose-connection.png)
+    ![Search for a connection](./media/add-data-connection/search-connections.png)
 
 1. Select **Create** to both create the connection and add it to your app.
 
@@ -58,16 +63,19 @@ Your [next step](#next-steps) after this article is to display and manage data f
 ## Identify or change a data source
 If you're updating an app, you might need to identify or change the source of data that appears in a gallery, a form, or another control. For example, you might need to identify a data source as you update an app that someone else created or you that you created long ago.
 
-1. Select the control for which you want to identify or change the data source.
-
-    For example, select a gallery (not a control within the gallery) by selecting its name in the left navigation bar.
+1. Select the control, such as a gallery, for which you want to identify or change the data source.
 
     The name of the data source appears on the **Properties** tab of the right-hand pane.
+
+    ![Identify a connection](./media/add-data-connection/identify-connection.png)
 
 1. To show more information about the data source or to change it, select the down arrow next to its name.
 
     More information about the current data source appears, and you can select or create another source.
 
+    ![Change a connection](./media/add-data-connection/change-connection.png)
+
 ## Next steps
+
 * To show and update data in a source such as Excel, SharePoint, or SQL Server, [add a gallery](add-gallery.md), and [add a form](add-form.md).
 * For data in other sources, use connector-specific functions such as those for [Office 365 Outlook](connections/connection-office365-outlook.md), [Twitter](connections/connection-twitter.md), and [Microsoft Translator](connections/connection-microsoft-translator.md).
