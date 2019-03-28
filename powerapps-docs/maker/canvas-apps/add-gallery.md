@@ -40,11 +40,11 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
 
 ## Add a gallery to a blank screen
 
-1. On the **Insert** tab, select **Gallery**, and then select the **Vertical** option that contains controls.
+1. On the **Insert** tab, select **Gallery**, and then select **Vertical**.
 
     ![Add vertical gallery](./media/add-gallery/gallery-dropdown.png)
 
-1. On the **Properties** tab of the right-hand pane, open the **Items** list, and select **Flooring Estimates**.
+1. On the **Properties** tab of the right-hand pane, open the **Items** list, and then select **Flooring Estimates**.
 
     ![Flooring estimates](./media/add-gallery/select-layout.png)
 
@@ -63,9 +63,9 @@ Show a list of items from any data source by adding a **[Gallery](controls/contr
     ![Show data](./media/add-gallery/show-data-default.png)
 
 ## Add a control to the Gallery control
-Before you do any other customization, select the layout for your **Gallery** control. The first set of controls in a **Gallery** control is the template, which determines how all data in the **Gallery** control appears.
+Before you do any other customization, ensure that the layout for your **Gallery** control most closely matches what you want. From there, you can further modify the **Gallery** template, which determines how all data in the **Gallery** control appears.
 
-1. Select the template by clicking or tapping near the bottom of the **Gallery** control and then clicking or tapping the pencil icon in the upper-left corner.
+1. Select the template by clicking or tapping near the bottom of the **Gallery** control and then selecting the pencil icon in its upper-left corner.
 
     ![Edit gallery template](./media/add-gallery/edit-item.png)
 
@@ -86,7 +86,7 @@ Before you do any other customization, select the layout for your **Gallery** co
     ![Final Gallery](./media/add-gallery/final-gallery.png)
 
 ## Filter and sort a gallery
-The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so it also determines which records appear based on filter criteria and in what order.
+The **[Items](controls/properties-core.md)** property of a **Gallery** control determines which items it shows. In this procedure, you configure that property so that it also determines which records appear based on filter criteria and in what order.
 
 ![Search box and sort icon](./media/add-gallery/text-search-box.png)
 
@@ -113,7 +113,7 @@ The **[Items](controls/properties-core.md)** property of a **Gallery** control d
 
     For more information about the functions in this formula, see the [formula reference](formula-reference.md).
 
-1. Double-click the search box, and then type part or all of a product name.
+1. Double-click the search box, and then type part or all of a product name in it.
 
     Only those items that meet the filter criterion appear.
 
