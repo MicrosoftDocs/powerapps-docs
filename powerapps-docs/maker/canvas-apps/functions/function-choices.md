@@ -63,21 +63,21 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
 	![In the left navigation bar, select EditForm1 on EditScreen1](media/function-choices/select-editform.png)
 
-4. On the **Properties** tab of the right pane, select **Accounts**.
+4. On the **Properties** tab of the right pane, select **Edit fields**.
 
-	![Select Accounts to open the Data pane](media/function-choices/open-data-pane.png)
+	![Open the Data pane](media/function-choices/open-data-pane.png)
 
-5. In the **Data** pane, scroll down to the list of fields.
+5. In the **Fields** pane, select **Add field**.
+
+1. Search for the **Primary Contact** field, select its check box, and then select **Add**.
 
 	![Select Accounts to open the Data pane](media/function-choices/field-list.png)
-
-6. Find the **Primary Contact** check box, and then select it if it's cleared.
 
 7. (optional) Drag the **Primary Contact** field from the bottom to the top of the list of fields.
 
 8. In the card for **Primary Contact**, select the **Combo box** control.
 
-    The **Items** property of that control is set to one of two formulas based on the state of the **Use column display names** check box in advanced settings.
+    The **Items** property of that control is set to one of two formulas based on the state of the **Use column display names** check box in **Advanced Settings**.
 
    - If the check box is selected, the property is set to this formula:<br>**Choices( Accounts.'Primary Contact' )**
    - If the check box is cleared, the property is set to this formula:<br>**Choices( Accounts.primarycontactid )**
