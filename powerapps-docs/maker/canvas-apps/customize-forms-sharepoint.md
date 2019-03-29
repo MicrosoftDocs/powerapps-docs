@@ -38,7 +38,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 
     ![Open fields pane](./media/customize-forms-sharepoint/edit-fields.png)
 
-1. Hide a field, such as **Number of Employees**, by hovering over it, selecting the ellipsis (...) that appears, and then selecting **Remove**.
+1. Hide a field, such as **Description**, by hovering over it, selecting the ellipsis (...) that appears, and then selecting **Remove**.
 
     ![List of fields](./media/customize-forms-sharepoint/hide-fields.png)
 
@@ -57,7 +57,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
 1. (optional) Reorder the other cards into this sequence:
 
     - Account Name
-    - Description
+    - Number of Employees
     - Annual Revenue
     - Main Phone
     - Address 1: Street 1
