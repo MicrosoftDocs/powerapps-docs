@@ -18,7 +18,7 @@ search.app:
 
 Build a canvas app to manage data that's stored in Common Data Service, using standard entities (which are built in), custom entities (which your organization creates), or both.
 
-When you build an app from the Common Data Service, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You only need to specify the entities that you want to show, manage, or use for both activities in the app.
+When you build an app from Common Data Service, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show, manage, or use for both activities in the app.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 1. In the middle of the screen, select **connect to data**.
 
-1. In the **Data** pane, select **Common Data Service** connection, select the **Accounts** check box, and then select **Connect**.
+1. In the **Data** pane, select **Common Data Service**, select the **Accounts** check box, and then select **Connect**.
 
 1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
