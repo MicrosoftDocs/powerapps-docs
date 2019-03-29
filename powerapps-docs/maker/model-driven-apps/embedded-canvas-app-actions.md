@@ -79,7 +79,7 @@ Calling the RefreshForm method can show the following error messages.
   
 | Error message | Troubleshooting guidance |
 |:--------------|:-------------------------|
-|**Please use "true" or "false" as the parameter value.** | Please check the value of the *showPrompt* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**Please use "true" or "false" as the parameter value.** | Please check the value of the *showPrompt* parameter and ensure that it is either "true" or "false". |
   
   
 ### SaveForm()  
