@@ -36,15 +36,13 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 1. Specify a name for your app, select **Phone**, and then select **Create**.
 
-    You can build an app from scratch for tablets, but this topic shows on building an app for phones.
+    You can build an app from scratch for tablets, but this topic shows building an app for phones.
 
 ## Specify an entity
 
-1. In the middle of the screen, select **connect to data** and then, in the **Data** pane, select the **Common Data Service** connection.
+1. In the middle of the screen, select **connect to data**.
 
-1. In the search box, select the **Accounts** check box, and then select **Connect**.
-
-    ![Specify the Accounts entity](./media/data-platform-create-app-scratch/cds-connect.png)
+1. In the **Data** pane, select **Common Data Service** connection, select the **Accounts** check box, and then select **Connect**.
 
 1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
@@ -61,8 +59,8 @@ When you build an app from the Common Data Service, you don't need to create a c
     This formula specifies that:
 
    - The gallery should show data from the **Accounts** entity.
-   - The data should be sorted in ascending order until a user clicks or taps the sort button to toggle the sort order.
-   - If a user types or pastes one or more characters into the search bar, the list will show only those accounts for which the name field contains the characters that the user specified.
+   - The data should be sorted in ascending order until a user selects the sort button to toggle the sort order.
+   - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list will show only those accounts for which the **name** field contains the characters that the user specified.
 
      You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
 
@@ -72,9 +70,9 @@ When you build an app from the Common Data Service, you don't need to create a c
 
     ![Browse screen](./media/data-platform-create-app-scratch/final-browse.png)
 
-1. In the left navigation bar, hover over **Screen1**, click or tap the ellipsis icon (...), and then click or tap **Delete**.
+1. In the left navigation bar, hover over **Screen1**, select the ellipsis icon (...), and then select **Delete**.
 
-1. In the left navigation bar, hover over **Screen2**, click or tap the ellipsis icon (...), and then click or tap **Rename**.
+1. In the left navigation bar, hover over **Screen2**, select the ellipsis icon (...), and then select **Rename**.
 
 1. Type or paste **BrowseScreen**, and then rename the gallery in that screen as **BrowseGallery**.
 
@@ -84,11 +82,13 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 1. Repeat the first step of the previous procedure, except add a **Form** screen instead of a **List** screen.
 
-1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as shown on the **Advanced tab** of the right-hand pane.
+1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as the **Advanced** tab of the right-hand pane shows.
 
     ![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. On the **Properties** tab of the right-hand pane, select **Edit fields** to open the **Fields** pane, select **Add field**, and then select the check boxes for these fields:
+1. On the **Properties** tab of the right-hand pane, select **Edit fields** to open the **Fields** pane.
+
+1. Select **Add field**, and then select the check boxes for these fields:
 
     - **Account Name**
     - **Address 1: Street 1**
@@ -149,7 +149,7 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 ## Test the app
 
-1. In the left navigation bar, select **BrowseScreen**, and then open Preview by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
+1. In the left navigation bar, select **BrowseScreen**, and then open Preview by pressing F5 (or by selecting the play icon near the upper-right corner).
 
     ![Open Preview](./media/data-platform-create-app-scratch/open-preview.png)
 
