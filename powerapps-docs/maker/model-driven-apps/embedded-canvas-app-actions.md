@@ -23,25 +23,62 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Embedded canvas apps actions
-**NavigateToMainForm(entityName, mainFormName, recordId)**  
+# Perform predefined actions on the host form from within an embedded canvas app
+Embedded canvas apps provide the ability to perform predefined actions on the host form. These actions enable makers to navigate, refresh and save the host form. Using these actions, an embedded canvas app can act as a more integral part of the form and the model-driven app.  
+  
+The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host form.  
+  
+### NavigateToMainForm(entityName, mainFormName, recordId)
 Navigates the host form to a main form and displays the specified record.  
 * **entityName** - A required string parameter that specifies the parent entity of the main form.  
 * **formName** - A required string parameter that specifies the name of the main form to navigate to.  
 * **recordId** - A required string parameter, that specifies the ID of the record to display in the main form.  
+ 
+Calling the NavigateToMainForm method can show the following error messages.
   
-**NavigateToView(entityName, viewName)**  
+| Error message | Troubleshooting guidance |
+|:--------------|:-------------------------|
+|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**Form not found: *[FormName]*** | Please check the value of the *mainFormName* parameter and ensure it is a valid main form name and that the user has access to it. |
+|**There was a problem loading the record.** | Please check the value of the *recordId* parameter and ensure it is a valid record ID and that the user has access to it. |
+  
+  
+### NavigateToView(entityName, viewName)
 Navigates the host form to a view.  
 * **entityName** - A required string parameter that specifies the parent entity of the view.  
 * **viewName** - A required string parameter that specifies the name of the main form to navigate to.  
+ 
+Calling the NavigateToView method can show the following error messages.
   
-**OpenQuickCreateForm(entityName)**  
+| Error message | Troubleshooting guidance |
+|:--------------|:-------------------------|
+|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+|**View not found: *[ViewName]*** | Please check the value of the *viewName* parameter and ensure it is a valid view name and that the user has access to it. |
+  
+  
+### OpenQuickCreateForm(entityName)  
 Opens the default quick create form for an entity.  
 * **entityName** - A required string parameter that specifies the parent entity of the quick create form.  
+ 
+Calling the OpenQuickCreateForm method can show the following error messages.
   
-**RefreshForm(showPrompt)**  
+| Error message | Troubleshooting guidance |
+|:--------------|:-------------------------|
+|**Entity not found: *[EntityName]*** | Please check the value of the *entityName* parameter and ensure it is a valid entity name and that the user has access to it. |
+  
+  
+### RefreshForm(showPrompt)  
 Refreshes the data on the host form.  
-* **showPrompt** - A required string parameter that indicates if a confirmation prompt should be displayed to the user before saving any unsaved data on the host form. Values should be "true" or "false".
+* **showPrompt** - A required boolean parameter that indicates if a confirmation prompt should be displayed to the user before saving any unsaved data on the host form. Values should be "true" or "false".
+ 
+Calling the RefreshForm method can show the following error messages.
   
-**SaveForm()**  
+| Error message | Troubleshooting guidance |
+|:--------------|:-------------------------|
+|**Please use "true" or "false" as the parameter value.** | Please check the value of the *showPrompt* parameter and ensure it is a valid entity name and that the user has access to it. |
+  
+  
+### SaveForm()  
 Saves the data on the host form.  
+
+
