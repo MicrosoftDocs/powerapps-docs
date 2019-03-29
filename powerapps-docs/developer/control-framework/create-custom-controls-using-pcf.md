@@ -36,15 +36,6 @@ To use PowerApps CLI you will need the following:
  `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1'))))`  
 
 > [!NOTE]
-> To uninstall the CLI tool please follow below steps:
-> 1. To find out where PowerApps CLI is installed open a command prompt and type 'where pac' 
-> 2. Delete the PowerAppsCLI folder
-> 3. Open Environment Variables tool by running command 'rundll32 sysdm.cpl,EditEnvironmentVariables' in the command prompt
-> 4. Double-click on 'Path' under 'User variable for...' section
-> 5. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side
-> 6. Click OK twice
-
-> [!NOTE]
 > To deploy your custom control, you will need Common Data Service environment with System administrator or System customizer privileges.
 
 > [!NOTE]
@@ -152,6 +143,15 @@ The feature team is aggregating anonymized telemetry in order to understand whic
 
 > [!NOTE]
 > To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
+
+## How to Uninstall
+To uninstall the CLI tool please follow below steps:
+1. To find out where PowerApps CLI is installed open a command prompt and type 'where pac' 
+1. Delete the PowerAppsCLI folder
+1. Open Environment Variables tool by running command 'rundll32 sysdm.cpl,EditEnvironmentVariables' in the command prompt
+1. Double-click on 'Path' under 'User variable for...' section
+1. Select the row containing PowerAppsCLI path and click the Delete button on the right-hand side
+1. Click OK twice
 
 ### See also
 
