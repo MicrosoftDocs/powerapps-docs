@@ -831,6 +831,8 @@
           href: ./model-driven-apps/pass-current-embedded-canvas-app.md
         - name: "Pass related records to an embedded canvas app"
           href:  ./model-driven-apps/pass-related-embedded-canvas-app.md
+        - name: "Perform predefined actions on the host form"
+          href:  ./model-driven-apps/embedded-canvas-app-actions.md
         - name: "Share an embedded canvas app"
           href:  ./model-driven-apps/share-embedded-canvas-app.md
         - name: "Embedded canvas app guidelines"
