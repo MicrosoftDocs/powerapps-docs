@@ -37,6 +37,12 @@ To use PowerApps CLI you will need the following:
  `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1'))))`  
 
 > [!NOTE]
+> To uninstall the CLI tool please copy-paste below command and run it in the Developer Command Prompt for VS 2017:
+    ``` PS
+    powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/uninstall/UninstallPowerAppsCLI.ps1'))))
+    ```
+
+> [!NOTE]
 > To deploy your custom control, you will need Common Data Service environment with System administrator or System customizer privileges.
 
 > [!NOTE]
