@@ -25,7 +25,11 @@ search.app:
 ---
 # Perform predefined actions on the host form from within an embedded canvas app
 Embedded canvas apps provide the ability to perform predefined actions on the host form. These actions enable makers to navigate, refresh and save the host form. Using these actions, an embedded canvas app can act as a more integral part of the form and the model-driven app.  
-  
+
+> [!NOTE]
+> This feature is currently in preview. <br />
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] 
+
 The **ModelDrivenFormIntegration** object now includes the following new methods to enable makers to perform actions on the host form.  
   
 ### NavigateToMainForm(entityName, mainFormName, recordId)
@@ -80,5 +84,10 @@ Calling the RefreshForm method can show the following error messages.
   
 ### SaveForm()  
 Saves the data on the host form.  
-
-
+  
+## See also
+[Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
+[Pass the current record as data context to an embedded canvas app](pass-current-embedded-canvas-app.md) <br />
+[Pass a list of related records as data context to an embedded canvas app](pass-related-embedded-canvas-app.md) <br />
+[Share an embedded canvas app](share-embedded-canvas-app.md) <br />
+[Guidelines on working with embedded canvas apps](embedded-canvas-app-guidelines.md)
