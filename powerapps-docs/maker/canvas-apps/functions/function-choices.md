@@ -77,10 +77,10 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
 8. In the card for **Primary Contact**, select the **Combo box** control.
 
-    The **Items** property of that control is set to one of two formulas based on the state of the **Use column display names** check box in advanced settings.
+    The **Items** property of that control weill be set to one of two formulas that are equivalent (the first is a display name and the second is a logical name for the same column):
 
-   - If the check box is selected, the property is set to this formula:<br>**Choices( Accounts.'Primary Contact' )**
-   - If the check box is cleared, the property is set to this formula:<br>**Choices( Accounts.primarycontactid )**
+   - **Choices( Accounts.'Primary Contact' )**
+   - **Choices( Accounts.primarycontactid )**
 
      ![A canvas screen with a form control. The **Combo box** control within the **Primary Contact** card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
 
@@ -88,10 +88,9 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
 10. On the **Insert** tab, select **Data table**.
 
-11. Set the **Items** property of the **Data table** control to one of these formulas:
+11. Set the **Items** property of the **Data table** control to:
 
-     - If the **Use column display names** check box in advanced settings is selected, use this formula:<br>**Choices( Accounts.'Primary Contact' )**
-     - Otherwise, use this formula:<br>**Choices( Accounts.primarycontactid )**
+     - **Choices( Accounts.'Primary Contact' )**
 
 12. Open the **Data** pane, and then select the check boxes for **firstname**, **lastname**, or any other field that you want to show.
 
