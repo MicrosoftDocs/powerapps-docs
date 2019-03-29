@@ -1,5 +1,5 @@
 ---
-title: Show, edit, or add a record from a table in a canvas app | Microsoft Docs
+title: Show, edit, or add a record in a canvas app | Microsoft Docs
 description: Use a canvas-app form to show, edit, or add a record from a table in your data source.
 author: emcoope-msft
 manager: kvivek
@@ -14,95 +14,86 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Show, edit, or add a record from a table in PowerApps
+# Show, edit, or add a record in a canvas app
 
-To show all fields in a record, add and configure a **[Display form](controls/control-form-detail.md)** control in a canvas app. To edit any field in a record (or to add a record) and save your changes back to a data source, add and configure an **[Edit form](controls/control-form-detail.md)** control in a canvas app.
+In a canvas app, add and configure a **[Display](controls/control-form-detail.md)** form control to show all fields in a record, You can also add and configure an **[Edit](controls/control-form-detail.md)** form control to edit any field in a record, add a record, and save your changes back to a data source.
 
 ## Prerequisites
 
-* Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
-* Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
-* Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
-* In a new or existing app, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
-* If you're using an existing app, [add a screen](add-screen-context-variables.md) to it.
+- Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
+- Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
+- Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
+- Create or open an app for phones, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
+
+    You can add a form to a tablet app, but it won't match this topic because the form will have three columns by default.
+
+- If you open an existing app, [add a screen](add-screen-context-variables.md) to it.
 
 ## Add a form, and show data
-1. Add a **[Drop down](controls/control-drop-down.md)** control, name it **ChooseProduct**, and set its **[Items](controls/properties-core.md)** property to this value:
-
-    **FlooringEstimates.Name**
+1. On a blank screen, add a **[Drop down](controls/control-drop-down.md)** control, and name it **ChooseProduct**.
 
     > [!NOTE]
    > If you're not sure how to add a control, rename it, or set a property, see [Add and configure controls](add-configure-controls.md).
 
+1. On the **Properties** tab of the right-hand pane, set **Items** to `FlooringEstimates` and **Value** to `Name`.
+
+    ![Set the form's Items property](./media/add-form/items-property.png)
+
     The list shows names of flooring products from the data source.
 
-2. Add an **Edit form** control, move it below **ChooseProduct**, and then resize the form to cover most of the screen.
+1. Add an **Edit** form control, move it below **ChooseProduct**, and then resize the form to cover most of the screen.
 
     ![Add a form](./media/add-form/add-a-form.png)
 
     > [!NOTE]
-   > This topic describes the **Edit form** control, but similar principles apply to the **Display form** control.
+   > This topic describes the **Edit** form control, but similar principles apply to the **Display** form control.
 
-3. Set the **[DataSource](controls/control-form-detail.md)** property of the form to **FlooringEstimates** and the **[Item](controls/control-form-detail.md)** property of the form to this formula:
+1. Set the form's **[DataSource](controls/control-form-detail.md)** property to **FlooringEstimates** and its **[Item](controls/control-form-detail.md)** property to this formula:
 
-   **First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))**
+    `First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))`
 
    This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**.
 
-4. In the **Data** pane, click or tap the checkbox for each field to show it.
+1. On the **Properties** tab of the right-hand pane, select **Edit fields**.
 
-    > [!NOTE]
-   > If the **Data** pane is closed, open it by selecting the form in the left-hand pane and then clicking or tapping **Data** in the right-hand pane.
+    ![Edit fields](./media/add-form/edit-fields.png)
 
-    ![Show fields on form](./media/add-form/checkbox.png)
+1. In the **Fields** pane, select **Add field**, select the check box for each field, and then select **Add**.
 
-5. In the **Data** pane, drag the **Name** entry to the top of the list.
+    ![Add fields](./media/add-form/add-fields.png)
 
-    ![Move a card](./media/add-form/drag-field.png)
+1. Select the ellipsis (...) next to **Add field**, select **Collapse all**, and then drag **Name** to the top of the list.
 
-    The **Edit form** control reflects your change.
+    ![Move field](./media/add-form/move-field.png)
 
-    ![Name at top](./media/add-form/move-card-form.png)
+    The **Edit** form control reflects your change.
+
+    ![Show form](./media/add-form/show-form1.png)
 
 ## Set the card type for a field
-1. With the form selected, click or tap the card selector for **Price** in the **Data** pane.
+1. In the **Fields** pane, expand the **Price** field by selecting its down arrow.
 
-    ![Select card selector](./media/add-form/price-card2.png)
+1. Open the **Control type** list, and then select **Edit slider**.
 
-2. Scroll down, and then click or tap the **View text** option to make the field read-only.
+    ![Edit slider](./media/add-form/edit-slider.png)
 
-    ![View text](./media/add-form/view-text.png)
+    In the form, the **Price** field shows a **Slider** control instead of a **Text input** control.
 
-    The form reflects your change.
-
-    ![Read-only number](./media/add-form/read-only.png)  
+1. (optional) Follow the same process to change the control for the **Overview** field to an **Edit multi-line text** control.
 
 ## (Edit form only) Save changes
-1. In the left-hand pane, select the form, and then click or tap the ellipsis (...).
 
-   ![Select the form](./media/add-form/select-form.png)
+1. Rename the form **EditForm**.
 
-2. Click or tap **Rename**, and then rename the form **EditForm**.
+1. Add a **[Button](controls/control-button.md)** control, and set its **[OnSelect](controls/properties-core.md)** property to this formula:
 
-3. Add a **[Button](controls/control-button.md)** control, and set its **[Text](controls/properties-core.md)** property to **Save**.
+   `SubmitForm(EditForm)`
 
-    ![Add a save button](./media/add-form/save-button.png)  
+1. Press F5 to open Preview, change the name of a product, and then select the button that you created.
 
-4. Set the **[OnSelect](controls/properties-core.md)** property of the **Save** button to this formula:
+    The **[SubmitForm](functions/function-form.md)** function saves your changes to the data source.
 
-   **SubmitForm(EditForm)**
-
-5. Open Preview mode by selecting the play button near the upper-right corner (or by pressing F5).
-
-    ![Open Preview mode](./media/add-form/open-preview.png)
-
-6. Change the name of a product, and then click or tap the **Save** button that you created.
-
-    The **[SubmitForm](functions/function-form.md)** function saves your changes to the data source with which you configured the form.
-
-7. (optional) Select the close icon to close Preview (or press Esc).
-
-    ![Close Preview](./media/add-form/close-preview.png)
+1. (optional) Close Preview by pressing Esc (or by selecting the close icon in the upper-right corner).
 
 ## Next steps
 Learn more about working with [forms](working-with-forms.md) and [formulas](working-with-formulas.md).
