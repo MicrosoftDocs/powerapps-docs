@@ -20,7 +20,7 @@ In a canvas app, customize a **Display form** control and an **Edit form** contr
 
 Each form comprises one or more cards, each of which shows data from a particular column in the data source. By following the steps in this topic, you can specify which cards appear in a form and move cards up and down within a form.
 
-If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-started.md).
+If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-started.md).
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
     ![Open fields pane](./media/customize-forms-sharepoint/edit-fields.png)
 
-1. Hide a field, such as **Number of Employees**, by hovering over it, selecting the ellipsis (...) that appears, and then selecting **Remove**
+1. Hide a field, such as **Number of Employees**, by hovering over it, selecting the ellipsis (...) that appears, and then selecting **Remove**.
 
     ![List of fields](./media/customize-forms-sharepoint/hide-fields.png)
 
@@ -71,7 +71,7 @@ If you're unfamiliar with PowerApps, see [Introduction to PowerApps](getting-sta
 
 ## Run the app
 
-1. In the left navigation bar, type or paste **Br** to filter the list, and then select **BrowseScreen1** to select it.
+1. In the left navigation bar, type or paste **Br** in the search bar, and then select **BrowseScreen1** to select it.
 
 2. Open Preview mode by pressing F5 (or by selecting the **Preview** icon near the upper-right corner).
 
