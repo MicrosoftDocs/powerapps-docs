@@ -36,6 +36,9 @@ To use PowerApps CLI you will need the following:
  `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1'))))`  
 
 > [!NOTE]
+> When you copy paste the above command, some times the space between the New-Object and System.Net.WebClient is removed. Make sure there is a space right after the New-Object. 
+
+> [!NOTE]
 > To deploy your custom control, you will need Common Data Service environment with System administrator or System customizer privileges.
 
 > [!NOTE]
