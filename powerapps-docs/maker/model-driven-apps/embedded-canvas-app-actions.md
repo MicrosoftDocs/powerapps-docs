@@ -87,7 +87,7 @@ Saves the data on the host form.
 
 
 > [!NOTE]
-> If you do not see the IntelliSense for the methods to perform predefined actions in embedded canvas apps that were created prior to this functionality being made available, save, close and re-open the app. 
+> If you do not see the IntelliSense for the methods to perform predefined actions in embedded canvas apps that were created prior to the functionality being made available; save, close and re-open the app. 
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
