@@ -2,7 +2,7 @@
 title: "Start a Dynamics 365 for Customer Engagement Web API project in Visual Studio (C#) (Common Data Service)| MicrosoftDocs"
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
 ms.custom: 
-ms.date: 03/27/2019
+ms.date: 04/01/2019
 ms.reviewer: 
 ms.service: powerapps
 ms.suite: 
@@ -37,7 +37,8 @@ This topic demonstrates how to create a new project in Visual Studio 2017 that b
 ## Create a project  
 The following procedure demonstrates how to create a console application project in C# that uses the Microsoft .NET Framework. For more information on supported versions of the .NET Framework, see [Supported extensions](../supported-extensions.md).  
   
-<a name="bkmk_newProject"></a>   
+<a name="bkmk_newProject"></a> 
+
 ### New Project  
   
 1. In Visual Studio, click **New Project**. The **New Project** dialog is displayed.  
@@ -46,7 +47,7 @@ The following procedure demonstrates how to create a console application project
   
 3. Above the list of available templates, select **.NET Framework 4.6.2**.  
   
-4. In the list of templates, select **Console Application**. (Alternately choose the project type suited to your solution.)  All of the Web API C# samples are console applications.  
+4. From the list of templates, select **Console App(.NET Framework)**. (Alternately choose the project type suited to your solution.)  All of the Web API C# samples are console applications.  
   
    ![A new console app project dialog in Common Data Service](media/new-project.PNG "A new console app project dialog in Common Data Service")  
   
@@ -54,59 +55,19 @@ The following procedure demonstrates how to create a console application project
   
 6. Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.6.2**.  
   
-<!--### Add all required resources to your project  
- The following procedures explain how to add all required managed references and packages to your project. Consider this a base set of resources that most managed code applications will need for invoking Web API operations.  
-<!--  
-#### Add the helper library NuGet package  
- The Dynamics 365 for Customer Engagement Web API Helper Library contains classes to assist with supplemental operations, such as application configuration, Dynamics 365 for Customer Engagement server authentication, exception handling, and Web communication. For more information, see [Use the Dynamics 365 for Customer Engagement Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md). The use of these classes is optional, although they are used extensively in the Web API samples.  The Dynamics 365 for Customer Engagement Web API Helper Library is distributed in source code form as a NuGet package.  Future updates will be distributed as NuGet package updates.  
-  
- If you have installed the NuGet command line utility or are using the Package Manager Console in Visual Studio:  
-  
-1. Issue the following command to install the helper library package.  
-  
-    `Install-Package Microsoft.CrmSdk.WebApi.Samples.HelperCode`  
-  
-2. Several messages are displayed about processing dependency packages. If a **License Acceptance** dialog is displayed, read the license terms and click **Accept**.  
-  
-3. Skip to step 6 below to confirm the installation of the helper library package.  
-  
- If you have installed the NuGet Package Manager extension:  
-  
-1. From the **Project** menu, select **Manage NuGet Packages**.  The **NuGet Package Manager** tab is displayed.  
-  
-2. In the upper right-hand corner, set the **Package** source drop-down to **Nuget.org**.  
-  
-3. In the upper left-hand corner, click on **Browse** then enter “`Dynamics 365 for Customer Engagement apps HelperCode`” in the search box and press Enter.  
-  
-   ![NuGet Package Manager showing Dynamics 365 for Customer Engagement apps Helper Code Library &#40;C&#35;&#41;](../media/package-manifest-helper-code.png "NuGet Package Manager showing Dynamics 365 for Customer Engagement apps Helper Code Library (C#)")  
-  
-4. Click **Install**.  If the **Preview** dialog is displayed, click **OK**.  
-  
-5. The **License Acceptance** dialog is displayed. Review the license terms and click **I Accept**.  
-  
-6. Navigate to the **Solution Explorer** window. Confirm that a new solution folder named **Web API Helper Code** was added.  
-  
-   ![VS Solution Explorer showing helper library files](../media/solution-explorer-helper-code.PNG "VS Solution Explorer showing helper library files")  
-  
-   The Dynamics 365 for Customer Engagement apps SDK Web API Helper Library package, [Microsoft.CrmSdk.WebApi.Samples.HelperCode](https://www.nuget.org/packages/Microsoft.CrmSdk.WebApi.Samples.HelperCode), depends upon the following other packages, which are automatically downloaded and installed alongside the helper library package:  
-  
--   [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) – contains [Json.NET](http://www.newtonsoft.com/json), a popular, MIT-licensed JSON framework for .NET.  
-  
--   [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) – contains the binaries for the Active Directory Authentication Library ([ADAL](https://msdn.microsoft.com/library/azure/mt417579.aspx)), which provides authentication functionality for .NET clients.  
-  
-> [!WARNING]
->  The Dynamics 365 for Customer Engagement apps SDK Web API Helper Library package was built against specific versions of these other two supporting packages.  Because of this, you should only directly update the helper library NuGet package.  This operation will update the proper supporting packages if required.  If you separately update one of these supporting packages, a newer version of that package may be incompatible with the helper library.  
-  -->
+#### Install and verify the required assembly references  
 
-#### Verify the required assembly references  
+1. After the project opens, click on **Tools** in the control bar on the top of your project. Select **NuGet Package Manager** > **Package Manager Console** and install the following NuGet packages.
+
+```
+install-package Newtonsoft.Json
+install-package System.Net.Http
+```
+2. In **Solution Explorer**, expand the **References** node.  
   
-1. In **Solution Explorer**, expand the **References** node.  
+3. Confirm that all the required references have been added to the project.  
   
-2. Confirm that all the required references have been added to the project.  
-  
-  <!-- ![VS Solution Explorer showing references for the helper library](../media/solution-explorer-references-helper-code.png "VS Solution Explorer showing references for the helper library")  
-  -->
-3. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](https://msdn.microsoft.com/library/wkze6zky.aspx).  
+4. If you have additional functionality that you routinely use in your applications, you can add the associated references to the required assemblies now. For more information, see [How to: Add or Remove References by Using the Add Reference Dialog Box](https://msdn.microsoft.com/library/wkze6zky.aspx).  
   
    Because the Common Data Service Web API is based on REST principles, it does not require client-side assemblies to access.  However, other APIs supported by Common Data Service apps do require these; for more information, see [Assemblies included in Common Data Service SDK](../org-service/assemblies-included-sdk.md).  
   
@@ -165,90 +126,6 @@ This section explains how to add a basic set of settings and instructions to per
   
 2.  When developing or deploying a solution, the actual connection and application registration values must be substituted for the example placeholder values.  
   
-<!--<a name="bkmk_addCodeToCallHelperLibrary"></a>
-
-#### Add code to call the helper library
-  
-1.  Edit the Program.cs file.  
-  
-2.  Add the following property to the Program class.  This property will be initialized after a successful connection to a Dynamics 365 for Customer Engagement server.  
-  
-     `private HttpClient httpClient;`  
-  
-3.  In the `Main` method, add the following statements.  
-  
-    ```csharp  
-  
-    Program app = new Program();  
-    try  
-    {  
-        String[] arguments = Environment.GetCommandLineArgs();  
-        app.ConnectToCRM(arguments);  
-    }  
-    catch (System.Exception ex)  
-    { ; }  
-    finally  
-    {  
-        if (app.httpClient != null)  
-        { app.httpClient.Dispose(); }  
-    }  
-  
-    ```  
-  
-4.  Next add the `ConnectToCRM` method, which uses the helper library `Configuration` and `Authentication` classes.  The following code demonstrates assigning  values to the [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient\(v=vs.118\).aspx) properties so that you can successfully access the release version of the Dynamics 365 for Customer Engagement Web API.  
-  
-    ```csharp  
-  
-    private void ConnectToCRM(String[] cmdargs)  
-    {  
-        Configuration config = null;  
-        if (cmdargs.Length > 0)  
-            config = new FileConfiguration(cmdargs[0]);  
-        else  
-            config = new FileConfiguration(null);  
-        Authentication auth = new Authentication(config);  
-        httpClient = new HttpClient(auth.ClientHandler, true);  
-        httpClient.BaseAddress = new Uri(config.ServiceUrl + "api/data/v8.1/");  
-        httpClient.Timeout = new TimeSpan(0, 2, 0);  
-        httpClient.DefaultRequestHeaders.Add("OData-MaxVersion", "4.0");  
-        httpClient.DefaultRequestHeaders.Add("OData-Version", "4.0");  
-        httpClient.DefaultRequestHeaders.Accept.Add(  
-            new MediaTypeWithQualityHeaderValue("application/json"));  
-    }  
-  
-    ```  
-  
-<a name="bkmk_addErrorHandlingCode"></a>
-
-### Add error-handling code
-
- The following changes add code to catch and report exceptions, including Web API errors, to the console.  If you are targeting a different environment, then modify the exception-handling code appropriately for that environment.  
-  
-1.  In `Main`, add the following statement to the `catch` block.  
-  
-     `DisplayException(ex);`  
-  
-2.  Add the corresponding method to the `Program` class.  
-  
-    ```csharp  
-  
-    private static void DisplayException(Exception ex)  
-    {  
-        Console.WriteLine("The application terminated with an error.");  
-        Console.WriteLine(ex.Message);  
-        while (ex.InnerException != null)  
-        {  
-            Console.WriteLine("\t* {0}", ex.InnerException.Message);  
-            ex = ex.InnerException;  
-        }  
-    }  
-  
-    ```  
-  
-3.  Save all the files in the solution.  
-  
-<a name="bkmk_nextSteps"></a>
--->
 ### Next steps
 
  At this point the solution can be built without errors. If you edit the application configuration file to supply values for your Dynamics 365 Server, the program should also successfully connect to that server. The solution represents a skeletal frame that is ready to accept custom code, including calls to the Common Data Service Web API.  
