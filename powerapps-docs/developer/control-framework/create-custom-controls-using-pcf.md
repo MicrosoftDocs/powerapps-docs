@@ -121,8 +121,8 @@ Follow the steps below to create and import a solution file:
    > The [publisherName] (https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created control is located. You can add the reference by using the command
-`pac solution add-reference --<path or relative path of your pcf project on disk>`
-4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command `msbuild/t:restore` and `msbuild`
+`pac solution add-reference --path <path or relative path of your pcf project on disk>`
+4. To generate a zip file from your solution project, you will need to `cd` into your solution project directory and build the project using the command `msbuild /t:restore` and `msbuild`
 
     > [!NOTE]
     > If msbuild 15 is not in the path, open Developer Command Prompt for Vs 2017 to run the msbuild commands.
