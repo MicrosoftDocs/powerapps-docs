@@ -183,7 +183,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** How do I share my form?
 
-**A:** You don't need to share the form - the form inherits permissions from the SharePoint list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-list-form-back-to-sharepoint) so that others can use it.
+**A:** You don't need to share the form - the form inherits permissions from the SharePoint list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-form) so that others can use it.
 
 **Q:** Who can customize forms?
 
