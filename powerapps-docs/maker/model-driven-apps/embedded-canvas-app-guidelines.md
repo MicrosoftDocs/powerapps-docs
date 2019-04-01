@@ -55,9 +55,10 @@ This topic provides guidelines on working with embedded canvas apps as well as h
      - To directly reference the record you can use the [First function](../canvas-apps/functions/function-first-last.md). Example: First(ModelDrivenFormIntegration.Data).Name
 -	Manually changing the App ID in the canvas app control properties is to be avoided as much as possible.
      - The App ID of the canvas app is automatically generated and filled in for you. 
-     - If for some reason you do need to manually edit it, you need to ensure that any App ID you use corresponds to an *embedded* canvas app and not just a standalone canvas app.
+     - If for some reason you do need to manually edit it, you need to ensure that any App ID you use corresponds to an *embedded* canvas app and not just a standalone canvas app. 
      - The embedded canvas app must also be created with the same data context that your model-driven form is going to send.
-     - After you have updated the App ID select **Customize** to establish the connection to the new app.
+     - After you have updated the App ID select **Customize** to open it in PowerApps Studio and establish the connection to the new app.
+     - Make a small change in the app to put it in an unsaved state, then save and publish the app.
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "Sorry we didn't find that app" make sure that the embedded canvas app is in the same solution as the model-driven form.
 - When you view a model-driven form with an embedded canvas app, if you see an error message that reads "It looks like you don’t have access to this app. Ask its owner to share it with you" make sure that the author has shared the embedded canvas app with you. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 
@@ -78,7 +79,10 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 - When you create a new record, an embedded canvas app on a form is not displayed even after the record is saved. 
 -    The ModelDrivenFormIntegration.Data object currently does not work with the Display form and Edit form controls.
 - You can’t use the **Canvas App** privilege in a security role to grant app users access to either an embedded or standalone canvas app. For more information on sharing an embedded canvas app, please refer to: [Share an embedded canvas app](share-embedded-canvas-app.md).
-- If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. 
+- If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. An easy way to do that is to use the [RefreshForm](embedded-canvas-app-actions.md) method.
+- [Methods to perform predefined actions](embedded-canvas-app-actions.md) will not be available in embedded canvas apps that were created prior to the capability being released. We are working on ways to have existing embedded canvas apps opt-in to new capabilities. In the meantime, here are some alternatives to bring over your controls from existing embedded canvas apps to a new ones.  
+  - [Copy-paste controls](https://powerapps.microsoft.com/blog/copy-and-paste-controls-across-canvas-apps-available/) from the old app to your new app.  
+  - Create and use [components for canvas apps](../canvas-apps/create-component.md) in your old app and import them in your new app.  
 
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
