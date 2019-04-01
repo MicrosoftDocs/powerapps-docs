@@ -87,9 +87,9 @@ Saves the data on the host form.
 
 
 > [!NOTE]
-> Predefined actions will not be available in your embedded canvas apps that were created prior to this functionality being released. We are working on ways to have existing embedded canvas apps opt-in to new capabilities. In the meantime, here are some alternatives to bring over your controls from an existing embedded canvas app to a new one.
-> -  Create a new embedded canvas app and [copy-paste controls](https://powerapps.microsoft.com/blog/copy-and-paste-controls-across-canvas-apps-available/) from the old app.  
-> -  Create and use [components for canvas apps](../canvas-apps/create-component.md) that you can easily share across apps.   
+> Methods to perform predefined actions will not be available in embedded canvas apps that were created prior to this functionality being released. We are working on ways to have existing embedded canvas apps opt-in to new capabilities. In the meantime, here are some alternatives to bring over controls from existing embedded canvas apps to a new ones.
+> - [Copy-paste controls](https://powerapps.microsoft.com/blog/copy-and-paste-controls-across-canvas-apps-available/) from the old app to your new app.  
+> - Create and use [components for canvas apps](../canvas-apps/create-component.md) in your old app and import them in your new app.   
 
 ## See also
 [Embed a canvas app on a model-driven form](embed-canvas-app-in-form.md) <br />
