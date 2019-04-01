@@ -31,7 +31,7 @@ To use PowerApps CLI you will need the following:
    - Option 1: Install Visual Studio 2017 or later
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
 - Install Microsoft CLI using the steps below:
-    1. Open the Developer Command Prompt for VS 2017
+    1. Open the Developer Command Prompt for VS 2017 as an Administrator
     2. Copy-paste below command into your command prompt and hit enter:
  `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1'))))`  
 
