@@ -2,7 +2,7 @@
 title: "Discover the URL for your organization using the Web API (Common Data Service)| Microsoft Docs"
 description: "Learn how you can use the Web API to discover at runtime the organizations, or instances that the logged-on user belongs to"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/01/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -58,27 +58,15 @@ In general, the Web API address of the Discovery service has the following forma
 
 The service base address of the global Discovery service is : `https://globaldisco.crm.dynamics.com/`. This results in the service address of `https://globaldisco.crm.dynamics.com/api/discovery/`.  
   
-<!-- TODO:
-The service base address of the Discovery service for a datacenter is : `https://disco.crm[N].dynamics.com/`. This results in the Discovery service address of `https://disco.crm[N].dynamics.com/api/discovery/`. Each datacenter has an N number associated with it. For a complete list of available Common Data Service datacenters, and their N numbers,  see [Download endpoints using Developer resources page](../developer-resources-page.md).   -->
-  
 ## Using the Discovery service  
 
 An entity set named `Instances` is used to obtain instance information. You can use `$select` and `$filter` with the Instances entity set to filter the returned data. You can also use `$metadata` to obtain the metadata document of the service.  
   
 ### Authentication
 
-Common Data Service Web API instances of the Discovery service require authentication with OAuth access tokens. On-premise or IFD instances of the Discovery Web API adopt the authentication model of their deployment, supporting either Integrated Windows Authentication (IWA) or OAuth tokens from a trusted token provider. Web Application Session authentication is not supported.  
-  
-When the Discovery service is configured for OAuth authentication, a request sent  to the service Web API without an access token triggers a bearer challenge with the authority of the “common” endpoint and the resource ID of the service.  Similarly, when an on-premise deployment is configured for OAuth, a bearer challenge returns the on-premise authority URL and the resource ID of the service.  
-  
-### Web API versioning
+Common Data Service Web API instances of the Discovery service require authentication with OAuth access tokens.
 
-Versioning of the Discovery service for a datacenter or on-premises/IFD is supported and is consistent with version numbering as used by the Organization service . However, the global Discovery service of Common Data Service is not tied to the version number of the Common Data Service deployment. Instead, the global service uses its own version numbering. As of this writing, the global Discovery service of Common Data Service is at version 1.0 (v1.0). For example:  
-  
-```http  
-GET https://globaldisco.crm.dynamics.com/api/discovery/v1.0/Instances(UniqueName='myorg')  
-```  
-  
+When the Discovery service is configured for OAuth authentication, a request sent  to the service Web API without an access token triggers a bearer challenge with the authority of the “common” endpoint and the resource ID of the service.
 ### CORS support
 
 The Discovery service Web API supports the CORS standard for cross-origin access as does the Web API.  For more information about CORS support see [Use OAuth with Cross-Origin Resource Sharing  to connect a Single Page Application](../oauth-cross-origin-resource-sharing-connect-single-page-application.md).  
@@ -110,4 +98,6 @@ The Discovery service Web API supports the CORS standard for cross-origin access
     GET https://disco.crm.dynamics.com/api/discovery/v8.1/Instances(UniqueName='myorg')/Id/$value  
     ```
 
-<!-- TODO: Add a see also section -->
+## See also
+
+[Web API Global Discovery Service sample (C#)](samples/global-discovery-service-csharp.md)
