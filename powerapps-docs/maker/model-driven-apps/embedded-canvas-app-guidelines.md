@@ -80,7 +80,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 -    The ModelDrivenFormIntegration.Data object currently does not work with the Display form and Edit form controls.
 - You can’t use the **Canvas App** privilege in a security role to grant app users access to either an embedded or standalone canvas app. For more information on sharing an embedded canvas app, please refer to: [Share an embedded canvas app](share-embedded-canvas-app.md).
 - If you write back the same data that is being displayed in the host model-driven form, the form will continue to display old data until it is refreshed. An easy way to do that is to use the [RefreshForm](embedded-canvas-app-actions.md) method.
-- > If you do not see the IntelliSense for the [methods to perform predefined actions](embedded-canvas-app-actions.md) in embedded canvas apps that were created prior to the functionality being made available; save, close and re-open the app. 
+- If you do not see the IntelliSense for the [methods to perform predefined actions](embedded-canvas-app-actions.md) in embedded canvas apps that were created prior to the functionality being made available; save, close and re-open the app. 
 
 ## See also
 [Embed a canvas app in a model-driven form](embed-canvas-app-in-form.md) <br />
