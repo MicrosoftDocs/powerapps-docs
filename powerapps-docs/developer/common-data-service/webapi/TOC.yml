@@ -11,6 +11,8 @@
       href: quick-start-console-app-csharp.md
     - name: Enhanced quick start (C#)
       href: enhanced-quick-start.md
+    - name: Start Web API project in Visual Studio
+      href: start-web-api-project-visual-studio-csharp.md
 - name: Authenticate
   href: authenticate-web-api.md
 - name: Types and operations
