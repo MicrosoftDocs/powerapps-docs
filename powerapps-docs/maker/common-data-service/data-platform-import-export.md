@@ -1,6 +1,6 @@
 ---
-title: Import or export data from Common Data Service for Apps
-description: Bulk import and export data from Excel or CSV files into entities in Common Data Service for Apps by using the Get Data from Excel and Export Data functionality
+title: Import or export data from Common Data Service
+description: Bulk import and export data from Excel or CSV files into entities in Common Data Service by using the Get Data from Excel and Export Data functionality
 author: sabinn-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,9 +13,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import or export data from Common Data Service for Apps
+# Import or export data from Common Data Service
 
-To bulk import and export data from Microsoft Excel or CSV files, use the Get Data from Excel file and Export Data features for updated Common Data Service for Apps environments.
+To bulk import and export data from Microsoft Excel or CSV files, use the Get Data from Excel file and Export Data features for updated Common Data Service environments.
 
 There are two ways that you can import files into entities from Excel or CSV files.
 
@@ -66,7 +66,7 @@ Every entity has required fields that must exist in your input file. We recommen
 
 ## Option 2: Import by bringing your own source file
 
-If you're an advanced user and know the required fields for a given entity for Common Data Service for Apps entities, define your own Excel or CSV source file. Follow the steps in **Import the file**.
+If you're an advanced user and know the required fields for a given entity for Common Data Service entities, define your own Excel or CSV source file. Follow the steps in **Import the file**.
 
 ## Navigate mapping errors
 
@@ -92,7 +92,7 @@ If you get mapping errors after you upload your file, select **Map status**. Tak
 
 ## Ensure uniqueness when you import data into an entity from Excel or CSV
 
-Common Data Service for Apps entities use a primary key to uniquely identify records within a Common Data Service entity table. The primary key for a Common Data Service entity is a globally unique identifier (GUID). It forms the default basis for record identification. Data operations, like importing data into Common Data Service entities, surface the default primary keys.
+Common Data Service entities use a primary key to uniquely identify records within a Common Data Service entity table. The primary key for a Common Data Service entity is a globally unique identifier (GUID). It forms the default basis for record identification. Data operations, like importing data into Common Data Service entities, surface the default primary keys.
 
 Example:  
 The primary key for an **Account** entity is **accountid**.

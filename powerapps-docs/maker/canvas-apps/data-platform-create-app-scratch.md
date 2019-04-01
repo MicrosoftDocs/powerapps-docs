@@ -1,6 +1,6 @@
 ---
-title: Create a canvas app from scratch using Common Data Service for Apps | Microsoft Docs
-description: In PowerApps, create a canvas app to add, update, and delete records in Common Data Service for Apps.
+title: Create a canvas app from scratch using Common Data Service | Microsoft Docs
+description: In PowerApps, create a canvas app to add, update, and delete records in Common Data Service.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -14,11 +14,11 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Create a canvas app from scratch using Common Data Service for Apps
+# Create a canvas app from scratch using Common Data Service
 
-Build a canvas app to manage data that's stored in Common Data Service for Apps, using standard entities (which are built in), custom entities (which your organization creates), or both.
+Build a canvas app to manage data that's stored in Common Data Service, using standard entities (which are built in), custom entities (which your organization creates), or both.
 
-When you build an app from the Common Data Service, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You only need to specify the entities that you want to show, manage, or use for both activities in the app.
+When you build an app from Common Data Service, you don't need to create a connection from PowerApps, as you do with data sources such as SharePoint, Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the app.
 
 ## Prerequisites
 
@@ -30,37 +30,37 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 1. Sign in to [PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Under **Make your own app**, hover over the **Start from blank** tile for canvas apps, click or tap the phone icon, and then click or tap **Make this app**.
+1. Under **Make your own app**, select **Canvas app from blank**.
 
-    ![Blank-app tile](./media/data-platform-create-app-scratch/start-from-blank.png)
+    ![Blank-app tile](./media/data-platform-create-app-scratch/blank-app.png)
 
-    You can design an app from scratch for phones or other devices (such as tablets); this topic will focus on designing an app for phones.
+1. Specify a name for your app, select **Phone**, and then select **Create**.
+
+    You can build an app from scratch for tablets, but this topic shows building an app for phones.
 
 ## Specify an entity
 
-1. In the middle of the screen, click or tap **connect to data** and then, in the **Data** pane, click or tap the **Common Data Service** connection.
+1. In the middle of the screen, select **connect to data**.
 
-1. In the search box, type or paste the first few letters of **Accounts** to filter the list of entities, select the **Accounts** check box, and then click or tap **Connect**.
+1. In the **Data** pane, select **Common Data Service**, select the **Accounts** check box, and then select **Connect**.
 
-    ![Specify the Accounts entity](./media/data-platform-create-app-scratch/cds-connect.png)
-
-1. Close the **Data** pane by clicking or tapping the close icon in the upper-right corner.
+1. Close the **Data** pane by selecting the close icon in the upper-right corner.
 
 ## Add a list screen
 
-1. On the **Home** tab, click or tap the down arrow for **New screen**, and then click or tap **List screen**.
+1. On the **Home** tab, select the down arrow for **New screen**, and then select **List**.
 
     ![Add a list screen](./media/data-platform-create-app-scratch/list-screen.png)
 
-1. In the left navigation bar, click or tap **TemplateGalleryList1** to select it, and then set the value of the **Items** property to this formula:
+1. In the left navigation bar, select **BrowseGallery1**, and then set the value of the **Items** property to this formula:
 
     `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
     This formula specifies that:
 
    - The gallery should show data from the **Accounts** entity.
-   - The data should be sorted in ascending order until a user clicks or taps the sort button to toggle the sort order.
-   - If a user types or pastes one or more characters into the search bar, the list will show only those accounts for which the name field contains the characters that the user specified.
+   - The data should be sorted in ascending order until a user selects the sort button to toggle the sort order.
+   - If a user types or pastes one or more characters into the search bar (**TextSearchBox1**), the list will show only those accounts for which the **name** field contains the characters that the user specified.
 
      You can use [these and many other functions](formula-reference.md) to specify how your app appears and behaves.
 
@@ -70,9 +70,9 @@ When you build an app from the Common Data Service, you don't need to create a c
 
     ![Browse screen](./media/data-platform-create-app-scratch/final-browse.png)
 
-1. In the left navigation bar, hover over **Screen1**, click or tap the ellipsis icon (...), and then click or tap **Delete**.
+1. In the left navigation bar, hover over **Screen1**, select the ellipsis icon (...), and then select **Delete**.
 
-1. In the left navigation bar, hover over **Screen2**, click or tap the ellipsis icon (...), and then click or tap **Rename**.
+1. In the left navigation bar, hover over **Screen2**, select the ellipsis icon (...), and then select **Rename**.
 
 1. Type or paste **BrowseScreen**, and then rename the gallery in that screen as **BrowseGallery**.
 
@@ -80,20 +80,24 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 ## Add a form screen
 
-1. Repeat the first step of the previous procedure, except add a **Form screen** instead of a **List screen**.
+1. Repeat the first step of the previous procedure, except add a **Form** screen instead of a **List** screen.
 
-1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as shown on the **Advanced tab** of the right-hand pane.
+1. Set the form's **DataSource** property to **Accounts** and its **Item** property to **BrowseGallery.Selected**, as the **Advanced** tab of the right-hand pane shows.
 
     ![Set the form's Datasource and Item property](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. On the **Properties** tab of the right-hand pane, click or tap **Accounts** to open the **Data** pane, and then select the checkboxes for these fields:
+1. On the **Properties** tab of the right-hand pane, select **Edit fields** to open the **Fields** pane.
 
-    - Account name
-    - Address 1: Street 1
-    - Address 1: City
-    - Address 1: ZIP/Postal code
-    - Number of Employees
-    - Annual Revenue
+1. Select **Add field**, and then select the check boxes for these fields:
+
+    - **Account Name**
+    - **Address 1: Street 1**
+    - **Address 1: City**
+    - **Address 1: ZIP/Postal code**
+    - **Number of Employees**
+    - **Annual Revenue**
+
+1. Select **Add**.
 
 1. Set the title bar's **Text** property to show **Create/Edit**.
 
@@ -105,37 +109,37 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 ## Configure icons
 
-1. On the **BrowseScreen**, click or tap the circular icon near the top of the screen, and set its **OnSelect** property to this formula:
+1. On the **BrowseScreen**, set the **OnSelect** property of the circular icon near the top of the screen to this formula:
 
     `Refresh(Accounts)`
 
     ![Refresh icon](./media/data-platform-create-app-scratch/refresh-icon.png)
 
-1. Click or tap the plus icon, and set its **OnSelect** property to this formula:
+1. Set the **OnSelect** property of the the plus icon to this formula:
 
     `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Add icon](./media/data-platform-create-app-scratch/plus-icon.png)
 
-1. Click or tap the first arrow pointing to the right, and set its **OnSelect** property to this formula:
+1. Set the **OnSelect** property of the first arrow pointing to the right to this formula:
 
     `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Next icon](./media/data-platform-create-app-scratch/next-icon.png)
 
-1. On the **FormScreen**, click or tap the cancel icon, and set its **OnSelect** property to this formula:
+1. On the **FormScreen**, set the **OnSelect** property of the cancel icon to this formula:
 
     `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Cancel icon](./media/data-platform-create-app-scratch/cancel-icon.png)
 
-1. Click or tap the checkmark icon, and set its **OnSelect** property to this formula:
+1. Set the **OnSelect** property of the checkmark icon to this formula:
 
     `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Checkmark icon](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
-1. On the **Insert** tab, click or tap **Icons**, and then click or tap the **Trash** icon.
+1. On the **Insert** tab, select **Icons**, and then select the **Trash** icon.
 
 1. Set the **Trash** icon's **Color** property to **White** and its **OnSelect** property to this formula:
 
@@ -145,11 +149,11 @@ When you build an app from the Common Data Service, you don't need to create a c
 
 ## Test the app
 
-1. In the left navigation bar, select **BrowseScreen**, and then open Preview by pressing F5 (or by clicking or tapping the play icon near the upper-right corner).
+1. In the left navigation bar, select **BrowseScreen**, and then open Preview by pressing F5 (or by selecting the play icon near the upper-right corner).
 
     ![Open Preview](./media/data-platform-create-app-scratch/open-preview.png)
 
-1. Toggle the list between ascending and descending sort orders, and filter the list by specific characters in each account name.
+1. Toggle the list between ascending and descending sort orders, and filter the list by one or more characters in the account name.
 
 1. Add an account, edit the account that you added, start to update the account but cancel your changes, and then delete the account.
 

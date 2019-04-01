@@ -104,7 +104,7 @@
     items:
     - name: 1 - Generate an app from data
       items:
-      - name: From Common Data Service for Apps
+      - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app.md
       - name: From SharePoint
         href: ./canvas-apps/app-from-sharepoint.md
@@ -120,7 +120,7 @@
         href: ./canvas-apps/customize-card.md
     - name: 3 - Create an app yourself
       items:
-      - name: From Common Data Service for Apps
+      - name: From Common Data Service
         href: ./canvas-apps/data-platform-create-app-scratch.md
       - name: From Excel
         href: ./canvas-apps/get-started-create-from-blank.md
@@ -131,12 +131,28 @@
       - name: Connect to data
         href: ./canvas-apps/connections-list.md
         items:
+        - name: Popular connectors
+          items:
+            - name: Common Data Service
+              href: canvas-apps/connections/connection-common-data-service.md
+            - name: SharePoint
+              href: canvas-apps/connections/connection-sharepoint-online.md
+            - name: SQL Server
+              href: canvas-apps/connections/connection-azure-sqldatabase.md
+            - name: Dynamics 365
+              href: canvas-apps/connections/connection-dynamics-crmonline.md
+            - name: Office 365 Users
+              href: canvas-apps/connections/connection-office365-users.md
+            - name: Office 365 Outlook
+              href: canvas-apps/connections/connection-office365-outlook.md
+            - name: Excel
+              href: canvas-apps/connections/connection-excel.md
+            - name: Cloud storage
+              href: canvas-apps/connections/cloud-storage-blob-connections.md
         - name: Add a connection
           href: ./canvas-apps/add-data-connection.md
         - name: Manage connections
           href: ./canvas-apps/add-manage-connections.md
-        - name: Connect to SharePoint
-          href: ./canvas-apps/connect-to-sharepoint.md
         - name: Prepare Excel data
           href: ./canvas-apps/how-to-excel-tips.md
         - name: Delegation
@@ -209,7 +225,6 @@
               href: ./canvas-apps/controls/control-attachments.md
             - name: Audio
               href: ./canvas-apps/controls/control-audio-video.md
-
             - name: Barcode scanner
               href: ./canvas-apps/controls/control-new-barcode-scanner.md
             - name: Button
@@ -664,6 +679,9 @@
       href: ./canvas-apps/set-name-tile.md
     - name: Change screen size and orientation
       href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+      items:
+        - name: Create responsive layout
+          href: ./canvas-apps/create-responsive-layout.md
   - name: Customize a SharePoint list form
     href: ./canvas-apps/customize-list-form.md
     items:
@@ -903,7 +921,7 @@
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
-- name: Common Data Service for Apps
+- name: Common Data Service
   href: ./common-data-service/data-platform-intro.md
   items:
   - name: Work with entities

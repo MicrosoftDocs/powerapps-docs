@@ -1,5 +1,5 @@
 ---
-title: "Create many-to-many entity relationships in Common Data Service for Apps overview | MicrosoftDocs"
+title: "Create many-to-many entity relationships in Common Data Service overview | MicrosoftDocs"
 description: "Learn how to create many-to-many entity relationships"
 ms.custom: ""
 ms.date: 05/29/2018
@@ -37,8 +37,8 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal](create-edit-nn-relationships-portal.md)|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create N:N (many-to-many) entity relationships in Common Data Service for Apps using solution explorer](create-edit-nn-relationships-solution-explorer.md) |
+|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create Many-to-many entity relationships in Common Data Service using PowerApps portal](create-edit-nn-relationships-portal.md)|
+|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.<br />More information: [Create N:N (many-to-many) entity relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md) |
 
 > [!NOTE]
 > You can also create new Many-to-many (N:N) entity relationship in your environment using the following:
@@ -55,7 +55,7 @@ You should use the PowerApps portal to create and edit Many-to-many (N:N) entity
 ## See also
 
 [Create and edit relationships between entities](create-edit-entity-relationships.md)<br />
-[Create Many-to-many entity relationships in Common Data Service for Apps using PowerApps portal](create-edit-nn-relationships-portal.md)<br />
-[Create N:N (many-to-many) entity relationships in Common Data Service for Apps using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
+[Create Many-to-many entity relationships in Common Data Service using PowerApps portal](create-edit-nn-relationships-portal.md)<br />
+[Create N:N (many-to-many) entity relationships in Common Data Service using solution explorer](create-edit-nn-relationships-solution-explorer.md)<br />
 [Developer documentation: Customize entity relationship metadata](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
 [Developer documentation: Entity relationship eligibility](https://docs.microsoft.com/dynamics365/customer-engagement/developer/entity-relationship-eligibility)

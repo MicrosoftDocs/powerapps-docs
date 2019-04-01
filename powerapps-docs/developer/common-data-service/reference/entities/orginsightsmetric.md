@@ -1,5 +1,5 @@
 ---
-title: "OrgInsightsMetric Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "OrgInsightsMetric Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the OrgInsightsMetric entity."
 services: ''
 suite: powerapps

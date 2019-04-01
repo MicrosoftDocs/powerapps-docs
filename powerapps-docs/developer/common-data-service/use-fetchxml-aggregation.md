@@ -1,5 +1,5 @@
 ---
-title: "Use FetchXML aggregation (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use FetchXML aggregation (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read about the grouping and aggregation features of FetchXML that let you calculate sum, average min, max and count" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -18,7 +18,7 @@ search.app:
 
 # Use FetchXML aggregation
 
-In Common Data Service for Apps, `FetchXML` includes grouping and aggregation features that let you calculate sum, average min, max and count.  
+In Common Data Service, `FetchXML` includes grouping and aggregation features that let you calculate sum, average min, max and count.  
   
  The following aggregate functions are supported:  
   
@@ -101,7 +101,7 @@ System.Console.WriteLine("===============================");
 ```
   
 ### Limitation with null values while computing average  
- **Null** values are not considered when CDS for Apps computes the average of data. However, zero (0) is used.  
+ **Null** values are not considered when Common Data Service computes the average of data. However, zero (0) is used.  
   
  In the following example, with the following data, the average for Account 1 (two entries) is shown as 250 whereas the average for Account 2 (two entries) is shown as 125.  
   
@@ -206,7 +206,7 @@ System.Console.WriteLine("===============================");
 
 ## Max
 
- **Null** values are not considered when Common Data Service (CDS) for Apps computes the maximum of data. However, zero (0) is used.  
+ **Null** values are not considered when Common Data Service computes the maximum of data. However, zero (0) is used.  
   
  The following example shows how to use the `max``aggregate` attribute.  
   
@@ -238,7 +238,7 @@ System.Console.WriteLine("===============================");
  
 ## Min
 
- **Null** values are not considered when CDS for Apps computes the minimum of data. However, zero (0) is used.  
+ **Null** values are not considered when Common Data Service computes the minimum of data. However, zero (0) is used.  
   
  The following example shows how to use the `min``aggregate` attribute.  
   

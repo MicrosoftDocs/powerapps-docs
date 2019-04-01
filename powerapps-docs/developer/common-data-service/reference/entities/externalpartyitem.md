@@ -1,5 +1,5 @@
 ---
-title: "ExternalPartyItem Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "ExternalPartyItem Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the ExternalPartyItem entity."
 services: ''
 suite: powerapps

@@ -1,5 +1,5 @@
 ---
-title: "FieldPermission Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "FieldPermission Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the FieldPermission entity."
 services: ''
 suite: powerapps

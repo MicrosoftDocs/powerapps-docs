@@ -1,9 +1,9 @@
 ---
-title: "Use plug-ins to extend business processes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "A plug-in is a .NET assembly that you can upload to the Common Data Service for Apps. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Use plug-ins to extend business processes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "A plug-in is a .NET assembly that you can upload to the Common Data Service. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 1/23/2019
-ms.reviewer: ""
+ms.date: 03/27/2019
+ms.reviewer: "phecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -17,10 +17,10 @@ search.app:
 ---
 # Use plug-ins to extend business processes
 
-A plug-in is a .NET assembly that you can upload to the Common Data Service for Apps. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform.
+A plug-in is a .NET assembly that you can upload to the Common Data Service. Classes within the assembly can be registered to specific events (steps) within the event framework. The code within the class provides a way for you to respond to the event so that you can augment or modify the default behavior of the platform.
 
 > [!IMPORTANT]
-> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in CDS for Apps](../../maker/common-data-service/cds-processes.md)<br/><br/>
+> Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../maker/common-data-service/cds-processes.md)<br/><br/>
 > Use plug-ins when a declarative process doesn’t meet your requirement.
 
 The classes in the assembly that can be registered to a step must implement the <xref:Microsoft.Xrm.Sdk.IPlugin> interface. This interface exposes a single method: <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*>. When an event occurs that has a class registered to it, contextual data is passed to the `Execute` method. Within the `Execute` method you can:
@@ -30,6 +30,9 @@ The classes in the assembly that can be registered to a step must implement the 
 - Initiate other actions using the Organization Service to add automation
 
 Plug-ins can be configured to execute synchronously or asynchronously. A synchronous plug-in will cause the operation to wait until the code in the Plug-in completes. This has an impact on perceived performance of the system. The operations in an asynchronous plug-in are placed in a queue and are executed after the operation is completed so that the operation can complete with minimal interruption.
+
+> [!NOTE]
+> [!INCLUDE[cc-d365ce-note-section](./includes/cc-d365ce-note-section.md)] [Write plug-ins to extend business processes (Customer Engagement)](/dynamics365/customer-engagement/developer/write-plugin-extend-business-processes)
 
 ## When to use plug-ins
 

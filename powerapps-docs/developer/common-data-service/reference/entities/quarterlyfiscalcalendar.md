@@ -1,5 +1,5 @@
 ---
-title: "QuarterlyFiscalCalendar Entity Reference (Common Data Service for Apps)| Microsoft Docs"
+title: "QuarterlyFiscalCalendar Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Includes schema information and supported messages for the QuarterlyFiscalCalendar entity."
 services: ''
 suite: powerapps

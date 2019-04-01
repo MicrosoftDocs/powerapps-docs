@@ -1,6 +1,6 @@
 ---
 title: "Create a dashboard (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Organization-owned dashboards can be created by using the Common Data Service for Apps web services (SDK) or by customizing the entity form in Common Data Service for Apps by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Organization-owned dashboards can be created by using the Common Data Service web services (SDK) or by customizing the entity form in Common Data Service by editing the customizations.xml file." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
@@ -24,7 +24,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/create-dashboard -->
 
-Organization-owned dashboards can be created by using the Common Data Service for Apps or by customizing the entity form in Common Data Service for Apps by editing the customizations.xml file.  
+Organization-owned dashboards can be created by using the Common Data Service or by customizing the entity form in Common Data Service by editing the customizations.xml file.  
   
 > [!NOTE]
 >  Some dashboards that are created by using the SDK or by customizing the entity form are not supported by the Dashboard Designer in the Web application. For more information, see [Limitations: Creating dashboards by using the SDK or through form customization](#Limitations) later in this topic.  
@@ -152,7 +152,7 @@ _dashboardId = _serviceProxy.Create(dashboard);
   
 #### Create a dashboard by customizing an entity form  
   
-1. Log on to Common Data Service for Apps.  
+1. Log on to Common Data Service.  
   
 2. Export a solution. For information about doing so, see [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).  
   
@@ -179,13 +179,13 @@ _dashboardId = _serviceProxy.Create(dashboard);
   
 6. Save the customizations.xml file.  
   
-7. Import the .zip file as a solution in CDS for Apps. More information: [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).  
+7. Import the .zip file as a solution in Common Data Service. More information: [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).  
   
 <a name="Limitations"></a>   
 
 ## Limitations: Creating dashboards by using the SDK or through form customization  
 
- Certain dashboards that are created or modified using the CDS for Apps or through form customization are not supported by the dashboard designer in the Web application. Avoid the following while creating or modifying a dashboard using the SDK or through form customization.  
+ Certain dashboards that are created or modified using the Common Data Service or through form customization are not supported by the dashboard designer in the Web application. Avoid the following while creating or modifying a dashboard using the SDK or through form customization.  
   
 ### General  
   

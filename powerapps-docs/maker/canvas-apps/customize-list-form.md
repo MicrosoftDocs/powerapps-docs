@@ -92,7 +92,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 1. Customize your form a variety of ways such as those that these topics describe:
 
     - Change its size, orientation, or both (for example, to [make the form wider](set-aspect-ratio-portrait-landscape.md)).
-    - Add a control so that users can [upload attachments](controls/properties-text.md).
+    - [Customize one or more cards](working-with-cards.md) (for example, change a card's display text or input control).
     - Create a [lookup field](sharepoint-lookup-fields.md).
 
     More information: [Understand SharePoint forms integration](sharepoint-form-integration.md)
@@ -183,7 +183,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** How do I share my form?
 
-**A:** You don't need to share the form - the form inherits permissions from the SharePoint list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-list-form-back-to-sharepoint) so that others can use it.
+**A:** You don't need to share the form - the form inherits permissions from the SharePoint list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-form) so that others can use it.
 
 **Q:** Who can customize forms?
 

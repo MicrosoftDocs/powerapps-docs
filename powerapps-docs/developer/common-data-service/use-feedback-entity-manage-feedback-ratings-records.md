@@ -1,5 +1,5 @@
 ---
-title: "Use the Feedback entity to manage feedback and ratings for records (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Use the Feedback entity to manage feedback and ratings for records (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about the feedback eneity to obtain feedback and ratings for the records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -17,9 +17,9 @@ search.app:
 ---
 # Use the Feedback entity to manage feedback and ratings for records
 
-Improve your products and services by enabling users to provide feedback and ratings for entity records in Common Data Service for Apps. For example, you can enable feedbacks and ratings for the `Product` entity to know user's feedback on the products you sell, or on the `Incident` (case) entity to understand and improve the quality of your customer support team.  
+Improve your products and services by enabling users to provide feedback and ratings for entity records in Common Data Service. For example, you can enable feedbacks and ratings for the `Product` entity to know user's feedback on the products you sell, or on the `Incident` (case) entity to understand and improve the quality of your customer support team.  
   
- You can enable feedback and rating for both system and custom entities in CDS for Apps. By default, the `KnowledgeArticle` entity is enabled for feedback and ratings. Use the new `Feedback` entity to programmatically create and manage feedback for entity records.  
+ You can enable feedback and rating for both system and custom entities in Common Data Service. By default, the `KnowledgeArticle` entity is enabled for feedback and ratings. Use the new `Feedback` entity to programmatically create and manage feedback for entity records.  
   
  To programmatically enable feedback for a:  
   
@@ -30,7 +30,7 @@ Improve your products and services by enabling users to provide feedback and rat
   Once you have enabled an entity for feedback and rating, you can't disable it. After you enable an entity for feedback, a regarding relationship is created between the entity and the `Feedback` entity.  
   
 > [!NOTE]
->  You can also use the customization tools in CDS for Apps to enable feedback and rating for system and custom entities. More information: [Enable an entity for feedback](http://go.microsoft.com/fwlink/p/?LinkId=785436)  
+>  You can also use the customization tools in Common Data Service to enable feedback and rating for system and custom entities. More information: [Enable an entity for feedback](http://go.microsoft.com/fwlink/p/?LinkId=785436)  
   
  The `Feedback` entity stores the following information :  
   
@@ -49,7 +49,7 @@ Improve your products and services by enabling users to provide feedback and rat
   
 - Feedback status such as Open or Closed  
   
-- Feedback source to display the source from where the feedback was submitted. If the feedback was created from within CDS for Apps, the value is set to **Internal**. Developers can add a value of their choice depending on the application used to provide feedback.  
+- Feedback source to display the source from where the feedback was submitted. If the feedback was created from within Common Data Service, the value is set to **Internal**. Developers can add a value of their choice depending on the application used to provide feedback.  
   
 - User who created or last modified the feedback record  
   

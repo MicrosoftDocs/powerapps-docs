@@ -1,5 +1,5 @@
 ---
-title: "Autonumber fields in Common Data Service for Apps | MicrosoftDocs"
+title: "Autonumber fields in Common Data Service | MicrosoftDocs"
 description: "Understand how to create, manage, and use autonumber fields"
 keywords: ""
 ms.date: 02/26/2019
@@ -88,4 +88,4 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
 9. Select **Done**.
 
 ## See also
- [Create and edit fields for Common Data Service for Apps using PowerApps portal](create-edit-field-portal.md)
+ [Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)

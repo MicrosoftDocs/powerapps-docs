@@ -1,5 +1,5 @@
 ---
-title: "Create and edit virtual entities with Common Data Service for Apps | MicrosoftDocs"
+title: "Create and edit virtual entities with Common Data Service | MicrosoftDocs"
 description: "Learn how to create virtual entities"
 ms.custom: ""
 ms.date: 06/27/2018
@@ -25,13 +25,13 @@ search.app:
 ---
 # Create and edit virtual entities that contain data from an external data source
 
-A virtual entity is a custom entity in Common Data Service for Apps that has fields containing data from an external data source. Virtual entities appear in your app to users as regular entity records, but contain data that is sourced from an external database, such as an  Azure SQL Database. Records based on virtual entities are available in all clients including custom clients developed using the CDS for Apps web services.  
+A virtual entity is a custom entity in Common Data Service that has fields containing data from an external data source. Virtual entities appear in your app to users as regular entity records, but contain data that is sourced from an external database, such as an  Azure SQL Database. Records based on virtual entities are available in all clients including custom clients developed using the Common Data Service web services.  
   
 In the past, to integrate the disparate data sources you would need to create a connector to move data or develop a custom plug-in, either client or server-side. However, with virtual entities you can connect directly with an external data source  at runtime so that specific data from the external data source is available in an environment, without the need for data replication.  
 
-Virtual entities are made up of three main components, a *data provider*, a *data source* record, and a *virtual entity*. The data provider consists of plug-ins and a data source entity. The data source is an entity record in CDS for Apps, which includes metadata that represents the schema of the connection parameters. Each virtual entity references a data source in the entity definition.  
+Virtual entities are made up of three main components, a *data provider*, a *data source* record, and a *virtual entity*. The data provider consists of plug-ins and a data source entity. The data source is an entity record in Common Data Service, which includes metadata that represents the schema of the connection parameters. Each virtual entity references a data source in the entity definition.  
   
-CDS for Apps includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
+Common Data Service includes an OData Data Provider that you can use to connect with an OData v4 web service that accesses the external data. 
   
 Alternatively, developers can build their own data providers. Data providers are installed in an environment as a solution. More Information: [Developer Documentation: Get started with virtual entities](../../developer/common-data-service/virtual-entities/get-started-ve.md)
   
@@ -41,7 +41,7 @@ Alternatively, developers can build their own data providers. Data providers are
   
 ## Virtual entity benefits  
   
-- Developers can implement plugins to read external data using the CDS for Apps web services and Plug-in Registration tool.  
+- Developers can implement plugins to read external data using the Common Data Service web services and Plug-in Registration tool.  
 - System customizers use PowerApps solution explorer to configure the data source record and create virtual entities that are used to access external data without writing any code.  
 - End users work with the records created by the virtual entity to view the data in fields, grids, search results, and Fetch XML-based reports and dashboards.  
   
@@ -58,7 +58,7 @@ Alternatively, developers can build their own data providers. Data providers are
     |Data Provider|Description|
     |--|--|
     |*Custom data provider*|If you've imported a data  provider plug-in, the data provider will appear here. More Information [Developer Documentation: Get started with virtual entities](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)|
-    |**OData v4 Data Provider**|CDS for Apps includes an OData Data Provider that can be used with OData v4 web services. More Information [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)|
+    |**OData v4 Data Provider**|Common Data Service includes an OData Data Provider that can be used with OData v4 web services. More Information [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)|
 
   
 ### Add a secured field to a Data Source
@@ -75,7 +75,7 @@ You create fields for a Data Source in the same way as any other entity. For dat
   
 ## Create a virtual entity
   
-You create a virtual entity just like any other entity in CDS for Apps with the addition of a few extra attributes described here. Virtual entities must be created using solution explorer.
+You create a virtual entity just like any other entity in Common Data Service with the addition of a few extra attributes described here. Virtual entities must be created using solution explorer.
 
 > [!NOTE]
 >  Although you can create a virtual entity by selecting **None** as the data source, to acquire data a virtual entity requires a data source. More Information [Add a data source to use for virtual entities](#AddDataSource)
@@ -140,10 +140,10 @@ Virtual entities have these restrictions.
 - Virtual entity fields can't be used in rollups or calculated fields.
 - A virtual entity can't be an activity type of entity.  
 - Many features that affect entity table rows cannot be enabled with virtual entities.  Examples include queues, knowledge management, SLAs, duplicate detection, change tracking, mobile offline  capability, field security, Relevance Search, Portals for Dynamics 365 web portal solutions, and N:N relationships between virtual entities.  
-- Virtual entities are organization owned and don't support the row-level Common Data Service for Apps security concepts. We recommend that you implement your own security model for the external data source.  
-- We recommend that you target a single data source when you use virtual entities in Advanced Finds. For example, creating an  Advanced Find that ultimately creates a join between the Common Data Service for Apps native data and the virtual entity external data isn't supported.  
+- Virtual entities are organization owned and don't support the row-level Common Data Service security concepts. We recommend that you implement your own security model for the external data source.  
+- We recommend that you target a single data source when you use virtual entities in Advanced Finds. For example, creating an  Advanced Find that ultimately creates a join between the Common Data Service native data and the virtual entity external data isn't supported.  
 - Field metadata properties that validate on update don’t apply to virtual entities. For example, a Whole Number field on a virtual entity field may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual entity.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.
-- Virtual entities don't support change tracking and cannot be synchronized by using a CDS for Apps feature, such as the Data Export Service.
+- Virtual entities don't support change tracking and cannot be synchronized by using a Common Data Service feature, such as the Data Export Service.
   
 ### See also  
 

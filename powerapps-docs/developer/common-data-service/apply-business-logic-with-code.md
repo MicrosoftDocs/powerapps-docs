@@ -1,6 +1,6 @@
 ---
-title: Apply business logic using code (Common Data Service (CDS) for Apps)| Microsoft Docs
-description: Learn how developers can use code to apply business logic in Common Data Service for Apps.
+title: Apply business logic using code (Common Data Service)| Microsoft Docs
+description: Learn how developers can use code to apply business logic in Common Data Service.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -22,13 +22,13 @@ search.app:
 
 # Apply business logic using code
 
-Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic in CDS for Apps](../../maker/common-data-service/cds-processes.md)
+Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic in Common Data Service](../../maker/common-data-service/cds-processes.md)
 
 When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.
 
 ## Create a plug-in
 
-You can write a .NET assembly to plug-in to the data transaction to apply business logic on the server. With Common Data Service for Apps there is a framework you use to register specific events to execute code defined within a class in an assembly. 
+You can write a .NET assembly to plug-in to the data transaction to apply business logic on the server. With Common Data Service there is a framework you use to register specific events to execute code defined within a class in an assembly. 
 
 More information: [Write plug-ins to extend business processes](plug-ins.md)
 
@@ -40,4 +40,4 @@ More information: [Workflow extensions](workflow/workflow-extensions.md)
 
 ### See also
 
-[Common Data Service for Apps Developer Overview](overview.md)
+[Common Data Service Developer Overview](overview.md)

@@ -1,8 +1,8 @@
 ---
-title: "Use XRM tooling to retrieve data (Common Data Service for Apps)| Microsoft Docs"
-description: "Use CrmServiceClient class to retrieve data from CDS for Apps"
+title: "Use XRM tooling to retrieve data (Common Data Service)| Microsoft Docs"
+description: "Use CrmServiceClient class to retrieve data from Common Data Service"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: 2afc057e-8f70-4bea-bad4-d01e18ed92fd
 caps.latest.revision: 14
 author: "MattB-msft"
-ms.author: "kvivek"
+ms.author: "nabuthuk"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -23,23 +23,19 @@ search.app:
 ---
 # Use XRM tooling to retrieve data
 
-There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in CDS for Apps. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
+There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in Common Data Service. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
   
 ## GetEntityDataById  
 
 This method searches for an entity by the specified ID. In this sample, we specify null for the field list value to fetch all the attributes of the specified entity record (account), and then display the name of the retrieved account record.  
   
 ```csharp  
-CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential("<UserName>", "<Password>", “<Domain>”),"<Server>", "<Port>", "<OrgName>");  
+CrmServiceClient svc = new CrmServiceClient(connectionstring);  
   
 // Verify that you are connected.  
-if (crmSvc != null && crmSvc.IsReady)  
+if (svc != null && svc.IsReady)  
 {  
-    //Display the CRM version number and org name that you are connected to  
-    Console.WriteLine("Connected to CRM! (Version: {0}; Org: {1}",   
-    crmSvc.ConnectedOrgVersion, crmSvc.ConnectedOrgUniqueName);  
-  
-    Dictionary<string, object> data = crmSvc.GetEntityDataById("account", <Account_ID>, null);  
+    Dictionary<string, object> data = svc.GetEntityDataById("account", <Account_ID>, null);  
     foreach (var pair in data)  
     {  
         if (pair.Key == "name")  
@@ -51,12 +47,12 @@ if (crmSvc != null && crmSvc.IsReady)
 else  
 {  
     // Display the last error.  
-    Console.WriteLine("An error occurred: {0}", crmSvc.LastCrmError);  
+    Console.WriteLine("An error occurred: {0}", svc.LastCrmError);  
   
     // Display the last exception message if any.  
-    Console.WriteLine(crmSvc.LastCrmException.Message);  
-    Console.WriteLine(crmSvc.LastCrmException.Source);  
-    Console.WriteLine(crmSvc.LastCrmException.StackTrace);  
+    Console.WriteLine(svc.LastCrmException.Message);  
+    Console.WriteLine(svc.LastCrmException.Source);  
+    Console.WriteLine(svc.LastCrmException.StackTrace);  
   
     return;  
 }  
@@ -65,18 +61,14 @@ else
   
 ## GetEntityDataByFetchSearchEC  
 
-This method searches for the entity based on the specified FetchXML query. In this sample, we retrieve and display the count of all account records in the system.  
+This method searches for the entity based on the specified `FetchXML` query. In this sample, we retrieve and display the count of all account records in the system.  
   
 ```csharp  
-CrmServiceClient crmSvc = new CrmServiceClient(new System.Net.NetworkCredential("<UserName>", "<Password>", “<Domain>”),"<Server>", "<Port>", "<OrgName>");  
+CrmServiceClient svc = new CrmServiceClient(connectionstring);  
   
 // Verify that you are connected.  
-if (crmSvc != null && crmSvc.IsReady)  
-{  
-    //Display the CRM version number and org name that you are connected to  
-    Console.WriteLine("Connected to CRM! (Version: {0}; Org: {1}",   
-    crmSvc.ConnectedOrgVersion, crmSvc.ConnectedOrgUniqueName);  
-  
+if (svc != null && svc.IsReady)  
+{   
     string fetchXML =   
         @"<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false' returntotalrecordcount='true' >  
             <entity name='account'>  
@@ -92,12 +84,12 @@ if (crmSvc != null && crmSvc.IsReady)
 else  
 {  
     // Display the last error.  
-    Console.WriteLine("An error occurred: {0}", crmSvc.LastCrmError);  
+    Console.WriteLine("An error occurred: {0}", svc.LastCrmError);  
   
     // Display the last exception message if any.  
-    Console.WriteLine(crmSvc.LastCrmException.Message);  
-    Console.WriteLine(crmSvc.LastCrmException.Source);  
-    Console.WriteLine(crmSvc.LastCrmException.StackTrace);  
+    Console.WriteLine(svc.LastCrmException.Message);  
+    Console.WriteLine(svc.LastCrmException.Source);  
+    Console.WriteLine(svc.LastCrmException.StackTrace);  
   
     return;  
 }  
@@ -106,5 +98,5 @@ else
 ### See also  
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Use XRM Tooling to connect to CDS for Apps](use-crmserviceclient-constructors-connect.md)<br />
-[Use XRM Tooling API to execute actions in CDS for Apps](use-xrm-tooling-execute-actions.md)
+[Use XRM Tooling to connect to Common Data Service](use-crmserviceclient-constructors-connect.md)<br />
+[Use XRM Tooling API to execute actions in Common Data Service](use-xrm-tooling-execute-actions.md)

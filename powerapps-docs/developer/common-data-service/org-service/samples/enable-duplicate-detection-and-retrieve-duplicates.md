@@ -1,5 +1,5 @@
 ---
-title: "Sample: Enable duplicate detection and retrieve duplicates (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Sample: Enable duplicate detection and retrieve duplicates (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This sample shows how to enable duplicate detection and retrieve duplicate records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
