@@ -1,20 +1,13 @@
 ---
-title: "ActivityParty Entity Reference (Common Data Service)| Microsoft Docs"
+title: "ActivityParty Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ActivityParty entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,19 +18,29 @@ search.app:
 
 Person or group associated with an activity. An activity can have multiple activity parties.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/activityparties<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+
 ## Entity Properties
 
-**DisplayName**: Activity Party<br />
-**DisplayCollectionName**: Activity Parties<br />
-**SchemaName**: ActivityParty<br />
-**CollectionSchemaName**: ActivityParties<br />
-**LogicalName**: activityparty<br />
-**LogicalCollectionName**: activityparties<br />
-**EntitySetName**: activityparties<br />
-**PrimaryIdAttribute**: activitypartyid<br />
-**PrimaryNameAttribute**: partyidname<br />
-**OwnershipType**: None<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|ActivityParties|
+|DisplayCollectionName|Activity Parties|
+|DisplayName|Activity Party|
+|EntitySetName|activityparties|
+|IsBPFEntity|False|
+|LogicalCollectionName|activityparties|
+|LogicalName|activityparty|
+|OwnershipType|None|
+|PrimaryIdAttribute|activitypartyid|
+|PrimaryNameAttribute|partyidname|
+|SchemaName|ActivityParty|
+
 <a name="writable-attributes"></a>
 
 ## Writable attributes
@@ -57,134 +60,157 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_ActivityId"></a> ActivityId
 
-**Description**: Unique identifier of the activity associated with the activity party. (A "party" is any person who is associated with an activity.)<br />
-**DisplayName**: Activity<br />
-**LogicalName**: activityid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Lookup<br />
-**Targets**: activitypointer
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the activity associated with the activity party. (A "party" is any person who is associated with an activity.)|
+|DisplayName|Activity|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|activityid|
+|RequiredLevel|SystemRequired|
+|Targets|activitypointer|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ActivityPartyId"></a> ActivityPartyId
 
-**Description**: Unique identifier of the activity party.<br />
-**DisplayName**: Activity Party<br />
-**LogicalName**: activitypartyid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the activity party.|
+|DisplayName|Activity Party|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|activitypartyid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_AddressUsed"></a> AddressUsed
 
-**Description**: Email address to which an email is delivered, and which is associated with the target entity.<br />
-**DisplayName**: Address <br />
-**LogicalName**: addressused<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 200
+|Property|Value|
+|--------|-----|
+|Description|Email address to which an email is delivered, and which is associated with the target entity.|
+|DisplayName|Address |
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|addressused|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Effort"></a> Effort
 
-**Description**: Amount of effort used by the resource in a service appointment activity.<br />
-**DisplayName**: Effort<br />
-**LogicalName**: effort<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Double<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0<br />
-**Precision**: 2
+|Property|Value|
+|--------|-----|
+|Description|Amount of effort used by the resource in a service appointment activity.|
+|DisplayName|Effort|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|effort|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Double|
 
 
 ### <a name="BKMK_ExchangeEntryId"></a> ExchangeEntryId
 
-**Description**: For internal use only.<br />
-**DisplayName**: Exchange Entry<br />
-**LogicalName**: exchangeentryid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 1024
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Exchange Entry|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|exchangeentryid|
+|MaxLength|1024|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ParticipationTypeMask"></a> ParticipationTypeMask
 
-**Description**: Role of the person in the activity, such as sender, to, cc, bcc, required, optional, organizer, regarding, or owner.<br />
-**DisplayName**: Participation Type<br />
-**LogicalName**: participationtypemask<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Role of the person in the activity, such as sender, to, cc, bcc, required, optional, organizer, regarding, or owner.|
+|DisplayName|Participation Type|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|participationtypemask|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Sender
-- **Value**: 2 **Label**: To Recipient
-- **Value**: 3 **Label**: CC Recipient
-- **Value**: 4 **Label**: BCC Recipient
-- **Value**: 5 **Label**: Required attendee
-- **Value**: 6 **Label**: Optional attendee
-- **Value**: 7 **Label**: Organizer
-- **Value**: 8 **Label**: Regarding
-- **Value**: 9 **Label**: Owner
-- **Value**: 10 **Label**: Resource
-- **Value**: 11 **Label**: Customer
+#### ParticipationTypeMask Options
+
+|Value|Label|
+|-----|-----|
+|1|Sender|
+|2|To Recipient|
+|3|CC Recipient|
+|4|BCC Recipient|
+|5|Required attendee|
+|6|Optional attendee|
+|7|Organizer|
+|8|Regarding|
+|9|Owner|
+|10|Resource|
+|11|Customer|
 
 
 
 ### <a name="BKMK_PartyId"></a> PartyId
 
-**Description**: Unique identifier of the party associated with the activity.<br />
-**DisplayName**: Party<br />
-**LogicalName**: partyid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: account,contact,knowledgearticle,queue,systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the party associated with the activity.|
+|DisplayName|Party|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|partyid|
+|RequiredLevel|None|
+|Targets|account,contact,knowledgearticle,queue,systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_PartyIdName"></a> PartyIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: partyidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 400
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|partyidname|
+|MaxLength|400|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_PartyObjectTypeCode"></a> PartyObjectTypeCode
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: partyobjecttypecode<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|partyobjecttypecode|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AddressUsedEmailColumnNumber](#BKMK_AddressUsedEmailColumnNumber)
@@ -205,204 +231,255 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_AddressUsedEmailColumnNumber"></a> AddressUsedEmailColumnNumber
 
-**Description**: Email address column number from associated party.<br />
-**DisplayName**: Email column number of party<br />
-**LogicalName**: addressusedemailcolumnnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: 1
+|Property|Value|
+|--------|-----|
+|Description|Email address column number from associated party.|
+|DisplayName|Email column number of party|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|addressusedemailcolumnnumber|
+|MaxValue|2147483647|
+|MinValue|1|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_DoNotEmail"></a> DoNotEmail
 
-**Description**: Information about whether to allow sending email to the activity party.<br />
-**DisplayName**: Do not allow Emails<br />
-**LogicalName**: donotemail<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Information about whether to allow sending email to the activity party.|
+|DisplayName|Do not allow Emails|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|donotemail|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Do Not Allow
-- **FalseOption Value**: 0 **Label**: Allow
+#### DoNotEmail Options
+
+|Value|Label|
+|-----|-----|
+|1|Do Not Allow|
+|0|Allow|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_DoNotFax"></a> DoNotFax
 
-**Description**: Information about whether to allow sending faxes to the activity party.<br />
-**DisplayName**: Do not allow Faxes<br />
-**LogicalName**: donotfax<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Information about whether to allow sending faxes to the activity party.|
+|DisplayName|Do not allow Faxes|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|donotfax|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Do Not Allow
-- **FalseOption Value**: 0 **Label**: Allow
+#### DoNotFax Options
+
+|Value|Label|
+|-----|-----|
+|1|Do Not Allow|
+|0|Allow|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_DoNotPhone"></a> DoNotPhone
 
-**Description**: Information about whether to allow phone calls to the lead.<br />
-**DisplayName**: Do not allow Phone Calls<br />
-**LogicalName**: donotphone<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Information about whether to allow phone calls to the lead.|
+|DisplayName|Do not allow Phone Calls|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|donotphone|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Do Not Allow
-- **FalseOption Value**: 0 **Label**: Allow
+#### DoNotPhone Options
+
+|Value|Label|
+|-----|-----|
+|1|Do Not Allow|
+|0|Allow|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_DoNotPostalMail"></a> DoNotPostalMail
 
-**Description**: Information about whether to allow sending postal mail to the lead.<br />
-**DisplayName**: Do not allow Postal Mails<br />
-**LogicalName**: donotpostalmail<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Information about whether to allow sending postal mail to the lead.|
+|DisplayName|Do not allow Postal Mails|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|donotpostalmail|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Do Not Allow
-- **FalseOption Value**: 0 **Label**: Allow
+#### DoNotPostalMail Options
+
+|Value|Label|
+|-----|-----|
+|1|Do Not Allow|
+|0|Allow|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_InstanceTypeCode"></a> InstanceTypeCode
 
-**Description**: Type of instance of a recurring series.<br />
-**DisplayName**: Appointment Type<br />
-**LogicalName**: instancetypecode<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Type of instance of a recurring series.|
+|DisplayName|Appointment Type|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|instancetypecode|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: Not Recurring
-- **Value**: 1 **Label**: Recurring Master
-- **Value**: 2 **Label**: Recurring Instance
-- **Value**: 3 **Label**: Recurring Exception
-- **Value**: 4 **Label**: Recurring Future Exception
+#### InstanceTypeCode Options
+
+|Value|Label|
+|-----|-----|
+|0|Not Recurring|
+|1|Recurring Master|
+|2|Recurring Instance|
+|3|Recurring Exception|
+|4|Recurring Future Exception|
 
 
 
 ### <a name="BKMK_IsPartyDeleted"></a> IsPartyDeleted
 
-**Description**: Information about whether the underlying entity record is deleted.<br />
-**DisplayName**: Is Party Deleted<br />
-**LogicalName**: ispartydeleted<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Information about whether the underlying entity record is deleted.|
+|DisplayName|Is Party Deleted|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ispartydeleted|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### IsPartyDeleted Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Description**: Unique identifier of the user or team who owns the activity_party.<br />
-**DisplayName**: Owner<br />
-**LogicalName**: ownerid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**Type**: Owner<br />
-**Targets**: systemuser,team
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user or team who owns the activity_party.|
+|DisplayName|Owner|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ownerid|
+|RequiredLevel|ApplicationRequired|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridtype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owningbusinessunit<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: False<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|owningbusinessunit|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owninguser<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: False<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|owninguser|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_ScheduledEnd"></a> ScheduledEnd
 
-**Description**: Scheduled end time of the activity.<br />
-**DisplayName**: Scheduled End<br />
-**LogicalName**: scheduledend<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateOnly
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Scheduled end time of the activity.|
+|DisplayName|Scheduled End|
+|Format|DateOnly|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|scheduledend|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ScheduledStart"></a> ScheduledStart
 
-**Description**: Scheduled start time of the activity.<br />
-**DisplayName**: Scheduled Start<br />
-**LogicalName**: scheduledstart<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateOnly
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Scheduled start time of the activity.|
+|DisplayName|Scheduled Start|
+|Format|DateOnly|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|scheduledstart|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: versionnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: BigInt<br />
-**MaxValue**: 9223372036854775807<br />
-**MinValue**: -9223372036854775808<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 <a name="onetomany"></a>
 
@@ -410,60 +487,20 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 Listed by **SchemaName**.
 
-- [userentityinstancedata_activityparty](#BKMK_userentityinstancedata_activityparty)
-- [ActivityParty_SyncErrors](#BKMK_ActivityParty_SyncErrors)
-
-
-### <a name="BKMK_userentityinstancedata_activityparty"></a> userentityinstancedata_activityparty
-
-Same as userentityinstancedata entity [userentityinstancedata_activityparty](userentityinstancedata.md#BKMK_userentityinstancedata_activityparty) Many-To-One relationship.
-
-**ReferencingEntity**: userentityinstancedata<br />
-**ReferencingAttribute**: objectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: userentityinstancedata_activityparty<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
-
 
 ### <a name="BKMK_ActivityParty_SyncErrors"></a> ActivityParty_SyncErrors
 
 Same as syncerror entity [ActivityParty_SyncErrors](syncerror.md#BKMK_ActivityParty_SyncErrors) Many-To-One relationship.
 
-**ReferencingEntity**: syncerror<br />
-**ReferencingAttribute**: regardingobjectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: True<br />
-**ReferencedEntityNavigationPropertyName**: ActivityParty_SyncErrors<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: Cascade
-- **Delete**: Cascade
-- **Merge**: Cascade
-- **Reparent**: Cascade
-- **Share**: Cascade
-- **Unshare**: Cascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|syncerror|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|ActivityParty_SyncErrors|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 
@@ -542,5 +579,9 @@ See fax Entity [fax_activity_parties](fax.md#BKMK_fax_activity_parties) One-To-M
 ### <a name="BKMK_activitypointer_activity_parties"></a> activitypointer_activity_parties
 
 See activitypointer Entity [activitypointer_activity_parties](activitypointer.md#BKMK_activitypointer_activity_parties) One-To-Many relationship.
-activityparty
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.activityparty?text=activityparty EntityType" />
