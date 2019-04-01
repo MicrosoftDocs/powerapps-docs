@@ -46,7 +46,7 @@ search.app:
   > The latest version of the view designer is currently in preview. Some features like enabling or disabling presence for a column and adding a find column are not yet supported. To accomplish these tasks, [open the view in the classic view designer](/dynamics365/customer-engagement/customize/create-and-edit-views#open-the-classic-view-designer).
   >  -   [Enable or disable presence for a column](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_EnableOrDisablePresence)  
   >
-  >  -   [Add find columns](choose-and-configure-columns.md#BKMK_AddFindColumns)  
+  >  -   [Add find columns](choose-and-configure-columns.md#BKMK_AddFindColumns) 
 
 
 
@@ -111,6 +111,20 @@ Click and drag the column header to the correct position.
   
 > [!TIP]
 >   You can also select the header of the column you want to move and from the dropdown select **Move Right** or **Move Left**.  
+
+<a name="BKMK_AddFindColumns"></a>  
+### Add find columns
+
+Find columns are the columns searched by an application when people use the search for records text box displayed for lists or whenever there is the ability to search for records for an entity in an application, such as when people are searching for a record for a lookup field.
+
+    1. Open a Quick Find view. For information on quick find views, see [System views](create-edit-views.md#system-views) Types of views.
+
+    2. Select **Add Find Columns** to open the dialog box.
+
+    3. Select the fields that contain the data that you want to search for.
+
+    4. Select **OK** to close the **Add Find Columns** dialog box.
+
   
 ## Next steps
 [Create or edit views](create-edit-views.md)
