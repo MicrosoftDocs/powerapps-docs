@@ -142,7 +142,7 @@ To add a custom control like data-set control or simple table control to a grid 
 The feature team is aggregating anonymized telemetry in order to understand which features or capabilities in the PowerApps CLI tool are most often used by the developers. The aggregated data allows to provide the best experience to the customers by focusing on what’s truly is important.
 
 > [!NOTE]
-> To disable the telemetry collection, run the command `pac telemetry - -enabled false`. To turn the telemetry back, use the command `pac telemetry- -enabled true`.
+> To disable the telemetry collection, run the command `pac telemetry --enable false`. To turn the telemetry back, use the command `pac telemetry --enable true`.
 
 ## How to Uninstall
 To uninstall the CLI tool please follow below steps:
