@@ -117,14 +117,13 @@ Click and drag the column header to the correct position.
 
 Find columns are the columns searched by an application when people use the search for records text box displayed for lists or whenever there is the ability to search for records for an entity in an application, such as when people are searching for a record for a lookup field.
 
-    1. Open a Quick Find view. For information on quick find views, see [System views](create-edit-views.md#system-views) Types of views.
+1. Open a Quick Find view. For information on quick find views, see [System views](create-edit-views.md#system-views) Types of views.
 
-    2. Select **Add Find Columns** to open the dialog box.
+2. Select **Add Find Columns** to open the dialog box.
 
-    3. Select the fields that contain the data that you want to search for.
+3. Select the fields that contain the data that you want to search for.
 
-    4. Select **OK** to close the **Add Find Columns** dialog box.
-
+4. Select **OK** to close the **Add Find Columns** dialog box.
   
 ## Next steps
 [Create or edit views](create-edit-views.md)
