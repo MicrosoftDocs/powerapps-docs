@@ -28,7 +28,7 @@ This sample shows how to create new records by using data import. The sample use
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+In order to simulate the scenario described above, the sample will do the following:
 
 ### Setup
 
