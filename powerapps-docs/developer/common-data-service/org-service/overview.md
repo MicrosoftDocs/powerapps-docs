@@ -25,7 +25,7 @@ The organization service is optimized for use with the .NET Framework and the SD
 Some extension capabilities, such as plug-ins and workflow extensions, depend on the .NET Framework and classes defined in these assemblies so the organization service is the only option when using these methods to extend Common Data Service.
 
 > [!NOTE]
-> The general Organization service programming documentation that is relevant to an online or on-premise server is available in the [Common Data Service](/powerapps/developer/common-data-service/org-service/overview) documentation set. To learn about accessing the Organization service through application code, start by reading the documentation under Common Data Service, and then if you are targeting an on-premise or IFD deployment, read the additional documentation in [Customer Engagement](/customer-engagement/developer/use-microsoft-dynamics-365-organization-service).
+> [!INCLUDE[cc-d365ce-note-section](../includes/cc-d365ce-note-section.md)] [Use the Dynamics 365 for Customer Engagement Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)
 
 ## Organization service assemblies
 
