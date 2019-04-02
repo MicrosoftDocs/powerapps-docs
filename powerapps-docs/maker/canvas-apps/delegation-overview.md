@@ -56,7 +56,7 @@ Within the **Filter** and **LookUp** functions, you can use these with columns o
 * **[StartsWith](functions/function-startswith.md)**
 * Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
 
-You can also use portions of your formula that evaluate to a constant value for all records. For example, **Left( Language(), 2 )** doesn't depend on any columns of the record and, therefore, returns the same value for all records. It's effectively a constant. Use of context variables, collections, and signals may not be constant and, therefore, will prevent **Filter** and **LookUp** from being delegated.  
+You can also use portions of your formula that evaluate to a constant value for all records. For example **Left( Language(), 2 )**, **Date( 2019, 3, 31 )**, and **Today()** don't depend on any columns of the record and, therefore, return the same value for all records.  These values can be sent to the data source as a constant and will not block delegation. 
 
 The previous list doesn't include these notable items:
 
@@ -66,7 +66,7 @@ The previous list doesn't include these notable items:
 * **[ExactIn](functions/operators.md)**
 * String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
 * Signals: **[Location](functions/signals.md)**, **[Acceleration](functions/signals.md)**, **[Compass](functions/signals.md)**, ...
-* Volatiles: **[Now](functions/function-now-today-istoday.md)**, **[Today](functions/function-now-today-istoday.md)**, **[Rand](functions/function-rand.md)**, ...
+* Volatiles: **[Rand](functions/function-rand.md)**, ...
 * [Collections](working-with-variables.md)
 
 ### Sorting functions
@@ -75,9 +75,9 @@ The previous list doesn't include these notable items:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](delegation-list.md) for details.
+**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, **[Max](functions/function-aggregates.md)**, and **[CountRows](functions/function-table-counts.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](delegation-list.md) for details.
 
-Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
+Other counting functions such as **[CountA](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)** can't be delegated.
 
 Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** can't be delegated.
 
