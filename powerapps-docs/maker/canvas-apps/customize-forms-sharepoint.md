@@ -113,7 +113,7 @@ If you're unfamiliar with canvas-pps, see [What are canvas apps?](getting-starte
     > [!div class="mx-imgBorder"]
     > ![Delete record](./media/customize-forms-sharepoint/delete-record.png)
 
-1. Close Preview mode by pressing Esc (or by clicking or tapping the close icon near the upper-left corner).
+1. Close Preview mode by pressing Esc (or by selecting the close icon near the upper-left corner).
 
 ## Next steps
 
