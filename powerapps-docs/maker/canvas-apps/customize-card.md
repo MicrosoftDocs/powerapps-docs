@@ -22,12 +22,12 @@ For an overview, see [Understand data cards](working-with-cards.md).
 
 ## Prerequisites
 
-* Learn how to [add and configure controls](add-configure-controls.md).
-* You can review this topic for general concepts only, or you can follow it step by step if you first complete the procedures in these topics:
+- Learn how to [add and configure controls](add-configure-controls.md).
+- You can review this topic for general concepts only, or you can follow it step by step if you first complete the procedures in these topics:
 
-  1. [Generate an app](data-platform-create-app.md).
-  2. [Customize its gallery](customize-layout-sharepoint.md).
-  3. [Customize its forms](customize-forms-sharepoint.md).
+    1. [Generate an app](data-platform-create-app.md).
+    1. [Customize its gallery](customize-layout-sharepoint.md).
+    1. [Customize its forms](customize-forms-sharepoint.md).
 
 ## Customize a locked card
 
@@ -37,55 +37,39 @@ In this procedure, you'll replace a **[Text-input](controls/control-text-input.m
 
 1. In the list of fields, select the down arrow for **Number of Employees**, and then open the list under **Control type**.
 
-    ![Drop-down list of options for a number card](./media/customize-card/card-selector.png)
+    > [!div class="mx-imgBorder"]
+    > ![Drop-down list of options for a number card](./media/customize-card/card-selector.png)
 
 1. Select **Edit Slider**.
 
     The screen reflects your change.
 
-    ![EditForm1 with slider control](./media/customize-card/add-slider.png)
-
-    You might need to unlock the card and change the **Slider** control's **Max** property to accommodate the range of values in this field.
+    > [!div class="mx-imgBorder"]
+    > ![EditForm1 with slider control](./media/customize-card/add-slider.png)
 
 ## Unlock and customize a card
 
-In this procedure, you'll unlock a card and then replace a **[Toggle](controls/control-toggle.md)** control with a **[Checkbox](controls/control-check-box.md)** control.
+In this procedure, you'll unlock a card and update the **Max** property of the **Slider** control that you just added.
 
-1. In **EditForm1**, show the **Send Marketing Materials** field.
+1. In **EditForm1**, select the **Slider** control in the **Number of Employees** card.
 
-    ![Show field for Send Marketing Materials](./media/customize-card/show-field.png)
+    > [!div class="mx-imgBorder"]
+    > ![Select the slider](./media/customize-card/select-slider.png)
 
-1. With that card selected, select **Advanced** near the top of the right-hand pane, and then select the lock icon to unlock the card.
+1. On the **Advanced** tab of the right-hand pane, select the lock icon to unlock the card.
 
-    ![Show field for Send Marketing Materials](./media/customize-card/unlock-card.png)
+    > [!div class="mx-imgBorder"]
+    > ![Unlock card](./media/customize-card/lock-icon.png)
 
-1. In the card, delete the **Toggle** control, add a **Check box** control, and name the new control **chkMktg**.
+1. Set the **Max** property of the **Slider** control to 10,000.
 
-    ![Replace toggle with checkbox](./media/customize-card/add-checkbox.png)
+    > [!div class="mx-imgBorder"]
+    > ![Max property on Advanced tab](./media/customize-card/max-property.png)
 
-1. Select the card that you just updated.
+    The **Slider** control shows a more accurate value.
 
-    ![Select card](./media/customize-card/select-card.png)
-
-1. In the right-hand pane, ensure that the **Advanced** tab is still showing, and then click or tap **More options**.
-
-    ![More options button](./media/customize-card/more-options.png)
-
-1. Change the value of the card's **Update** property to this expression:
-
-    `chkMktg.Value`
-
-1. Change value of the **Y** property of the error message for that card to this expression:
-
-    `chkMktg.Y + chkMktg.Height`
-
-    ![Select error message for new card](./media/customize-card/select-error.png)
-
-1. Change the value of the **Text** property of **chkMktg** to **Yes**.
-
-    The screen reflects your changes, and the errors are resolved.
-
-    ![Final screen with errors resolved](./media/customize-card/final-screen.png)
+    > [!div class="mx-imgBorder"]
+    > ![Slider range: 0-10,000](./media/customize-card/final-slider.png)
 
 ## Next steps
 
