@@ -98,9 +98,10 @@ For some entities, such as account and user, the visualizations are provided out
   
 ### Visualization example  
  Let’s look at an example of creating the visualization for a custom entity. We created a custom entity called new_Widget, created a self-referential relationship and marked it as hierarchical, as shown here.  
-  
- ![Widget relationship definition](media/widget-relationship-definition.png "Widget relationship definition")  
-  
+ 
+> [!div class="mx-imgBorder"] 
+> ![Widget relationship definition](media/widget-relationship-definition.png "Widget relationship definition")  
+   
  Next, in the **Hierarchy Settings** grid view, we selected the **Widget_new_Widget_new_Widget** hierarchical relationship. In the form, we filled in the required fields. If you haven’t yet marked the relationship as hierarchical, the link on the form will take you to the classic entity editor, where you can also mark the relationship as hierarchical.  
   
  For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four fields to display in each tile.  
