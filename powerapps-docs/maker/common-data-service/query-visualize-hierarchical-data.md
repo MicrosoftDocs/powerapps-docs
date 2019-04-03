@@ -85,7 +85,7 @@ For some entities, such as account and user, the visualizations are provided out
   
  Important things to remember when you create visualizations:  
   
--   Only one (1: N) self-referential relationship per entity can be set as hierarchical. In this relationship the primary entity and the related entity must be of the same type, such as account_parent_account or new_new_widget_new_widget.  
+-   Only one (1: N) self-referential relationship per entity can be set as hierarchical. In this relationship the primary entity and the related entity must be of the same type, such as account_parent_account or Widget_new_Widget_new_Widget.  
   
 -   Presently, a hierarchy or visualization is based on one entity only. You can depict the account hierarchy showing accounts at multiple levels, but you can’t show accounts and contacts in the same hierarchy visualization.  
   
@@ -96,7 +96,7 @@ For some entities, such as account and user, the visualizations are provided out
   
  ![Widget relationship definition](media/widget-relationship-definition.png "Widget relationship definition")  
   
- Next, in the **Hierarchy Settings** grid view, we selected the **new_new_widget_new_widget** hierarchical relationship. In the form, we filled in the required fields. If you haven’t yet marked the (1:N) relationship as hierarchical, the link on the form will take you back to the relationship definition form, where you can mark the relationship as hierarchical.  
+ Next, in the **Hierarchy Settings** grid view, we selected the **Widget_new_Widget_new_Widget** hierarchical relationship. In the form, we filled in the required fields. If you haven’t yet marked the (1:N) relationship as hierarchical, the link on the form will take you back to the relationship definition form, where you can mark the relationship as hierarchical.  
   
  For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four fields to display in each tile.  
   
