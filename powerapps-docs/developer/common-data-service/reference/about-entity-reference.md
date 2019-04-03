@@ -1,20 +1,14 @@
 ---
 title: "About Entity Reference (Common Data Service)| Microsoft Docs"
 description: "Use this reference to understand the available operations that can be performed for specific entities, the default attributes attributes of each entity and the relationships between entities."
-services: ''
-suite: powerapps
-documentationcenter: na
 author: JimDaly
 manager: kvivek
-editor: ''
-tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
+ms.date: 03/31/2019
 ms.author: jdaly
+ms.reviewer: kvivek
 search.audienceType: 
   - developer
 search.app: 

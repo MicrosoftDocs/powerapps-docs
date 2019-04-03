@@ -1,20 +1,13 @@
 ---
-title: "SyncError Entity Reference (Common Data Service)| Microsoft Docs"
+title: "SyncError Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the SyncError entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,19 +18,36 @@ search.app:
 
 Failure reason and other detailed information for a record that failed to sync.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Assign|PATCH [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/syncerrors<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/syncerrors<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/syncerrors(*syncerrorid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+
 ## Entity Properties
 
-**DisplayName**: Sync Error<br />
-**DisplayCollectionName**: Sync Errors<br />
-**SchemaName**: SyncError<br />
-**CollectionSchemaName**: SyncErrors<br />
-**LogicalName**: syncerror<br />
-**LogicalCollectionName**: syncerrors<br />
-**EntitySetName**: syncerrors<br />
-**PrimaryIdAttribute**: syncerrorid<br />
-**PrimaryNameAttribute**: name<br />
-**OwnershipType**: UserOwned<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|SyncErrors|
+|DisplayCollectionName|Sync Errors|
+|DisplayName|Sync Error|
+|EntitySetName|syncerrors|
+|IsBPFEntity|False|
+|LogicalCollectionName|syncerrors|
+|LogicalName|syncerror|
+|OwnershipType|UserOwned|
+|PrimaryIdAttribute|syncerrorid|
+|PrimaryNameAttribute|name|
+|SchemaName|SyncError|
+
 <a name="writable-attributes"></a>
 
 ## Writable attributes
@@ -66,263 +76,310 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_Action"></a> Action
 
-**Description**: Action Name for which sync error has occurred<br />
-**DisplayName**: Action<br />
-**LogicalName**: action<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description|Action Name for which sync error has occurred|
+|DisplayName|Action|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|action|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ActionData"></a> ActionData
 
-**Description**: Show the action data<br />
-**DisplayName**: Action Data<br />
-**LogicalName**: actiondata<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: String<br />
-**FormatName**: TextArea<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 10000
+|Property|Value|
+|--------|-----|
+|Description|Show the action data|
+|DisplayName|Action Data|
+|FormatName|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|actiondata|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Description"></a> Description
 
-**Description**: Enter a short description of the sync error.<br />
-**DisplayName**: Description<br />
-**LogicalName**: description<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Memo<br />
-**Format**: TextArea<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 4000
+|Property|Value|
+|--------|-----|
+|Description|Enter a short description of the sync error.|
+|DisplayName|Description|
+|Format|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|description|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ErrorCode"></a> ErrorCode
 
-**Description**: Displays the error code.<br />
-**DisplayName**: Error Code<br />
-**LogicalName**: errorcode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: Memo<br />
-**Format**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description|Displays the error code.|
+|DisplayName|Error Code|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|errorcode|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ErrorDetail"></a> ErrorDetail
 
-**Description**: Error description from the exception<br />
-**DisplayName**: Error Detail<br />
-**LogicalName**: errordetail<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: Memo<br />
-**Format**: TextArea<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 1073741823
+|Property|Value|
+|--------|-----|
+|Description|Error description from the exception|
+|DisplayName|Error Detail|
+|Format|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|errordetail|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_ErrorMessage"></a> ErrorMessage
 
-**Description**: Error Message of the exception<br />
-**DisplayName**: Error Message<br />
-**LogicalName**: errormessage<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: String<br />
-**FormatName**: TextArea<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 1000
+|Property|Value|
+|--------|-----|
+|Description|Error Message of the exception|
+|DisplayName|Error Message|
+|FormatName|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|errormessage|
+|MaxLength|1000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ErrorTime"></a> ErrorTime
 
-**Description**: Date and time when the upsync request was executed on CRM server<br />
-**DisplayName**: Error Time<br />
-**LogicalName**: errortime<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the upsync request was executed on CRM server|
+|DisplayName|Error Time|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|errortime|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ErrorType"></a> ErrorType
 
-**Description**: Select the preferred error type.<br />
-**DisplayName**: Error Type<br />
-**LogicalName**: errortype<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the preferred error type.|
+|DisplayName|Error Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|errortype|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: Conflict
-- **Value**: 1 **Label**: Record not found
-- **Value**: 2 **Label**: Record already exists
-- **Value**: 3 **Label**: Others
+#### ErrorType Options
+
+|Value|Label|
+|-----|-----|
+|0|Conflict|
+|1|Record not found|
+|2|Record already exists|
+|3|Others|
 
 
 
 ### <a name="BKMK_Name"></a> Name
 
-**Description**: Entity name of the record for which sync error has occurred<br />
-**DisplayName**: Entity<br />
-**LogicalName**: name<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description|Entity name of the record for which sync error has occurred|
+|DisplayName|Entity|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|name|
+|MaxLength|100|
+|RequiredLevel|ApplicationRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Description**: Unique identifier of the user or team who owns the sync error.<br />
-**DisplayName**: Owner<br />
-**LogicalName**: ownerid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Owner<br />
-**Targets**: systemuser,team
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user or team who owns the sync error.|
+|DisplayName|Owner|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|ownerid|
+|RequiredLevel|SystemRequired|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridtype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_RegardingObjectId"></a> RegardingObjectId
 
-**Description**: Choose the record that the sync error relates to.<br />
-**DisplayName**: Record<br />
-**LogicalName**: regardingobjectid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: Lookup<br />
-**Targets**: account,activitymimeattachment,activityparty,annotation,appointment,attachment,businessdatalocalizedlabel,businessunit,category,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,connection,connectionrole,contact,customeraddress,duplicaterule,duplicaterulecondition,email,emailserverprofile,expiredprocess,externalparty,externalpartyitem,fax,feedback,fieldpermission,fieldsecurityprofile,goal,goalrollupquery,importmap,internaladdress,kbarticle,kbarticletemplate,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,newprocess,offlinecommanddefinition,organization,phonecall,position,postfollow,processsession,processstage,processtrigger,publisher,queue,queueitem,recurringappointmentmaster,report,reportcategory,role,rollupfield,savedquery,savedqueryvisualization,sharepointdocumentlocation,sharepointsite,sla,slaitem,slakpiinstance,socialactivity,socialprofile,solution,subject,syncerror,systemuser,task,team,teamtemplate,template,territory,transactioncurrency,translationprocess,userquery,userqueryvisualization,workflow
+|Property|Value|
+|--------|-----|
+|Description|Choose the record that the sync error relates to.|
+|DisplayName|Record|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|regardingobjectid|
+|RequiredLevel|None|
+|Targets|account,activitymimeattachment,activityparty,annotation,appointment,attachment,businessdatalocalizedlabel,businessunit,category,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,connection,connectionrole,contact,customeraddress,duplicaterule,duplicaterulecondition,email,emailserverprofile,expiredprocess,externalparty,externalpartyitem,fax,feedback,fieldpermission,fieldsecurityprofile,fileattachment,goal,goalrollupquery,holidaywrapper,importmap,internaladdress,kbarticle,kbarticletemplate,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,msdyn_connector,newprocess,offlinecommanddefinition,organization,phonecall,position,postfollow,processsession,processstage,processtrigger,publisher,queue,queueitem,recurringappointmentmaster,report,reportcategory,role,rollupfield,savedquery,savedqueryvisualization,sharepointdocumentlocation,sharepointsite,sla,slaitem,slakpiinstance,socialactivity,socialprofile,solution,subject,syncerror,systemuser,task,team,teamtemplate,template,territory,transactioncurrency,translationprocess,userquery,userqueryvisualization,workflow|
+|Type|Lookup|
 
 
 ### <a name="BKMK_RegardingObjectIdName"></a> RegardingObjectIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: regardingobjectidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 4000
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|regardingobjectidname|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: regardingobjecttypecode<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|regardingobjecttypecode|
+|RequiredLevel|None|
+|Type|EntityName|
 
 
 ### <a name="BKMK_RequestData"></a> RequestData
 
-**Description**: Request data for the entity that had the sync error.<br />
-**DisplayName**: Request Data<br />
-**LogicalName**: requestdata<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Memo<br />
-**Format**: TextArea<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 1073741823
+|Property|Value|
+|--------|-----|
+|Description|Request data for the entity that had the sync error.|
+|DisplayName|Request Data|
+|Format|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|requestdata|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
-**Description**: Shows whether the sync error is active or resolved.<br />
-**DisplayName**: State<br />
-**LogicalName**: statecode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: State<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Shows whether the sync error is active or resolved.|
+|DisplayName|State|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statecode|
+|RequiredLevel|SystemRequired|
+|Type|State|
 
-- **Value**: 0 **Label**: Active **DefaultStatus**: 0 **InvariantName**: Active
-- **Value**: 1 **Label**: Resolved **DefaultStatus**: 1 **InvariantName**: Resolved
+#### StateCode Options
+
+|Value|Label|DefaultStatus|InvariantName|
+|-----|-----|-------------|-------------|
+|0|Active|0|Active|
+|1|Resolved|1|Resolved|
 
 
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
-**Description**: Select the sync error status.<br />
-**DisplayName**: Status Reason<br />
-**LogicalName**: statuscode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Status<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the sync error status.|
+|DisplayName|Status Reason|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statuscode|
+|RequiredLevel|None|
+|Type|Status|
 
-- **Value**: 0 **Label**: Active **State**: 0
-- **Value**: 1 **Label**: Fixed **State**: 1
+#### StatusCode Options
+
+|Value|Label|State|
+|-----|-----|-----|
+|0|Active|0|
+|1|Fixed|1|
 
 
 
 ### <a name="BKMK_SyncErrorId"></a> SyncErrorId
 
-**Description**: Unique identifier of the sync error.<br />
-**DisplayName**: Sync Error Id<br />
-**LogicalName**: syncerrorid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the sync error.|
+|DisplayName|Sync Error Id|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|syncerrorid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
@@ -350,279 +407,321 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Description**: Unique identifier of the user who created the sync error.<br />
-**DisplayName**: Created By<br />
-**LogicalName**: createdby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who created the sync error.|
+|DisplayName|Created By|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
-**Description**: Date and time when the sync Error was created.<br />
-**DisplayName**: Created On<br />
-**LogicalName**: createdon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the sync Error was created.|
+|DisplayName|Created On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdon|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Description**: Unique identifier of the delegate user who created the sync error.<br />
-**DisplayName**: Created By (Delegate)<br />
-**LogicalName**: createdonbehalfby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the delegate user who created the sync error.|
+|DisplayName|Created By (Delegate)|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Description**: Unique identifier of the user who last modified the sync error.<br />
-**DisplayName**: Modified By<br />
-**LogicalName**: modifiedby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who last modified the sync error.|
+|DisplayName|Modified By|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
-**Description**: Date and time when the sync error was last modified.<br />
-**DisplayName**: Modified On<br />
-**LogicalName**: modifiedon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the sync error was last modified.|
+|DisplayName|Modified On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedon|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Description**: Unique identifier of the delegate user who last modified the sync error.<br />
-**DisplayName**: Modified By (Delegate)<br />
-**LogicalName**: modifiedonbehalfby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the delegate user who last modified the sync error.|
+|DisplayName|Modified By (Delegate)|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridyominame|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Description**: Business unit that owns the sync error.<br />
-**DisplayName**: Owning Business Unit<br />
-**LogicalName**: owningbusinessunit<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: businessunit
+|Property|Value|
+|--------|-----|
+|Description|Business unit that owns the sync error.|
+|DisplayName|Owning Business Unit|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunit|
+|RequiredLevel|None|
+|Targets|businessunit|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Description**: Unique identifier of the team who owns the sync error.<br />
-**DisplayName**: Owning Team<br />
-**LogicalName**: owningteam<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: team
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the team who owns the sync error.|
+|DisplayName|Owning Team|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|owningteam|
+|RequiredLevel|None|
+|Targets|team|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Description**: Unique identifier of the user who owns the sync error.<br />
-**DisplayName**: Owning User<br />
-**LogicalName**: owninguser<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who owns the sync error.|
+|DisplayName|Owning User|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|owninguser|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_RegardingObjectIdYomiName"></a> RegardingObjectIdYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: regardingobjectidyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 4000
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|regardingobjectidyominame|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Description**: Shows the version number of the sync error.<br />
-**DisplayName**: Version Number<br />
-**LogicalName**: versionnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: BigInt<br />
-**MaxValue**: 9223372036854775807<br />
-**MinValue**: -9223372036854775808<br />
+|Property|Value|
+|--------|-----|
+|Description|Shows the version number of the sync error.|
+|DisplayName|Version Number|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 <a name="onetomany"></a>
 
@@ -635,26 +734,15 @@ Listed by **SchemaName**.
 
 Same as syncerror entity [SyncError_SyncErrors](syncerror.md#BKMK_SyncError_SyncErrors) Many-To-One relationship.
 
-**ReferencingEntity**: syncerror<br />
-**ReferencingAttribute**: regardingobjectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: True<br />
-**ReferencedEntityNavigationPropertyName**: SyncError_SyncErrors<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: Cascade
-- **Delete**: Cascade
-- **Merge**: Cascade
-- **Reparent**: Cascade
-- **Share**: Cascade
-- **Unshare**: Cascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|syncerror|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|SyncError_SyncErrors|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 
@@ -663,6 +751,7 @@ Same as syncerror entity [SyncError_SyncErrors](syncerror.md#BKMK_SyncError_Sync
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
 
 - [Territory_SyncErrors](#BKMK_Territory_SyncErrors)
+- [msdyn_connector_SyncErrors](#BKMK_msdyn_connector_SyncErrors)
 - [KnowledgeBaseRecord_SyncErrors](#BKMK_KnowledgeBaseRecord_SyncErrors)
 - [SocialProfile_SyncErrors](#BKMK_SocialProfile_SyncErrors)
 - [QueueItem_SyncErrors](#BKMK_QueueItem_SyncErrors)
@@ -676,14 +765,12 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Publisher_SyncErrors](#BKMK_Publisher_SyncErrors)
 - [DuplicateRule_SyncErrors](#BKMK_DuplicateRule_SyncErrors)
 - [Subject_SyncErrors](#BKMK_Subject_SyncErrors)
-- [ChannelAccessProfile_SyncErrors](#BKMK_ChannelAccessProfile_SyncErrors)
 - [UserQuery_SyncErrors](#BKMK_UserQuery_SyncErrors)
 - [MailMergeTemplate_SyncErrors](#BKMK_MailMergeTemplate_SyncErrors)
 - [SyncError_SyncErrors](#BKMK_SyncError_SyncErrors)
 - [SavedQuery_SyncErrors](#BKMK_SavedQuery_SyncErrors)
 - [lk_syncerrorbase_modifiedby](#BKMK_lk_syncerrorbase_modifiedby)
 - [lk_syncerrorbase_modifiedonbehalfby](#BKMK_lk_syncerrorbase_modifiedonbehalfby)
-- [ChannelAccessProfileRule_SyncErrors](#BKMK_ChannelAccessProfileRule_SyncErrors)
 - [TransactionCurrency_SyncErrors](#BKMK_TransactionCurrency_SyncErrors)
 - [SocialActivity_SyncErrors](#BKMK_SocialActivity_SyncErrors)
 - [CustomerAddress_SyncErrors](#BKMK_CustomerAddress_SyncErrors)
@@ -696,7 +783,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [RollupField_SyncErrors](#BKMK_RollupField_SyncErrors)
 - [KbArticleTemplate_SyncErrors](#BKMK_KbArticleTemplate_SyncErrors)
 - [Account_SyncErrors](#BKMK_Account_SyncErrors)
-- [OfflineCommandDefinition_SyncErrors](#BKMK_OfflineCommandDefinition_SyncErrors)
 - [FieldSecurityProfile_SyncErrors](#BKMK_FieldSecurityProfile_SyncErrors)
 - [UserQueryVisualization_SyncErrors](#BKMK_UserQueryVisualization_SyncErrors)
 - [FieldPermission_SyncErrors](#BKMK_FieldPermission_SyncErrors)
@@ -706,7 +792,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [KnowledgeArticleViews_SyncErrors](#BKMK_KnowledgeArticleViews_SyncErrors)
 - [Appointment_SyncErrors](#BKMK_Appointment_SyncErrors)
 - [SystemUser_SyncError](#BKMK_SystemUser_SyncError)
-- [ExternalParty_SyncErrors](#BKMK_ExternalParty_SyncErrors)
 - [Contact_SyncErrors](#BKMK_Contact_SyncErrors)
 - [ExpiredProcess_SyncErrors](#BKMK_ExpiredProcess_SyncErrors)
 - [Workflow_SyncErrors](#BKMK_Workflow_SyncErrors)
@@ -725,9 +810,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Position_SyncErrors](#BKMK_Position_SyncErrors)
 - [SharePointDocumentLocation_SyncErrors](#BKMK_SharePointDocumentLocation_SyncErrors)
 - [Report_SyncErrors](#BKMK_Report_SyncErrors)
-- [ExternalPartyItem_SyncErrors](#BKMK_ExternalPartyItem_SyncErrors)
 - [Connection_SyncErrors](#BKMK_Connection_SyncErrors)
-- [ChannelAccessProfileRuleItem_SyncErrors](#BKMK_ChannelAccessProfileRuleItem_SyncErrors)
 - [ProcessSession_SyncErrors](#BKMK_ProcessSession_SyncErrors)
 - [Category_SyncErrors](#BKMK_Category_SyncErrors)
 - [ConnectionRole_SyncErrors](#BKMK_ConnectionRole_SyncErrors)
@@ -750,7 +833,15 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_Territory_SyncErrors"></a> Territory_SyncErrors
 
+**Added by**: Application Common Solution
+
 See territory Entity [Territory_SyncErrors](territory.md#BKMK_Territory_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_connector_SyncErrors"></a> msdyn_connector_SyncErrors
+
+**Added by**: Power Connector Solution Solution
+
+See msdyn_connector Entity [msdyn_connector_SyncErrors](msdyn_connector.md#BKMK_msdyn_connector_SyncErrors) One-To-Many relationship.
 
 ### <a name="BKMK_KnowledgeBaseRecord_SyncErrors"></a> KnowledgeBaseRecord_SyncErrors
 
@@ -804,10 +895,6 @@ See duplicaterule Entity [DuplicateRule_SyncErrors](duplicaterule.md#BKMK_Duplic
 
 See subject Entity [Subject_SyncErrors](subject.md#BKMK_Subject_SyncErrors) One-To-Many relationship.
 
-### <a name="BKMK_ChannelAccessProfile_SyncErrors"></a> ChannelAccessProfile_SyncErrors
-
-See channelaccessprofile Entity [ChannelAccessProfile_SyncErrors](channelaccessprofile.md#BKMK_ChannelAccessProfile_SyncErrors) One-To-Many relationship.
-
 ### <a name="BKMK_UserQuery_SyncErrors"></a> UserQuery_SyncErrors
 
 See userquery Entity [UserQuery_SyncErrors](userquery.md#BKMK_UserQuery_SyncErrors) One-To-Many relationship.
@@ -831,10 +918,6 @@ See systemuser Entity [lk_syncerrorbase_modifiedby](systemuser.md#BKMK_lk_syncer
 ### <a name="BKMK_lk_syncerrorbase_modifiedonbehalfby"></a> lk_syncerrorbase_modifiedonbehalfby
 
 See systemuser Entity [lk_syncerrorbase_modifiedonbehalfby](systemuser.md#BKMK_lk_syncerrorbase_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_ChannelAccessProfileRule_SyncErrors"></a> ChannelAccessProfileRule_SyncErrors
-
-See channelaccessprofilerule Entity [ChannelAccessProfileRule_SyncErrors](channelaccessprofilerule.md#BKMK_ChannelAccessProfileRule_SyncErrors) One-To-Many relationship.
 
 ### <a name="BKMK_TransactionCurrency_SyncErrors"></a> TransactionCurrency_SyncErrors
 
@@ -884,10 +967,6 @@ See kbarticletemplate Entity [KbArticleTemplate_SyncErrors](kbarticletemplate.md
 
 See account Entity [Account_SyncErrors](account.md#BKMK_Account_SyncErrors) One-To-Many relationship.
 
-### <a name="BKMK_OfflineCommandDefinition_SyncErrors"></a> OfflineCommandDefinition_SyncErrors
-
-See offlinecommanddefinition Entity [OfflineCommandDefinition_SyncErrors](offlinecommanddefinition.md#BKMK_OfflineCommandDefinition_SyncErrors) One-To-Many relationship.
-
 ### <a name="BKMK_FieldSecurityProfile_SyncErrors"></a> FieldSecurityProfile_SyncErrors
 
 See fieldsecurityprofile Entity [FieldSecurityProfile_SyncErrors](fieldsecurityprofile.md#BKMK_FieldSecurityProfile_SyncErrors) One-To-Many relationship.
@@ -923,10 +1002,6 @@ See appointment Entity [Appointment_SyncErrors](appointment.md#BKMK_Appointment_
 ### <a name="BKMK_SystemUser_SyncError"></a> SystemUser_SyncError
 
 See systemuser Entity [SystemUser_SyncError](systemuser.md#BKMK_SystemUser_SyncError) One-To-Many relationship.
-
-### <a name="BKMK_ExternalParty_SyncErrors"></a> ExternalParty_SyncErrors
-
-See externalparty Entity [ExternalParty_SyncErrors](externalparty.md#BKMK_ExternalParty_SyncErrors) One-To-Many relationship.
 
 ### <a name="BKMK_Contact_SyncErrors"></a> Contact_SyncErrors
 
@@ -1000,17 +1075,9 @@ See sharepointdocumentlocation Entity [SharePointDocumentLocation_SyncErrors](sh
 
 See report Entity [Report_SyncErrors](report.md#BKMK_Report_SyncErrors) One-To-Many relationship.
 
-### <a name="BKMK_ExternalPartyItem_SyncErrors"></a> ExternalPartyItem_SyncErrors
-
-See externalpartyitem Entity [ExternalPartyItem_SyncErrors](externalpartyitem.md#BKMK_ExternalPartyItem_SyncErrors) One-To-Many relationship.
-
 ### <a name="BKMK_Connection_SyncErrors"></a> Connection_SyncErrors
 
 See connection Entity [Connection_SyncErrors](connection.md#BKMK_Connection_SyncErrors) One-To-Many relationship.
-
-### <a name="BKMK_ChannelAccessProfileRuleItem_SyncErrors"></a> ChannelAccessProfileRuleItem_SyncErrors
-
-See channelaccessprofileruleitem Entity [ChannelAccessProfileRuleItem_SyncErrors](channelaccessprofileruleitem.md#BKMK_ChannelAccessProfileRuleItem_SyncErrors) One-To-Many relationship.
 
 ### <a name="BKMK_ProcessSession_SyncErrors"></a> ProcessSession_SyncErrors
 
@@ -1083,5 +1150,9 @@ See importmap Entity [ImportMap_SyncErrors](importmap.md#BKMK_ImportMap_SyncErro
 ### <a name="BKMK_EmailServerProfile_SyncErrors"></a> EmailServerProfile_SyncErrors
 
 See emailserverprofile Entity [EmailServerProfile_SyncErrors](emailserverprofile.md#BKMK_EmailServerProfile_SyncErrors) One-To-Many relationship.
-syncerror
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.syncerror?text=syncerror EntityType" />

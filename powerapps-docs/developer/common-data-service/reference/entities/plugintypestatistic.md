@@ -1,20 +1,13 @@
 ---
-title: "PluginTypeStatistic Entity Reference (Common Data Service)| Microsoft Docs"
+title: "PluginTypeStatistic Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the PluginTypeStatistic entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,21 +18,34 @@ search.app:
 
 Plug-in type statistic.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Retrieve|GET [*org URI*]/api/data/v9.0/plugintypestatistics(*plugintypestatisticid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/plugintypestatistics<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+
 ## Entity Properties
 
-**DisplayName**: Plug-in Type Statistic<br />
-**DisplayCollectionName**: Plug-in Type Statistics<br />
-**SchemaName**: PluginTypeStatistic<br />
-**CollectionSchemaName**: PluginTypeStatistics<br />
-**LogicalName**: plugintypestatistic<br />
-**LogicalCollectionName**: plugintypestatistics<br />
-**EntitySetName**: plugintypestatistics<br />
-**PrimaryIdAttribute**: plugintypestatisticid<br />
-**PrimaryNameAttribute**: <br />
-**OwnershipType**: OrganizationOwned<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|PluginTypeStatistics|
+|DisplayCollectionName|Plug-in Type Statistics|
+|DisplayName|Plug-in Type Statistic|
+|EntitySetName|plugintypestatistics|
+|IsBPFEntity|False|
+|LogicalCollectionName|plugintypestatistics|
+|LogicalName|plugintypestatistic|
+|OwnershipType|OrganizationOwned|
+|PrimaryIdAttribute|plugintypestatisticid|
+|PrimaryNameAttribute||
+|SchemaName|PluginTypeStatistic|
+
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [AverageExecuteTimeInMilliseconds](#BKMK_AverageExecuteTimeInMilliseconds)
@@ -73,395 +79,417 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_AverageExecuteTimeInMilliseconds"></a> AverageExecuteTimeInMilliseconds
 
-**Description**: The average execution time (in milliseconds) for the plug-in type.<br />
-**DisplayName**: The average execution time<br />
-**LogicalName**: averageexecutetimeinmilliseconds<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|The average execution time (in milliseconds) for the plug-in type.|
+|DisplayName|The average execution time|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|averageexecutetimeinmilliseconds|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_CrashContributionPercent"></a> CrashContributionPercent
 
-**Description**: The plug-in type percentage contribution to crashes.<br />
-**DisplayName**: Percentage contribution to crashes<br />
-**LogicalName**: crashcontributionpercent<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 100<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|The plug-in type percentage contribution to crashes.|
+|DisplayName|Percentage contribution to crashes|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|crashcontributionpercent|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_CrashCount"></a> CrashCount
 
-**Description**: Number of times the plug-in type has crashed.<br />
-**DisplayName**: Number of times crashed<br />
-**LogicalName**: crashcount<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Number of times the plug-in type has crashed.|
+|DisplayName|Number of times crashed|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|crashcount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_CrashPercent"></a> CrashPercent
 
-**Description**: Percentage of crashes for the plug-in type.<br />
-**DisplayName**: Percentage of crashes<br />
-**LogicalName**: crashpercent<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 100<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Percentage of crashes for the plug-in type.|
+|DisplayName|Percentage of crashes|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|crashpercent|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Description**: Unique identifier of the user who created the plug-in type statistic.<br />
-**DisplayName**: Created By<br />
-**LogicalName**: createdby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who created the plug-in type statistic.|
+|DisplayName|Created By|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
-**Description**: Date and time when the plug-in type statistic was created.<br />
-**DisplayName**: Created On<br />
-**LogicalName**: createdon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the plug-in type statistic was created.|
+|DisplayName|Created On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Description**: Unique identifier of the delegate user who created the plug-in type statistic.<br />
-**DisplayName**: Created By (Delegate)<br />
-**LogicalName**: createdonbehalfby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the delegate user who created the plug-in type statistic.|
+|DisplayName|Created By (Delegate)|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ExecuteCount"></a> ExecuteCount
 
-**Description**: Number of times the plug-in type has been executed.<br />
-**DisplayName**: Execution Count<br />
-**LogicalName**: executecount<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Number of times the plug-in type has been executed.|
+|DisplayName|Execution Count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|executecount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_FailureCount"></a> FailureCount
 
-**Description**: Number of times the plug-in type has failed.<br />
-**DisplayName**: Failure Count<br />
-**LogicalName**: failurecount<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Number of times the plug-in type has failed.|
+|DisplayName|Failure Count|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|failurecount|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_FailurePercent"></a> FailurePercent
 
-**Description**: Percentage of failures for the plug-in type.<br />
-**DisplayName**: Failure Percent<br />
-**LogicalName**: failurepercent<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 100<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Percentage of failures for the plug-in type.|
+|DisplayName|Failure Percent|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|failurepercent|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Description**: Unique identifier of the user who last modified the plug-in type statistic.<br />
-**DisplayName**: Modified By<br />
-**LogicalName**: modifiedby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who last modified the plug-in type statistic.|
+|DisplayName|Modified By|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
-**Description**: Date and time when the plug-in type statistic was last modified.<br />
-**DisplayName**: Modified On<br />
-**LogicalName**: modifiedon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the plug-in type statistic was last modified.|
+|DisplayName|Modified On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Description**: Unique identifier of the delegate user who modified the plug-in type statistic.<br />
-**DisplayName**: Modified By (Delegate)<br />
-**LogicalName**: modifiedonbehalfby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the delegate user who modified the plug-in type statistic.|
+|DisplayName|Modified By (Delegate)|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
-**Description**: Unique identifier of the organization with which the plug-in type statistic is associated.<br />
-**DisplayName**: <br />
-**LogicalName**: organizationid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Lookup<br />
-**Targets**: organization
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the organization with which the plug-in type statistic is associated.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationid|
+|RequiredLevel|SystemRequired|
+|Targets|organization|
+|Type|Lookup|
 
 
 ### <a name="BKMK_PluginTypeId"></a> PluginTypeId
 
-**Description**: Unique identifier of the plug-in type associated with this plug-in type statistic.<br />
-**DisplayName**: Plugin Type<br />
-**LogicalName**: plugintypeid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Lookup<br />
-**Targets**: plugintype
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the plug-in type associated with this plug-in type statistic.|
+|DisplayName|Plugin Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|plugintypeid|
+|RequiredLevel|SystemRequired|
+|Targets|plugintype|
+|Type|Lookup|
 
 
 ### <a name="BKMK_PluginTypeIdName"></a> PluginTypeIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: plugintypeidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|plugintypeidname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_PluginTypeStatisticId"></a> PluginTypeStatisticId
 
-**Description**: Unique identifier of the plug-in type statistic.<br />
-**DisplayName**: <br />
-**LogicalName**: plugintypestatisticid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the plug-in type statistic.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|plugintypestatisticid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_TerminateCpuContributionPercent"></a> TerminateCpuContributionPercent
 
-**Description**: The plug-in type percentage contribution to Worker process termination due to excessive CPU usage.<br />
-**DisplayName**: Terminate CPU Contribution Percent<br />
-**LogicalName**: terminatecpucontributionpercent<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 100<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|The plug-in type percentage contribution to Worker process termination due to excessive CPU usage.|
+|DisplayName|Terminate CPU Contribution Percent|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|terminatecpucontributionpercent|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_TerminateHandlesContributionPercent"></a> TerminateHandlesContributionPercent
 
-**Description**: The plug-in type percentage contribution to Worker process termination due to excessive handle usage.<br />
-**DisplayName**: Terminate Handles Contribution Percent<br />
-**LogicalName**: terminatehandlescontributionpercent<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 100<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|The plug-in type percentage contribution to Worker process termination due to excessive handle usage.|
+|DisplayName|Terminate Handles Contribution Percent|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|terminatehandlescontributionpercent|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_TerminateMemoryContributionPercent"></a> TerminateMemoryContributionPercent
 
-**Description**: The plug-in type percentage contribution to Worker process termination due to excessive memory usage.<br />
-**DisplayName**: Terminate Memory Contribution Percent<br />
-**LogicalName**: terminatememorycontributionpercent<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 100<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|The plug-in type percentage contribution to Worker process termination due to excessive memory usage.|
+|DisplayName|Terminate Memory Contribution Percent|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|terminatememorycontributionpercent|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_TerminateOtherContributionPercent"></a> TerminateOtherContributionPercent
 
-**Description**: The plug-in type percentage contribution to Worker process termination due to unknown reasons.<br />
-**DisplayName**: Terminate Other Contribution Percent<br />
-**LogicalName**: terminateothercontributionpercent<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 100<br />
-**MinValue**: 0
-
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_userentityinstancedata_plugintypestatistic"></a> userentityinstancedata_plugintypestatistic
-
-Same as userentityinstancedata entity [userentityinstancedata_plugintypestatistic](userentityinstancedata.md#BKMK_userentityinstancedata_plugintypestatistic) Many-To-One relationship.
-
-**ReferencingEntity**: userentityinstancedata<br />
-**ReferencingAttribute**: objectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: userentityinstancedata_plugintypestatistic<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|Description|The plug-in type percentage contribution to Worker process termination due to unknown reasons.|
+|DisplayName|Terminate Other Contribution Percent|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|terminateothercontributionpercent|
+|MaxValue|100|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 <a name="manytoone"></a>
 
@@ -500,5 +528,9 @@ See systemuser Entity [modifiedby_plugintypestatistic](systemuser.md#BKMK_modifi
 ### <a name="BKMK_plugintype_plugintypestatistic"></a> plugintype_plugintypestatistic
 
 See plugintype Entity [plugintype_plugintypestatistic](plugintype.md#BKMK_plugintype_plugintypestatistic) One-To-Many relationship.
-plugintypestatistic
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.plugintypestatistic?text=plugintypestatistic EntityType" />
