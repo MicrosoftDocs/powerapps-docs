@@ -101,7 +101,6 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
 
 While building a one-to-many or a many-to-many relationship, you can also set advanced behaviors.
 
-[!div class="mx-imgBorder"]
 ![Advanced behavior](./media/data-platform-cds-newrelationship/advanced-1.png "Advanced behavior")
 
 These options are also referred to as cascading behaviors because they cascade down the hierarchy of related entities. For example, it may be desireable to delete the related tests and homework of a student if a student is removed from the system. This type of behavior is called a parental relationship.
