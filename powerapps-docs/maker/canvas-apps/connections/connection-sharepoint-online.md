@@ -1,13 +1,13 @@
 ---
 title: Overview of the SharePoint connection | Microsoft Docs
-description: See the available functions, responses, and examples for SharePoint
+description: See the available functions, responses, and examples for SharePoint.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 07/12/2017
+ms.date: 04/03/2019
 ms.author: niwaggon
 search.audienceType:
   - maker
@@ -90,7 +90,7 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
     > [!div class="mx-imgBorder"]
     > ![Under Choose a list, select the check box for Documents or one or more lists that you want to use, and then select Connect](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists.  If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter a custom list name**.
+    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists.  If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom list name**.
 
     > [!div class="mx-imgBorder"]
     > ![Type the name of the list in the box that contains Enter a custom list name.](./media/connection-sharepoint-online/custom-list.png)
@@ -113,7 +113,7 @@ If your custom list contains any of these types of columns, show that data in a 
 
     For example, specify **ThisItem.Manager.DisplayName** to show display names from a **Person or Group** column named **Manager**.
 
-    You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (with the trailing period).
+    You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (including the trailing period).
 
     > [!NOTE]
     > For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
@@ -154,6 +154,8 @@ You can [download a sample app](https://pwrappssamples.blob.core.windows.net/sam
 
 1. After you download the app, open [PowerApps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**.
 1. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the first two procedures in this topic.
+
+<!--note from editor: In procedure step above, link to topics "Create a connection" and "Add data to an existing app"? -->
 
 > [!NOTE]
 > By default, this app shows [delegation warnings](../delegation-overview.md), but you can ignore them if your library contains fewer than 500 items.
