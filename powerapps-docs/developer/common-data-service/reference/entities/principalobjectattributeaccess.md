@@ -1,20 +1,13 @@
 ---
-title: "PrincipalObjectAttributeAccess Entity Reference (Common Data Service)| Microsoft Docs"
+title: "PrincipalObjectAttributeAccess Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the PrincipalObjectAttributeAccess entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,19 +18,33 @@ search.app:
 
 Defines CRM security principals (users and teams) access rights to secured field for an entity instance.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Create|POST [*org URI*]/api/data/v9.0/principalobjectattributeaccessset<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/principalobjectattributeaccessset<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/principalobjectattributeaccessset(*principalobjectattributeaccessid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+
 ## Entity Properties
 
-**DisplayName**: Field Sharing<br />
-**DisplayCollectionName**: Field Sharing<br />
-**SchemaName**: PrincipalObjectAttributeAccess<br />
-**CollectionSchemaName**: PrincipalObjectAttributeAccesses<br />
-**LogicalName**: principalobjectattributeaccess<br />
-**LogicalCollectionName**: principalobjectattributeaccesses<br />
-**EntitySetName**: principalobjectattributeaccessset<br />
-**PrimaryIdAttribute**: principalobjectattributeaccessid<br />
-**PrimaryNameAttribute**: <br />
-**OwnershipType**: OrganizationOwned<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|PrincipalObjectAttributeAccesses|
+|DisplayCollectionName|Field Sharing|
+|DisplayName|Field Sharing|
+|EntitySetName|principalobjectattributeaccessset|
+|IsBPFEntity|False|
+|LogicalCollectionName|principalobjectattributeaccesses|
+|LogicalName|principalobjectattributeaccess|
+|OwnershipType|OrganizationOwned|
+|PrimaryIdAttribute|principalobjectattributeaccessid|
+|PrimaryNameAttribute||
+|SchemaName|PrincipalObjectAttributeAccess|
+
 <a name="writable-attributes"></a>
 
 ## Writable attributes
@@ -56,113 +63,139 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_AttributeId"></a> AttributeId
 
-**Description**: Unique identifier of the shared secured field<br />
-**DisplayName**: Secured field<br />
-**LogicalName**: attributeid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the shared secured field|
+|DisplayName|Secured field|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|attributeid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_ObjectId"></a> ObjectId
 
-**Description**: Unique identifier of the entity instance with shared secured field<br />
-**DisplayName**: Entity instance<br />
-**LogicalName**: objectid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Lookup<br />
-**Targets**: account,appointment,businessunit,channelaccessprofile,connection,contact,customeraddress,email,fax,feedback,goal,kbarticle,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailmergetemplate,phonecall,position,queue,queueitem,recurringappointmentmaster,reportcategory,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,systemuser,task,team,territory
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the entity instance with shared secured field|
+|DisplayName|Entity instance|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|objectid|
+|RequiredLevel|SystemRequired|
+|Targets|account,appointment,businessunit,channelaccessprofile,connection,contact,customeraddress,email,fax,feedback,goal,holidaywrapper,kbarticle,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailmergetemplate,msdyn_connector,phonecall,position,queue,queueitem,recurringappointmentmaster,reportcategory,sharepointdocumentlocation,sharepointsite,socialactivity,socialprofile,systemuser,task,team,territory|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ObjectTypeCode"></a> ObjectTypeCode
 
-**Description**: Type of the record with shared secured field<br />
-**DisplayName**: Entity object type<br />
-**LogicalName**: objecttypecode<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description|Type of the record with shared secured field|
+|DisplayName|Entity object type|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|objecttypecode|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_PrincipalId"></a> PrincipalId
 
-**Description**: Unique identifier of the principal to which secured field is shared<br />
-**DisplayName**: Principal<br />
-**LogicalName**: principalid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Lookup<br />
-**Targets**: systemuser,team
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the principal to which secured field is shared|
+|DisplayName|Principal|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|principalid|
+|RequiredLevel|SystemRequired|
+|Targets|systemuser,team|
+|Type|Lookup|
 
 
 ### <a name="BKMK_PrincipalIdType"></a> PrincipalIdType
 
-**Description**: Type of the principal to which secured field is shared<br />
-**DisplayName**: Principal type<br />
-**LogicalName**: principalidtype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description|Type of the principal to which secured field is shared|
+|DisplayName|Principal type|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|principalidtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_PrincipalObjectAttributeAccessId"></a> PrincipalObjectAttributeAccessId
 
-**Description**: Unique identifier of the shared secured field instance<br />
-**DisplayName**: Shared secured field<br />
-**LogicalName**: principalobjectattributeaccessid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the shared secured field instance|
+|DisplayName|Shared secured field|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|principalobjectattributeaccessid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_ReadAccess"></a> ReadAccess
 
-**Description**: Read permission for secured field instance<br />
-**DisplayName**: Read permission<br />
-**LogicalName**: readaccess<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Read permission for secured field instance|
+|DisplayName|Read permission|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|readaccess|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### ReadAccess Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_UpdateAccess"></a> UpdateAccess
 
-**Description**: Update permission for secured field instance<br />
-**DisplayName**: Update permission<br />
-**LogicalName**: updateaccess<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Update permission for secured field instance|
+|DisplayName|Update permission|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|updateaccess|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### UpdateAccess Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
 
+
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [OrganizationId](#BKMK_OrganizationId)
@@ -173,87 +206,63 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_OrganizationId"></a> OrganizationId
 
-**Description**: Unique identifier of the associated organization.<br />
-**DisplayName**: Organization<br />
-**LogicalName**: organizationid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Lookup<br />
-**Targets**: organization
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the associated organization.|
+|DisplayName|Organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationid|
+|RequiredLevel|SystemRequired|
+|Targets|organization|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OrganizationIdName"></a> OrganizationIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: organizationidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|organizationidname|
+|MaxLength|160|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_PrincipalIdName"></a> PrincipalIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: principalidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|principalidname|
+|MaxLength|160|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: versionnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: BigInt<br />
-**MaxValue**: 9223372036854775807<br />
-**MinValue**: -9223372036854775808<br />
-
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
-
-
-### <a name="BKMK_userentityinstancedata_principalobjectattributeaccess"></a> userentityinstancedata_principalobjectattributeaccess
-
-Same as userentityinstancedata entity [userentityinstancedata_principalobjectattributeaccess](userentityinstancedata.md#BKMK_userentityinstancedata_principalobjectattributeaccess) Many-To-One relationship.
-
-**ReferencingEntity**: userentityinstancedata<br />
-**ReferencingAttribute**: objectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: userentityinstancedata_principalobjectattributeaccess<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 <a name="manytoone"></a>
 
@@ -262,13 +271,13 @@ Same as userentityinstancedata entity [userentityinstancedata_principalobjectatt
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
 
 - [territory_principalobjectattributeaccess](#BKMK_territory_principalobjectattributeaccess)
+- [msdyn_connector_PrincipalObjectAttributeAccesses](#BKMK_msdyn_connector_PrincipalObjectAttributeAccesses)
 - [account_principalobjectattributeaccess](#BKMK_account_principalobjectattributeaccess)
 - [contact_principalobjectattributeaccess](#BKMK_contact_principalobjectattributeaccess)
 - [lk_principalobjectattributeaccess_organizationid](#BKMK_lk_principalobjectattributeaccess_organizationid)
 - [team_principalobjectattributeaccess_principalid](#BKMK_team_principalobjectattributeaccess_principalid)
 - [systemuser_principalobjectattributeaccess_principalid](#BKMK_systemuser_principalobjectattributeaccess_principalid)
 - [knowledgearticle_PrincipalObjectAttributeAccess](#BKMK_knowledgearticle_PrincipalObjectAttributeAccess)
-- [channelaccessprofile_PrincipalObjectAttributeAccess](#BKMK_channelaccessprofile_PrincipalObjectAttributeAccess)
 - [KnowledgeBaseRecord_PrincipalObjectAttributeAccess](#BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess)
 - [team_principalobjectattributeaccess](#BKMK_team_principalobjectattributeaccess)
 - [reportcategory_principalobjectattributeaccess](#BKMK_reportcategory_principalobjectattributeaccess)
@@ -299,7 +308,15 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_territory_principalobjectattributeaccess"></a> territory_principalobjectattributeaccess
 
+**Added by**: Application Common Solution
+
 See territory Entity [territory_principalobjectattributeaccess](territory.md#BKMK_territory_principalobjectattributeaccess) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_connector_PrincipalObjectAttributeAccesses"></a> msdyn_connector_PrincipalObjectAttributeAccesses
+
+**Added by**: Power Connector Solution Solution
+
+See msdyn_connector Entity [msdyn_connector_PrincipalObjectAttributeAccesses](msdyn_connector.md#BKMK_msdyn_connector_PrincipalObjectAttributeAccesses) One-To-Many relationship.
 
 ### <a name="BKMK_account_principalobjectattributeaccess"></a> account_principalobjectattributeaccess
 
@@ -324,10 +341,6 @@ See systemuser Entity [systemuser_principalobjectattributeaccess_principalid](sy
 ### <a name="BKMK_knowledgearticle_PrincipalObjectAttributeAccess"></a> knowledgearticle_PrincipalObjectAttributeAccess
 
 See knowledgearticle Entity [knowledgearticle_PrincipalObjectAttributeAccess](knowledgearticle.md#BKMK_knowledgearticle_PrincipalObjectAttributeAccess) One-To-Many relationship.
-
-### <a name="BKMK_channelaccessprofile_PrincipalObjectAttributeAccess"></a> channelaccessprofile_PrincipalObjectAttributeAccess
-
-See channelaccessprofile Entity [channelaccessprofile_PrincipalObjectAttributeAccess](channelaccessprofile.md#BKMK_channelaccessprofile_PrincipalObjectAttributeAccess) One-To-Many relationship.
 
 ### <a name="BKMK_KnowledgeBaseRecord_PrincipalObjectAttributeAccess"></a> KnowledgeBaseRecord_PrincipalObjectAttributeAccess
 
@@ -432,5 +445,9 @@ See letter Entity [letter_principalobjectattributeaccess](letter.md#BKMK_letter_
 ### <a name="BKMK_socialprofile_principalobjectattributeaccess"></a> socialprofile_principalobjectattributeaccess
 
 See socialprofile Entity [socialprofile_principalobjectattributeaccess](socialprofile.md#BKMK_socialprofile_principalobjectattributeaccess) One-To-Many relationship.
-principalobjectattributeaccess
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.principalobjectattributeaccess?text=principalobjectattributeaccess EntityType" />

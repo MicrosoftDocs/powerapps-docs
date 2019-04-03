@@ -1,20 +1,13 @@
 ---
-title: "Dependency Entity Reference (Common Data Service)| Microsoft Docs"
+title: "Dependency Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Dependency entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,21 +18,39 @@ search.app:
 
 A component dependency in CRM.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Retrieve|GET [*org URI*]/api/data/v9.0/dependencies(*dependencyid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveDependenciesForDelete|<xref href="Microsoft.Dynamics.CRM.RetrieveDependenciesForDelete?text=RetrieveDependenciesForDelete Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependenciesForDeleteRequest>|
+|RetrieveDependenciesForUninstall|<xref href="Microsoft.Dynamics.CRM.RetrieveDependenciesForUninstall?text=RetrieveDependenciesForUninstall Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependenciesForUninstallRequest>|
+|RetrieveDependentComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveDependentComponents?text=RetrieveDependentComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveDependentComponentsRequest>|
+|RetrieveMissingDependencies|<xref href="Microsoft.Dynamics.CRM.RetrieveMissingDependencies?text=RetrieveMissingDependencies Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveMissingDependenciesRequest>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/dependencies<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrieveRequiredComponents|<xref href="Microsoft.Dynamics.CRM.RetrieveRequiredComponents?text=RetrieveRequiredComponents Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveRequiredComponentsRequest>|
+
 ## Entity Properties
 
-**DisplayName**: Dependency<br />
-**DisplayCollectionName**: Dependency<br />
-**SchemaName**: Dependency<br />
-**CollectionSchemaName**: Dependency<br />
-**LogicalName**: dependency<br />
-**LogicalCollectionName**: dependencies<br />
-**EntitySetName**: dependencies<br />
-**PrimaryIdAttribute**: dependencyid<br />
-**PrimaryNameAttribute**: <br />
-**OwnershipType**: None<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|Dependency|
+|DisplayCollectionName|Dependency|
+|DisplayName|Dependency|
+|EntitySetName|dependencies|
+|IsBPFEntity|False|
+|LogicalCollectionName|dependencies|
+|LogicalName|dependency|
+|OwnershipType|None|
+|PrimaryIdAttribute|dependencyid|
+|PrimaryNameAttribute||
+|SchemaName|Dependency|
+
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [DependencyId](#BKMK_DependencyId)
@@ -60,366 +71,380 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_DependencyId"></a> DependencyId
 
-**Description**: Unique identifier of a dependency.<br />
-**DisplayName**: Dependency Identifier<br />
-**LogicalName**: dependencyid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of a dependency.|
+|DisplayName|Dependency Identifier|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dependencyid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_DependencyType"></a> DependencyType
 
-**Description**: The dependency type of the dependency.<br />
-**DisplayName**: Dependency Type<br />
-**LogicalName**: dependencytype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|The dependency type of the dependency.|
+|DisplayName|Dependency Type|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dependencytype|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: None
-- **Value**: 1 **Label**: Solution Internal
-- **Value**: 2 **Label**: Published
-- **Value**: 4 **Label**: Unpublished
+#### DependencyType Options
+
+|Value|Label|
+|-----|-----|
+|0|None|
+|1|Solution Internal|
+|2|Published|
+|4|Unpublished|
 
 
 
 ### <a name="BKMK_DependentComponentBaseSolutionId"></a> DependentComponentBaseSolutionId
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: dependentcomponentbasesolutionid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dependentcomponentbasesolutionid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_DependentComponentNodeId"></a> DependentComponentNodeId
 
-**Description**: Unique identifier of the dependent component's node.<br />
-**DisplayName**: Dependent Component<br />
-**LogicalName**: dependentcomponentnodeid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**Type**: Lookup<br />
-**Targets**: dependencynode
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the dependent component's node.|
+|DisplayName|Dependent Component|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dependentcomponentnodeid|
+|RequiredLevel|ApplicationRequired|
+|Targets|dependencynode|
+|Type|Lookup|
 
 
 ### <a name="BKMK_DependentComponentObjectId"></a> DependentComponentObjectId
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: dependentcomponentobjectid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dependentcomponentobjectid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_DependentComponentParentId"></a> DependentComponentParentId
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: dependentcomponentparentid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dependentcomponentparentid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_DependentComponentType"></a> DependentComponentType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: dependentcomponenttype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dependentcomponenttype|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Entity
-- **Value**: 2 **Label**: Attribute
-- **Value**: 3 **Label**: Relationship
-- **Value**: 4 **Label**: Attribute Picklist Value
-- **Value**: 5 **Label**: Attribute Lookup Value
-- **Value**: 6 **Label**: View Attribute
-- **Value**: 7 **Label**: Localized Label
-- **Value**: 8 **Label**: Relationship Extra Condition
-- **Value**: 9 **Label**: Option Set
-- **Value**: 10 **Label**: Entity Relationship
-- **Value**: 11 **Label**: Entity Relationship Role
-- **Value**: 12 **Label**: Entity Relationship Relationships
-- **Value**: 13 **Label**: Managed Property
-- **Value**: 14 **Label**: Entity Key
-- **Value**: 16 **Label**: Privilege
-- **Value**: 17 **Label**: PrivilegeObjectTypeCode
-- **Value**: 18 **Label**: Index
-- **Value**: 20 **Label**: Role
-- **Value**: 21 **Label**: Role Privilege
-- **Value**: 22 **Label**: Display String
-- **Value**: 23 **Label**: Display String Map
-- **Value**: 24 **Label**: Form
-- **Value**: 25 **Label**: Organization
-- **Value**: 26 **Label**: Saved Query
-- **Value**: 29 **Label**: Workflow
-- **Value**: 31 **Label**: Report
-- **Value**: 32 **Label**: Report Entity
-- **Value**: 33 **Label**: Report Category
-- **Value**: 34 **Label**: Report Visibility
-- **Value**: 35 **Label**: Attachment
-- **Value**: 36 **Label**: Email Template
-- **Value**: 37 **Label**: Contract Template
-- **Value**: 38 **Label**: KB Article Template
-- **Value**: 39 **Label**: Mail Merge Template
-- **Value**: 44 **Label**: Duplicate Rule
-- **Value**: 45 **Label**: Duplicate Rule Condition
-- **Value**: 46 **Label**: Entity Map
-- **Value**: 47 **Label**: Attribute Map
-- **Value**: 48 **Label**: Ribbon Command
-- **Value**: 49 **Label**: Ribbon Context Group
-- **Value**: 50 **Label**: Ribbon Customization
-- **Value**: 52 **Label**: Ribbon Rule
-- **Value**: 53 **Label**: Ribbon Tab To Command Map
-- **Value**: 55 **Label**: Ribbon Diff
-- **Value**: 59 **Label**: Saved Query Visualization
-- **Value**: 60 **Label**: System Form
-- **Value**: 61 **Label**: Web Resource
-- **Value**: 62 **Label**: Site Map
-- **Value**: 63 **Label**: Connection Role
-- **Value**: 64 **Label**: Complex Control
-- **Value**: 65 **Label**: Hierarchy Rule
-- **Value**: 66 **Label**: Custom Control
-- **Value**: 68 **Label**: Custom Control Default Config
-- **Value**: 70 **Label**: Field Security Profile
-- **Value**: 71 **Label**: Field Permission
-- **Value**: 90 **Label**: Plugin Type
-- **Value**: 91 **Label**: Plugin Assembly
-- **Value**: 92 **Label**: SDK Message Processing Step
-- **Value**: 93 **Label**: SDK Message Processing Step Image
-- **Value**: 95 **Label**: Service Endpoint
-- **Value**: 150 **Label**: Routing Rule
-- **Value**: 151 **Label**: Routing Rule Item
-- **Value**: 152 **Label**: SLA
-- **Value**: 153 **Label**: SLA Item
-- **Value**: 154 **Label**: Convert Rule
-- **Value**: 155 **Label**: Convert Rule Item
-- **Value**: 161 **Label**: Mobile Offline Profile
-- **Value**: 162 **Label**: Mobile Offline Profile Item
-- **Value**: 165 **Label**: Similarity Rule
-- **Value**: 166 **Label**: Data Source Mapping
-- **Value**: 201 **Label**: SDKMessage
-- **Value**: 202 **Label**: SDKMessageFilter
-- **Value**: 203 **Label**: SdkMessagePair
-- **Value**: 204 **Label**: SdkMessageRequest
-- **Value**: 205 **Label**: SdkMessageRequestField
-- **Value**: 206 **Label**: SdkMessageResponse
-- **Value**: 207 **Label**: SdkMessageResponseField
-- **Value**: 208 **Label**: Import Map
-- **Value**: 210 **Label**: WebWizard
+#### DependentComponentType Options
+
+|Value|Label|
+|-----|-----|
+|1|Entity|
+|2|Attribute|
+|3|Relationship|
+|4|Attribute Picklist Value|
+|5|Attribute Lookup Value|
+|6|View Attribute|
+|7|Localized Label|
+|8|Relationship Extra Condition|
+|9|Option Set|
+|10|Entity Relationship|
+|11|Entity Relationship Role|
+|12|Entity Relationship Relationships|
+|13|Managed Property|
+|14|Entity Key|
+|16|Privilege|
+|17|PrivilegeObjectTypeCode|
+|18|Index|
+|20|Role|
+|21|Role Privilege|
+|22|Display String|
+|23|Display String Map|
+|24|Form|
+|25|Organization|
+|26|Saved Query|
+|29|Workflow|
+|31|Report|
+|32|Report Entity|
+|33|Report Category|
+|34|Report Visibility|
+|35|Attachment|
+|36|Email Template|
+|37|Contract Template|
+|38|KB Article Template|
+|39|Mail Merge Template|
+|44|Duplicate Rule|
+|45|Duplicate Rule Condition|
+|46|Entity Map|
+|47|Attribute Map|
+|48|Ribbon Command|
+|49|Ribbon Context Group|
+|50|Ribbon Customization|
+|52|Ribbon Rule|
+|53|Ribbon Tab To Command Map|
+|55|Ribbon Diff|
+|59|Saved Query Visualization|
+|60|System Form|
+|61|Web Resource|
+|62|Site Map|
+|63|Connection Role|
+|64|Complex Control|
+|65|Hierarchy Rule|
+|66|Custom Control|
+|68|Custom Control Default Config|
+|70|Field Security Profile|
+|71|Field Permission|
+|90|Plugin Type|
+|91|Plugin Assembly|
+|92|SDK Message Processing Step|
+|93|SDK Message Processing Step Image|
+|95|Service Endpoint|
+|150|Routing Rule|
+|151|Routing Rule Item|
+|152|SLA|
+|153|SLA Item|
+|154|Convert Rule|
+|155|Convert Rule Item|
+|161|Mobile Offline Profile|
+|162|Mobile Offline Profile Item|
+|165|Similarity Rule|
+|166|Data Source Mapping|
+|201|SDKMessage|
+|202|SDKMessageFilter|
+|203|SdkMessagePair|
+|204|SdkMessageRequest|
+|205|SdkMessageRequestField|
+|206|SdkMessageResponse|
+|207|SdkMessageResponseField|
+|208|Import Map|
+|210|WebWizard|
+|300|Canvas App|
+|371|Connector|
 
 
 
 ### <a name="BKMK_RequiredComponentBaseSolutionId"></a> RequiredComponentBaseSolutionId
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: requiredcomponentbasesolutionid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|requiredcomponentbasesolutionid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_RequiredComponentIntroducedVersion"></a> RequiredComponentIntroducedVersion
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: requiredcomponentintroducedversion<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Double<br />
-**MaxValue**: 1000000000<br />
-**MinValue**: 0<br />
-**Precision**: 2
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|requiredcomponentintroducedversion|
+|MaxValue|1000000000|
+|MinValue|0|
+|Precision|2|
+|RequiredLevel|None|
+|Type|Double|
 
 
 ### <a name="BKMK_RequiredComponentNodeId"></a> RequiredComponentNodeId
 
-**Description**: Unique identifier of the required component's node<br />
-**DisplayName**: Required Component<br />
-**LogicalName**: requiredcomponentnodeid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**Type**: Lookup<br />
-**Targets**: dependencynode
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the required component's node|
+|DisplayName|Required Component|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|requiredcomponentnodeid|
+|RequiredLevel|ApplicationRequired|
+|Targets|dependencynode|
+|Type|Lookup|
 
 
 ### <a name="BKMK_RequiredComponentObjectId"></a> RequiredComponentObjectId
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: requiredcomponentobjectid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|requiredcomponentobjectid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_RequiredComponentParentId"></a> RequiredComponentParentId
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: requiredcomponentparentid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|requiredcomponentparentid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_RequiredComponentType"></a> RequiredComponentType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: requiredcomponenttype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|requiredcomponenttype|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Entity
-- **Value**: 2 **Label**: Attribute
-- **Value**: 3 **Label**: Relationship
-- **Value**: 4 **Label**: Attribute Picklist Value
-- **Value**: 5 **Label**: Attribute Lookup Value
-- **Value**: 6 **Label**: View Attribute
-- **Value**: 7 **Label**: Localized Label
-- **Value**: 8 **Label**: Relationship Extra Condition
-- **Value**: 9 **Label**: Option Set
-- **Value**: 10 **Label**: Entity Relationship
-- **Value**: 11 **Label**: Entity Relationship Role
-- **Value**: 12 **Label**: Entity Relationship Relationships
-- **Value**: 13 **Label**: Managed Property
-- **Value**: 14 **Label**: Entity Key
-- **Value**: 16 **Label**: Privilege
-- **Value**: 17 **Label**: PrivilegeObjectTypeCode
-- **Value**: 18 **Label**: Index
-- **Value**: 20 **Label**: Role
-- **Value**: 21 **Label**: Role Privilege
-- **Value**: 22 **Label**: Display String
-- **Value**: 23 **Label**: Display String Map
-- **Value**: 24 **Label**: Form
-- **Value**: 25 **Label**: Organization
-- **Value**: 26 **Label**: Saved Query
-- **Value**: 29 **Label**: Workflow
-- **Value**: 31 **Label**: Report
-- **Value**: 32 **Label**: Report Entity
-- **Value**: 33 **Label**: Report Category
-- **Value**: 34 **Label**: Report Visibility
-- **Value**: 35 **Label**: Attachment
-- **Value**: 36 **Label**: Email Template
-- **Value**: 37 **Label**: Contract Template
-- **Value**: 38 **Label**: KB Article Template
-- **Value**: 39 **Label**: Mail Merge Template
-- **Value**: 44 **Label**: Duplicate Rule
-- **Value**: 45 **Label**: Duplicate Rule Condition
-- **Value**: 46 **Label**: Entity Map
-- **Value**: 47 **Label**: Attribute Map
-- **Value**: 48 **Label**: Ribbon Command
-- **Value**: 49 **Label**: Ribbon Context Group
-- **Value**: 50 **Label**: Ribbon Customization
-- **Value**: 52 **Label**: Ribbon Rule
-- **Value**: 53 **Label**: Ribbon Tab To Command Map
-- **Value**: 55 **Label**: Ribbon Diff
-- **Value**: 59 **Label**: Saved Query Visualization
-- **Value**: 60 **Label**: System Form
-- **Value**: 61 **Label**: Web Resource
-- **Value**: 62 **Label**: Site Map
-- **Value**: 63 **Label**: Connection Role
-- **Value**: 64 **Label**: Complex Control
-- **Value**: 65 **Label**: Hierarchy Rule
-- **Value**: 66 **Label**: Custom Control
-- **Value**: 68 **Label**: Custom Control Default Config
-- **Value**: 70 **Label**: Field Security Profile
-- **Value**: 71 **Label**: Field Permission
-- **Value**: 90 **Label**: Plugin Type
-- **Value**: 91 **Label**: Plugin Assembly
-- **Value**: 92 **Label**: SDK Message Processing Step
-- **Value**: 93 **Label**: SDK Message Processing Step Image
-- **Value**: 95 **Label**: Service Endpoint
-- **Value**: 150 **Label**: Routing Rule
-- **Value**: 151 **Label**: Routing Rule Item
-- **Value**: 152 **Label**: SLA
-- **Value**: 153 **Label**: SLA Item
-- **Value**: 154 **Label**: Convert Rule
-- **Value**: 155 **Label**: Convert Rule Item
-- **Value**: 161 **Label**: Mobile Offline Profile
-- **Value**: 162 **Label**: Mobile Offline Profile Item
-- **Value**: 165 **Label**: Similarity Rule
-- **Value**: 166 **Label**: Data Source Mapping
-- **Value**: 201 **Label**: SDKMessage
-- **Value**: 202 **Label**: SDKMessageFilter
-- **Value**: 203 **Label**: SdkMessagePair
-- **Value**: 204 **Label**: SdkMessageRequest
-- **Value**: 205 **Label**: SdkMessageRequestField
-- **Value**: 206 **Label**: SdkMessageResponse
-- **Value**: 207 **Label**: SdkMessageResponseField
-- **Value**: 208 **Label**: Import Map
-- **Value**: 210 **Label**: WebWizard
+#### RequiredComponentType Options
+
+|Value|Label|
+|-----|-----|
+|1|Entity|
+|2|Attribute|
+|3|Relationship|
+|4|Attribute Picklist Value|
+|5|Attribute Lookup Value|
+|6|View Attribute|
+|7|Localized Label|
+|8|Relationship Extra Condition|
+|9|Option Set|
+|10|Entity Relationship|
+|11|Entity Relationship Role|
+|12|Entity Relationship Relationships|
+|13|Managed Property|
+|14|Entity Key|
+|16|Privilege|
+|17|PrivilegeObjectTypeCode|
+|18|Index|
+|20|Role|
+|21|Role Privilege|
+|22|Display String|
+|23|Display String Map|
+|24|Form|
+|25|Organization|
+|26|Saved Query|
+|29|Workflow|
+|31|Report|
+|32|Report Entity|
+|33|Report Category|
+|34|Report Visibility|
+|35|Attachment|
+|36|Email Template|
+|37|Contract Template|
+|38|KB Article Template|
+|39|Mail Merge Template|
+|44|Duplicate Rule|
+|45|Duplicate Rule Condition|
+|46|Entity Map|
+|47|Attribute Map|
+|48|Ribbon Command|
+|49|Ribbon Context Group|
+|50|Ribbon Customization|
+|52|Ribbon Rule|
+|53|Ribbon Tab To Command Map|
+|55|Ribbon Diff|
+|59|Saved Query Visualization|
+|60|System Form|
+|61|Web Resource|
+|62|Site Map|
+|63|Connection Role|
+|64|Complex Control|
+|65|Hierarchy Rule|
+|66|Custom Control|
+|68|Custom Control Default Config|
+|70|Field Security Profile|
+|71|Field Permission|
+|90|Plugin Type|
+|91|Plugin Assembly|
+|92|SDK Message Processing Step|
+|93|SDK Message Processing Step Image|
+|95|Service Endpoint|
+|150|Routing Rule|
+|151|Routing Rule Item|
+|152|SLA|
+|153|SLA Item|
+|154|Convert Rule|
+|155|Convert Rule Item|
+|161|Mobile Offline Profile|
+|162|Mobile Offline Profile Item|
+|165|Similarity Rule|
+|166|Data Source Mapping|
+|201|SDKMessage|
+|202|SDKMessageFilter|
+|203|SdkMessagePair|
+|204|SdkMessageRequest|
+|205|SdkMessageRequestField|
+|206|SdkMessageResponse|
+|207|SdkMessageResponseField|
+|208|Import Map|
+|210|WebWizard|
+|300|Canvas App|
+|371|Connector|
 
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: versionnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: BigInt<br />
-**MaxValue**: 9223372036854775807<br />
-**MinValue**: -9223372036854775808<br />
-
-<a name="onetomany"></a>
-
-## One-To-Many Relationships
-
-Listed by **SchemaName**.
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 
-### <a name="BKMK_userentityinstancedata_dependency"></a> userentityinstancedata_dependency
 
-Same as userentityinstancedata entity [userentityinstancedata_dependency](userentityinstancedata.md#BKMK_userentityinstancedata_dependency) Many-To-One relationship.
+### See also
 
-**ReferencingEntity**: userentityinstancedata<br />
-**ReferencingAttribute**: objectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: userentityinstancedata_dependency<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: NoCascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
-
-dependency
-
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.dependency?text=dependency EntityType" />
