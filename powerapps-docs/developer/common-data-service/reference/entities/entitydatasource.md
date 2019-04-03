@@ -355,7 +355,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 
 ### <a name="BKMK_entitydataprovider_datasource"></a> entitydataprovider_datasource
 
-See entitydataprovider Entity [entitydataprovider_datasource](entitydataprovider.md#BKMK_entitydataprovider_datasource) One-To-Many relationship.
+See entitydataprovider Entity entitydataprovider_datasource One-To-Many relationship.
 
 ### <a name="BKMK_organization_entitydatasource"></a> organization_entitydatasource
 
@@ -364,6 +364,5 @@ See organization Entity organization_entitydatasource One-To-Many relationship.
 ### See also
 
 [About the Entity Reference](../about-entity-reference.md)<br />
-[Programming reference for Dynamics 365 Customer Engagement](../programming-reference.md)<br />
 [Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
 <xref href="Microsoft.Dynamics.CRM.entitydatasource?text=entitydatasource EntityType" />
