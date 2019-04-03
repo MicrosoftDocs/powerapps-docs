@@ -43,6 +43,16 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 - When you update an app, the formula to which this property is set runs when the app is loaded into PowerApps Studio. To see the impact of changing this property, you'll need to save, close, and reload your app.
 - The **OnStart** property is actually a property of the app, not the screen. For editing convenience, you view and modify it as a property on the first screen of your app. If you remove the first screen or reorder screens, this property may become hard to find. In this case, save, close, and reload your app, and the property will reappear as a property of the first screen.
 
+**Name** - The name of the screen.
+
+**Width** - The width of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is narrower in width than this property, then the screen will be scrollable in the horizontal direction.
+
+**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is shorter in height than this property, then the screen will be scrollable in the vertical direction.
+
+**Orientation** - The orientation of the screen. If **Width** > **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
+
+**Size** - A positive integer classifying the size of the screen. The classification is determined by comparing the screen's **Width** to the values in the [**App.SizeBreakpoints**](../functions/signals.md) property. The **ScreenSize** type consists of four values (**Small**, **Medium**, **Large**, **ExtraLarge**) that correspond to the integers 1 through 4.
+ 
 ## Related functions
 
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)
