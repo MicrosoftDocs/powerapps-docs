@@ -112,8 +112,9 @@ To create that effect, you'd need to update the **Height** property of the **Upp
 With these formulas in place, you need only change the **Height** property of the **Upper** control to express a different fraction of the height of the screen. The **Lower** control automatically moves and resizes to account for the change.
 
 You can use these formula patterns for expressing common layout relationships between a control, named **C**, and its parent or a sibling control, named **D**.
-<br/>
-<br/>
+
+
+
 | Relationship between C and its parent | Property | Formula | Illustration |
 |--|--|--|--|
 | **C** fills width of parent, with a margin of *N* | **X**| *N* | ![Example of C filling width of parent](media/create-responsive-layout/c1.png) |
