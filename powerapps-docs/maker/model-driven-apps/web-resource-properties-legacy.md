@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 06/27/2018
+ms.date: 04/03/2019
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
@@ -33,6 +33,9 @@ While viewing a form:
 - **When editing a web resource**: Select a form tab and the web resource that you want to edit, and then on the **Home** tab, select **Change Properties**. <br />![Change web resource properties](media/web-resource-change-properties.png)
 
 This will open the **Add Web Resource** or **Web Resource Properties** dialog box.
+
+> [!IMPORTANT]
+> You must select the **Visible by default** option for the web resource to appear on the form and be available to users.
 
 ![Add Web Resource dialog](media/add-web-resource-dialog.png)
 
