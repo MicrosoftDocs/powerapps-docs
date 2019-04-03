@@ -34,11 +34,10 @@ While viewing a form:
 
 This will open the **Add Web Resource** or **Web Resource Properties** dialog box.
 
-> [!IMPORTANT]
-> You must select the **Visible by default** option for the web resource to appear on the form and be available to users.
-
 ![Add Web Resource dialog](media/add-web-resource-dialog.png)
 
+> [!IMPORTANT]
+> You must select the **Visible by default** option for the web resource to appear on the form and be available to users.
 
 ## Web resource properties
 
