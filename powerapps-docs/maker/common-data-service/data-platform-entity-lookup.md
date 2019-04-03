@@ -99,7 +99,7 @@ To add a Many-to-many relationship, create a relation under the **Relationships*
 
 ## Add advanced relationship behavior
 
-While building a one-to-many or a many-to-many relationship, you can also set advanced behaviors.
+While building a one-to-many or a many-to-one relationship, you can also set advanced behaviors.
 
 ![Advanced behavior](./media/data-platform-cds-newrelationship/advanced-1.png "Advanced behavior")
 
@@ -109,19 +109,21 @@ On the other hand, you may decide that you don't want  actions to cascade down t
 
 As you model your business data by creating custom entities or when using existing Common Data Model entities, consider the behavior you require and the implications for the entire hierarchy of related entities and choose between one of the following standard behaviors:
 
-* **Parental.** In a parental relationship between two entities, any action taken on a record of the parent entity is also taken on any child entity records that are related to the parent entity record. For example, this would cause all of the child records to be deleted when the parent is deleted.
+* **Referential, Remove Link:** In a referential relationship between two entities, you can navigate to any related records, but actions taken on one will not affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher will have no impact on the related class.
 
-* **Referential.** In a referential relationship between two entities, you can navigate to any related records, but actions taken on one will not affect the other. For example, if you have a one-to-many relationship between teachers and classes, deleting a teacher will have no impact on the related class.
-
-* **Referential, Restrict Delete.** In a referential, restrict delete relationship between two entities, you can navigate to any related records. Actions taken on the parent record will not be applied to the child record, but the parent record cannot be deleted while the child record exists. This is useful if you do not want child records to become orphaned. This forces the user to delete all of the children before deleting the parent.
+* **Referential, Restrict Delete:** In a referential, restrict delete relationship between two entities, you can navigate to any related records. Actions taken on the parent record will not be applied to the child record, but the parent record cannot be deleted while the child record exists. This is useful if you do not want child records to become orphaned. This forces the user to delete all of the children before deleting the parent.
 
     > [!div class="mx-imgBorder"] 
     > ![Referential, Restrict Delete](./media/data-platform-cds-newrelationship/advanced-3.png "Referential, Restrict Delete")
 
-* **Custom.** In a custom relationship between two entities, you select the behavior associated with each of a set of possible actions.
+* **Parental:** In a parental relationship between two entities, any action taken on a record of the parent entity is also taken on any child entity records that are related to the parent entity record. For example, this would cause all of the child records to be deleted when the parent is deleted.
+
+* **Custom:** In a custom relationship between two entities, you select the behavior associated with each of a set of possible actions. 
 
     > [!div class="mx-imgBorder"] 
     > ![Custom behavior](./media/data-platform-cds-newrelationship/advanced-2.png "Custom behavior")
+
+For more information on defaults and custom behaviors: [Configure entity relationship behavior](./entity-relationship-behavior).
 
 
 
