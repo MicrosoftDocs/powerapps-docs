@@ -1,20 +1,13 @@
 ---
-title: "RecurrenceRule Entity Reference (Common Data Service)| Microsoft Docs"
+title: "RecurrenceRule Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the RecurrenceRule entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,19 +18,34 @@ search.app:
 
 Recurrence Rule represents the pattern of incidence of recurring entities.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Create|POST [*org URI*]/api/data/v9.0/recurrencerules<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/recurrencerules<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|Update|PATCH [*org URI*]/api/data/v9.0/recurrencerules(*ruleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|ValidateRecurrenceRule|<xref href="Microsoft.Dynamics.CRM.ValidateRecurrenceRule?text=ValidateRecurrenceRule Function" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateRecurrenceRuleRequest>|
+
 ## Entity Properties
 
-**DisplayName**: Recurrence Rule<br />
-**DisplayCollectionName**: Recurrence Rules<br />
-**SchemaName**: RecurrenceRule<br />
-**CollectionSchemaName**: RecurrenceRules<br />
-**LogicalName**: recurrencerule<br />
-**LogicalCollectionName**: recurrencerules<br />
-**EntitySetName**: recurrencerules<br />
-**PrimaryIdAttribute**: ruleid<br />
-**PrimaryNameAttribute**: <br />
-**OwnershipType**: UserOwned<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|RecurrenceRules|
+|DisplayCollectionName|Recurrence Rules|
+|DisplayName|Recurrence Rule|
+|EntitySetName|recurrencerules|
+|IsBPFEntity|False|
+|LogicalCollectionName|recurrencerules|
+|LogicalName|recurrencerule|
+|OwnershipType|UserOwned|
+|PrimaryIdAttribute|ruleid|
+|PrimaryNameAttribute||
+|SchemaName|RecurrenceRule|
+
 <a name="writable-attributes"></a>
 
 ## Writable attributes
@@ -73,377 +81,457 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_DayOfMonth"></a> DayOfMonth
 
-**Description**: The day of the month on which the recurring appointment or task occurs.<br />
-**DisplayName**: Day Of Month<br />
-**LogicalName**: dayofmonth<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 31<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|The day of the month on which the recurring appointment or task occurs.|
+|DisplayName|Day Of Month|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|dayofmonth|
+|MaxValue|31|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_DaysOfWeekMask"></a> DaysOfWeekMask
 
-**Description**: Bitmask representing the days of the week on which the recurring appointment or task occurs.<br />
-**DisplayName**: Days Of Week Mask<br />
-**LogicalName**: daysofweekmask<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 127<br />
-**MinValue**: 1
+|Property|Value|
+|--------|-----|
+|Description|Bitmask representing the days of the week on which the recurring appointment or task occurs.|
+|DisplayName|Days Of Week Mask|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|daysofweekmask|
+|MaxValue|127|
+|MinValue|1|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_Duration"></a> Duration
 
-**Description**: Duration of the recurrence pattern in minutes.<br />
-**DisplayName**: Duration<br />
-**LogicalName**: duration<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: Duration<br />
-**MaxValue**: 2147483647<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|Duration of the recurrence pattern in minutes.|
+|DisplayName|Duration|
+|Format|Duration|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|duration|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_EffectiveEndDate"></a> EffectiveEndDate
 
-**Description**: The actual end date for expansion of the recurrence pattern.<br />
-**DisplayName**: Effective End Date<br />
-**LogicalName**: effectiveenddate<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|The actual end date for expansion of the recurrence pattern.|
+|DisplayName|Effective End Date|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|effectiveenddate|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_EffectiveStartDate"></a> EffectiveStartDate
 
-**Description**: The actual start date for expansion of the recurrence pattern.<br />
-**DisplayName**: Effective Start Date<br />
-**LogicalName**: effectivestartdate<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateOnly
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|The actual start date for expansion of the recurrence pattern.|
+|DisplayName|Effective Start Date|
+|Format|DateOnly|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|effectivestartdate|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_EndTime"></a> EndTime
 
-**Description**: End time of the associated activity.<br />
-**DisplayName**: End Time<br />
-**LogicalName**: endtime<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|End time of the associated activity.|
+|DisplayName|End Time|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|endtime|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_FirstDayOfWeek"></a> FirstDayOfWeek
 
-**Description**: First day Of week for the recurrence pattern.<br />
-**DisplayName**: First Day Of Week<br />
-**LogicalName**: firstdayofweek<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 6<br />
-**MinValue**: 0
+|Property|Value|
+|--------|-----|
+|Description|First day Of week for the recurrence pattern.|
+|DisplayName|First Day Of Week|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|firstdayofweek|
+|MaxValue|6|
+|MinValue|0|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_Instance"></a> Instance
 
-**Description**: Specifies the count for which the recurrence pattern is valid for a given interval.<br />
-**DisplayName**: Instance<br />
-**LogicalName**: instance<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Specifies the count for which the recurrence pattern is valid for a given interval.|
+|DisplayName|Instance|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|instance|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: First
-- **Value**: 2 **Label**: Second
-- **Value**: 3 **Label**: Third
-- **Value**: 4 **Label**: Fourth
-- **Value**: 5 **Label**: Last
+#### Instance Options
+
+|Value|Label|
+|-----|-----|
+|1|First|
+|2|Second|
+|3|Third|
+|4|Fourth|
+|5|Last|
 
 
 
 ### <a name="BKMK_Interval"></a> Interval
 
-**Description**: Number of units of a given recurrence type between occurrences.<br />
-**DisplayName**: Interval<br />
-**LogicalName**: interval<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 1000<br />
-**MinValue**: 1
+|Property|Value|
+|--------|-----|
+|Description|Number of units of a given recurrence type between occurrences.|
+|DisplayName|Interval|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|interval|
+|MaxValue|1000|
+|MinValue|1|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_IsNthMonthly"></a> IsNthMonthly
 
-**Description**: Specifies whether the monthly recurrence pattern is Nth monthly, valid only for monthly recurrence.<br />
-**DisplayName**: Nth Monthly<br />
-**LogicalName**: isnthmonthly<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Specifies whether the monthly recurrence pattern is Nth monthly, valid only for monthly recurrence.|
+|DisplayName|Nth Monthly|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isnthmonthly|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### IsNthMonthly Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_IsNthYearly"></a> IsNthYearly
 
-**Description**: Specifies whether the yearly recurrence pattern is Nth yearly, valid only for yearly recurrence.<br />
-**DisplayName**: Nth Yearly<br />
-**LogicalName**: isnthyearly<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Specifies whether the yearly recurrence pattern is Nth yearly, valid only for yearly recurrence.|
+|DisplayName|Nth Yearly|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isnthyearly|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### IsNthYearly Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_IsRegenerate"></a> IsRegenerate
 
-**Description**: Valid only for task type recurrence,indicates whether task should be regenerated.<br />
-**DisplayName**: Regenerate<br />
-**LogicalName**: isregenerate<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Valid only for task type recurrence,indicates whether task should be regenerated.|
+|DisplayName|Regenerate|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isregenerate|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### IsRegenerate Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_IsWeekDayPattern"></a> IsWeekDayPattern
 
-**Description**: Specifies whether the weekly recurrence pattern is actually a daily every weekday pattern, valid only for weekly recurrence.<br />
-**DisplayName**: Every Weekday<br />
-**LogicalName**: isweekdaypattern<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Specifies whether the weekly recurrence pattern is actually a daily every weekday pattern, valid only for weekly recurrence.|
+|DisplayName|Every Weekday|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isweekdaypattern|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### IsWeekDayPattern Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_MonthOfYear"></a> MonthOfYear
 
-**Description**: Specifies the month of the year valid for the recurrence pattern.<br />
-**DisplayName**: Month Of Year<br />
-**LogicalName**: monthofyear<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Specifies the month of the year valid for the recurrence pattern.|
+|DisplayName|Month Of Year|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|monthofyear|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: Invalid Month Of Year
-- **Value**: 1 **Label**: January
-- **Value**: 2 **Label**: February
-- **Value**: 3 **Label**: March
-- **Value**: 4 **Label**: April
-- **Value**: 5 **Label**: May
-- **Value**: 6 **Label**: June
-- **Value**: 7 **Label**: July
-- **Value**: 8 **Label**: August
-- **Value**: 9 **Label**: September
-- **Value**: 10 **Label**: October
-- **Value**: 11 **Label**: November
-- **Value**: 12 **Label**: December
+#### MonthOfYear Options
+
+|Value|Label|
+|-----|-----|
+|0|Invalid Month Of Year|
+|1|January|
+|2|February|
+|3|March|
+|4|April|
+|5|May|
+|6|June|
+|7|July|
+|8|August|
+|9|September|
+|10|October|
+|11|November|
+|12|December|
 
 
 
 ### <a name="BKMK_ObjectId"></a> ObjectId
 
-**Description**: Unique identifier of the object with which the recurrence rule is associated.<br />
-**DisplayName**: Regarding<br />
-**LogicalName**: objectid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: activitypointer
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the object with which the recurrence rule is associated.|
+|DisplayName|Regarding|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|objectid|
+|RequiredLevel|None|
+|Targets|activitypointer|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ObjectTypeCode"></a> ObjectTypeCode
 
-**Description**: <br />
-**DisplayName**: Object Type <br />
-**LogicalName**: objecttypecode<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Object Type |
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|objecttypecode|
+|RequiredLevel|None|
+|Type|EntityName|
 
 
 ### <a name="BKMK_Occurrences"></a> Occurrences
 
-**Description**: Number of occurrences of the recurrence pattern.<br />
-**DisplayName**: Occurrences<br />
-**LogicalName**: occurrences<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Integer<br />
-**Format**: None<br />
-**MaxValue**: 999<br />
-**MinValue**: 1
+|Property|Value|
+|--------|-----|
+|Description|Number of occurrences of the recurrence pattern.|
+|DisplayName|Occurrences|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|occurrences|
+|MaxValue|999|
+|MinValue|1|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Description**: Unique identifier of the user or team who owns the recurrence rule.<br />
-**DisplayName**: Owner<br />
-**LogicalName**: ownerid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Owner<br />
-**Targets**: systemuser,team
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user or team who owns the recurrence rule.|
+|DisplayName|Owner|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|ownerid|
+|RequiredLevel|SystemRequired|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridtype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|owneridtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_PatternEndDate"></a> PatternEndDate
 
-**Description**: End date of the Recurrence Range.<br />
-**DisplayName**: Recurrence Range End<br />
-**LogicalName**: patternenddate<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|End date of the Recurrence Range.|
+|DisplayName|Recurrence Range End|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|patternenddate|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_PatternEndType"></a> PatternEndType
 
-**Description**: Pattern End Type of a recurring series.<br />
-**DisplayName**: Pattern End Type<br />
-**LogicalName**: patternendtype<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Pattern End Type of a recurring series.|
+|DisplayName|Pattern End Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|patternendtype|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: No End Date
-- **Value**: 2 **Label**: Occurrences
-- **Value**: 3 **Label**: Pattern End Date
+#### PatternEndType Options
+
+|Value|Label|
+|-----|-----|
+|1|No End Date|
+|2|Occurrences|
+|3|Pattern End Date|
 
 
 
 ### <a name="BKMK_PatternStartDate"></a> PatternStartDate
 
-**Description**: Start date of the Recurrence Range.<br />
-**DisplayName**: Recurrence Range Start<br />
-**LogicalName**: patternstartdate<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Start date of the Recurrence Range.|
+|DisplayName|Recurrence Range Start|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|patternstartdate|
+|RequiredLevel|ApplicationRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_RecurrencePatternType"></a> RecurrencePatternType
 
-**Description**: Type of Recurrence.<br />
-**DisplayName**: Recurrence Pattern<br />
-**LogicalName**: recurrencepatterntype<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Type of Recurrence.|
+|DisplayName|Recurrence Pattern|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|recurrencepatterntype|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: Daily
-- **Value**: 1 **Label**: Weekly
-- **Value**: 2 **Label**: Monthly
-- **Value**: 3 **Label**: Yearly
+#### RecurrencePatternType Options
+
+|Value|Label|
+|-----|-----|
+|0|Daily|
+|1|Weekly|
+|2|Monthly|
+|3|Yearly|
 
 
 
 ### <a name="BKMK_RuleId"></a> RuleId
 
-**Description**: Unique identifier of the entity associated with recurrence rule.<br />
-**DisplayName**: Recurrence Rule<br />
-**LogicalName**: ruleid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the entity associated with recurrence rule.|
+|DisplayName|Recurrence Rule|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|ruleid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_StartTime"></a> StartTime
 
-**Description**: Start time of the recurring activity.<br />
-**DisplayName**: Start Time<br />
-**LogicalName**: starttime<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Start time of the recurring activity.|
+|DisplayName|Start Time|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|starttime|
+|RequiredLevel|None|
+|Type|DateTime|
 
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [CreatedBy](#BKMK_CreatedBy)
@@ -470,265 +558,305 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Description**: Unique identifier of the user who created the recurrence rule.<br />
-**DisplayName**: Created By<br />
-**LogicalName**: createdby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who created the recurrence rule.|
+|DisplayName|Created By|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
-**Description**: Date and time when the recurrence rule was created.<br />
-**DisplayName**: Created On<br />
-**LogicalName**: createdon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the recurrence rule was created.|
+|DisplayName|Created On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Description**: Unique identifier of the delegate user who created the recurrence rule.<br />
-**DisplayName**: Created By (Delegate)<br />
-**LogicalName**: createdonbehalfby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the delegate user who created the recurrence rule.|
+|DisplayName|Created By (Delegate)|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Description**: Unique identifier of the user who last modified the recurrence rule.<br />
-**DisplayName**: Modified By<br />
-**LogicalName**: modifiedby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who last modified the recurrence rule.|
+|DisplayName|Modified By|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
-**Description**: Date and time when the recurrence rule was last modified.<br />
-**DisplayName**: Modified On<br />
-**LogicalName**: modifiedon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the recurrence rule was last modified.|
+|DisplayName|Modified On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Description**: Unique identifier of the delegate user who modified the recurrence rule.<br />
-**DisplayName**: Created By (Delegate)<br />
-**LogicalName**: modifiedonbehalfby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the delegate user who modified the recurrence rule.|
+|DisplayName|Created By (Delegate)|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridyominame|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Description**: Unique identifier of the business unit that owns the recurrence rule.<br />
-**DisplayName**: Owning Business Unit<br />
-**LogicalName**: owningbusinessunit<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: businessunit
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the business unit that owns the recurrence rule.|
+|DisplayName|Owning Business Unit|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunit|
+|RequiredLevel|None|
+|Targets|businessunit|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Description**: <br />
-**DisplayName**: Owning Team<br />
-**LogicalName**: owningteam<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: team
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Owning Team|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningteam|
+|RequiredLevel|None|
+|Targets|team|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Description**: <br />
-**DisplayName**: Owning User<br />
-**LogicalName**: owninguser<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Owning User|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owninguser|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: versionnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: BigInt<br />
-**MaxValue**: 9223372036854775807<br />
-**MinValue**: -9223372036854775808<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 <a name="onetomany"></a>
 
@@ -741,26 +869,15 @@ Listed by **SchemaName**.
 
 Same as recurringappointmentmaster entity [recurrencerule_recurringappointmentmaster](recurringappointmentmaster.md#BKMK_recurrencerule_recurringappointmentmaster) Many-To-One relationship.
 
-**ReferencingEntity**: recurringappointmentmaster<br />
-**ReferencingAttribute**: activityid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: recurrencerule_recurringappointmentmaster<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: NoCascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|recurringappointmentmaster|
+|ReferencingAttribute|activityid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|recurrencerule_recurringappointmentmaster|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -799,5 +916,9 @@ See systemuser Entity [lk_recurrencerulebase_createdonbehalfby](systemuser.md#BK
 ### <a name="BKMK_lk_recurrencerulebase_modifiedonbehalfby"></a> lk_recurrencerulebase_modifiedonbehalfby
 
 See systemuser Entity [lk_recurrencerulebase_modifiedonbehalfby](systemuser.md#BKMK_lk_recurrencerulebase_modifiedonbehalfby) One-To-Many relationship.
-recurrencerule
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.recurrencerule?text=recurrencerule EntityType" />

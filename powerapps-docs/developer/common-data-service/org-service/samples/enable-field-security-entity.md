@@ -34,7 +34,7 @@ This sample requires additional users that are not in your system. Create the re
 
 ## How this sample works
 
-In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
+In order to simulate the scenario described above, the sample will do the following:
 
 ### Setup
 
