@@ -36,6 +36,8 @@
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-MSPowerApps",
       "contributors_to_exclude": [
+        "buck1ey",
+        "bishalgoswami",
         "openpublishingbuild",
         "sudeepku",
         "v-thepet",
