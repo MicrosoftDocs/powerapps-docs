@@ -75,9 +75,9 @@ The previous list doesn't include these notable items:
 In **Sort**, the formula can only be the name of a single column and can't include other operators or functions.
 
 ### Aggregate functions
-**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, **[Max](functions/function-aggregates.md)**, and **[CountRows](functions/function-table-counts.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](delegation-list.md) for details.
+**[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](delegation-list.md) for details.
 
-Other counting functions such as **[CountA](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)** can't be delegated.
+Other counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
 
 Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** can't be delegated.
 
