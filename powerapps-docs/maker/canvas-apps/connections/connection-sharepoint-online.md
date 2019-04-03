@@ -18,7 +18,7 @@ search.app:
 
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch.
+Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch:
 
 - Show data from a custom list in a SharePoint Online site or an on-premises site.
 - Show images and play video or audio files in a library (SharePoint Online only).
@@ -100,6 +100,8 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
 ## Build your own app from scratch
 
 Apply the concepts in [Create an app from scratch](../get-started-create-from-blank.md) to SharePoint instead of Excel.
+
+<!--note from editor: Show user input placeholder text in italics instead of bold & inside square brackets? ("Placeholders" entry in MWSG "Formatting developer text elements")  -->
 
 ## Show list columns in a gallery
 
