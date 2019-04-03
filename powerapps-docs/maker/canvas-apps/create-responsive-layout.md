@@ -114,7 +114,6 @@ With these formulas in place, you need only change the **Height** property of th
 You can use these formula patterns for expressing common layout relationships between a control, named **C**, and its parent or a sibling control, named **D**.
 
 
-
 | Relationship between C and its parent | Property | Formula | Illustration |
 |--|--|--|--|
 | **C** fills width of parent, with a margin of *N* | **X**| *N* | ![Example of C filling width of parent](media/create-responsive-layout/c1.png) |
@@ -125,8 +124,9 @@ You can use these formula patterns for expressing common layout relationships be
 | **C** aligned with bottom edge of parent, with margin of *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c4.png) |
 | **C** centered horizontally on parent | **X** | `(Parent.Width - C.Width) / 2` | ![Example of C centered horizontally on parent](media/create-responsive-layout/c5.png) |
 | **C** centered vertically on parent | **Y** | `(Parent.Height - C.Height) / 2` | ![Example of C centered vertically on parent](media/create-responsive-layout/c6.png) |
-<br/>
-<br/>
+
+
+
 | Relationship between C and D | Property | Formula | Illustration |
 |--|--|--|--|
 | **C** horizontally aligned with **D** and the same width as **D** | **X** | `D.X` | ![Example of pattern](media/create-responsive-layout/d1.png) |
