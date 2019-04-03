@@ -92,7 +92,7 @@ For some entities, such as account and user, the visualizations are provided out
 -   Maximum number of fields that can be displayed in a tile is four. If you add more fields to the Quick Form that is used for the tile view, only the first four fields will be displayed.  
   
 ### Visualization example  
- Let’s look at an example of creating the visualization for a custom entity. We created a custom entity called new_Widget, created a (1:N) self-referential relationship **new_new_widget_new_widget** and marked it as hierarchical, as shown here.  
+ Let’s look at an example of creating the visualization for a custom entity. We created a custom entity called new_Widget, created a (1:N) self-referential relationship and marked it as hierarchical, as shown here.  
   
  ![Widget relationship definition](media/widget-relationship-definition.png "Widget relationship definition")  
   
