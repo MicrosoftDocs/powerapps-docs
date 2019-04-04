@@ -23,7 +23,7 @@ Common Data Service lets you securely store and manage data that's used by busin
 For information on purchasing a plan to use Common Data Service, see [Pricing info](../../administrator/pricing-billing-skus.md).
 
 ## Why use Common Data Service?
-Standard and custom entities within Common Data Service provide a secure and cloud-based storage option for your data. Entities let you to create a business-focused definition of your organization's data for use within apps. If you're not sure if entities are your best option, consider these benefits:
+Standard and custom entities within Common Data Service provide a secure and cloud-based storage option for your data. Entities let you create a business-focused definition of your organization's data for use within apps. If you're not sure if entities are your best option, consider these benefits:
 
 * **Easy to manage** &ndash; Both the metadata and data are stored in the cloud. You don't need to worry about the details of how they're stored.
 * **Easy to secure** &ndash; Data is securely stored so that users can see it only if you grant them access. Role-based security allows you to control access to entities for different users within your organization.
