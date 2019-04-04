@@ -54,7 +54,7 @@ The **Char** function translates a number into a string with the corresponding A
     - **TemplateSize**: 30
     - **TemplatePadding**: 0
 
-    The value of the **Items** property multiplies 16 by the column number provided by the Value column of the **Items** property from the first gallery (0-7 in ThisItem.Value). The formula then adds the result to one of the row numbers from the second gallery (0-15 in the record scope that the [**ForAll**](function-forall.md) function provides).
+    The value of the **Items** property multiplies 16 by the column number provided by the Value column of the **Items** property from the first gallery (0-7 in `ThisItem.Value`). The formula then adds the result to one of the row numbers from the second gallery (0-15 in the record scope that the [**ForAll**](function-forall.md) function provides).
 
 1. Inside the second (vertical) gallery, add a **Label** control, and set these properties:
 

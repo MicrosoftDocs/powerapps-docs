@@ -1,6 +1,6 @@
 ---
 title: PowerApps for enterprise developers, partners, and ISVs | Microsoft Docs
-description: An introduction to developing solutions in PowerApps.
+description: An introduction to developing solutions with canvas apps.
 author: ImadYanni
 manager: kvivek
 ms.service: powerapps
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# PowerApps for enterprise developers, partners, and ISVs
+# Canvas apps for enterprise developers, partners, and ISVs
 
 As a developer, you can extend canvas apps in PowerApps, enabling even more powerful solutions for organizations and customers.
 
@@ -23,7 +23,7 @@ As a developer, you can extend canvas apps in PowerApps, enabling even more powe
 
 As an enterprise developer, empower your organization to build robust, tailored solutions on PowerApps:
 
-- **Build custom connectors**: Develop custom connectors to connect to your organization's data and web services through Microsoft Flow. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/)
+- **Build custom connectors**: Develop custom connectors to connect to your organization's data and web services. [Learn more](https://docs.microsoft.com/connectors/custom-connectors/)
 
 - **Build Azure Functions**: Craft Azure Functions to extend apps with custom server-side logic. [Learn more](https://docs.microsoft.com/azure/azure-functions/functions-powerapps-scenario)
 
