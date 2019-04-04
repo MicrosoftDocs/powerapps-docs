@@ -18,7 +18,9 @@ search.app:
 
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
-Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch:
+Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch.
+
+<!--note from editor: Add an intro to the bullet items to make clearer the connection between the above para and the bullets (if that is intended)--e.g., "By making these connections, you can:"  -->
 
 - Show data from a custom list in a SharePoint Online site or an on-premises site.
 - Show images and play video or audio files in a library (SharePoint Online only).
