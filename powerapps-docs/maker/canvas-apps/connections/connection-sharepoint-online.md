@@ -20,7 +20,7 @@ search.app:
 
 Connect to a SharePoint site to generate an app automatically from a custom list, or create a connection before you add data to an existing app or build an app from scratch.
 
-<!--note from editor: Add an intro to the bullet items to make clearer the connection between the above para and the bullets (if that is intended)--e.g., "By making these connections, you can:"  -->
+Depending on where your data resides, you can take either or both of these approaches:
 
 - Show data from a custom list in a SharePoint Online site or an on-premises site.
 - Show images and play video or audio files in a library (SharePoint Online only).
@@ -92,7 +92,7 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
     > [!div class="mx-imgBorder"]
     > ![Under Choose a list, select the check box for Documents or one or more lists that you want to use, and then select Connect](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists.  If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom list name**.
+    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
 
     > [!div class="mx-imgBorder"]
     > ![Type the name of the list in the box that contains Enter a custom list name.](./media/connection-sharepoint-online/custom-list.png)
@@ -103,26 +103,24 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
 
 Apply the concepts in [Create an app from scratch](../get-started-create-from-blank.md) to SharePoint instead of Excel.
 
-<!--note from editor: Show user input placeholder text in italics instead of bold & inside square brackets? ("Placeholders" entry in MWSG "Formatting developer text elements")  -->
-
 ## Show list columns in a gallery
 
 If your custom list contains any of these types of columns, show that data in a **Gallery** control by using the formula bar to set the **Text** property of one or more **Label** controls in that gallery:
 
-- For a **Choice** or **Lookup** column, specify **ThisItem.[ColumnName].Value** to show data in that column.
+- For a **Choice** or **Lookup** column, specify **ThisItem.**_ColumnName_**.Value** to show data in that column.
 
     For example, specify **ThisItem.Location.Value** if you have a **Choice** column named **Location**, and specify **ThisItem.PostalCode.Value** if you have a **Lookup** column named **PostalCode**.
 
-- For a **Person or Group** column, specify **ThisItem.[ColumnName].DisplayName** to show the display name of the user or the group.
+- For a **Person or Group** column, specify **ThisItem.**_ColumnName_**.DisplayName** to show the display name of the user or the group.
 
     For example, specify **ThisItem.Manager.DisplayName** to show display names from a **Person or Group** column named **Manager**.
 
-    You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.[ColumnName].** (including the trailing period).
+    You can also show different information about users, such as email addresses or job titles. To display a complete list of options, specify **ThisItem.**_ColumnName_**.** (including the trailing period).
 
     > [!NOTE]
     > For a **CreatedBy** column, specify **ThisItem.Author.DisplayName** to show the display names of users who created items in the list. For a **ModifiedBy** column, specify **ThisItem.Editor.DisplayName** to show the display names of users who changed items in the list.
 
-- For a **Managed Metadata** column, specify **ThisItem.[ColumnName].Label** to show data in that column.
+- For a **Managed Metadata** column, specify **ThisItem.**_ColumnName_**.Label** to show data in that column.
 
     For example, specify **ThisItem.Languages.Label** if you have a **Managed Metadata** column named **Languages**.
 
@@ -158,8 +156,6 @@ You can [download a sample app](https://pwrappssamples.blob.core.windows.net/sam
 
 1. After you download the app, open [PowerApps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**.
 1. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the first two procedures in this topic.
-
-<!--note from editor: In procedure step above, link to topics "Create a connection" and "Add data to an existing app"? -->
 
 > [!NOTE]
 > By default, this app shows [delegation warnings](../delegation-overview.md), but you can ignore them if your library contains fewer than 500 items.
