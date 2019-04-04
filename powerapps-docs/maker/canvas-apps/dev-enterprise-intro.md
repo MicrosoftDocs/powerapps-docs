@@ -1,6 +1,6 @@
 ---
 title: PowerApps for enterprise developers, partners, and ISVs | Microsoft Docs
-description: An introduction to developing solutions in PowerApps.
+description: An introduction to developing solutions with canvas apps.
 author: ImadYanni
 manager: kvivek
 ms.service: powerapps
