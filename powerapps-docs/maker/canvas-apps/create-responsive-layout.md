@@ -22,9 +22,7 @@ After you make that choice, you can make a few more choices if you select **File
 
 Those choices underlie every other choice you make as you design screen layouts. If your app runs on a device of a different size or on the web, your entire layout scales to fit the screen where the app is running. If an app designed for a phone runs in a large browser window, for example, the app scales to compensate and looks oversized for its space. The app can't take advantage of the additional pixels by showing more controls or more content.
 
-If you create a responsive layout, controls can respond to different devices or window sizes, making the experience on different form factors feel more at home. To achieve responsive layout, you adjust some settings and write expressions throughout your app. 
-
-<!--note from editor: Will users know definition of "form factors"?   -->
+If you create a responsive layout, controls can respond to different devices or window sizes, making various experiences feel more natural. To achieve responsive layout, you adjust some settings and write expressions throughout your app. 
 
 ## Disable Scale to fit
 
@@ -68,13 +66,11 @@ In the simplest case, one control fills an entire screen. To create this effect,
 | **Width**  | `Parent.Width`  |
 | **Height** | `Parent.Height` |
 
-<!--note from editor: In text below, make "Parent" boldface per "operator" entry in MWSG "Formatting developer text elements"   -->
+These formulas use the **Parent** operator. For a control placed directly on a screen, **Parent** refers to the screen. With these property values, the control appears in the upper-left corner of the screen (0, 0) and has the same **Width** and **Height** as the screen.
 
-These formulas use the Parent operator. For a control placed directly on a screen, Parent refers to the screen. With these property values, the control appears in the upper-left corner of the screen (0, 0) and has the same **Width** and **Height** as the screen.
+Later in this topic, you'll apply these principles (and the **Parent** operator) to position controls inside other containers, such as galleries, group controls, and components.
 
-Later in this topic, you'll apply these principles (and the Parent operator) to position controls inside other containers, such as galleries, group controls, and components.
-
-As an alternative, the control can fill only the top half of the screen. To create this effect, change the **Height** formula to **Parent.Height** / 2, and leave the other formulas unchanged.
+As an alternative, the control can fill only the top half of the screen. To create this effect, set the **Height** property to **Parent.Height** / 2, and leave the other formulas unchanged.
 
 If you want a second control to fill the bottom half of the same screen, you can take at least two other approaches to constructing its formulas. For simplicity, you might take this approach:
 
@@ -113,7 +109,6 @@ With these formulas in place, you need only change the **Height** property of th
 
 You can use these formula patterns for expressing common layout relationships between a control, named **C**, and its parent or a sibling control, named **D**.
 
-
 | Relationship between C and its parent | Property | Formula | Illustration |
 |--|--|--|--|
 | **C** fills width of parent, with a margin of *N* | **X**| *N* | ![Example of C filling width of parent](media/create-responsive-layout/c1.png) |
@@ -124,8 +119,6 @@ You can use these formula patterns for expressing common layout relationships be
 | **C** aligned with bottom edge of parent, with margin of *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Example of C aligning with edge of parent](media/create-responsive-layout/c4.png) |
 | **C** centered horizontally on parent | **X** | `(Parent.Width - C.Width) / 2` | ![Example of C centered horizontally on parent](media/create-responsive-layout/c5.png) |
 | **C** centered vertically on parent | **Y** | `(Parent.Height - C.Height) / 2` | ![Example of C centered vertically on parent](media/create-responsive-layout/c6.png) |
-
-
 
 | Relationship between C and D | Property | Formula | Illustration |
 |--|--|--|--|
@@ -149,7 +142,7 @@ As you construct screens that contain more controls, it will become more conveni
 
 ### Galleries
 
-If you use a gallery in your app, you'll need to lay out controls within the gallery's template. You can position these controls by writing formulas that use the Parent operator, which will refer to the gallery template. In the formulas on controls within a gallery template, use the **Parent.TemplateHeight** and **Parent.TemplateWidth** properties. Use these instead of **Parent.Width** and **Parent.Height**, which refer to the overall size of the gallery.
+If you use a gallery in your app, you'll need to lay out controls within the gallery's template. You can position these controls by writing formulas that use the **Parent** operator, which will refer to the gallery template. In the formulas on controls within a gallery template, use the **Parent.TemplateHeight** and **Parent.TemplateWidth** properties; don't use **Parent.Width** and **Parent.Height**, which refer to the overall size of the gallery.
 
 ![Vertical gallery showing Template Width and Height](media/create-responsive-layout/gallery-vertical.png)
 
@@ -162,7 +155,6 @@ Consider the example of a header at the top of a screen. It's common to have a h
 ![Header example using a group](media/create-responsive-layout/header-group.png)
 
 Set the properties for these controls to these values:
-
 
 | Property | Header | Menu | Close | Title |
 |--|--|--|--|--|
