@@ -20,11 +20,11 @@ Before you build a canvas app in PowerApps, you specify whether to tailor the ap
 
 After you make that choice, you can make a few more choices if you select **File** > **App settings** > **Screen size + orientation**. You can choose portrait or landscape orientation and screen size (tablet only). You can also lock or unlock the aspect ratio and support device rotation (or not).
 
-Those choices underlie every other choice you make as you design screen layouts. If your app runs on a device of a different size or on the web, your entire layout scale to fit the screen where the app is running. If an app designed for a phone runs in a large browser window, for example, the app scales to compensate and looks oversized for its space. The app can't take advantage of the additional pixels by showing more controls or more content.
+Those choices underlie every other choice you make as you design screen layouts. If your app runs on a device of a different size or on the web, your entire layout scales to fit the screen where the app is running. If an app designed for a phone runs in a large browser window, for example, the app scales to compensate and looks oversized for its space. The app can't take advantage of the additional pixels by showing more controls or more content.
 
-If you create a responsive layout, controls can respond to different devices or window sizes, making the experience on different form factors feel more at home. To achieve responsive layout, you adjust some settings and write expressions throughout your app. 
+If you create a responsive layout, controls can respond to different devices or window sizes, making various experiences feel more natural. To achieve responsive layout, you adjust some settings and write expressions throughout your app. 
 
-## Disable Scale to Fit
+## Disable Scale to fit
 
 You can configure each screen so that its layout adapts to the actual space in which the app is running.
 
@@ -44,7 +44,7 @@ To make your app's layouts respond to changes in the screen dimensions, you'll w
 
 These formulas refer to the **Width**, **Height**, **DesignWidth**, and **DesignHeight** properties of the app. The app's **Width** and **Height** properties correspond to the dimensions of the device or browser window in which your app is running. If the user resizes the browser window (or rotates the device if you've turned off **Lock orientation**), the values of these properties change dynamically. The formulas in the screen's **Width** and **Height** properties are reevaluated when these values change.
 
-The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Screen size + orientation** pane of **App settings**. For example, if you select the phone layout in the portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
+The **DesignWidth** and **DesignHeight** properties come from the dimensions that you specify in the **Screen size + orientation** pane of **App settings**. For example, if you select the phone layout in portrait orientation, **DesignWidth** is 640, and **DesignHeight** is 1136.
 
 As they're used in the formulas for the screen's **Width** and **Height** properties, you can think of **DesignWidth** and **DesignHeight** as the minimum dimensions for which you'll design the app. If the actual area available to your app is even smaller than these minimum dimensions, the formulas for the screen's **Width** and **Height** properties ensure that their values won't become any smaller than minimums. In that case, the user must scroll to view all of the screen's content.
 
@@ -66,11 +66,11 @@ In the simplest case, one control fills an entire screen. To create this effect,
 | **Width**  | `Parent.Width`  |
 | **Height** | `Parent.Height` |
 
-These formulas use the Parent operator. For a control placed directly on a screen, Parent refers to the screen. With these property values, the control appears in the upper-left corner of the screen (0, 0) and has the same **Width** and **Height** as the screen.
+These formulas use the **Parent** operator. For a control placed directly on a screen, **Parent** refers to the screen. With these property values, the control appears in the upper-left corner of the screen (0, 0) and has the same **Width** and **Height** as the screen.
 
-Later in this topic, you'll apply these principles (and the Parent operator) to position controls inside other containers, such as galleries, group controls, and components.
+Later in this topic, you'll apply these principles (and the **Parent** operator) to position controls inside other containers, such as galleries, group controls, and components.
 
-As an alternative, the control can fill only the top half of the screen. To create this effect, change the **Height** formula to **Parent.Height** / 2, and leave the other formulas unchanged.
+As an alternative, the control can fill only the top half of the screen. To create this effect, set the **Height** property to **Parent.Height** / 2, and leave the other formulas unchanged.
 
 If you want a second control to fill the bottom half of the same screen, you can take at least two other approaches to constructing its formulas. For simplicity, you might take this approach:
 
@@ -87,7 +87,10 @@ If you want a second control to fill the bottom half of the same screen, you can
 
 ![Upper and Lower control](media/create-responsive-layout/dynamic-layout.png)
 
-This configuration would achieve the effect that you want, but you'd need to edit each formula if you changed your mind about the relative sizes of the controls. For example, you might decide that the top control should occupy only the top one-third of the screen, with the bottom control filling the lower two-thirds. To create that effect, you'd need to update the **Height** property of the **Upper** control and the **Y** and **Height** properties of the **Lower** control. Instead, consider writing the formulas for the **Lower** control in terms of the **Upper** control (and itself), as in this example:
+This configuration would achieve the effect that you want, but you'd need to edit each formula if you changed your mind about the relative sizes of the controls. For example, you might decide that the top control should occupy only the top one-third of the screen, with the bottom control filling the lower two-thirds. 
+
+To create that effect, you'd need to update the **Height** property of the **Upper** control and the **Y** and **Height** properties of the **Lower** control. Instead, consider writing the formulas for the **Lower** control in terms of the **Upper** control (and itself), as in this example:
+
 
 | Control | Property | Formula           |
 |-|----------|-------------------|
@@ -139,7 +142,7 @@ As you construct screens that contain more controls, it will become more conveni
 
 ### Galleries
 
-If you use a gallery in your app, you'll need to lay out controls within the gallery's template. You can position these controls by writing formulas that use the Parent operator, which will refer to the gallery template. In the formulas on controls within a gallery template, use the Parent.TemplateHeight and Parent.TemplateWidth properties. Use these instead of Parent.Width and Parent.Height, which refer to the overall size of the gallery.
+If you use a gallery in your app, you'll need to lay out controls within the gallery's template. You can position these controls by writing formulas that use the **Parent** operator, which will refer to the gallery template. In the formulas on controls within a gallery template, use the **Parent.TemplateHeight** and **Parent.TemplateWidth** properties; don't use **Parent.Width** and **Parent.Height**, which refer to the overall size of the gallery.
 
 ![Vertical gallery showing Template Width and Height](media/create-responsive-layout/gallery-vertical.png)
 
@@ -166,11 +169,11 @@ Having written these formulas, you can adjust the size or position of the **Head
 
 ### Components
 
-If you use another experimental feature, named Components, you can construct building blocks and reuse them throughout your app. As with the **Group** control, the controls that you place within a component should base their position and size formulas on `Parent.Width` and `Parent.Height`, which refer to the size of the component. More information: [Create a component](create-component.md)
+If you use another experimental feature, named Components, you can construct building blocks and reuse them throughout your app. As with the **Group** control, the controls that you place within a component should base their position and size formulas on `Parent.Width` and `Parent.Height`, which refer to the size of the component. More information: [Create a component](create-component.md).
 
 ## Adapting layout for device size and orientation
 
-So far, you've learned how to use formulas to change each control's size in response to the available space, while keeping controls aligned relative to each other. But you might want or need to make more substantial layout changes in response to different device sizes and orientations. When a device is rotated from portrait to landscape orientation, for example, you may want to switch from a vertical layout to a horizontal one. On a larger device, you can present more content or rearrange it to provide a more appealing layout. On a smaller device, you might need to split up content across multiple screens.
+So far, you've learned how to use formulas to change each control's size in response to the available space, while keeping controls aligned relative to each other. But you might want or need to make more substantial layout changes in response to different device sizes and orientations. When a device is rotated from portrait to landscape orientation, for example, you might want to switch from a vertical layout to a horizontal one. On a larger device, you can present more content or rearrange it to provide a more appealing layout. On a smaller device, you might need to split up content across multiple screens.
 
 ### Device orientation
 
@@ -189,7 +192,7 @@ To adapt the screen's **Width** and **Height** properties to the device orientat
 
 These formulas swap the app's **DesignWidth** and **DesignHeight** values, based on whether the device's width is less than its height (portrait orientation) or more than its height (landscape orientation).
 
-After you adjust the screen's **Width** and **Height** formulas, you may also want to rearrange controls within your screen to better use the available space. For example, if each of two controls occupies half of the screen, you might stack them vertically in portrait but arrange them side by side in landscape.
+After you adjust the screen's **Width** and **Height** formulas, you might also want to rearrange controls within your screen to better use the available space. For example, if each of two controls occupies half of the screen, you might stack them vertically in portrait but arrange them side by side in landscape.
 
 > [!NOTE]
 > In landscape orientation, the **Upper** and **Lower** controls appear as left and right controls.
@@ -211,6 +214,6 @@ After you adjust the screen's **Width** and **Height** formulas, you may also wa
 
 ### Known limitations
 
-The authoring canvas doesn't respond to the sizing formulas created. To test responsive behavior, save and publish your app, then open it on devices or in browser windows of various sizes and orientations.
+The authoring canvas doesn't respond to the sizing formulas created. To test responsive behavior, save and publish your app, and then open it on devices or in browser windows of various sizes and orientations.
 
 If you write expressions or formulas in the **X**, **Y**, **Width**, and **Height** properties of a control, you'll overwrite those expressions or formulas if you later drag the control to a different location or resize the control by dragging its border.

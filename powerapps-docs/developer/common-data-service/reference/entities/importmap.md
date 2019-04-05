@@ -1,20 +1,13 @@
 ---
-title: "ImportMap Entity Reference (Common Data Service)| Microsoft Docs"
+title: "ImportMap Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the ImportMap entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,19 +18,42 @@ search.app:
 
 Data map used in import.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|Assign|PATCH [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
+|Create|POST [*org URI*]/api/data/v9.0/importmaps<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|Delete|DELETE [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
+|ExportMappingsImportMap|<xref href="Microsoft.Dynamics.CRM.ExportMappingsImportMap?text=ExportMappingsImportMap Action" />|<xref:Microsoft.Crm.Sdk.Messages.ExportMappingsImportMapRequest>|
+|GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
+|ImportMappingsImportMap|<xref href="Microsoft.Dynamics.CRM.ImportMappingsImportMap?text=ImportMappingsImportMap Action" />|<xref:Microsoft.Crm.Sdk.Messages.ImportMappingsImportMapRequest>|
+|ModifyAccess|<xref href="Microsoft.Dynamics.CRM.ModifyAccess?text=ModifyAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/importmaps<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|RetrievePrincipalAccess|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrievePrincipalAccessRequest>|
+|RetrieveSharedPrincipalsAndAccess|<xref href="Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess?text=RetrieveSharedPrincipalsAndAccess Function" />|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|
+|RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
+|SetState|PATCH [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
+|Update|PATCH [*org URI*]/api/data/v9.0/importmaps(*importmapid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+
 ## Entity Properties
 
-**DisplayName**: Data Map<br />
-**DisplayCollectionName**: Data Maps<br />
-**SchemaName**: ImportMap<br />
-**CollectionSchemaName**: ImportMaps<br />
-**LogicalName**: importmap<br />
-**LogicalCollectionName**: importmaps<br />
-**EntitySetName**: importmaps<br />
-**PrimaryIdAttribute**: importmapid<br />
-**PrimaryNameAttribute**: name<br />
-**OwnershipType**: UserOwned<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|ImportMaps|
+|DisplayCollectionName|Data Maps|
+|DisplayName|Data Map|
+|EntitySetName|importmaps|
+|IsBPFEntity|False|
+|LogicalCollectionName|importmaps|
+|LogicalName|importmap|
+|OwnershipType|UserOwned|
+|PrimaryIdAttribute|importmapid|
+|PrimaryNameAttribute|name|
+|SchemaName|ImportMap|
+
 <a name="writable-attributes"></a>
 
 ## Writable attributes
@@ -65,256 +81,311 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_Description"></a> Description
 
-**Description**: Type additional information to describe the data map, such as the intended use or data source.<br />
-**DisplayName**: Description<br />
-**LogicalName**: description<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: TextArea<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 2000
+|Property|Value|
+|--------|-----|
+|Description|Type additional information to describe the data map, such as the intended use or data source.|
+|DisplayName|Description|
+|FormatName|TextArea|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|description|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_EntitiesPerFile"></a> EntitiesPerFile
 
-**Description**: Choose whether a data file can contain data for one or more record types.<br />
-**DisplayName**: Entities Per File<br />
-**LogicalName**: entitiesperfile<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Choose whether a data file can contain data for one or more record types.|
+|DisplayName|Entities Per File|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|entitiesperfile|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Single Entity Per File
-- **Value**: 2 **Label**: Multiple Entities Per File
+#### EntitiesPerFile Options
+
+|Value|Label|
+|-----|-----|
+|1|Single Entity Per File|
+|2|Multiple Entities Per File|
 
 
 
 ### <a name="BKMK_ImportMapId"></a> ImportMapId
 
-**Description**: Unique identifier of the data map.<br />
-**DisplayName**: Data Map<br />
-**LogicalName**: importmapid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForUpdate**: False<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the data map.|
+|DisplayName|Data Map|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|importmapid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_ImportMapType"></a> ImportMapType
 
-**Description**: Select the type of data map to distinguish out-of-the-box data maps from custom maps.<br />
-**DisplayName**: Map Type<br />
-**LogicalName**: importmaptype<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the type of data map to distinguish out-of-the-box data maps from custom maps.|
+|DisplayName|Map Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|importmaptype|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Standard
-- **Value**: 2 **Label**: Out of Box
-- **Value**: 3 **Label**: In Process
+#### ImportMapType Options
+
+|Value|Label|
+|-----|-----|
+|1|Standard|
+|2|Out of Box|
+|3|In Process|
 
 
 
 ### <a name="BKMK_IntroducedVersion"></a> IntroducedVersion
 
-**Description**: Version in which the component is introduced.<br />
-**DisplayName**: Introduced Version<br />
-**LogicalName**: introducedversion<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: String<br />
-**FormatName**: VersionNumber<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 48
+|Property|Value|
+|--------|-----|
+|Description|Version in which the component is introduced.|
+|DisplayName|Introduced Version|
+|FormatName|VersionNumber|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|introducedversion|
+|MaxLength|48|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_IsWizardCreated"></a> IsWizardCreated
 
-**Description**: Information about whether this data map was created by the Data Migration Manager.<br />
-**DisplayName**: Is Wizard-Created<br />
-**LogicalName**: iswizardcreated<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Information about whether this data map was created by the Data Migration Manager.|
+|DisplayName|Is Wizard-Created|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iswizardcreated|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: True
-- **FalseOption Value**: 0 **Label**: False
+#### IsWizardCreated Options
+
+|Value|Label|
+|-----|-----|
+|1|True|
+|0|False|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_MapCustomizations"></a> MapCustomizations
 
-**Description**: Customizations XML<br />
-**DisplayName**: Map Customizations<br />
-**LogicalName**: mapcustomizations<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 1073741823
+|Property|Value|
+|--------|-----|
+|Description|Customizations XML|
+|DisplayName|Map Customizations|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|mapcustomizations|
+|MaxLength|1073741823|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Name"></a> Name
 
-**Description**: Type a descriptive name for the data map.<br />
-**DisplayName**: Map Name<br />
-**LogicalName**: name<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 320
+|Property|Value|
+|--------|-----|
+|Description|Type a descriptive name for the data map.|
+|DisplayName|Map Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|name|
+|MaxLength|320|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
-**Description**: Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.<br />
-**DisplayName**: Owner<br />
-**LogicalName**: ownerid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Owner<br />
-**Targets**: systemuser,team
+|Property|Value|
+|--------|-----|
+|Description|Enter the user or team who is assigned to manage the record. This field is updated every time the record is assigned to a different user.|
+|DisplayName|Owner|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|ownerid|
+|RequiredLevel|SystemRequired|
+|Targets|systemuser,team|
+|Type|Owner|
 
 
 ### <a name="BKMK_OwnerIdType"></a> OwnerIdType
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridtype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: EntityName<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridtype|
+|RequiredLevel|SystemRequired|
+|Type|EntityName|
 
 
 ### <a name="BKMK_Source"></a> Source
 
-**Description**: Type the name of the migration source that this data map is used for.<br />
-**DisplayName**: Source<br />
-**LogicalName**: source<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Type the name of the migration source that this data map is used for.|
+|DisplayName|Source|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|source|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_SourceType"></a> SourceType
 
-**Description**: Select the migration source type that this data map is used for.<br />
-**DisplayName**: Source System Type<br />
-**LogicalName**: sourcetype<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**IsValidForUpdate**: False<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the migration source type that this data map is used for.|
+|DisplayName|Source System Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|sourcetype|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Map For SalesForce.com Full Data Export
-- **Value**: 2 **Label**: Map For SalesForce.com Report Export
-- **Value**: 3 **Label**: Map For SalesForce.com Contact and Account Report Export
-- **Value**: 4 **Label**: Microsoft Office Outlook 2010 with Business Contact Manager
-- **Value**: 5 **Label**: Generic Map for Contact and Account
+#### SourceType Options
+
+|Value|Label|
+|-----|-----|
+|1|Map For SalesForce.com Full Data Export|
+|2|Map For SalesForce.com Report Export|
+|3|Map For SalesForce.com Contact and Account Report Export|
+|4|Microsoft Office Outlook 2010 with Business Contact Manager|
+|5|Generic Map for Contact and Account|
 
 
 
 ### <a name="BKMK_SourceUserIdentifierForSourceCRMUserLink"></a> SourceUserIdentifierForSourceCRMUserLink
 
-**Description**: Source user value for source Microsoft Dynamics 365 user link.<br />
-**DisplayName**: Source User Value<br />
-**LogicalName**: sourceuseridentifierforsourcecrmuserlink<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Source user value for source Microsoft Dynamics 365 user link.|
+|DisplayName|Source User Value|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|sourceuseridentifierforsourcecrmuserlink|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_SourceUserIdentifierForSourceDataSourceUserLink"></a> SourceUserIdentifierForSourceDataSourceUserLink
 
-**Description**: Column in the source file that uniquely identifies a user.<br />
-**DisplayName**: Source User Identifier<br />
-**LogicalName**: sourceuseridentifierforsourcedatasourceuserlink<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Column in the source file that uniquely identifies a user.|
+|DisplayName|Source User Identifier|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|sourceuseridentifierforsourcedatasourceuserlink|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_StateCode"></a> StateCode
 
-**Description**: Shows whether the data map is active or inactive. Inactive data maps are read-only and can't be edited.<br />
-**DisplayName**: Status<br />
-**LogicalName**: statecode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**IsValidForCreate**: False<br />
-**Type**: State<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Shows whether the data map is active or inactive. Inactive data maps are read-only and can't be edited.|
+|DisplayName|Status|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statecode|
+|RequiredLevel|SystemRequired|
+|Type|State|
 
-- **Value**: 0 **Label**: Active **DefaultStatus**: 1 **InvariantName**: Active
-- **Value**: 1 **Label**: Inactive **DefaultStatus**: 2 **InvariantName**: Inactive
+#### StateCode Options
+
+|Value|Label|DefaultStatus|InvariantName|
+|-----|-----|-------------|-------------|
+|0|Active|1|Active|
+|1|Inactive|2|Inactive|
 
 
 
 ### <a name="BKMK_StatusCode"></a> StatusCode
 
-**Description**: Select the data map's status.<br />
-**DisplayName**: Status Reason<br />
-**LogicalName**: statuscode<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Status<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the data map's status.|
+|DisplayName|Status Reason|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|statuscode|
+|RequiredLevel|SystemRequired|
+|Type|Status|
 
-- **Value**: 1 **Label**: Active **State**: 0
-- **Value**: 2 **Label**: Inactive **State**: 1
+#### StatusCode Options
+
+|Value|Label|State|
+|-----|-----|-----|
+|1|Active|0|
+|2|Inactive|1|
 
 
 
 ### <a name="BKMK_TargetUserIdentifierForSourceCRMUserLink"></a> TargetUserIdentifierForSourceCRMUserLink
 
-**Description**: Microsoft Dynamics 365 user.<br />
-**DisplayName**: Target User Value<br />
-**LogicalName**: targetuseridentifierforsourcecrmuserlink<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 160
+|Property|Value|
+|--------|-----|
+|Description|Microsoft Dynamics 365 user.|
+|DisplayName|Target User Value|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|targetuseridentifierforsourcecrmuserlink|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentState](#BKMK_ComponentState)
@@ -348,656 +419,738 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
 
-**Description**: For internal use only.<br />
-**DisplayName**: Component State<br />
-**LogicalName**: componentstate<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Component State|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componentstate|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: Published
-- **Value**: 1 **Label**: Unpublished
-- **Value**: 2 **Label**: Deleted
-- **Value**: 3 **Label**: Deleted Unpublished
+#### ComponentState Options
+
+|Value|Label|
+|-----|-----|
+|0|Published|
+|1|Unpublished|
+|2|Deleted|
+|3|Deleted Unpublished|
 
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Description**: Shows who created the record.<br />
-**DisplayName**: Created By<br />
-**LogicalName**: createdby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Shows who created the record.|
+|DisplayName|Created By|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedByName"></a> CreatedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedByYomiName"></a> CreatedByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
-**Description**: Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.<br />
-**DisplayName**: Created On<br />
-**LogicalName**: createdon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
+|DisplayName|Created On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdon|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Description**: Shows who created the record on behalf of another user.<br />
-**DisplayName**: Created By (Delegate)<br />
-**LogicalName**: createdonbehalfby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Shows who created the record on behalf of another user.|
+|DisplayName|Created By (Delegate)|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ImportMapIdUnique"></a> ImportMapIdUnique
 
-**Description**: Unique identifier of the ImortMap.<br />
-**DisplayName**: <br />
-**LogicalName**: importmapidunique<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the ImortMap.|
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|importmapidunique|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_IsManaged"></a> IsManaged
 
-**Description**: Information that specifies whether this component is managed.<br />
-**DisplayName**: State<br />
-**LogicalName**: ismanaged<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Information that specifies whether this component is managed.|
+|DisplayName|State|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ismanaged|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Managed
-- **FalseOption Value**: 0 **Label**: Unmanaged
+#### IsManaged Options
+
+|Value|Label|
+|-----|-----|
+|1|Managed|
+|0|Unmanaged|
 
 **DefaultValue**: False
+
 
 
 ### <a name="BKMK_IsValidForImport"></a> IsValidForImport
 
-**Description**: Information about whether the data map is valid for use with data import.<br />
-**DisplayName**: Is Valid For Import<br />
-**LogicalName**: isvalidforimport<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Information about whether the data map is valid for use with data import.|
+|DisplayName|Is Valid For Import|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isvalidforimport|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Yes
-- **FalseOption Value**: 0 **Label**: No
+#### IsValidForImport Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
 
 **DefaultValue**: False
 
 
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Description**: Shows who last updated the record.<br />
-**DisplayName**: Modified By<br />
-**LogicalName**: modifiedby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Shows who last updated the record.|
+|DisplayName|Modified By|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedByName"></a> ModifiedByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedByYomiName"></a> ModifiedByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
-**Description**: Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.<br />
-**DisplayName**: Modified On<br />
-**LogicalName**: modifiedon<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options.|
+|DisplayName|Modified On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedon|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Description**: Shows who last updated the record on behalf of another user.<br />
-**DisplayName**: Modified By (Delegate)<br />
-**LogicalName**: modifiedonbehalfby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Shows who last updated the record on behalf of another user.|
+|DisplayName|Modified By (Delegate)|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OverwriteTime"></a> OverwriteTime
 
-**Description**: For internal use only.<br />
-**DisplayName**: Record Overwrite Time<br />
-**LogicalName**: overwritetime<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateOnly
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|For internal use only.|
+|DisplayName|Record Overwrite Time|
+|Format|DateOnly|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|overwritetime|
+|RequiredLevel|SystemRequired|
+|Type|DateTime|
 
 
 ### <a name="BKMK_OwnerIdName"></a> OwnerIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridname|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwnerIdYomiName"></a> OwnerIdYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: owneridyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owneridyominame|
+|MaxLength|100|
+|RequiredLevel|SystemRequired|
+|Type|String|
 
 
 ### <a name="BKMK_OwningBusinessUnit"></a> OwningBusinessUnit
 
-**Description**: Business unit that owns the data map.<br />
-**DisplayName**: Owning Business Unit<br />
-**LogicalName**: owningbusinessunit<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: businessunit
+|Property|Value|
+|--------|-----|
+|Description|Business unit that owns the data map.|
+|DisplayName|Owning Business Unit|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningbusinessunit|
+|RequiredLevel|None|
+|Targets|businessunit|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwningTeam"></a> OwningTeam
 
-**Description**: Unique identifier of the team who owns the data map.<br />
-**DisplayName**: Owning Team<br />
-**LogicalName**: owningteam<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: team
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the team who owns the data map.|
+|DisplayName|Owning Team|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owningteam|
+|RequiredLevel|None|
+|Targets|team|
+|Type|Lookup|
 
 
 ### <a name="BKMK_OwningUser"></a> OwningUser
 
-**Description**: Unique identifier of the user who owns the data map.<br />
-**DisplayName**: Owning User<br />
-**LogicalName**: owninguser<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who owns the data map.|
+|DisplayName|Owning User|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|owninguser|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Description**: Unique identifier of the associated solution.<br />
-**DisplayName**: Solution<br />
-**LogicalName**: solutionid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the associated solution.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|solutionid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_SupportingSolutionId"></a> SupportingSolutionId
 
-**Description**: For internal use only.<br />
-**DisplayName**: Solution<br />
-**LogicalName**: supportingsolutionid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: False<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|For internal use only.|
+|DisplayName|Solution|
+|IsValidForForm|False|
+|IsValidForRead|False|
+|LogicalName|supportingsolutionid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_TargetEntity"></a> TargetEntity
 
-**Description**: Select the name of the Microsoft Dynamics 365 record type that this data map is defined for.<br />
-**DisplayName**: Record Type<br />
-**LogicalName**: targetentity<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: ApplicationRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Select the name of the Microsoft Dynamics 365 record type that this data map is defined for.|
+|DisplayName|Record Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|targetentity|
+|RequiredLevel|ApplicationRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Account
-- **Value**: 2 **Label**: Contact
-- **Value**: 5 **Label**: Note
-- **Value**: 6 **Label**: Business Unit Map
-- **Value**: 7 **Label**: Owner
-- **Value**: 8 **Label**: User
-- **Value**: 9 **Label**: Team
-- **Value**: 10 **Label**: Business Unit
-- **Value**: 14 **Label**: System User Principal
-- **Value**: 29 **Label**: Subscription
-- **Value**: 30 **Label**: Filter Template
-- **Value**: 31 **Label**: Privilege Object Type Code
-- **Value**: 33 **Label**: Subscription Synchronization Information
-- **Value**: 35 **Label**: Tracking information for deleted entities
-- **Value**: 36 **Label**: Client update
-- **Value**: 37 **Label**: Subscription Manually Tracked Object
-- **Value**: 42 **Label**: SystemUser BusinessUnit Entity Map
-- **Value**: 44 **Label**: Field Sharing
-- **Value**: 45 **Label**: Subscription Statistic Offline
-- **Value**: 46 **Label**: Subscription Statistic Outlook
-- **Value**: 47 **Label**: Subscription Sync Entry Offline
-- **Value**: 48 **Label**: Subscription Sync Entry Outlook
-- **Value**: 50 **Label**: Position
-- **Value**: 51 **Label**: System User Manager Map
-- **Value**: 52 **Label**: User Search Facet
-- **Value**: 54 **Label**: Global Search Configuration
-- **Value**: 78 **Label**: Virtual Entity Data Provider
-- **Value**: 85 **Label**: Virtual Entity Data Source
-- **Value**: 92 **Label**: Team template
-- **Value**: 99 **Label**: Social Profile
-- **Value**: 126 **Label**: Indexed Article
-- **Value**: 127 **Label**: Article
-- **Value**: 129 **Label**: Subject
-- **Value**: 132 **Label**: Announcement
-- **Value**: 135 **Label**: Activity Party
-- **Value**: 150 **Label**: User Settings
-- **Value**: 950 **Label**: New Process
-- **Value**: 951 **Label**: Translation Process
-- **Value**: 955 **Label**: Expired Process
-- **Value**: 1001 **Label**: Attachment
-- **Value**: 1002 **Label**: Attachment
-- **Value**: 1003 **Label**: Internal Address
-- **Value**: 1007 **Label**: Image Descriptor
-- **Value**: 1016 **Label**: Article Template
-- **Value**: 1019 **Label**: Organization
-- **Value**: 1021 **Label**: Organization UI
-- **Value**: 1023 **Label**: Privilege
-- **Value**: 1030 **Label**: System Form
-- **Value**: 1031 **Label**: User Dashboard
-- **Value**: 1036 **Label**: Security Role
-- **Value**: 1037 **Label**: Role Template
-- **Value**: 1039 **Label**: View
-- **Value**: 1043 **Label**: String Map
-- **Value**: 1071 **Label**: Address
-- **Value**: 1072 **Label**: Subscription Clients
-- **Value**: 1075 **Label**: Status Map
-- **Value**: 1082 **Label**: Article Comment
-- **Value**: 1086 **Label**: User Fiscal Calendar
-- **Value**: 1094 **Label**: Authorization Server
-- **Value**: 1095 **Label**: Partner Application
-- **Value**: 1111 **Label**: System Chart
-- **Value**: 1112 **Label**: User Chart
-- **Value**: 1113 **Label**: Ribbon Tab To Command Mapping
-- **Value**: 1115 **Label**: Ribbon Context Group
-- **Value**: 1116 **Label**: Ribbon Command
-- **Value**: 1117 **Label**: Ribbon Rule
-- **Value**: 1120 **Label**: Application Ribbons
-- **Value**: 1130 **Label**: Ribbon Difference
-- **Value**: 1140 **Label**: Replication Backlog
-- **Value**: 1189 **Label**: Document Suggestions
-- **Value**: 1190 **Label**: SuggestionCardTemplate
-- **Value**: 1200 **Label**: Field Security Profile
-- **Value**: 1201 **Label**: Field Permission
-- **Value**: 1203 **Label**: Team Profiles
-- **Value**: 1234 **Label**: Channel Property Group
-- **Value**: 1236 **Label**: Channel Property
-- **Value**: 1300 **Label**: SocialInsightsConfiguration
-- **Value**: 1309 **Label**: Saved Organization Insights Configuration
-- **Value**: 1400 **Label**: Sync Attribute Mapping Profile
-- **Value**: 1401 **Label**: Sync Attribute Mapping
-- **Value**: 1403 **Label**: Team Sync-Attribute Mapping Profiles
-- **Value**: 1404 **Label**: Principal Sync Attribute Map
-- **Value**: 2000 **Label**: Annual Fiscal Calendar
-- **Value**: 2001 **Label**: Semiannual Fiscal Calendar
-- **Value**: 2002 **Label**: Quarterly Fiscal Calendar
-- **Value**: 2003 **Label**: Monthly Fiscal Calendar
-- **Value**: 2004 **Label**: Fixed Monthly Fiscal Calendar
-- **Value**: 2010 **Label**: Email Template
-- **Value**: 2012 **Label**: Unresolved Address
-- **Value**: 2013 **Label**: Territory
-- **Value**: 2015 **Label**: Theme
-- **Value**: 2016 **Label**: User Mapping
-- **Value**: 2020 **Label**: Queue
-- **Value**: 2023 **Label**: QueueItemCount
-- **Value**: 2024 **Label**: QueueMemberCount
-- **Value**: 2027 **Label**: License
-- **Value**: 2029 **Label**: Queue Item
-- **Value**: 2500 **Label**: User Entity UI Settings
-- **Value**: 2501 **Label**: User Entity Instance Data
-- **Value**: 3000 **Label**: Integration Status
-- **Value**: 3005 **Label**: Channel Access Profile
-- **Value**: 3008 **Label**: External Party
-- **Value**: 3231 **Label**: Connection Role
-- **Value**: 3233 **Label**: Connection Role Object Type Code
-- **Value**: 3234 **Label**: Connection
-- **Value**: 4003 **Label**: Calendar
-- **Value**: 4004 **Label**: Calendar Rule
-- **Value**: 4011 **Label**: Inter Process Lock
-- **Value**: 4023 **Label**: Email Hash
-- **Value**: 4101 **Label**: Display String Map
-- **Value**: 4102 **Label**: Display String
-- **Value**: 4110 **Label**: Notification
-- **Value**: 4120 **Label**: Exchange Sync Id Mapping
-- **Value**: 4200 **Label**: Activity
-- **Value**: 4201 **Label**: Appointment
-- **Value**: 4202 **Label**: Email
-- **Value**: 4204 **Label**: Fax
-- **Value**: 4207 **Label**: Letter
-- **Value**: 4210 **Label**: Phone Call
-- **Value**: 4212 **Label**: Task
-- **Value**: 4216 **Label**: Social Activity
-- **Value**: 4220 **Label**: UntrackedEmail
-- **Value**: 4230 **Label**: Saved View
-- **Value**: 4231 **Label**: Metadata Difference
-- **Value**: 4232 **Label**: Business Data Localized Label
-- **Value**: 4250 **Label**: Recurrence Rule
-- **Value**: 4251 **Label**: Recurring Appointment
-- **Value**: 4299 **Label**: Email Search
-- **Value**: 4410 **Label**: Data Import
-- **Value**: 4411 **Label**: Data Map
-- **Value**: 4412 **Label**: Import Source File
-- **Value**: 4413 **Label**: Import Data
-- **Value**: 4414 **Label**: Duplicate Detection Rule
-- **Value**: 4415 **Label**: Duplicate Record
-- **Value**: 4416 **Label**: Duplicate Rule Condition
-- **Value**: 4417 **Label**: Column Mapping
-- **Value**: 4418 **Label**: List Value Mapping
-- **Value**: 4419 **Label**: Lookup Mapping
-- **Value**: 4420 **Label**: Owner Mapping
-- **Value**: 4423 **Label**: Import Log
-- **Value**: 4424 **Label**: Bulk Delete Operation
-- **Value**: 4425 **Label**: Bulk Delete Failure
-- **Value**: 4426 **Label**: Transformation Mapping
-- **Value**: 4427 **Label**: Transformation Parameter Mapping
-- **Value**: 4428 **Label**: Import Entity Mapping
-- **Value**: 4450 **Label**: Data Performance Dashboard
-- **Value**: 4490 **Label**: Office Document
-- **Value**: 4500 **Label**: Relationship Role
-- **Value**: 4501 **Label**: Relationship Role Map
-- **Value**: 4502 **Label**: Customer Relationship
-- **Value**: 4567 **Label**: Auditing
-- **Value**: 4579 **Label**: Ribbon Client Metadata.
-- **Value**: 4600 **Label**: Entity Map
-- **Value**: 4601 **Label**: Attribute Map
-- **Value**: 4602 **Label**: Plug-in Type
-- **Value**: 4603 **Label**: Plug-in Type Statistic
-- **Value**: 4605 **Label**: Plug-in Assembly
-- **Value**: 4606 **Label**: Sdk Message
-- **Value**: 4607 **Label**: Sdk Message Filter
-- **Value**: 4608 **Label**: Sdk Message Processing Step
-- **Value**: 4609 **Label**: Sdk Message Request
-- **Value**: 4610 **Label**: Sdk Message Response
-- **Value**: 4611 **Label**: Sdk Message Response Field
-- **Value**: 4613 **Label**: Sdk Message Pair
-- **Value**: 4614 **Label**: Sdk Message Request Field
-- **Value**: 4615 **Label**: Sdk Message Processing Step Image
-- **Value**: 4616 **Label**: Sdk Message Processing Step Secure Configuration
-- **Value**: 4618 **Label**: Service Endpoint
-- **Value**: 4619 **Label**: Plug-in Trace Log
-- **Value**: 4700 **Label**: System Job
-- **Value**: 4702 **Label**: Workflow Wait Subscription
-- **Value**: 4703 **Label**: Process
-- **Value**: 4704 **Label**: Process Dependency
-- **Value**: 4705 **Label**: ISV Config
-- **Value**: 4706 **Label**: Process Log
-- **Value**: 4707 **Label**: Application File
-- **Value**: 4708 **Label**: Organization Statistic
-- **Value**: 4709 **Label**: Site Map
-- **Value**: 4710 **Label**: Process Session
-- **Value**: 4711 **Label**: Expander Event
-- **Value**: 4712 **Label**: Process Trigger
-- **Value**: 4724 **Label**: Process Stage
-- **Value**: 4725 **Label**: Business Process Flow Instance
-- **Value**: 4800 **Label**: Web Wizard
-- **Value**: 4802 **Label**: Wizard Page
-- **Value**: 4803 **Label**: Web Wizard Access Privilege
-- **Value**: 4810 **Label**: Time Zone Definition
-- **Value**: 4811 **Label**: Time Zone Rule
-- **Value**: 4812 **Label**: Time Zone Localized Name
-- **Value**: 7000 **Label**: System Application Metadata
-- **Value**: 7001 **Label**: User Application Metadata
-- **Value**: 7100 **Label**: Solution
-- **Value**: 7101 **Label**: Publisher
-- **Value**: 7102 **Label**: Publisher Address
-- **Value**: 7103 **Label**: Solution Component
-- **Value**: 7105 **Label**: Dependency
-- **Value**: 7106 **Label**: Dependency Node
-- **Value**: 7107 **Label**: Invalid Dependency
-- **Value**: 7108 **Label**: Dependency Feature
-- **Value**: 7200 **Label**: RuntimeDependency
-- **Value**: 8000 **Label**: Post
-- **Value**: 8001 **Label**: Post Role
-- **Value**: 8002 **Label**: Post Regarding
-- **Value**: 8003 **Label**: Follow
-- **Value**: 8005 **Label**: Comment
-- **Value**: 8006 **Label**: Like
-- **Value**: 8040 **Label**: ACIViewMapper
-- **Value**: 8050 **Label**: Trace
-- **Value**: 8051 **Label**: Trace Association
-- **Value**: 8052 **Label**: Trace Regarding
-- **Value**: 8181 **Label**: Routing Rule Set
-- **Value**: 8199 **Label**: Rule Item
-- **Value**: 8700 **Label**: AppModule Metadata
-- **Value**: 8701 **Label**: AppModule Metadata Dependency
-- **Value**: 8702 **Label**: AppModule Metadata Async Operation
-- **Value**: 8840 **Label**: Hierarchy Rule
-- **Value**: 9006 **Label**: App
-- **Value**: 9007 **Label**: App Module Component
-- **Value**: 9009 **Label**: App Module Roles
-- **Value**: 9011 **Label**: App Config Master
-- **Value**: 9012 **Label**: App Configuration
-- **Value**: 9013 **Label**: App Configuration Instance
-- **Value**: 9100 **Label**: Report
-- **Value**: 9101 **Label**: Report Related Entity
-- **Value**: 9102 **Label**: Report Related Category
-- **Value**: 9103 **Label**: Report Visibility
-- **Value**: 9104 **Label**: Report Link
-- **Value**: 9105 **Label**: Currency
-- **Value**: 9106 **Label**: Mail Merge Template
-- **Value**: 9107 **Label**: Import Job
-- **Value**: 9201 **Label**: LocalConfigStore
-- **Value**: 9300 **Label**: Record Creation and Update Rule
-- **Value**: 9301 **Label**: Record Creation and Update Rule Item
-- **Value**: 9333 **Label**: Web Resource
-- **Value**: 9400 **Label**: Channel Access Profile Rule
-- **Value**: 9401 **Label**: Channel Access Profile Rule Item
-- **Value**: 9502 **Label**: SharePoint Site
-- **Value**: 9507 **Label**: Sharepoint Document
-- **Value**: 9508 **Label**: Document Location
-- **Value**: 9509 **Label**: SharePoint Data
-- **Value**: 9510 **Label**: Rollup Properties
-- **Value**: 9511 **Label**: Rollup Job
-- **Value**: 9600 **Label**: Goal
-- **Value**: 9602 **Label**: Rollup Query
-- **Value**: 9603 **Label**: Goal Metric
-- **Value**: 9604 **Label**: Rollup Field
-- **Value**: 9605 **Label**: Email Server Profile
-- **Value**: 9606 **Label**: Mailbox
-- **Value**: 9607 **Label**: Mailbox Statistics
-- **Value**: 9608 **Label**: Mailbox Auto Tracking Folder
-- **Value**: 9650 **Label**: Process Configuration
-- **Value**: 9690 **Label**: Organization Insights Notification
-- **Value**: 9699 **Label**: Organization Insights Metric
-- **Value**: 9750 **Label**: SLA
-- **Value**: 9751 **Label**: SLA Item
-- **Value**: 9752 **Label**: SLA KPI Instance
-- **Value**: 9753 **Label**: Custom Control
-- **Value**: 9754 **Label**: Custom Control Resource
-- **Value**: 9755 **Label**: Custom Control Default Config
-- **Value**: 9866 **Label**: Mobile Offline Profile
-- **Value**: 9867 **Label**: Mobile Offline Profile Item
-- **Value**: 9868 **Label**: Mobile Offline Profile Item Association
-- **Value**: 9869 **Label**: Sync Error
-- **Value**: 9870 **Label**: Offline Command Definition
-- **Value**: 9900 **Label**: Navigation Setting
-- **Value**: 9910 **Label**: MultiEntitySearch
-- **Value**: 9912 **Label**: Multi Select Option Value
-- **Value**: 9919 **Label**: Hierarchy Security Configuration
-- **Value**: 9930 **Label**: Knowledge Base Record
-- **Value**: 9932 **Label**: Time Stamp Date Mapping
-- **Value**: 9936 **Label**: Azure Service Connection
-- **Value**: 9940 **Label**: Document Template
-- **Value**: 9941 **Label**: Personal Document Template
-- **Value**: 9945 **Label**: Text Analytics Entity Mapping
-- **Value**: 9947 **Label**: Knowledge Search Model
-- **Value**: 9949 **Label**: Advanced Similarity Rule
-- **Value**: 9950 **Label**: Office Graph Document
-- **Value**: 9951 **Label**: Similarity Rule
-- **Value**: 9953 **Label**: Knowledge Article
-- **Value**: 9955 **Label**: Knowledge Article Views
-- **Value**: 9957 **Label**: Language
-- **Value**: 9958 **Label**: Feedback
-- **Value**: 9959 **Label**: Category
-- **Value**: 9960 **Label**: Knowledge Article Category
-- **Value**: 9961 **Label**: DelveActionHub
-- **Value**: 9962 **Label**: Action Card
-- **Value**: 9968 **Label**: ActionCardUserState
-- **Value**: 9973 **Label**: Action Card User Settings
-- **Value**: 9983 **Label**: Action Card Type
-- **Value**: 9986 **Label**: Interaction for Email
-- **Value**: 9987 **Label**: External Party Item
-- **Value**: 9997 **Label**: Email Signature
-- **Value**: 10000 **Label**: OData v4 Data Source
+#### TargetEntity Options
+
+|Value|Label|
+|-----|-----|
+|1|Account|
+|2|Contact|
+|5|Note|
+|6|Business Unit Map|
+|7|Owner|
+|8|User|
+|9|Team|
+|10|Business Unit|
+|14|System User Principal|
+|29|Subscription|
+|30|Filter Template|
+|31|Privilege Object Type Code|
+|33|Subscription Synchronization Information|
+|35|Tracking information for deleted entities|
+|36|Client update|
+|37|Subscription Manually Tracked Object|
+|42|SystemUser BusinessUnit Entity Map|
+|44|Field Sharing|
+|45|Subscription Statistic Offline|
+|46|Subscription Statistic Outlook|
+|47|Subscription Sync Entry Offline|
+|48|Subscription Sync Entry Outlook|
+|50|Position|
+|51|System User Manager Map|
+|52|User Search Facet|
+|54|Global Search Configuration|
+|55|FileAttachment|
+|78|Virtual Entity Data Provider|
+|85|Virtual Entity Data Source|
+|92|Team template|
+|99|Social Profile|
+|126|Indexed Article|
+|127|Article|
+|129|Subject|
+|132|Announcement|
+|135|Activity Party|
+|150|User Settings|
+|300|Canvas App|
+|301|Callback Registration|
+|371|Connector|
+|950|New Process|
+|951|Translation Process|
+|955|Expired Process|
+|1001|Attachment|
+|1002|Attachment|
+|1003|Internal Address|
+|1007|Image Descriptor|
+|1016|Article Template|
+|1019|Organization|
+|1021|Organization UI|
+|1023|Privilege|
+|1030|System Form|
+|1031|User Dashboard|
+|1036|Security Role|
+|1037|Role Template|
+|1039|View|
+|1043|String Map|
+|1071|Address|
+|1072|Subscription Clients|
+|1075|Status Map|
+|1082|Article Comment|
+|1086|User Fiscal Calendar|
+|1094|Authorization Server|
+|1095|Partner Application|
+|1111|System Chart|
+|1112|User Chart|
+|1113|Ribbon Tab To Command Mapping|
+|1115|Ribbon Context Group|
+|1116|Ribbon Command|
+|1117|Ribbon Rule|
+|1120|Application Ribbons|
+|1130|Ribbon Difference|
+|1140|Replication Backlog|
+|1189|Document Suggestions|
+|1190|SuggestionCardTemplate|
+|1200|Field Security Profile|
+|1201|Field Permission|
+|1203|Team Profiles|
+|1234|Channel Property Group|
+|1236|Channel Property|
+|1300|SocialInsightsConfiguration|
+|1309|Saved Organization Insights Configuration|
+|1400|Sync Attribute Mapping Profile|
+|1401|Sync Attribute Mapping|
+|1403|Team Sync-Attribute Mapping Profiles|
+|1404|Principal Sync Attribute Map|
+|2000|Annual Fiscal Calendar|
+|2001|Semiannual Fiscal Calendar|
+|2002|Quarterly Fiscal Calendar|
+|2003|Monthly Fiscal Calendar|
+|2004|Fixed Monthly Fiscal Calendar|
+|2010|Email Template|
+|2012|Unresolved Address|
+|2013|Territory|
+|2015|Theme|
+|2016|User Mapping|
+|2020|Queue|
+|2023|QueueItemCount|
+|2024|QueueMemberCount|
+|2027|License|
+|2029|Queue Item|
+|2500|User Entity UI Settings|
+|2501|User Entity Instance Data|
+|3000|Integration Status|
+|3005|Channel Access Profile|
+|3008|External Party|
+|3231|Connection Role|
+|3233|Connection Role Object Type Code|
+|3234|Connection|
+|4003|Calendar|
+|4004|Calendar Rule|
+|4011|Inter Process Lock|
+|4023|Email Hash|
+|4101|Display String Map|
+|4102|Display String|
+|4110|Notification|
+|4120|Exchange Sync Id Mapping|
+|4200|Activity|
+|4201|Appointment|
+|4202|Email|
+|4204|Fax|
+|4207|Letter|
+|4210|Phone Call|
+|4212|Task|
+|4216|Social Activity|
+|4220|UntrackedEmail|
+|4230|Saved View|
+|4231|Metadata Difference|
+|4232|Business Data Localized Label|
+|4250|Recurrence Rule|
+|4251|Recurring Appointment|
+|4299|Email Search|
+|4410|Data Import|
+|4411|Data Map|
+|4412|Import Source File|
+|4413|Import Data|
+|4414|Duplicate Detection Rule|
+|4415|Duplicate Record|
+|4416|Duplicate Rule Condition|
+|4417|Column Mapping|
+|4418|List Value Mapping|
+|4419|Lookup Mapping|
+|4420|Owner Mapping|
+|4423|Import Log|
+|4424|Bulk Delete Operation|
+|4425|Bulk Delete Failure|
+|4426|Transformation Mapping|
+|4427|Transformation Parameter Mapping|
+|4428|Import Entity Mapping|
+|4450|Data Performance Dashboard|
+|4490|Office Document|
+|4500|Relationship Role|
+|4501|Relationship Role Map|
+|4502|Customer Relationship|
+|4567|Auditing|
+|4579|Ribbon Client Metadata.|
+|4600|Entity Map|
+|4601|Attribute Map|
+|4602|Plug-in Type|
+|4603|Plug-in Type Statistic|
+|4605|Plug-in Assembly|
+|4606|Sdk Message|
+|4607|Sdk Message Filter|
+|4608|Sdk Message Processing Step|
+|4609|Sdk Message Request|
+|4610|Sdk Message Response|
+|4611|Sdk Message Response Field|
+|4613|Sdk Message Pair|
+|4614|Sdk Message Request Field|
+|4615|Sdk Message Processing Step Image|
+|4616|Sdk Message Processing Step Secure Configuration|
+|4618|Service Endpoint|
+|4619|Plug-in Trace Log|
+|4700|System Job|
+|4702|Workflow Wait Subscription|
+|4703|Process|
+|4704|Process Dependency|
+|4705|ISV Config|
+|4706|Process Log|
+|4707|Application File|
+|4708|Organization Statistic|
+|4709|Site Map|
+|4710|Process Session|
+|4711|Expander Event|
+|4712|Process Trigger|
+|4724|Process Stage|
+|4725|Business Process Flow Instance|
+|4800|Web Wizard|
+|4802|Wizard Page|
+|4803|Web Wizard Access Privilege|
+|4810|Time Zone Definition|
+|4811|Time Zone Rule|
+|4812|Time Zone Localized Name|
+|7000|System Application Metadata|
+|7001|User Application Metadata|
+|7100|Solution|
+|7101|Publisher|
+|7102|Publisher Address|
+|7103|Solution Component|
+|7105|Dependency|
+|7106|Dependency Node|
+|7107|Invalid Dependency|
+|7108|Dependency Feature|
+|7200|RuntimeDependency|
+|8000|Post|
+|8001|Post Role|
+|8002|Post Regarding|
+|8003|Follow|
+|8005|Comment|
+|8006|Like|
+|8040|ACIViewMapper|
+|8050|Trace|
+|8051|Trace Association|
+|8052|Trace Regarding|
+|8181|Routing Rule Set|
+|8199|Rule Item|
+|8700|AppModule Metadata|
+|8701|AppModule Metadata Dependency|
+|8702|AppModule Metadata Async Operation|
+|8840|Hierarchy Rule|
+|9006|Model-driven App|
+|9007|App Module Component|
+|9009|App Module Roles|
+|9011|App Config Master|
+|9012|App Configuration|
+|9013|App Configuration Instance|
+|9100|Report|
+|9101|Report Related Entity|
+|9102|Report Related Category|
+|9103|Report Visibility|
+|9104|Report Link|
+|9105|Currency|
+|9106|Mail Merge Template|
+|9107|Import Job|
+|9201|LocalConfigStore|
+|9300|Record Creation and Update Rule|
+|9301|Record Creation and Update Rule Item|
+|9333|Web Resource|
+|9400|Channel Access Profile Rule|
+|9401|Channel Access Profile Rule Item|
+|9502|SharePoint Site|
+|9507|Sharepoint Document|
+|9508|Document Location|
+|9509|SharePoint Data|
+|9510|Rollup Properties|
+|9511|Rollup Job|
+|9600|Goal|
+|9602|Rollup Query|
+|9603|Goal Metric|
+|9604|Rollup Field|
+|9605|Email Server Profile|
+|9606|Mailbox|
+|9607|Mailbox Statistics|
+|9608|Mailbox Auto Tracking Folder|
+|9609|Mailbox Tracking Category|
+|9650|Process Configuration|
+|9690|Organization Insights Notification|
+|9699|Organization Insights Metric|
+|9750|SLA|
+|9751|SLA Item|
+|9752|SLA KPI Instance|
+|9753|Custom Control|
+|9754|Custom Control Resource|
+|9755|Custom Control Default Config|
+|9866|Mobile Offline Profile|
+|9867|Mobile Offline Profile Item|
+|9868|Mobile Offline Profile Item Association|
+|9869|Sync Error|
+|9870|Offline Command Definition|
+|9875|Language Provisioning State|
+|9890|SolutionHistoryData|
+|9900|Navigation Setting|
+|9910|MultiEntitySearch|
+|9912|Multi Select Option Value|
+|9919|Hierarchy Security Configuration|
+|9930|Knowledge Base Record|
+|9932|Time Stamp Date Mapping|
+|9936|Azure Service Connection|
+|9940|Document Template|
+|9941|Personal Document Template|
+|9945|Text Analytics Entity Mapping|
+|9947|Knowledge Search Model|
+|9949|Advanced Similarity Rule|
+|9950|Office Graph Document|
+|9951|Similarity Rule|
+|9953|Knowledge Article|
+|9955|Knowledge Article Views|
+|9957|Language|
+|9958|Feedback|
+|9959|Category|
+|9960|Knowledge Article Category|
+|9961|DelveActionHub|
+|9962|Action Card|
+|9968|ActionCardUserState|
+|9973|Action Card User Settings|
+|9983|Action Card Type|
+|9986|Interaction for Email|
+|9987|External Party Item|
+|9996|HolidayWrapper|
+|9997|Email Signature|
+|10000|OData v4 Data Source|
+|10001|Solution Component Summary|
+|10002|Solution Component Data Source|
+|10003|Solution History|
+|10004|Solution History Data Source|
+|10005|Component Layer|
+|10006|Component Layer Data Source|
 
 
 <a name="onetomany"></a>
@@ -1006,7 +1159,6 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 Listed by **SchemaName**.
 
-- [userentityinstancedata_importmap](#BKMK_userentityinstancedata_importmap)
 - [TransformationMapping_ImportMap](#BKMK_TransformationMapping_ImportMap)
 - [OwnerMapping_ImportMap](#BKMK_OwnerMapping_ImportMap)
 - [ImportMap_AsyncOperations](#BKMK_ImportMap_AsyncOperations)
@@ -1017,238 +1169,124 @@ Listed by **SchemaName**.
 - [ColumnMapping_ImportMap](#BKMK_ColumnMapping_ImportMap)
 
 
-### <a name="BKMK_userentityinstancedata_importmap"></a> userentityinstancedata_importmap
-
-Same as userentityinstancedata entity [userentityinstancedata_importmap](userentityinstancedata.md#BKMK_userentityinstancedata_importmap) Many-To-One relationship.
-
-**ReferencingEntity**: userentityinstancedata<br />
-**ReferencingAttribute**: objectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: userentityinstancedata_importmap<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
-
-
 ### <a name="BKMK_TransformationMapping_ImportMap"></a> TransformationMapping_ImportMap
 
 Same as transformationmapping entity [TransformationMapping_ImportMap](transformationmapping.md#BKMK_TransformationMapping_ImportMap) Many-To-One relationship.
 
-**ReferencingEntity**: transformationmapping<br />
-**ReferencingAttribute**: importmapid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: TransformationMapping_ImportMap<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|transformationmapping|
+|ReferencingAttribute|importmapid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|TransformationMapping_ImportMap|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_OwnerMapping_ImportMap"></a> OwnerMapping_ImportMap
 
 Same as ownermapping entity [OwnerMapping_ImportMap](ownermapping.md#BKMK_OwnerMapping_ImportMap) Many-To-One relationship.
 
-**ReferencingEntity**: ownermapping<br />
-**ReferencingAttribute**: importmapid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: OwnerMapping_ImportMap<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|ownermapping|
+|ReferencingAttribute|importmapid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|OwnerMapping_ImportMap|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_ImportMap_AsyncOperations"></a> ImportMap_AsyncOperations
 
 Same as asyncoperation entity [ImportMap_AsyncOperations](asyncoperation.md#BKMK_ImportMap_AsyncOperations) Many-To-One relationship.
 
-**ReferencingEntity**: asyncoperation<br />
-**ReferencingAttribute**: regardingobjectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: ImportMap_AsyncOperations<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: NoCascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|asyncoperation|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ImportMap_AsyncOperations|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_ImportMap_ImportFile"></a> ImportMap_ImportFile
 
 Same as importfile entity [ImportMap_ImportFile](importfile.md#BKMK_ImportMap_ImportFile) Many-To-One relationship.
 
-**ReferencingEntity**: importfile<br />
-**ReferencingAttribute**: importmapid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: ImportMap_ImportFile<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: RemoveLink
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|importfile|
+|ReferencingAttribute|importmapid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ImportMap_ImportFile|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_ImportMap_BulkDeleteFailures"></a> ImportMap_BulkDeleteFailures
 
 Same as bulkdeletefailure entity [ImportMap_BulkDeleteFailures](bulkdeletefailure.md#BKMK_ImportMap_BulkDeleteFailures) Many-To-One relationship.
 
-**ReferencingEntity**: bulkdeletefailure<br />
-**ReferencingAttribute**: regardingobjectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: ImportMap_BulkDeleteFailures<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|bulkdeletefailure|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ImportMap_BulkDeleteFailures|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_ImportEntityMapping_ImportMap"></a> ImportEntityMapping_ImportMap
 
 Same as importentitymapping entity [ImportEntityMapping_ImportMap](importentitymapping.md#BKMK_ImportEntityMapping_ImportMap) Many-To-One relationship.
 
-**ReferencingEntity**: importentitymapping<br />
-**ReferencingAttribute**: importmapid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: ImportEntityMapping_ImportMap<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|importentitymapping|
+|ReferencingAttribute|importmapid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ImportEntityMapping_ImportMap|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_ImportMap_SyncErrors"></a> ImportMap_SyncErrors
 
 Same as syncerror entity [ImportMap_SyncErrors](syncerror.md#BKMK_ImportMap_SyncErrors) Many-To-One relationship.
 
-**ReferencingEntity**: syncerror<br />
-**ReferencingAttribute**: regardingobjectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: True<br />
-**ReferencedEntityNavigationPropertyName**: ImportMap_SyncErrors<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: Cascade
-- **Delete**: Cascade
-- **Merge**: Cascade
-- **Reparent**: Cascade
-- **Share**: Cascade
-- **Unshare**: Cascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|syncerror|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|ImportMap_SyncErrors|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: Cascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
 ### <a name="BKMK_ColumnMapping_ImportMap"></a> ColumnMapping_ImportMap
 
 Same as columnmapping entity [ColumnMapping_ImportMap](columnmapping.md#BKMK_ColumnMapping_ImportMap) Many-To-One relationship.
 
-**ReferencingEntity**: columnmapping<br />
-**ReferencingAttribute**: importmapid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: ColumnMapping_ImportMap<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|columnmapping|
+|ReferencingAttribute|importmapid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|ColumnMapping_ImportMap|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
@@ -1292,5 +1330,9 @@ See systemuser Entity [SystemUser_ImportMaps](systemuser.md#BKMK_SystemUser_Impo
 ### <a name="BKMK_lk_importmapbase_modifiedby"></a> lk_importmapbase_modifiedby
 
 See systemuser Entity [lk_importmapbase_modifiedby](systemuser.md#BKMK_lk_importmapbase_modifiedby) One-To-Many relationship.
-importmap
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.importmap?text=importmap EntityType" />
