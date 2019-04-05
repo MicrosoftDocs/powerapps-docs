@@ -64,7 +64,7 @@ The build tools expect the control source to be exported using standard ES6 modu
       ```
     After:
     ```TypeScript
-     export class YourControlName implements ComponentFramework.StandardControl<IInputs, IIOutputs> { 
+     export class YourControlName implements ComponentFramework.StandardControl<IInputs, IOutputs> { 
           <your class implementation>
           }
    ```
