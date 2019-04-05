@@ -53,7 +53,7 @@ Within the **Filter** and **LookUp** functions, you can use these with columns o
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**
 * **[IsBlank](functions/function-isblank-isempty.md)**
-* **[StartsWith](functions/function-startswith.md)**
+* **[StartsWith](functions/function-startswith.md)**, **[EndsWith](functions/function-startswith.md)**
 * Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
 
 You can also use portions of your formula that evaluate to a constant value for all records. For example **Left( Language(), 2 )**, **Date( 2019, 3, 31 )**, and **Today()** don't depend on any columns of the record and, therefore, return the same value for all records.  These values can be sent to the data source as a constant and will not block delegation. 
@@ -77,28 +77,31 @@ In **Sort**, the formula can only be the name of a single column and can't inclu
 ### Aggregate functions
 **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)**, and **[Max](functions/function-aggregates.md)** can be delegated. Only a limited number of data sources support this delegation at this time; check the [delegation list](delegation-list.md) for details.
 
-Other counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
+Counting functions such as **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)**, and **[Count](functions/function-table-counts.md)** can't be delegated.
 
 Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** can't be delegated.
 
+### Table shaping functions
+
+**[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, and **[ShowColumns](functions/function-table-shaping.md)** partially support delegation.  Formulas in their arguments can be delegated.  However, the output of these functions will be subject to the non-delegation record limit.
+
+A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:
+
+**AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
+
+Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the output of the **AddColumns** function isn't delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. 
+
+A potential downside to using **AddColumns** in this manner is that the **LookUp** will make separate calls to the data source for each of those first records in **Products**, causing a lot of chatter on the network. If **Suppliers** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnStart**](functions/signals.md)). 
+ 
 ## Non-delegable functions
 All other functions don't support delegation, including these notable functions:
 
-* Table shaping: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ...
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Choices](functions/function-choices.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
 * **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
-
-A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:
-
-**AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
-
-Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the **AddColumns** function isn't delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  
-
-Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. A potential downside is that **LookUp** will make separate calls to the data source for each of those first records in **Products**, causing a lot of chatter on the network. If **Suppliers** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnVisible**](controls/control-screen.md) on the opening screen) and do the **LookUp** to it instead.  
 
 ## Non-delegable limits
 Formulas that can't be delegated will be processed locally. This allows for the full breadth of the PowerApps formula language to be used. But at a price: all the data must be brought to the device first, which could involve retrieving a large amount of data over the network. That can take time, giving the impression that your app is slow or possibly crashed.

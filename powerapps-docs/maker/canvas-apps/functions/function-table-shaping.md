@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 08/24/2018
+ms.date: 04/04/2019
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -43,9 +43,13 @@ Use the **RenameColumns** function to rename one or more columns of a table by p
 
 The **ShowColumns** function includes columns of a table and drops all other columns. You can use **ShowColumns** to create a single-column table from a multi-column table.  **ShowColumns** includes columns, and **DropColumns** excludes columns.  
 
-For all these functions, the result is a new table with the transform applied.  The original table isn't modified.
+For all these functions, the result is a new table with the transform applied.  The original table isn't modified.  There is no way to modify an existing table with a formula.  SharePoint, the Common Data Service, SQL Server and other data sources provide tools for modifying the columns of lists, entities, and tables which is often referred to as *schema*.  The functions in this article only transform an input table, without modifying the original, into an output table for further use.
 
-[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
+The arguments to these functions support delegation.  For example, a **Filter** formula as an argument such as:
+```powerapps-dot
+AddColumns( RealEstateAgents, "Listings",  Filter(  '[dbo].[AllListings]', ListingAgentName = AgentName ) )
+```
+will search through all listings even if there are a million rows in the **'[dbo].[AllListings]'** data source.  However, the output of these functions will be subject to the non-delegation record limit.  In this example, only 500 records will be returned even if the **RealEstateAgents** data source has more records than this.
 
 ## Syntax
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
@@ -86,12 +90,34 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 | **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Renames the **UnitPrice** and **QuantitySold** columns in the result. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
 | **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Performs the following table transforms in order, starting from the inside of the formula: <ol><li>Adds a **Revenue** column based on the per-record calculation of **UnitPrice * Quantity**.<li>Renames **UnitPrice** to **Price**.<li>Excludes the **Quantity** column.</ol>  Note that order is important. For example, we can't calculate with **UnitPrice** after it has been renamed. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
+
 ### Step by step
-1. Import or create a collection named **Inventory** as the first subprocedure in [Show text and images in a gallery](../show-images-text-gallery-sort-filter.md) describes.
-2. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula:
-   
-    **ClearCollect(Inventory2, RenameColumns(Inventory, "ProductName", "JacketID"))**
-3. Press F5, select the button that you just created, and then press Esc to return to the design workspace.
-4. On the **File** menu, select **Collections**.
-5. Confirm that you've created a collection, named **Inventory2**. The new collection contains the same information as **Inventory** except that the column named **ProductName** in **Inventory** is named **JacketID** in **Inventory2**.
+
+Let's try some of the above examples.  
+
+1. To create a collection that holds the above data to experiment with, add a **Button** control and set its **OnSelect** property to:
+```powerapps-dot
+ClearCollect( IceCreamSales, 
+	Table(
+        { Flavor: "Strawberry", UnitPrice: 1.99, QuantitySold: 20 }, 
+        { Flavor: "Chocolate", UnitPrice: 2.99, QuantitySold: 45 },
+        { Flavor: "Vanilla", UnitPrice: 1.50, QuantitySold: 35 }
+	)
+)
+```
+1. Select the button to execute the formula.
+1. Add a second **Button** control and set its **OnSelect** property to:
+```powerapps-dot
+ClearCollect( FirstExample, 
+	AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )
+) 
+```
+1. Select the second button to execute the second formula.
+1. On the **File** menu, select **Collections**.
+1. Select the **IceCreamSales** collection first:
+![Collection viewer showing three records of the Ice Cream Sales collection that does not include a Revenue column](media/function-table-shaping/ice-cream-sales-collection.png)
+Note that this collection has not been modified.  Calling **AddColumns** used **IceCreamSales** as a read-only argument to the function, it did not modify this argument.  Instead, the functions returned a new table which was captured by the second **ClearCollect** into the **FirstExample** collection:
+![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)
+This is where we see our added column.  We have *shaped* the table as it flowed through the functions without modifying the original.
+
 
