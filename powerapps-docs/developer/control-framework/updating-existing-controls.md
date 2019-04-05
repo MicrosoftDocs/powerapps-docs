@@ -62,7 +62,7 @@ The build tools expect the control source to be exported using standard ES6 modu
      ```TypeScript
      module SampleNamespace
      {
-    export class TSLinearInputControl implements ControlFramework.StandardControl<InputsOutputs.IInputBag, InputsOutputs.IOutputBag> {
+    export class TSLinearInputControl implements ComponentFramework.StandardControl<InputsOutputs.IInputBag, InputsOutputs.IOutputBag> {
 	      <your class implementation>
 	       }
             }
@@ -70,7 +70,7 @@ The build tools expect the control source to be exported using standard ES6 modu
       ```
     After:
     ```TypeScript
-     export class TSLinearInputControl implements ControlFramework.StandardControl<InputsOutputs.IInputBag, InputsOutputs.IOutputBag> {
+     export class TSLinearInputControl implements ComponentFramework.StandardControl<InputsOutputs.IInputBag, InputsOutputs.IOutputBag> {
 	 <your class implementation>
           }
    ```
@@ -81,11 +81,11 @@ Legacy projects required manually creating and editing an `inputsOutputs.d.ts` t
 The typing file is renamed to `ManifestTypes.d.ts` and it is now generated into a subfolder named `generated`. In addition, the `InputsOutputs.IInputBag` and `InputsOutputs.IOutputBag` types are renamed to `IInputs` and `IOutputs` respectively.
 To use the new typing file:
 
-1.	Import the new `ManifestTypes.d.ts` file by adding the following line at the top of the control source file:
-import { IInputs, IOutputs } from `./generated/ManifestTypes`.
-2.	Rename all references of **InputsOutputs.IInputBag** to **IInputs**.
-3.	Rename all references of **InputsOutputs.IOutputBag** to IOutputs**.
-4.	Build the project to generate a new **ManifestTypes.d.ts** file using the command `npm run build`.
+1. Import the new `ManifestTypes.d.ts` file by adding the following line at the top of the control source file:
+    import { IInputs, IOutputs } from `./generated/ManifestTypes`.
+2. Rename all references of **InputsOutputs.IInputBag** to **IInputs**.
+3. Rename all references of **InputsOutputs.IOutputBag** to IOutputs**.
+4. Build the project to generate a new **ManifestTypes.d.ts** file using the command `npm run build`.
 
 ### See also
 
