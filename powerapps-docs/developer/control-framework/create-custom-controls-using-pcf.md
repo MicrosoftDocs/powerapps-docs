@@ -31,7 +31,8 @@ To use PowerApps CLI you will need the following:
    - Option 1: Install Visual Studio 2017 or later
    - Option 2: Install .NET Core 2.2 SDK and install Visual Studio Code
 - Install Microsoft CLI using the steps below:
-    1. Open the Developer Command Prompt for VS 2017 as an Administrator
+    1. Create a directory on your machine for example, `c:\pac`.
+    1. Open the Developer Command Prompt for VS 2017 as an Administrator and navigate to the directory you have created.
     2. Copy-paste below command into your command prompt and hit enter:
  `powershell Invoke-Command -ScriptBlock ([scriptblock]::Create(((New-Object System.Net.WebClient).DownloadString('https://powerappsclipreview.blob.core.windows.net/install/InstallPowerAppsCLI.ps1'))))`  
 
@@ -54,7 +55,7 @@ To get started, open a new Developer Command Prompt for VS 2017 after installing
  `pac pcf init --namespace <specify your namespace here> --name <put control name here> --template <control type>`
  
    > [!NOTE]
-   >Today we offer two types of controls **field** and **dataset**.
+   > Today we offer two types of controls **field** and **dataset**.
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
 5. Open your project folder (`C:\Users\<your name>\Documents\My_PCF_Control\<control name>`) in any developer environment of your choice and get started with your custom control development. If you would like a to follow a step-by-step tutorial please scroll down see how a sample linear control is implemented.
@@ -121,7 +122,7 @@ Follow the steps below to create and import a solution file:
  `pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>` after `cd <your new folder>`.
 
    > [!NOTE]
-   > The [publisherName] (https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
+   > The [publisherName](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/entities/publisher) and [cutomizationPrefix](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/change-solution-publisher-prefix) values must be unique to your environment.
  
 3. Once the new solution project is created, you need to refer to the location where the created control is located. You can add the reference by using the command
 `pac solution add-reference --path <path or relative path of your pcf project on disk>`
