@@ -125,9 +125,15 @@ Let's try some of the above examples.
 1. On the **File** menu, select **Collections**.
 
 1. Let's look at the result.  Select the **IceCreamSales** collection first:
-![Collection viewer showing three records of the Ice Cream Sales collection that does not include a Revenue column](media/function-table-shaping/ice-cream-sales-collection.png)
-Note that this collection has not been modified.  Calling **AddColumns** used **IceCreamSales** as a read-only argument to the function, it did not modify this argument.  Instead, the functions returned a new table which was captured by the second **ClearCollect** into the **FirstExample** collection:
-![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)
-This is where we see our added column.  We have added something to the table as it flowed through the function without modifying the original.
+ 
+	![Collection viewer showing three records of the Ice Cream Sales collection that does not include a Revenue column](media/function-table-shaping/ice-cream-sales-collection.png)
+
+	Note that this collection has not been modified.  Calling **AddColumns** used **IceCreamSales** as a read-only argument to the function, it did not modify this argument.  
+
+1. Instead, the functions returned a new table which was captured by the second **ClearCollect** into the **FirstExample** collection:
+
+	![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)
+
+	This is where we see our added column.  We have added something to the table as it flowed through the function without modifying the original.
 
 
