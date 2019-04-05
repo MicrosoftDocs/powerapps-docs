@@ -11,11 +11,7 @@ ms.author: "nabuthuk"
 
 # Implement controls using TypeScript
 
-This topic showcases how to implement custom controls using TypeScript. Custom controls provide enhanced user experience to view and work with data in forms, views.
-Each custom control is comprised of the following key components:
-
-1. Manifest
-2. Control implementation library
+This tutorial will walk you through creating a new custom control in Typescript. The sample control is a linear input control.  The linear input control enables users to enter numeric values using a visual slider instead of directly keying in values. 
 
 ## Creating a new control project
 
@@ -276,42 +272,7 @@ The linear input control’s `init` method creates an input element and sets the
 6. Rebuild the project using the command `npm run build `.
 7. Inspect the build output under `./out/controls/TSLinearInputControl` and observe that the `TS_LinearInputControl.css` file is now included with the compiled build artifacts. 
 
-### Trobuleshooting hints
 
-1. If you have previously created a PCF control using the tooling version 0.1.817.1 or earlier and would like to ensure that latest build & debug modules are being utilized, make below one-time updates to the package.json: 
-
-```JSON
-"dependencies": { 
-    "@types/node": "^10.12.18", 
-    "@types/powerapps-component-framework": "1.1.0" 
-  }, 
-  "devDependencies": { 
-    "pcf-scripts": "~0", 
-    "pcf-start": "~0" 
-  } 
-  ```
-2. If the build failed because of authorization then user will see this error `Failed to retrieve information about Microsoft.PowerApps.MSBuild.Pcf from remote s​ource <Feed Url>`. For example: 
-
-`Failed to retrieve information about 'Microsoft.PowerApps.MSBuild.Pcf' from remote s​ource       https://msazure.pkgs.visualstudio.com/_packaging/bf1119d5-5309-4482-a532-74999cd2338c/nuget/v3/flat2/micr​osoft.powerapps.msbuild.pcf/index.json`.  
-
-To correct this issue: 
-
-1. Open NuGet.Config file from `%APPDATA%\NuGet\`. The feed from which the user is getting error should be present in this file. 
-2. Either remove the feed from the NuGet.Config file or generate a PAT token and add into Nuget.Config file. Sample Nuget.Config file with internal feed and PAT token will look like this: 
-```xml
- '<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-  <packageSources>  
-    <add key="CRMSharedFeed" value="https://dynamicscrm.pkgs.visualstudio.com/_packaging/CRMSharedFeed/nuget/v3/index.json" />  
-  </packageSources>  
-  <packageSourceCredentials>  
-    <CRMSharedFeed>  
-      <add key="Username" value="anything" />  
-      <add key="Password" value="User PAT" />  
-    </CRMSharedFeed>  
-  </packageSourceCredentials>  
-</configuration>' 
-```
 ### See also
 
 [Update existing PCF controls](updating-existing-controls.md)
