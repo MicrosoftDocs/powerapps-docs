@@ -52,9 +52,9 @@ AddColumns( RealEstateAgents,
 	Filter(  '[dbo].[AllListings]', ListingAgentName = AgentName ) 
 )
 ```
-However, the output of these functions will be subject to the [non-delegation record limit](../delegation-overview#non-delegable-limits).  In this example, only 500 records will be returned even if the **RealEstateAgents** data source has more records than this.
+However, the output of these functions will be subject to the [non-delegation record limit](../delegation-overview.md#non-delegable-limits).  In this example, only 500 records will be returned even if the **RealEstateAgents** data source has more records than this.
 
-A word of caution when using **AddColumns** in this manner: the **Filter** will make separate calls to the data source for each of those first records in **RealEstateAgents**, causing a lot of chatter on the network. If **[dbo].[AllListings]** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnStart**](signals.md)).  Also consider restructuring your app so that you only pull in the related records when the user specifically asks for them.  
+A word of caution when using **AddColumns** in this manner: the **Filter** will make separate calls to the data source for each of those first records in **RealEstateAgents**, causing a lot of chatter on the network. If **[dbo].[AllListings]** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts using [**OnStart**](signals.md#app).  Also consider restructuring your app so that you only pull in the related records when the user specifically asks for them.  
 
 ## Syntax
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
@@ -100,7 +100,7 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 
 Let's try some of the above examples.  
 
-1. To create a collection that holds the above data to experiment with, add a **Button** control and set its **OnSelect** property to:
+1. To create a collection that holds the above data to experiment with, add a **[Button](../controls/control-button.md)** control and set its **OnSelect** property to:
 	```powerapps-dot
 	ClearCollect( IceCreamSales, 
 		Table(
@@ -110,19 +110,24 @@ Let's try some of the above examples.
 		)
 	)
 	```
+
 1. Select the button to execute the formula.
+
 1. Add a second **Button** control and set its **OnSelect** property to:
 	```powerapps-dot
 	ClearCollect( FirstExample, 
 		AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )
 	) 
 	```
+
 1. Select the second button to execute the second formula.
+
 1. On the **File** menu, select **Collections**.
-1. Select the **IceCreamSales** collection first:
+
+1. Let's look at the result.  Select the **IceCreamSales** collection first:
 ![Collection viewer showing three records of the Ice Cream Sales collection that does not include a Revenue column](media/function-table-shaping/ice-cream-sales-collection.png)
 Note that this collection has not been modified.  Calling **AddColumns** used **IceCreamSales** as a read-only argument to the function, it did not modify this argument.  Instead, the functions returned a new table which was captured by the second **ClearCollect** into the **FirstExample** collection:
 ![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)
-This is where we see our added column.  We have *shaped* the table as it flowed through the functions without modifying the original.
+This is where we see our added column.  We have added something to the table as it flowed through the function without modifying the original.
 
 
