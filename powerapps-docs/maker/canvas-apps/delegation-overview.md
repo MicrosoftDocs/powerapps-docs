@@ -56,7 +56,7 @@ Within the **Filter** and **LookUp** functions, you can use these with columns o
 * **[StartsWith](functions/function-startswith.md)**, **[EndsWith](functions/function-startswith.md)**
 * Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
 
-You can also use portions of your formula that evaluate to a constant value for all records. For example **Left( Language(), 2 )**, **Date( 2019, 3, 31 )**, and **Today()** don't depend on any columns of the record and, therefore, return the same value for all records.  These values can be sent to the data source as a constant and will not block delegation. 
+You can also use portions of your formula that evaluate to a constant value for all records. For example, **Left( Language(), 2 )**, **Date( 2019, 3, 31 )**, and **Today()** don't depend on any columns of the record and, therefore, return the same value for all records. These values can be sent to the data source as a constant and won't block delegation. 
 
 The previous list doesn't include these notable items:
 
@@ -83,9 +83,9 @@ Other aggregate functions such as **[StdevP](functions/function-aggregates.md)**
 
 ### Table shaping functions
 
-**[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, and **[ShowColumns](functions/function-table-shaping.md)** partially support delegation.  Formulas in their arguments can be delegated.  However, the output of these functions will be subject to the non-delegation record limit.
+**[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, and **[ShowColumns](functions/function-table-shaping.md)** partially support delegation.  Formulas in their arguments can be delegated.  However, the output of these functions are subject to the non-delegation record limit.
 
-A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:
+As in this example, makers often use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance:
 
 ```powerapps-dot
 AddColumns( Products, 
@@ -94,9 +94,9 @@ AddColumns( Products,
 )
 ```
 
-Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the output of the **AddColumns** function isn't delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. 
+Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the output of the **AddColumns** function isn't delegable. The result of the entire formula is limited to the first portion of the **Products** data source. Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. 
 
-A potential downside to using **AddColumns** in this manner is that the **LookUp** will make separate calls to the data source for each of those first records in **Products**, causing a lot of chatter on the network. If **Suppliers** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnStart**](functions/signals.md)).  Also consider restructuring your app so that you only pull in the related records when the user specifically asks for them.  
+If you use **AddColumns** in this manner, **LookUp** must make separate calls to the data source for each of those first records in **Products**, which causes a lot of chatter on the network. If **Suppliers** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnStart**](functions/signals.md)). You can also restructure your app so that you pull in only the related records when the user specifically asks for them.  
  
 ## Non-delegable functions
 All other functions don't support delegation, including these notable functions:
