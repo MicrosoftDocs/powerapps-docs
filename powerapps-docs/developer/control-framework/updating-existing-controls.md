@@ -24,12 +24,6 @@ Once the project has been created migrate your custom control source to the new 
 2. Copy or replace the contents of **ControlManifest.xml** into **ControlManifest.Input.xml** file.
 3. Copy all other peripheral control resources such as css, resx, img into the corresponding subfolder from the old project to the new project.
 
-    > [!div class="mx-imgBorder"]
-    > ![Old control project](media/old-control-project.png "Old control project")
-
-    > [!div class="mx-imgBorder"]
-    > ![New control project](media/new-control-project.png "New control project")
-
 ## Updating Manifest file
 
 The `ControlManifest.xml` file that defines the custom control properties is been replaced with a `ControlManifest.Input.xml` file. There should otherwise be very little change in schema between the two files.
@@ -70,7 +64,7 @@ The build tools expect the control source to be exported using standard ES6 modu
       ```
     After:
     ```TypeScript
-     export class YourControlName implements ComponentFramework.StandardControl<Inputs, InputsOutputs.IOutputBag> { 
+     export class YourControlName implements ComponentFramework.StandardControl<IInputs, IIOutputs> { 
           <your class implementation>
           }
    ```
