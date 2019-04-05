@@ -88,7 +88,10 @@ Other aggregate functions such as **[StdevP](functions/function-aggregates.md)**
 A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:
 
 ```powerapps-dot
-**AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
+AddColumns( Products, 
+    "Supplier Name", 
+    LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name 
+)
 ```
 
 Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the output of the **AddColumns** function isn't delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. 
