@@ -131,9 +131,9 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
             this.labelElement.setAttribute("id","lrclabel");
 
             // retrieving the latest value from the control and setting it to the HTMl elements.
-            this._value = context.parameters.controlValue.raw;
-            this.inputElement.setAttribute("value",context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0");
-            this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "0";
+            this._value = context.parameters.sliderValue.raw;
+            this.inputElement.setAttribute("value",context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "0");
+            this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "0";
 
             // appending the HTML elements to the control's HTML container element.
             this._container.appendChild(this.inputElement);
@@ -159,10 +159,10 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
         public updateView(context: ComponentFramework.Context<IInputs>): void
         {
             // storing the latest context from the control.
-            this._value = context.parameters.controlValue.raw;
+            this._value = context.parameters.sliderValue.raw;
             this._context = context;
-            this.inputElement.setAttribute("value",context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "");
-            this.labelElement.innerHTML = context.parameters.controlValue.formatted ? context.parameters.controlValue.formatted : "";
+            this.inputElement.setAttribute("value",context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "");
+            this.labelElement.innerHTML = context.parameters.sliderValue.formatted ? context.parameters.sliderValue.formatted : "";
         }
 
 		/** 
@@ -172,7 +172,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
         public getOutputs(): IOutputs
         {
             return {
-                controlValue : this._value
+                sliderValue : this._value
             };
         }
 
