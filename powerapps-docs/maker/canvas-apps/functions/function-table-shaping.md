@@ -56,7 +56,7 @@ AddColumns( RealEstateAgents,
 
 However, the output of these functions is subject to the [non-delegation record limit](../delegation-overview.md#non-delegable-limits).  In this example, only 500 records are returned even if the **RealEstateAgents** data source has 501 or more records.
 
-If you use **AddColumns** in this manner, **Filter** must make separate calls to the data source for each of those first records in **RealEstateAgents**, which causes a lot of chatter on the network. If **[dbo].[AllListings]** is small enough and doesn't change often, you could call **Collect** in [**OnStart**](signals.md#app) to cache the data source in your app when it starts. As an alternative, you could restructure your app so that you pull in only the related records when the user asks for them.  
+If you use **AddColumns** in this manner, **Filter** must make separate calls to the data source for each of those first records in **RealEstateAgents**, which causes a lot of network chatter. If **[dbo].[AllListings]** is small enough and doesn't change often, you could call the **Collect** function in [**OnStart**](signals.md#app) to cache the data source in your app when it starts. As an alternative, you could restructure your app so that you pull in the related records only when the user asks for them.  
 
 ## Syntax
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
