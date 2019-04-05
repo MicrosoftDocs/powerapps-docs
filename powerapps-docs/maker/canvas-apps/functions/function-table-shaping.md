@@ -43,18 +43,20 @@ Use the **RenameColumns** function to rename one or more columns of a table by p
 
 The **ShowColumns** function includes columns of a table and drops all other columns. You can use **ShowColumns** to create a single-column table from a multi-column table.  **ShowColumns** includes columns, and **DropColumns** excludes columns.  
 
-For all these functions, the result is a new table with the transform applied.  The original table isn't modified.  There is no way to modify an existing table with a formula.  SharePoint, the Common Data Service, SQL Server and other data sources provide tools for modifying the columns of lists, entities, and tables which is often referred to as *schema*.  The functions in this article only transform an input table, without modifying the original, into an output table for further use.
+For all these functions, the result is a new table with the transform applied. The original table isn't modified. You can't modify an existing table with a formula. SharePoint, Common Data Service, SQL Server, and other data sources provide tools for modifying the columns of lists, entities, and tables, which are often referred to as the schema. The functions in this topic only transform an input table, without modifying the original, into an output table for further use.
 
-The arguments to these functions support delegation.  For example, a **Filter** function used as an argument to pull in related records will search through all listings even if there are a million rows in the **'[dbo].[AllListings]'** data source:
+The arguments to these functions support delegation. For example, a **Filter** function used as an argument to pull in related records searches through all listings, even if the **'[dbo].[AllListings]'** data source contains a million rows:
+
 ```powerapps-dot
 AddColumns( RealEstateAgents, 
 	"Listings",  
 	Filter(  '[dbo].[AllListings]', ListingAgentName = AgentName ) 
 )
 ```
-However, the output of these functions will be subject to the [non-delegation record limit](../delegation-overview.md#non-delegable-limits).  In this example, only 500 records will be returned even if the **RealEstateAgents** data source has more records than this.
 
-A word of caution when using **AddColumns** in this manner: the **Filter** will make separate calls to the data source for each of those first records in **RealEstateAgents**, causing a lot of chatter on the network. If **[dbo].[AllListings]** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts using [**OnStart**](signals.md#app).  Also consider restructuring your app so that you only pull in the related records when the user specifically asks for them.  
+However, the output of these functions is subject to the [non-delegation record limit](../delegation-overview.md#non-delegable-limits).  In this example, only 500 records are returned even if the **RealEstateAgents** data source has 501 or more records.
+
+If you use **AddColumns** in this manner, **Filter** must make separate calls to the data source for each of those first records in **RealEstateAgents**, which causes a lot of chatter on the network. If **[dbo].[AllListings]** is small enough and doesn't change often, you could call **Collect** in [**OnStart**](signals.md#app) to cache the data source in your app when it starts. As an alternative, you could restructure your app so that you pull in only the related records when the user asks for them.  
 
 ## Syntax
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
@@ -95,12 +97,12 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 | **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Renames the **UnitPrice** and **QuantitySold** columns in the result. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
 | **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Performs the following table transforms in order, starting from the inside of the formula: <ol><li>Adds a **Revenue** column based on the per-record calculation of **UnitPrice * Quantity**.<li>Renames **UnitPrice** to **Price**.<li>Excludes the **Quantity** column.</ol>  Note that order is important. For example, we can't calculate with **UnitPrice** after it has been renamed. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
-
 ### Step by step
 
-Let's try some of the above examples.  
+Let's try some of the examples from earlier in this topic.  
 
-1. To create a collection that holds the above data to experiment with, add a **[Button](../controls/control-button.md)** control and set its **OnSelect** property to:
+1. Create a collection by adding a **[Button](../controls/control-button.md)** control and setting its **OnSelect** property to this formula:
+
 	```powerapps-dot
 	ClearCollect( IceCreamSales, 
 		Table(
@@ -111,29 +113,23 @@ Let's try some of the above examples.
 	)
 	```
 
-1. Select the button to execute the formula.
+1. Run the formula by selecting the button while holding down the Alt key.
 
-1. Add a second **Button** control and set its **OnSelect** property to:
+1. Add a second **Button** control, set its **OnSelect** property to this formula, and then run it:
+
 	```powerapps-dot
 	ClearCollect( FirstExample, 
 		AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )
 	) 
 	```
-
-1. Select the second button to execute the second formula.
-
-1. On the **File** menu, select **Collections**.
-
-1. Let's look at the result.  Select the **IceCreamSales** collection first:
+1. On the **File** menu, select **Collections**, and then select **IceCreamSales** to show that collection.
  
-	![Collection viewer showing three records of the Ice Cream Sales collection that does not include a Revenue column](media/function-table-shaping/ice-cream-sales-collection.png)
+	As this graphic shows, the second formula didn't modify this collection. The **AddColumns** function used **IceCreamSales** as a read-only argument; the function didn't modify the table to which that argument refers.
+	
+	![Collection viewer showing three records of the Ice Cream Sales collection that doesn't include a Revenue column](media/function-table-shaping/ice-cream-sales-collection.png)
 
-	Note that this collection has not been modified.  Calling **AddColumns** used **IceCreamSales** as a read-only argument to the function, it did not modify this argument.  
+1. Select **FirstExample**.
 
-1. Instead, the functions returned a new table which was captured by the second **ClearCollect** into the **FirstExample** collection:
+	As this graphic shows, the second formula returned a new table with the added column. The **ClearCollect** function captured the new table in the **FirstExample** collection, adding something to the original table as it flowed through the function without modifying the source:
 
 	![Collection viewer showing three records of the First Example collection that includes a new Revenue column](media/function-table-shaping/first-example-collection.png)
-
-	This is where we see our added column.  We have added something to the table as it flowed through the function without modifying the original.
-
-
