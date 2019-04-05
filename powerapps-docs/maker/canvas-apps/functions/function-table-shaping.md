@@ -45,11 +45,16 @@ The **ShowColumns** function includes columns of a table and drops all other col
 
 For all these functions, the result is a new table with the transform applied.  The original table isn't modified.  There is no way to modify an existing table with a formula.  SharePoint, the Common Data Service, SQL Server and other data sources provide tools for modifying the columns of lists, entities, and tables which is often referred to as *schema*.  The functions in this article only transform an input table, without modifying the original, into an output table for further use.
 
-The arguments to these functions support delegation.  For example, a **Filter** formula as an argument such as:
+The arguments to these functions support delegation.  For example, a **Filter** function used as an argument to pull in related records will search through all listings even if there are a million rows in the **'[dbo].[AllListings]'** data source:
 ```powerapps-dot
-AddColumns( RealEstateAgents, "Listings",  Filter(  '[dbo].[AllListings]', ListingAgentName = AgentName ) )
+AddColumns( RealEstateAgents, 
+	"Listings",  
+	Filter(  '[dbo].[AllListings]', ListingAgentName = AgentName ) 
+)
 ```
-will search through all listings even if there are a million rows in the **'[dbo].[AllListings]'** data source.  However, the output of these functions will be subject to the non-delegation record limit.  In this example, only 500 records will be returned even if the **RealEstateAgents** data source has more records than this.
+However, the output of these functions will be subject to the [non-delegation record limit](../delegation-overview#non-delegable-limits).  In this example, only 500 records will be returned even if the **RealEstateAgents** data source has more records than this.
+
+A word of caution when using **AddColumns** in this manner: the **Filter** will make separate calls to the data source for each of those first records in **RealEstateAgents**, causing a lot of chatter on the network. If **[dbo].[AllListings]** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnStart**](signals.md)).  Also consider restructuring your app so that you only pull in the related records when the user specifically asks for them.  
 
 ## Syntax
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
@@ -96,22 +101,22 @@ None of these examples modify the **IceCreamSales** data source. Each function t
 Let's try some of the above examples.  
 
 1. To create a collection that holds the above data to experiment with, add a **Button** control and set its **OnSelect** property to:
-```powerapps-dot
-ClearCollect( IceCreamSales, 
-	Table(
-        { Flavor: "Strawberry", UnitPrice: 1.99, QuantitySold: 20 }, 
-        { Flavor: "Chocolate", UnitPrice: 2.99, QuantitySold: 45 },
-        { Flavor: "Vanilla", UnitPrice: 1.50, QuantitySold: 35 }
+	```powerapps-dot
+	ClearCollect( IceCreamSales, 
+		Table(
+        	{ Flavor: "Strawberry", UnitPrice: 1.99, QuantitySold: 20 }, 
+        	{ Flavor: "Chocolate", UnitPrice: 2.99, QuantitySold: 45 },
+        	{ Flavor: "Vanilla", UnitPrice: 1.50, QuantitySold: 35 }
+		)
 	)
-)
-```
+	```
 1. Select the button to execute the formula.
 1. Add a second **Button** control and set its **OnSelect** property to:
-```powerapps-dot
-ClearCollect( FirstExample, 
-	AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )
-) 
-```
+	```powerapps-dot
+	ClearCollect( FirstExample, 
+		AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )
+	) 
+	```
 1. Select the second button to execute the second formula.
 1. On the **File** menu, select **Collections**.
 1. Select the **IceCreamSales** collection first:

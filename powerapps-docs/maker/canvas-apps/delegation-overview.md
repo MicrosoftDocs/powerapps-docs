@@ -91,7 +91,7 @@ A common pattern is to use **AddColumns** and **LookUp** to merge information fr
 
 Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the output of the **AddColumns** function isn't delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. 
 
-A potential downside to using **AddColumns** in this manner is that the **LookUp** will make separate calls to the data source for each of those first records in **Products**, causing a lot of chatter on the network. If **Suppliers** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnStart**](functions/signals.md)). 
+A potential downside to using **AddColumns** in this manner is that the **LookUp** will make separate calls to the data source for each of those first records in **Products**, causing a lot of chatter on the network. If **Suppliers** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnStart**](functions/signals.md)).  Also consider restructuring your app so that you only pull in the related records when the user specifically asks for them.  
  
 ## Non-delegable functions
 All other functions don't support delegation, including these notable functions:
