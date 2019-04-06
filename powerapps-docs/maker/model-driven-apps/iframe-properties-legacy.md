@@ -41,7 +41,7 @@ To view IFrame properties, follow these steps.
 |---------|--------------|-----------------|  
 |**General**|**Name**|**Required**: A unique name for the iFrame. The name can contain only alphanumeric characters and underscores.|  
 ||**URL**|**Required**: The URL for the page to display in the iFrame.|  
-||**Pass record object-type code and unique identifiers as parameters**|Data about the organization, user, and the record can be passed to the iFrame. More information: [Pass parameters to iFrames](iframe-properties-legacy.md#BKMK_PassParametersToIFRAMEs)|  
+||**Pass record object-type code and unique identifiers as parameters**|Data about the organization, user, and the record can be passed to the iFrame. More information: [Pass parameters to iFrames](#pass-parameters-to-iframes) |  
 ||**Label**|**Required**: A label to display for the iFrame.|  
 ||**Display label on the Form**|Whether the label should be displayed.|  
 ||**Restrict cross-frame scripting, where supported**|It is considered a security risk to allow pages from a different web site to interact with the Dynamics 365 application using scripts. Use this option to restrict cross frame scripting for pages you do not have control over.<br /><br />|  

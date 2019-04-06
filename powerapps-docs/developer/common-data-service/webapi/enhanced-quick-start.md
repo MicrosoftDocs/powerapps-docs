@@ -33,9 +33,9 @@ How you capture user credentials depends on the type of client you are making. F
 
 Enabling this requires three steps:
 
-1. [Add Reference to System.Configuration to the Visual Studio project](#1-add-reference-to-systemconfiguration-to-the-visual-studio-project)
-1. [Edit the application configuration file](#2-edit-the-application-configuration-file)
-1. [Add using statement to Program.cs](#3-add-using-statement-to-programcs)
+1. [Add Reference to System.Configuration to the Visual Studio project](#add-reference-to-systemconfiguration-to-the-visual-studio-project)
+1. [Edit the application configuration file](#edit-the-application-configuration-file)
+1. [Add using statement to Program.cs](#add-using-statement-to-programcs)
 
 
 ### Add Reference to System.Configuration to the Visual Studio project

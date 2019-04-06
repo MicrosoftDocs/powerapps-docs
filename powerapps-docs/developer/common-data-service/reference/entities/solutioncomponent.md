@@ -1,20 +1,13 @@
 ---
-title: "SolutionComponent Entity Reference (Common Data Service)| Microsoft Docs"
+title: "SolutionComponent Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the SolutionComponent entity."
-services: ''
-suite: powerapps
-documentationcenter: na
-author: JimDaly
-manager: kvivek
-editor: ''
-tags: ''
-ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/31/2018
-ms.author: jdaly
+ms.date: 04/01/2019
+ms.service: "powerapps"
+ms.topic: "reference"
+ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
+author: "KumarVivek"
+ms.author: "kvivek"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,21 +18,38 @@ search.app:
 
 A component of a CRM solution.
 
+
+## Messages
+
+|Message|Web API Operation|SDK Assembly|
+|-|-|-|
+|AddSolutionComponent|<xref href="Microsoft.Dynamics.CRM.AddSolutionComponent?text=AddSolutionComponent Action" />|<xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest>|
+|IsComponentCustomizable|<xref href="Microsoft.Dynamics.CRM.IsComponentCustomizable?text=IsComponentCustomizable Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsComponentCustomizableRequest>|
+|RemoveSolutionComponent|<xref href="Microsoft.Dynamics.CRM.RemoveSolutionComponent?text=RemoveSolutionComponent Action" />|<xref:Microsoft.Crm.Sdk.Messages.RemoveSolutionComponentRequest>|
+|Retrieve|GET [*org URI*]/api/data/v9.0/solutioncomponents(*solutioncomponentid*)<br />See [Retrieve](/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*>|
+|RetrieveMultiple|GET [*org URI*]/api/data/v9.0/solutioncomponents<br />See [Query Data](/powerapps/developer/common-data-service/webapi/query-data-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*>|
+|UpdateSolutionComponent|<xref href="Microsoft.Dynamics.CRM.UpdateSolutionComponent?text=UpdateSolutionComponent Action" />|<xref:Microsoft.Crm.Sdk.Messages.UpdateSolutionComponentRequest>|
+
 ## Entity Properties
 
-**DisplayName**: Solution Component<br />
-**DisplayCollectionName**: Solution Components<br />
-**SchemaName**: SolutionComponent<br />
-**CollectionSchemaName**: SolutionComponents<br />
-**LogicalName**: solutioncomponent<br />
-**LogicalCollectionName**: solutioncomponentss<br />
-**EntitySetName**: solutioncomponents<br />
-**PrimaryIdAttribute**: solutioncomponentid<br />
-**PrimaryNameAttribute**: <br />
-**OwnershipType**: None<br />
-**IsBPFEntity**: False<br />
+|Property|Value|
+|--------|-----|
+|CollectionSchemaName|SolutionComponents|
+|DisplayCollectionName|Solution Components|
+|DisplayName|Solution Component|
+|EntitySetName|solutioncomponents|
+|IsBPFEntity|False|
+|LogicalCollectionName|solutioncomponentss|
+|LogicalName|solutioncomponent|
+|OwnershipType|None|
+|PrimaryIdAttribute|solutioncomponentid|
+|PrimaryNameAttribute||
+|SchemaName|SolutionComponent|
+
 <a name="read-only-attributes"></a>
+
 ## Read-only attributes
+
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
 - [ComponentType](#BKMK_ComponentType)
@@ -65,331 +75,381 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 ### <a name="BKMK_ComponentType"></a> ComponentType
 
-**Description**: The object type code of the component.<br />
-**DisplayName**: Object Type Code<br />
-**LogicalName**: componenttype<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|The object type code of the component.|
+|DisplayName|Object Type Code|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|componenttype|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
 
-- **Value**: 1 **Label**: Entity
-- **Value**: 2 **Label**: Attribute
-- **Value**: 3 **Label**: Relationship
-- **Value**: 4 **Label**: Attribute Picklist Value
-- **Value**: 5 **Label**: Attribute Lookup Value
-- **Value**: 6 **Label**: View Attribute
-- **Value**: 7 **Label**: Localized Label
-- **Value**: 8 **Label**: Relationship Extra Condition
-- **Value**: 9 **Label**: Option Set
-- **Value**: 10 **Label**: Entity Relationship
-- **Value**: 11 **Label**: Entity Relationship Role
-- **Value**: 12 **Label**: Entity Relationship Relationships
-- **Value**: 13 **Label**: Managed Property
-- **Value**: 14 **Label**: Entity Key
-- **Value**: 16 **Label**: Privilege
-- **Value**: 17 **Label**: PrivilegeObjectTypeCode
-- **Value**: 18 **Label**: Index
-- **Value**: 20 **Label**: Role
-- **Value**: 21 **Label**: Role Privilege
-- **Value**: 22 **Label**: Display String
-- **Value**: 23 **Label**: Display String Map
-- **Value**: 24 **Label**: Form
-- **Value**: 25 **Label**: Organization
-- **Value**: 26 **Label**: Saved Query
-- **Value**: 29 **Label**: Workflow
-- **Value**: 31 **Label**: Report
-- **Value**: 32 **Label**: Report Entity
-- **Value**: 33 **Label**: Report Category
-- **Value**: 34 **Label**: Report Visibility
-- **Value**: 35 **Label**: Attachment
-- **Value**: 36 **Label**: Email Template
-- **Value**: 37 **Label**: Contract Template
-- **Value**: 38 **Label**: KB Article Template
-- **Value**: 39 **Label**: Mail Merge Template
-- **Value**: 44 **Label**: Duplicate Rule
-- **Value**: 45 **Label**: Duplicate Rule Condition
-- **Value**: 46 **Label**: Entity Map
-- **Value**: 47 **Label**: Attribute Map
-- **Value**: 48 **Label**: Ribbon Command
-- **Value**: 49 **Label**: Ribbon Context Group
-- **Value**: 50 **Label**: Ribbon Customization
-- **Value**: 52 **Label**: Ribbon Rule
-- **Value**: 53 **Label**: Ribbon Tab To Command Map
-- **Value**: 55 **Label**: Ribbon Diff
-- **Value**: 59 **Label**: Saved Query Visualization
-- **Value**: 60 **Label**: System Form
-- **Value**: 61 **Label**: Web Resource
-- **Value**: 62 **Label**: Site Map
-- **Value**: 63 **Label**: Connection Role
-- **Value**: 64 **Label**: Complex Control
-- **Value**: 65 **Label**: Hierarchy Rule
-- **Value**: 66 **Label**: Custom Control
-- **Value**: 68 **Label**: Custom Control Default Config
-- **Value**: 70 **Label**: Field Security Profile
-- **Value**: 71 **Label**: Field Permission
-- **Value**: 90 **Label**: Plugin Type
-- **Value**: 91 **Label**: Plugin Assembly
-- **Value**: 92 **Label**: SDK Message Processing Step
-- **Value**: 93 **Label**: SDK Message Processing Step Image
-- **Value**: 95 **Label**: Service Endpoint
-- **Value**: 150 **Label**: Routing Rule
-- **Value**: 151 **Label**: Routing Rule Item
-- **Value**: 152 **Label**: SLA
-- **Value**: 153 **Label**: SLA Item
-- **Value**: 154 **Label**: Convert Rule
-- **Value**: 155 **Label**: Convert Rule Item
-- **Value**: 161 **Label**: Mobile Offline Profile
-- **Value**: 162 **Label**: Mobile Offline Profile Item
-- **Value**: 165 **Label**: Similarity Rule
-- **Value**: 166 **Label**: Data Source Mapping
-- **Value**: 201 **Label**: SDKMessage
-- **Value**: 202 **Label**: SDKMessageFilter
-- **Value**: 203 **Label**: SdkMessagePair
-- **Value**: 204 **Label**: SdkMessageRequest
-- **Value**: 205 **Label**: SdkMessageRequestField
-- **Value**: 206 **Label**: SdkMessageResponse
-- **Value**: 207 **Label**: SdkMessageResponseField
-- **Value**: 208 **Label**: Import Map
-- **Value**: 210 **Label**: WebWizard
+#### ComponentType Options
+
+|Value|Label|
+|-----|-----|
+|1|Entity|
+|2|Attribute|
+|3|Relationship|
+|4|Attribute Picklist Value|
+|5|Attribute Lookup Value|
+|6|View Attribute|
+|7|Localized Label|
+|8|Relationship Extra Condition|
+|9|Option Set|
+|10|Entity Relationship|
+|11|Entity Relationship Role|
+|12|Entity Relationship Relationships|
+|13|Managed Property|
+|14|Entity Key|
+|16|Privilege|
+|17|PrivilegeObjectTypeCode|
+|18|Index|
+|20|Role|
+|21|Role Privilege|
+|22|Display String|
+|23|Display String Map|
+|24|Form|
+|25|Organization|
+|26|Saved Query|
+|29|Workflow|
+|31|Report|
+|32|Report Entity|
+|33|Report Category|
+|34|Report Visibility|
+|35|Attachment|
+|36|Email Template|
+|37|Contract Template|
+|38|KB Article Template|
+|39|Mail Merge Template|
+|44|Duplicate Rule|
+|45|Duplicate Rule Condition|
+|46|Entity Map|
+|47|Attribute Map|
+|48|Ribbon Command|
+|49|Ribbon Context Group|
+|50|Ribbon Customization|
+|52|Ribbon Rule|
+|53|Ribbon Tab To Command Map|
+|55|Ribbon Diff|
+|59|Saved Query Visualization|
+|60|System Form|
+|61|Web Resource|
+|62|Site Map|
+|63|Connection Role|
+|64|Complex Control|
+|65|Hierarchy Rule|
+|66|Custom Control|
+|68|Custom Control Default Config|
+|70|Field Security Profile|
+|71|Field Permission|
+|90|Plugin Type|
+|91|Plugin Assembly|
+|92|SDK Message Processing Step|
+|93|SDK Message Processing Step Image|
+|95|Service Endpoint|
+|150|Routing Rule|
+|151|Routing Rule Item|
+|152|SLA|
+|153|SLA Item|
+|154|Convert Rule|
+|155|Convert Rule Item|
+|161|Mobile Offline Profile|
+|162|Mobile Offline Profile Item|
+|165|Similarity Rule|
+|166|Data Source Mapping|
+|201|SDKMessage|
+|202|SDKMessageFilter|
+|203|SdkMessagePair|
+|204|SdkMessageRequest|
+|205|SdkMessageRequestField|
+|206|SdkMessageResponse|
+|207|SdkMessageResponseField|
+|208|Import Map|
+|210|WebWizard|
+|300|Canvas App|
+|371|Connector|
 
 
 
 ### <a name="BKMK_CreatedBy"></a> CreatedBy
 
-**Description**: Unique identifier of the user who created the solution<br />
-**DisplayName**: Created By<br />
-**LogicalName**: createdby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who created the solution|
+|DisplayName|Created By|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedOn"></a> CreatedOn
 
-**Description**: Date and time when the solution was created.<br />
-**DisplayName**: Created On<br />
-**LogicalName**: createdon<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the solution was created.|
+|DisplayName|Created On|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_CreatedOnBehalfBy"></a> CreatedOnBehalfBy
 
-**Description**: Unique identifier of the delegate user who created the solution.<br />
-**DisplayName**: Created By (Delegate)<br />
-**LogicalName**: createdonbehalfby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the delegate user who created the solution.|
+|DisplayName|Created By (Delegate)|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_CreatedOnBehalfByName"></a> CreatedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_CreatedOnBehalfByYomiName"></a> CreatedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: createdonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|createdonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_IsMetadata"></a> IsMetadata
 
-**Description**: Indicates whether this component is metadata or data.<br />
-**DisplayName**: Is this component metadata<br />
-**LogicalName**: ismetadata<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Boolean<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether this component is metadata or data.|
+|DisplayName|Is this component metadata|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|ismetadata|
+|RequiredLevel|None|
+|Type|Boolean|
 
-- **TrueOption Value**: 1 **Label**: Metadata
-- **FalseOption Value**: 0 **Label**: Data
+#### IsMetadata Options
+
+|Value|Label|
+|-----|-----|
+|1|Metadata|
+|0|Data|
 
 **DefaultValue**: True
 
 
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
-**Description**: Unique identifier of the user who last modified the solution.<br />
-**DisplayName**: Modified By<br />
-**LogicalName**: modifiedby<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the user who last modified the solution.|
+|DisplayName|Modified By|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedOn"></a> ModifiedOn
 
-**Description**: Date and time when the solution was last modified.<br />
-**DisplayName**: Modified On<br />
-**LogicalName**: modifiedon<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: DateTime<br />
-**DateTimeBehavior**: UserLocal<br />
-**Format**: DateAndTime
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description|Date and time when the solution was last modified.|
+|DisplayName|Modified On|
+|Format|DateAndTime|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedon|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ModifiedOnBehalfBy"></a> ModifiedOnBehalfBy
 
-**Description**: Unique identifier of the delegate user who modified the solution.<br />
-**DisplayName**: Modified By (Delegate)<br />
-**LogicalName**: modifiedonbehalfby<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: systemuser
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the delegate user who modified the solution.|
+|DisplayName|Modified By (Delegate)|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfby|
+|RequiredLevel|None|
+|Targets|systemuser|
+|Type|Lookup|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByName"></a> ModifiedOnBehalfByName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyname|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ModifiedOnBehalfByYomiName"></a> ModifiedOnBehalfByYomiName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: modifiedonbehalfbyyominame<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 100
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|modifiedonbehalfbyyominame|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ObjectId"></a> ObjectId
 
-**Description**: Unique identifier of the object with which the component is associated.<br />
-**DisplayName**: Regarding<br />
-**LogicalName**: objectid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the object with which the component is associated.|
+|DisplayName|Regarding|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|objectid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_RootComponentBehavior"></a> RootComponentBehavior
 
-**Description**: Indicates the include behavior of the root component.<br />
-**DisplayName**: Root Component Behavior<br />
-**LogicalName**: rootcomponentbehavior<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Picklist<br />
-**Options**:
+|Property|Value|
+|--------|-----|
+|Description|Indicates the include behavior of the root component.|
+|DisplayName|Root Component Behavior|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|rootcomponentbehavior|
+|RequiredLevel|None|
+|Type|Picklist|
 
-- **Value**: 0 **Label**: Include Subcomponents
-- **Value**: 1 **Label**: Do not include subcomponents
-- **Value**: 2 **Label**: Include As Shell Only
+#### RootComponentBehavior Options
+
+|Value|Label|
+|-----|-----|
+|0|Include Subcomponents|
+|1|Do not include subcomponents|
+|2|Include As Shell Only|
 
 
 
 ### <a name="BKMK_RootSolutionComponentId"></a> RootSolutionComponentId
 
-**Description**: The parent ID of the subcomponent, which will be a root<br />
-**DisplayName**: Root Solution Component ID<br />
-**LogicalName**: rootsolutioncomponentid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|The parent ID of the subcomponent, which will be a root|
+|DisplayName|Root Solution Component ID|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|rootsolutioncomponentid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_SolutionComponentId"></a> SolutionComponentId
 
-**Description**: Unique identifier of the solution component.<br />
-**DisplayName**: Solution Component Identifier<br />
-**LogicalName**: solutioncomponentid<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: SystemRequired<br />
-**Type**: Uniqueidentifier<br />
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the solution component.|
+|DisplayName|Solution Component Identifier|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|solutioncomponentid|
+|RequiredLevel|SystemRequired|
+|Type|Uniqueidentifier|
 
 
 ### <a name="BKMK_SolutionId"></a> SolutionId
 
-**Description**: Unique identifier of the solution.<br />
-**DisplayName**: Solution<br />
-**LogicalName**: solutionid<br />
-**IsValidForForm**: True<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: Lookup<br />
-**Targets**: solution
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the solution.|
+|DisplayName|Solution|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|solutionid|
+|RequiredLevel|None|
+|Targets|solution|
+|Type|Lookup|
 
 
 ### <a name="BKMK_SolutionIdName"></a> SolutionIdName
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: solutionidname<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: String<br />
-**FormatName**: Text<br />
-**IsLocalizable**: False<br />
-**MaxLength**: 256
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|solutionidname|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_VersionNumber"></a> VersionNumber
 
-**Description**: <br />
-**DisplayName**: <br />
-**LogicalName**: versionnumber<br />
-**IsValidForForm**: False<br />
-**IsValidForRead**: True<br />
-**RequiredLevel**: None<br />
-**Type**: BigInt<br />
-**MaxValue**: 9223372036854775807<br />
-**MinValue**: -9223372036854775808<br />
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|versionnumber|
+|MaxValue|9223372036854775807|
+|MinValue|-9223372036854775808|
+|RequiredLevel|None|
+|Type|BigInt|
 
 <a name="onetomany"></a>
 
@@ -397,60 +457,20 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 
 Listed by **SchemaName**.
 
-- [solutioncomponent_parent_solutioncomponent](#BKMK_solutioncomponent_parent_solutioncomponent)
-- [userentityinstancedata_solutioncomponent](#BKMK_userentityinstancedata_solutioncomponent)
-
 
 ### <a name="BKMK_solutioncomponent_parent_solutioncomponent"></a> solutioncomponent_parent_solutioncomponent
 
 Same as solutioncomponent entity [solutioncomponent_parent_solutioncomponent](solutioncomponent.md#BKMK_solutioncomponent_parent_solutioncomponent) Many-To-One relationship.
 
-**ReferencingEntity**: solutioncomponent<br />
-**ReferencingAttribute**: rootsolutioncomponentid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: solutioncomponent_parent_solutioncomponent<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: Cascade
-- **Delete**: Restrict
-- **Merge**: NoCascade
-- **Reparent**: Cascade
-- **Share**: Cascade
-- **Unshare**: Cascade
-
-
-### <a name="BKMK_userentityinstancedata_solutioncomponent"></a> userentityinstancedata_solutioncomponent
-
-Same as userentityinstancedata entity [userentityinstancedata_solutioncomponent](userentityinstancedata.md#BKMK_userentityinstancedata_solutioncomponent) Many-To-One relationship.
-
-**ReferencingEntity**: userentityinstancedata<br />
-**ReferencingAttribute**: objectid<br />
-**IsHierarchical**: False<br />
-**IsCustomizable**: False<br />
-**ReferencedEntityNavigationPropertyName**: userentityinstancedata_solutioncomponent<br />
-**AssociatedMenuConfiguration**:
-
-- **Behavior**: DoNotDisplay
-- **Group**: Details
-- **Label**: 
-- **Order**: 
-
-**CascadeConfiguration**:
-
-- **Assign**: NoCascade
-- **Delete**: Cascade
-- **Merge**: NoCascade
-- **Reparent**: NoCascade
-- **Share**: NoCascade
-- **Unshare**: NoCascade
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponent|
+|ReferencingAttribute|rootsolutioncomponentid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|solutioncomponent_parent_solutioncomponent|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: Cascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: Cascade<br />Share: Cascade<br />Unshare: Cascade|
 
 <a name="manytoone"></a>
 
@@ -479,5 +499,9 @@ See systemuser Entity [lk_solutioncomponentbase_createdonbehalfby](systemuser.md
 ### <a name="BKMK_solution_solutioncomponent"></a> solution_solutioncomponent
 
 See solution Entity [solution_solutioncomponent](solution.md#BKMK_solution_solutioncomponent) One-To-Many relationship.
-solutioncomponent
 
+### See also
+
+[About the Entity Reference](../about-entity-reference.md)<br />
+[Web API Reference](/dynamics365/customer-engagement/web-api/about)<br />
+<xref href="Microsoft.Dynamics.CRM.solutioncomponent?text=solutioncomponent EntityType" />
