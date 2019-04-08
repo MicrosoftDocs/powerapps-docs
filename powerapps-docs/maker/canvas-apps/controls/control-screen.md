@@ -30,11 +30,13 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 ## Additional properties
 
+**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is shorter than this property, the screen can scroll vertically.
+
 **[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
-**OnHidden** – The behavior of an app when the user navigates away from a screen.
+**Name** - The name of the screen.
 
-**OnVisible** – The behavior of an app when the user navigates to a screen.
+**OnHidden** – The behavior of an app when the user navigates away from a screen.
 
 **OnStart** – The behavior of the app when the user opens the app.
 
@@ -43,16 +45,14 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 - When you update an app, the formula to which this property is set runs when the app is loaded into PowerApps Studio. To see the impact of changing this property, you'll need to save, close, and reload your app.
 - The **OnStart** property is actually a property of the app, not the screen. For editing convenience, you view and modify it as a property on the first screen of your app. If you remove the first screen or reorder screens, this property may become hard to find. In this case, save, close, and reload your app, and the property will reappear as a property of the first screen.
 
-**Name** - The name of the screen.
+**OnVisible** – The behavior of an app when the user navigates to a screen.
 
-**Width** - The width of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is narrower in width than this property, then the screen will be scrollable in the horizontal direction.
+**Orientation** - The orientation of the screen. If its **Width** is greater than its **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
 
-**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is shorter in height than this property, then the screen will be scrollable in the vertical direction.
+**Size** - A positive integer that classifies the size of the screen. The classification is determined by comparing the screen's **Width** property to the values in the [**App.SizeBreakpoints**](../functions/signals.md) property. The **ScreenSize** type consists of four values (**Small**, **Medium**, **Large**, and **ExtraLarge**) that correspond to the integers 1 through 4.
 
-**Orientation** - The orientation of the screen. If **Width** > **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
+**Width** - The width of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is narrower than this property, the screen can scroll horizontally.
 
-**Size** - A positive integer classifying the size of the screen. The classification is determined by comparing the screen's **Width** to the values in the [**App.SizeBreakpoints**](../functions/signals.md) property. The **ScreenSize** type consists of four values (**Small**, **Medium**, **Large**, **ExtraLarge**) that correspond to the integers 1 through 4.
- 
 ## Related functions
 
 [**Distinct**( *DataSource*, *ColumnName* )](../functions/function-distinct.md)

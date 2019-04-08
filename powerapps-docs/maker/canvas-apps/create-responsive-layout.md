@@ -194,7 +194,7 @@ These formulas swap the app's **DesignWidth** and **DesignHeight** values, based
 
 After you adjust the screen's **Width** and **Height** formulas, you might also want to rearrange controls within your screen to better use the available space. For example, if each of two controls occupies half of the screen, you might stack them vertically in portrait but arrange them side by side in landscape.
 
-You can use the screen's **Orientation** property to check whether the screen is oriented vertically or horizontally.
+You can use the screen's **Orientation** property to determine whether the screen is oriented vertically or horizontally.
 
 > [!NOTE]
 > In landscape orientation, the **Upper** and **Lower** controls appear as left and right controls.
@@ -214,9 +214,9 @@ You can use the screen's **Orientation** property to check whether the screen is
 
 ![expressions to adapt a landscape orientation](media/create-responsive-layout/landscape.png)
 
-### Screen Sizes and Breakpoints
+### Screen sizes and breakpoints
 
-You can adjust your layout based on the size of the device. The screen's **Size** property classifies the current device size. The size is a positive integer; the ScreenSize type provides named constants to help with readability. The constants are:
+You can adjust your layout based on the size of the device. The screen's **Size** property classifies the current device size. The size is a positive integer; the ScreenSize type provides named constants to help with readability. This table lists the constants:
 
 | Constant              | Value | Typical device type (using default app settings) |
 |-----------------------|-------|--------------------------------------------------|
@@ -225,9 +225,13 @@ You can adjust your layout based on the size of the device. The screen's **Size*
 | ScreenSize.Large      | 3     | Tablet, held horizontally                        |
 | ScreenSize.ExtraLarge | 4     | Desktop computer                                 |
 
-Use these sizes to make decisions about your app's layout. For example, if you want a control to be hidden on a phone-sized device, but visible otherwise, you could set its Visible property to the formula `Parent.Size >= ScreenSize.Medium`. This formula evaluates to **true** when the size is medium or larger, and **false** otherwise.
+Use these sizes to make decisions about your app's layout. For example, if you want a control to be hidden on a phone-sized device but visible otherwise, you could set the control's **Visible** property to this formula:
 
-If you want a control to occupy a different fraction of the screen width, based on the screen size, set its Width property to the formula:
+`Parent.Size >= ScreenSize.Medium`
+
+This formula evaluates to **true** when the size is medium or larger and **false** otherwise.
+
+If you want a control to occupy a different fraction of the screen width based on the screen size, set the control's **Width** property to this formula:
 
 ```
 Parent.Width *  
@@ -237,19 +241,19 @@ Parent.Width *
         0.25)
 ```
 
-This formula sets the control's width to half the screen width on a small screen, 0.3 of the screen width on a medium screen, and one quarter of the screen width on all other size screens.
+This formula sets the control's width to half of the screen width on a small screen, three-tenths of the screen width on a medium screen, and a quarter of the screen width on all other screens.
 
-## Custom Breakpoints
+## Custom breakpoints
 
-The screen's Size property is calculated by comparing the screen's Width property to the values found in the app's **SizeBreakpoints** property. This property is a single-column table of numbers that indicate the breakpoints in the width that separate the possible screen Size values:
+The screen's **Size** property is calculated by comparing the screen's **Width** property to the values in the app's **SizeBreakpoints** property. This property is a single-column table of numbers that indicate the width breakpoints that separate the named screen sizes:
 
-In a canvas app created for tablet or web, the default values in SizeBreakpoints are [600, 900, 1200]. In an app created for phone, the values are [1200, 1800, 2400]. (The values for phone apps are doubled because such apps use coordinates that are effectively double the coordinates used in other apps.)
+In an app created for tablet or web, the default value in the app's **SizeBreakpoints** property are **[600, 900, 1200]**. In an app created for phones, the value is **[1200, 1800, 2400]**. (The values for phone apps are doubled because such apps use coordinates that are effectively double the coordinates used in other apps.)
 
 ![default values of App.SizeBreakpoints property](media/create-responsive-layout/default-breakpoints.png)
 
-You can customize the breakpoints for your app by changing the values in **SizeBreakpoints**. Select App in the tree view, then select **SizeBreakpoints** in the formula bar, and edit the values. You may create as many breakpoints as you app needs. However, only sizes 1 through 4 have corresponding named ScreenSize values; sizes beyond ExtraLarge can be referenced in your formulas by their numeric values (5, 6, etc.).
+You can customize your app's breakpoints by changing the values in the app's **SizeBreakpoints** property. Select **App** in the tree view, select **SizeBreakpoints** in the property list, and then edit the values in the formula bar. You can create as many breakpoints as your app needs, but only sizes 1 through 4 correspond to named screen sizes. In formulas, you can refer to sizes beyond ExtraLarge by their numeric values (5, 6, and so forth).
 
-Fewer breakpoints are also allowed. For example, if your app needs only three sizes (two breakpoints), the possible screen sizes will be Small, Medium, and Large.
+You can also specify fewer breakpoints. For example, your app might need only three sizes (two breakpoints), so the possible screen sizes will be Small, Medium, and Large.
 
 ## Known limitations
 

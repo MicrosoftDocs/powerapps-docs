@@ -42,13 +42,13 @@ The **App** signal returns information about the running app.
 | **App.Height** | Returns the height of the window in which the app is running. You can use this property in a formula when you set the **Height** property of the screen to build a responsive app. |
 | **App.DesignWidth** | Returns the width of the app in PowerApps Studio. You can use this property in a formula when you set the **Width** property of the screen to to ensure a minimum width in a responsive app.  |
 | **App.DesignHeight** | Returns the height of the app in PowerApps Studio. You can use this property in a formula when you set the **Height** property of the screen to to ensure a minimum height in a responsive app.  |
-| **App.SizeBreakpoints** | A single-column table of numbers that delimit the screen size ranges returned by the [**Screen.Size**](../controls/control-screen.md) property. The values in this table may be changed to customize the breakpoints used by all of the app's screens.
+| **App.SizeBreakpoints** | A single-column table of numbers that delimit the screen-size ranges that the [**Screen.Size**](../controls/control-screen.md) property returns. The values in this table may be changed to customize the breakpoints that all of the app's screens use.
 
 The **App** object also has a [behavior formula](../working-with-formulas-in-depth.md) that you can set.
 
 | Property  | Description |
 | --- | --- |
-| **App.OnStart** | The behavior of the app when the user starts it. This property is commonly used to retrieve and cache data into collections with the **[Collect](function-clear-collect-clearcollect.md)** function, set up variables with the **[Set](function-set.md)** function, and navigate to an initial screen with the **[Navigate](function-navigate.md)** function. This formula is evaluated before the first screen appears. No screen is loaded, so you can't set context variables with the **[UpdateContext](function-updatecontext.md)** function. However, you can pass context variables with the **Navigate** function. |
+| **App.OnStart** | The behavior of the app when the user starts it. Makers often use this property to retrieve and cache data into collections with the **[Collect](function-clear-collect-clearcollect.md)** function, set up variables with the **[Set](function-set.md)** function, and navigate to an initial screen with the **[Navigate](function-navigate.md)** function. This formula is evaluated before the first screen appears. No screen is loaded, so you can't set context variables with the **[UpdateContext](function-updatecontext.md)** function. However, you can pass context variables with the **Navigate** function. |
 
 The **App** object appears at the top of the hierarchical list of controls in the left navigation pane, and you can select this object like a control on a screen. After you select the object, you can view and edit one of its properties if you select that property in the drop-down list to the left of the formula bar.  
 
