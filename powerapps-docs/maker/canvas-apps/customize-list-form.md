@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 ms.author: anneta
 search.audienceType: 
   - maker
@@ -89,13 +89,13 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. Open your list, select **New** in the command bar, and then select **Customize** near the top of the form.
 
-1. Customize your form a variety of ways such as those that these topics describe:
+1. Customize your form in a variety of ways, such as those that these topics describe:
 
     - Change its size, orientation, or both (for example, to [make the form wider](set-aspect-ratio-portrait-landscape.md)).
     - [Customize one or more cards](working-with-cards.md) (for example, change a card's display text or input control).
     - Create a [lookup field](sharepoint-lookup-fields.md).
 
-    More information: [Understand SharePoint forms integration](sharepoint-form-integration.md)
+    More information: [Understand SharePoint forms integration](sharepoint-form-integration.md).
 
 ## Use the default form
 
@@ -151,7 +151,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** How can I easily share my form with others?
 
-**A:** Open the form, select **Copy link**, and then send the link to anyone you want to use the form.
+**A:** Open the form, select **Copy link**, and then send the link to anyone whom you want to use the form.
 
 **Q:** Can I update my form without making my changes visible to others?
 
@@ -173,7 +173,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 1. Go back to the **Versions** page in the other browser tab, locate the version that you want to restore, and then select **Restore**.
 
     > [!NOTE]
-    > If you get an error message saying the restore failed because the form is locked by another user, wait until the user unlocks the form, and then try again.
+    > If you get an error message saying that the restore failed because the form is locked by another user, wait until the user unlocks the form, and then try again.
 
 **Q:** Can I move my form from one list to another?
 
@@ -183,7 +183,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** How do I share my form?
 
-**A:** You don't need to share the form - the form inherits permissions from the SharePoint list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-form) so that others can use it.
+**A:** You don't need to share the form—the form inherits permissions from the SharePoint list. When you're done customizing it, just [publish it back to SharePoint](customize-list-form.md#save-and-publish-the-form) so that others can use it.
 
 **Q:** Who can customize forms?
 
@@ -205,6 +205,6 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. At the top of the default environment page, select **Resources**.
 
-1. From the list of apps, look for apps with a **SharePoint Form** app type - these are the customized forms.
+1. From the list of apps, look for apps with a **SharePoint Form** app type—these are the customized forms.
 
     ![List of customized forms](./media/customize-list-form/all-customized-forms.png)
