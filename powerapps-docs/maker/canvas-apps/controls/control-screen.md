@@ -30,7 +30,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 ## Additional properties
 
-**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientationd) is **Off**) and the device on which the app is running is shorter than this property, the screen can scroll vertically.
+**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) is **Off**) and the device on which the app is running is shorter than this property, the screen can scroll vertically.
 
 **[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
