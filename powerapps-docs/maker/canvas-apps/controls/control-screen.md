@@ -30,7 +30,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 ## Additional properties
 
-**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is shorter than this property, the screen can scroll vertically.
+**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientationd) is **Off**) and the device on which the app is running is shorter than this property, the screen can scroll vertically.
 
 **[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
@@ -51,7 +51,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **Size** - A positive integer that classifies the size of the screen. The classification is determined by comparing the screen's **Width** property to the values in the [**App.SizeBreakpoints**](../functions/signals.md) property. The **ScreenSize** type consists of four values (**Small**, **Medium**, **Large**, and **ExtraLarge**) that correspond to the integers 1 through 4.
 
-**Width** - The width of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is narrower than this property, the screen can scroll horizontally.
+**Width** - The width of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) is **Off**) and the device on which the app is running is narrower than this property, the screen can scroll horizontally.
 
 ## Related functions
 
