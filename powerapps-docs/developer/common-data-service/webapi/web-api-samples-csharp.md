@@ -139,7 +139,7 @@ throw new Exception(string.Format("Failed to retrieve contact for reason: {0}", 
   
 ### Response success and error handling
 
-In general, the samples take a straightforward approach to processing HTTP responses. If the request succeeds, information about the operation is typically output to the console. If the response also carries a JSON payload or useful headers, this information is only processed upon success. And lastly, if a Common Data Service entity was created, the `entityUris` collection is updated with the URI of that resource. The [DeleteRequiredRecords](#bkmk_deleteRequiredRecords) method uses this collection to optionally delete data created by the sample from your Common Data Service server.  
+In general, the samples take a straightforward approach to processing HTTP responses. If the request succeeds, information about the operation is typically output to the console. If the response also carries a JSON payload or useful headers, this information is only processed upon success. And lastly, if a Common Data Service entity was created, the `entityUris` collection is updated with the URI of that resource. The `DeleteRequiredRecords` method uses this collection to optionally delete data created by the sample from your Common Data Service server.  
   
 If the request failed, the program outputs a contextual message about the operation that failed, and then it throws a custom exception of type `Exception`. The exception-handler outputs more information about the exception and then control passes to a `finally` block that includes cleanup logic, again including a call to `DeleteRequiredRecords`. The following code demonstrates this error-handling approach on a POST request to create a record.  
   

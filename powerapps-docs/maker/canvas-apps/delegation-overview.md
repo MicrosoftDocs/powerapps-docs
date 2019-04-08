@@ -53,10 +53,10 @@ Within the **Filter** and **LookUp** functions, you can use these with columns o
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**
 * **[IsBlank](functions/function-isblank-isempty.md)**
-* **[StartsWith](functions/function-startswith.md)**
+* **[StartsWith](functions/function-startswith.md)**, **[EndsWith](functions/function-startswith.md)**
 * Constant values that are the same across all records, such as control properties and [global and context variables](working-with-variables.md).
 
-You can also use portions of your formula that evaluate to a constant value for all records. For example, **Left( Language(), 2 )** doesn't depend on any columns of the record and, therefore, returns the same value for all records. It's effectively a constant. Use of context variables, collections, and signals may not be constant and, therefore, will prevent **Filter** and **LookUp** from being delegated.  
+You can also use portions of your formula that evaluate to a constant value for all records. For example, **Left( Language(), 2 )**, **Date( 2019, 3, 31 )**, and **Today()** don't depend on any columns of the record and, therefore, return the same value for all records. These values can be sent to the data source as a constant and won't block delegation. 
 
 The previous list doesn't include these notable items:
 
@@ -66,7 +66,7 @@ The previous list doesn't include these notable items:
 * **[ExactIn](functions/operators.md)**
 * String manipulation functions: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
 * Signals: **[Location](functions/signals.md)**, **[Acceleration](functions/signals.md)**, **[Compass](functions/signals.md)**, ...
-* Volatiles: **[Now](functions/function-now-today-istoday.md)**, **[Today](functions/function-now-today-istoday.md)**, **[Rand](functions/function-rand.md)**, ...
+* Volatiles: **[Rand](functions/function-rand.md)**, ...
 * [Collections](working-with-variables.md)
 
 ### Sorting functions
@@ -81,24 +81,32 @@ Counting functions such as **[CountRows](functions/function-table-counts.md)**, 
 
 Other aggregate functions such as **[StdevP](functions/function-aggregates.md)** and **[VarP](functions/function-aggregates.md)** can't be delegated.
 
+### Table shaping functions
+
+**[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, and **[ShowColumns](functions/function-table-shaping.md)** partially support delegation.  Formulas in their arguments can be delegated.  However, the output of these functions are subject to the non-delegation record limit.
+
+As in this example, makers often use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance:
+
+```powerapps-dot
+AddColumns( Products, 
+    "Supplier Name", 
+    LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name 
+)
+```
+
+Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the output of the **AddColumns** function isn't delegable. The result of the entire formula is limited to the first portion of the **Products** data source. Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. 
+
+If you use **AddColumns** in this manner, **LookUp** must make separate calls to the data source for each of those first records in **Products**, which causes a lot of network chatter. If **Suppliers** is small enough and doesn't change often, you could call the **Collect** function in [**OnStart**](functions/signals.md) to cache the data source in your app when it starts. As an alternative, you could restructure your app so that you pull in the related records only when the user asks for them.  
+ 
 ## Non-delegable functions
 All other functions don't support delegation, including these notable functions:
 
-* Table shaping: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ...
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Choices](functions/function-choices.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
 * **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
-
-A common pattern is to use **AddColumns** and **LookUp** to merge information from one table into another, commonly referred to as a Join in database parlance.  For example:
-
-**AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
-
-Even though **Products** and **Suppliers** may be delegable data sources and **LookUp** is a delegable function, the **AddColumns** function isn't delegable.  The result of the entire formula will be limited to the first portion of the **Products** data source.  
-
-Because the **LookUp** function and its data source are delegable, a match for **Suppliers** can be found anywhere in the data source, even if it's large. A potential downside is that **LookUp** will make separate calls to the data source for each of those first records in **Products**, causing a lot of chatter on the network. If **Suppliers** is small enough and doesn't change often, you could cache the data source in your app with a **Collect** call when the app starts (using [**OnVisible**](controls/control-screen.md) on the opening screen) and do the **LookUp** to it instead.  
 
 ## Non-delegable limits
 Formulas that can't be delegated will be processed locally. This allows for the full breadth of the PowerApps formula language to be used. But at a price: all the data must be brought to the device first, which could involve retrieving a large amount of data over the network. That can take time, giving the impression that your app is slow or possibly crashed.
