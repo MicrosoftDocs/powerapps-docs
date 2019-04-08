@@ -240,7 +240,6 @@ Parent.Width *
         ScreenSize.Medium, 0.3,  
         0.25)
 ```
-
 This formula sets the control's width to half of the screen width on a small screen, three-tenths of the screen width on a medium screen, and a quarter of the screen width on all other screens.
 
 ## Custom breakpoints
