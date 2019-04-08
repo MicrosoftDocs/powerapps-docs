@@ -123,7 +123,7 @@ As you model your business data by creating custom entities or when using existi
     > [!div class="mx-imgBorder"] 
     > ![Custom behavior](./media/data-platform-cds-newrelationship/advanced-2.png "Custom behavior")
 
-For more information on defaults and custom behaviors: [Configure entity relationship behavior](entity-relationship-behavior).
+For more information on defaults and custom behaviors: [Configure entity relationship behavior](entity-relationship-behavior.md).
 
 
 
