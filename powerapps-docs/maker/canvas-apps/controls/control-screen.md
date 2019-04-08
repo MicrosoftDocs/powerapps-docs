@@ -45,9 +45,9 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **Name** - The name of the screen.
 
-**Width** - The width of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is narrower in width than this property, then the screen will be scrollable in the horizontal direction.
+**Width** - The width of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) is **Off**) and the device on which the app is running is narrower in width than this property, then the screen will be scrollable in the horizontal direction.
 
-**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape#change-screen-size-and-orientation.md) is **Off**) and the device on which the app is running is shorter in height than this property, then the screen will be scrollable in the vertical direction.
+**Height** - The height of the screen. If the app is responsive ([**Scale to fit**](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) is **Off**) and the device on which the app is running is shorter in height than this property, then the screen will be scrollable in the vertical direction.
 
 **Orientation** - The orientation of the screen. If **Width** > **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
 
