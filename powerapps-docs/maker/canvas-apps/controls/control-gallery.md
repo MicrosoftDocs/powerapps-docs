@@ -9,9 +9,9 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/25/2017
 ms.author: fikaradz
-search.audienceType: 
+search.audienceType:
   - maker
-search.app: 
+search.app:
   - PowerApps
 ---
 # Gallery control in canvas apps
@@ -55,8 +55,6 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 **[Height](properties-size-location.md)** – The distance between a control's top and bottom edges.
 
 **ItemAccessibleLabel** – Label of each gallery item for screen readers. Should describe what each item is.
-
-**Layout** – Whether the user scrolls through a gallery or adjusts a slider top to bottom (**Vertical**) or left to right (**Horizontal**).
 
 **NavigationStep** – How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
 
