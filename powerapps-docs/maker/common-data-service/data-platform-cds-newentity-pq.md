@@ -67,7 +67,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 
 1. In the **Primary name field** list, click or tap **ContactName**, and then click or tap **Next** in the lower-right corner.
 
-    You can specify a different primary-name field, map a different column in the source table to each field in the entity that you're creating, or both. To follow this tutorial exactly, leave the default column mapping.
+    You can specify a different primary-name field, map a different column in the source table to each field in the entity that you're creating, or both. You can also specify whether Text columns in your query output should be created as Multiline Text vs. Single-Line Text in CDS. To follow this tutorial exactly, leave the default column mapping.
 
 1. When the **Load status** is **Completed**, select **Done** in the lower-right corner.
 
