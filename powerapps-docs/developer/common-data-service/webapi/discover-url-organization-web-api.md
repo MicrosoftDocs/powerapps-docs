@@ -24,7 +24,7 @@ search.app:
 # Discover the URL for your organization using the Web API
 
 > [!NOTE]
-> Global discovery service is currently in L2 and is expected be moved to L4 in April 2019. The process to provide Global discovery service support to all regions in currently underway and is expected to be completed by October 2019.
+> Global Discovery Service is currently in L2 and is expected to be moved to L4 in April 2019. The process to provide Global Discovery Service support to all regions in currently underway and is expected to be completed by October 2019.
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
