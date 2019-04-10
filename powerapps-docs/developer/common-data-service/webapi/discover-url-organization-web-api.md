@@ -24,7 +24,7 @@ search.app:
 # Discover the URL for your organization using the Web API
 
 > [!NOTE]
-> Global Discovery Service is currently in L2 and is expected to be moved to L4 in April 2019. The process to provide Global Discovery Service support to all regions in currently underway and is expected to be completed by October 2019.
+> Global Discovery Service is currently available for Government Community Cloud(GCC) Moderate, that is, for all domains that end with `crm9.dynamics.com` and is expected to be available to use for all domains under `crm.microsoftdynamics.us` by April 2019. The process to provide Global Discovery Service support for all regions in currently underway and is expected to be completed by October 2019.
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
