@@ -115,7 +115,7 @@ When you build an app from Common Data Service, you don't need to create a conne
 
     ![Refresh icon](./media/data-platform-create-app-scratch/refresh-icon.png)
 
-1. Set the **OnSelect** property of the the plus icon to this formula:
+1. Set the **OnSelect** property of the plus icon to this formula:
 
     `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
