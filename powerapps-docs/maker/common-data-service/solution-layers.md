@@ -27,18 +27,12 @@ search.app:
 ---
 
 # Use solution layers
-
-[!INCLUDE [cc-applies-to-update-9-0-0](../includes/cc-applies-to-update-9-0-0.md)]
-
 Solution layers allows you to view all component changes that occur due to solution upgrades over time. Within a solution layer, you can drill-down to view the specific changed and unchanged property details for a component. 
 
 Solution layers provide the following benefits: 
 -	Let’s you see the order in which a solution changed a component. 
 -	Let’s you view all properties of a component within a specific solution including the changes to the component. 
 -	Can be used to troubleshoot dependency or solution layering issues by displaying change details for a component that was introduced by a solution upgrade.
-
-> [!NOTE]
-> This feature is only available with [!INCLUDE [pn-microsoftcrm](../includes/pn-microsoftcrm.md)] (online).
 
 ## View the solution layers for a component
 You can access solution layers from the **Components** list or from the **Dependency Details** dialog box in solution explorer. 
