@@ -59,7 +59,7 @@
         ]
       },
       "learn_banner_products": {
-	      "**/*.md": [
+	"**/*.md": [
           "powerapps"
         ]
       }
