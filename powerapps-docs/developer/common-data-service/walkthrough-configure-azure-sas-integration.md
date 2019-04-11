@@ -48,7 +48,7 @@ This walkthrough guides you through configuring the Azure Service Bus issuer, sc
   
 ## Create a service endpoint
 
-A [ServiceEndpoint Entity ](reference/entities/serviceendpoint.md) contains configuration data that is required for external messaging with a Azure Service Bus solution endpoint. By using the Plug-in Registration Tool, you can easily create a service endpoint entity in a Common Data Service organization and configure  the service bus endpoint issuer, scope, and rules. D:\GitHub\power-apps\powerapps-docs-pr\powerapps-docs\developer\common-data-service\reference\entities\serviceendpoint.md
+A [ServiceEndpoint Entity](reference/entities/serviceendpoint.md) contains configuration data that is required for external messaging with a Azure Service Bus solution endpoint. By using the Plug-in Registration Tool, you can easily create a service endpoint entity in a Common Data Service organization and configure  the service bus endpoint issuer, scope, and rules.
   
 ### Register a Service Endpoint  
   
