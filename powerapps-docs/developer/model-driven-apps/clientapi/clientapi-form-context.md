@@ -1,6 +1,6 @@
 ---
 title: "Client API form context in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 04/10/2019
 ms.service: powerapps
 ms.topic: "conceptual"
 applies_to: 
@@ -21,7 +21,7 @@ search.app:
 
 The Client API form context (**formContext**) provides a reference to the form or to an item on the form, such as, a quick view control or a row in an editable grid, against which the current code is executed.
 
-Earlier, the global **Xrm.Page** object was used to represent a form or an item on the form. With version 9.0, the **Xrm.Page** object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](reference/executioncontext/getFormContext.md) method of the passed in execution context object to return reference to the appropriate form or an item on the form.
+Earlier, the global **Xrm.Page** object was used to represent a form or an item on the form. With the latest version, the **Xrm.Page** object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated), and you should use the [getFormContext](reference/executioncontext/getFormContext.md) method of the passed in execution context object to return reference to the appropriate form or an item on the form. A public announcement here in the documentation, on the official blog, and in many other places will be made at least six months before removal. 
 
 > [!IMPORTANT]
 > *Deprecated* means that we intend to remove a feature or capability from a future major release of model-driven apps; the feature or capability will continue to work and is fully supported until it is officially removed.<br/><br/>Use of the **Xrm.Page** object as a static access to the primary form context is *still* supported to maintain backward compatibility with the existing scripts, and won’t be removed as soon as some other client API methods listed in the [Client API deprecation](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) section. We recommend that you use the new **formContext** object instead of the **Xrm.Page** object in your code targeting version 9.0 or later where possible. Also, using the **formContext** object enables you to create common event handlers that can operate either on a form or in an editable grid depending on where its called. More information: [getFormContext (Client API reference)](reference/executioncontext/getFormContext.md).<br><br>Getting the **formContext** object for JavaScript functions for ribbon actions is different from how you get it in form scripting. More information: [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions).
