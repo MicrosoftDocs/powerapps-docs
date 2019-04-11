@@ -37,7 +37,7 @@ Solution layers provide the following benefits:
 ## View the solution layers for a component
 You can access solution layers from the **Components** list or from the **Dependency Details** dialog box in solution explorer. 
 
-1. To view solution layers from the **Components** list, open solution explorer, in the **Components** list select a component, such as **Account**, and then select **Solution Layers** on the toolbar. 
+1. To view solution layers from the **Components** list, [open solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer), in the **Components** list select a component, such as **Account**, and then select **Solution Layers** on the toolbar. 
 
    > [!div class="mx-imgBorder"] 
    > ![](media/solution-layers-toolbar.png "Solution layers button")
