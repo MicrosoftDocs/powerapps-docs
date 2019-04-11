@@ -40,8 +40,8 @@ Use solution explorer to perform app making and customization tasks that can’t
 1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2.	On the left navigation pane select **Solutions**.  
 3.	Select **Switch to classic** on the toolbar to open solution explorer. 
-
     Notice that the **Switch to classic** command isn't available when you select a solution in the list.
+4.  In the list of available solutions select the solution you want in the **Display Name** column to open solution explorer.
 
 ## Apps
 The Apps area lists all model-driven and canvas apps that you have privileges to in your environment. In addition to launching an app, from the Apps area you can also assign security roles to it. 
