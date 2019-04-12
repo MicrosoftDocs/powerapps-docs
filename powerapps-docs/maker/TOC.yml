@@ -1069,7 +1069,7 @@
       href: ./common-data-service/navigate-specific-solution.md
     - name: Create a solution
       href: ./common-data-service/create-solution.md
-    - name: Solution layers
+    - name: View solution layers
       href: ./common-data-service/solution-layers.md
     - name: Use solution checker
       href: ./common-data-service/use-powerapps-checker.md
