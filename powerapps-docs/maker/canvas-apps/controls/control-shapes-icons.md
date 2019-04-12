@@ -9,9 +9,9 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-search.audienceType: 
+search.audienceType:
   - maker
-search.app: 
+search.app:
   - PowerApps
 ---
 # Shape controls and Icon controls in PowerApps
@@ -51,6 +51,13 @@ These controls include arrows, geometric shapes, action icons, and symbols for w
 **[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
 
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+## Icon only additional key properties
+**Icon** - The type of icon to display.
+
+**Rotation** - The number of degrees to rotate the icon.
+
+**Color** - The color of the graphic.
 
 ## Related functions
 
