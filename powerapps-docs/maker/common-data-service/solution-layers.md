@@ -1,5 +1,5 @@
 ---
-title: "Solution layers | MicrosoftDocs"
+title: "View solution layers | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
 ms.date: 04/10/2019
@@ -26,7 +26,7 @@ search.app:
   - D365CE
 ---
 
-# Use solution layers
+# View solution layers
 Solution layers allows you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill-down to view the specific changed and unchanged property details for a component. 
 
 Solution layers provide the following benefits: 
