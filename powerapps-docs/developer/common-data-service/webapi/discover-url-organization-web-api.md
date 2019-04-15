@@ -24,8 +24,17 @@ search.app:
 # Discover the URL for your organization using the Web API
 
 > [!NOTE]
-> Global Discovery Service is currently available for Government Community Cloud(GCC) Moderate, that is, for all domains that end with `crm9.dynamics.com` and is expected to be available to use for all domains under `crm.microsoftdynamics.us` by April 2019. The process to provide Global Discovery Service support for all regions in currently underway and is expected to be completed by October 2019.<br /><br />
-> It is recommended that users switch from the legacy Regional discovery service to Global discovery service, that is switch from `https://disco.crm.dynamics.com` to `https://globaldisco.crm.dynamics.com`.
+> Global Discovery Service is currently available for Government Community Cloud(GCC) Moderate. This means that it is available for all domains that end with `crm9.dynamics.com` and is expected to be available to use for all domains under `crm.microsoftdynamics.us` by May 2019. The process to provide Global Discovery Service support for all sovereign regions in currently underway and is expected to be completed by October 2019.
+>
+> It is recommended that users switch from the legacy Regional discovery service to Global discovery service.
+>
+> The table given below lists the Global discovery URL for every region.
+>
+> |Region|Global discovery URL|
+> |------|------|
+> |Commercial|https://globaldisco.crm.dynamics.com|
+> |GCC Moderate||
+> |GCC High||
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
