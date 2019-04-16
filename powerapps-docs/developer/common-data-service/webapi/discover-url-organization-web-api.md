@@ -27,7 +27,7 @@ search.app:
 
 With the Web API discovery service, you can use standard `$filter` and `$select` parameters to a Web API service request to customize the returned list of instance data.
 <!-- TODO should only talk about the global discovery service -->
-In addition to datacenter specific Discovery services, that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only global Discovery service that spans all operational datacenters. For more information about the Discovery service on the 2011 endpoint see [Discovery Service](../org-service/discovery-service.md)
+In addition to datacenter specific Discovery services, that are available on the 2011 (SOAP) endpoint and through the Web API, there is also a Web API only Global Discovery service that spans all operational datacenters. For more information about the Discovery service on the 2011 endpoint see [Discovery Service](../org-service/discovery-service.md)
 
   
 ## Information provided by the Discovery service 
@@ -76,8 +76,7 @@ The Discovery service Web API supports the CORS standard for cross-origin access
 -   Get the details of a specific instance. If you leave out the GUID, all instances that the authenticated user has access to are returned.  
   
     ```http  
-    GET https://disco.crm.dynamics.com/api/discovery/v8.1/Instances(<guid>)  
-    GET https://dev.crm.external.contoso.com/api/discovery/v8.1/Instances(<guid>)  
+    GET https://disco.crm.dynamics.com/api/discovery/v9.0/Instances(<guid>)  
     ```  
   
 -   You can use the UniqueName attribute as an alternate key.  
@@ -95,7 +94,7 @@ The Discovery service Web API supports the CORS standard for cross-origin access
 -   Retrieve a specific instance's ID property value.  
   
     ```http  
-    GET https://disco.crm.dynamics.com/api/discovery/v8.1/Instances(UniqueName='myorg')/Id/$value  
+    GET https://disco.crm.dynamics.com/api/discovery/v9.0/Instances(UniqueName='myorg')/Id/$value  
     ```
 
 ## See also
