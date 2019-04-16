@@ -12,9 +12,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: AE107774-4545-44B4-94C8-A0271EFA7876
 caps.latest.revision: 11
-author: "SushantSikka"
+author: "susikka"
 ms.author: "susikka"
-manager: "amyla"
+manager: "shujoshi"
 search.audienceType: 
   - developer
 search.app: 
