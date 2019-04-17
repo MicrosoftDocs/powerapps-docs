@@ -32,9 +32,9 @@ search.app:
 >
 > |Region|Global discovery URL|
 > |------|------|
-> |Commercial|https://globaldisco.crm.dynamics.com|
-> |GCC Moderate||
-> |GCC High||
+> |Commercial|`https://globaldisco.crm.dynamics.com`|
+> |GCC Moderate|`https://globaldisco.crm9.dynamics.com`|
+> |GCC High|`https://globaldisco.crm.microsoftdynamics.us`|
 
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
