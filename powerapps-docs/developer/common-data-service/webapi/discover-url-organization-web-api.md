@@ -28,7 +28,7 @@ search.app:
 >
 > It is recommended that users switch from the legacy Regional discovery service to Global discovery service.
 >
-> The table given below lists the Global discovery URL for every region.
+> The table given below lists the Global discovery URL for every sovereign region.
 >
 > |Region|Global discovery URL|
 > |------|------|
