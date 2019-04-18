@@ -26,6 +26,8 @@ search.app:
   - D365CE
 ---
 
+<!--note from editor: Best practice is that H1 title and title in metadata are different.    -->
+
 # View solution layers
 Solution layers allow you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill down to view specific changed and unchanged property details for a component. 
 
@@ -37,12 +39,14 @@ Solution layers:
 ## View the solution layers for a component
 You can access solution layers from the **Components** list or from the **Dependency Details** dialog box in solution explorer. 
 
+<!--note from editor: In step 2 below, does the page display a name at top? If so, use the same capitalization in text. -->
+
 1. To view solution layers from the **Components** list, open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). In the **Components** list, select a component, such as **Account**, and then select **Solution Layers** on the toolbar. 
 
    > [!div class="mx-imgBorder"] 
    > ![](media/solution-layers-toolbar.png "Solution layers button")
 
-2. The solution layer page appears. It displays each layer for the component, such as the Account entity displayed here, with the most recent layer at the top. To view the details for a solution layer, select it. 
+2. The solution layer page appears. It displays each layer for the component, such as the **Account** entity displayed here, with the most recent layer at the top. To view the details for a solution layer, select it. 
 
    > [!div class="mx-imgBorder"] 
    > ![](media/solution-layers-list.png "Solution layers list")
@@ -57,5 +61,5 @@ You can access solution layers from the **Components** list or from the **Depend
    > [!div class="mx-imgBorder"] 
    > ![](media/solution-layers-all-prop.png "Solution layer all properties")
 
-## See also
+### See also
 [Solutions overview](solutions-overview.md)
