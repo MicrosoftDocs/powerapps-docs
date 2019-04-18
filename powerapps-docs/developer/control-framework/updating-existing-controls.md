@@ -1,7 +1,7 @@
 ---
 title: Update existing custom controls using PowerApps Component Framework Tooling| Microsoft Docs
 description: Update controls using the PowerApps Component Framework Tooling
-keywords: PowerApps ContrComponentol Framework, Custom Controls, Control Framework
+keywords: PowerApps Component Framework, Custom Controls, Control Framework
 ms.author: nabuthuk
 manager: kvivek
 ms.date: 03/01/2019
