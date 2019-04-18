@@ -45,7 +45,7 @@ In the above example, the global Discovery service of Common Data Service is use
 > [!NOTE]
 > It is recommended that users switch from the legacy regional discovery service (`https://disco.crm.dynamics.com`) to global discovery service (`https://globaldisco.crm.dynamics.com`).
 > 
-> For Dynamics 365 US Government users, the global discovery service is available only for the **GCC Moderate** users and the URL is `https://globaldisco.crm9.dynamics.com`. More information: [Dynamics 365 Government URLs](https://docs.microsoft.com/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls). 
+> For Dynamics 365 US Government users, the global discovery service is available only for the **GCC** users and the URL is `https://globaldisco.crm9.dynamics.com`. More information: [Dynamics 365 Government URLs](https://docs.microsoft.com/dynamics365/customer-engagement/admin/government/microsoft-dynamics-365-government#dynamics-365-us-government-urls). 
 
   
 ### Scope of the returned information
