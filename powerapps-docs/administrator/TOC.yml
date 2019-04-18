@@ -31,7 +31,7 @@
       href: https://docs.microsoft.com/power-platform/admin/logging-powerapps
   - name: Data integration
     items:
-    - name: Integrate data into CDS for Apps
+    - name: Integrate data into Common Data Service
       href: data-integrator.md
     - name: Data Integrator Error management and troubleshooting
       href: data-integrator-error-management.md
@@ -39,7 +39,7 @@
       items:
       - name: System-generated logs
         href: powerapps-gdpr-dsr-guide-systemlogs.md
-      - name: Data integrations for CDS for Apps
+      - name: Data integrations for Common Data Service
         href: data-integration-gdpr-dsr-guide.md
       - name: PowerApps customer data
         href: powerapps-gdpr-dsr-guide.md
@@ -48,7 +48,7 @@
           href: powerapps-gdpr-export-dsr.md
         - name: Delete data
           href: powerapps-gdpr-delete-dsr.md
-      - name: CDS for Apps customer data
+      - name: Common Data Service customer data
         href: common-data-service-gdpr-dsr-guide.md
   - name: Administer environments
     href: environments-administration.md

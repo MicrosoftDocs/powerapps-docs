@@ -20,7 +20,9 @@ A control that can determine how your app responds after a certain amount of tim
 ## Description
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.
 
-Note that you need to preview the app in order for Timer to run in the designer.  This allows user to configure the timer in the designer without any time restrictions.
+> [!NOTE]
+> In PowerApps Studio, timers run only in Preview mode.
+
 
 ## Key properties
 **Duration** – How long a timer runs in milliseconds.  There is no maximum value.
@@ -136,33 +138,31 @@ Note that you need to preview the app in order for Timer to run in the designer.
 
 5. Select the timer button to start or stop the animation. The text in the label fades to white, returns to full intensity, and repeats the process.
 
-
 ## Accessibility guidelines
-The same guidelines for **[Button](control-button.md)**  apply because **Timer** is just a specialized button.
+The same guidelines for the **[Button](control-button.md)** control apply to the **Timer** control if users can interact with it.
 
-> [!IMPORTANT]
-> Controlling the **Timer** without direct user intervention is not supported for accessibility. For example, a timer can be visually hidden by positioning other controls above it or setting its **[Visible](properties-core.md)** property to **false**. The timer automatically starts when a screen is shown, and after some time, executes some action automatically. Currently, there is no general way to make this scenario accessible.
+### Background timers
+Background timers run automatically and are hidden. Use them in a supporting role where the elapsed time is of little interest to the user. For example, you can refresh data every minute or show a notification message only for a certain amount of time.
 
-Other accessibility guidelines are as follows.
+Background timers should have their **[Visible](properties-core.md)** property set to false so that they are hidden from all users.
 
-### Timing
-If a **Timer** is started or stopped automatically, consider if users have sufficient time to read and use content. Keyboard and screen reader users may require more time to react to a timed event.
+### Timing considerations
+If a **Timer** runs automatically, consider whether users have enough time to read and use content. Keyboard and screen-reader users may need more time to react to a timed event.
 
-Any one of these strategies is sufficient:
-* Allow users to cancel the timed event
-* Allow users to adjust the time limit before it begins
-* Warn 20 seconds before the time limit expires and provide a way to extend the limit easily
+Any of these strategies is sufficient:
+* Allow users to cancel the timed event.
+* Allow users to adjust the time limit before it begins.
+* Warn 20 seconds before the time limit expires and provide an easy way to extend the limit.
 
 Some scenarios are exempt from these requirements. Learn more in the [WCAG 2.0 guideline for time limits](https://www.w3.org/TR/WCAG20/#time-limits).
 
 ### Screen reader support
-* **[Text](properties-core.md)** must be present.
-* Do not use **[Text](properties-core.md)** for time-sensitive and important information. Screen reader users will not be alerted to changes to **[Text](properties-core.md)**.
+* If a timer triggers changes on the current screen, use a [live region](../accessible-apps-live-regions.md) to tell screen-reader users what changed.
 
     > [!NOTE]
-  > Screen readers will announce the elapsed time every 5 seconds. However, the timer **[Text](properties-core.md)** will not be included in the announcement.
+    > If the timer is visible and running, screen readers will announce the elapsed time every five seconds.
 
-* Consider adding a **[Label](control-text-box.md)** to show the elapsed time. Use the timer's **[Text](properties-core.md)** to instruct the user to start or stop the timer.
-
-### Support in PowerApps Studio
-As you build an app, timers are disabled to prevent events from triggering. You can test timers in PowerApps Studio if you open Preview, or you can save the app and test them in PowerApps Mobile or the web player.
+* Don't use the **[Text](properties-core.md)** property of a control for time-sensitive and important information. Screen readers won't announce changes to **[Text](properties-core.md)**.
+* For interactive timers:
+    * **[Text](properties-core.md)** must be present.
+    * Consider adding a **[Label](control-text-box.md)** control to show the elapsed time. Use the timer's **[Text](properties-core.md)** property to instruct the user to start or stop the timer.

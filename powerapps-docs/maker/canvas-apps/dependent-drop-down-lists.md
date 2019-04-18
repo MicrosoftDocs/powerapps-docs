@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 02/28/2019
+ms.date: 04/04/2019
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -22,7 +22,7 @@ As a best practice, create a data source for the values in the "parent" and "chi
 
 For the scenario in this topic, store employees submit issues to an **Incidents** list through a form. Employees specify not only the location of the store at which the incident occurred but also the department within that location. Not all locations have the same departments, so a **Locations** list ensures that employees can't specify a department for a location that doesn't have that department.
 
-This topic uses SharePoint lists as data sources, but all tabular data sources work the same way.
+This topic uses Microsoft SharePoint lists as data sources, but all tabular data sources work the same way.
 
 ## Create data sources
 
@@ -43,7 +43,7 @@ A **Locations** list shows the departments at each location.
 | Pembroke       | Produce          |
 | Pembroke       | Floral           |
 
-An **Incidents** list shows contact information and information about each incident. Create the Date column as a **Date** column, but create the other columns as **Single line of text** columns to simplify configuration and avoid [delegation](./delegation-overview.md) warnings in PowerApps.
+An **Incidents** list shows contact information and information about each incident. Create the Date column as a **Date** column, but create the other columns as **Single line of text** columns to simplify configuration and avoid [delegation](./delegation-overview.md) warnings in Microsoft PowerApps.
 
 | First Name | Last Name | Phone Number     | Location | Department | Description       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
@@ -80,7 +80,7 @@ After that change, you can ignore the **Title** column, or you can [remove it](h
 
 ## Replace the controls
 
-1. In the **Fields** pane, select the down arrow next to **Location**.
+1. In the **Fields** pane, select the arrow next to **Location**.
 
     If you've closed the **Fields** pane, you can open it again by selecting **SharePointForm1** in the left navigation bar and then selecting **Edit fields** on the **Properties** tab of the right-hand pane.
 
@@ -138,7 +138,7 @@ If you rename your controls, you can identify them more easily, and the examples
 
 ## Configure the departments
 
-1. Select **ddDepartment** and then, on the **Properties** tab of the right-hand pane, select **Depends on.**
+1. Select **ddDepartment**, and then, on the **Properties** tab of the right-hand pane, select **Depends on.**
 
 1. Under **Parent control**, ensure that **ddLocation** appears in the upper list and **Result** appears in the lower list.
 
@@ -196,10 +196,10 @@ Confirm whether you're displaying the correct field for your control in either o
     > ![Change combo box](./media/dependent-drop-down-lists/combo-box-display-field.png)
 
 **My child drop-down list contains duplicate items.**
-This symptom is likely due to using a **LookUp** column in SharePoint or a **Choices** function in PowerApps. To remove the duplication, wrap a **Distinct** function around the properly returning data. More information: [Distinct function](functions/function-distinct.md)
+This symptom is likely due to using a **LookUp** column in SharePoint or a **Choices** function in PowerApps. To remove the duplication, wrap a **Distinct** function around the properly returning data. More information: [Distinct function](functions/function-distinct.md).
 
 ## Known limitations
 
-This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Common Data Service for Apps.
+This configuration is available on **Drop down** controls, as well as **Combo box** and **List box** controls that allow one selection at a time. You can't use the **Depends On** configuration for any of those controls if they allow multiple selections. This approach isn't recommended for working with option sets in Common Data Service.
 
 The **Depends On** configuration doesn't support static data or collections. To configure dependent drop-down lists with these sources, edit the expression directly in the formula bar. In addition, PowerApps doesn't support using two choice fields in SharePoint without any matching table of data, and you can't define **Matching field** within this UI.

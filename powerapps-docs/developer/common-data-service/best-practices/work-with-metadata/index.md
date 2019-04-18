@@ -1,6 +1,6 @@
 ---
-title: "Developers: Best practices and guidance while working with metadata for the Common Data Service for Apps | Microsoft Docs"
-description: Best practices and guidance while working with metadata for developers of the Common Data Service for Apps in PowerApps.
+title: "Developers: Best practices and guidance while working with metadata for the Common Data Service | Microsoft Docs"
+description: Best practices and guidance while working with metadata for developers of the Common Data Service in PowerApps.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -22,9 +22,9 @@ search.app:
   - D365CE
 ---
 
-# Best practices and guidance while working with metadata for the Common Data Service for Apps
+# Best practices and guidance while working with metadata for the Common Data Service
 
-This list below contains all of the guidance and best practices regarding interacting and working with metadata within the Common Data Service for Apps.
+This list below contains all of the guidance and best practices regarding interacting and working with metadata within the Common Data Service.
 
 
 |Best Practice  |Description  |

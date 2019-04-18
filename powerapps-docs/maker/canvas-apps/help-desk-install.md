@@ -41,7 +41,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 This list stores the Help Desk tickets.
 
-1. Open a web browser and navigate to https://portal.office.com.
+1. Open a web browser and navigate to https://admin.microsoft.com.
 2. Log in with an account that has permission to create SharePoint lists.
 3. Navigate to the site collection where you want the HelpDesk list to reside.
 4. Click the **gear icon** in the top right portion of the web page.
@@ -132,7 +132,7 @@ This list stores the Help Desk tickets.
 2. In the **Require that this column contains information** radio button list, select **No**.
 3. Click **OK**.
 
-## Download the Help Desk PowerApp
+## Download the app
 
 1.	[Download](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) the PowerApps package and save it to your machine.
 
@@ -166,7 +166,7 @@ This list stores the Help Desk tickets.
 4.	Click **Create**.
 5.	In the popup window, select the account you logged in with.
 
-## Import the Help Desk PowerApp
+## Import the app
 
 1. In a web browser, navigate to https://web.powerapps.com.
 2. Sign in by providing the same credentials that you used to sign up.
@@ -203,33 +203,27 @@ This list stores the Help Desk tickets.
 
 	![Import settings screen](./media/help-desk-install/import-done.png)
 
-## Configure the PowerApp to use the SharePoint list
+## Configure the app to use the SharePoint list
 
 1. Under Next steps, click **Open app**.
 2. Click **Allow** when prompted for permission.
 
 ### Delete connections
 
-1. Click **View**.
-2. Click **Data sources**.
-3. In the **Data** pane, click the **ellipses** next to the **HelpDesk** SharePoint connection.
-4. Click **Remove**.
+1. On the **View** tab, select **Data sources**.
+1. In the **Data** pane, select the ellipsis (...) next to **HelpDesk**, and then select **Remove**.
 
 ### HelpDesk list
 
-1. Click **View**.
-2. Click **Data sources**.
-3. In the **Data** pane, click **+ Add data source**.
-4. Select **SharePoint**.
-5. Click **Create**.
-6. In the **Recent sites** list, select the SharePoint site where you created the HelpDesk List.
+1. On the **View** tab, select **Data sources**.
+1. In the **Data** pane, select **Add data source** > **New connection** > **SharePoint** > **Create**.
+1. In the **Recent sites** list, select the SharePoint site where you created the HelpDesk List.
 
-	> [!TIP] 
-	> If the site does not appear in the list, enter the URL to the SharePoint site in the textbox and click, **Go**.
+    > [!TIP] 
+    > If the site doesn't appear in the list, type or paste the URL to the SharePoint site in the textbox, and then select **Go**.
 
-7. In the **Search** textbox at the top of the list enter **HelpDesk**.
-8. Check the checkbox next to the **HelpDesk** list.
-9. Click **Connect**.
+1. In the **Search** box at the top of the list, type or paste **HelpDesk**.
+1. Select the checkbox next to **HelpDesk**, and then select **Connect**.
 
 ### Update admin list
 
@@ -241,22 +235,19 @@ This list stores the Help Desk tickets.
 	![Update Admin list](./media/help-desk-install/Change-admin.png)
 	
    > [!TIP]
-   > If you have more than 1 admin, please use a comma to delimit the admin.  Example:
+   > If you have more than one administrator, use a comma to delimit the list of administrators. Example:
    > "admin1@microsoft.com","admin2@microsoft.com".
    > To ensure the addresses in the AdminList match the format PowerApps expects, select
    > View > Variables > Global > MyProfile and look at the 'Mail' column to see the expected email format.
 
-5. Click **File**.
-6. Click **Save**.
-7. Click **Publish**.
-8. Click **Publish this version**.
+1. Select **File** > **Save** > **Publish** > **Publish this version**.
 
-## Modify the Flow
+## Modify the flow
 
 1.	In the menu on the left, click **Flows**.
 2.	If prompted to sign in, sign in by providing the same credentials that you used to sign up.
 3.	Select **My flows** in the top menu.
-4.	Next to the **HelpDeskFlow** Flow, click the **pencil icon**. 
+4.	Next to the **HelpDeskFlow** Flow, click the pencil icon. 
  
 	![Edit Flow screen](./media/help-desk-install/edit-flow.png)
 
@@ -277,18 +268,16 @@ This list stores the Help Desk tickets.
 
 11.	Click **Update flow**.
 
-## Play the PowerApp
+## Play the app
 
 1. In the web browser, click **Apps**.
-2. Click the **ellipses** next to the Help Desk PowerApp.
+2. Click the ellipsis (...) next to the Help Desk app.
 3. Click **Open**. 
 
 > [!TIP]
 > Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk PowerApp Sample.
 
-
 ## Next steps
 - [Customize a SharePoint list form](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
 - [Add and configure a control](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-configure-controls)
-- [Edit and manage permissions for a SharePoint list or library](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
- 
+- [Edit and manage permissions for a SharePoint list or library](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

@@ -1,5 +1,5 @@
 ---
-title: "Handle exceptions in a plug-in (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Handle exceptions in a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
 ms.custom: ""
 ms.date: 1/23/2019

@@ -31,7 +31,7 @@ search.app:
 ## Open a view for editing in the latest view designer
 
 > [!IMPORTANT]
-> The latest version of the view designer is currently in preview. Some features like advanced filtering, custom controls, and column properties are not yet supported. To accomplish these tasks, [open the view in the classic view designer](#open-a-view-in-solution-explorer).
+> The latest version of the view designer is currently in preview. Some features like advanced filtering, custom controls, and column properties are not yet supported. To accomplish these tasks, [Open a view for editing in solution explorer](#open-a-view-for-editing-in-solution-explorer).
 
 1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 

@@ -1,5 +1,5 @@
 ---
-title: "Sample: Create a custom workflow activity (Common Data Service for Apps) | Microsoft Docs"
+title: "Sample: Create a custom workflow activity (Common Data Service) | Microsoft Docs"
 description: "The sample demonstrates how to write a custom workflow activity that can create an account and a task for the account. This sample uses early binding."
 ms.custom: ""
 ms.date: 10/31/2018

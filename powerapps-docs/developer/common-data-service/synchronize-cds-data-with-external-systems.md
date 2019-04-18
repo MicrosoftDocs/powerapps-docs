@@ -1,5 +1,5 @@
 ---
-title: "<Topic Title> (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "<Topic Title> (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Synchronize Common Data Service for Apps data with external systems
+# Synchronize Common Data Service data with external systems
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/synchronize-dynamics-365-data-with-external-systems
 Too much focus on this as a new feature and the change from the past.

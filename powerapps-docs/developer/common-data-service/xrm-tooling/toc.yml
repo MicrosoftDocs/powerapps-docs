@@ -24,6 +24,7 @@
     href: use-xrm-tooling-common-login-control-client-applications.md
   - name: Configure tracing for XRM tooling
     href: configure-tracing-xrm-tooling.md
+  - name: Simplified Connection quick start
+    href: sample-simplified-connection-quick-start.md
   - name: 'Sample: Quick start for XRM Tooling API'
     href: sample-quick-start-xrm-tooling-api.md
-

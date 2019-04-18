@@ -1,5 +1,5 @@
 ---
-title: "Create entities using the Organization Service (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create entities using the Organization Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -230,7 +230,7 @@ More information: [Detect duplicate data using the Organization service](detect-
 
 When people create new records in the application they are usually created in the context of another record. For example, you might create a new contact record in the context of an account. When this happens certain attribute values from the account entity are copied into the contact form. This expedites the creation of the new related record because the new record will have some default values set so that the person editing the record to be created doesn't need to enter those values. They can change the values if they like before saving.
 
-The values that will be copied over when a new record is created this way is controlled by configurations applied to the CDS for Apps environment, so it can vary between environments. 
+The values that will be copied over when a new record is created this way is controlled by configurations applied to the Common Data Service environment, so it can vary between environments. 
 
 More information: 
 - [Map entity fields](../../../maker/common-data-service/map-entity-fields.md)

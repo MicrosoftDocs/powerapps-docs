@@ -1,5 +1,5 @@
 ---
-title: "Configure data import (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Configure data import (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Configuration information that is required for importing data is contained in the data import entity and the import source file entity." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -49,7 +49,7 @@ The configuration information that is required for importing data is contained i
 - Read the content of the source file into the `ImportFile.Content`.  
   
 > [!IMPORTANT]
->  We do not recommend updating records by using data import programmatically. To update, use the data export and import capabilities of the CDS for Apps Web application. Use **Export to Excel** to export records to an XML Spreadsheet 2003 (.xml) file. This is the only valid source file type for the Update mode. Re-importing data from the XML Spreadsheet 2003 (.xml) source file ensures that the data integrity in CDS for Apps is maintained. To import updated data, use the CDS for Apps Import Data Wizard. For more information about the Import Data Wizard, see CDS for Apps Help.  
+>  We do not recommend updating records by using data import programmatically. To update, use the data export and import capabilities of the Common Data Service Web application. Use **Export to Excel** to export records to an XML Spreadsheet 2003 (.xml) file. This is the only valid source file type for the Update mode. Re-importing data from the XML Spreadsheet 2003 (.xml) source file ensures that the data integrity in Common Data Service is maintained. To import updated data, use the Common Data Service Import Data Wizard. For more information about the Import Data Wizard, see Common Data Service Help.  
  
 ### See Also
 

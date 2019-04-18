@@ -1,5 +1,5 @@
 ---
-title: "Multi-Select Picklist attributes (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Multi-Select Picklist attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about multi-select picklist attributes that allow storing multiple option choices in a single attribute." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018

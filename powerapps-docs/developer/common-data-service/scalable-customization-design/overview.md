@@ -1,5 +1,5 @@
 ---
-title: "Scalable Customization Design: Overview (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Scalable Customization Design: Overview (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The first in a series of topics. This topic introduces symptoms that can appear when code customizations are not optimized and the constraints that code customizations must operate within to avoid them. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/15/2019
@@ -15,15 +15,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Scalable Customization Design in Common Data Service for Apps
+# Scalable Customization Design in Common Data Service
 
 > [!NOTE]
 > This is the first in a series of topics about scalable customization design. While this content has been divided into separate topics, it presents a wholistic view of concepts, issues, and strategies surrounding the design of scalable customizations. Each topic builds upon concepts established in preceding topics.
 > You can [download these topics as a single PDF document](/powerapps/opbuildpdf/developer/common-data-service/scalable-customization-design/TOC.pdf?branch=live) if you want to read it offline.
 
-Common Data Service for Apps (CDS for Apps) is designed to protect itself and its users from long running activities that could affect both the response times for the user making a request and the stability and responsiveness of the system for other users.
+Common Data Service is designed to protect itself and its users from long running activities that could affect both the response times for the user making a request and the stability and responsiveness of the system for other users.
 
-A challenge faced by some people implementing CDS for Apps solutions are errors thrown by the platform or the underlying Microsoft SQL Server database when these protective measures take effect. This is often interpreted as the platform not being able to scale or incorrectly terminating or throttling requests to the system.
+A challenge faced by some people implementing Common Data Service solutions are errors thrown by the platform or the underlying Microsoft SQL Server database when these protective measures take effect. This is often interpreted as the platform not being able to scale or incorrectly terminating or throttling requests to the system.
 
 This content is based on experiences investigating and addressing the true underlying causes of the majority of these types of challenges. These topics describe how the platform protects itself from the impact of these requests imposed on the system and explains why this behavior is most often the result of custom implementations not understanding the impact on blocking and transaction usage within the platform.
 
@@ -51,7 +51,7 @@ These types of problems typically exhibit a combination of common symptoms as sh
 
 In reality a combination of these symptoms can and often would be reported together when these challenges are faced. It’s not always the case that these symptoms are an indicator of problems with the design. Other issues, such as disk I/O limitations in the database or a product bug, can cause similar symptoms. But the most common cause of these kinds of symptoms, and therefore one worth checking for, relates directly to the design of the custom implementation and how it affects the system. 
 
-> *Why should we worry? Doesn’t CDS for apps just take care of this…?*
+> *Why should we worry? Doesn’t Common Data Service just take care of this…?*
 
 It does as far as it can… But it uses locking and transactions to protect the system against conflicts when required.
 
@@ -68,14 +68,14 @@ The underlying impact of long running transactions, database blocking, and compl
 
 ## Design for platform constraints
 
-The CDS for Apps platform has a number of deliberate constraints it imposes to prevent any one action having too detrimental an impact on the rest of the system and, therefore, on users. 
+The Common Data Service platform has a number of deliberate constraints it imposes to prevent any one action having too detrimental an impact on the rest of the system and, therefore, on users. 
 While this behavior can be frustrating since it can block specific requests from completing and often leads to questions around whether the constraints can be lifted, this is rarely a good approach when you consider the broader implications.
 
 When the platform is used as intended and an implementation is optimized, it’s very rare that there is a scenario where these constraints would be encountered. Running into the constraint is almost always an indication of behaviors that will be tying up resources excessively in the system. This means other requests either from the same user or other users can’t be processed. So while it may be possible to loosen the constraint on the request being blocked, what that actually means is that the resources it is consuming are tied up for even longer causing bigger impacts on other users.
 
-At the heart of these constraints is the idea that the CDS for Apps platform is designed to support a transactional, multi-user application where quick response to user demand is the priority. It’s not intended to be a platform for long running or batch processing. It is possible to drive a series of short requests to CDS for Apps but CDS for Apps isn’t designed to handle batch processing. Equally, where there are activities running large iterative processing, CDS for Apps isn’t designed to handle that iterative processing.
+At the heart of these constraints is the idea that the Common Data Service platform is designed to support a transactional, multi-user application where quick response to user demand is the priority. It’s not intended to be a platform for long running or batch processing. It is possible to drive a series of short requests to Common Data Service but Common Data Service isn’t designed to handle batch processing. Equally, where there are activities running large iterative processing, Common Data Service isn’t designed to handle that iterative processing.
 
-In those scenarios, a separate service can be used to host the long running process, driving shorter transactional requests to CDS for Apps itself. For example, using Flow or hosting Microsoft SQL Server Integration Services (SSIS) elsewhere and then driving individual create or update requests to CDS for Apps is a much better pattern than using a plug-in to loop through thousands of records being created in CDS for Apps.
+In those scenarios, a separate service can be used to host the long running process, driving shorter transactional requests to Common Data Service itself. For example, using Flow or hosting Microsoft SQL Server Integration Services (SSIS) elsewhere and then driving individual create or update requests to Common Data Service is a much better pattern than using a plug-in to loop through thousands of records being created in Common Data Service.
 
 It is worth being aware of and understanding the platform constraints that do exist, so that you can allow for them in your application design. Also, if you do encounter these errors, you can understand why they are happening and what you can change to avoid them.
 
@@ -84,8 +84,8 @@ It is worth being aware of and understanding the platform constraints that do ex
 |**Plug-in timeouts**|&bull; Plug-ins will time out after 2 minutes <br />&bull; Don't preform long running operations in plug-ins. Protects the platform and the sandbox service and ultimately the user from poor user experience|
 |**SQL timeouts**|&bull; Requests to SQL Server time out at 30 seconds<br />&bull; Protects against long running requests<br />&bull; Provides protection within a particular organization and its private database<br />&bull; Also provides protection at a database server level against excessive use of shared resources such as processors/memory|
 |**Workflow limits**|&bull; Operates under a Fair Usage policy<br />&bull; No specific hard limits, but balance resource across organizations<br />&bull; Where demand is low an organization can take full advantage of available capacity. Where demand is high, resources and throughput are shared.|
-|**Maximum concurrent connections**|&bull; There is a platform default setting of  a maximum connection pool limit of 100 connections from the  Web Server connection pool in IIS to the database. CDS for Apps does not change this value<br />&bull; If you hit this, it is an indication of an error in the system; look at why so many connections are blocking<br />&bull; With multiple web servers, each with 100 concurrent connections to the database of typical &lt; 10ms, this suggests a throughput of &gt; 10k database requests for each web server. This should not be required and would hit other challenges well before that|
-|**ExecuteMultiple**|&bull; The `ExecuteMultiple` message is designed to assist with collections of operations being sent to CDS for Apps from an external source<br />&bull; The processing of large groups of these requests can tie up vital resources in CDS for Apps at the expense of more response critical requests by users, therefore this is limited to 2 concurrent `ExecuteMultiple` requests per organization|
+|**Maximum concurrent connections**|&bull; There is a platform default setting of  a maximum connection pool limit of 100 connections from the  Web Server connection pool in IIS to the database. Common Data Service does not change this value<br />&bull; If you hit this, it is an indication of an error in the system; look at why so many connections are blocking<br />&bull; With multiple web servers, each with 100 concurrent connections to the database of typical &lt; 10ms, this suggests a throughput of &gt; 10k database requests for each web server. This should not be required and would hit other challenges well before that|
+|**ExecuteMultiple**|&bull; The `ExecuteMultiple` message is designed to assist with collections of operations being sent to Common Data Service from an external source<br />&bull; The processing of large groups of these requests can tie up vital resources in Common Data Service at the expense of more response critical requests by users, therefore this is limited to 2 concurrent `ExecuteMultiple` requests per organization|
 
 ## Next steps
 

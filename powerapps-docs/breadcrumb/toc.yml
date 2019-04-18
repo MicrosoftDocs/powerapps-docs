@@ -21,7 +21,7 @@
       tocHref: /powerapps/developer/common-data-service/
       topicHref: /powerapps/maker/index
       items: 
-      - name: Common Data Service for Apps
+      - name: Common Data Service
         tocHref: /powerapps/developer/common-data-service/
         topicHref: /powerapps/maker/common-data-service/index          
         items:

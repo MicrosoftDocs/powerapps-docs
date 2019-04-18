@@ -1,6 +1,6 @@
 ---
-title: Common Data Service for Apps entities | Microsoft Docs
-description: Learn about the entities available in Common Data Service for Apps.
+title: Common Data Service entities | Microsoft Docs
+description: Learn about the entities available in Common Data Service.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -29,11 +29,11 @@ Overlap with content in https://docs.microsoft.com/dynamics365/customer-engageme
 
 -->
 
-# Common Data Service for Apps entities
+# Common Data Service entities
 
-Providing storage for data is the most important function of Common Data Service for Apps. Common Data Service includes a base set of entities that provide structure for data used by business applications. 
+Providing storage for data is the most important function of Common Data Service. Common Data Service includes a base set of entities that provide structure for data used by business applications. 
 
-You can view the base set of entities in the [Common Data Service for Apps entity reference](reference/about-entity-reference.md).
+You can view the base set of entities in the [Common Data Service entity reference](reference/about-entity-reference.md).
 
 ## Modify entities
 
@@ -53,7 +53,7 @@ There are several ways to edit entity metadata using designers.
 
 ### Import a solution
 
-A solution can contain entity metadata and other customized components. Importing a managed or unmanaged solution into your Common Data Service for Apps tenant will include those entities or extend existing entities with the new entity metadata they contain.
+A solution can contain entity metadata and other customized components. Importing a managed or unmanaged solution into your Common Data Service tenant will include those entities or extend existing entities with the new entity metadata they contain.
 
 ### From a data source using Power Query
 
@@ -61,7 +61,7 @@ You can create new entities and fill them with data using Power Query. More info
 
 ### Use metadata services
 
-The web services exposed in CDS for Apps include capabilities to create, read, write, and delete entity metadata. These services are most frequently used to read the metadata because that data can inform your code at runtime about how the environment has been customized. More information: [Metadata services](metadata-services.md)
+The web services exposed in Common Data Service include capabilities to create, read, write, and delete entity metadata. These services are most frequently used to read the metadata because that data can inform your code at runtime about how the environment has been customized. More information: [Metadata services](metadata-services.md)
 
 ## Entity metadata
 
@@ -86,6 +86,6 @@ The Entity metadata includes the following information:
 
 ### See also
 
-[Common Data Service for Apps Developer Overview](overview.md)
+[Common Data Service Developer Overview](overview.md)
 
 

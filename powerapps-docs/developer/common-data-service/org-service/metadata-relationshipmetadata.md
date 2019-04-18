@@ -1,5 +1,5 @@
 ---
-title: "Create and retrieve entity relationship (Common Data Service for Apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Create and retrieve entity relationship (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Shows code samples to create and retrieve entity relationships." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
@@ -149,7 +149,7 @@ public bool EligibleCreateOneToManyRelationship(string referencedEntity,
 
 ## Create an N:N entity relationship  
 
- The following sample uses a [EligibleCreateManyToManyRelationship](#EligibleCreateManyToManyRelationship) method to verify that the `Account` and `Campaign` entities can participate in a N:N entity relationship and then creates the entity relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>.  
+ The following sample uses a [EligibleCreateManyToManyRelationship](#BKMK_EligibleCreateManyToManyRelationship) method to verify that the `Account` and `Campaign` entities can participate in a N:N entity relationship and then creates the entity relationship by using <xref:Microsoft.Xrm.Sdk.Messages.CreateManyToManyRequest>.  
   
 ```csharp
 bool accountEligibleParticipate =
